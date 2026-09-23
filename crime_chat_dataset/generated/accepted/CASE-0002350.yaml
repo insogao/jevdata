@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002350
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-60253f76235c242d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A想借节前送购物卡维系与王经理的关系，盼希望主管看到申请时能记得自己的那份；这份礼物也可以被解释成普通节日问候。
+  critical_evidence:
+  - 节前A主动约王经理见面，王经理负责组内的项目申请汇总。
+  - A见面时送出一张购物卡，但不提卡面金额；王经理收下这份节日心意。
+  - 见面后A发消息提到自己的我那份项目申请，暗示希望后续留意；王经理只表示按通常流程处理。
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司福利卡
+
+attributes:
+  duration_days: 2
+  turn_count: 49
+  approximate_tokens_estimate: 1073
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0240
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-108
+
+dedup:
+  content_hash: sha256:e9d2384c9c10ba148037c799c0193274062909c0a52954b2a546e2b4929ac720
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【9月24日】
+  A：王经理，节前我想请您吃个便饭，感谢最近照顾工作。
+  B：不用客气，找个不忙的时间就行。
+  A：明晚方便吗？我来定地方，离单位不远。
+  B：明晚可以，别订太正式的地方。
+  A：好，就附近那家家常菜馆。顺便带一点节日小心意。
+  B：吃饭可以，东西真不用特意准备。
+  A：你家小狗最近还挑食吗
+  B：这周好点了 换了个碗
+  A：哈哈它还挺会挑
+  B：猫也一样 不喜欢就不碰
+  A：看来得慢慢试
+  B：嗯 先不折腾它了
+  A：它现在一听开罐声就跑来
+  A：你那边月底也要补台账吗
+  B：要啊 这周在核一遍
+  A：我们刚换了新版表格
+  B：我也收到了 看着清楚些
+  A：就是填起来多两栏
+  B：熟悉了就快了
+  A：我把旧表也留了一份
+  A：这几天早晚温差也太大了
+  B：是啊 我中午还穿短袖呢
+  A：我早上出门带了件外套
+  B：带着好 晚上风一吹就冷
+  A：预报说明天会晴一点
+  B：那我把阳台衣服洗了
+  A：我把外套放包里了
+  【9月25日】
+  A：附近新开了家面馆你去过没
+  B：去过一次 汤还不错
+  A：我上次点的拌面有点咸
+  B：那你下次试试番茄鸡蛋面
+  A：好 我记下了
+  B：中午人少点再去
+  A：你最近还坐地铁吗
+  B：基本都坐 开车找位太费劲
+  A：我这两天改骑车了
+  B：路上注意点 早高峰车多
+  A：就两站路 还挺方便
+  B：嗯 下雨我就不骑了
+  A：我到门口了，你慢慢来。
+  B：刚出来，马上到。
+  A：这个给你，一张小购物卡，过节图个方便。卡面金额我也没仔细看。
+  B：你太客气了，心意我收下，下次别这么见外。
+  B：今天聊得挺轻松的，回去路上注意。
+  A：好呀，你也早点休息。
+  A：前几天顺带提过的我那份项目申请，我这边先等着，有空再说哈。
+  B：材料都按顺序处理，有消息会照常通知。
+  A：明白，我就是问问，节前事情多辛苦啦。
+  B：不客气，缺什么会统一联系，不用专门跑一趟。

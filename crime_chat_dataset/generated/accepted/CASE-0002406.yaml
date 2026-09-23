@@ -1,0 +1,146 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002406
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-2917d62d5270769d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 在节前递给 B 一张未标明面值的购物卡，之后提及自己正在办理的事项，希望 B 留意；B 不因礼物作任何特殊安排，明确按一致的公开流程处理，并依规定处置礼物。
+  critical_evidence:
+  - A 在节日前约 B 见面，体现节日节点
+  - A 送出购物卡但没有说明面值，只说是节日心意
+  - 送卡后 A 以含蓄或直接方式提及希望 B 关注其事项；B 表示按公开标准办理、不插队也不改变结果
+  benign_alternatives:
+  - 单纯的节日礼节往来，与办理事项没有关联
+  - 单位或团队统一发放的福利卡
+
+attributes:
+  duration_days: 5
+  turn_count: 69
+  approximate_tokens_estimate: 1831
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0243
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-109
+
+dedup:
+  content_hash: sha256:6a224a7c9d5b2c07a7c02adde2e8face4a7ec5284f6301ba046a4c17bb671c05
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【6月11日】
+  A：节日快到了，有空当面聊几句不？
+  B：可以呀，老许。我周四下午在。
+  A：好，那我带点节前的小东西过去，不是什么贵重的。
+  B：你那边楼下是不是新开了花店？
+  A：嗯，门口摆了好多小盆栽。
+  B：我想买盆绿萝放桌上，那个好养吗？
+  A：挺省心的，偶尔浇点水就行。
+  B：心意到了就行，你别专门准备。
+  A：给你一张购物卡，面值我真没看，主要图个节日气氛。
+  B：我先收着，不过要按单位要求确认一下能不能留。
+  A：行，你看着办。我就是想起你来，顺手带的。
+  A：上回的会议纪要我整理好了，发群里了。
+  B：看见了，重点列得很清楚。
+  A：还有一项我不确定，明天再对一下。
+  【6月12日】
+  B：行，我上午在。
+  B：最近你之前提的那份材料有进展吗？
+  A：我上回说的那件事，之后有空再说就行。
+  B：我只能按统一顺序处理，材料缺什么会照清单通知。
+  A：懂，别因为这张卡有压力。
+  B：我爸最近迷上做面包，厨房天天有香味。
+  A：挺好啊，比外面买的放心。
+  B：就是他每次都做一大盘，吃不完。
+  A：分给邻居呗，省得浪费。
+  【系统消息】B 向 A 转账 46 元，已收款。
+  B：那最好，我会按规定登记或退回，不会因此优先处理。
+  A：嗯，按正常流程来就行。
+  B：资料齐了大家都会收到同样的进度消息。
+  A：这周地铁口在修路，我早上绕了好大一圈。
+  【6月13日】
+  B：我也看到了，路牌不太明显。
+  A：今天我多留了十分钟，总算没迟到。
+  B：嗯，最近出门得早点。
+  A：好，节前事情多，我等通知。
+  B：好，节日快乐，其他事照常联系。
+  B：我爸最近迷上做面包，厨房天天有香味。
+  A：挺好啊，比外面买的放心。
+  B：就是他每次都做一大盘，吃不完。
+  A：分给邻居呗，省得浪费。
+  A：我把上周的文件夹也归档了，桌面终于清爽点。
+  B：我也该整理一下，找东西太费时间。
+  A：等节后我把共享盘里那份旧版删掉。
+  B：先确认大家都用新版本再清理哈。
+  B：最近附近的公交改线了，你坐哪趟？
+  【6月14日】
+  A：我改坐2路，时间差不多。
+  B：好，那我也看看能不能换。
+  A：高峰期少走一段路还不错。
+  B：我在看保温饭盒，想带饭上班。
+  A：玻璃的重一点，塑料的轻便。
+  B：那我先买个轻的试试。
+  A：挺好，记得看下能不能微波。
+  A：我把上周的文件夹也归档了，桌面终于清爽点。
+  B：我也该整理一下，找东西太费时间。
+  A：等节后我把共享盘里那份旧版删掉。
+  B：先确认大家都用新版本再清理哈。
+  B：最近附近的公交改线了，你坐哪趟？
+  A：我改坐2路，时间差不多。
+  B：好，那我也看看能不能换。
+  【6月15日】
+  A：高峰期少走一段路还不错。
+  B：你那边楼下是不是新开了花店？
+  A：嗯，门口摆了好多小盆栽。
+  B：我想买盆绿萝放桌上，那个好养吗？
+  A：挺省心的，偶尔浇点水就行。
+  A：我把上周的文件夹也归档了，桌面终于清爽点。
+  B：我也该整理一下，找东西太费时间。
+  A：等节后我把共享盘里那份旧版删掉。
+  B：先确认大家都用新版本再清理哈。
+  B：最近附近的公交改线了，你坐哪趟？
+  A：我改坐2路，时间差不多。
+  B：好，那我也看看能不能换。
+  A：高峰期少走一段路还不错。
+  B：我爸最近迷上做面包，厨房天天有香味。

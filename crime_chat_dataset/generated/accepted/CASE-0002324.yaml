@@ -1,0 +1,118 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002324
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-ce86c4a8b17991e6
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 借节前见面送出一张未说明面值的购物卡，并在之后含蓄提到希望 B 关注其正在办理的事项；B 不作特殊承诺，说明按公开标准和统一顺序处理，并将礼物依规处理。
+  critical_evidence:
+  - A 节前主动约见 B，表达节日问候
+  - A 送给 B 一张购物卡但未说明面值，称是节日心意
+  - A 在送卡后暗示希望 B 对其事项多留意；B 明确按公开标准、统一流程处理，不给予特殊照顾
+  benign_alternatives:
+  - 熟人或合作方之间普通节日往来
+  - 单位统一发放的福利卡或无关事项的礼节性赠礼
+
+attributes:
+  duration_days: 4
+  turn_count: 43
+  approximate_tokens_estimate: 1147
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0237
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-107
+
+dedup:
+  content_hash: sha256:44ce7e30cf7f0e8a6f4eed5846adb571a88fbd257f640622408c9de09cd25561
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【9月6日】
+  A：我明后天会到附近，节前你哪天方便？
+  B：可以，林经理。我周三下午在办公室。
+  A：好，我路过时把节日东西带给你，不占太久。
+  B：周末我准备把阳台收拾一下，堆了好多箱子。
+  A：我也该整理了，快递盒都没拆。
+  B：先扔纸箱吧，别一下弄太久。
+  A：嗯，分两天做，腰不行了。
+  B：不用专门准备礼物，见面聊会儿就行。
+  A：就是个那张小卡，我没留意面值，图个节日气氛。
+  B：收到啦，谢谢。不过你先别急着走，我得确认下单位对这类礼物怎么处理。
+  B：你上次推荐的茶我买到了，味道不错。
+  【9月7日】
+  A：那个不太苦，晚上喝也还好。
+  B：我泡淡一点，正合适。
+  A：喜欢就好，我也常买。
+  A：没啥贵重的，你别有负担，大家节前都互相问候一下。
+  B：我会按规定登记或退回，免得之后说不清。
+  A：对了，我前阵子提交的材料是不是还差点什么？
+  B：我可以提醒你公开清单里的材料要求，具体进度还是按队列走。
+  A：这两天风大，你出门记得带外套。
+  B：早上还挺暖的，下午就降温了。
+  A：我昨天没看天气，差点冻着。
+  B：我包里常放个薄围巾，方便。
+  【9月8日】
+  A：你方便的时候帮我多看一眼就行，我不是催你。
+  B：所有人都按同一标准，我不会因为礼物改顺序或结果。
+  A：明白，礼物跟那件事没关系，你照常办。
+  B：好，材料齐全后会按流程通知。
+  A：那卡你看怎么处理合适，我不想让你为难。
+  B：我按规定处理，之后咱们也照常沟通工作。
+  B：不急，我家还有一个备用的。
+  A：那我放在会议室柜子里了。
+  B：看到了，谢啦。
+  B：对了，楼下咖啡店换菜单了。
+  A：有啥新口味？
+  【9月9日】
+  B：柚子气泡水，喝着还行。
+  A：天气热了倒是可以试试。
+  A：你上次借我的保温杯我洗好了，明天带给你。
+  B：不急，我家还有一个备用的。
+  A：那我放在会议室柜子里了。
+  B：看到了，谢啦。
+  B：对了，楼下咖啡店换菜单了。
+  A：有啥新口味？
+  B：柚子气泡水，喝着还行。
+  A：天气热了倒是可以试试。
