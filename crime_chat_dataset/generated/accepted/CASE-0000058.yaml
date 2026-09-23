@@ -1,0 +1,136 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000058
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000156
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: other_illicit_coordination
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 私设外围盘口坐庄收注，不出票不留凭证，以九个点退水发展 B 做下线代理，B 名下再带人层层抽水，往上数七层直达总盘，转账实为投注金。
+  critical_evidence:
+  - 全程无票无凭证：A 称「咱这玩法没票，就我记账你记账」，赢了来拿现金，与实体店出票拍照留凭证完全相反
+  - 转账 2800 元是投注金：B 收十二个人每人两百共两千四，加上周六场凑两千八转给 A，A 承诺「输赢周五结」「中了来我这拿现金」，坐庄收注兑付
+  - 退水与层级话术：A 按九个点给 B 返水、B 名下带人「还能再吃一层」「往上数七层都记着这单」，并接受赊账押注，构成多层地下投注链
+  benign_alternatives:
+  - 兄弟间正常聊球赛和赔率
+  - 同事合买彩票的日常闲聊
+
+attributes:
+  duration_days: 5
+  turn_count: 61
+  approximate_tokens_estimate: 1349
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: illegal_lottery_chain
+  risk: 3
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0005
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:edf7709ae4e733fbeee8fbd7222b6886418349cb23e692143d3b1b539e488cff
+pipeline_status: accepted
+title: other_illicit_coordination/illegal_lottery_chain
+conversation: |-
+  【10月19日】
+  B：哥，晚上忙不
+  A：刚挂完盘，就等你这话
+  B：正好，问你个事
+  A：说
+  B：今晚开什么，欧冠那场出不
+  A：开，周三凌晨那场也接，赔率老样子一点九
+  B：那给我们办公室凑一场
+  A：行，几位的量
+  B：十二个，老班带头
+  A：那你把钱收齐直接转我，水钱老规矩给你留
+  B：水钱是几个点来着
+  A：九个点，你名下再带人进来，你还能再吃一层
+  B：嫂子今晚做啥
+  A：红烧带鱼，小豆点名的
+  B：羡慕，我今晚泡面
+  A：过来吃啊，加双筷子的事
+  B：下回，今晚得盯凌晨那场
+  A：泡面少吃，胃不好
+  【10月20日】
+  B：哥，钱收齐了，一人两百，十二个人两千四
+  A：行，转我，我给你挂上
+  B：把那场和周六英超一起算呗
+  A：一起两千八，水钱给你多返一个点
+  B：水钱先记账上
+  A：都记着呢，账在我这丢不了
+  A：你侄子期中语文九十八，老师夸了
+  B：可以啊小豆，奖励啥
+  A：周末带他去游乐场，票都买了
+  B：那小子命是真舒服
+  【10月21日】
+  B：哥，两千八转你了
+  【系统消息】B 向 A 转账 2800 元，已收款。
+  A：收到，两场都挂上了，输赢周五结
+  A：挂好了，欧冠一场英超一场
+  B：有没有啥凭证，老班问
+  A：咱这玩法没票，就我记账你记账，回头对流水就行
+  B：老班问万一中了大数，你赔得起不
+  A：放心，上面有人兜底，这盘子稳得很
+  B：行，我说中了按份现结
+  A：成，中了来我这拿现金
+  B：哥，给你买的护膝到了没
+  A：到了，昨晚站里取的
+  B：戴上，盯盘一坐一天，膝盖要护
+  A：你嫂子也这么说，你俩一个口径
+  B：必须统一战线
+  A：行行行，戴还不行嘛
+  【10月22日】
+  B：哥！中了没
+  A：昨晚那场全红，账面赢一万一千六
+  B：十二个人分，一人九百来块
+  A：下午来拿现金，现结，顺手把你那层的水钱也结了
+  B：那我名下这两层也抽两个点哈哈
+  A：抽，你下面的水你自己吃，别喂太狠
+  B：懂，新来的那位我先按十个点收着
+  A：收着收着，这行就这样
+  【10月23日】
+  B：哥，新来那位说他朋友也想进来，那边人不少
+  A：人多单大可以，让他挂你名下，你又多一层
+  B：他要是押大了输跑了呢
+  A：赊账可以，跑单跑不掉，你往上数七层都记着这单呢
+  B：那我跟他们说了啊
+  A：让想玩的都找你，单子递到我这就行
+  A：周六降温，游乐场穿厚点
+  B：给小豆带上恐龙帽
+  A：他嫌丑，死活不戴
+  B：哈哈随你，你小时候也这样

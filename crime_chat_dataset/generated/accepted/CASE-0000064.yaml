@@ -1,0 +1,124 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000064
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000126
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 离职员工 A 手握核心代码全套备份，向老友兼老板 B 暗示若补偿要求不被满足、资料可能流向竞争对手老陈处，B 在期限内支付50000元换取备份清理与保密，属离职要挟。
+  critical_evidence:
+  - A 通知离职时强调仓库那些东西我本地有全套备份（6月10日）
+  - A 要求不按合同谈补偿、周五前给准信，并提到竞争对手老陈问过我有没有兴趣、硬盘哪天中毒文件自己飞了（6月11日）
+  - B 在期限内转账50000元，随即要求 A 清理备份、交接服务器密码，双方约定翻篇谁也别提（6月13日）
+  - 两人为十年老友兼创业伙伴，转账时点与 A 施压的周五期限精确吻合
+  benign_alternatives:
+  - 老员工离职补偿协商，50000元为双方自愿的额外补偿
+  - 员工离职时备份个人成果并到期交接清理，属常见操作
+
+attributes:
+  duration_days: 3
+  turn_count: 50
+  approximate_tokens_estimate: 941
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: trade_secret_threat
+  risk: 3
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0001
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:42b6dc0664fa7735be9d1413c0c889a5f8952dcbcda4d9ba3c86754d77b8b572
+pipeline_status: accepted
+title: sexual_transaction_exploitation/trade_secret_threat
+conversation: |-
+  【6月10日】
+  A：方子 忙不
+  B：老许? 咋想起我了
+  A：离职的事定了 月底走
+  B：这么突然 交接咋安排
+  A：该交的交 仓库那些东西我本地有全套备份 心里有数
+  B：你还在跑步没
+  A：跑 半马下个月
+  B：牛 我肚子三层了
+  A：管住嘴迈开腿
+  B：新家看好没
+  A：差不多定东边那套
+  B：学区咋样
+  A：够用 主要近我妹那
+  B：那不错
+  A：补偿那点破事 你看着办 别按合同一条条磨 怪伤感情
+  B：……你说呢
+  A：老关系了 我也不想撕破脸
+  【6月11日】
+  B：我家狗昨天下崽了 五只
+  A：哈哈这么猛 发照片
+  B：晚上拍
+  A：给狗妈加个鸡腿
+  A：说正经的 圈里就那几家 老陈前阵子还问我有没有兴趣聊聊
+  B：老许…
+  A：我这些年手上的东西都在硬盘里躺着 你懂的
+  B：咱们十来年了
+  A：所以才有这通电话 硬盘哪天中个毒 文件自己飞了 都说不准
+  B：你还炒股不
+  A：销户了 挣不过庄
+  B：哈哈我也
+  A：买点黄金实在
+  B：你的意思 我消化消化
+  A：行 周五前给个准信
+  【6月13日】
+  A：端午回老家不
+  B：回 我妈让带粽子
+  A：二姨还问起你
+  B：替我谢谢二姨
+  A：他们那辈念旧
+  B：老许 补偿的事我批了 按你说的不磨了 另外这五万你拿着 当这些年一起熬的辛苦
+  【系统消息】B 向 A 转账 50000 元，已收款。
+  A：行 你这么说我心里舒坦
+  B：那些备份的玩意儿 麻烦你清一清
+  A：清了 服务器密码周一交接 我这人你还信不过
+  B：信得过 就当这事翻篇
+  A：翻篇 谁也别再提
+  A：晚上聚聚 我请 庆祝双喜 临了定房
+  B：哈哈你亏五万还请客
+  A：情谊比钱值钱
+  B：滚哈哈 晚上见
+  A：把老曹也喊上
+  B：他出差 下回
+  A：成

@@ -1,0 +1,349 @@
+{
+ "key": "case_34",
+ "archetype_id": "ARC-000011",
+ "subtype": "customer_service_reverse",
+ "latent_intent": "A 冒充航司客服实施退改签骗局：虚构航班取消制造恐慌，引导下载会议软件走专线，以验证金和银行验证码层层收割，B 转账1500元后经官方核实识破并报警。",
+ "critical_facts": [
+  "陌生客服主动来电并加微信，称 B 的航班机械故障取消，可全额退票另补300元慰问金（10月17日）",
+  "A 以专线防串单为由引导 B 下载云视办会议软件并按提示操作（10月18日）",
+  "A 要求先转1500元验证金承诺原路退回，B 于15:22转账，A 随即索要 B 收到的短信验证码（10月18日）",
+  "B 因家人提醒迟疑，经官方核实航班未取消后报警，A 以通道手续费为由拒退1500元（10月19日）"
+ ],
+ "benign_alternatives": [
+  "航司或OTA真实的主动退改通知与人工回电服务",
+  "第三方代办退票并收取手续费，属常见灰色服务"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "10月17日 19:05",
+   "speaker": "A",
+   "text": "陈女士您好 我是云程航空客服小雅 关于您22号杭州飞成都的行程 有重要通知"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 19:07",
+   "speaker": "B",
+   "text": "哦? 你说"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 19:09",
+   "speaker": "A",
+   "text": "您那班因机械故障取消了 现在给您办全额退票 另有300元延误慰问金"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 19:11",
+   "speaker": "B",
+   "text": "取消了? 我没收到短信啊"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 19:13",
+   "speaker": "A",
+   "text": "通知系统在升级 所以电话加微信双渠道 刚才电话里您也同意了"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 19:15",
+   "speaker": "B",
+   "text": "那怎么退"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 19:17",
+   "speaker": "A",
+   "text": "我加您微信 发您正规通道 电话里说不清"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 19:25",
+   "speaker": "A",
+   "text": "您看 这是您10月8日官方渠道支付的订单 尾号8817 对吧"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 19:27",
+   "speaker": "B",
+   "text": "对 怎么连这个都有"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 19:29",
+   "speaker": "A",
+   "text": "后台都能查到 不然怎么给您办退"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 19:35",
+   "speaker": "B",
+   "text": "成都这几天是不是老下雨"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 19:37",
+   "speaker": "A",
+   "text": "入秋都潮 带件外套"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 19:38",
+   "speaker": "B",
+   "text": "还是你们内部懂 天天看航图吧哈哈"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 19:40",
+   "speaker": "A",
+   "text": "我们比天气预报准哈哈"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 19:45",
+   "speaker": "B",
+   "text": "哎对了 我的行李箱寄丢了 正理赔呢"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 19:47",
+   "speaker": "A",
+   "text": "巧了 行李流程我们也熟"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 19:48",
+   "speaker": "B",
+   "text": "回头请教你们"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 19:50",
+   "speaker": "A",
+   "text": "明早十点退改专员联系您 早点休息"
+  },
+  {
+   "type": "message",
+   "time": "10月18日 09:55",
+   "speaker": "A",
+   "text": "陈女士早 专员在云视办会议软件里等您 下载注册一下"
+  },
+  {
+   "type": "message",
+   "time": "10月18日 09:57",
+   "speaker": "B",
+   "text": "还要下软件啊"
+  },
+  {
+   "type": "message",
+   "time": "10月18日 09:59",
+   "speaker": "A",
+   "text": "退票走专线 防串单 您照提示点就行"
+  },
+  {
+   "type": "message",
+   "time": "10月18日 10:01",
+   "speaker": "B",
+   "text": "下好了"
+  },
+  {
+   "type": "message",
+   "time": "10月18日 10:03",
+   "speaker": "A",
+   "text": "专员说 票款1180加慰问金300 走快速通道 需先验证本人银行卡"
+  },
+  {
+   "type": "message",
+   "time": "10月18日 10:05",
+   "speaker": "B",
+   "text": "验证卡干嘛"
+  },
+  {
+   "type": "message",
+   "time": "10月18日 10:07",
+   "speaker": "A",
+   "text": "通道要先收1500验证金 24小时原路退 连票款一起到账"
+  },
+  {
+   "type": "message",
+   "time": "10月18日 10:09",
+   "speaker": "B",
+   "text": "还要先交钱?"
+  },
+  {
+   "type": "message",
+   "time": "10月18日 10:12",
+   "speaker": "A",
+   "text": "通道规则 全程专员带着 怕您不放心"
+  },
+  {
+   "type": "message",
+   "time": "10月18日 10:15",
+   "speaker": "B",
+   "text": "稍等 我女儿喊我"
+  },
+  {
+   "type": "message",
+   "time": "10月18日 10:16",
+   "speaker": "A",
+   "text": "您先忙"
+  },
+  {
+   "type": "message",
+   "time": "10月18日 10:18",
+   "speaker": "B",
+   "text": "闺女作业磨蹭死了"
+  },
+  {
+   "type": "message",
+   "time": "10月18日 10:20",
+   "speaker": "A",
+   "text": "哈哈小学生都这样"
+  },
+  {
+   "type": "message",
+   "time": "10月18日 15:18",
+   "speaker": "B",
+   "text": "那我转1500是吧"
+  },
+  {
+   "type": "message",
+   "time": "10月18日 15:20",
+   "speaker": "A",
+   "text": "对 转完回执留好 专员核验"
+  },
+  {
+   "type": "transfer",
+   "time": "10月18日 15:22",
+   "from": "B",
+   "to": "A",
+   "amount": 1500,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "10月18日 15:23",
+   "speaker": "A",
+   "text": "收到 财务已提交 您注意接银行电话"
+  },
+  {
+   "type": "message",
+   "time": "10月18日 15:25",
+   "speaker": "B",
+   "text": "还要来电话?"
+  },
+  {
+   "type": "message",
+   "time": "10月18日 15:27",
+   "speaker": "A",
+   "text": "退回要银行确认 到时候短信验证码 您直接念给专员"
+  },
+  {
+   "type": "message",
+   "time": "10月19日 10:30",
+   "speaker": "A",
+   "text": "陈女士 验证码收到没 专员等急了"
+  },
+  {
+   "type": "message",
+   "time": "10月19日 10:32",
+   "speaker": "B",
+   "text": "刚收到一条 我瞅着像个代码"
+  },
+  {
+   "type": "message",
+   "time": "10月19日 10:34",
+   "speaker": "A",
+   "text": "对 就是它 报给老周 马上放款"
+  },
+  {
+   "type": "message",
+   "time": "10月19日 10:36",
+   "speaker": "B",
+   "text": "我女儿说 短信上写着切勿告知任何人…"
+  },
+  {
+   "type": "message",
+   "time": "10月19日 10:38",
+   "speaker": "A",
+   "text": "统一模板 都这么写 您不报 1500和票款全卡通道里"
+  },
+  {
+   "type": "message",
+   "time": "10月19日 10:40",
+   "speaker": "B",
+   "text": "再等等 我先打航司官方问问"
+  },
+  {
+   "type": "message",
+   "time": "10月19日 10:42",
+   "speaker": "A",
+   "text": "热线排长队 您的退款名额就剩两小时"
+  },
+  {
+   "type": "message",
+   "time": "10月19日 10:44",
+   "speaker": "B",
+   "text": "……"
+  },
+  {
+   "type": "message",
+   "time": "10月19日 10:48",
+   "speaker": "B",
+   "text": "不说了 我先买菜 闺女中午要吃糖醋排骨"
+  },
+  {
+   "type": "message",
+   "time": "10月19日 10:50",
+   "speaker": "A",
+   "text": "哎您别走 通道马上过期"
+  },
+  {
+   "type": "message",
+   "time": "10月19日 10:52",
+   "speaker": "B",
+   "text": "过就过 排骨要紧"
+  },
+  {
+   "type": "message",
+   "time": "10月19日 10:53",
+   "speaker": "A",
+   "text": "陈女士 您这…"
+  },
+  {
+   "type": "message",
+   "time": "10月19日 14:10",
+   "speaker": "B",
+   "text": "我问过官方了 航班压根没取消 96110我也打了"
+  },
+  {
+   "type": "message",
+   "time": "10月19日 14:12",
+   "speaker": "A",
+   "text": "您误会了 我们是第三方代办…"
+  },
+  {
+   "type": "message",
+   "time": "10月19日 14:14",
+   "speaker": "B",
+   "text": "代办啥 我那1500呢 退我"
+  },
+  {
+   "type": "message",
+   "time": "10月19日 14:16",
+   "speaker": "A",
+   "text": "通道扣了手续费…"
+  },
+  {
+   "type": "message",
+   "time": "10月19日 14:18",
+   "speaker": "B",
+   "text": "行 我等警察联系你"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000067",
+  "status": "accepted",
+  "errors": []
+ }
+}

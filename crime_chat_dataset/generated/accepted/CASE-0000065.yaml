@@ -1,0 +1,149 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000065
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000106
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: theft_robbery_property_crime
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 库管 A 利用盘点时间差、西门监控损坏与换班便利，与外部买家 B 约定按件计价倒卖库存小家电，B 先押金后补款，属内外勾结的监守自盗。
+  critical_evidence:
+  - A 明确出货窗口：周三上午全库盘点、账数须在周二夜前平，交易卡点安排在盘点前（4月14日）
+  - A 选定西门交接，理由是该处探头损坏未修、当天仅其一人盯岗（4月14日）
+  - 按件计价35元/件、共1100件计38500元，B 押金5000元，清点后05:01转账余款33500元（4月15-16日）
+  - 装车限定四点前完事以免接班人员撞见；次日盘点出现短缺，A 称在损耗里匀平（4月16日）
+  benign_alternatives:
+  - 正常的内部尾货处理或库存调拨，价格数量吻合且有押金与结算
+  - 库管帮朋友按内部价拿货，盘点差异属正常损耗
+
+attributes:
+  duration_days: 3
+  turn_count: 75
+  approximate_tokens_estimate: 1465
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: insider_stocktip_theft
+  risk: 2
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0001
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:d058dad1a1b1ca95038181497302bc97effb6c09511c6c0f90e465f870b83d69
+pipeline_status: accepted
+title: theft_robbery_property_crime/insider_stocktip_theft
+conversation: |-
+  【4月14日】
+  B：蔡哥 库里那批货 还能动不
+  A：能动 就看赶不赶趟
+  B：啥意思
+  A：周三上午全库盘点 盘点前 账上的数得平
+  B：那就周二夜里前弄完
+  A：对 过了点就动不了
+  B：货从哪出方便
+  A：西门 那排探头去年坏了一直没修 报修单还压着
+  B：稳不稳
+  A：西门周三就我盯岗 老吴的班我给换好了
+  B：蔡哥办事真周全
+  B：你腰咋样 上回不是说贴膏药嘛
+  A：老毛病 阴天就酸
+  B：少搬重的 让小年轻干
+  A：库里就我一个老的 都得我来
+  B：那你多注意身体
+  B：咋个结法
+  A：按件 一件三十五 这批是新机型
+  B：行 三十五就三十五
+  A：数当场点 你先押五千 余的清完给
+  B：成 明天转你
+  B：哦对了 你家丫头中考咋样
+  A：稳了 区重点铁定
+  B：厉害 回头得贺一贺
+  A：贺啥 请我吃碗牛肉面就行
+  B：哈哈小气
+  【4月15日】
+  B：蔡哥 押金转你了 五千 查收
+  A：收到 车安排哪天
+  B：就明天 周二 后半夜两点
+  A：行 品类报我 我按箱归拢
+  B：吹风机800 加湿器300 剃须刀那批不要
+  A：剃须刀在二楼东库 拿着费劲 不弄它
+  B：800加300 共1100件
+  A：对 一件三十五 合计38500
+  B：账齐 余款当场清
+  B：后半夜那顿我安排 烧烤还是麻辣烫
+  A：包子豆浆吧 凌晨吃烧烤受不住
+  B：行 你想得周到
+  A：干仓库的 胃都熬坏了
+  B：路上不会有啥岔子吧
+  A：后半夜的路上你放心 车到直接进西门
+  B：行 都听你安排
+  A：装车麻利点 四点前必须完事 接班的一来就露馅
+  B：放心 来的都是熟手
+  A：箱子上的唛别撕 到时候按件点数
+  B：懂
+  B：明天有雨不 我看预报
+  A：后天才下 明晚没事
+  B：你比预报台准
+  A：库房顶漏没漏我都知道哈哈
+  B：哈哈那倒是
+  【4月16日】
+  A：齐活 1100件一件不少
+  B：牛 累坏了吧
+  A：老腰快断了 快转钱
+  B：这就转 38500减五千押金 余33500
+  【系统消息】B 向 A 转账 33500 元，已收款。
+  A：收到 一分不差 跟你做事舒坦
+  B：彼此彼此
+  B：这批走得快 下月还有不
+  A：库里还压着一万台加湿器 看上面调不调价
+  B：今早你们不是盘点 就虚惊一场?
+  A：正盘着呢 我在库房陪着 估计中午才完
+  B：少了这么多不查啊
+  A：损耗里能匀一部分 台面上过得去
+  B：今天还这么冷 都四月了
+  A：倒春寒 过几天就好
+  B：你上回说的海边度假呢
+  A：七月 涠洲岛 带老小一大家
+  B：可以啊 走起
+  A：先攒钱吧哈哈
+  A：下一批等我跟采购对了再喊你
+  B：老价三十五?
+  A：看品 新品可能四十二
+  B：也行 有货就喊 多少都要
+  A：你这吞量 我再给你磨两块
+  B：哈哈砍王是你 就这么定

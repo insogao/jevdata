@@ -1,0 +1,481 @@
+{
+ "key": "case_19",
+ "archetype_id": "ARC-000106",
+ "subtype": "insider_stocktip_theft",
+ "latent_intent": "库管 A 利用盘点时间差、西门监控损坏与换班便利，与外部买家 B 约定按件计价倒卖库存小家电，B 先押金后补款，属内外勾结的监守自盗。",
+ "critical_facts": [
+  "A 明确出货窗口：周三上午全库盘点、账数须在周二夜前平，交易卡点安排在盘点前（4月14日）",
+  "A 选定西门交接，理由是该处探头损坏未修、当天仅其一人盯岗（4月14日）",
+  "按件计价35元/件、共1100件计38500元，B 押金5000元，清点后05:01转账余款33500元（4月15-16日）",
+  "装车限定四点前完事以免接班人员撞见；次日盘点出现短缺，A 称在损耗里匀平（4月16日）"
+ ],
+ "benign_alternatives": [
+  "正常的内部尾货处理或库存调拨，价格数量吻合且有押金与结算",
+  "库管帮朋友按内部价拿货，盘点差异属正常损耗"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "4月14日 09:30",
+   "speaker": "B",
+   "text": "蔡哥 库里那批货 还能动不"
+  },
+  {
+   "type": "message",
+   "time": "4月14日 09:32",
+   "speaker": "A",
+   "text": "能动 就看赶不赶趟"
+  },
+  {
+   "type": "message",
+   "time": "4月14日 09:34",
+   "speaker": "B",
+   "text": "啥意思"
+  },
+  {
+   "type": "message",
+   "time": "4月14日 09:36",
+   "speaker": "A",
+   "text": "周三上午全库盘点 盘点前 账上的数得平"
+  },
+  {
+   "type": "message",
+   "time": "4月14日 09:38",
+   "speaker": "B",
+   "text": "那就周二夜里前弄完"
+  },
+  {
+   "type": "message",
+   "time": "4月14日 09:40",
+   "speaker": "A",
+   "text": "对 过了点就动不了"
+  },
+  {
+   "type": "message",
+   "time": "4月14日 09:44",
+   "speaker": "B",
+   "text": "货从哪出方便"
+  },
+  {
+   "type": "message",
+   "time": "4月14日 09:46",
+   "speaker": "A",
+   "text": "西门 那排探头去年坏了一直没修 报修单还压着"
+  },
+  {
+   "type": "message",
+   "time": "4月14日 09:48",
+   "speaker": "B",
+   "text": "稳不稳"
+  },
+  {
+   "type": "message",
+   "time": "4月14日 09:50",
+   "speaker": "A",
+   "text": "西门周三就我盯岗 老吴的班我给换好了"
+  },
+  {
+   "type": "message",
+   "time": "4月14日 09:52",
+   "speaker": "B",
+   "text": "蔡哥办事真周全"
+  },
+  {
+   "type": "message",
+   "time": "4月14日 09:58",
+   "speaker": "B",
+   "text": "你腰咋样 上回不是说贴膏药嘛"
+  },
+  {
+   "type": "message",
+   "time": "4月14日 09:59",
+   "speaker": "A",
+   "text": "老毛病 阴天就酸"
+  },
+  {
+   "type": "message",
+   "time": "4月14日 10:01",
+   "speaker": "B",
+   "text": "少搬重的 让小年轻干"
+  },
+  {
+   "type": "message",
+   "time": "4月14日 10:02",
+   "speaker": "A",
+   "text": "库里就我一个老的 都得我来"
+  },
+  {
+   "type": "message",
+   "time": "4月14日 10:04",
+   "speaker": "B",
+   "text": "那你多注意身体"
+  },
+  {
+   "type": "message",
+   "time": "4月14日 10:08",
+   "speaker": "B",
+   "text": "咋个结法"
+  },
+  {
+   "type": "message",
+   "time": "4月14日 10:10",
+   "speaker": "A",
+   "text": "按件 一件三十五 这批是新机型"
+  },
+  {
+   "type": "message",
+   "time": "4月14日 10:12",
+   "speaker": "B",
+   "text": "行 三十五就三十五"
+  },
+  {
+   "type": "message",
+   "time": "4月14日 10:14",
+   "speaker": "A",
+   "text": "数当场点 你先押五千 余的清完给"
+  },
+  {
+   "type": "message",
+   "time": "4月14日 10:16",
+   "speaker": "B",
+   "text": "成 明天转你"
+  },
+  {
+   "type": "message",
+   "time": "4月14日 10:22",
+   "speaker": "B",
+   "text": "哦对了 你家丫头中考咋样"
+  },
+  {
+   "type": "message",
+   "time": "4月14日 10:24",
+   "speaker": "A",
+   "text": "稳了 区重点铁定"
+  },
+  {
+   "type": "message",
+   "time": "4月14日 10:25",
+   "speaker": "B",
+   "text": "厉害 回头得贺一贺"
+  },
+  {
+   "type": "message",
+   "time": "4月14日 10:27",
+   "speaker": "A",
+   "text": "贺啥 请我吃碗牛肉面就行"
+  },
+  {
+   "type": "message",
+   "time": "4月14日 10:29",
+   "speaker": "B",
+   "text": "哈哈小气"
+  },
+  {
+   "type": "message",
+   "time": "4月15日 11:10",
+   "speaker": "B",
+   "text": "蔡哥 押金转你了 五千 查收"
+  },
+  {
+   "type": "message",
+   "time": "4月15日 11:12",
+   "speaker": "A",
+   "text": "收到 车安排哪天"
+  },
+  {
+   "type": "message",
+   "time": "4月15日 11:14",
+   "speaker": "B",
+   "text": "就明天 周二 后半夜两点"
+  },
+  {
+   "type": "message",
+   "time": "4月15日 11:16",
+   "speaker": "A",
+   "text": "行 品类报我 我按箱归拢"
+  },
+  {
+   "type": "message",
+   "time": "4月15日 11:18",
+   "speaker": "B",
+   "text": "吹风机800 加湿器300 剃须刀那批不要"
+  },
+  {
+   "type": "message",
+   "time": "4月15日 11:20",
+   "speaker": "A",
+   "text": "剃须刀在二楼东库 拿着费劲 不弄它"
+  },
+  {
+   "type": "message",
+   "time": "4月15日 11:22",
+   "speaker": "B",
+   "text": "800加300 共1100件"
+  },
+  {
+   "type": "message",
+   "time": "4月15日 11:24",
+   "speaker": "A",
+   "text": "对 一件三十五 合计38500"
+  },
+  {
+   "type": "message",
+   "time": "4月15日 11:26",
+   "speaker": "B",
+   "text": "账齐 余款当场清"
+  },
+  {
+   "type": "message",
+   "time": "4月15日 11:32",
+   "speaker": "B",
+   "text": "后半夜那顿我安排 烧烤还是麻辣烫"
+  },
+  {
+   "type": "message",
+   "time": "4月15日 11:34",
+   "speaker": "A",
+   "text": "包子豆浆吧 凌晨吃烧烤受不住"
+  },
+  {
+   "type": "message",
+   "time": "4月15日 11:35",
+   "speaker": "B",
+   "text": "行 你想得周到"
+  },
+  {
+   "type": "message",
+   "time": "4月15日 11:37",
+   "speaker": "A",
+   "text": "干仓库的 胃都熬坏了"
+  },
+  {
+   "type": "message",
+   "time": "4月15日 11:42",
+   "speaker": "B",
+   "text": "路上不会有啥岔子吧"
+  },
+  {
+   "type": "message",
+   "time": "4月15日 11:44",
+   "speaker": "A",
+   "text": "后半夜的路上你放心 车到直接进西门"
+  },
+  {
+   "type": "message",
+   "time": "4月15日 11:46",
+   "speaker": "B",
+   "text": "行 都听你安排"
+  },
+  {
+   "type": "message",
+   "time": "4月15日 11:48",
+   "speaker": "A",
+   "text": "装车麻利点 四点前必须完事 接班的一来就露馅"
+  },
+  {
+   "type": "message",
+   "time": "4月15日 11:50",
+   "speaker": "B",
+   "text": "放心 来的都是熟手"
+  },
+  {
+   "type": "message",
+   "time": "4月15日 11:52",
+   "speaker": "A",
+   "text": "箱子上的唛别撕 到时候按件点数"
+  },
+  {
+   "type": "message",
+   "time": "4月15日 11:53",
+   "speaker": "B",
+   "text": "懂"
+  },
+  {
+   "type": "message",
+   "time": "4月15日 12:00",
+   "speaker": "B",
+   "text": "明天有雨不 我看预报"
+  },
+  {
+   "type": "message",
+   "time": "4月15日 12:02",
+   "speaker": "A",
+   "text": "后天才下 明晚没事"
+  },
+  {
+   "type": "message",
+   "time": "4月15日 12:03",
+   "speaker": "B",
+   "text": "你比预报台准"
+  },
+  {
+   "type": "message",
+   "time": "4月15日 12:05",
+   "speaker": "A",
+   "text": "库房顶漏没漏我都知道哈哈"
+  },
+  {
+   "type": "message",
+   "time": "4月15日 12:07",
+   "speaker": "B",
+   "text": "哈哈那倒是"
+  },
+  {
+   "type": "message",
+   "time": "4月16日 04:55",
+   "speaker": "A",
+   "text": "齐活 1100件一件不少"
+  },
+  {
+   "type": "message",
+   "time": "4月16日 04:56",
+   "speaker": "B",
+   "text": "牛 累坏了吧"
+  },
+  {
+   "type": "message",
+   "time": "4月16日 04:58",
+   "speaker": "A",
+   "text": "老腰快断了 快转钱"
+  },
+  {
+   "type": "message",
+   "time": "4月16日 05:00",
+   "speaker": "B",
+   "text": "这就转 38500减五千押金 余33500"
+  },
+  {
+   "type": "transfer",
+   "time": "4月16日 05:01",
+   "from": "B",
+   "to": "A",
+   "amount": 33500,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "4月16日 05:02",
+   "speaker": "A",
+   "text": "收到 一分不差 跟你做事舒坦"
+  },
+  {
+   "type": "message",
+   "time": "4月16日 05:04",
+   "speaker": "B",
+   "text": "彼此彼此"
+  },
+  {
+   "type": "message",
+   "time": "4月16日 05:06",
+   "speaker": "B",
+   "text": "这批走得快 下月还有不"
+  },
+  {
+   "type": "message",
+   "time": "4月16日 05:08",
+   "speaker": "A",
+   "text": "库里还压着一万台加湿器 看上面调不调价"
+  },
+  {
+   "type": "message",
+   "time": "4月16日 08:30",
+   "speaker": "B",
+   "text": "今早你们不是盘点 就虚惊一场?"
+  },
+  {
+   "type": "message",
+   "time": "4月16日 08:32",
+   "speaker": "A",
+   "text": "正盘着呢 我在库房陪着 估计中午才完"
+  },
+  {
+   "type": "message",
+   "time": "4月16日 08:34",
+   "speaker": "B",
+   "text": "少了这么多不查啊"
+  },
+  {
+   "type": "message",
+   "time": "4月16日 08:36",
+   "speaker": "A",
+   "text": "损耗里能匀一部分 台面上过得去"
+  },
+  {
+   "type": "message",
+   "time": "4月16日 08:42",
+   "speaker": "B",
+   "text": "今天还这么冷 都四月了"
+  },
+  {
+   "type": "message",
+   "time": "4月16日 08:44",
+   "speaker": "A",
+   "text": "倒春寒 过几天就好"
+  },
+  {
+   "type": "message",
+   "time": "4月16日 08:46",
+   "speaker": "B",
+   "text": "你上回说的海边度假呢"
+  },
+  {
+   "type": "message",
+   "time": "4月16日 08:48",
+   "speaker": "A",
+   "text": "七月 涠洲岛 带老小一大家"
+  },
+  {
+   "type": "message",
+   "time": "4月16日 08:50",
+   "speaker": "B",
+   "text": "可以啊 走起"
+  },
+  {
+   "type": "message",
+   "time": "4月16日 08:52",
+   "speaker": "A",
+   "text": "先攒钱吧哈哈"
+  },
+  {
+   "type": "message",
+   "time": "4月16日 09:00",
+   "speaker": "A",
+   "text": "下一批等我跟采购对了再喊你"
+  },
+  {
+   "type": "message",
+   "time": "4月16日 09:02",
+   "speaker": "B",
+   "text": "老价三十五?"
+  },
+  {
+   "type": "message",
+   "time": "4月16日 09:04",
+   "speaker": "A",
+   "text": "看品 新品可能四十二"
+  },
+  {
+   "type": "message",
+   "time": "4月16日 09:06",
+   "speaker": "B",
+   "text": "也行 有货就喊 多少都要"
+  },
+  {
+   "type": "message",
+   "time": "4月16日 09:08",
+   "speaker": "A",
+   "text": "你这吞量 我再给你磨两块"
+  },
+  {
+   "type": "message",
+   "time": "4月16日 09:10",
+   "speaker": "B",
+   "text": "哈哈砍王是你 就这么定"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000065",
+  "status": "accepted",
+  "errors": []
+ }
+}

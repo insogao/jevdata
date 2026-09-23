@@ -1,0 +1,114 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000062
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000017
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A 为在园区项目评审中中标，经人引荐请 B 向评审环节递话，公示当日即支付30000元感谢费并叮嘱保密，属事成付费型的请托酬谢。
+  critical_evidence:
+  - A 经小李引荐结识 B，直言评审环节门道深，请其把关并承诺事成必有谢（9月12日）
+  - 评审前 A 反复追问打点是否稳妥、何时出结果，B 称该做的都做了（9月16日）
+  - 中标公示当日10:24，A 立即向 B 转账30000元心意（9月20日）
+  - A 特别叮嘱这事就咱俩知道，群里千万别提，小李那边也别声张（9月20日）
+  benign_alternatives:
+  - 合法招投标咨询或居间服务，30000元为事后结算的服务费
+  - 商务伙伴间的人情往来与中秋送礼
+
+attributes:
+  duration_days: 3
+  turn_count: 40
+  approximate_tokens_estimate: 828
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: intermediary_payment_after_result
+  risk: 2
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0001
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:4089a63a053c9f7831910b68beac4cd1e1baf8e4fe3f30c3156f4bf56dd4aa3a
+pipeline_status: accepted
+title: bribery_corruption/intermediary_payment_after_result
+conversation: |-
+  【9月12日】
+  A：何总您好 我是东恒设备老郑 小李引荐的
+  B：郑总好 小李提过你
+  A：不瞒您说 园区智能化那个项目 我们盯了小半年
+  B：嗯 单子不小
+  A：听说评审环节门道深 我们光做产品的 怕吃亏
+  B：你这话说得在行
+  A：想请您帮忙把把关 事成必有谢
+  B：话我帮你递到 成不成看缘分
+  A：杭州这几天热得邪乎
+  B：是 秋老虎赖着不走
+  A：您那儿的茶有名 下回讨一杯
+  B：哈哈来嘛 老茶客了
+  A：那结果一出我第一时间向您汇报
+  B：好
+  【9月16日】
+  A：何总 评审是不是这周
+  B：周四开
+  A：咱们这边都打点稳妥了吧 我心里没底
+  B：该做的都做了 你把技术分稳住就行
+  A：明白 商务标我们留了余地
+  B：嗯 别掉链子
+  B：你家孩子今年高考?
+  A：对 刚上大一 在武汉
+  B：挺好 解放了
+  A：解放是解放 就是费钱哈哈
+  A：何总 最早啥时候出结果
+  B：快的话周五公示
+  A：好 我等您信儿
+  【9月20日】
+  A：何总! 公示了 我们第一!
+  B：恭喜 替你高兴
+  A：全亏您费力 这份情我记着
+  B：客气了
+  A：说好的心意您务必收下 不能让您白忙
+  B：……你这人
+  A：一点心意 后面园区二期还指望您
+  【系统消息】A 向 B 转账 30000 元，已收款。
+  B：收到啦 你这人情世故很到位
+  A：应该的 这事就咱俩知道 群里千万别提 小李那边也别声张
+  B：懂 我嘴严
+  A：快中秋了 给您备了盒茶 下午给您寄过去
+  B：你这 太客气了
+  A：一点土产 别推辞

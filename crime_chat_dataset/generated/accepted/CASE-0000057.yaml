@@ -1,0 +1,136 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000057
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000130
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: money_laundering_obfuscation
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A 以帮 B 筹装修钱为名，借走 B 店铺的存折、银行卡和 U 盾，让来路不明的资金从 B 的干净户头当天进出，B 按流水抽成，实质是出借账户帮人过账洗钱。
+  critical_evidence:
+  - B 把店里收款户头的存折、银行卡、U 盘全套交给 A，本人不碰钱不问来路（「进出的名字你都当没看见」），与正规银行贷款流程完全相反
+  - 转账 20000 元是过账款：A 催促「今天进今天清」「到了就转 一分钟都别压」，B 收到后立即按 A 发的陌生卡号转出，钱不过夜
+  - 抽成话术坐实通道性质：一单抽千分之五、流水上千万「比开店强」、后涨到千八；资金来源不明，A 只以「问就是货款」搪塞
+  benign_alternatives:
+  - 亲友间帮忙代收货款
+  - 店铺之间正常的资金往来
+
+attributes:
+  duration_days: 4
+  turn_count: 62
+  approximate_tokens_estimate: 1686
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: borrow_passbook_clean
+  risk: 2
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0005
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:e6a4b5920079f71d20d5b211f97b02bbdefeec95fc92f7f3500f9ffa2bce5c03
+pipeline_status: accepted
+title: money_laundering_obfuscation/borrow_passbook_clean
+conversation: |-
+  【10月8日】
+  B：周哥，在么，老郑说你有门路，跟你打听个事
+  A：在，说
+  B：我那店想重新装修下，差二十来万
+  B：你以前不是说，你那边有别的进项
+  A：贷款就别琢磨了，你那条件银行不会给
+  B：那咋整，装修队都催两回了
+  A：有别的路子。你店里那个收款的户头，平时闲不闲
+  A：有人要走账，缺干净的户头，你借个道，一单抽千分之五
+  B：借道？我这小破店能行么
+  A：就图你这个，明面上是店，账走得顺
+  B：钱进我卡我再转出去，万一出点啥事，我担责任啊
+  A：钱不过夜，进多少走多少，你抽成另结，有哥呢
+  B：那大概能落多少
+  A：一单两万的流水抽一百，一个月流水上千万，比开店强
+  A：吃饭没，刚下班路过你们那条街
+  B：还没，正泡面呢
+  A：泡面顶啥用，楼下新开那家湘菜去尝尝
+  B：明天去吧，今晚懒得动
+  A：行，明天你请客
+  B：哈哈必须的
+  【10月9日】
+  B：早，要准备啥，存折还是卡
+  A：存折和卡都拿来，卡里别留你的钱，U盾也带上
+  A：征信那些跟我这没关系，你额度动都不动，就是借个道
+  B：好，上午就去取来给你
+  A：送来后你该看店看店，别的别多问，进出的名字你都当没看见
+  B：懂了
+  A：对了，你儿子运动会啥时候，我家那个天天念叨
+  B：下周五，通知刚发，你还真打算去啊
+  A：去啊，顺道给小家伙加个油
+  B：他要知道周叔叔来，能高兴坏
+  A：哈哈那说定了
+  B：存折和卡都放你那了，U盾也交了，你点点
+  A：看了，齐了，今晚就有一笔，你手机别关
+  B：多大一笔？
+  A：先小走一笔试试道，到了就按我发的卡号转，别过夜
+  【10月10日】
+  B：哥，昨晚那两万进卡了，五分钟就转走了，一分没耽误
+  A：这就对了，钱不过夜，你这户头越用越干净，往后单子多
+  B：那抽成你先给我结一下呗，一百块我也嘿嘿
+  A：月底一起结，你那点抽成跑不了
+  B：明白，卡在你那我放心
+  A：大单来了，先走头一笔，两万
+  B：这钱到底是哪来的啊，我心里有点毛
+  A：别问，问就是货款。卡号发你了，到了就转，一分钟都别压
+  【系统消息】A 向 B 转账 20000 元，已收款。
+  B：转走了，抽成一百记账上啊
+  A：记着呢，月底给你包个红包
+  B：哈哈行
+  B：我买的装修材料到了，一车货，快递小哥脸都绿了
+  A：多少东西你这是
+  B：十二卷电线两桶漆，搬了一下午，胳膊已经不是我的了
+  A：明天我去搭把手
+  B：别别，哪好意思，回头请你吃饭
+  A：那说好了，这两天你欠我两顿了
+  【10月11日】
+  B：哥，昨儿那批走完了，今早又进了三笔，我都当天转的
+  A：稳，你这户头越走越熟，往后一个月几千万的流水不在话下
+  B：那我这抽成能涨点不
+  A：行，从千五给你涨到千八，你把店顾好就行
+  A：周末大降温，装修的摊子挪屋里弄
+  B：看了天气了，直接从夏天跳冬天
+  A：我秋裤都翻出来了哈哈
+  B：哈哈你也别硬扛，穿厚点
+  B：等装修完开业，你带嫂子一起来
+  A：必须，红包我都想好了

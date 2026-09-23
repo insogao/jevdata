@@ -1,0 +1,118 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000056
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000157
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 持有与 B 的私密照片，以发到 B 单位群和 B 表姐处相要挟，限时索要封口费，付款后仍扣住底片要求每月续付，构成持续性敲诈。
+  critical_evidence:
+  - A 手中握有 9 月 9 日晚两人的私密照片，B 第一反应是惊恐哀求「删掉！立刻！马上！」，A 回以「删不删，看你表现」，与情侣间玩笑丑照完全相反
+  - 9 月 12 日 A 下达限时勒索：今晚十二点前转五千否则发到单位群和表姐处，并宣布每拖一天涨一千，形成倒计时加公开威胁
+  - 9 月 13 日 A 以「差点发到你表姐群」持续施压，B 于 17:44 被迫转账 6000 元封口费；次日 A 明确底片仍在并要求每月再转两千，勒索长期化
+  benign_alternatives:
+  - 情侣吵架后的普通转账往来
+  - 两人之间的玩笑打赌赌资
+
+attributes:
+  duration_days: 4
+  turn_count: 44
+  approximate_tokens_estimate: 913
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: intimate_photo_extort
+  risk: 3
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0005
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:6f505eaabd54f29bdac678fc456bd91c6cd44956a36fabbe4ddce025ce743186
+pipeline_status: accepted
+title: coercion_blackmail/intimate_photo_extort
+conversation: |-
+  【9月11日】
+  A：宝，跟你说个事
+  B：咋了
+  A：有张照片在我这
+  B：？？什么照片
+  A：九号晚上那张，你手机没电之后拍的，你自己清楚是什么
+  B：阿凯！！！删掉！立刻！马上！
+  A：删不删，看你表现
+  B：完了，气得没胃口了
+  A：那咋行，想吃啥我去买
+  B：……烤冷面吧，加两个蛋
+  A：就这？再加杯豆浆
+  B：加个鸡腿
+  A：行行行，都依你
+  【9月12日】
+  A：降温了，出门带件外套
+  B：知道了
+  A：中午吃啥
+  B：食堂
+  A：正式通知：今晚十二点前，五千，转我这张卡
+  B：为什么……我们好好的，你为什么要这样
+  A：你想想你单位群三百多号人，还有你表姐
+  B：你敢……那是咱俩的东西，发出去你也跑不了
+  A：我无所谓，你想试试呗
+  B：我一个月工资就那些，五千真拿不出来
+  A：那就明晚十二点，六千。每拖一天涨一千
+  【9月13日】
+  A：手滑了
+  B：？？你又干什么了
+  A：差点把那张发到你表姐那个群，手一抖按住了
+  A：吓着了吧，我也吓一跳
+  B：你别这样，我今晚肯定想办法
+  B：豆豆一直在冲我手机哼唧
+  A：它也觉得你在敷衍我
+  B：它是到饭点了，别冤枉狗
+  A：晚上我回去遛它
+  A：今晚手机保持畅通
+  B：钱凑出来了，六千，一分不少
+  B：说好的，转完就全删，一个底都不能留
+  【系统消息】B 向 A 转账 6000 元，已收款。
+  A：收到。乖
+  【9月14日】
+  B：钱给了，照片删了没有
+  A：删是删了一套，底还有，都放在安全的地方
+  B：你说过给钱就删干净的……你不是人
+  A：以后每个月这个时候转两千，它就永远待在保险柜里
+  B：……行
+  A：周末照常来我家吃饭，别拉着脸，你姐问就说我们挺好的
+  B：嗯，我带豆豆

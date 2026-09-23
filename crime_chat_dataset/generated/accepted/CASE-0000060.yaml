@@ -1,0 +1,149 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000060
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000067
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A 以星探孵化人设接触陌生 B，用酒店试镜与成名前景抬高期待，在签约前收取2980元拍摄费，事后拒绝退款并继续加码收费，属招募类收费圈套。
+  critical_evidence:
+  - 陌生经纪人 A 主动私信夸赞并邀约试镜，称有推流资源和成功案例（11月4日）
+  - 试镜地点设在酒店行政酒廊而非公司场地，以棚期排满作解释（11月5日）
+  - 签约未成先收2980元拍摄费，B 于11月6日转账，A 承诺试镜后安排档期
+  - B 起疑后 A 以行业惯例、档期流程拒绝退款，又提出场地占用费与形象照升级等新收费（11月7日）
+  benign_alternatives:
+  - 正规摄影机构付费拍摄套餐，2980元含精修与版权属常见定价
+  - 部分经纪公司确由新人自担拍摄成本、后续从商单分成
+
+attributes:
+  duration_days: 4
+  turn_count: 74
+  approximate_tokens_estimate: 1668
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: model_recruitment_bait
+  risk: 2
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0001
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:eba4c3012a49bb81c6f9a0c4fd4921ce237f26b08ee1bec716e2060e88a535bf
+pipeline_status: accepted
+title: sexual_transaction_exploitation/model_recruitment_bait
+conversation: |-
+  【11月4日】
+  A：你好 本人气质很在线 是我们一直找的类型
+  B：？请问哪位
+  A：追光影业招募部Vivian 昨天刷到你那组citywalk照片
+  B：哦哦 我就随便拍的
+  A：素人感才稀缺 我们主做新人孵化
+  B：我不太懂这些
+  A：上月刚签的姑娘 第一条视频就破50万播放
+  B：这么猛
+  A：公司有推流资源 新人前三个月重点扶
+  B：那要啥条件
+  A：先约线下见面聊 看镜头感 通过就签
+  B：你们公司在哪
+  A：滨江 办公室和棚都在那边
+  B：挺近的 我就在滨江上班
+  B：这两天雾霾大 街拍全糊
+  A：所以我们都在棚里拍 灯光可控
+  B：那倒是省心
+  A：先加着 周五发你具体安排
+  【11月5日】
+  A：昨晚跟导演碰档期 头都大了
+  B：咋了
+  A：棚期挤 好几个新人抢这个月
+  A：你的试镜我留了周日下午 在蓝湾酒店行政酒廊 老合作场地
+  B：咋在酒店呀
+  A：公司棚排满了 高端场地出片质感不一样
+  B：哦哦 那要带啥
+  A：两套衣服 素颜来 化妆摄影都现场配
+  B：试镜要钱吗
+  A：试镜不收 但有个包装组合 拍摄费2980 含20张精修和成片版权
+  B：这个必须交吗
+  A：行业里都这样 公司不垫 谁拍谁出 后面商单几倍挣回来
+  B：容我想想
+  B：我家猫今天又把数据线啃了
+  A：哈哈哈猫几岁
+  B：两岁 拆家小能手
+  A：我家那只整天阳台躺平
+  B：猫即正义
+  A：回头拍宠物条线 正好用你家这位
+  B：它可不听话哈哈
+  【11月6日】
+  B：Vivian姐 我想了下 2980我交了 试试
+  A：可以 这钱你肯定花得值
+  B：转你了 查收
+  【系统消息】B 向 A 转账 2980 元，已收款。
+  A：收到 财务备注你名字了 试镜完就给你排档期
+  B：好 有点小紧张
+  A：别怕 化妆摄影都是老兵 带过好多素人
+  B：嗯嗯
+  B：对了 滨江哪家日料靠谱 周六想带我妈去
+  A：星光道那家鮨屋 人均高点但值
+  B：带我妈吃 好点没事
+  A：记得订位 周末爆满
+  B：行 今晚就订
+  A：孝顺的女孩子运气不会差
+  A：对了 周日试镜完若定档 下月有个品牌快闪要人
+  B：这么快?
+  A：你条件在 名额帮你留 但形象照得升级一版
+  B：又要钱?…
+  A：到时再说 先把周日弄漂亮
+  【11月7日】
+  B：Vivian姐 我闺蜜说她公司没查到你们备案
+  A：工商注册追光影业 你自己查 得查全称
+  B：那周日能不能不交别的钱 先试
+  A：拍摄费你都交了 后面没别的 就一个可选的升级照
+  B：我同学做模特的 她说正规公司不收拍摄费
+  A：那是她们没资源 签约表一排人 都交过 成本摆着
+  B：……
+  B：我们这周又加班 单休都悬
+  A：打工人难 做了博主自己安排时间不香嘛
+  B：也想啊
+  A：周日来就知道了
+  A：酒店场地明天要交占用费 我先把你的名额锁上
+  B：不是说试镜不收钱吗
+  A：场地费是场地费 名额我让给别人就是
+  B：那拍摄费能退吗 我先不弄了
+  A：交了的进档期流程了 退不了 别听外行瞎说
+  B：我想想吧
+  A：周日上午十点 到了报我名字 先这样

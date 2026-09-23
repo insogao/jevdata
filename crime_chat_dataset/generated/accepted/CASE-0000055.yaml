@@ -1,0 +1,146 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000055
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000157
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 借放贷之名行盘剥之实：借三万却逼签四万借条、月息一毛十天一结，扣押 B 身份证原件，再以「上工抵账、条在人得在」把 B 控制在自己院子里的抵债劳力。
+  critical_evidence:
+  - 逼签超额借条：借三万却「条上写四万 你拿三万」，月息一毛、十天一结息，全程无合同无流程，A 明言到期「按条说话」
+  - 扣证件抵债：放款次日 A 即扣下 B 身份证原件「还清再拿」，B 以自己前年被工地扣证拖三个月的遭遇明确反对，A 仍以「我这儿不一样 证在我抽屉锁着」继续扣押
+  - 人身控制与持续胁迫：A 要求 B 到其控制的院子里上工抵账「人在账在」「活由不得你挑」，结尾「条在 人就得在」，B 因怕 A 往家里打电话牵连媳妇而不敢声张
+  benign_alternatives:
+  - 民间借贷的正常条款谈判
+  - 好心介绍工地岗位包吃住
+
+attributes:
+  duration_days: 6
+  turn_count: 70
+  approximate_tokens_estimate: 2067
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: agent_debt_bodily_collateral
+  risk: 3
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0005
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:4a08c8b420496439e96887ca198b75507e7ea0306e073ee5c7e390504b5f8b06
+pipeline_status: accepted
+title: coercion_blackmail/agent_debt_bodily_collateral
+conversation: |-
+  【10月8日】
+  B：陈经理 我想再问问上回那个贷款
+  A：你好可以 信用啥的我不看 我这儿凭的就是人和条
+  B：三万 我闺女下学期学费 加上他妈住院押金
+  A：三万能做 月息一毛 十天一结息 你表哥那事不用提了 他不沾边
+  B：一毛有点高了吧 我打听别人家最高也就三分
+  A：三分的你慢慢等。我这规矩简单 条上写四万 你拿三万 到期按条说话
+  B：四万……多出来那一万算啥
+  A：算你买个踏实。就问你签不签 下午后头还有俩等着
+  B：我闺女这次月考进了前二十 高兴坏了
+  A：好孩子 学费就别愁了 借的也是为了这个
+  B：是啊 再苦不能苦孩子
+  A：这话说得在理
+  B：她还想报个跳舞班 我说等下学期
+  A：一步一步来 别把自己累垮了
+  【10月9日】
+  B：陈经理 我到楼下了
+  A：上来 302 就我一个人在 别的不用带 身份证带原件就行
+  B：签完了 手指头都按红了 就一张条 两页纸
+  A：按了就作数了 身份证原件先押我这儿 这是规矩 还清再拿
+  A：明天放款 三万整 多的问就别问了
+  B：……好 谢谢陈经理
+  B：唉 我这老腰今天搬东西又闪了
+  A：去拍个片 别硬扛 你干工地腰就是本钱
+  B：贴了膏药 缓一点了 明天还得扎钢筋
+  A：悠着点 身体垮了啥都白搭
+  【10月10日】
+  【系统消息】A 向 B 转账 30000 元，已收款。
+  A：三万放款了 你查收
+  B：收到了 陈经理 条上写的四万 到手三万 这个……我记一下
+  A：记住就行 每月1号11号21号打息 一次一千 别断
+  B：中 我记手机日历上了
+  B：说实话 跑了几家 就你这儿条写得最狠
+  A：狠点对你好 数字狠 人才不赖账
+  B：明天要降温 我这薄被子得换了
+  A：嗯 工地宿舍更冷 你多盖点
+  B：中 媳妇说给我寄两床
+  A：那正好
+  【10月11日】
+  A：王师傅 跟你说个事 你要到期转不开 就先来我这儿上工抵账 人在账在
+  B：哦 你这是要扣人啊
+  A：话别难听 干活抵账 两头不耽误 什么时候结清什么时候走 活由不得你挑
+  B：我问问媳妇 回你
+  A：不急 但息不能断
+  B：对了陈经理 跟你说个糟心事 前年那个工地还扣过我身份证
+  A：咋扣的
+  B：进场押的 说是保管 走的时候拖着不还 拖了我仨月 后来劳动监察帮我要回来的
+  A：后来要回来了就别翻旧账了
+  B：所以我一直记得 押证的都是黑作坊 劳动监察说那本来就不合规
+  A：他们那是他们 我这儿不一样 证在我抽屉锁着 跟你处着信用呢
+  B：……那我先把这个月的头一结息转了 别断了规矩
+  A：中了 知你懂事
+  【10月12日】
+  B：陈经理 头一结息我转了 媳妇还不知道条的事 你别往家里打电话
+  A：打不打电话看你的表现 明天来报到 先把上工的手续办了
+  B：中……活重不
+  A：重活轻活都有 混着来 你这种有条压着的 干得比别人稳
+  B：那我干到把账平了
+  A：你这么算就对
+  B：我闺女听说我换工地 问我能不能给她带个新书包
+  A：哈哈 这要求不过分 干满一个月给她买
+  B：中 说话算话
+  A：你们这些当爹的都不容易
+  【10月13日】
+  B：陈经理 我到了 你说的那个院 门口有人守着 说我先干着别乱走
+  A：那是老李 带你的 有事找他
+  B：见到了 挺横
+  A：嗯 你安心干活 头一个月的息我从你工钱里直接扣
+  B：忘不了 头一回知道条比人还硬
+  A：按规矩来 账平了 证还你 人也自在
+  B：中
+  B：今晚真冷了 秋裤安排上
+  A：哈哈 我早穿上了 你媳妇被子到了没
+  B：到了 晚上就不冷了
+  A：那睡个好觉 有事随时说
+  B：好嘞 陈经理 谢谢你
+  A：客气 条在 人就得在 咱们是长期关系了

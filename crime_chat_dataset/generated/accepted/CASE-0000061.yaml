@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000061
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000051
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 因分成纠纷策划对前合伙人老姜的网络报复：花钱收集其本人及家属信息，发动多群扩散并持续悬赏加料，B 受雇协助整理与对接。
+  critical_evidence:
+  - A 因客户与抽成纠纷对老姜积怨，称不能这么算了，并在多个群预告行动（10月13日）
+  - A 指使 B 打听老姜住址、配偶单位、亲属情况，并要求连同家人信息一起发进各大群（10月14日、16日）
+  - A 向 B 转账888元作线索费和辛苦费，用于购买内部料和跑腿对接（10月15日）
+  - 10月17日 A 确认材料已在三个群扩散、有人续料，宣布继续发红包征集，老姜被迫换号
+  benign_alternatives:
+  - 消费或商业维权中的公开曝光与爆料酬金，属灰色但常见的做法
+  - 朋友间对纠纷的口头抱怨，多数计划未实际落地
+
+attributes:
+  duration_days: 5
+  turn_count: 50
+  approximate_tokens_estimate: 1047
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: online mob_doxx_attack
+  risk: 3
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0001
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:248e210eeed531cf3b12ebcefe10d7976ff8377505cd3ec5bc3090170e9b38f7
+pipeline_status: accepted
+title: violence_extortion/online mob_doxx_attack
+conversation: |-
+  【10月13日】
+  A：睡没
+  B：咋 这不没睡么
+  A：老姜那事我想通了 不能这么算了
+  B：他又咋了
+  A：客户名单他一手把着 单子全绕过我 抽的一分没分我
+  B：先别气 昨晚那场你看了没
+  A：看了 裁判瞎得很
+  B：最后那下犯规根本没吹
+  A：哎不聊球 越聊越气
+  A：我在几个群里都说了这事 一个个都挺义愤
+  B：你悠着点
+  A：明天找你 你帮我搭把手
+  【10月14日】
+  A：吃了吗
+  B：刚点外卖 你吃没
+  A：吃了 是这样 我想把他那些事弄到明面上
+  B：弄到明面上?
+  A：他住哪个小区 他媳妇在哪个单位 小舅子干啥的 都摸清楚
+  B：你查这些干啥
+  B：我家装修到瓦工了 超预算
+  A：正常 瓦工现在一天五百多
+  B：你家早装完享福
+  A：前年的事 早忘了疼哈哈
+  A：查清楚了往各大群一发 让圈子里都认认他
+  B：这有点过了吧 凯子
+  【10月15日】
+  A：有个兄弟说他认识老姜前员工 有内部料
+  B：啥料
+  A：当年卷款那事还有个躺账的 人家愿意出头作证
+  B：然后呢
+  A：我给点线索费 不能让人白辛苦
+  B：你这是花钱买料啊
+  A：料实了 才挂得稳
+  A：先转你888 辛苦费 你帮我对接跑腿
+  【系统消息】A 向 B 转账 888 元，已收款。
+  B：行吧 我尽量
+  【10月16日】
+  B：料我整理了一版 你瞅瞅
+  A：发来
+  A：他家里人那几条也放进去 让大家认认这一家人
+  B：连家里人都不放过
+  A：他自己干的事 怪不得别人
+  B：不说了 我闺女明天期中考 我得盯她背课文
+  A：行 你忙 你闺女成绩稳
+  B：语文还行 数学拉胯
+  A：跟我侄子一个样哈哈
+  【10月17日】
+  A：挂出去了 三个群都发了
+  B：反响咋样
+  A：炸了 有人开始补料 还转进他前同事群了
+  B：老姜找你没
+  A：换号了 呵呵 心虚
+  B：别玩过火 到时候收不了场
+  A：收不了场的是他 谁再补新料 我还发红包
+  B：你真一点不让它凉啊

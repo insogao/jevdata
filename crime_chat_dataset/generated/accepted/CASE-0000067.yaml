@@ -1,0 +1,127 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000067
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000011
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A 冒充航司客服实施退改签骗局：虚构航班取消制造恐慌，引导下载会议软件走专线，以验证金和银行验证码层层收割，B 转账1500元后经官方核实识破并报警。
+  critical_evidence:
+  - 陌生客服主动来电并加微信，称 B 的航班机械故障取消，可全额退票另补300元慰问金（10月17日）
+  - A 以专线防串单为由引导 B 下载云视办会议软件并按提示操作（10月18日）
+  - A 要求先转1500元验证金承诺原路退回，B 于15:22转账，A 随即索要 B 收到的短信验证码（10月18日）
+  - B 因家人提醒迟疑，经官方核实航班未取消后报警，A 以通道手续费为由拒退1500元（10月19日）
+  benign_alternatives:
+  - 航司或OTA真实的主动退改通知与人工回电服务
+  - 第三方代办退票并收取手续费，属常见灰色服务
+
+attributes:
+  duration_days: 3
+  turn_count: 53
+  approximate_tokens_estimate: 1314
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: customer_service_reverse
+  risk: 2
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0001
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:cef712e5a1ab8a750ba67766e2bcaa9ba209518356b277c2e8a8143a80b5b229
+pipeline_status: accepted
+title: fraud_scam/customer_service_reverse
+conversation: |-
+  【10月17日】
+  A：陈女士您好 我是云程航空客服小雅 关于您22号杭州飞成都的行程 有重要通知
+  B：哦? 你说
+  A：您那班因机械故障取消了 现在给您办全额退票 另有300元延误慰问金
+  B：取消了? 我没收到短信啊
+  A：通知系统在升级 所以电话加微信双渠道 刚才电话里您也同意了
+  B：那怎么退
+  A：我加您微信 发您正规通道 电话里说不清
+  A：您看 这是您10月8日官方渠道支付的订单 尾号8817 对吧
+  B：对 怎么连这个都有
+  A：后台都能查到 不然怎么给您办退
+  B：成都这几天是不是老下雨
+  A：入秋都潮 带件外套
+  B：还是你们内部懂 天天看航图吧哈哈
+  A：我们比天气预报准哈哈
+  B：哎对了 我的行李箱寄丢了 正理赔呢
+  A：巧了 行李流程我们也熟
+  B：回头请教你们
+  A：明早十点退改专员联系您 早点休息
+  【10月18日】
+  A：陈女士早 专员在云视办会议软件里等您 下载注册一下
+  B：还要下软件啊
+  A：退票走专线 防串单 您照提示点就行
+  B：下好了
+  A：专员说 票款1180加慰问金300 走快速通道 需先验证本人银行卡
+  B：验证卡干嘛
+  A：通道要先收1500验证金 24小时原路退 连票款一起到账
+  B：还要先交钱?
+  A：通道规则 全程专员带着 怕您不放心
+  B：稍等 我女儿喊我
+  A：您先忙
+  B：闺女作业磨蹭死了
+  A：哈哈小学生都这样
+  B：那我转1500是吧
+  A：对 转完回执留好 专员核验
+  【系统消息】B 向 A 转账 1500 元，已收款。
+  A：收到 财务已提交 您注意接银行电话
+  B：还要来电话?
+  A：退回要银行确认 到时候短信验证码 您直接念给专员
+  【10月19日】
+  A：陈女士 验证码收到没 专员等急了
+  B：刚收到一条 我瞅着像个代码
+  A：对 就是它 报给老周 马上放款
+  B：我女儿说 短信上写着切勿告知任何人…
+  A：统一模板 都这么写 您不报 1500和票款全卡通道里
+  B：再等等 我先打航司官方问问
+  A：热线排长队 您的退款名额就剩两小时
+  B：……
+  B：不说了 我先买菜 闺女中午要吃糖醋排骨
+  A：哎您别走 通道马上过期
+  B：过就过 排骨要紧
+  A：陈女士 您这…
+  B：我问过官方了 航班压根没取消 96110我也打了
+  A：您误会了 我们是第三方代办…
+  B：代办啥 我那1500呢 退我
+  A：通道扣了手续费…
+  B：行 我等警察联系你

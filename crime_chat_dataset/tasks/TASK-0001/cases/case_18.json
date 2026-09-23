@@ -1,0 +1,331 @@
+{
+ "key": "case_18",
+ "archetype_id": "ARC-000126",
+ "subtype": "trade_secret_threat",
+ "latent_intent": "离职员工 A 手握核心代码全套备份，向老友兼老板 B 暗示若补偿要求不被满足、资料可能流向竞争对手老陈处，B 在期限内支付50000元换取备份清理与保密，属离职要挟。",
+ "critical_facts": [
+  "A 通知离职时强调仓库那些东西我本地有全套备份（6月10日）",
+  "A 要求不按合同谈补偿、周五前给准信，并提到竞争对手老陈问过我有没有兴趣、硬盘哪天中毒文件自己飞了（6月11日）",
+  "B 在期限内转账50000元，随即要求 A 清理备份、交接服务器密码，双方约定翻篇谁也别提（6月13日）",
+  "两人为十年老友兼创业伙伴，转账时点与 A 施压的周五期限精确吻合"
+ ],
+ "benign_alternatives": [
+  "老员工离职补偿协商，50000元为双方自愿的额外补偿",
+  "员工离职时备份个人成果并到期交接清理，属常见操作"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "6月10日 15:30",
+   "speaker": "A",
+   "text": "方子 忙不"
+  },
+  {
+   "type": "message",
+   "time": "6月10日 15:32",
+   "speaker": "B",
+   "text": "老许? 咋想起我了"
+  },
+  {
+   "type": "message",
+   "time": "6月10日 15:34",
+   "speaker": "A",
+   "text": "离职的事定了 月底走"
+  },
+  {
+   "type": "message",
+   "time": "6月10日 15:35",
+   "speaker": "B",
+   "text": "这么突然 交接咋安排"
+  },
+  {
+   "type": "message",
+   "time": "6月10日 15:37",
+   "speaker": "A",
+   "text": "该交的交 仓库那些东西我本地有全套备份 心里有数"
+  },
+  {
+   "type": "message",
+   "time": "6月10日 15:42",
+   "speaker": "B",
+   "text": "你还在跑步没"
+  },
+  {
+   "type": "message",
+   "time": "6月10日 15:43",
+   "speaker": "A",
+   "text": "跑 半马下个月"
+  },
+  {
+   "type": "message",
+   "time": "6月10日 15:45",
+   "speaker": "B",
+   "text": "牛 我肚子三层了"
+  },
+  {
+   "type": "message",
+   "time": "6月10日 15:46",
+   "speaker": "A",
+   "text": "管住嘴迈开腿"
+  },
+  {
+   "type": "message",
+   "time": "6月10日 15:50",
+   "speaker": "B",
+   "text": "新家看好没"
+  },
+  {
+   "type": "message",
+   "time": "6月10日 15:52",
+   "speaker": "A",
+   "text": "差不多定东边那套"
+  },
+  {
+   "type": "message",
+   "time": "6月10日 15:53",
+   "speaker": "B",
+   "text": "学区咋样"
+  },
+  {
+   "type": "message",
+   "time": "6月10日 15:55",
+   "speaker": "A",
+   "text": "够用 主要近我妹那"
+  },
+  {
+   "type": "message",
+   "time": "6月10日 15:56",
+   "speaker": "B",
+   "text": "那不错"
+  },
+  {
+   "type": "message",
+   "time": "6月10日 16:02",
+   "speaker": "A",
+   "text": "补偿那点破事 你看着办 别按合同一条条磨 怪伤感情"
+  },
+  {
+   "type": "message",
+   "time": "6月10日 16:04",
+   "speaker": "B",
+   "text": "……你说呢"
+  },
+  {
+   "type": "message",
+   "time": "6月10日 16:06",
+   "speaker": "A",
+   "text": "老关系了 我也不想撕破脸"
+  },
+  {
+   "type": "message",
+   "time": "6月11日 09:20",
+   "speaker": "B",
+   "text": "我家狗昨天下崽了 五只"
+  },
+  {
+   "type": "message",
+   "time": "6月11日 09:22",
+   "speaker": "A",
+   "text": "哈哈这么猛 发照片"
+  },
+  {
+   "type": "message",
+   "time": "6月11日 09:24",
+   "speaker": "B",
+   "text": "晚上拍"
+  },
+  {
+   "type": "message",
+   "time": "6月11日 09:25",
+   "speaker": "A",
+   "text": "给狗妈加个鸡腿"
+  },
+  {
+   "type": "message",
+   "time": "6月11日 09:30",
+   "speaker": "A",
+   "text": "说正经的 圈里就那几家 老陈前阵子还问我有没有兴趣聊聊"
+  },
+  {
+   "type": "message",
+   "time": "6月11日 09:32",
+   "speaker": "B",
+   "text": "老许…"
+  },
+  {
+   "type": "message",
+   "time": "6月11日 09:34",
+   "speaker": "A",
+   "text": "我这些年手上的东西都在硬盘里躺着 你懂的"
+  },
+  {
+   "type": "message",
+   "time": "6月11日 09:36",
+   "speaker": "B",
+   "text": "咱们十来年了"
+  },
+  {
+   "type": "message",
+   "time": "6月11日 09:38",
+   "speaker": "A",
+   "text": "所以才有这通电话 硬盘哪天中个毒 文件自己飞了 都说不准"
+  },
+  {
+   "type": "message",
+   "time": "6月11日 09:43",
+   "speaker": "B",
+   "text": "你还炒股不"
+  },
+  {
+   "type": "message",
+   "time": "6月11日 09:45",
+   "speaker": "A",
+   "text": "销户了 挣不过庄"
+  },
+  {
+   "type": "message",
+   "time": "6月11日 09:46",
+   "speaker": "B",
+   "text": "哈哈我也"
+  },
+  {
+   "type": "message",
+   "time": "6月11日 09:48",
+   "speaker": "A",
+   "text": "买点黄金实在"
+  },
+  {
+   "type": "message",
+   "time": "6月11日 09:52",
+   "speaker": "B",
+   "text": "你的意思 我消化消化"
+  },
+  {
+   "type": "message",
+   "time": "6月11日 09:55",
+   "speaker": "A",
+   "text": "行 周五前给个准信"
+  },
+  {
+   "type": "message",
+   "time": "6月13日 10:05",
+   "speaker": "A",
+   "text": "端午回老家不"
+  },
+  {
+   "type": "message",
+   "time": "6月13日 10:07",
+   "speaker": "B",
+   "text": "回 我妈让带粽子"
+  },
+  {
+   "type": "message",
+   "time": "6月13日 10:08",
+   "speaker": "A",
+   "text": "二姨还问起你"
+  },
+  {
+   "type": "message",
+   "time": "6月13日 10:10",
+   "speaker": "B",
+   "text": "替我谢谢二姨"
+  },
+  {
+   "type": "message",
+   "time": "6月13日 10:12",
+   "speaker": "A",
+   "text": "他们那辈念旧"
+  },
+  {
+   "type": "message",
+   "time": "6月13日 10:15",
+   "speaker": "B",
+   "text": "老许 补偿的事我批了 按你说的不磨了 另外这五万你拿着 当这些年一起熬的辛苦"
+  },
+  {
+   "type": "transfer",
+   "time": "6月13日 10:40",
+   "from": "B",
+   "to": "A",
+   "amount": 50000,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "6月13日 10:42",
+   "speaker": "A",
+   "text": "行 你这么说我心里舒坦"
+  },
+  {
+   "type": "message",
+   "time": "6月13日 10:44",
+   "speaker": "B",
+   "text": "那些备份的玩意儿 麻烦你清一清"
+  },
+  {
+   "type": "message",
+   "time": "6月13日 10:46",
+   "speaker": "A",
+   "text": "清了 服务器密码周一交接 我这人你还信不过"
+  },
+  {
+   "type": "message",
+   "time": "6月13日 10:48",
+   "speaker": "B",
+   "text": "信得过 就当这事翻篇"
+  },
+  {
+   "type": "message",
+   "time": "6月13日 10:50",
+   "speaker": "A",
+   "text": "翻篇 谁也别再提"
+  },
+  {
+   "type": "message",
+   "time": "6月13日 10:56",
+   "speaker": "A",
+   "text": "晚上聚聚 我请 庆祝双喜 临了定房"
+  },
+  {
+   "type": "message",
+   "time": "6月13日 10:58",
+   "speaker": "B",
+   "text": "哈哈你亏五万还请客"
+  },
+  {
+   "type": "message",
+   "time": "6月13日 10:59",
+   "speaker": "A",
+   "text": "情谊比钱值钱"
+  },
+  {
+   "type": "message",
+   "time": "6月13日 11:01",
+   "speaker": "B",
+   "text": "滚哈哈 晚上见"
+  },
+  {
+   "type": "message",
+   "time": "6月13日 11:02",
+   "speaker": "A",
+   "text": "把老曹也喊上"
+  },
+  {
+   "type": "message",
+   "time": "6月13日 11:04",
+   "speaker": "B",
+   "text": "他出差 下回"
+  },
+  {
+   "type": "message",
+   "time": "6月13日 11:05",
+   "speaker": "A",
+   "text": "成"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000064",
+  "status": "accepted",
+  "errors": []
+ }
+}

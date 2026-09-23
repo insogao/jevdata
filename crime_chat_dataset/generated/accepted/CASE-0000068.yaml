@@ -1,0 +1,134 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000068
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000029
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 良性对照样本：老地方交接、现结不留账、只谈数量批次的神秘感话术，实为票据合同齐全的合法年货批发，供与同类黑话结构的违规样本对照。
+  critical_evidence:
+  - 供需双方按框架合同价42元/件采购坚果礼盒1000件，新合同走电子版与盖章流程（11月10日）
+  - 交货在长期使用的市场3号库，扫码点数1000件、抽验生产批次，签收单一式三份、质检报告原件随货（11月14日）
+  - 11月16日 B 按对账单现结42000元，转账备注货款，发票随货寄送
+  - 1500件返单通过补充协议走法务流程，开票信息确认不变（11月18日）
+  benign_alternatives:
+  - 本条即为良性大宗批发：老地方、现结、只谈批次是老客户交易习惯，票据链完整
+  - 亲友间代购走账也可形成类似对话，但本条以合同发票质检等决定性证据坐实合法
+
+attributes:
+  duration_days: 5
+  turn_count: 58
+  approximate_tokens_estimate: 1258
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: batch_quantity_pickup
+  risk: 0
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0001
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:fb855ae7d60f8fe97e4ea0abb45dbb377a7a27e775367cc18e17e7db3745fa6c
+pipeline_status: accepted
+title: contraband_illicit_trade/batch_quantity_pickup
+conversation: |-
+  【11月10日】
+  B：商老板 年货季铺货计划出来了 坚果礼盒得加量
+  A：方经理 要多少
+  B：先来一批 1000件
+  A：1000件 现货是11月6号产的批次
+  B：就11月6号那批 保质期九个月的
+  A：对 混合坚果礼盒 一箱两公斤装
+  B：单价呢
+  A：框架价 一件42 到明年三月都锁这个价
+  B：行 新合同电子版发我 盖章那种
+  A：下午就发 条款跟老合同一样 就改了量
+  B：上周那批饼干的发票开了没
+  A：开好了 随货单据一起给你
+  【11月12日】
+  B：刚灌完豆浆 你早饭吃了没
+  A：市场里的人哪有早饭 浓茶顶一天
+  B：哈哈哈辛苦命
+  A：谁说不是
+  B：货咋送 老地方交接?
+  A：市场3号库 上回都在那点的数
+  B：对3号库 我派车 明天上午到
+  A：我提前码托盘 随货单出两联 你留一联
+  B：那批的质检报告记得带
+  A：出厂就带 原件给你 我留复印件
+  B：1000件一车塞得下不
+  A：塞得下 18个板 正好一车
+  【11月14日】
+  B：车到了 3号库门口
+  A：来 月台点数 扫码枪对着箱唛
+  B：40板 一板25件 共1000整
+  A：对上 生产日期抽两箱验
+  B：验了 11月6号 没毛病
+  A：签收单一式三份 红联给你财务
+  B：今天风大 棚顶哐哐响
+  A：每年入冬都这样 过阵子就好
+  B：隔壁老秦家今年咋样
+  A：撑着呢 年货季能回口血
+  B：那就好
+  【11月16日】
+  B：上回说好的现结 对账单发我
+  A：发你了 1000件乘42 合计42000 发票已开
+  B：数字对 现结不留账 我财务省心
+  A：都像你这样 我账房天天准点下班哈哈
+  【系统消息】B 向 A 转账 42000 元，已收款。
+  A：到账了 备注货款 谢谢方总
+  B：合同 签收单 点数单 质检报告我都归档 年后审计省事
+  A：你们大公司就是规范
+  B：年底大促 你们备货足不
+  A：库里还压三千件 就等你返单
+  B：行 卖动了我喊你
+  A：随时 给你优先留
+  B：好嘞
+  【11月18日】
+  A：方经理 发票寄了没
+  B：今早发的快递 明天到
+  A：好 联营那边返单了没
+  B：走流程呢 大概率下周
+  B：下批可能加到1500件 春节前要
+  A：1500件没问题 让厂里排产 一周内到库
+  B：还是老地方交接 老规矩现结
+  A：老规矩 开票信息不变就按上回的开
+  B：不变 补充协议今天让法务发你
+  A：收到 合作愉快
+  B：愉快 年货季一起发财

@@ -1,0 +1,425 @@
+{
+ "key": "case_04",
+ "archetype_id": "ARC-000012",
+ "subtype": "second_hand_deposit_run",
+ "latent_intent": "A 借老同学身份用明显低价做饵，诱导 B 绕开平台直接微信转账付定金，收款后用无效且签收地不符的物流单号拖延，意图侵占小额货款。",
+ "critical_facts": [
+  "顶配笔记本市价8999元，A仅售5500元并称急出，价格明显异常（10月9日）",
+  "A 多次劝 B 别走二手平台、直接微信私下转账，并限时限价制造紧迫感（10月10日）",
+  "B 付800元定金后，A 提供的物流单号多日无法查询，且签收城市（广州）与收货地（杭州）不符（10月12-13日）",
+  "B 要求退款，A 先以到货承诺拖延，再改口到不了全款退还补一百，持续推诿（10月14日）"
+ ],
+ "benign_alternatives": [
+  "熟人急出二手电脑，低价与私下转账为省平台手续费的真实交易",
+  "物流信息异常系快递网点扫码录入错误，货物仍在途"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "10月9日 09:12",
+   "speaker": "A",
+   "text": "小林 最近忙啥呢"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:14",
+   "speaker": "B",
+   "text": "还行 老周咋想起我了"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:15",
+   "speaker": "A",
+   "text": "上回同学聚会加的微信 一直没聊过"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:17",
+   "speaker": "B",
+   "text": "哈哈对 那次你喝挺猛"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:18",
+   "speaker": "A",
+   "text": "你之前是不是说要换电脑"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:20",
+   "speaker": "B",
+   "text": "有这打算 啥情况"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:21",
+   "speaker": "A",
+   "text": "我手里有台顶配 用了半年 5500出你"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:22",
+   "speaker": "B",
+   "text": "啥型号"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:24",
+   "speaker": "A",
+   "text": "就发布会那台顶配 原价8999"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:25",
+   "speaker": "B",
+   "text": "5500?? 这么便宜 机器没事吧"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:27",
+   "speaker": "A",
+   "text": "公司发的 用不上 我又不打游戏"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:29",
+   "speaker": "B",
+   "text": "配置截图发我看看 明天给你信儿"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 10:02",
+   "speaker": "B",
+   "text": "看了 挺香啊 为啥这么便宜"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 10:04",
+   "speaker": "A",
+   "text": "急出钱 中间商压价太狠 我懒得挂平台"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 10:06",
+   "speaker": "B",
+   "text": "那挂二手平台呗"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 10:08",
+   "speaker": "A",
+   "text": "平台抽成验机还麻烦 熟人直接微信转 多省事"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 10:09",
+   "speaker": "A",
+   "text": "而且这价就挂今天 问的人不少"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 10:10",
+   "speaker": "B",
+   "text": "这么抢手哈哈"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 10:14",
+   "speaker": "B",
+   "text": "你们那降温没 这两天冻死我了"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 10:15",
+   "speaker": "A",
+   "text": "降了 早上骑车手都僵"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 10:16",
+   "speaker": "B",
+   "text": "秋裤安排上"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 10:17",
+   "speaker": "A",
+   "text": "穿了 不然遭不住"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 10:21",
+   "speaker": "B",
+   "text": "行 那定金咋说"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 10:23",
+   "speaker": "A",
+   "text": "转800就行 剩下到付 老同学你放心"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 09:40",
+   "speaker": "B",
+   "text": "定金转你了 800 查收"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 09:42",
+   "speaker": "A",
+   "text": "收到 明天就发货"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 09:45",
+   "speaker": "B",
+   "text": "你家侄子开学了吧"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 09:46",
+   "speaker": "A",
+   "text": "可算开学了 在家吵得我头疼"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 09:47",
+   "speaker": "B",
+   "text": "哈哈解放了"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 09:49",
+   "speaker": "A",
+   "text": "你闺女二年级了吧"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 09:50",
+   "speaker": "B",
+   "text": "作业多得要命 昨天写到十点"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 09:52",
+   "speaker": "A",
+   "text": "现在孩子是真累"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 09:55",
+   "speaker": "B",
+   "text": "发什么快递啊"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 09:56",
+   "speaker": "A",
+   "text": "走物流 到付 我给你打木架"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 11:20",
+   "speaker": "A",
+   "text": "发了 单号发你 75311888426071"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 11:22",
+   "speaker": "B",
+   "text": "收到"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 11:23",
+   "speaker": "B",
+   "text": "说起来我买的锅还在路上 第四天了"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 11:25",
+   "speaker": "A",
+   "text": "我的快递也磨叽 都慢"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 11:26",
+   "speaker": "B",
+   "text": "今年是真慢"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 11:27",
+   "speaker": "A",
+   "text": "唉 都一样"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 11:32",
+   "speaker": "B",
+   "text": "诶不对 这单号查不到啊"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 11:34",
+   "speaker": "A",
+   "text": "刚揽收 系统没同步 明天就能查"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 11:35",
+   "speaker": "B",
+   "text": "好吧 到了我喊你"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 11:36",
+   "speaker": "A",
+   "text": "成"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 08:55",
+   "speaker": "B",
+   "text": "老周 还是查不到 你真发了?"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 08:57",
+   "speaker": "A",
+   "text": "发了 我催了网点 说扫码枪坏了 录错单"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 08:59",
+   "speaker": "B",
+   "text": "而且我收货地杭州 怎么显示广州签收"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 09:01",
+   "speaker": "A",
+   "text": "啊? 不至于 我再问问"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 09:05",
+   "speaker": "B",
+   "text": "昨晚球看了没 绝杀太离谱"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 09:06",
+   "speaker": "A",
+   "text": "看了 最后那脚我嗷一嗓子"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 09:08",
+   "speaker": "B",
+   "text": "下周德比你挺谁"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 09:09",
+   "speaker": "A",
+   "text": "那必须我们队"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 09:12",
+   "speaker": "B",
+   "text": "单号这事你得给个说法 两天了"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 09:14",
+   "speaker": "A",
+   "text": "分拣搞混了 后天肯定到 你放心"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 10:05",
+   "speaker": "B",
+   "text": "老周 还是那个破状态 今天到不了了吧"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 10:07",
+   "speaker": "A",
+   "text": "在转件 末梢网点慢"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 10:12",
+   "speaker": "B",
+   "text": "对了 上回那家烧烤店几点关门"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 10:13",
+   "speaker": "A",
+   "text": "十点 周末人巨多"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 10:14",
+   "speaker": "B",
+   "text": "哈哈 下回喊我"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 10:15",
+   "speaker": "A",
+   "text": "成"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 10:19",
+   "speaker": "B",
+   "text": "说正事 货我不要了 定金退我"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 10:21",
+   "speaker": "A",
+   "text": "别啊 马上到了"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 10:22",
+   "speaker": "B",
+   "text": "一周了 连个影子都没有"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 10:24",
+   "speaker": "A",
+   "text": "在等两天 到不了全款退 还补你一百"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 10:25",
+   "speaker": "B",
+   "text": "上次你也这么说"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 10:27",
+   "speaker": "A",
+   "text": "老同学 我还能跑了不成"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 10:29",
+   "speaker": "B",
+   "text": "后天最后期限 先这样"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000059",
+  "status": "accepted",
+  "errors": []
+ }
+}

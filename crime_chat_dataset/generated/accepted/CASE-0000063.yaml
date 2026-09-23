@@ -1,0 +1,135 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000063
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000137
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: other_illicit_coordination
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 坐庄、B 收单的亲友型外围私彩链条：B 向熟人收注，A 每晚按赛果开单赔付并抽两个点退水，通过上分转账汇总结算，形成稳定分工。
+  critical_evidence:
+  - B 每晚询问今晚开啥并将亲友单子报给 A，A 按赛果认赔付（11月3日、4日、8日）
+  - A 固定抽退水两个点并多次强调不得少收，B 介绍新客称以后外围就找你（11月3日、5日）
+  - A 设置单场限额并要求账目每周一清，11月7日 B 向 A 转账20000元上分
+  - 11月8日三张单全中，A 自认赔付六千余并决定放缓节奏
+  benign_alternatives:
+  - 亲戚间对正式联赛与官方彩票的讨论，开啥指正规赛程
+  - 20000元转账为亲友借款或合伙进货款，两个点是代购手续费的玩笑说法
+
+attributes:
+  duration_days: 6
+  turn_count: 58
+  approximate_tokens_estimate: 1016
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: illegal_lottery_chain
+  risk: 3
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0001
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:f503c1c12ed52f47170d0c5540042361fb9c0b1e17ee39dc8006e8e3419e6391
+pipeline_status: accepted
+title: other_illicit_coordination/illegal_lottery_chain
+conversation: |-
+  【11月3日】
+  B：强哥 今晚开啥
+  A：欧联那场 意甲的也有 单子收了多少
+  B：收了几个 老张他们跟着你那场走
+  A：行 截图发我
+  B：十点前给你
+  A：晚饭吃没
+  B：叫了黄焖鸡 你呢
+  A：我妈炖了排骨 明天来吃
+  B：好嘞表哥
+  A：记住 退水还是两个点 别自作主张少收
+  【11月4日】
+  B：哥 结果出了 老张中了
+  A：他那场中了四千二 扣退水给他
+  B：你这边吃多少
+  A：就两个点 咱挣个辛苦钱
+  B：懂
+  B：婶子血压好点没
+  A：稳住了 天天量着
+  B：那就好 让她少吃咸
+  A：嗯 你嫂子天天盯着
+  【11月5日】
+  A：今天量不小 周中就这样?
+  B：新来俩 都说以后外围就找你 熟人带熟人
+  A：行 新面孔你把着点 单场一个人别超五千
+  B：懂 单子碎点没事
+  A：对 咱这买卖靠细水长流
+  B：晚上单子我先攒着
+  B：哥 你上回那鞋哪买的 给个链接
+  A：官方抢的 你抢不着哈哈
+  B：小气
+  A：下回帮你盯着
+  【11月6日】
+  B：哥 今晚净量一万八
+  A：赔付我认 单子留好
+  B：老张想加大 说下把子跟两万
+  A：让他缓两天 大额不接 稳着点
+  B：明白
+  B：明天好像大降温
+  A：是 秋裤我都翻出来了
+  B：哈哈咱俩同步了
+  A：中年人的默契
+  B：哈哈哈
+  【11月7日】
+  B：哥 上分 两万 老张那笔加俩新兄弟的
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  A：收到 你那边账平了吧
+  B：平了 手头压点现金周转
+  A：缺周转跟我说 别拿单子的钱填
+  B：知道分寸
+  A：账每礼拜对一次 老规矩
+  B：对了 老张问今晚开啥
+  A：照旧 十一点出 我等你单子
+  B：好
+  A：两个点不变
+  【11月8日】
+  A：今天结果有点邪 三张单全压中
+  B：赔出去多少
+  A：六千多 破财免灾
+  B：下周还开不
+  A：开 节奏放慢点 稳两周
+  B：行 听你的
+  B：婶子明天复查 我陪她去
+  A：好 你陪着 我赶不回来
+  B：应该的

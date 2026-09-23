@@ -1,0 +1,143 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000059
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000012
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: fraud_scam
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 借老同学身份用明显低价做饵，诱导 B 绕开平台直接微信转账付定金，收款后用无效且签收地不符的物流单号拖延，意图侵占小额货款。
+  critical_evidence:
+  - 顶配笔记本市价8999元，A仅售5500元并称急出，价格明显异常（10月9日）
+  - A 多次劝 B 别走二手平台、直接微信私下转账，并限时限价制造紧迫感（10月10日）
+  - B 付800元定金后，A 提供的物流单号多日无法查询，且签收城市（广州）与收货地（杭州）不符（10月12-13日）
+  - B 要求退款，A 先以到货承诺拖延，再改口到不了全款退还补一百，持续推诿（10月14日）
+  benign_alternatives:
+  - 熟人急出二手电脑，低价与私下转账为省平台手续费的真实交易
+  - 物流信息异常系快递网点扫码录入错误，货物仍在途
+
+attributes:
+  duration_days: 6
+  turn_count: 67
+  approximate_tokens_estimate: 1296
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: second_hand_deposit_run
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0001
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:9392fe8931dedd3b9ff9254bc0455d7570b7819a405c662c29f99c3eea32ed9c
+pipeline_status: accepted
+title: fraud_scam/second_hand_deposit_run
+conversation: |-
+  【10月9日】
+  A：小林 最近忙啥呢
+  B：还行 老周咋想起我了
+  A：上回同学聚会加的微信 一直没聊过
+  B：哈哈对 那次你喝挺猛
+  A：你之前是不是说要换电脑
+  B：有这打算 啥情况
+  A：我手里有台顶配 用了半年 5500出你
+  B：啥型号
+  A：就发布会那台顶配 原价8999
+  B：5500?? 这么便宜 机器没事吧
+  A：公司发的 用不上 我又不打游戏
+  B：配置截图发我看看 明天给你信儿
+  【10月10日】
+  B：看了 挺香啊 为啥这么便宜
+  A：急出钱 中间商压价太狠 我懒得挂平台
+  B：那挂二手平台呗
+  A：平台抽成验机还麻烦 熟人直接微信转 多省事
+  A：而且这价就挂今天 问的人不少
+  B：这么抢手哈哈
+  B：你们那降温没 这两天冻死我了
+  A：降了 早上骑车手都僵
+  B：秋裤安排上
+  A：穿了 不然遭不住
+  B：行 那定金咋说
+  A：转800就行 剩下到付 老同学你放心
+  【10月11日】
+  B：定金转你了 800 查收
+  A：收到 明天就发货
+  B：你家侄子开学了吧
+  A：可算开学了 在家吵得我头疼
+  B：哈哈解放了
+  A：你闺女二年级了吧
+  B：作业多得要命 昨天写到十点
+  A：现在孩子是真累
+  B：发什么快递啊
+  A：走物流 到付 我给你打木架
+  【10月12日】
+  A：发了 单号发你 75311888426071
+  B：收到
+  B：说起来我买的锅还在路上 第四天了
+  A：我的快递也磨叽 都慢
+  B：今年是真慢
+  A：唉 都一样
+  B：诶不对 这单号查不到啊
+  A：刚揽收 系统没同步 明天就能查
+  B：好吧 到了我喊你
+  A：成
+  【10月13日】
+  B：老周 还是查不到 你真发了?
+  A：发了 我催了网点 说扫码枪坏了 录错单
+  B：而且我收货地杭州 怎么显示广州签收
+  A：啊? 不至于 我再问问
+  B：昨晚球看了没 绝杀太离谱
+  A：看了 最后那脚我嗷一嗓子
+  B：下周德比你挺谁
+  A：那必须我们队
+  B：单号这事你得给个说法 两天了
+  A：分拣搞混了 后天肯定到 你放心
+  【10月14日】
+  B：老周 还是那个破状态 今天到不了了吧
+  A：在转件 末梢网点慢
+  B：对了 上回那家烧烤店几点关门
+  A：十点 周末人巨多
+  B：哈哈 下回喊我
+  A：成
+  B：说正事 货我不要了 定金退我
+  A：别啊 马上到了
+  B：一周了 连个影子都没有
+  A：在等两天 到不了全款退 还补你一百
+  B：上次你也这么说
+  A：老同学 我还能跑了不成
+  B：后天最后期限 先这样
