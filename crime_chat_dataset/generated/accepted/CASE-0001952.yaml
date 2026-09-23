@@ -1,0 +1,125 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001952
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000081
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-ec0b514c45ffbafb
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: privacy_doxxing
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 上级 A 想打听一个熟人的化验结果，找到在医院检验科上班的下属 B，借口只是看一眼、不改不动，连日拿人情和平时照顾施压，让 B 在系统里帮忙查，事后给 B 发了个红包做感谢。
+  critical_evidence:
+  - A 找到在医院工作的下属 B，问能不能帮忙查一份别人的化验单，说是朋友急着知道结果
+  - B 说明系统有权限限制、不是本人不能查、账号一查都有记录，表示为难
+  - A 以平时对 B 的照顾和人情反复施压，B 最终要了姓名和就诊日期答应看看
+  - B 在系统里搜到结果，把关键几项截图发给 A，并叮嘱别外传
+  - A 事后发红包感谢 B，叮嘱天知地知
+  benign_alternatives:
+  - 陪诊代取报告授权，家属持被委托人签字的授权去医院代取检验报告
+  - 保险核保流程，投保人授权保险公司依法调阅体检与检验记录
+
+attributes:
+  duration_days: 4
+  turn_count: 46
+  approximate_tokens_estimate: 935
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: medical_record_browse
+  risk: 2
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0163
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:ee7c98e917f4dec208df3aad3187413b4de784b887371a1e0ce254c0e6494a39
+pipeline_status: accepted
+title: privacy_doxxing/medical_record_browse
+conversation: |-
+  【6月3日】
+  A：小王 在忙吗
+  B：在的哥 刚交完班
+  A：有个事想麻烦你 你们系统里是不是能查化验结果
+  B：能查 不过只能查自己管的病人 咋了
+  A：有个朋友 我这边急着想知道他结果
+  B：谁啊
+  A：姓周 上周在你们那做的 具体哪天我回头问清楚给你
+  B：哥 这个不合规矩吧 不是本人没法查
+  A：就看一眼结果 又不是让你改 你想多了
+  B：我账号一查都有记录的 被查到要写检查
+  A：你平时帮哥那么多 这次再帮哥一回 天知地知
+  B：……行吧 你把名字和大概哪天给我
+  A：对了 上次那个项目报告你写完了没
+  B：还差个结尾 今晚弄
+  A：辛苦 弄完发我
+  B：好嘞
+  B：哥 中午吃啥
+  A：楼下快餐 随便对付
+  B：我这也差不多 忙得脚不沾地
+  A：科室最近人多不
+  B：多 天天加班
+  【6月4日】
+  A：名字我发你了 周某某 上周三做的 血常规加肝功那几项
+  B：看到了 我看看能不能搜到
+  B：搜到了 等下我把关键几项截给你
+  A：好
+  B：[image：检验报告截图，数值部分打码]
+  B：这几项偏高 你让他去医院找医生看看
+  A：知道了 谢啦
+  A：别跟别人说
+  B：知道
+  A：下午那个会你去不去
+  B：去 我两点到
+  A：帮我占个座
+  B：行
+  【6月5日】
+  A：你们那个系统点一下就能看 挺方便
+  B：就这一次啊哥 下不为例
+  A：放心 我谁也不说
+  B：哥 那事我心里有点不踏实
+  A：有啥不踏实的 结果都看到了
+  B：以后这种真别找我了
+  A：行行行 不为难你
+  【6月6日】
+  A：上次麻烦你了 发个红包
+  A：买点水果 别嫌少
+  【系统消息】A 向 B 转账 2000 元，已收款。
+  B：哥 这多了
+  A：一点心意 拿着
+  B：那谢谢哥了
+  A：客气啥

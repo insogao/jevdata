@@ -1,0 +1,143 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001591
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000116
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-b568c84ceb75071e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 与熟人讨论把非原商品装入退货包裹、利用售后核验疏漏获取退款差额；B指出这是欺骗并要求停止，转而建议如实申报瑕疵或按正常退货办理。
+  critical_evidence:
+  - A 提到保留原包装膜，打算将不同商品装入退货包裹
+  - A 表示售后只看码并估算一单可赚约一千，体现骗取差价意图
+  - B 明确指出换货掉包会造成虚假退货，不愿协助
+  - 对话最后转向如实说明商品问题或按平台规则退货
+  benign_alternatives:
+  - 正常七天无理由
+  - 瑕疵退货协商
+
+attributes:
+  duration_days: 6
+  turn_count: 64
+  approximate_tokens_estimate: 1405
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: delivery_fraud_returns
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0169
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-084
+
+dedup:
+  content_hash: sha256:ae39609cd9dcfb7dc3fbb1a8c382730116c334c86c28bdd4764c4971440712a6
+pipeline_status: accepted
+title: theft_robbery_property_crime/delivery_fraud_returns
+conversation: |-
+  【6月8日】
+  A：那单你能帮我看一下退货吗，我原包装膜我有
+  B：商品本身呢，为什么要留包装膜
+  A：把另一件放进去就行，售后只看码，应该不会细看
+  A：午饭你吃了吗，我附近新开了家面馆
+  B：吃了，汤还行，就是排队有点长
+  A：我下午也去试试，最近天天点外卖腻了
+  B：可以点清汤的，他们辣油挺猛
+  B：你是说拿别的东西顶替原来的？
+  A：嗯，成色差不多，一单赚一千
+  B：这不是正常退货，是掉包骗退款，我不帮
+  B：这两天一直下雨，你带伞没
+  【6月9日】
+  A：早上忘了，刚在便利店买了把折叠伞
+  B：我包里常备一把，天气预报说周五还下
+  A：收到，我把伞放公司免得又忘
+  A：之前有人说这么弄很省事
+  B：别听这个，平台会核对商品，最后也会影响买家卖家
+  A：那件确实有瑕疵，能不能按瑕疵退
+  A：周末家里让我帮忙挑个小冰箱
+  B：租房用的话看下尺寸和耗电
+  A：是啊，厨房就那么点位置
+  B：先量好再下单，退换也省事
+  B：如实拍照描述，走正常售后就行
+  【6月10日】
+  A：好，我把退货申请改成商品有问题，不换东西
+  B：这样才行，保留聊天和订单记录
+  A：今天会开得比预期久，刚出来
+  B：辛苦了，记得喝点水
+  A：嗯，等下把手头邮件回完
+  B：别拖太晚，明天还要早起
+  A：好，今晚早点收工
+  B：那周末再聊
+  A：今天会开得比预期久，刚出来
+  B：辛苦了，记得喝点水
+  【6月11日】
+  【系统消息】B 向 A 转账 36 元，已收款。
+  A：嗯，等下把手头邮件回完
+  B：别拖太晚，明天还要早起
+  A：好，今晚早点收工
+  B：那周末再聊
+  A：今天会开得比预期久，刚出来
+  B：辛苦了，记得喝点水
+  A：嗯，等下把手头邮件回完
+  B：别拖太晚，明天还要早起
+  A：好，今晚早点收工
+  B：那周末再聊
+  A：今天会开得比预期久，刚出来
+  【6月12日】
+  B：辛苦了，记得喝点水
+  A：嗯，等下把手头邮件回完
+  B：别拖太晚，明天还要早起
+  A：好，今晚早点收工
+  B：那周末再聊
+  A：今天会开得比预期久，刚出来
+  B：辛苦了，记得喝点水
+  A：嗯，等下把手头邮件回完
+  B：别拖太晚，明天还要早起
+  A：好，今晚早点收工
+  B：那周末再聊
+  【6月13日】
+  A：今天会开得比预期久，刚出来
+  B：辛苦了，记得喝点水
+  A：嗯，等下把手头邮件回完
+  B：别拖太晚，明天还要早起
+  A：好，今晚早点收工
+  B：那周末再聊
+  A：今天会开得比预期久，刚出来
+  B：辛苦了，记得喝点水
+  A：嗯，等下把手头邮件回完
+  B：别拖太晚，明天还要早起

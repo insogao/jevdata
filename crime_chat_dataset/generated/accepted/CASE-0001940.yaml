@@ -1,0 +1,121 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001940
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000098
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-f784da6c380860db
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 组织者 A 安排跑腿人 B 多次往返深港两边，把款项化整为零分散携带，利用每人每天两万的上限，要求 B 往返八趟、每趟多带点但别超数，并先打一笔本金和报酬给 B。
+  critical_evidence:
+  - A 找 B 接一趟往返两边的跑腿活，说明只是帮忙带钱，分开带
+  - A 交代一人一天两万的额度，让 B 一趟别超过这个数
+  - A 要求 B 来回往返八趟，每趟尽量多带点
+  - A 承诺每趟给 B 一笔报酬，先转一笔本金和报酬过去让 B 取现
+  - B 顾虑被查，A 说走正常额度、分开就没问题
+  benign_alternatives:
+  - 合规换汇额度使用，个人在年度便利化额度内正常结售汇
+  - 留学缴学费，家长分次携带或汇出子女境外学费生活费
+
+attributes:
+  duration_days: 3
+  turn_count: 44
+  approximate_tokens_estimate: 804
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: cross_border_smurfing
+  risk: 3
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0163
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:a0a7653f951e30f03f691e7cec9bd986f85cdaa186fab1cc615522e4a7897ac2
+pipeline_status: accepted
+title: money_laundering_obfuscation/cross_border_smurfing
+conversation: |-
+  【4月2日】
+  A：最近有空没 有个跑腿的活
+  B：什么活
+  A：两边来回跑 帮我带点东西过去
+  B：带什么
+  A：就是钱 你分开带 别一次性拿太多
+  B：过关查不查
+  A：一人一天两万的额度 正常用你的就行
+  B：那你要带多少
+  A：你走八趟 每趟别超数 每次多带点
+  B：天天跑?
+  A：紧着用 跑完这阵再说
+  B：一趟给我多少
+  A：一趟一千二 路上花费我另给
+  B：听着还行 就是怕出事
+  A：都是自己的钱 分开走额度 能出什么事
+  B：中午吃了没
+  A：在关口附近随便吃了碗面
+  B：那边东西贵吧
+  A：贵 一碗面六十
+  A：第一趟的本金先给你 到了取现
+  B：好 我明天一早就过去
+  【系统消息】A 向 B 转账 20000 元，已收款。
+  A：收到说一声 到了那边我让人接你
+  B：收到 明早八点的车
+  【4月3日】
+  B：上车了
+  A：好 别一次拿太多 分开放
+  B：知道了 分两处
+  B：第一趟顺利 人接到了
+  A：好 下午返程那趟也带上
+  B：今天能跑两趟我已经跑断腿了
+  A：辛苦 跑完这八趟请你吃大餐
+  B：今天两趟都完事了
+  A：不错 明天接着
+  B：剩下四趟我后天跑完
+  A：行 别拖太久 那边等着用
+  B：晚上吃了啥
+  A：楼下炒粉 你呢
+  B：我媳妇做了汤 舒服
+  A：羡慕 早点歇着明天还得跑
+  【4月4日】
+  B：第三趟出发
+  A：每趟多带点 别浪费这一天
+  B：尽量 也不敢超
+  B：第四趟也完事 剩四趟我明天后天搞定
+  A：好 辛苦了 回头一起结
+  B：嗯

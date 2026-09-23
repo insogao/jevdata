@@ -1,0 +1,109 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001943
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000130
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-e718add823c6a177
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 手里保存了和 B 视频聊天时截下的画面，拿这份东西威胁 B，说名单在自己手上，先要八千块，给 B 一个分钟级的倒计时，逼 B 尽快转钱，B 害怕先转了八千。
+  critical_evidence:
+  - A 说手里有和 B 视频时截下的东西，还有一份名单
+  - A 以此威胁 B，要 B 先拿八千出来
+  - A 给了 B 一个分钟级的倒计时，说时间到就发出去
+  - B 讨价还价，A 不退让，说名单里的人都看着
+  - B 先转八千，A 说这只是第一笔，后面还有
+  benign_alternatives:
+  - 视频聊天误会，网络聊天中因画面或截图产生的误会经沟通澄清
+  - 诈骗预警提醒，平台或警方提醒用户警惕以截图索财的诈骗
+
+attributes:
+  duration_days: 2
+  turn_count: 33
+  approximate_tokens_estimate: 622
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: video_call_screen_cap
+  risk: 3
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0163
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:6e23aef9aa42dbec28561f9a2199de681165857d40b3ab669d86b6bfe4750d08
+pipeline_status: accepted
+title: coercion_blackmail/video_call_screen_cap
+conversation: |-
+  【10月20日】
+  A：在吗 有件事跟你说一下
+  B：谁啊
+  A：上次视频那个是我 你忘了
+  B：你想干吗
+  A：你那天的画面我截下来了 还有你的名单在我这
+  B：你删了 不然我报警
+  A：报警也行 发出去更热闹 先来个八千
+  B：凭什么给你八千
+  A：给你十分钟 时间到我就群发
+  B：你这是敲诈
+  A：还有八分钟 想清楚
+  B：能不能少点 我手头没这么多
+  A：一分不能少 名单里那些人还想看看你是谁呢
+  B：你别乱来
+  A：五分钟
+  B：我转 你说话算话 收到就删
+  A：先转 转完再说
+  【系统消息】B 向 A 转账 8000 元，已收款。
+  A：收到 这只是第一笔
+  B：你说好了删的
+  A：我说的是先来个八千 剩下的慢慢聊
+  B：我真没钱了
+  【10月21日】
+  A：早上好 想通了吗 再拿一万这事就算了结
+  B：你这是没完没了
+  A：最后一次 给了我就彻底删
+  B：我不信你
+  A：那你就等着
+  B：我朋友说这种事对方永远不会删
+  A：你朋友懂什么 再给我一万二
+  B：我要报警了
+  A：你报 看谁的东西先发出去
+  B：我把钱凑了 你别发
+  A：这才乖 转吧
+  B：（对方账号已注销）

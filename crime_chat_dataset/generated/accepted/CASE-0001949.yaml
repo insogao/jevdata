@@ -1,0 +1,117 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001949
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000075
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-e3bd6e9c82bd0425
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: privacy_doxxing
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 同事 B 想打听一个陌生人的身份和住址，找到号称手里有渠道的 A，提供手机号按条付费，A 说能秒出姓名和大致住址，B 先转了一笔查一条试试。
+  critical_evidence:
+  - B 问 A 能不能凭一个手机号查到这个人的身份信息
+  - A 说可以查，按条计费，一条一个价
+  - A 强调流程快、给号就秒出结果
+  - B 先转一笔钱查一条试水，A 把查到的姓名和大致住址发过来
+  - A 提醒查出来的东西看完删掉，别到处说
+  benign_alternatives:
+  - 律师依法调证，执业律师持调查令向有关机构调取当事人信息
+  - 平台实名核验讨论，用户咨询平台如何核验对方实名身份防止被骗
+
+attributes:
+  duration_days: 4
+  turn_count: 39
+  approximate_tokens_estimate: 649
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: id_address_lookup
+  risk: 2
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0163
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:45171627c979ddf2547947123872bad5fa66bd480e246e334d15549c78cccd27
+pipeline_status: accepted
+title: privacy_doxxing/id_address_lookup
+conversation: |-
+  【7月8日】
+  B：在吗 问你个事
+  A：在 说
+  B：你那边是不是能查人 就一个手机号
+  A：能 你想查什么
+  B：想看看这人是谁 住哪一块
+  A：可以 按条算 一条两百
+  B：这么贵 靠谱吗
+  A：给号就秒出 姓名加大概住址
+  B：为什么是大概
+  A：精确门牌没有 到小区不差
+  B：先查一条试试
+  A：行 你把号发我 我排上
+  B：138xxxx 这个
+  A：收到 先转两百 出了就发你
+  B：好
+  【系统消息】B 向 A 转账 200 元，已收款。
+  A：收到 等我几分钟
+  A：查到了 姓李 住在城东那块 具体小区我发你
+  B：这么快
+  A：都说了秒出 看完删掉 别到处说
+  B：知道 就我自己看
+  B：中午吃啥
+  A：外卖 黄焖鸡
+  B：我这也是外卖 天天吃腻了
+  A：自己带饭省钱
+  【7月9日】
+  B：昨天那个准不准
+  A：我们这条线数据老 大差不差
+  B：那我再查两条
+  A：可以 两号码发来 一起算四百
+  B：行 我整理下发你
+  A：号发来了没
+  B：马上 我在开会
+  A：不急 你忙
+  B：号发你了 你看下
+  A：收到 明早给你结果
+  B：好 早点休息
+  【7月10日】
+  A：两条都出来了 我发你
+  B：收到 转你了
+  【系统消息】B 向 A 转账 400 元，已收款。
+  A：嗯 老规矩 看完删
+  B：放心

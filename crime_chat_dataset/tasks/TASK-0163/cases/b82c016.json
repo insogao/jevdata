@@ -1,0 +1,290 @@
+{
+ "key": "b82c016",
+ "archetype_id": "ARC-000010",
+ "subtype": "prize_fee",
+ "latent_intent": "A 以内部工作人员的口吻通知 B 在活动里中了大奖，要 B 先转一笔手续费和保证金才能领，还发来一张所谓公证书的照片打消 B 的疑虑，B 动了心转了钱。",
+ "critical_facts": [
+  "A 用类似官方的口吻通知 B，说 B 在活动里中了大奖",
+  "B 一开始不信，A 报出 B 的部分信息并强调名额真实",
+  "A 发来一张所谓公证书的照片，说是官方公证、领奖要交手续费",
+  "A 以逾期作废、名额保留时间为由催 B 尽快转手续费",
+  "B 转出一笔手续费，A 说财务核对后放款"
+ ],
+ "benign_alternatives": [
+  "真实平台抽奖，用户在正规平台参与抽奖中奖后按公示规则领奖",
+  "商场有奖销售，商家依法公示奖项和兑奖流程"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "12月5日 10:00",
+   "speaker": "A",
+   "text": "您好 这里是活动兑奖中心的 恭喜您抽中我们一等奖"
+  },
+  {
+   "type": "message",
+   "time": "12月5日 10:05",
+   "speaker": "B",
+   "text": "我没参加什么活动啊"
+  },
+  {
+   "type": "message",
+   "time": "12月5日 10:08",
+   "speaker": "A",
+   "text": "您上月在XX平台下单时自动参与的 系统抽取的"
+  },
+  {
+   "type": "message",
+   "time": "12月5日 10:11",
+   "speaker": "B",
+   "text": "真的假的 现在骗子多"
+  },
+  {
+   "type": "message",
+   "time": "12月5日 10:14",
+   "speaker": "A",
+   "text": "理解您的顾虑 帮您核对下 您尾号是xxxx对吧"
+  },
+  {
+   "type": "message",
+   "time": "12月5日 10:17",
+   "speaker": "B",
+   "text": "对 你怎么知道"
+  },
+  {
+   "type": "message",
+   "time": "12月5日 10:20",
+   "speaker": "A",
+   "text": "系统里就您的信息 奖品是现金加礼品包 名额真实"
+  },
+  {
+   "type": "message",
+   "time": "12月5日 10:24",
+   "speaker": "B",
+   "text": "那要我怎么领"
+  },
+  {
+   "type": "message",
+   "time": "12月5日 10:27",
+   "speaker": "A",
+   "text": "领奖前要走公证 需要您先垫付手续费 之后连本带奖退给您"
+  },
+  {
+   "type": "message",
+   "time": "12月5日 10:31",
+   "speaker": "B",
+   "text": "还要先交钱?"
+  },
+  {
+   "type": "message",
+   "time": "12月5日 10:34",
+   "speaker": "A",
+   "text": "流程就是这样 我发您公证书照片 您看下就放心了"
+  },
+  {
+   "type": "image",
+   "time": "12月5日 10:36",
+   "speaker": "A",
+   "note": "一张盖红章的所谓公证书照片，编号处模糊"
+  },
+  {
+   "type": "message",
+   "time": "12月5日 10:38",
+   "speaker": "A",
+   "text": "盖了章的 官方公证 手续费是走账用 不是我们收"
+  },
+  {
+   "type": "message",
+   "time": "12月5日 10:42",
+   "speaker": "B",
+   "text": "要交多少"
+  },
+  {
+   "type": "message",
+   "time": "12月5日 10:45",
+   "speaker": "A",
+   "text": "一千八 还有个保证金五百 一共两千三"
+  },
+  {
+   "type": "message",
+   "time": "12月5日 10:48",
+   "speaker": "B",
+   "text": "奖金多少"
+  },
+  {
+   "type": "message",
+   "time": "12月5日 10:51",
+   "speaker": "A",
+   "text": "现金三万八 加一套数码产品"
+  },
+  {
+   "type": "message",
+   "time": "12月5日 10:54",
+   "speaker": "B",
+   "text": "那我考虑下"
+  },
+  {
+   "type": "message",
+   "time": "12月5日 11:00",
+   "speaker": "A",
+   "text": "名额只保留到今天下午三点 逾期就作废了"
+  },
+  {
+   "type": "message",
+   "time": "12月5日 12:10",
+   "speaker": "B",
+   "text": "中午了 你不上班吗"
+  },
+  {
+   "type": "message",
+   "time": "12月5日 12:13",
+   "speaker": "A",
+   "text": "在的 兑奖中心中午不休息 怕耽误大家领奖"
+  },
+  {
+   "type": "message",
+   "time": "12月5日 12:16",
+   "speaker": "B",
+   "text": "你们在哪 我能去现场吗"
+  },
+  {
+   "type": "message",
+   "time": "12月5日 12:19",
+   "speaker": "A",
+   "text": "活动是线上的 全国兑奖 所以走线上公证"
+  },
+  {
+   "type": "message",
+   "time": "12月5日 14:00",
+   "speaker": "B",
+   "text": "这个钱怎么转"
+  },
+  {
+   "type": "message",
+   "time": "12月5日 14:04",
+   "speaker": "A",
+   "text": "转到我发您的对接账户 备注写手续费"
+  },
+  {
+   "type": "message",
+   "time": "12月5日 14:08",
+   "speaker": "B",
+   "text": "转了就能领?"
+  },
+  {
+   "type": "message",
+   "time": "12月5日 14:11",
+   "speaker": "A",
+   "text": "财务核验后当天放款 奖金直接打您卡"
+  },
+  {
+   "type": "message",
+   "time": "12月5日 14:15",
+   "speaker": "B",
+   "text": "行 我转"
+  },
+  {
+   "type": "transfer",
+   "time": "12月5日 14:20",
+   "from": "B",
+   "to": "A",
+   "amount": 2300,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "12月5日 14:23",
+   "speaker": "A",
+   "text": "收到 我提交财务 稍等"
+  },
+  {
+   "type": "message",
+   "time": "12月5日 14:26",
+   "speaker": "B",
+   "text": "好 我等着"
+  },
+  {
+   "type": "message",
+   "time": "12月6日 09:00",
+   "speaker": "B",
+   "text": "怎么样了 奖金到了吗"
+  },
+  {
+   "type": "message",
+   "time": "12月6日 09:05",
+   "speaker": "A",
+   "text": "系统显示您账户状态异常 需要再交一笔解冻费"
+  },
+  {
+   "type": "message",
+   "time": "12月6日 09:08",
+   "speaker": "B",
+   "text": "怎么又要钱"
+  },
+  {
+   "type": "message",
+   "time": "12月6日 09:12",
+   "speaker": "A",
+   "text": "这是流程规定 解冻后一次性退还 您别急"
+  },
+  {
+   "type": "message",
+   "time": "12月6日 10:30",
+   "speaker": "B",
+   "text": "我怎么感觉不对劲"
+  },
+  {
+   "type": "message",
+   "time": "12月6日 10:34",
+   "speaker": "A",
+   "text": "您看公证书都发了 还能骗您不成 就差这一步"
+  },
+  {
+   "type": "message",
+   "time": "12月6日 11:00",
+   "speaker": "B",
+   "text": "我问了我朋友 他说这是骗局"
+  },
+  {
+   "type": "message",
+   "time": "12月6日 11:04",
+   "speaker": "A",
+   "text": "您朋友懂什么 名额给您留到十二点啊"
+  },
+  {
+   "type": "message",
+   "time": "12月6日 15:00",
+   "speaker": "B",
+   "text": "我不办了 你把手续费退我"
+  },
+  {
+   "type": "message",
+   "time": "12月6日 15:20",
+   "speaker": "A",
+   "text": "……"
+  },
+  {
+   "type": "message",
+   "time": "12月6日 18:00",
+   "speaker": "B",
+   "text": "在吗 退钱"
+  },
+  {
+   "type": "message",
+   "time": "12月7日 09:00",
+   "speaker": "B",
+   "text": "再不回我报警了"
+  },
+  {
+   "type": "message",
+   "time": "12月7日 12:00",
+   "speaker": "B",
+   "text": "（对方已把你删除/拉黑）"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0001946",
+  "status": "accepted",
+  "errors": []
+ }
+}

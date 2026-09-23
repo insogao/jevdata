@@ -1,0 +1,129 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001774
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-4c942d185eee427e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 把对公开讨论的归纳延伸成对匿名账号的关联猜测，提到图片时间和转发记录等线索；B 要求停止追踪个人并只保留主题汇总。
+  critical_evidence:
+  - 讨论从公开内容分析滑向关联匿名账号的猜测
+  - 对话出现相册原图时间、转发内容等身份关联暗示
+  - B 要求不再追踪账号、不外传截图，只保留汇总主题
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 2
+  turn_count: 55
+  approximate_tokens_estimate: 1457
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0166
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-083
+
+dedup:
+  content_hash: sha256:f355ba568b3b23026d5e9d9305ced9e7ae9bfdb40d65487dd254a445fd3270f3
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【10月1日】
+  A：我在整理上周那个公开讨论串，想把品牌反馈分下类。
+  B：我以为只是做舆情摘要，怎么还问到某个匿名用户？
+  A：不是要写名字，就是觉得几条发言像同一个人。
+  B：公开帖子讨论内容可以，别把人和小号硬连起来。
+  A：小号也给你翻了，我随口提一句，没打算放报告。
+  B：翻到不等于能公开，尤其别截图给组外看。
+  A：有一张图的相册原图时间也挺巧的。
+  B：这类细节更别当线索拼，用户没同意过。
+  A：我当时觉得转发过什么都能查，可能就顺手看多了。
+  A：周五晚饭我订了家小馆，订位86。
+  B：好，我把自己那份43转给你。
+  【系统消息】A 向 B 转账 43 元，已收款。
+  A：收到，周五见面吃。
+  B：行。
+  A：菜单我先发你看看。
+  B：好，我下班过去。
+  B：我们只统计公开讨论主题，不追个人轨迹，这个边界要守住。
+  A：嗯，报告里删掉那句，也不再提哪个账号。
+  B：谢谢。要写就写“部分评论存在重复观点”，不做身份判断。
+  A：部门负责人刚问我今晚能不能交初稿。
+  B：先把品牌话题按产品和售后分两栏吧。
+  A：好，我把个人关联那段拿掉。
+  B：截图也检查下，别带昵称或头像。
+  A：知道，最后只留汇总数字。
+  B：这样就够用了。
+  A：你中午吃了吗，我刚从楼下回来。
+  B：吃了碗面，汤有点咸。
+  A：那家我也吃过，分量倒挺足。
+  B：是，没吃完还打包了一点。
+  A：晚上别再吃太重了。
+  B：嗯，回家煮点粥。
+  【10月2日】
+  A：刚才我又看了一眼那串讨论，还是不确定是不是同一人。
+  B：那就不要下结论，留在公开文本能支持的范围里。
+  A：你说得对，没必要猜。
+  B：涉及匿名用户，宁可少写一点。
+  A：我把旧草稿也删了。
+  B：好，等我看过汇总再发。
+  A：另说个事，周五晚饭我订了家小馆。
+  B：哪家？最近新开的那家吗？
+  A：对，菜单不贵，咱们各点各的。
+  A：你家那盆绿萝最近怎么样？
+  B：长了新叶，可能是我终于记得浇水了。
+  A：哈哈，植物也等到了靠谱的主人。
+  B：别夸，我上个月还差点忘了。
+  A：放窗边会不会晒过头？
+  B：上午有点散光就够了。
+  B：我先垫了86元订位，晚点你转一半就好。
+  A：行，吃完我把我的那份给你。
+  B：不急，周五见面再算。
+  A：收到，谢啦。
+  B：报告中只写公众讨论内容，不做账号身份推断。
+  A：我会把个人线索从草稿和截图里都删掉。
+  B：品牌舆情可以分析观点，别关联具体用户。
+  A：懂了，之后只留汇总，不点名。
+  B：报告中只写公众讨论内容，不做账号身份推断。
+  A：我会把个人线索从草稿和截图里都删掉。

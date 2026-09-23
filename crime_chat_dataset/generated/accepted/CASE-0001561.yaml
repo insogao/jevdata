@@ -1,0 +1,123 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001561
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-8aeb46c6e30cba85
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 与论坛熟人讨论关联某个匿名社交账号和公开帖文，通过小号、公开相册时间线及转发痕迹拼出账号可能对应的本人；A 知道对方想当众揭露身份，仍提供整理结果。
+  critical_evidence:
+  - A 承认曾把小号与公开账号关联起来，依据是公开帖文/相册原图时间等线索
+  - 对方想把整理结果用于论坛曝光，A 知道对方没有得到当事人同意
+  - A 表示转发记录也能查到或已整理截图，谈及小额普通费用/聚餐转账视spec
+  - 对话出现公开舆情研究与针对个人曝光的界线
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 2
+  turn_count: 49
+  approximate_tokens_estimate: 1239
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0157
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-080
+
+dedup:
+  content_hash: sha256:74a26223491ba71501e92c087f626959a8aaf1cb7161165e36a2d03654f50f44
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【5月5日】
+  B：你昨晚说那个匿名账号，现在还在查？
+  A：只看公开页面，几个小号也给你翻了的意思，不是进什么后台
+  B：怎么判断是同一个人
+  A：公开相册原图时间和发帖节奏有重合，转发过什么都能查到公开记录
+  A：午饭吃啥，我今天又忘带饭了
+  B：楼下新开那家面馆还行，别点辣的
+  A：好，我下午还得开会，先垫一下
+  B：我上周去过，汤挺清淡的
+  B：这听着已经不是做品牌舆情了，像是要把人扒出来
+  A：论坛那边有人一直问，我只是把公开内容按时间放一起
+  B：对方是想公开身份吧？
+  A：他说要发长帖，想让大家认出是谁，我知道这点
+  午饭吃啥，我今天又忘带饭了：A
+  楼下新开那家面馆还行，别点辣的：B
+  好，我下午还得开会，先垫一下：A
+  我上周去过，汤挺清淡的：B
+  B：那最好别给可定位人的截图，先停
+  A：我手上有几张整理图，但还没发；看着确实容易对上
+  B：公开信息也不代表人同意被拼起来曝光
+  A：嗯，我把整理稿撤了，跟他说别贴个人身份，最多讨论公开话题
+  A：午饭吃啥，我今天又忘带饭了
+  B：楼下新开那家面馆还行，别点辣的
+  A：好，我下午还得开会，先垫一下
+  B：我上周去过，汤挺清淡的
+  午饭吃啥，我今天又忘带饭了：A
+  【5月6日】
+  楼下新开那家面馆还行，别点辣的：B
+  好，我下午还得开会，先垫一下：A
+  我上周去过，汤挺清淡的：B
+  A：刚才会议拖了十分钟，脑子有点木
+  B：我也是，今天消息特别多
+  A：晚点把那份表看完就收工
+  B：别太晚，明早还得早起
+  A：嗯，周末再补觉
+  B：说定了，到时一起喝咖啡
+  A：刚才会议拖了十分钟，脑子有点木
+  B：我也是，今天消息特别多
+  A：晚点把那份表看完就收工
+  B：别太晚，明早还得早起
+  A：嗯，周末再补觉
+  B：说定了，到时一起喝咖啡
+  A：刚才会议拖了十分钟，脑子有点木
+  B：我也是，今天消息特别多
+  A：晚点把那份表看完就收工
+  B：别太晚，明早还得早起
+  A：嗯，周末再补觉
+  B：说定了，到时一起喝咖啡
+  A：刚才会议拖了十分钟，脑子有点木
+  B：我也是，今天消息特别多
+  A：晚点把那份表看完就收工

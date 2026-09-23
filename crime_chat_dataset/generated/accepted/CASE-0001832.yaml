@@ -1,0 +1,124 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001832
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-f2a6773277cf0555
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 借节前见面向能接触那份资料进度的B送一张不说明面值的购物卡，并在送卡前后暗示想让B留意自己的那份资料；B拒绝个人礼卡，区分单位福利卡与私人礼物，要求按正常顺序处理。
+  critical_evidence:
+  - A 节前主动约见或联系能接触那份资料进度的B
+  - A 提出送一张购物卡但不说明面值
+  - A 将礼物与自己的那份资料进度联系起来，暗示希望B留意
+  - B 区分单位统一发放的福利卡与私人礼物，并拒绝个人礼卡
+  - B 表示按统一流程或正常顺序办理
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司福利卡
+
+attributes:
+  duration_days: 2
+  turn_count: 48
+  approximate_tokens_estimate: 1066
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0186
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-090
+
+dedup:
+  content_hash: sha256:338e70e854ec3a6b271f7a119edf05abbb594bbdf0832fd23a1223bb32d1e67d
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【9月25日】
+  A：堂妹，节前你哪天方便？节前回家吃饭时顺便聊聊
+  B：这两天事情有点多，怎么突然想见面？
+  A：你晚饭吃啥
+  B：煮面吧，回来晚了
+  A：加个蛋就行，别只吃泡面
+  B：知道啦，冰箱还有青菜
+  A：我回家就煮，十分钟搞定
+  B：不错，青菜别忘了洗
+  A：已经泡上了，哈哈
+  A：想问问那份资料的进展，也好提前安排一下。
+  B：那份资料都按统一顺序处理，我只能看流程到哪一步。
+  A：咱们是亲戚，就是想当面谢谢你平时照应。
+  A：今天路上堵不堵
+  B：桥那边在修路，有点慢
+  A：我绕小路走了
+  B：明早我也早点出门
+  A：我把导航收藏一下
+  B：好，明早看路况再决定
+  A：嗯，别到时候又迟到
+  B：吃饭可以，带东西就不用了。
+  A：我给你带了张购物卡，面值没问，节前一点心意。
+  【系统消息】A 向 B 转账 300 元，已收款。
+  A：你上次说的鞋到了吗
+  B：到了，码数刚好
+  A：那不错，走路舒服不
+  【9月26日】
+  B：还行，先穿两天看看
+  A：那先穿着试试，不磨脚就好
+  B：对，走多了再看
+  A：嗯，周末再告诉你
+  B：私人给的我不能留，单位统一发的福利卡才按公司规矩登记。
+  A：我那份那份资料，能不能有消息时帮我留意一下？
+  A：周末要不要去逛书店
+  B：可以啊，下午人少点
+  A：那我把地址发你
+  B：收到，顺便喝杯咖啡
+  A：正好我也想买支笔
+  B：那家文具区挺全的
+  B：我不能因为认识或收礼就给谁调顺序，都是照同一套要求办。
+  A：嗯，我知道，就是问问。
+  B：你把东西拿回去，按正常流程等通知。
+  A：你家猫还挑食吗
+  B：好多了，换了新粮
+  A：别一下换太多吧
+  B：嗯，我掺着旧的喂
+  A：旧粮我还留了一点
+  B：慢慢掺就好，别换太突然
+  A：前两天提的那份资料，现在有消息了吗？
+  B：我会按提交顺序看，有变化走正常通知，不会单独插队。
+  A：明白，那就照规矩来。卡我带回去。

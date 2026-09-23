@@ -1,0 +1,121 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001945
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000095
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-be055d21b23b1b5b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 收卡的 A 向有卡源的熟人 B 大量收购购物卡，指定京东卡、苏果卡都要，谈好九四折实结、卡密发来即付款，B 分批出卡，A 按折算的钱转给 B。
+  critical_evidence:
+  - A 说最近在收卡，问 B 那边有多少货
+  - A 指定要京东卡和苏果卡，其他小卡不要
+  - A 报价按九四折实结，卡密发来马上就转钱
+  - B 先发一批卡密，A 收到后按折价转账
+  - A 让 B 长期供货，别断，走老规矩不啰嗦
+  benign_alternatives:
+  - 正规卡券回收平台，用户通过持牌平台出售闲置购物卡并正常结算
+  - 公司福利卡转让，员工把单位发的福利卡转给同事回收变现
+
+attributes:
+  duration_days: 4
+  turn_count: 41
+  approximate_tokens_estimate: 863
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: gift_card_cashout
+  risk: 3
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0163
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:ec358cc4c51e1f910f6b1a1e63d2edba09c51e59a134def6bfef8af190e99ac8
+pipeline_status: accepted
+title: money_laundering_obfuscation/gift_card_cashout
+conversation: |-
+  【1月5日】
+  A：哥 最近手里有卡不 我在收
+  B：有 你要哪种
+  A：京东卡 苏果卡 都要 量大
+  B：别的卡呢 我还有些小店卡
+  A：那两种好出 别的不要
+  B：什么价
+  A：九四折实结 一万的卡给你九千四
+  B：有点低 别家给九六
+  A：我这边走量 卡密即付 你不压货
+  B：先小批试试 我发几个卡密
+  A：行 发来我就转 咱不拖
+  B：[卡密] JD-xxxx-xxxx 面值三千
+  A：验了 有效 三千的给你两千八百二
+  【系统消息】A 向 B 转账 2820 元，已收款。
+  B：到账了 爽快
+  A：都说卡密即付 长期合作
+  B：我这边量不小 你吃得下吗
+  A：越多越好 我下游等着用
+  【1月6日】
+  B：今天天气冷 你那边下雪没
+  A：没下 就是干冷
+  B：注意保暖 我一早还得去拿货
+  A：辛苦 拿的什么货
+  B：就那种卡 别人给我的 你来收正好
+  A：中午有货发我不 我这边急要
+  B：下午整理好一起发你
+  B：[卡密] 苏果-xxxx 面值五千 五张
+  A：收到 我验下
+  A：五张都行 五千一张 九四折 一共两万三千五
+  【系统消息】A 向 B 转账 23500 元，已收款。
+  B：收到 老规矩 别到处说价
+  A：放心 价不外传
+  【1月7日】
+  A：还有不 我这边下游催得紧
+  B：有 明后天给你弄一批
+  A：好 卡密即付 你发我马上转
+  B：晚上陪家人 不聊了 明早发
+  【1月8日】
+  A：早 货呢
+  B：整理呢 十点发你
+  B：[卡密] 京东-xxxx 面值一万 十张
+  A：收到 验完转你 九四折一共九万四
+  B：好
+  A：转你九万四 以后就按这个量走
+  【系统消息】A 向 B 转账 94000 元，已收款。
+  B：收到 长期合作
+  A：嗯 别断货

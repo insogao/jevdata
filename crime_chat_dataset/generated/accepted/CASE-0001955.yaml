@@ -1,0 +1,117 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001955
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000057
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-65cda57164cb3d06
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 校门口混的年纪大的学生 A 盯上低年级的 B，逼 B 每天交十块钱，说不交就让他知道后果，威胁 B 别告诉老师，B 怕得先交了几天的钱。
+  critical_evidence:
+  - A 在校门口堵住低年级的 B，开口就要 B 每天交十块钱
+  - B 说没钱，A 说不交你知道后果、明天就让你好看
+  - A 威胁 B 别告诉老师也别跟家里说，说了更麻烦
+  - B 被吓住，先交了几天的钱
+  - A 说以后每天放学在老地方等他
+  benign_alternatives:
+  - 同学间借钱，高年级同学临时借钱给低年级并约定归还
+  - 小卖部赊账，学生在校内小卖部记名赊账后补款
+
+attributes:
+  duration_days: 6
+  turn_count: 37
+  approximate_tokens_estimate: 678
+  relationship: 中间人关系
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: campus_periphery_intimidation
+  risk: 3
+  relationship: 中间人关系
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0163
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:1637fb476fbca50b5befebe40470062499cfb329297eeb9275a65b90be354f49
+pipeline_status: accepted
+title: violence_extortion/campus_periphery_intimidation
+conversation: |-
+  【4月8日】
+  A：喂 低年级那个 过来一下
+  B：干吗
+  A：以后每天给我十块钱 放学在这等我
+  B：我没有 你别找我要
+  A：没有?不交你知道后果
+  B：我要告诉老师
+  A：你敢告诉老师试试 说了更麻烦
+  B：凭什么给你
+  A：就凭这条街我说了算 识相点
+  B：……我只有五块
+  A：今天先五块 明天补上 别让我天天追着要
+  【4月9日】
+  A：钱呢
+  B：只有十块
+  A：拿来 昨天的还欠五块 明天一起
+  B：你别得寸进尺
+  A：怎么 想挨收拾?
+  【4月10日】
+  B：中午你别堵我了 我把钱给你
+  A：不光是钱 以后帮我写作业
+  B：凭什么
+  A：凭我知道你班级 别逼我去你班门口找你
+  B：钱给你 别找我麻烦
+  【系统消息】B 向 A 转账 15 元，已收款。
+  A：这还差不多 每天老地方 别迟到
+  B：嗯
+  【4月11日】
+  B：我今天值日 放学晚点
+  A：值日也得来 我在校门口等你
+  A：到了没
+  B：马上 刚出教学楼
+  A：下次再让我等 加五块
+  B：知道了
+  【4月12日】
+  B：我同学问我为什么天天往校门口跑
+  A：你别乱说 说出去有你好看
+  B：我没说
+  B：今天钱给你
+  A：乖 这样大家都省事
+  【4月13日】
+  B：我爸发现我零花钱少了
+  A：那你自己想办法 别断我这条
+  B：我真的快拿不出了

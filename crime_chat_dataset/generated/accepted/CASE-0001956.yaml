@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001956
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000094
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-cb8e358ad8bcee81
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 盘口上级 A 给 B 开通一条代理线，交代按流水的千分之八结算佣金、秒到不压款，并把拉人的层级安排说成走第七层通道分散，让 B 先带几个人报单跑起来。
+  critical_evidence:
+  - A 给 B 开一条代理线，说明不是直接玩，是带人报单拿返点
+  - A 交代佣金按流水的千分之八算，结算秒到、不压款
+  - A 提到拉人的层级要按第七层通道走，分散开不容易被盯上
+  - A 让 B 先找几个熟客报单把流水跑起来
+  - A 先给 B 结了一笔佣金，证明秒结
+  benign_alternatives:
+  - 游戏点券代充，代理按充值金额拿平台返点并正常结算
+  - 平台充值服务，渠道商按用户消费流水获得合法佣金
+
+attributes:
+  duration_days: 5
+  turn_count: 47
+  approximate_tokens_estimate: 972
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: gambling_updown_score
+  risk: 3
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0163
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:cb51e83a885c15dfb10f6cd5884f02c498e5e7a10b6a7d5eb4e64de0d5a7a2e3
+pipeline_status: accepted
+title: money_laundering_obfuscation/gambling_updown_score
+conversation: |-
+  【3月3日】
+  A：老陈 给你开条线 你就不用自己下场了
+  B：什么线
+  A：你带人报单 你拿返点 不用你出本钱
+  B：返点怎么算
+  A：按流水千八 千分之八
+  B：结算呢 别拖我
+  A：秒结 到点自动到 从不压款
+  B：那我要拉多少人
+  A：先三五个熟客就够 慢慢往下铺
+  B：怎么铺 一层层拉?
+  A：对 走第七层通道 分开报 别堆一起
+  B：为啥要分层
+  A：上头位一次进太多 显眼 分开了稳
+  B：懂了 我晚上问问几个老哥
+  B：你吃了吗
+  A：刚吃 楼下小馆
+  B：我接孩子去了 现在才闲
+  A：顾家的男人 哈哈
+  【3月4日】
+  B：问了两个 都说想试试
+  A：好 让他们先把号报过来
+  B：流水怎么记 我这边要盯着
+  A：后台能看 我给你开个查看的口子
+  B：行 那我先跑起来
+  A：记住 先小的后大的 别一上来就猛
+  B：今天这两个下了几把 流水一千多
+  A：可以 慢慢来 千八就是八块
+  B：这么算得跑多少才有钱
+  A：流水大就多 你铺的人多了自然上来
+  A：今天天气好 出来溜达没
+  B：在小区走了两圈
+  A：我腰不好 走两圈就酸
+  B：你该锻炼了
+  【3月5日】
+  B：昨天的返点到了吗
+  A：到了 你查下 我先给你结一笔
+  【系统消息】A 向 B 转账 860 元，已收款。
+  B：真到账了 秒结没说错
+  A：跟我干就这样 说到做到
+  B：我又拉了个跑车的 手里人不少
+  A：好 但让他走别的线 别都堆我这条
+  B：明白 分开报
+  B：晚上陪老婆逛超市 先不聊
+  A：去吧 记得把今天报单记上
+  【3月6日】
+  A：这两条线流水上来了 千八每天都能给你结
+  B：好 我再铺几个人 第七层那条也开了
+  A：对 就照这个节奏 别急
+  【3月7日】
+  B：这两天流水比前几天高不少
+  A：稳住 细水长流 别贪一把
+  B：知道

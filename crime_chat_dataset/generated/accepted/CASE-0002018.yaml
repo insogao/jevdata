@@ -1,0 +1,130 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002018
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000006
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-45e8afe43d50abfe
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 开店老板 B 为春季进货向银行客户经理 A 申请五万小微经营贷，因听说过「放款前收费」的骗术而反复试探是否要保证金；A 全程走银行正规流程——第一关查征信、材料只走 App 不进私人微信、电子合同带统一编号官网可验、明确放款前一分钱不收——最终五万真实放款到账并约定每月还款。表面可疑在于「预审秒过、经理贴身跟进」形似贷款诈骗话术，实为正规信贷。
+  critical_evidence:
+  - A 第一关就要查征信，并让材料只走银行 App、别发个人微信（3月10日）
+  - B 问怎么不要保证金，A 明确放款前银行一分钱不收、让先交钱的扭头就走全是骗子（3月11日）
+  - 合同为电子合同带统一编号，官网输编号可查真伪，A 主动让 B 拿给家里人把关（3月11日）
+  - 3月12日五万贷款真实放款到账，约定每月21号还款、提前还无违约金（转账锚定）
+  benign_alternatives:
+  - 正规银行贷款流程
+  - 亲友借款
+
+attributes:
+  duration_days: 3
+  turn_count: 54
+  approximate_tokens_estimate: 1501
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: loan_fee_bait
+  risk: 0
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0130
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-071
+
+dedup:
+  content_hash: sha256:7ace4029b7a9a0ab4bf140cadb0bd6f58b33c83738989d550272da3732754053
+pipeline_status: accepted
+title: fraud_scam/loan_fee_bait
+conversation: |-
+  【3月10日】
+  B：王经理早 想咨询下进货的贷款 你们行里现在好办吗
+  A：早 好办 小微经营贷就是给咱这种店的 您店开几年了
+  B：五年了 流水一般 每月也就十来万
+  A：流水连续就行 您把近六个月的拉出来 征信这边要查一把 您别介意
+  B：要查征信啊 我还以为有不用查的路子
+  A：不查征信的都是外地小广告 正规银行第一关就是它 您别绕出去
+  B：那行 查就查 我这点记录扛得住
+  A：额度想多少
+  B：五万 春季进货压一压就够
+  A：五万没问题 利率按小微优惠给您算 今天先做个查询授权
+  A：今早还倒春寒 您多穿点
+  B：店里还开着电暖器 哈哈
+  A：我们大厅也冷 客户办业务都缩脖子
+  B：春捂秋冻 老话没错
+  A：是这个理
+  B：对了您中午吃啥
+  A：食堂面条 你将就点 别光顾着盘库
+  B：授权弄好了 流水也传了 还要啥
+  A：营业执照和租赁合同拍照 从App里传 就这两样 面签约在后天
+  B：拍给您微信发就行?
+  A：走App传 别发私人微信 流程里都有记录 对您也是个保障
+  B：明白 稳当
+  B：刚盘完库 累瘫
+  A：您这是给自己攒家底 累得值
+  B：借您吉言 这批货卖了请您吃饭
+  A：吃饭不急 先把贷款办利索
+  B：哎您这话实在
+  A：实在才是长久生意
+  【3月11日】
+  A：预审过了 五万额度批了 面签改明天上午十点 来柜台
+  B：这么快? 咋不问我要保证金之类的
+  A：贷款哪有先收费的 放款前银行一分钱不收 谁让您先交钱 您扭头就走 那全是骗子
+  A：所以合同您拿回去慢慢看 拿给家里人看都行 看不明白我一条条讲
+  B：合同电子版收到了 这个章怎么核实
+  A：电子合同有统一编号 官网输编号能查真伪 柜台也能验 您放心 拿给家里人看都行
+  A：应该的 大额合同就得家里人把关
+  B：闺女家长会刚散 拖到现在
+  A：老师说啥了
+  B：说她作文好 数学飘
+  A：跟她爸小时候一样吧 哈哈
+  B：哎 别提了 辅导数学血压高
+  A：明天面签完 给孩子带盒巧克力 哈哈
+  【3月12日】
+  B：面签签完了 手都签酸了
+  A：流程走完 下午四点前放款 您留意短信
+  A：周日行里组织爬山 您去不去
+  B：周日得看店 命苦
+  A：赚钱要紧 身体也顾着点
+  B：等旺季过了补觉
+  A：行 爬山明年再约
+  B：成 一言为定
+  B：短信来了! 放款了五万!
+  【系统消息】A 向 B 转账 50000 元，已收款。
+  B：到账了 整五万 一分没少
+  A：到了就好 还款日每月21号 绑您那张卡 提前还也没有违约金
+  B：晓得了 王经理 这回真是帮大忙 下次进货还找您
+  A：合作愉快 用款合规 春季生意兴隆

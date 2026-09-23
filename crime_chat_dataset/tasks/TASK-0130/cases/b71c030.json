@@ -1,0 +1,386 @@
+{
+ "key": "b71c030",
+ "archetype_id": "ARC-000089",
+ "subtype": "hotel_register_leak",
+ "latent_intent": "酒店夜班前台 A 把当晚刚办入住客人的住宿单子（房号、楼层、日期）按次卖给替人定位的 B，一单八百当晚结清；B 照单子把人找到后已预约下一单，A 排班配合，是一条长期稳定的住宿信息泄露通道。表面像前台正常帮客人查询或受托找人，实为内部单子外泄。",
+ "critical_facts": [
+  "B 要找的人当晚九点四十刚办进来，A 上夜班当晚就确认进来了，并称夜班什么动静都过他的手（4月10日）",
+  "A 出单子：房号楼层、住几晚、哪天走全在上头，让 B 看完就删（4月11日）",
+  "定价一单八百、按次结、当晚结清，B 于4月12日凌晨转账八百到账（转账锚定）",
+  "B 照单子把人找到，确认门牌日期全对，并答应不去酒店闹（4月12日）",
+  "B 预约下礼拜三下一单，A 称排好夜班等、八百老规矩（4月13日，长期化）"
+ ],
+ "benign_alternatives": [
+  "前台正常入住登记与问询服务",
+  "警方或机构依法查询住客信息"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "4月10日 23:02",
+   "speaker": "B",
+   "text": "睡没 跟你说个事"
+  },
+  {
+   "type": "message",
+   "time": "4月10日 23:04",
+   "speaker": "A",
+   "text": "夜班 刚交接完 讲"
+  },
+  {
+   "type": "message",
+   "time": "4月10日 23:06",
+   "speaker": "B",
+   "text": "我跟你提过的那个人 今天应该到了 你帮我留意下"
+  },
+  {
+   "type": "message",
+   "time": "4月10日 23:09",
+   "speaker": "A",
+   "text": "哪个"
+  },
+  {
+   "type": "message",
+   "time": "4月10日 23:10",
+   "speaker": "B",
+   "text": "就上回说的 跟人一块过来的那个 你懂的"
+  },
+  {
+   "type": "message",
+   "time": "4月10日 23:15",
+   "speaker": "A",
+   "text": "等我看下今晚的进店单"
+  },
+  {
+   "type": "message",
+   "time": "4月10日 23:19",
+   "speaker": "A",
+   "text": "进来了 九点四十办的 楼层不高"
+  },
+  {
+   "type": "message",
+   "time": "4月10日 23:20",
+   "speaker": "B",
+   "text": "这么快就有信 还是你这边靠谱"
+  },
+  {
+   "type": "message",
+   "time": "4月10日 23:22",
+   "speaker": "A",
+   "text": "夜班就这点好处 什么动静都过我的手"
+  },
+  {
+   "type": "message",
+   "time": "4月10日 23:24",
+   "speaker": "B",
+   "text": "那明晚能给我个准信吗 我这边急着用"
+  },
+  {
+   "type": "message",
+   "time": "4月10日 23:27",
+   "speaker": "A",
+   "text": "急什么 明天再说 来客人了"
+  },
+  {
+   "type": "message",
+   "time": "4月10日 23:45",
+   "speaker": "A",
+   "text": "柜子里就剩红烧牛肉面了 天天这个"
+  },
+  {
+   "type": "message",
+   "time": "4月10日 23:47",
+   "speaker": "B",
+   "text": "泡面配夜班 你们这行标配"
+  },
+  {
+   "type": "message",
+   "time": "4月10日 23:49",
+   "speaker": "A",
+   "text": "吃了仨月 闻着味就饱"
+  },
+  {
+   "type": "message",
+   "time": "4月10日 23:51",
+   "speaker": "B",
+   "text": "让家里给你送点吃的呗"
+  },
+  {
+   "type": "message",
+   "time": "4月10日 23:53",
+   "speaker": "A",
+   "text": "懒得折腾 凑合到天亮"
+  },
+  {
+   "type": "message",
+   "time": "4月10日 23:55",
+   "speaker": "B",
+   "text": "行行 我给你点个外卖 算我孝敬"
+  },
+  {
+   "type": "message",
+   "time": "4月11日 08:50",
+   "speaker": "B",
+   "text": "早 昨晚后来忙吗"
+  },
+  {
+   "type": "message",
+   "time": "4月11日 08:55",
+   "speaker": "A",
+   "text": "忙什么 一晚上两拨散客"
+  },
+  {
+   "type": "message",
+   "time": "4月11日 08:57",
+   "speaker": "B",
+   "text": "那我那事呢"
+  },
+  {
+   "type": "message",
+   "time": "4月11日 09:03",
+   "speaker": "A",
+   "text": "中午前给你信"
+  },
+  {
+   "type": "message",
+   "time": "4月11日 13:20",
+   "speaker": "A",
+   "text": "单子出了 你要的都在上头 房号楼层 住几晚 哪天走 全有"
+  },
+  {
+   "type": "message",
+   "time": "4月11日 13:22",
+   "speaker": "B",
+   "text": "真出来了 就等这个"
+  },
+  {
+   "type": "message",
+   "time": "4月11日 13:24",
+   "speaker": "A",
+   "text": "看完就删 我这边不留底"
+  },
+  {
+   "type": "message",
+   "time": "4月11日 13:26",
+   "speaker": "B",
+   "text": "晓得 老规矩 钱怎么算"
+  },
+  {
+   "type": "message",
+   "time": "4月11日 13:28",
+   "speaker": "A",
+   "text": "一单八百 按次结 今晚十二点前转我就行"
+  },
+  {
+   "type": "message",
+   "time": "4月11日 13:30",
+   "speaker": "B",
+   "text": "行 一单一结 干脆"
+  },
+  {
+   "type": "message",
+   "time": "4月11日 15:10",
+   "speaker": "B",
+   "text": "今年回南天真狠 墙上全是水珠"
+  },
+  {
+   "type": "message",
+   "time": "4月11日 15:13",
+   "speaker": "A",
+   "text": "大堂地毯潮得能拧出水 客人天天投诉"
+  },
+  {
+   "type": "message",
+   "time": "4月11日 15:15",
+   "speaker": "B",
+   "text": "你们没配除湿机吗"
+  },
+  {
+   "type": "message",
+   "time": "4月11日 15:17",
+   "speaker": "A",
+   "text": "两台不够看 电费还超了预算"
+  },
+  {
+   "type": "message",
+   "time": "4月11日 15:19",
+   "speaker": "B",
+   "text": "潮得人心烦 觉都睡不踏实"
+  },
+  {
+   "type": "message",
+   "time": "4月11日 15:22",
+   "speaker": "A",
+   "text": "你那屋开空调除湿啊 傻"
+  },
+  {
+   "type": "message",
+   "time": "4月11日 21:05",
+   "speaker": "B",
+   "text": "单子我看了 日期对上了 就是他"
+  },
+  {
+   "type": "message",
+   "time": "4月11日 21:08",
+   "speaker": "A",
+   "text": "人别闹到我酒店来 给我惹麻烦"
+  },
+  {
+   "type": "message",
+   "time": "4月11日 21:10",
+   "speaker": "B",
+   "text": "放心 我就在外头等他 自己的事自己了"
+  },
+  {
+   "type": "message",
+   "time": "4月12日 00:18",
+   "speaker": "B",
+   "text": "十二点了 这就转你"
+  },
+  {
+   "type": "message",
+   "time": "4月12日 00:20",
+   "speaker": "B",
+   "text": "转了 收一下"
+  },
+  {
+   "type": "transfer",
+   "time": "4月12日 00:21",
+   "from": "B",
+   "to": "A",
+   "amount": 800,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "4月12日 00:25",
+   "speaker": "A",
+   "text": "收到 一单一结 是痛快"
+  },
+  {
+   "type": "message",
+   "time": "4月12日 00:27",
+   "speaker": "B",
+   "text": "该说痛快的是我"
+  },
+  {
+   "type": "message",
+   "time": "4月12日 00:45",
+   "speaker": "A",
+   "text": "值夜台就我和猫 大眼瞪小眼"
+  },
+  {
+   "type": "message",
+   "time": "4月12日 00:48",
+   "speaker": "B",
+   "text": "你真养猫了"
+  },
+  {
+   "type": "message",
+   "time": "4月12日 00:50",
+   "speaker": "A",
+   "text": "后院捡的 现在比我还横"
+  },
+  {
+   "type": "message",
+   "time": "4月12日 00:52",
+   "speaker": "B",
+   "text": "夜班有个伴 熬得动些"
+  },
+  {
+   "type": "message",
+   "time": "4月12日 00:55",
+   "speaker": "A",
+   "text": "主要靠剧 下个月续那部悬疑的"
+  },
+  {
+   "type": "message",
+   "time": "4月12日 00:57",
+   "speaker": "B",
+   "text": "回头推我两部 我最近剧荒"
+  },
+  {
+   "type": "message",
+   "time": "4月12日 19:30",
+   "speaker": "B",
+   "text": "人我照着单子找着了 门牌日期全对 你这单子是真准"
+  },
+  {
+   "type": "message",
+   "time": "4月12日 19:34",
+   "speaker": "A",
+   "text": "准不准的别提我 下回别半夜喊我"
+  },
+  {
+   "type": "message",
+   "time": "4月12日 19:36",
+   "speaker": "B",
+   "text": "晓得 替我挠挠猫下巴"
+  },
+  {
+   "type": "message",
+   "time": "4月13日 10:15",
+   "speaker": "B",
+   "text": "老家那边下雨没 我爸这两天腰又疼"
+  },
+  {
+   "type": "message",
+   "time": "4月13日 10:20",
+   "speaker": "A",
+   "text": "我们这晴着 让你爸别睡凉席"
+  },
+  {
+   "type": "message",
+   "time": "4月13日 10:22",
+   "speaker": "B",
+   "text": "哈哈你比我妈还细 行 我提醒他"
+  },
+  {
+   "type": "message",
+   "time": "4月13日 10:25",
+   "speaker": "A",
+   "text": "长辈腰上事别拖 带去推拿推推"
+  },
+  {
+   "type": "message",
+   "time": "4月13日 10:28",
+   "speaker": "B",
+   "text": "嗯 听你的 我明天就挂个号"
+  },
+  {
+   "type": "message",
+   "time": "4月13日 22:40",
+   "speaker": "B",
+   "text": "下礼拜三还有一个人 到时候提前说给你"
+  },
+  {
+   "type": "message",
+   "time": "4月13日 22:44",
+   "speaker": "A",
+   "text": "具体哪天的房 我排好夜班等你"
+  },
+  {
+   "type": "message",
+   "time": "4月13日 22:46",
+   "speaker": "B",
+   "text": "日子定了我说 还是老规矩"
+  },
+  {
+   "type": "message",
+   "time": "4月13日 22:48",
+   "speaker": "A",
+   "text": "八百 夜班都在"
+  },
+  {
+   "type": "message",
+   "time": "4月13日 22:50",
+   "speaker": "B",
+   "text": "成 就指望你了"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0002016",
+  "status": "accepted",
+  "errors": []
+ }
+}

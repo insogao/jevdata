@@ -1,0 +1,151 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001771
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-85b5f7a73a563396
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 被问到提供同事联系方式、简历和离职名单；B 指出未经授权不能转交或出售，并要求只走合规招聘渠道。
+  critical_evidence:
+  - 有人索要整个部门的联系方式
+  - 对方提出简历按份卖并提及离职名单
+  - B 指出未经授权不得分享或交易，建议走正式招聘渠道
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 2
+  turn_count: 78
+  approximate_tokens_estimate: 1924
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0166
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-083
+
+dedup:
+  content_hash: sha256:8f3461c0c269733ed9efd70d39ffa49f1e8f13f4f584daae73403e12ec5f91f7
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【10月1日】
+  A：有人问我能不能弄到原单位整个部门的电话。
+  B：那种通讯录是内部资料，别给。
+  A：他说只是方便正常招聘联系。
+  B：正常猎头应该走授权渠道，不会要整份未授权名单。
+  A：另外还说简历按份卖，想让我牵个线。
+  B：简历不是商品，没同意就不能转卖。
+  A：还提到离职名单，说里面有不少合适的人。
+  B：离职名单也有个人信息，别收、别发。
+  A：我没有把资料给他。
+  B：就保持这个做法，必要时向负责人报告。
+  A：已经把那段聊天记下来准备说明。
+  A：这两天早晚温差挺大，我早上出门又穿少了。
+  B：我也是，中午热得想脱外套，晚上骑车又冷。
+  A：我把薄围巾塞包里了，方便。
+  B：好主意，我车里还有件旧开衫。
+  A：周末看预报好像还要降温。
+  B：那我提醒家里人把厚衣服翻出来。
+  B：只提交给合规负责人，别在群里扩散。
+  A：公司那边的猎头供应商要重新核对合同。
+  B：把授权范围和联系人用途都写清楚。
+  A：还有候选人撤回授权的处理方式。
+  B：对，收到撤回就停止联系。
+  A：我会把模板发给法务看。
+  B：好，按流程来。
+  A：对方又说他有一份现成的名单，可以先让我看看。
+  B：不用看，来源不明的资料不要接触。
+  A：我回绝了，也没问细节。
+  B：这样最好，避免不必要的信息流转。
+  A：上次你说的那个保温杯好用吗？
+  B：还行，盖子不漏，洗起来也方便。
+  A：那我也看看，办公室那个掉漆了。
+  B：选个简单的吧，花里胡哨的不好洗。
+  A：我先收藏，周末再下单。
+  B：行，活动多比比价。
+  A：后续只通过公司登记的供应商。
+  B：嗯。
+  A：我在楼下买咖啡，顺便给你带一杯？
+  B：要个美式，少冰。
+  A：一共38，我先付了。
+  B：我扫你19，等会儿发。
+  A：好，不急。
+  B：收到了，谢谢。
+  B：招聘联系要以本人主动投递或明确授权为前提。
+  A：明白，我不会给出任何号码或简历。
+  B：如果需要候选人，走公开渠道。
+  【10月2日】
+  A：你家那盆绿萝最近怎么样？
+  B：长了新叶，可能是我终于记得浇水了。
+  A：哈哈，植物也等到了靠谱的主人。
+  B：别夸，我上个月还差点忘了。
+  A：放窗边会不会晒过头？
+  B：上午有点散光就够了。
+  A：我会把这点转给负责人。
+  B：招聘联系要以本人主动投递或明确授权为前提。
+  A：明白，我不会给出任何号码或简历。
+  B：如果需要候选人，走公开渠道。
+  A：我会把这点转给负责人。
+  B：招聘联系要以本人主动投递或明确授权为前提。
+  A：明白，我不会给出任何号码或简历。
+  B：如果需要候选人，走公开渠道。
+  A：我会把这点转给负责人。
+  B：招聘联系要以本人主动投递或明确授权为前提。
+  A：明白，我不会给出任何号码或简历。
+  A：你周末准备怎么安排？
+  B：可能带家里人去公园走走。
+  A：最近那边有新开的展吗？
+  B：有个免费的花展，入口不远。
+  A：听起来不错，别赶最热的时候。
+  B：对，早点去，午饭前回来。
+  B：如果需要候选人，走公开渠道。
+  A：我会把这点转给负责人。
+  B：招聘联系要以本人主动投递或明确授权为前提。
+  A：明白，我不会给出任何号码或简历。
+  B：如果需要候选人，走公开渠道。
+  A：我会把这点转给负责人。
+  B：招聘联系要以本人主动投递或明确授权为前提。
+  A：明白，我不会给出任何号码或简历。
+  B：如果需要候选人，走公开渠道。
+  A：我会把这点转给负责人。

@@ -1,0 +1,266 @@
+{
+ "key": "b82c071",
+ "archetype_id": "ARC-000049",
+ "subtype": "beat_example_warning",
+ "latent_intent": "车间主管 A 约多次违规的员工 B 到楼下办公室做一次严肃的纪律谈话，说要让他长长记性，并把工资结算和劳动争议调解的事一并讲清楚，全程按公司制度走，最后给 B 结了一笔工资和补偿。",
+ "critical_facts": [
+  "A 是车间主管，约屡次违规的 B 到楼下办公室当面谈",
+  "A 说这次要让他长长记性，再犯就按制度严肃处理",
+  "A 说明处理都走公司规章，会通知人事一起做记录",
+  "A 提到有争议可以走劳动调解，不私下解决，别把事情闹大",
+  "A 给 B 结算了当月工资和一笔补偿金"
+ ],
+ "benign_alternatives": [
+  "严格管理谈话，主管依据公司制度对违规员工进行正式纪律谈话并做记录",
+  "劳动纠纷调解，劳动者与单位通过劳动调解委员会依法解决争议"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "11月10日 09:10",
+   "speaker": "A",
+   "text": "小李 下午两点到楼下一楼办公室来一趟 我跟你谈谈"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 09:15",
+   "speaker": "B",
+   "text": "头儿 又咋了"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 09:18",
+   "speaker": "A",
+   "text": "你这个月迟到几次了 还有两次没戴护具 自己心里没数"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 09:22",
+   "speaker": "B",
+   "text": "我下次注意"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 09:25",
+   "speaker": "A",
+   "text": "光注意不行 这次得给你长长记性 按制度来"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 09:29",
+   "speaker": "B",
+   "text": "要扣钱吗"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 09:32",
+   "speaker": "A",
+   "text": "扣不扣按规章说 我会叫上人事一起做记录 当面讲清楚"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 09:36",
+   "speaker": "B",
+   "text": "行 我下午过去"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 09:40",
+   "speaker": "A",
+   "text": "地点就在楼下一楼会议室 不是别的地方"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 12:00",
+   "speaker": "B",
+   "text": "中午吃了没"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 12:03",
+   "speaker": "A",
+   "text": "食堂吃的 你呢"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 12:06",
+   "speaker": "B",
+   "text": "我带了饭 省点"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 12:09",
+   "speaker": "A",
+   "text": "家里负担重就好好干 别老出岔子"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 14:00",
+   "speaker": "A",
+   "text": "到了没 我这边人齐了"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 14:03",
+   "speaker": "B",
+   "text": "到了 在门口"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 14:30",
+   "speaker": "A",
+   "text": "谈完了 你最近确实困难 我按制度给你把工资结了 另外补你一点"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 14:33",
+   "speaker": "B",
+   "text": "真的?我以为要开除我"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 14:36",
+   "speaker": "A",
+   "text": "制度是制度 该给的给 但再犯就没这么客气了"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 14:40",
+   "speaker": "B",
+   "text": "谢谢头儿 我改"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 14:43",
+   "speaker": "A",
+   "text": "钱今天下午到你卡上 有意见可以走调解 别憋着"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 14:46",
+   "speaker": "B",
+   "text": "没有意见 我服"
+  },
+  {
+   "type": "transfer",
+   "time": "11月10日 15:30",
+   "from": "A",
+   "to": "B",
+   "amount": 6800,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 15:33",
+   "speaker": "B",
+   "text": "钱到了 多谢头儿"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 15:36",
+   "speaker": "A",
+   "text": "好好干 别的都是虚的"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 18:00",
+   "speaker": "B",
+   "text": "晚上回去我把护具找出来 明天开始戴"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 18:03",
+   "speaker": "A",
+   "text": "这才对"
+  },
+  {
+   "type": "message",
+   "time": "11月11日 08:30",
+   "speaker": "A",
+   "text": "今天准时到了没"
+  },
+  {
+   "type": "message",
+   "time": "11月11日 08:33",
+   "speaker": "B",
+   "text": "到了 七点五十就来了"
+  },
+  {
+   "type": "message",
+   "time": "11月11日 08:36",
+   "speaker": "A",
+   "text": "保持住"
+  },
+  {
+   "type": "message",
+   "time": "11月11日 12:00",
+   "speaker": "B",
+   "text": "头儿 中午一起?"
+  },
+  {
+   "type": "message",
+   "time": "11月11日 12:03",
+   "speaker": "A",
+   "text": "行 走吧"
+  },
+  {
+   "type": "message",
+   "time": "11月12日 09:00",
+   "speaker": "A",
+   "text": "这周纪律检查我报了你表现 说在改"
+  },
+  {
+   "type": "message",
+   "time": "11月12日 09:04",
+   "speaker": "B",
+   "text": "够意思"
+  },
+  {
+   "type": "message",
+   "time": "11月12日 09:07",
+   "speaker": "A",
+   "text": "自己争气 比啥都强"
+  },
+  {
+   "type": "message",
+   "time": "11月13日 10:00",
+   "speaker": "A",
+   "text": "护具戴了几天了"
+  },
+  {
+   "type": "message",
+   "time": "11月13日 10:03",
+   "speaker": "B",
+   "text": "天天戴 习惯了"
+  },
+  {
+   "type": "message",
+   "time": "11月13日 10:06",
+   "speaker": "A",
+   "text": "好 安全第一"
+  },
+  {
+   "type": "message",
+   "time": "11月14日 17:00",
+   "speaker": "B",
+   "text": "头儿 这月工资条我看了 没问题"
+  },
+  {
+   "type": "message",
+   "time": "11月14日 17:04",
+   "speaker": "A",
+   "text": "有疑问随时找人事 按规定来"
+  },
+  {
+   "type": "message",
+   "time": "11月14日 17:07",
+   "speaker": "B",
+   "text": "知道了 谢谢"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0001958",
+  "status": "accepted",
+  "errors": []
+ }
+}

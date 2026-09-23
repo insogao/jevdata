@@ -1,0 +1,206 @@
+{
+ "key": "b82c046",
+ "archetype_id": "ARC-000003",
+ "subtype": "impersonation",
+ "latent_intent": "A 用新号码冒充 B 的老朋友，说手机和号都换了、原来的号停用了，上来就急着借钱让 B 马上转账，B 提出语音核实身份被 A 用不方便接电话搪塞过去，B 最后转了钱。",
+ "critical_facts": [
+  "一个陌生新号添加 B，自称是老朋友，说换号了",
+  "A 没寒暄几句就直接开口借钱，说急用、让 B 马上转",
+  "B 提出打个语音核实一下，A 以在外面、信号不好推脱",
+  "A 报了 B 的旧事来取信，催 B 别磨蹭",
+  "B 转出一笔钱，A 说收到后再联系，随后失联"
+ ],
+ "benign_alternatives": [
+  "真人换号通知，朋友换手机号后群发通知并正常联系",
+  "正规客服回访，平台客服按流程核实身份后提供服务"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "11月2日 19:00",
+   "speaker": "A",
+   "text": "老张 是我 老王 我换号了"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 19:04",
+   "speaker": "B",
+   "text": "哪个老王"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 19:07",
+   "speaker": "A",
+   "text": "就以前一起打球那个 老号停了 这是新号"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 19:10",
+   "speaker": "B",
+   "text": "哦 好久没联系了 怎么突然找我"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 19:13",
+   "speaker": "A",
+   "text": "有个急事 手头周转不开 借我两万应个急"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 19:16",
+   "speaker": "B",
+   "text": "这么急?"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 19:18",
+   "speaker": "A",
+   "text": "对 今天必须到位 你先转我 明天就还"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 19:21",
+   "speaker": "B",
+   "text": "我打个语音给你 咱聊聊"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 19:23",
+   "speaker": "A",
+   "text": "我这会儿在外面 信号不好 别打了"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 19:26",
+   "speaker": "B",
+   "text": "那你怎么证明是你啊"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 19:28",
+   "speaker": "A",
+   "text": "上回你请我吃的烧烤 你还喝多了 我记得清楚"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 19:31",
+   "speaker": "B",
+   "text": "这事你怎么知道"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 19:33",
+   "speaker": "A",
+   "text": "跟你说了我是老王 快转吧 磨蹭啥"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 19:36",
+   "speaker": "B",
+   "text": "你把账号发我"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 19:38",
+   "speaker": "A",
+   "text": "就这个号 转过来就行 备注别写"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 19:41",
+   "speaker": "B",
+   "text": "你原来号多少 我打过去"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 19:43",
+   "speaker": "A",
+   "text": "原号销了 接不了 你别那么多事"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 19:46",
+   "speaker": "B",
+   "text": "行吧 我转你 你明天一定还"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 19:48",
+   "speaker": "A",
+   "text": "放心 还能骗你"
+  },
+  {
+   "type": "transfer",
+   "time": "11月2日 19:52",
+   "from": "B",
+   "to": "A",
+   "amount": 20000,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 19:55",
+   "speaker": "A",
+   "text": "收到 明天联系你"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 20:00",
+   "speaker": "B",
+   "text": "好 别失联"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 09:00",
+   "speaker": "B",
+   "text": "钱啥时候还我"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 09:10",
+   "speaker": "A",
+   "text": "再等等 下午给你"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 14:00",
+   "speaker": "B",
+   "text": "在吗"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 18:00",
+   "speaker": "B",
+   "text": "你到底是不是老王"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 18:30",
+   "speaker": "B",
+   "text": "我给老王本人打电话了 他说根本没换号"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 19:00",
+   "speaker": "B",
+   "text": "你把钱退回来"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 08:00",
+   "speaker": "B",
+   "text": "再不回我报警了"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 08:10",
+   "speaker": "A",
+   "text": "（消息已发出，但被对方拒收）"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0001953",
+  "status": "accepted",
+  "errors": []
+ }
+}

@@ -1,0 +1,137 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002016
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000089
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-037778eee205bdb7
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: privacy_doxxing
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 酒店夜班前台 A 把当晚刚办入住客人的住宿单子（房号、楼层、日期）按次卖给替人定位的 B，一单八百当晚结清；B 照单子把人找到后已预约下一单，A 排班配合，是一条长期稳定的住宿信息泄露通道。表面像前台正常帮客人查询或受托找人，实为内部单子外泄。
+  critical_evidence:
+  - B 要找的人当晚九点四十刚办进来，A 上夜班当晚就确认进来了，并称夜班什么动静都过他的手（4月10日）
+  - A 出单子：房号楼层、住几晚、哪天走全在上头，让 B 看完就删（4月11日）
+  - 定价一单八百、按次结、当晚结清，B 于4月12日凌晨转账八百到账（转账锚定）
+  - B 照单子把人找到，确认门牌日期全对，并答应不去酒店闹（4月12日）
+  - B 预约下礼拜三下一单，A 称排好夜班等、八百老规矩（4月13日，长期化）
+  benign_alternatives:
+  - 前台正常入住登记与问询服务
+  - 警方或机构依法查询住客信息
+
+attributes:
+  duration_days: 4
+  turn_count: 59
+  approximate_tokens_estimate: 1349
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: hotel_register_leak
+  risk: 3
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0130
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-071
+
+dedup:
+  content_hash: sha256:91f97557c1603b8349f2b848e96f61f2437f334eb2684db6b0841bf4d8a90553
+pipeline_status: accepted
+title: privacy_doxxing/hotel_register_leak
+conversation: |-
+  【4月10日】
+  B：睡没 跟你说个事
+  A：夜班 刚交接完 讲
+  B：我跟你提过的那个人 今天应该到了 你帮我留意下
+  A：哪个
+  B：就上回说的 跟人一块过来的那个 你懂的
+  A：等我看下今晚的进店单
+  A：进来了 九点四十办的 楼层不高
+  B：这么快就有信 还是你这边靠谱
+  A：夜班就这点好处 什么动静都过我的手
+  B：那明晚能给我个准信吗 我这边急着用
+  A：急什么 明天再说 来客人了
+  A：柜子里就剩红烧牛肉面了 天天这个
+  B：泡面配夜班 你们这行标配
+  A：吃了仨月 闻着味就饱
+  B：让家里给你送点吃的呗
+  A：懒得折腾 凑合到天亮
+  B：行行 我给你点个外卖 算我孝敬
+  【4月11日】
+  B：早 昨晚后来忙吗
+  A：忙什么 一晚上两拨散客
+  B：那我那事呢
+  A：中午前给你信
+  A：单子出了 你要的都在上头 房号楼层 住几晚 哪天走 全有
+  B：真出来了 就等这个
+  A：看完就删 我这边不留底
+  B：晓得 老规矩 钱怎么算
+  A：一单八百 按次结 今晚十二点前转我就行
+  B：行 一单一结 干脆
+  B：今年回南天真狠 墙上全是水珠
+  A：大堂地毯潮得能拧出水 客人天天投诉
+  B：你们没配除湿机吗
+  A：两台不够看 电费还超了预算
+  B：潮得人心烦 觉都睡不踏实
+  A：你那屋开空调除湿啊 傻
+  B：单子我看了 日期对上了 就是他
+  A：人别闹到我酒店来 给我惹麻烦
+  B：放心 我就在外头等他 自己的事自己了
+  【4月12日】
+  B：十二点了 这就转你
+  B：转了 收一下
+  【系统消息】B 向 A 转账 800 元，已收款。
+  A：收到 一单一结 是痛快
+  B：该说痛快的是我
+  A：值夜台就我和猫 大眼瞪小眼
+  B：你真养猫了
+  A：后院捡的 现在比我还横
+  B：夜班有个伴 熬得动些
+  A：主要靠剧 下个月续那部悬疑的
+  B：回头推我两部 我最近剧荒
+  B：人我照着单子找着了 门牌日期全对 你这单子是真准
+  A：准不准的别提我 下回别半夜喊我
+  B：晓得 替我挠挠猫下巴
+  【4月13日】
+  B：老家那边下雨没 我爸这两天腰又疼
+  A：我们这晴着 让你爸别睡凉席
+  B：哈哈你比我妈还细 行 我提醒他
+  A：长辈腰上事别拖 带去推拿推推
+  B：嗯 听你的 我明天就挂个号
+  B：下礼拜三还有一个人 到时候提前说给你
+  A：具体哪天的房 我排好夜班等你
+  B：日子定了我说 还是老规矩
+  A：八百 夜班都在
+  B：成 就指望你了

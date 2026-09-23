@@ -1,0 +1,115 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001902
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-759b1f205037671a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A借节前的一次礼貌拜访和购物卡维系与陈工的关系，希望后续材料别被搁太久；表面仍可解释为节日人情。
+  critical_evidence:
+  - A在节前主动约陈工线下见面，谈到节日问候。
+  - A见面时送出一张购物卡，没有说明面值；陈工以节日心意收下。
+  - 见面后A提及自己的申请或材料，希望后续留意；陈工回应仍按正常流程办理，不承诺特殊处理。
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司福利卡
+
+attributes:
+  duration_days: 3
+  turn_count: 40
+  approximate_tokens_estimate: 1046
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0192
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-092
+
+dedup:
+  content_hash: sha256:5f756862dd30ac527f954b00f864fc4f9ce36e32f45852562b664418c6397d56
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【1月20日】
+  林工：陈工，节前想跟你约个便饭，最近辛苦啦。
+  陈工：好呀，最近确实一直在忙。
+  林工：快过节了，想当面打个招呼，也顺便问下负责登记合作方资料。
+  陈工：可以啊，明天下班后我有空，别特意准备什么。
+  林工：好，那我订个附近的家常菜馆，带份小小的节日心意。
+  A：这两天风挺大的
+  B：早上出门差点把伞吹翻
+  A：我这边还好 就是晚上降温
+  B：我妈非让我穿厚点 哈哈
+  A：最近预报说周末晴
+  B：那正好可以洗晒被子
+  陈工：吃饭就行啦，别客气。
+  A：你最近还开车上班吗
+  B：没呢 地铁快一些
+  A：我也是 停车位太难找了
+  B：下雨天打车又堵
+  A：我现在提前一站下走过去
+  B：挺好 当锻炼了
+  【1月21日】
+  A：最近颈椎还酸吗
+  B：好点了 少低头就好
+  A：我也在练拉伸 每天十分钟
+  B：能坚持就不错
+  A：晚上早点睡也有用
+  B：知道啦 这周争取不熬夜
+  林工：我到了，在门口等你。
+  陈工：我刚下楼，看见你了。
+  林工：顺手把一张购物卡给你，没特意讲面值，就是节日问候。
+  【系统消息】B 向 林工 转账 135 元，已收款。
+  陈工：你太客气了，心意我收下，下回别专门带东西。
+  陈工：这顿咱们分一下，我把我那份转你，省得每次你抢着付。
+  林工：收到啦，那就各付各的，下次我再约你。
+  【1月22日】
+  A：你爸妈今年过节来这边吗
+  B：我爸说看天气再定
+  A：老人家路上别太赶
+  B：是啊 我给他们把车票看好了
+  A：家里缺啥我再买点
+  B：不用买太多 他们总嫌占地方
+  林工：上次聊到我那份申请/材料，后续有空时帮我留意一下进度就好。
+  陈工：收到的材料还是按正常顺序走，有消息会按通知联系你。
+  林工：明白，我就是问问流程，节前辛苦了。
+  陈工：不客气，缺什么材料会统一通知，安心等消息。

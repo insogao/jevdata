@@ -1,0 +1,144 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001973
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-4d03577ec59f7073
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 节前提出给能接触摊位申请进度的B带一张不说明面值的购物卡，并在送卡前后暗示想让B留意自己的摊位申请；B拒绝个人礼卡，区分单位福利卡与私人礼物，要求按正常顺序处理。
+  critical_evidence:
+  - A 节前主动约见或联系能接触摊位申请进度的B
+  - A 提出送一张购物卡但不说明面值
+  - A 将礼物与自己的摊位申请进度联系起来，暗示希望B留意
+  - B 区分单位统一发放的福利卡与私人礼物，并拒绝个人礼卡
+  - B 表示按统一流程或正常顺序办理
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司福利卡
+
+attributes:
+  duration_days: 5
+  turn_count: 66
+  approximate_tokens_estimate: 1245
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0201
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-095
+
+dedup:
+  content_hash: sha256:76683a93177434af95ea9a545c0b151854b9f04018af97429b385e5b34df4082
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【6月2日】
+  A：您好，想节前见一面问问情况，你哪天有空？
+  B：我看看安排，怎么了？
+  A：你昨晚做饭了没
+  B：煮了点粥，简单吃
+  A：天热胃口也一般
+  B：是啊，先吃清淡点
+  A：我明天再煮些
+  B：多放点南瓜也不错
+  A：家里刚好还有
+  A：我之前交的摊位申请还想问问进度，后面好安排。
+  A：你那双雨鞋找到了吗
+  B：在鞋柜最里面
+  A：下雨天记得穿
+  B：嗯，放门口了
+  【6月3日】
+  A：还擦干净放好了
+  B：鞋底先看看有没有裂
+  A：我检查过了
+  B：这类材料都按时间顺着看，我不方便替谁单独调整。
+  A：上回按你的指引把表交上去了，节前想当面谢谢你。
+  A：周末球场还有位置吗
+  B：下午那场还没满
+  A：那我带双备用鞋
+  B：好，别太晚到
+  A：我六点前就出门
+  B：路上可能会堵
+  A：我看下导航再走
+  B：见面没问题，别专门准备东西。
+  【6月4日】
+  A：阿姨最近睡得好些吗
+  B：好多了，晚上不咳了
+  A：那就继续按时吃药
+  B：我帮她记着呢
+  A：医生说状态稳定
+  B：真好，家里都放心些
+  A：本来想带张购物卡，面值没看，想节前送给你。
+  B：单位发的福利卡要按单位的办法登记，私人送的我不收。
+  A：你家电梯修好了吗
+  B：上午物业来检查过
+  A：现在运行正常没
+  B：刚才试了一下，没问题
+  A：看来只是小毛病
+  【6月5日】
+  B：对，师傅说已经调过
+  A：我那份摊位申请到你手上时，方便帮我留意下吗？
+  A：耳机的声音恢复了吗
+  B：清了下灰，好多了
+  A：那就不用换新的
+  B：先用两天观察下
+  A：我把耳机盒也充上了
+  B：这样路上就够用
+  B：我只按统一顺序跟进，不会因为礼物或熟悉就提前。
+  A：好，我就是问问，没别的意思。
+  A：楼下那棵桂花开了吗
+  B：开了，晚上挺香的
+  A：路过时我也闻到了
+  【6月6日】
+  B：今年开得比去年早
+  A：我拍了张照片
+  B：发我看看呀
+  B：卡先别带来，后续按正常通知走。
+  A：早上公交挤不挤
+  B：还好，我坐了前一班
+  A：提早十分钟确实好些
+  B：我明天也试试
+  A：我看了下实时到站
+  B：省得站台等太久
+  A：上次提的摊位申请有新进展了吗？
+  B：有更新我会照平时的方式通知，顺序不变。
+  A：明白，那卡我就不带了，节前正常见面。

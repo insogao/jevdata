@@ -1,0 +1,135 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002025
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000024
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-d49ca0155838e993
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: bribery_corruption
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 竞聘部门主管的 A 与考评组成员 B 以打球、钓鱼为掩护在考核前单独密会，B 提前透出名单走向，A 以一幅「老家收的字」为名送上谢礼；公示后 A 按字画市价转 6 万并叮嘱对方收下，B 收款后要求「球照打、话别多说」——一场全程不提买卖二字的晋升交易落定并转为长期关系。
+  critical_evidence:
+  - 考核窗口期前 A 特意约 B「就咱俩、别喊老刘他们」单独打球密会（3月10日）
+  - B 明示「名单其实早有影子了、仨人里你排最前面、这半个月稳住」（3月11日）
+  - A 借「老家收的字、给您书房那面墙」送出装裱好的字画，B 称「字先挂着、其他看你自己」（3月12日）
+  - 公示前一天 B 通气「稳了、把三楼工牌照补一张、准备搬家吧」（3月13日）
+  - 公示当天 A 按「老先生落款的市价」转 60000 元作谢礼，B 收款并叮嘱「以后球照打、话别多说」（3月14日，转账）
+  benign_alternatives:
+  - 正常人情答谢
+  - 字画爱好者之间的交流转让
+
+attributes:
+  duration_days: 5
+  turn_count: 56
+  approximate_tokens_estimate: 1441
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: promotion_payment
+  risk: 3
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0146
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-077
+
+dedup:
+  content_hash: sha256:0336224f8a50f77780c90b4d0abf1954464f6e73e2c4eaa948ca1c3ae7d66148
+pipeline_status: accepted
+title: bribery_corruption/promotion_payment
+conversation: |-
+  【3月10日】
+  A：部长 周五晚上打球不 新翻修那片 灯亮
+  B：可以 老刘他们喊不
+  A：不喊 就咱俩 你上回说人多乱哄哄打不痛快
+  B：行 那包个小场 七点你把拍子给我带上 我那支线断了
+  A：我带两支 随你挑
+  B：好 这周竞聘的事别声张 组里还没定调
+  A：懂 我谁都没提
+  B：儿子昨晚上网课又摸鱼 你家那个呢
+  A：我家闺女乖 但小升初简历愁死我 她妈天天改
+  B：简历都是玄学 面谈看缘分
+  A：您到时候给掌掌眼 您懂行
+  B：行 发来我看看
+  【3月11日】
+  A：食堂今天有糖醋鱼 排队排到门口
+  B：我带了饭 减脂 你去吃
+  A：给您带块鱼 减脂的人嘴最馋
+  B：那带一小块 哈哈
+  B：你们年轻人代谢好 我看一眼都长秤
+  A：您那是骨架 体检出来医生都夸
+  B：就你会说话
+  A：部长 主管那个窗口 就这周出结果吧
+  B：名单其实早有影子了 仨人里你排最前面 这半个月稳住 别出岔子 也别请长假
+  A：哎 好嘞 我这半年项目都赶在前头交
+  B：我知道 我都看在眼里
+  B：明晚钓鱼去吗 河湾那边新开的塘
+  A：去 我新买的竿还没开张
+  B：那明晚七点 塘边见 别带外人
+  A：就咱俩
+  【3月12日】
+  A：部长 老家我叔那里收了幅字 老先生写的 四个字 笔力好
+  B：哦 哪四个字
+  A：宁静致远 说给我这样跑项目的人合适 我寻思您书房那面墙正空着
+  B：字先拿来看看 再说
+  A：周五打球那天我带过去 装裱都做好了
+  B：行
+  A：对了字的事 别跟办公室提 免得人家说我搞小圈子
+  B：我懂 分寸我有
+  【3月13日】
+  B：昨晚睡得咋样 我落枕了 脖子歪着
+  A：我腰也不行 周末去做了两次理疗 推拿加艾灸 那家师傅手艺好
+  B：发个位置 我也去试试
+  A：好嘞 先单次试试 别急着办卡
+  B：理疗完去你那蹭杯手冲
+  A：随时 豆子刚开的
+  B：明天出公示 傍晚记得刷新下
+  A：哎 心里还是没底
+  B：稳了 把三楼的工牌照补一张给行政 准备搬家吧
+  A：明白 谢部长 今晚把交接材料理了
+  B：别熬太晚
+  【3月14日】
+  A：公示看见了 谢 部长这半年提点
+  B：你自己稳 当之无愧 以后管人了嘴更要严
+  A：懂 那幅字您可别推 说好的谢礼
+  B：字我挂着 谢礼就别搞了
+  A：一码归一码 您不收我心里不踏实 我按老先生落款的市价来
+  B：……你啊 收了 以后球照打 话别多说
+  A：懂 周五老时间
+  【系统消息】A 向 B 转账 60000 元，已收款。
+  B：收到
+  A：今晚我请客 球馆边上那家羊汤?
+  B：行 喝完早点回 明天新岗位开第一次会

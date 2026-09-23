@@ -1,0 +1,148 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001773
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-22faf46f288f6fed
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 被问到提供同事联系方式、简历和离职名单；B 指出未经授权不能转交或出售，并要求只走合规招聘渠道。
+  critical_evidence:
+  - 有人索要整个部门的联系方式
+  - 对方提出简历按份卖并提及离职名单
+  - B 指出未经授权不得分享或交易，建议走正式招聘渠道
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 6
+  turn_count: 70
+  approximate_tokens_estimate: 1426
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0166
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-083
+
+dedup:
+  content_hash: sha256:f88df48434b60baf2185c05735c5780c1ab29abb4628caf8fe1fdaae79c9236a
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【10月1日】
+  A：联系人又来问我能不能给他一份部门通讯录。
+  B：没有授权就不能提供，别让他把“招聘”当理由。
+  A：他说离职名单也可以一起给，省得他自己找。
+  B：这属于员工个人信息，不能转给外部。
+  A：他还说简历按份卖，问我有多少份。
+  B：不参与交易，也别谈数量和来源。
+  A：我已经明确拒绝，没发任何文件。
+  B：好，后面让他通过正式供应商流程。
+  A：他说我不帮忙就算了，我没继续回。
+  【10月2日】
+  A：楼下咖啡我先付了38元。
+  B：我转你19，一人一杯。
+  【系统消息】B 向 A 转账 19 元，已收款。
+  A：好，收到。
+  B：下次我来付。
+  A：行。
+  B：谢谢。
+  B：如果继续骚扰就告诉主管。
+  A：我把聊天记下了。
+  B：不要保存或转发任何附件。
+  A：人事今天提醒大家检查通讯录权限。
+  B：谁确实需要谁申请，按岗位开通。
+  A：离职员工资料会单独归档。
+  B：访问也要有工作理由。
+  A：我把这条记进会议纪要。
+  B：挺好。
+  【10月3日】
+  A：最近睡得还好吗？
+  B：一般，楼上装修早上挺吵的。
+  A：要不要换个厚点的窗帘？
+  B：我先试试耳塞，已经买了一盒。
+  A：白天有空眯一会儿也行。
+  B：中午我尽量不排会。
+  A：外部那个人刚说可以先给我看一份样本。
+  B：别接收，也别下载。
+  A：我回了只能从公司官网提交供应商申请。
+  B：对，这样可以核验授权。
+  A：没有问他名单是怎么来的。
+  B：不用问，也不要牵涉进去。
+  A：午饭我带了两盒便当，楼下吃？
+  B：好，我刚忙完。
+  A：这家新出的鸡肉饭还不错。
+  【10月4日】
+  A：快递到了吗？
+  B：刚到驿站，晚点顺路拿。
+  A：我上次那个包裹压坏了，退换还挺麻烦。
+  B：我买东西都选能退的店。
+  A：这次买的是日用品，应该没事。
+  B：拆的时候我拍一下外箱。
+  【10月5日】
+  B：嗯，酱汁有点甜。
+  A：下次我点少酱。
+  B：我就按原味来。
+  A：我顺路买了点水果，128元，咱俩一人一半。
+  B：我转你64，收到没？
+  A：收到了，谢谢。
+  B：不用客气，周末带回家。
+  A：好。
+  B：记得洗了再吃。
+  A：你中午吃了吗，我刚从楼下回来。
+  B：吃了碗面，汤有点咸。
+  A：那家我也吃过，分量倒挺足。
+  B：是，没吃完还打包了一点。
+  A：晚上别再吃太重了。
+  B：嗯，回家煮点粥。
+  【10月6日】
+  A：公司把外部招聘合作说明发出来了。
+  B：那就按说明走，不碰内部个人资料。
+  A：收到。
+  B：谢谢你及时确认。
+  A：应该的。
+  B：下次有事先问清授权。
+  B：候选人资料只能按授权目的使用。
+  A：我不会向个人或外部发送。
+  B：有招聘需求就让公司采购审核。
+  A：好，我已经留了公开入口。

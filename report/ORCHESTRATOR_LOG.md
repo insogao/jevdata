@@ -322,3 +322,107 @@
 - 2026-09-24 03:34 | task_cli: COMPLETE claim=178 TASK-0159 agent=opencode-deepseek-20260924-al accepted=20 pairs=0 | worker done: 20 case files written
 - 2026-09-24 03:35 | task_cli: COMPLETE claim=179 TASK-0160 agent=opencode-deepseek-20260924-am accepted=20 pairs=0 | worker done: 20 case files written
 - 2026-09-24 03:35 | task_cli: CLAIM claim=181 TASK-0162 agent=opencode-deepseek-20260924-ao lease=7200s 截止=2026-09-24T05:35:38
+- 2026-09-24 03:38 | task_cli: CLAIM claim=182 TASK-0130 agent=glm-w1 lease=7200s 截止=2026-09-24T05:38:08
+- 2026-09-24 03:38 | task_cli: CLAIM claim=183 TASK-0146 agent=glm-w2 lease=7200s 截止=2026-09-24T05:38:08
+- 2026-09-24 03:38 | task_cli: CLAIM claim=184 TASK-0157 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T05:38:45
+- 2026-09-24 03:38 | task_cli: CLAIM claim=185 TASK-0164 agent=builder_eighteen_luna lease=7200s 截止=2026-09-24T05:38:52
+- 2026-09-24 03:38 | task_cli: CLAIM claim=186 TASK-0165 agent=builder_nineteen_luna lease=7200s 截止=2026-09-24T05:38:56
+- 2026-09-24 03:38 | task_cli: FAILED claim=184 TASK-0157 agent=builder_seventeen_luna 原因=误由 worker.py start 自动领取；本次指派限定 TASK-0164/0165/0166，未开始生成，交还任务池。 -> 重新入池（attempts 1/3）
+- 2026-09-24 03:39 | task_cli: CLAIM claim=187 TASK-0157 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T05:39:05
+- 2026-09-24 03:40 | task_cli: COMPLETE claim=185 TASK-0164 agent=builder_eighteen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 03:40 | task_cli: COMPLETE claim=186 TASK-0165 agent=builder_nineteen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 03:40 | task_cli: CLAIM claim=188 TASK-0167 agent=builder_eighteen_luna lease=7200s 截止=2026-09-24T05:40:17
+- 2026-09-24 03:40 | task_cli: COMPLETE claim=187 TASK-0157 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 03:40 | task_cli: CLAIM claim=189 TASK-0168 agent=builder_nineteen_luna lease=7200s 截止=2026-09-24T05:40:24
+- 2026-09-24 03:40 | task_cli: CLAIM claim=190 TASK-0169 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T05:40:30
+- 2026-09-24 03:40 | task_cli: FAILED claim=188 TASK-0167 agent=builder_eighteen_luna 原因=安全策略阻挡：该包含批量拆卸共享单车零件并遗弃、骗退货/调包、尾随取件、手机账号绕锁转售等明确盗窃/诈骗方案，按信号复现会生成可操作犯罪内容；禁止洗稿降风险，交还任务。 -> 重新入池（attempts 1/3）
+- 2026-09-24 03:40 | task_cli: FAILED claim=189 TASK-0168 agent=builder_nineteen_luna 原因=TASK-0168 含 ARC-000113 手机锁绕过/刷机转卖与 ARC-000114 蹲点偷快递/尾随进门的协同规格；生成会构造财产犯罪操作性对话，依安全边界不生成，未改写降风险。 -> 重新入池（attempts 1/3）
+- 2026-09-24 03:41 | task_cli: COMPLETE claim=190 TASK-0169 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 03:41 | task_cli: COMPLETE claim=180 TASK-0161 agent=opencode-deepseek-20260924-an accepted=20 pairs=0 | worker done: 20 case files written
+- 2026-09-24 03:42 | task_cli: CLAIM claim=191 TASK-0167 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T05:42:04
+- 2026-09-24 03:42 | task_cli: FAILED claim=191 TASK-0167 agent=builder_seventeen_luna 原因=所领 TASK-0167 包含多条 theft_robbery_property_crime（含拆盗共享单车配件），不符合本次仅处理 bribery_corruption 的指派范围；未生成内容，原样交还。 -> 重新入池（attempts 2/3）
+- 2026-09-24 03:42 | task_cli: CLAIM claim=192 TASK-0170 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T05:42:56
+- 2026-09-24 03:43 | task_cli: COMPLETE claim=192 TASK-0170 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 03:44 | task_cli: CLAIM claim=193 TASK-0171 agent=builder_twenty_luna lease=7200s 截止=2026-09-24T05:44:05
+- 2026-09-24 03:44 | task_cli: CLAIM claim=194 TASK-0172 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T05:44:17
+- 2026-09-24 03:44 | task_cli: CLAIM claim=195 TASK-0163 agent=opencode-deepseek-20260924-ap lease=7200s 截止=2026-09-24T05:44:34
+- 2026-09-24 03:44 | task_cli: CLAIM claim=196 TASK-0166 agent=builder_twentyone_luna lease=7200s 截止=2026-09-24T05:44:34
+- 2026-09-24 03:44 | task_cli: COMPLETE claim=194 TASK-0172 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 03:45 | task_cli: CLAIM claim=197 TASK-0173 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T05:45:36
+- 2026-09-24 03:45 | task_cli: COMPLETE claim=181 TASK-0162 agent=opencode-deepseek-20260924-ao accepted=20 pairs=0 | worker done: 20 case files written
+- 2026-09-24 03:45 | task_cli: COMPLETE claim=197 TASK-0173 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 03:46 | task_cli: CLAIM claim=198 TASK-0174 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T05:46:13
+- 2026-09-24 03:46 | task_cli: COMPLETE claim=198 TASK-0174 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 03:46 | task_cli: CLAIM claim=199 TASK-0175 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T05:46:45
+- 2026-09-24 03:46 | task_cli: COMPLETE claim=199 TASK-0175 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 03:47 | task_cli: CLAIM claim=200 TASK-0176 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T05:47:54
+- 2026-09-24 03:48 | task_cli: COMPLETE claim=200 TASK-0176 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 03:48 | task_cli: CLAIM claim=201 TASK-0177 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T05:48:24
+- 2026-09-24 03:48 | task_cli: COMPLETE claim=201 TASK-0177 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 03:48 | task_cli: CLAIM claim=202 TASK-0178 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T05:48:53
+- 2026-09-24 03:49 | task_cli: COMPLETE claim=202 TASK-0178 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 03:49 | task_cli: CLAIM claim=203 TASK-0179 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T05:49:34
+- 2026-09-24 03:49 | task_cli: COMPLETE claim=203 TASK-0179 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 03:50 | task_cli: CLAIM claim=204 TASK-0180 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T05:50:03
+- 2026-09-24 03:50 | task_cli: COMPLETE claim=204 TASK-0180 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 03:50 | task_cli: CLAIM claim=205 TASK-0181 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T05:50:35
+- 2026-09-24 03:50 | task_cli: CLAIM claim=206 TASK-0167 agent=opencode-deepseek-20260924-ar lease=7200s 截止=2026-09-24T05:50:44
+- 2026-09-24 03:50 | task_cli: COMPLETE claim=205 TASK-0181 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 03:51 | task_cli: CLAIM claim=207 TASK-0182 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T05:51:15
+- 2026-09-24 03:51 | task_cli: COMPLETE claim=207 TASK-0182 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 03:51 | task_cli: CLAIM claim=208 TASK-0183 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T05:51:46
+- 2026-09-24 03:51 | task_cli: COMPLETE claim=208 TASK-0183 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 03:52 | task_cli: CLAIM claim=209 TASK-0184 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T05:52:21
+- 2026-09-24 03:52 | task_cli: COMPLETE claim=196 TASK-0166 agent=builder_twentyone_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 03:52 | task_cli: COMPLETE claim=209 TASK-0184 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 03:52 | task_cli: COMPLETE claim=195 TASK-0163 agent=opencode-deepseek-20260924-ap accepted=20 pairs=0 | worker done: 20 case files written
+- 2026-09-24 03:53 | task_cli: COMPLETE claim=193 TASK-0171 agent=builder_twenty_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 03:53 | task_cli: CLAIM claim=210 TASK-0185 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T05:53:24
+- 2026-09-24 03:53 | task_cli: CLAIM claim=211 TASK-0186 agent=builder_twenty_luna lease=7200s 截止=2026-09-24T05:53:30
+- 2026-09-24 03:53 | task_cli: COMPLETE claim=210 TASK-0185 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 03:54 | task_cli: CLAIM claim=212 TASK-0187 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T05:54:11
+- 2026-09-24 03:54 | task_cli: COMPLETE claim=212 TASK-0187 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 03:54 | task_cli: CLAIM claim=213 TASK-0189 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T05:54:48
+- 2026-09-24 03:54 | task_cli: CLAIM claim=214 TASK-0188 agent=opencode-deepseek-20260924-as lease=7200s 截止=2026-09-24T05:54:53
+- 2026-09-24 03:55 | task_cli: COMPLETE claim=213 TASK-0189 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 03:55 | task_cli: CLAIM claim=215 TASK-0190 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T05:55:15
+- 2026-09-24 03:55 | task_cli: COMPLETE claim=215 TASK-0190 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 03:55 | task_cli: COMPLETE claim=206 TASK-0167 agent=opencode-deepseek-20260924-ar accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 03:56 | task_cli: COMPLETE claim=211 TASK-0186 agent=builder_twenty_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 03:56 | task_cli: CLAIM claim=216 TASK-0191 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T05:56:09
+- 2026-09-24 03:56 | task_cli: CLAIM claim=217 TASK-0192 agent=builder_twentytwo_luna lease=7200s 截止=2026-09-24T05:56:15
+- 2026-09-24 03:56 | task_cli: COMPLETE claim=216 TASK-0191 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 03:56 | task_cli: CLAIM claim=218 TASK-0193 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T05:56:56
+- 2026-09-24 03:57 | task_cli: CLAIM claim=219 TASK-0194 agent=builder_twenty_luna lease=7200s 截止=2026-09-24T05:57:02
+- 2026-09-24 03:57 | task_cli: COMPLETE claim=218 TASK-0193 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 03:57 | task_cli: CLAIM claim=220 TASK-0195 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T05:57:30
+- 2026-09-24 03:57 | task_cli: COMPLETE claim=220 TASK-0195 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 03:58 | task_cli: CLAIM claim=221 TASK-0196 agent=opencode-deepseek-20260924-aw lease=7200s 截止=2026-09-24T05:58:04
+- 2026-09-24 03:59 | task_cli: COMPLETE claim=219 TASK-0194 agent=builder_twenty_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:00 | task_cli: CLAIM claim=222 TASK-0198 agent=builder_twenty_luna lease=7200s 截止=2026-09-24T06:00:07
+- 2026-09-24 04:00 | task_cli: COMPLETE claim=217 TASK-0192 agent=builder_twentytwo_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:01 | task_cli: CLAIM claim=223 TASK-0197 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T06:01:43
+- 2026-09-24 04:01 | task_cli: CLAIM claim=224 TASK-0199 agent=builder_twentytwo_luna lease=7200s 截止=2026-09-24T06:01:49
+- 2026-09-24 04:01 | task_cli: COMPLETE claim=223 TASK-0197 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:02 | task_cli: FAILED claim=214 TASK-0188 agent=opencode-deepseek-20260924-as 原因=OpenCode DeepSeek upstream returned insufficient account funds; worker stopped before completion. Preserve partial cases for continuation. -> 重新入池（attempts 1/3）
+- 2026-09-24 04:02 | task_cli: FAILED claim=221 TASK-0196 agent=opencode-deepseek-20260924-aw 原因=OpenCode DeepSeek upstream returned insufficient account funds; worker stopped before completion. Preserve partial cases for continuation. -> 重新入池（attempts 1/3）
+- 2026-09-24 04:02 | task_cli: COMPLETE claim=222 TASK-0198 agent=builder_twenty_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:02 | task_cli: CLAIM claim=225 TASK-0200 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T06:02:41
+- 2026-09-24 04:02 | task_cli: COMPLETE claim=225 TASK-0200 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:03 | task_cli: CLAIM claim=226 TASK-0201 agent=builder_twenty_luna lease=7200s 截止=2026-09-24T06:03:28
+- 2026-09-24 04:03 | task_cli: CLAIM claim=227 TASK-0202 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T06:03:31
+- 2026-09-24 04:03 | task_cli: COMPLETE claim=227 TASK-0202 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:04 | task_cli: CLAIM claim=228 TASK-0203 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T06:04:02
+- 2026-09-24 04:04 | task_cli: COMPLETE claim=228 TASK-0203 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:04 | task_cli: CLAIM claim=229 TASK-0204 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T06:04:34
+- 2026-09-24 04:04 | task_cli: COMPLETE claim=224 TASK-0199 agent=builder_twentytwo_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:04 | task_cli: COMPLETE claim=229 TASK-0204 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:04 | task_cli: COMPLETE claim=226 TASK-0201 agent=builder_twenty_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:05 | task_cli: CLAIM claim=230 TASK-0196 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T06:05:52
+- 2026-09-24 04:06 | task_cli: CLAIM claim=231 TASK-0188 agent=builder_twenty_luna lease=7200s 截止=2026-09-24T06:06:01
+- 2026-09-24 04:06 | task_cli: CLAIM claim=232 TASK-0205 agent=builder_twentytwo_luna lease=7200s 截止=2026-09-24T06:06:02
+- 2026-09-24 04:06 | task_cli: COMPLETE claim=183 TASK-0146 agent=glm-w2 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:06 | task_cli: COMPLETE claim=230 TASK-0196 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:06 | task_cli: COMPLETE claim=182 TASK-0130 agent=glm-w1 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:07 | task_cli: CLAIM claim=233 TASK-0206 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T06:07:02
+- 2026-09-24 04:07 | task_cli: COMPLETE claim=233 TASK-0206 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written

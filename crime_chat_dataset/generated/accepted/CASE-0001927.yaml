@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001927
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-e453f65e502764f9
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 借节前见面向能接触活动点位申请进度的B送一张不说明面值的购物卡，并在送卡前后暗示想让B留意自己的活动点位申请；B拒绝个人礼卡，区分单位福利卡与私人礼物，要求按正常顺序处理。
+  critical_evidence:
+  - A 节前主动约见或联系能接触活动点位申请进度的B
+  - A 提出送一张购物卡但不说明面值
+  - A 将礼物与自己的活动点位申请进度联系起来，暗示希望B留意
+  - B 区分单位统一发放的福利卡与私人礼物，并拒绝个人礼卡
+  - B 表示按统一流程或正常顺序办理
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司福利卡
+
+attributes:
+  duration_days: 6
+  turn_count: 52
+  approximate_tokens_estimate: 1124
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0198
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-094
+
+dedup:
+  content_hash: sha256:87583805edf0451d202e15b859ec6b18e11c5d873a606447827dedea670f6cbd
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【8月9日】
+  A：老朋友，想节前见一面，你哪天有空？
+  B：这周还好，怎么了？
+  A：你家窗台的香葱长出来没
+  B：长了一点，得再等几天
+  A：炒蛋时候剪一点就行
+  B：嗯，我种着玩
+  A：我准备再种一小盆
+  B：阳台还能放得下吗
+  A：放得下，我把旧花盆腾出来
+  【8月10日】
+  A：我之前交的活动点位申请还没听到消息，想问问大概到哪儿了。
+  B：我这边看到的都是按先后流转，不能单独给谁改顺序。
+  A：午饭吃的什么
+  B：附近新开了家盖饭
+  A：味道还行吗
+  B：挺清淡的，下次可以去
+  A：下回我早点去
+  B：人少就不用等位
+  A：咱们认识好多年了，我一直记得你对我的照应。
+  【8月11日】
+  B：见面没问题，东西真的不用带。
+  A：你那个保温杯找到没
+  B：在车后座，昨晚忘了拿
+  A：还好没落在外面
+  B：我现在就收进包里
+  A：我放到副驾驶了
+  B：这样进门就能拿
+  A：我带了那张卡，里头多少我没看，就当节前一点心意。
+  【系统消息】A 向 B 转账 300 元，已收款。
+  【8月12日】
+  B：私人送的我不能收，单位发的福利卡要按单位的办法来。
+  A：周末要不要去看花市
+  B：可以呀，上午早点去
+  A：好，避开中午人多
+  B：我到时发你消息
+  A：我查了下公交路线
+  B：直达那班更方便
+  A：那件你知道的事，之后有空帮我提一句就行。
+  B：不管认识多久，我都只能照同一套流程往下办。
+  【8月13日】
+  A：你家小狗最近乖不乖
+  B：还行，最近不乱叫了
+  A：邻居应该省心些
+  B：是，晚上安静多了
+  A：它现在爱趴门口
+  B：估计等你回家
+  A：懂，我就是顺口问问。
+  B：卡你先拿回去，等有消息会照常告诉你。
+  A：外头风挺大吧
+  【8月14日】
+  B：刚才骑车回来有点冷
+  A：戴个围巾吧
+  B：我找找抽屉里那条
+  A：找到了，颜色都褪了
+  B：能用就先用着
+  A：上次聊的那件事有回音没？我这边还等着安排。
+  B：我会按提交的先后看，有变化走原来的通知方式。
+  A：好，我明白了，东西先不留你这儿，节前就正常见面。

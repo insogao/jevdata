@@ -1,325 +1,330 @@
 {
-  "key": "b83c001",
-  "archetype_id": "ARC-000080",
-  "subtype": "workplace_contact_out",
-  "latent_intent": "A 被问到提供同事联系方式、简历和离职名单；B 指出未经授权不能转交或出售，并要求只走合规招聘渠道。",
-  "critical_facts": [
-    "有人索要整个部门的联系方式",
-    "对方提出简历按份卖并提及离职名单",
-    "B 指出未经授权不得分享或交易，建议走正式招聘渠道"
-  ],
-  "benign_alternatives": [
-    "猎头正常触达",
-    "通讯录共享授权"
-  ],
-  "events": [
-    {
-      "type": "message",
-      "time": "10月1日 08:35",
-      "speaker": "A",
-      "text": "有个认识的人说想收一份原单位整个部门电话。"
-    },
-    {
-      "type": "message",
-      "time": "10月1日 08:39",
-      "speaker": "B",
-      "text": "为什么要整份？正常招聘联系不需要内部通讯录。"
-    },
-    {
-      "type": "message",
-      "time": "10月1日 08:43",
-      "speaker": "A",
-      "text": "他说可以把简历按份卖给他，顺便带上离职名单。"
-    },
-    {
-      "type": "message",
-      "time": "10月1日 08:47",
-      "speaker": "A",
-      "text": "我买的水果和点心一共128元。"
-    },
-    {
-      "type": "message",
-      "time": "10月1日 08:51",
-      "speaker": "B",
-      "text": "我出一半，给你转64。"
-    },
-    {
-      "type": "transfer",
-      "time": "10月1日 08:53",
-      "from": "B",
-      "to": "A",
-      "amount": 64,
-      "status": "received"
-    },
-    {
-      "type": "message",
-      "time": "10月1日 08:55",
-      "speaker": "A",
-      "text": "收到。"
-    },
-    {
-      "type": "message",
-      "time": "10月1日 08:59",
-      "speaker": "B",
-      "text": "周末带回去大家一起吃。"
-    },
-    {
-      "type": "message",
-      "time": "10月1日 09:03",
-      "speaker": "A",
-      "text": "好，别忘了拿。"
-    },
-    {
-      "type": "message",
-      "time": "10月1日 09:07",
-      "speaker": "B",
-      "text": "记住了。"
-    },
-    {
-      "type": "message",
-      "time": "10月2日 08:35",
-      "speaker": "B",
-      "text": "这类信息没有本人同意不能卖，也不能转给外人。"
-    },
-    {
-      "type": "message",
-      "time": "10月2日 08:39",
-      "speaker": "A",
-      "text": "我没答应，只是没想到他开口这么直接。"
-    },
-    {
-      "type": "message",
-      "time": "10月2日 08:43",
-      "speaker": "B",
-      "text": "别把任何实际号码或简历发过去。"
-    },
-    {
-      "type": "message",
-      "time": "10月2日 08:47",
-      "speaker": "A",
-      "text": "上次你说的那个保温杯好用吗？"
-    },
-    {
-      "type": "message",
-      "time": "10月2日 08:51",
-      "speaker": "B",
-      "text": "还行，盖子不漏，洗起来也方便。"
-    },
-    {
-      "type": "message",
-      "time": "10月2日 08:55",
-      "speaker": "A",
-      "text": "那我也看看，办公室那个掉漆了。"
-    },
-    {
-      "type": "message",
-      "time": "10月2日 08:59",
-      "speaker": "B",
-      "text": "选个简单的吧，花里胡哨的不好洗。"
-    },
-    {
-      "type": "message",
-      "time": "10月2日 09:03",
-      "speaker": "A",
-      "text": "我先收藏，周末再下单。"
-    },
-    {
-      "type": "message",
-      "time": "10月2日 09:07",
-      "speaker": "B",
-      "text": "行，活动多比比价。"
-    },
-    {
-      "type": "message",
-      "time": "10月3日 08:35",
-      "speaker": "A",
-      "text": "对，我手上也没有名单。"
-    },
-    {
-      "type": "message",
-      "time": "10月3日 08:39",
-      "speaker": "B",
-      "text": "如果他再提，就让他走公司公开供应商申请。"
-    },
-    {
-      "type": "message",
-      "time": "10月3日 08:43",
-      "speaker": "A",
-      "text": "我回他说不做这类转交。"
-    },
-    {
-      "type": "message",
-      "time": "10月3日 08:47",
-      "speaker": "A",
-      "text": "快递到了吗？"
-    },
-    {
-      "type": "message",
-      "time": "10月3日 08:51",
-      "speaker": "B",
-      "text": "刚到驿站，晚点顺路拿。"
-    },
-    {
-      "type": "message",
-      "time": "10月3日 08:55",
-      "speaker": "A",
-      "text": "我上次那个包裹压坏了，退换还挺麻烦。"
-    },
-    {
-      "type": "message",
-      "time": "10月3日 08:59",
-      "speaker": "B",
-      "text": "我买东西都选能退的店。"
-    },
-    {
-      "type": "message",
-      "time": "10月3日 09:03",
-      "speaker": "A",
-      "text": "这次买的是日用品，应该没事。"
-    },
-    {
-      "type": "message",
-      "time": "10月3日 09:07",
-      "speaker": "B",
-      "text": "拆的时候我拍一下外箱。"
-    },
-    {
-      "type": "message",
-      "time": "10月3日 09:11",
-      "speaker": "B",
-      "text": "很好，保持这个边界。"
-    },
-    {
-      "type": "message",
-      "time": "10月3日 09:15",
-      "speaker": "A",
-      "text": "他还说别跟原单位的人提。"
-    },
-    {
-      "type": "message",
-      "time": "10月3日 09:19",
-      "speaker": "B",
-      "text": "这更说明事情不对，停止联系并向负责人说明。"
-    },
-    {
-      "type": "message",
-      "time": "10月4日 08:35",
-      "speaker": "A",
-      "text": "你周末准备怎么安排？"
-    },
-    {
-      "type": "message",
-      "time": "10月4日 08:39",
-      "speaker": "B",
-      "text": "可能带家里人去公园走走。"
-    },
-    {
-      "type": "message",
-      "time": "10月4日 08:43",
-      "speaker": "A",
-      "text": "最近那边有新开的展吗？"
-    },
-    {
-      "type": "message",
-      "time": "10月4日 08:47",
-      "speaker": "B",
-      "text": "有个免费的花展，入口不远。"
-    },
-    {
-      "type": "message",
-      "time": "10月4日 08:51",
-      "speaker": "A",
-      "text": "听起来不错，别赶最热的时候。"
-    },
-    {
-      "type": "message",
-      "time": "10月4日 08:55",
-      "speaker": "B",
-      "text": "对，早点去，午饭前回来。"
-    },
-    {
-      "type": "message",
-      "time": "10月4日 08:59",
-      "speaker": "A",
-      "text": "我没答应，也不会问他要样本。"
-    },
-    {
-      "type": "message",
-      "time": "10月4日 09:03",
-      "speaker": "B",
-      "text": "来源不明的名单不要接触。"
-    },
-    {
-      "type": "message",
-      "time": "10月4日 09:07",
-      "speaker": "A",
-      "text": "我让他走公司公开申请流程。"
-    },
-    {
-      "type": "message",
-      "time": "10月5日 08:35",
-      "speaker": "A",
-      "text": "你家那盆绿萝最近怎么样？"
-    },
-    {
-      "type": "message",
-      "time": "10月5日 08:39",
-      "speaker": "B",
-      "text": "长了新叶，可能是我终于记得浇水了。"
-    },
-    {
-      "type": "message",
-      "time": "10月5日 08:43",
-      "speaker": "A",
-      "text": "哈哈，植物也等到了靠谱的主人。"
-    },
-    {
-      "type": "message",
-      "time": "10月5日 08:47",
-      "speaker": "B",
-      "text": "别夸，我上个月还差点忘了。"
-    },
-    {
-      "type": "message",
-      "time": "10月5日 08:51",
-      "speaker": "A",
-      "text": "放窗边会不会晒过头？"
-    },
-    {
-      "type": "message",
-      "time": "10月5日 08:55",
-      "speaker": "B",
-      "text": "上午有点散光就够了。"
-    },
-    {
-      "type": "message",
-      "time": "10月5日 08:59",
-      "speaker": "B",
-      "text": "对，候选人资料要有本人授权。"
-    },
-    {
-      "type": "message",
-      "time": "10月5日 09:03",
-      "speaker": "A",
-      "text": "我也会提醒主管有人来索要资料。"
-    },
-    {
-      "type": "message",
-      "time": "10月5日 09:07",
-      "speaker": "B",
-      "text": "只向需要处理的人说明就行。"
-    },
-    {
-      "type": "message",
-      "time": "10月5日 09:11",
-      "speaker": "A",
-      "text": "不会把任何号码或简历发出去。"
-    },
-    {
-      "type": "message",
-      "time": "10月5日 09:15",
-      "speaker": "B",
-      "text": "谢谢，守住这个边界。"
-    }
-  ]
+ "key": "b83c001",
+ "archetype_id": "ARC-000080",
+ "subtype": "workplace_contact_out",
+ "latent_intent": "A 被问到提供同事联系方式、简历和离职名单；B 指出未经授权不能转交或出售，并要求只走合规招聘渠道。",
+ "critical_facts": [
+  "有人索要整个部门的联系方式",
+  "对方提出简历按份卖并提及离职名单",
+  "B 指出未经授权不得分享或交易，建议走正式招聘渠道"
+ ],
+ "benign_alternatives": [
+  "猎头正常触达",
+  "通讯录共享授权"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "10月1日 08:35",
+   "speaker": "A",
+   "text": "有个认识的人说想收一份原单位整个部门电话。"
+  },
+  {
+   "type": "message",
+   "time": "10月1日 08:39",
+   "speaker": "B",
+   "text": "为什么要整份？正常招聘联系不需要内部通讯录。"
+  },
+  {
+   "type": "message",
+   "time": "10月1日 08:43",
+   "speaker": "A",
+   "text": "他说可以把简历按份卖给他，顺便带上离职名单。"
+  },
+  {
+   "type": "message",
+   "time": "10月1日 08:47",
+   "speaker": "A",
+   "text": "我买的水果和点心一共128元。"
+  },
+  {
+   "type": "message",
+   "time": "10月1日 08:51",
+   "speaker": "B",
+   "text": "我出一半，给你转64。"
+  },
+  {
+   "type": "transfer",
+   "time": "10月1日 08:53",
+   "from": "B",
+   "to": "A",
+   "amount": 64,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "10月1日 08:55",
+   "speaker": "A",
+   "text": "收到。"
+  },
+  {
+   "type": "message",
+   "time": "10月1日 08:59",
+   "speaker": "B",
+   "text": "周末带回去大家一起吃。"
+  },
+  {
+   "type": "message",
+   "time": "10月1日 09:03",
+   "speaker": "A",
+   "text": "好，别忘了拿。"
+  },
+  {
+   "type": "message",
+   "time": "10月1日 09:07",
+   "speaker": "B",
+   "text": "记住了。"
+  },
+  {
+   "type": "message",
+   "time": "10月2日 08:35",
+   "speaker": "B",
+   "text": "这类信息没有本人同意不能卖，也不能转给外人。"
+  },
+  {
+   "type": "message",
+   "time": "10月2日 08:39",
+   "speaker": "A",
+   "text": "我没答应，只是没想到他开口这么直接。"
+  },
+  {
+   "type": "message",
+   "time": "10月2日 08:43",
+   "speaker": "B",
+   "text": "别把任何实际号码或简历发过去。"
+  },
+  {
+   "type": "message",
+   "time": "10月2日 08:47",
+   "speaker": "A",
+   "text": "上次你说的那个保温杯好用吗？"
+  },
+  {
+   "type": "message",
+   "time": "10月2日 08:51",
+   "speaker": "B",
+   "text": "还行，盖子不漏，洗起来也方便。"
+  },
+  {
+   "type": "message",
+   "time": "10月2日 08:55",
+   "speaker": "A",
+   "text": "那我也看看，办公室那个掉漆了。"
+  },
+  {
+   "type": "message",
+   "time": "10月2日 08:59",
+   "speaker": "B",
+   "text": "选个简单的吧，花里胡哨的不好洗。"
+  },
+  {
+   "type": "message",
+   "time": "10月2日 09:03",
+   "speaker": "A",
+   "text": "我先收藏，周末再下单。"
+  },
+  {
+   "type": "message",
+   "time": "10月2日 09:07",
+   "speaker": "B",
+   "text": "行，活动多比比价。"
+  },
+  {
+   "type": "message",
+   "time": "10月3日 08:35",
+   "speaker": "A",
+   "text": "对，我手上也没有名单。"
+  },
+  {
+   "type": "message",
+   "time": "10月3日 08:39",
+   "speaker": "B",
+   "text": "如果他再提，就让他走公司公开供应商申请。"
+  },
+  {
+   "type": "message",
+   "time": "10月3日 08:43",
+   "speaker": "A",
+   "text": "我回他说不做这类转交。"
+  },
+  {
+   "type": "message",
+   "time": "10月3日 08:47",
+   "speaker": "A",
+   "text": "快递到了吗？"
+  },
+  {
+   "type": "message",
+   "time": "10月3日 08:51",
+   "speaker": "B",
+   "text": "刚到驿站，晚点顺路拿。"
+  },
+  {
+   "type": "message",
+   "time": "10月3日 08:55",
+   "speaker": "A",
+   "text": "我上次那个包裹压坏了，退换还挺麻烦。"
+  },
+  {
+   "type": "message",
+   "time": "10月3日 08:59",
+   "speaker": "B",
+   "text": "我买东西都选能退的店。"
+  },
+  {
+   "type": "message",
+   "time": "10月3日 09:03",
+   "speaker": "A",
+   "text": "这次买的是日用品，应该没事。"
+  },
+  {
+   "type": "message",
+   "time": "10月3日 09:07",
+   "speaker": "B",
+   "text": "拆的时候我拍一下外箱。"
+  },
+  {
+   "type": "message",
+   "time": "10月3日 09:11",
+   "speaker": "B",
+   "text": "很好，保持这个边界。"
+  },
+  {
+   "type": "message",
+   "time": "10月3日 09:15",
+   "speaker": "A",
+   "text": "他还说别跟原单位的人提。"
+  },
+  {
+   "type": "message",
+   "time": "10月3日 09:19",
+   "speaker": "B",
+   "text": "这更说明事情不对，停止联系并向负责人说明。"
+  },
+  {
+   "type": "message",
+   "time": "10月4日 08:35",
+   "speaker": "A",
+   "text": "你周末准备怎么安排？"
+  },
+  {
+   "type": "message",
+   "time": "10月4日 08:39",
+   "speaker": "B",
+   "text": "可能带家里人去公园走走。"
+  },
+  {
+   "type": "message",
+   "time": "10月4日 08:43",
+   "speaker": "A",
+   "text": "最近那边有新开的展吗？"
+  },
+  {
+   "type": "message",
+   "time": "10月4日 08:47",
+   "speaker": "B",
+   "text": "有个免费的花展，入口不远。"
+  },
+  {
+   "type": "message",
+   "time": "10月4日 08:51",
+   "speaker": "A",
+   "text": "听起来不错，别赶最热的时候。"
+  },
+  {
+   "type": "message",
+   "time": "10月4日 08:55",
+   "speaker": "B",
+   "text": "对，早点去，午饭前回来。"
+  },
+  {
+   "type": "message",
+   "time": "10月4日 08:59",
+   "speaker": "A",
+   "text": "我没答应，也不会问他要样本。"
+  },
+  {
+   "type": "message",
+   "time": "10月4日 09:03",
+   "speaker": "B",
+   "text": "来源不明的名单不要接触。"
+  },
+  {
+   "type": "message",
+   "time": "10月4日 09:07",
+   "speaker": "A",
+   "text": "我让他走公司公开申请流程。"
+  },
+  {
+   "type": "message",
+   "time": "10月5日 08:35",
+   "speaker": "A",
+   "text": "你家那盆绿萝最近怎么样？"
+  },
+  {
+   "type": "message",
+   "time": "10月5日 08:39",
+   "speaker": "B",
+   "text": "长了新叶，可能是我终于记得浇水了。"
+  },
+  {
+   "type": "message",
+   "time": "10月5日 08:43",
+   "speaker": "A",
+   "text": "哈哈，植物也等到了靠谱的主人。"
+  },
+  {
+   "type": "message",
+   "time": "10月5日 08:47",
+   "speaker": "B",
+   "text": "别夸，我上个月还差点忘了。"
+  },
+  {
+   "type": "message",
+   "time": "10月5日 08:51",
+   "speaker": "A",
+   "text": "放窗边会不会晒过头？"
+  },
+  {
+   "type": "message",
+   "time": "10月5日 08:55",
+   "speaker": "B",
+   "text": "上午有点散光就够了。"
+  },
+  {
+   "type": "message",
+   "time": "10月5日 08:59",
+   "speaker": "B",
+   "text": "对，候选人资料要有本人授权。"
+  },
+  {
+   "type": "message",
+   "time": "10月5日 09:03",
+   "speaker": "A",
+   "text": "我也会提醒主管有人来索要资料。"
+  },
+  {
+   "type": "message",
+   "time": "10月5日 09:07",
+   "speaker": "B",
+   "text": "只向需要处理的人说明就行。"
+  },
+  {
+   "type": "message",
+   "time": "10月5日 09:11",
+   "speaker": "A",
+   "text": "不会把任何号码或简历发出去。"
+  },
+  {
+   "type": "message",
+   "time": "10月5日 09:15",
+   "speaker": "B",
+   "text": "谢谢，守住这个边界。"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0001769",
+  "status": "accepted",
+  "errors": []
+ }
 }

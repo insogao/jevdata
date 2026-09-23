@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002015
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000094
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-708193c682e4b6cc
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 上线 A 把升级到第七层的通道口子派给下线 B 走账：单子一手进一手出、佣金千八、秒结，B 走完四万的首笔后当晚即收到三百二佣金，并已被排上下周二十万级的大单，是一条层级明确、靠速度结算的长线资金通道。表面像游戏代充或平台充值服务，全程无一处点明真实用途。
+  critical_evidence:
+  - A 派活称老走法、通道已排到第七层、一手交一手秒结（7月6日，语音开场）
+  - 佣金定为千八，B 应下（7月6日）
+  - B 于7月8日走完一笔四万，称第七层今天不卡顺得很（7月8日）
+  - 7月9日 A 结佣金三百二并秒到账，B 称秒结名不虚传（转账锚定）
+  - A 排下周十万级大单、留到周二，叮嘱到手就动别压着（7月10-11日，长期化）
+  benign_alternatives:
+  - 游戏点券代充
+  - 平台充值服务
+
+attributes:
+  duration_days: 6
+  turn_count: 51
+  approximate_tokens_estimate: 902
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: gambling_updown_score
+  risk: 3
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0130
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-071
+
+dedup:
+  content_hash: sha256:c56ec8ce387d5a58c42a9b251ee1574ac61d8978952848f885de82d4b44b077c
+pipeline_status: accepted
+title: money_laundering_obfuscation/gambling_updown_score
+conversation: |-
+  【7月6日】
+  A：[voice：8秒语音，语速快，背景嘈杂]
+  B：听了 什么口子
+  A：你那头还接不接 老走法
+  B：接 通道这回走几层
+  A：排到第七层了 才升的 干净
+  B：第七层 卡不卡
+  A：一手交一手 秒结
+  A：佣金千八 行就排你
+  B：行 排我
+  B：预报说周五有台风 你窗口关了没
+  A：关了 上回吹裂一块玻璃
+  B：我家阳台窗还渗水
+  A：找物业啊 你就是磨不开面子
+  B：明天就去
+  A：嗯 修完拍照给我看
+  【7月7日】
+  B：宵夜吃啥 楼下烤串开了
+  A：二十串 别辣
+  B：上回你还无辣不欢
+  A：胃这两天闹腾
+  B：那带瓶酸奶
+  A：加十串 谢了
+  【7月8日】
+  B：下午那笔四万走完了 第七层今天不卡 顺得很
+  B：昨晚点球看得我心口疼
+  A：让你猜比分不猜
+  B：猜错多丢人
+  A：下轮回本
+  B：回本你请客
+  A：看你那单走得顺不顺 哈哈
+  【7月9日】
+  A：昨天四万那单 佣金给你
+  【系统消息】A 向 B 转账 320 元，已收款。
+  B：到 三百二 秒结名不虚传
+  A：千八 就是这么痛快
+  B：流量又超 月月超
+  A：换套餐啊 一百G那种
+  B：你那是公司补贴吧
+  A：想得美 我自己掏的
+  B：哦 那当我没说
+  A：下月走完那批 换个好点的
+  【7月10日】
+  A：下周有个大的 十万级 吃得下吗
+  B：分两个号 分两天走
+  A：行 给你留到周二
+  A：端午回老家没
+  B：没回 票难抢 给我爸打了钱
+  A：打了多少
+  B：两千 老人家嘴上嫌多
+  A：都这样 有心就行
+  B：您呢 上月回过没
+  A：回了 陪我爸喝了顿
+  【7月11日】
+  A：周二的单 备好
+  B：备了 号也腾出来了
+  A：记住一条 快 到手就动 别压着
+  B：晓得 一到就走
+  A：嗯 做完这轮 你歇两天

@@ -1,0 +1,154 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001904
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-9d2902a68827d1b4
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A借节前的一次礼貌拜访和购物卡维系与周姐的关系，替后续资料核验留些好印象；表面仍可解释为节日人情。
+  critical_evidence:
+  - A在节前主动约周姐线下见面，谈到节日问候。
+  - A见面时送出一张购物卡，没有说明面值；周姐以节日心意收下。
+  - 见面后A提及自己的申请或材料，希望后续留意；周姐回应仍按正常流程办理，不承诺特殊处理。
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司福利卡
+
+attributes:
+  duration_days: 4
+  turn_count: 78
+  approximate_tokens_estimate: 1758
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0192
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-092
+
+dedup:
+  content_hash: sha256:5cdb92ec81621da1f903b3f94e17c4c21891c6c03a91801ab10c59f41b1216ad
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【1月20日】
+  小沈：周姐，节前想跟你约个便饭，最近辛苦啦。
+  周姐：好呀，最近确实一直在忙。
+  小沈：快过节了，想当面打个招呼，也顺便问下负责供应商资料初审。
+  周姐：可以啊，明天下班后我有空，别特意准备什么。
+  小沈：好，那我订个附近的家常菜馆，带份小小的节日心意。
+  A：你家附近那家面馆还开着吗
+  B：开着呢 中午排队老长
+  A：我上次点的拌面有点咸
+  B：那家汤面稳一点 我一般加个蛋
+  A：下回错开十二点去吧
+  B：行 过两天我试试
+  A：我刚才还想起来，家里也问过这个。
+  B：嗯 这种小事慢慢来就好。
+  A：我回头按你说的试试。
+  周姐：吃饭就行啦，别客气。
+  B：行 有结果再跟我说。
+  A：哈哈好 那先这样。
+  B：好呀 你忙吧。
+  A：说到这个，我周末正好能处理一下。
+  A：这两天风挺大的
+  B：早上出门差点把伞吹翻
+  A：我这边还好 就是晚上降温
+  B：我妈非让我穿厚点 哈哈
+  A：最近预报说周末晴
+  B：那正好可以洗晒被子
+  A：我刚才还想起来，家里也问过这个。
+  B：嗯 这种小事慢慢来就好。
+  A：我回头按你说的试试。
+  B：行 有结果再跟我说。
+  A：哈哈好 那先这样。
+  B：好呀 你忙吧。
+  A：说到这个，我周末正好能处理一下。
+  【1月21日】
+  A：你最近还开车上班吗
+  B：没呢 地铁快一些
+  A：我也是 停车位太难找了
+  B：下雨天打车又堵
+  A：我现在提前一站下走过去
+  B：挺好 当锻炼了
+  A：我刚才还想起来，家里也问过这个。
+  B：嗯 这种小事慢慢来就好。
+  A：我回头按你说的试试。
+  B：行 有结果再跟我说。
+  A：哈哈好 那先这样。
+  B：好呀 你忙吧。
+  小沈：我到了，在门口等你。
+  周姐：我刚下楼，看见你了。
+  小沈：顺手把一张购物卡给你，没特意讲面值，就是节日问候。
+  【系统消息】B 向 小沈 转账 128 元，已收款。
+  周姐：你太客气了，心意我收下，下回别专门带东西。
+  周姐：这顿咱们分一下，我把我那份转你，省得每次你抢着付。
+  小沈：收到啦，那就各付各的，下次我再约你。
+  【1月22日】
+  A：最近颈椎还酸吗
+  B：好点了 少低头就好
+  A：我也在练拉伸 每天十分钟
+  B：能坚持就不错
+  A：晚上早点睡也有用
+  B：知道啦 这周争取不熬夜
+  A：我刚才还想起来，家里也问过这个。
+  B：嗯 这种小事慢慢来就好。
+  A：我回头按你说的试试。
+  B：行 有结果再跟我说。
+  A：哈哈好 那先这样。
+  B：好呀 你忙吧。
+  【1月23日】
+  A：你爸妈今年过节来这边吗
+  B：我爸说看天气再定
+  A：老人家路上别太赶
+  B：是啊 我给他们把车票看好了
+  A：家里缺啥我再买点
+  B：不用买太多 他们总嫌占地方
+  A：我刚才还想起来，家里也问过这个。
+  B：嗯 这种小事慢慢来就好。
+  A：我回头按你说的试试。
+  B：行 有结果再跟我说。
+  A：哈哈好 那先这样。
+  B：好呀 你忙吧。
+  小沈：上次聊到我那份申请/材料，后续有空时帮我留意一下进度就好。
+  周姐：收到的材料还是按正常顺序走，有消息会按通知联系你。
+  小沈：明白，我就是问问流程，节前辛苦了。
+  周姐：不客气，缺什么材料会统一通知，安心等消息。

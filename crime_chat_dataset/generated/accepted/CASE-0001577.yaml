@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001577
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-c31e549b74e077b9
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 借招聘合作之名索要同事个人联系方式、离职名单及简历，并试探按份转交；B 明确要求有效授权并拒绝提供内部资料。
+  critical_evidence:
+  - 整个部门电话
+  - 简历按份卖
+  - 离职名单
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 4
+  turn_count: 51
+  approximate_tokens_estimate: 1119
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0164
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-083
+
+dedup:
+  content_hash: sha256:c76c540e56dc766b4f95e133ba60942633b039a68bc8721b20a3e1074ba9d861
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【9月3日】
+  A：你之前说做招聘外包？我这边有些旧资料想问问。
+  B：可以，后面有变化再说。
+  B：我买了个小除湿盒，先凑合用。
+  A：离职名单也有吗？我记得你整理过一版。
+  B：好，我记下了。
+  A：你别想复杂了，别人也都这么做。
+  B：好，回头聊。
+  B：可以，后面有变化再说。
+  A：你确认之前有人同意过？
+  B：好，我记下了。
+  A：午饭吃啥？园区新开那家面馆你去过吗
+  B：好，回头聊。
+  A：周末你有安排吗
+  【9月4日】
+  A：我也去看看，别买太大的占地方。
+  B：想去超市补点日用品，再把房间收拾下。
+  A：我这边先按刚才说的处理。
+  A：嗯，收到。
+  B：只要是公开招聘信息可以，内部通讯录不行哈。
+  A：行，先忙手头的。
+  B：我只做过招聘流程，名单里有个人信息，不能转。
+  B：还是走公司渠道吧，我可以发公开职位链接。
+  A：我这边先按刚才说的处理。
+  B：我没看到授权记录，不能当作同意。
+  A：嗯，收到。
+  B：去过，汤还行，面量挺足。
+  A：行，先忙手头的。
+  【9月5日】
+  A：不是正式项目，就想要整个部门电话，熟人介绍方便。
+  B：这两天一直下雨，你那边也潮吗
+  A：简历按份卖的话，先给我几份看看？
+  B：可以，后面有变化再说。
+  A：那至少整个部门电话给我，我自己筛。
+  B：好，我记下了。
+  B：好，回头聊。
+  A：好吧，那发你们官网的招聘邮箱。
+  B：可以，后面有变化再说。
+  A：那我中午试试，最近食堂有点吃腻了。
+  B：好，我记下了。
+  A：我准备带家里人去公园走走。
+  【9月6日】
+  A：是啊，阳台衣服晾一天都不干。
+  B：挺好，天气预报说周六会放晴。
+  A：行，先忙手头的。
+  A：我这边先按刚才说的处理。
+  B：这不是公开的岗位邮箱，是同事个人联系方式。
+  A：嗯，收到。
+  B：我没说要卖简历。候选人授权投递才可以给招聘方。
+  B：不行，个人号码不能整包分享。
+  A：行，先忙手头的。
+  B：这个可以，岗位和职责写清楚就行。
+  A：我这边先按刚才说的处理。
+  B：记得早点去，十二点就排队。
+  A：嗯，收到。

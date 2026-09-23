@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001772
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-ff95b5d6383af3de
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 想借工作人员权限查看非本人监护的学生成绩并索要截图；B 拒绝越权查询，要求家长使用学校官方渠道。
+  critical_evidence:
+  - A 想查看非本人监护或非本人负责学生的校内成绩档案
+  - A 提到班主任系统点一下并试探索要截图
+  - B 拒绝越权查看并引导家长使用官方查询流程
+  benign_alternatives:
+  - 家长查自己孩子
+  - 学校官方查询
+
+attributes:
+  duration_days: 2
+  turn_count: 49
+  approximate_tokens_estimate: 1220
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0166
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-083
+
+dedup:
+  content_hash: sha256:58d99f804d10a8cdbc6ef20446c546693f941b9160d55c21fb1f60b080048e87
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【10月1日】
+  A：有件小事想问你，系统里能不能看一下另一个孩子的成绩？
+  B：那不是你负责的学生，也不是家长授权查询的范围。
+  A：就看一眼排名，不往外传。
+  A：上次你说的那个保温杯好用吗？
+  B：还行，盖子不漏，洗起来也方便。
+  A：那我也看看，办公室那个掉漆了。
+  B：选个简单的吧，花里胡哨的不好洗。
+  A：我先收藏，周末再下单。
+  B：行，活动多比比价。
+  B：不行，档案只能按学校规定的权限查看。
+  A：班主任系统点一下应该很快吧。
+  B：系统能打开不等于可以看，不能替别人查。
+  A：你周末准备怎么安排？
+  B：可能带家里人去公园走走。
+  A：最近那边有新开的展吗？
+  B：有个免费的花展，入口不远。
+  A：听起来不错，别赶最热的时候。
+  B：对，早点去，午饭前回来。
+  A：我只想知道他大概到什么水平。
+  B：用公开的录取说明和孩子自己的成绩判断，不能动别人的记录。
+  A：那截图也不行？
+  A：最近你家孩子作息调整过来没？
+  B：好多了，晚上不再抱着平板到很晚。
+  A：那挺好，早上起床也轻松点。
+  B：是，最近自己设了闹钟。
+  A：周末还去上兴趣班吗？
+  B：去半天，下午就让他休息。
+  【10月2日】
+  B：当然不行，里面的信息属于学生本人。
+  A：明白，我不再问了。
+  B：如果是自己孩子，走官方查询入口就行。
+  A：这两天早晚温差挺大，我早上出门又穿少了。
+  B：我也是，中午热得想脱外套，晚上骑车又冷。
+  A：我把薄围巾塞包里了，方便。
+  B：好主意，我车里还有件旧开衫。
+  A：周末看预报好像还要降温。
+  B：那我提醒家里人把厚衣服翻出来。
+  A：对了，家长群里那个“红包已发”的提示我刚看见。
+  B：那是运动会奖品名单的群公告，没涉及私下转账。
+  A：哦我以为是有人单独发了。
+  A：你中午吃了吗，我刚从楼下回来。
+  B：吃了碗面，汤有点咸。
+  A：那家我也吃过，分量倒挺足。
+  B：是，没吃完还打包了一点。
+  A：晚上别再吃太重了。
+  B：嗯，回家煮点粥。
+  B：没有，成绩也不会和红包挂钩。
+  A：知道了，我把这个问题放下。
+  B：嗯，按公开流程来。
+  B：我不会打开那份档案，也不会转发任何截图。

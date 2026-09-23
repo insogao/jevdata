@@ -1,0 +1,106 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001953
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000003
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-e3c5b84accc117bd
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: fraud_scam
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A 用新号码冒充 B 的老朋友，说手机和号都换了、原来的号停用了，上来就急着借钱让 B 马上转账，B 提出语音核实身份被 A 用不方便接电话搪塞过去，B 最后转了钱。
+  critical_evidence:
+  - 一个陌生新号添加 B，自称是老朋友，说换号了
+  - A 没寒暄几句就直接开口借钱，说急用、让 B 马上转
+  - B 提出打个语音核实一下，A 以在外面、信号不好推脱
+  - A 报了 B 的旧事来取信，催 B 别磨蹭
+  - B 转出一笔钱，A 说收到后再联系，随后失联
+  benign_alternatives:
+  - 真人换号通知，朋友换手机号后群发通知并正常联系
+  - 正规客服回访，平台客服按流程核实身份后提供服务
+
+attributes:
+  duration_days: 3
+  turn_count: 29
+  approximate_tokens_estimate: 607
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: impersonation
+  risk: 3
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0163
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:9f22aba0bac4c0591569247bb1c8c46b8448c8a18c4079a287dc818c321e3bac
+pipeline_status: accepted
+title: fraud_scam/impersonation
+conversation: |-
+  【11月2日】
+  A：老张 是我 老王 我换号了
+  B：哪个老王
+  A：就以前一起打球那个 老号停了 这是新号
+  B：哦 好久没联系了 怎么突然找我
+  A：有个急事 手头周转不开 借我两万应个急
+  B：这么急?
+  A：对 今天必须到位 你先转我 明天就还
+  B：我打个语音给你 咱聊聊
+  A：我这会儿在外面 信号不好 别打了
+  B：那你怎么证明是你啊
+  A：上回你请我吃的烧烤 你还喝多了 我记得清楚
+  B：这事你怎么知道
+  A：跟你说了我是老王 快转吧 磨蹭啥
+  B：你把账号发我
+  A：就这个号 转过来就行 备注别写
+  B：你原来号多少 我打过去
+  A：原号销了 接不了 你别那么多事
+  B：行吧 我转你 你明天一定还
+  A：放心 还能骗你
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  A：收到 明天联系你
+  B：好 别失联
+  【11月3日】
+  B：钱啥时候还我
+  A：再等等 下午给你
+  B：在吗
+  B：你到底是不是老王
+  B：我给老王本人打电话了 他说根本没换号
+  B：你把钱退回来
+  【11月4日】
+  B：再不回我报警了
+  A：（消息已发出，但被对方拒收）

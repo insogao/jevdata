@@ -1,0 +1,123 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001831
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-123d65056610fa3c
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 节前提出给能接触那份手续进度的B带一张不说明面值的购物卡，并在送卡前后暗示想让B留意自己的那份手续；B拒绝个人礼卡，区分单位福利卡与私人礼物，要求按正常顺序处理。
+  critical_evidence:
+  - A 节前主动约见或联系能接触那份手续进度的B
+  - A 提出送一张购物卡但不说明面值
+  - A 将礼物与自己的那份手续进度联系起来，暗示希望B留意
+  - B 区分单位统一发放的福利卡与私人礼物，并拒绝个人礼卡
+  - B 表示按统一流程或正常顺序办理
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司福利卡
+
+attributes:
+  duration_days: 2
+  turn_count: 48
+  approximate_tokens_estimate: 1041
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0186
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-090
+
+dedup:
+  content_hash: sha256:fe0aa4bc12ed576453725428aff843e0ee628b056feef6607c9d22f9934dc94a
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【5月28日】
+  A：介绍人，节前你哪天方便？节前碰面时顺便提一下
+  B：这两天事情有点多，怎么突然想见面？
+  A：今天路上堵不堵
+  B：桥那边在修路，有点慢
+  A：我绕小路走了
+  B：明早我也早点出门
+  A：我把导航收藏一下
+  B：好，明早看路况再决定
+  A：嗯，别到时候又迟到
+  A：想问问那份手续的进展，也好提前安排一下。
+  B：那份手续都按统一顺序处理，我只能看流程到哪一步。
+  A：咱们认识的人也不少，就是想当面谢谢你平时照应。
+  A：你上次说的鞋到了吗
+  B：到了，码数刚好
+  A：那不错，走路舒服不
+  B：还行，先穿两天看看
+  A：那先穿着试试，不磨脚就好
+  B：对，走多了再看
+  A：嗯，周末再告诉你
+  B：吃饭可以，带东西就不用了。
+  A：本来想带张卡给你，里面多少我也没看，就一点心意。
+  A：周末要不要去逛书店
+  B：可以啊，下午人少点
+  A：那我把地址发你
+  【5月29日】
+  B：收到，顺便喝杯咖啡
+  A：正好我也想买支笔
+  B：那家文具区挺全的
+  A：顺路看看吧，不急
+  B：私人给的我不能留，单位统一发的福利卡才按公司规矩登记。
+  A：那天说的那份，你有空时帮我看一眼就行。
+  A：你家猫还挑食吗
+  B：好多了，换了新粮
+  A：别一下换太多吧
+  B：嗯，我掺着旧的喂
+  A：旧粮我还留了一点
+  B：慢慢掺就好，别换太突然
+  B：我不能因为认识或收礼就给谁调顺序，都是照同一套要求办。
+  A：嗯，我知道，就是问问。
+  B：卡就先别拿来了，等正常通知。
+  A：这两天降温了
+  B：早上出门差点穿少
+  A：我把薄外套找出来了
+  B：我也是，晚上风挺凉
+  A：晚上回去把外套挂门口
+  B：挺好，早上不容易忘
+  A：前两天提的那件事，有空帮我瞅一眼进度？
+  B：我会按提交顺序看，有变化走正常通知，不会单独插队。
+  A：明白，那我就不带卡了，按规矩来。

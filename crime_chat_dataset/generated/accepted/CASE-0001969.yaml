@@ -1,0 +1,125 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001969
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-0ac70659f8fce103
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 借节前见面向能接触经营登记表进度的B送一张不说明面值的购物卡，并在送卡前后暗示想让B留意自己的经营登记表；B拒绝个人礼卡，区分单位福利卡与私人礼物，要求按正常顺序处理。
+  critical_evidence:
+  - A 节前主动约见或联系能接触经营登记表进度的B
+  - A 提出送一张购物卡但不说明面值
+  - A 将礼物与自己的经营登记表进度联系起来，暗示希望B留意
+  - B 区分单位统一发放的福利卡与私人礼物，并拒绝个人礼卡
+  - B 表示按统一流程或正常顺序办理
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司福利卡
+
+attributes:
+  duration_days: 6
+  turn_count: 45
+  approximate_tokens_estimate: 975
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0201
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-095
+
+dedup:
+  content_hash: sha256:7ffbb5e3e60ca686edbadb7f2ffc280c4928bcf1886ddd84a57b5c1553ec0df3
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【4月9日】
+  A：您好，节前想当面请教一下，你哪天有空？
+  B：我看看安排，怎么了？
+  A：你买的咖啡豆是哪种
+  B：中度烘焙的，不太酸
+  A：我也喜欢这种
+  B：下次给你分一点
+  A：我这包还挺香的
+  B：闻着像坚果味
+  【4月10日】
+  A：我之前交的经营登记表还想问问进度，后面好安排。
+  B：这类材料都按时间顺着看，我不方便替谁单独调整。
+  A：上次你说过办理进度，节前想当面谢谢你。
+  A：阳台的小番茄熟了吗
+  B：还青着呢，再晒两天
+  A：别着急，熟了才甜
+  B：嗯，我先不摘
+  A：我给它搭了个小架
+  【4月11日】
+  B：枝条不容易倒
+  B：见面没问题，别专门准备东西。
+  A：我给你备了张购物卡，面值没看，节前一点心意。
+  【系统消息】A 向 B 转账 300 元，已收款。
+  A：你们家周末去公园吗
+  B：可能下午走一圈
+  A：带瓶水，最近挺晒
+  【4月12日】
+  B：好，我放包里
+  A：我把水和帽子备好了
+  B：那就不容易晒着
+  B：单位发的福利卡要按单位的办法登记，私人送的我不收。
+  A：我那份经营登记表到你手上时，方便帮我留意下吗？
+  A：那本书你看到哪了
+  B：看到一半，节奏挺慢
+  A：后面会快起来的
+  【4月13日】
+  B：那我再读几章
+  A：我今晚多看一会儿
+  B：别熬太晚就行
+  B：我只按统一顺序跟进，不会因为礼物或熟悉就提前。
+  A：好，我就是问问，没别的意思。
+  B：那张卡你带回去，之后还是按正常通知走。
+  A：你昨晚做饭了没
+  B：煮了点粥，简单吃
+  【4月14日】
+  A：天热胃口也一般
+  B：是啊，先吃清淡点
+  A：我明天再煮些
+  B：多放点南瓜也不错
+  A：上次提的经营登记表有新进展了吗？
+  B：有更新我会照平时的方式通知，顺序不变。
+  A：知道了，卡我拿回去，节前正常见面。

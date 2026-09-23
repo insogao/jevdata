@@ -1,0 +1,118 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001958
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000049
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-25b5d32cc0b2e663
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 车间主管 A 约多次违规的员工 B 到楼下办公室做一次严肃的纪律谈话，说要让他长长记性，并把工资结算和劳动争议调解的事一并讲清楚，全程按公司制度走，最后给 B 结了一笔工资和补偿。
+  critical_evidence:
+  - A 是车间主管，约屡次违规的 B 到楼下办公室当面谈
+  - A 说这次要让他长长记性，再犯就按制度严肃处理
+  - A 说明处理都走公司规章，会通知人事一起做记录
+  - A 提到有争议可以走劳动调解，不私下解决，别把事情闹大
+  - A 给 B 结算了当月工资和一笔补偿金
+  benign_alternatives:
+  - 严格管理谈话，主管依据公司制度对违规员工进行正式纪律谈话并做记录
+  - 劳动纠纷调解，劳动者与单位通过劳动调解委员会依法解决争议
+
+attributes:
+  duration_days: 5
+  turn_count: 39
+  approximate_tokens_estimate: 826
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: beat_example_warning
+  risk: 0
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0163
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:ca7af5c96fc33272e308c07defcd6f9aa4a0455311ebb611f6b2f2866fb6a808
+pipeline_status: accepted
+title: violence_extortion/beat_example_warning
+conversation: |-
+  【11月10日】
+  A：小李 下午两点到楼下一楼办公室来一趟 我跟你谈谈
+  B：头儿 又咋了
+  A：你这个月迟到几次了 还有两次没戴护具 自己心里没数
+  B：我下次注意
+  A：光注意不行 这次得给你长长记性 按制度来
+  B：要扣钱吗
+  A：扣不扣按规章说 我会叫上人事一起做记录 当面讲清楚
+  B：行 我下午过去
+  A：地点就在楼下一楼会议室 不是别的地方
+  B：中午吃了没
+  A：食堂吃的 你呢
+  B：我带了饭 省点
+  A：家里负担重就好好干 别老出岔子
+  A：到了没 我这边人齐了
+  B：到了 在门口
+  A：谈完了 你最近确实困难 我按制度给你把工资结了 另外补你一点
+  B：真的?我以为要开除我
+  A：制度是制度 该给的给 但再犯就没这么客气了
+  B：谢谢头儿 我改
+  A：钱今天下午到你卡上 有意见可以走调解 别憋着
+  B：没有意见 我服
+  【系统消息】A 向 B 转账 6800 元，已收款。
+  B：钱到了 多谢头儿
+  A：好好干 别的都是虚的
+  B：晚上回去我把护具找出来 明天开始戴
+  A：这才对
+  【11月11日】
+  A：今天准时到了没
+  B：到了 七点五十就来了
+  A：保持住
+  B：头儿 中午一起?
+  A：行 走吧
+  【11月12日】
+  A：这周纪律检查我报了你表现 说在改
+  B：够意思
+  A：自己争气 比啥都强
+  【11月13日】
+  A：护具戴了几天了
+  B：天天戴 习惯了
+  A：好 安全第一
+  【11月14日】
+  B：头儿 这月工资条我看了 没问题
+  A：有疑问随时找人事 按规定来
+  B：知道了 谢谢

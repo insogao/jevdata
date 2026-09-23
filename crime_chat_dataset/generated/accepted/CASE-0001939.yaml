@@ -1,0 +1,101 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001939
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000133
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-aecdb3ab896721af
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: coercion_blackmail
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 楼下邻居 A 借楼上 B 家装修噪音和漏水为由，暗示 B 每月送两条烟这事就能帮忙压下去，还说自己认识城管，用抬头不见低头见施压，让 B 私下给好处。
+  critical_evidence:
+  - A 以楼上 B 家装修吵闹、下水渗水为由找 B 理论
+  - A 暗示只要每月意思意思（两条烟）就能把投诉的事平掉
+  - A 提到自己认识城管和物业的人，能说上话
+  - A 用低头不见抬头见、闹大了对谁都不好来施压
+  - B 觉得别扭，A 说都是邻居别伤了和气
+  benign_alternatives:
+  - 邻里噪音调解，邻居间就噪音问题通过社区调解协商解决
+  - 物业投诉流程，居民通过物业和社区按流程反映装修扰民问题
+
+attributes:
+  duration_days: 2
+  turn_count: 26
+  approximate_tokens_estimate: 666
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: resident_noise_leverage
+  risk: 1
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0163
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:3421815a85f58f60247d607b2adf368e0f4fe870eb6e6d39a0b7b597c8f88193
+pipeline_status: accepted
+title: coercion_blackmail/resident_noise_leverage
+conversation: |-
+  【3月15日】
+  A：楼上的 你下来一下 你家装修吵得我家没法待
+  B：抱歉啊 师傅说这两天就完事了
+  A：还有你家阳台往下渗水 我阳台墙皮都泡了
+  B：这个我让人来修 回头我去看看
+  A：光嘴上说没用 我这边都准备去物业告了
+  B：别别别 我这几天就处理
+  A：处理是一回事 我这人好说话 你每月意思意思 两条烟 这事就平
+  B：什么意思
+  A：我认识城管和物业的 那边我替你打个招呼 你就两条烟的事
+  B：这不合适吧
+  A：有啥不合适 抬头不见低头见的 非要闹到物业大家都难看
+  B：我修好不就行了
+  A：修是你的事 打招呼是我的事 两条烟不多
+  B：我考虑下吧
+  A：行 你想清楚 明天物业那边我还没去
+  【3月16日】
+  B：师傅今天下午来修漏水
+  A：修归修 昨天说的事呢
+  B：我一个月买烟也得花钱 你不能这么要
+  A：那我下午就去物业 顺便叫城管来看看你家外扩的棚子
+  B：那棚子又不碍事
+  A：碍不碍事我说了算 识相点
+  B：我先给你一条行不 以后再说
+  A：一条也行 先这样 每个月别断了
+  B：……知道了
+  A：记住了 月底我来拿 别让我跑第二趟
+  B：嗯

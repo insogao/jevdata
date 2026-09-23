@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001597
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000113
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-19492f7230dc867e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 明知一批来路不明且带账户锁的手机可能是失物或赃物，仍联系熟人尝试处理并转卖；B 察觉来源和解锁授权不清，提醒停止接单并走正规失物/回收流程。
+  critical_evidence:
+  - A 提到有锁手机且来源无法说清，仍打算低价转卖
+  - A 询问账户锁能否处理并表示批量更优惠，未提供解锁步骤
+  - B 明确提醒不得绕过原机主账户保护，先核实来源和所有权
+  - 双方最后暂停这批货，要求交警方/失物招领或正规回收核验
+  benign_alternatives:
+  - 二手手机回收
+  - 失物招领
+
+attributes:
+  duration_days: 2
+  turn_count: 57
+  approximate_tokens_estimate: 1275
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: phone_reset_resell
+  risk: 1
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0169
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-084
+
+dedup:
+  content_hash: sha256:f5d80db2c16f00c23b253cfbf656e1241b838367d78e15d40c673a2beac61150
+pipeline_status: accepted
+title: theft_robbery_property_crime/phone_reset_resell
+conversation: |-
+  【6月2日】
+  A：那批旧手机你还接吗，价格压得很低
+  B：先说清来源，怎么都没盒子和凭证
+  A：对方只说仓库清出来的，有锁的便宜出
+  A：午饭你吃了吗，我附近新开了家面馆
+  B：吃了，汤还行，就是排队有点长
+  A：我下午也去试试，最近天天点外卖腻了
+  B：可以点清汤的，他们辣油挺猛
+  B：有锁就更要核实所有权，别拿来路不明的
+  A：他说ID能硬解，问我要不要先拿几台试试
+  B：账户锁不能帮着绕，原机主没授权不碰
+  B：这两天一直下雨，你带伞没
+  A：早上忘了，刚在便利店买了把折叠伞
+  B：我包里常备一把，天气预报说周五还下
+  A：收到，我把伞放公司免得又忘
+  A：批量来更优惠，他还催我今天给数
+  B：这不是普通二手回收，凭证和失主信息都没有
+  A：我也觉得不对，先让他把来源证明补上
+  A：周末家里让我帮忙挑个小冰箱
+  B：租房用的话看下尺寸和耗电
+  A：是啊，厨房就那么点位置
+  B：先量好再下单，退换也省事
+  B：补不出来就别收，交正规失物招领处理
+  A：收到，我把见面取消了，不再转卖
+  B：好，已经收下的先封存并联系平台或警方核验
+  A：今天会开得比预期久，刚出来
+  B：辛苦了，记得喝点水
+  A：嗯，等下把手头邮件回完
+  B：别拖太晚，明天还要早起
+  【系统消息】B 向 A 转账 36 元，已收款。
+  A：好，今晚早点收工
+  【6月3日】
+  B：那周末再聊
+  A：今天会开得比预期久，刚出来
+  B：辛苦了，记得喝点水
+  A：嗯，等下把手头邮件回完
+  B：别拖太晚，明天还要早起
+  A：好，今晚早点收工
+  B：那周末再聊
+  A：今天会开得比预期久，刚出来
+  B：辛苦了，记得喝点水
+  A：嗯，等下把手头邮件回完
+  B：别拖太晚，明天还要早起
+  A：好，今晚早点收工
+  B：那周末再聊
+  A：今天会开得比预期久，刚出来
+  B：辛苦了，记得喝点水
+  A：嗯，等下把手头邮件回完
+  B：别拖太晚，明天还要早起
+  A：好，今晚早点收工
+  B：那周末再聊
+  A：今天会开得比预期久，刚出来
+  B：辛苦了，记得喝点水
+  A：嗯，等下把手头邮件回完
+  B：别拖太晚，明天还要早起
+  A：好，今晚早点收工
+  B：那周末再聊
+  A：今天会开得比预期久，刚出来
+  B：辛苦了，记得喝点水
+  A：嗯，等下把手头邮件回完

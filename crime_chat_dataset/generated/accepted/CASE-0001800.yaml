@@ -1,0 +1,130 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001800
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-9d850386864c0209
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 借合同讨论会前私人送礼卡表达谢意，刻意不说面值，并在送卡前后暗示希望负责流程的B留意其申请；B指出礼物不得影响审批，拒收个人礼卡并要求申请继续走公开规则。
+  critical_evidence:
+  - A 在节前主动约见掌握流程的B
+  - A 提议送购物卡并刻意不说明面值
+  - A 在送礼前后暗示希望B留意或优先处理自己的申请
+  - B 区分个人礼物与单位福利卡，拒绝收礼并坚持公开流程
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司福利卡
+
+attributes:
+  duration_days: 6
+  turn_count: 52
+  approximate_tokens_estimate: 1166
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0187
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-090
+
+dedup:
+  content_hash: sha256:1b1f61b2016002fd684facf9fd264d8a4711a9e87f62c5717eb1548f517d37f5
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【9月10日】
+  A：合同讨论会前约个时间碰一下，有点小心意想当面给你
+  B：如果是工作上的事，发正式邮件就行
+  A：一张购物卡，不说面值，免得你有压力
+  B：你家猫最近还挑食吗
+  A：好多了，换了个口味就肯吃
+  B：那就先少买点试吃装
+  A：嗯，免得它又不碰
+  B：这反而让我难处理，单位礼品要登记
+  A：我就是想让你看下我那份申请
+  【9月11日】
+  B：申请和礼物不能挂钩，先不要送
+  A：最近通勤路上修路，公交绕了一站
+  B：我也发现了，早上多留十分钟
+  A：今天差点迟到，幸好会议也晚了
+  B：希望下周能修好
+  A：短信我发了，那个节点能不能帮忙留意一下
+  B：我看到了，会按公开队列处理，不会特别照顾
+  A：那卡我拿回去，申请我也不私下催了
+  A：你午饭吃什么了
+  【9月12日】
+  B：食堂今天有番茄牛腩，还不错
+  A：我去晚了只剩面条
+  B：下次早点，十二点人最多
+  B：谢谢配合。需要更新就按系统提示操作
+  A：行，节日问候还是照常发你
+  B：可以，工作审批保持原来的规则
+  B：外面风挺大，你带外套没
+  A：带了，早上看天气预报说降温
+  【9月13日】
+  B：我穿少了，办公室空调也冷
+  A：我抽屉有件薄开衫，你要可以借
+  A：收到，我先把资料核对完整
+  B：有需要就按流程提问
+  A：好的，晚点还要处理手头工作
+  B：忙完记得休息一下
+  A：谢谢提醒，我先去开会
+  B：好，有消息走系统通知
+  A：收到，我先把资料核对完整
+  【9月14日】
+  B：有需要就按流程提问
+  A：好的，晚点还要处理手头工作
+  B：忙完记得休息一下
+  A：谢谢提醒，我先去开会
+  B：好，有消息走系统通知
+  A：收到，我先把资料核对完整
+  B：有需要就按流程提问
+  A：好的，晚点还要处理手头工作
+  B：忙完记得休息一下
+  【9月15日】
+  A：谢谢提醒，我先去开会
+  B：好，有消息走系统通知
+  A：收到，我先把资料核对完整
+  B：有需要就按流程提问
+  A：好的，晚点还要处理手头工作
+  B：忙完记得休息一下
+  A：谢谢提醒，我先去开会
+  B：好，有消息走系统通知

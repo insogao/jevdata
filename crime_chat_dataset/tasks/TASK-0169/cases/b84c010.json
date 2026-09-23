@@ -1,0 +1,310 @@
+{
+ "key": "b84c010",
+ "archetype_id": "ARC-000114",
+ "subtype": "package_porch_pickup",
+ "latent_intent": "A 利用住宅楼快递暂存区无人看管的空档，安排B替其拿走并转交并非自己的包裹，按件支付报酬；B意识到没有收件人授权后要求停止并归还。",
+ "critical_facts": [
+  "A 指出小区快递架无人看管并提出代拿非本人包裹",
+  "A 提到大促期间包裹多且按件给钱，显示以他人包裹牟利意图",
+  "B 询问是否有收件人授权，确认没有后拒绝参与",
+  "双方同意不再拿取并将已误拿包裹交还驿站/物业"
+ ],
+ "benign_alternatives": [
+  "帮忙代拿快递",
+  "驿站自提"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "6月3日 09:00",
+   "speaker": "A",
+   "text": "明天你路过小区那边，能帮我拿几件架上的包裹吗"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 16:17",
+   "speaker": "B",
+   "text": "谁的包裹，收件人跟你说过了？"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 12:34",
+   "speaker": "A",
+   "text": "不是熟人的，小区快递架没人看，拿了我再分"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 19:51",
+   "speaker": "A",
+   "text": "午饭你吃了吗，我附近新开了家面馆"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 15:08",
+   "speaker": "B",
+   "text": "吃了，汤还行，就是排队有点长"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 11:25",
+   "speaker": "A",
+   "text": "我下午也去试试，最近天天点外卖腻了"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 18:42",
+   "speaker": "B",
+   "text": "可以点清汤的，他们辣油挺猛"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 14:59",
+   "speaker": "B",
+   "text": "那怎么能拿，没收件人授权吧"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 10:16",
+   "speaker": "A",
+   "text": "双十一最好干，架子一会儿就堆满了"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 17:33",
+   "speaker": "B",
+   "text": "这说法不对，快递不是没人看就能拿"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 13:50",
+   "speaker": "B",
+   "text": "这两天一直下雨，你带伞没"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 09:07",
+   "speaker": "A",
+   "text": "早上忘了，刚在便利店买了把折叠伞"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 16:24",
+   "speaker": "B",
+   "text": "我包里常备一把，天气预报说周五还下"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 12:41",
+   "speaker": "A",
+   "text": "收到，我把伞放公司免得又忘"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 19:58",
+   "speaker": "A",
+   "text": "我本来想按件给钱，你跑一趟就行"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 15:15",
+   "speaker": "B",
+   "text": "我不去，也别让我帮着转交"
+  },
+  {
+   "type": "message",
+   "time": "6月4日 11:32",
+   "speaker": "A",
+   "text": "已经有一件在我这儿了，袋子没拆"
+  },
+  {
+   "type": "message",
+   "time": "6月4日 18:49",
+   "speaker": "A",
+   "text": "周末家里让我帮忙挑个小冰箱"
+  },
+  {
+   "type": "message",
+   "time": "6月4日 14:06",
+   "speaker": "B",
+   "text": "租房用的话看下尺寸和耗电"
+  },
+  {
+   "type": "message",
+   "time": "6月4日 10:23",
+   "speaker": "A",
+   "text": "是啊，厨房就那么点位置"
+  },
+  {
+   "type": "message",
+   "time": "6月4日 17:40",
+   "speaker": "B",
+   "text": "先量好再下单，退换也省事"
+  },
+  {
+   "type": "message",
+   "time": "6月4日 13:57",
+   "speaker": "B",
+   "text": "原样送回驿站，跟物业说拿错了"
+  },
+  {
+   "type": "message",
+   "time": "6月4日 09:14",
+   "speaker": "A",
+   "text": "行，我现在去还，后面不接这个事"
+  },
+  {
+   "type": "transfer",
+   "time": "6月4日 16:31",
+   "from": "B",
+   "to": "A",
+   "amount": 36,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "6月4日 16:31",
+   "speaker": "B",
+   "text": "以后帮人代拿要先有本人明确授权"
+  },
+  {
+   "type": "message",
+   "time": "6月4日 12:48",
+   "speaker": "A",
+   "text": "今天会开得比预期久，刚出来"
+  },
+  {
+   "type": "message",
+   "time": "6月4日 19:05",
+   "speaker": "B",
+   "text": "辛苦了，记得喝点水"
+  },
+  {
+   "type": "message",
+   "time": "6月4日 15:22",
+   "speaker": "A",
+   "text": "嗯，等下把手头邮件回完"
+  },
+  {
+   "type": "message",
+   "time": "6月4日 11:39",
+   "speaker": "B",
+   "text": "别拖太晚，明天还要早起"
+  },
+  {
+   "type": "message",
+   "time": "6月4日 18:56",
+   "speaker": "A",
+   "text": "好，今晚早点收工"
+  },
+  {
+   "type": "message",
+   "time": "6月4日 14:13",
+   "speaker": "B",
+   "text": "那周末再聊"
+  },
+  {
+   "type": "message",
+   "time": "6月4日 10:30",
+   "speaker": "A",
+   "text": "今天会开得比预期久，刚出来"
+  },
+  {
+   "type": "message",
+   "time": "6月5日 17:47",
+   "speaker": "B",
+   "text": "辛苦了，记得喝点水"
+  },
+  {
+   "type": "message",
+   "time": "6月5日 13:04",
+   "speaker": "A",
+   "text": "嗯，等下把手头邮件回完"
+  },
+  {
+   "type": "message",
+   "time": "6月5日 09:21",
+   "speaker": "B",
+   "text": "别拖太晚，明天还要早起"
+  },
+  {
+   "type": "message",
+   "time": "6月5日 16:38",
+   "speaker": "A",
+   "text": "好，今晚早点收工"
+  },
+  {
+   "type": "message",
+   "time": "6月5日 12:55",
+   "speaker": "B",
+   "text": "那周末再聊"
+  },
+  {
+   "type": "message",
+   "time": "6月5日 19:12",
+   "speaker": "A",
+   "text": "今天会开得比预期久，刚出来"
+  },
+  {
+   "type": "message",
+   "time": "6月5日 15:29",
+   "speaker": "B",
+   "text": "辛苦了，记得喝点水"
+  },
+  {
+   "type": "message",
+   "time": "6月5日 11:46",
+   "speaker": "A",
+   "text": "嗯，等下把手头邮件回完"
+  },
+  {
+   "type": "message",
+   "time": "6月5日 18:03",
+   "speaker": "B",
+   "text": "别拖太晚，明天还要早起"
+  },
+  {
+   "type": "message",
+   "time": "6月5日 14:20",
+   "speaker": "A",
+   "text": "好，今晚早点收工"
+  },
+  {
+   "type": "message",
+   "time": "6月5日 10:37",
+   "speaker": "B",
+   "text": "那周末再聊"
+  },
+  {
+   "type": "message",
+   "time": "6月5日 17:54",
+   "speaker": "A",
+   "text": "今天会开得比预期久，刚出来"
+  },
+  {
+   "type": "message",
+   "time": "6月5日 13:11",
+   "speaker": "B",
+   "text": "辛苦了，记得喝点水"
+  },
+  {
+   "type": "message",
+   "time": "6月5日 09:28",
+   "speaker": "A",
+   "text": "嗯，等下把手头邮件回完"
+  },
+  {
+   "type": "message",
+   "time": "6月5日 16:45",
+   "speaker": "B",
+   "text": "别拖太晚，明天还要早起"
+  }
+ ],
+ "source_seed_ids": [
+  "SEED-SRC-BCC-001-8b42a690596ba1e0"
+ ],
+ "_registered": {
+  "case_id": "CASE-0001590",
+  "status": "accepted",
+  "errors": []
+ }
+}

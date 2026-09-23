@@ -1,0 +1,139 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002012
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000108
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-fd76632e00d8cae1
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: theft_robbery_property_crime
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 有锁匠手艺的同事 A 碍于情面答应陪 B 去旧居「拿回自己的东西」：B 以产权证明拿不出来为由绕开正规开锁，两人约傍晚五点半住户未归时进屋，一次得手后 B 转 2000 元谢礼，A 要求就此封口。表面像同事间帮忙取物，实为借开锁手艺入室取财。
+  critical_evidence:
+  - B 请 A 搭把手去旧居拿回自己的东西，以正规开锁要产权证明为由绕开正规途径，A 明知蹊跷仍答应就这一回（5月14日）
+  - A 点出那种老小区最好开、还在用老簧锁（5月14日）
+  - 两人约傍晚五点半动手：上班的没回来、老人全在楼下，撞不见人（5月15日）
+  - 当日傍晚进屋后 B 称东西拿齐了，两人分开离开、到家报平安（5月15日）
+  - B 转 2000 元谢礼，A 收下后称下不为例、这事烂肚子里谁问都没有（5月16日，转账锚定）
+  benign_alternatives:
+  - 正规开锁换锁服务
+  - 物业协助业主取回物品
+
+attributes:
+  duration_days: 3
+  turn_count: 62
+  approximate_tokens_estimate: 1395
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: key_copy_burglary
+  risk: 3
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0130
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-071
+
+dedup:
+  content_hash: sha256:7de6f147512a8dc77d7b73a2b711fa59ff8bbbd14e6257b5a5ffb724f719f314
+pipeline_status: accepted
+title: theft_robbery_property_crime/key_copy_burglary
+conversation: |-
+  【5月14日】
+  A：食堂糖醋排骨 轮到我就剩汤底
+  B：谁让你卡着十二点二十才下楼
+  A：我那摊活不加班赶不完
+  B：可怜 明天我帮你占座
+  A：占座有用吗 人人都会冲
+  B：那咱打配合 你端我抢
+  A：成 明天见分晓
+  B：对了 上回换锁那事 我丈母娘一直夸你手艺
+  A：小活 那种老楼我闭着眼干
+  B：你们这行 是不是越老的锁越好弄
+  A：那种老小区最好开 还用老簧锁 新小区反而不一样
+  B：哦 这样
+  B：有个私事想托你 你听完可以骂我
+  A：你说
+  B：我有几样自己的东西 在以前住的那屋里 一直没拿回来 现在那屋别人住着
+  A：东西是你的 你上门拿啊
+  B：人家不给进门 正规开锁要产权证明 我拿不出 这事一直堵在心里
+  A：你想怎样 直说 别绕
+  B：你手艺好 找个傍晚陪我去一趟 东西到手就完 就当同事搭把手
+  A：这手我搭了就是同谋 你懂不懂
+  B：就一回 东西真是我的 我对天发誓
+  A：让我想想 今晚别催我
+  A：今晚不去楼下健身角?
+  B：没心思 你那哑铃多少公斤来着
+  A：二十 你连举三组就喊妈
+  B：我那是热身 懂不懂
+  A：明早我还跑步 你爱来不来
+  B：来 来还不行嘛
+  【5月15日】
+  A：你那事 我琢磨了半宿
+  B：咋样
+  A：丑话说死 就这一回 我这辈子不去第二趟 完了谁也别再提
+  B：一回 就一回
+  A：哪个小区 什么门 我得心里有数
+  B：城北老小区 六楼 铁门 就你说的那种老簧锁
+  A：几点去
+  B：傍晚五点半 那个点上班的没回来 老人全在楼下活动 撞不见人
+  A：行 五点半 小区外头碰头
+  B：下午三点碰头会 带上周那版表
+  A：带着呢 你别在会上又把我抬出来
+  B：谁让你做得最漂亮
+  A：少来 下周我休假 别给我派活
+  B：休什么假 攒钱娶媳妇要紧
+  A：滚滚
+  B：我提前溜了 楼下等你
+  A：我也请了假 十分钟脚程
+  B：就这扇 你看能行不
+  A：行了 别杵门口 有话上楼道说
+  B：好了 东西拿齐了
+  A：快走 分开走 到家说一声
+  【5月16日】
+  A：到家了?
+  B：昨晚就到了 东西都齐 多亏你
+  A：说好的 就这一回
+  B：一回 谢礼你收下 别推
+  【系统消息】B 向 A 转账 2000 元，已收款。
+  B：转了 你看下
+  A：收了 下不为例 这事烂肚子里 谁问都没有
+  B：放心 我嘴比保险柜严
+  A：中午排骨 我第一个冲
+  B：座位给我留了没
+  A：占了 就看你抢不抢得过隔壁组
+  B：有你配合 我怕啥
+  A：昨晚没睡好? 脸色差
+  B：睡了十小时还是乏 奇了

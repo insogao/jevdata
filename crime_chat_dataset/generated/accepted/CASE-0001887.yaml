@@ -1,0 +1,150 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001887
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-2e248c49ae483f35
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 节前提出给能接触店面备案资料进度的B带一张不说明面值的购物卡，并在送卡前后暗示想让B留意自己的店面备案资料；B拒绝个人礼卡，区分单位福利卡与私人礼物，要求按正常顺序处理。
+  critical_evidence:
+  - A 节前主动约见或联系能接触店面备案资料进度的B
+  - A 提出送一张购物卡但不说明面值
+  - A 将礼物与自己的店面备案资料进度联系起来，暗示希望B留意
+  - B 区分单位统一发放的福利卡与私人礼物，并拒绝个人礼卡
+  - B 表示按统一流程或正常顺序办理
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司福利卡
+
+attributes:
+  duration_days: 2
+  turn_count: 75
+  approximate_tokens_estimate: 1431
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0194
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-093
+
+dedup:
+  content_hash: sha256:706db0fc47c47b2b3cd1ade036dd56cc497a9d4bd8af8488845233a51998f387
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【7月20日】
+  A：老邻居，节前路过想请你喝杯茶，你哪天方便？
+  A：你说的那家面馆在哪
+  B：小公园对面那条街
+  A：我下班顺路找找
+  B：门口有棵大树，很好认
+  A：我大概六点过去
+  B：那会儿人应该不多
+  B：最近排得有点满，什么事呀？
+  A：我之前交的店面备案资料想问下大概情况，也好安排后面的事。
+  A：你家小鱼还好吧
+  B：都挺活跃的
+  A：水温别一下变太多
+  B：我换水时注意着呢
+  A：我每周换一点水
+  B：挺好，温差别太大
+  B：流程都按提交时间往下走，我只能照统一要求处理。
+  A：你买的书架到了吗
+  B：到了，装了一个多小时
+  A：螺丝多不多
+  B：还好，说明书挺清楚
+  A：我还剩一块板没装
+  B：慢慢来，别弄伤手
+  A：咱们认识挺久了，我也想当面谢谢你。
+  A：今天午休睡着没
+  B：眯了十分钟，精神多了
+  A：我一睡就容易睡过头
+  B：定个闹钟就好
+  A：我下午精神好多了
+  B：中午休息一下还是有用
+  B：见面喝茶没问题，真不用带东西。
+  A：你最近还做烤饼吗
+  B：周末试了咸口的
+  A：听着不错，加了什么
+  B：葱花和芝麻，下回给你带
+  A：下次多烤两个
+  B：好啊，我带茶过去
+  A：我本来想带张商超卡，面值没看过，节前一点心意。
+  B：私下给的我不能收，单位统一发的福利卡另按单位规矩登记。
+  【7月21日】
+  A：晚上走路那段亮不亮
+  B：路灯都修好了
+  A：那就安心些
+  B：嗯，我跟邻居一起走
+  A：我换了条靠河的小路
+  B：晚上风景不错
+  A：我那份店面备案资料到你手上时，方便帮我留意下吗？
+  A：窗边那件衣服收了吗
+  B：收了，刚好赶在下雨前
+  A：动作真快
+  B：手机提醒我了
+  A：下回我设个闹钟
+  B：天气预报也挺准
+  B：我只能照统一次序走，不能看关系或礼物来安排。
+  A：你阳台上的小番茄结果没
+  B：结了几个，颜色还没红
+  A：再晒几天太阳看看
+  B：嗯，我挪到窗边了
+  A：今晚再观察一天
+  B：好，别浇得太勤
+  A：好，我没别的意思，就是问问。
+  A：今晚是不是要下雨
+  B：预报说八点左右
+  A：那你带把折叠伞
+  B：放包里了，放心
+  A：我下班提前两站下车
+  B：那也行，路上别急
+  B：那张先别带过来，后面有消息会按原来的方式通知。
+  A：前两天那份店面备案资料有消息了吗？
+  A：你那辆自行车修好了？
+  B：换了刹车线，好骑多了
+  A：挺好，路口慢点
+  B：知道，早高峰不抢
+  A：我还买了个车灯
+  B：晚上用得上
+  B：我会照顺序跟进，有变化再通知你，不会单独提前。
+  A：明白，那卡我就不带了，节前正常见面。

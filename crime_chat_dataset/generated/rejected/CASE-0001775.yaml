@@ -1,0 +1,144 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001775
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-eea6be636245cf45
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 把对公开讨论的归纳延伸成对匿名账号的关联猜测，提到图片时间和转发记录等线索；B 要求停止追踪个人并只保留主题汇总。
+  critical_evidence:
+  - 讨论从公开内容分析滑向关联匿名账号的猜测
+  - 对话出现相册原图时间、转发内容等身份关联暗示
+  - B 要求不再追踪账号、不外传截图，只保留汇总主题
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 4
+  turn_count: 69
+  approximate_tokens_estimate: 1598
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0166
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-083
+
+dedup:
+  content_hash: sha256:0954c8b7786f2eeb15cd241049fa8ecd20e1a9e5d211adcacb3685188878db0b
+pipeline_status: rejected
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【10月1日】
+  A：品牌组想把公开讨论按主题归纳，我把几个帖子做了标签。
+  B：只统计主题就好，别把账号当成同一个人。
+  A：我看到有人问小号也给你翻了，好像是个熟悉的用户。
+  B：这句话听起来就越界了，别继续对个人做关联。
+  A：我没找到真实姓名，也没想发出去。
+  B：不需要知道名字才会侵犯隐私，匿名账号也有边界。
+  A：你中午吃了吗，我刚从楼下回来。
+  B：吃了碗面，汤有点咸。
+  A：那家我也吃过，分量倒挺足。
+  B：是，没吃完还打包了一点。
+  A：晚上别再吃太重了。
+  B：嗯，回家煮点粥。
+  【10月2日】
+  A：有人说相册原图时间能对上，但我没保存图片。
+  B：别去追那些细节，也不要转存内容。
+  A：那我只把讨论热度放进报告。
+  B：可以，删除身份猜测和相关截图。
+  A：我删完了，准备把草稿给你看。
+  B：好，确认没有昵称头像再交。
+  A：上次你说的那个保温杯好用吗？
+  B：还行，盖子不漏，洗起来也方便。
+  A：那我也看看，办公室那个掉漆了。
+  B：选个简单的吧，花里胡哨的不好洗。
+  A：我先收藏，周末再下单。
+  B：行，活动多比比价。
+  A：周一要做产品例会的三页汇报。
+  B：先把售后问题按物流、质量分开吧。
+  A：好的，评论里重复的问题合并统计。
+  B：汇总时别截单个用户的帖子。
+  A：明白。
+  B：这就够团队讨论了。
+  【10月3日】
+  A：你周末准备怎么安排？
+  B：可能带家里人去公园走走。
+  A：最近那边有新开的展吗？
+  B：有个免费的花展，入口不远。
+  A：听起来不错，别赶最热的时候。
+  B：对，早点去，午饭前回来。
+  A：我刚又看到有人说“转发过什么都能查”，听着挺吓人。
+  B：那是夸张说法，不代表我们该去追个人历史。
+  A：我不会继续点进个人主页。
+  B：谢谢，公开讨论也要克制使用。
+  A：报告里只留讨论主题。
+  B：行。
+  A：你家那盆绿萝最近怎么样？
+  B：长了新叶，可能是我终于记得浇水了。
+  A：哈哈，植物也等到了靠谱的主人。
+  B：别夸，我上个月还差点忘了。
+  A：放窗边会不会晒过头？
+  B：上午有点散光就够了。
+  A：午饭我们去吃那家砂锅吧？
+  B：可以，最近降温正好吃热的。
+  A：我先订个四人桌，晚上同事也来。
+  B：好，我带饮料。
+  A：你喜欢无糖的对吧？
+  B：对，少冰就行。
+  【10月4日】
+  A：这两天早晚温差挺大，我早上出门又穿少了。
+  B：我也是，中午热得想脱外套，晚上骑车又冷。
+  A：我把薄围巾塞包里了，方便。
+  B：好主意，我车里还有件旧开衫。
+  A：周末看预报好像还要降温。
+  B：那我提醒家里人把厚衣服翻出来。
+  A：我把汇总表发你了。
+  B：看到了，数字和主题都很清楚。
+  A：没有账号信息。
+  B：好，后续也保持这个范围。
+  A：收到。
+  B：辛苦啦。
+  B：汇总意见不需要追踪账号是谁。
+  A：我把草稿里所有推断都拿掉。
+  B：谢谢，匿名讨论也要尊重边界。

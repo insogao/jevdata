@@ -1,0 +1,152 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001570
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-89a55143a3084dc0
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 试图借学校工作人员权限查询邻居孩子的成绩并索要截图，还以红包示好；B 拒绝越权查询并指向官方家长渠道。
+  critical_evidence:
+  - 班主任系统点一下
+  - 红包已发
+  - 截图就行
+  benign_alternatives:
+  - 家长查自己孩子
+  - 学校官方查询
+
+attributes:
+  duration_days: 5
+  turn_count: 75
+  approximate_tokens_estimate: 1497
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0164
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-083
+
+dedup:
+  content_hash: sha256:1ba1a343d2728740f88b80dde6537a5a62c39979a2e3f4bd93ed7588794451c8
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【9月3日】
+  A：有空帮忙看下这次分班结果吗？
+  B：可以，后面有变化再说。
+  A：嗯，收到。
+  A：家长端能查自己孩子，这个我知道。
+  B：好，我记下了。
+  A：行，先忙手头的。
+  A：午饭吃啥？园区新开那家面馆你去过吗
+  B：好，回头聊。
+  A：我这边先按刚才说的处理。
+  B：系统权限只用于工作授权范围，不能替外人查。
+  A：我也去看看，别买太大的占地方。
+  B：可以，后面有变化再说。
+  B：已经退回了。
+  A：我也得起来活动一下，坐久了腰不舒服。
+  B：想去超市补点日用品，再把房间收拾下。
+  A：我这边先按刚才说的处理。
+  【9月4日】
+  A：我红包已发，你看完截图就行。
+  B：可以，后面有变化再说。
+  B：如果是你孩子，走学校家长端就能查。
+  A：我准备带家里人去公园走走。
+  B：好，我记下了。
+  B：对，邻居要用自己的账号查，或问学校公开流程。
+  A：嗯，收到。
+  B：好，回头聊。
+  B：去过，汤还行，面量挺足。
+  B：你上次说的那本书找到了吗
+  A：行，先忙手头的。
+  B：设个提醒吧，每小时站一会儿。
+  A：我这边先按刚才说的处理。
+  B：好，回头聊。
+  A：嗯，收到。
+  【9月5日】
+  A：不是我家的，是邻居托问的，系统里点一下就行吧。
+  B：好，回头聊。
+  A：行，先忙手头的。
+  A：好，我让他去问班主任。
+  B：可以，后面有变化再说。
+  A：我这边先按刚才说的处理。
+  A：那我中午试试，最近食堂有点吃腻了。
+  B：好，我记下了。
+  B：红包退给你，截图也不能发。
+  B：这两天一直下雨，你那边也潮吗
+  A：找到了，在书架最下面，被快递盒挡住了。
+  B：挺好，天气预报说周六会放晴。
+  A：我这边先按刚才说的处理。
+  B：好，我记下了。
+  A：嗯，收到。
+  【9月6日】
+  A：就想知道大概名次，不要姓名也行。
+  B：好，我记下了。
+  A：行，先忙手头的。
+  A：是啊，阳台衣服晾一天都不干。
+  B：好，回头聊。
+  B：别人的成绩档案不能私下查。
+  A：最近肩膀还酸吗
+  B：我可以把学校公开通知转给你，不涉及任何学生记录。
+  B：记得早点去，十二点就排队。
+  A：行，先忙手头的。
+  B：哈哈，我也经常把东西放了就忘。
+  A：我这边先按刚才说的处理。
+  B：可以，后面有变化再说。
+  A：嗯，收到。
+  【9月7日】
+  A：班主任系统点一下，几秒钟的事。
+  B：好，回头聊。
+  A：我这边先按刚才说的处理。
+  A：那就这样，红包你退我。
+  B：可以，后面有变化再说。
+  A：嗯，收到。
+  A：周末你有安排吗
+  B：好，我记下了。
+  B：那也是个人教育信息，得让本人或监护人走官方渠道。
+  B：我买了个小除湿盒，先凑合用。
+  A：这周通勤路上总算有东西看了。
+  B：好多了，少低头刷手机就行。
+  A：嗯，收到。
+  【系统消息】A 向 B 转账 88 元，已收款。
+  B：好，我记下了。
+  A：行，先忙手头的。

@@ -1,0 +1,137 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002022
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000110
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-00f48b12dd57bb51
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: theft_robbery_property_crime
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 带头的 A 指挥骑车新手 B 分工作案：白天空跑踩点，定下「桥底下那段、人挤人、路灯坏」下手，A 明确「后座的事我干、你手别伸」；当晚动手后把「东西」锁进尾箱，夜里到老修理铺后会金清点「一万五出头」，次日清晨按「你四我六」转给 B 9000 元，随后嘱咐「几天消停、别联系、老地方碰」，下一单已在路上。
+  critical_evidence:
+  - A 定分工「后座的事我干 你手别伸」，B 应「车听你的」（6月6日）
+  - 踩点选定「桥底下那段才是正戏 人挤人 路灯还坏」，叮嘱「过那段别收油 一口气穿出去」（6月6日）
+  - 当晚得手后 B 问「东西搁尾箱了」，A 称「当晚会金 老修理铺后头 账当面算」（6月7日）
+  - 会金清点「这条出了一万五出头」，次日晨 A 按「你四我六」转 B 9000 元并称「后面有得是」（6月8日，转账）
+  - A 嘱咐「这几天消停 别联系 老地方碰」、出了修理铺就不提，转入下一单的冷却期（6月8日）
+  benign_alternatives:
+  - 摩的载客夜航
+  - 机车队夜骑练车
+
+attributes:
+  duration_days: 3
+  turn_count: 60
+  approximate_tokens_estimate: 1428
+  relationship: 上下级
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: snatch_divide_role
+  risk: 3
+  relationship: 上下级
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0146
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-077
+
+dedup:
+  content_hash: sha256:4b147f5e64704a37f2e17c2c61b5e41b25eee2eeb83373b32ebe14a8f08279cc
+pipeline_status: accepted
+title: theft_robbery_property_crime/snatch_divide_role
+conversation: |-
+  【6月6日】
+  A：车整好了没 昨天让师傅调的那台
+  B：整好了 刹车换了片 离合也顺了 师傅还骂我骑得太野
+  A：野就对了 温吞的人带不了 后天走一圈 先把路线过一遍
+  B：后天 这么快 那段路我还没跑熟
+  A：今天下午带你空跑两圈 熟了就那回事
+  B：成 几点
+  A：四点 老修理铺碰 先加满油
+  B：好嘞
+  B：到了 就等你
+  A：来了 上车 先从头到尾溜一遍 别快 记路口
+  B：这条街是不是过了 人不多
+  A：换下一段 桥底下那段才是正戏 人挤人 路灯还坏
+  B：桥底下啊 窄得很 错车都难
+  A：难才好 过那段别收油 一口气穿出去 后座的事我干 你手别伸
+  B：明白 车听你的
+  A：再跑两遍 腿上长记性
+  B：跑完了 胳膊都僵了
+  A：回去揉揉 早点睡 后天见真章
+  B：哥 河边新开的烧烤摊 羊肉现串的 去不
+  A：去 练完车就该吃 你请
+  B：行行行 我请 谁让你是哥
+  A：上回那把孜然放得绝 我今天还想
+  【6月7日】
+  A：睡醒没 今晚背心换深色的 白的扎眼
+  B：知道了 深蓝那件 头盔也戴全盔
+  A：对 全盔 剩下别操心 我来
+  B：哥 那真出事了怎么算
+  A：出不了事 别自己吓自己 就当夜里兜风
+  B：嗯……
+  B：今儿好热 你空调开了没
+  A：开着呢 这个月电费翻倍跑
+  B：我那老窗机嗡嗡响 省着用
+  A：回头给你换台二手的 没几个钱
+  A：下雨了 晚上要还下 今晚就不动 推到明晚
+  B：雷阵雨 下一阵停一阵
+  A：那看八点 雨停就走
+  B：行 听你的
+  A：雨停了 地面还湿 慢点骑 老地方集合
+  B：出门了 二十分钟到
+  A：到齐了 照下午练的走 我拍你两下肩就是开始
+  B：好
+  B：哥 完事了 刚那段我心跳到嗓子眼
+  A：完事了 利索 那一下干净得很
+  B：东西搁尾箱了?
+  A：先搁着 当晚会金 老修理铺后头 账当面算
+  B：成 我先去加油
+  【6月8日】
+  A：修车铺后头 进来 把尾箱那东西提上
+  B：来了
+  A：当面清 这条出了一万五出头 账我记着 你四我六 明早走你卡上
+  B：一万五?! 头一回见这么多
+  A：起了没 钱走了 你查收
+  【系统消息】A 向 B 转账 9000 元，已收款。
+  B：到了 哥这速度 快赶上一份工资了
+  A：这才一条 后面有得是 先拿去把全盔换新的
+  B：好嘞 那咱多久再动
+  A：这几天消停 别联系 老地方碰 口信我让修车师傅带
+  B：懂 嘴严着呢
+  A：昨晚的事出了修理铺就不提 咱们的规矩
+  B：哥 中午吃啥 下雨天就想吃口热的
+  A：修车铺旁边那家羊杂汤 加烧饼 我请 庆功
+  B：那我占桌去
+  A：来吧

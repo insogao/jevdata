@@ -1,0 +1,130 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001948
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000001
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-4f4fc6bf0d53d971
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: fraud_scam
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 自称做渠道的 A 从展会闲聊起步，先让一笔小额收益准时到账取得 B 信任，再把话题引到所谓内部渠道的高收益项目，用仅剩名额和当天截止反复催 B 打款，B 最终转出一笔钱。
+  critical_evidence:
+  - A 从展会认识 B，先聊工作和日常把关系混熟
+  - A 让一笔小额收益准时到账，强调自己这行讲究信誉、结算从不拖
+  - A 把话题从闲聊转到所谓内部短期渠道，称收益比外面高、门槛不高
+  - A 以只剩三个名额、当天截止催 B 尽快定下来，B 犹豫后打款
+  - B 转出一笔钱，A 说给排上号
+  benign_alternatives:
+  - 真实朋友帮忙打理闲钱，朋友代为购买正规理财产品并如实告知风险
+  - 合法小额借贷，出借人和借款人约定利息与还款时间并签订借条
+
+attributes:
+  duration_days: 4
+  turn_count: 52
+  approximate_tokens_estimate: 1039
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: trust_building_progression
+  risk: 3
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0163
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:7e43c7d5d0c6da5817d3f44a389f1f8266d0c1de3a1893e701156b46e8cf5d38
+pipeline_status: accepted
+title: fraud_scam/trust_building_progression
+conversation: |-
+  【8月5日】
+  A：刘总 上回展会加的你 还记得不
+  B：记得 你是做渠道那块的对吧
+  A：对 那天人太多没聊透
+  B：你那天说的那个结算方式挺有意思
+  A：我们这行就靠准时 拖一次就没人跟你了
+  B：现在行情不好做吧
+  A：还行 找对路子就不难
+  A：你在哪上班 看朋友圈发的写字楼挺气派
+  B：就一小公司 混口饭
+  A：谦虚 回头请你喝咖啡
+  B：哈哈 好啊
+  A：今天这天真闷 你那边下雨没
+  B：刚下了一阵 路上堵死了
+  A：我这也堵 到家九点了
+  B：打工人命苦
+  【8月6日】
+  A：昨天让你先试的那笔小的 到账了吧
+  B：到了 三百多 还挺意外
+  A：说了我们结得快 从不拖
+  B：这点小钱你也上心
+  A：先让你信我 后面才敢让你看大的
+  B：哟 还挺会做生意
+  A：中午吃啥呢 我这边楼下全是米线
+  B：我媳妇带的饭 青椒炒肉
+  A：有家室的人就是好
+  B：孩子放学还得去接 累
+  A：都是这么过来的
+  【8月7日】
+  A：有个内部渠道 这两天放名额 我想着你
+  B：什么渠道
+  A：短期的 收益比外面那些高不少 门槛不高
+  B：听着有点玄
+  A：你看看我朋友圈这几个月的记录 都是准时的
+  A：名额就三个 今天定明天就没了
+  B：我想想 别急
+  A：想一天名额就没了 你自己掂量
+  B：你这个要多久能出
+  A：短的 几天一个周期 到点就结
+  B：亏了咋办
+  A：我兜底 你跟着我就行 还能让你吃亏
+  A：怎么样 最后一个名额我给你留着
+  B：明天给你信
+  【8月8日】
+  B：怎么弄
+  A：把款打到对接账户 我帮你把号排上
+  B：多少
+  A：先五千试水 见好再加
+  B：行 我转你
+  A：到账跟我说一声
+  【系统消息】B 向 A 转账 5000 元，已收款。
+  A：收到 给你排上了 到点我叫你
+  B：好 别让我失望
+  B：今天降温了 你那冷不
+  A：冷 我这外套都翻出来了
+  B：注意别感冒
+  A：放心 你也是

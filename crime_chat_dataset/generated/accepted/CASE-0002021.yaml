@@ -1,0 +1,136 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002021
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000141
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-ea8d6447daddbb9b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: other_illicit_coordination
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 同厂同事 A 下山弄「山货」私下卖给开私房菜的 B：本月只有四只、公二母二、行情一只一千四，约在老河口机耕道口夜里两点交货、冰袋备足天亮前进冷柜，B 先转 5600 全款、凌晨当面点货，A 还叮嘱皮子另有人收别让 B 沾——一条打游击式的野味收购线，交货后已约下月落雪再供一批。
+  critical_evidence:
+  - B 催货，A 称「这个月只有四只、公的两只母的两只，再多是真没了」（11月4日）
+  - 行情一只一千四，B 嫌贵抬出上年价，A 以冬季行情和冻库压货价顶回（11月4日）
+  - 交货定在「老河口机耕道口、夜里两点、车停桥墩背风面」，叮嘱冰袋备足、泡沫箱装、天亮前必须进冷柜（11月5日）
+  - B 转 5600 元全款（四只），凌晨当面点货「公二母二」完成，A 称皮子另有人收、让 B 别沾（11月5-6日，转账）
+  - 交货后 A 称下月落雪前再跑一趟、量大压到一千二，B 说再添个冰柜接货（11月6日）
+  benign_alternatives:
+  - 山货土产收购
+  - 养殖货源的正常调货
+
+attributes:
+  duration_days: 3
+  turn_count: 59
+  approximate_tokens_estimate: 1677
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: forest_poaching
+  risk: 2
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0146
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-077
+
+dedup:
+  content_hash: sha256:2caa61510648d296cf61ebc5cf0193e1e52ec23c4410e2f6b0f68ab2d63c6230
+pipeline_status: accepted
+title: other_illicit_coordination/forest_poaching
+conversation: |-
+  【11月4日】
+  A：调休单你交没 这周谁顶夜班还没定
+  B：交了 让组长排我周四 我周四有事
+  A：行 我替你喊人
+  B：谢了 午饭吃没 今天食堂辣子鸡听说不错
+  A：排队的人绕三圈 我泡面算了
+  B：那我给你带一份 反正我也要去
+  B：对了 上回说的那个 还有路子没 客人一直问
+  A：有 但货紧 这个月只有四只 公的两只母的两只 再多是真没了
+  B：四只够干啥 我那边周末能开两桌
+  A：爱要不要 山里眼下就这行情 霜降一过更难寻
+  B：价呢 别跟我打哑谜
+  A：一只一千四 冬天就这个价 冻库里压货的转手都卖一千六
+  B：贵了 上年你给我的还一千一
+  A：上年是上年 今年进山的油钱你都问不着 我一天跑两趟山
+  B：让我想想 晚上回你
+  A：想归想 货不等人 明晚就有别的口子来问
+  【11月5日】
+  A：今早降温 你骑车把护膝戴上 上回摔的疤还没好利索
+  B：戴了 就是你那张防风罩借我 我那个裂了
+  A：午休你来拿
+  B：好嘞
+  B：想好了 四只我全要 一千四就一千四 你给我留到周末
+  A：周末晚了 我周四夜里就得交一半出去 给市里一个口子
+  B：那就这周 你定哪天
+  A：明晚 老河口那条机耕道口 夜里两点 车停桥墩背风那面
+  B：两点也太熬人 白天不行?
+  A：白天路上眼睛多 夜里清爽 货也压得住
+  B：行 那我备着 车里放两床毯子
+  A：冰袋你备足 后备箱那个泡沫箱带上 天亮前必须进你的冷柜 不然就坏了
+  B：懂 我店里冷柜昨天刚除过霜
+  A：钱怎么走
+  B：五千六全款 我今晚先转你
+  A：行 到账我明晚准时到
+  B：转了 你查收 五千六 整
+  【系统消息】B 向 A 转账 5600 元，已收款。
+  A：收到了 明晚两点 见货
+  B：昨晚追的那个剧更了 你看没 那个配角反转绝了
+  A：没追 你又安利 我列表里堆了五部
+  B：就这部 先看头两集 不上头我把食堂券送你
+  A：这么横 那我今晚看看
+  【11月6日】
+  B：到桥墩了 路口没灯 你在哪头
+  A：桥墩背风面 泡沫箱先开 我点给你看 四只 公二母二 你对
+  B：对上了 成色可以
+  A：我这些不带记号的 干干净净 冰袋铺两层 装车直接回
+  B：好了 盖上了 两点差三分 完事
+  A：记住皮子我另有人收 你别沾 你就当这趟只收了肉
+  B：我不沾 这行的规矩我懂
+  A：快回 路口朝东那边有车灯
+  B：昨晚那批冰过之后成色真不错 中午试了一味 客人没话讲
+  A：那是 下月落雪前我再跑一趟 你把冷柜腾出整层
+  B：腾 我再添个冰柜 生意好嘛
+  A：有眼光 量大了再给你压到一千二
+  B：成 就等你这话
+  A：我爸妈那边开始腌菜了 你上回要的萝卜干 我让他们多晒了两篾
+  B：惦记着呢 晒好了给我留十斤
+  A：十斤都是碎的我不给你 好的在里头挑
+  B：那我给你留坛子
+  B：晚上食堂有羊汤 我给你占个座 暖暖
+  A：来 你把我周四的调休再确认下
+  B：确认了 你歇你的
+  A：成

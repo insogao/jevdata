@@ -1,0 +1,120 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001946
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000010
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-05b6ea7836795287
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: fraud_scam
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 以内部工作人员的口吻通知 B 在活动里中了大奖，要 B 先转一笔手续费和保证金才能领，还发来一张所谓公证书的照片打消 B 的疑虑，B 动了心转了钱。
+  critical_evidence:
+  - A 用类似官方的口吻通知 B，说 B 在活动里中了大奖
+  - B 一开始不信，A 报出 B 的部分信息并强调名额真实
+  - A 发来一张所谓公证书的照片，说是官方公证、领奖要交手续费
+  - A 以逾期作废、名额保留时间为由催 B 尽快转手续费
+  - B 转出一笔手续费，A 说财务核对后放款
+  benign_alternatives:
+  - 真实平台抽奖，用户在正规平台参与抽奖中奖后按公示规则领奖
+  - 商场有奖销售，商家依法公示奖项和兑奖流程
+
+attributes:
+  duration_days: 4
+  turn_count: 42
+  approximate_tokens_estimate: 1033
+  relationship: 中间人关系
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: prize_fee
+  risk: 3
+  relationship: 中间人关系
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0163
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:20315d5c6852371f610216173cee611c18a0600cbffa1873fc4bf365242439cf
+pipeline_status: accepted
+title: fraud_scam/prize_fee
+conversation: |-
+  【12月5日】
+  A：您好 这里是活动兑奖中心的 恭喜您抽中我们一等奖
+  B：我没参加什么活动啊
+  A：您上月在XX平台下单时自动参与的 系统抽取的
+  B：真的假的 现在骗子多
+  A：理解您的顾虑 帮您核对下 您尾号是xxxx对吧
+  B：对 你怎么知道
+  A：系统里就您的信息 奖品是现金加礼品包 名额真实
+  B：那要我怎么领
+  A：领奖前要走公证 需要您先垫付手续费 之后连本带奖退给您
+  B：还要先交钱?
+  A：流程就是这样 我发您公证书照片 您看下就放心了
+  A：[image：一张盖红章的所谓公证书照片，编号处模糊]
+  A：盖了章的 官方公证 手续费是走账用 不是我们收
+  B：要交多少
+  A：一千八 还有个保证金五百 一共两千三
+  B：奖金多少
+  A：现金三万八 加一套数码产品
+  B：那我考虑下
+  A：名额只保留到今天下午三点 逾期就作废了
+  B：中午了 你不上班吗
+  A：在的 兑奖中心中午不休息 怕耽误大家领奖
+  B：你们在哪 我能去现场吗
+  A：活动是线上的 全国兑奖 所以走线上公证
+  B：这个钱怎么转
+  A：转到我发您的对接账户 备注写手续费
+  B：转了就能领?
+  A：财务核验后当天放款 奖金直接打您卡
+  B：行 我转
+  【系统消息】B 向 A 转账 2300 元，已收款。
+  A：收到 我提交财务 稍等
+  B：好 我等着
+  【12月6日】
+  B：怎么样了 奖金到了吗
+  A：系统显示您账户状态异常 需要再交一笔解冻费
+  B：怎么又要钱
+  A：这是流程规定 解冻后一次性退还 您别急
+  B：我怎么感觉不对劲
+  A：您看公证书都发了 还能骗您不成 就差这一步
+  B：我问了我朋友 他说这是骗局
+  A：您朋友懂什么 名额给您留到十二点啊
+  B：我不办了 你把手续费退我
+  A：……
+  B：在吗 退钱
+  【12月7日】
+  B：再不回我报警了
+  B：（对方已把你删除/拉黑）

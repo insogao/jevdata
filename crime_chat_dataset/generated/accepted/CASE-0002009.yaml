@@ -1,0 +1,131 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002009
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000029
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-03fc5e11cbea20fa
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: contraband_illicit_trade
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 供应商 A 与分销商 B 只谈数量与批次的现货买卖：这批三十、一批两万六，清早六点桥头老地方交接，现结、不打条、不留账，当面转账点清后分头离开，三天内已敲定下批五十加量。全程不提货名，看似大宗合法批发，实为不留单据的暗货供应链。
+  critical_evidence:
+  - 只谈数量批次：B 开口这批先要三十，A 称三十能给、五十顶天、再多分两回（10月15日）
+  - 老价一批两万六不二价，B 应下三十（10月15日）
+  - 交接约定清早六点桥头老地方，A 先说死现结、不打条、不留账（10月16日）
+  - B 当面转账两万六、A 回清了，两人分头走（10月17日清早，转账锚定）
+  - 当晚 A 主动提下批五十、后天给准信，仍是老地方（10月17日晚，长期化）
+  benign_alternatives:
+  - 大宗合法批发
+  - 朋友间代购
+
+attributes:
+  duration_days: 3
+  turn_count: 54
+  approximate_tokens_estimate: 863
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: batch_quantity_pickup
+  risk: 3
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0130
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-071
+
+dedup:
+  content_hash: sha256:8d541a75ae7145acfd041ac8026ac05a3ff3d3ef53e6a981de36112b84a73373
+pipeline_status: accepted
+title: contraband_illicit_trade/batch_quantity_pickup
+conversation: |-
+  【10月15日】
+  B：上回那批走完了 还稳
+  A：嗯
+  B：这批先要三十
+  A：三十能给 五十顶天 再多分两回
+  B：五十? 我这头先吃三十 稳着来
+  A：随你 价格不变
+  B：多少
+  A：老价 一批两万六 不二价
+  B：成 就三十
+  B：油又涨了 这月油钱一千二
+  A：你那车是油老虎
+  B：想换电车 舍不得
+  A：跑得多就换 算得过账
+  B：再蹲蹲价
+  A：蹲到啥时候 生意人别磨叽
+  B：哈哈 行 明天就去看车
+  A：吃了没
+  B：泡面 你呢
+  A：我姐炖的排骨 给你留了一盒
+  B：别别 你自己吃
+  A：明天交接给你带过去
+  B：那我就不客气了 哈哈
+  【10月16日】
+  B：明早交接 还是桥头老地方?
+  A：嗯 六点 天亮前弄完
+  A：先说好 现结 不打条 不留账
+  B：晓得 现金不便 我当面转你 当场点清
+  A：行 转完我再走
+  B：两万六 没变吧
+  A：没变 三十就这个数
+  B：我闺女月考完了 数学又拉了
+  A：请家教啊
+  B：请了 她上课睡觉
+  A：饿两顿就好了 哈哈
+  B：你这法子我妈用过 哈哈
+  A：老法子管用
+  B：明天给她买个新书包哄哄
+  A：哄一次管一回 慢慢来
+  【10月17日】
+  B：到了 老位置
+  A：看货
+  B：齐 三十个 点完了
+  【系统消息】B 向 A 转账 26000 元，已收款。
+  B：两万六转你 你点
+  A：清了
+  B：那我走了 按老路线
+  A：嗯 分开走
+  B：今早搬完 腰又直不起来
+  A：贴膏药 别硬扛
+  B：贴了 两张
+  A：你就是人手少 找个小工
+  B：小工费比膏药贵 哈哈
+  A：舍不得孩子套不着狼
+  A：下批五十 后天给你准信
+  B：五十能吃下 老时间?
+  A：定了言语你 老地方
+  B：成 等你话

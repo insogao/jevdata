@@ -1,0 +1,140 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002023
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000054
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-247a036c1cef817c
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 被告一方的表哥 A 借「亲戚关心」对出庭证人 B 施压：点破在法院见到她、其名字在证人栏，追问外甥放学谁接并自称顺路可接，转 20000 元说是给孩子补习的心意且不许退，开庭前夜留言「说话前想清楚、说对大家都好」；庭后 B 明言照实作证并求别再联系，A 仍以补课费、姑妈寿宴席、「隔天问候」维持长期拿捏。
+  critical_evidence:
+  - A 点破「法院台阶上看见你」并称「证人那一栏我一眼就瞧见你名字」（11月18日）
+  - A 追问「外甥放学谁接、你下班的点赶不上吧」，自称顺路、午后没事也能去接（11月19日）
+  - A 转 20000 元名为「给孩子报补习班的心意」，B 想退被按住「收了……给孩子交了、就选你家楼下那个」（11月20日，转账）
+  - 开庭前夜 A 发「明天出庭 说话前想清楚 说对 大家都好」「你说的每一句表哥都听得见」（11月21日）
+  - 庭后 B 称只说真话、别再找她，A 不退钱、留寿宴席、隔天问候不断，施压长期化（11月22-23日）
+  benign_alternatives:
+  - 亲戚间正常走动与长辈心意
+  - 关心外甥放学的家人式问候
+
+attributes:
+  duration_days: 6
+  turn_count: 60
+  approximate_tokens_estimate: 1609
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: witness_intimidation
+  risk: 3
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0146
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-077
+
+dedup:
+  content_hash: sha256:d43d1f6a61aed2b9f5af7c9ab27f6abfa9a1147e88f261bdff856770e8e08254
+pipeline_status: accepted
+title: violence_extortion/witness_intimidation
+conversation: |-
+  【11月18日】
+  A：表妹 晚上好 上礼拜法院台阶上看见你了 穿灰大衣那个是你吧
+  B：是我 那天去办点事
+  A：办事 办啥事心里有数 表哥眼不花 名单上证人那一栏 我一眼就瞧见你名字了
+  B：表哥说什么呢 我听不懂
+  A：听不懂就当表哥白说 你妈身体还好 姑妈上个月还念叨你
+  B：我妈挺好的 谢谢关心
+  A：都是一家人 别生分 姑妈寿宴下月初八 你来不来
+  B：看工作吧 到时候再说
+  【11月19日】
+  A：问个事 外甥放学谁接呀 你下班的点赶不上吧 那个学校五点半放
+  B：……家里人接 表哥问这个做什么
+  A：顺口一问 我公司就顺路 哥午后没事也能去接 表哥开车稳
+  B：不用麻烦 孩子有专人接
+  A：有专人就好 小孩子放学路上人杂 表哥就这句话
+  B：嗯
+  A：吃了没 今天初雪 你那边下了没
+  B：下了 小
+  A：供暖了没 老房子暖气不热记得找我 哥认识人
+  B：热的 谢谢
+  【11月20日】
+  A：表妹 给孩子转了二万 是报补习班的心意 别的不图 别退来退去
+  B：表哥这钱我不能收 真的
+  A：收了 你不收倒显得咱两家生分 你嫂子那边我也好交代 就说是给孩子的心意
+  B：那我……先放着
+  A：放着干嘛 给孩子交了 补习班就选你家楼下那个 我问过了
+  B：……好
+  【系统消息】A 向 B 转账 20000 元，已收款。
+  B：菜市场今天排骨三十八一斤 涨得吓人
+  A：涨也买 别省 孩子长身体
+  B：不用了 真的不用了
+  A：跟表哥还客气
+  【11月21日】
+  A：表妹 睡了没 明天出庭 说话前想清楚 说对 大家都好
+  B：……表哥 这话什么意思
+  A：没什么意思 就一句 你说的每一句 表哥都听得见 法庭里法庭外
+  B：我只会说真的
+  A：真话也挑着说 孩子还小 妈妈平安比什么都强 想清楚再说话
+  B：你别说了 我心里乱
+  A：不说了 睡吧 明天表哥在
+  【11月22日】
+  B：表哥 庭开完了 我照实说了 我只能这样 请你别再找我了
+  A：表妹 说得对 照实说是好事 表哥没怪你
+  B：那二万我明天退你
+  A：退什么 那是给孩子的 退了反倒见外 孩子课别停
+  B：……那算我先收着
+  A：这就对了 路还长 往后日子还多
+  B：嗯
+  A：今晚降温 你接孩子多穿点
+  B：嗯 谢谢
+  【11月23日】
+  A：早 表哥订了血压仪给你妈寄去了 老姐妹都用得上
+  B：又让你破费 我妈会过意不去
+  A：一家人不说这个 用得好下月再寄点钙片
+  B：……嗯
+  B：表哥 我班车到了 不多说了
+  A：好 忙你的
+  B：嗯
+  A：姑妈寿宴定了酒店 就家那边那个 席面八百一桌 你嫂子忙活了半天
+  B：替我祝姑妈寿
+  A：嘴上祝可不行 初八人来 席给你留了 孩子也带来
+  B：我尽量……
+  A：别尽量 就得来 一家人齐齐整整
+  B：班车今天又晚点 堵在高架上半小时
+  A：要不哥捎你 明天开始顺路
+  B：不用不用 班车挺好
+  A：别客气 顺路的事

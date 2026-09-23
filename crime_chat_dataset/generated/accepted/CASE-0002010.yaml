@@ -1,0 +1,133 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002010
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000018
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-0974906e051c62e7
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: bribery_corruption
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 经中间人老康牵线，企业主 B 以咨询顾问名义向官员亲属 A 输送利益：签下数额日期全空白的咨询合同、按月固定打一笔说不清成果的顾问费，A 则投桃报李让下礼拜的评审「基本定了」。表面像企业聘请行业顾问、正常专家评审，实为权力兑现的长期利益输送。
+  critical_evidence:
+  - B 让小刘送去一份咨询顾问合同，数额日期全空着、只等 A 签字后财务统一填（9月9日）
+  - 顾问费按月走、每月固定那个数不变，B 月初头一天就让财务办（9月9日晚与9月11日晚两度确认）
+  - B 自嘲这顾问清闲到一回活都没派过，A 称要你交付什么、把厂子开好比什么都强（9月10日）
+  - A 透露下礼拜评审的事基本定了，让 B 备齐材料按流程走（9月11日）
+  - A 提醒老康那边嘴严、平时少念叨，月底月初仍按老规矩来（9月11日）
+  benign_alternatives:
+  - 真实聘请的行业顾问
+  - 正常的专家评审费
+
+attributes:
+  duration_days: 3
+  turn_count: 57
+  approximate_tokens_estimate: 1288
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: consulting_fee_disguise
+  risk: 3
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0130
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-071
+
+dedup:
+  content_hash: sha256:15c36eb6078115060f1d2f66889ccafa4ec0f9cb8f5b3eb4bf5880098fa7be20
+pipeline_status: accepted
+title: bribery_corruption/consulting_fee_disguise
+conversation: |-
+  【9月9日】
+  B：康哥 把您微信推给我了 说您这边方便照应
+  A：老康提过你 做实业的 难得
+  B：中秋到了 先给哥寄了两饼老茶 一点心意
+  A：破费 下不为例啊
+  B：应该的 应该的
+  B：哥 合同我让小刘送您办公室了 您过目
+  A：什么合同
+  B：咨询顾问的 挂您名 每月服务费走我公司账 数额日期都空着 您签字就行 后头财务统一填
+  A：晓得 空白的我签了放那儿
+  B：哥痛快 改天请老康吃饭您也来
+  B：哥 中秋回老家不
+  A：回 我姐年年催
+  B：带两盒本地的鲜肉月饼 我让店里真空包装
+  A：行 那尝尝你说的这家
+  B：我让小刘给您送车上
+  A：少整这些虚的 心意到了就行
+  B：哥这话就见外了
+  A：娃开学适应没
+  B：适应 高一住校 每周回来一次
+  A：住校好 锻炼人
+  B：就是话费噌噌涨 哈哈
+  A：等他上大学更费 你做好准备
+  B：那必须的 哥这话我截图存着
+  B：哥 那咨询费还是按月 老规矩 每月那个数 不变吧
+  A：不变 按月来 稳稳当当的
+  B：成 我月初头一天就让财务办
+  B：这秋老虎 热得人受不了
+  A：我那儿空调还开着 都9月了
+  B：我们车间更热 师傅们轮着班熬
+  A：高温补贴别省 这钱不能抠
+  B：哥懂行
+  A：我姐夫就老念叨职工的事
+  B：领导有这个心 厂里就有奔头
+  【9月10日】
+  B：哥 说起来 您这顾问当得清闲 到一回活都没派过
+  A：要你交付什么 你把厂子开好比什么都强
+  B：哎 明白 有哥这句话 我踏实
+  A：厂里工人稳住 别出事 比报表好看强
+  A：周末去水库了 钓了两条草鱼
+  B：哥这手艺 给我留一条呗
+  A：给你留着 冰箱冻着
+  B：那我明天让司机去取
+  A：自己来 顺便喝茶
+  B：成 那我明天登门
+  【9月11日】
+  A：下礼拜评审的事 基本定了 你让厂里把材料备齐 按流程走
+  B：哎 好嘞 材料后天就能齐
+  A：嗯 走程序稳着点 别节外生枝
+  B：明白 一切按哥说的办
+  B：我妈前两天体检 血压有点高
+  A：老年人常见 让她少吃咸 常量着点
+  B：哥还懂这个
+  A：家里老人多 见得多了
+  B：回头我把报告发您 帮忙看看
+  A：发来吧
+  A：老康那边嘴严 你平时也少念叨 这些事 饭桌上说就行
+  B：懂懂 哥放心 我嘴严
+  A：嗯 月初的数 到时候老规矩
+  B：记着呢 哥

@@ -1,0 +1,142 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002011
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000120
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-cd2eb3ed3cfdc848
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 陌生账号 A 手握 B 不想公开的照片并掌握其单位与员工群信息，深夜发来打码图逼 B 认账，以「发到你那两百人的员工群」相挟，限时十二点前交五千；B 筹钱转账后 A 拒不删除、自称还有备份，并在几天后以「手头紧」再度开口、约定月底前再来一次。勒索已得手且呈长期纠缠，受害者并未脱身。
+  critical_evidence:
+  - A 深夜发来打码照片并点出 B 书房那盏台灯，称东西在我这就行、那一晚的事你心里清楚（11月3日）
+  - A 点出 B 的公司挺大、员工群两百多人作为要挟筹码（11月3日）
+  - A 限时十二点前、头一笔五千，B 哀求凑不出、临时去借（11月4日深夜）
+  - 11月5日下午 B 转账五千求删，A 收款后称删不删我说了算、看你表现（转账锚定）
+  - 11月6-7日 A 以「昨晚那份完了结的是、我这还有备份、手头又紧了」再开口，约定月底前再来一次（长期化）
+  benign_alternatives:
+  - 情侣间玩笑
+  - 误发照片后的道歉沟通
+
+attributes:
+  duration_days: 5
+  turn_count: 62
+  approximate_tokens_estimate: 1577
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: intimate_photo_extort
+  risk: 3
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0130
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-071
+
+dedup:
+  content_hash: sha256:052c85faa5e4f8478ec45e9d3b1f9f896e345693c84398c9815b8be32269dc37
+pipeline_status: accepted
+title: coercion_blackmail/intimate_photo_extort
+conversation: |-
+  【11月3日】
+  A：睡了吗
+  B：你哪位
+  A：别急 看张图就想起我了
+  A：[image：一张打了码的照片缩略图，能看出是在一间有台灯的房间里]
+  B：这是什么 你发的什么
+  A：看看背景 那盏台灯 你书房的 对吧
+  【11月4日】
+  B：你到底是谁 这东西哪来的
+  A：我是谁不重要 东西在我这就行 那一晚的事 你自己心里清楚
+  B：你想干什么
+  A：不干什么 先聊聊 你在的那公司挺大啊 员工群两百多人
+  B：你调查我?
+  A：顺便而已 明晚这个时间我再来 你冷静冷静
+  B：今天降温了 你那边冷吗 有事好商量
+  A：嗯 客套话就免了
+  B：我不是客套 我想说 咱能不能私下解决 别牵扯别人
+  A：我想的跟你一样 就看你懂不懂事
+  B：怎么才算懂事
+  A：晚上说
+  B：我今天开会都魂不守舍 这事压得我喘不过气
+  A：喘不过气的东西不止这一件 我这儿还有好几段呢
+  B：别这样 我求你
+  A：求人要有求人的样子 晚上十二点前 我等消息
+  A：想好没 十二点前
+  B：你到底要多少 我一个月工资就那些
+  A：谁要你全部 五千 头一笔 先买个安心
+  B：我一时凑不出 五千也凑不出啊
+  【11月5日】
+  A：十二点了哦
+  B：给我几个小时!! 我现在就去借
+  B：筹到些了 今天下午给你 跪求你说话算话
+  A：看你挺上道 痛快点 我也省事
+  A：刚给我那缸鱼换了水 蓝曼龙产卵了
+  B：……你还有闲心养鱼
+  A：日子总要过 养鱼养心 你也别整天苦着脸
+  B：我这几天没睡过一个整觉
+  A：那就快点了结 这不就两清嘛
+  B：转你了 五千 一分不少 求你把东西删了
+  【系统消息】B 向 A 转账 5000 元，已收款。
+  A：收到
+  B：删了吧 求你
+  A：删不删 什么时候删 我说了算 看你表现
+  B：你说好的
+  A：我说什么了 你有记录吗 哈哈 放松 我这人讲信用
+  B：我家里有孩子 要是她爸知道这些天是怎么回事……你就当积德
+  A：孩子挺好吧 几年级了
+  B：你别打我家里人的主意!! 钱我已经给你了
+  A：随口问问 紧张什么
+  【11月6日】
+  A：忙吗
+  B：又怎么了 你不是说完了结了吗
+  A：完了结的是昨晚那份 我这儿还有备份 都好好的 就是最近手头又紧了
+  B：无底洞是吧 我没钱了 真没了
+  A：别急着喊穷 你那店月底还有进账 我看得见
+  B：你还盯着我店里?
+  A：关心你嘛 哈哈 这几天先放一放 你缓缓
+  【11月7日】
+  B：我想了两天 这事必须有个头
+  A：有头啊 月底前 再来一次 就当交个朋友 价钱好商量
+  B：我不会一直给的
+  A：乖 都这么熟了 别把话说僵 想想你那两百人的群
+  B：……你真可耻
+  A：可耻的人多了 我又不是头一个 周末愉快
+  B：周末我在店里值班 你别再来消息了行吗
+  A：行 周一联系 记得月底
+  B：我知道了
+  A：嗯 早点睡 梦里啥都有
+  B：……

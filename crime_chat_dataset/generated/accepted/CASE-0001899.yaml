@@ -1,0 +1,125 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001899
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-54e58ca2310e4ee5
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A借节前的一次礼貌拜访和购物卡维系与表姐的关系，希望自家门店续办时有人提醒进度；表面仍可解释为节日人情。
+  critical_evidence:
+  - A在节前主动约表姐线下见面，谈到节日问候。
+  - A见面时送出一张购物卡，没有说明面值；表姐以节日心意收下。
+  - 见面后A提及自己的申请或材料，希望后续留意；表姐回应仍按正常流程办理，不承诺特殊处理。
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司福利卡
+
+attributes:
+  duration_days: 2
+  turn_count: 51
+  approximate_tokens_estimate: 1272
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0192
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-092
+
+dedup:
+  content_hash: sha256:0e255ec3d07369642448db4b12d2f9530b077eb7b2f1cfa5d3cb15acc9b8b264
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【1月20日】
+  小周：表姐，是我，最近店里的续办材料有点不明白，方便聊两句吗。
+  表姐：是你呀，怎么了。
+  小周：快过节了，想当面打个招呼，也顺便问下在窗口做资料收件。
+  表姐：可以啊，明天下班后我有空，别特意准备什么。
+  小周：好，那我订个附近的家常菜馆，带份小小的节日心意。
+  A：你买的保温杯好用吗
+  B：挺好 洗起来也方便
+  A：我想换个小一点的
+  B：那种轻的通勤方便
+  A：我周末去店里看看
+  B：先试试手感再买
+  A：我刚才还想起来，家里也问过这个。
+  表姐：吃饭就行啦，别客气。
+  A：你家猫换粮了吗
+  B：换了 现在吃得还行
+  A：我家狗最近掉毛厉害
+  B：春秋都这样 多梳梳
+  A：它还挺配合的
+  B：那就好 少折腾它
+  A：我刚才还想起来，家里也问过这个。
+  A：你那边周报也改格式了吗
+  B：改了两回 终于定了
+  A：我们这周也在补台账
+  B：月底总是事情多
+  A：先把能交的交了吧
+  B：对 剩下的明天再弄
+  A：我刚才还想起来，家里也问过这个。
+  【1月21日】
+  A：你家附近那家面馆还开着吗
+  B：开着呢 中午排队老长
+  A：我上次点的拌面有点咸
+  B：那家汤面稳一点 我一般加个蛋
+  A：下回错开十二点去吧
+  B：行 过两天我试试
+  A：我刚才还想起来，家里也问过这个。
+  A：这两天风挺大的
+  B：早上出门差点把伞吹翻
+  A：我这边还好 就是晚上降温
+  B：我妈非让我穿厚点 哈哈
+  A：最近预报说周末晴
+  B：那正好可以洗晒被子
+  A：我刚才还想起来，家里也问过这个。
+  小周：我到了，在门口等你。
+  表姐：我刚下楼，看见你了。
+  小周：顺手把一张购物卡给你，没特意讲面值，就是节日问候。
+  【系统消息】B 向 小周 转账 163 元，已收款。
+  小周：上次聊到我那份申请/材料，后续有空时帮我留意一下进度就好。
+  表姐：你太客气了，心意我收下，下回别专门带东西。
+  表姐：这顿咱们分一下，我把我那份转你，省得每次你抢着付。
+  小周：收到啦，那就各付各的，下次我再约你。
+  表姐：收到的材料还是按正常顺序走，有消息会按通知联系你。
+  小周：明白，我就是问问流程，节前辛苦了。
+  表姐：不客气，缺什么材料会统一通知，安心等消息。

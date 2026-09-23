@@ -1,0 +1,159 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001788
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-112b94c77f83d81b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 借节前见面向负责了解续约材料流程的B送一张不说明面值的购物卡，并在前后暗示想让B留意自己的续约材料；B明确不收个人礼卡，区分单位福利卡与私人礼物，要求按统一公开顺序处理。
+  critical_evidence:
+  - A 在节前主动约见能了解续约材料进度的B
+  - A 提到带一张购物卡但不说面值
+  - A 在送卡前后暗示希望B留意自己的续约材料
+  - B 区分单位统一发放的福利卡与私人礼物，并拒绝个人礼卡
+  - B 表明申请仍按公开规则和正常顺序办理
+  benign_alternatives:
+  - 正常节日人情往来
+  - 单位统一发放的公司福利卡
+
+attributes:
+  duration_days: 6
+  turn_count: 79
+  approximate_tokens_estimate: 1641
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0171
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-085
+
+dedup:
+  content_hash: sha256:e0811a0935becef6d16c1f2c4e8693f62975e6589d8907acb361a926babbd825
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【12月18日】
+  A：同事，最近忙不忙，节前想当面见一下
+  A：你上次说的鞋到了吗
+  B：到了，码数刚好
+  A：那不错，走路舒服不
+  B：还行，先穿两天看看
+  A：那先穿着试试，不磨脚就好
+  B：对，走多了再看
+  B：还行呀，怎么啦
+  A：我那份续约材料想问问大概到哪一步了，顺便把节礼带给你
+  A：周末要不要去逛书店
+  B：可以啊，下午人少点
+  A：那我把地址发你
+  B：收到，顺便喝杯咖啡
+  A：正好我也想买支笔
+  【12月19日】
+  B：那家文具区挺全的
+  B：续约材料按公开顺序走，我能看到进度，但不能单独替谁决定
+  A：你家猫还挑食吗
+  B：好多了，换了新粮
+  A：别一下换太多吧
+  B：嗯，我掺着旧的喂
+  A：旧粮我还留了一点
+  B：慢慢掺就好，别换太突然
+  A：知道，我就是想当面聊聊，平时也谢谢你照应
+  B：见面可以，别太客气，主要聊聊事情就行
+  A：这两天降温了
+  B：早上出门差点穿少
+  A：我把薄外套找出来了
+  【12月20日】
+  B：我也是，晚上风挺凉
+  A：晚上回去把外套挂门口
+  B：挺好，早上不容易忘
+  A：我带了张购物卡，面值就不提了，节前一点心意
+  【系统消息】A 向 B 转账 300 元，已收款。
+  A：冰箱是不是该清一下
+  B：昨天剩菜我都装盒了
+  A：放太久的就别留了
+  B：放心，今天就吃掉
+  A：那盒汤我今晚热掉
+  B：别放太久，注意闻一下
+  B：个人的卡我不能收，单位统一发的福利卡才是另一回事
+  A：平时项目上互相照应，我也不是要你做什么特别的，就那份续约材料能不能留意一下
+  【12月21日】
+  A：你妈最近肩膀好点没
+  B：好多了，理疗后轻松些
+  A：那就好，别总提重东西
+  B：我提醒她了
+  A：我让她这周少搬东西
+  B：对，缓几天再说
+  B：我明白你的意思，不过我只能按大家一样的流程看
+  A：中午那家小馆还开吗
+  B：开着，老板说菜单换了
+  A：下次去试试新菜
+  B：行，我也想吃点清淡的
+  A：我收藏一下菜单
+  B：下次早点去就不用排队
+  A：嗯，我就顺嘴问问，别有压力
+  【12月22日】
+  B：这卡我先退给你，单位统一发的福利卡才是另一回事
+  A：你最近晚上还散步吗
+  B：走二十分钟吧
+  A：挺好，别一下走太久
+  B：嗯，慢慢来
+  A：我买了双舒服的鞋
+  B：那挺好，慢慢加时间
+  A：前两天提的续约材料，你有空时帮我看下有没有消息？
+  A：窗台漏水修好了没
+  B：师傅昨天来补过了
+  A：下次下雨再看看
+  B：希望这回能行
+  A：外面下雨时再观察下
+  【12月23日】
+  B：师傅说补过就能好
+  B：收到了，我会按提交顺序处理，有变化会走正常通知
+  A：节前如果能有个进度就好了，我好安排后面的事
+  A：周末天气看了吗
+  B：预报说晴转多云
+  A：那带把伞以防万一
+  B：好，我塞包里
+  A：我看了下周日下午不错
+  B：那就别忘了带伞
+  A：好，我放门口了
+  B：哈哈，稳妥
+  B：理解，但不能因为礼物或认识就往前挪
+  A：好，那就按规矩来，这张我拿回去

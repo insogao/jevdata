@@ -1,0 +1,119 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001944
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000074
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-4f03fb6186156bb5
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 在某封闭场所内做事的 A 找到外面跑动的中间人 B，说里面的人也想找点消遣，让 B 负责递话接送、A 在里面接应，事成分好处，反复叮嘱别带手机、走小门。
+  critical_evidence:
+  - A 在封闭场所内部做事，说里面的人也有找消遣的需求
+  - A 让外面的中间人 B 负责往里递话、安排人进出
+  - A 承诺每成一单给 B 一笔好处，现结不拖
+  - A 反复强调别带手机、走侧门，别留记录
+  - B 先做成一单，A 把钱结给 B
+  benign_alternatives:
+  - 正常家属会见沟通，家属按规定预约会见并携带必要物品
+  - 所内小卖部，场所内合规经营的日用品供应服务
+
+attributes:
+  duration_days: 5
+  turn_count: 40
+  approximate_tokens_estimate: 766
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: rehab_house_pimping
+  risk: 3
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0163
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:0a7b6c7233e8cf41a55558cfe09e993dcac4d94178d6a06c18f3567964cdd52d
+pipeline_status: accepted
+title: sexual_transaction_exploitation/rehab_house_pimping
+conversation: |-
+  【9月2日】
+  A：哥 里面的人最近也想找点乐子
+  B：什么意思
+  A：就是有人想要点东西 你从外面递进来
+  B：递什么
+  A：你别问那么细 你递话 我来接应 你就有钱拿
+  B：一单给我多少
+  A：你递话我给钱 一单八百 现结
+  B：不会出岔子吧
+  A：你机灵点就没事 记住别带手机进来
+  B：为什么不能带
+  A：带了留记录 走侧门 别走正门
+  B：行 我先试一单
+  A：对 就一单 事成你就明白了
+  【9月3日】
+  B：中午吃饭了没
+  A：吃了 里面伙食一般
+  B：你那边管得严不严
+  A：严 所以让你别带手机
+  A：今晚有个熟客想安排 你去侧门接一下
+  B：怎么认
+  A：他说了暗号 我发你 你把话递给我就行
+  B：懂了
+  B：事办完了 人送回去了
+  A：好 你的钱现在给你
+  【系统消息】A 向 B 转账 800 元，已收款。
+  B：到账了 这活比跑车强
+  A：那当然 但你要嘴严
+  【9月4日】
+  A：今天还有两单 你安排下时间
+  B：下午我没事 可以
+  A：记住 还是别带手机 侧门进
+  B：知道 我有数
+  B：两单都完事了
+  A：辛苦 钱一起结 以后每周都有
+  B：行 我当正经活干了
+  【9月5日】
+  A：这周的单子我记了个数 你别记 我记就行
+  B：明白 不留痕
+  A：聪明 就喜欢跟你合作
+  B：今天天气不错 出来没
+  A：我出不来 里面待着
+  B：辛苦 晚上见
+  【9月6日】
+  A：又有老客点了名 还是老规矩
+  B：收到 侧门见

@@ -1,0 +1,112 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001947
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000030
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-aeb7050033581ebd
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: contraband_illicit_trade
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 老买家 B 找卖家 A 问「上次那种还有没有」，A 用代称报货，按「片/条/个」报价，两人不直说是什么货，约好数量和发货方式后 B 转了一笔钱。
+  critical_evidence:
+  - B 是老买家，上来就问上次那种还有没有
+  - A 用代称称呼货物，不直接说品名
+  - A 按片、条、个为单位报价，B 按数量下单
+  - 两人约定发货方式，B 先转一笔款，A 说到账就安排发
+  - A 提醒走老地址、别在群里多说
+  benign_alternatives:
+  - 行业黑话的正规交易，同行用惯用简称交流正常商品并正常开票
+  - 游戏道具交易，玩家用圈内俗称买卖游戏内虚拟道具
+
+attributes:
+  duration_days: 3
+  turn_count: 35
+  approximate_tokens_estimate: 637
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: code_word_catalog
+  risk: 2
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0163
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:99303cc59963d4dcaeddf819c5b7fa590e25acdbc0acb983d11c2abed6110e4c
+pipeline_status: accepted
+title: contraband_illicit_trade/code_word_catalog
+conversation: |-
+  【9月12日】
+  B：哥 上次那种还有吗
+  A：有 你要几片
+  B：先来二十片看看货
+  A：二十片行 老价 一片三十五
+  B：能便宜点不 上次三十
+  A：最近紧 三十五 整条要的话给你算三十三
+  B：整条多少片
+  A：一条五十片
+  B：那来两条 再搭十个散的
+  A：两条一千六百五 散的十个算三百 一共一千九百五
+  B：行 跟上次一样的路数发吧
+  A：还是老地址 别写名字
+  B：知道 这两天到?
+  A：先转款 到了我当天发 隔天到
+  B：好 我转你
+  【系统消息】B 向 A 转账 1950 元，已收款。
+  A：收到 明天给你安排
+  B：哥 这批跟上次一个批次不
+  A：新到的 比上次的还正
+  B：那就好 别给我掺次品
+  A：老主顾了我能干那事 放心
+  【9月13日】
+  B：今天天气降温了
+  A：是啊 早上一出门冷一激灵
+  B：你那仓库潮不潮 别受潮了
+  A：都放架子上了 干着
+  B：发了没
+  A：下午发 单号晚点给你
+  A：发出去了 单号发你私聊
+  B：收到 谢了哥
+  A：在群里别多说 有事私聊
+  B：懂
+  B：到了我先验货 好的话再补
+  A：随你 反正不愁卖
+  【9月14日】
+  B：东西到了 没问题
+  A：那就好 下次还找我
+  B：必须的

@@ -1,0 +1,123 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001954
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000083
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-d54e33e5d544006d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: privacy_doxxing
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 上级 A 让下属 B 弄一套定位的东西，悄悄装在某个人的车上，指定要磁吸免接线的款式，要求一周换一辆车防止被察觉，还让 B 找机会给那人的手机也装一个，A 转钱给 B 付设备和跑腿费。
+  critical_evidence:
+  - A 让 B 弄一套能定位的东西，指定要磁吸的、免接线，贴在车上就走
+  - A 要求一周换一辆车，别老贴同一辆，免得被发现
+  - A 还让 B 想办法给那人的手机上也装一个
+  - A 叮嘱装的时候别让人看见，位置挑隐蔽的地方
+  - A 先转一笔钱给 B 买设备外加跑腿费
+  benign_alternatives:
+  - 家庭共享位置，家人之间用手机自带的共享位置功能互相报平安
+  - 车队管理，物流公司为旗下车辆安装定位终端做调度管理
+
+attributes:
+  duration_days: 5
+  turn_count: 44
+  approximate_tokens_estimate: 885
+  relationship: 上下级
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: location_share_tracking
+  risk: 3
+  relationship: 上下级
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0163
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:83cb22738e89da3ad756f23d7f303c04e090b32b8b5ddef3abea0ef89df9a0a3
+pipeline_status: accepted
+title: privacy_doxxing/location_share_tracking
+conversation: |-
+  【10月6日】
+  A：有个事 你帮我办一下
+  B：您说
+  A：弄一套定位的东西 能贴车上的那种
+  B：要什么款式的
+  A：磁吸的 免接线 贴上去就能用 别搞那种要拆壳的
+  B：这个好弄 贴哪个车
+  A：就他家那辆 具体我发你 你别大张旗鼓
+  B：装哪块比较稳妥
+  A：底盘或者后备箱夹层 别让人一眼看见
+  B：行 我知道了
+  A：还有一个 一周给我换辆车 老贴一辆容易露
+  B：换车?他家里还有别的车?
+  A：他经常换着开 你就跟着换 别让人起疑
+  B：那我还得盯着他换车
+  A：对 你机灵点
+  B：手机要不要也弄一个 更好盯
+  A：能装就装一个 趁他不注意
+  B：这个难点 得找机会
+  A：所以让你想辙 钱不是问题
+  B：行 我先买设备
+  B：中午吃了吗
+  A：吃了 食堂
+  B：我这会儿在外面 顺便看设备
+  A：看好了跟我说价
+  【10月7日】
+  B：看中一款 磁吸的 续航半个月 三百多
+  A：要两个 一个备着 钱我转你
+  B：好 那我把跑腿的也算上
+  A：一起算 先给你两千
+  【系统消息】A 向 B 转账 2000 元，已收款。
+  B：收到了 我今天就去装第一辆
+  A：好 晚上跟我说装哪了
+  B：第一台装好了 贴底盘 很稳
+  A：行 信号怎么样
+  B：试了下能连上 位置挺准
+  A：好 别声张
+  B：晚上降温了 多穿点
+  A：知道了 你也注意
+  【10月8日】
+  B：他今天换车了 我准备跟过去换
+  A：抓紧 别让他先走了
+  【10月9日】
+  B：第二辆装上了 手机那个我再找机会
+  A：手机那个不急 先盯车
+  【10月10日】
+  A：这几天记录都正常不
+  B：正常 他基本两点一线
+  A：继续盯着 别断了
+  B：放心

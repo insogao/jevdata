@@ -1,0 +1,117 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001942
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000144
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-575abcdb04b880cc
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: other_illicit_coordination
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A 向想让孩子进对口名校的家长 B 表示能操作户口挂靠，说把户口迁进来挂两年就能按学区入学，费用二十万，并称校长那边已经通了，让 B 尽快定下来交钱。
+  critical_evidence:
+  - A 说可以帮 B 的孩子走挂户口的办法进对口学校
+  - A 称户口挂进来满两年就符合入学条件，不用真的买房
+  - A 报价手续费二十万，说名额有限先到先得
+  - A 透露校长那边已经通了，让 B 放心
+  - B 先付一笔定金，A 说安排去办迁移手续
+  benign_alternatives:
+  - 学区房正常购买，家长按政策购买学区范围内住房并落户入学
+  - 积分入学政策，外来务工人员按居住证积分规则申请公办学位
+
+attributes:
+  duration_days: 3
+  turn_count: 40
+  approximate_tokens_estimate: 857
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: school_zone_hukou_trade
+  risk: 3
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0163
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:1d0428b3412c7aa2d77a96e489eef3705664e3e451193d29d3f58da5e2b070c7
+pipeline_status: accepted
+title: other_illicit_coordination/school_zone_hukou_trade
+conversation: |-
+  【8月10日】
+  A：哥 孩子上学的事定了没
+  B：还没 对口的学校一般 想进实验小学没门路
+  A：我这边能操作 户口挂进去就行
+  B：挂户口?怎么挂
+  A：找个学区内的户头 把孩子户口迁进去 挂两年就行
+  B：不用买房?这能行吗
+  A：买房几百万 挂户二十个 你说哪个划算
+  B：费用二十万?
+  A：对 二十个 包挂进去办成
+  B：靠谱吗 别到时候上不了
+  A：校长那边通了 我办过好几个了
+  B：中午吃饭没
+  A：吃了 在跑这个事 下午还去见人
+  B：见谁
+  A：学校那边的熟人 你不用管
+  B：孩子户口迁出去 以后有影响吗
+  A：挂两年就迁回来 没事 都这么办
+  B：那钱怎么给
+  A：先付五万定金 办妥了再给尾款
+  B：办不成退吗
+  A：办不成退你 我跑得了吗 都熟人
+  【8月11日】
+  B：我跟孩子他妈商量了下 有点担心
+  A：担心啥 这门路就这几天 过了就没了
+  B：学校真认吗
+  A：校长都点头了 你还有啥不放心的
+  B：行 那我先交定金
+  A：转我 我把户头给你定住
+  【系统消息】B 向 A 转账 50000 元，已收款。
+  A：收到 这两天带你去办迁移
+  B：好 可别出岔子
+  A：放心 我办事你还不放心
+  B：什么时候去办
+  A：等我通知 快了
+  【8月12日】
+  B：材料要准备啥
+  A：户口本 出生证明 照片 我列给你
+  B：尾款十五万什么时候给
+  A：办成当天给 你先备着
+  B：我问了学校 说没这种操作
+  A：你问的是前台 前台懂什么 我走的是上面的
+  B：我这心里越来越没底
+  A：都交了定金了 别自己吓自己

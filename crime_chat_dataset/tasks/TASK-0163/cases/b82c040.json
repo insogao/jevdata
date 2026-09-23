@@ -1,0 +1,314 @@
+{
+ "key": "b82c040",
+ "archetype_id": "ARC-000081",
+ "subtype": "medical_record_browse",
+ "latent_intent": "上级 A 想打听一个熟人的化验结果，找到在医院检验科上班的下属 B，借口只是看一眼、不改不动，连日拿人情和平时照顾施压，让 B 在系统里帮忙查，事后给 B 发了个红包做感谢。",
+ "critical_facts": [
+  "A 找到在医院工作的下属 B，问能不能帮忙查一份别人的化验单，说是朋友急着知道结果",
+  "B 说明系统有权限限制、不是本人不能查、账号一查都有记录，表示为难",
+  "A 以平时对 B 的照顾和人情反复施压，B 最终要了姓名和就诊日期答应看看",
+  "B 在系统里搜到结果，把关键几项截图发给 A，并叮嘱别外传",
+  "A 事后发红包感谢 B，叮嘱天知地知"
+ ],
+ "benign_alternatives": [
+  "陪诊代取报告授权，家属持被委托人签字的授权去医院代取检验报告",
+  "保险核保流程，投保人授权保险公司依法调阅体检与检验记录"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "6月3日 10:02",
+   "speaker": "A",
+   "text": "小王 在忙吗"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 10:05",
+   "speaker": "B",
+   "text": "在的哥 刚交完班"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 10:06",
+   "speaker": "A",
+   "text": "有个事想麻烦你 你们系统里是不是能查化验结果"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 10:09",
+   "speaker": "B",
+   "text": "能查 不过只能查自己管的病人 咋了"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 10:11",
+   "speaker": "A",
+   "text": "有个朋友 我这边急着想知道他结果"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 10:13",
+   "speaker": "B",
+   "text": "谁啊"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 10:14",
+   "speaker": "A",
+   "text": "姓周 上周在你们那做的 具体哪天我回头问清楚给你"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 10:16",
+   "speaker": "B",
+   "text": "哥 这个不合规矩吧 不是本人没法查"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 10:18",
+   "speaker": "A",
+   "text": "就看一眼结果 又不是让你改 你想多了"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 10:20",
+   "speaker": "B",
+   "text": "我账号一查都有记录的 被查到要写检查"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 10:22",
+   "speaker": "A",
+   "text": "你平时帮哥那么多 这次再帮哥一回 天知地知"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 10:25",
+   "speaker": "B",
+   "text": "……行吧 你把名字和大概哪天给我"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 10:30",
+   "speaker": "A",
+   "text": "对了 上次那个项目报告你写完了没"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 10:32",
+   "speaker": "B",
+   "text": "还差个结尾 今晚弄"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 10:34",
+   "speaker": "A",
+   "text": "辛苦 弄完发我"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 10:36",
+   "speaker": "B",
+   "text": "好嘞"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 12:15",
+   "speaker": "B",
+   "text": "哥 中午吃啥"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 12:17",
+   "speaker": "A",
+   "text": "楼下快餐 随便对付"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 12:19",
+   "speaker": "B",
+   "text": "我这也差不多 忙得脚不沾地"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 12:21",
+   "speaker": "A",
+   "text": "科室最近人多不"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 12:23",
+   "speaker": "B",
+   "text": "多 天天加班"
+  },
+  {
+   "type": "message",
+   "time": "6月4日 09:10",
+   "speaker": "A",
+   "text": "名字我发你了 周某某 上周三做的 血常规加肝功那几项"
+  },
+  {
+   "type": "message",
+   "time": "6月4日 09:14",
+   "speaker": "B",
+   "text": "看到了 我看看能不能搜到"
+  },
+  {
+   "type": "message",
+   "time": "6月4日 09:20",
+   "speaker": "B",
+   "text": "搜到了 等下我把关键几项截给你"
+  },
+  {
+   "type": "message",
+   "time": "6月4日 09:22",
+   "speaker": "A",
+   "text": "好"
+  },
+  {
+   "type": "image",
+   "time": "6月4日 09:28",
+   "speaker": "B",
+   "note": "检验报告截图，数值部分打码"
+  },
+  {
+   "type": "message",
+   "time": "6月4日 09:29",
+   "speaker": "B",
+   "text": "这几项偏高 你让他去医院找医生看看"
+  },
+  {
+   "type": "message",
+   "time": "6月4日 09:31",
+   "speaker": "A",
+   "text": "知道了 谢啦"
+  },
+  {
+   "type": "message",
+   "time": "6月4日 09:33",
+   "speaker": "A",
+   "text": "别跟别人说"
+  },
+  {
+   "type": "message",
+   "time": "6月4日 09:35",
+   "speaker": "B",
+   "text": "知道"
+  },
+  {
+   "type": "message",
+   "time": "6月4日 13:10",
+   "speaker": "A",
+   "text": "下午那个会你去不去"
+  },
+  {
+   "type": "message",
+   "time": "6月4日 13:12",
+   "speaker": "B",
+   "text": "去 我两点到"
+  },
+  {
+   "type": "message",
+   "time": "6月4日 13:14",
+   "speaker": "A",
+   "text": "帮我占个座"
+  },
+  {
+   "type": "message",
+   "time": "6月4日 13:16",
+   "speaker": "B",
+   "text": "行"
+  },
+  {
+   "type": "message",
+   "time": "6月5日 15:00",
+   "speaker": "A",
+   "text": "你们那个系统点一下就能看 挺方便"
+  },
+  {
+   "type": "message",
+   "time": "6月5日 15:03",
+   "speaker": "B",
+   "text": "就这一次啊哥 下不为例"
+  },
+  {
+   "type": "message",
+   "time": "6月5日 15:05",
+   "speaker": "A",
+   "text": "放心 我谁也不说"
+  },
+  {
+   "type": "message",
+   "time": "6月5日 18:20",
+   "speaker": "B",
+   "text": "哥 那事我心里有点不踏实"
+  },
+  {
+   "type": "message",
+   "time": "6月5日 18:22",
+   "speaker": "A",
+   "text": "有啥不踏实的 结果都看到了"
+  },
+  {
+   "type": "message",
+   "time": "6月5日 18:24",
+   "speaker": "B",
+   "text": "以后这种真别找我了"
+  },
+  {
+   "type": "message",
+   "time": "6月5日 18:26",
+   "speaker": "A",
+   "text": "行行行 不为难你"
+  },
+  {
+   "type": "message",
+   "time": "6月6日 10:00",
+   "speaker": "A",
+   "text": "上次麻烦你了 发个红包"
+  },
+  {
+   "type": "message",
+   "time": "6月6日 10:01",
+   "speaker": "A",
+   "text": "买点水果 别嫌少"
+  },
+  {
+   "type": "transfer",
+   "time": "6月6日 10:02",
+   "from": "A",
+   "to": "B",
+   "amount": 2000,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "6月6日 10:05",
+   "speaker": "B",
+   "text": "哥 这多了"
+  },
+  {
+   "type": "message",
+   "time": "6月6日 10:07",
+   "speaker": "A",
+   "text": "一点心意 拿着"
+  },
+  {
+   "type": "message",
+   "time": "6月6日 10:09",
+   "speaker": "B",
+   "text": "那谢谢哥了"
+  },
+  {
+   "type": "message",
+   "time": "6月6日 10:10",
+   "speaker": "A",
+   "text": "客气啥"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0001952",
+  "status": "accepted",
+  "errors": []
+ }
+}

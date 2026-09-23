@@ -1,0 +1,114 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001941
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000014
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-461a3a088467e3d6
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: fraud_scam
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 中间人 A 向替孩子找工作的家长 B 表示手里有内部指标，能安排进好单位，强调名额只剩一个、要先交钱再签合同、笔试只是走个过场，B 心动但仍在犹豫。
+  critical_evidence:
+  - A 自称手里有内部指标，能帮 B 的孩子安排进一个不错的单位
+  - A 说名额就剩一个，很多人抢，让 B 抓紧
+  - A 要求先交一笔费用，事成之后再签合同，顺序是钱先到
+  - A 说笔试就是走过场、走个形式，不用孩子真准备
+  - B 半信半疑，追问靠不靠谱、办不成就怎么办
+  benign_alternatives:
+  - 正规人才引进，地方政府通过公开的人才引进计划招录并公示
+  - 事业单位公开招聘，单位依法发布公告、考试、公示后录用
+
+attributes:
+  duration_days: 3
+  turn_count: 39
+  approximate_tokens_estimate: 820
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: inner_job_purchase
+  risk: 3
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0163
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:b91171e912e24a074b4886ad198b2d1d22153ed32686e4be644aa759817df250
+pipeline_status: accepted
+title: fraud_scam/inner_job_purchase
+conversation: |-
+  【5月8日】
+  A：姐 你家孩子工作定了没
+  B：还没呢 投了好多都没信
+  A：我这边有个内部指标 能安排进国企下面那个单位
+  B：内部指标?靠谱吗
+  A：我都办成好几个了 就是名额紧
+  B：要什么条件
+  A：本科就行 剩下我来运作
+  B：要考试不
+  A：笔试就是走个过场 你让孩子去坐着就行
+  B：这听着不太正规啊
+  A：现在都这样 名面上走流程 里头早定了
+  B：得多少钱
+  A：三十个 先交二十个 剩下的入职后给
+  B：三十万?这么多
+  A：进这么个好单位值 名额就剩一个了
+  B：能不能先签个合同再说钱
+  A：先交后签 这行规矩 你不交名额立马给别人
+  B：中午吃什么
+  A：随便吃点 我下午还要去见人
+  B：见谁
+  A：另一个客户 也是给孩子办工作的
+  B：那你这生意挺好
+  B：办不成的怎么办
+  A：办不成退你 我图的是回头客
+  B：你说的那个单位 具体是哪个
+  A：城南那个 我发资料给你 你别说出去
+  B：我先跟孩子他爸商量下
+  A：尽快 这周定就这周 晚了别怪我没提醒
+  B：孩子说不愿意走这种路子
+  A：年轻人不懂 等进不去了就后悔
+  【5月9日】
+  B：你办的这些 有成功案例吗
+  A：多了 我朋友圈发的那些都是 你自己看
+  B：我看看
+  A：姐 名额今天下午就锁了 你决定没
+  B：再给两天行不
+  A：两天后找别人了我可不负责
+  B：孩子他爸说先不办 谢谢你了
+  A：行 想通了随时找我 名额不一定有
+  B：好

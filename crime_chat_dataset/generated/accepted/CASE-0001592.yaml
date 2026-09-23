@@ -1,0 +1,130 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001592
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-f095b8b6641db3aa
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 想在节前向掌握审批/资源分配权的B送购物卡，回避说明面值并暗示随后请托；B提醒礼品需按单位制度申报，拒绝以礼卡换取办事便利。
+  critical_evidence:
+  - A 在节前约B私下见面并提出送购物卡
+  - A 刻意不说礼卡面值，称只是心意
+  - A 在送卡后短信暗示希望B优先处理其申请/事项
+  - B拒绝以礼卡影响审批，要求退回并按规定申报或走公开流程
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司福利卡
+
+attributes:
+  duration_days: 2
+  turn_count: 55
+  approximate_tokens_estimate: 1253
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0169
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-084
+
+dedup:
+  content_hash: sha256:a56ba3c23cdea24abc78fc14907c431b0c2664361e6dc44fd92cf6d4bd990ab6
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【6月9日】
+  A：节前想约你喝杯咖啡，有张小卡片给你
+  B：什么卡？公司最近在登记外来礼品
+  A：购物卡，不说面值了，过节一点心意
+  A：午饭你吃了吗，我附近新开了家面馆
+  B：吃了，汤还行，就是排队有点长
+  A：我下午也去试试，最近天天点外卖腻了
+  B：可以点清汤的，他们辣油挺猛
+  B：还是先说清楚，避免后面有误会
+  A：明天下午见一面吧，别弄得太正式
+  B：如果跟我手上的审批有关，就不适合私下收
+  B：这两天一直下雨，你带伞没
+  A：早上忘了，刚在便利店买了把折叠伞
+  B：我包里常备一把，天气预报说周五还下
+  A：收到，我把伞放公司免得又忘
+  A：卡我已经放信封里了，你收着就行
+  B：我不能收未申报的礼品，按制度登记或退回
+  A：发你消息了，那份申请能不能帮我往前排一下
+  A：周末家里让我帮忙挑个小冰箱
+  B：租房用的话看下尺寸和耗电
+  A：是啊，厨房就那么点位置
+  B：先量好再下单，退换也省事
+  B：这就是让我办事了，礼卡我不会收，也不会改变顺序
+  A：好，我来取回，申请照正常队列
+  B：请把礼品退回记录留好，后续都走公开渠道
+  B：你上次说肩膀疼好些了吗
+  A：好点了，贴了两天膏药
+  B：别一直坐着，起来活动下
+  【系统消息】B 向 A 转账 36 元，已收款。
+  A：嗯，下午开会前去楼下走走
+  【6月10日】
+  A：今天会开得比预期久，刚出来
+  B：辛苦了，记得喝点水
+  A：嗯，等下把手头邮件回完
+  B：别拖太晚，明天还要早起
+  A：好，今晚早点收工
+  B：那周末再聊
+  A：今天会开得比预期久，刚出来
+  B：辛苦了，记得喝点水
+  A：嗯，等下把手头邮件回完
+  B：别拖太晚，明天还要早起
+  A：好，今晚早点收工
+  B：那周末再聊
+  A：今天会开得比预期久，刚出来
+  B：辛苦了，记得喝点水
+  A：嗯，等下把手头邮件回完
+  B：别拖太晚，明天还要早起
+  A：好，今晚早点收工
+  B：那周末再聊
+  A：今天会开得比预期久，刚出来
+  B：辛苦了，记得喝点水
+  A：嗯，等下把手头邮件回完
+  B：别拖太晚，明天还要早起
+  A：好，今晚早点收工
+  B：那周末再聊
+  A：今天会开得比预期久，刚出来
+  B：辛苦了，记得喝点水
+  A：嗯，等下把手头邮件回完
