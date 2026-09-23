@@ -1,0 +1,145 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000321
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000048
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-b31239ce8bd0fcdc
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A因旧怨想当面对同事老蒋'算账'，让同事B摸清对方通勤路线、下班到家时间并拍照确认本人，还付了跑腿费，准备周五拦人当面施压。
+  critical_evidence:
+  - A向同事B打听老蒋的通勤路线（2号线、东门、地下二层车位）
+  - A要B留意老蒋几点下班、几点到家，并让B次日偷拍照片确认身份
+  - B拍到老蒋照片发给A确认，双方约定周五当面'把话说到'
+  - A给B转800元跑腿费，并要求周五前后随时互通消息
+  benign_alternatives:
+  - 同事间帮忙核对他人行程以便当面沟通工作
+  - 帮忙搬家盯物流或寻人式的顺手帮忙
+
+attributes:
+  duration_days: 2
+  turn_count: 70
+  approximate_tokens_estimate: 1608
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: revenge_stalking_plan
+  risk: 3
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0037
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-020
+
+dedup:
+  content_hash: sha256:4c8ab2c5b47bc43eb031a391ac8ce39f1d689fc9fbe12e57365239bff0ee1e59
+pipeline_status: accepted
+title: violence_extortion/revenge_stalking_plan
+conversation: |-
+  【10月13日】
+  B：早，昨晚又加班到几点？
+  A：十二点多，方案改到吐
+  B：你们甲方是真难伺候
+  A：不说了，说起来上火。对了，上次提过的事，这周你方便不
+  B：哪件事？
+  A：就……你懂的那件。他现在是不是还坐2号线上下班
+  B：老蒋？他上个月好像开车了，我看见他停地下二层
+  A：开车了？那他走哪个口
+  B：这我真没留意。你找他到底什么事
+  A：当面把话说清楚，电话里说不明白
+  B：……我大概知道是哪件事了
+  A：你懂就行，我不多说了
+  B：你俩一个大组的，楼下碰见不就行了
+  A：碰见能说什么，当着一楼前台吗
+  B：也对
+  A：先不聊了，中午吃啥，食堂周四才有排骨
+  B：今天麻婆豆腐，点外卖吧，老位置那家
+  A：行，我酸汤肥牛微辣，我请
+  B：你这微辣上次辣得直灌冰水
+  A：这次真微辣
+  B：行，十二点去拿
+  A：你取外卖顺路帮我瞅一眼呗，他车是不是黑色帕萨特
+  B：行，反正我要下楼取电动车
+  A：咋样
+  B：在，B区17号，没记错
+  A：好，下班帮我留意他几点走、走哪个门，到家大概几点
+  B：就为这个？你直接问他不行吗
+  A：问了就没意思了，你懂的
+  B：行吧，六点我倒垃圾顺路看一眼
+  A：下午会开得我头疼
+  B：我们这空调冻死人
+  A：入秋就这样。你妈老寒腿好点没
+  B：贴了膏药，不肯去医院，老一辈都这样
+  A：晚上我陪你绕一圈药店？顺路
+  B：今天不行，今天帮你看老蒋
+  A：哦对，那明天，膏药别断
+  B：人出来了，六点零八，东门，往地铁站去了
+  A：好，2号线果然没变
+  B：你到底想干嘛，我可说好就是看一眼
+  A：看一眼就行，剩下的不用你
+  B：明天还要看吗
+  A：明天中午，帮我随手拍张照，我怕认错人尴尬
+  B：拍照就有点过了吧
+  A：确认下人而已，人在画面里就行
+  B：行，一张，拍完就删
+  B：到家了，你吃了没
+  A：外卖刚到，你妈腿呢，泡脚没
+  【10月14日】
+  A：早，双十一种草件冲锋衣，六百八值不值
+  B：你钓鱼竿吃灰半年了还买装备
+  A：竿是竿，衣服是衣服
+  B：行行行，你会花
+  A：说正事，中午别忘了
+  B：记得，不过他下午好像请了假，早上听他们组的人说的
+  A：请假？那中午在楼里吗
+  B：在，十二点他们组下楼吃饭，我瞅准了拍
+  A：别紧张，就路人随手拍那种
+  A：咋样
+  B：拍到了，发你了，灰夹克低头看手机那个
+  A：嗯，是他，没错，删了吧
+  B：删了。你真打算周五去堵他？
+  A：嗯，话得当面说到，他躲了半年了
+  B：你可别来横的啊
+  A：我心里有数，横的没用，我要的是他把话说清楚
+  B：行，提前跟我说一声，我心里有个数
+  A：嗯，到时候给你打电话
+  【系统消息】A 向 B 转账 800 元，已收款。
+  A：跑腿费，别嫌少
+  B：一顿奶茶的事，你整得跟谍战片似的
+  A：拿着，这两天麻烦你了
+  B：下次这种事先说清楚，我这心里七上八下的
+  A：成，周五前后我有动静就告诉你

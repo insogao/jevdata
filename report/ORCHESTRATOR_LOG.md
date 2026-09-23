@@ -8,3 +8,4 @@
 - 2026-09-23 21:05 | batch 17 (TASK-0027/28/29): accepted 200->230 (+30, rejected 0), pairs 30->35, judge agree(+-1)=30/30 (label adherence fix 生效: risk0/1 全部被判官维持) | pushed
 - 2026-09-23 21:40 | batch 18 (TASK-0030/31/32): accepted 230->260 (+30, rejected 0), pairs 35->40, judge agree(+-1)=30/30; 两处红线冲突（未成年情境）被代理自动改写为成年并保留检测信号 | pushed
 - 2026-09-24 09:45 | batch 19 (TASK-0033/34/35): accepted 260->290 (+30, rejected 0), pairs 40->44, judge agree(+-1)=28/30, 2 disagreements (302 维权取证 target2 judge0; 306 判后执行取证 target3 judge0 -> review) | pushed
+- 2026-09-24 10:15 | batch 20 (TASK-0036/37/38): accepted 290->320 (+30, rejected 0), pairs 49->53?, judge agree(+-1)=30/30; 法律程序框架约束生效（暴力/勒索类无再被误写为维权框架）| pushed

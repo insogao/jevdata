@@ -1,0 +1,127 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000330
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-8ae696021ef9b811
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: privacy_doxxing
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 表姐为被网友骗走三万二的闺蜜出气，请有论坛管理权限的表哥私下挖出骗子的真实身份并锁定其单位，准备把整理好的身份信息发到几百人的群里挂人；事后转 2000 元答谢。
+  critical_evidence:
+  - B 借管理权限翻出对方换了马甲的小号，比对出年龄造假
+  - 从小号晒图的原图拍摄时间和背景工牌锁定真实城市与单位
+  - 把对方三年来的转发记录与二手交易留下的手机尾号交叉对上
+  - 10月11日 A 向 B 转 2000 元买烟答谢，约定周末在退款群里发整理好的信息
+  benign_alternatives:
+  - 公开信息检索的合规讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 3
+  turn_count: 51
+  approximate_tokens_estimate: 1592
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 2
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0038
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-020
+
+dedup:
+  content_hash: sha256:53e406cfd246526f2524db492fe645fb9fc25f055e669b48b51abfcbdc1c90f7
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【10月9日】
+  A：哥，外婆周日生日，你回不回来
+  B：回，蛋糕订了，老样式那家
+  A：行，我和妈下午到
+  A：还有个事想求你，你最近还管那个论坛的后台不
+  B：管，板务嘛。怎么了
+  A：小雨被网友骗了三万二，就是聊了两年的那个，上周直接拉黑失联
+  A：我咽不下这口气，三万二啊，她准备结婚的钱
+  B：你想干嘛，先说好，出格的事我不碰
+  A：就是找，找到了在圈子里说说，让他没法再骗下一个
+  B：他把什么留网上了没
+  A：一个账号，头像是个军官照片，肯定是假的
+  B：账号发我，我看看他的历史记录，别抱太大指望
+  A：谢谢哥，晚上给你发
+  B：吃饭去，中午我妈炖了排骨喊我
+  A：你真幸福，我吃外卖第21天
+  B：哈哈，周日回来吃外婆的手艺
+  A：就盼这个了
+  【10月10日】
+  B：你发的账号我翻了一晚上
+  A：怎么样？
+  B：主号干净得很，不过小号也给你翻了，换了个马甲，兴趣列表露馅
+  A：小号里有什么
+  B：晒过一张钓鱼的照片，开的原图，相册原图时间比他跟小雨说的年纪小七岁，拍摄地也不对
+  A：哈，连年纪都是编的。小雨给他转过生日红包，收款名字还不是那个姓
+  B：他转发过什么都能查，我把他三年前转的帖子扒出来，里面留的二手交易信息尾号对上了
+  A：所以现在能定位到人？
+  B：名字有了，城市有了，单位大概率也有了。但到此为止，我只到查这一步
+  A：查都查了，就差临门一脚，哥，他那种人就该让他单位同事都看看
+  B：挂人这步我不掺和
+  A：不用你动手，群我自己有，三百多人呢
+  B：你高兴就好，别写是我查的
+  A：知道啦，你就当我什么都没说。哎你上次说帮我修电脑带了没
+  B：带了，在我包里，你周日在老家给我，我给你装个固态
+  A：好，外婆还夸你呢，说你买的那件马甲她天天穿
+  B：合身就行。十一点了，睡吧
+  A：睡不着，一想到周末就精神
+  【10月11日】
+  A：哥，我把他的名字单位整理成一张图了，你看看还有啥漏的
+  B：你自己发出去的，写错一个字就是造谣，后果自己掂量，我不管
+  A：放心，我对照了三遍，单位是他钓鱼照背景里的工牌，错不了
+  B：工牌？你连照片放大看了？
+  A：嗯，小号那张，胸牌上的字能认出来
+  B：行吧。东西删了没，我这边不留底
+  A：删了。哥，一点心意
+  【系统消息】A 向 B 转账 2000 元，已收款。
+  B：转我两千干嘛
+  A：买两条烟，技术费，别嫌弃
+  B：烟我收了，下不为例，这事到今天就翻篇
+  A：好。周末我先在小雨她们的退款群里发，让那几个被骗的姐妹认认人
+  B：随你。外婆生日中午开席，你别迟到
+  A：忘不了，我还想吃外婆的八宝饭了
+  B：她提前一天就泡豆子了
+  A：那我这周末就干两件事，吃饭，发帖
+  B：……行，路上买点外婆爱吃的桃酥

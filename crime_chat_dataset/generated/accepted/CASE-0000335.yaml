@@ -1,0 +1,148 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000335
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000120
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-f7a4f7d876f7b6d4
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 无隐藏意图：情侣兼同事间因为一方误把合照发进公司大群而互相打趣，另一方玩笑式索要封口红包，520 元红包收下后当场说全花回对方身上并约火锅；表面像照片要挟，实为情侣玩笑与见家长前的日常。
+  critical_evidence:
+  - B 把两人合照手滑发进公司大群三秒撤回，担心影响下周竞聘
+  - A 假称照片原图在自己这，玩笑限期今晚十二点前完成谢罪任务
+  - 10月14日 B 转 520 元封口红包，A 收下后说钱全给 B 买裙子并约火锅
+  - 两人是同事兼情侣，已见过女方家长，周六约好见男方父母
+  benign_alternatives:
+  - 情侣间玩笑打闹
+  - 误发照片后的道歉与安抚
+
+attributes:
+  duration_days: 6
+  turn_count: 69
+  approximate_tokens_estimate: 1717
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: intimate_photo_extort
+  risk: 0
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0038
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-020
+
+dedup:
+  content_hash: sha256:dfdb6fc72c588356fd87d771353be0088770a9644535776829570215e353353f
+pipeline_status: accepted
+title: coercion_blackmail/intimate_photo_extort
+conversation: |-
+  【10月10日】
+  B：完了完了完了
+  A：咋了，一大早发癫
+  B：我刚才手滑，把咱俩那张合照发公司大群了
+  A：哪张？
+  B：就上山看日出那张，你搂着我那张！
+  A：三秒撤回了没
+  B：撤了！但不知道有没有人截图，我心跳一百八
+  A：哈哈哈，群里有人说话没
+  B：暂时没有，老张还在发他的养生文章
+  A：那就没事，情侣合照而已，你慌什么
+  B：慌！下周还要竞聘，影响不好
+  A：行，中午请你喝奶茶压压惊，上班去啦
+  【10月11日】
+  A：对了，那张照片，原图在我这
+  B：你还存着！删了删了，吓死我了
+  A：不删，拍得真好，我都设成屏保了，哈哈
+  B：你可真是我的黑粉头子
+  A：跟你商量个事，今晚十二点前
+  B：？
+  A：十二点前把你上次想买的那条裙子链接发我，不然我就把咱合照设成你们部门群公告，再@全体成员，哈哈
+  B：哈哈哈你可真敢想，你要真发我明天就辞职
+  A：舍不得，你工资比我高，哈哈
+  B：中午吃啥，食堂有酸菜鱼
+  A：排队半小时打饭五分钟，走起
+  B：你请，谁让你威胁我，哈哈
+  【10月12日】
+  B：下午烦死了，客户改需求改到第八版
+  A：心疼，晚上给你带烤冷面
+  B：加两份蛋，谢谢老公
+  A：叫得我骨头都酥了，哈哈
+  B：对了白天的事，你真不会发吧
+  A：发什么发，我嫌丢人，僚机都不当当我发去哪
+  B：那就好，被领导看到我真社会性死亡
+  A：放心，我相册里只有自拍和你的丑照，哈哈
+  B：滚！
+  A：烤冷面到了，两蛋一肠
+  B：我最好吃，爱老公
+  【10月13日】
+  A：昨晚群里有动静没
+  B：没有，老张养生文发到第九篇了，没人提照片，应该没看见
+  A：那就是撤得快，我女友手速可以
+  B：那必须。哎你们部门团建不去了？
+  A：预算砍了，改成办公室吃披萨，敷衍
+  B：哈哈惨，我们团建去漂流
+  A：气人，帮我漂一个
+  B：好嘞。周六见家长的事阿姨定了没
+  A：定了，周六中午，我妈说你爱吃排骨
+  B：阿姨真好，我买点什么去
+  A：买你自己就行，顶多带两斤荔枝
+  B：行，荔枝我认认真真挑
+  【10月14日】
+  B：哎呀想起来，你那个玩笑还没完呢
+  A：哪个玩笑
+  B：裙子啊，还有你欠的奶茶，两件事一起算
+  A：奶茶我早请过了，裙子行，我发你个链接
+  B：发的什么，那家店不是你最烦的
+  A：逗你的，我看中另一条，周末带你去试，试完直接火锅
+  B：火锅配新裙子，今天真大方
+  A：哄女朋友，大方点怎么了，哈哈
+  B：那封口红包是不是也得表示下，哈哈
+  A：你倒是会递台阶
+  【系统消息】B 向 A 转账 520 元，已收款。
+  B：520封口费，收不收？不收就是照片随我处置，哈哈
+  A：收了收了，这钱回头全给你买裙子，倒贴都愿意
+  B：哈哈哈成交
+  A：十二点了，睡觉，明天竞聘材料最后过一遍
+  B：嗯嗯晚安，周六见家长紧张
+  【10月15日】
+  A：起床没，竞聘下午吧，别慌
+  B：起了，PPT背了三遍
+  A：正常发挥就行，你可是我见过最稳的人
+  B：借你吉言，中午吃食堂壮胆
+  A：陪你，咱不吃食堂，吃你爱的那家粥
+  B：好好好，下午完事跟你汇报
+  A：等你，无论结果晚上都火锅

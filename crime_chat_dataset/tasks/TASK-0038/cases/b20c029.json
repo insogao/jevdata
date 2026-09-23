@@ -1,0 +1,330 @@
+{
+ "key": "b20c029",
+ "archetype_id": "ARC-000106",
+ "subtype": "insider_stocktip_theft",
+ "latent_intent": "仓管借中间人牵线，与外部二批老板约定趁周二夜班、周三盘点前的空档，把库房小家电私下倒卖套现，按件分成、定金先行，并特意挑了没有监控的西门走货。",
+ "critical_facts": [
+  "动手定在周二夜班、周三早上盘点之前，差数会被算进盘点容差",
+  "西门一侧没有监控，老探头去年拆了没装新的，货从西门走",
+  "按件结：耳机充电宝每件 40，10月8日 B 先转 3000 定金，尾款月底结",
+  "首批一百件，B 提出下回翻倍，A 提醒压住量细水长流"
+ ],
+ "benign_alternatives": [
+  "仓库正常出货与库存调拨",
+  "员工内购渠道"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "10月6日 19:40",
+   "speaker": "A",
+   "text": "老周介绍来的吧，我是阿凯"
+  },
+  {
+   "type": "message",
+   "time": "10月6日 19:43",
+   "speaker": "B",
+   "text": "是，老周说你这边走量，我做二批的，专收小家电"
+  },
+  {
+   "type": "message",
+   "time": "10月6日 19:45",
+   "speaker": "A",
+   "text": "先说好，我只跟熟人玩，有老周担保就行"
+  },
+  {
+   "type": "message",
+   "time": "10月6日 19:46",
+   "speaker": "B",
+   "text": "明白，规矩你定"
+  },
+  {
+   "type": "message",
+   "time": "10月6日 19:48",
+   "speaker": "A",
+   "text": "今天先认识下，这周店里盯得紧，下周再细聊"
+  },
+  {
+   "type": "message",
+   "time": "10月6日 19:50",
+   "speaker": "B",
+   "text": "好，不急。你吃饭没"
+  },
+  {
+   "type": "message",
+   "time": "10月6日 19:52",
+   "speaker": "A",
+   "text": "刚吃完食堂，土豆炖鸡没鸡"
+  },
+  {
+   "type": "message",
+   "time": "10月6日 19:54",
+   "speaker": "B",
+   "text": "哈哈，我们这片有家烧烤，下回请你"
+  },
+  {
+   "type": "message",
+   "time": "10月6日 19:55",
+   "speaker": "A",
+   "text": "行，先这样，我巡逻去了"
+  },
+  {
+   "type": "message",
+   "time": "10月6日 19:56",
+   "speaker": "B",
+   "text": "好，你忙"
+  },
+  {
+   "type": "message",
+   "time": "10月7日 12:10",
+   "speaker": "B",
+   "text": "吃了吗，想好哪天了没"
+  },
+  {
+   "type": "message",
+   "time": "10月7日 12:13",
+   "speaker": "A",
+   "text": "周二，我夜班，盘点周三早上才开始，差数全算盘差"
+  },
+  {
+   "type": "message",
+   "time": "10月7日 12:15",
+   "speaker": "B",
+   "text": "夜班几个人"
+  },
+  {
+   "type": "message",
+   "time": "10月7日 12:18",
+   "speaker": "A",
+   "text": "就我一个管西半区，西门那侧没监控，老探头去年就拆了一直没装"
+  },
+  {
+   "type": "message",
+   "time": "10月7日 12:20",
+   "speaker": "B",
+   "text": "品类你挑，我只收走量的"
+  },
+  {
+   "type": "message",
+   "time": "10月7日 12:23",
+   "speaker": "A",
+   "text": "耳机和充电宝，库位好出，单价不高不惹眼，按件结，一件40"
+  },
+  {
+   "type": "message",
+   "time": "10月7日 12:25",
+   "speaker": "B",
+   "text": "40行，头回先来一百件，我转你定金"
+  },
+  {
+   "type": "message",
+   "time": "10月7日 12:28",
+   "speaker": "A",
+   "text": "3000定金，其余货到按件点清，月底结尾款"
+  },
+  {
+   "type": "message",
+   "time": "10月7日 12:30",
+   "speaker": "B",
+   "text": "痛快，晚上我把定金转你"
+  },
+  {
+   "type": "message",
+   "time": "10月7日 12:32",
+   "speaker": "A",
+   "text": "嗯，转完你就等周二晚上的信"
+  },
+  {
+   "type": "message",
+   "time": "10月7日 12:34",
+   "speaker": "B",
+   "text": "行，周二夜里我安排车在老地方等"
+  },
+  {
+   "type": "transfer",
+   "time": "10月8日 15:12",
+   "from": "B",
+   "to": "A",
+   "amount": 3000
+  },
+  {
+   "type": "message",
+   "time": "10月8日 15:30",
+   "speaker": "B",
+   "text": "定金你点下"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 15:32",
+   "speaker": "A",
+   "text": "点过了，3000没错"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 15:34",
+   "speaker": "B",
+   "text": "今晚顺利不"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 15:36",
+   "speaker": "A",
+   "text": "顺利，值班表我调过了，十点后西半区就我"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 15:39",
+   "speaker": "B",
+   "text": "东西你放西门里侧就行，车到了我让人搬"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 15:41",
+   "speaker": "A",
+   "text": "行，我用周转箱装着，不显眼"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 15:44",
+   "speaker": "B",
+   "text": "收到，数对了下回直接翻倍"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 15:46",
+   "speaker": "A",
+   "text": "先别贪，一百件，盘点压得住的量"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 15:48",
+   "speaker": "B",
+   "text": "懂，细水长流"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 15:50",
+   "speaker": "A",
+   "text": "今晚风大，你车别来太早"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 11:40",
+   "speaker": "A",
+   "text": "盘点完事了，差数在容差里，平了"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 11:43",
+   "speaker": "B",
+   "text": "漂亮，尾款月底一起，利润给你留着"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 11:45",
+   "speaker": "A",
+   "text": "嗯。下批等大促后，库房进出大"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 12:02",
+   "speaker": "B",
+   "text": "听你的。中午吃啥"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 12:04",
+   "speaker": "A",
+   "text": "食堂红烧肉，补补"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 12:06",
+   "speaker": "B",
+   "text": "哈哈该补。老周说你闺女上小学了"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 12:09",
+   "speaker": "A",
+   "text": "对，一年级，昨天考了俩小红花"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 12:11",
+   "speaker": "B",
+   "text": "可以啊，奖学金叔出，哈哈"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 12:13",
+   "speaker": "A",
+   "text": "那敢情好"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 10:15",
+   "speaker": "B",
+   "text": "那批货出完了，二批抢着要"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 10:18",
+   "speaker": "A",
+   "text": "行，尾款月底别忘"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 10:20",
+   "speaker": "B",
+   "text": "忘不了，按件结一件不差"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 10:22",
+   "speaker": "A",
+   "text": "下批等月底，最近盘点勤"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 10:24",
+   "speaker": "B",
+   "text": "行，不急，长期合作"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 10:26",
+   "speaker": "A",
+   "text": "对了上回说的烧烤，周五晚上有空不"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 10:28",
+   "speaker": "B",
+   "text": "有空，我定位置"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 10:30",
+   "speaker": "A",
+   "text": "就咱俩，清静点那家"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 10:32",
+   "speaker": "B",
+   "text": "好，周五见"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 10:34",
+   "speaker": "A",
+   "text": "嗯，到时候见"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000334",
+  "status": "accepted",
+  "errors": []
+ }
+}

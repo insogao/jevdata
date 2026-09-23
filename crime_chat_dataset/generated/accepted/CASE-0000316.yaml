@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000316
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-926490f5537feec5
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: privacy_doxxing
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A 因被网友在论坛发帖指其卖假货而怀恨，通过中间人 B 找人把对方小号与历史发言翻出来，整理成曝光长帖报复，事后小额付酬并嘱咐不提来源。
+  critical_evidence:
+  - A 想报复在版上挂他卖假货的老白，提出把对方小号也翻出来，B 称小号能对上、转发记录和相册原图时间都能查
+  - 中间人开价五百做一次试水，只碰版面公开内容、不碰后台私密信息
+  - 材料到手后 A 整理长帖发到版面，署名伪称自己蹲了半个月，B 嘱咐别提自己这道、别改图别扯家里人
+  - 帖子发出后 A 转给 B 500 元，由 B 转交办事的人，并说下不为例
+  benign_alternatives:
+  - 公开信息检索与舆情梳理
+  - 品牌口碑分析取材
+
+attributes:
+  duration_days: 4
+  turn_count: 45
+  approximate_tokens_estimate: 1179
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0036
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-020
+
+dedup:
+  content_hash: sha256:642d38cfc54d54f0906041d68971e57e03d244b00bd1fa356aefa8b3d3947a06
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【10月14日】
+  A：在吗，上次说的事还能办不
+  B：哪件，帖子那个？
+  A：对，老白那个，他在版上把我挂了，说我卖假货，我店都开不下去了
+  B：哦这个，我认识的那位说能看，就看你想要到哪一步
+  A：我要把他老底翻出来，他那个小号也给你翻了，天天换马甲带节奏
+  B：小号能对上，他转发过什么都能查，连相册原图的拍照时间都能对出来
+  A：好，就先扒公开的，他号里那些见不得人的，整理出来发版上，让大伙评评理
+  B：行，只走公开的路子，后台私的东西不碰，脏活我不接
+  B：你最近还夜跑不
+  A：跑，今儿刚五公里
+  B：行啊，我三天没动弹了
+  A：明晚河滨道，一起？
+  【10月15日】
+  B：问了，那位说浅的免费帮看，深的要走一趟，得表示表示
+  A：表示多少
+  B：他说五百，先来一次试水的，把小号先对出来
+  A：五百可以，办成了我再加
+  B：行，我传话，东西回来原样给你，别说是从我这过的
+  A：放心，我谁也不说
+  A：你家猫绝育了没
+  B：绝了，戴圈呢，惨兮兮
+  A：哈哈，拍个视频我看看
+  B：晚上发你
+  【10月16日】
+  B：东西到了，你看，小号对上了，连他去年转发的都拉了单子
+  A：好家伙……这原图时间一对，去年那波节奏真是他带的
+  B：嗯，都是版面上公开能翻到的，就是费工夫
+  A：够了，这些够我整理一个长帖
+  B：丑话说前头，发帖你自己署名，别提从我这过的
+  A：明白，就说自己蹲了半个月
+  B：还有，别改人家图，别扯家里人，不然我也不答应
+  A：就事论事，我懂
+  B：周六爬山去不
+  A：去，预报晴天
+  B：带上你那新登山杖
+  A：必须的
+  【10月17日】
+  A：帖子我半夜发出去了，楼下已经盖到三十多楼
+  B：反应挺快，那五百你转我，我给那边送过去
+  A：这就转
+  【系统消息】A 向 B 转账 500 元，已收款。
+  B：收到，我这就给人家送去
+  A：替我谢谢他，办得真利索
+  B：嗯，下不为例，这种忙以后少求，伤和气
+  A：知道，这次是真忍不了了
+  A：降温了，你那件冲锋衣该出场了
+  B：早穿上了，腿还是冷
+  A：秋裤！你妈都救不了你
+  B：哈哈哈行，听劝

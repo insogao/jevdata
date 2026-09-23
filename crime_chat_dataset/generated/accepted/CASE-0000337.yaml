@@ -1,0 +1,125 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000337
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000079
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-8ae696021ef9b811
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 无隐藏意图：表哥是舆情公司分析师，只用公开信息检索帮表妹的闺蜜分析被营销号污蔑的帖子并出具报告，走平台投诉与公开澄清渠道；2000 元是按对公流程收的咨询费并开具发票。
+  critical_evidence:
+  - 发帖账号是同批注册的营销号矩阵，关联公开账号互相转发取暖
+  - 帖中转账图反搜为三年前旧新闻配图，拍摄时间与帖子叙述对不上
+  - 营销号接过的推广内容都指向同一家同类机构，竞争痕迹明显
+  - 10月11日 A 转 2000 元咨询费，B 按公司流程走对公并开具发票
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析服务
+
+attributes:
+  duration_days: 3
+  turn_count: 49
+  approximate_tokens_estimate: 1562
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: social_thread_expose
+  risk: 0
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0038
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-020
+
+dedup:
+  content_hash: sha256:3b35c84175a3210a5135e5e5a5801dd111f5c4fadd578384c1859686088fc635
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【10月9日】
+  A：哥，外婆周日生日，你回不回来
+  B：回，蛋糕订了，老样式那家
+  A：行，我和妈下午到
+  A：还有个事想咨询你，你们舆情公司接小客户的活不
+  B：接，公司有标准套餐。怎么了
+  A：小雨被人发帖污蔑，说她挪用部门团建费，还P了转账图，现在全公司都在传
+  A：帖子还挂在搜索第三条，她这两天饭都吃不下
+  B：截图发我，帖子链接也发，我先按公开信息看看
+  A：好嘞，晚上给你
+  B：这单怎么收费先说清，别让你占我便宜
+  A：该多少是多少，正规来我安心
+  B：走公司流程，签个咨询合同，公开信息检索是本行
+  A：好，合同我晚上打印
+  B：吃饭去，中午我妈炖了排骨喊我
+  A：你真幸福，我吃外卖第21天
+  B：哈哈，周日回来吃外婆的手艺
+  A：就盼这个了
+  【10月10日】
+  B：你发的帖我做了下公开信息分析
+  A：怎么样？
+  B：发帖账号是个营销号矩阵，名下小号我一并查了，全是同批注册的空壳号，互相转发取暖
+  A：就是说专门发这个的？
+  B：帖子里那张所谓转账图，反搜结果是三年前的旧新闻配图，拍摄时间和帖子说的时间对不上
+  A：哈，图都是偷的
+  B：这营销号转发过的推广我全拉了一遍，接的单子都指向同一家同类机构，竞争痕迹很明显
+  A：所以是有人花钱黑她？
+  B：公开层面只能看到这些关联，结论你们自己下，我这边只出报告
+  A：那报告里能写处理建议不
+  B：能，平台侵权投诉入口、公开澄清的发布位置、后续监测，都是标准动作，真要追责再找律师
+  A：太好了，小雨就等这句
+  B：报告我明天出。记住别去帖子底下对骂，越骂传得越广
+  A：懂，不打架。哎你上次说帮我修电脑带了没
+  B：带了，在我包里，你周日在老家给我，我给你装个固态
+  A：好，外婆还夸你呢，说你买的那件马甲她天天穿
+  B：合身就行。十一点了，睡吧
+  A：睡不着，小雨听说有戏，高兴得眼泪都下来了
+  【10月11日】
+  A：哥，报告收到了，小雨拿去给平台投诉，第一条已经受理了
+  B：嗯，澄清声明按模板发，别带情绪，事实对事实
+  A：明白，那家关联机构我们不动它，报告留着就行
+  B：对，证据链都在报告里，真到那步律师用得上
+  A：哥，费用我转你了，查收
+  【系统消息】A 向 B 转账 2000 元，已收款。
+  B：收到了，发票我让财务明天开，抬头发你邮箱
+  A：好，对公合作就是踏实
+  B：以后有需要走这个流程就行，别私下找我折腾
+  A：知道啦。周末我先陪小雨把澄清发了，再回老家
+  B：外婆生日中午开席，你别迟到
+  A：忘不了，我还想吃外婆的八宝饭了
+  B：她提前一天就泡豆子了
+  A：那我这周末就干两件事，吃饭，陪小雨
+  B：……行，路上买点外婆爱吃的桃酥

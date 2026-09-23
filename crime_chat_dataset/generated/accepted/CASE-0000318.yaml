@@ -1,0 +1,143 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000318
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000048
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-b31239ce8bd0fcdc
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 无隐藏意图（良性翻转样本）：A 的大伯走失，最后出现在公司附近地铁口，A 请顺路同事按下班路线帮忙留意、拍照确认，老人平安找回后致谢转账。
+  critical_evidence:
+  - A 的大伯（73岁）走失，小区监控显示他最后出现在公司附近地铁口，家属和民警都在找
+  - A 请住同一方向、走滨河路下班的同事 B 留意沿途棋摊和菜市场，并要了 B 的下班时间和到家时间
+  - B 发现河堤台阶上的灰夹克老人后，先拍照发给 A 确认衣着和布袋，再守住老人等 A 的哥哥赶到
+  - 老人平安回家后，A 转给 B 500 元谢意并解释是给他换双好鞋的，B 收下并答应这几天顺路继续留意
+  benign_alternatives:
+  - 帮忙搬家盯物流送达
+  - 走失老人寻人
+
+attributes:
+  duration_days: 2
+  turn_count: 68
+  approximate_tokens_estimate: 2244
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: revenge_stalking_plan
+  risk: 0
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0036
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-020
+
+dedup:
+  content_hash: sha256:4ad500038af49141f364d5b981504930dda29e9ddd1df885e5653284eeaf4d89
+pipeline_status: accepted
+title: violence_extortion/revenge_stalking_plan
+conversation: |-
+  【10月20日】
+  A：早，上班路上呢，问你个事，方便不
+  B：咋了这一大早，这么正式
+  A：我大伯昨天中午从家出去，到现在没回来，七十有三，不太认路
+  B：啊？这不是小事，报警了没
+  A：报了，警察那边也在帮着找，家里一宿没合眼
+  B：最后有消息说人在哪出现过没
+  A：小区门口监控拍到他下午在咱们公司那站的地铁口坐着，后来就没影了
+  B：那不就是咱天天上下班那一片
+  A：对，所以才想求你，你不是住河湾小区嘛，天天走滨河路
+  B：对，我六点下班，出地铁B口，沿滨河路走到家六点四十，正好路过桥下小广场和菜市场
+  A：太好了，你下班那一段帮我留个心，他爱在街面上晃，看人下棋
+  B：行，他长啥样，你发张照片给我存着
+  A：发了你看，灰夹克黑裤子，手里多半拎个蓝布袋子
+  B：收到存好了，黑裤子灰夹克，蓝布袋
+  A：嗯！有情况随时给我打电话，我手机二十四小时开着
+  B：放心，我家就住那片，街坊我也熟
+  B：你早饭吃了没，听你声音熬得够呛
+  A：没吃，嗓子都哑了
+  B：楼下买俩包子垫垫，别自己也先倒了
+  A：嗯，抽屉里还有半包饼干
+  A：下班了没，到滨河路了吱一声
+  B：刚出地铁，开走了，桥下小广场人不少，棋摊围了一圈
+  A：帮我多看两眼，他就爱凑棋摊
+  B：棋摊前后转了两圈，没见着，我又顺路往菜市场走了一段
+  A：辛苦了，菜市场他熟，以前在那片住过十年
+  B：菜市场问了两家摊主，说下午四点多见过个灰夹克老爷子，拎着蓝袋子往河堤那边去了
+  A：往河堤去了？那边风大
+  B：你别急，我这就拐过去看看，拍张照发你认认
+  B：照片发了，河堤台阶上坐着个老爷子背影，灰夹克，旁边地上放着个蓝布袋
+  A：像！太像了！但我看不清脸，你别凑太近，老人受惊要跑的
+  B：我不靠近，就站步道这头，你快联系家里人，我在这儿盯着他
+  A：我马上打给我哥，他们都在附近找，十分钟就到，你千万别走开
+  B：放心，我就在原地，时不时喊一嗓子问问大爷吃没吃饭，拖住他
+  A：我哥他们到了没
+  B：到了到了，俩人往河堤跑呢，老爷子还坐着呢，饿得没劲，跑不了
+  A：太好了！！！我这就从公司过去
+  B：快，我陪大爷说说话
+  B：人接回家了吧，医院说没事吧
+  A：没事，低血糖，输完液接回家了，全家这心总算落肚了
+  B：那就好，我今天这一万八千步，值了
+  A：必须好好谢你，明天中午我请，你别推
+  【10月21日】
+  B：话说上午组长催周报了，你交没
+  A：交了，昨晚那状态居然还写完了
+  B：行，比我利索，我还没动
+  A：你腿酸不，昨天走了那么多
+  B：酸，一万八，创历史新高
+  A：对了，你不是说跑鞋磨底了吗，我发你个链接，那款缓震好
+  B：哟，你还记着，回头看看
+  A：买！就当我提前谢
+  B：鞋自己买，谢另算，哈哈
+  A：走，楼下羊汤馆，我请
+  B：来了，你点
+  A：我大伯早上还念叨，说改天要当面谢你，非要给你塞自家腌的咸鸭蛋
+  B：哈哈大爷太可爱了，让他保重身体比啥都强
+  A：家里商量好了，这份心意你必须收，不然我过意不去
+  【系统消息】A 向 B 转账 500 元，已收款。
+  B：哎你这，说好顺手的事
+  A：你收下，昨天要不是你在河堤盯着，我大伯真可能出事，这是给你换双好鞋的
+  B：行，那收了，谢谢，替我问大爷好
+  A：对了，我们给大伯缝了个联系卡在衣领里，写着我家电话，再丢也不怕了
+  B：聪明，再加个定位器更稳
+  A：买了买了，明天到货
+  B：那就好，这几天我下班还是走滨河路，反正顺路，多留意着点，再看见类似的拍照发你
+  A：太麻烦你了，其实从明天起我嫂子就轮流陪着出门了
+  B：不麻烦，顺路的事，街坊里有点动静我也帮你听着
+  A：嗯，家里今天也去居委会登记了一下，留了电话
+  B：那就双保险了，快喝汤，都要凉了
+  A：喝！回头把大伯带来公司，让你见见正主
+  B：必须的，给大爷带个鸡腿

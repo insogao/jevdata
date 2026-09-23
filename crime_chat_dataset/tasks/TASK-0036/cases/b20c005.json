@@ -1,0 +1,336 @@
+{
+ "key": "b20c005",
+ "archetype_id": "ARC-000102",
+ "subtype": "phone_topup_layering",
+ "latent_intent": "熟人把便利店收款码变成充值通道，替上游过账走流水，单子深夜也进、来路一概不问，店主板压两万周转，靠两个点利润分成结算。",
+ "critical_facts": [
+  "上游直接把充值密钥发到店主微信，按单出码，一天几十单、凌晨也在进单",
+  "所有单子不问客户是谁，进账的钱按指定单子原路转出，不混店里自己的账",
+  "利润按两个点结算，另有 B 打给 A 的两万元本金押在店里周转",
+  "三天四百二十单后，B 连本带利一次性转回 20840 元（本金两万加利润八百四）"
+ ],
+ "benign_alternatives": [
+  "正规话费充值代理",
+  "便利店代缴水电煤业务"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "10月9日 09:15",
+   "speaker": "A",
+   "text": "老周，早上那批码到了，我试了两个，都能用"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:18",
+   "speaker": "B",
+   "text": "能用就行，今儿单子多，你盯紧点"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:20",
+   "speaker": "A",
+   "text": "你这一上午推过来三十多单了，我这小店平时一天才十几单充值"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:22",
+   "speaker": "B",
+   "text": "客户多嘛，你到账就出码，别的不用管"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:24",
+   "speaker": "A",
+   "text": "行，我就管出码，客户是谁我一概不问"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:25",
+   "speaker": "B",
+   "text": "对喽，咱这活儿，问多了干不长"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:27",
+   "speaker": "A",
+   "text": "你早饭吃了没，豆浆油条给你留了一份，中午来拿"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:29",
+   "speaker": "B",
+   "text": "搁着吧，中午过去，这几天胃好多了"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:31",
+   "speaker": "A",
+   "text": "那就行，凉的少碰"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:32",
+   "speaker": "B",
+   "text": "知道啦，李姐"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 14:03",
+   "speaker": "B",
+   "text": "下午这波密钥我让上游直接发你微信，你按单子顺序出"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 14:05",
+   "speaker": "A",
+   "text": "收到，五十一百的都有，还有几笔六百六的，啥客户这么充"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 14:07",
+   "speaker": "B",
+   "text": "别琢磨面额，有人就爱充六百六，图个顺"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 14:09",
+   "speaker": "A",
+   "text": "行，我出就完了"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 14:11",
+   "speaker": "B",
+   "text": "利润按两个点给你记着，你只出力，不用垫钱"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 14:12",
+   "speaker": "A",
+   "text": "两个点也不少了，积少成多嘛"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 14:14",
+   "speaker": "A",
+   "text": "你家小的这回月考咋样"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 14:16",
+   "speaker": "B",
+   "text": "数学又拉了，他爸天天盯着补"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 14:18",
+   "speaker": "A",
+   "text": "孩子嘛，慢慢来，别吼"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 14:19",
+   "speaker": "B",
+   "text": "借你吉言"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 08:47",
+   "speaker": "A",
+   "text": "今儿早上六点就有单进来，我卷帘门都没开呢"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 08:50",
+   "speaker": "B",
+   "text": "正常，夜里的单攒着，天亮一起清"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 08:52",
+   "speaker": "A",
+   "text": "昨儿一整天连夜里，小六十单了"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 08:54",
+   "speaker": "B",
+   "text": "量上来了，你那个收款码顶得住不"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 08:56",
+   "speaker": "A",
+   "text": "顶得住，就是银行前几天问我流水咋回事，我说店里生意好"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 08:58",
+   "speaker": "B",
+   "text": "就说是店里生意好呗，别的少解释"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 09:00",
+   "speaker": "A",
+   "text": "懂，少说多干"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 09:01",
+   "speaker": "A",
+   "text": "对了，有几单备注写着慢充，也照出？"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 09:03",
+   "speaker": "B",
+   "text": "照出，备注别理，那是他们那头的玩法"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 09:05",
+   "speaker": "B",
+   "text": "你托我带的那个按摩仪到了，放你店里柜台了"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 09:07",
+   "speaker": "A",
+   "text": "哎哟辛苦，多少钱，我给你"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 09:09",
+   "speaker": "B",
+   "text": "三百八，月底一起算"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 09:11",
+   "speaker": "A",
+   "text": "那哪行……行吧，先记着"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 11:20",
+   "speaker": "B",
+   "text": "李姐，这两天单子还要加量，你店里得压点钱周转"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 11:22",
+   "speaker": "A",
+   "text": "要多少"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 11:24",
+   "speaker": "B",
+   "text": "先两万，你收款码进来的钱你别动，按我发你的单子原路出"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 11:26",
+   "speaker": "A",
+   "text": "进多少出多少，那我不白忙活"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 11:28",
+   "speaker": "B",
+   "text": "傻，利润另算，两个点，一天几十单，你自己按计算器"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 11:30",
+   "speaker": "A",
+   "text": "行吧，你这么一说我就明白了"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 11:32",
+   "speaker": "B",
+   "text": "记三条：单子不问人，密钥不外传，账不混店里自己的"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 11:34",
+   "speaker": "A",
+   "text": "明白，收银就我一个人，别人碰不着"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 11:36",
+   "speaker": "A",
+   "text": "今儿风大，你骑车围个围巾"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 11:38",
+   "speaker": "B",
+   "text": "戴着呢，老寒腿扛不住喽"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 11:40",
+   "speaker": "A",
+   "text": "晚上我炖了萝卜汤，给你盛一保温桶"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 11:42",
+   "speaker": "B",
+   "text": "那敢情好，下班来取"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 21:30",
+   "speaker": "B",
+   "text": "这三天拢共四百二十单，本金两万你那儿，流水你核一下"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 21:33",
+   "speaker": "A",
+   "text": "核了，小本上一笔没差"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 21:35",
+   "speaker": "B",
+   "text": "利润八百四，连本带利给你转过去，你点点"
+  },
+  {
+   "type": "transfer",
+   "time": "10月12日 21:36",
+   "from": "B",
+   "to": "A",
+   "amount": 20840
+  },
+  {
+   "type": "message",
+   "time": "10月12日 21:38",
+   "speaker": "A",
+   "text": "到了，20840，一分不差，你这账比会计还细"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 21:40",
+   "speaker": "B",
+   "text": "下周一上游那边换规矩，到时候我再跟你说"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 21:42",
+   "speaker": "A",
+   "text": "行，听你信儿，晚安"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000310",
+  "status": "accepted",
+  "errors": []
+ }
+}

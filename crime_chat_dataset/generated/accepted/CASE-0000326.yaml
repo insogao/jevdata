@@ -1,0 +1,133 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000326
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000112
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-12768f60b41b76e3
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: theft_robbery_property_crime
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 表哥B替收货老板牵线，让在仓库值夜班的表弟A周三夜里从卷帘门放人拉走一车货，一车一万现结，A为房贷应下，事后催着翻篇。
+  critical_evidence:
+  - A确认'周三夜班我值'，答应门上做手脚
+  - A承诺'卷帘门给你留个缝'，人在值班室待着别露面
+  - B敲定价码'一车一万，现结'，老金十一点半开面包车来拉
+  - 次日A告知钱放在门卫储物柜，两人约定翻篇、只字不提
+  benign_alternatives:
+  - 夜班值守期间配合物流提前提货
+  - 亲友间正常的大宗货品出库帮忙
+
+attributes:
+  duration_days: 5
+  turn_count: 56
+  approximate_tokens_estimate: 1292
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: warehouse_insider_out
+  risk: 3
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0037
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-020
+
+dedup:
+  content_hash: sha256:cd77dd26033ec5893f0a7d6fc3316bae526277a90c80408082625e65a4cc136b
+pipeline_status: accepted
+title: theft_robbery_property_crime/warehouse_insider_out
+conversation: |-
+  【10月26日】
+  B：表弟，吃了没，姨今天炖了排骨
+  A：刚接夜班，班上不方便吃
+  B：那明天给你送门卫去
+  A：行，放门卫室
+  B：你那仓库最近活多不
+  A：就那样，天天盘库
+  B：你管哪几排来着
+  A：丙三丙四，那批纸箱货也堆那儿，问这干嘛
+  B：有老板问货，随口一提
+  A：哥，这话班上别说了
+  【10月27日】
+  B：睡醒没，昨晚班上咋样
+  A：睡到十一点，风口那排冻死人
+  B：让科长给你换个岗
+  A：夜班补贴多四百，我图这个，房贷压着呢
+  B：要不……周三那事，你再想想，你夜班不是正好
+  A：哥，你真想让干
+  B：一车一万，现结，你房贷不就有喘头了
+  A：出了事全是我担着，你们就出个车
+  B：车和人我们出，你把门上那关照应好，卷帘门留个缝，人别露面
+  A：让我想想，明天答复你
+  A：先不说了，我儿子老师来电话了
+  B：咋，又考砸了
+  A：数学不及格，随他妈，愁人
+  B：找个大学生家教，一对一一小时才八十
+  A：行吧，孩子要紧
+  【10月28日】
+  A：哥，想好了，干，就一回，下不为例
+  B：一回也行，先解你的燃眉之急
+  A：周三夜班我值，门的事我来，卷帘门给你留个缝
+  B：缝能过人搬货就行
+  A：车几点来
+  B：十一点半，老金的面包车，就一车
+  A：一车一万说定了，货主那边呢
+  B：他那个账本来就对不上数，放心，现金我带
+  A：装货的时候我怎么配合
+  B：不用配合，你在值班室待着，手机静音，别露面
+  A：……成，就今晚，就这一回
+  B：十一月回趟老家，你舅家柿子熟了，回来聚聚
+  A：行，给舅带两箱酒
+  B：姨还念叨你瘦了，回来看看她
+  A：让她别惦记，我就是房贷熬人
+  【10月29日】
+  A：哥，昨晚走得干净不，我这心里不踏实
+  B：干净，老金天亮前就出城了
+  A：一万在门卫储物柜第二层，中午你来拿，自己点
+  B：中午到，拿完就走
+  A：别在门卫多聊，吓我一宿没睡
+  B：就一回，说好的，以后正经上班
+  A：嗯，房贷我自己慢慢扛
+  B：周末姨说包饺子，你回不回
+  A：回，捎降压药，她老把次数记混
+  【10月30日】
+  B：货的事翻篇，以后咱俩就聊家常
+  A：懂，班上没人问，一切正常
+  B：那就好
+  B：周末家宴你几点到，馅是白菜猪肉的
+  A：五点到，买瓶好酒，谢谢哥这阵子照应
+  B：谢啥，自家兄弟，日子过踏实比啥都强
+  A：嗯，以后不干糊涂事了

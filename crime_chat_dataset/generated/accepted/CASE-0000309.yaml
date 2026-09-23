@@ -1,0 +1,134 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000309
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000043
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-7876fc5be0b2114a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: contraband_illicit_trade
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 经中间人老蔡牵线，酒水供应商向灌装作坊订购'看着一样'的名酒专供夜场，回收带原盖旧瓶、防伪码能过小程序扫码，半夜套矿泉水箱子面交，定金加货到结清。
+  critical_evidence:
+  - B 经老蔡介绍找到 A，要夜场走量那两个牌子的'看着一样的'酒水，回收渠道收带原盖的旧瓶由 B 提供
+  - A 称码那边有人管、能过小程序扫码，上月城南二十几箱一箱没退
+  - 定价一箱二百六、不到正品一半，只走夜场渠道不进超市不上网，半夜用矿泉水箱子套着面交
+  - 十箱先付一半定金，B 转 1300 元到 A 指定的其配偶账户，货到结清尾款一千三
+  benign_alternatives:
+  - 正规名酒经销商串货
+  - 散酒作坊代灌贴牌
+
+attributes:
+  duration_days: 3
+  turn_count: 58
+  approximate_tokens_estimate: 1341
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: alcohol_counterfeit_line
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0036
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-020
+
+dedup:
+  content_hash: sha256:82108bc57abd7d9df37c8159ed859df79a566df55f73b28f6813fb27afa6c4d2
+pipeline_status: accepted
+title: contraband_illicit_trade/alcohol_counterfeit_line
+conversation: |-
+  【10月19日】
+  B：喂，老蔡把你号推我了，说你能出那种酒
+  A：他说的哪两个牌子
+  B：就夜场里走量那俩，你懂的
+  A：懂，你自己啥渠道，开店还是送货
+  B：我给七八家场子供酒水，老板们点名要看着一样的，正品价实在吃不消
+  A：一个月能量多大
+  B：一家五十箱起步，做顺了三家不止
+  A：可以谈，但你先把瓶子的事定下来
+  B：瓶子我出，回收渠道现成的，场子后头成堆
+  A：要带原盖的，豁口的不要
+  B：明白，整箱收，都带盖
+  A：老蔡怎么说的我，说有个送货的要找，我怕认错人
+  B：我是他表侄小马，他跟你提过
+  A：哦小马，那对上了
+  A：吃了吗，聊半天了
+  B：还没，刚从场子出来
+  A：去把旁边牛肉面安排了，别糊弄胃
+  B：这就去
+  【10月20日】
+  B：瓶子收好了，三十七箱，你那边啥时候能出
+  A：先出十箱，拿去铺一家场子试试水
+  B：扫码的事咋说，他们现在拿小程序扫
+  A：码那边有人管，能过，你回去让人随便扫
+  B：扫过才算数，扫不过我砸手里
+  A：上个月城南那批二十几箱，一箱没退，你打听去
+  B：行，那先来十箱
+  A：价给你，一箱二百六，不到正品一半，你转手三百六，一场下来就回本
+  B：夜里场子能卖两百多一瓶，我有得赚
+  A：所以稳赚，但记住，别进超市别上网，只走夜场
+  B：懂，夜场专供
+  B：货咋送
+  A：矿泉水箱子套着，半夜送到你仓库，就咱俩
+  B：成，仓库常开着
+  B：你娃初三了吧，老蔡说他成绩好
+  A：初三，天天熬到十一二点
+  B：都这样，熬出头就好
+  A：借你吉言
+  B：过节老蔡攒局，你来不
+  A：看情况，忙完这阵再说
+  B：来嘛，你可别带自家那两箱
+  A：哈哈，我正经买的，放心
+  【10月21日】
+  B：十箱的钱我先付一半当定，货到结清，转哪个号
+  A：转我老婆那个号，发你了
+  B：行，这就转
+  【系统消息】B 向 A 转账 1300 元，已收款。
+  A：到了，今晚两点老仓库，你一个人来
+  B：一个人，开车去
+  A：嗯，外面套的水箱子码好，看着就是拉水
+  B：懂，场子里我统一口径，就说经销商特价的
+  A：口径统一好，谁问都是正经渠道拿的货
+  B：明白
+  A：尾款一千三，货到点清，别拖
+  B：今儿降温，你半夜来穿厚点
+  A：知道，军大衣伺候
+  B：哈哈，行，仓库灯给你留着
+  A：嗯
+  A：对了，你那智齿拔了没
+  B：拔了，脸还肿着，晚上正好吓人
+  A：哈哈那正好，低调进场
+  B：你可拉倒吧，晚上见

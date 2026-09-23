@@ -1,0 +1,147 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000314
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000048
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-a8aa8749140f7ae9
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 被旧合伙人卷走钱款，借天天进园区卸货的货运合作方记录对方上下班时间和住处车辆动静、确认长相，准备时机成熟时当面私下算账，承诺以车队业务作为报酬，全程不走账。
+  critical_evidence:
+  - 目标宋某在智创园区三号楼，黑色SUV早八点四十进、傍晚五点五十走，住滨河家园九号楼
+  - B 的货车每天从东门进出两趟卸货，末趟可拖到六点半，还顺路经过滨河家园北门，完全覆盖目标的作息动线
+  - A 与宋十年前合伙干工程被卷走账上钱款和客户，明确说人认准就行、后面的事他来，要当面把账算清
+  - A 承诺事成把这一片的车队活儿优先给 B 作报酬，要求只看只记、本子不给第三个人看
+  benign_alternatives:
+  - 商务往来前打听合作方近况
+  - 老友重逢前核实落脚点
+
+attributes:
+  duration_days: 4
+  turn_count: 71
+  approximate_tokens_estimate: 2161
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: revenge_stalking_plan
+  risk: 3
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0036
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-020
+
+dedup:
+  content_hash: sha256:4be25abf3d48694533312b888d92a31b2239fc50391a8810f692721be41b4525
+pipeline_status: accepted
+title: violence_extortion/revenge_stalking_plan
+conversation: |-
+  【10月22日】
+  A：睡了没，问你个事
+  B：没呢，刚到家，说
+  A：宋总那个智创园区，你货车天天都进吧
+  B：进，东门，一天两趟，下午那趟正好赶上他们下班点
+  A：那正好，帮我留意个人，三号楼的，姓宋，四十多，寸头，开黑色SUV
+  B：巧了，三号楼楼下常停一辆黑的，人我还真没留意过
+  A：人不用搭话，你就记他几点到，几点走，车停哪
+  B：这个容易，我卸货时间正好卡他们上下班
+  A：嗯，先记两天，别打听，就自己看
+  B：成，包我身上
+  B：对了，你那批货这周发不走？
+  A：缓两天，仓里先出那批
+  B：行，提前一天跟我说，我好排车
+  A：老规矩，你的车优先
+  【10月23日】
+  B：记了一天，黑车八点五十进的，下午四点半我进厂卸货，车还在
+  A：那就是不常出门，关键是下班，你末趟能磨到几点
+  B：六点出东门，磨到六点半也行，尾板慢慢关
+  A：那你就六点半出，顺脚看那车走没走
+  B：懂了，车牌手记，车头拍了张，发你认认
+  A：收到，是这车，人不用拍，人我认得
+  B：这么熟？
+  A：十年前一个锅里吃饭的，后来各走各的，认车就行
+  B：对了，你说的人住滨河家园吧？北门外常停这么一辆，我表哥就那小区
+  A：对，滨河家园，几号楼打听着没
+  B：我表哥说九号楼，哪户没问，我也没让他多嘴
+  A：不用他掺和，你晚上收车过北门，看一眼那车在不在、几点到的就行
+  B：行，北门那条街我天天过，车在不在、楼里灯亮没亮，都能记
+  B：你家那位腰好点没，上回还说贴膏药
+  A：好多了，就是还老刷手机
+  B：让她少看，腰才好得快
+  A：说她呢，不听，哈哈
+  【10月24日】
+  B：汇报，黑车八点四十进，五点五十人跟车一起走的，往南出了门
+  A：五点五十，固定了，准得很
+  B：还有个事，今天在楼下抽烟，我瞅着人了，矮个，微胖，寸头，左边眉毛上有颗痣
+  A：痣？左眉毛？
+  B：对，挺明显，老远就看见
+  A：是他，十年前那颗痣就在，错不了
+  B：你俩以前很熟？
+  A：何止，当年合伙干工程，他把账上的钱和一摊子客户卷走了，人间蒸发，现在改名换姓躲在这园区
+  B：原来是这样，怪不得你这么上心
+  A：这回叫我发现，算他到头了
+  B：你打算咋弄？说实话，我心里得有个底
+  A：你就管记，人认准、点记准，后面的事我来，不牵扯你
+  B：丑话说前头，出格的事我不掺和
+  A：能出啥格，我就是要个当面说话的机会，这几年的账，得当面算清楚
+  B：行吧，你自己心里有数就行
+  A：我心里有数，这事就咱俩知道，你那小本自己收好，别给第三个人看
+  B：放心，我嘴严
+  B：问你个正经的，晚饭吃了没，我又在车里啃面包
+  A：刚扒了两口盒饭
+  B：咱俩这作息，胃都得坏
+  A：改天去你说的那家羊蝎子，你请
+  【10月25日】
+  B：今儿有情况，他中午没出，下午三点带俩人下楼，上车往城西去了
+  A：城西？去了多久
+  B：五点回的，后备箱看着沉，搬了俩纸箱进楼
+  A：纸箱？多大的
+  B：就普通纸箱，我卸货路过瞄了一眼，没多看
+  A：行，别多看，明天继续，把下周的规律记全
+  B：成，周一到周五我天天在，他跑不了
+  A：我要的就是他每天几点在公司、几点回滨河家园，别的时辰不关咱事
+  B：明白，晚上北门我顺脚多磨蹭五分钟
+  B：周末歇不，预报说周日有雨
+  A：歇，周日陪家里看丈母娘去
+  B：正好，周末园区也不上班，我也歇
+  B：你那老腰咋样，搬货让人搭把手
+  A：好了，最近游泳呢
+  B：游泳好，我这颈椎也想去
+  B：再说一遍啊，我只管看和记
+  A：知道，看和记，别的都不用你，事成之后，这一片的车队活儿我优先给你
+  B：这话我爱听，先说好，我这车还指着吃饭，别给我惹麻烦
+  A：麻烦轮不到你，你把每天的点记准就行，等两头的时间都摸透了，到时候你只管把末趟那趟的时间告诉我

@@ -1,0 +1,133 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000336
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000043
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-7876fc5be0b2114a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 无隐藏意图：持证小酒厂为餐饮供应链定制代工灌装自有品牌酒水，走合同、检验报告、官方溯源码与对公转账；表面像私下勾兑灌装，实为合规贴牌代工。
+  critical_evidence:
+  - A 厂里证照齐全，每批送检出报告，瓶贴备案与溯源码由厂里接入官方平台
+  - 瓶子由 B 提供但须随批附食品接触材质证明，厂里留档验收
+  - 10月10日 B 对公转 20000 元定金，备注酒水代工定金，发票随首批货开
+  - 只服务签年框的合作餐厅，明确不接夜场渠道
+  benign_alternatives:
+  - 正规名酒经销合作
+  - 散酒作坊的合规代工讨论
+
+attributes:
+  duration_days: 3
+  turn_count: 57
+  approximate_tokens_estimate: 1723
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: alcohol_counterfeit_line
+  risk: 0
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0038
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-020
+
+dedup:
+  content_hash: sha256:78e9a1ff1b5af0d490ea33878680aa4a4644e7dbd0f180a76bad98e60a20f447
+pipeline_status: accepted
+title: contraband_illicit_trade/alcohol_counterfeit_line
+conversation: |-
+  【10月9日】
+  B：陈老板早，老蒋说你厂里的高粱酒是他喝过最正的口粮
+  A：老蒋嘴刁，他能认可就差不了。你是做餐饮供应的？
+  B：对，手里十几家签年框的餐厅，想找小厂定制自有牌子，量大要求细
+  A：可以细说。先交代家底：厂里证照齐全，每批送检出报告，牌子备案我给你办，合规上放一百个心
+  B：爽快，我最怕证照含糊
+  A：含糊的活我不接，罚一次倾家荡产
+  B：先问价，五十度高粱，首批两千瓶，灌装加瓶贴全包多少
+  A：你瓶子自备的话，灌装加贴标一瓶八块五
+  B：瓶子我出，固定瓶商，合作惯了
+  A：行，但一条：瓶子必须带食品接触材质证明，每批随货，我留档
+  B：没问题，瓶商证照我都拷给你
+  A：丑话说前头，省得扯皮。对了老蒋腰好点没，上次见他贴膏药
+  B：问得好，他上礼拜还念叨你，说你酒香
+  A：让他别硬扛。晚上我把报价单和厂区照片发你
+  B：好，照片先解馋，下周我实地看厂
+  A：欢迎，来了尝新酒
+  B：你酿酒的粮食哪来的
+  A：本地定的糯高粱，种植户合作五年，每季收粮我都在场
+  B：听着就踏实
+  A：踏实生意才长久，下午联系
+  【10月10日】
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  A：定金收到，两万，对公流水备注写着酒水代工定金，很规范
+  B：规范点好，财务好平账。合同你盖章没
+  A：盖了，一式两份今天顺丰，单号晚上发你
+  B：好。灌装排期多久
+  A：瓶子到厂后二十天出第一批，检验报告随货走
+  B：两千瓶铺我那十几家餐厅，按月配额，半年能消化
+  A：节奏刚好，别压库
+  B：瓶贴设计稿改第三版了，备案号加在背面
+  A：对，必须有位置，印刷样先寄我确认
+  A：中午了，厂里今天炖鸡，食堂大姐手艺可以
+  B：哈哈你们厂食堂比我公司强，我泡面
+  A：泡什么面，楼下那家羊汤走起
+  B：我在市里过不去，哈哈
+  A：那下回来厂里喝
+  B：一定。发票记得随首批货一起开
+  B：对了有朋友做酒吧供应链，问要不要接，量很大
+  A：不接，我只服务签年框的餐厅，夜场账期乱还惹是非
+  B：也是，稳当点好
+  A：嗯，印刷样到了我拍照你
+  【10月11日】
+  B：溯源码的事定了吗
+  A：定了，接的官方追溯平台，一瓶一码，扫码能看到批次、灌装日期和检验报告
+  B：这个好，我跟餐厅也好交代，现在餐饮查得严，溯源齐我推得动
+  A：对，你推货也有底气
+  B：瓶子周三到厂，材质证明让瓶商直接寄你
+  A：好，到货我验收拍照给你
+  B：你们北边冬天冷不
+  A：冷，好在车间恒温，就是出门冻脑袋
+  B：哈哈多穿点。我媳妇说下月去你们那看雪
+  A：来，顺便看厂，我给嫂子拿两瓶新酒
+  B：你这生意做到我家里了，哈哈
+  A：顺嘴一提。首批瓶贴印刷样明天到，你盯一下
+  B：盯着呢，到了拍照你确认
+  A：嗯。定金两万记在合同附件，尾款按货到验收结清走
+  B：就按合同来，我不拖供应商货款
+  A：那这合作能长久。中午吃啥
+  B：食堂糖醋排骨，抢到了
+  A：好家伙，我们食堂只有烧茄子，酸了

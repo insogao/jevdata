@@ -1,0 +1,146 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000327
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000132
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-63b5294f1382d85c
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: coercion_blackmail
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A借快递破损狮子大开口，用曝光视频、媒体人脉和连环投诉威胁驿站老板，逼对方私下掏钱消灾。
+  critical_evidence:
+  - A坚称高保价索赔九千，远超物品实际价值三百
+  - A以'不赔我就发抖音'和'媒体朋友一堆'相要挟
+  - A点破一个投诉扣半个月工资，以连环投诉施压
+  - B被迫私下转3000元，换A当场删除曝光素材
+  benign_alternatives:
+  - 正常快递破损理赔协商
+  - 消费者对服务不满的正常投诉沟通
+
+attributes:
+  duration_days: 2
+  turn_count: 71
+  approximate_tokens_estimate: 1744
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: courier_claim_extort
+  risk: 2
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0037
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-020
+
+dedup:
+  content_hash: sha256:62f0cb15786e1998910fac98d0a2728adc7d0df8b75b4a795b7631f49c45a2d1
+pipeline_status: accepted
+title: coercion_blackmail/courier_claim_extort
+conversation: |-
+  【9月26日】
+  A：你好，在吗，昨天到的那件茶具，四个杯子碎了仨
+  B：您好在的，麻烦拍下外箱和内包装照片我看看
+  A：照片有，箱子瘪了一角，里面就两层薄泡沫
+  B：好的，我先给您登记破损理赔，一般按保价来
+  A：保价？我保了九千，单子上写着呢
+  B：您这单系统里显示没保价，您再看下底单
+  A：底单我拍了，要看吗，白纸黑字
+  B：那您发我，我跟总部核对
+  A：核对要几天，我等着钱用
+  B：正常三到五个工作日
+  A：太久了吧，我朋友上回在你们另一家店，当天就赔了
+  B：每件都得走流程，您别急
+  A：对了，我抖音八万多粉，平时就爱拍点开箱测评
+  B：您别介，咱们好好沟通
+  A：我就随口一提，你按规矩办就行
+  A：今天这雨下得，箱子怕不是路上淋的
+  B：是，这两天暴雨，件都潮了
+  A：中秋前你们件多吧
+  B：多，天天卸到夜里，腰都直不起来
+  A：辛苦，干你们这行不容易
+  B：谁说不是呢
+  B：您那张底单我看了，像素不清楚，保价那栏对不上
+  A：呵，那你慢慢跟总部问，我这边也问问别人
+  B：您这话什么意思
+  A：我媒体朋友一堆，真捅出去，就不止是赔杯子的事了
+  A：不赔我就发抖音，标题我都想好了
+  B：您这是威胁我啊
+  A：我这叫提醒。你们加盟的，总部一个投诉扣你半个月，投诉多了呢
+  B：一个投诉扣半月，你这是要我白干
+  A：我就发一个，你猜扣多少
+  B：哎，您少发点，咱们商量，您说个数
+  A：九千，一分不能少
+  B：九千？您那杯子满打满算值三百
+  A：我不管值多少，我时间不要钱啊
+  B：这样，我个人先垫您五百，流程照走，行吗
+  A：五百？打发叫花子呢
+  A：不说了，我闺女放学了，接孩子去
+  B：您接孩子，孩子初几了
+  A：初二，正是费钱的时候
+  B：是，我们家老二也费钱
+  A：那你懂我压力了吧
+  B：懂懂，您先忙
+  B：您考虑得怎么样，五百不行我再添点
+  A：晚上想了想，看你还算痛快，八千八，图个吉利
+  B：八千八真拿不出来，网点一个月利润就那点
+  A：那你看着办，明天中午之前，过时不候
+  B：我再想想办法
+  A：视频我都剪好了，就差最后一键
+  B：别别，明天上午一定给您准信
+  【9月27日】
+  B：早，昨晚盘了账，能凑出三千，您要是点头，这事就算了
+  A：三千？我视频都发一半朋友看过了
+  B：您行行好，三千顶我半个月工资了
+  A：我媒体朋友一通电话就来，你再想想
+  B：真没了，再加我直接关门大吉
+  A：哼，三千就三千，看你态度还行
+  B：好，您把收款码发我，这就转
+  A：码发你了，下回包装上点心
+  B：一定一定
+  【系统消息】B 向 A 转账 3000 元，已收款。
+  B：转了您查收，那个视频……
+  A：素材我这就删，放心，我说话算话
+  B：谢谢您，中秋快乐
+  A：哎，你们驿站旁边那家胡辣汤还开着没
+  B：开着，我天天早上喝一碗
+  A：那我哪天去尝尝，喝完心里舒坦点
+  B：我请您一碗，压压惊
+  A：你这人，行，那这事翻篇
+  B：翻篇翻篇
+  A：对了，碎的杯子我留了一个，留个纪念
+  B：……您开心就好
+  A：下回发货包结实点，别让我再跑一趟
+  B：记住了您
