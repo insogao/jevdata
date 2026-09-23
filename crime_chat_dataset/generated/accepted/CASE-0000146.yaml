@@ -1,0 +1,157 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000146
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000045
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-0008d2c0ad1f63cb
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A借「照应街面」之名向新开店铺按月收取费用，用别家店被撬的祸事暗示不交钱的下场，B迫于压力按其报价转账三千。
+  critical_evidence:
+  - 自称经陈哥介绍的街面人物上门示好，与店主并无物业或商会瓜葛
+  - 月初准时问候，强调兄弟们通宵看街、也要吃饭
+  - 绘声绘色提及老周家店半夜卷帘门被撬且破不了案，称交了心意后一直平安
+  - 明码报价「三五百是人情、三五千是交情」，店主微信转三千后称往后每月这时候再来
+  benign_alternatives:
+  - 物业费催缴
+  - 商会会费
+
+attributes:
+  duration_days: 3
+  turn_count: 81
+  approximate_tokens_estimate: 2010
+  relationship: 中间人关系
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: protection_fee
+  risk: 3
+  relationship: 中间人关系
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0019
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-014
+
+dedup:
+  content_hash: sha256:5fde0993ee8a7cd89f6ace100c6e00ec419f6f4a9a0c68ad9523b8a0dba7927c
+pipeline_status: accepted
+title: violence_extortion/protection_fee
+conversation: |-
+  【6月1日】
+  A：陈哥让我加的你，说你是这条街新盘的店主，姓罗吧
+  B：对，我姓罗，这月刚开张，您是
+  A：我姓关，街面上混口饭吃，往后抬头不见低头见
+  B：关老板好，以后多关照
+  A：开业大吉，送你个彩头，这条街的门户往后有人看着，夜里踏实
+  B：这，物业不是有保安吗
+  A：保安十二点就缩屋里了，兄弟们可是通宵在街上转的
+  B：那，怎么好意思
+  A：不客气，街面太平，大家生意都好做
+  A：你这店是女装吧，陈哥说你眼光好
+  B：小本生意，女装带点童装，您有好货源尽管介绍
+  A：我表妹在十三行做档口，回头拉个群，拿货比别人低一成
+  B：那感情好
+  B：关老板中午吃了没，街口新开的牛腩面不错
+  A：吃过了，兄弟们凑的一桌大排档
+  B：你们天天这么热闹
+  A：人多才好办事嘛，哈哈
+  B：下午刚给娃开完家长会，迟到被老师点名
+  A：娃多大了
+  B：初二，正是费心的年纪
+  A：费心才对，我仔当年也这样，现在出息了
+  B：开业酬宾累瘫了
+  A：头三天都这样，熬过去就顺了
+  B：借您吉言
+  A：对了，晚上锁门记得后巷那扇也栓上，最近那条巷子不太平
+  B：不太平？怎么了
+  A：老周服装店你知道吧，上礼拜半夜卷帘门被人撬了，货撒了一地
+  B：啊，报警了吗
+  A：报了，查不出来，街面上这种事难破
+  B：真吓人
+  A：不过他家后来学乖了，如今每天热络得很，跟兄弟们处得像一家人，再没出过事
+  B：处得像一家人，怎么个处法
+  A：人情往来嘛，逢年过节走动走动，烟酒茶水，心意到了，门就稳了
+  B：哦，我明白了
+  A：明白就好，不急，月初大家都忙
+  【6月2日】
+  A：早，昨晚睡得踏实吧，后巷没动静吧
+  B：谢谢提醒，栓得紧紧的
+  A：那就对了
+  B：关老板，昨天说的档口群拉我一下呗
+  A：拉你了，备注下店名，我表妹人爽快
+  B：加了，谢了
+  A：你生意顺，我在街面上说话也有面子
+  B：中午一起吃碗牛腩面，我请
+  A：今天不成，兄弟们中午有安排，改天我请你吃点好的
+  B：那行
+  A：你家娃初二，成绩抓得紧不
+  B：一般般，数学拉分，报了个辅导班
+  A：辅导班贵吧，一学期好几千
+  B：可不是，钱包大出血
+  A：熬熬就过去，孩子出息比啥都强
+  B：关老板，晚上有空吗，请您吃个便饭
+  A：吃饭就不用，你刚开业，钱花在刀刃上
+  B：那怎么好意思
+  A：真不用请吃请喝，街面上不讲究这个，讲究个心意
+  B：心意，您直说，我不爱猜
+  A：这条街十几家店，哪家不是每月跟兄弟们走动走动，一个月三百五百是人情，三五千那是交情，看你自己把店当多少钱
+  B：交情都包括什么
+  A：门面平安、货源消息、街面上的眼睛，兄弟们几十号人，也要吃饭
+  B：容我想想
+  A：不急，明天再来坐坐
+  B：今天生意好点，谢谢您那句话，街面太平生意才好做
+  A：你这话我爱听
+  【6月3日】
+  A：早，月初第二天，街上清净
+  B：清净就好
+  B：关老板，中午牛腩面，这回赏脸了吧
+  A：行，给个面子
+  B：我家娃就爱吃这家
+  A：娃吃面长个儿
+  B：昨晚那球看了没，我熬不动了
+  A：看了，兄弟们聚在大排档，热闹
+  B：大排档宵夜好吃不
+  A：烤生蚝一绝，改天带上你
+  B：关老板，昨天您说的数，我想了想
+  A：你说
+  B：我小本经营，三千先表个心意，往后生意做起来再议，行吗
+  A：你是明白人，三千就三千，交情慢慢处
+  B：微信转方便吗
+  A：方便，就这号
+  【系统消息】B 向 A 转账 3000 元，已收款。
+  B：转了，您点下
+  A：收到，往后每月这时候我来坐坐，你的门面就是我的门面
+  B：应该的，多关照

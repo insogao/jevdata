@@ -1,0 +1,135 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000150
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000143
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-a1814933f4939abc
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: other_illicit_coordination
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 熟识的会计与票头在月底合谋补足进项缺口：资金走一圈回流做平票面，按票面点数支付报酬，并轮换空壳公司避开稽查关注。
+  critical_evidence:
+  - A告知B某家公司『这月票量不够』缺口二百多万，让老王对接从别处匀票补齐
+  - A反复叮嘱资金流截图做好、走账的卡要换新的，避免同一张卡来回走被注意
+  - B确认新注册的那家公司目前仍在税务稽查关注名单之外，商定壳子轮着用、下月缓一缓
+  - A按票面千分之八给B结算点数，转账18000元作为这单的好处费
+  benign_alternatives:
+  - 代账公司之间的正常开票调剂
+  - 税务筹划和资金流痕管理的合规讨论
+
+attributes:
+  duration_days: 4
+  turn_count: 58
+  approximate_tokens_estimate: 2024
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: false_invoicing_group
+  risk: 3
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0020
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-014
+
+dedup:
+  content_hash: sha256:b6b681118ab5646307296a832f65a1c694bd3832b0257cf9f4ea192465c826e2
+pipeline_status: accepted
+title: other_illicit_coordination/false_invoicing_group
+conversation: |-
+  【10月25日】
+  A：小陈，早上好，月底了，账走得咋样
+  B：涛哥早，在赶，几家一起申报，忙得脚不沾地
+  A：我这边有家要重点跟一下，这月票量不够，缺口二百多万
+  B：又是那个建材的？他进项一直跟不上，账上利润太高
+  A：对。你跟他说别慌，我让他那边的老王给你对接，缺的部分从那边匀一点过来
+  B：匀过来的东西，合同和流水都得配套，不然对不上
+  A：这个你放心，配套的东西那边做全套的，你只要把账平好
+  B：行，那我把科目先空着，等你那边东西到了再入
+  A：嗯，就这几天的事，月底前必须都落好
+  B：说到月底，你国庆回老家没，我妈还问你
+  A：回了待了三天，你妈身体咋样
+  B：挺好，就是念叨让我早点成家
+  A：哈哈长辈都这样，你也别老拖着
+  B：缘分的事急不来
+  【10月26日】
+  A：东西那边开始走了，第一笔今天下午进
+  B：好，我盯着网银。对了，走账的卡用哪几张，还是上次那套吗
+  A：别用上次那套，卡要换新的，同一张卡来回走得太多容易扎眼
+  B：明白，我让老王那边多备两张卡
+  A：还有，资金流截图做好，每一笔进出的截图都留好，账跟钱要对得上，谁问都能拿出来
+  B：这点我懂，我做了个专门的文件夹，按日期命名
+  A：嗯，你做事我放心
+  B：说点开心的，双十一购物车我都囤了两万多的东西了
+  A：你买啥了这么多
+  B：给我爸换了按摩椅，给我姐家娃买了学习桌，还有一堆纸巾洗衣液
+  A：会过日子，趁便宜囤
+  A：第一笔到了，六十万，你看到没
+  B：看到了，我先挂往来，后面怎么走你说
+  A：按老路子，分三笔出去，回来的时候走对公，票面和流水就都圆上了
+  B：懂，我下午就安排，明天之前弄完
+  A：辛苦，办完这单，老规矩，按点数给你
+  B：说到辛苦，我最近晚上跟着同事夜跑，五公里
+  A：可以啊，我天天坐着，肚子都起来了
+  B：你也来，就江边那条道
+  A：等这阵忙完的，最近天天陪客户喝酒，跑不动
+  【10月27日】
+  A：昨天那几笔都平了？
+  B：平了，报表我拉平了，你看下数字对不对，我发你了
+  A：对，没问题。这个月的点数我算一下，按票面千分之八，给你算一万八
+  B：行，不急，等这轮全走完再结也行
+  A：不用，先给你，你拿去用
+  B：那我就却之不恭了哈哈
+  B：涛哥，问你个事，你那个写字楼还租着没，我朋友想找个小办公室
+  A：租着呢，还有半间空着，让他来看，租金好商量
+  B：行，我让他直接联系你
+  A：对了，还有件事，我那家新注册的公司，你查下现在是个什么状态，是不是还在稽查名单外头
+  B：我看了，税务那边目前没有任何提示，风控也没异常，还是干净的
+  A：那就好，这家先别动，留着接下一波，老那家用得差不多了
+  B：懂，壳子轮着来。不过我提醒一句，频率太高容易引起注意，下月最好缓一缓
+  A：你说得对，我也这个意思，十一月中再启动
+  A：说到十一月，我妹婚期定了，十一月十六
+  B：好事啊！在老家办还是这边
+  A：老家办，到时候你得来喝喜酒
+  B：那必须的，红包我都想好封多少了
+  A：人到就行，你从大学就跟我妹认识，算老朋友了
+  【10月28日】
+  A：小陈，点数我给你转过去，一万八，你收一下
+  【系统消息】A 向 B 转账 18000 元，已收款。
+  B：收到了涛哥。都弄利索了，报表、流水、底稿我都归档了，这月申报明天就能提交
+  A：好，辛苦了，那家老板还说请你吃饭
+  B：饭就免了，让他把材料按我说的补齐比啥都强
+  A：哈哈你就是这样。行，下月有事再叫你

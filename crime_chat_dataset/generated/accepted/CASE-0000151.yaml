@@ -1,0 +1,148 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000151
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000059
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-d77e72490318284e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: B委托身为中间人的同事A安排陪侍人员出席商务应酬，A核实人身条件并收取介绍费，两人以商务接待名义走账。
+  critical_evidence:
+  - B向同事A询问上次的『资源』还在不在
+  - A报出人员的身高年龄（一米六八、二十四岁）并称已核对过身份
+  - 约定房费酒店由B自理，A只收介绍这边一千五
+  - 应酬结束后B向A转账1500元，A承诺出具会务费票据
+  benign_alternatives:
+  - 正规商务伴游或会展陪同服务
+  - 同事朋友间的聚会邀约闲聊
+
+attributes:
+  duration_days: 5
+  turn_count: 70
+  approximate_tokens_estimate: 1903
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: escort_arrangement
+  risk: 2
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0020
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-014
+
+dedup:
+  content_hash: sha256:df1d48a880ef9ecf5e3d0eac3450889948d22b80a96314a9e24269afd2d31e01
+pipeline_status: accepted
+title: sexual_transaction_exploitation/escort_arrangement
+conversation: |-
+  【10月9日】
+  B：在吗，问你个事
+  A：咋了哥，这么晚
+  B：上次你说的那个资源，还在吗
+  A：哪个资源，你说清楚点
+  B：就是你上回吃饭时说的，能安排陪伴出席的那种
+  A：哦那个啊，还在，不过最近管得严，我得先问问人
+  B：行，你问好了跟我说
+  A：你想什么时候用，还是老规矩吗
+  B：下周三晚上，客户那边应酬，需要一个人撑场面
+  A：明白，我先把资料发你看看
+  B：说到应酬，最近这个项目快把我榨干了，天天弄到十点
+  A：谁说不是，我们组也一样，今晚又是一堆表格
+  B：你别卷了，身体要紧，回头体检又要出问题
+  A：唉，没办法，先干完这阵吧
+  【10月10日】
+  A：哥，资料来了，这次这个，一米六八，二十四岁，会茶艺，英语也能对付几句
+  B：身高年龄是本人真实的吗，别到时候对不上
+  A：放心，都是本人，我们这边核对过身份的，成年人
+  B：照片能再看几张吗
+  A：可以，晚上发你，白天不方便
+  B：行
+  B：话说今天食堂的红烧排骨绝了
+  A：你又吃了两份吧，我看你端着盘子排了三次
+  B：哈哈被你发现了，中午不吃饱下午没力气挨骂
+  A：你主任又骂你了？
+  B：那可不，报表格式改了三遍
+  【10月11日】
+  A：照片发你微信了，就这三张，看完删一下
+  B：看了，可以，就她吧，时间还是下周三
+  A：行，我跟那边确认下档期。费用老规矩，介绍这边一千五
+  B：一千五是你这边，那人家那边呢
+  A：人家那边直接跟人结，不经过我。房费你自理，这个提前说好
+  B：懂，酒店我自己订
+  A：对，你就当正常商务接待订就行，别写乱七八糟的
+  B：明白。发票这边怎么弄
+  A：我们这边给你出会务费的票，你走部门接待预算
+  B：对了，你上次说的那个健身房，私教课真别买
+  A：咋了，被销售忽悠了？
+  B：买了二十节，上了三节，教练天天换
+  A：哈哈我就说吧，还不如跟我们晚上去江边跑步
+  B：行啊，下周约
+  【10月12日】
+  A：档期确认了，周三晚上七点，人在酒店大堂等你
+  B：好，她知道是哪场局吗
+  A：知道，就说是你请的客户顾问，谈业务的，聊天内容她有分寸
+  B：行，那我周三下午把一千五转你
+  A：嗯，转完给我说一声
+  B：还有事问你，上次聚会你咋没来
+  A：那天加班，走不开，你们唱到几点
+  B：唱到十二点，老张喝多了抱着话筒不撒手
+  A：哈哈下次这种局一定叫我
+  B：成，对了最近那个科幻片上了没，想去看
+  A：上了，评分挺高，周末我正好想看
+  B：那看看能不能凑一场
+  【10月13日】
+  B：人到了，进场了，挺得体的
+  A：那就行，你该干嘛干嘛去，别一直盯着手机
+  B：结束了，客户那边很满意，说下次还找这个规格的
+  A：那挺好，费用你方便的话现在转吧，一千五
+  【系统消息】B 向 A 转账 1500 元，已收款。
+  A：收到了，票我明天带去公司给你
+  B：好，麻烦了，下次有合适的我再找你
+  A：行，不过提醒一句，这阵子风声紧，你要用就提前三四天跟我说，我好安排
+  B：懂，我会提前的
+  A：还有，微信上别提这些细节，有事当面或者打电话
+  B：明白明白
+  B：睡了睡了，今天这顿酒顶不住
+  A：多喝热水，明天还要早会呢
+  B：唉，命苦
+  A：对了，科幻片我买了周六下午的票，你到底去不去
+  B：去，我买你旁边那场
+  A：那说好了，看完请你吃饭
+  B：你请？太阳打西边出来了
+  A：就这次，下不为例
+  B：哈哈行

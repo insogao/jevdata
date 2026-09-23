@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000140
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000040
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-9c5aa3b22f84ad55
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: contraband_illicit_trade
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: B替开小超市的表哥寻便宜烟货源，A借职务之便搭上码头刚到的无票货，私下约仓库看货、现金结算，避开一切走账痕迹。
+  critical_evidence:
+  - 同事关系牵线，问价「这条多少」：正规二百三一条，那边一百一还再磨
+  - 货没有票，包装口味与柜台一致，只给熟人心里有数
+  - 约定周六下午去城东仓库看货，知道的人越少越好，当面拆箱对钢印
+  - 五千五全现金当面点清，先转两千定金锁货，余款验货后现金结
+  benign_alternatives:
+  - 免税店代购讨论
+  - 正常卷烟批发
+
+attributes:
+  duration_days: 6
+  turn_count: 53
+  approximate_tokens_estimate: 1147
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: tobacco_smuggle
+  risk: 2
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0019
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-014
+
+dedup:
+  content_hash: sha256:fa831481b5bb2205fba00d1ec5acc5e90f9386a1dca298c2707080ecf8fe5594
+pipeline_status: accepted
+title: contraband_illicit_trade/tobacco_smuggle
+conversation: |-
+  【9月22日】
+  A：食堂豆浆机又坏了，排了二十分钟
+  B：我自带面包，机智如我
+  A：下回捎我一个
+  B：收一块钱跑腿费，哈哈
+  B：对了，上回听你说老家那条线还在走
+  A：你打听这个干嘛
+  B：我表哥开小超市，烟走得快，正价拿货太吃成本
+  A：你说的这条多少钱知道吗，正规渠道二百三一条
+  B：你那边呢
+  A：那边一百一，一个件五十条还能再磨
+  B：差这么多，货对版吗
+  A：包装口味一模一样，就是没票，自己心里有数就行
+  B：我先问问我表哥的量
+  A：行，最近刚到一批，手慢无
+  【9月23日】
+  A：昨晚那球绝杀了吧
+  B：看了，吼得邻居敲墙
+  A：周五约一场
+  B：算我一个，好久没跑动
+  B：我表哥说先来一个件试试水
+  A：一个件五十条，一百一拿，五千五，比柜台省小一万
+  B：价能接受，货我得先看看
+  A：周六下午带你去库里看货，眼见为实
+  B：库在城东那边
+  A：嗯，到时候我发位置，知道的人越少越好
+  B：懂，就咱俩和库头
+  【9月24日】
+  B：今天跳水式降温
+  A：秋裤已经安排上了
+  B：明天还更低，别感冒耽误周六的事
+  A：就怕周六下雨，看货不方便
+  B：预报说阴，没事
+  A：先说好，那天现金结算，不走账
+  B：全现金，五千五当面点
+  A：老规矩，验完货当面点清
+  B：成，听你安排
+  【9月25日】
+  B：今晚加班不，顺路帮我带份炒饭
+  A：加到八点，老三样
+  B：再确认下，万一不对版呢
+  A：当面拆箱，一条条对钢印，不对当场各自走人
+  B：行，这话我爱听
+  A：量要稳定，价我再往下磨一点
+  【9月26日】
+  A：明天看货，一个件先给你留着，今晚转两千定金锁住，余款现金
+  B：也行，省得白跑
+  【系统消息】B 向 A 转账 2000 元，已收款。
+  B：定金转了，点一下
+  A：收到，周六下午三点城东，位置明早发你
+  A：双十一你囤啥了
+  B：纸巾猫粮，穷人只配刚需
+  A：你家橘座又沉了三斤吧
+  B：它那是过冬战略储备
+  【9月27日】
+  B：出发了，三点到
+  A：到路口别进去，我出来接
+  B：钱带了五千五整
+  A：见货点钱，老规矩
+  B：看完美请你撸串

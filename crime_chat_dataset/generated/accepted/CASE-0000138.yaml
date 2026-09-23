@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000138
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000049
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-8b9187d944ab5f29
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 表面像老板放话要给违规班组一个教训、约在地下车库私下碰头，实际全程落到停线考核、绩效公示与劳动调解的正规处理上，无任何威胁或暴力成分。
+  critical_evidence:
+  - 老板在会上放话要给三号班组的人长长记性，A与B商定走停线半天、重新工艺考核、绩效扣分公示的制度处理
+  - 两人约在负二层车库碰头交接考勤与绩效单据，原因是办公室装修、访客区混乱
+  - 周四劳动调解：补发加班费与社保补缴合计两万三，老刘认了并回岗，双方签调解书
+  - A转账860元归还B垫付的安全培训资料费和盒饭钱，发票已入财务账
+  benign_alternatives:
+  - 严格管理谈话
+  - 劳动纠纷调解
+
+attributes:
+  duration_days: 4
+  turn_count: 49
+  approximate_tokens_estimate: 1644
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: beat_example_warning
+  risk: 0
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0018
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-014
+
+dedup:
+  content_hash: sha256:9a7a2b8b32ff29762cd46c197dc76984aba626706bb9fb6bd292e5edf58abb59
+pipeline_status: accepted
+title: violence_extortion/beat_example_warning
+conversation: |-
+  【10月8日】
+  A：老周，早。昨天老板在会上拍了桌子，你听说了吧
+  B：听说了，三号班组那批活儿，回去全得返
+  A：他原话是「这次必须给他长长记性」，我听着都发毛
+  B：长记性可以，按制度来就行，别又搞那种拍肩膀吓唬人的老一套
+  A：你有什么想法
+  B：停线半天，全员重新过工艺考核，绩效里扣当月质量分，白纸黑字公示
+  A：行，老板那边我去说，他要的是看得见的处理
+  B：对了，你们楼上是不是在装修？上次来找你连个坐的地方都没有
+  A：是，这周倒腾楼层呢，我工位还没定，停车位也乱
+  B：难怪，昨天我去负一层，绕了三圈没找着访客位
+  A：明天上午你来不？顺便把三号班组的考勤和上季度绩效单带上，纸质的我签收
+  B：可以，十点前到，地库碰头？楼上乱糟糟的
+  A：行，B2电梯口，我下来接你
+  【10月9日】
+  A：到了没
+  B：刚停好车，B2电梯口，看见你了
+  A：考勤单我收了。还有个事正好当面说，老刘那个仲裁
+  B：他不是闹到劳动监察去了吗
+  A：周四正式调解，工会和劳务公司都来人，老板让我牵头
+  B：你可得稳住，别把关系闹僵了，人家就是想要个说法加补偿
+  A：心里有数，该给的加班费一分不少，社保补缴的账也让财务核了
+  B：这样最好，谈判桌上你别拍桌子就行，哈哈
+  A：我什么时候拍过，都是微笑服务
+  【10月11日】
+  A：明儿调解，你把老刘那半年排班记录再核一遍，对方律师肯定抠这个
+  B：核完了，三月有两笔跨夜班算错过，我标黄了
+  A：好，主动把错的认了，诚意就够了
+  B：你家小子这周不是体测吗，紧张不
+  A：可不，天天跳绳打卡，昨天跳了四百个，喊腿疼
+  B：四百个，大人都够呛，让他悠着点别伤膝盖
+  A：老师说及格就行重在参与，话这么说，卷的还是家长
+  B：都一样，我家那个跑步全靠我陪着遛
+  A：刚老板确认了，调解方案他签字，别的不掺和
+  B：那就稳了
+  【10月12日】
+  A：调解完了，签了，老刘下午就回来上班
+  B：补偿按你说的给了？
+  A：加班费加社保补缴一共两万三，他认了，双方都松口气
+  B：这就对了，好聚好散，来日好相见
+  A：三号班组也服气，说公示的处理他们认，返工已经干完了
+  B：那这事就都齐了
+  A：还有个小事，上回安全培训，你们垫的资料费和盒饭钱，发票我收齐了
+  B：那点钱一直没好意思催你
+  A：财务走对公得下周，我先用自己的转你，860，票已经入账了
+  B：行，收到就行，你倒是不拖欠，哈哈
+  A：我这人别的没有，报销从不压
+  【系统消息】A 向 B 转账 860 元，已收款。
+  B：到了，860，谢了
+  A：小事。对了降温了，你们那边冷不
+  B：冷，一降十度，今天把厚外套都翻出来了
+  A：我周末想带孩子去买两件秋装，你顺路一起不，奥莱那边
+  B：行啊，正好我也给家里那位买，周日上午？
+  A：周日上午九点，奥莱北门见

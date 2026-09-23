@@ -1,0 +1,136 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000134
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000132
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-888115667fdf7ce8
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: coercion_blackmail
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 寄件人借快递破损索赔，以发短视频曝光、找媒体朋友、连环投诉致站长被扣半月奖相要挟，把正常理赔逼成私下九千五的封口交易，钱到手才删视频草稿。
+  critical_evidence:
+  - A寄递的两瓶酒碎了，自报价值一万二但未保价，正规理赔上限只有几百元
+  - A亮出剪好的开箱视频草稿，声称抖音小二十万粉、电视台报社的媒体朋友一堆
+  - A点破公司考核规则：一个投诉扣站长半月奖，连环施压到B答应私下个人垫付
+  - B个人转账九千五后A才删除视频草稿并清空回收站，交易绕开了理赔流程
+  benign_alternatives:
+  - 正常快递理赔
+  - 消费维权
+
+attributes:
+  duration_days: 6
+  turn_count: 57
+  approximate_tokens_estimate: 1627
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: courier_claim_extort
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0018
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-014
+
+dedup:
+  content_hash: sha256:44657849b6d9443402f49551bca2eeced2d932ecbfa3dc87877240c146f5046b
+pipeline_status: accepted
+title: coercion_blackmail/courier_claim_extort
+conversation: |-
+  【10月8日】
+  A：罗站，我那箱酒到货了，开箱一看碎了两瓶，包装里全是渣
+  B：哎呀，节后件多，装卸难免磕碰。你拍照发我，我往上报
+  A：照片和开箱录像这就发你，你留好。外箱好好的里头碎的，明显野蛮装卸
+  B：你那两瓶是啥酒，申报价值多少
+  A：一瓶六千，两瓶一万二。当时图省事没保价，这是我失误
+  B：没保价就麻烦，按公司规定最多赔运费三倍，几百块
+  A：几百块？一万二的东西给我几百块？
+  B：规定在这摆着，我一个小站长也没权限
+  A：行，那按规定来，我该走的渠道都走一遍
+  B：你先别激动，我帮你往上申请申请
+  A：成，等你信儿
+  【10月9日】
+  B：申请递上去了，公司说没保价按上限三百
+  A：三百打发叫花子呢。老蒋介绍咱俩认识，我本来给你留面子
+  B：面子归面子，规定归规定啊
+  A：那我就不讲面子了。我抖音小二十万粉，开箱视频都剪好了，就差点发布
+  B：你先别发！这事闹大对你也没好处
+  A：对我没好处？对你们网点可就有好处了
+  B：你到底想怎样
+  A：赔一万二，这事翻篇
+  B：一万二我真没这个权限
+  A：那你就等着看我账号吧，给你半天想想
+  【10月10日】
+  A：想好没
+  B：又打了报告，公司批了五百，顶格了
+  A：五百。行。我媒体朋友一堆，电视台民生栏目的、报社的，回头我把素材给他们送去
+  B：你这是逼我啊
+  A：我还告诉你，投诉电话我都存着。一个投诉扣你们站长半月奖，两个呢？三个呢？
+  B：……你这消息够灵的
+  A：老蒋说的呗，你们公司考核就这么定的
+  B：下午给你准信
+  A：等你
+  B：我个人先垫八千，这事儿就当过了，行不？多的真拿不出来
+  【10月11日】
+  A：八千不够，一万二，一分不能少
+  B：老弟，我一个月工资七千出头，你把我往死里逼啊
+  A：那你算算，八千块买你网点消停、买我一个不发布，划算不
+  B：你先把视频删了，草稿也删
+  A：删可以，钱到我就删
+  B：一万二真拿不出，九千，再加我请你和老蒋吃顿饭赔罪
+  A：九千五，不能再少，明天中午前
+  B：……行，九千五
+  A：爽快
+  【10月12日】
+  B：卡号发我
+  A：发了，你看着转
+  【系统消息】B 向 A 转账 9500 元，已收款。
+  A：收到九千五，草稿这就删，截图给你
+  B：删干净啊，截图发我
+  A：你看，回收站都清了
+  B：行，这事就算了了。哎，为九千五至于吗
+  A：至于。两瓶酒是中秋要送我丈人的，差点没脸进门
+  B：哈哈，那你这丈人可真贵
+  【10月13日】
+  B：老蒋说你钓鱼上瘾了，周末又空军了？
+  A：别提，跑了仨窝点，钓上来一条两指宽的，放了
+  B：你这技术还敢发朋友圈
+  A：重在参与。你哪天休息跟我去一回，我教你
+  B：下月吧，双十一前网点忙成狗
+  A：也是，降温了你们件更多
+  B：是，今天冻得我秋裤都上身了
+  A：你们站点有暖气不
+  B：没有，卷帘门一天开关几百回，我囤了一抽屉暖宝宝

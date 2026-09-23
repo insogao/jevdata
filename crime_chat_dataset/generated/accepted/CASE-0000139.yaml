@@ -1,0 +1,140 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000139
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000122
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-6cc300902213ce2e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: coercion_blackmail
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A握着高管B签字放行问题款项的底单，不加害也不举报，只以此为筹码逼B给自己晋升，威胁不从就让它送到审计面前。
+  critical_evidence:
+  - A声称留有去年华东供应商三笔签字的原始流程单扫描件和邮件备份，存于多处
+  - 开出的条件是华南区总监职位，位子一公示就当无事发生
+  - 明示不从就让东西自己走到该去的地方、审计见真章
+  - B承诺人事会提名并公示后，A承诺一个字不再提
+  benign_alternatives:
+  - 合法举报前的内部沟通
+  - 劳动仲裁相关协商
+
+attributes:
+  duration_days: 5
+  turn_count: 63
+  approximate_tokens_estimate: 1705
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: workplace_wrongdoing_leverage
+  risk: 2
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0019
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-014
+
+dedup:
+  content_hash: sha256:ec01d98028d0a73f5f3fac625e748e81d402ff6dee78658bd3111e28f8c4ee1d
+pipeline_status: accepted
+title: coercion_blackmail/workplace_wrongdoing_leverage
+conversation: |-
+  【5月12日】
+  B：下季度预算案你跟进来，周五前给我初稿
+  A：好的。另外想约您个时间，有件事邮件里说不合适
+  B：什么事
+  A：去年华东那批标的事，您签过字的那三笔
+  B：那三笔怎么了，流程都走完了
+  A：流程是走完了，可当时的原始流程单和往来邮件，我都留了底
+  B：你这是威胁我？
+  A：不敢，我就是个干活的，只想把话摆到桌面上
+  B：你到底想要什么，开个价
+  A：不是钱的事，我来公司七年，这次晋升名单又没我
+  B：你的意思是
+  A：华南区总监的位子，把我放进去，这事就当没发生过
+  B：你留了些什么
+  A：三笔签字的扫描件，前后两个月的邮件备份，存的地方不止一处
+  【5月13日】
+  B：你想要位子，人事那关怎么过，凭空多一个总监
+  A：架构调整的名义，上个月不是刚并了两个部门，操作空间您比我懂
+  B：你倒是研究得透
+  A：七年了，该研究的早研究了
+  B：位子的事没那么快，你先把手头项目做好
+  A：项目我从来没差过事，但这回我不想再陪跑
+  B：你就不怕闹大对你也没好处，你也参与过流程
+  A：我是执行，签字栏里没有我，这点我核对过很多遍
+  B：呵，连这个都查过
+  A：干活的习惯，例行留档
+  A：对了，团建定三亚还是海口了
+  B：三亚，助理在订酒店
+  B：你先把预算初稿整明白
+  【5月14日】
+  B：你所谓的底，经得起看吗
+  A：信不信在您，备份不止一处，这点昨天说过了
+  A：我只是不想再等一年
+  B：你就不怕我把你调去边缘部门
+  A：调我可以，东西不跟着我调，它们会自己去该去的地方
+  B：你这是把我往死里架
+  A：我只是要一个本该轮到我的位子，审计见不见，全看您这几天
+  B：下周人事会上我提你的名字
+  A：位子一公示，这事就算了，过去的事我一个字不提
+  B：你最好说话算话
+  A：我比谁都盼着翻篇
+  A：您那桌应酬散了没，替我敬赵总一杯
+  B：少贫，还在酒桌上
+  A：那您少喝点，回头还有要您拍板的事
+  B：睡觉，明天说
+  【5月15日】
+  B：位子可以推动，但你手里那些东西，公示当天要当场清干净
+  A：当面删给您看可以，存档的部分，在您履约之前不会动
+  B：你这是常年腌着一口刀
+  A：我这是给自己讨个公道，账我不乱报，活我不少干
+  B：你儿子明年小升初吧，学区的事我可以帮忙说话
+  A：孩子的事我自己跑，您把自家的事理顺比啥都强，雅思成绩都考出来了，嫂子厉害
+  B：公示文件我让人起草了，你低调点
+  A：一定
+  B：降压药按时吃，别学我硬扛
+  A：领您关心，血压计都买了，早晚各量
+  B：量完发我看看，别糊弄
+  A：好，您也早点休息
+  【5月16日】
+  A：三亚的日子定了没，机票有特价
+  B：下月中，公司统一订，你别自己下单
+  A：得令
+  B：预算终稿直接报财务，华东那两家按原框架续签，你别多手
+  A：明白，我就是个做表的
+  B：公示出了，往后嘴闭严
+  A：嘴严是我唯一的优点
+  B：终稿收到，做得不错
+  A：应该的，祝您周末愉快

@@ -1,0 +1,154 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000141
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000141
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-6155b6dd76091623
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: other_illicit_coordination
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A在封山的大雪前把山里弄来的活货出手，B开野味供货的三个店收货，两人约在后半夜桥头一手交钱一手交货。
+  critical_evidence:
+  - 熟人老同学关系，A每月从山里出活货给B供货，这个月只有四只、都是活的、一只二十来斤
+  - 定价一只一千三共五千现金，当面点清
+  - 约夜里两点在桥头第二根电线杆交接，B闪两下大灯接头
+  - B备好六个冰袋、A出泡沫箱，B收货后匀给三个店出手
+  benign_alternatives:
+  - 山货土产收购
+  - 养殖野味的合法讨论
+
+attributes:
+  duration_days: 2
+  turn_count: 79
+  approximate_tokens_estimate: 1570
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: forest_poaching
+  risk: 2
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0019
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-014
+
+dedup:
+  content_hash: sha256:fd5678db15bc5efcc9e5f10a959f7bf01289fd48d98e9be2c1c16682413f659b
+pipeline_status: accepted
+title: other_illicit_coordination/forest_poaching
+conversation: |-
+  【11月20日】
+  A：发小，山下下雪了没
+  B：下了薄薄一层，你那山上雪大吧
+  A：大，门都推不开，今年冷得早
+  B：冷点好，你那点存货正好放得住
+  A：就惦记这个是吧，哈哈
+  B：三个店等着我供货，我能不惦记
+  A：这个月只有四只，别嫌少，雪一封山货就出不来
+  B：四只？上个月还说有七八只
+  A：今年山里也空，转悠半个月就这数
+  B：行，四只什么成色
+  A：都活的，毛色正，一只二十来斤，个个精神
+  B：全要了，老价
+  A：一只一千三，看在老同学面上抹个零头，五千整
+  B：比市场里的金贵多了
+  A：那可不，山里跑的，肉质两码事
+  B：中午吃了吗
+  A：剩饭就咸菜，山上凑合
+  B：下山请你吃锅子，暖暖和和那种
+  A：成，先把正事定了
+  B：四只怎么个交法
+  A：明晚夜里两点，老地方，桥头第二根电线杆，你开车来
+  B：两点？不能白天吗
+  A：白天活货折腾不起，天热容易蔫，夜里凉快好走
+  B：行，听你的
+  A：冰袋你备好，我出泡沫箱，路上俩小时，到了不带味儿
+  B：冰袋家里冰柜冻着六个，够
+  A：那就齐活了
+  B：杀好再给我吗
+  A：给你活的，你那边自己弄，鲜字当头
+  B：活的路上不出问题吧
+  A：笼子都是结实的，路上蹦不坏，你放后备箱
+  B：嗯，就这么定
+  B：晚上少喝点，明晚有正事
+  A：村里酒席推不掉，我就露个面
+  B：悠着点，别误了后半夜
+  A：误不了，心里有数
+  【11月21日】
+  B：起了没，今晚几点再确认下
+  A：两点不变，桥头见
+  B：好，钱取好了，五千现金
+  A：当面点清，老规矩
+  A：昨晚酒席喝大了，腰到现在还酸
+  B：老毛病，膏药别停
+  A：贴着呢，小卖部那种，便宜管用
+  B：回头寄你两盒好的，我家用着灵
+  B：我家那个月考完了，数学又没上九十
+  A：别太逼他，男孩开窍晚，我当年数学不及格
+  B：你那是九百年前的事，哈哈
+  A：多鼓励少骂，管用
+  A：东西拾掇好了，笼子箱子冰袋一样不落
+  B：冰袋下午又冻了俩，八个
+  A：稳妥，天要是回暖路上得靠它们
+  B：你还缺啥不
+  A：不缺，就缺觉，今晚先眯两个钟头
+  B：抓紧，别到点起不来
+  A：年货你们城里有好的没，我娃念叨巧克力
+  B：我顺路捎两盒，当跑路费
+  A：那我占便宜了
+  B：客气啥，一年一回
+  B：我出门了，到桥头一点五十
+  A：我先过去等着，到了闪两下大灯
+  B：成
+  【11月22日】
+  A：到了，就我一个，直接过来
+  B：看见了，闪灯了
+  A：来，先点钱后装货
+  B：五千整，你数
+  A：对，没错，四只笼子点一下
+  B：一二三四，齐
+  A：箱子给我，冰袋码上，动作快
+  B：好嘞，齐了
+  A：走吧，我先看着你上主路
+  B：到了给你信
+  B：到家了，都精神着呢
+  A：缓一晚再出手，别急着
+  B：懂，三个店匀着送
+  A：下雪前再有货，先紧着你
+  B：老同学处成生意伙伴了
+  A：睡了，后半夜山里冷
+  B：晚安，路上小心
+  A：嗯

@@ -1,0 +1,140 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000152
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000044
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-3ad8de4c50cb6da3
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 熟人债主以‘了解你的住址、家人、工作单位’等方式持续施压逼债，透露已到过债务人小区和厂门口，约当面谈判并迫使其先还部分款项。
+  critical_evidence:
+  - A与B是欠条在手的借贷熟人，A催讨近一年未清的欠款并单方面限定周五前先还两万
+  - A表示知道B住哪个小区几栋、见过他家门口的白色轿车，还知道B妻子在百货那边上班
+  - A主动提出欠款当面谈，约定老乡聚餐后在茶馆单独见面，并要求带上借条照片改还款日期
+  - B迫于压力先信用卡套现转账8000元，A承认剩余四万二分期、十一月二十号前再还一万
+  benign_alternatives:
+  - 正规借贷催收的还款协商
+  - 熟人之间有借条的债务分期安排
+
+attributes:
+  duration_days: 3
+  turn_count: 64
+  approximate_tokens_estimate: 2193
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: debt_collection_threat
+  risk: 3
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0020
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-014
+
+dedup:
+  content_hash: sha256:7729333e008c0d43718114967bbf9cb5d4636208afa47826f442ba19714dfae0
+pipeline_status: accepted
+title: violence_extortion/debt_collection_threat
+conversation: |-
+  【10月17日】
+  A：老周，睡醒了没
+  B：刚醒，什么事，大清早的
+  A：也没什么，那笔钱到月底就满一年了，你这边什么打算
+  B：宽限我到年底，年底肯定给你结清
+  A：老周，当初是你自己写的条子按的手印。年底又是年底，你上回也是这么说的
+  B：我这不是厂里压着货款嘛，又不是不认账
+  A：认账就好办。这周五之前先给我两万，剩下的分三个月，你来定日子
+  B：两万我真拿不出来，八千行不行，我先把信用卡套出来
+  A：八千太少，你上个月不是刚提了新车
+  B：那车是贷款买的，月供九千多，你可以去看我的还款记录
+  A：我不用看记录，你住哪个小区几栋我都清楚，你家那辆白车我昨天还看见了
+  B：你什么意思，你还跟到我家来了？
+  A：没跟，巧了，顺路。你老婆在百货那边上班吧，挺辛苦的
+  B：你连她上班的地方都知道，你这是威胁我
+  A：我这是提醒你，大家都是熟人，别把事情闹到不好看，对你没好处
+  B：过两天老乡会聚餐你去不去，群里在接龙
+  A：看情况，手头事多。你要是把钱的事办利索了，我肯定去，咱们喝酒
+  B：行吧，我先把接龙报上
+  A：嗯
+  【10月18日】
+  A：早上好，钱凑得怎么样了
+  B：在凑，别催，我下午去银行
+  A：好，我等你消息。对了问你个事，你那套出租的房子还租着没
+  B：租着呢，一个月一千八，怎么了
+  A：没什么，就是说你要真周转不开，把房子退了租也能腾出一条路
+  B：房子不能动，那是留着给我养老的
+  A：我建议你重新想想，钱的事比房子要紧
+  B：说到卖东西，我那辆旧摩托挂二手平台半个月了没人问
+  A：你那辆破踏板谁要啊，卖了也好，男人有汽车就够了
+  B：那可是我青春，哈哈
+  A：青春值几个钱，钱才是硬道理
+  B：银行弄好了，我先转你八千，剩下的我真得慢慢来
+  A：八千就八千，先转吧，剩下的你说个准日子
+  B：转了，你查收
+  【系统消息】B 向 A 转账 8000 元，已收款。
+  A：收到了。剩余的四万二，十一月二十号之前给一万，剩下年底结清，这次我记下来了
+  B：行，十一月我尽量给一万
+  A：不是尽量，是必须。丑话说前头，你要是再拖，我就不能这么客客气气跟你说了
+  B：你还想要怎样，我都转钱了
+  A：我要的是按日子来。还有，你爸妈老宅那边在李家村吧，好些年没回去了吧
+  B：你提我爸妈干什么，有本事冲我来
+  A：我就提提。老人家年纪大了，别让他们操心，你按日子还钱，谁也不会去打扰他们
+  B：……行，十一月二十号，我记住了
+  A：对了明天大幅降温，你跑步别穿那么少，你朋友圈不是天天五公里
+  B：跑不了了，最近厂里加班，到家都十一点
+  A：加班好啊，加班有钱拿，正好还我钱
+  B：……你真是三句不离钱
+  【10月19日】
+  A：早上好，今天周五，别忘了老乡聚餐
+  B：晚上去。钱的事你也别一直催，我又不会跑
+  A：我不是催你，是提醒你。正好今晚吃完饭，咱们当面谈一次，把后面的日子当面定下来
+  B：当面谈就当面谈，你别带人来
+  A：我一个人去，你一个人来，老地方茶馆，就咱俩
+  B：行
+  B：说到茶馆，你们村口快递代收点挪哪去了，我给我妈寄的茶叶上周显示派送失败
+  A：挪到村口小卖部了。你给你妈寄茶叶怎么不直接给我，我捎回去
+  B：下回吧，这单我让驿站改地址了
+  A：行
+  B：我下午让会计把账理了理，十一月给一万问题不大，你放心
+  A：好，这话我爱听。别让我再跑你们厂门口等你了
+  B：你上次来厂里，保安都问我了，多丢人
+  A：那你按日子还钱，就不用丢人了
+  B：今晚吃完饭你少喝点，回头又要说胡话
+  A：喝，怎么不喝，就冲你今天转了八千，也得喝两杯
+  B：行行行，七点茶馆见，先谈完再说
+  A：好，七点见，带上你那张条子的照片，咱把日子改了
+  B：带着呢，晚上见

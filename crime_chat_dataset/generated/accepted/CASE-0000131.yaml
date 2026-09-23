@@ -1,0 +1,141 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000131
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000109
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-ee5f07cdefbc1ab6
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: theft_robbery_property_crime
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 表兄弟俩看似闲聊家长里短，实际在约定利用取款高峰在自助银行动手脚分账，表弟负责外围那台、事后按台分成，全程用装备、上场、收工等行话隐去做法。
+  critical_evidence:
+  - A网购的两个读卡器到货验过，藏在车库工具箱里没敢往家里拿
+  - 两人把装备分两批拿：小件周三A先带走，大件周五B开车到楼下取走放后备箱
+  - 行动时间算好周五晚七点到九点的取款高峰，东街和商场门口两台，B只管商场那台
+  - A先转B两千元定金并约定事成后一台一千五分成，当晚收工后约定次日八点半算账
+  benign_alternatives:
+  - 银行设备巡检
+  - 金融安防讨论
+
+attributes:
+  duration_days: 4
+  turn_count: 64
+  approximate_tokens_estimate: 1713
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: atm_skim_team
+  risk: 3
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0018
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-014
+
+dedup:
+  content_hash: sha256:6e7549249cea10f1946f8cc27198ab7b7547a935d94c6a1a098b7d7c792fc52f
+pipeline_status: accepted
+title: theft_robbery_property_crime/atm_skim_team
+conversation: |-
+  【10月8日】
+  B：哥，忙不
+  A：刚起，咋
+  B：上回你说的那个来钱的路子，还缺人不
+  A：你可想好，这不是长久的营生
+  B：我就想把信用社那笔逾期填上，就干这一回
+  A：表姨要是知道，非敲我脑袋不可
+  B：她敲你是因为你三十好几不处对象，跟这无关，哈哈
+  A：我网购那俩读卡器昨天到货了，验过，比上一批那对成色好
+  B：放哪儿了
+  A：先搁车库工具箱，没敢往家里拿，你嫂子眼睛尖
+  B：周三表姨生日你还去不
+  A：去，蛋糕定好了，再包六百红包，老人家图热闹
+  B：我拎两箱奶。那周五具体怎么弄
+  A：装备分两批拿：小件周三我先揣走，大件周五你开车来我楼下取
+  B：成，几点上场
+  A：算好了，就取款高峰那阵，周五晚七点到九点人挤人谁也顾不上谁。先东街和商场门口两台，你只管商场那台，别的别碰
+  【10月9日】
+  A：周三生日宴咱俩别喝多，误周五的事
+  B：就喝两杯啤酒，我有数
+  B：哥，你先垫了多少本钱
+  A：上批加这批一万二了，垫得手头都紧
+  B：那这样，干完先把我那份折进去
+  A：不用，这回成不成我都给你分辛苦钱
+  【系统消息】A 向 B 转账 2000 元，已收款。
+  B：这就转我两千？我还没干呢
+  A：定金。事成按台算，一台一千五
+  B：行，我就站我那台边上玩手机，别的不沾
+  A：你就当个摆设，主是我
+  B：我明天先去信用社把最低还款挪了，别周五出岔子
+  A：挪，你那点底细经不起拖
+  B：哎我妈要是问起来我在忙啥，我咋说
+  A：就说帮我看店，反正她也不细问
+  【10月10日】
+  B：哥，周五有雨，你车别停露天
+  A：知道，停地库。你那双篮球鞋到没
+  B：到了，就等周末上场。膝盖还有点不稳，医生让少蹦
+  A：那你悠着点，周五那摊子事你自己量力，不行就撤
+  B：成。干完这票，信用社我先还两千
+  A：窟窿堵上也别再沾，这营生做不长，我干完这批也打算收手
+  B：你能收手最好，表姨老念叨你
+  A：念叨我啥
+  B：说你三十好几了，对象都处不上
+  A：忙完这阵就去相亲，真去
+  B：哈哈，你年年都忙完这阵
+  A：这回是真的，我连相亲软件都下了
+  B：照片发我看呗，我给你把把关
+  A：滚，没个正形
+  A：小件我今晚取走了，车库里工具箱你周五来时整个拎走
+  B：行，周五晚七点我到你楼下
+  A：那个工具箱有密码锁，密码还是老家老门牌号
+  【10月11日】
+  B：哥，工具箱拎回来了，在后尾箱
+  A：七点才开始，去太早干嘛，商场里人多眼杂
+  B：晓得，先吃饭。东街那台你几时去
+  A：七点前后到，你只管你那台
+  A：中午再检查一遍，别磕了碰了
+  B：放心，毛巾裹着呢
+  B：哥，我这边完事了，你呢
+  A：齐活。回家先把东西收利索，明早我给你算账
+  B：今天人是真多，队排到门口
+  A：高峰就这样。早点歇着
+  B：明早几点，我给你捎豆浆
+  A：八点半。对了降温了，多穿点
+  B：一降十来度，厚冲锋衣都翻出来了
+  A：火锅约不，周日你拿分成请客
+  B：请请请，就怕剩不下几个子儿，哈哈
+  A：少贫。八点半见
+  B：好嘞

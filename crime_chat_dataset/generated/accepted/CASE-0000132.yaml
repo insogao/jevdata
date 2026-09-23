@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000132
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000049
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-8b9187d944ab5f29
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A作为老板的心腹向欠款分包人B带话施压，用长记性、别出人命等话术暗示武力教训，逼对方私下先付两万元换一句翻篇，构成以恐吓索取钱财的关系。
+  critical_evidence:
+  - 老板因仓库货物损失放话要给他长长记性，A原样带话给B并让他自己品
+  - A刻意不去办公室、约B晚九点单独到锦绣家园负二层车库见面，说人多眼杂
+  - 见面后A转述老板就一句话别出人命就行，B当晚认下并于次日先转两万元托A递话翻篇
+  - A持续施压：月底三万八一分不能差、往后别往仓库那边凑、你按规矩来就没人找你麻烦
+  benign_alternatives:
+  - 严格管理谈话
+  - 劳动纠纷调解
+
+attributes:
+  duration_days: 4
+  turn_count: 49
+  approximate_tokens_estimate: 1442
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: beat_example_warning
+  risk: 3
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0018
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-014
+
+dedup:
+  content_hash: sha256:f4e4ca50a0af80ce17cd0088a36838c0f38d80639f94cd8284cdb419c4a19125
+pipeline_status: accepted
+title: violence_extortion/beat_example_warning
+conversation: |-
+  【10月8日】
+  A：建斌，忙不
+  B：王哥，咋突然找我了
+  A：你新办公室装修得咋样了，上回说还晾着
+  B：完了，晾俩月了，就怕味儿大不敢搬
+  A：放几盆绿萝多开窗，我们那会儿也这么熬过来的
+  B：成。您找我是有事吧
+  A：前天仓库那批货的事，老板在会上点名了，火气不小
+  B：那批货运输压坏的大半，我认这个亏，货款三万八我月底前结清
+  A：他不听这些。他原话就一句——得给他长长记性
+  B：……这啥意思
+  A：我原样带到，意思你自己品。明晚有空没，过来一趟
+  B：去哪儿谈？公司？我把会计叫上把账摆开
+  A：不去公司。明晚九点，锦绣家园负二层车库，我在那边等你
+  【10月9日】
+  B：王哥，我想了半天还是把话说明白，货款三万八我月底前一定结清
+  B：在吗
+  A：在开会。钱是钱的事，老板要的不光是这个
+  B：那他还要啥
+  A：明晚见了再说。别多想，也别乱跑
+  B：别乱跑是啥意思，我又不是小孩
+  A：话我带到了就完了。晚上九点别迟
+  B：到了，B2，你在哪个位置
+  A：最里头柱子那儿，黑色SUV
+  B：王哥，到家了。今晚你说的那些，我认
+  A：你能这么想就好。老板那边就一句话——别出人命就行，剩下的你好自为之
+  B：这话听着瘆人……货款我先转两万给你行不
+  A：别走对公。你转我，我给你递话，让这事翻篇
+  B：……行，明上午我转
+  【10月11日】
+  B：王哥，两万这就转你，你跟老板那边把话递到位
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  A：收到了。话我中午吃饭时候说，你等着
+  B：麻烦王哥了，真不是我存心拖，那批货我赔进去不少
+  A：我尽量帮你圆。以后进货验货那关你自己上点心
+  B：晓得，晓得
+  A：递到了。老板没说啥，就嗯了一声
+  B：这算是翻篇了？
+  A：你当没这回事。月底那笔一分别差。还有，往后别往仓库那边凑
+  B：不去不去，绕着走
+  【10月12日】
+  A：月底的三万八别忘
+  B：忘不了，工程款一到就转
+  B：王哥，我闺女九月刚上初中，天天晚自习，我这心里七上八下的
+  A：都这样，熬过初一就好带了。成绩咋样
+  B：数学跟不上，愁人，正寻思找个补习班
+  A：别报太密的，孩子也遭罪
+  B：也是。哎这两天降温降得邪乎，你出门加衣服
+  A：是，一降十几度，秋裤都上身了
+  B：你们库房冬天更冷吧，上回我去搬样册冻够呛
+  A：可不是，库房不让开空调，我让司机给我带了件军大衣，哈哈
+  B：那晚上地库那种地方你也少待，阴得很
+  A：以后那种场合不会有了，你按规矩来就行
+  B：明白，一定按规矩来

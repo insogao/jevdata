@@ -1,0 +1,125 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000144
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000084
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-1ab2986ce4c0e65b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: privacy_doxxing
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: B通过中间人引荐雇佣懂技术的人，把另一个人的微信聊天记录按月打包导出来，动机不肯说，双方约定做完互不相认。
+  critical_evidence:
+  - 开口只要目标对象的微信记录，指定近三个月按月打包成文件夹
+  - 声称安卓苹果都能搞，按机型定周期、按月三千计价，抹零后八千五
+  - 经王总引荐建立商务关系，先付定金四千二，尾款四千三交货时结
+  - 要求手法不用管、别的不问，做完即清谁也不认识谁，知情越少越稳
+  benign_alternatives:
+  - 自己手机故障后的数据恢复
+  - 企业合规取证的内部协作
+
+attributes:
+  duration_days: 5
+  turn_count: 47
+  approximate_tokens_estimate: 1114
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: chat_log_export
+  risk: 3
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0019
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-014
+
+dedup:
+  content_hash: sha256:122dfd0010da05767cd44d16948ab69cf9e07deac717634e19d2cca865982c76
+pipeline_status: accepted
+title: privacy_doxxing/chat_log_export
+conversation: |-
+  【11月3日】
+  A：王总把你推给我了，说你有个急事
+  B：对，事情急，但要求单纯
+  A：你说说要什么
+  B：我只要微信记录，别的都不要
+  A：纯记录是吧，文字图片语音都算
+  B：主要文字
+  A：能做，安卓苹果都能搞，就是周期不一样
+  A：苹果慢些，要预留四五天，安卓快
+  B：对方用的就是苹果
+  A：那按一周内给你信准备
+  A：你们园区新开那家咖啡厅试了没，王总说拉花绝了
+  B：试了，燕麦拿铁不错，就是排队
+  A：下回帮我带一杯，我请
+  【11月4日】
+  B：补一句，能不能按月导，只要最近仨月
+  A：可以，按月打包，一个月一个文件夹
+  B：就要七八九这仨月
+  A：记下了，三个月，一个号
+  A：王总昨天还提你，说跟你共事过的都讲究
+  B：他抬举我，我就一条规矩，做完这事，两边干干净净
+  A：行有行规，做完即清，谁也不认识谁
+  B：晚上有个应酬，回聊
+  A：忙你的，事不耽误
+  B：又是陪客户，喝酒的命
+  A：少喝点，留点肝明天用
+  【11月5日】
+  A：昨晚喝大了没
+  B：半斤的量撑了一斤，早上头还嗡嗡的
+  A：小米粥安排上，你这胃是铁打的
+  B：费用怎么讲，你直接报数
+  A：按月三千，仨月九千，定金一半，东西出来结尾款
+  B：九千有点咬手，抹个零
+  A：看王总面子，八千五，再低交代不过去
+  B：行，八千五
+  B：中途要是有动静呢
+  A：手法的事你不用管，你只管把号码给我，别的不问
+  A：记住一条，到手之后你知道的越少越稳
+  【11月6日】
+  A：号码发我，备注好要哪几个月
+  B：发了，就一个号，苹果的
+  A：收到，今天开始弄，最迟下周三给你信
+  A：定金转一半，四千二凑个整
+  【系统消息】B 向 A 转账 4250 元，已收款。
+  B：转了四千二，尾款四千三交货时结
+  B：降温了，你们写字楼暖气开没
+  A：开了，薄毛衣正好
+  B：我还在外面跑客户，冻成狗
+  【11月7日】
+  A：按月的部分理出来一半了，下周三前给你
+  B：尾款我备好了，别拖过周末
+  A：说下周三就下周三
+  B：行，等信儿

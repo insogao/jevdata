@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000147
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000040
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-9c5aa3b22f84ad55
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 无真实隐藏意图：表面像私下渠道拿便宜烟，实为亲属经营的持证烟酒批发部的正常批发业务，报价、看样、开票一应俱全。
+  critical_evidence:
+  - 供货方是持烟草专卖证的烟酒批发部，挂门脸、导航可查、柜台明面看样
+  - 批发价比零售便宜一成多，二十条玉溪四千二并开具机打发票
+  - 定金两千转给对方后索取收据并抵入总货款，余款提货时结清
+  - 结算走店里对公账户或扫码，票随货走，价格单锁价一个月
+  benign_alternatives:
+  - 免税店代购讨论
+  - 正常卷烟批发
+
+attributes:
+  duration_days: 6
+  turn_count: 53
+  approximate_tokens_estimate: 1205
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: tobacco_smuggle
+  risk: 0
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0019
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-014
+
+dedup:
+  content_hash: sha256:7a97fe9568ae5a8ab5a8d795b5fbd7eb3e989d4663cf7563e61c4107f58e54f1
+pipeline_status: accepted
+title: contraband_illicit_trade/tobacco_smuggle
+conversation: |-
+  【9月22日】
+  A：食堂豆浆机又坏了，排了二十分钟
+  B：我自带面包，机智如我
+  A：下回捎我一个
+  B：收一块钱跑腿费，哈哈
+  B：对了，你小舅子那个烟酒批发部还开着吧
+  A：开着呢，你问这个干嘛
+  B：我表哥开小超市，想换个稳定的拿货渠道，正价太吃成本
+  A：他那儿是批发价，比柜台便宜一成多，二条起送
+  B：那一条能便宜多少，票呢
+  A：一条省二三十吧，有票，机打发票，月结都行，烟草证挂着的
+  B：那挺好，正规渠道还便宜
+  A：直接找我也一样，我给他管账
+  B：那先按他报价单来一份
+  A：行，明早我把品种和报价单发你
+  【9月23日】
+  A：昨晚那球绝杀了吧
+  B：看了，吼得邻居敲墙
+  A：周五约一场
+  B：算我一个，好久没跑动
+  B：我表哥说先拿二十条玉溪试试你们服务
+  A：批发价四千二，比零售省四百出头，发票开在一起
+  B：价合理，货我想先看看
+  A：周六上午来店里，柜台随便看，都在明面上
+  B：城东仓库那边那家？
+  A：对，门脸挂着牌子，导航搜得到
+  B：好，周六上午十点
+  【9月24日】
+  B：今天跳水式降温
+  A：秋裤已经安排上了
+  B：明天还更低，别感冒
+  A：周六下不下雨店里都不歇，你看着天出门
+  A：结算都走店里对公账户，或者扫码，要发票当场开
+  B：能开票太好了，我表哥入账方便
+  A：正经生意，票款齐全
+  B：成
+  【9月25日】
+  B：今晚加班不，顺路帮我带份炒饭
+  A：加到八点，老三样
+  B：懂我
+  B：再确认下，价格别到时候变
+  A：报价单白纸黑字，一个月内锁价，涨跌不改
+  B：行，这话我爱听
+  A：量大还有阶梯返点，季度结
+  【9月26日】
+  A：周六提货前先付两千定金锁货，余款提货时结清，定金开在总货款里
+  B：行，规矩正常
+  【系统消息】B 向 A 转账 2000 元，已收款。
+  B：定金转了，收一下
+  A：收到，收据拍照发你，周六抵货款
+  A：双十一你囤啥了
+  B：纸巾猫粮，穷人只配刚需
+  A：你家橘座又沉了三斤吧
+  B：它那是过冬战略储备
+  【9月27日】
+  B：到楼下了，你们门口牌子挺显眼
+  A：上来吧，先喝茶，货在展厅随便挑
+  B：票记得一起给我
+  A：放心，票随货走
+  B：弄完请你撸串

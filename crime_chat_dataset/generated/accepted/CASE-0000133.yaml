@@ -1,0 +1,119 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000133
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-0ddf06d396930e8f
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 供应商与甲方经办人纯属正常业务往来，唯一刺眼的是一次被对方当场挡回去的送购物卡玩笑和一条没有下文的深夜客气话，此外再无任何对价往来，转账也有团建AA的决定性正常解释。
+  critical_evidence:
+  - 辅料验收按流程排期、交单、通过，B多次强调按流程办
+  - A开过一次要给孩子捎购物卡、面值保密的玩笑，被B以按流程办的事不兴这个挡回，此后再无下文
+  - A深夜发过一条请您喝茶的客气话，B未接话，次日转入团建安排
+  - B转给A的560元是部门团建农家乐AA款，人均280共两人份，钓位由A统一预订
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司福利卡
+
+attributes:
+  duration_days: 6
+  turn_count: 40
+  approximate_tokens_estimate: 1257
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0018
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-014
+
+dedup:
+  content_hash: sha256:63062f493e87244afabdf28fdff9a7d86c8fe8b3f1de8cd22e52da517f20c14a
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【10月8日】
+  A：王经理早，上回说的那批辅料，验收排期出来没
+  B：排上了，这周四上午，提前把报验单交到库房
+  A：好嘞，上午就送，还是交给小陈吧
+  B：交小陈，按流程走就行
+  A：对了马上中秋，节前咱们碰一下？我请您尝尝今年头茬蟹
+  B：蟹就不必，工作午餐就行，周四验完一起吃食堂
+  A：食堂好，我就爱你们食堂的卤味
+  【10月9日】
+  A：报验单和检测报告都交小陈了，您给把把关
+  B：我看下。听说你家孩子刚上初中，适应没
+  A：可别提了，天天作业写到十一点，我辅导不了，干着急
+  B：初中都这样，熬过初一就好，我家那位当年也这样
+  A：借您吉言
+  B：单子没问题，周四上午九点，别迟到
+  A：一定早到
+  【10月10日】
+  A：王经理，明儿验收，我给您和老师们备点茶歇，咖啡奶茶随便点
+  B：茶歇不用，一瓶水就行，验完各回各家
+  A：听您的。哎晚上凉了，您加衣服
+  B：是，一降七八度，秋裤都上身了
+  A：哈哈同款秋裤
+  B：你也有？那咱俩这岁数算实锤了
+  【10月11日】
+  A：王经理，验收挺顺利，谢谢各位老师费心
+  B：材料全，该过就过，按流程来的
+  A：顺带说一句，我们单位过节发了几张购物卡，回头给您孩子捎两张，面值保密，哈哈
+  B：可别，孩子写作业的卡都有了。按流程办的事，不兴这个
+  A：跟您开玩笑呢，哈哈。那就说好了，食堂那顿
+  B：可以，十二点我还有个会，抓紧
+  B：今天卤味不错吧，我就说食堂招牌
+  【10月12日】
+  A：王经理，今天多亏您安排，改天我请您喝茶
+  【10月13日】
+  A：对了下周六部门团建，农家乐，您上次说想钓鱼，来不
+  B：来，钓具都落灰了。AA怎么算
+  A：人均280，农家乐和钓位我统一订的，您转我就行
+  B：成，回头转你
+  B：天气预报说周六晴，正好
+  B：团建的钱我转你了，我和部门老李两个人份
+  【系统消息】B 向 A 转账 560 元，已收款。
+  A：收到560，两个人的，把你俩排东边柳树阴凉那排了
+  B：行。对了上次验收的单子归档了，尾款按合同节点月底走
+  A：好嘞，发票我提前开好送来
+  B：提前开，别到月底挤
+  A：晓得。钓鱼那天我带新买的竿，您帮我瞅瞅值不值
+  B：带来，我这双火眼金睛专治交智商税，哈哈
