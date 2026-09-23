@@ -1,0 +1,236 @@
+{
+ "key": "b82c045",
+ "archetype_id": "ARC-000099",
+ "subtype": "refund_cycle_wash",
+ "latent_intent": "网店老板 A 与专门走账的中间人 B 合谋，用虚假退款把来路不明的钱过一遍，要求原路退到指定的另一张卡，B 收两个点手续费，两人还商量把店铺流水做漂亮。",
+ "critical_facts": [
+  "A 提出把一笔钱从店铺「退款」通道走一遍，原路退到 B 指定的那张卡",
+  "B 按金额收两个点手续费，说这是行价",
+  "A 提到这样走还能把店铺流水做得好看出账好看",
+  "A 先转一笔 8000 元让 B 试一单"
+ ],
+ "benign_alternatives": [
+  "正常电商退款",
+  "刷单退款纠纷讨论"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "9月1日 11:00",
+   "speaker": "A",
+   "text": "哥 之前说的走账的事 能做不"
+  },
+  {
+   "type": "message",
+   "time": "9月1日 11:30",
+   "speaker": "B",
+   "text": "能 量多大 用哪种通道"
+  },
+  {
+   "type": "message",
+   "time": "9月1日 11:33",
+   "speaker": "A",
+   "text": "先从店铺的退款走 客户看不到 后台自己点一下就退了"
+  },
+  {
+   "type": "message",
+   "time": "9月1日 11:36",
+   "speaker": "B",
+   "text": "退到哪张卡 得是能接钱的"
+  },
+  {
+   "type": "message",
+   "time": "9月1日 11:39",
+   "speaker": "A",
+   "text": "原路退回指定卡 我发账号给你 别退回下单那张"
+  },
+  {
+   "type": "message",
+   "time": "9月1日 11:42",
+   "speaker": "B",
+   "text": "懂 两边分开 查起来才像正常纠纷"
+  },
+  {
+   "type": "message",
+   "time": "9月1日 11:45",
+   "speaker": "A",
+   "text": "手续费怎么算"
+  },
+  {
+   "type": "message",
+   "time": "9月1日 11:48",
+   "speaker": "B",
+   "text": "两个点 行价 我这不接小单 一万起"
+  },
+  {
+   "type": "message",
+   "time": "9月1日 11:51",
+   "speaker": "A",
+   "text": "行 顺便把店铺流水做起来 我要冲个额度 最近想贷点款"
+  },
+  {
+   "type": "message",
+   "time": "9月1日 11:54",
+   "speaker": "B",
+   "text": "这个我在行 走几笔大的 流水立刻好看"
+  },
+  {
+   "type": "message",
+   "time": "9月2日 20:10",
+   "speaker": "A",
+   "text": "先试一单 我给你转八千 你走一遍看看顺不"
+  },
+  {
+   "type": "transfer",
+   "time": "9月2日 20:16",
+   "from": "A",
+   "to": "B",
+   "amount": 8000,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "9月2日 20:18",
+   "speaker": "B",
+   "text": "收到 明早就走 走完给你截图"
+  },
+  {
+   "type": "message",
+   "time": "9月2日 20:21",
+   "speaker": "A",
+   "text": "时间上别太规律 一天走一笔就行"
+  },
+  {
+   "type": "message",
+   "time": "9月2日 20:24",
+   "speaker": "B",
+   "text": "放心 我比你想得细"
+  },
+  {
+   "type": "message",
+   "time": "9月3日 09:40",
+   "speaker": "B",
+   "text": "第一笔走完了 截图发你"
+  },
+  {
+   "type": "image",
+   "time": "9月3日 09:42",
+   "speaker": "B",
+   "note": "后台退款记录截图（占位）"
+  },
+  {
+   "type": "message",
+   "time": "9月3日 09:45",
+   "speaker": "A",
+   "text": "看着挺像那么回事 我那客户要挑不出毛病"
+  },
+  {
+   "type": "message",
+   "time": "9月3日 09:48",
+   "speaker": "B",
+   "text": "纠纷单号我都编好了 前后时间对得上"
+  },
+  {
+   "type": "message",
+   "time": "9月3日 12:20",
+   "speaker": "A",
+   "text": "中午了 你吃了没"
+  },
+  {
+   "type": "message",
+   "time": "9月3日 12:24",
+   "speaker": "B",
+   "text": "刚吃完 你这店几号扣点 别让平台盯上"
+  },
+  {
+   "type": "message",
+   "time": "9月3日 12:27",
+   "speaker": "A",
+   "text": "心里有数 我专门挑活动期走"
+  },
+  {
+   "type": "message",
+   "time": "9月4日 15:00",
+   "speaker": "A",
+   "text": "再走两笔 一共三万"
+  },
+  {
+   "type": "message",
+   "time": "9月4日 15:04",
+   "speaker": "B",
+   "text": "行 手续费我先扣 到账给你说"
+  },
+  {
+   "type": "message",
+   "time": "9月4日 15:07",
+   "speaker": "A",
+   "text": "对了 那张卡是我表弟的 你备注写货款就行"
+  },
+  {
+   "type": "message",
+   "time": "9月4日 15:10",
+   "speaker": "B",
+   "text": "嗯 货款比退款干净"
+  },
+  {
+   "type": "message",
+   "time": "9月4日 18:40",
+   "speaker": "B",
+   "text": "两笔都到 手续费扣了六百 剩下转你表弟卡了"
+  },
+  {
+   "type": "message",
+   "time": "9月4日 18:44",
+   "speaker": "A",
+   "text": "收到 这效率可以"
+  },
+  {
+   "type": "message",
+   "time": "9月5日 10:10",
+   "speaker": "A",
+   "text": "我算了下 走一个月流水能好看不少 贷款那边稳了"
+  },
+  {
+   "type": "message",
+   "time": "9月5日 10:14",
+   "speaker": "B",
+   "text": "别走太猛 一个店一个月流水翻几倍银行也会问"
+  },
+  {
+   "type": "message",
+   "time": "9月5日 10:17",
+   "speaker": "A",
+   "text": "有道理 那我们换几个店轮着走"
+  },
+  {
+   "type": "message",
+   "time": "9月5日 10:20",
+   "speaker": "B",
+   "text": "对 别把鸡蛋放一个篮子"
+  },
+  {
+   "type": "message",
+   "time": "9月6日 20:30",
+   "speaker": "A",
+   "text": "再帮我找两个能接的店铺 我出点介绍费"
+  },
+  {
+   "type": "message",
+   "time": "9月6日 20:34",
+   "speaker": "B",
+   "text": "有 我熟人开的 明天拉个群"
+  },
+  {
+   "type": "message",
+   "time": "9月6日 20:37",
+   "speaker": "A",
+   "text": "行 这事办成了亏待不了你"
+  },
+  {
+   "type": "message",
+   "time": "9月6日 20:40",
+   "speaker": "B",
+   "text": "先说好 我只收点 别的我不掺和"
+  }
+ ]
+}

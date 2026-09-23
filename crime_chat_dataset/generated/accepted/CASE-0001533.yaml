@@ -1,0 +1,131 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001533
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-fab11e92c1b59446
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 为满足招聘客户的快速触达需求，试探从 B 处取得未经员工同意的整部门电话、离职名单或简历；B 拒绝提供个人资料，只同意公开岗位或经本人授权的自愿推荐。
+  critical_evidence:
+  - A 要求获得整个部门的电话或离职名单以供客户直接联系
+  - A 提到简历按份计价，表现出把求职者资料当作批量资源的倾向
+  - B 指出在职与离职人员资料都不能未经同意外传
+  - B 提供可接受替代方式：公开招聘信息，由候选人自愿联系或授权转交
+  - 对话中的小额转账是餐费/打车等日常报销，与个人资料无关
+  benign_alternatives:
+  - 猎头公开发布职位并由求职者自愿应聘
+  - 经授权后的一对一候选人推荐
+
+attributes:
+  duration_days: 6
+  turn_count: 51
+  approximate_tokens_estimate: 1215
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0155
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-080
+
+dedup:
+  content_hash: sha256:a29d0f7fae560e362fa7aa98d7637963baae91d678bf3974d43e7e74d95f44d3
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【5月9日】
+  A：几家客户又在问招聘的事，想要一份完整的部门联系人。
+  B：我不能给通讯录，员工没有授权。
+  A：离职名单也没有吗？他们想找刚出来的人。
+  B：离职后的个人信息仍然不能随便提供。
+  A：有人跟我说简历按份卖，报价还挺高。
+  B：这类资料不该按份卖。我可以问问谁愿意主动联系。
+  A：附近新修了条步道，你去过吗？
+  B：还没，听说傍晚风景不错。
+  A：周末不下雨就去走走。
+  【5月10日】
+  B：可以，带瓶水就行。
+  A：我再叫上小周？
+  B：好，人多也热闹。
+  A：整个部门电话我先不提了，怕你为难。
+  B：谢谢，岗位信息公开出去让候选人自己报名。
+  A：我刚转了90，昨天打车我先垫的那笔。
+  B：收到了，你还多算了十块。
+  A：算上路边停车那个小票了。
+  【5月11日】
+  B：好，我核一下再退差额。
+  A：你妈上次说要换个电饭煲，买了吗？
+  B：还没，先把旧的清理了再看。
+  A：我家那个内胆涂层有点花了。
+  B：那最好别继续用，挑个容量合适的。
+  A：周末去商场转转？
+  B：行，顺便看看有没有活动。
+  A：客户问能不能今天拿离职名单，我回他没有。
+  B：对，别帮他找内部文件。
+  【系统消息】A 向 B 转账 90 元，已收款。
+  【5月12日】
+  A：那我发岗位描述，愿意聊的再自己报名。
+  B：把公司名称和岗位写清楚，别用模糊的邀约。
+  A：他们说先电话聊比较快。
+  B：候选人愿意留下电话再联系。
+  A：你们这周排班改了吗？
+  B：周四换到下午，其他没动。
+  A：那我把会议挪到周五上午。
+  B：可以，我那会儿有空。
+  【5月13日】
+  A：邀请发你了。
+  B：收到了，回头确认材料。
+  A：那个简历报价我拒了，让对方走招聘平台。
+  B：这样处理省心。
+  A：他说别人都能弄，我也没接话。
+  B：不用比较，资料边界一样。
+  A：后续有自愿投递我再提醒你。
+  B：可以，让本人直接发最好。
+  A：你家猫最近还挑食吗？
+  【5月14日】
+  B：好多了，换回之前那种粮就肯吃。
+  A：我朋友也遇到过，换粮要慢慢来。
+  B：对，混着旧粮一点点换。
+  A：我把这招告诉她。
+  B：希望有用。
+  A：今天总算没那么赶。
+  B：早点下班吧。
+  A：对了，办公室打印机也修好了，明天不用排队。

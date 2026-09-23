@@ -1,0 +1,133 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001534
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-3d5bbed686a95ca4
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 受熟人所托，试探让学校工作人员 B 越过家长端权限查看另一名学生的成绩并提供截图；B 明确拒绝代查，只解释监护人查询本人孩子的官方流程，A 随后收回请求。
+  critical_evidence:
+  - A 不是该学生监护人，却提出请 B 在校内系统查看其成绩并给截图
+  - B 明确说明只能按权限处理自己负责的教学工作，不能查其他学生档案
+  - A 以红包话题试探关系，但红包仅为公开的班级活动找零，与成绩请求无关
+  - B 引导对方家长本人使用官方入口或预约班主任沟通；对话最终未发生代查或泄露
+  benign_alternatives:
+  - 家长查询自己孩子成绩
+  - 学校通过官方入口提供脱敏班级统计
+
+attributes:
+  duration_days: 3
+  turn_count: 58
+  approximate_tokens_estimate: 1632
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0155
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-080
+
+dedup:
+  content_hash: sha256:bb318b6d20ac6e57add5f6e987ff12541c4523e35f9284fa92a4f0afca16478d
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【5月10日】
+  A：你在学校那边还忙吗，想问个成绩查询的事，别耽误你太久。
+  B：刚下课，怎么了？如果是自己孩子，家长端能查。
+  A：不是我家那个，是邻居家孩子，他爸最近一直问我。
+  B：那得让家长本人走正式入口，别的学生信息我不能点开。
+  A：你就帮我看下大概位置，名字我等会发你？
+  B：名字也先别发，群里说过不要收同学资料。
+  A：你家猫最近还挑食吗？
+  B：好多了，换回之前那种粮就肯吃。
+  A：我朋友也遇到过，换粮要慢慢来。
+  B：对，混着旧粮一点点换。
+  A：我把这招告诉她。
+  B：希望有用。
+  A：你这么谨慎啊，我只是想帮他爸心里有数。
+  B：理解，但我只能解释查询流程，不能替别人查。
+  A：我把上次设计的红包海报发到群里了，记得看下。
+  B：看到了，是班级活动的抽奖海报吧，看到了。
+  A：嗯，家委会做的，不是单独给你的。
+  B：好，那就清楚了，最近家长群消息太多。
+  A：中午吃什么？我不想再点外卖了。
+  B：楼下新开了家盖饭，评价还可以。
+  【5月11日】
+  A：有清淡点的吗？最近胃不太舒服。
+  B：有番茄鸡蛋和菌菇汤。
+  A：那我也去试试。
+  B：一点见，给你留位置。
+  A：那如果他爸自己来问，你能不能告诉他入口在哪？
+  B：官方小程序里有成绩单，家长实名后只显示自己绑定的孩子。
+  A：行，我让他自己弄。可是他非说想跟班里平均分比一下。
+  B：学校会发脱敏的班级统计，不含单个同学姓名。
+  A：他想看的是孩子在班里的大概位置，我也不好说。
+  B：可以约班主任聊自己孩子的情况，不能拿别人分数作比较。
+  A：最近肩膀有点酸，可能坐太久了。
+  B：起来走几分钟会舒服些，别一直盯屏幕。
+  A：我刚倒了杯水，顺便活动下。
+  B：挺好，晚上早点休息。
+  A：争取今天不熬夜。
+  B：给自己留点空档。
+  A：我刚想起来，你说过周五有家长开放日？
+  B：对，下午三点，带身份证登记就行。
+  A：他爸爸工作走不开，可能让我替他去。
+  【5月12日】
+  B：可以先问班主任是否接受委托，别替家长签字。
+  A：我懂，我先把公开安排转给他。
+  B：这样最稳，具体成绩让监护人本人问。
+  A：我在看一个小台灯，晚上看书用。
+  B：选光线柔和、亮度能调的。
+  A：桌面不大，最好底座小点。
+  B：夹灯也可以，省位置。
+  A：对，我找找看。
+  B：买之前量一下桌沿。
+  A：他又来催我了，说就要一张截图给家里看。
+  B：我不会截别人的档案；系统里每次查询都有权限记录。
+  A：好，我跟他说学校不支持代查，别再托我了。
+  B：谢谢，省得后面解释不清。
+  A：对了，周末你们学校运动会还办吗？
+  B：看天气，预报说可能下雨，今天还没最后通知。
+  A：我家小孩盼着接力，鞋都拿出来了。
+  B：先备个室内替代项目吧，通知会发群里。
+  A：我把家长端的官方说明转给他了。
+  B：很好，让监护人自己验证绑定信息。

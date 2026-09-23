@@ -1,0 +1,130 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001555
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000085
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-fe0de6e3ee5ec31f
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 的舅舅走失，家属着急想通过「以图找人」私下查人下落；做安防的 B 从行业角度说明人脸比对的合法边界，劝 A 走报警和正规寻人渠道，A 最终只在 B 处买了台家用摄像头看门口，没有进行任何违规查询。
+  critical_evidence:
+  - A 问一张侧脸照片能不能用来比对找人，B 说技术上可以但必须有授权、私下比对违法
+  - A 说明舅舅走失三天，B 让 A 立刻报警走失踪人口系统而不是找私人渠道
+  - B 明确拒绝帮 A 私下查人，提醒别信网上那些「出结果付费」的广告
+  - A 只在 B 处购买一台 380 元的家用摄像头，用于查看自家门口，交易正常开票
+  benign_alternatives:
+  - 安防行业讨论
+  - 失联亲友寻人报警
+
+attributes:
+  duration_days: 3
+  turn_count: 54
+  approximate_tokens_estimate: 1101
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: face_search
+  risk: 0
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0160
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:50412c2bcf31d4a8891bf3aa4abbccb2a89845da4374a032cc1b9d08de504bbc
+pipeline_status: accepted
+title: privacy_doxxing/face_search
+conversation: |-
+  【10月14日】
+  A：你好 听说你做人脸识别这块
+  B：对 安防行业 怎么了
+  A：我想问 一张侧脸能不能比对人
+  B：技术上是能 但得本人授权 私自比对是违法的
+  A：我舅舅走失三天了 家里急得不行
+  B：那赶紧报警 走失踪人口 他们有系统
+  A：报了 还没消息
+  B：那也得等 别信网上那些能查人的
+  A：有人说出一万就能查
+  B：那些基本都是骗子 别花冤枉钱
+  A：今天降温 我在派出所门口等消息 冻得慌
+  B：先去吃点热的 家人别垮了
+  A：吃不下
+  B：越是这时候越要稳住
+  A：我舅平时爱去公园下棋 我贴了寻人启事
+  B：对 这个有用 再发发朋友圈和本地群
+  A：都发了
+  A：我想在你那买套家用摄像头 看看门口有没有线索
+  B：行 我发你两个型号 家用够的
+  A：要能看夜里的
+  B：这款带夜视 三百八 正品开票
+  A：就这个
+  【系统消息】A 向 B 转账 380 元，已收款。
+  B：收到 我下午给你寄 发票一起
+  A：谢谢
+  B：安装的时候对着门口 别对邻居家
+  A：知道 就照自家门前
+  B：对 别侵别人隐私
+  【10月15日】
+  B：派出所那边有消息没
+  A：还没有 我天天打电话催
+  B：催是对 但也别太频繁 人家也忙
+  A：我懂
+  A：摄像头到了 我装上了
+  B：好用不
+  A：画面清楚 晚上也行
+  B：那就好
+  A：中午我妈煮了面 让我多吃点
+  B：阿姨说得对 你得吃
+  A：嗯 吃了两大碗
+  B：我跟同行也打听了一嘴 这种走失多数能找着
+  A：借你吉言
+  B：有线索先给派出所 别自己乱跑
+  A：好
+  【10月16日】
+  B：今天咋样
+  A：有线索了!有人说在西站见过像的
+  B：那赶紧给派出所 让他们调监控
+  A：已经说了 他们去查
+  A：真的太谢谢你了 那天要不是你拦着 我差点给骗子转钱
+  B：那种「一张侧脸就能查」的全是坑
+  A：记下了
+  B：摄像头那边要扩容随时找我 走正规渠道就行
+  A：好 有需要找你
+  A：派出所来电话了 说正在核实
+  B：好事 稳着来
+  A：嗯 等消息

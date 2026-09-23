@@ -1,0 +1,128 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001556
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000069
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-0baa4678e7796981
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: B 早前因家里急事向朋友 A 借了一笔钱，眼下还不上；两人平心静气地协商分期还款，约定每月还两千、B 愿意多接兼职尽早还清，全程是正常民间借贷的还款安排，没有任何以身体或其他东西抵债的内容。
+  critical_evidence:
+  - B 主动说明因母亲住院这月还不上，向 A 表达歉意
+  - A 表示不急、让 B 先顾家里，并提出可以按月分期还
+  - 两人约定每月还两千，B 说会接兼职多还一点，A 也同意可以提前还
+  - B 通过转账还了第一笔两千元，A 确认收到并让 B 别有压力
+  benign_alternatives:
+  - 分期还款协商
+  - 劳动抵偿合法约定
+
+attributes:
+  duration_days: 4
+  turn_count: 51
+  approximate_tokens_estimate: 1014
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: debt_body_exchange
+  risk: 0
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0160
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:14fe14147e92ba475328819624bfe37b3acf16d4e9a9e4532342ad791b42fdb5
+pipeline_status: accepted
+title: sexual_transaction_exploitation/debt_body_exchange
+conversation: |-
+  【9月27日】
+  B：哥 上次借你那钱 我这月怕是还不上
+  A：出啥事了
+  B：我妈住院 花了不少 手头都空了
+  A：那就先缓缓 不急这一时
+  B：我心里过意不去 说好这个月还的
+  A：你先把家里顾好 钱的事好说
+  B：谢谢你 哥
+  A：今天雨挺大 你在医院还是在家
+  B：刚从医院回来 一身湿
+  A：赶紧换身干的 别跟着病倒
+  B：知道 就是累
+  A：要不这样 每月还两千 分几个月 你看行不
+  B：行 我尽量早点还 先还点意思意思
+  A：不用意思 按计划来就行
+  B：那这月底我先转两千 表个态
+  A：随你 别勉强
+  B：晚饭还没吃 医院那边刚安顿好
+  A：先吃饭 别扛着
+  B：楼下买个包子对付下
+  【9月28日】
+  B：昨晚我接了个周末的兼职 能多挣点
+  A：别把身体熬垮了
+  B：白天上班晚上打零工 能行
+  A：钱慢慢还 我不催你
+  A：今天单位食堂有你爱吃的糖醋排骨
+  B：你都记着我爱吃啥
+  A：认识这么多年了
+  B：我妈今天精神好多了 能下地走两步
+  A：那就好 你也别太揪心
+  B：嗯 慢慢来吧
+  【9月29日】
+  A：我这边账单理了下 你之前借的是两万一
+  B：对 我记着呢
+  A：每月两千 差不多十个月 不急
+  B：好 我争取半年还清
+  A：有多大劲使多大劲 别硬撑
+  B：今天太阳好 我把被子晒了
+  A：这天晒东西正好
+  B：晒完心情都好点
+  A：借条我收着呢 你放心
+  B：有借条我反而安心 明明白白
+  A：对 亲兄弟明算账
+  【9月30日】
+  B：这个月的我先给你转过去
+  A：好
+  【系统消息】B 向 A 转账 2000 元，已收款。
+  A：收到了 记你账上了
+  B：剩下的我按月还
+  A：别有压力 先顾家里
+  B：等妈出院我请你吃饭
+  A：行 到时候我请你 庆祝阿姨康复
+  B：哈哈 好
+  A：周末要是加班别忘吃饭
+  B：记着呢 谢谢你一直没催我
+  A：都是朋友 说这干啥

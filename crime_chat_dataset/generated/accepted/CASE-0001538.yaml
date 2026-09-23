@@ -1,0 +1,120 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001538
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-50f972b9e553cc11
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 为满足招聘客户的快速触达需求，试探从 B 处取得未经员工同意的整部门电话、离职名单或简历；B 拒绝提供个人资料，只同意公开岗位或经本人授权的自愿推荐。
+  critical_evidence:
+  - A 要求获得整个部门的电话或离职名单以供客户直接联系
+  - A 提到简历按份计价，表现出把求职者资料当作批量资源的倾向
+  - B 指出在职与离职人员资料都不能未经同意外传
+  - B 提供可接受替代方式：公开招聘信息，由候选人自愿联系或授权转交
+  - 对话中的小额转账是餐费/打车等日常报销，与个人资料无关
+  benign_alternatives:
+  - 猎头公开发布职位并由求职者自愿应聘
+  - 经授权后的一对一候选人推荐
+
+attributes:
+  duration_days: 2
+  turn_count: 44
+  approximate_tokens_estimate: 1122
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0155
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-080
+
+dedup:
+  content_hash: sha256:8ffd8004824b02c6fea352e92c1b13f03d3a723ca7b4b60ff7a9e31195b1510b
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【5月12日】
+  A：客户想补一批招聘线索，之前你说认识几个做行政的。
+  B：我可以把岗位发给他们自愿看，通讯录不能整份给。
+  A：整个部门电话拿到就省事，简历按份卖也有人接。
+  B：我不碰没授权的名单，离职名单也一样。
+  A：我只负责介绍，不保存他们的信息。
+  B：介绍可以一对一征求同意，不能先把号码交给客户。
+  A：你妈上次说要换个电饭煲，买了吗？
+  B：还没，先把旧的清理了再看。
+  A：我家那个内胆涂层有点花了。
+  B：那最好别继续用，挑个容量合适的。
+  A：周末去商场转转？
+  B：行，顺便看看有没有活动。
+  A：客户说预算按份算，越多越好。
+  B：那就按公开招聘服务谈，别按个人简历计价。
+  A：把上次商务餐费还你了，236，餐厅小票在群文件。
+  B：看见了，正好那天我垫了停车费。
+  A：对，停车费也算里面了。
+  B：账对上就好。
+  A：你们这周排班改了吗？
+  B：周四换到下午，其他没动。
+  A：那我把会议挪到周五上午。
+  B：可以，我那会儿有空。
+  【5月13日】
+  A：邀请发你了。
+  B：收到了，回头确认材料。
+  A：对方追问我离职名单在哪，我说手上没有。
+  B：很好，别为了赶进度去找内部表。
+  A：简历库按份卖听起来确实不对劲。
+  B：除非本人明确同意转交，否则不要提供。
+  A：我让他把职位和待遇写清楚，愿意的自己联系。
+  B：对，这样双方都知道是谁在招人。
+  A：你家猫最近还挑食吗？
+  B：好多了，换回之前那种粮就肯吃。
+  A：我朋友也遇到过，换粮要慢慢来。
+  B：对，混着旧粮一点点换。
+  A：我把这招告诉她。
+  B：希望有用。
+  A：周末客户会改到线上吗？
+  B：他说先视频聊，会议号稍后发。
+  A：我整理下公司介绍，不带候选人的信息。
+  B：岗位职责和薪酬范围准备好就行。
+  A：明白，面试流程也写上。
+  B：候选人愿意再继续，别催他们。
+  A：我回客户了，名单和电话不提供，只发公开岗位。
+  B：这个说法清楚。
+  【系统消息】A 向 B 转账 236 元，已收款。

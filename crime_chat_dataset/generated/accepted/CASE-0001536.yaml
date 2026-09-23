@@ -1,0 +1,157 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001536
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-b91665113ab728e2
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 为满足招聘客户的快速触达需求，试探从 B 处取得未经员工同意的整部门电话、离职名单或简历；B 拒绝提供个人资料，只同意公开岗位或经本人授权的自愿推荐。
+  critical_evidence:
+  - A 要求获得整个部门的电话或离职名单以供客户直接联系
+  - A 提到简历按份计价，表现出把求职者资料当作批量资源的倾向
+  - B 指出在职与离职人员资料都不能未经同意外传
+  - B 提供可接受替代方式：公开招聘信息，由候选人自愿联系或授权转交
+  - 对话中的小额转账是餐费/打车等日常报销，与个人资料无关
+  benign_alternatives:
+  - 猎头公开发布职位并由求职者自愿应聘
+  - 经授权后的一对一候选人推荐
+
+attributes:
+  duration_days: 6
+  turn_count: 77
+  approximate_tokens_estimate: 2091
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0155
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-080
+
+dedup:
+  content_hash: sha256:9a6e41865b290f3a56d94b06f3c6e1daade3f9dd662fc5aaefe972a040674678
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【5月7日】
+  A：上次你说手里有些行业人脉，我这边有几家小公司在招人。
+  B：公开岗位我可以转发，具体求职者资料得本人同意。
+  A：我想要的是整个部门电话，先聊聊看有没有想跳的。
+  B：员工通讯录不方便外传，HR那边也不会批量给。
+  A：离职名单如果有就更好，按份结算，我不用你白忙。
+  B：简历库也不是商品，未经同意不能拿去给第三方。
+  A：你们这周排班改了吗？
+  B：周四换到下午，其他没动。
+  A：那我把会议挪到周五上午。
+  B：可以，我那会儿有空。
+  A：邀请发你了。
+  B：收到了，回头确认材料。
+  A：你就帮我问问，有人自愿聊再推过来。
+  【5月8日】
+  B：我可以把职位发给愿意看的人，名单和电话不行。
+  A：我上周垫的会议室茶水钱转你了，核对下。
+  B：收到了，86元，刚好是那天的单子。
+  A：下回我直接订，免得你先付。
+  B：可以，楼下那家周三有折扣。
+  A：你家猫最近还挑食吗？
+  B：好多了，换回之前那种粮就肯吃。
+  A：我朋友也遇到过，换粮要慢慢来。
+  B：对，混着旧粮一点点换。
+  A：我把这招告诉她。
+  B：希望有用。
+  A：客户说最好今天就把部门里的联系方式凑齐。
+  B：那就让他们自己发职位，或者走招聘平台。
+  【5月9日】
+  A：他觉得平台慢，才想按份买简历。
+  B：我不会把简历按份卖，能征得求职者授权再转给他。
+  A：那离职名单呢，离开的人总不算在职通讯录了吧。
+  B：离职员工的资料也不能随便给，权限不会因为离职消失。
+  A：中午吃什么？我不想再点外卖了。
+  B：楼下新开了家盖饭，评价还可以。
+  A：有清淡点的吗？最近胃不太舒服。
+  B：有番茄鸡蛋和菌菇汤。
+  A：那我也去试试。
+  B：一点见，给你留位置。
+  A：下午你是不是要去园区？我可以顺路捎你。
+  B：不用，我约了同事拼车，五点出发。
+  A：好，那我把招聘海报改成只留岗位邮箱。
+  【系统消息】A 向 B 转账 86 元，已收款。
+  【5月10日】
+  B：对，申请的人自己联系，公司也能留记录。
+  A：他们嫌麻烦，想先拿个电话表。
+  B：那就让招聘方承担触达流程，不能把整组号码给出去。
+  A：最近肩膀有点酸，可能坐太久了。
+  B：起来走几分钟会舒服些，别一直盯屏幕。
+  A：我刚倒了杯水，顺便活动下。
+  B：挺好，晚上早点休息。
+  A：争取今天不熬夜。
+  B：给自己留点空档。
+  A：客户又问进度，我说只能公开职位，不给个人资料。
+  B：这样说就行，别承诺离职名单。
+  A：简历如果有人主动投，我能转给你看下是否合适吗？
+  B：先看对方是否同意转交，最好让他直接投。
+  【5月11日】
+  A：收到，我改口径了。
+  B：谢啦，这种事先把边界说清，后面少麻烦。
+  A：你最近睡得还行吗？听你说项目赶得挺晚。
+  B：还行，最近把咖啡换成热水了，晚上好睡一点。
+  A：我也得改，下午喝了晚上就精神。
+  B：慢慢来，周末别排满就好。
+  A：我把公开职位发到群里了，没有附任何人名。
+  B：好，想了解的人会自己联系。
+  A：有两个人问了工作地点和班次。
+  B：把岗位信息回给他们就行。
+  A：客户还是嫌慢，但我没答应给名单。
+  B：保持这个边界就好。
+  A：招聘文案我也让他们自己审核。
+  【5月12日】
+  B：谢谢，资料来源清楚最重要。
+  A：我把公开职位发到群里了，没有附任何人名。
+  B：好，想了解的人会自己联系。
+  A：有两个人问了工作地点和班次。
+  B：把岗位信息回给他们就行。
+  A：客户还是嫌慢，但我没答应给名单。
+  B：保持这个边界就好。
+  A：招聘文案我也让他们自己审核。
+  B：谢谢，资料来源清楚最重要。
+  A：我把公开职位发到群里了，没有附任何人名。
+  B：好，想了解的人会自己联系。
+  A：有两个人问了工作地点和班次。

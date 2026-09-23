@@ -1,0 +1,138 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001543
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000083
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-212cd177943e6eae
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: privacy_doxxing
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A 想掌握熟人 B 的行踪，托关系好的 C 弄来磁吸免接线的定位装置，趁对方不在偷偷吸在车上，约定对方一周换一次车就顺手挪过去，还打算在对方手机里也装一个；A 付钱给 C 并反复确认安装隐蔽、不易被发现。
+  critical_evidence:
+  - A 拿到磁吸、免接线的定位装置，要求充一次电能用很久、换车时方便挪位置
+  - C 交代吸在车底或座椅下方，别吸在显眼处，一周换车就顺手挪过去
+  - A 还想在对方手机里也装一个，C 说那得能碰到机器才行
+  - A 转账八百元给 C 作为装置费用，并叮嘱这事对谁都不能提
+  benign_alternatives:
+  - 家庭共享位置
+  - 车队管理
+
+attributes:
+  duration_days: 6
+  turn_count: 59
+  approximate_tokens_estimate: 1058
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: location_share_tracking
+  risk: 3
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0160
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:5664d0cec2dedb9f3d1308054c07240fd4c616884f2461b00288c38014300ead
+pipeline_status: accepted
+title: privacy_doxxing/location_share_tracking
+conversation: |-
+  【10月26日】
+  A：哥 上次说的那个 弄到没
+  C：磁吸的 免接线 到了
+  A：好 一周一换车 得能挪
+  C：充一次用两周 挪的时候顺手就行
+  A：手机那个呢
+  C：手机也能弄 但得能碰到机器 装一次的事
+  A：那我想办法
+  C：你别急 一步一步来
+  A：嗯
+  【10月27日】
+  C：装置我放你楼下快递柜了 晚上取
+  A：好 我晚上去拿
+  C：吸车底或者座椅下面 别吸显眼的地方
+  A：知道 越隐蔽越好
+  C：中午吃饭没
+  A：没胃口 心里有事
+  C：你也别太钻牛角尖
+  A：不弄明白我睡不着
+  A：拿到了 巴掌大一个
+  C：对 那个就是 记得先激活
+  A：怎么激活
+  C：我发你步骤 手机上点开就行
+  A：激活了 能看到点
+  C：能看就行 明天找机会装上去
+  A：她明晚才回来 我白天弄
+  【10月28日】
+  A：装好了 吸在座椅下面 看不见
+  C：好 你试试信号
+  A：有信号 定位挺准
+  C：那就行 别老盯着看 容易露
+  C：今天降温 你穿厚点
+  A：知道 你在忙啥
+  C：接了个活 修车
+  A：你那车行最近生意好不
+  C：马马虎虎 够吃饭
+  A：她今天去了城东那家咖啡店 待了一下午
+  C：你先沉住气 别急着摊牌
+  A：我懂
+  【10月29日】
+  A：她说明天要换车开 我得把东西挪过去
+  C：对 挪的时候小心点
+  A：知道 我趁她睡了弄
+  C：手机那个你打算啥时候弄
+  A：等她洗澡的时候 碰一下应该行
+  C：那几分钟得抓紧
+  【10月30日】
+  A：挪好了 新车上也有了
+  C：行 你越来越熟了
+  A：都是为了弄清楚
+  C：你天天这样盯着 人受得了吗
+  A：受得了 弄明白了就好
+  A：钱我转你 八百 说好的
+  【系统消息】A 向 C 转账 800 元，已收款。
+  C：收到
+  A：这事对谁都不能提
+  C：放心 我嘴严
+  【10月31日】
+  A：她昨晚去了一个小区 待到十点
+  C：你别冲动
+  A：我就看看 不冲动
+  C：中午吃点好的
+  A：没那心情
+  A：手机那个没装成 她一直拿着
+  C：那就先这样 别再折腾
+  A：再找机会

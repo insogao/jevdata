@@ -1,0 +1,119 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001542
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000113
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-e666581e4360e959
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: theft_robbery_property_crime
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A 手里有一批来源不清、带账号锁的二手手机，低价出给会刷机的 B；B 负责解 ID 锁、刷机洗白后再转卖，双方按台结算、批量更优惠，全程现金/转账走私下渠道。
+  critical_evidence:
+  - A 说有一批有 ID 锁的苹果机便宜出，B 表示有锁的能硬解、可以收
+  - B 报价按型号算、批量来更优惠，让 A 先拿五台试解
+  - A 把机器交给 B，B 解完锁后直接把货款转给 A
+  - 两人约定以后走量，来源和流向都不过问，只认机器和钱
+  benign_alternatives:
+  - 二手手机回收
+  - 失物招领
+
+attributes:
+  duration_days: 3
+  turn_count: 43
+  approximate_tokens_estimate: 678
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: phone_reset_resell
+  risk: 2
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0160
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:76fa2280166597e1b47ca172ca01aac124765b7c2df565c7d5f5d5f7fa8a5244
+pipeline_status: accepted
+title: theft_robbery_property_crime/phone_reset_resell
+conversation: |-
+  【11月10日】
+  A：哥 有批有锁的机器 你要不要
+  B：什么型号
+  A：苹果的 带 ID 锁
+  B：有锁的便宜出 硬解我能做
+  A：一台多少
+  B：按型号 批量来更优惠
+  A：先给你五台 你解了解
+  B：行 解完我一起结你
+  A：中午吃啥
+  B：盒饭 在店里忙
+  A：你店最近生意好不
+  B：一般 靠这个贴补
+  A：机器我下午给你送过去
+  B：放我柜台下就行 别放台面
+  A：知道
+  B：收到了 成色还行
+  A：有两台外观花的 便宜点
+  B：行 我按花机算
+  【11月11日】
+  A：解几台了
+  B：两台好了 还有三台卡在验证
+  A：能解就行 不急
+  B：解完我就上架 卖相好的先出
+  A：今天双十一 你那边人多不
+  B：问的多 买的少
+  A：现在都精了
+  B：五台都解开了 洗过一遍
+  A：这么快
+  B：熟手 我之前做过不少
+  A：货款多少
+  B：五台算你两千五
+  A：太低了吧
+  B：有锁机就这价 批量我给你加
+  A：行吧 先这样
+  【系统消息】B 向 A 转账 2500 元，已收款。
+  A：收到了
+  B：下次量大的话提前说 我腾地方
+  A：我手里还有十几台
+  【11月12日】
+  B：来历你别说 我也懒得问
+  A：各做各的 只认机器和钱
+  B：对 这样长久
+  A：中午你吃了吗
+  B：吃了 你呢
+  A：刚吃 下午把剩下的拉给你
+  B：好 我等着

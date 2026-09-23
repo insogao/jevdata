@@ -1,0 +1,133 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001558
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000083
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-212cd177943e6eae
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 做车队生意，想给车辆装合规的车载定位用于排班和油耗管理；经营车载设备的 B 说明要走公司统一安装、司机知情授权的正规方案，并推荐家人之间用家庭共享位置的功能，A 付了设备服务费全程公开透明。
+  critical_evidence:
+  - A 想用车载定位做车队排班和油耗管理，B 说要用公司统一安装、司机知情授权的合规方案
+  - B 明确不能偷偷装，设备由公司统一采购安装、后台凭授权账号登录查看
+  - A 还问家里老人走丢怎么防，B 建议用手机上的家庭共享位置功能、双方互相授权
+  - A 按正规价格支付设备服务费六百元，B 开具票据、签安装授权单
+  benign_alternatives:
+  - 家庭共享位置
+  - 车队管理
+
+attributes:
+  duration_days: 6
+  turn_count: 54
+  approximate_tokens_estimate: 1031
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: location_share_tracking
+  risk: 0
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0160
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:c8df4470ce67d05b76794675e5bef3851ea031da499065398a5a9679976b0f1d
+pipeline_status: accepted
+title: privacy_doxxing/location_share_tracking
+conversation: |-
+  【11月13日】
+  A：哥 车队管理那个定位方案看了吗
+  B：看了 车载的 免接线 合规款
+  A：得能看轨迹 排班要用
+  B：对 后台能看 凭授权账号登录
+  A：不用偷偷装吧
+  B：不用 公司统一装 司机都签知情书
+  A：那行 合规我就放心了
+  B：这行现在查得严 必须本人同意
+  A：懂
+  B：中午吃饭没
+  A：在车队食堂吃的 你呢
+  B：刚吃完 下午去装两台
+  A：你先给我这两台试 好用再批量
+  B：装完了一台 你登录看看
+  A：看到了 轨迹挺清楚
+  B：对 油耗统计也有
+  A：这个实用
+  A：对了 家里老人年纪大了 怕走丢
+  B：那用手机的家庭共享位置就行
+  A：怎么弄
+  B：互相授权 老人同意就能看 别偷偷弄
+  【11月14日】
+  A：给老人设置好了 她自己也愿意
+  B：那最好 有意外能第一时间找到
+  A：嗯 放心多了
+  A：今天降温 你装设备注意安全
+  B：有手套 不碍事
+  B：你那两台用着还行吧
+  A：挺好 我决定批量装剩下的车
+  B：行 我排个期 让司机们签授权
+  【11月15日】
+  A：司机那边我开会说了 都同意
+  B：好 那就走公司流程
+  A：费用怎么算
+  B：设备加服务 一台一年三百 开票
+  A：先两台 六百我现在转你
+  【系统消息】A 向 B 转账 600 元，已收款。
+  B：收到 票我寄你
+  A：中午车队加餐 炖了个鸡
+  B：你这待遇不错
+  A：大家辛苦嘛
+  【11月16日】
+  B：授权单我发你 让司机签一下
+  A：好 我打印出来
+  B：签完拍照留档 合规
+  A：都签完了 发你
+  B：收到 明天带设备上门
+  【11月17日】
+  B：今天装四台 下午能完工
+  A：辛苦 装完一起结
+  B：按合同来 不急
+  A：都上线了 后台看得见
+  B：嗯 有异常后台会提醒
+  【11月18日】
+  A：老人昨天自己出门 共享位置看到了
+  B：那就好 家人也安心
+  A：这钱花得值
+  A：周末我请你吃饭 谢谢你帮忙
+  B：客气啥 有事随时说
+  A：那就这么定了

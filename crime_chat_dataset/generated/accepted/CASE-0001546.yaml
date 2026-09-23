@@ -1,0 +1,115 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001546
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000095
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-09706067031fcc60
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A 在网上结识自称手里有大批购物卡的陌生人 B，以九四折收卡、卡密即付的方式快速把购物卡变现，只做先验小额、分批交易，不问来源也不留凭证。
+  critical_evidence:
+  - B 称有一批五万元的京东卡，按九四折出售，A 提出先验小额确认能用
+  - A 问卡从哪来，B 含糊称是公司发的用不完
+  - 验卡通过后 A 按九四折给 B 转账，并约定后续苏果卡也要
+  - 两人约定分批发卡、不开发票不留单据、不追问来源
+  benign_alternatives:
+  - 正规卡券回收平台
+  - 公司福利卡转让
+
+attributes:
+  duration_days: 4
+  turn_count: 38
+  approximate_tokens_estimate: 609
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: gift_card_cashout
+  risk: 3
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0160
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:8997103aa90b1f90f6cd4ba43f07e26190e71024078483baa51b8a287d297fdc
+pipeline_status: accepted
+title: money_laundering_obfuscation/gift_card_cashout
+conversation: |-
+  【10月22日】
+  A：兄弟 你说有一批卡?
+  B：对 京东卡 五万面值 九四折出
+  A：能先验吗
+  B：可以 先发一张小额给你验
+  A：你哪来的卡
+  B：公司发的 用不完 便宜出
+  A：行 先验
+  B：发你了 一百面值
+  【10月23日】
+  A：验过了 能用
+  B：那咱接着来 先给你一万的
+  A：九四折 一万是九千四
+  B：对 卡密发你就付
+  A：发吧
+  【系统消息】A 向 B 转账 9400 元，已收款。
+  B：收到 后面的明天再发
+  A：苏果卡也要
+  B：苏果卡面值小 折一样
+  A：你吃饭了没
+  B：刚扒两口 你呢
+  A：面条 简单
+  B：做这行的都吃得随便
+  A：你在这个圈子多久了
+  B：没几年 熟人多罢了
+  A：那货源稳就行
+  【10月24日】
+  B：今天天气降温 你那边冷不冷
+  A：挺冷 出门加衣了
+  B：我也是
+  B：今天发你两万的 分两张卡
+  A：发
+  B：发了 你验完付我
+  A：验了 能用 但有一张边缘磨损
+  B：能用就行 没影响
+  A：下批注意点
+  B：好 这批两万我回头一起结
+  【10月25日】
+  A：发票啥的就别开 咱私下走
+  B：懂 我也不问来源
+  A：对 各取所需
+  B：剩两万明天发你
+  A：行 卡能用我照单全收

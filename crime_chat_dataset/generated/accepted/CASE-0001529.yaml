@@ -1,0 +1,131 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001529
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-11518b6c5fec7f4e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 在论坛争议中试探将匿名账号、小号、公开相册时间或转发记录拼成身份线索，意图推动围观者识别发帖人；B 作为版务持续阻止身份推断，要求只讨论公开观点并撤下可识别材料。
+  critical_evidence:
+  - A 提到翻找小号、相册原图时间或转发记录，试图把匿名账号关联起来
+  - A 表示要将前后发言整理给他人看，可能使匿名发帖人被识别
+  - B 明确指出公开内容不等于可以集中曝光个人身份
+  - B 要求不传播截图或账号对应关系，只引用去识别化的公开观点并走版规流程
+  - 对话中的日常转账（如有）与论坛争议无关
+  benign_alternatives:
+  - 基于公开帖文讨论观点和事实
+  - 版务依社区规则隐藏可能暴露个人信息的内容
+
+attributes:
+  duration_days: 2
+  turn_count: 55
+  approximate_tokens_estimate: 1433
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0155
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-080
+
+dedup:
+  content_hash: sha256:001e6a58772bfa5ed618770ad48e9b3f5bdd7d9d7e2bf8b2989cf9d29a1df364
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【5月5日】
+  A：那个热帖还在涨，评论里都在猜楼主是谁。
+  B：版里只允许讨论公开内容，别把匿名账号往现实身份上套。
+  A：我翻到他小号也给你翻了，几个公开帖子时间挺接近。
+  B：小号是不是同一个人不能凭感觉下结论，更别贴出来。
+  A：相册原图时间也能对上，很多人都这么说。
+  B：时间信息也可能误导，别公开截图或个人资料。
+  A：中午吃什么？我不想再点外卖了。
+  B：楼下新开了家盖饭，评价还可以。
+  A：有清淡点的吗？最近胃不太舒服。
+  B：有番茄鸡蛋和菌菇汤。
+  A：那我也去试试。
+  B：一点见，给你留位置。
+  A：我本来想拼个时间线，证明他之前转发过什么。
+  B：可以讨论帖子内容，涉及个人账号关联就停在这。
+  A：我把周末聚餐的钱先给你了，180，菜钱你帮忙订。
+  B：收到了，老地方那桌我订了六点半。
+  A：别点太辣，我妈最近胃不舒服。
+  B：知道，清汤锅底，菜单我发群里。
+  A：最近肩膀有点酸，可能坐太久了。
+  B：起来走几分钟会舒服些，别一直盯屏幕。
+  A：我刚倒了杯水，顺便活动下。
+  B：挺好，晚上早点休息。
+  A：争取今天不熬夜。
+  B：给自己留点空档。
+  A：评论里有人让我把小号截图发出去，觉得这才有说服力。
+  B：我不会帮着发。公开信息也不代表可以集中曝光一个人。
+  A：那我把帖子里争议那句摘出来，不带账号？
+  B：摘内容可以，先去掉能识别个人的细节。
+  【系统消息】A 向 B 转账 180 元，已收款。
+  【5月6日】
+  A：有几个转发内容其实是公开的。
+  B：就讨论观点本身，别做个人关系推断。
+  A：我在看一个小台灯，晚上看书用。
+  B：选光线柔和、亮度能调的。
+  A：桌面不大，最好底座小点。
+  B：夹灯也可以，省位置。
+  A：对，我找找看。
+  B：买之前量一下桌沿。
+  A：我刚看了下群公告，版主说先锁评论等核实。
+  B：对，别让猜测扩散。
+  A：我删掉了之前整理的账号对应表，没有发给群里。
+  B：谢谢，保留公开帖子链接讨论就够了。
+  A：热帖我也不顶了，等版主处理。
+  B：嗯，先把话题拉回内容。
+  A：这两天温差真大，早上出门有点冷。
+  B：中午又热，穿薄外套比较方便。
+  A：我车里放一把伞，结果忘在公司了。
+  B：我包里有折叠伞，可以借你用。
+  A：下班还你，谢啦。
+  B：不急，明天给也行。
+  A：我稍后把处理说明发你，先等版主公告。
+  A：附近新修了条步道，你去过吗？
+  B：还没，听说傍晚风景不错。
+  A：周末不下雨就去走走。
+  B：可以，带瓶水就行。
+  A：我再叫上小周？
+  B：好，人多也热闹。

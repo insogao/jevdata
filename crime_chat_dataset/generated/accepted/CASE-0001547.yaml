@@ -1,0 +1,145 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001547
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000007
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-2505ae9ffaf12e5a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: fraud_scam
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A 以长期嘘寒问暖、早晚关心和单向情感倾诉获取独居 B 的信任，随后以「稳定副业」为由引导 B 在某 App 小额投入并展示当日返利，待 B 想提现时以账户异常为由索取保证金，是典型的情感养成后引流的杀猪盘。
+  critical_evidence:
+  - A 连续数日对 B 早晚问候、点外卖、听其抱怨工作与感情，营造异地恋式陪伴
+  - A 自称认识做数据项目的表哥，引导 B 下载某 App 投入两千元并当日看到三十余元返利
+  - B 想提现时被告知账户异常，客服要求缴纳一万元左右的保证金，A 称自己当初也交过且次日原路退回
+  - B 向 A 转账 8000 元保证金后，提现始终未到账，A 只说系统排队让 B 继续等
+  benign_alternatives:
+  - 真实异地恋互助
+  - 合法情感咨询
+
+attributes:
+  duration_days: 4
+  turn_count: 67
+  approximate_tokens_estimate: 1362
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: romance_pig_butchering
+  risk: 3
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0160
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:afc5a64609ff0702e55e149f2939bb5ab05e3d0620c8ff8b46e1c3c6f36220b0
+pipeline_status: accepted
+title: fraud_scam/romance_pig_butchering
+conversation: |-
+  【9月3日】
+  A：今天降温了 记得加件外套
+  B：刚下班 确实冷
+  A：吃了吗 别又随便对付一口
+  B：泡面 哈哈 一个人懒得做
+  A：那可不行 明天给你点份汤
+  B：你这么客气干啥
+  A：认识你也是缘分 我这人就是操心命
+  B：哈哈 你哪儿人
+  A：老家东北 现在在深圳做点小生意 你呢
+  B：我杭州的 做行政
+  A：那挺好 稳定
+  B：稳定是稳定 就是无聊
+  【9月4日】
+  A：早 汤给你点好了 记得趁热
+  B：到了到了 谢谢你呀 太贴心了
+  A：跟我还客气
+  B：长这么大 第一次有人给我点外卖
+  A：那是你之前遇人不淑
+  B：别说了 一提就烦
+  A：昨天是不是又加班了
+  B：加到九点 领导还挑刺
+  A：受委屈就跟我说 我听着
+  B：嗯…谢谢你
+  A：对了 我这边有个副业 闲钱放着也是放着
+  B：什么副业
+  A：我表哥弄的一个数据项目 跟着做点小单 很稳的
+  B：靠谱吗 我不太懂这些
+  A：你看我像是会坑你的人吗 我自己都跟了小半年
+  B：那我先看看
+  A：不急 有空我教你 咱不投多
+  【9月5日】
+  A：早上好 昨晚睡得好吗
+  B：还行 就是梦见在开会
+  A：别太拼了 身体是自己的
+  B：知道啦
+  A：我这边出太阳了 你那天气咋样
+  B：也晴 中午想出去走走
+  A：出去晒晒好 顺便把昨天那事跟你说下
+  B：嗯你说
+  A：我先把入口发你 你注册下 跟着我操作就行
+  B：行
+  A：[image：App首页截图，账号金额打码]
+  B：看到了 界面还挺正规
+  A：那是 人家是有牌照的机构
+  B：我先放两千试试
+  A：可以 第一次少放点 心里有底
+  B：投好了
+  A：你看 是不是当天就有收益
+  B：还真有 三十多块 哈哈
+  A：我说了吧 稳吧
+  B：那多放点是不是赚更多
+  A：别急 慢慢来 讲节奏
+  【9月6日】
+  B：哥 我这收益快一千了 想提出来试试
+  A：提现是吧 你先申请 我看看
+  B：提示账户异常 要联系客服
+  A：别急 我帮你问问
+  A：客服说你账户是新的 要交一笔保证金走流程 完了原路退
+  B：保证金多少
+  A：一万二 按你提现额度算的
+  B：这么多啊
+  A：都这样 我当初也交过 第二天就退了 你信我
+  B：那我先交八千行吗
+  A：你凑凑看 实在不行我帮你垫点
+  B：不用 我卡里还有点 我先转
+  【系统消息】B 向 A 转账 8000 元，已收款。
+  A：收到了 我这就给你提交
+  A：应该很快 你等我消息
+  B：好 麻烦你了
+  B：哥 到账了吗 我这边还没动静
+  A：系统在排队 这两天慢 你再等等
+  B：好吧…

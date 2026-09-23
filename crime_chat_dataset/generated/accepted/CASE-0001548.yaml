@@ -1,0 +1,137 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001548
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000118
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-ad8b5d413925f412
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: theft_robbery_property_crime
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 工地工人 A 伙同收料的 B，趁下班把钢筋头和成袋水泥用斗车装着、帆布盖住运出工地道闸，按吨按袋低价卖给 B，并事先由 B「搞定」值班保安，货款线下现金结清。
+  critical_evidence:
+  - A 告诉 B 今晚能出两吨多钢筋头外加几袋水泥，让 B 安排车来拉
+  - B 要求 A 下班时用斗车装、帆布盖好别露出来，价格按吨、按袋算老价
+  - A 担心值班保安，B 说保安他已经搞定，让 A 只管装车
+  - 两人约定隔一天出一趟以免太扎眼，货款线下现金结清、不走转账
+  benign_alternatives:
+  - 工地退场材料处理
+  - 正规废料清运
+
+attributes:
+  duration_days: 3
+  turn_count: 62
+  approximate_tokens_estimate: 1087
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: construction_site_material_out
+  risk: 2
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0160
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:8ecd8df4304f96aabd8bdefb2c585582c90c93b96ca5136cc4eb57dd92432b42
+pipeline_status: accepted
+title: theft_robbery_property_crime/construction_site_material_out
+conversation: |-
+  【9月18日】
+  A：哥 这边料齐了 你啥时候来拉
+  B：今晚能出多少
+  A：钢筋头两吨多 还有几袋水泥
+  B：钢筋按吨 水泥按袋 老价
+  A：行
+  B：下班车斗帆布盖好 别露出来
+  A：知道
+  A：保安今儿是老王值班吧
+  B：保安我搞定 你只管装
+  A：对了 今晚食堂有炖排骨 我吃完再弄
+  B：你先吃饱 别到点没力气
+  A：哈哈 两吨多呢
+  A：开始装了 帆布盖好了
+  B：从后门走 前门今晚装了监控
+  A：好
+  A：出来了 你那边接一下
+  B：收到 过磅 两吨三
+  B：钱明早给你 今天没带够现金
+  A：行 信你
+  【9月19日】
+  B：昨晚那批 给你两千六 下班给你
+  A：数对就行
+  A：中午太阳挺毒 晒得睁不开眼
+  B：工地就这样 多喝水
+  A：下午浇筑 估计得干到天黑
+  B：那你今晚还出吗
+  A：看情况 浇完剩的边角料不少
+  A：我闺女下周生日 想给她买个蛋糕
+  B：小孩就图个热闹 买个大的
+  A：钱得省着点花 最近家里开销大
+  B：这不正给你找进项嘛
+  A：工头又催进度了 天天喊
+  B：忍忍 干这行都这样
+  A：你那边收的料都出给谁了
+  B：有小厂子收 你别管 我这边稳
+  A：今晚能再弄点 但不多
+  B：少就少 别太勤 太扎眼
+  A：那就隔一天
+  B：对 细水长流
+  A：工头问最近料怎么少了 我说正常损耗
+  B：别慌 报损本来就有数
+  A：嗯
+  【9月20日】
+  B：白天有人来查吗
+  A：没有 挺平静
+  B：那就今晚再来一趟
+  A：行 我看看剩多少
+  A：家里孩子开学要交费 手头正好紧
+  B：这不就来钱了 今晚多出点
+  A：谢了哥
+  B：客气啥 互相帮衬
+  A：等孩子上学这事过了 我请你喝酒
+  B：行 到时候别赖账
+  A：今晚估计要下雨 帆布得盖严实点
+  B：对 淋湿了压秤 亏的是你
+  A：知道
+  A：食堂今天红烧肉 我吃了两碗饭
+  B：干活就得吃饱
+  A：今晚一吨八 帆布盖好了
+  B：老地方 卸完给你现金
+  A：到了
+  B：过磅一吨八 一千九 拿着
+  A：行 下次再约
+  B：嗯 过两天再说 稳稳的

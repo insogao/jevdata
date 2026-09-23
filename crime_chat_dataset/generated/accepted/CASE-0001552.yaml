@@ -1,0 +1,125 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001552
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000045
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-7fded9d2a48a5c2e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A 以「照看店面、兄弟们帮衬」为名，每逢月初准时找小店主 B 收取「管理费」，并借别家店拖欠后「出事」的例子暗示不交的后果；B 迫于压力按月转账，不敢声张。
+  critical_evidence:
+  - A 月初准时上门收「老规矩」的钱，B 抱怨生意差，A 只说兄弟们不易
+  - A 提到隔壁那家店上月拖着没交、结果玻璃被砸，暗示不交的后果
+  - B 按三百元的标准给 A 转账，A 说这个月先这样、下月照旧
+  - A 让 B 别到处声张，说大家都是这样过来的
+  benign_alternatives:
+  - 物业费催缴
+  - 商会会费
+
+attributes:
+  duration_days: 6
+  turn_count: 46
+  approximate_tokens_estimate: 725
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: protection_fee
+  risk: 3
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0160
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:40ee66bce1e8816b893868a17f12933859ea2d239d2366c52a4701a44f4839c3
+pipeline_status: accepted
+title: violence_extortion/protection_fee
+conversation: |-
+  【11月4日】
+  A：老板 这个月的事
+  B：又到点了啊
+  A：月初准时来 老规矩
+  B：上个月生意真不好
+  A：理解 但兄弟们也不易 要吃饭的
+  B：多少
+  A：还是三百 没涨你
+  B：我这就转
+  A：你看看隔壁那家 上月拖着没给
+  B：咋了
+  A：半夜玻璃碎了两块 到现在没查出来
+  B：……
+  A：你交了 就啥事没有
+  B：知道
+  【系统消息】B 向 A 转账 300 元，已收款。
+  A：收到 这个月先这样
+  B：下月还是这个数吗
+  A：照旧 你放心做你的生意
+  B：中午店里人少 我随便吃了点
+  A：你店位置不错 好好干
+  【11月5日】
+  A：昨天卷帘门修了没
+  B：修了 有点卡
+  A：该修修 别出安全问题
+  B：嗯
+  B：今天进货涨价了 面粉又贵了
+  A：这行情谁都不好过
+  B：房租也涨
+  A：所以说要抱团 互相照应
+  【11月6日】
+  A：老板 有人来店里闹事没
+  B：没有
+  A：有我帮你摆平 别担心
+  B：谢谢
+  B：你中午在哪儿吃
+  A：路边随便吃 忙
+  B：忙啥呢
+  A：收账 几家店都一样
+  【11月7日】
+  A：你隔壁老王也交了 他说生意还行
+  B：他跟我说过
+  A：都是这样过来的 别多想
+  B：我不多想 就是想多赚点
+  【11月8日】
+  B：这两天天气转凉 生意更淡了
+  A：淡就淡 该给的还是要给
+  B：知道
+  【11月9日】
+  A：提前说一声 下月照旧 三百
+  B：行
+  A：别到处声张 对你好
+  B：我谁都不说

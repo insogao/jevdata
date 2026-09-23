@@ -1,0 +1,135 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001554
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000085
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-fee2c5728b393d53
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: privacy_doxxing
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A 想查清一个只有一面之缘的人的身份住址，找上有渠道的 B，用一张侧脸照片通过所谓「全城摄像头比对」的方式定位对方，按结果付费；B 收定金后反馈比对结果和大致活动范围。
+  critical_evidence:
+  - A 只有一张侧脸照片，B 说一张侧脸就够、能对出身份
+  - B 称可以用全城摄像头数据扫描比对，给出对方的活动范围和大致住址
+  - B 报价出结果付费、先收八百定金，A 转账后 B 开始比对
+  - B 反馈了对方的常出没地段和大致楼栋，A 又问能不能查到工作单位
+  benign_alternatives:
+  - 安防行业讨论
+  - 失联亲友寻人报警
+
+attributes:
+  duration_days: 3
+  turn_count: 57
+  approximate_tokens_estimate: 944
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: face_search
+  risk: 3
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0160
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:9d50597d78eb731e035530565c4ff58e104554bc3e45e666d735fc057f90bf56
+pipeline_status: accepted
+title: privacy_doxxing/face_search
+conversation: |-
+  【11月1日】
+  A：哥 听说你能查人
+  B：看你要查啥
+  A：我只有一张侧脸照片
+  B：一张侧脸就够
+  A：能查到啥
+  B：全城摄像头扫 能对出身份 还有大概活动范围
+  A：多少钱
+  B：出结果付费 先八百定金
+  A：先转定金是吧
+  B：对 对上了再给尾款
+  A：稍等 我发照片给你
+  B：发 清楚点
+  A：[image：一张侧脸抓拍照，背景为商场]
+  B：收到 我看看质量
+  A：能行吗
+  B：能 就是角度偏一点 我尽量
+  A：中午吃了吗
+  B：刚吃完 你呢
+  A：没吃 着急
+  B：先把钱的事定了吧
+  A：好
+  【系统消息】A 向 B 转账 800 元，已收款。
+  B：收到 我排上队 大概两天出
+  A：越快越好
+  A：你今天上班还是在家
+  B：在家弄电脑 你那个正在跑
+  A：辛苦了
+  A：晚上降温 你注意点
+  B：知道 你别老催
+  【11月2日】
+  A：有进展没
+  B：对上了几个相似度高的 还在筛
+  A：大概长啥样 能确认不
+  B：别急 乱认会出岔子
+  B：中午吃啥 我点外卖凑单
+  A：随便 你吃你的
+  B：你这人一有事就不吃饭
+  B：有结果了 常出没在城西万达那一片
+  A：住哪 能具体到楼吗
+  B：大概是万达后面那个回迁小区 几号楼不确定
+  A：够了 尾款多少
+  B：一千二 一共两千
+  A：我明天转
+  A：我再给你张她上班地方的照片 能查单位吗
+  B：能试试 这个另算
+  A：行
+  【11月3日】
+  A：照片发你了
+  A：[image：写字楼门口街拍，人物正面远景]
+  B：收到 这个清楚 好办
+  A：多少钱
+  B：加八百 老规矩先付
+  A：好 我连尾款一起转你两千
+  B：行
+  A：中午随便吃了点
+  B：嗯
+  B：单位也查到了 在市中心那栋写字楼 做行政的
+  A：太好了
+  B：你悠着点用 别到处说
+  A：放心 就我自己知道
+  A：钱转你了
+  B：收到 有需要再找我

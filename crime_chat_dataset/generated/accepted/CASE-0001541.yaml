@@ -1,0 +1,135 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001541
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000095
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-27cbc877ee881213
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 以九四折大量回收京东卡、苏果卡等购物卡，要求对方先发卡密、收到即付款，靠折价快速把来路不明的购物卡变现；B 是长期供卡人，负责从熟人处收卡转卖给 A 赚差价。
+  critical_evidence:
+  - A 报价九四折实结、卡密即付，B 想谈到九八折被拒，A 称这是行情
+  - A 表示京东卡、苏果卡都要，让 B 朋友那边有货就都拿来
+  - B 把卡密发给 A，A 当即为五千元面值的卡转账四千七，双方不开发票、不留单据
+  - A 提醒 B 收卡时别问来源、量大分批发，尽量避免同一张卡被反复登记
+  benign_alternatives:
+  - 正规卡券回收平台
+  - 公司福利卡转让
+
+attributes:
+  duration_days: 4
+  turn_count: 58
+  approximate_tokens_estimate: 944
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: gift_card_cashout
+  risk: 3
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0160
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:6fa468aca312141670b48d67ed28a44eb4cc9ccacd48d2055c62d534cbc23e49
+pipeline_status: accepted
+title: money_laundering_obfuscation/gift_card_cashout
+conversation: |-
+  【10月10日】
+  B：哥 还收卡吗
+  A：收 什么卡
+  B：京东卡 五千的 有几张
+  A：九四折实结 卡密即付
+  B：九八折行不行
+  A：就九四 行情都这样
+  B：行吧 我凑凑
+  B：今天中午吃啥 我请客
+  A：楼下那家小炒 你过来
+  B：十分钟到
+  A：你最近忙啥呢
+  B：瞎忙 单位效益不行 想搞点副业
+  A：这个来钱快 你上道就行
+  B：你孩子那补习班还报不报
+  A：报 贵得要死 一学期八千
+  B：现在养娃都这样
+  【10月11日】
+  B：卡我搞到三张 先发你
+  A：发 我验一下
+  B：发你了 三张 一万五
+  A：我看看……有点问题 有一张已经用过了
+  B：啊?那我问问上家
+  A：你自己把好关 别收废卡
+  B：好 我先只发这两张
+  A：两张一万 九四折 九千四
+  B：转吧
+  【系统消息】A 向 B 转账 9400 元，已收款。
+  A：到了 下次快点
+  B：收到 谢谢哥
+  A：苏果卡也要 你朋友那边有货都拿来
+  B：苏果卡面值小 折一样吗
+  A：一样 九四 量大再说
+  B：行 我帮你问
+  A：收卡别问来源 懂不懂
+  B：懂 给钱就收
+  【10月12日】
+  A：量大就分批发 别一次太多
+  B：为什么
+  A：省得同一张卡反复登记 惹眼
+  B：明白了
+  B：今天天气好 我准备去爬山
+  A：你倒是闲
+  B：忙完这阵子再说
+  B：朋友那边说还有两万的卡 能全收吗
+  A：能 分两批发
+  B：好 我安排
+  【10月13日】
+  A：上次那张废卡你上家咋说的
+  B：退我了 换了一张
+  A：行 换的那张发来验
+  B：这就发
+  A：验过了 能用 差你的补上
+  B：不用急 攒着一起
+  A：行 这单攒到两万一次结
+  B：对了 我媳妇问你嫂子那个方子
+  A：我让她微信发过去
+  B：好嘞
+  A：这两天量可以 你保持
+  B：只要折别降
+  A：行情不降我不降
+  B：那我明天继续收
+  A：嗯 收着

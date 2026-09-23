@@ -1,0 +1,123 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001540
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000058
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-3b2ebb49753c19df
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: violence_extortion
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A 因生意被同城另一家直播商家挤兑，私下请同事 B 组织一批小号到对方直播间集中刷屏差评、冲垮直播节奏，按场次付费，被封号就换新号继续。
+  critical_evidence:
+  - A 要求 B 在指定直播间集中刷屏差评，把对方的直播冲停
+  - B 报价一单五十、冲十分钟，并称话术可以发给他照着发
+  - A 先转 500 元定金，约定当晚十点开冲，要求不带脏字、像真实买家抱怨以躲过平台筛查
+  - 对方账号被封后 B 称手里有一批新号，A 让 B 换号继续，费用下次一起结
+  benign_alternatives:
+  - 差评维权
+  - 营销互喷讨论
+
+attributes:
+  duration_days: 2
+  turn_count: 48
+  approximate_tokens_estimate: 906
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: livestream_hate_raid_for_hire
+  risk: 2
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0160
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:cf6f9aa52785ea89d57fdbe15fcd3b564f19cccb41bc37a72043f7802a3150fc
+pipeline_status: accepted
+title: violence_extortion/livestream_hate_raid_for_hire
+conversation: |-
+  【9月7日】
+  A：在吗 帮个忙
+  B：说
+  A：你手上还有那些号吗
+  B：有是有 你要多少
+  A：今晚有个直播间 我想给它冲一冲
+  B：差评还是刷屏
+  A：都来点 让它没法好好播
+  B：懂 老规矩 一单五十冲十分钟
+  A：行 我先给你五百 跑十单
+  B：话术我发你 你挑挑
+  A：不用挑 你们那套就行
+  B：记住别带脏字 平台现在查得严
+  A：我知道 就说货不对板 态度差
+  B：对 越平实越像真买家
+  【系统消息】A 向 B 转账 500 元，已收款。
+  B：收到 十点开冲
+  A：好
+  B：你中午吃啥了
+  A：楼下快餐 随便吃点
+  B：我也刚扒完 下午店长要开会 烦
+  A：你那店长天天开会 有啥好开的
+  B：就催业绩呗 上个月扣了我两百
+  A：行 晚上那事别耽误正事
+  B：放心 十点我准时开工
+  A：对了 上次你说的加湿器哪个牌子来着
+  B：小熊那个 一百出头 我链接发你
+  A：行 我媳妇说晚上干得嗓子疼
+  B：买个小的就够用
+  B：冲了 十分钟 对面人掉了一半
+  A：干得漂亮
+  B：有个别号被限了 其他还行
+  A：值了
+  【9月8日】
+  B：昨晚那个话术号被封了两个
+  A：没事 那就换号继续
+  B：新号我这边还有一批 就是贵点
+  A：加钱没事 别停就行
+  B：行 今晚这场我多安排几个人
+  A：嗯 别露馅
+  B：放心 号都是外地的 查不到咱俩
+  A：中午开会那事咋样了
+  B：挨批了 说这个月再差就调岗
+  A：熬着吧 谁不是这么过来的
+  B：哎
+  A：我晚上请客吃饭 就不聊了
+  B：去呗 那事我盯着
+  B：搞定了 对面直接下播了
+  A：哈哈哈哈 这钱花得值
+  B：这次用的号多 你回头看着补点
+  A：知道 下次一起结

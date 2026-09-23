@@ -1,0 +1,129 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001550
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000062
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-9da4b8781ab51fdc
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 在网上出售来源不明的女性私密影像材料，先发打码样品给买家 B 过目，成交后通过网盘即时发送、按套计价；B 是长期收集此类材料的买家，双方只谈样品、套数和价格，从不追问拍摄是否经本人同意。
+  critical_evidence:
+  - A 说有素人原创、没流过的套图，先发打码样品给 B 看
+  - B 让 A 发样品打码确认，A 称成交后过网盘秒发、原图无水印
+  - 双方按套计价，这套十二张报价两百元，B 转账后 A 发网盘链接
+  - A 表示素材是「内部来的」、不过问来源，B 只关心更新频率和价格
+  benign_alternatives:
+  - 摄影约拍合作
+  - 情侣间分享
+
+attributes:
+  duration_days: 6
+  turn_count: 49
+  approximate_tokens_estimate: 770
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: photo_material_trade
+  risk: 3
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0160
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:0766f6a627ce0d1bc11b370ce496af0419a1de494f475b52ec16b86bf6946d18
+pipeline_status: accepted
+title: sexual_transaction_exploitation/photo_material_trade
+conversation: |-
+  【11月19日】
+  A：哥 上次说的那套还收吗
+  B：收 有新的没
+  A：有 素人原创 没流过的
+  B：先发样品 打码
+  A：行 一套十二张 打码发你
+  B：过码我看看
+  A：过网盘秒发 你放心
+  B：一套多少
+  A：按套 这套两百
+  B：先看样品再定
+  A：发你了
+  A：[image：样品图，面部打码]
+  B：行 这套要了
+  A：先付款 后发链接
+  B：老规矩
+  A：对 定金一百
+  B：转你了
+  【系统消息】B 向 A 转账 200 元，已收款。
+  A：收到 链接发你了 密码在文件里
+  B：下好了
+  【11月20日】
+  A：今天冷 你在家还是上班
+  B：在家 没啥事
+  A：那正好 我下午再整理两套
+  B：有新的先给我留
+  B：中午随便吃了点
+  A：我也是 忙
+  B：你这行货源稳不稳
+  A：稳 内部来的 你不问来源就行
+  A：整理好两套了 都是原创
+  B：发样品
+  A：这就发 还是打码
+  B：一套都有多少张
+  A：一套十张 一套十五张 价格一样
+  B：那要十五张那套
+  【11月21日】
+  B：昨晚睡了
+  A：没事 白天再弄
+  B：那套十五张的转你了
+  A：收到 你直接转还是老价
+  B：老价 别涨
+  A：中午出去吃了个面
+  B：我点的外卖
+  【11月22日】
+  A：你这收藏量不小了吧
+  B：就图个新鲜 别问
+  A：行 各取所需
+  【11月23日】
+  A：过两天还有一批 要提前订
+  B：给我留着 钱不是问题
+  A：爽快
+  【11月24日】
+  B：上一套有几张是旧图吧
+  A：有两张重复的 下批补给你
+  B：行 别糊弄我
+  A：做长久的 哪能糊弄

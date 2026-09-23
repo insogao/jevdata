@@ -1,0 +1,113 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001549
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000127
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-4561025f05ddd2cd
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 陌生人 A 自称手里握有 B 的旧事材料，以「对你名声不好」相要挟，要求 B 支付五万元一次性了断，并暗示不答应就把事情闹大；B 被迫凑钱换取对方删除材料。
+  critical_evidence:
+  - A 主动联系 B，称手上有去年冬天那件事的东西，让 B 别装不认识
+  - A 明示这事对 B 名声不好，提出让 B 出个数一次性了断，并称这是给 B 体面
+  - A 开价五万一次清，威胁 B 别闹大、闹大对 B 没好处，还给三天期限
+  - B 东拼西凑后向 A 转账五万元，A 称钱到东西到、两清
+  benign_alternatives:
+  - 侵权赔偿和解
+  - 人身损害调解
+
+attributes:
+  duration_days: 2
+  turn_count: 38
+  approximate_tokens_estimate: 688
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: victim_silence_fee
+  risk: 3
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0160
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:2fe4d51635a22832b4990cd11ca12b415b9e7a837d8b4abba126a6f6c583aaf4
+pipeline_status: accepted
+title: coercion_blackmail/victim_silence_fee
+conversation: |-
+  【9月16日】
+  A：你好 是李小姐吧
+  B：你谁
+  A：不用管我是谁 我手上有样东西 你可能有兴趣
+  B：什么东西
+  A：去年冬天那事 你忘了 我可没忘
+  B：你想干嘛
+  A：不想干嘛 就是觉得这事对你名声不好
+  B：你到底要什么
+  A：把话说白 你出个数 这事到我这就打住
+  B：你这是敲诈
+  A：别说得那么难听 我这人讲体面
+  B：今天降温了 出门多穿点自己
+  A：呵 你还有心情关心天气
+  B：我上有老下有小 你别逼我
+  B：晚上吃啥呢 家里等我回去做饭
+  A：想好了再谈吃饭的事
+  A：想好了吗
+  B：我没那么多钱
+  A：五万 一次清
+  B：我凑不出
+  A：那就别怪我不讲究 闹大对你没好处
+  B：你让我想想办法
+  【9月17日】
+  B：我凑到三万 剩下缓缓行吗
+  A：差的两万想办法 给你三天
+  B：你保证删了
+  A：钱到 东西到 两清
+  B：我同事说最近骗子多 让我小心点
+  A：你不用拐弯抹角 就一句话 给不给
+  B：我找我妈借了点 凑够了
+  A：这就对了
+  【系统消息】B 向 A 转账 50000 元，已收款。
+  A：收到
+  B：东西呢
+  A：我这就删 你放心 以后没人提
+  B：你要是留了底 我跟你没完
+  A：都说了讲体面
+  B：孩子放学要我去接 先这样
+  A：行 以后别联系了
+  B：嗯

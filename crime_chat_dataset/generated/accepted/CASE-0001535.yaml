@@ -1,0 +1,134 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001535
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-541636d46744a3a0
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 在论坛争议中试探将匿名账号、小号、公开相册时间或转发记录拼成身份线索，意图推动围观者识别发帖人；B 作为版务持续阻止身份推断，要求只讨论公开观点并撤下可识别材料。
+  critical_evidence:
+  - A 提到翻找小号、相册原图时间或转发记录，试图把匿名账号关联起来
+  - A 表示要将前后发言整理给他人看，可能使匿名发帖人被识别
+  - B 明确指出公开内容不等于可以集中曝光个人身份
+  - B 要求不传播截图或账号对应关系，只引用去识别化的公开观点并走版规流程
+  - 对话中的日常转账（如有）与论坛争议无关
+  benign_alternatives:
+  - 基于公开帖文讨论观点和事实
+  - 版务依社区规则隐藏可能暴露个人信息的内容
+
+attributes:
+  duration_days: 2
+  turn_count: 59
+  approximate_tokens_estimate: 1338
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0155
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-080
+
+dedup:
+  content_hash: sha256:5e1eef6473cda9c7a17eeaa7361f0bf4ea12a9f75b6859e94143afcfc82d90da
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【5月11日】
+  A：朋友在论坛发帖吐槽，有人想把几个账号都对应起来。
+  B：我只是帮忙看内容，不能把匿名账号往同一个人身上认。
+  A：小号也给你翻了，公开相册时间看着有点像。
+  B：相似不代表是一个人，别公开拼图或猜测。
+  A：转发过什么都能查到，我想说明他前后说法冲突。
+  B：引用原帖内容就够了，别做个人轨迹整理。
+  A：我在看一个小台灯，晚上看书用。
+  B：选光线柔和、亮度能调的。
+  A：桌面不大，最好底座小点。
+  B：夹灯也可以，省位置。
+  A：对，我找找看。
+  B：买之前量一下桌沿。
+  A：那我把账号名和头像都遮掉？
+  B：先别发截图，文字概括争议点更稳。
+  A：我把上周咖啡钱还你了，两个拿铁一共68。
+  B：收到，多谢。下次我请你。
+  A：不用，正好我有券。
+  B：那下次我买甜点。
+  A：这两天温差真大，早上出门有点冷。
+  B：中午又热，穿薄外套比较方便。
+  A：我车里放一把伞，结果忘在公司了。
+  B：我包里有折叠伞，可以借你用。
+  A：下班还你，谢啦。
+  B：不急，明天给也行。
+  A：群里有人问能不能发原图时间证明。
+  B：不要传播原图，可能带出拍摄者或其他人的信息。
+  A：我让他只贴公开发言的链接。
+  B：可以，讨论内容不去追具体是谁。
+  A：有个版务已经把猜身份的回复折叠了。
+  B：做得好，避免越传越多。
+  【5月12日】
+  A：附近新修了条步道，你去过吗？
+  B：还没，听说傍晚风景不错。
+  A：周末不下雨就去走走。
+  B：可以，带瓶水就行。
+  A：我再叫上小周？
+  B：好，人多也热闹。
+  A：你家阳台的薄荷还活着吗？
+  B：活着，就是长太快，剪了好多。
+  A：原来的帖子我没再转发，争议内容也删了。
+  B：谢谢，别再把猜测搬到别的平台。
+  A：我会提醒朋友只谈公开发言。
+  B：这样就够了。
+  A：你妈上次说要换个电饭煲，买了吗？
+  B：还没，先把旧的清理了再看。
+  A：我家那个内胆涂层有点花了。
+  B：那最好别继续用，挑个容量合适的。
+  A：周末去商场转转？
+  B：行，顺便看看有没有活动。
+  A：明天午饭去吃面吗？
+  B：可以，我一点前有个会。
+  A：那我晚点占个位置。
+  B：好，别点太多，最近胃不舒服。
+  A：我回去也记得给薄荷松松土。
+  A：你们这周排班改了吗？
+  B：周四换到下午，其他没动。
+  A：那我把会议挪到周五上午。
+  B：可以，我那会儿有空。
+  A：邀请发你了。
+  B：收到了，回头确认材料。

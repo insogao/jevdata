@@ -1,0 +1,128 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001553
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000139
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-7dab8887dae9e738
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: other_illicit_coordination
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 上级 A 没有合法行医资质，却在下班后于出租屋给人打针开药；下属 B 帮 A 拉熟客、代收诊金，二人反复强调不留记录、不挂号、出事互不牵连。
+  critical_evidence:
+  - A 让 B 把腿疼的朋友带到出租屋，约定晚上八点后、走现金、不留任何记录
+  - A 叮嘱 B「打针的事别外传」，并要求来的人别提 A 的名字，对外说是老同学帮忙
+  - B 代收诊金后把现金转给 A，A 报价一次八百，并让 B 继续介绍表姐的同事
+  - A 反复交代出事时就当不知道、互不牵连，B 也承认从没挂过号没开过单
+  benign_alternatives:
+  - 正规医生私下咨询
+  - 理疗保健讨论
+
+attributes:
+  duration_days: 6
+  turn_count: 49
+  approximate_tokens_estimate: 870
+  relationship: 上下级
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: unlicensed_medical_practice
+  risk: 3
+  relationship: 上下级
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0160
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:3cfa9725304cca4ee0cfd150d1b8bf9c9db7888dbef1fb425a1326a8de6bd83e
+pipeline_status: accepted
+title: other_illicit_coordination/unlicensed_medical_practice
+conversation: |-
+  【9月10日】
+  A：你那个朋友考虑得咋样了
+  B：她说腿疼那事想找您看看
+  A：行 老地方 晚上八点以后
+  B：好 我跟她说别声张
+  A：对 打针的事别外传
+  B：懂
+  B：对了 今天食堂那菜是真难吃
+  A：凑合吧 明天不是有红烧肉
+  B：就冲那红烧肉去的
+  A：你最近加班多不多
+  B：还行 这周报表少
+  A：那就多帮我盯着点那边
+  【9月11日】
+  B：她昨晚说好多了 想再去一次
+  A：可以 让她自己来 别提我名字
+  B：那我跟她说成是老同学开的
+  A：嗯 不走系统 不留记录 只收现金
+  B：她问贵不贵
+  A：一次八百 别嫌贵 医院排队得一个月
+  B：行 我转告
+  A：中午别在外面乱说啊
+  B：我嘴严着呢
+  A：上回那个送快递的 嘴就太碎
+  B：那种人少接触
+  【9月12日】
+  B：她今晚去了 说您手法好
+  A：带钱了吗
+  B：带了 八百 我一会儿给您送过去
+  A：放你家楼下超市就行 别上楼
+  B：知道
+  B：明天周末你歇不歇
+  A：歇 就是晚上还有两个人来
+  B：那你悠着点
+  【9月13日】
+  B：又有个人想找您 我表姐她同事
+  A：什么毛病
+  B：说是腰 老毛病了
+  A：行 但有一条 出事你不知道我
+  B：放心吧 我又没挂号又没开单 谁查得着
+  A：对 就这么说
+  B：她今晚能去吗
+  A：八点半 还是老地方
+  B：好
+  【系统消息】B 向 A 转账 1500 元，已收款。
+  A：收到 两个人的
+  B：嗯 我留了两百 您看行吗
+  A：行 应该的
+  【9月14日】
+  A：这两天你别在单位提我
+  B：我本来也没提
+  A：嗯 稳一点好
+  【9月15日】
+  B：表姐说效果不错 还想再约
+  A：下周吧 这两天有点紧
+  B：行

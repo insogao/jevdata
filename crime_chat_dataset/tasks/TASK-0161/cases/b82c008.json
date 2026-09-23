@@ -1,0 +1,170 @@
+{
+ "key": "b82c008",
+ "archetype_id": "ARC-000018",
+ "subtype": "consulting_fee_disguise",
+ "latent_intent": "公职人员的亲属 A 出面，让企业主 B 与一个空壳「咨询公司」签一份条款空白的顾问合同，按月固定打「咨询费」，实际不交付任何咨询成果，本质是利益输送的外壳。",
+ "critical_facts": [
+  "A 让 B 签一份咨询服务合同，合同内容先空着，说回头补",
+  "约定每月固定打一笔咨询费，走对公转账",
+  "B 问是否需要交付咨询报告，A 说「不用，走个形式就行」",
+  "B 按约定先转第一个月 12000 元咨询费"
+ ],
+ "benign_alternatives": [
+  "真实行业顾问",
+  "专家评审费"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "10月9日 15:00",
+   "speaker": "A",
+   "text": "王总 上次饭桌上说的合作 我这边准备好了"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 15:20",
+   "speaker": "B",
+   "text": "哦对 你说合同是吧 发我看看条款"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 15:23",
+   "speaker": "A",
+   "text": "条款我先没填 就先盖个章签个字 具体回头我哥那边再定"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 15:27",
+   "speaker": "B",
+   "text": "合同空着签不太合适吧 出了事算谁的"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 15:30",
+   "speaker": "A",
+   "text": "王总您还不放心我们? 我哥是什么人您清楚 走个形式给外面看"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 15:34",
+   "speaker": "B",
+   "text": "那费用怎么算"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 15:37",
+   "speaker": "A",
+   "text": "一个月一万二 按月打 长期稳定 比请个真顾问便宜"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 15:40",
+   "speaker": "B",
+   "text": "那我这边要出什么咨询成果吗 备案的时候好交代"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 15:43",
+   "speaker": "A",
+   "text": "不用 走个形式就行 真要报告我随便给你套一份模板"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 15:46",
+   "speaker": "B",
+   "text": "行 那我先打一个月 以后生意上多关照"
+  },
+  {
+   "type": "transfer",
+   "time": "10月9日 15:52",
+   "from": "B",
+   "to": "A",
+   "amount": 12000,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 15:55",
+   "speaker": "A",
+   "text": "收到 合同我明天让人送过去 你盖个章就行"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 16:00",
+   "speaker": "B",
+   "text": "好"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 09:10",
+   "speaker": "B",
+   "text": "合同收到了 抬头是家咨询公司? 我以为直接跟你签"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 09:14",
+   "speaker": "A",
+   "text": "这样好看 有主体有发票 你入账也方便"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 09:17",
+   "speaker": "B",
+   "text": "发票有吧 财务那边要"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 09:20",
+   "speaker": "A",
+   "text": "有 服务费发票 每个月都开给你"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 09:24",
+   "speaker": "B",
+   "text": "行 那我让财务归档"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 12:30",
+   "speaker": "A",
+   "text": "王总午饭吃了吗 我这边刚忙完"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 12:34",
+   "speaker": "B",
+   "text": "吃了 你哥最近还好吧 好久没见了"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 12:37",
+   "speaker": "A",
+   "text": "挺好 他忙 不方便出面 这些事我替他张罗"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 12:40",
+   "speaker": "B",
+   "text": "理解 那以后有事就找你了"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 14:50",
+   "speaker": "A",
+   "text": "对了 下个月那笔记得按时 别拖 拖了不好看"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 14:54",
+   "speaker": "B",
+   "text": "放心 每月九号我让财务固定打"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 14:57",
+   "speaker": "A",
+   "text": "嗯 稳定最重要"
+  }
+ ]
+}
