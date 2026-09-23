@@ -1,0 +1,140 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000027
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000088
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: privacy_doxxing
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 公估理赔人员绕开公函流程，私下付费让诊所档案管理员调取第三方伤者的就诊记录用于理赔核算，属于无授权获取他人健康信息。
+  critical_evidence:
+  - A（公估理赔外勤）经中间人浩子介绍联系诊所档案管理员B，因公函流程太慢，绕开正规渠道索要第三方伤者老陈的病历
+  - B 明确表示走系统留痕的不碰，最终从纸质档案私自拍摄六张就诊记录和处置单发给 A
+  - A 以这条信息值一顿饭承诺对价，10月15日上午收到图片后当天转账 2000 元
+  - 时间顺序完整：14日提出请求并议价，15日上午私下交付，15日中午付款
+  benign_alternatives:
+  - 正常保险理赔调查中的同行资料沟通
+  - 公估公司之间的常规协作与人情往来
+
+attributes:
+  duration_days: 2
+  turn_count: 67
+  approximate_tokens_estimate: 1493
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: insurance_claims_snoop
+  risk: 2
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0002
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:3290d9ff75fa9ea3f83949a8d5da12a38755f9d7a7f0e6d692b07df4579ea346
+pipeline_status: accepted
+title: privacy_doxxing/insurance_claims_snoop
+conversation: |-
+  【10月14日】
+  A：您好，是浩子介绍我加您的，我姓关，做人伤理赔外勤这块的
+  B：你好你好，浩哥昨天跟我提过您
+  B：您是哪家公估的来着
+  A：恒正公估，帮保司跑外勤的，以后少不了麻烦您
+  B：客气啥，都是一个圈子里的
+  A：就是老陈那个单子，浩子应该跟您提了
+  B：提了提了，伤者在门诊做理疗那个嘛
+  A：对对，就是他
+  A：对了，你们那边今天是不是降温了
+  B：可不是，一早出门冻得我直缩脖子
+  A：我们这边还短袖呢
+  B：羡慕，我暖水袋都翻出来了
+  A：熬熬吧，下个月我们也冷了
+  B：到时候记得穿秋裤哈哈
+  A：跟您说下正事哈
+  A：老陈那单，对方在你们诊所做过几次理疗对吧
+  B：四五次呢，都是下午来的
+  A：我手里现在就一张挂号的凭证
+  B：就诊记录肯定有的，这个跑不掉
+  A：我就想先把他的病历调出来看看内容
+  B：那你得走公函啊，发到我们前台
+  A：公函一层层批下来，半个月都不止
+  A：这单月底就要结，领导天天催
+  B：你们做外勤的不都是等函嘛
+  A：等函黄花菜都凉了
+  A：我就是想提前掌握下内容，心里有个数
+  B：中午了，吃了没
+  A：还没，刚从医院出来，随便对付口
+  B：我们楼下新开了家牛杂，味道正得很
+  A：听着就香
+  B：哪天来，我带你去
+  A：行，到时候我请，说好了的
+  A：咱接着上午的说哈
+  A：他那几次的就诊记录和处置单，你帮我拍一份
+  B：哎哟，这个我可不敢随便动
+  A：姐，不让您白忙，这条信息值一顿饭
+  B：哈哈你可真会说话
+  B：走系统留痕的我不碰，这是底线
+  A：那就别走系统嘛，档案室不归您管着嘛
+  B：档案室倒是我在管……
+  A：纸质的翻出来拍两张，又不动原件
+  B：我想想哈，这两天前台忙
+  A：不急，这两天都行，事成大餐安排
+  【10月15日】
+  A：珍姐早
+  B：早，刚开门
+  A：不打扰您，就说一声
+  B：你家闺女最近咋样
+  A：皮得很，昨天把作业本撕了折飞机
+  B：哈哈这个我熟悉，我家小子也干过
+  A：你家那个现在坐得住没
+  B：坐不住，全靠他爸吼
+  A：哈哈天下娃娃一般样
+  B：跟你说个事
+  B：老陈那几次的记录，我上午翻出来了
+  A：这么快
+  B：正好今天我盯档案室
+  B：关键的几页拍好了，待会发你
+  A：姐，您这是救我这条命
+  B：就诊记录加处置单，一共六张
+  A：我先说好，这份情必须表示
+  B：大餐就免了哈哈
+  B：发你了，你看看清楚不
+  A：清清楚楚，太清楚了
+  A：这下跟保司那边好交代了
+  A：一顿饭的规矩不能少，我先转您
+  【系统消息】A 向 B 转账 2000 元，已收款。
+  B：你这也太客气了，一顿牛杂的事
+  A：应该的，往后有单子还找您

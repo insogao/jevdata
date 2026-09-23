@@ -1,0 +1,125 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000020
+  family_id: FAM-PILOT-0001
+  lineage_id: LIN-PILOT-0001
+  archetype_id: ARC-000009
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_pilot
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 经销商向持证咨询公司支付合法市场询价与标书咨询服务费，流程留痕。
+  critical_evidence:
+  - 明确按合同对公支付并开发票
+  - 群里发复函、合同归档留痕
+  - 无隐藏指令
+  benign_alternatives:
+  - 正常居间咨询费
+  - 合规采购辅助服务
+
+attributes:
+  duration_days: 7
+  turn_count: 48
+  approximate_tokens_estimate: 1003
+  relationship: business
+  obfuscation: low
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: intermediary_payment_after_result
+  risk: 0
+  relationship: business
+  obfuscation: low
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: AGT-SESSION-001
+  model_id: MOD-SESSION-001
+  batch_id: BATCH-PILOT-001
+
+dedup:
+  content_hash: sha256:aa6cfaf102a41d555719404f281fdb6e8b03c520121b1d48716f7a7e80df5937
+pipeline_status: accepted
+title: 正常采购咨询：居间服务费对公结算
+conversation: |-
+  【10月8日】
+  A：张科，早。上次说的那台CT还是这个型号吗？
+  B：型号没变，预算还在走流程。
+  A：大概什么时候能有准信？厂里催我报价。
+  B：急不来，牵扯的人多。
+  A：懂，那我不催。
+  B：中午吃啥，食堂还是外面？
+  A：外面，新开的那家面馆走一个。
+  B：这家的牛肉面还行。
+  A：下次带你尝尝他们家的小菜。
+  【10月9日】
+  A：王老师家的孩子病好了吗？
+  B：好了，昨天返校。
+  A：那就好。对了，参数这块还需要我配合什么吗？
+  B：标书你按我发你的那份改，别自作主张。
+  A：明白，都照你说的来。
+  B：今晚有球，看吗？
+  A：看，老地方？
+  B：嗯。
+  【10月10日】
+  A：昨晚那个点球争议大了。
+  B：VAR就该取消，看得气死。
+  A：哈哈。对了，评审名单定了吗？
+  B：差不多，还是那几位。
+  A：那就稳了吧？
+  B：别问这么直白。等通知。
+  A：媳妇让我问你这周末去不去摘橘子。
+  B：去，孩子们正好放假。
+  【10月11日】
+  A：今天出结果吗？
+  B：下午签。
+  A：那台机器的售后我还是指定老刘团队，行不行？
+  B：可以，这个你定。
+  B：签了。
+  A：好。咨询费按合同那个数走？
+  B：对，合同价，你直接对公转我们公司就行。
+  A：行，发票我让财务一起开好。
+  【系统消息】A 向 B 转账 40000 元，已收款。
+  B：收到。
+  A：尾款按合同验收后付。
+  B：行，合同归档后我在项目群里发个复函。
+  A：放心，我一个字没说过。
+  【10月12日】
+  A：橘子我订了两箱，周末给你带一箱。
+  B：客气啥，人过来就行。
+  B：老刘那边你让他下周进场装。
+  A：好，我通知他。
+  【10月13日】
+  A：张科，验收大概什么节奏？
+  B：装机完跑两周，月底验收。
+  A：那月底验收单我提前准备。
+  B：嗯。先不聊这个，开会上楼了。
+  【10月14日】
+  A：周末摘橘子带娃去，你们家那位来不来？
+  B：她值班，我和孩子来。
+  A：行，周日早上九点园子门口。

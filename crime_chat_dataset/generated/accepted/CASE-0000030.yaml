@@ -1,0 +1,140 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000030
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000076
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: privacy_doxxing
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A 为情感纠葛对象付费购买行踪追踪服务，服务商按周出售他人日常活动片区与时段，双方明知不属于监护或调度用途。
+  critical_evidence:
+  - A 经中间人黎哥介绍请 B 追踪一名以前很熟、现在联系不上且明确不是家属的女性，B 提供其常出没片区与时段
+  - B 明确按周收费一千五、先款后查，只提供大概位置，并当面撇清别拿去干违法的事
+  - 10月12日 A 转账 1500 元支付首周费用，付款在前、次日晚间交付在后，之后持续续订
+  - A 要求加查目标接触的人员被 B 以超出范围拒绝，双方清楚这不是监护或车辆调度场景
+  benign_alternatives:
+  - 家长监护定位
+  - 公司车辆调度
+
+attributes:
+  duration_days: 6
+  turn_count: 63
+  approximate_tokens_estimate: 1234
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: phone_number_trace
+  risk: 3
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0002
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:cce564c3d2416cd8a4f40d18c477060c9c3d177dccf7d5aa2a6fa6c917b0764f
+pipeline_status: accepted
+title: privacy_doxxing/phone_number_trace
+conversation: |-
+  【10月10日】
+  A：谭哥好，黎哥把我微信推给您的
+  B：你好，黎哥说了
+  A：我这边有个事想请教下
+  A：想知道一个人的活动范围，大概就行
+  B：什么人
+  A：一个……以前很熟的人，现在联系不上了
+  B：是家里人吗？家里人自己装个东西就能看
+  A：不是家里人，也装不了
+  B：明白了
+  B：你想要到什么程度
+  【10月11日】
+  A：昨晚那场看了没，最后绝杀太狠了
+  B：看了，那脚弧线值回熬夜
+  A：我押了个平局，白瞎
+  B：你这眼光，别买了哈哈
+  A：下回跟你反向操作
+  B：反向梭哈，稳赢
+  B：回正题，我这边按周算
+  A：一周多少
+  B：一千五，先款
+  B：我只给大概，哪个片区、常出没的时段，就到这一步
+  A：够了够了，我只要大概位置
+  B：先说好，你可别拿这个去干违法的事
+  A：就是想知道她过得咋样，心里有个数
+  B：行，想好给我信
+  【10月12日】
+  A：谭哥，我想好了，先来一周
+  B：行，转我就行
+  A：好嘞
+  【系统消息】A 向 B 转账 1500 元，已收款。
+  B：收到了
+  A：什么时候能出
+  B：明晚这个点之前，第一轮
+  A：辛苦谭哥
+  B：客气，干活去了
+  【10月13日】
+  A：你上次说的那个秋茶到了没
+  B：快递显示还在郑州中转，急死
+  A：秋茶就这几天鲜
+  B：中转一天我都嫌久
+  A：到了尝完跟我说声
+  B：必须的，好东西不独吞
+  B：第一轮出来了
+  B：工作日基本在城南那片，中午固定去两个地方，很规律
+  A：晚上呢
+  B：晚上的不在我这块，说过了，就到这一步
+  A：行，城南，记下了
+  B：每周更新一轮，你看还需不需要
+  A：需要需要，下周的给我留着
+  【10月14日】
+  B：今早有雾，开车慢点
+  A：看到了，白茫茫一片
+  B：这天气一周雾三回
+  A：你们海边更潮吧
+  B：潮，被子永远晒不干
+  A：想想都难受，太阳快点出来吧
+  A：谭哥，这周再来一轮
+  B：行，老规矩
+  A：顺便问下，周末她一般去哪片
+  B：周末规律跟工作日两码事，下周跑出来给你
+  A：成，那下周见
+  B：嗯，下周的钱到时一起算
+  【10月15日】
+  A：谭哥，她最近好像见了个人，男女能看出来不
+  B：这个超出我说的范围了
+  A：就多看一眼
+  B：我就给位置和时段，别的没有，你也别为难我
+  A：行吧，是我不懂规矩
+  B：下轮数据明晚给你，老时间

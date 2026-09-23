@@ -1,0 +1,205 @@
+schema_version: CASE-YAML-v1
+identity:
+  case_id: CASE-DEMO-0008
+  family_id: FAM-DEMO-0008
+  lineage_id: LIN-DEMO-0008
+  archetype_id: ARC-DEMO-0008
+  variant_id: v01
+source:
+  source_ids:
+  - SRC-SYN-001
+  source_seed_ids:
+  - SEED-SYN-DEMO-0008
+  source_type: synthetic_demo
+lineage:
+  root_case_id: CASE-DEMO-0008
+  parent_case_id: null
+  generation_type: original_demo
+labels:
+  risk: 2
+  category: theft_robbery_property_crime
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+hidden_case:
+  latent_intent: 卖方回避来源，要求以明显异常价格快速转手一批物品。
+  critical_evidence:
+  - 买方主动质疑来源
+  - 卖方明确拒绝解释来源
+  - 价格异常且要求尽快出手
+  - 讨论减少交易记录
+  benign_alternatives:
+  - 急售二手物品
+  - 公司清仓
+attributes:
+  duration_days: 4
+  turn_count: 120
+  approximate_tokens_estimate: 1406
+  relationship: business_contact
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+  topic_switches_estimate: 15
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: fencing_suspicious_goods
+  risk: 2
+  relationship: business_contact
+  obfuscation: medium
+  has_transfer: false
+execution:
+  workflow_version: DATASET-WF-v2.2-DEMO
+  prompt_id: PRM-DEMO-MANUAL-001
+  agent_id: AGT-PLANNER-001
+  model_id: MOD-GPT-5.6-SOL
+  batch_id: BATCH-DEMO-20-V2
+dedup:
+  content_hash: sha256:73b18fb2294c94e284acf2cf27c74a21feb1257ee86ef1eae5bb3000124bd401
+  semantic_cluster_id: SCL-DEMO-0008
+title: 赃物处置：来源回避、异常低价与快速转手
+conversation: |-
+  【2月14日】
+  
+  A：你最近还收那类设备吗？
+  B：看成色和来源。
+  A：有几台，价格能给很低。
+  B：多低？
+  A：差不多正常的一半。
+  B：来源没问题吧？
+  A：别问那么细。
+  
+  
+  A：猫最近还半夜叫吗？
+  B：好多了，晚上陪它玩一会儿就安静。
+  A：之前可能就是精力太旺。
+  B：医生也这么说。
+  A：它那次打针花了多少？
+  B：三百多，比我上次看感冒还贵。
+  A：照片发我一张。
+  B：晚点拍，它现在睡着了。
+  
+  A：你上次推荐的咖啡豆我买了。
+  B：怎么样？
+  A：还行，就是我磨得太细。
+  B：你那个机器要粗一点。
+  A：我明天调一下，办公室几个人都说香。
+  B：别一上来买太多。
+  A：就买了半斤。
+  B：那还好。
+  
+  A：房东今天又问续租。
+  B：你打算续吗？
+  A：还在想，通勤有点远。
+  B：但你那边房租还算便宜。
+  A：就是这个让我纠结。
+  B：要搬就早点看房。
+  A：最近没时间。
+  B：先问问能不能续半年。
+  【2月15日】
+  
+  B：一半价格太夸张了。
+  A：就是急着出。
+  B：有票或者原包装吗？
+  A：没有，你按现货看。
+  B：那我不好直接收。
+  A：你先帮我问熟客，能走就走。
+  
+  
+  A：你体检报告拿到了？
+  B：拿到了，几个指标偏高。
+  A：医生怎么说？
+  B：让我少油少盐，多运动。
+  A：这话每个人都能收到。
+  B：确实。
+  A：你别再每天夜宵了。
+  B：我努力，从明天开始。
+  
+  A：周六聚餐你来吗？
+  B：应该来，地点定了吗？
+  A：还在投票，一家火锅一家粤菜。
+  B：我投粤菜，最近有点上火。
+  A：你每次都说上火。
+  B：年纪大了。
+  A：少来。
+  B：哈哈。
+  
+  A：你电脑昨天那个问题解决了吗？
+  B：重装驱动后好了。
+  A：我还以为硬盘坏了。
+  B：差点也以为，重要文件现在都同步云盘了。
+  A：那就行。
+  B：就是公司VPN还是偶尔断。
+  A：那个大家都断，不是你机器问题。
+  B：那我放心了。
+  【2月16日】
+  
+  A：问得怎么样？
+  B：有人要，但他也问来源。
+  A：就说朋友急售。
+  B：这个说法我不敢保证。
+  A：先出两台，钱到了我再给你那份。
+  
+  
+  A：今天雨挺大的，你带伞了吗？
+  B：没带，早上出门还没下。
+  A：我看天气预报说晚上更大。
+  B：那我下班买把便宜的。
+  A：家里已经四五把了，你每次都忘。
+  B：问题是都不在我手上。
+  A：地铁今天也晚点。
+  B：我刚看到群里有人说了。
+  
+  A：你妈复查结果出来了吗？
+  B：出来了，医生说先观察，不用住院。
+  A：那还好，下个月再去一次？
+  B：对，我周末回去陪两天。
+  A：最近让她少熬夜。
+  B：她比我还难劝。
+  A：需要我帮你订票吗？
+  B：不用，我自己来。
+  
+  A：快递柜又满了，我的包裹被放到隔壁小区。
+  B：你买什么了？
+  A：两本书，还有给孩子的画笔。
+  B：现在快递真会放。
+  A：我下班绕过去取。
+  B：太晚就明天吧。
+  A：明天可能更没时间，我已经截图取件码了。
+  B：那别忘了。
+  【2月17日】
+  
+  B：有一个人愿意拿两台。
+  A：那就别拖。
+  B：他要当面验机。
+  A：可以，但别留太多记录。
+  B：我只负责联系。
+  A：知道。
+  
+  A：昨天那个电影你看完了吗？
+  B：看完了，后半段有点拖。
+  A：我看到一半睡着了。
+  B：前面其实更好看。
+  A：结尾别剧透。
+  B：不说，你最好从头看，不然人物关系记不住。
+  A：有这么复杂？
+  B：也还好。
+  
+  A：家里水龙头还漏吗？
+  B：师傅上午来修了，换了个阀芯。
+  A：物业不管这个？
+  B：屋里的不管，花了两百多。
+  A：那至少不滴了。
+  B：嗯，晚上回去再看看。
+  A：漏水真的烦。
+  B：是，地柜差点都潮了。
+  
+  A：你下个月不是要去成都吗？
+  B：可能改到月底，行程还没确认。
+  A：机票买了吗？
+  B：还没，公司统一订。
+  A：月底酒店应该挺贵。
+  B：不用我管。
+  A：如果周五结束得早，可以多待一天。
+  B：我也想顺便看看博物馆。

@@ -1,0 +1,89 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000023
+  family_id: FAM-PILOT-0003
+  lineage_id: LIN-PILOT-0003
+  archetype_id: ARC-000004
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_pilot
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 正常二手吉他面交：母亲与儿子日常、线下面交、价格明确。
+  critical_evidence:
+  - 商品与价格明确且当面验货
+  - 家庭语境明确（母亲/儿子）
+  - 转账金额与约定一致
+  benign_alternatives:
+  - 无——本就是正常交易
+
+attributes:
+  duration_days: 2
+  turn_count: 20
+  approximate_tokens_estimate: 388
+  relationship: stranger
+  obfuscation: low
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: second_hand_deposit_run
+  risk: 0
+  relationship: stranger
+  obfuscation: low
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: AGT-SESSION-001
+  model_id: MOD-SESSION-001
+  batch_id: BATCH-PILOT-001
+
+dedup:
+  content_hash: sha256:353649803791ebf5934c61e529ed35cc406f63916169cea938ac2616ee52ac83
+pipeline_status: accepted
+title: 二手吉他面交：老地方、那个数（hard negative）
+conversation: |-
+  【10月20日】
+  A：兄弟，琴还在吧
+  B：在，就等你了
+  A：还是上次说的那个数？800
+  B：800，琴包变调夹都给你
+  A：成，明天老地方见
+  B：地铁站B口，晚上七点
+  【10月21日】
+  A：今天降温，你多穿点
+  B：知道了妈，下班就去取琴，别跟我念了
+  A：中午吃啥，食堂那窗口换人了
+  B：那你尝尝新师傅的，晚上我跟同学吃饭
+  B：到B口了，你在哪
+  A：北边第三个柱子，抱着琴的就是我
+  B：音准没问题，弦也新
+  A：我就说自己保养得好
+  【系统消息】B 向 A 转账 800 元，已收款。
+  A：收到，回头练好了来找我换电箱款
+  B：哈哈好，师父再见
+  B：妈我到家了，琴很好，就是有点占地方
+  A：放墙角去，别碍着写作业

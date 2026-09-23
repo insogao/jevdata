@@ -1,0 +1,104 @@
+{
+ "task_id": "TASK-0005",
+ "batch_id": "BATCH-PILOT-002",
+ "prompt_id": "PRM-DIALOGUE-001",
+ "note": "为已存在的 risk0 良性版补写风险 base：先读良性文件，保持对话骨架（事件顺序/时间戳/大部分台词）一致，只把决定性事实翻转为风险方向。",
+ "cases": [
+  {
+   "key": "case_12b",
+   "mirror_file": "D:\\work\\jev\\crime_chat_dataset\\tasks\\TASK-0002\\cases\\case_45.json",
+   "archetype_id": "ARC-000157",
+   "subtype": "intimate_photo_extort",
+   "top_category": "coercion_blackmail",
+   "risk": 3,
+   "illicit_likelihood": 3,
+   "evidence_strength": "strong",
+   "review_required": true,
+   "axes": {
+    "relationship": "熟人",
+    "obfuscation": "high",
+    "duration_days": 4,
+    "message_target": 41,
+    "side_topics": 3
+   },
+   "transfer": {
+    "has_transfer": true,
+    "normal_transfer_count": 0,
+    "suspicious_transfer_count": 1
+   },
+   "flip_hint": "把「玩笑丑照+奶茶钱」翻转为「私密照片威胁+封口费」：转账金额改大、加入倒计时与公开威胁、保留付款"
+  },
+  {
+   "key": "case_16b",
+   "mirror_file": "D:\\work\\jev\\crime_chat_dataset\\tasks\\TASK-0002\\cases\\case_48.json",
+   "archetype_id": "ARC-000156",
+   "subtype": "illegal_lottery_chain",
+   "top_category": "other_illicit_coordination",
+   "risk": 3,
+   "illicit_likelihood": 3,
+   "evidence_strength": "strong",
+   "review_required": true,
+   "axes": {
+    "relationship": "熟人",
+    "obfuscation": "high",
+    "duration_days": 5,
+    "message_target": 58,
+    "side_topics": 3
+   },
+   "transfer": {
+    "has_transfer": true,
+    "normal_transfer_count": 0,
+    "suspicious_transfer_count": 1
+   },
+   "flip_hint": "把「实体店出票」翻转为「地下坐庄外围」：退水话术、第七层通道式黑话、转账变为投注金"
+  },
+  {
+   "key": "case_02b",
+   "mirror_file": "D:\\work\\jev\\crime_chat_dataset\\tasks\\TASK-0003\\cases\\case_42.json",
+   "archetype_id": "ARC-000157",
+   "subtype": "agent_debt_bodily_collateral",
+   "top_category": "coercion_blackmail",
+   "risk": 3,
+   "illicit_likelihood": 3,
+   "evidence_strength": "strong",
+   "review_required": true,
+   "axes": {
+    "relationship": "陌生人",
+    "obfuscation": "medium",
+    "duration_days": 6,
+    "message_target": 70,
+    "side_topics": 4
+   },
+   "transfer": {
+    "has_transfer": true,
+    "normal_transfer_count": 0,
+    "suspicious_transfer_count": 1
+   },
+   "flip_hint": "把「电子合同借款+工地招工」翻转为「逼签超额借条+扣证件/扣人抵债」：删除合法合同要素，加入胁迫"
+  },
+  {
+   "key": "case_14b",
+   "mirror_file": "D:\\work\\jev\\crime_chat_dataset\\tasks\\TASK-0004\\cases\\case_47.json",
+   "archetype_id": "ARC-000130",
+   "subtype": "borrow_passbook_clean",
+   "top_category": "money_laundering_obfuscation",
+   "risk": 2,
+   "illicit_likelihood": 2,
+   "evidence_strength": "medium",
+   "review_required": true,
+   "axes": {
+    "relationship": "亲友",
+    "obfuscation": "high",
+    "duration_days": 4,
+    "message_target": 62,
+    "side_topics": 3
+   },
+   "transfer": {
+    "has_transfer": true,
+    "normal_transfer_count": 0,
+    "suspicious_transfer_count": 1
+   },
+   "flip_hint": "把「正规银行流程+亲友还款」翻转为「借存折过流水洗钱」：来源不明的过账、抽成话术、催促当天转出"
+  }
+ ]
+}

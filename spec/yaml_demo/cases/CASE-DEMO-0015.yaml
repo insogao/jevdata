@@ -1,0 +1,230 @@
+schema_version: CASE-YAML-v1
+identity:
+  case_id: CASE-DEMO-0015
+  family_id: FAM-DEMO-0015
+  lineage_id: LIN-DEMO-0015
+  archetype_id: ARC-DEMO-0015
+  variant_id: v01
+source:
+  source_ids:
+  - SRC-SYN-001
+  source_seed_ids:
+  - SEED-SYN-DEMO-0015
+  source_type: synthetic_demo
+lineage:
+  root_case_id: CASE-DEMO-0015
+  parent_case_id: null
+  generation_type: original_demo
+labels:
+  risk: 1
+  category: coercion_blackmail
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: true
+hidden_case:
+  latent_intent: 存在强硬催债和模糊威胁，但背景显示可能是正常私人债务纠纷，尚无明确非法对价。
+  critical_evidence:
+  - 存在威胁性语言
+  - 双方都承认有历史借款
+  - 对方多次要求按借条金额结清
+  - 没有额外索取超出债务的利益
+  benign_alternatives:
+  - 正常债务催收
+  - 民事纠纷
+attributes:
+  duration_days: 3
+  turn_count: 143
+  approximate_tokens_estimate: 1653
+  relationship: friend
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+  topic_switches_estimate: 17
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: aggressive_debt_collection_ambiguous
+  risk: 1
+  relationship: friend
+  obfuscation: medium
+  has_transfer: true
+execution:
+  workflow_version: DATASET-WF-v2.2-DEMO
+  prompt_id: PRM-DEMO-MANUAL-001
+  agent_id: AGT-PLANNER-001
+  model_id: MOD-GPT-5.6-SOL
+  batch_id: BATCH-DEMO-20-V2
+dedup:
+  content_hash: sha256:79358c6cb650115edcbe3e373ca4ee97014001fd61462755bb68596923c72f72
+  semantic_cluster_id: SCL-DEMO-0015
+title: 边界案例：催债措辞强硬但证据不足以认定敲诈
+conversation: |-
+  【7月10日】
+  
+  A：这笔钱你拖了两个月了。
+  B：我知道，最近真的周转不开。
+  A：借条写的是六月底。
+  B：再给我一周。
+  A：你别让我去找你家里人说。
+  B：别牵扯家里。
+  
+  
+  A：周六聚餐你来吗？
+  B：应该来，地点定了吗？
+  A：还在投票，一家火锅一家粤菜。
+  B：我投粤菜，最近有点上火。
+  A：你每次都说上火。
+  B：年纪大了。
+  A：少来。
+  B：哈哈。
+  
+  A：房东今天又问续租。
+  B：你打算续吗？
+  A：还在想，通勤有点远。
+  B：但你那边房租还算便宜。
+  A：就是这个让我纠结。
+  B：要搬就早点看房。
+  A：最近没时间。
+  B：先问问能不能续半年。
+  
+  A：你下个月不是要去成都吗？
+  B：可能改到月底，行程还没确认。
+  A：机票买了吗？
+  B：还没，公司统一订。
+  A：月底酒店应该挺贵。
+  B：不用我管。
+  A：如果周五结束得早，可以多待一天。
+  B：我也想顺便看看博物馆。
+  
+  A：上次那个文档你还有最新版吗？
+  B：应该在共享盘，周三改过一次，标题后面有v6。
+  A：我这里只找到周一的版本。
+  B：第三页数据要用新的。
+  A：找到了，我下午重新导一遍。
+  B：发之前让我看一眼。
+  A：行。
+  B：别又把内部备注一起发出去。
+  
+  A：今天外面特别堵。
+  B：我坐地铁还好。
+  A：我开车半小时没过两个路口。
+  B：早说让你别开。
+  A：晚上还得去接人。
+  B：那没办法。
+  A：你那边几点下班？
+  B：六点多吧。
+  
+  A：今天公司又停电了十分钟。
+  B：你们那栋楼怎么老出问题？
+  A：物业说是检修，下午会议室空调也坏了。
+  B：文件没丢吧？
+  A：自动保存了。
+  B：那还好。
+  A：大家都在群里吐槽。
+  B：听着像整栋楼都该修。
+  【7月11日】
+  
+  B：我先还一部分行不行？
+  A：可以，但剩下要有明确日期。
+  【系统消息】B 向 A 转账 3000 元，已收款。
+  A：收到了。
+  B：剩下的下周五。
+  A：到时候别再失约。
+  
+  
+  A：你妈复查结果出来了吗？
+  B：出来了，医生说先观察，不用住院。
+  A：那还好，下个月再去一次？
+  B：对，我周末回去陪两天。
+  A：最近让她少熬夜。
+  B：她比我还难劝。
+  A：需要我帮你订票吗？
+  B：不用，我自己来。
+  
+  A：你电脑昨天那个问题解决了吗？
+  B：重装驱动后好了。
+  A：我还以为硬盘坏了。
+  B：差点也以为，重要文件现在都同步云盘了。
+  A：那就行。
+  B：就是公司VPN还是偶尔断。
+  A：那个大家都断，不是你机器问题。
+  B：那我放心了。
+  
+  A：报销你交了吗？
+  B：还差一张酒店发票。
+  A：系统月底关。
+  B：我今天催酒店补。
+  A：你上个月那笔也没报吧？
+  B：那笔已经过了。
+  A：财务最近审得很细。
+  B：是，按实际填就行。
+  
+  A：孩子这次考试怎么样？
+  B：数学还行，英语掉了点。
+  A：最近是不是没怎么背单词？
+  B：天天说背了，我也不知道背没背。
+  A：别逼太紧，他自己也着急。
+  B：我知道。
+  A：周末带出去放松一下。
+  B：准备去公园骑车。
+  
+  A：周末还打球吗？
+  B：看天气，场地不湿就去。
+  A：老张说他脚扭了。
+  B：那少一个人。
+  A：我问问小陈，他周五应该出差回来。
+  B：那正好。
+  A：还是七点？
+  B：可以。
+  【7月12日】
+  
+  A：我昨天说话重了。
+  B：没事，我确实欠着。
+  A：我只要按借条结清。
+  B：知道。
+  
+  A：家里水龙头还漏吗？
+  B：师傅上午来修了，换了个阀芯。
+  A：物业不管这个？
+  B：屋里的不管，花了两百多。
+  A：那至少不滴了。
+  B：嗯，晚上回去再看看。
+  A：漏水真的烦。
+  B：是，地柜差点都潮了。
+  
+  A：快递柜又满了，我的包裹被放到隔壁小区。
+  B：你买什么了？
+  A：两本书，还有给孩子的画笔。
+  B：现在快递真会放。
+  A：我下班绕过去取。
+  B：太晚就明天吧。
+  A：明天可能更没时间，我已经截图取件码了。
+  B：那别忘了。
+  
+  A：你弟什么时候回来？
+  B：下周三，待一周左右。
+  A：那家里要热闹了。
+  B：我妈已经开始准备一堆菜。
+  A：老人就喜欢这样。
+  B：对。
+  A：你们周末是不是要聚？
+  B：大概率。
+  
+  A：晚上要不要顺路买点水果？
+  B：可以买橙子，别再买香蕉了。
+  A：上次不是你说要吃？
+  B：买太多吃不完。
+  A：那橙子和苹果，还要酸奶吗？
+  B：来两盒无糖的。
+  A：记住了。
+  B：谢谢。
+  
+  A：你最近是不是又换手机了？
+  B：没换，贴膜碎了，看起来像新机。
+  A：我说颜色怎么没变。
+  B：这个还能用两年。
+  A：电池呢？
+  B：一天一充，还行。
+  A：我那个已经一天两充。
+  B：那你该换电池了。

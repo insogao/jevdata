@@ -1,0 +1,168 @@
+schema_version: CASE-YAML-v1
+identity:
+  case_id: CASE-DEMO-0011
+  family_id: FAM-DEMO-0011
+  lineage_id: LIN-DEMO-0011
+  archetype_id: ARC-DEMO-0011
+  variant_id: v01
+source:
+  source_ids:
+  - SRC-SYN-001
+  source_seed_ids:
+  - SEED-SYN-DEMO-0011
+  source_type: synthetic_demo
+lineage:
+  root_case_id: CASE-DEMO-0011
+  parent_case_id: null
+  generation_type: original_demo
+labels:
+  risk: 3
+  category: bribery_corruption
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+hidden_case:
+  latent_intent: 多方在正式投标前私下约定中标方和报价位置，破坏独立竞争。
+  critical_evidence:
+  - 明确说这次“让你们拿”
+  - 讨论其他参与方配合报价
+  - 强调文件表面不能看出协调
+  - 没有正常联合投标披露
+  benign_alternatives:
+  - 合法联合投标
+  - 同一集团内部预算讨论
+attributes:
+  duration_days: 4
+  turn_count: 87
+  approximate_tokens_estimate: 999
+  relationship: business
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+  topic_switches_estimate: 10
+generation_signature:
+  top_category: bribery_corruption
+  subtype: bid_coordination
+  risk: 3
+  relationship: business
+  obfuscation: medium
+  has_transfer: false
+execution:
+  workflow_version: DATASET-WF-v2.2-DEMO
+  prompt_id: PRM-DEMO-MANUAL-001
+  agent_id: AGT-PLANNER-001
+  model_id: MOD-GPT-5.6-SOL
+  batch_id: BATCH-DEMO-20-V2
+dedup:
+  content_hash: sha256:f35faf2ebd131df85e3254ba55314e306ccafd0247388894d93c7655aa3c2490
+  semantic_cluster_id: SCL-DEMO-0011
+title: 围标串标：提前协调谁中以及其他报价位置
+conversation: |-
+  【11月10日】
+  
+  A：招标文件看了吧？
+  B：看了，条件跟之前差不多。
+  A：这次还是你们主拿。
+  B：另外两家呢？
+  A：我去沟通，他们会配合。
+  B：价格别挤太近。
+  
+  
+  A：孩子这次考试怎么样？
+  B：数学还行，英语掉了点。
+  A：最近是不是没怎么背单词？
+  B：天天说背了，我也不知道背没背。
+  A：别逼太紧，他自己也着急。
+  B：我知道。
+  A：周末带出去放松一下。
+  B：准备去公园骑车。
+  
+  A：你最近是不是又换手机了？
+  B：没换，贴膜碎了，看起来像新机。
+  A：我说颜色怎么没变。
+  B：这个还能用两年。
+  A：电池呢？
+  B：一天一充，还行。
+  A：我那个已经一天两充。
+  B：那你该换电池了。
+  【11月11日】
+  
+  A：一家已经说好了。
+  B：另一家呢？
+  A：还在谈。
+  B：我们正常按自己的成本报？
+  A：你们按正常区间，另外两家留在后面。
+  B：文件别做得太一致，不然太明显。
+  
+  
+  A：晚上要不要顺路买点水果？
+  B：可以买橙子，别再买香蕉了。
+  A：上次不是你说要吃？
+  B：买太多吃不完。
+  A：那橙子和苹果，还要酸奶吗？
+  B：来两盒无糖的。
+  A：记住了。
+  B：谢谢。
+  
+  A：今天公司又停电了十分钟。
+  B：你们那栋楼怎么老出问题？
+  A：物业说是检修，下午会议室空调也坏了。
+  B：文件没丢吧？
+  A：自动保存了。
+  B：那还好。
+  A：大家都在群里吐槽。
+  B：听着像整栋楼都该修。
+  【11月12日】
+  
+  A：另一家也点头了。
+  B：那我让同事准备。
+  A：这件事别在正式群说。
+  B：知道。
+  A：下周你来北京吗？
+  B：可能周二。
+  
+  
+  A：今天外面特别堵。
+  B：我坐地铁还好。
+  A：我开车半小时没过两个路口。
+  B：早说让你别开。
+  A：晚上还得去接人。
+  B：那没办法。
+  A：你那边几点下班？
+  B：六点多吧。
+  
+  A：你中午吃什么？
+  B：还没想，楼下那家面最近排队太久。
+  A：我昨天点了他们家的外卖，送到都坨了。
+  B：那我还是去便利店吧。
+  A：你不是说最近胃不舒服吗，别总吃冷的。
+  B：知道，下午还有两个会，懒得跑远。
+  A：晚上早点回去，冰箱里还有汤。
+  B：行，我回去热一下。
+  【11月13日】
+  
+  B：报价初稿出来了。
+  A：你只给我看大概区间就行。
+  B：嗯。
+  A：其他人的我来协调。
+  B：好。
+  
+  A：周末还打球吗？
+  B：看天气，场地不湿就去。
+  A：老张说他脚扭了。
+  B：那少一个人。
+  A：我问问小陈，他周五应该出差回来。
+  B：那正好。
+  A：还是七点？
+  B：可以。
+  
+  A：我把阳台那几盆花都换土了。
+  B：你不是最怕弄泥？
+  A：最近突然想养点东西。
+  B：别再把多肉养死。
+  A：这次看了教程。
+  B：教程救不了浇水太勤。
+  A：我控制。
+  B：长好一点拍给我看。

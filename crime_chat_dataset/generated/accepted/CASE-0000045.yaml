@@ -1,0 +1,140 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000045
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000021
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: bribery_corruption
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 评标专家经中间人引荐，在开标前向初次结识的承包商提供指定品牌与参数清单、指导报价策略，约定事成后按“老规矩”给“那个数”；中标公示当晚深夜 B 转账 50000 元。全程文字、不留备注，无任何直接命名，需结合时间线与转账才能推断。
+  critical_evidence:
+  - 两人经“老陈”引荐初次合作、素不相识，A 开场即暗示能左右评审（“评审的事，有我能说话的地方”）（msgs 1-5）
+  - 开标前 A 向 B 提供指定品牌与参数清单，要求“带量报价”逐一对应，并指导报价比其预期高两个点、不压最低价（msgs 7-9、17-23）
+  - 双方约定事成之后按“老规矩”给“那个数”，刻意只用微信文字、不打电话、传文件走邮箱、转账不备注（msgs 11、29-35、52-54）
+  - 中标公示当晚 23:47，B 向 A 转账 50000 元，无备注无任何业务凭证（transfer + msgs 50-60）
+  benign_alternatives:
+  - 合法分包合作
+  - 居间佣金合规申报
+
+attributes:
+  duration_days: 5
+  turn_count: 64
+  approximate_tokens_estimate: 1413
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: project_bid_kickback
+  risk: 3
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0004
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:c38cd1dcbc489642a9e0f9bfcb518a0f125cd92d43f38ed0efc37c759d0f4e77
+pipeline_status: accepted
+title: bribery_corruption/project_bid_kickback
+conversation: |-
+  【10月8日】
+  A：是小赵吧，老陈把你微信推给我了
+  B：对，周工好，久仰久仰
+  A：客套省了，那个项目你想不想做
+  B：智慧园区那个标？我们跟了大半年了
+  A：评审的事，有我能说话的地方
+  B：那可太好了，周工有吩咐
+  A：我发你一张清单，参数和品牌照着填，带量报价
+  B：带量？招标文件不是不让吗
+  A：让你带你就带，一一对应，错不了
+  B：明白，我让预算连夜调
+  A：电话就别打了，文字说清楚就行
+  B：懂，您放心
+  B：周工这两天过来不，我安排车
+  A：我后天的高铁，不用接，酒店自己订
+  B：那哪行，到了说一声，请你吃个便饭
+  A：便饭免了，正事要紧
+  【10月9日】
+  A：清单收到没
+  B：收到，三处品牌跟招标文件不一致，真没问题？
+  A：技术分占四成，照我的来，分不会低
+  B：那报价区间呢，压到多少合适
+  A：别压最低，比我预的高两个点，这样顺理成章
+  B：高两个点还能中？
+  A：照做就是，别的你不用懂
+  B：好，全听您的
+  B：你们那边降温没，这边一场雨直接入冬了
+  A：下了两天了，我钓鱼都停了
+  B：周工还钓这个呢，改天跟您学学
+  A：就图个清静
+  【10月10日】
+  A：明天开标，你的标书我晚上扫一眼
+  B：多谢周工，大文件发您邮箱？
+  A：发邮箱，微信别传大件
+  B：好嘞
+  A：还有个事，事成之后，老规矩，你懂的
+  B：懂的懂的，一定按规矩来
+  A：那个数，别多别少
+  B：周工痛快，我也不含糊
+  B：给您备了两饼茶，云南朋友寄的
+  A：茶就不必了，东西你留着
+  B：一点心意，不值钱玩意
+  A：先放你这，以后有机会再说
+  【10月11日】
+  A：你那个技术方案第七页，数据对得上吗
+  B：对得上，跟清单一一对应的
+  A：行，别的几家里有两家文件都做不平，你稳的
+  B：那我心里有底了
+  A：公示一般三到五天，你盯着点网站
+  B：周工孩子多大了，跟您跑工地不
+  A：大二，住校，不跟我掺和
+  B：年轻人有自己的天地好
+  B：回头让他学工科，回来接您的班嘛
+  A：是，省心，就是费钱哈哈
+  【10月12日】
+  B：周工！中了！第一名，公示贴出来了
+  A：知道了，恭喜，按说好的来
+  B：必须的，卡号发我……还是老方式？
+  A：老方式，别备注，别多话
+  B：明白
+  B：晚上我安排
+  B：周工晚饭吃了没，请你吃个夜宵庆祝下
+  A：不用了，早点休息，明天各自忙
+  B：那您好好休息
+  【系统消息】B 向 A 转账 50000 元，已收款。
+  B：周工，转了，您查收
+  A：收到。后面变更签证的活还长，咱慢慢处
+  B：全仰仗您
+  A：以后晚上少发消息，白天说
+  B：懂了，您休息

@@ -1,0 +1,130 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000046
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000094
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 工作室老板（上线）拉着有收款码资源的渠道合作方（下线）做过账生意：B 用“闲码”收款后秒转上游，抽千八佣金、名义秒结；通道已排到“第七层”，客人“急着提钱”暗示线上赌客提现。全程黑话，结合 A→B 的 4600 元佣金结算才能定性。
+  critical_evidence:
+  - B 用“闲的那个码”替 A 过账，店里正常收款码不动，到账就转、别过夜，佣金千八且号称秒结（msgs 5-9、17-20）
+  - A 自述通道已排到“第七层”，一层层往下放，B 明确知道自己在链条末节且不问上游（msgs 27-32）
+  - B 问单子来路，A 只说“线上来的客人，急着提钱用，你管人家干嘛”，B 明知有问题仍继续（msgs 37-40）
+  - A 于10月12日晚转给 B 4600 元过账佣金，走私人微信、无合同凭证，结算比承诺拖延了三天（msgs 47-49 + transfer）
+  benign_alternatives:
+  - 游戏点券代充
+  - 平台充值服务
+
+attributes:
+  duration_days: 5
+  turn_count: 54
+  approximate_tokens_estimate: 1138
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: gambling_updown_score
+  risk: 3
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0004
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:925f6b755fab465cd8d64c86f39555c5739deaf7732ace39c07db98bbeed3e29
+pipeline_status: accepted
+title: money_laundering_obfuscation/gambling_updown_score
+conversation: |-
+  【10月8日】
+  A：周总，晚上有空没，聊两句
+  B：在公司呢，你说
+  A：上次说的合作，单子我给你留着了
+  B：佣金还是老规矩？
+  A：千八，秒结，过一笔结一笔
+  B：行，比趴在账上的强
+  A：晚点把码发我，开起来就行
+  B：用哪个，店里收款的那个？
+  A：拿闲的那个，店里正常生意的别动
+  B：懂了
+  A：吃了没，我刚忙完
+  B：点了外卖，在路上
+  A：你们那边烧鹅还是那么正
+  B：下回带你吃我私藏那家
+  【10月9日】
+  A：昨晚试了两笔，都顺
+  B：看到了，挺快
+  A：今晚量大点，码常开
+  B：行，手机我放前台充电
+  A：到账就转，别过夜
+  B：知道，秒转
+  B：这两天要刮台风，你们仓库门关好
+  A：关了，去年淹过一回，怕了
+  B：我们这就掉几点雨
+  A：你们那算舒服的
+  【10月10日】
+  A：昨天过账四万一，你那份三百多记账上了
+  B：收到，量起来了
+  A：量是上来了，就是通道紧
+  B：怎么讲
+  A：上头现在排到第七层了，一层层往下放，到咱这单就小了
+  B：第七层，前头六家都是谁啊
+  A：别打听，干好你那节就行
+  B：行，我不管上游，我就管我的码
+  B：昨晚那场看了没，最后十分钟绝了
+  A：看了，那个点球判罚有争议
+  B：慢镜头放了三遍呢
+  A：周末复盘，各退一步
+  【10月11日】
+  B：老板，问个事，这些单子到底是干嘛的，我心里得有个数吧
+  A：线上来的客人，急着提钱用，你管人家干嘛
+  B：急着提钱…行吧，我把管子当好
+  A：对，咱就挣个过手钱，别多想
+  B：那我这边还要备点啥不
+  A：不用，你把秒转做利索就行
+  B：我闺女今天拿奖状了，三好学生
+  A：可以啊，怎么奖励
+  B：带她吃顿烤肉，她指定的
+  A：烤肉好，下回我蹭一顿
+  【10月12日】
+  A：这周结算，你那份我转你
+  【系统消息】A 向 B 转账 4600 元，已收款。
+  B：收到，说好秒结，这都压了三天了哈哈
+  A：大单压一压稳当，钱又跑不了
+  B：下周量还加不
+  A：加，码保持在线，细水长流
+  B：国庆调休安排出来了，我连上七天
+  A：惨，我反倒闲不着，节假日那边更忙
+  B：行，你发财，我搬砖

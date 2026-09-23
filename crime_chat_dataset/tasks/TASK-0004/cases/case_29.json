@@ -1,0 +1,426 @@
+{
+ "key": "case_29",
+ "archetype_id": "ARC-000117",
+ "subtype": "farm_irrigation_motor_theft",
+ "latent_intent": "夜间“收货人”专挑村里浇完地、无人看管的灌溉电机下手，废品站老板按铜价收赃：按台计价随铜价浮动、先付定金锁货、指路线绕开村口狗并盖帆布遮货。全程无“偷”字，靠时机、路线、价格与知情细节组合定性。",
+ "critical_facts": [
+  "A 专挑“浇完地往田头一撂、十来天没人管”的时机去收电机，且自己说“丢了都没人知道”（msgs 5-11、37）",
+  "B 提示“村口狗凶得绕后头走”，指定从村北土路出村直送到店里，货用帆布盖、路上谎称“修电机的”（msgs 42-48）",
+  "按台计价随铜价行情浮动（“铜价高，一台顶以前一台半”，好货六百差货四百），B 先转 2000 定金锁货、货到现结余款（msgs 13-20 + transfer）",
+  "B 明知来路有问题仍收：说“你这话让我收来路不明的货啊”“有动静就撤，出事我这店就完了”（msgs 10、40）"
+ ],
+ "benign_alternatives": [
+  "废品正常回收",
+  "农机维修"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "10月8日 21:48",
+   "speaker": "A",
+   "text": "强哥，睡没"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 21:49",
+   "speaker": "B",
+   "text": "收完废品刚到家，咋"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 21:49",
+   "speaker": "A",
+   "text": "我表哥把你微信给我了，说你能收电机"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 21:50",
+   "speaker": "B",
+   "text": "收啊，电机水泵都收，咋了"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 21:50",
+   "speaker": "A",
+   "text": "我们村东头那几台浇地的电机，这两天浇完最后一遍就该闲了"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 21:51",
+   "speaker": "B",
+   "text": "闲了咋"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 21:51",
+   "speaker": "A",
+   "text": "我寻思闲着也是闲着，帮你收几台？"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 21:52",
+   "speaker": "B",
+   "text": "村里的东西，主家能同意？"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 21:52",
+   "speaker": "A",
+   "text": "浇完地往田头一撂，十来天没人管，丢了都没人知道"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 21:53",
+   "speaker": "B",
+   "text": "你这话让我收来路不明的货啊"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 21:53",
+   "speaker": "A",
+   "text": "啥来路不明，村里置办的，搁着也是锈"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 21:54",
+   "speaker": "B",
+   "text": "行吧行吧，电机我收，按台算还是按斤"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 21:54",
+   "speaker": "A",
+   "text": "按台，现在铜价高，一台顶以前一台半"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 21:55",
+   "speaker": "B",
+   "text": "铜是不少，成色好的六百，差点的四百"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 21:55",
+   "speaker": "A",
+   "text": "成，先来四台"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 21:56",
+   "speaker": "B",
+   "text": "杂牌的我压价，铭牌得在"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 21:56",
+   "speaker": "A",
+   "text": "都是大厂出的，铭牌擦擦都亮"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 21:57",
+   "speaker": "B",
+   "text": "那行，四台两千四"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 21:57",
+   "speaker": "A",
+   "text": "定金咋算"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 21:58",
+   "speaker": "B",
+   "text": "先转两千，货到现结，剩四百"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 21:58",
+   "speaker": "A",
+   "text": "可以，够爽快"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 22:03",
+   "speaker": "B",
+   "text": "你们村玉米收完没"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 22:04",
+   "speaker": "A",
+   "text": "收完了，秸秆还杵地里"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 22:04",
+   "speaker": "B",
+   "text": "秸秆不让烧了吧"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 22:05",
+   "speaker": "A",
+   "text": "不让，打捆拉走，一亩还补二十"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 22:05",
+   "speaker": "B",
+   "text": "我们那边没这政策，羡慕"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 22:06",
+   "speaker": "A",
+   "text": "政策年年变，够吃就行"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 22:10",
+   "speaker": "B",
+   "text": "明晚货到了别急着走，我烫了酒，新泡的杨梅"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 22:11",
+   "speaker": "A",
+   "text": "我酒量不行，两杯就上脸"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 22:11",
+   "speaker": "B",
+   "text": "上脸好啊，暖和"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 22:12",
+   "speaker": "A",
+   "text": "哈哈那我少喝点，还得骑车"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 22:12",
+   "speaker": "B",
+   "text": "骑啥车，睡我店里，床给你留着"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:22",
+   "speaker": "A",
+   "text": "强哥，昨晚我又转了转，六台能凑齐"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:23",
+   "speaker": "B",
+   "text": "别贪多，先四台，卖完再说"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:23",
+   "speaker": "A",
+   "text": "也行，明天几点送"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:24",
+   "speaker": "B",
+   "text": "你几点方便"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:24",
+   "speaker": "A",
+   "text": "电机白天在田头摆着，得等天黑透了再动"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:25",
+   "speaker": "B",
+   "text": "行，晚十点前到店里，我等门"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:25",
+   "speaker": "A",
+   "text": "前两天有护田队夜里转，这两天秋收完估计散了"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:26",
+   "speaker": "B",
+   "text": "你自己盯紧点，有动静就撤，出事我这店就完了"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:26",
+   "speaker": "A",
+   "text": "明白，小心的很"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:27",
+   "speaker": "B",
+   "text": "村口那几条狗凶不"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:27",
+   "speaker": "A",
+   "text": "凶，老刘家两条狼狗，你得绕后头走"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:28",
+   "speaker": "B",
+   "text": "那你出来走村北土路，直接到镇上"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:28",
+   "speaker": "A",
+   "text": "后斗用帆布盖一下不"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:29",
+   "speaker": "B",
+   "text": "盖上稳当，路上有人问就说修电机的"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:29",
+   "speaker": "A",
+   "text": "懂，修电机的，顺路捎两台去修"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:30",
+   "speaker": "B",
+   "text": "对喽，就这么说"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:31",
+   "speaker": "A",
+   "text": "定金你转吧，我备货去"
+  },
+  {
+   "type": "transfer",
+   "time": "10月9日 10:32",
+   "from": "B",
+   "to": "A",
+   "amount": 2000
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:33",
+   "speaker": "A",
+   "text": "收到了强哥，够意思"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:33",
+   "speaker": "B",
+   "text": "剩四百货到现结，铜价按明天早上的算"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:34",
+   "speaker": "A",
+   "text": "你可别压我价"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:34",
+   "speaker": "B",
+   "text": "市场价摆着，我还能亏你"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:35",
+   "speaker": "A",
+   "text": "行吧，谁让你是老板"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 15:40",
+   "speaker": "A",
+   "text": "对了强哥，你腰咋样了，上回见你贴着膏药"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 15:41",
+   "speaker": "B",
+   "text": "老毛病，搬废品搬的，阴天疼得钻心"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 15:41",
+   "speaker": "A",
+   "text": "我爸也这毛病，贴南边那个膏药管用"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 15:42",
+   "speaker": "B",
+   "text": "回头你问下牌子，我搬一天床架直不起腰"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 15:42",
+   "speaker": "A",
+   "text": "你也少搬点，雇个小工一天才一百多"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 15:43",
+   "speaker": "B",
+   "text": "舍不得，能自己动就不花钱"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 15:43",
+   "speaker": "A",
+   "text": "你呀，钱挣不完腰先完了"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 15:44",
+   "speaker": "B",
+   "text": "哈哈借你吉言，明晚货完好咱喝两杯"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 15:44",
+   "speaker": "A",
+   "text": "嗯，十点前到，你等我"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 15:45",
+   "speaker": "B",
+   "text": "等着，杨梅酒给你满上"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 15:45",
+   "speaker": "A",
+   "text": "强哥再问下，电机你是整机走还是拆了卖"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 15:46",
+   "speaker": "B",
+   "text": "看货，铜足的整机走，老式的拆铜，你管那么多，送到就行"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000051",
+  "status": "accepted",
+  "errors": []
+ }
+}

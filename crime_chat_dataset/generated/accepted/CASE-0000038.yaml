@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000038
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000037
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: contraband_illicit_trade
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 考务印刷环节的内部人周五夜里私自复制流出当次考试材料，中介按科打包购买转卖给考生，订金锁名额、尾款现金现结不留凭据，约定用后即清名单。
+  critical_evidence:
+  - A 称货周五（10月16日）夜里才能齐，窗口只到周六上午使用之前，过期成废纸
+  - 按份计价：单份八千、四份打包两万八，B 锁两个打包名额共五万六
+  - B 于 10月14日 09:15 转 20000 元订金锁名额，尾款 36000 元现金现结、不留收条
+  - A 交货当晚答应周六中午前把名单清干净，B 要求下回有货提前打招呼
+  benign_alternatives:
+  - 考前辅导资料与模拟题库的批发交易
+  - 印刷品尾货的正常商务采购
+
+attributes:
+  duration_days: 4
+  turn_count: 50
+  approximate_tokens_estimate: 1059
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: exam_leak_material
+  risk: 3
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0003
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:93f7ec565e1e170304ae1705376c9d250c1827f50083bdc9d5b5a573cca89ad4
+pipeline_status: accepted
+title: contraband_illicit_trade/exam_leak_material
+conversation: |-
+  【10月13日】
+  B：周总 上回聊的那批 这周能定吗
+  A：周五夜里才齐 得等那边封箱以后
+  B：周六上午就要用 来得及吧
+  A：就是掐着这个窗口弄的 过了周六全是废纸
+  B：明白 价格咱们再对一遍
+  A：单份八千 四份打包两万八
+  B：我先锁两个打包的
+  A：行 名额给你压着 订金两万
+  B：两万先抵一个行不行 手头有点紧
+  A：两万先抵着 周五夜里总数五万六 一次结清
+  B：中 我明天就转
+  A：收到我就把名单报上去
+  B：周总还天天晨跑吗
+  A：跑 每天六点江边五公里 雷打不动
+  B：佩服 我跑八百米就喘
+  A：慢慢来 你这底子恢复快
+  【10月14日】
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  B：两万转了 点一下
+  A：收到 名单上给你留了两个
+  B：剩余的周五夜里结清对吧
+  A：对 一手交钱一手交货 老规矩
+  B：地方还是城外那仓库
+  A：嗯 你自己开车来 别带生人
+  A：你上回给的岩茶喝完了 挺顺口
+  B：喝完吱声 我那还有两饼
+  A：行 下午就靠它撑着 比咖啡顶用
+  B：咖啡伤胃 我早戒了
+  A：我戒不掉 早起还得灌一杯
+  【10月15日】
+  B：明晚几点方便
+  A：十一点以后 仓库那盏绿灯亮着就是弄好了
+  B：好 我开白车
+  A：尾款备现金 转也行
+  B：转吧 对账清楚
+  A：随你
+  B：我下午三点就出发 怕高速堵
+  A：周五晚高峰是堵 三点走正好
+  B：行 下午两个会我都推了
+  A：慢点开 不急这一会儿
+  B：拿到我就给下面几位送去
+  A：后半夜再走 别犯困
+  【10月16日】
+  B：到了 绿灯亮着
+  A：进来吧 让小李给你们搬
+  B：好
+  【10月17日】
+  B：弄完了 周总 一份不差
+  A：尾款三万六 点好给我
+  B：点好了 现金给的 收条就不要了吧
+  A：不要 这辈子就这一锤子买卖 干净
+  B：周六那边完事 名单记得清了
+  A：中午之前 干干净净
+  B：下回有信儿早点喊我
+  A：看那边排期 有动静我喊你

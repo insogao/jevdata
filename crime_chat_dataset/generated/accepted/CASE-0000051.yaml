@@ -1,0 +1,139 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000051
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000117
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: theft_robbery_property_crime
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 夜间“收货人”专挑村里浇完地、无人看管的灌溉电机下手，废品站老板按铜价收赃：按台计价随铜价浮动、先付定金锁货、指路线绕开村口狗并盖帆布遮货。全程无“偷”字，靠时机、路线、价格与知情细节组合定性。
+  critical_evidence:
+  - A 专挑“浇完地往田头一撂、十来天没人管”的时机去收电机，且自己说“丢了都没人知道”（msgs 5-11、37）
+  - B 提示“村口狗凶得绕后头走”，指定从村北土路出村直送到店里，货用帆布盖、路上谎称“修电机的”（msgs 42-48）
+  - 按台计价随铜价行情浮动（“铜价高，一台顶以前一台半”，好货六百差货四百），B 先转 2000 定金锁货、货到现结余款（msgs 13-20 + transfer）
+  - B 明知来路有问题仍收：说“你这话让我收来路不明的货啊”“有动静就撤，出事我这店就完了”（msgs 10、40）
+  benign_alternatives:
+  - 废品正常回收
+  - 农机维修
+
+attributes:
+  duration_days: 2
+  turn_count: 66
+  approximate_tokens_estimate: 1532
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: farm_irrigation_motor_theft
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0004
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:241183efaf1979f3957824e7f2da056800ab398863443ce9aff31762c20ffd77
+pipeline_status: accepted
+title: theft_robbery_property_crime/farm_irrigation_motor_theft
+conversation: |-
+  【10月8日】
+  A：强哥，睡没
+  B：收完废品刚到家，咋
+  A：我表哥把你微信给我了，说你能收电机
+  B：收啊，电机水泵都收，咋了
+  A：我们村东头那几台浇地的电机，这两天浇完最后一遍就该闲了
+  B：闲了咋
+  A：我寻思闲着也是闲着，帮你收几台？
+  B：村里的东西，主家能同意？
+  A：浇完地往田头一撂，十来天没人管，丢了都没人知道
+  B：你这话让我收来路不明的货啊
+  A：啥来路不明，村里置办的，搁着也是锈
+  B：行吧行吧，电机我收，按台算还是按斤
+  A：按台，现在铜价高，一台顶以前一台半
+  B：铜是不少，成色好的六百，差点的四百
+  A：成，先来四台
+  B：杂牌的我压价，铭牌得在
+  A：都是大厂出的，铭牌擦擦都亮
+  B：那行，四台两千四
+  A：定金咋算
+  B：先转两千，货到现结，剩四百
+  A：可以，够爽快
+  B：你们村玉米收完没
+  A：收完了，秸秆还杵地里
+  B：秸秆不让烧了吧
+  A：不让，打捆拉走，一亩还补二十
+  B：我们那边没这政策，羡慕
+  A：政策年年变，够吃就行
+  B：明晚货到了别急着走，我烫了酒，新泡的杨梅
+  A：我酒量不行，两杯就上脸
+  B：上脸好啊，暖和
+  A：哈哈那我少喝点，还得骑车
+  B：骑啥车，睡我店里，床给你留着
+  【10月9日】
+  A：强哥，昨晚我又转了转，六台能凑齐
+  B：别贪多，先四台，卖完再说
+  A：也行，明天几点送
+  B：你几点方便
+  A：电机白天在田头摆着，得等天黑透了再动
+  B：行，晚十点前到店里，我等门
+  A：前两天有护田队夜里转，这两天秋收完估计散了
+  B：你自己盯紧点，有动静就撤，出事我这店就完了
+  A：明白，小心的很
+  B：村口那几条狗凶不
+  A：凶，老刘家两条狼狗，你得绕后头走
+  B：那你出来走村北土路，直接到镇上
+  A：后斗用帆布盖一下不
+  B：盖上稳当，路上有人问就说修电机的
+  A：懂，修电机的，顺路捎两台去修
+  B：对喽，就这么说
+  A：定金你转吧，我备货去
+  【系统消息】B 向 A 转账 2000 元，已收款。
+  A：收到了强哥，够意思
+  B：剩四百货到现结，铜价按明天早上的算
+  A：你可别压我价
+  B：市场价摆着，我还能亏你
+  A：行吧，谁让你是老板
+  A：对了强哥，你腰咋样了，上回见你贴着膏药
+  B：老毛病，搬废品搬的，阴天疼得钻心
+  A：我爸也这毛病，贴南边那个膏药管用
+  B：回头你问下牌子，我搬一天床架直不起腰
+  A：你也少搬点，雇个小工一天才一百多
+  B：舍不得，能自己动就不花钱
+  A：你呀，钱挣不完腰先完了
+  B：哈哈借你吉言，明晚货完好咱喝两杯
+  A：嗯，十点前到，你等我
+  B：等着，杨梅酒给你满上
+  A：强哥再问下，电机你是整机走还是拆了卖
+  B：看货，铜足的整机走，老式的拆铜，你管那么多，送到就行

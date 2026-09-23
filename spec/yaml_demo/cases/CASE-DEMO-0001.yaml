@@ -1,0 +1,191 @@
+schema_version: CASE-YAML-v1
+identity:
+  case_id: CASE-DEMO-0001
+  family_id: FAM-DEMO-0001
+  lineage_id: LIN-DEMO-0001
+  archetype_id: ARC-DEMO-0001
+  variant_id: v01
+source:
+  source_ids:
+  - SRC-SYN-001
+  source_seed_ids:
+  - SEED-SYN-DEMO-0001
+  source_type: synthetic_demo
+lineage:
+  root_case_id: CASE-DEMO-0001
+  parent_case_id: null
+  generation_type: original_demo
+labels:
+  risk: 3
+  category: bribery_corruption
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+hidden_case:
+  latent_intent: 付款与某项业务结果存在明显对价关系，并通过熟人中间转付。
+  critical_evidence:
+  - 前几天反复询问同一事项是否“过了”
+  - 结果确认后很快出现大额转账
+  - 明确说不要直接找对方、不要在项目群提
+  - 中间人事后确认已经“处理”
+  benign_alternatives:
+  - 合法咨询费
+  - 正常项目居间费
+attributes:
+  duration_days: 5
+  turn_count: 106
+  approximate_tokens_estimate: 1315
+  relationship: business
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+  topic_switches_estimate: 13
+generation_signature:
+  top_category: bribery_corruption
+  subtype: intermediary_payment_after_result
+  risk: 3
+  relationship: business
+  obfuscation: high
+  has_transfer: true
+execution:
+  workflow_version: DATASET-WF-v2.2-DEMO
+  prompt_id: PRM-DEMO-MANUAL-001
+  agent_id: AGT-PLANNER-001
+  model_id: MOD-GPT-5.6-SOL
+  batch_id: BATCH-DEMO-20-V2
+dedup:
+  content_hash: sha256:3abf935b5e6330b69b63f1494b6ecda8005c45844f4c68a0150209b1a9eff6db
+  semantic_cluster_id: SCL-DEMO-0001
+title: 利益输送：结果确认后由中间人收款
+conversation: |-
+  【9月3日】
+  
+  A：上午在办公室吗？我把上周那份表重新整理了一遍。
+  B：在，十点后有个会。
+  A：行，我晚点发你。
+  B：你上次问的那个我也顺便打听了，还没最后签。
+  A：先别催，别让人觉得我们太急。
+  B：知道。晚上吃饭吗？
+  A：不了，孩子今天补课。
+  B：那改天。
+  
+  
+  A：你最近是不是又换手机了？
+  B：没换，贴膜碎了，看起来像新机。
+  A：我说颜色怎么没变。
+  B：这个还能用两年。
+  A：电池呢？
+  B：一天一充，还行。
+  A：我那个已经一天两充。
+  B：那你该换电池了。
+  
+  A：猫最近还半夜叫吗？
+  B：好多了，晚上陪它玩一会儿就安静。
+  A：之前可能就是精力太旺。
+  B：医生也这么说。
+  A：它那次打针花了多少？
+  B：三百多，比我上次看感冒还贵。
+  A：照片发我一张。
+  B：晚点拍，它现在睡着了。
+  【9月4日】
+  
+  A：表我发邮箱了，你看一下第三页。
+  B：看到了，数字我下午跟财务核。
+  A：昨天那个有新消息吗？
+  B：他说流程往前走了一步，但还差最后那个人。
+  A：嗯，还是按之前说的，不用直接找。
+  B：我明白。
+  A：中午记得把发票照片给我。
+  B：一会儿拍。
+  
+  
+  A：今天公司又停电了十分钟。
+  B：你们那栋楼怎么老出问题？
+  A：物业说是检修，下午会议室空调也坏了。
+  B：文件没丢吧？
+  A：自动保存了。
+  B：那还好。
+  A：大家都在群里吐槽。
+  B：听着像整栋楼都该修。
+  
+  A：你体检报告拿到了？
+  B：拿到了，几个指标偏高。
+  A：医生怎么说？
+  B：让我少油少盐，多运动。
+  A：这话每个人都能收到。
+  B：确实。
+  A：你别再每天夜宵了。
+  B：我努力，从明天开始。
+  【9月5日】
+  
+  B：早上那边临时又开了个会。
+  A：结果怎么样？
+  B：没说死，但基本没问题。
+  A：那先不动。
+  B：对，等正式下来再说。
+  A：晚上你妈复查结果出来没？
+  B：出来了，没大事。
+  A：那就好。
+  
+  
+  A：你中午吃什么？
+  B：还没想，楼下那家面最近排队太久。
+  A：我昨天点了他们家的外卖，送到都坨了。
+  B：那我还是去便利店吧。
+  A：你不是说最近胃不舒服吗，别总吃冷的。
+  B：知道，下午还有两个会，懒得跑远。
+  A：晚上早点回去，冰箱里还有汤。
+  B：行，我回去热一下。
+  
+  A：今天雨挺大的，你带伞了吗？
+  B：没带，早上出门还没下。
+  A：我看天气预报说晚上更大。
+  B：那我下班买把便宜的。
+  A：家里已经四五把了，你每次都忘。
+  B：问题是都不在我手上。
+  A：地铁今天也晚点。
+  B：我刚看到群里有人说了。
+  【9月6日】
+  
+  A：今天是不是出结果？
+  B：刚刚回我了。
+  A：过了？
+  B：嗯，已经签了。
+  A：那还是之前那个数？
+  B：对。你别直接找他，我这边来。
+  【系统消息】A 向 B 转账 20000 元，已收款。
+  B：收到了。
+  A：剩下那部分月底再说。
+  B：行。这个不要在项目群里提。
+  A：知道，我只跟你说。
+  
+  
+  A：我把阳台那几盆花都换土了。
+  B：你不是最怕弄泥？
+  A：最近突然想养点东西。
+  B：别再把多肉养死。
+  A：这次看了教程。
+  B：教程救不了浇水太勤。
+  A：我控制。
+  B：长好一点拍给我看。
+  【9月7日】
+  
+  A：昨天那个你处理了吗？
+  B：已经弄完了。
+  A：好。
+  B：对了，合同附件少了一页，你让小周补一下。
+  A：我下午找他。
+  B：晚上还有球吗？
+  A：有，七点老地方。
+  B：行。
+  
+  A：你车修好了吗？
+  B：修好了，换了个小件，顺便做了保养。
+  A：多少钱？
+  B：一千多，主要人工贵。
+  A：现在修车都这样。
+  B：下个月年检应该省事点。
+  A：保险续了吗？
+  B：还没，这周看。

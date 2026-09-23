@@ -1,0 +1,133 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000032
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000064
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 房主组织女主播在深夜包场时段打擦边表演，礼物收益五五分成，被封号后换群继续，属于游走在平台红线上的情色直播生意。
+  critical_evidence:
+  - A 与 B 约定晚上十点开播，海总包场的场次要上正题，着装要求刻意收敛以躲避平台巡查
+  - 收益分成固定为礼物五五，含私下红包部分，全部由 A 记账
+  - A 于次日转账 6400 元给 B，为昨晚礼物折算 12800 元的一半
+  - 同行主播被平台封号后，A 称封号就换群是常态并已有备用安排
+  benign_alternatives:
+  - 正规直播公会的才艺主播合作
+  - 线上娱乐主播的正常商务排期与分成
+
+attributes:
+  duration_days: 2
+  turn_count: 60
+  approximate_tokens_estimate: 999
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: cam_room_fee_split
+  risk: 2
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0002
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:9523afde8fb1cd6dd902cbd4066e921c0c0c63e76496619483df931827b33be5
+pipeline_status: accepted
+title: sexual_transaction_exploitation/cam_room_fee_split
+conversation: |-
+  【10月21日】
+  A：醒了没
+  B：刚醒，哥
+  A：下午把状态养好
+  B：知道啦，昨晚收工太晚了
+  B：哥中午吃啥，楼下酸菜鱼排队排疯了
+  A：让他们排，你去对面吃米粉
+  B：上周吃过，一般
+  A：那点个外卖呗
+  B：行吧，烧鸭饭走起
+  A：早点吃完眯一会
+  A：晚上老时间
+  B：晚上十点开播嘛，记着呢
+  A：十点上线热场，十点半上正题
+  B：今晚还是海总包场？
+  A：嗯，最近风声紧，穿收敛点
+  B：比上回那件还收敛的那种？
+  A：对，自己心里有数就行
+  B：懂懂懂，晚上见
+  A：我家橘又把键盘占了，气死
+  B：哈哈哈它也想上班
+  A：趴在删除键上一动不动
+  B：它这是要帮你删黑历史
+  B：哥，今晚分成还按老规矩？
+  A：礼物五五，说过的
+  B：私下红包那部分也算吧
+  A：算，进房间的都算
+  B：那我就放心了
+  A：账我笔笔记着，亏谁不能亏你
+  B：辛苦强哥
+  A：晚上状态拉满
+  【10月22日】
+  A：降温了，多穿点
+  B：知道啦，哥你比我妈还啰嗦
+  A：你妈不啰嗦谁啰嗦
+  B：顶嘴
+  A：昨晚数据出来了
+  B：多少多少
+  A：礼物折下来一万二千八
+  B：哇，海总真大方
+  A：你那一半是六千四
+  B：哥你直接转我？
+  A：转了，看下
+  【系统消息】A 向 B 转账 6400 元，已收款。
+  B：到啦到啦
+  B：这个月房租稳了
+  A：跟着我饿不着
+  B：哥我办了张健身卡
+  A：你？健身？
+  B：怎么，主播不配体能吗
+  A：行行行，练出马甲线人气翻倍
+  B：那卡费你报销一半
+  A：想得美
+  B：哥，跟你说个事，琪琪的号没了
+  A：看到了，昨晚说封就封
+  B：养了大半年的号，心疼死
+  A：常事，封号就换群，这一行谁没换过几个
+  B：咱这边要是也摊上呢
+  A：我有准备，真到那步你听我安排
+  B：对了哥，昨晚那局你上分没
+  A：别提了，连跪三把
+  B：哈哈哈带我一局，我贼强
+  A：先把今晚播好，十点见

@@ -1,0 +1,153 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000037
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000126
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: coercion_blackmail
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 离职员工（雇主的家族晚辈）私拷公司全部代码与文档，以此为筹码要求雇主免除三万违约金并额外支付两个月工资，遭拒后逐步升级暗示把资料发给竞争对手。
+  critical_evidence:
+  - A 自认离职前把公司代码、文档、代码库整套拷贝备份在家
+  - A 提出免除三万违约金加两个月工资两项要求，并称不想弄难看
+  - B 表示按合同从工资里扣三万后，A 以「让它去该去的地方」暗示发给对家施压
+  - B 让步免除违约金、只肯给一个月项目奖金，A 咬死两个月并限周四前答复
+  benign_alternatives:
+  - 离职补偿与违约金的正常劳资谈判
+  - 亲友间为离职待遇讨说法的家庭争执
+
+attributes:
+  duration_days: 5
+  turn_count: 78
+  approximate_tokens_estimate: 1776
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: trade_secret_threat
+  risk: 2
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0003
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:0caf306e3799f461e345a03e85a82fbf7facd4c4592510e234c9843c74251d50
+pipeline_status: accepted
+title: coercion_blackmail/trade_secret_threat
+conversation: |-
+  【10月8日】
+  B：小宇 真决定走了
+  A：恩 李叔 交接这礼拜就完
+  B：你妈知道不
+  A：知到 被她骂了一顿 说你那活稳定
+  B：稳定啥 熬人 你还年轻
+  A：我想去大厂卷两年 攒点钱
+  B：也行 周六来家里吃饭 你婶炖排骨
+  A：中 我带箱啤酒
+  B：别买 上回你拿那箱还没动
+  A：那我拎点水果
+  A：这两天降温 你和你婶多穿点
+  B：知道 你也把厚外套翻出来
+  A：我那件拉链坏了 扔了
+  B：周六把你表弟那件拿走 他穿不着
+  B：对了 交接单我看了 你那块文档还欠着
+  A：周五前给你 东西多 我慢慢理
+  B：不急 理清楚就行
+  【10月9日】
+  A：李叔 文档发你邮箱了
+  B：收到 我过一遍
+  B：挺全 就差部署那块
+  A：部署我口头给你讲 那部分我留着有用
+  B：啥意思
+  A：叔 打开天窗说亮话 那套东西我手里有全套 代码 文档 库 在家备着呢
+  B：你拷那个干啥
+  A：保命呗 我在这四年 白加黑 你心里有数
+  A：我就俩要求 一 违约那三万你给我免了 二 再多给两个月工资 就当过渡
+  B：小宇 你这是跟叔谈条件
+  A：叔 咱俩什么关系 我不想弄难看
+  A：奶奶血压最近咋样
+  B：还那样 药没断 你婶一礼拜量两次
+  A：下月复查我请假陪她去
+  B：好 有心
+  B：她还念叨你小时候偷她糖吃
+  A：哈哈 都哪年的事了
+  B：今晚有球 不许再埋汰我主队
+  A：你主队后防跟纸糊的一样
+  B：呵呵 晚上看谁哭
+  A：看球归看球 周六饭桌上把事说开
+  【10月10日】
+  B：排骨给你打包没
+  A：打了 拿回来了 你婶手艺真不赖
+  B：你婶说让你常来
+  A：中 叔 事上你考虑咋样
+  B：免三万我得跟股东交代 两个月工资更没名目
+  A：名目你来想 你是老板
+  B：我托人给你介绍下家 工资只高不低 行不
+  A：叔 我不是来找下家的 我是来解决事的
+  B：你这样婶知道了心里多凉
+  A：婶那边别提 这是我跟公司的事
+  A：我给奶奶买的护膝到了 给她寄过去没
+  B：寄了 戴着遛弯呢 说暖和
+  A：那就行 下回给她换个电子血压计
+  B：你安排就行 她就疼你
+  【10月11日】
+  B：小宇 财务把违约金那笔走流程了 下周打给你
+  A：叔 你这是啥意思
+  B：按合同来 三万该扣的扣 该走的走
+  A：我说过我的要求 三万免了 再给两个月
+  B：你这是要挟叔
+  A：话别这么难听 我就是不想吃亏
+  A：那堆东西搁我这也烫手 你不解决 我只能让它去该去的地方
+  B：你想发对家去
+  A：我可没说 发不发 看你
+  B：小宇 冷静点 这条路走不通
+  A：我冷静得很 这礼拜给准话
+  B：今晚还看不
+  A：看 但你主队还得输
+  B：呸呸呸
+  A：明天又降温 我妈让给你捎两床被子
+  B：让她别费事 家里有
+  【10月12日】
+  B：小宇 叔想了一宿
+  A：你说
+  B：违约金三万我做主给你免了 两个月不行 最多一个月 走项目奖金 你把文档补齐
+  A：一个月不行 两个月 少一天免谈
+  B：你这是把叔往墙角逼
+  A：我也没办法 房贷月月压着 叔
+  B：给我两天 我跟合伙人碰一下
+  A：行 就两天 周四之前
+  A：叔 我把话搁这 东西在我手里一天 我心里就踏实一天 你也别寻思别的辙
+  B：叔知道了

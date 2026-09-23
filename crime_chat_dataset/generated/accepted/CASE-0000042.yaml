@@ -1,0 +1,139 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000042
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000142
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: other_illicit_coordination
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 工厂老板让相熟的货车司机夜里十二点到老厂装运生产废料，因原倾倒点施工改道北边荒沟倾倒，一车一千五、不走公司账不开票，四车共六千元私转结清，对外只称运费。
+  critical_evidence:
+  - 约定夜里十二点老地方装料，因以前那片埋管施工改到北边过铁路的荒沟
+  - 一车一千五、不走公司账、不开票，A 以私转结算并嘱咐对外只说是运费
+  - 10月12日 00:20 A 转 B 6000 元，结清四车费用
+  - A 提醒别总盯着一个点，往沟深处挪着倒
+  benign_alternatives:
+  - 夜间正规渣土固废清运作业
+  - 运输费按车结算的正常物流合作
+
+attributes:
+  duration_days: 3
+  turn_count: 64
+  approximate_tokens_estimate: 1248
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: illegal_dumping_fee
+  risk: 2
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0003
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:70af711306fdf1a463e0c82e723f577eeca015b6ecca4e8181772606ebf68b9a
+pipeline_status: accepted
+title: other_illicit_coordination/illegal_dumping_fee
+conversation: |-
+  【10月9日】
+  B：胡总 那批料这两天弄不
+  A：弄 周六周日两天清完 你跑几趟
+  B：一趟俩钟头 一晚三趟顶天
+  A：三趟就三趟 周六夜里开始
+  B：还是十二点 老地方装
+  A：嗯 料下午备好 苫布盖严实
+  B：倒哪 还是以前那片
+  A：以前那片别去了 开埋管子 进不去
+  B：那换哪
+  A：北边过铁路那条土路 走到底 那条沟深
+  B：那边路有点烂
+  A：你那车怕啥 倒完苫布卷利索 回来再过遍水
+  A：吃了没
+  B：服务区一碗面 十五块 肉都没两片
+  A：哈哈 回来带你去东关新开那家 羊肉汤
+  B：中 得喝两盅
+  B：胡总 这活钱咋算来着
+  A：一车一千五 老价 干完一起结 不走公司账 我私转你
+  B：中 票就别开了吧
+  A：开什么票 我小本本记着
+  B：我闺女这礼拜月考 又不省心
+  A：考咋样
+  B：班里前十 你说气人不 天天玩 考前才翻书
+  A：聪明 随你
+  【10月10日】
+  B：今晚雨不小 咋整
+  A：照常 十二点 雨天人少 慢点开
+  B：行 雨刮前天刚换的
+  A：料我到场里等你 到了直接装
+  B：我那车也该保养了 跑了八万
+  A：去西环那家 便宜 回头我带你去
+  B：中 下礼拜就去 顺便换电瓶
+  A：电瓶别贪便宜 我上回贪便宜半道趴窝
+  B：知道 知道
+  A：今晚先两车 明天再两车 别贪
+  B：收到
+  B：头一车倒了 沟里没水 正好
+  A：中 第二车装上
+  【10月11日】
+  B：第二车倒了 今晚收了
+  A：辛苦 两车先记着 干完一起结
+  B：中
+  A：昨夜没淋着吧
+  B：没 苫布盖得严实
+  A：那沟也够深 够倒一阵
+  A：别老盯着一个点 沟长着呢 往里挪挪
+  B：懂
+  B：今晚最后两车
+  A：嗯 弄完好歇着 料还剩半场 下礼拜再说
+  B：羊肉汤还作数不
+  A：作数 明早七点你接我 头锅汤才浓
+  B：七点也太早 老板刚开火
+  A：就要头锅 走吧
+  B：行行行 依你
+  B：对了胡总 这钱我媳妇问起来咋说
+  A：运费 这本来就是运费
+  B：哈哈 中 运费
+  A：别声张 场里几个老人口碎
+  B：懂 我从来不多话
+  B：雨停了 路有点滑 我慢点开
+  A：到了吱一声
+  【10月12日】
+  B：两车倒完 收工
+  A：辛苦 我现在转你
+  【系统消息】A 向 B 转账 6000 元，已收款。
+  A：四车六千 一次结清 点下
+  B：点了 明早羊肉汤我请
+  A：用你的钱请我 哈哈 睡了

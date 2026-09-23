@@ -1,0 +1,118 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000025
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000040
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: contraband_illicit_trade
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 批发商从口岸渠道低价购入来路不明的整批卷烟，约在仓库看货、现金结算，避开正规流通渠道，疑似走私烟转批。
+  critical_evidence:
+  - A 以条为单位向 B 批量询价五十条起，成交价二百五一条明显低于常规渠道
+  - B 称货从那边过来、最近上头风声紧要压两三天，货源来路异常且时间上反复犹豫
+  - 交易约在院内老仓库看货提货并强调你一个人来，不走店面
+  - 付款方式定为现金老规矩当面点清，A 先转账 5000 元定金
+  benign_alternatives:
+  - 免税店代购讨论
+  - 正常卷烟批发
+
+attributes:
+  duration_days: 4
+  turn_count: 43
+  approximate_tokens_estimate: 694
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: tobacco_smuggle
+  risk: 2
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0002
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:5da406a7ed8ef4526e828bc7bd2a5f3e81961554e447adc8081f1787f3404d17
+pipeline_status: accepted
+title: contraband_illicit_trade/tobacco_smuggle
+conversation: |-
+  【10月10日】
+  A：崔哥，睡没
+  B：没，船上刚回来
+  A：不打扰吧
+  B：说
+  A：手头那批，这条多少
+  B：你要几条
+  A：先来五十条试试
+  B：五十条，二百六一条
+  A：市里出货二百八都费劲，你这价顶
+  B：那你去比比，我这价不二
+  A：二百五行不，量大
+  B：二百五，五十条起，到头了
+  B：你们那边风大不大，海上今早八级
+  A：大，楼顶花盆都吹翻了
+  B：这季节风就是多
+  A：你跑船的多注意
+  B：惯了，风里来雨里去
+  A：安全要紧
+  【10月11日】
+  B：跟你说，你要的那批得缓两天
+  A：咋了
+  B：最近上头风声紧，那边过来得慢
+  A：得等多久
+  B：两三天，周五前给你准信
+  A：晚饭吃了没
+  B：船上对付了口泡面
+  A：下回靠岸我请，码头那家羊汤
+  B：那家行，汤厚，加烧饼
+  A：你是真懂行
+  【10月12日】
+  B：准信来了，货到了，压在仓里
+  A：周五能看货不
+  B：能，下午四点，你一个人来
+  A：老仓库？
+  B：嗯，进院子右边那排
+  B：钱备好，到了直接装
+  A：明晚有球看不
+  B：看，仓库那台老电视
+  A：那画质，人影都拖尾
+  B：能看个比分就行
+  【10月13日】
+  B：周五下午四点，别忘了
+  A：定金我先转你点，表个诚意
+  【系统消息】A 向 B 转账 5000 元，已收款。
+  B：收到了
+  A：剩下那天当面点清
+  B：行，现金老规矩

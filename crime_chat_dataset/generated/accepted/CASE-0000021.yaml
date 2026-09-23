@@ -1,0 +1,110 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000021
+  family_id: FAM-PILOT-0002
+  lineage_id: LIN-PILOT-0002
+  archetype_id: ARC-000005
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_pilot
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 刷单返利诈骗：小额返利建立信任，连单垫付后以解冻金继续索款。
+  critical_evidence:
+  - 首单小额秒返建立信任
+  - 连单话术要求追加垫付
+  - 提现受阻要求解冻金
+  - 受害者质疑后威胁不退
+  benign_alternatives:
+  - 正规电商众包任务
+  - 朋友介绍的真实兼职
+
+attributes:
+  duration_days: 3
+  turn_count: 36
+  approximate_tokens_estimate: 817
+  relationship: stranger
+  obfuscation: low
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: part_time_task
+  risk: 2
+  relationship: stranger
+  obfuscation: low
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: AGT-SESSION-001
+  model_id: MOD-SESSION-001
+  batch_id: BATCH-PILOT-001
+
+dedup:
+  content_hash: sha256:58f5bfb252441938b51647b70191cfe49b19579a1e694ad09e645ae110505522
+pipeline_status: accepted
+title: 刷单诈骗：返利建立信任后连单垫付
+conversation: |-
+  【11月3日】
+  A：姐妹，进群了？今天的单子看了吗
+  B：进了，看着有点复杂
+  A：超简单，拍下付款截图发我，本金加佣金马上返你
+  B：真返啊？
+  A：我做了三个月了，你看群里的晒单
+  B：我先试个小额的
+  A：收到，108 返你 118，看下微信
+  【系统消息】A 向 B 转账 118 元，已收款。
+  B：到了到了，这么快
+  B：宝宝睡了才腾出空，还有单吗
+  A：今晚大单，垫付 2000 返 260，做不做
+  B：这么大？
+  A：名额就两个，做完今天封顶
+  B：那…我做
+  【系统消息】B 向 A 转账 2000 元，已收款。
+  A：收到。这个是连单，要把第二单也做完才能一起返
+  B：啊？还要再做？
+  A：系统卡任务，别慌，做完这单 2000 的全返
+  B：转了，这次真到账了吧
+  A：在处理，急单多，晚点一起结
+  【11月4日】
+  B：昨晚的怎么还没到？
+  A：你那个卡单了，任务超时，要交 3000 解冻金才能提
+  B：还要交？
+  A：解冻后 4600 一起退你，群主都这么做
+  B：我卡里没那么多钱了
+  A：先借点，今天必须处理，不然前面的也拿不回来
+  B：孩子发烧我去医院了，晚点说
+  A：好的，下午三点前处理，过期通道关闭
+  B：我实在拿不出钱了，把之前的退我就行
+  A：那你的 4000 就真拿不回来了，自己想清楚
+  B：……
+  【11月5日】
+  A：在吗，今天有补偿单，冲 1000 返 300
+  B：不做了，你把我的钱退我
+  A：退你？任务没完成谁给你退
+  B：再不退我报警了
+  A：随便，平台在境外，你告去
+  B：已到派出所备案，警官说这是典型刷单诈骗

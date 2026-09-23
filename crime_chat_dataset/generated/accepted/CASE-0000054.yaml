@@ -1,0 +1,137 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000054
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000006
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 良性变体：对话开头出现“不看征信秒批、先交保证金”式话术场景，但决定性事实是全程走正规银行贷款流程（本人面签、征信官网自查、电子合同可查、放款前不收费）；对话中的转账是归还去年的个人借款，与贷款无关。
+  critical_evidence:
+  - A 明确并反复强调正规银行放款前一分钱不收，让 B 先交保证金的都是骗子（对应msgs 7-10、39）
+  - 全程官方流程：B 本人在人民银行征信中心官网查征信、到银行网点当面签约，电子合同可在银行App随时查到（msgs 23、35-37、55）
+  - 额度与利率以银行审批为准，A 只协助准备材料，放款直接进 B 本人银行卡、不经 A 之手（msgs 13、33、54-55）
+  - 10月10日 A 转给 B 的 20000 元是归还去年个人借款，与贷款无关，B 提到当初写过借条（msgs 41-46）
+  benign_alternatives:
+  - 正规银行贷款流程
+  - 亲友借款
+
+attributes:
+  duration_days: 4
+  turn_count: 62
+  approximate_tokens_estimate: 1610
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: loan_fee_bait
+  risk: 0
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0004
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:57f748b4f20c6a8ca8e5549f75774fe8079e32d20ee9f9cd0b29c20855d3d6a1
+pipeline_status: accepted
+title: fraud_scam/loan_fee_bait
+conversation: |-
+  【10月8日】
+  B：周哥，在么，老郑说你有门路，跟你打听个事
+  A：在，说
+  B：我那店想重新装修下，差二十来万，有人给我推了个贷款
+  B：说什么不看征信，当天就能放款
+  A：打住，这种你碰都别碰
+  B：啊？不是说现在有快捷通道么
+  A：记住一条，正规银行放款之前一分钱不收
+  A：谁让你先交保证金，谁就是骗子
+  B：对方还真说先交两万保证金，批了就退
+  A：退你个鬼，这就是老套路了
+  A：你要贷就走银行正规产品，你这条件完全够
+  B：银行不是流程特别慢么
+  A：材料备齐一两周也就下来了，慢点踏实
+  B：行，那听你的
+  A：吃饭没，刚下班路过你们那条街
+  B：还没，正泡面呢
+  A：泡面顶啥用，楼下新开那家湘菜去尝尝
+  B：明天去吧，今晚懒得动
+  A：行，明天你请客
+  B：哈哈必须的
+  【10月9日】
+  B：早，今天要准备啥材料
+  A：身份证、半年流水、租赁合同，营业执照带原件
+  A：征信自己先查下，人民银行征信中心官网就能申请，别用来路不明的链接查
+  B：好，上午就去弄
+  A：查完发我看下，就看有没有逾期，别的我不看
+  B：懂了
+  A：对了，你儿子运动会啥时候，我家那个天天念叨
+  B：下周五，通知刚发，你还真打算去啊
+  A：去啊，顺道给小家伙加个油
+  B：他要知道周叔叔来，能高兴坏
+  A：哈哈那说定了
+  B：材料拍给你了，你帮我把把关
+  A：看了，没毛病，理得挺利索
+  B：那我明天直接去网点？
+  A：嗯，经理我帮你约好了，上午十点，当面签
+  【10月10日】
+  B：哥，签完了！合同签的是电子版
+  A：这就对了，回头银行App里随时能查到这份合同
+  B：还好问了句要不要带保证金，经理都笑了
+  A：再说一遍，放款之前收钱的全是骗子，你这一分没花，对喽
+  B：明白，记牢了
+  A：正事之外说个事，去年借你那两万，我这周转开了
+  B：哎呀不急，你先留着用
+  A：用什么用，都大半年了
+  【系统消息】A 向 B 转账 20000 元，已收款。
+  B：收到收到，那借条回头我给你寄回去？
+  A：撕啥，你收好，证明我是个讲信用的人哈哈
+  B：哈哈行
+  B：我买的装修材料到了，一车货，快递小哥脸都绿了
+  A：多少东西你这是
+  B：十二卷电线两桶漆，搬了一下午，胳膊已经不是我的了
+  A：明天我去搭把手
+  B：别别，哪好意思，回头请你吃饭
+  A：那说好了，这两天你欠我两顿了
+  【10月11日】
+  B：哥！批了批了！二十万，利率比我预想的还低
+  A：我说你条件够吧，周一银行直接放款到你卡里，不经我手
+  B：懂，全程银行走，一分费用没有
+  A：对喽，以后再有人跟你推销那种秒批的，你都知道咋回了
+  A：周末大降温，装修的摊子挪屋里弄
+  B：看了天气了，直接从夏天跳冬天
+  A：我秋裤都翻出来了哈哈
+  B：哈哈你也别硬扛，穿厚点
+  B：等装修完开业，你带嫂子一起来
+  A：必须，红包我都想好了

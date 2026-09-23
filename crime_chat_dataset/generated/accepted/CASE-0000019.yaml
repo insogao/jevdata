@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000019
+  family_id: FAM-PILOT-0001
+  lineage_id: LIN-PILOT-0001
+  archetype_id: ARC-000009
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_pilot
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: bribery_corruption
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 设备采购中标后向评审关键人支付回扣，经中间人转付并刻意避人耳目。
+  critical_evidence:
+  - 中标前多次打探进度并强调照办
+  - 中标当日即向中间人大额转账
+  - 明确说别直接找他、别在项目群里提
+  - 约定剩余部分验收后支付
+  benign_alternatives:
+  - 合法居间服务费
+  - 设备售后协调费
+
+attributes:
+  duration_days: 7
+  turn_count: 48
+  approximate_tokens_estimate: 972
+  relationship: business
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: intermediary_payment_after_result
+  risk: 3
+  relationship: business
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: AGT-SESSION-001
+  model_id: MOD-SESSION-001
+  batch_id: BATCH-PILOT-001
+
+dedup:
+  content_hash: sha256:e6d5762831d8b2da707a120a692ada99772bb9079baefac3ae97a1bedcb8e0f1
+pipeline_status: accepted
+title: 利益输送：设备中标当日经中间人转付回扣
+conversation: |-
+  【10月8日】
+  A：张科，早。上次说的那台CT还是这个型号吗？
+  B：型号没变，预算还在走流程。
+  A：大概什么时候能有准信？厂里催我报价。
+  B：急不来，牵扯的人多。
+  A：懂，那我不催。
+  B：中午吃啥，食堂还是外面？
+  A：外面，新开的那家面馆走一个。
+  B：这家的牛肉面还行。
+  A：下次带你尝尝他们家的小菜。
+  【10月9日】
+  A：王老师家的孩子病好了吗？
+  B：好了，昨天返校。
+  A：那就好。对了，参数这块还需要我配合什么吗？
+  B：标书你按我发你的那份改，别自作主张。
+  A：明白，都照你说的来。
+  B：今晚有球，看吗？
+  A：看，老地方？
+  B：嗯。
+  【10月10日】
+  A：昨晚那个点球争议大了。
+  B：VAR就该取消，看得气死。
+  A：哈哈。对了，评审名单定了吗？
+  B：差不多，还是那几位。
+  A：那就稳了吧？
+  B：别问这么直白。等通知。
+  A：媳妇让我问你这周末去不去摘橘子。
+  B：去，孩子们正好放假。
+  【10月11日】
+  A：今天出结果吗？
+  B：下午签。
+  A：那台机器的售后我还是指定老刘团队，行不行？
+  B：可以，这个你定。
+  B：签了。
+  A：好。还是上次说的那个数？
+  B：对。你别直接找他，我这边来。
+  A：明白，只跟你对接。
+  【系统消息】A 向 B 转账 40000 元，已收款。
+  B：收到。
+  A：剩下的一半验收后给。
+  B：行。这事不要在项目群里提。
+  A：放心，我一个字没说过。
+  【10月12日】
+  A：橘子我订了两箱，周末给你带一箱。
+  B：客气啥，人过来就行。
+  B：老刘那边你让他下周进场装。
+  A：好，我通知他。
+  【10月13日】
+  A：张科，验收大概什么节奏？
+  B：装机完跑两周，月底验收。
+  A：那月底我按老规矩办。
+  B：嗯。先不聊这个，开会上楼了。
+  【10月14日】
+  A：周末摘橘子带娃去，你们家那位来不来？
+  B：她值班，我和孩子来。
+  A：行，周日早上九点园子门口。

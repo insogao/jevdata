@@ -1,0 +1,96 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000022
+  family_id: FAM-PILOT-0002
+  lineage_id: LIN-PILOT-0002
+  archetype_id: ARC-000005
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_pilot
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 正规电商客服外包兼职：官方流程退款、小额快递费垫付报销、按月结算。
+  critical_evidence:
+  - 退款走平台官方通道
+  - 小额垫付有报销记录
+  - 按月结算工资非返利
+  benign_alternatives:
+  - 真实兼职客服
+  - 平台众包任务
+
+attributes:
+  duration_days: 3
+  turn_count: 23
+  approximate_tokens_estimate: 518
+  relationship: colleague
+  obfuscation: low
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: part_time_task
+  risk: 0
+  relationship: colleague
+  obfuscation: low
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: AGT-SESSION-001
+  model_id: MOD-SESSION-001
+  batch_id: BATCH-PILOT-001
+
+dedup:
+  content_hash: sha256:d6d6d55676623816cb1245188e198f109c03929d6976fd79b0c993bdc0cc3f50
+pipeline_status: accepted
+title: 正规兼职：电商客服外包与快递费报销
+conversation: |-
+  【11月3日】
+  A：姐妹，培训群进了？明天工号就下来了
+  B：进了，规则有点多
+  A：记熟话术就行，系统的会自动弹
+  B：好，我先看文档
+  B：试岗那单我处理完了
+  A：看到了，处理得很规范，明天正式排班
+  B：第一次干还有点紧张
+  B：宝宝睡了，我把今天学的话术又过了一遍
+  A：你上心，月底绩效肯定好
+  【11月4日】
+  A：这单客户要退款，你按流程走就行
+  B：好，我先安抚再提交申请
+  B：提交了，退款 89 块走的官方通道
+  A：收到，平台已经退了
+  B：孩子发烧我去医院了，晚上的班找人换下
+  A：行，你先忙孩子，我顶上
+  B：孩子退烧了，明天我正常上班
+  A：好，记得把昨天的垫付快递费 12 块单子发我，给你报
+  B：发你了，谢谢姐
+  【11月5日】
+  【系统消息】A 向 B 转账 12 元，已收款。
+  A：报销到了，看下微信
+  B：到了，工资啥时候发呀
+  A：每月 15 号，做多少结多少
+  B：好嘞，明天见
+  A：见

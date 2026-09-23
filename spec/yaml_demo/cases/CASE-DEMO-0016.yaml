@@ -1,0 +1,164 @@
+schema_version: CASE-YAML-v1
+identity:
+  case_id: CASE-DEMO-0016
+  family_id: FAM-DEMO-0016
+  lineage_id: LIN-DEMO-0016
+  archetype_id: ARC-DEMO-0016
+  variant_id: v01
+source:
+  source_ids:
+  - SRC-SYN-001
+  source_seed_ids:
+  - SEED-SYN-DEMO-0016
+  source_type: synthetic_demo
+lineage:
+  root_case_id: CASE-DEMO-0016
+  parent_case_id: null
+  generation_type: original_demo
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+hidden_case:
+  latent_intent: 合法商务介绍费，付款与真实项目、合同条款和发票完全对应。
+  critical_evidence:
+  - 明确有合同条款
+  - 真实项目已成交
+  - 走公司财务和发票
+  - 回单公开留在项目群
+  benign_alternatives:
+  - 利益输送
+  - 商业贿赂
+attributes:
+  duration_days: 4
+  turn_count: 82
+  approximate_tokens_estimate: 1008
+  relationship: business
+  obfuscation: low
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+  topic_switches_estimate: 10
+generation_signature:
+  top_category: none
+  subtype: legal_referral_fee
+  risk: 0
+  relationship: business
+  obfuscation: low
+  has_transfer: true
+execution:
+  workflow_version: DATASET-WF-v2.2-DEMO
+  prompt_id: PRM-DEMO-MANUAL-001
+  agent_id: AGT-PLANNER-001
+  model_id: MOD-GPT-5.6-SOL
+  batch_id: BATCH-DEMO-20-V2
+dedup:
+  content_hash: sha256:05bf2c5569e8da4c8657e8171371ff84a3d3d60342857cc192a85cb24fb3c4ad
+  semantic_cluster_id: SCL-DEMO-0016
+title: Hard Negative：合同内合法介绍费
+conversation: |-
+  【6月1日】
+  
+  A：客户那边合同盖完了。
+  B：那我们这边介绍服务也算完成了。
+  A：对，金额按第六条算。
+  B：我下午把服务发票开出来。
+  A：抬头还是合同上的公司名。
+  
+  
+  A：昨天那个电影你看完了吗？
+  B：看完了，后半段有点拖。
+  A：我看到一半睡着了。
+  B：前面其实更好看。
+  A：结尾别剧透。
+  B：不说，你最好从头看，不然人物关系记不住。
+  A：有这么复杂？
+  B：也还好。
+  
+  A：家里水龙头还漏吗？
+  B：师傅上午来修了，换了个阀芯。
+  A：物业不管这个？
+  B：屋里的不管，花了两百多。
+  A：那至少不滴了。
+  B：嗯，晚上回去再看看。
+  A：漏水真的烦。
+  B：是，地柜差点都潮了。
+  【6月2日】
+  
+  B：发票发你邮箱了。
+  A：收到了，我让财务审核。
+  B：有问题随时说。
+  A：昨天客户还问售后联系人，我把小李推过去了。
+  B：行。
+  
+  
+  A：你上次推荐的咖啡豆我买了。
+  B：怎么样？
+  A：还行，就是我磨得太细。
+  B：你那个机器要粗一点。
+  A：我明天调一下，办公室几个人都说香。
+  B：别一上来买太多。
+  A：就买了半斤。
+  B：那还好。
+  
+  A：房东今天又问续租。
+  B：你打算续吗？
+  A：还在想，通勤有点远。
+  B：但你那边房租还算便宜。
+  A：就是这个让我纠结。
+  B：要搬就早点看房。
+  A：最近没时间。
+  B：先问问能不能续半年。
+  【6月3日】
+  
+  A：财务说今天付款。
+  B：好。
+  【系统消息】Company_A 向 Company_B 转账 8500 元，已收款。
+  B：到账了。
+  A：回单我放项目群。
+  B：收到，谢谢。
+  
+  
+  A：周六聚餐你来吗？
+  B：应该来，地点定了吗？
+  A：还在投票，一家火锅一家粤菜。
+  B：我投粤菜，最近有点上火。
+  A：你每次都说上火。
+  B：年纪大了。
+  A：少来。
+  B：哈哈。
+  
+  A：你电脑昨天那个问题解决了吗？
+  B：重装驱动后好了。
+  A：我还以为硬盘坏了。
+  B：差点也以为，重要文件现在都同步云盘了。
+  A：那就行。
+  B：就是公司VPN还是偶尔断。
+  A：那个大家都断，不是你机器问题。
+  B：那我放心了。
+  【6月4日】
+  
+  A：下周可能还有另一个客户要咨询。
+  B：可以，还是按正式合同走。
+  A：没问题。
+  
+  A：你妈复查结果出来了吗？
+  B：出来了，医生说先观察，不用住院。
+  A：那还好，下个月再去一次？
+  B：对，我周末回去陪两天。
+  A：最近让她少熬夜。
+  B：她比我还难劝。
+  A：需要我帮你订票吗？
+  B：不用，我自己来。
+  
+  A：快递柜又满了，我的包裹被放到隔壁小区。
+  B：你买什么了？
+  A：两本书，还有给孩子的画笔。
+  B：现在快递真会放。
+  A：我下班绕过去取。
+  B：太晚就明天吧。
+  A：明天可能更没时间，我已经截图取件码了。
+  B：那别忘了。

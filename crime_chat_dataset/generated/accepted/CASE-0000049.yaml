@@ -1,0 +1,141 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000049
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000094
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 上线同事把 B 发展成资金通道末梢：B 用绑闲卡的收款码替上游过账，到账后原数转回只留千八佣金、秒结；资金已在“第七层”多级通道中流转。全程用代词与黑话，无任何直接命名，需结合转账事件（收3万、数分钟内转回29760）才能推断。
+  critical_evidence:
+  - B 用自己的收款码帮 A“过单”，到账后须原数转回上游，只留千分之八佣金，且“秒结、过一笔结一笔”（msgs 9、24-28）
+  - A 自述通道已排到“第七层”，B 明确知道自己是多层资金链条的最末一节（msgs 47-49）
+  - 10月10日晚 B 收到 30000 元后数分钟内转回 29760 元，快进快出，零头即为佣金（msgs 40-44 + transfer）
+  - B 多次表达不安（“出了事算谁的”“心里有点虚”“怕卡进出多了出问题”），A 以“你就是根管子”“常用的卡别搅进来”安抚，双方均知情（msgs 12-13、31、60-64）
+  benign_alternatives:
+  - 游戏点券代充
+  - 平台充值服务
+
+attributes:
+  duration_days: 4
+  turn_count: 66
+  approximate_tokens_estimate: 1342
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: gambling_updown_score
+  risk: 3
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0004
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:a469a4283b9c84156214d27c00249dd7df41fce7d877b1d821723ad892d11761
+pipeline_status: accepted
+title: money_laundering_obfuscation/gambling_updown_score
+conversation: |-
+  【10月8日】
+  A：下班没
+  B：刚打卡，你呢
+  A：先走了，晚上那个事你想好没
+  B：你说的是用我那个码收钱？
+  A：对，就绑闲卡那张，平时不动的那张
+  B：一晚能过多少
+  A：不一定，看你那头活不活跃
+  B：佣金怎么算
+  A：千八，秒结，过一笔结一笔，从不拖
+  B：千八…一万块八十？
+  A：对，你动动手指的事
+  B：钱过我的手，出了事算谁的
+  A：你就是根管子，进多少出多少，剩下的都是你的
+  B：那我得想想
+  A：想啥，明晚先来小的试试
+  B：我再琢磨琢磨
+  A：明天食堂是不是还是那几个菜
+  B：土豆烧牛肉，牛肉含量随缘
+  A：哈哈我带饭了，我妈装的，吃不完分你
+  B：行，中午拼桌
+  【10月9日】
+  A：开了，你把码发过去就行，别的不用管
+  B：发了
+  B：来单了，到账三千
+  A：原数转回，扣千八
+  B：转你2976，留24？
+  A：对，算得挺快
+  B：转了，你查收
+  A：到了，痛快，这就叫秒结
+  B：这钱到底是哪来的啊
+  A：你问那么多干嘛，通道的事你搞不明白
+  B：我就怕卡进出多了出问题
+  A：正经过账，怕啥
+  B：周四球馆定了没，老地方
+  A：定了，老李说他腰不行改游泳了
+  B：他上个月还嚷嚷要赢我呢
+  A：你俩就互相嘴硬吧
+  【10月10日】
+  A：今晚量大，你现在方便不
+  B：方便，码一直在线
+  A：好，来了直接转我，手别停
+  B：这笔有点大啊，三万整
+  A：大单佣金也大，转完这单你今天三百多
+  B：到了，转你了
+  【系统消息】B 向 A 转账 29760 元，已收款。
+  A：收到，今晚到这，稳
+  B：刚那笔一分钟就出去了，跟击鼓传花似的
+  A：管子就要快，你这悟性可以
+  B：通道现在到底几层了，我听你上次说又加了
+  A：排到第七层了，你是最末一节
+  B：第七层…前头还有六个人
+  A：所以轮不到你操心
+  B：明天预报有雨，你车借我用下，我那电动车没挡泥板
+  A：行，钥匙在前台抽屉，我跟门卫说一声
+  B：顺便你那把伞也借我，昨天丢了
+  A：拿去，顺便把我充电器还我
+  B：哈哈行，一并带上
+  【10月11日】
+  A：昨晚过账多少，对下账
+  B：我记的流水：三万一，我的佣金两百四十八
+  A：对得上，你那份记着，周五一起结
+  B：行，说好秒结的哈
+  A：大单压一压，钱跑不了
+  B：唉，这钱挣得心里有点虚
+  A：虚啥，你又不偷不抢
+  B：三万过我的卡，总觉得不踏实
+  A：常用的卡别搅进来，就那张闲卡，这阵过了就歇
+  B：行吧，听你的
+  A：晚上还有一拨，人在就行
+  B：嗯，在线

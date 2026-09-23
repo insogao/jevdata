@@ -1,0 +1,169 @@
+schema_version: CASE-YAML-v1
+identity:
+  case_id: CASE-DEMO-0006
+  family_id: FAM-DEMO-0006
+  lineage_id: LIN-DEMO-0006
+  archetype_id: ARC-DEMO-0006
+  variant_id: v01
+source:
+  source_ids:
+  - SRC-SYN-001
+  source_seed_ids:
+  - SEED-SYN-DEMO-0006
+  source_type: synthetic_demo
+lineage:
+  root_case_id: CASE-DEMO-0006
+  parent_case_id: null
+  generation_type: original_demo
+labels:
+  risk: 2
+  category: privacy_doxxing
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+hidden_case:
+  latent_intent: 对方付费要求查询与自己无关的第三方身份信息，提供者明确称并非公开渠道。
+  critical_evidence:
+  - 查询对象为陌生第三方
+  - 要求确认到具体个人
+  - 提供者强调不是公开页面信息
+  - 付款换取查询结果
+  benign_alternatives:
+  - 查询本人信息
+  - 查询公开工商信息
+attributes:
+  duration_days: 4
+  turn_count: 87
+  approximate_tokens_estimate: 1025
+  relationship: acquaintance
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+  topic_switches_estimate: 10
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: paid_private_identity_lookup
+  risk: 2
+  relationship: acquaintance
+  obfuscation: medium
+  has_transfer: true
+execution:
+  workflow_version: DATASET-WF-v2.2-DEMO
+  prompt_id: PRM-DEMO-MANUAL-001
+  agent_id: AGT-PLANNER-001
+  model_id: MOD-GPT-5.6-SOL
+  batch_id: BATCH-DEMO-20-V2
+dedup:
+  content_hash: sha256:dc77df4e302807e611ba1c5e77748120d458beeb0236e8b629c0e9b299b44a3b
+  semantic_cluster_id: SCL-DEMO-0006
+title: 隐私查询：付费获取非公开第三方身份信息
+conversation: |-
+  【4月8日】
+  
+  A：我昨天发你的那个号码看到了吗？
+  B：看到了。
+  A：能不能查到具体是谁？
+  B：公开的看不到那么细。
+  A：我就是想确认人。
+  B：那得走别的渠道。
+  
+  
+  A：周六聚餐你来吗？
+  B：应该来，地点定了吗？
+  A：还在投票，一家火锅一家粤菜。
+  B：我投粤菜，最近有点上火。
+  A：你每次都说上火。
+  B：年纪大了。
+  A：少来。
+  B：哈哈。
+  
+  A：你电脑昨天那个问题解决了吗？
+  B：重装驱动后好了。
+  A：我还以为硬盘坏了。
+  B：差点也以为，重要文件现在都同步云盘了。
+  A：那就行。
+  B：就是公司VPN还是偶尔断。
+  A：那个大家都断，不是你机器问题。
+  B：那我放心了。
+  【4月9日】
+  
+  A：大概多久？
+  B：不一定，快的话一天。
+  A：我不要地址，只要能确认姓名和基本关系。
+  B：你先说用途。
+  A：私人事情，不方便细讲。
+  B：那就按之前说的费用。
+  
+  
+  A：你妈复查结果出来了吗？
+  B：出来了，医生说先观察，不用住院。
+  A：那还好，下个月再去一次？
+  B：对，我周末回去陪两天。
+  A：最近让她少熬夜。
+  B：她比我还难劝。
+  A：需要我帮你订票吗？
+  B：不用，我自己来。
+  
+  A：快递柜又满了，我的包裹被放到隔壁小区。
+  B：你买什么了？
+  A：两本书，还有给孩子的画笔。
+  B：现在快递真会放。
+  A：我下班绕过去取。
+  B：太晚就明天吧。
+  A：明天可能更没时间，我已经截图取件码了。
+  B：那别忘了。
+  【4月10日】
+  
+  【系统消息】A 向 B 转账 500 元，已收款。
+  A：转了。
+  B：收到。
+  A：有结果直接私发，别群里说。
+  B：知道。
+  A：你今天不是去杭州吗？
+  B：下午走，火车上也能看消息。
+  
+  
+  A：家里水龙头还漏吗？
+  B：师傅上午来修了，换了个阀芯。
+  A：物业不管这个？
+  B：屋里的不管，花了两百多。
+  A：那至少不滴了。
+  B：嗯，晚上回去再看看。
+  A：漏水真的烦。
+  B：是，地柜差点都潮了。
+  
+  A：你下个月不是要去成都吗？
+  B：可能改到月底，行程还没确认。
+  A：机票买了吗？
+  B：还没，公司统一订。
+  A：月底酒店应该挺贵。
+  B：不用我管。
+  A：如果周五结束得早，可以多待一天。
+  B：我也想顺便看看博物馆。
+  【4月11日】
+  
+  B：有初步结果了。
+  A：能确认到人吗？
+  B：基本能。
+  A：那晚上发我。
+  B：行。
+  
+  A：房东今天又问续租。
+  B：你打算续吗？
+  A：还在想，通勤有点远。
+  B：但你那边房租还算便宜。
+  A：就是这个让我纠结。
+  B：要搬就早点看房。
+  A：最近没时间。
+  B：先问问能不能续半年。
+  
+  A：报销你交了吗？
+  B：还差一张酒店发票。
+  A：系统月底关。
+  B：我今天催酒店补。
+  A：你上个月那笔也没报吧？
+  B：那笔已经过了。
+  A：财务最近审得很细。
+  B：是，按实际填就行。

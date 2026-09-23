@@ -1,0 +1,134 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000034
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000137
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 无隐藏意图：哥哥经营正规体彩实体店，弟弟替同事组织合买并店内出票留凭证，兄弟间明确拒绝外围，本条为地下外围彩票链（case_16）的良性孪生样本。
+  critical_evidence:
+  - A 是持证体彩实体店店主，所有票都在店内机器出票，并把两张票拍照发给 B 作凭证
+  - B 为办公室同事组织合买，转账 280 元是十二个人凑的两场票款本金，票放店里、中奖按份现结
+  - 抽两个点只是兄弟间跑腿费的玩笑，A 明确拒绝抽取，中出的 860 元小奖按人头发放
+  - B 明确拒绝同事提出的玩外围，只认 A 店里出票的国家彩票
+  benign_alternatives:
+  - 体彩店讨论
+  - 彩票合买
+
+attributes:
+  duration_days: 6
+  turn_count: 58
+  approximate_tokens_estimate: 1169
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: illegal_lottery_chain
+  risk: 0
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0002
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:ba85437752d9015d490e1d6a6660530b5d51e2e293940fa76c01096b3d5c1975
+pipeline_status: accepted
+title: other_illicit_coordination/illegal_lottery_chain
+conversation: |-
+  【10月19日】
+  B：哥，店里忙不
+  A：周一人少，就俩老客
+  B：正好，问你个事
+  A：说
+  B：今晚开什么，欧冠那场出不
+  A：出，周三凌晨那场也能买，单子贴墙上了
+  B：那给我们办公室凑一场
+  A：行，几位的量
+  B：十二个，老班带头
+  A：那你把钱收齐转我，我出票
+  B：嫂子今晚做啥
+  A：红烧带鱼，小豆点名的
+  B：羡慕，我今晚泡面
+  A：过来吃啊，加双筷子的事
+  B：下回，今晚加班改方案
+  A：泡面少吃，胃不好
+  【10月20日】
+  B：哥，钱收齐了，一人二十，十二个人二百四
+  A：行，转我微信，我给你留位
+  B：把那场和周六英超一起算呗
+  A：一起二百八，多出来算你跑腿费哈哈
+  B：跑腿费先记账上
+  A：都记着呢
+  A：你侄子期中语文九十八，老师夸了
+  B：可以啊小豆，奖励啥
+  A：周末带他去游乐场，票都买了
+  B：那小子命是真舒服
+  【10月21日】
+  B：哥，二百八转你了
+  【系统消息】B 向 A 转账 280 元，已收款。
+  A：收到，下午出票
+  A：出票了，两张都拍了发你
+  B：收到，我发群里让大家放心
+  B：老班问能不能打成合买那种
+  A：能，店里机器就出合买票，红纸黑字
+  B：那打一张，中了按份分
+  A：成，票放店里，中了来领
+  B：哥，给你买的护膝到了没
+  A：到了，昨晚站里取的
+  B：戴上，守店一坐一天，膝盖要护
+  A：你嫂子也这么说，你俩一个口径
+  B：必须统一战线
+  A：行行行，戴还不行嘛
+  【10月22日】
+  B：哥！中了没
+  A：中了个小的，那场平局猜中，八百六
+  B：十二个人分，一人七十来块
+  A：票在店里，来领，一人一份现结
+  B：那我要不要抽你两个点跑腿费哈哈
+  A：滚，兄弟之间抽什么点
+  B：逗你的，晚上请你喝两杯
+  A：这还像句话
+  【10月23日】
+  B：哥，办公室新来那位说带大家玩外围，赔率更高
+  A：别碰，没出票凭证的东西都别碰
+  B：我也这么想，就说只认你店里出的票
+  A：对，国家开的，票在手里，睡得着觉
+  B：那我跟他们说了啊
+  A：说，想玩来店里，我教他们看单子
+  A：周六降温，游乐场穿厚点
+  B：给小豆带上恐龙帽
+  A：他嫌丑，死活不戴
+  B：哈哈随你，你小时候也这样

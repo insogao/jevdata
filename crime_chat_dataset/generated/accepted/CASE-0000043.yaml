@@ -1,0 +1,147 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000043
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000131
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 表面像「扣人抵债、人先跟我们走」的高利贷话术，实际是小贷公司客户经理按正规流程放款：电子合同加借条、表哥担保、月息一分、十二期还款，还顺手介绍了包吃住的工地岗位；「扣证件」只是借款人抱怨前东家的旧纠纷。
+  critical_evidence:
+  - 借款三万元走电子合同加借条，月息一分、十二期，B 的表哥出面担保
+  - 10月10日 10:21 A 向 B 放款 30000 元，B 回复合同借条都收到，还款日为每月 15 日
+  - 「跟我们走」是 A 介绍的钢筋工岗位：包吃住、月结八千、自愿报名、只登记身份证复印件不押证
+  - 「扣证件」指 B 前年工地老东家扣身份证、拖了三个月，已由劳动监察帮忙要回，属过往纠纷吐槽
+  benign_alternatives:
+  - 正常担保借贷（决定性）
+  - 工地扣证件纠纷的讨论
+
+attributes:
+  duration_days: 6
+  turn_count: 70
+  approximate_tokens_estimate: 1831
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: agent_debt_bodily_collateral
+  risk: 0
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0003
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:878b94a22b9e4af392f512523aab177728a0f1e5191cc9db01a07d107425b026
+pipeline_status: accepted
+title: coercion_blackmail/agent_debt_bodily_collateral
+conversation: |-
+  【10月8日】
+  B：陈经理 我想再问问上回那个贷款
+  A：你好可以 我看了你资料 信用这块没问题
+  B：三万 我闺女下学期学费 加上他妈住院押金
+  A：能做 月息一分 十二期 你表哥担保那事他答应了吗
+  B：答应了 他说愿意给我签
+  A：行 那走正常流程 电子合同 人脸签 借条也出一份
+  B：中 要我准备啥
+  A：你俩的身份证 银行卡 明天来店里面签
+  B：我闺女这次月考进了前二十 高兴坏了
+  A：好孩子 学费就别愁了 借的也是为了这个
+  B：是啊 再苦不能苦孩子
+  A：这话说得在理
+  B：她还想报个跳舞班 我说等下学期
+  A：一步一步来 别把自己累垮了
+  【10月9日】
+  B：陈经理 我到楼下了
+  A：上来 302 我等你
+  B：签完了 手指头都按红了
+  A：哈哈 正规流程都得走 你表哥那边也签了
+  A：明天放款 三万整 到账你留意
+  B：好 谢谢陈经理
+  B：唉 我这老腰今天搬东西又闪了
+  A：去拍个片 别硬扛 你干工地腰就是本钱
+  B：贴了膏药 缓一点了 明天还得扎钢筋
+  A：悠着点 身体垮了啥都白搭
+  【10月10日】
+  【系统消息】A 向 B 转账 30000 元，已收款。
+  A：三万放款了 你查收
+  B：收到了 陈经理 合同和借条都收到 电子的也存好了
+  A：嗯 每月15号还款提醒我会发你 头一期 11月15号
+  B：中 我记手机日历上了
+  B：说实话 跑了几家 就你这儿没让我先交什么手续费
+  A：前期收费的都别搭理 那不正规
+  B：明天要降温 我这薄被子得换了
+  A：嗯 工地宿舍更冷 你多盖点
+  B：中 媳妇说给我寄两床
+  A：那正好
+  【10月11日】
+  A：王师傅 跟你说个事 我们工程队缺两个钢筋工 包吃住 月结八千
+  B：哦 你还管介绍活
+  A：熟人嘛 有意向你过去干俩月 还款也更稳当 你考虑 不强求
+  B：我问问媳妇 回你
+  A：不急
+  B：对了陈经理 跟你说个糟心事 前年那个工地还扣过我身份证
+  A：咋扣的
+  B：进场押的 说是保管 走的时候拖着不还 拖了我仨月
+  A：后来呢
+  B：我去劳动监察反映 人家一个电话就帮我要回来了 还说扣证件本来就不合规
+  A：那是 扣证件的不能惯 现在正规工地都不押证
+  B：所以这回换工地 我先问清楚
+  A：我们这边从来不押 也就是登记个复印件
+  【10月12日】
+  B：陈经理 我媳妇同意了 我过去干俩月
+  A：行 我给队长说一声 你明天去报到 身份证带原件登记 工资月结
+  B：中 吃住真包
+  A：包 六人间有暖气 食堂三顿
+  B：那我省下的就都能还款
+  A：你这么算就对
+  B：我闺女听说我换工地 问我能不能给她带个新书包
+  A：哈哈 这要求不过分 干满一个月给她买
+  B：中 说话算话
+  A：你们这些当爹的都不容易
+  【10月13日】
+  B：陈经理 我到宿舍了 挺干净 比我想像的好
+  A：那行 队长姓刘 有事找他
+  B：见到了 挺和气
+  A：嗯 你安心干活 11月15号头一期 我提醒你
+  B：忘不了 头一回借正规贷款 心里踏实
+  A：按期还 这期还完你信用就养起来了
+  B：中
+  B：今晚真冷了 秋裤安排上
+  A：哈哈 我早穿上了 你媳妇被子到了没
+  B：到了 晚上就不冷了
+  A：那睡个好觉 有事随时说
+  B：好嘞 陈经理 谢谢你
+  A：客气 该走的流程走完 咱们就是长期关系了

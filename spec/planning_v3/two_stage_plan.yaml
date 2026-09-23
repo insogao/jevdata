@@ -1,0 +1,26 @@
+schema_version: DATASET-PLAN-v3
+stages:
+  - stage_id: STAGE-1-PUBLIC
+    name: Broad Public Data
+    purpose: public dataset ingestion, normalization, taxonomy, seed coverage
+    target_examples: "30000-50000"
+    exact_risk_0_3_required: false
+    outputs:
+      - normalized seeds
+      - merged taxonomy
+      - archetype seed pool
+      - broad_train
+  - stage_id: STAGE-2-CURATED
+    name: Curated Business Chat
+    purpose: business-specific long 1-to-1 chat, exact decision boundaries
+    target_examples: "8000-12000"
+    exact_risk_0_3_required: true
+    canonical_format: CASE-YAML-v1
+    outputs:
+      - curated YAML cases
+      - train/calibration/test splits
+      - Nimble export
+training_ablation:
+  - curated_only
+  - broad_then_curated
+  - broad_plus_curated_mixed

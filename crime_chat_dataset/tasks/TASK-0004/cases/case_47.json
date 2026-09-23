@@ -1,0 +1,402 @@
+{
+ "key": "case_47",
+ "archetype_id": "ARC-000006",
+ "subtype": "loan_fee_bait",
+ "latent_intent": "良性变体：对话开头出现“不看征信秒批、先交保证金”式话术场景，但决定性事实是全程走正规银行贷款流程（本人面签、征信官网自查、电子合同可查、放款前不收费）；对话中的转账是归还去年的个人借款，与贷款无关。",
+ "critical_facts": [
+  "A 明确并反复强调正规银行放款前一分钱不收，让 B 先交保证金的都是骗子（对应msgs 7-10、39）",
+  "全程官方流程：B 本人在人民银行征信中心官网查征信、到银行网点当面签约，电子合同可在银行App随时查到（msgs 23、35-37、55）",
+  "额度与利率以银行审批为准，A 只协助准备材料，放款直接进 B 本人银行卡、不经 A 之手（msgs 13、33、54-55）",
+  "10月10日 A 转给 B 的 20000 元是归还去年个人借款，与贷款无关，B 提到当初写过借条（msgs 41-46）"
+ ],
+ "benign_alternatives": [
+  "正规银行贷款流程",
+  "亲友借款"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "10月8日 20:05",
+   "speaker": "B",
+   "text": "周哥，在么，老郑说你有门路，跟你打听个事"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:06",
+   "speaker": "A",
+   "text": "在，说"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:07",
+   "speaker": "B",
+   "text": "我那店想重新装修下，差二十来万，有人给我推了个贷款"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:07",
+   "speaker": "B",
+   "text": "说什么不看征信，当天就能放款"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:08",
+   "speaker": "A",
+   "text": "打住，这种你碰都别碰"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:09",
+   "speaker": "B",
+   "text": "啊？不是说现在有快捷通道么"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:10",
+   "speaker": "A",
+   "text": "记住一条，正规银行放款之前一分钱不收"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:10",
+   "speaker": "A",
+   "text": "谁让你先交保证金，谁就是骗子"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:11",
+   "speaker": "B",
+   "text": "对方还真说先交两万保证金，批了就退"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:11",
+   "speaker": "A",
+   "text": "退你个鬼，这就是老套路了"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:12",
+   "speaker": "A",
+   "text": "你要贷就走银行正规产品，你这条件完全够"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:12",
+   "speaker": "B",
+   "text": "银行不是流程特别慢么"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:13",
+   "speaker": "A",
+   "text": "材料备齐一两周也就下来了，慢点踏实"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:13",
+   "speaker": "B",
+   "text": "行，那听你的"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:20",
+   "speaker": "A",
+   "text": "吃饭没，刚下班路过你们那条街"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:21",
+   "speaker": "B",
+   "text": "还没，正泡面呢"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:21",
+   "speaker": "A",
+   "text": "泡面顶啥用，楼下新开那家湘菜去尝尝"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:22",
+   "speaker": "B",
+   "text": "明天去吧，今晚懒得动"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:22",
+   "speaker": "A",
+   "text": "行，明天你请客"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:23",
+   "speaker": "B",
+   "text": "哈哈必须的"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 08:32",
+   "speaker": "B",
+   "text": "早，今天要准备啥材料"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 08:33",
+   "speaker": "A",
+   "text": "身份证、半年流水、租赁合同，营业执照带原件"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 08:34",
+   "speaker": "A",
+   "text": "征信自己先查下，人民银行征信中心官网就能申请，别用来路不明的链接查"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 08:35",
+   "speaker": "B",
+   "text": "好，上午就去弄"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 08:35",
+   "speaker": "A",
+   "text": "查完发我看下，就看有没有逾期，别的我不看"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 08:36",
+   "speaker": "B",
+   "text": "懂了"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:02",
+   "speaker": "A",
+   "text": "对了，你儿子运动会啥时候，我家那个天天念叨"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:03",
+   "speaker": "B",
+   "text": "下周五，通知刚发，你还真打算去啊"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:03",
+   "speaker": "A",
+   "text": "去啊，顺道给小家伙加个油"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:04",
+   "speaker": "B",
+   "text": "他要知道周叔叔来，能高兴坏"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:04",
+   "speaker": "A",
+   "text": "哈哈那说定了"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 15:40",
+   "speaker": "B",
+   "text": "材料拍给你了，你帮我把把关"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 15:42",
+   "speaker": "A",
+   "text": "看了，没毛病，理得挺利索"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 15:43",
+   "speaker": "B",
+   "text": "那我明天直接去网点？"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 15:44",
+   "speaker": "A",
+   "text": "嗯，经理我帮你约好了，上午十点，当面签"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 09:15",
+   "speaker": "B",
+   "text": "哥，签完了！合同签的是电子版"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 09:16",
+   "speaker": "A",
+   "text": "这就对了，回头银行App里随时能查到这份合同"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 09:17",
+   "speaker": "B",
+   "text": "还好问了句要不要带保证金，经理都笑了"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 09:17",
+   "speaker": "A",
+   "text": "再说一遍，放款之前收钱的全是骗子，你这一分没花，对喽"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 09:18",
+   "speaker": "B",
+   "text": "明白，记牢了"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 16:20",
+   "speaker": "A",
+   "text": "正事之外说个事，去年借你那两万，我这周转开了"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 16:20",
+   "speaker": "B",
+   "text": "哎呀不急，你先留着用"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 16:21",
+   "speaker": "A",
+   "text": "用什么用，都大半年了"
+  },
+  {
+   "type": "transfer",
+   "time": "10月10日 16:22",
+   "from": "A",
+   "to": "B",
+   "amount": 20000
+  },
+  {
+   "type": "message",
+   "time": "10月10日 16:23",
+   "speaker": "B",
+   "text": "收到收到，那借条回头我给你寄回去？"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 16:24",
+   "speaker": "A",
+   "text": "撕啥，你收好，证明我是个讲信用的人哈哈"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 16:24",
+   "speaker": "B",
+   "text": "哈哈行"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 19:30",
+   "speaker": "B",
+   "text": "我买的装修材料到了，一车货，快递小哥脸都绿了"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 19:31",
+   "speaker": "A",
+   "text": "多少东西你这是"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 19:31",
+   "speaker": "B",
+   "text": "十二卷电线两桶漆，搬了一下午，胳膊已经不是我的了"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 19:32",
+   "speaker": "A",
+   "text": "明天我去搭把手"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 19:32",
+   "speaker": "B",
+   "text": "别别，哪好意思，回头请你吃饭"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 19:33",
+   "speaker": "A",
+   "text": "那说好了，这两天你欠我两顿了"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 10:12",
+   "speaker": "B",
+   "text": "哥！批了批了！二十万，利率比我预想的还低"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 10:13",
+   "speaker": "A",
+   "text": "我说你条件够吧，周一银行直接放款到你卡里，不经我手"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 10:13",
+   "speaker": "B",
+   "text": "懂，全程银行走，一分费用没有"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 10:14",
+   "speaker": "A",
+   "text": "对喽，以后再有人跟你推销那种秒批的，你都知道咋回了"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 15:05",
+   "speaker": "A",
+   "text": "周末大降温，装修的摊子挪屋里弄"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 15:06",
+   "speaker": "B",
+   "text": "看了天气了，直接从夏天跳冬天"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 15:06",
+   "speaker": "A",
+   "text": "我秋裤都翻出来了哈哈"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 15:07",
+   "speaker": "B",
+   "text": "哈哈你也别硬扛，穿厚点"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 15:08",
+   "speaker": "B",
+   "text": "等装修完开业，你带嫂子一起来"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 15:08",
+   "speaker": "A",
+   "text": "必须，红包我都想好了"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000054",
+  "status": "accepted",
+  "errors": []
+ }
+}

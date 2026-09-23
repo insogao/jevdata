@@ -1,0 +1,141 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000044
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000088
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 表面像花钱私下买病历的信息交易，实际是公估公司持伤者授权书、报理赔单号与委托函编号、走医务科系统登记的正常理赔调查；68 元只是病历复印工本费，牛肉面是人情玩笑。
+  critical_evidence:
+  - A 报出理赔单号与保险公司委托函编号，B 系统核对无误并收到伤者授权书后才受理
+  - B 明确必须走系统登记、公对公，明确拒绝私下拿病历的方式
+  - 10月15日 11:05 A 转 68 元病历复印工本费，B 开收据拍照给 A 留档报销
+  - 所谓「值一顿饭」只是 B 玩笑要 A 请牛肉面，与材料本身无关
+  benign_alternatives:
+  - 保险正常理赔调查（决定性）
+  - 公估公司标准作业流程
+
+attributes:
+  duration_days: 2
+  turn_count: 68
+  approximate_tokens_estimate: 1655
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: insurance_claims_snoop
+  risk: 0
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0003
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:499e0d94216cfcac9ba4d47dc4858994f88c826278c0b7bbfa5869e5831532d7
+pipeline_status: accepted
+title: privacy_doxxing/insurance_claims_snoop
+conversation: |-
+  【10月14日】
+  A：您好 打听下 是惠民诊所医务科吗 前台给的这个号
+  B：对 医务科 小郑 您说
+  A：我是正衡公估的 免贵姓杜 受鼎诚保险委托 处理一起车险人伤的理赔
+  B：单号多少
+  A：理赔单号 2026-0912-038 委托函编号 B-2026-4471 我念慢点
+  B：您稍等 我系统里对一下
+  B：对得上 9月12号是有这么一位 外伤处置
+  A：对 我需要当时的门诊病历和影象报告复印件
+  B：您有伤者授权吗 没授权我们不能直接给
+  A：有 伤者签的授权书 扫描件我马上传您邮箱 原件随后寄
+  B：好 我核过授权就能走流程
+  A：麻烦尽快 车主那边等着定损
+  B：正常流程 走系统登记 明后天就能复印 您别急
+  A：必须走系统 公对公 我们也要留痕
+  B：嗯 有的人想私下拿 那我们肯定不行 您手续全 就好办
+  A：应该的
+  B：你们查勘的这两天辛苦 下雨还出现场
+  A：没办法 昨天在现场淋成落汤鸡
+  B：我们门口那条路又积水了
+  A：是 今年这秋雨没完没了
+  A：授权书原件我下午寄出 单号回头发您
+  B：好 到了我签收登记
+  A：今天发 明儿上午差不多到
+  B：行 我盯着
+  A：到了您吱一声
+  B：好嘞
+  【10月15日】
+  B：杜老师 快递到了 授权和函都对
+  A：太好了 那按清单麻烦您
+  B：门诊病历8页 影象报告2张 处置记录3页 就这些
+  A：对 就这些 复印件加盖医务科章
+  B：会盖的 工本费68 您扫码还是对公
+  A：我个人先垫 扫码就行 您给我开个收据 我回去报销
+  B：行 抬头写您个人还是公司
+  A：写公司全称 我念给您 记下
+  B：记好了 您扫这个码
+  【系统消息】A 向 B 转账 68 元，已收款。
+  B：收到68 收据这就开 拍照发您
+  A：好嘞 谢谢
+  B：收据拍您了 材料下午寄出 寄付还是到付
+  A：寄付 公估出 单号发我留档
+  B：中
+  B：杜老师你们这行也辛苦 天天下现场
+  A：混口饭吃 对了 说好的牛肉面我请 上回电话里答应的
+  B：哈哈 您还真记着 那我不客气了
+  A：就您诊所对面那家 评分挺高
+  B：行 他家牛肉给得多 下回来查勘喊我
+  A：一定
+  B：明天听说还下雨
+  A：嗯 我明天还有个现场
+  B：带伞 出现场慢点 查勘的自己摔了可没得赔 哈
+  A：哈哈 我自己保障买得足足的
+  B：材料装好了 三点快递来揽收
+  A：好 单号发我 我这边归档
+  B：您台账做得真细
+  A：习惯 每一步都要能回溯 不然公司内控那关过不去
+  B：我们也一样 复印登记簿您这是第47笔
+  A：规范就好 双方都踏实
+  B：您是鼎诚车险那边委托的吧
+  A：对 鼎诚车险部 以后有单子还找您
+  B：行 只要手续齐 都好说
+  A：伤者那边咱就不另外打扰了 按授权走 免得人家多想
+  B：放心 我们不主动联系伤者 这是规矩
+  A：那材料就麻烦您了
+  B：应该的
+  B：揽收了 单号发您了
+  A：收到 已登记
+  B：牛肉面您可别忘了
+  A：忘不了 下礼拜三我到这片查勘 顺路
+  B：一言为定

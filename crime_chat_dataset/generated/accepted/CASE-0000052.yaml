@@ -1,0 +1,146 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000052
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000048
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 因分手怀恨，让发小 B 踩点前女友的下班时间、回家时间与车辆情况，并指定“周二”这个时间点；B 两次到现场蹲点并拍照让 A 确认，收 3000 元跑腿费。A 说“剩下的我自己来，你别沾手”。全程无任何直接命名，靠组合推断。
+  critical_evidence:
+  - A 让 B 摸“她”的下班时间、几点到家与车辆情况，并指定“周二”这个时间点（msgs 11-13、27-33、41-42）
+  - B 两次到现场蹲点，把目标人物拍下来发 A 确认，A 回“是她，没错，就她”（msgs 20-24、43-46）
+  - A 于10月10日晚转 3000 元跑腿费，说“事成另有表示”，B 收下（transfer + msgs 56-59）
+  - B 多次质问“你要干嘛，别把我绕进去”，A 说“剩下的我自己来，你别沾手”，B 明知不对劲仍提供了行踪信息（msgs 28-33、60-64）
+  benign_alternatives:
+  - 帮忙搬家盯物流
+  - 走失老人寻人
+
+attributes:
+  duration_days: 3
+  turn_count: 72
+  approximate_tokens_estimate: 1621
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: revenge_stalking_plan
+  risk: 3
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0004
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:abcddcaa807af6a78535ad4c9f59b59853db67884d9bad3980f623b7a8b2b4af
+pipeline_status: accepted
+title: violence_extortion/revenge_stalking_plan
+conversation: |-
+  【10月8日】
+  A：哥们，睡没
+  B：没，刚洗完澡，咋了这一惊一乍的
+  A：帮我个忙，就你能帮
+  B：说，只要不是违法乱纪的
+  A：能有什么事，你就帮我盯个点
+  B：盯啥
+  A：她。她换工作了你知道吧，城东那家做跨境电商的
+  B：你还惦记呢，都散半年了
+  A：我不是惦记，我心里这口气你懂
+  B：行吧行吧，你让我干啥
+  A：她那个楼，早上几点人多，下班几点走，你顺路帮我看看
+  B：我又不去城东，专门跑一趟？
+  A：跑一趟，油钱我出
+  B：你这人真是
+  B：对了，你爸玉米收完没，今年台风闹的
+  A：收完了，减产一截，老头心疼坏了
+  B：我爸也说想换那个新品种
+  A：换啥种，够吃就行
+  B：哈哈老人家都这心态
+  【10月9日】
+  B：今天去看了，她那栋楼我绕了一圈
+  A：几点到的，见着人没
+  B：早高峰人太多，晚上六点四十，她跟俩同事出来往地铁站走
+  A：她开车还是地铁
+  B：地铁，那辆白车还停楼下，落灰了
+  A：车停着，人坐地铁
+  B：咋，你还想堵她车？
+  A：想啥呢，我就想知道她几点到家
+  B：你要干嘛，说真的
+  A：送个东西，当面对清楚，没别的事
+  B：我看你就是没放下
+  A：你把到家的点摸准，周二之前给我
+  B：周二？你要干嘛，我可跟你说，别把我绕进去
+  A：你就给我个时间，剩下的我自己来，你别沾手
+  B：丫丫期中考咋样了
+  A：数学又没上九十，随她妈，文科脑子
+  B：哈哈你可拉倒吧，你当年数学及格没
+  A：我那是没开窍，开窍了不得了大文豪
+  B：丫丫最近见你多吗
+  A：周末接过来住一晚，平时说不上话
+  B：多陪陪吧，大人的事别耽误孩子
+  【10月10日】
+  B：摸清了，她一般七点一刻到家，周二那楼老张值班，认得我
+  A：七点一刻，记下了
+  B：我今天又跟了一趟，把人拍给你，别认错了
+  A：发来
+  B：你看下像不像
+  A：是她，没错，就她
+  B：你拍胸脯啊，我这是干嘛呢我
+  A：帮兄弟一把，我记你的好
+  B：那你别整出事来，我就当帮朋友看个点
+  A：能出什么事，我又不是去吵架
+  B：你那车修好没，引擎那声还响不
+  A：修了，换了根皮带，八百，肉疼
+  B：八百买个安静，值
+  A：你那破车也该收拾了，底盘哐当哐当的
+  B：凑合开，年底换了它
+  A：跑腿的钱转你，别嫌少
+  【系统消息】A 向 B 转账 3000 元，已收款。
+  B：收到了，你这……行吧
+  A：事成另有表示，咱哥俩不说这个
+  B：我可说好了，我就到这，后面别叫我
+  A：周二晚上你在家待着，啥也不用管，也别给我打电话
+  B：你这话听得我心里发毛
+  A：毛啥，我就是去把话说开
+  B：但愿吧，你别冲动
+  B：明晚球看不，老地方投影
+  A：不去了，这几天烦
+  B：那酒给你留着，回头你请
+  B：行吧，球随时都有，人别垮了
+  A：行，等我忙完这阵
+  B：说真的，回头找她好好说，别整僵了
+  A：我有分寸，就是不能这么不明不白的
+  B：行，周二之前有事随时喊我
+  A：嗯，就到这，睡吧

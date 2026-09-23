@@ -1,0 +1,414 @@
+{
+ "key": "case_01",
+ "archetype_id": "ARC-000021",
+ "subtype": "project_bid_kickback",
+ "latent_intent": "评标专家经中间人引荐，在开标前向初次结识的承包商提供指定品牌与参数清单、指导报价策略，约定事成后按“老规矩”给“那个数”；中标公示当晚深夜 B 转账 50000 元。全程文字、不留备注，无任何直接命名，需结合时间线与转账才能推断。",
+ "critical_facts": [
+  "两人经“老陈”引荐初次合作、素不相识，A 开场即暗示能左右评审（“评审的事，有我能说话的地方”）（msgs 1-5）",
+  "开标前 A 向 B 提供指定品牌与参数清单，要求“带量报价”逐一对应，并指导报价比其预期高两个点、不压最低价（msgs 7-9、17-23）",
+  "双方约定事成之后按“老规矩”给“那个数”，刻意只用微信文字、不打电话、传文件走邮箱、转账不备注（msgs 11、29-35、52-54）",
+  "中标公示当晚 23:47，B 向 A 转账 50000 元，无备注无任何业务凭证（transfer + msgs 50-60）"
+ ],
+ "benign_alternatives": [
+  "合法分包合作",
+  "居间佣金合规申报"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "10月8日 21:12",
+   "speaker": "A",
+   "text": "是小赵吧，老陈把你微信推给我了"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 21:13",
+   "speaker": "B",
+   "text": "对，周工好，久仰久仰"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 21:13",
+   "speaker": "A",
+   "text": "客套省了，那个项目你想不想做"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 21:14",
+   "speaker": "B",
+   "text": "智慧园区那个标？我们跟了大半年了"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 21:14",
+   "speaker": "A",
+   "text": "评审的事，有我能说话的地方"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 21:15",
+   "speaker": "B",
+   "text": "那可太好了，周工有吩咐"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 21:15",
+   "speaker": "A",
+   "text": "我发你一张清单，参数和品牌照着填，带量报价"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 21:16",
+   "speaker": "B",
+   "text": "带量？招标文件不是不让吗"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 21:16",
+   "speaker": "A",
+   "text": "让你带你就带，一一对应，错不了"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 21:17",
+   "speaker": "B",
+   "text": "明白，我让预算连夜调"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 21:18",
+   "speaker": "A",
+   "text": "电话就别打了，文字说清楚就行"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 21:18",
+   "speaker": "B",
+   "text": "懂，您放心"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 21:26",
+   "speaker": "B",
+   "text": "周工这两天过来不，我安排车"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 21:27",
+   "speaker": "A",
+   "text": "我后天的高铁，不用接，酒店自己订"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 21:27",
+   "speaker": "B",
+   "text": "那哪行，到了说一声，请你吃个便饭"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 21:28",
+   "speaker": "A",
+   "text": "便饭免了，正事要紧"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:40",
+   "speaker": "A",
+   "text": "清单收到没"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:41",
+   "speaker": "B",
+   "text": "收到，三处品牌跟招标文件不一致，真没问题？"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:41",
+   "speaker": "A",
+   "text": "技术分占四成，照我的来，分不会低"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:42",
+   "speaker": "B",
+   "text": "那报价区间呢，压到多少合适"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:42",
+   "speaker": "A",
+   "text": "别压最低，比我预的高两个点，这样顺理成章"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:43",
+   "speaker": "B",
+   "text": "高两个点还能中？"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:43",
+   "speaker": "A",
+   "text": "照做就是，别的你不用懂"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:44",
+   "speaker": "B",
+   "text": "好，全听您的"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:52",
+   "speaker": "B",
+   "text": "你们那边降温没，这边一场雨直接入冬了"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:53",
+   "speaker": "A",
+   "text": "下了两天了，我钓鱼都停了"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:53",
+   "speaker": "B",
+   "text": "周工还钓这个呢，改天跟您学学"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:54",
+   "speaker": "A",
+   "text": "就图个清静"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 22:05",
+   "speaker": "A",
+   "text": "明天开标，你的标书我晚上扫一眼"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 22:06",
+   "speaker": "B",
+   "text": "多谢周工，大文件发您邮箱？"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 22:06",
+   "speaker": "A",
+   "text": "发邮箱，微信别传大件"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 22:07",
+   "speaker": "B",
+   "text": "好嘞"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 22:08",
+   "speaker": "A",
+   "text": "还有个事，事成之后，老规矩，你懂的"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 22:08",
+   "speaker": "B",
+   "text": "懂的懂的，一定按规矩来"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 22:09",
+   "speaker": "A",
+   "text": "那个数，别多别少"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 22:09",
+   "speaker": "B",
+   "text": "周工痛快，我也不含糊"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 22:15",
+   "speaker": "B",
+   "text": "给您备了两饼茶，云南朋友寄的"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 22:16",
+   "speaker": "A",
+   "text": "茶就不必了，东西你留着"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 22:16",
+   "speaker": "B",
+   "text": "一点心意，不值钱玩意"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 22:17",
+   "speaker": "A",
+   "text": "先放你这，以后有机会再说"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 15:30",
+   "speaker": "A",
+   "text": "你那个技术方案第七页，数据对得上吗"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 15:31",
+   "speaker": "B",
+   "text": "对得上，跟清单一一对应的"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 15:31",
+   "speaker": "A",
+   "text": "行，别的几家里有两家文件都做不平，你稳的"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 15:32",
+   "speaker": "B",
+   "text": "那我心里有底了"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 15:32",
+   "speaker": "A",
+   "text": "公示一般三到五天，你盯着点网站"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 20:12",
+   "speaker": "B",
+   "text": "周工孩子多大了，跟您跑工地不"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 20:13",
+   "speaker": "A",
+   "text": "大二，住校，不跟我掺和"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 20:13",
+   "speaker": "B",
+   "text": "年轻人有自己的天地好"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 20:14",
+   "speaker": "B",
+   "text": "回头让他学工科，回来接您的班嘛"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 20:14",
+   "speaker": "A",
+   "text": "是，省心，就是费钱哈哈"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 17:05",
+   "speaker": "B",
+   "text": "周工！中了！第一名，公示贴出来了"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 17:06",
+   "speaker": "A",
+   "text": "知道了，恭喜，按说好的来"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 17:06",
+   "speaker": "B",
+   "text": "必须的，卡号发我……还是老方式？"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 17:07",
+   "speaker": "A",
+   "text": "老方式，别备注，别多话"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 17:07",
+   "speaker": "B",
+   "text": "明白"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 17:08",
+   "speaker": "B",
+   "text": "晚上我安排"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 19:40",
+   "speaker": "B",
+   "text": "周工晚饭吃了没，请你吃个夜宵庆祝下"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 19:41",
+   "speaker": "A",
+   "text": "不用了，早点休息，明天各自忙"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 19:41",
+   "speaker": "B",
+   "text": "那您好好休息"
+  },
+  {
+   "type": "transfer",
+   "time": "10月12日 23:47",
+   "from": "B",
+   "to": "A",
+   "amount": 50000
+  },
+  {
+   "type": "message",
+   "time": "10月12日 23:48",
+   "speaker": "B",
+   "text": "周工，转了，您查收"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 23:52",
+   "speaker": "A",
+   "text": "收到。后面变更签证的活还长，咱慢慢处"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 23:53",
+   "speaker": "B",
+   "text": "全仰仗您"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 23:53",
+   "speaker": "A",
+   "text": "以后晚上少发消息，白天说"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 23:54",
+   "speaker": "B",
+   "text": "懂了，您休息"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000045",
+  "status": "accepted",
+  "errors": []
+ }
+}

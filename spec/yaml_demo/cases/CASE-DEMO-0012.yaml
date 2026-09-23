@@ -1,0 +1,186 @@
+schema_version: CASE-YAML-v1
+identity:
+  case_id: CASE-DEMO-0012
+  family_id: FAM-DEMO-0012
+  lineage_id: LIN-DEMO-0012
+  archetype_id: ARC-DEMO-0012
+  variant_id: v01
+source:
+  source_ids:
+  - SRC-SYN-001
+  source_seed_ids:
+  - SEED-SYN-DEMO-0012
+  source_type: synthetic_demo
+lineage:
+  root_case_id: CASE-DEMO-0012
+  parent_case_id: null
+  generation_type: original_demo
+labels:
+  risk: 2
+  category: money_laundering_obfuscation
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+hidden_case:
+  latent_intent: 一方租借他人账户收取来源不明资金，并按笔数或流水支付报酬。
+  critical_evidence:
+  - 账户用途只有收款和转出
+  - 按笔计算报酬
+  - 要求不要询问资金来源
+  - 账户持有人担忧风险
+  benign_alternatives:
+  - 公司临时代收
+  - 亲友代付款
+attributes:
+  duration_days: 4
+  turn_count: 102
+  approximate_tokens_estimate: 1193
+  relationship: friend
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+  topic_switches_estimate: 12
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: account_rental_for_pass_through
+  risk: 2
+  relationship: friend
+  obfuscation: high
+  has_transfer: true
+execution:
+  workflow_version: DATASET-WF-v2.2-DEMO
+  prompt_id: PRM-DEMO-MANUAL-001
+  agent_id: AGT-PLANNER-001
+  model_id: MOD-GPT-5.6-SOL
+  batch_id: BATCH-DEMO-20-V2
+dedup:
+  content_hash: sha256:66f0a2f7b64ab695007b25717ad609a59dc143a457b8d8e43039c0e35494191d
+  semantic_cluster_id: SCL-DEMO-0012
+title: 账户出借：仅作资金通道并按笔获利
+conversation: |-
+  【10月1日】
+  
+  A：你那个卡最近不用吧？
+  B：平时不太用。
+  A：借我收几笔，过一下就行。
+  B：什么钱？
+  A：你不用管，到了我告诉你往哪转。
+  B：我不想影响我自己。
+  
+  
+  A：你弟什么时候回来？
+  B：下周三，待一周左右。
+  A：那家里要热闹了。
+  B：我妈已经开始准备一堆菜。
+  A：老人就喜欢这样。
+  B：对。
+  A：你们周末是不是要聚？
+  B：大概率。
+  
+  A：今天外面特别堵。
+  B：我坐地铁还好。
+  A：我开车半小时没过两个路口。
+  B：早说让你别开。
+  A：晚上还得去接人。
+  B：那没办法。
+  A：你那边几点下班？
+  B：六点多吧。
+  
+  A：你中午吃什么？
+  B：还没想，楼下那家面最近排队太久。
+  A：我昨天点了他们家的外卖，送到都坨了。
+  B：那我还是去便利店吧。
+  A：你不是说最近胃不舒服吗，别总吃冷的。
+  B：知道，下午还有两个会，懒得跑远。
+  A：晚上早点回去，冰箱里还有汤。
+  B：行，我回去热一下。
+  【10月2日】
+  
+  A：不会长期用，就几天。
+  B：怎么给我算？
+  A：按笔，一笔给你固定的。
+  B：来源确定没问题？
+  A：别问来源，你只做收和转。
+  B：我再想想。
+  
+  
+  A：上次那个文档你还有最新版吗？
+  B：应该在共享盘，周三改过一次，标题后面有v6。
+  A：我这里只找到周一的版本。
+  B：第三页数据要用新的。
+  A：找到了，我下午重新导一遍。
+  B：发之前让我看一眼。
+  A：行。
+  B：别又把内部备注一起发出去。
+  
+  A：周末还打球吗？
+  B：看天气，场地不湿就去。
+  A：老张说他脚扭了。
+  B：那少一个人。
+  A：我问问小陈，他周五应该出差回来。
+  B：那正好。
+  A：还是七点？
+  B：可以。
+  
+  A：我把阳台那几盆花都换土了。
+  B：你不是最怕弄泥？
+  A：最近突然想养点东西。
+  B：别再把多肉养死。
+  A：这次看了教程。
+  B：教程救不了浇水太勤。
+  A：我控制。
+  B：长好一点拍给我看。
+  【10月3日】
+  
+  B：最多两三笔。
+  A：可以。
+  B：我不接太大的。
+  A：知道。
+  B：今天我带家里人去体检，下午别急着找我。
+  A：行。
+  
+  
+  A：孩子这次考试怎么样？
+  B：数学还行，英语掉了点。
+  A：最近是不是没怎么背单词？
+  B：天天说背了，我也不知道背没背。
+  A：别逼太紧，他自己也着急。
+  B：我知道。
+  A：周末带出去放松一下。
+  B：准备去公园骑车。
+  
+  A：你最近是不是又换手机了？
+  B：没换，贴膜碎了，看起来像新机。
+  A：我说颜色怎么没变。
+  B：这个还能用两年。
+  A：电池呢？
+  B：一天一充，还行。
+  A：我那个已经一天两充。
+  B：那你该换电池了。
+  【10月4日】
+  
+  【系统消息】C 向 B 转账 5000 元，已收款。
+  B：有一笔到了。
+  A：我把下一步发你。
+  B：弄完你就结我的。
+  A：没问题。
+  
+  A：晚上要不要顺路买点水果？
+  B：可以买橙子，别再买香蕉了。
+  A：上次不是你说要吃？
+  B：买太多吃不完。
+  A：那橙子和苹果，还要酸奶吗？
+  B：来两盒无糖的。
+  A：记住了。
+  B：谢谢。
+  
+  A：今天公司又停电了十分钟。
+  B：你们那栋楼怎么老出问题？
+  A：物业说是检修，下午会议室空调也坏了。
+  B：文件没丢吧？
+  A：自动保存了。
+  B：那还好。
+  A：大家都在群里吐槽。
+  B：听着像整栋楼都该修。

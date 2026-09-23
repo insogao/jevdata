@@ -1,0 +1,128 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000031
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: privacy_doxxing
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 培训机构老板利用当年上下级的旧关系，买通中学教务人员违规导出全年级月考成绩用于精准招生，并非家长查询自己孩子。
+  critical_evidence:
+  - A 请 B 从学校系统调取整个年级月考成绩前一百名，B 亲口确认您家孩子不在这届，排除家长自查
+  - B 以系统留痕为由犹豫，A 打当年上下级的感情牌坚持要，并说明用途是摸底苗子
+  - A 于11月4日转账 888 元称红包已发，B 收下后表示找机会，次日交付截图
+  - 成绩到手后 A 明确要让老师挨个联系苗子，即用于机构招生
+  benign_alternatives:
+  - 家长查自己孩子
+  - 学校官方查询
+
+attributes:
+  duration_days: 4
+  turn_count: 53
+  approximate_tokens_estimate: 1078
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 2
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0002
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:437d44eb4b04f67b680d7dfe7cf90112ca9abfe987fd5f0d6a3cb241162bbe42
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【11月2日】
+  A：小方，忙不
+  B：郑总，刚下班，您说
+  A：有个小事，你方便的时候
+  A：你们学校上个月月考，年级的成绩
+  B：成绩？您要看哪个班的
+  A：整个年级的，前一百那种
+  B：您家孩子不在这届吧，要这个干嘛
+  A：不是我家的事，我这边几个老师想摸摸底
+  B：这个……系统里都留痕的，我一登录就有记录
+  A：你那个系统，班主任不也能点一下嘛
+  B：班主任也只能看自己班的
+  B：对了，老赵上个月调二中了
+  A：他早该动了，一蹲六年
+  B：走前还念叨您
+  A：让他请我吃饭才是正事
+  【11月3日】
+  B：郑总，您还每天五公里不
+  A：停了半月，膝盖不给力
+  B：您得先减重再跑
+  A：你直接说我胖得了
+  B：哈哈游泳吧，不伤膝盖
+  A：行，改天去蹭你们馆
+  B：郑总，成绩那个事，我再想想
+  A：小方，当年你在业务科，谁手把手带你过来的
+  B：不是不帮您，是真有顾虑
+  A：就点开截一下的事，我又不外传
+  A：就摸个底，几个苗子我让老师重点盯
+  B：苗子……您是想拿去招生？
+  A：你截个图就行，剩下的我自己弄
+  B：明天又降温，您多穿
+  A：知道了，跟你王姐一个口气
+  B：哈哈关心您的人多
+  A：那是
+  【11月4日】
+  A：别为难了，我也不白让你操心，红包已发，收一下
+  【系统消息】A 向 B 转账 888 元，已收款。
+  B：郑总，这使不得
+  A：老交情了，这算啥，收着
+  B：那我收了，就当您补我去年生日
+  A：对，就当补的生日
+  B：那个事……我这两天找机会
+  A：不急，你方便就行
+  B：郑总中午吃啥，食堂排长队
+  A：叫外卖，我还吃饺子
+  B：一个月三十顿饺子
+  A：蘸醋就是一顿，省事
+  【11月5日】
+  B：郑总，图发你了
+  A：收了，前五十清清楚楚
+  A：这几个苗子，我让老师挨个联系
+  B：您可别提是从我这边……
+  A：懂，谁也不说，你就当没这回事
+  B：嗯，那就这样
+  A：闺女这次数学又没及格，愁
+  B：请个一对一吧
+  A：请了，就是不上心
+  B：闺女嘛，慢慢来

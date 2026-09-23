@@ -1,0 +1,201 @@
+schema_version: CASE-YAML-v1
+identity:
+  case_id: CASE-DEMO-0002
+  family_id: FAM-DEMO-0002
+  lineage_id: LIN-DEMO-0002
+  archetype_id: ARC-DEMO-0002
+  variant_id: v01
+source:
+  source_ids:
+  - SRC-SYN-001
+  source_seed_ids:
+  - SEED-SYN-DEMO-0002
+  source_type: synthetic_demo
+lineage:
+  root_case_id: CASE-DEMO-0002
+  parent_case_id: null
+  generation_type: original_demo
+labels:
+  risk: 3
+  category: fraud_scam
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+hidden_case:
+  latent_intent: 两人协同对第三方持续编造理由收款，内部对话明确把对方是否相信作为核心目标。
+  critical_evidence:
+  - 讨论第三方是否“信了”
+  - 先后设计不同理由继续收款
+  - 第三方付款后内部确认并讨论下一步
+  - 无真实履约内容
+  benign_alternatives:
+  - 正常预付款业务
+  - 合法代收服务费
+attributes:
+  duration_days: 5
+  turn_count: 114
+  approximate_tokens_estimate: 1397
+  relationship: acquaintance
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+  topic_switches_estimate: 14
+generation_signature:
+  top_category: fraud_scam
+  subtype: coordinated_advance_fee_scam
+  risk: 3
+  relationship: acquaintance
+  obfuscation: high
+  has_transfer: true
+execution:
+  workflow_version: DATASET-WF-v2.2-DEMO
+  prompt_id: PRM-DEMO-MANUAL-001
+  agent_id: AGT-PLANNER-001
+  model_id: MOD-GPT-5.6-SOL
+  batch_id: BATCH-DEMO-20-V2
+dedup:
+  content_hash: sha256:35581d863acfc881e529e5ad99677928dd51125b82799d941536b570e5629231
+  semantic_cluster_id: SCL-DEMO-0002
+title: 诈骗协同：先建立信任，再以新理由继续收款
+conversation: |-
+  【8月18日】
+  
+  A：她今天又问进度了。
+  B：你就说还在排队，别一次讲太多。
+  A：她有点犹豫，问是不是还要加钱。
+  B：先别提第二笔，等她自己着急。
+  A：行。你晚上回家吗？
+  B：晚点，今天公司团建。
+  A：那我不等你吃饭了。
+  
+  
+  A：晚上要不要顺路买点水果？
+  B：可以买橙子，别再买香蕉了。
+  A：上次不是你说要吃？
+  B：买太多吃不完。
+  A：那橙子和苹果，还要酸奶吗？
+  B：来两盒无糖的。
+  A：记住了。
+  B：谢谢。
+  
+  A：你中午吃什么？
+  B：还没想，楼下那家面最近排队太久。
+  A：我昨天点了他们家的外卖，送到都坨了。
+  B：那我还是去便利店吧。
+  A：你不是说最近胃不舒服吗，别总吃冷的。
+  B：知道，下午还有两个会，懒得跑远。
+  A：晚上早点回去，冰箱里还有汤。
+  B：行，我回去热一下。
+  【8月19日】
+  
+  B：昨天她后来怎么说？
+  A：基本信了，说只要这周能下来就行。
+  B：那今天别联系太频繁。
+  A：知道。她下午可能先打一笔。
+  B：先收第一笔，后面的理由我再想。
+  A：你上次那份模板还在吗？
+  B：在，但这次别照搬，太像。
+  
+  
+  A：今天外面特别堵。
+  B：我坐地铁还好。
+  A：我开车半小时没过两个路口。
+  B：早说让你别开。
+  A：晚上还得去接人。
+  B：那没办法。
+  A：你那边几点下班？
+  B：六点多吧。
+  
+  A：我把阳台那几盆花都换土了。
+  B：你不是最怕弄泥？
+  A：最近突然想养点东西。
+  B：别再把多肉养死。
+  A：这次看了教程。
+  B：教程救不了浇水太勤。
+  A：我控制。
+  B：长好一点拍给我看。
+  【8月20日】
+  
+  A：她刚说下午转。
+  B：别催紧。
+  A：我先聊点别的拖一下。
+  B：嗯。
+  A：对了你车修好了吗？
+  B：修好了，花了两千多。
+  A：真贵。
+  
+  
+  A：周末还打球吗？
+  B：看天气，场地不湿就去。
+  A：老张说他脚扭了。
+  B：那少一个人。
+  A：我问问小陈，他周五应该出差回来。
+  B：那正好。
+  A：还是七点？
+  B：可以。
+  
+  A：你车修好了吗？
+  B：修好了，换了个小件，顺便做了保养。
+  A：多少钱？
+  B：一千多，主要人工贵。
+  A：现在修车都这样。
+  B：下个月年检应该省事点。
+  A：保险续了吗？
+  B：还没，这周看。
+  【8月20日下午】
+  
+  A：到了。
+  【系统消息】C 向 A 转账 8000 元，已收款。
+  B：先别马上回太快。
+  A：我过十分钟再说。
+  B：嗯，告诉她下一步还要等确认。
+  A：如果她问剩下的钱呢？
+  B：就说等这一步过了再补，不要一次说死。
+  
+  
+  A：你最近是不是又换手机了？
+  B：没换，贴膜碎了，看起来像新机。
+  A：我说颜色怎么没变。
+  B：这个还能用两年。
+  A：电池呢？
+  B：一天一充，还行。
+  A：我那个已经一天两充。
+  B：那你该换电池了。
+  
+  A：猫最近还半夜叫吗？
+  B：好多了，晚上陪它玩一会儿就安静。
+  A：之前可能就是精力太旺。
+  B：医生也这么说。
+  A：它那次打针花了多少？
+  B：三百多，比我上次看感冒还贵。
+  A：照片发我一张。
+  B：晚点拍，它现在睡着了。
+  【8月21日】
+  
+  A：她今天又问了，说是不是还有一笔。
+  B：可以提，但别用昨天那个理由。
+  A：那我说资料临时有变化？
+  B：你自己组织，核心是让她觉得前一笔已经在推进。
+  A：明白。
+  B：下午我得陪孩子去医院，消息可能回得慢。
+  A：行，我自己接着聊。
+  
+  A：今天公司又停电了十分钟。
+  B：你们那栋楼怎么老出问题？
+  A：物业说是检修，下午会议室空调也坏了。
+  B：文件没丢吧？
+  A：自动保存了。
+  B：那还好。
+  A：大家都在群里吐槽。
+  B：听着像整栋楼都该修。
+  
+  A：你体检报告拿到了？
+  B：拿到了，几个指标偏高。
+  A：医生怎么说？
+  B：让我少油少盐，多运动。
+  A：这话每个人都能收到。
+  B：确实。
+  A：你别再每天夜宵了。
+  B：我努力，从明天开始。

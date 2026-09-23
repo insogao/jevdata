@@ -1,0 +1,432 @@
+{
+ "key": "case_07",
+ "archetype_id": "ARC-000088",
+ "subtype": "insurance_claims_snoop",
+ "latent_intent": "公估理赔人员绕开公函流程，私下付费让诊所档案管理员调取第三方伤者的就诊记录用于理赔核算，属于无授权获取他人健康信息。",
+ "critical_facts": [
+  "A（公估理赔外勤）经中间人浩子介绍联系诊所档案管理员B，因公函流程太慢，绕开正规渠道索要第三方伤者老陈的病历",
+  "B 明确表示走系统留痕的不碰，最终从纸质档案私自拍摄六张就诊记录和处置单发给 A",
+  "A 以这条信息值一顿饭承诺对价，10月15日上午收到图片后当天转账 2000 元",
+  "时间顺序完整：14日提出请求并议价，15日上午私下交付，15日中午付款"
+ ],
+ "benign_alternatives": [
+  "正常保险理赔调查中的同行资料沟通",
+  "公估公司之间的常规协作与人情往来"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "10月14日 09:12",
+   "speaker": "A",
+   "text": "您好，是浩子介绍我加您的，我姓关，做人伤理赔外勤这块的"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:14",
+   "speaker": "B",
+   "text": "你好你好，浩哥昨天跟我提过您"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:15",
+   "speaker": "B",
+   "text": "您是哪家公估的来着"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:16",
+   "speaker": "A",
+   "text": "恒正公估，帮保司跑外勤的，以后少不了麻烦您"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:17",
+   "speaker": "B",
+   "text": "客气啥，都是一个圈子里的"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:18",
+   "speaker": "A",
+   "text": "就是老陈那个单子，浩子应该跟您提了"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:19",
+   "speaker": "B",
+   "text": "提了提了，伤者在门诊做理疗那个嘛"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:19",
+   "speaker": "A",
+   "text": "对对，就是他"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:21",
+   "speaker": "A",
+   "text": "对了，你们那边今天是不是降温了"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:22",
+   "speaker": "B",
+   "text": "可不是，一早出门冻得我直缩脖子"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:23",
+   "speaker": "A",
+   "text": "我们这边还短袖呢"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:24",
+   "speaker": "B",
+   "text": "羡慕，我暖水袋都翻出来了"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:25",
+   "speaker": "A",
+   "text": "熬熬吧，下个月我们也冷了"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:26",
+   "speaker": "B",
+   "text": "到时候记得穿秋裤哈哈"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:31",
+   "speaker": "A",
+   "text": "跟您说下正事哈"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:32",
+   "speaker": "A",
+   "text": "老陈那单，对方在你们诊所做过几次理疗对吧"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:33",
+   "speaker": "B",
+   "text": "四五次呢，都是下午来的"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:34",
+   "speaker": "A",
+   "text": "我手里现在就一张挂号的凭证"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:35",
+   "speaker": "B",
+   "text": "就诊记录肯定有的，这个跑不掉"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:36",
+   "speaker": "A",
+   "text": "我就想先把他的病历调出来看看内容"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:37",
+   "speaker": "B",
+   "text": "那你得走公函啊，发到我们前台"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:38",
+   "speaker": "A",
+   "text": "公函一层层批下来，半个月都不止"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:38",
+   "speaker": "A",
+   "text": "这单月底就要结，领导天天催"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:39",
+   "speaker": "B",
+   "text": "你们做外勤的不都是等函嘛"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:40",
+   "speaker": "A",
+   "text": "等函黄花菜都凉了"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:41",
+   "speaker": "A",
+   "text": "我就是想提前掌握下内容，心里有个数"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 11:52",
+   "speaker": "B",
+   "text": "中午了，吃了没"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 11:53",
+   "speaker": "A",
+   "text": "还没，刚从医院出来，随便对付口"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 11:54",
+   "speaker": "B",
+   "text": "我们楼下新开了家牛杂，味道正得很"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 11:55",
+   "speaker": "A",
+   "text": "听着就香"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 11:56",
+   "speaker": "B",
+   "text": "哪天来，我带你去"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 11:56",
+   "speaker": "A",
+   "text": "行，到时候我请，说好了的"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 14:02",
+   "speaker": "A",
+   "text": "咱接着上午的说哈"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 14:03",
+   "speaker": "A",
+   "text": "他那几次的就诊记录和处置单，你帮我拍一份"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 14:05",
+   "speaker": "B",
+   "text": "哎哟，这个我可不敢随便动"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 14:06",
+   "speaker": "A",
+   "text": "姐，不让您白忙，这条信息值一顿饭"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 14:07",
+   "speaker": "B",
+   "text": "哈哈你可真会说话"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 14:08",
+   "speaker": "B",
+   "text": "走系统留痕的我不碰，这是底线"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 14:09",
+   "speaker": "A",
+   "text": "那就别走系统嘛，档案室不归您管着嘛"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 14:10",
+   "speaker": "B",
+   "text": "档案室倒是我在管……"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 14:11",
+   "speaker": "A",
+   "text": "纸质的翻出来拍两张，又不动原件"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 14:12",
+   "speaker": "B",
+   "text": "我想想哈，这两天前台忙"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 14:13",
+   "speaker": "A",
+   "text": "不急，这两天都行，事成大餐安排"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 10:05",
+   "speaker": "A",
+   "text": "珍姐早"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 10:07",
+   "speaker": "B",
+   "text": "早，刚开门"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 10:08",
+   "speaker": "A",
+   "text": "不打扰您，就说一声"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 10:10",
+   "speaker": "B",
+   "text": "你家闺女最近咋样"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 10:12",
+   "speaker": "A",
+   "text": "皮得很，昨天把作业本撕了折飞机"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 10:13",
+   "speaker": "B",
+   "text": "哈哈这个我熟悉，我家小子也干过"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 10:14",
+   "speaker": "A",
+   "text": "你家那个现在坐得住没"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 10:15",
+   "speaker": "B",
+   "text": "坐不住，全靠他爸吼"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 10:16",
+   "speaker": "A",
+   "text": "哈哈天下娃娃一般样"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 11:20",
+   "speaker": "B",
+   "text": "跟你说个事"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 11:21",
+   "speaker": "B",
+   "text": "老陈那几次的记录，我上午翻出来了"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 11:22",
+   "speaker": "A",
+   "text": "这么快"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 11:23",
+   "speaker": "B",
+   "text": "正好今天我盯档案室"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 11:24",
+   "speaker": "B",
+   "text": "关键的几页拍好了，待会发你"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 11:25",
+   "speaker": "A",
+   "text": "姐，您这是救我这条命"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 11:26",
+   "speaker": "B",
+   "text": "就诊记录加处置单，一共六张"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 11:28",
+   "speaker": "A",
+   "text": "我先说好，这份情必须表示"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 11:29",
+   "speaker": "B",
+   "text": "大餐就免了哈哈"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 11:31",
+   "speaker": "B",
+   "text": "发你了，你看看清楚不"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 11:33",
+   "speaker": "A",
+   "text": "清清楚楚，太清楚了"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 11:34",
+   "speaker": "A",
+   "text": "这下跟保司那边好交代了"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 11:35",
+   "speaker": "A",
+   "text": "一顿饭的规矩不能少，我先转您"
+  },
+  {
+   "type": "transfer",
+   "time": "10月15日 11:36",
+   "from": "A",
+   "to": "B",
+   "amount": 2000
+  },
+  {
+   "type": "message",
+   "time": "10月15日 11:38",
+   "speaker": "B",
+   "text": "你这也太客气了，一顿牛杂的事"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 11:40",
+   "speaker": "A",
+   "text": "应该的，往后有单子还找您"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000027",
+  "status": "accepted",
+  "errors": []
+ }
+}

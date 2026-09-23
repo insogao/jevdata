@@ -1,0 +1,154 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000041
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000033
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: contraband_illicit_trade
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 工厂渠道人员向网店卖家推销与专柜同模具的一比一复刻鞋，配齐吊牌和能过扫码的防伪码，按拿货量分层报价，卖家打算以「外贸尾单原单」名义上架销售。
+  critical_evidence:
+  - A 自称货从生产线下来、与专柜同模具一比一，普通渠道拿不到
+  - A 承诺吊牌防伪齐全、扫码能过官方页面，B 实测扫码通过
+  - 报价按量分层：样品 260，100 双起 190，300 双 175，500 双降到 168
+  - B 明确说店里按「外贸尾单、专柜同款、原单」名义卖
+  benign_alternatives:
+  - 代工厂真正的外贸尾单库存处理
+  - 国货平替渠道的正常批发议价
+
+attributes:
+  duration_days: 6
+  turn_count: 78
+  approximate_tokens_estimate: 1540
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: replica_counterfeit
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0003
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:a44772d76026eac3ca555b3a1fc040e5b33ab65c4b7826fec9ef09f7e012cd9a
+pipeline_status: accepted
+title: contraband_illicit_trade/replica_counterfeit
+conversation: |-
+  【10月8日】
+  B：阿彬你好 华哥说你这边有货
+  A：对 你要看哪个款
+  B：先看那款老爹鞋 灰白配色
+  A：有现货 这个跟专柜一个模具 一比一的
+  B：一比一？啥意思
+  A：就是我们线下来的 版型材料一样 专柜卖八九百 我这拿货价低多了
+  B：那吊牌这些呢
+  A：齐的 吊牌防伪都有 扫码能过官方那套
+  B：哦 质量我得先拿一双看看
+  A：行 先发双样品也行 运费到付
+  B：你们那边降温没 这边冷空气到了
+  A：降了 昨天就得穿外套
+  B：我秋裤都翻出来了 哈哈
+  A：我还扛着 年轻火气旺
+  B：羡慕
+  B：回到货 样品啥价
+  A：样品按零售 260 拿货另算
+  B：拿货什么价
+  A：按量 100 双起 190 300 双以上 175 500 双再谈
+  B：还能低不 我同行有人 170 拿的
+  A：那让他来我这拿 173 给你 保你有得赚
+  B：中 我先卖样品看反馈
+  【10月9日】
+  A：样品下午发 你那边哪家快递快
+  B：门口那家通达就行 我取着方便
+  A：行 单号晚上发你
+  B：好嘞 面单上品类写啥
+  A：写鞋材配件就行 又不超重
+  B：恩恩
+  A：对了 你店里打算怎么卖
+  B：就写外贸尾单 专柜同款 原单
+  A：可以 这么写好卖
+  B：我老客多 都认我
+  【10月10日】
+  B：单号呢 我看到哪了
+  A：发你了 查下 明后天到
+  B：看到 12 号能到
+  A：中午吃了没 我还空着肚子
+  B：吃了 食堂 难吃
+  A：我们外卖吃腻了 天天盒饭
+  B：你自己开火呗
+  A：懒 得空来我这 带你吃大排档
+  B：行啊 我就好这口
+  B：对了 300 双那个价 给我留一批灰白的
+  A：可以 你定了说 我压货给你 但款到发货
+  B：中 我筹一下
+  【10月11日】
+  A：样品到了吗
+  B：到了 我试试
+  B：鞋底有点胶味 正常不
+  A：正常 新胶水味 放两天就散 专柜刚开箱也这味
+  B：行 我上脚跑两天
+  A：跑吧 这底耐磨
+  B：防伪我扫了 哈 真出页面了
+  A：说了能过 不然我们怎么做
+  B：是是
+  【10月12日】
+  B：跑了五公里 挺舒服 跟我专柜那双没差
+  A：那必须的 同一条线下来的
+  B：行 我订 300 双 先灰白 后面黑白
+  A：175 那个价 给你留 300
+  B：什么时候发
+  A：款到三天内 一次发还是分两次
+  B：分两次吧 我仓库小
+  A：行 头次 150 二次 150
+  A：你们那下周还要降温 我看预报了
+  B：是 最低 5 度 我这老寒腿又要犯
+  A：你多大就老寒腿 哈哈
+  B：别笑 年轻骑车吹的
+  B：降到 5 度 灰白这色正好冬天卖
+  A：嗯 冬天深色好卖 你再配点黑红
+  【10月13日】
+  B：款我明天凑齐给你
+  A：好 你转哪个卡
+  B：华哥那个还是你自己的
+  A：我自己的 你存我发你的那张
+  B：好
+  A：对了 拿够 500 双我给你 168 以后都按这个
+  B：那我努努力
+  A：店里写尾单没问题 别写那个字 哈
+  B：哈哈 谁写那个
+  A：冬天卖得好 年后来看厂 顺便吃饭
+  B：行 说到做到

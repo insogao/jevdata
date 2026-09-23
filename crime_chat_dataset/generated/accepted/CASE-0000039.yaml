@@ -1,0 +1,155 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000039
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000002
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 部门主管以内部通道高额收益为饵，用收益截图诱导下属从两万加仓到五万，再让他拉小舅子进场拿老带新返佣，等下属想提现时又以 VIP 等级为由要求继续充钱。
+  critical_evidence:
+  - A 展示一周约 20 个点的收益截图，称走内部通道、无官网无备案
+  - A 劝 B 把仓位从两万加到五万，10月10日 20:15 B 转 30000 元
+  - A 让 B 把小舅子也拉进场，并承诺老带新两人各返 500 元
+  - B 想提现 5000 给母亲换手机时，A 称需再充 10% 升 VIP3 才能到账
+  benign_alternatives:
+  - 合法私募或资管计划的内部额度介绍
+  - 上级对下属的正常理财推荐
+
+attributes:
+  duration_days: 5
+  turn_count: 79
+  approximate_tokens_estimate: 1839
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: investment_lead
+  risk: 2
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0003
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:e128b253b14fba71aad4de9477470f3e996dc8a39164b89989885b089dbe4169
+pipeline_status: accepted
+title: fraud_scam/investment_lead
+conversation: |-
+  【10月8日】
+  A：小赵 昨天让你看的图看了吗
+  B：看了 王哥 你这收益真的假的 一周20个点
+  A：假的我还费劲P图啊 内部通道 带着公司几个老兄弟在做
+  B：啥通道啊 稳吗
+  A：量化对冲 老师带 我进来八个月 提了三回
+  B：我月薪就那样 怕经不起亏
+  A：你先放两万试试水 我盯仓位 亏了算我的
+  B：行 那我两万 钱转哪儿
+  A：转我卡里 我给你上到系统里 截图每天发你
+  A：话说回来 今天季度报告你赶得完吗
+  B：赶得完 加个班呗
+  A：辛苦 弄完这季度 我给你申请调薪
+  B：谢王哥
+  B：王哥 晚上吃啥 我点外卖捎你一份
+  A：来个麻辣香锅 微辣
+  B：行 上回你辣得灌了三瓶水 哈哈
+  A：那次是失手 微辣 记住了
+  【10月9日】
+  A：图发你了 昨天进账2100 两万本金 稳稳的
+  B：看到了 有点心动
+  B：这比我妈买的银行理财强太多了
+  A：银行那俩点够干啥 通胀都跑不赢
+  B：那我这两天把年终奖取出来
+  A：你要真能凑五万 我给你往稳健池里放 仓位大了老师才带你玩
+  B：王哥 明晚有球 看不
+  A：看 我主队这赛季稳
+  B：借你吉言 我买它赢 哈哈
+  A：小赌怡情 别上头
+  B：就50块 娱乐
+  A：你最近咋不来打球了
+  B：膝盖有点不舒服 养养
+  A：那你跑步机走起 别老坐着
+  B：中 明天开始 每天五公里先
+  A：膝盖不舒服就快走 别硬跑
+  B：晓得 你奶茶也少喝点 哈哈
+  【10月10日】
+  【系统消息】B 向 A 转账 30000 元，已收款。
+  B：王哥 三万转你了 你给上上
+  A：收到 已上报系统 现在仓里五万整
+  A：截图发你了 年化看着吧
+  B：中 谢王哥带我
+  A：自己人不说这个 对了 你小舅子不是刚发年终奖
+  B：咋
+  A：名额有限 这个月就剩两个位子 问他要不来一把 过了这村没这店
+  B：我问问他 不过他比我谨慎
+  A：谨慎就错过 我刚又截了张今早的 你转给他看看
+  B：行 我发他
+  A：明天例会你汇报 别迟到
+  B：好的 PPT我晚上再顺一遍
+  A：把三季度数据加进去 老板要看
+  B：收到
+  【10月11日】
+  B：王哥 我小舅子问 这平台叫啥 有没有官网备案
+  A：内部通道 没官网 走的是资管计划 你让他直接问我
+  B：他还有点犹豫
+  A：让他看我账户 犹豫一礼拜 少赚两千 我再给他申请个老带新奖励
+  B：老带新还有奖励？
+  A：对 他进 我俩各返500 你也有份
+  B：哦 这样
+  A：就这两天 我给你留着位
+  A：中午吃啥 今天我请 你小舅子的事成了请你吃大餐
+  B：哈哈 那我先吃个盒饭垫垫
+  A：楼下新开那家烧腊 评分4.8
+  B：明天去 明天去
+  B：昨晚那球唉 输成那样
+  A：说了后卫不行 你还买他赢
+  B：50块买个教训
+  【10月12日】
+  B：王哥 我想提5000出来 给我妈换个手机
+  A：提现要VIP3才秒到 你现在差一档 再充10%就升
+  B：还要再充？
+  A：平台规矩 充5000升VIP3 这5000也在仓里生钱 又不是花了
+  B：我手头没现金了 月底再说
+  A：那你先让你小舅子顶一个位子 他的老带新奖励返你 正好凑上
+  B：他还在想
+  A：想啥啊 你看我三天两头提现 你弟要是错过 别说哥没带你
+  B：我再劝劝他
+  A：今天例会汇报不错 老板夸了
+  B：谢王哥 那调薪
+  A：记着呢 年底一起报
+  B：中
+  B：昨天走了五公里 膝盖没事
+  A：行啊 明天球场见
+  B：好

@@ -1,0 +1,130 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000036
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000006
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 假放贷经理以「不看征信秒批」为饵，以保证金、解冻费等名目层层收费，合同只发图片无法核实，等借款人察觉要求退款时钱已被以「系统冻结」为由扣住。
+  critical_evidence:
+  - A 承诺不看征信秒批五万、内部渠道次日到账
+  - 10月9日 14:03 B 转 3000 元保证金后，A 又以系统冻结为由要 2000 解冻费，随后升级到 5000
+  - A 发的合同只是一张图片，无公司全称与公章，B 要求视频核验工牌被以「风控部门不让录屏」推脱
+  - 到 10月11日 放款始终未到，B 要求退还 5000，A 称钱都在系统里冻着退不了
+  benign_alternatives:
+  - 正规贷款平台的服务费与验证流程
+  - 熟人中介介绍的民间借贷
+
+attributes:
+  duration_days: 4
+  turn_count: 55
+  approximate_tokens_estimate: 1482
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: loan_fee_bait
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0003
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:5f673fb1f399d6e52e2f9348c93184c50b38995d33a209e138cd58c98e1d58c0
+pipeline_status: accepted
+title: fraud_scam/loan_fee_bait
+conversation: |-
+  【10月8日】
+  B：华哥说你这儿放款快 我开超市急用五万进货
+  A：你好 我这边不看征信 秒批5万内 今天申请明天到账
+  B：那么快？银行都得跑半个月
+  A：我们是内部渠道 走大数据 你只要证明还款能力
+  B：我超市营业执照有 流水也有
+  A：行 执照和身份证拍我 再填个表
+  B：好嘞 这就发
+  A：收到 系统预审过了 额度5万 年化9个点
+  B：这么顺利？
+  A：不过放款前要交3000保证金 证明你不是撸一把就跑 到账原路退
+  B：还要交钱？
+  A：保证金 又不是收费 你款下来了它退你 正规平台都有
+  B：你们那边冷不 我们这都穿外套了
+  A：热着呢 我还短袖
+  B：羡慕 我们这秋风一起满街落叶
+  A：那你这进货也得囤点秋冬货吧
+  B：可不 我就等着这笔钱囤货呢
+  A：那更得抓紧 今天交了保证金 明天就放
+  【10月9日】
+  A：吃午饭没 我刚点了个猪脚饭
+  B：还没 店里忙 顾不上
+  A：老板娘也得按时吃饭 别胃又疼
+  B：唉 老毛病了
+  B：这次进的主要是零食饮料 都涨价了
+  A：物价是高 我们楼下小卖部可乐都3块5了
+  B：我薄利 多卖一箱是一箱
+  A：等你钱到账 大干一场
+  【系统消息】B 向 A 转账 3000 元，已收款。
+  B：3000交了 你看下
+  A：收到 我给你排加急
+  B：合同我什么时候签
+  A：合同发了 你看下
+  B：就一张图？没有公章落款啊 连公司全称都是打印体
+  A：电子合同都这样 放款后纸质随款寄你
+  B：那我视频看你工牌行不 心里踏实点
+  A：我们风控部门不让录屏 你放心 王姐介绍的还能坑你
+  B：唔 王姐是我表姨 那行吧
+  【10月10日】
+  B：经理 怎么还没放款
+  A：别急 卡在银管系统 说是要验证资金活跃度 再交2000解冻 放款时一起退
+  B：又要交？说好就3000保证金
+  A：这是系统冻的 不是我要 你不配合 银行渠道快不了
+  B：我再想想 总觉得不对
+  A：你想啊 眼看要放款 卡在这 3000不白交了？今天交明天必到
+  A：对了 我最近开始夜跑 你说膝盖疼正常吗
+  B：那得看疼法 我上回跑狠了养了俩月
+  A：那我还是快走吧
+  B：嗯 量力而行
+  【10月11日】
+  B：经理 还没动静 说好的今天到账
+  A：系统又提示你卡号异常 说是填错一位冻结了 要5000解冻金
+  B：卡号我核了三遍 没错
+  A：那就是系统误判 你跟系统犟没用 钱不解冻放不出来
+  B：我要见着钱才交 这一万我拿不出来
+  A：想想办法 借也借点 到账就是五万五
+  B：你先把5000退我 这单我不做了
+  A：退不了 都在系统里冻着 解冻了一起退
+  B：你等我问你王姐去
+  A：别 别去麻烦她 这马上就到账了

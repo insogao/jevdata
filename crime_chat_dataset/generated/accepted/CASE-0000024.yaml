@@ -1,0 +1,90 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000024
+  family_id: FAM-PILOT-0004
+  lineage_id: LIN-PILOT-0004
+  archetype_id: ARC-000004
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_pilot
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 朋友间讨论新闻案件+游戏点券代充，敏感词出现在新闻语境不构成风险。
+  critical_evidence:
+  - 制毒话题明确是新闻报道讨论
+  - 小额转账用途明确（点券代充）
+  - 全程朋友日常语境
+  benign_alternatives:
+  - 无——本就是正常聊天
+
+attributes:
+  duration_days: 3
+  turn_count: 20
+  approximate_tokens_estimate: 369
+  relationship: friend
+  obfuscation: low
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: second_hand_deposit_run
+  risk: 0
+  relationship: friend
+  obfuscation: low
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: AGT-SESSION-001
+  model_id: MOD-SESSION-001
+  batch_id: BATCH-PILOT-001
+
+dedup:
+  content_hash: sha256:c32ca8302705fd1ff14fd449af63841bf11196fdc1a675979f5a90437198ed1d
+pipeline_status: accepted
+title: 新闻讨论与点券代充（hard negative）
+conversation: |-
+  【10月25日】
+  A：看到新闻没，那个跨省制毒的团伙被抓了
+  B：看了，抓了二十多个，涉案上亿
+  A：电视剧都不敢这么拍
+  B：现实更离谱，藏废弃工厂里造
+  A：最后还不是被抓，这种钱碰不得
+  A：上线了，今晚开黑不
+  B：开，十点老时间
+  B：打得爽，这皮肤出手了
+  A：我看看，特效确实帅
+  【10月26日】
+  B：帮我充个点券呗，我手机支付限额了
+  A：多少
+  B：68，转你
+  【系统消息】B 向 A 转账 68 元，已收款。
+  A：充好了，收到没
+  B：到了，晚上请你喝奶茶
+  A：一杯奶茶就想打发我，再充68
+  B：滚哈哈
+  【10月27日】
+  A：那新闻后续出来了，主犯判了无期
+  B：该，一把手都不能保他

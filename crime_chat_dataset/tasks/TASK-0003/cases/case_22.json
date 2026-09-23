@@ -1,0 +1,491 @@
+{
+ "key": "case_22",
+ "archetype_id": "ARC-000126",
+ "subtype": "trade_secret_threat",
+ "latent_intent": "离职员工（雇主的家族晚辈）私拷公司全部代码与文档，以此为筹码要求雇主免除三万违约金并额外支付两个月工资，遭拒后逐步升级暗示把资料发给竞争对手。",
+ "critical_facts": [
+  "A 自认离职前把公司代码、文档、代码库整套拷贝备份在家",
+  "A 提出免除三万违约金加两个月工资两项要求，并称不想弄难看",
+  "B 表示按合同从工资里扣三万后，A 以「让它去该去的地方」暗示发给对家施压",
+  "B 让步免除违约金、只肯给一个月项目奖金，A 咬死两个月并限周四前答复"
+ ],
+ "benign_alternatives": [
+  "离职补偿与违约金的正常劳资谈判",
+  "亲友间为离职待遇讨说法的家庭争执"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "10月8日 09:12",
+   "speaker": "B",
+   "text": "小宇 真决定走了"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 09:15",
+   "speaker": "A",
+   "text": "恩 李叔 交接这礼拜就完"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 09:16",
+   "speaker": "B",
+   "text": "你妈知道不"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 09:17",
+   "speaker": "A",
+   "text": "知到 被她骂了一顿 说你那活稳定"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 09:18",
+   "speaker": "B",
+   "text": "稳定啥 熬人 你还年轻"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 09:19",
+   "speaker": "A",
+   "text": "我想去大厂卷两年 攒点钱"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 09:20",
+   "speaker": "B",
+   "text": "也行 周六来家里吃饭 你婶炖排骨"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 09:21",
+   "speaker": "A",
+   "text": "中 我带箱啤酒"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 09:22",
+   "speaker": "B",
+   "text": "别买 上回你拿那箱还没动"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 09:23",
+   "speaker": "A",
+   "text": "那我拎点水果"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 09:25",
+   "speaker": "A",
+   "text": "这两天降温 你和你婶多穿点"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 09:27",
+   "speaker": "B",
+   "text": "知道 你也把厚外套翻出来"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 09:28",
+   "speaker": "A",
+   "text": "我那件拉链坏了 扔了"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 09:29",
+   "speaker": "B",
+   "text": "周六把你表弟那件拿走 他穿不着"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 09:31",
+   "speaker": "B",
+   "text": "对了 交接单我看了 你那块文档还欠着"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 09:32",
+   "speaker": "A",
+   "text": "周五前给你 东西多 我慢慢理"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 09:33",
+   "speaker": "B",
+   "text": "不急 理清楚就行"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:02",
+   "speaker": "A",
+   "text": "李叔 文档发你邮箱了"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:20",
+   "speaker": "B",
+   "text": "收到 我过一遍"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:41",
+   "speaker": "B",
+   "text": "挺全 就差部署那块"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:45",
+   "speaker": "A",
+   "text": "部署我口头给你讲 那部分我留着有用"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:46",
+   "speaker": "B",
+   "text": "啥意思"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:48",
+   "speaker": "A",
+   "text": "叔 打开天窗说亮话 那套东西我手里有全套 代码 文档 库 在家备着呢"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:49",
+   "speaker": "B",
+   "text": "你拷那个干啥"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:50",
+   "speaker": "A",
+   "text": "保命呗 我在这四年 白加黑 你心里有数"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:52",
+   "speaker": "A",
+   "text": "我就俩要求 一 违约那三万你给我免了 二 再多给两个月工资 就当过渡"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:53",
+   "speaker": "B",
+   "text": "小宇 你这是跟叔谈条件"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:54",
+   "speaker": "A",
+   "text": "叔 咱俩什么关系 我不想弄难看"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 11:20",
+   "speaker": "A",
+   "text": "奶奶血压最近咋样"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 11:35",
+   "speaker": "B",
+   "text": "还那样 药没断 你婶一礼拜量两次"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 11:36",
+   "speaker": "A",
+   "text": "下月复查我请假陪她去"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 11:37",
+   "speaker": "B",
+   "text": "好 有心"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 11:38",
+   "speaker": "B",
+   "text": "她还念叨你小时候偷她糖吃"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 11:39",
+   "speaker": "A",
+   "text": "哈哈 都哪年的事了"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 20:10",
+   "speaker": "B",
+   "text": "今晚有球 不许再埋汰我主队"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 20:12",
+   "speaker": "A",
+   "text": "你主队后防跟纸糊的一样"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 20:13",
+   "speaker": "B",
+   "text": "呵呵 晚上看谁哭"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 20:15",
+   "speaker": "A",
+   "text": "看球归看球 周六饭桌上把事说开"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 19:40",
+   "speaker": "B",
+   "text": "排骨给你打包没"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 19:42",
+   "speaker": "A",
+   "text": "打了 拿回来了 你婶手艺真不赖"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 19:43",
+   "speaker": "B",
+   "text": "你婶说让你常来"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 19:45",
+   "speaker": "A",
+   "text": "中 叔 事上你考虑咋样"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 19:47",
+   "speaker": "B",
+   "text": "免三万我得跟股东交代 两个月工资更没名目"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 19:48",
+   "speaker": "A",
+   "text": "名目你来想 你是老板"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 19:50",
+   "speaker": "B",
+   "text": "我托人给你介绍下家 工资只高不低 行不"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 19:51",
+   "speaker": "A",
+   "text": "叔 我不是来找下家的 我是来解决事的"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 19:52",
+   "speaker": "B",
+   "text": "你这样婶知道了心里多凉"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 19:53",
+   "speaker": "A",
+   "text": "婶那边别提 这是我跟公司的事"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 20:15",
+   "speaker": "A",
+   "text": "我给奶奶买的护膝到了 给她寄过去没"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 20:17",
+   "speaker": "B",
+   "text": "寄了 戴着遛弯呢 说暖和"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 20:18",
+   "speaker": "A",
+   "text": "那就行 下回给她换个电子血压计"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 20:19",
+   "speaker": "B",
+   "text": "你安排就行 她就疼你"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 10:05",
+   "speaker": "B",
+   "text": "小宇 财务把违约金那笔走流程了 下周打给你"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 10:09",
+   "speaker": "A",
+   "text": "叔 你这是啥意思"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 10:10",
+   "speaker": "B",
+   "text": "按合同来 三万该扣的扣 该走的走"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 10:12",
+   "speaker": "A",
+   "text": "我说过我的要求 三万免了 再给两个月"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 10:13",
+   "speaker": "B",
+   "text": "你这是要挟叔"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 10:15",
+   "speaker": "A",
+   "text": "话别这么难听 我就是不想吃亏"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 10:16",
+   "speaker": "A",
+   "text": "那堆东西搁我这也烫手 你不解决 我只能让它去该去的地方"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 10:17",
+   "speaker": "B",
+   "text": "你想发对家去"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 10:18",
+   "speaker": "A",
+   "text": "我可没说 发不发 看你"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 10:20",
+   "speaker": "B",
+   "text": "小宇 冷静点 这条路走不通"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 10:21",
+   "speaker": "A",
+   "text": "我冷静得很 这礼拜给准话"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 20:02",
+   "speaker": "B",
+   "text": "今晚还看不"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 20:03",
+   "speaker": "A",
+   "text": "看 但你主队还得输"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 20:04",
+   "speaker": "B",
+   "text": "呸呸呸"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 21:30",
+   "speaker": "A",
+   "text": "明天又降温 我妈让给你捎两床被子"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 21:32",
+   "speaker": "B",
+   "text": "让她别费事 家里有"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 09:40",
+   "speaker": "B",
+   "text": "小宇 叔想了一宿"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 09:42",
+   "speaker": "A",
+   "text": "你说"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 09:45",
+   "speaker": "B",
+   "text": "违约金三万我做主给你免了 两个月不行 最多一个月 走项目奖金 你把文档补齐"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 09:47",
+   "speaker": "A",
+   "text": "一个月不行 两个月 少一天免谈"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 09:48",
+   "speaker": "B",
+   "text": "你这是把叔往墙角逼"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 09:50",
+   "speaker": "A",
+   "text": "我也没办法 房贷月月压着 叔"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 09:52",
+   "speaker": "B",
+   "text": "给我两天 我跟合伙人碰一下"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 09:53",
+   "speaker": "A",
+   "text": "行 就两天 周四之前"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 09:55",
+   "speaker": "A",
+   "text": "叔 我把话搁这 东西在我手里一天 我心里就踏实一天 你也别寻思别的辙"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 09:57",
+   "speaker": "B",
+   "text": "叔知道了"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000037",
+  "status": "accepted",
+  "errors": []
+ }
+}

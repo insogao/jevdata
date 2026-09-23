@@ -1,0 +1,378 @@
+{
+ "key": "case_13",
+ "archetype_id": "ARC-000029",
+ "subtype": "batch_quantity_pickup",
+ "latent_intent": "上家与分销商做了两年的无票低价货源生意：交易只谈数量与批号、不提品名来路，价格低于市面两成；物流园库房边“老地方”交接，现金现结不留账，转账定金特意不写备注、聊天记录要求删除。结合对价与规避留痕的细节组合可定性。",
+ "critical_facts": [
+  "交易只谈数量与批次（“一手二百件往上”“只谈量和批号”），从不提品名与来路，价格二百八一件、市面三百六，低约两成（msgs 3-9）",
+  "交接定在“老地方”（物流园后头那排库房边上），指定周五晚八点、单独赴约、面包车直接开进去装完就走（msgs 11-13、44-48）",
+  "现金现结、不留账不留字据：B 转 20000 定金时 A 特别叮嘱“备注啥都别写”“聊天记录看完也删了”（msgs 15、22-25 + transfer）",
+  "总货款五万六，验货后现金付清余款三万六，全程无发票无任何正规渠道凭证（msgs 36-37、54-56）"
+ ],
+ "benign_alternatives": [
+  "大宗合法批发",
+  "朋友间代购"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "10月8日 20:14",
+   "speaker": "A",
+   "text": "老蔡，货到了，先紧你"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:15",
+   "speaker": "B",
+   "text": "来了来了，这批啥情况"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:15",
+   "speaker": "A",
+   "text": "数量你定，我只谈量和批号，别的你清楚"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:16",
+   "speaker": "B",
+   "text": "懂，老规矩嘛，一手能拿多少"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:16",
+   "speaker": "A",
+   "text": "二百件往上，少了不好配"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:17",
+   "speaker": "B",
+   "text": "价格呢，别跟我整虚的"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:17",
+   "speaker": "A",
+   "text": "二百八一件，市面上三百六，你自己算"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:18",
+   "speaker": "B",
+   "text": "低这么多，来路稳不稳"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:18",
+   "speaker": "A",
+   "text": "问那么多干嘛，两年了哪次坑过你"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:19",
+   "speaker": "B",
+   "text": "行，那先来二百件"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:19",
+   "speaker": "A",
+   "text": "可以，老地方交"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:20",
+   "speaker": "B",
+   "text": "物流园后头那个口？"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:20",
+   "speaker": "A",
+   "text": "对，还是那排库房边上"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:21",
+   "speaker": "B",
+   "text": "现结还是月结"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:21",
+   "speaker": "A",
+   "text": "现结，现金，不留账，你我知道就行"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:22",
+   "speaker": "B",
+   "text": "周五晚行不"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:22",
+   "speaker": "A",
+   "text": "周五晚八点，定金先打一半"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:28",
+   "speaker": "B",
+   "text": "国庆你们放几天"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:29",
+   "speaker": "A",
+   "text": "三天，还得留人看货，放假比上班还操心"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:29",
+   "speaker": "B",
+   "text": "我们商场国庆全员上岗，惨"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:30",
+   "speaker": "A",
+   "text": "谁让咱干这行，节假日正是走货的时候"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 21:28",
+   "speaker": "B",
+   "text": "定金转你了，你查收，备注没写啊"
+  },
+  {
+   "type": "transfer",
+   "time": "10月9日 21:30",
+   "from": "B",
+   "to": "A",
+   "amount": 20000
+  },
+  {
+   "type": "message",
+   "time": "10月9日 21:31",
+   "speaker": "A",
+   "text": "收到，以后转账啥都别写，这聊天记录看完也删了"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 21:32",
+   "speaker": "B",
+   "text": "至于么，搞得跟地下工作似的"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 21:32",
+   "speaker": "A",
+   "text": "谨慎没坏处，货对货钱对钱，别留把柄"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 21:33",
+   "speaker": "B",
+   "text": "行，周五我开车去"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 21:33",
+   "speaker": "A",
+   "text": "开面包车来，二百件你那轿车塞不下"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 21:34",
+   "speaker": "B",
+   "text": "那我借我小舅子那台"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 21:40",
+   "speaker": "A",
+   "text": "你家老大开学适应没，住校习惯吗"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 21:41",
+   "speaker": "B",
+   "text": "头两周天天哭着打电话，现在好了，就是费生活费"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 21:41",
+   "speaker": "A",
+   "text": "都这样，我家那个一月生活费比我烟钱多十倍"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 21:42",
+   "speaker": "B",
+   "text": "哈哈你还好意思说烟"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 20:15",
+   "speaker": "A",
+   "text": "提醒下，周五来别带生人，就你一个"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 20:16",
+   "speaker": "B",
+   "text": "知道，老规矩，验货再给余款不"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 20:16",
+   "speaker": "A",
+   "text": "当场验，验完现结，一共五万六，你备好"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 20:17",
+   "speaker": "B",
+   "text": "定金两万出了，剩三万六现金，我周五去取"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 20:17",
+   "speaker": "A",
+   "text": "对，带够，别差几百块让人笑话"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 20:18",
+   "speaker": "B",
+   "text": "放心，我账上向来清楚"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 20:25",
+   "speaker": "B",
+   "text": "你血压咋样了，上回你说高"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 20:26",
+   "speaker": "A",
+   "text": "药吃着呢，一百四九十，医生让少喝"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 20:26",
+   "speaker": "B",
+   "text": "能推的应酬就推了吧"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 20:27",
+   "speaker": "A",
+   "text": "是，尽量推"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 19:50",
+   "speaker": "A",
+   "text": "周五的货我从南边调，你八点到，别早别晚"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 19:51",
+   "speaker": "B",
+   "text": "八点，库房边上，就咱俩"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 19:51",
+   "speaker": "A",
+   "text": "对，车直接开进去，装完就走"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 19:52",
+   "speaker": "B",
+   "text": "要带几个框"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 19:52",
+   "speaker": "A",
+   "text": "六个框，别的啥都别带"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 19:53",
+   "speaker": "B",
+   "text": "明白"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 19:54",
+   "speaker": "A",
+   "text": "这批卖完再找我，下批给你留"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 19:54",
+   "speaker": "B",
+   "text": "成，你供货得稳，我下头几家店等着呢"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 19:55",
+   "speaker": "A",
+   "text": "稳，跟我干就有得赚"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 21:07",
+   "speaker": "B",
+   "text": "明天八点，我把现金备好了"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 21:08",
+   "speaker": "A",
+   "text": "嗯，到了先验三件，没问题再开封"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 21:08",
+   "speaker": "B",
+   "text": "行，钱货两清，不留字据"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 21:09",
+   "speaker": "A",
+   "text": "对，咱这生意，账都在心里"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 21:09",
+   "speaker": "B",
+   "text": "放心，两年了我啥时候掉过链子"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 21:10",
+   "speaker": "A",
+   "text": "那倒是，明天见"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 21:10",
+   "speaker": "B",
+   "text": "明天见"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000047",
+  "status": "accepted",
+  "errors": []
+ }
+}

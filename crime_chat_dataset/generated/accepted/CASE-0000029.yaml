@@ -1,0 +1,141 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000029
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 申请人借中秋节点向掌握验收流程的审批口熟人送出不说面值的购物卡，并在事后把这份节礼与加快自己那批货的验收挂钩，属于人情包装下的利益输送。
+  critical_evidence:
+  - 节前两天 A 反复约 B 见面，特意定在节前的26日下午老地方茶楼
+  - A 送出一张不说明种类和面值、只说都能用的卡，B 嘴上说人来就行但未拒收
+  - 交接刻意安排得隐蔽：东西提前放后门院子里 B 车的后备箱，不当面给
+  - 见面当晚 A 发消息把卡和我那批货的验收挂钩，B 回应节后上班给催流程
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司福利卡
+
+attributes:
+  duration_days: 3
+  turn_count: 68
+  approximate_tokens_estimate: 1249
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0002
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:008c7330d6042e3b249edeb9cd5478ec10e8bf675918311fa2ad195ca448c061
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【9月25日】
+  A：马科哥，忙着呢
+  B：小罗啊，咋了
+  A：没事，快过节了，问问你啥时候回市里
+  B：27号下去，28陪着家里过
+  A：那正好，25还是26，出来坐坐？
+  B：26下午行，晚上家里有事
+  A：成，26下午，老地方茶楼
+  B：行
+  A：哥，你到了吱一声，我过去接你
+  B：不用接，我自己开车
+  A：那我把位置发你
+  B：嗯
+  A：今年单位发的月饼是螺蛳粉馅的，你敢信
+  B：哈哈哈现在厂家是真敢搞
+  A：我咬了一口，魂都没了
+  B：留着，回头发给对头
+  A：那不成投毒了嘛哈哈
+  B：记得配醋，中和一下
+  A：哥，26那天我给你备了点节日的意思
+  B：客气啥，人来就行
+  A：一点心意，一张卡，你平时买点啥都方便
+  B：什么卡？
+  A：您就别问了，都能用
+  B：你这孩子，搞这些
+  A：过节嘛，就是点意思，别嫌薄
+  B：到时候再说吧
+  B：节后带你去水库，今年草鱼多
+  A：好啊，我那根竿都落灰了
+  B：你爸传下来那根老古董？
+  A：对，就是重
+  B：重才稳，钓大物的
+  A：那说定了，钓上来全归你
+  【9月26日】
+  B：你家小子一年级适应没
+  A：前两天哭，这两天没事了，比我坚强
+  B：都这样，大人先绷不住
+  A：他妈天天在家长群里卷，我看着头大
+  B：别卷，孩子开心最重要
+  A：借您吉言，躺平了
+  A：哥，下午茶楼定好了，三点，靠里那间
+  B：行，我三点前到
+  A：车停后门那个院里方便不
+  B：嗯，后门近
+  A：那东西我提前放你车上，省得拿着
+  B：放后备箱就行
+  A：好嘞，三点见
+  B：嗯
+  B：要下雨了，出门带伞
+  A：看天色是憋不住了
+  B：一下雨就凉快，过节舒服
+  A：就怕堵车，节前全城大堵
+  B：那你两点前出门，赶得及
+  A：这就出发
+  【9月27日】
+  A：哥，到家没
+  B：到了，你也慢点开
+  A：今天当面没好意思多说，卡你拿着，就一点节日意思
+  B：知道了，你这个人
+  A：另外我那批货的验收，节后麻烦哥多上心
+  A：材料都交上去了，就差你们那边过一遍
+  B：节后上班我给你催流程
+  A：有哥这句话就踏实了，中秋快乐，替我问嫂子好
+  B：对了，节后那场德比，茶楼还包场不
+  A：包！老规矩，宵夜我出
+  B：你上次点的卤串太咸
+  A：这次换家，你说了算
+  B：那家的烤冷面不错
+  A：烤冷面配啤酒，你是懂行的
+  B：哈哈到时候见
+  A：节后联系，哥

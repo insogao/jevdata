@@ -1,0 +1,130 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000053
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000094
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 与 case_05 共用同一对话骨架的良性变体（sibling, v02）：A 的网店做正规游戏点券代充，B 是渠道代理，用独立收款码收客人充值款后汇总给商户账户，平台官方通道结算、后台逐单可查、佣金千八秒结。仅翻转两处关键台词（通道来路与单子性质），其余与 case_05 一致。
+  critical_evidence:
+  - B 用独立收款码替 A 的网店收点券代充款，佣金按流水千八、平台“秒结”自动分账（msgs 5-9、17-20）
+  - 单子全部来自平台后台——客人买游戏点券、皮肤，A 明说“后台每单都能查、一级商户、开票没问题”，来源完全可核（msgs 37-40 翻转处）
+  - 结算走平台官方直连通道、钱不过私人的手，不存在多层转手（msgs 27-32 翻转处）
+  - A 于10月12日晚转给 B 的 4600 元是本周代充返佣，与后台订单流水一一对应，仅因平台周结略有延迟（msgs 47-50 + transfer）
+  benign_alternatives:
+  - 游戏点券代充
+  - 平台充值服务
+
+attributes:
+  duration_days: 5
+  turn_count: 54
+  approximate_tokens_estimate: 1139
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: gambling_updown_score
+  risk: 0
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0004
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:f230ad89c983f631e4de23cfdebe9f6acb0b63c5daad4e6d70caa4ded77b2feb
+pipeline_status: accepted
+title: money_laundering_obfuscation/gambling_updown_score
+conversation: |-
+  【10月8日】
+  A：周总，晚上有空没，聊两句
+  B：在公司呢，你说
+  A：上次说的合作，单子我给你留着了
+  B：佣金还是老规矩？
+  A：千八，秒结，过一笔结一笔
+  B：行，比趴在账上的强
+  A：晚点把码发我，开起来就行
+  B：用哪个，店里收款的那个？
+  A：拿闲的那个，店里正常生意的别动
+  B：懂了
+  A：吃了没，我刚忙完
+  B：点了外卖，在路上
+  A：你们那边烧鹅还是那么正
+  B：下回带你吃我私藏那家
+  【10月9日】
+  A：昨晚试了两笔，都顺
+  B：看到了，挺快
+  A：今晚量大点，码常开
+  B：行，手机我放前台充电
+  A：到账就转，别过夜
+  B：知道，秒转
+  B：这两天要刮台风，你们仓库门关好
+  A：关了，去年淹过一回，怕了
+  B：我们这就掉几点雨
+  A：你们那算舒服的
+  【10月10日】
+  A：昨天过账四万一，你那份三百多记账上了
+  B：收到，量起来了
+  A：量是上来了，通道也顺
+  B：走的哪个通道，稳不稳
+  A：平台官方直连的结算通道，钱不过别人的手
+  B：那后台我能对账不
+  A：每单都能查，一级商户，开票也没问题
+  B：行，那我就管我的码
+  B：昨晚那场看了没，最后十分钟绝了
+  A：看了，那个点球判罚有争议
+  B：慢镜头放了三遍呢
+  A：周末复盘，各退一步
+  【10月11日】
+  B：老板，问个事，这些单子都是啥啊，我心里得有个数吧
+  A：平台上的点券代充单，客人买皮肤买点卡，急用到账
+  B：哦，游戏充值啊，那我明白了
+  A：对，正常买卖，把对账做好就行
+  B：那我这边还要备点啥不
+  A：不用，你把秒转做利索就行
+  B：我闺女今天拿奖状了，三好学生
+  A：可以啊，怎么奖励
+  B：带她吃顿烤肉，她指定的
+  A：烤肉好，下回我蹭一顿
+  【10月12日】
+  A：这周结算，你那份我转你
+  【系统消息】A 向 B 转账 4600 元，已收款。
+  B：收到，说好秒结，这都压了三天了哈哈
+  A：平台周结就这样，量大那周还多
+  B：下周量还加不
+  A：加，码保持在线，细水长流
+  B：国庆调休安排出来了，我连上七天
+  A：惨，我反倒闲不着，节假日那边更忙
+  B：行，你发财，我搬砖

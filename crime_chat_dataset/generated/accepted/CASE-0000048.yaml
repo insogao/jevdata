@@ -1,0 +1,124 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000048
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: privacy_doxxing
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 培训机构课程顾问利用与校方的业务关系，请有系统权限的教务人员违规查询并截图整年级学生月考成绩（非本人孩子），转账2000元“感谢费”作为对价，用成绩筛选考砸学生的家长精准推销课程；双方均知此事不能外传。
+  critical_evidence:
+  - B 用教务系统权限查询初三年级全体月考成绩，把多名学生的姓名班级分数截图发给 A，这些学生与 B 本人家庭无关（msgs 21、24-25）
+  - A 于收到名单次日（10月10日晚）转账 2000 元“感谢费”，B 口头推辞后收下，并说“下次可没下次了”“下不为例”（transfer + msgs 35-38、48）
+  - A 的用途是筛出考砸学生的家长推销一对一课程，三天内已签三单（msgs 7、22、32、43-46）
+  - 双方都清楚此事见不得光：B 强调“仅此一次”，A 回“天知地知你知我知”（msgs 9、47-48）
+  benign_alternatives:
+  - 家长查自己孩子
+  - 学校官方查询
+
+attributes:
+  duration_days: 4
+  turn_count: 49
+  approximate_tokens_estimate: 1200
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 2
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0004
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:a5edc46f7b4c8492f42921e3b71e346c1b6e2f7ccedaed5325ff9021b7accf27
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【10月8日】
+  A：王老师，忙着呢
+  B：喝茶呢，咋想起我了
+  A：想你了呗，咱这合作两年了，你们月考出分没
+  B：昨天刚出，问这个干嘛
+  A：初三那届的，能不能发我瞅瞅
+  B：你要成绩干嘛，你又不教书
+  A：你忘了我是干啥的了，考砸的家长最舍得投入
+  B：你这算盘打得我在教室都听见了
+  B：名单发你可以，仅此一次啊
+  A：好嘞，就要这次月考的，带班级和名次
+  B：我下午没课的时候进系统点一下就行
+  B：说起来这天说冷就冷，你们到处跑的，多穿点
+  A：是，今天风大，电动车骑得我手都是僵的
+  B：我们办公室空调还开着呢，老张非说热
+  A：哈哈让他穿短袖焊椅子上吧
+  B：老顽童一个
+  【10月9日】
+  A：王老师，起了没
+  B：周六起这么早干嘛
+  A：名单别忘了啊
+  B：知道了知道了，我上午去趟办公室
+  B：进去了，这届两极分化挺厉害
+  A：就要中间往下那段，太差的家长破罐子破摔，不要
+  B：你这套路比我教书都专业
+  A：截图就行，名字班级分数三样
+  B：发你了，收好
+  A：收到，我筛筛
+  B：对了，你们那儿体检套餐还有么，我爸妈单位那个太糊弄
+  A：有，跟市里医院合作的，给你留个名额
+  B：多少钱，别给我整虚的
+  A：明码标价，比单位那个多俩项目，回头发你对比
+  B：行，那我跟我妹商量下
+  【10月10日】
+  A：名单筛出来了，好几个家长昨晚就加我了
+  A：一分耕耘一分收获，这个你收下
+  【系统消息】A 向 B 转账 2000 元，已收款。
+  B：你这干啥，快收回去
+  A：感谢费，必须的，不然下次谁给我点系统
+  B：下次可没下次了啊
+  A：收了收了，一杯奶茶钱，别跟我客气
+  B：你这奶茶够我喝一年
+  A：周日香山红叶节去不去，我组织家长徒步
+  B：我就不凑热闹了，人挤人
+  A：也是，那天地铁都得限流
+  B：你们带着家长爬山也是个人才
+  【10月11日】
+  A：王老师，跟你汇报下，昨天签了三个一对一
+  B：这么快，你嘴皮子是真行
+  A：靠你那份名单，月底前再冲一波
+  B：行了别夸我，记住就这一次
+  A：天知地知你知我知
+  B：少来这套，下不为例
+  A：周一给你带公司新出的茶

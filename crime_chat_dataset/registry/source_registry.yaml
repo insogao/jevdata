@@ -1,0 +1,86 @@
+# Source Registry — Stage 1 公开数据源（v3 计划 §36 固定 Source ID）
+# 状态: pending_download | downloaded | normalized | restricted | gated
+registry_version: SRC-REG-v1
+updated_at: "2026-09-23"
+
+sources:
+  - source_id: SRC-WGM-001
+    name: WildGuardMix
+    url: https://huggingface.co/datasets/allenai/wildguardmix
+    license: CHECK_DATASET_CARD
+    access: gated_auto          # 需 HF 账号接受条款，本机无 token
+    role: [taxonomy, risk_seed, adversarial_boundary]
+    direct_training_use: false
+    status: gated
+
+  - source_id: SRC-AEG-001
+    name: NVIDIA Aegis 2.0
+    url: https://huggingface.co/datasets/nvidia/Aegis-AI-Content-Safety-Dataset-2.0
+    license: CC-BY-4.0
+    access: public
+    role: [taxonomy, multi_turn_safety]
+    direct_training_use: false
+    status: pending_download
+
+  - source_id: SRC-SAL-001
+    name: SALAD-Bench / Salad-Data
+    url: https://huggingface.co/datasets/OpenSafetyLab/Salad-Data
+    license: Apache-2.0
+    access: public
+    role: [taxonomy, risk_seed]
+    direct_training_use: false
+    status: pending_download
+
+  - source_id: SRC-SCC-001
+    name: Scam Conversation Corpus
+    url: https://zenodo.org/records/15212527
+    license: RESTRICTED
+    access: application_required
+    role: [scam_language_structure]
+    direct_training_use: false
+    status: restricted
+
+  - source_id: SRC-CVX-001
+    name: COVA-X / ScamLingua
+    url: https://scamlingua.org/
+    license: RESEARCH_ONLY
+    access: application_required
+    role: [scam_dialogue_structure]
+    direct_training_use: false
+    status: restricted
+
+  - source_id: SRC-BSD-001
+    name: BothBosu scam-dialogue
+    url: https://huggingface.co/datasets/BothBosu/scam-dialogue
+    license: Apache-2.0
+    access: public
+    role: [scam_non_scam_contrast, pipeline_validation]
+    direct_training_use: false
+    status: pending_download
+
+  - source_id: SRC-PSD-001
+    name: ProsocialDialog
+    url: https://huggingface.co/datasets/allenai/prosocial-dialog
+    license: CC-BY-4.0
+    access: public
+    role: [risk_0_1_2_boundary, caution_labels]
+    direct_training_use: false
+    status: pending_download
+
+  - source_id: SRC-BCC-001
+    name: Banking Conversation Corpus
+    url: https://huggingface.co/datasets/talkmap/banking-conversation-corpus
+    license: MIT
+    access: public
+    role: [financial_hard_negative]
+    direct_training_use: false
+    status: pending_download
+
+  - source_id: SRC-AML-001
+    name: IBM AMLSim
+    url: https://github.com/IBM/AMLSim
+    license: Apache-2.0
+    access: public_code
+    role: [transaction_pattern_overlay]
+    direct_training_use: false
+    status: registered          # 代码库；本轮只登记，不生成交易数据

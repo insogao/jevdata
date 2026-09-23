@@ -1,0 +1,354 @@
+{
+ "key": "case_05",
+ "archetype_id": "ARC-000094",
+ "subtype": "gambling_updown_score",
+ "latent_intent": "工作室老板（上线）拉着有收款码资源的渠道合作方（下线）做过账生意：B 用“闲码”收款后秒转上游，抽千八佣金、名义秒结；通道已排到“第七层”，客人“急着提钱”暗示线上赌客提现。全程黑话，结合 A→B 的 4600 元佣金结算才能定性。",
+ "critical_facts": [
+  "B 用“闲的那个码”替 A 过账，店里正常收款码不动，到账就转、别过夜，佣金千八且号称秒结（msgs 5-9、17-20）",
+  "A 自述通道已排到“第七层”，一层层往下放，B 明确知道自己在链条末节且不问上游（msgs 27-32）",
+  "B 问单子来路，A 只说“线上来的客人，急着提钱用，你管人家干嘛”，B 明知有问题仍继续（msgs 37-40）",
+  "A 于10月12日晚转给 B 4600 元过账佣金，走私人微信、无合同凭证，结算比承诺拖延了三天（msgs 47-49 + transfer）"
+ ],
+ "benign_alternatives": [
+  "游戏点券代充",
+  "平台充值服务"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "10月8日 19:02",
+   "speaker": "A",
+   "text": "周总，晚上有空没，聊两句"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 19:03",
+   "speaker": "B",
+   "text": "在公司呢，你说"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 19:03",
+   "speaker": "A",
+   "text": "上次说的合作，单子我给你留着了"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 19:04",
+   "speaker": "B",
+   "text": "佣金还是老规矩？"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 19:04",
+   "speaker": "A",
+   "text": "千八，秒结，过一笔结一笔"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 19:05",
+   "speaker": "B",
+   "text": "行，比趴在账上的强"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 19:05",
+   "speaker": "A",
+   "text": "晚点把码发我，开起来就行"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 19:06",
+   "speaker": "B",
+   "text": "用哪个，店里收款的那个？"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 19:06",
+   "speaker": "A",
+   "text": "拿闲的那个，店里正常生意的别动"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 19:07",
+   "speaker": "B",
+   "text": "懂了"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 19:15",
+   "speaker": "A",
+   "text": "吃了没，我刚忙完"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 19:16",
+   "speaker": "B",
+   "text": "点了外卖，在路上"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 19:16",
+   "speaker": "A",
+   "text": "你们那边烧鹅还是那么正"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 19:17",
+   "speaker": "B",
+   "text": "下回带你吃我私藏那家"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 21:12",
+   "speaker": "A",
+   "text": "昨晚试了两笔，都顺"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 21:13",
+   "speaker": "B",
+   "text": "看到了，挺快"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 21:13",
+   "speaker": "A",
+   "text": "今晚量大点，码常开"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 21:14",
+   "speaker": "B",
+   "text": "行，手机我放前台充电"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 21:14",
+   "speaker": "A",
+   "text": "到账就转，别过夜"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 21:15",
+   "speaker": "B",
+   "text": "知道，秒转"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 21:20",
+   "speaker": "B",
+   "text": "这两天要刮台风，你们仓库门关好"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 21:21",
+   "speaker": "A",
+   "text": "关了，去年淹过一回，怕了"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 21:21",
+   "speaker": "B",
+   "text": "我们这就掉几点雨"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 21:22",
+   "speaker": "A",
+   "text": "你们那算舒服的"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 20:08",
+   "speaker": "A",
+   "text": "昨天过账四万一，你那份三百多记账上了"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 20:09",
+   "speaker": "B",
+   "text": "收到，量起来了"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 20:09",
+   "speaker": "A",
+   "text": "量是上来了，就是通道紧"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 20:10",
+   "speaker": "B",
+   "text": "怎么讲"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 20:10",
+   "speaker": "A",
+   "text": "上头现在排到第七层了，一层层往下放，到咱这单就小了"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 20:11",
+   "speaker": "B",
+   "text": "第七层，前头六家都是谁啊"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 20:11",
+   "speaker": "A",
+   "text": "别打听，干好你那节就行"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 20:12",
+   "speaker": "B",
+   "text": "行，我不管上游，我就管我的码"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 20:40",
+   "speaker": "B",
+   "text": "昨晚那场看了没，最后十分钟绝了"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 20:41",
+   "speaker": "A",
+   "text": "看了，那个点球判罚有争议"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 20:41",
+   "speaker": "B",
+   "text": "慢镜头放了三遍呢"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 20:42",
+   "speaker": "A",
+   "text": "周末复盘，各退一步"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 11:26",
+   "speaker": "B",
+   "text": "老板，问个事，这些单子到底是干嘛的，我心里得有个数吧"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 11:27",
+   "speaker": "A",
+   "text": "线上来的客人，急着提钱用，你管人家干嘛"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 11:27",
+   "speaker": "B",
+   "text": "急着提钱…行吧，我把管子当好"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 11:28",
+   "speaker": "A",
+   "text": "对，咱就挣个过手钱，别多想"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 11:28",
+   "speaker": "B",
+   "text": "那我这边还要备点啥不"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 11:29",
+   "speaker": "A",
+   "text": "不用，你把秒转做利索就行"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 19:02",
+   "speaker": "B",
+   "text": "我闺女今天拿奖状了，三好学生"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 19:03",
+   "speaker": "A",
+   "text": "可以啊，怎么奖励"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 19:03",
+   "speaker": "B",
+   "text": "带她吃顿烤肉，她指定的"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 19:04",
+   "speaker": "A",
+   "text": "烤肉好，下回我蹭一顿"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 20:14",
+   "speaker": "A",
+   "text": "这周结算，你那份我转你"
+  },
+  {
+   "type": "transfer",
+   "time": "10月12日 20:19",
+   "from": "A",
+   "to": "B",
+   "amount": 4600
+  },
+  {
+   "type": "message",
+   "time": "10月12日 20:20",
+   "speaker": "B",
+   "text": "收到，说好秒结，这都压了三天了哈哈"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 20:21",
+   "speaker": "A",
+   "text": "大单压一压稳当，钱又跑不了"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 20:21",
+   "speaker": "B",
+   "text": "下周量还加不"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 20:22",
+   "speaker": "A",
+   "text": "加，码保持在线，细水长流"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 20:26",
+   "speaker": "B",
+   "text": "国庆调休安排出来了，我连上七天"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 20:27",
+   "speaker": "A",
+   "text": "惨，我反倒闲不着，节假日那边更忙"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 20:27",
+   "speaker": "B",
+   "text": "行，你发财，我搬砖"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000046",
+  "status": "accepted",
+  "errors": []
+ }
+}

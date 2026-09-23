@@ -1,0 +1,134 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000047
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000029
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: contraband_illicit_trade
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 上家与分销商做了两年的无票低价货源生意：交易只谈数量与批号、不提品名来路，价格低于市面两成；物流园库房边“老地方”交接，现金现结不留账，转账定金特意不写备注、聊天记录要求删除。结合对价与规避留痕的细节组合可定性。
+  critical_evidence:
+  - 交易只谈数量与批次（“一手二百件往上”“只谈量和批号”），从不提品名与来路，价格二百八一件、市面三百六，低约两成（msgs 3-9）
+  - 交接定在“老地方”（物流园后头那排库房边上），指定周五晚八点、单独赴约、面包车直接开进去装完就走（msgs 11-13、44-48）
+  - 现金现结、不留账不留字据：B 转 20000 定金时 A 特别叮嘱“备注啥都别写”“聊天记录看完也删了”（msgs 15、22-25 + transfer）
+  - 总货款五万六，验货后现金付清余款三万六，全程无发票无任何正规渠道凭证（msgs 36-37、54-56）
+  benign_alternatives:
+  - 大宗合法批发
+  - 朋友间代购
+
+attributes:
+  duration_days: 5
+  turn_count: 58
+  approximate_tokens_estimate: 1309
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: batch_quantity_pickup
+  risk: 2
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0004
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-PILOT-002
+
+dedup:
+  content_hash: sha256:25092e7ab2b4651b4b82b105a48b115fa2b55a6cf30bedc67dfe57a4c5b083c1
+pipeline_status: accepted
+title: contraband_illicit_trade/batch_quantity_pickup
+conversation: |-
+  【10月8日】
+  A：老蔡，货到了，先紧你
+  B：来了来了，这批啥情况
+  A：数量你定，我只谈量和批号，别的你清楚
+  B：懂，老规矩嘛，一手能拿多少
+  A：二百件往上，少了不好配
+  B：价格呢，别跟我整虚的
+  A：二百八一件，市面上三百六，你自己算
+  B：低这么多，来路稳不稳
+  A：问那么多干嘛，两年了哪次坑过你
+  B：行，那先来二百件
+  A：可以，老地方交
+  B：物流园后头那个口？
+  A：对，还是那排库房边上
+  B：现结还是月结
+  A：现结，现金，不留账，你我知道就行
+  B：周五晚行不
+  A：周五晚八点，定金先打一半
+  B：国庆你们放几天
+  A：三天，还得留人看货，放假比上班还操心
+  B：我们商场国庆全员上岗，惨
+  A：谁让咱干这行，节假日正是走货的时候
+  【10月9日】
+  B：定金转你了，你查收，备注没写啊
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  A：收到，以后转账啥都别写，这聊天记录看完也删了
+  B：至于么，搞得跟地下工作似的
+  A：谨慎没坏处，货对货钱对钱，别留把柄
+  B：行，周五我开车去
+  A：开面包车来，二百件你那轿车塞不下
+  B：那我借我小舅子那台
+  A：你家老大开学适应没，住校习惯吗
+  B：头两周天天哭着打电话，现在好了，就是费生活费
+  A：都这样，我家那个一月生活费比我烟钱多十倍
+  B：哈哈你还好意思说烟
+  【10月10日】
+  A：提醒下，周五来别带生人，就你一个
+  B：知道，老规矩，验货再给余款不
+  A：当场验，验完现结，一共五万六，你备好
+  B：定金两万出了，剩三万六现金，我周五去取
+  A：对，带够，别差几百块让人笑话
+  B：放心，我账上向来清楚
+  B：你血压咋样了，上回你说高
+  A：药吃着呢，一百四九十，医生让少喝
+  B：能推的应酬就推了吧
+  A：是，尽量推
+  【10月11日】
+  A：周五的货我从南边调，你八点到，别早别晚
+  B：八点，库房边上，就咱俩
+  A：对，车直接开进去，装完就走
+  B：要带几个框
+  A：六个框，别的啥都别带
+  B：明白
+  A：这批卖完再找我，下批给你留
+  B：成，你供货得稳，我下头几家店等着呢
+  A：稳，跟我干就有得赚
+  【10月12日】
+  B：明天八点，我把现金备好了
+  A：嗯，到了先验三件，没问题再开封
+  B：行，钱货两清，不留字据
+  A：对，咱这生意，账都在心里
+  B：放心，两年了我啥时候掉过链子
+  A：那倒是，明天见
+  B：明天见

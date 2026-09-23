@@ -1,0 +1,235 @@
+schema_version: CASE-YAML-v1
+identity:
+  case_id: CASE-DEMO-0004
+  family_id: FAM-DEMO-0004
+  lineage_id: LIN-DEMO-0004
+  archetype_id: ARC-DEMO-0004
+  variant_id: v01
+source:
+  source_ids:
+  - SRC-SYN-001
+  source_seed_ids:
+  - SEED-SYN-DEMO-0004
+  source_type: synthetic_demo
+lineage:
+  root_case_id: CASE-DEMO-0004
+  parent_case_id: null
+  generation_type: original_demo
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+hidden_case:
+  latent_intent: 一方以掌握的私密材料为筹码要求付款，付款后承诺暂不公开。
+  critical_evidence:
+  - 明确暗示材料公开会造成严重后果
+  - 付款被设定为保持沉默的条件
+  - 收款后确认“暂时不会发”
+  benign_alternatives:
+  - 合法纠纷和解
+  - 债务偿还
+attributes:
+  duration_days: 5
+  turn_count: 144
+  approximate_tokens_estimate: 1694
+  relationship: conflict
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 2
+  format: wechat_1to1_transcript
+  topic_switches_estimate: 18
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: silence_for_payment
+  risk: 3
+  relationship: conflict
+  obfuscation: high
+  has_transfer: true
+execution:
+  workflow_version: DATASET-WF-v2.2-DEMO
+  prompt_id: PRM-DEMO-MANUAL-001
+  agent_id: AGT-PLANNER-001
+  model_id: MOD-GPT-5.6-SOL
+  batch_id: BATCH-DEMO-20-V2
+dedup:
+  content_hash: sha256:b21871ff9201659540ce309f2e68c149789d07b8f2ed4109e9624aba231b6a21
+  semantic_cluster_id: SCL-DEMO-0004
+title: 敲诈勒索：以不公开私密材料为条件收款
+conversation: |-
+  【6月11日】
+  
+  A：你昨天为什么不回我？
+  B：我不想再聊那件事。
+  A：你不聊也行，但我手里的东西还在。
+  B：你到底想怎么样？
+  A：先把之前说的处理掉。
+  B：别发给别人。
+  
+  
+  A：你下个月不是要去成都吗？
+  B：可能改到月底，行程还没确认。
+  A：机票买了吗？
+  B：还没，公司统一订。
+  A：月底酒店应该挺贵。
+  B：不用我管。
+  A：如果周五结束得早，可以多待一天。
+  B：我也想顺便看看博物馆。
+  
+  A：晚上要不要顺路买点水果？
+  B：可以买橙子，别再买香蕉了。
+  A：上次不是你说要吃？
+  B：买太多吃不完。
+  A：那橙子和苹果，还要酸奶吗？
+  B：来两盒无糖的。
+  A：记住了。
+  B：谢谢。
+  
+  A：你中午吃什么？
+  B：还没想，楼下那家面最近排队太久。
+  A：我昨天点了他们家的外卖，送到都坨了。
+  B：那我还是去便利店吧。
+  A：你不是说最近胃不舒服吗，别总吃冷的。
+  B：知道，下午还有两个会，懒得跑远。
+  A：晚上早点回去，冰箱里还有汤。
+  B：行，我回去热一下。
+  【6月12日】
+  
+  B：我今天在出差，晚上再说。
+  A：我没那么多耐心。
+  B：你给我一天。
+  A：可以，明晚之前。
+  B：你保证不乱发。
+  A：看你怎么处理。
+  B：这件事别牵扯我家里。
+  
+  
+  A：报销你交了吗？
+  B：还差一张酒店发票。
+  A：系统月底关。
+  B：我今天催酒店补。
+  A：你上个月那笔也没报吧？
+  B：那笔已经过了。
+  A：财务最近审得很细。
+  B：是，按实际填就行。
+  
+  A：今天外面特别堵。
+  B：我坐地铁还好。
+  A：我开车半小时没过两个路口。
+  B：早说让你别开。
+  A：晚上还得去接人。
+  B：那没办法。
+  A：你那边几点下班？
+  B：六点多吧。
+  
+  A：我把阳台那几盆花都换土了。
+  B：你不是最怕弄泥？
+  A：最近突然想养点东西。
+  B：别再把多肉养死。
+  A：这次看了教程。
+  B：教程救不了浇水太勤。
+  A：我控制。
+  B：长好一点拍给我看。
+  【6月13日】
+  
+  B：数还是之前那个？
+  A：没变。
+  B：我只能先给一部分。
+  A：先到一半，剩下周五。
+  【系统消息】B 向 A 转账 12000 元，已收款。
+  A：收到了。
+  B：东西别发。
+  A：暂时不会。
+  
+  
+  A：你弟什么时候回来？
+  B：下周三，待一周左右。
+  A：那家里要热闹了。
+  B：我妈已经开始准备一堆菜。
+  A：老人就喜欢这样。
+  B：对。
+  A：你们周末是不是要聚？
+  B：大概率。
+  
+  A：周末还打球吗？
+  B：看天气，场地不湿就去。
+  A：老张说他脚扭了。
+  B：那少一个人。
+  A：我问问小陈，他周五应该出差回来。
+  B：那正好。
+  A：还是七点？
+  B：可以。
+  
+  A：你车修好了吗？
+  B：修好了，换了个小件，顺便做了保养。
+  A：多少钱？
+  B：一千多，主要人工贵。
+  A：现在修车都这样。
+  B：下个月年检应该省事点。
+  A：保险续了吗？
+  B：还没，这周看。
+  【6月14日】
+  
+  B：你昨天说暂时是什么意思？
+  A：剩下的到了就是结束。
+  B：我已经在想办法。
+  A：那就别拖。
+  B：我今天要陪父亲复诊，别一直打电话。
+  A：我不打电话，只看结果。
+  
+  
+  A：上次那个文档你还有最新版吗？
+  B：应该在共享盘，周三改过一次，标题后面有v6。
+  A：我这里只找到周一的版本。
+  B：第三页数据要用新的。
+  A：找到了，我下午重新导一遍。
+  B：发之前让我看一眼。
+  A：行。
+  B：别又把内部备注一起发出去。
+  
+  A：你最近是不是又换手机了？
+  B：没换，贴膜碎了，看起来像新机。
+  A：我说颜色怎么没变。
+  B：这个还能用两年。
+  A：电池呢？
+  B：一天一充，还行。
+  A：我那个已经一天两充。
+  B：那你该换电池了。
+  
+  A：猫最近还半夜叫吗？
+  B：好多了，晚上陪它玩一会儿就安静。
+  A：之前可能就是精力太旺。
+  B：医生也这么说。
+  A：它那次打针花了多少？
+  B：三百多，比我上次看感冒还贵。
+  A：照片发我一张。
+  B：晚点拍，它现在睡着了。
+  【6月15日】
+  
+  【系统消息】B 向 A 转账 12000 元，已收款。
+  B：全了。
+  A：行。
+  B：把东西删了。
+  A：我说过不会发。
+  B：我要的是删掉。
+  A：先这样。
+  
+  A：孩子这次考试怎么样？
+  B：数学还行，英语掉了点。
+  A：最近是不是没怎么背单词？
+  B：天天说背了，我也不知道背没背。
+  A：别逼太紧，他自己也着急。
+  B：我知道。
+  A：周末带出去放松一下。
+  B：准备去公园骑车。
+  
+  A：今天公司又停电了十分钟。
+  B：你们那栋楼怎么老出问题？
+  A：物业说是检修，下午会议室空调也坏了。
+  B：文件没丢吧？
+  A：自动保存了。
+  B：那还好。
+  A：大家都在群里吐槽。
+  B：听着像整栋楼都该修。
