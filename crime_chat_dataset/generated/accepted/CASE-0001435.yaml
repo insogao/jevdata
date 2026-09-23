@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001435
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000136
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-f7c76da7564a5ebf
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: other_illicit_coordination
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 会写脚本的 A 帮黄牛 B 做抢票工具：A 把加速包的参数调好，用一批账号批量抢票，成功一张收三百，实名认证的问题由 A 想办法解决，B 只管找买家出手。
+  critical_evidence:
+  - B 找 A 要一套抢票的脚本，说热门场次的票一放就没
+  - A 答应做，并说加速包参数会调好，放票瞬间批量提交
+  - A 提出实名问题难搞，但表示自己来搞定，B 不用管
+  - 两人约定成功抢到一张给 A 三百，先把这一场的数结清
+  - B 把这一场成功抢到的票的提成转给 A
+  benign_alternatives:
+  - 研究候补购票的正常技巧
+  - 正规的代购代抢服务
+
+attributes:
+  duration_days: 4
+  turn_count: 54
+  approximate_tokens_estimate: 1448
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: ticket_scalp_bot
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0145
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-076
+
+dedup:
+  content_hash: sha256:1a9d4b489b48a311ece763c14c290d3e8de4c99814a0d41daced928d1c849875
+pipeline_status: accepted
+title: other_illicit_coordination/ticket_scalp_bot
+conversation: |-
+  【8月20日】
+  B：阿哲 帮我写个东西 抢票的
+  A：什么场次 演唱会还是
+  B：就下个月那个 一放票就秒没 手动根本抢不到
+  A：可以做 加速包参数我给你调好 放票那一下批量提交
+  B：能抢多少
+  A：看你账号备了多少 号多抢得多 你只管备号
+  B：实名问题怎么办 现在都要绑脸
+  A：这个我来搞 你别管 我这边有路子
+  B：你分成怎么算
+  A：成功一张给我三百 没抢到不要钱
+  B：三百有点多 一张票才多少
+  A：你转手加价卖出去 一张赚的可不止三百 别抠
+  B：行 那先做一场试试
+  A：你号准备得咋样 我这边脚本框架搭好了
+  B：我收了一批 二十来个 够不够
+  A：二十个抢这种场次勉强 你再多备点 越多越好
+  B：好 我再收
+  B：今天跑了半天收号 累死 饭都没好好吃
+  A：辛苦 号是这行的命 收够了才有得抢
+  B：你说实名你搞 会不会出事
+  A：我处理得干净 你只管抢 别问细节
+  【8月21日】
+  A：参数我调好了 放票前三十秒启动 你盯好时间
+  B：收到 我到时候人在电脑前
+  A：网络要稳 用有线 别用手机热点
+  B：知道 我拉了宽带
+  B：中午跟朋友吃饭 他说最近查得严
+  A：查也是查出手的 你别太张扬 散票慢慢放
+  B：懂了 我不在一个平台挂
+  A：脚本发你了 按说明书跑 我不在现场 你自己顶住
+  B：好 我先拿非热门场次练手
+  【8月22日】
+  B：练了一场 抢到两张 脚本挺稳
+  A：那就等正场 记住正场成功率看号量
+  A：还有五分钟 准备启动
+  B：全员就位 心跳都快了
+  A：跑完了 后台看数据
+  B：抢到六张 有三张付款超时退了
+  A：六张养成三张成 也算可以 下次付款参数我调快点
+  B：行 三张这个场次能卖不少
+  A：按说好的一张三百 三张九百 你现在给我结了
+  B：等我把票转出去再给行不行
+  A：不行 说好成功一张就结 你转手是你的利润
+  B：行 我转你
+  【系统消息】B 向 A 转账 900 元，已收款。
+  A：收到 九百 下场我给脚本加个自动改价的模块
+  B：那更省事 你多弄点功能
+  【8月23日】
+  B：有买家嫌贵 说官方才那个价
+  A：你就说一票难求 嫌贵别买 别降价坏了行市
+  B：也是 反正抢到就是硬通货
+  A：对 这行靠的就是你抢不到的别人也抢不到
+  A：下场是半个月后 这段时间你把号养着 别让掉线
+  B：我每天登一下 保持活跃
+  A：对 还有别用同一个网络登太多号 容易一锅端
+  B：明白 我分开挂
+  B：说实话这买卖暴利 就是心里不踏实
+  A：挣够了就收 别贪 咱们又不抢银行

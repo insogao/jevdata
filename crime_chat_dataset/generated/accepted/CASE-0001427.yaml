@@ -1,0 +1,139 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001427
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000028
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-ce465d4a3463ad45
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 这是一段正常的工程尾款催收：供货方 A 在验收签单后依合同向甲方科室负责人 B 催要尾款，B 按流程先核对问题整改台账，确认整改销项后依约扣除 5% 履约保证金，再走财务审批把尾款正常打给 A。全程是合规的商务结算，没有任何行贿受贿成分。
+  critical_evidence:
+  - A 是供货方，B 是甲方科室负责人，A 在验收单签完后向 B 催要工程尾款
+  - B 称按合同「验收合格后十五个工作日内」走款，并先核对问题整改台账
+  - 台账上有三项待整改，A 补交密封圈和整改回执后逐项销项
+  - B 依合同从尾款中扣除 5% 履约保证金，约定竣工后返还
+  - B 走完财务审批，把尾款 46800 元正常打给 A
+  benign_alternatives:
+  - 正常合同尾款催收
+  - 履约保证金扣除
+
+attributes:
+  duration_days: 2
+  turn_count: 63
+  approximate_tokens_estimate: 1271
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: contract_signature_fee
+  risk: 0
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0144
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-076
+
+dedup:
+  content_hash: sha256:96e3cd2a9c59739098e95cfda163bde7b779fac42eb9029dc94a48204410b3d4
+pipeline_status: accepted
+title: bribery_corruption/contract_signature_fee
+conversation: |-
+  【3月12日】
+  A：王工您好，我是做管材那家的小李，方便说两句吗
+  B：你说
+  A：就是上个月那批管件的验收单，您这边签完了吧
+  B：签是签了 台账我先过一遍
+  A：好的好的 那尾款大概啥时候能走
+  B：按合同验收合格后十五个工作日内 别急
+  A：我这边工人工资要发了 问一下心里有底
+  B：嗯 我记着
+  A：对了王工 今天这风也太大了 您那边工地还开工吗
+  B：停了半天 脚手架不放心
+  A：我们这边也是 灰吹得睁不开眼
+  B：春天就这样 忍忍
+  A：哈哈 忍忍
+  A：王工中午吃了没
+  B：食堂对付了一口
+  A：食堂那个红烧肉是真不行
+  B：能吃就行 你还挑
+  A：下次我路过给您带份我们楼下的面
+  B：不用不用 客气啥
+  B：台账我看了 有三项待整改 你那边回执交了没
+  A：交了两项，第三项那个密封圈我们补发过去了
+  B：密封圈到了就销项 别拖
+  A：明白 今天就催仓库
+  【3月13日】
+  A：王工早，密封圈快递单号我发您了
+  B：收到 我让人签
+  A：麻烦您了
+  B：台账销完 按合同要留一笔履约保证金
+  A：这个我知道，合同里写了 5%
+  B：对 尾款里扣 竣工后返还
+  A：行 规矩我懂 扣就扣
+  A：说到钱 我家那小子这学期补习班又涨价了
+  B：现在都这样 我闺女钢琴课一节三百
+  A：三百？！抢钱啊
+  B：可不 不学又怕落下
+  A：唉 都是当爹的命
+  B：哈哈 认了吧
+  A：王工您爱人让您买那个空气炸锅买了没
+  B：买了 京东第二天就到
+  A：好用不 我家那位也念叨
+  B：还行 炸鸡翅不用油
+  A：那我也整一个
+  B：等活动 便宜一百多
+  A：王工，整改回执三项都销完了，您看下
+  B：看了 没问题
+  A：那这个月能走款不
+  B：我这边审批提上去了 走财务
+  A：好嘞 多谢王工
+  B：扣完质保金 尾款给你打过去
+  A：金额没问题 按台账算的
+  B：财务今天下午统一放
+  A：收到 辛苦您
+  B：应该的
+  【系统消息】B 向 A 转账 46800 元，已收款。
+  A：到账了，四万六千八，数目对的
+  B：好 后面维保有事随时说
+  A：一定 王工改天请您吃个饭
+  B：吃饭就免了 把活干好
+  A：哈哈 那必须的
+  A：对了王工 您说那个竣工资料要几份
+  B：一式三份 盖章
+  A：收到 我下周送过去
+  B：行
+  A：那先不打扰您了
+  B：嗯 忙去吧

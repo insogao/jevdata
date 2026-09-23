@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001412
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-12416aceeaf56a6b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 亲友之间闲聊，A 怀疑一个长期发帖黑自己的匿名账号是同行，懂技术的 B 帮他从公开信息里做关联比对——翻出关联小号、比对相册原图时间戳、查转发历史。全程只用公开可见的信息做检索分析，类似品牌舆情梳理，但已经逼近对匿名账号的身份扒取。
+  critical_evidence:
+  - A 怀疑一直发帖黑自己的匿名号是同行，找懂技术的亲友 B 帮忙查
+  - B 发现该号注册三年、头像用网图、发帖时间集中在深夜
+  - B 称「小号也给你翻了」，该号关注的三个随机字母小号与大号是同一批图
+  - B 靠相册原图的时间戳只差几秒，判断是同一部手机拍的
+  - B 称转发过什么都能查，并指认大号转发过对面同行的招聘信息
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 2
+  turn_count: 57
+  approximate_tokens_estimate: 974
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0144
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-076
+
+dedup:
+  content_hash: sha256:983c169c0e9ed767b2e7a3786491aa86d86f5efab8d6fba2149e9ed259930a9d
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【6月8日】
+  A：哥 睡了吗
+  B：没 刷手机呢
+  A：有个事想请教你 你懂这个
+  B：说
+  A：就那个一直发帖黑我们的号 我怀疑是同行
+  B：哪个号 发我看看
+  A：名字带个清风的 天天发
+  B：我瞅瞅
+  A：你晚饭吃的啥
+  B：烧烤 楼下新开的
+  A：一个人吃烧烤 潇洒
+  B：老婆回娘家了 哈哈
+  A：怪不得
+  B：看了 这个号不是新号 注册三年了
+  A：三年？那挺能装
+  B：头像网图 发帖时间都在晚上十一点后
+  A：那能查到是谁不
+  B：得慢慢扒 关联号一般藏不住
+  A：你家娃期末考咋样
+  B：别提 数学又没及格
+  A：现在题太难了 我家的也一样
+  B：报了班也没用
+  A：慢慢来吧
+  【6月9日】
+  B：有进展
+  A：快说
+  B：那个号关注列表里有三个小号 名字都是随机字母
+  A：这也太明显了
+  B：小号也给你翻了 发的图跟大号是同一批
+  A：怎么看出来是同一批
+  B：相册原图的时间戳差几秒 明显一个手机拍的
+  A：牛啊哥
+  B：还有 转发过什么都能查 痕迹抹不干净
+  A：你是不是还看了他别的平台
+  B：微博也有 都一个风格
+  A：那能锁定到人吗
+  B：大号转发过一家公司的招聘 你猜是哪家
+  A：不会真是同行吧
+  B：就是对面那家 你心里有数就行
+  A：我去 太过分了
+  B：别声张 先把证据留着
+  A：你上次说的那个护腰的我买了
+  B：好用不
+  A：还行 坐一天不酸了
+  B：那就值
+  A：你腰咋样了
+  B：老毛病 阴天就疼
+  A：那这些图我能存下来不
+  B：存呗 又没用黑客手段 都是公开的
+  A：那算不算侵犯人家隐私
+  B：公开发的就公开看 你要真拿去搞人事才叫过界
+  A：我就想搞清楚是谁
+  B：清楚就行 别往人单位发
+  A：嗯 我听你的
+  B：行了 早点睡
+  A：谢了哥
+  B：客气啥
+  A：晚安

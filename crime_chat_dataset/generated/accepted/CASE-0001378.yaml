@@ -1,0 +1,120 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001378
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-a605227018e12a21
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 试图借 B 的公司内部接触机会取得同事联系方式、离职名单或简历库内容，并提出按份付费；B 只透露概况或拒绝交付资料。
+  critical_evidence:
+  - A 提出索取整个部门联系方式或离职名单，并提及按份购买简历。
+  - B 说明通讯录和简历含同事个人信息，未经授权不能共享。
+  - A 以招聘/猎头合作名义提出小额整理费；B 未交付完整名单或联系方式。
+  - B 引导 A 通过公开招聘或授权渠道接触候选人。
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 5
+  turn_count: 42
+  approximate_tokens_estimate: 949
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0152
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-079
+
+dedup:
+  content_hash: sha256:2064fb9ac3627c91a2d935a824c2f5ee69875409044fc0be74c9657eac8cbc9e
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【9月3日】
+  A：陈经理，招聘季到了，能把整个部门的联系人整理给我吗？
+  B：内部通讯录不能直接给外面，得问每个人授权。
+  A：我不是发广告，想按简历方向联系几位合适的人。
+  A：家里问你端午回不回去。
+  B：看排班，周六应该能走。
+  A：我可以顺路接你。
+  B：先别定，我确认完车票再说。
+  A：我爸还说要带点自家种的菜。
+  B：那我回去前给你发消息。
+  【9月4日】
+  B：那也不能把电话和简历库打包卖给你。
+  A：先给离职名单那部分吧，我按份结算，后续再谈。
+  B：我只核对了一个离职意向，没有给你整份名单。
+  B：最近睡得怎么样？你上次说肩膀不舒服。
+  A：好点了，换了枕头。
+  B：我设了个提醒，每小时起来活动一下。
+  A：挺好，别等疼了才想起来。
+  B：别老坐着不动，起来走走。
+  【系统消息】A 向 B 转账 200 元，已收款。
+  【9月5日】
+  A：知道啦，今天已经出去买咖啡了。
+  A：那我按顾问费转你一点，资料也发我。
+  B：费用收了，资料不会发。你要找人请走公开招聘渠道。
+  A：我这边只收到概况，没有号码。
+  B：对，别把同事联系方式当商品。
+  B：鞋盒还留着，真不舒服还能换。
+  A：那就再走两天看看。
+  A：你上次买的鞋尺码合适吗？
+  【9月6日】
+  B：合适，就是颜色比图片深一点。
+  A：网购都这样，留着穿吧。
+  B：嗯，通勤挺舒服的。
+  A：你那边忙完了吗？
+  B：差不多了，等会儿回你。
+  A：你那边忙完了吗？
+  B：差不多了，等会儿回你。
+  A：行，不急。
+  B：刚把表格交了。
+  【9月7日】
+  A：辛苦，喝点水。
+  B：嗯，桌上有杯子。
+  A：你那边忙完了吗？
+  B：差不多了，等会儿回你。
+  A：行，不急。
+  B：刚把表格交了。
+  A：辛苦，喝点水。
+  B：嗯，桌上有杯子。

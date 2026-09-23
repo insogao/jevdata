@@ -1,0 +1,142 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001302
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-89cbb6157348161e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 请求学校工作人员 B 私下查非本人监护范围内学生的成绩档案，提出红包并索要截图；B 拒绝调阅或泄露个人教育信息，建议由监护人走正式查询流程。
+  critical_evidence:
+  - A 请求私下查他人成绩档案
+  - A 提到红包并索要截图
+  - B 拒绝查看、截图或传播他人的成绩与升学信息
+  - B 建议有权限的监护人通过学校正式渠道申请
+  benign_alternatives:
+  - 家长查询自己孩子
+  - 学校官方查询
+
+attributes:
+  duration_days: 3
+  turn_count: 67
+  approximate_tokens_estimate: 1023
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0142
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-075
+
+dedup:
+  content_hash: sha256:8d23f341cb11e65cba2558cee6ff0901c5676ac2e450f0db3fdd7b2c721ea1af
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【9月5日】
+  A：在吗，想确认个事
+  B：在，你说
+  A：我刚忙完手头工作
+  B：好，不急
+  A：午饭吃什么呀
+  B：楼下新开的面馆还行
+  A：我想吃清淡一点
+  A：我明早先开个会
+  A：我明早先开个会
+  B：有番茄汤底
+  A：那中午去试试
+  B：好，我也下楼
+  B：那晚些时候对一下
+  B：那晚些时候对一下
+  A：我明早先开个会
+  A：我明早先开个会
+  B：那晚些时候对一下
+  A：我明早先开个会
+  A：能不能帮我看看另一位学生的成绩档案
+  B：那晚些时候对一下
+  B：你是他的监护人吗
+  A：不是，班主任系统点一下就行
+  B：我不能私下查看他人档案
+  A：我明早先开个会
+  B：那晚些时候对一下
+  【9月6日】
+  B：好，结束了再联系
+  B：好，结束了再联系
+  A：行，不耽误你
+  A：行，不耽误你
+  A：今早风挺大的
+  B：好，结束了再联系
+  B：好，结束了再联系
+  B：还飘了点小雨
+  A：我差点忘带伞
+  B：下班看天气再走
+  A：预报说傍晚会停
+  B：那就好，路上小心
+  A：行，不耽误你
+  B：好，结束了再联系
+  A：行，不耽误你
+  B：好，结束了再联系
+  A：红包已发，截图给我就行
+  B：我不会收这个，也不会截图或泄露成绩
+  A：只是想问升学情况
+  B：这也需要授权，不能越过监护人
+  A：行，不耽误你
+  【9月7日】
+  A：下午应该空一点
+  A：下午应该空一点
+  B：没事，我这边也能安排
+  B：没事，我这边也能安排
+  A：下午应该空一点
+  A：下午应该空一点
+  B：没事，我这边也能安排
+  A：新买的杯子到了
+  B：怎么样好用吗
+  A：挺好，颜色比照片暗
+  B：实物有点色差正常
+  A：不漏水就行
+  B：那就值了
+  A：下午应该空一点
+  A：那正式查询要怎么走
+  B：请监护人联系学校公布的办公室
+  A：好，我去问家长
+  B：我可以给你公开的咨询渠道
+  B：没事，我这边也能安排
+  A：下午应该空一点
+  B：没事，我这边也能安排

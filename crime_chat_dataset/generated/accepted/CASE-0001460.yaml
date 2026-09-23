@@ -1,0 +1,151 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001460
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-7fc05090b98ffe1c
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 家长 A 借在中学教务处任职的高中同学 B，绕开学校合分与家长会的统一节奏，提前调取自家孩子月考的各科分数与班级排名，还顺势探听班级第一名给儿子『定目标』；B 明知教务系统查询留痕，仍用自己的口令进系统截图发人，靠『就这一次、不外传、快进快出』的私下约定把越权查询抹平。
+  critical_evidence:
+  - 月考成绩要等合分加家长会才发，A 找教务口的 B 想提前知道自家孩子分数与班级排名（第1天）
+  - B 说口令不能外借、自己进去点开看一眼就行，并拒收红包只肯收一杯奶茶（第1天）
+  - 第2天 B 把各科分数加班级排名截图发给 A，数学 128 分班级第七，A 提前拿到完整成绩（第2天）
+  - A 追问班级第一名的具体分数，B 口头透露 306 分、只比她儿子高十一分，但拒绝再发截图（第2天）
+  - B 提醒系统查询留痕、自己挑没人的时候快进快出，两人约定就这一次下不为例（第2天）
+  benign_alternatives:
+  - 家长提前了解自己孩子的考试成绩
+  - 学校教职人员对熟人的顺路帮忙
+
+attributes:
+  duration_days: 2
+  turn_count: 75
+  approximate_tokens_estimate: 2439
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0125
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-070
+
+dedup:
+  content_hash: sha256:e7449524a2af4a62bc01613f16a85dc7697d54336ae7aa485cbc51e7a4e4b64e
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【11月8日】
+  A：早啊 周六还去单位?
+  B：值个班 来得晚走得早
+  A：你们学校上周月考吧 我们家那位考完跟没事人一样
+  B：初三这周确实考了 成绩还得等年级那边合完
+  A：合完还要等家长会 这都半个月了 别的学校早出了
+  B：流程就这样 先任课老师看 再年级平衡 完了才发家长
+  A：我不是催你 就想提前知道个大概 他这学期状态忽上忽下
+  B：你想知道到什么程度
+  A：各科分数 班级排名 有个数我心里踏实
+  B：这个倒不难 成绩在教务系统里就摆着 就看合不合适进去看一眼
+  A：太合适了 你在教务口 这不是顺手的事嘛
+  B：顺手是顺手 口令不能外借 我自己进去点开看一眼
+  A：那多不好意思 回头我给你发个红包
+  B：红包就打住啊 收了这事就变味了 你请我喝杯奶茶就行
+  A：奶茶管够 对了你早上来值班路上堵不堵 我刚从早市回来 人挤人
+  B：走小路 不堵 早市买什么好东西了
+  A：梭子蟹便宜 三十块四只 中午蒸了
+  B：会过日子 我们食堂师傅说这周蟹黄正肥
+  A：那改天给你带两只 值班吃
+  B：带带带 我蒸锅都带来了
+  A：想起来了他数学是不是还老样子 平时作业都对 一考就崩
+  B：我还没细看 别急 下午值班没事就去点一下 你等我信
+  A：好嘞 不催 你顺手就行
+  B：还有一说一 查出来是你家孩子的 咱知道就行 别发家长群 别跟班主任提
+  A：懂 我嘴严 又不是头一回求你办事
+  B：楼上又开始电锤了 我值班宿舍都在震
+  A：装修季都这样 我们隔壁栋上个月贴砖 贴了一整月
+  B：我都习惯了 睡个午觉跟打地鼠似的
+  A：哈哈你可以去值班室睡 那儿安静
+  B：值班室没床 趴桌上脖子疼
+  B：点进去了 你家孩子这次进步不小 你先听个大概 明天我把截图理给你
+  A：别卖关子 大概是多少
+  B：数学稳住了 班里中上 总排名往前蹿了十几名
+  A：真的假的 那臭小子回家还装死
+  B：悬念留到明天 截图来了你自己细品
+  A：行 吊人胃口 你这班值出悬念来了
+  A：对了寒假有想法没 我在琢磨带他出去走走
+  B：冰雪那线路今年火 你们敢不敢凑热闹
+  A：怕人多 再看看 他假期还有补习班占着
+  B：那就省内泡个温泉 孩子也乐意
+  【11月9日】
+  B：早 截图理好了 科目分数加班级排名一张图 你看下
+  A：来了来了
+  B：[image：各科成绩与班级排名截图]
+  A：收到 我看 我看 这排名老母亲眼泪要下来了
+  B：先别激动 看数学 是不是稳了一大截
+  A：稳了 128 班里第七 他自己知道不
+  B：他要是知道你提前看了 回头家长会你俩对不上账
+  A：对不上就不对账 我就说我问老师去了
+  A：那个……再打听个事 他们班第一还是那个女孩吧 多少分
+  B：你这是想给儿子找参照物?
+  A：主要是他说班里有学霸 看看差多少 好定目标
+  B：差得不算多 这次她也就比他高十来分 你儿子这势头下学期有得追
+  A：那具体多少呢
+  B：306 他 295 就这点差距 但名字和单子我就不发了 你心里有数就行
+  A：行行 不发就不发 我就问这一句
+  B：就这一回啊 再多的问我也不敢说了 那系统看一眼都有记录
+  A：记录? 不是就查个成绩吗
+  B：查询留痕 谁点开过谁的 都在后台躺着 我这是看在老同学份上担着干系
+  A：那你以后还是别帮我干这种事 我不能坑你
+  B：一学期一次 我挑没人的时候看 快进快出 出不了事
+  A：那说好 就这一次 下不为例
+  B：嗯 你把图收好 别外传 有家长问起来就说过两天统一发
+  A：奶茶想要哪家的 我下午送校门口
+  B：值班室常点那家 杨枝甘露 大杯去冰
+  A：记下了 再给你带两只蟹 值班蒸着吃
+  B：你这么一说 我下午都好过了
+  A：对了 期中考完是不是也这样等半个月
+  B：差不多 不过你别找我了 我这胆子就这一回
+  A：行 你要真不方便我就等学校通知 领你情了
+  B：嗯 真急就盯家长会通知 反正差不了几天
+  B：螃蟹收到 蒸上了 香得很
+  A：配杨枝甘露齁不齁
+  B：齁不齁的 日子得过出滋味来
+  A：那必须 下回出分我请你吃大闸蟹 正经的
+  B：你先把这次的截图藏好
+  A：藏保险柜了 周一家长会见

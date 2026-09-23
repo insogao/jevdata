@@ -1,0 +1,138 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001218
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-e21a59c836438b27
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 想把匿名社交账号与现实身份对应并翻看过往内容；B 拒绝识别或曝光私人账号关联，只接受讨论经授权公开的品牌内容。
+  critical_evidence:
+  - A 要求关联匿名账号与现实身份
+  - A 提到小号和过往转发内容
+  - B 拒绝识别、汇总或曝光私人账号信息
+  - B 只接受经授权公开的品牌内容讨论
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 4
+  turn_count: 61
+  approximate_tokens_estimate: 1004
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0136
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-073
+
+dedup:
+  content_hash: sha256:aade045c677a4c42177bba9129516daeb9776d3b304a59b112da0a7e229ef1b5
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【9月14日】
+  A：在吗，想确认个事
+  B：在，你说
+  A：我刚忙完手头工作
+  B：好，不急
+  A：新买的杯子到了
+  B：怎么样好用吗
+  A：挺好，颜色比照片暗
+  A：我明早先开个会
+  B：实物有点色差正常
+  A：不漏水就行
+  B：那就值了
+  A：行，不耽误你
+  A：下午应该空一点
+  A：我明早先开个会
+  A：行，不耽误你
+  A：想把那个匿名账号和现实的人对上
+  B：你是要识别账号背后的个人吗
+  A：小号也想翻，之前转发过什么都想看看
+  B：我不帮忙识别或汇总私人账号内容
+  A：另外上次午饭AA我转你了，和刚才聊的事无关
+  【系统消息】A 向 B 转账 72 元，已收款。
+  B：收到了，是午饭分摊，谢谢
+  【9月15日】
+  B：好，结束了再联系
+  B：没事，我这边也能安排
+  A：今天会开得有点久
+  B：我这边刚忙完
+  A：材料我晚点再过一遍
+  B：行，明早发也来得及
+  A：好，先歇会儿
+  B：那晚些时候对一下
+  B：嗯，别太晚
+  B：好，结束了再联系
+  B：没事，我这边也能安排
+  A：只是在小范围聊聊
+  B：私下整理也会越过隐私边界
+  A：品牌官方内容可以看吧
+  B：可以，只限经授权公开的信息
+  【9月16日】
+  A：下午应该空一点
+  A：我明早先开个会
+  A：行，不耽误你
+  A：下午应该空一点
+  A：周末可能回家一趟
+  B：车票看了吗
+  A：晚上查查
+  B：早点买选择多
+  A：嗯，回去吃顿饭
+  B：路上注意安全
+  A：我明早先开个会
+  A：那个人的账号我不碰了
+  B：好，避免把匿名内容和身份连起来
+  A：我们只看品牌公告
+  B：可以，范围限定在获准公开的材料
+  【9月17日】
+  B：那晚些时候对一下
+  B：好，结束了再联系
+  B：没事，我这边也能安排
+  B：那晚些时候对一下
+  A：肩膀最近有点酸
+  B：坐太久了吧
+  A：这几天会议多
+  B：中间记得起来动动
+  A：我下午去走走
+  B：好，别一直盯屏幕

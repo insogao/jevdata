@@ -1,0 +1,117 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001364
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-b29d216e6731312b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 想借助熟人接触前同事的联系方式和简历资料，对方提出整部门电话、离职名单及按份提供简历的说法；B 提醒先核实本人授权，双方最终没有传递名单，仍保留猎头正常触达的可能。
+  critical_evidence:
+  - A 提到有人愿意按批提供整个部门电话。
+  - 对话出现离职名单和简历按份卖的说法。
+  - B 指出旧通讯录不等于授权，建议仅联系主动报名或同意被联系的人。
+  - A 暂缓传递名单，转而索取岗位信息并让本人自愿联系。
+  benign_alternatives:
+  - 猎头通过公开招聘信息正常联系求职者
+  - 员工授权共享通讯录或主动报名
+
+attributes:
+  duration_days: 4
+  turn_count: 41
+  approximate_tokens_estimate: 1316
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0150
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-078
+
+dedup:
+  content_hash: sha256:37520777729f7e4f309401b21f8f1cb162ac98a3047013b9f8621cf24227409b
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【5月3日】
+  A：最近有个猎头合作方问我有没有以前团队的联系方式。
+  B：是有人自己留过简历的那批吗？
+  A：他问整个部门电话，说省得一个个找。
+  B：先确认本人愿不愿意被联系吧，旧表不代表现在授权。
+  B：今天午饭你吃了吗？
+  A：刚吃完，楼下那家面馆换菜单了。
+  B：好吃吗，我下午也想去。
+  A：番茄牛腩还行，别点他们的冰饮。
+  A：最近有几个人问我换工作的事，你那边是不是还留着以前那份部门通讯表？
+  B：有旧的工作表，里面是大家以前自己填的联系方式。
+  A：有人说整部门电话都能按批给，我想确认下你听没听过。
+  【5月4日】
+  B：听过猎头会按岗位找人，但整份表最好先问清授权。
+  A：周末天气看着不错，想出去走走。
+  B：我也想，最近一直在办公室坐着。
+  A：河边那段步道修好了，傍晚人少。
+  B：那我带水，走一圈就回来。
+  A：离职名单你也还看得到吧？简历按份卖这种说法我觉得有点不靠谱。
+  B：离职的就更要小心，不能因为以前同事就默认同意。
+  A：我只是想问问渠道，不一定要发。
+  B：那就用公开招聘页或者让有意向的人自己留资料吧。
+  A：对方刚才又催了一次，说只内部看看。
+  【5月5日】
+  B：内部也要有依据，不能把熟人关系当许可。
+  B：我妈问我买的收纳盒到了没。
+  A：到了吧？我上次看你发过快递消息。
+  B：到了，尺寸刚好，终于不用堆桌上。
+  A：不错，我也得把书桌理一下。
+  A：有个合作方让我把几个人的电话先给他，说省得一个个问。
+  B：要是没同意，我不建议直接给。猎头正常触达也应该从公开简历或本人授权来。
+  A：嗯，先让他发岗位和公司介绍，我转给愿意聊的人。
+  B：这样稳妥，别把旧通讯录当资源包。
+  A：他又催我今天给名单了。
+  【5月6日】
+  B：你可以回他说先确认每个人愿不愿意被联系。
+  A：我回了，暂时不传整份。
+  B：好，有人主动报名再介绍就行。
+  A：我回他说先把岗位说明发来，谁有兴趣谁自己联系。
+  B：这样可以，离职名单和旧通讯录都先别转。
+  A：嗯，暂时不传整份，也没给任何人电话。
+  B：那至少先把授权这步补上。
+  B：我妈问我买的收纳盒到了没。
+  A：到了吧？我上次看你发过快递消息。
+  B：到了，尺寸刚好，终于不用堆桌上。

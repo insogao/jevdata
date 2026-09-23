@@ -1,0 +1,140 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001375
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-db2c044b45cae95d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 试图让 B 将公开社交内容与匿名账号关联，借相册时间、转发习惯等线索猜测个人身份并对外曝光；B 只谈公开内容或明确拒绝识别个人。
+  critical_evidence:
+  - A 请求把匿名账号与某个现实个人关联，并提及公开相册时间或转发记录。
+  - B 提醒公开线索不足以确认身份，拒绝提供可能定位个人的细节。
+  - A 想将关联结果发到群聊/帖子或让他人认出对象。
+  - B 拒绝私下收钱或提供身份线索，建议只讨论公开内容；安全对照案仅做匿名话题统计。
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 4
+  turn_count: 64
+  approximate_tokens_estimate: 1210
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0152
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-079
+
+dedup:
+  content_hash: sha256:ccb490061bcbc17cc8136afb405e43f9d4dd7052bd67901de0a41dee608d2454
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【9月8日】
+  A：客户要做品牌舆情回顾，想把公开帖子按话题归个类。
+  B：可以，只统计公开内容，不追账号背后的个人。
+  A：对，别列账号，也不需要照片时间这些细节。
+  A：家里问你端午回不回去。
+  B：看排班，周六应该能走。
+  A：我可以顺路接你。
+  B：先别定，我确认完车票再说。
+  A：我爸还说要带点自家种的菜。
+  B：那我回去前给你发消息。
+  B：那我做一份不带用户名的主题统计。
+  A：小号关联那块不做，避免误伤。
+  B：嗯，匿名用户身份不作判断，只看帖子本身。
+  B：最近睡得怎么样？你上次说肩膀不舒服。
+  A：好点了，换了枕头。
+  B：我设了个提醒，每小时起来活动一下。
+  A：挺好，别等疼了才想起来。
+  【9月9日】
+  B：别老坐着不动，起来走走。
+  A：知道啦，今天已经出去买咖啡了。
+  A：按项目流程走，费用从公司预算出。
+  B：不用私下转账，我走正式报销。
+  A：收到，交付只要趋势和公开来源链接。
+  B：明白，结果不会包含个人线索。
+  B：鞋盒还留着，真不舒服还能换。
+  A：那就再走两天看看。
+  A：你上次买的鞋尺码合适吗？
+  B：合适，就是颜色比图片深一点。
+  B：下次我带你去试试，听说新换了厨师。
+  A：好啊，等我这周忙完。
+  A：网购都这样，留着穿吧。
+  B：嗯，通勤挺舒服的。
+  A：中午吃啥？楼下那家面馆开门了。
+  B：我刚吃过，今天带了饭。
+  【9月10日】
+  A：又是自己做的？
+  B：昨晚剩的咖喱，微波一下还行。
+  A：你那边忙完了吗？
+  B：差不多了，等会儿回你。
+  A：辛苦，喝点水。
+  B：嗯，桌上有杯子。
+  A：你那边忙完了吗？
+  B：差不多了，等会儿回你。
+  A：行，不急。
+  B：刚把表格交了。
+  A：辛苦，喝点水。
+  B：嗯，桌上有杯子。
+  A：你那边忙完了吗？
+  B：差不多了，等会儿回你。
+  A：行，不急。
+  B：刚把表格交了。
+  【9月11日】
+  A：辛苦，喝点水。
+  B：嗯，桌上有杯子。
+  A：你那边忙完了吗？
+  B：差不多了，等会儿回你。
+  A：行，不急。
+  B：刚把表格交了。
+  A：辛苦，喝点水。
+  B：嗯，桌上有杯子。
+  A：你那边忙完了吗？
+  B：差不多了，等会儿回你。
+  A：行，不急。
+  B：刚把表格交了。
+  A：辛苦，喝点水。
+  B：嗯，桌上有杯子。
+  A：你那边忙完了吗？
+  B：差不多了，等会儿回你。

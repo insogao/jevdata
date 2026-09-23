@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001332
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-8f1063e07011a06d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 陌生招聘中介以合作为由索取同事联系方式和简历名单；对方坚持只使用本人授权的候选人资料。
+  critical_evidence:
+  - 对方试探获取未经授权的部门联系方式、员工简历或离职名单
+  - 招聘需求被用作索取资料的表面理由
+  - 聊天另一方拒绝提供，转向公开岗位及候选人授权流程
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 6
+  turn_count: 48
+  approximate_tokens_estimate: 910
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0151
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-078
+
+dedup:
+  content_hash: sha256:489e38b196c80ac43eb34302b576fe4090fcf851b8bbc4334332f3f8e517b7dc
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【9月3日】
+  A：你好，听说你们部门近期有人离职
+  A：我们不讨论员工个人情况
+  B：有整个部门电话，做个触达名单很快
+  【系统消息】B 向 A 转账 38 元，已收款。
+  A：奶茶钱收到了，刚才你垫的我补给你了。
+  A：联系方式不能未经同意转给外部
+  B：简历按份卖的资源我能给你
+  A：你家猫好点了吗
+  B：好多了，已经肯吃饭
+  A：那就放心了
+  B：医生让再观察两天
+  【9月4日】
+  A：我补充一句，别误会
+  A：不需要，候选人自己提交即可
+  B：离职名单给个大概也行
+  A：这类信息我们不会分享
+  B：我只是帮你们补人，省点时间
+  A：可以转发公开岗位链接
+  A：午饭订哪家
+  B：我选了那家盖饭
+  A：别加香菜，记得备注
+  B：放心我也不吃香菜
+  【9月5日】
+  A：你有空再回我就行
+  A：那你给我HR私人号码呢
+  B：请用网站上的公共联系入口
+  A：我把那份表删掉了
+  B：谢谢，也别再转发
+  A：明白，以后只发公开职位
+  A：最近在看什么剧
+  B：一部轻松的生活剧
+  A：好看吗，别太虐就行
+  B：不虐，适合下饭
+  【9月6日】
+  A：今天那边有新消息吗
+  A：下班要买菜吗
+  B：买点青菜和鸡蛋
+  A：我冰箱还有豆腐
+  B：那我顺路带点水果
+  【9月7日】
+  A：我把范围重新想了下
+  A：你家猫好点了吗
+  B：好多了，已经肯吃饭
+  A：那就放心了
+  B：医生让再观察两天
+  B：别把猜测写成事实
+  【9月8日】
+  A：最后确认一下
+  A：午饭订哪家
+  B：我选了那家盖饭
+  A：别加香菜，记得备注
+  B：放心我也不吃香菜
+  B：那我只留公开且必要的部分
+  B：就按公开、授权、和讨论本身有关的范围来，其他内容我不参与。

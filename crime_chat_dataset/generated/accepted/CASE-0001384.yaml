@@ -1,0 +1,119 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001384
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-e8d9e4919726a463
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 招聘中介试探取得未经明确授权的部门联系方式和旧简历并转卖；对方说明授权边界，建议只用公开招聘渠道。
+  critical_evidence:
+  - 询问能否拿到整个部门电话及旧简历
+  - 明确提及简历按份出售的想法
+  - 提及离职名单仍属于个人资料，不能因离职而转用
+  - 对方说明需要明确授权，推荐公开招聘渠道
+  - 对方停止传递旧表格并改用公开岗位链接
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 6
+  turn_count: 40
+  approximate_tokens_estimate: 1314
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0153
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-079
+
+dedup:
+  content_hash: sha256:443e49d51eb65f6a20f818cbdf263c814ff8629b074bc53ed26e673add3fec97
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【9月1日】
+  A：你好，看到你做招聘助理，想问下你手里有团队联络资源吗？
+  B：如果是公开招聘信息可以聊，个人通讯录要看授权范围。
+  A：我想要整个部门电话，方便介绍岗位，不用你挨个打招呼。
+  B：部门电话不代表每个人同意被外部联系，这个我不能提供。
+  A：这两天一直下雨，你那边也降温了吗？
+  B：早晚凉了，我把薄外套翻出来了。
+  A：我昨天忘带伞，回家一路都湿了。
+  B：哈哈我包里常年放把折叠伞。
+  A：看到了，我会把职位职责和薪资写完整。
+  【9月2日】
+  B：候选人主动投递后再联系，流程简单也清楚。
+  A：行，之前那份旧表我已经删掉了。
+  【9月3日】
+  A：以前合作的人留下过一批简历，简历按份卖也有人问。
+  B：简历里有个人信息，候选人只同意招聘用途的话不能转卖。
+  A：有些人已经离职了，离职名单也许就没那么敏感吧？
+  B：离职不等于授权。你可以用招聘平台公开简历或等本人投递。
+  A：你上次说的那盆绿萝还活着吗？
+  B：活着，就是新叶长得慢。
+  A：少浇水，最近屋里不太通风。
+  B：好，我挪到窗边试试。
+  B：涉及个人资料的文件记得按公司流程处理。
+  A：收到，谢谢你提醒。
+  【9月4日】
+  A：明白，我是想省点时间，没想给人添麻烦。
+  B：那就发公开岗位链接，想了解的人会自己联系。
+  A：你说得对，通讯录共享也得有明确授权，不是存着就能用。
+  B：是的，最好把授权用途写清楚，撤回也要能处理。
+  A：我妈最近迷上了做面包，家里全是面粉。
+  B：自己做的香是香，就是收拾台面麻烦。
+  A：她还让我买了个小秤，感觉要开店了。
+  B：哈哈做着玩挺好，记得少放糖。
+  B：公开招聘页我发你邮箱了，介绍时用这个链接就行。
+  A：看到了，我会把职位职责和薪资写完整。
+  【9月5日】
+  B：公开招聘页我发你邮箱了，介绍时用这个链接就行。
+  【9月6日】
+  A：我把刚才那张表先撤掉，不再转给其他人。
+  B：谢谢。招聘需求我可以帮你转发公开版。
+  A：岗位要求我整理好了，不带任何候选人资料。
+  B：这样就可以，薪资范围也标一下比较清楚。
+  A：通勤那条路修好了，今天终于没堵。
+  B：太好了，我早上绕了半天。
+  A：导航还没更新，差点把我带进小巷。
+  B：我现在看路牌，不太信导航了。

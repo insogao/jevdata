@@ -1,0 +1,93 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001330
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-af0796abfebee6e1
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 陌生人以招聘顾问名义试探获取企业员工联络资料和简历，助手只提供公开招聘渠道。
+  critical_evidence:
+  - 对方试探获取未经授权的部门联系方式、员工简历或离职名单
+  - 招聘需求被用作索取资料的表面理由
+  - 聊天另一方拒绝提供，转向公开岗位及候选人授权流程
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 2
+  turn_count: 20
+  approximate_tokens_estimate: 394
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0151
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-078
+
+dedup:
+  content_hash: sha256:9d55613a985bdd8b0deedb81add3fa9cd059f2cf06a9d9bbd48ab26d5785a750
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【9月7日】
+  A：你好，看到你们在招运营吗
+  A：有岗位介绍页，你可以直接看
+  B：我想先联系整个部门电话，效率高
+  A：员工电话没有对外授权
+  B：离职名单也有的话更好筛
+  A：早，路上堵不堵
+  B：主路有点慢
+  A：我改坐地铁了
+  B：今天风挺大的
+  【9月8日】
+  A：我补充一句，别误会
+  A：这个不能提供，候选人需要自己投
+  B：简历按份卖的我也能介绍
+  A：我们不收来源不明的简历
+  B：只是先聊聊，不会打扰太久
+  A：未经同意不适合联系
+  A：你上次说的面包店
+  B：买到了，奶油不腻
+  A：下次给我带一个
+  B：好，记住了
+  B：就按公开、授权、和讨论本身有关的范围来，其他内容我不参与。

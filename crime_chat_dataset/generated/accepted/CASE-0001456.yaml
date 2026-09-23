@@ -1,0 +1,141 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001456
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-98af3cb3ae25a35e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 私下做内推生意的老销售 A 以一顿一顿的软磨硬泡，让入职不久的人事薪酬助理 B 用工作权限把最近提离职员工的名单拍照给他，按份五十计价并许诺月月来一单，B 半推半就发了第一份名单，实为同事间长期交易公司内部人事信息。
+  critical_evidence:
+  - A 在电梯偶遇后的闲聊里点题：让 B 借工作系统给他翻那本全公司的册子（8月19日）
+  - A 报出老规矩的价格：那种纸一份五十，B 点破导出有记录、这在她们岗位叫泄密（8月20日）
+  - A 改口只看提了走人的那几个，B 承认这批她经手、说想想（8月21日）
+  - B 发出一周内三个提离职员工的名单截图，叮嘱只此一张别外发（8月22日）
+  - A 顺势提出月月来一单、一份五十赚奶茶钱，B 划线只给提离职的、在职的一个字不能出（8月22日）
+  benign_alternatives:
+  - 同事间的正常信息互通
+  - 内推跳槽的行业常态交流
+
+attributes:
+  duration_days: 4
+  turn_count: 62
+  approximate_tokens_estimate: 1665
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0124
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-069
+
+dedup:
+  content_hash: sha256:6411778c6954e36a06d4e8358d0f8c816e120c3f6d50bb4f15f07ed6701a915e
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【8月19日】
+  A：中午电梯里跟你打招呼你没听见 想啥呢
+  B：想报销单的事 电梯里跟梦游一样 哈哈
+  A：你们人事的报销单还用愁 又不用垫钱
+  B：垫了 上回团建烧烤 差价还是我垫的
+  A：对 175那笔 我一直说还你
+  B：不急 一百来块 哈哈
+  A：对了 中午说的话 别当耳旁风
+  B：中午说什么了
+  A：册子啊 你手头那本 全公司的
+  B：哥 我那是工作系统 不是什么册子
+  A：系统也行 借我翻两页的事
+  B：我上班去了啊 哈哈
+  A：说真的 上回烧烤那家不错 下次团建还去
+  B：行啊 反正你们销售部出钱 哈哈
+  A：销售部请客天经地义 烤茄子必点
+  B：你上次一个人干掉两份 还说不饿
+  A：年轻人饭量你别质疑
+  B：行行 你赢了
+  【8月20日】
+  A：想好了没 上回说的 那种纸一份五十 价照旧
+  B：哥 我转正才仨月 系统里每次导出都有记录的
+  A：谁让你导出了 拍照 跟你自拍一个按法
+  B：你越说越吓人了
+  A：吓什么 这行当谁不这么周转 就是个信息差
+  B：信息差 搁我们这叫泄密 哥
+  B：油价又涨了 你开车上班一个月油费多少
+  A：一千出头 所以我在琢磨拼车 你顺路不
+  B：我坐地铁 地铁多香 空调还足
+  A：夏天你是香 秋天挤成相片你就哭了
+  B：哈哈那我秋天再哭
+  A：到时候我拉你 一天十块 交个油钱
+  【8月21日】
+  A：昨晚上话说重了 没生气吧
+  B：没有 就是我这岗位真不能乱来
+  A：那这样 只看提了走人的那几个 反正都要走 谁带谁走无所谓
+  B：提了离职的那批啊……这个我倒是经手
+  A：对 就这批 你就当帮我省点事
+  B：我想想 别催我
+  A：不催 你想
+  B：团建那175 你直接转我吧 哈哈 别拖了
+  A：这就转 你看 我说还就还
+  【系统消息】A 向 B 转账 175 元，已收款。
+  B：到了 谢啦 这下两清了
+  A：没两清 册子的事还欠着呢 哈哈
+  B：你这人
+  B：你那个健身房年卡去几次了 别又白办
+  A：去了四次 均一次四百 越算越亏
+  B：哈哈哈四百一次 你不如请私教
+  A：所以我决定了 明天开始一周三去 你监督
+  B：行 我看你朋友圈打卡 断一次罚十块
+  A：这罚法 我宁可去健身
+  【8月22日】
+  B：拍好了 就三个 最近一周提的 手续都走一半的
+  B：[image：离职交接名单截图 一张 三个人名与所属部门]
+  B：就这一张 你存好别外发
+  A：好嘞 老周要的正是这批 你帮大忙了
+  B：下不为例啊 说好的就这一次
+  A：一次就一次 要是好用 下月再帮我留意一茬
+  B：月月来? 你可真敢想
+  A：你想想 一份五十 一个月一单 你奶茶钱不就有了
+  B：先说好 我只给提了走人的 在职的一个字都不能从我手里出去
+  A：懂规矩就好 咱这叫信息共享
+  B：你少给我戴高帽 哈哈
+  A：对了 下周组局烧烤 你来不来
+  B：来 但这回你别垫钱 让销售部直接挂账
+  A：挂账挂账 争取把财务那姑娘也叫上
+  B：你少打我们财务的主意 哈哈

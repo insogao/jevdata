@@ -1,0 +1,139 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001425
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-54b65ba00edcabfd
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: privacy_doxxing
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A 被人骗钱拉黑，托有论坛后台权限的李哥 B 帮他扒出匿名号背后的真实身份。B 利用后台注册信息和公开的相册原图时间戳、转发记录做账号关联，锁定对方大概位置，A 为此转账一千二作为报酬。谈话以「帮你查清楚」为名，实质是有偿对匿名账号的人肉定位。
+  critical_evidence:
+  - A 为查被拉黑骗钱者的真实身份，请有论坛后台权限的 B 帮忙扒号
+  - B 称两个常用号发帖风格一致、头像同套图，判断是同一人
+  - B 用后台注册信息发现「小号也给你翻了」，小号与大号注册手机尾号相同
+  - B 靠相册原图时间戳推断位置，并通过转发历史查到对方在城南一家物流公司
+  - A 以一千二作为报酬转给 B，并要求不留自己名字
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 6
+  turn_count: 59
+  approximate_tokens_estimate: 954
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 2
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0144
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-076
+
+dedup:
+  content_hash: sha256:9c6dea6ae8dbb802b21a6dd68569bcbc0bf615938ca224e71ee28d67a9ce8931
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【9月1日】
+  A：李哥在吗
+  B：在 说
+  A：上次群里那个事 你还记得吧
+  B：记得 骗你钱那个
+  A：对 他把我拉黑了 换了号还在活跃
+  B：你想咋办
+  A：想弄清楚他到底是谁
+  B：这个我能弄 但你别声张
+  A：李哥吃饭没
+  B：刚吃完 你呢
+  A：啃了个面包 没胃口
+  B：为那点钱不值当
+  A：不是钱的事 是气
+  B：懂
+  【9月2日】
+  B：给我他常用那两个号
+  A：发了 一个是群里的 一个是他私聊我的
+  B：两个号发的东西风格一样
+  A：所以是一个人？
+  B：大概率 头像用的同一套图
+  A：今天台风 你那没事吧
+  B：风大 窗户咣当
+  A：我们这边停课了
+  B：注意安全 别出门
+  【9月3日】
+  B：深挖了下 他还有个号
+  A：还有？
+  B：小号也给你翻了 注册手机是同一个尾号
+  A：你这么厉害
+  B：常规操作 论坛后台能看注册信息
+  A：那能看到他真实身份不
+  B：相册原图的时间 能定位大概位置
+  A：具体点
+  B：别急 得一步步来
+  A：你闺女上初中了吧
+  B：初二 叛逆得很
+  A：都一样 我家的也不听话
+  B：熬过这几年就好
+  【9月4日】
+  B：转发过什么都能查 他转过三条招聘
+  A：招聘？哪的
+  B：一家物流 城南那片
+  A：那他在城南？
+  B：至少在那上班
+  A：够了 我就要这个
+  B：前后弄了四天 你看这个数行不行
+  A：你说
+  B：一千二 我熬夜弄的
+  A：行 转你
+  【系统消息】A 向 B 转账 1200 元，已收款。
+  B：收到 我再给你整理成文档
+  A：别留我名
+  B：知道
+  【9月5日】
+  B：文档给你了 看看
+  A：收到 这些够我找他了
+  B：你自己把握 别搞出格的事
+  A：我就问问他啥时候还钱
+  A：你昨晚又是通宵？
+  B：习惯了
+  A：少熬 三十多的人了
+  B：嗯
+  【9月6日】
+  A：李哥 谢了 回头请你喝酒
+  B：行 到时候叫我

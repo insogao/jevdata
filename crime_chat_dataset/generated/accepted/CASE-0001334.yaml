@@ -1,0 +1,120 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001334
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-189d75ea3db1044c
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 中间人借家长关系探问另一名学生的考试档案，校方人员拒绝私下查询并引导监护人使用正式入口。
+  critical_evidence:
+  - 中间人打听非本人关系学生的成绩/档案
+  - 以班主任系统、红包或截图催促私下查询
+  - 工作人员拒绝查看或传递，要求监护人使用官方授权渠道
+  benign_alternatives:
+  - 家长查自己孩子
+  - 学校官方查询
+
+attributes:
+  duration_days: 5
+  turn_count: 43
+  approximate_tokens_estimate: 836
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0151
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-078
+
+dedup:
+  content_hash: sha256:7085e39b2985957f68f01ee21a016e9b57818b7d366180334a7fe784f35ce4b7
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【9月10日】
+  A：那位家长又来问分数了
+  A：是查自己孩子的吗
+  B：不是，是想比较下同年级情况
+  【系统消息】B 向 A 转账 38 元，已收款。
+  A：奶茶钱收到了，刚才你垫的我补给你了。
+  A：这种不能私下看别人的档案
+  B：班主任系统点一下就有吧
+  A：午休有空吗
+  B：想去买点水果
+  A：我这边有橙子，要不要分你几个
+  B：好呀，放茶水间就行
+  【9月11日】
+  A：我补充一句，别误会
+  A：系统权限也要按职责和授权用
+  B：红包已发，辛苦你帮忙
+  A：我已经退回去了
+  B：截图就行，名字我可以裁掉
+  A：分数本身也是学生隐私
+  A：最近天气忽冷忽热
+  B：早上还穿短袖，晚上要外套
+  A：我包里塞了件薄衫
+  B：我也是，空调房冷
+  【9月12日】
+  A：你有空再回我就行
+  A：我让她走学校统一查询
+  B：对，通知里有时间和入口
+  A：她说今天来不及
+  B：可以等开放时间，别私下转发
+  A：我不会查，也不会留截图
+  A：快递柜满了吗
+  B：刚取完，今天还挺顺
+  A：我那件衣服还在路上
+  B：晚点看下物流
+  【9月13日】
+  A：今天那边有新消息吗
+  A：知道了，我回她官方流程
+  A：周末想做什么
+  B：可能在家收拾书架
+  A：听着就累，记得休息
+  B：先整理一层吧
+  【9月14日】
+  A：我把范围重新想了下
+  A：午休有空吗
+  B：想去买点水果
+  A：我这边有橙子，要不要分你几个
+  B：好呀，放茶水间就行
+  B：别把猜测写成事实
+  B：就按公开、授权、和讨论本身有关的范围来，其他内容我不参与。

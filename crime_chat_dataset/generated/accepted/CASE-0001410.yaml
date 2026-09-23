@@ -1,0 +1,128 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001410
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000140
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-afc76ee1c7d7adba
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: other_illicit_coordination
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 包工头 A 在自家楼上违规加了半层，怕被查拆，托城管联系人 B 打点。B 承诺年前不会来查、把例行检查拦下来，A 则按「老规矩」送烟酒并转账八千作为好处费，双方约定有检查提前通气。表面是正规报建/物业装修沟通，实为违建免拆的利益输送。
+  critical_evidence:
+  - A 楼上违规加层已封顶，担心被查拆，找城管联系人 B 帮忙打点
+  - B 表示「年前不会来查」，让 A 放心，并称加层的事稳了
+  - B 说下周有个例行检查「我拦下来了」，要求别到处嚷嚷
+  - 双方约定按老规矩烟酒照旧，A 另转八千作为好处费
+  - A 承诺正月里不动工，并要 B 有检查提前吱一声
+  benign_alternatives:
+  - 正规报建流程
+  - 物业装修管理
+
+attributes:
+  duration_days: 4
+  turn_count: 50
+  approximate_tokens_estimate: 694
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: illegal_construction_bribe_inspect
+  risk: 2
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0144
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-076
+
+dedup:
+  content_hash: sha256:e04502b6a6e7a645392dadb3f3d8e9632bde4eaad8d5135143035ef090278ee1
+pipeline_status: accepted
+title: other_illicit_coordination/illegal_construction_bribe_inspect
+conversation: |-
+  【1月8日】
+  A：老周 忙不
+  B：还行 咋了
+  A：我那楼上的事 你知道的
+  B：哪个 加那层？
+  A：对 封顶了
+  B：你胆儿不小啊
+  A：这不找你了嘛
+  A：中午吃的啥
+  B：泡面
+  A：又泡面 你嫂子不管你？
+  B：管不住
+  A：哈哈 来我工地 我请你吃食堂
+  A：这天冷得邪乎
+  B：零下五度 谁遭得住
+  A：我工地都停工了 就等开春
+  B：开春再说吧
+  【1月9日】
+  A：老周 那边最近有啥动静没
+  B：年前不会来查 你放心
+  A：那就好 加层的事稳了？
+  B：稳 你自己别到处嚷嚷
+  A：我嘴严
+  B：嗯
+  A：你家小子期末考完了吧
+  B：考完了 天天在家打游戏
+  A：现在孩子都这样
+  B：拿他没办法
+  【1月10日】
+  B：我跟你说个事
+  A：你说
+  B：下周有个例行 我拦下来了
+  A：谢了老周
+  B：别光嘴上谢
+  A：懂的懂的 老规矩
+  B：烟酒照旧啊
+  A：给你备好了 还是那两样
+  A：你要的那款酒我问了 涨价了
+  B：涨多少
+  A：五十
+  B：那也买
+  A：行 我让人捎
+  B：年前就这一段 过了正月才动
+  A：明白 我正月里不动工
+  A：这点心意你先收着
+  【系统消息】A 向 B 转账 8000 元，已收款。
+  B：收到
+  A：后面还有 检查前记得提前吱一声
+  B：放心
+  【1月11日】
+  A：你腰还疼不
+  B：老毛病
+  A：我给你带两盒膏药
+  B：那就麻烦你了
+  A：客气啥

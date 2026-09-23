@@ -1,0 +1,308 @@
+{
+ "key": "b76c015",
+ "archetype_id": "ARC-000091",
+ "subtype": "split_transfer_chain",
+ "latent_intent": "A 找 B 帮忙过账：上游的资金进来后，用 B 名下的多个账户把一笔拆成二十来笔小额再转出去，B 按千分之五拿佣金，A 叮嘱到账就转、别在账上留太久。",
+ "critical_facts": [
+  "A 找 B 谈一桩帮忙过账的生意，说只需要用几个账户进进出出",
+  "A 要求一笔大额到账后当天拆成二十笔小额转出去，别整笔过",
+  "A 约定按千分之五给 B 抽佣，转得多拿得多",
+  "A 反复叮嘱到账就转出去，账户里别留余额，备注统一写成货款",
+  "B 试着做了一单，A 按约定把佣金转给 B"
+ ],
+ "benign_alternatives": [
+  "正常的批量付款与分账",
+  "群收款后的合理拆账"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "6月2日 21:10",
+   "speaker": "A",
+   "text": "老何 有桩跑腿的生意 你接不接"
+  },
+  {
+   "type": "message",
+   "time": "6月2日 21:13",
+   "speaker": "B",
+   "text": "什么跑腿 你说"
+  },
+  {
+   "type": "message",
+   "time": "6月2日 21:15",
+   "speaker": "A",
+   "text": "就是帮人过过账 你手上不是有好几个账户 借来用用"
+  },
+  {
+   "type": "message",
+   "time": "6月2日 21:18",
+   "speaker": "B",
+   "text": "过账 哪来的钱"
+  },
+  {
+   "type": "message",
+   "time": "6月2日 21:20",
+   "speaker": "A",
+   "text": "上面做生意收的钱 想分开放 你只管进出 别问来源"
+  },
+  {
+   "type": "message",
+   "time": "6月2日 21:23",
+   "speaker": "B",
+   "text": "我抽多少"
+  },
+  {
+   "type": "message",
+   "time": "6月2日 21:25",
+   "speaker": "A",
+   "text": "千分之五 一笔一万你拿五十 一天几十笔你自己算"
+  },
+  {
+   "type": "message",
+   "time": "6月2日 21:28",
+   "speaker": "B",
+   "text": "这么多 那具体怎么弄"
+  },
+  {
+   "type": "message",
+   "time": "6月2日 21:30",
+   "speaker": "A",
+   "text": "一笔进来别整笔转 拆开 一笔拆二十个 分到几个户头出去"
+  },
+  {
+   "type": "message",
+   "time": "6月2日 21:33",
+   "speaker": "B",
+   "text": "为啥要拆"
+  },
+  {
+   "type": "message",
+   "time": "6月2日 21:35",
+   "speaker": "A",
+   "text": "拆开才不显眼 整笔过谁都要多看两眼 这道理你懂"
+  },
+  {
+   "type": "message",
+   "time": "6月2日 21:38",
+   "speaker": "B",
+   "text": "那会不会查到我头上"
+  },
+  {
+   "type": "message",
+   "time": "6月2日 21:40",
+   "speaker": "A",
+   "text": "你就说是帮朋友代收货款 怕啥 又没写明是什么钱"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 09:30",
+   "speaker": "B",
+   "text": "我想了一晚上 还是有点怕"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 09:34",
+   "speaker": "A",
+   "text": "怕就别干这行 想挣钱就别怕 我先给你试一小笔"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 09:37",
+   "speaker": "B",
+   "text": "试多少"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 09:40",
+   "speaker": "A",
+   "text": "先来两万 你拆成二十笔一千的 转到我给的那几个户头"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 09:43",
+   "speaker": "B",
+   "text": "行 我试试"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 12:20",
+   "speaker": "B",
+   "text": "中午出去吃了个面 顺便把卡都确认了一遍"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 12:24",
+   "speaker": "A",
+   "text": "卡都要是能用的 别到关键时候掉链子"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 12:27",
+   "speaker": "B",
+   "text": "能用的 我平时都小额用着"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 14:00",
+   "speaker": "A",
+   "text": "钱到了 你查一下"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 14:05",
+   "speaker": "B",
+   "text": "到了 两万整"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 14:08",
+   "speaker": "A",
+   "text": "到账就转出去 别在账上留余额 备注都写货款"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 14:12",
+   "speaker": "B",
+   "text": "这么多户头我一下转不完 银行还可能限额"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 14:15",
+   "speaker": "A",
+   "text": "限额就分两天 但别过夜 剩下的先取出来存别的户"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 14:18",
+   "speaker": "B",
+   "text": "明白"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 18:00",
+   "speaker": "B",
+   "text": "转了十四笔 剩六笔晚上接着来"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 18:04",
+   "speaker": "A",
+   "text": "好 今晚必须清完 明早还有一笔进来"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 21:30",
+   "speaker": "B",
+   "text": "二十笔都转完了 户头里没留钱"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 21:34",
+   "speaker": "A",
+   "text": "干净 佣金一百我给你转过去"
+  },
+  {
+   "type": "transfer",
+   "time": "6月3日 21:38",
+   "from": "A",
+   "to": "B",
+   "amount": 100,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "6月3日 21:40",
+   "speaker": "B",
+   "text": "收到 一百"
+  },
+  {
+   "type": "message",
+   "time": "6月4日 10:00",
+   "speaker": "A",
+   "text": "今天这单大 五万 你多备几个户头 拆细一点"
+  },
+  {
+   "type": "message",
+   "time": "6月4日 10:04",
+   "speaker": "B",
+   "text": "五万拆二十个 一笔两千五 也行"
+  },
+  {
+   "type": "message",
+   "time": "6月4日 10:07",
+   "speaker": "A",
+   "text": "别整数 掺点零头 看着像正常付款"
+  },
+  {
+   "type": "message",
+   "time": "6月4日 10:10",
+   "speaker": "B",
+   "text": "懂了 我错开金额"
+  },
+  {
+   "type": "message",
+   "time": "6月4日 12:30",
+   "speaker": "B",
+   "text": "今天天热 跑银行出了一身汗"
+  },
+  {
+   "type": "message",
+   "time": "6月4日 12:34",
+   "speaker": "A",
+   "text": "辛苦 挣这个钱就这样 手别停"
+  },
+  {
+   "type": "message",
+   "time": "6月4日 15:40",
+   "speaker": "B",
+   "text": "有个户头今天被限制非柜面了 转不出去"
+  },
+  {
+   "type": "message",
+   "time": "6月4日 15:44",
+   "speaker": "A",
+   "text": "那个先停用 换个户头顶上 别硬转"
+  },
+  {
+   "type": "message",
+   "time": "6月4日 15:47",
+   "speaker": "B",
+   "text": "好 我换个"
+  },
+  {
+   "type": "message",
+   "time": "6月5日 09:15",
+   "speaker": "A",
+   "text": "这两天进出的数你记一份 月底跟你对"
+  },
+  {
+   "type": "message",
+   "time": "6月5日 09:19",
+   "speaker": "B",
+   "text": "记了 我记在一个小本上 没存手机"
+  },
+  {
+   "type": "message",
+   "time": "6月5日 09:22",
+   "speaker": "A",
+   "text": "聪明 别留电子的 出事最怕聊天记录"
+  },
+  {
+   "type": "message",
+   "time": "6月5日 21:00",
+   "speaker": "B",
+   "text": "老哥这生意能做多久"
+  },
+  {
+   "type": "message",
+   "time": "6月5日 21:04",
+   "speaker": "A",
+   "text": "做一天算一天 挣够了你我都能收手 别贪"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0001431",
+  "status": "accepted",
+  "errors": []
+ }
+}

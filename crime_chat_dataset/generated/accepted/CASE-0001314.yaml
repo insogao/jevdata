@@ -1,0 +1,128 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001314
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-024789340d093c6c
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 声称将 B 的匿名账号与本人关联，想在讨论区继续谈及；B 拒绝曝光或关联，要求撤回、停止传播并走平台隐私渠道。
+  critical_evidence:
+  - A 声称认出小号，并提及旧转发或相册原图时间，但不描述查找方法
+  - A 表示会在讨论区传播关联判断
+  - B 反对公开关联、要求撤回和停止传播
+  - 区分品牌公开舆情与针对个人的账号关联
+  benign_alternatives:
+  - 公开品牌舆情分析
+  - 本人授权的账号说明
+
+attributes:
+  duration_days: 5
+  turn_count: 50
+  approximate_tokens_estimate: 969
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0141
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-075
+
+dedup:
+  content_hash: sha256:27aa8be61f5e895b7ba32e083c0fbd9d3c186987dd4771eb14fe29b5b56d256d
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【7月3日】
+  A：有人把那串讨论发给我看了
+  B：关于品牌的公开讨论可以
+  A：午休有出去吃吗
+  B：在楼下买了个简餐
+  A：我今天自己带饭
+  B：挺好，清淡一点
+  A：我觉得那个小号是你
+  B：别把账号和我的身份对外关联
+  A：天气预报周末转晴
+  B：那可以去走走
+  【7月4日】
+  A：我正好想晒下太阳
+  B：记得带水
+  A：旧转发和原图显示时间都挺像
+  B：不要再据此推测或传播
+  A：最近通勤还顺吗
+  B：早上有点堵车
+  A：我换了条路，快一些
+  B：那挺好的
+  A：群里有人要我说清楚是谁
+  B：我不同意公开，麻烦撤回相关回复
+  【7月5日】
+  A：你上回推荐的电影看了吗
+  B：看了，节奏还不错
+  A：适合周末放松
+  B：是，不用想太多
+  A：回复删掉了
+  B：谢谢，我会通过平台隐私渠道反馈
+  A：办公室那盆绿植长新叶了
+  B：最近温度合适吧
+  A：我挪到窗边了
+  B：记得少浇点水
+  【7月6日】
+  A：之后不再提这个账号
+  B：公开舆情可以聊，个人不要带上
+  A：刚才午饭我先垫上了，按AA转我就行
+  【系统消息】B 向 A 转账 27 元，已收款。
+  B：按顺序处理就行，稍后再回
+  A：消息我已经看见，稍后再回
+  B：好，那先忙吧，稍后再回
+  A：我准备出门了，稍后再回
+  B：路上注意安全，稍后再回
+  A：我刚把日程排好了，稍后再回
+  B：好，别忘了留点空，稍后再回
+  【7月7日】
+  A：刚才去倒水了，稍后再回
+  B：我也起来活动一下，稍后再回
+  A：这事我晚点再确认，稍后再回
+  B：没问题，不着急，稍后再回
+  A：下午还有几件工作，稍后再回
+  B：按顺序处理就行，稍后再回
+  A：消息我已经看见，稍后再回
+  B：好，那先忙吧，稍后再回
+  A：我准备出门了，稍后再回
+  B：路上注意安全，稍后再回

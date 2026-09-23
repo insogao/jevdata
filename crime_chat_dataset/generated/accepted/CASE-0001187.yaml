@@ -1,0 +1,129 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001187
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-2481ab9506ca7c83
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 请求 B 越权查看其他学生的成绩或升学资料，并提出红包、只要截图；B 拒绝查询、收礼和转发，指向学校官方渠道。
+  critical_evidence:
+  - A 请求查看并非自己孩子的成绩或升学资料
+  - A 提出红包以换取资料并要求只发截图
+  - B 明确拒绝查询、收礼和转发学生资料
+  - B 区分家长通过学校官方渠道查询自己孩子资料
+  benign_alternatives:
+  - 家长通过学校官方渠道查自己孩子
+  - 学校公开发布的通知
+
+attributes:
+  duration_days: 5
+  turn_count: 52
+  approximate_tokens_estimate: 1283
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0132
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-072
+
+dedup:
+  content_hash: sha256:efeaaa9d98b8351beb0f413148a156bdadba4f7e4eab007b46a7268c3a051d4f
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【1月2日】
+  A：最近家长群在聊升学安排，我有个事想问
+  B：公开的申请流程我能解释
+  A：午饭后来得及吃吗
+  B：吃了点，今天还行
+  A：我中午带了便当
+  B：那挺方便的
+  A：能不能帮我看下别的学生的成绩档案
+  B：不能，我不能查看或透露其他学生资料
+  A：最近通勤还顺吗
+  B：早上那段有点堵
+  A：我今天骑车快一点
+  【1月3日】
+  B：天好时骑车挺舒服
+  A：我可以发个红包，只要截屏就好
+  B：心意不用，红包我不收，截图也不会发
+  A：家里那盆花开了
+  B：颜色好看吗
+  A：淡黄色的，挺清爽
+  B：记得拍张照留着
+  A：是想给孩子参考下，不会外传
+  B：家长只能通过学校正式渠道查自己孩子
+  A：好，那我问学校怎么申请
+  【1月4日】
+  B：可以，我把公开说明发你
+  A：谢谢，红包我不发了
+  B：嗯，学生资料要按规定保护
+  A：我刚忙完手头这点事，我等会儿再确认
+  B：辛苦了，喝点水，我等会儿再确认
+  A：下午还得确认一个安排，我等会儿再确认
+  B：好，按你节奏来，我等会儿再确认
+  A：手机刚才没看到提醒，我等会儿再确认
+  B：没事，现在看到了，我等会儿再确认
+  A：我记到日历里了，我等会儿再确认
+  B：这样比较不容易忘，我等会儿再确认
+  【1月5日】
+  A：我先去处理个工作消息，我等会儿再确认
+  B：行，晚点再聊，我等会儿再确认
+  A：外面风有点大，我等会儿再确认
+  B：那回去路上注意点，我等会儿再确认
+  A：我刚忙完手头这点事，我等会儿再确认
+  B：辛苦了，喝点水，我等会儿再确认
+  A：下午还得确认一个安排，我等会儿再确认
+  B：好，按你节奏来，我等会儿再确认
+  A：手机刚才没看到提醒，我等会儿再确认
+  B：没事，现在看到了，我等会儿再确认
+  【1月6日】
+  A：我记到日历里了，我等会儿再确认
+  B：这样比较不容易忘，我等会儿再确认
+  A：我先去处理个工作消息，我等会儿再确认
+  B：行，晚点再聊，我等会儿再确认
+  A：外面风有点大，我等会儿再确认
+  B：那回去路上注意点，我等会儿再确认
+  A：我刚忙完手头这点事，我等会儿再确认
+  B：辛苦了，喝点水，我等会儿再确认
+  A：下午还得确认一个安排，我等会儿再确认
+  B：好，按你节奏来，我等会儿再确认

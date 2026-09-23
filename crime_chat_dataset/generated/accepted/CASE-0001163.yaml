@@ -1,0 +1,124 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001163
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-936469e3183a7176
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 请求学校工作人员 B 私下查非本人监护范围内学生的成绩档案，提出红包并索要截图；B 拒绝调阅或泄露个人教育信息，建议由监护人走正式查询流程。
+  critical_evidence:
+  - A 请求私下查他人成绩档案
+  - A 提到红包并索要截图
+  - B 拒绝查看、截图或传播他人的成绩与升学信息
+  - B 建议有权限的监护人通过学校正式渠道申请
+  benign_alternatives:
+  - 家长查询自己孩子
+  - 学校官方查询
+
+attributes:
+  duration_days: 4
+  turn_count: 47
+  approximate_tokens_estimate: 781
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0126
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-070
+
+dedup:
+  content_hash: sha256:136bc1f024dc71ce63f07d91f7321b3efd79278ff9d85eb8081789ea7477cec2
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【9月14日】
+  A：在吗，想确认个事
+  B：在，你说
+  A：我刚忙完手头工作
+  B：好，不急
+  A：新买的杯子到了
+  B：怎么样好用吗
+  A：挺好，颜色比照片暗
+  A：我明早先开个会
+  B：实物有点色差正常
+  A：不漏水就行
+  B：那就值了
+  A：行，不耽误你
+  A：能不能帮我看看另一位学生的成绩档案
+  B：你是他的监护人吗
+  A：不是，班主任系统点一下就行
+  B：我不能私下查看他人档案
+  A：另外上次午饭AA我转你了，和刚才聊的事无关
+  【系统消息】A 向 B 转账 72 元，已收款。
+  B：收到了，是午饭分摊，谢谢
+  【9月15日】
+  B：好，结束了再联系
+  A：今天会开得有点久
+  B：我这边刚忙完
+  A：材料我晚点再过一遍
+  B：行，明早发也来得及
+  A：好，先歇会儿
+  B：嗯，别太晚
+  A：红包已发，截图给我就行
+  B：我不会收这个，也不会截图或泄露成绩
+  A：只是想问升学情况
+  B：这也需要授权，不能越过监护人
+  【9月16日】
+  A：下午应该空一点
+  A：周末可能回家一趟
+  B：车票看了吗
+  A：晚上查查
+  B：早点买选择多
+  A：嗯，回去吃顿饭
+  B：路上注意安全
+  A：那正式查询要怎么走
+  B：请监护人联系学校公布的办公室
+  A：好，我去问家长
+  B：我可以给你公开的咨询渠道
+  【9月17日】
+  B：那晚些时候对一下
+  A：肩膀最近有点酸
+  B：坐太久了吧
+  A：这几天会议多
+  B：中间记得起来动动
+  A：我下午去走走
+  B：好，别一直盯屏幕

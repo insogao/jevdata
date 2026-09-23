@@ -1,0 +1,118 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001177
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-19a9f18b839fc686
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A以上级身份要求校方人员私查另一学生成绩、升学档案，并提及红包和截图；B拒绝越权操作与信息披露，要求监护人走正式渠道。
+  critical_evidence:
+  - A要求查非本人子女的成绩档案。
+  - A以班主任系统点一下即可查询作暗示。
+  - A称红包已发，并要求截图就行。
+  - B拒绝查询和发图，指引监护人使用学校官方流程。
+  benign_alternatives:
+  - 家长查自己孩子
+  - 学校官方查询
+
+attributes:
+  duration_days: 3
+  turn_count: 42
+  approximate_tokens_estimate: 856
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0131
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-072
+
+dedup:
+  content_hash: sha256:fc3ec28463341090ce6183cb653ae790c9056fd7a40511fc6728affe3f8f1de4
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【10月8日】
+  A：有人想提前看一下那位学生的成绩档案，你帮我确认下。
+  B：我不能查没有授权的学生记录。
+  A：班主任系统点一下就能看到升学那栏。
+  B：职位关系不会改变查询权限。
+  A：对了，你之前提到晨会安排，有进展没？
+  B：有，今天处理好了。
+  A：比想象中麻烦吗？
+  B：没有，等了几分钟就结束。
+  A：挺顺利的。
+  B：是啊，可以放心了。
+  A：我把时间也记下来了。
+  A：说到日程，食堂窗口别忘了留时间。
+  B：记着呢，我写进日历了。
+  A：你这周安排得满吗？
+  B：周四以后就松一点。
+  A：那也记得休息。
+  B：好，听你的。
+  【10月9日】
+  A：红包已发，截图就行，不用多说。
+  B：这笔钱我会退回，成绩信息也不会发送。
+  A：我只是想让家长安心一点。
+  A：我刚看到周末天气的通知。
+  B：我也看见了，信息蛮清楚。
+  A：你想怎么安排？
+  B：先照原计划来，之后再确认。
+  A：行，有变化互相说。
+  B：好呀。
+  A：今天想到打印材料，上次说还没定。
+  B：现在定下来了。
+  A：需要我搭把手吗？
+  B：不用，已经弄好了。
+  A：那太好了。
+  B：嗯，少一件惦记的事。
+  A：上次你先垫的午饭钱我还你了，和前面说的事无关。
+  【系统消息】A 向 B 转账 43 元，已收款。
+  【10月10日】
+  B：让学生监护人联系学校官方窗口，按规定申请。
+  A：好，我会让家长自己办。
+  B：谢谢，私下查看不合适。
+  A：顺便问下，园区接驳定了吗？
+  B：刚收到确认，按原计划。
+  A：时间方便吗？
+  B：还行，不需要再调整。
+  A：那就好，省点心。
+  B：嗯，最近事情有点多。

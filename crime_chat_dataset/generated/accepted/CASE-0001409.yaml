@@ -1,0 +1,131 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001409
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000100
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-5a2f5d234b7536e4
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: money_laundering_obfuscation
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 中介老板 A 让没有公司的个人 B 以其名义代签一份小合同、走一趟账，A 拟好居间协议让 B 收款后扣下两点分成再把余款转回自己，并注明税点由 B 承担。表面是正规的居间介绍与多层分销结算，实际存在借个人账户走账、截留分成的灰色空间。
+  critical_evidence:
+  - A 让 B 以自己的名义签合同收款，称居间协议已拟好、中间介绍费都这么走
+  - 合同金额三万元，约定钱先进 B 的账户再转回 A
+  - A 给 B 留两个点即六百元作为分成，其余归 A，税点由 B 承担
+  - B 签好协议寄回，甲方按期把三万元打到 B 的账户
+  - B 扣下自己那份后按 A 的备注要求把余款转回 A
+  benign_alternatives:
+  - 多层合法分销
+  - 代理记账服务
+
+attributes:
+  duration_days: 6
+  turn_count: 51
+  approximate_tokens_estimate: 1009
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: commission_layering
+  risk: 1
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0144
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-076
+
+dedup:
+  content_hash: sha256:ba91446a9c82f1f3496f510546855fd2718ba44af5e4842b835fae0d9965b96b
+pipeline_status: accepted
+title: money_laundering_obfuscation/commission_layering
+conversation: |-
+  【4月2日】
+  A：在吗 之前说那个事 你考虑得咋样
+  B：在的 张总
+  A：就那个小合同 走你们名下 我这边居间协议都拟好了
+  B：走我名下？我一个个人 能签吗
+  A：签居间就行 钱进来你再转我 走个账
+  B：这样合规吗
+  A：正经居间 你查查 中间介绍费都是这么走
+  B：那我看看协议
+  A：对了 这两天降温 你那边冷不
+  B：冻死了 我都开空调了
+  A：我们办公室暖气早停了
+  B：忍忍吧 快五一了
+  A：是啊 熬过去就好
+  A：中午吃啥了
+  B：泡面 忙
+  A：你这不行啊 天天泡面胃要坏
+  B：穷啊张总
+  A：穷啥 这单做成够你吃半年
+  B：哈哈 那得做完再说
+  【4月3日】
+  A：说正事 合同金额三万 打到你对公还是个人
+  B：个人吧 我名下没公司
+  A：行 居间协议写你名 你收完扣下你那份 剩下的转我
+  B：我那份咋算
+  A：给你留两个点 税点你们出 剩下的归我
+  B：两个点 六百 行吧
+  A：那协议我发你邮箱 你打印签了寄我
+  A：你媳妇知道你接这个不
+  B：不管我 她忙她自己的
+  A：那挺好 别让她掺和
+  B：嗯 我心里有数
+  【4月4日】
+  A：你那车修好了没 上次追尾那个
+  B：修了 保险赔的 花了两千
+  A：现在保费贵得很
+  B：可不 明年还得涨
+  A：协议签了没
+  B：签好了 顺丰寄出去了
+  A：好 甲方那边下周三打款 你盯着账户
+  B：知道
+  【4月5日】
+  A：你最近还熬夜不 上次说头晕
+  B：好点了 少熬了
+  A：四十的人了 悠着点
+  B：知道知道 张总比我妈还唠叨
+  【4月6日】
+  A：钱到了没
+  B：还没 财务说周五
+  A：行 到了先别动
+  【4月7日】
+  B：张总 到了 三万整
+  A：好 你扣你那份 剩下转我 备注写居间费
+  B：我这就转
+  【系统消息】B 向 A 转账 29400 元，已收款。
+  A：收到 数对的
+  B：那这单就完了？
+  A：完了 后面还有 你手机保持开机

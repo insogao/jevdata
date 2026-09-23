@@ -1,0 +1,156 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001415
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000025
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-187cee288744e6fd
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 家长 A 为让差两分的孩子进实验中学，绕过公开招生渠道找校内人员 B 疏通。B 暗示名额已内部锁定、只剩一个，要求走「捐资助学」名目、钱不走公账，收据开成「校庆捐赠」，并叮嘱 A 别声张、别在家长群说。A 先转一笔钱把名额锁死。
+  critical_evidence:
+  - A 求 B 帮差两分的孩子进实验中学，B 说名额都锁死了但内部还剩一个
+  - B 要求别走明的，走「捐资助学」的口子，钱别走公账
+  - B 说收据开成「校庆捐赠」，名目统一写这个
+  - B 让 A 先转一半、开学前补后一半，A 转了一万五
+  - B 叮嘱别跟人说、尤其别在家长群，明面上就当正常转学
+  benign_alternatives:
+  - 合法捐赠助学
+  - 正常转学手续
+
+attributes:
+  duration_days: 4
+  turn_count: 78
+  approximate_tokens_estimate: 1053
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: school_admission_payment
+  risk: 2
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0144
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-076
+
+dedup:
+  content_hash: sha256:de5e72dc7f76e0c72d4ef6e157ac0d8806bdbabd55aa959c6ca401b60f632302
+pipeline_status: accepted
+title: bribery_corruption/school_admission_payment
+conversation: |-
+  【8月12日】
+  A：王老师在吗 我是上次家长会坐后排那个
+  B：哦 你说
+  A：孩子分数就差两分 想问问还有没有机会
+  B：现在名额都锁死了 你知道的
+  A：就是想请您指条路
+  B：你家孩子我有点印象 这样 有个内部的说法
+  A：您说
+  B：别走明的 走那个助学 的口子
+  A：助学?我不太懂
+  B：就是捐资助学 钱别走公账
+  A：那...多少
+  B：回头细说 你先别声张
+  A：今天热得不行
+  B：嗯 三十七度
+  A：孩子们军训都晒黑了
+  B：可不
+  A：晚上吃啥
+  B：随便煮点面
+  A：老师也这么将就啊
+  B：忙
+  A：王老师 白天说的事
+  B：嗯 那个口子一个学期就两个名额 现在只剩一个
+  A：您帮帮忙
+  B：我帮你锁 但得按规矩来
+  A：啥规矩
+  B：名目走校庆捐赠 收据我开成这个
+  A：现金还是转
+  B：先转一半 后一半开学前
+  A：多少
+  B：三
+  A：三万?
+  B：嗯
+  【8月13日】
+  A：我妈非说要请老师吃饭
+  B：别 别搞这些
+  A：我知道 我就是说说
+  B：嗯 越简单越好
+  A：钱我准备好了
+  B：转吧 备注别写
+  A：写啥
+  B：空着 或者写资料费
+  A：好
+  A：转了
+  【系统消息】A 向 B 转账 15000 元，已收款。
+  B：收到 名额给你留着
+  A：太谢谢了
+  B：别谢 也别跟人说 尤其别在家长群
+  A：懂
+  B：你家那空调在哪买的
+  A：国美 便宜
+  B：我家想换一个
+  A：我发你型号
+  【8月14日】
+  B：这两天腰不行
+  A：老师注意身体
+  B：老毛病了
+  A：我给您带点膏药?
+  B：不用
+  A：孩子问开学分班的事
+  B：别急 名单下来我告诉你
+  A：好
+  B：记住 明面上就是正常转学
+  A：嗯 我嘴严
+  【8月15日】
+  A：今天凉快了
+  B：嗯 降温了
+  A：该添衣服了
+  B：嗯
+  B：后一半开学前给我就行
+  A：好 几天内
+  B：收据我给你 你收好
+  A：名目就是那个?
+  B：校庆捐赠 别问
+  A：谢了
+  A：娃今天高兴坏了
+  B：还没定呢 别让他出去说
+  A：我知道
+  B：行了
+  A：王老师 以后有事您说话
+  B：嗯 就这样
+  A：好
+  B：别发消息了 白天

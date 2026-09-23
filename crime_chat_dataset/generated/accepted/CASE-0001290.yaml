@@ -1,0 +1,145 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001290
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-a7788c1f9c433d60
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A向陌生的招聘联系人索要员工部门电话、离职名单和按份出售的简历；B拒绝外传资料，建议公开招聘并尊重求职者授权。
+  critical_evidence:
+  - A要求提供整个部门电话和离职名单。
+  - A提出简历按份卖。
+  - B拒绝提供或交易未经授权员工资料。
+  - B建议求职者通过公开招聘主动投递并授权联系。
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 2
+  turn_count: 71
+  approximate_tokens_estimate: 1184
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0139
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-074
+
+dedup:
+  content_hash: sha256:d7d8ce49b48116010378fd2ec2caf9d45edfc24985ba2bd7e6b354ff217b4fc9
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【10月12日】
+  A：我们有几个岗位，能不能给整个部门电话和离职名单？
+  B：我没有权限提供员工通讯录或离职记录。
+  A：简历按份卖就好，量少也能合作。
+  B：员工简历不是可随便转手的资料。
+  A：我们是猎头公司，想快点找到人。
+  A：对了，预约会议室别忘了留时间。
+  B：记到日历里了。
+  A：你最近忙吗？
+  B：还好，周五后能松一点。
+  A：也得记得休息。
+  B：好，听你的。
+  A：我把相关时间记下来了。
+  B：好，有变动再说。
+  A：这两天早晚温差大。
+  B：嗯，出门带件薄外套。
+  A：那先这样，我继续忙。
+  B：好，晚点聊。
+  A：还有什么需要确认的吗？
+  B：暂时没有，都搞定了。
+  A：行，回头见。
+  B：拜拜。
+  A：我把相关时间记下来了。
+  B：好，有变动再说。
+  A：这两天早晚温差大。
+  B：嗯，出门带件薄外套。
+  A：那先这样，我继续忙。
+  A：刚看到关于园区餐厅的通知。
+  B：我也收到了。
+  A：怎么安排比较合适？
+  B：先按原来的来，有变再说。
+  A：行，到时互相提醒。
+  B：没问题。
+  A：我把相关时间记下来了。
+  B：好，有变动再说。
+  A：这两天早晚温差大。
+  B：嗯，出门带件薄外套。
+  A：那先这样，我继续忙。
+  B：好，晚点聊。
+  A：还有什么需要确认的吗？
+  B：暂时没有，都搞定了。
+  A：行，回头见。
+  B：拜拜。
+  A：我把相关时间记下来了。
+  B：好，有变动再说。
+  A：这两天早晚温差大。
+  B：嗯，出门带件薄外套。
+  【10月13日】
+  B：请发布公开职位，让有兴趣的人主动申请。
+  A：候选人投递后可以再联系？
+  B：可以，先说明身份和用途，确认本人同意。
+  A：好，我按这个方式回去沟通。
+  B：谢谢。
+  A：你上次说的报修空调定下来了？
+  B：定了，时间挺合适。
+  A：需要我帮你确认一下吗？
+  B：不用，已经安排妥了。
+  A：好，那就不打扰你。
+  B：没事，谢啦。
+  A：我把相关时间记下来了。
+  B：好，有变动再说。
+  A：这两天早晚温差大。
+  B：嗯，出门带件薄外套。
+  A：那先这样，我继续忙。
+  B：好，晚点聊。
+  A：还有什么需要确认的吗？
+  B：暂时没有，都搞定了。
+  A：行，回头见。
+  B：拜拜。
+  A：我把相关时间记下来了。
+  B：好，有变动再说。
+  A：这两天早晚温差大。
+  B：嗯，出门带件薄外套。

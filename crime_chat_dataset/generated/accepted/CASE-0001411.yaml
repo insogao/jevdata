@@ -1,0 +1,138 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001411
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000028
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-ce465d4a3463ad45
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: bribery_corruption
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 供应商 A 的验收单被甲方科室负责人 B 压着，B 以台账“对不上”为借口拖住尾款，验收前暗示要走“老规矩”。A 心领神会，主动提出安排“那部分的辛苦”，并在第二天向 B 转账 8000 元当作签字/盖章的辛苦费，B 收款后称会让人把台账销掉、次日走流程。
+  critical_evidence:
+  - A 提交验收单后，B 称问题台账第三条与现场不符，先把单子挂起来不办
+  - B 暗示验收前要先“理顺”，A 追问金额，B 让 A 自己看着办，并称尾款压着不是他一个人说了算
+  - A 表示“那部分辛苦”会安排，B 让 A 别在聊天里说、见面再讲
+  - A 向 B 转账 8000 元作为辛苦费，B 确认收到并称会让人把台账销一下、次日走验收流程
+  - B 拒绝 A 送茶叶等实物，强调别在东西上做文章
+  benign_alternatives:
+  - 正常合同尾款催收
+  - 履约保证金扣除
+
+attributes:
+  duration_days: 2
+  turn_count: 62
+  approximate_tokens_estimate: 1266
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: contract_signature_fee
+  risk: 3
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0144
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-076
+
+dedup:
+  content_hash: sha256:a858490f5a8b7fe5f88d154d5b4ec826cab0f9ab060e84970ab780740c925e2d
+pipeline_status: accepted
+title: bribery_corruption/contract_signature_fee
+conversation: |-
+  【3月11日】
+  A：王处 上午好 上周报的那份验收单 您那边过了没
+  B：看了 有几处对不上
+  A：哪块 我马上让人改
+  B：问题台账第三条 跟现场对不上 先挂着吧
+  A：那条是登记笔误 我重做一版给您送过去
+  B：嗯 这两天忙 回头再说
+  A：行 麻烦王处了
+  B：这两天降温 你们那边还照常施工?
+  A：照常 早上手都冻僵 工人都套上棉衣了
+  B：别赶工赶出岔子 安全第一
+  A：不敢 现在这进度本来也快不了
+  B：慢有慢的道理 急啥
+  A：是是 听您的
+  A：王处中午吃饭没 我们楼下新开一家面馆
+  B：食堂对付了 你们那片的我吃不惯
+  A：哈哈 那改天我请您吃顿好的
+  B：再说吧 最近应酬多 吃不动
+  A：行 您保重身体
+  B：你家孩子今年中考吧 上次你提过
+  A：哎 别提 天天补课 钱哗哗地花
+  B：正常 都这样 熬过这半年就好
+  A：借您吉言 主要是怕考不上重点
+  B：分数够就行 别太逼孩子
+  A：嗯 谢谢王处开导
+  【3月12日】
+  B：你那个单子 我又翻了一遍
+  A：怎么样 王处
+  B：现场没问题 就是台账那块 你懂吧
+  A：懂 您说怎么办
+  B：验收前有些事得先理顺 老规矩你清楚
+  A：清楚 您给个数
+  B：别问我 你自己看着办
+  A：我这小本生意 您多担待
+  B：担待不了 尾款压着 也不是我一个人说了算
+  A：明白 那部分辛苦 我这边安排
+  B：别在这说 见面讲
+  A：好 我下午过去
+  B：周末有球不
+  A：有 老看台 我弄了两张票
+  B：我不去 人多吵
+  A：那钓鱼去 水库那边最近出鱼
+  B：再说 先把正事办了
+  A：对对 正事要紧
+  A：王处 您那胃还疼吗 上次说烧心
+  B：老毛病 吃点药压着
+  A：少喝酒 我们家老人也这样 忌口以后才好
+  B：哪戒得掉 场面上躲不过
+  A：那也得当心
+  B：知道了
+  【系统消息】A 向 B 转账 8000 元，已收款。
+  A：到了您查收 一点心意 单子的事拜托了
+  B：嗯 收到了 台账我让人销一下
+  A：谢谢王处 那验收
+  B：明天走流程 你别催
+  A：不催不催
+  B：对了 你上次说的那个茶叶 哪买的
+  A：网上下的 我给您带两罐
+  B：别整这些 说了别在东西上做文章
+  A：明白明白 就是随手
+  B：拿人手短 你记住
+  A：记住了 那先这样
+  B：嗯 明天等通知
+  A：好嘞 谢谢王处
+  B：嗯

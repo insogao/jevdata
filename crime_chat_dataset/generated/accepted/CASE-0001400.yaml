@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001400
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000037
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-531187718cc99608
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: contraband_illicit_trade
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 在教务/命题环节的 A 能在开考前拿到题目，约定开考前一夜把材料交给中介 B，B 按科目向学生报价、先收订金锁名额，A 从中分成。
+  critical_evidence:
+  - A 说能在开考前把“东西”拿出来，约在开考前一夜交货
+  - B 按科目报价，热门科目价格更高
+  - B 让学生先交订金锁名额，说名额有限
+  - A 从 B 这里拿分成，催 B 把订金收齐再交货
+  - 两人用“资料”“冲刺卷”“原题”代称，不写明是什么考试
+  benign_alternatives:
+  - 正规的考前辅导资料
+  - 正规模拟题库的购买
+
+attributes:
+  duration_days: 5
+  turn_count: 52
+  approximate_tokens_estimate: 1163
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: exam_leak_material
+  risk: 3
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0143
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-076
+
+dedup:
+  content_hash: sha256:5157a4355a3f09c688af96503af42bce2ed10fca08bc4597ac3b2d792219e5ad
+pipeline_status: accepted
+title: contraband_illicit_trade/exam_leak_material
+conversation: |-
+  【12月1日】
+  B：王老师 这次能不能赶上 学生都在催
+  A：别急 一切照旧 开考头天晚上给你
+  B：好 价格还是老样子吗
+  A：今年这个数 你们那边按科目加价我不管
+  B：热门那门我收高点 家长肯出
+  A：随你 但我的那份提前结 别拖
+  B：放心 我都是先收订金锁名额 钱到你我才发
+  【12月2日】
+  B：中午跟几个家长聊了 都挺急
+  A：急才好 不急谁出这个价
+  B：有个家长说认识人 想压价
+  A：那就别卖他 名额就这些
+  B：今天收了五个订金 都是你那门的
+  A：别声张 别在群里发 一对一联系
+  B：知道 我用的都是小号
+  A：聪明 材料我头天晚上才拿得到 你别提前承诺太满
+  【12月3日】
+  B：又有人问 说是家长群推荐的
+  A：问你你就说没把握 正好抬价
+  B：你可真会做生意
+  A：彼此彼此 你也抽了不少
+  A：中午在食堂吃的 最近查得紧
+  B：查啥 你别吓我
+  A：例行检查 你那边别用大号收款
+  B：我都是现金和别的人代收
+  B：订金到八个了 钱我先给你一半
+  A：行 另一半交货当天结
+  B：你那份我都记着呢 不会少
+  【12月4日】
+  A：后天就考了 你那边稳住 别再加人
+  B：为啥 多一个多一份钱
+  A：人越多越容易漏 就这些了
+  B：行 听你的
+  B：中午没睡好 老想这事
+  A：到这时候谁都紧张 过了这关就好了
+  B：你可别到时候放我鸽子
+  A：我什么时候失过手
+  B：订金总共这个数 你核对
+  A：对得上 明晚十点老地方见
+  B：换成别的地方吧 老地方最近有保安
+  A：那就学校后门 你早点到
+  【12月5日】
+  A：我到了 车没熄火
+  B：马上到 钱带全了
+  A：东西给你 你点点 别拆封
+  B：收到 你那份转你了
+  【系统消息】B 向 A 转账 8000 元，已收款。
+  B：到了 你查下
+  A：收到 记住 这事烂在肚子里
+  B：那必须的
+  【12月6日】
+  B：已经发下去了 学生说很有用
+  A：嗯 别让他们乱传 传开了就麻烦
+  B：我跟他们说了 看完就删
+  A：考完了 我今天轻松多了
+  B：我这几天提心吊胆 总算过了
+  A：下一场再说 最近先别联系
+  B：懂 消停一阵

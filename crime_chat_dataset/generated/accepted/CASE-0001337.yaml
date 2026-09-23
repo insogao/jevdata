@@ -1,0 +1,119 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001337
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-f6d1fc6180c7d27d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 熟人试探出售同事的联系方式与简历；对话表面谈招聘，助手不接受未经授权的通讯录和离职名单。
+  critical_evidence:
+  - 对方试探获取未经授权的部门联系方式、员工简历或离职名单
+  - 招聘需求被用作索取资料的表面理由
+  - 聊天另一方拒绝提供，转向公开岗位及候选人授权流程
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 5
+  turn_count: 43
+  approximate_tokens_estimate: 832
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0151
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-078
+
+dedup:
+  content_hash: sha256:54ef6c61c5690ecfc423ef70d531d8b2aa2cbb2e692c3b0b5f442ca5be2e9c90
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【9月5日】
+  A：下周那个岗位还在招吗
+  A：在，先从官网投递的人里筛
+  B：我这有整个部门电话，熟人给的
+  A：这些人同意被猎头联系了吗
+  B：还没问，先看看有没有合适的
+  A：午休有空吗
+  B：想去买点水果
+  A：我这边有橙子，要不要分你几个
+  B：好呀，放茶水间就行
+  【9月6日】
+  A：我补充一句，别误会
+  A：那不行，通讯录共享得有授权
+  B：离职名单我也能拿到一份
+  A：名单从哪来的先别发我
+  B：简历按份卖的渠道你听过没
+  A：我们按候选人授权流程走
+  A：最近天气忽冷忽热
+  B：早上还穿短袖，晚上要外套
+  A：我包里塞了件薄衫
+  B：我也是，空调房冷
+  【9月7日】
+  A：你有空再回我就行
+  A：你别这么死板，只是先打个招呼
+  B：没有同意的联系方式我不会用
+  A：那我发个空白岗位介绍给你？
+  B：可以，发公开招聘链接就好
+  A：我把那份表撤回了
+  A：快递柜满了吗
+  B：刚取完，今天还挺顺
+  A：我那件衣服还在路上
+  B：晚点看下物流
+  【9月8日】
+  A：今天那边有新消息吗
+  A：谢谢，别留本地副本
+  B：明白，后面让候选人自己投
+  A：周末想做什么
+  B：可能在家收拾书架
+  A：听着就累，记得休息
+  B：先整理一层吧
+  【9月9日】
+  A：我把范围重新想了下
+  A：午休有空吗
+  B：想去买点水果
+  A：我这边有橙子，要不要分你几个
+  B：好呀，放茶水间就行
+  B：别把猜测写成事实
+  B：就按公开、授权、和讨论本身有关的范围来，其他内容我不参与。

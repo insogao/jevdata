@@ -1,0 +1,137 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001403
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000101
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-06c7da48f156b556
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 招募看起来人畜无害的 B 当跑腿，让其带身份证去外地几家银行分批取现，按取款额抽千分之五当报酬，并教 B 谎称是自己的钱、别说帮别人取，实为替团伙转移资金。
+  critical_evidence:
+  - A 让 B 带身份证去外地取一笔现金，保证当天能往返
+  - A 说按取款额抽千分之五给 B 当报酬
+  - A 交代 B 要是被问就说是自己的钱，别说替别人取
+  - A 让 B 分几家银行、几笔小额取，别一次取完
+  - A 先转了一笔定金给 B，把事定下来
+  benign_alternatives:
+  - 帮朋友代取快递
+  - 正规平台的兼职跑腿
+
+attributes:
+  duration_days: 5
+  turn_count: 59
+  approximate_tokens_estimate: 1252
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: help_move_fund_fee
+  risk: 3
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0143
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-076
+
+dedup:
+  content_hash: sha256:a4b0af5ce49a4abd03cf506919ba4f3a0a8a6ce846ed151a028eca20609d81d3
+pipeline_status: accepted
+title: money_laundering_obfuscation/help_move_fund_fee
+conversation: |-
+  【4月2日】
+  A：在吗 有个轻松的活 想不想接
+  B：啥活 说清楚
+  A：跑一趟外地 用你身份证取点钱 当天回
+  B：取钱? 谁的
+  A：公司的 你别问那么多
+  B：这不是洗钱吧
+  A：想啥呢 就是走个手续 你跑腿就行
+  B：给我多少钱
+  A：按取的千分之五 取十万给你五百 来回车费我出
+  B：十万就五百? 少了点
+  A：你啥也不用干 就排个队 还想咋样
+  【4月3日】
+  B：我昨天想了下 这活有点怪
+  A：哪里怪 就是取个钱 你怕啥
+  B：为啥不用你们自己的卡
+  A：我们有额度限制 用你的方便 完事后卡你拿走
+  B：万一银行问我取钱干嘛
+  A：就说你自己的钱 家里急用 千万别提我
+  B：中午吃饭还在琢磨这事
+  A：琢磨啥 机会就这一次 明天发车
+  B：去哪
+  A：隔壁市 高铁半小时 别问具体哪家
+  A：记住分几家取 一家别超五万
+  B：为啥要分几笔
+  A：大额要预约要说明 麻烦 分开省事
+  B：感觉像做贼
+  A：别瞎想 我在这行干好几年了
+  A：先给你转点定金
+  【系统消息】A 向 B 转账 1000 元，已收款。
+  A：收到没 就当车马费 事成再结
+  B：收到了 那我明天去
+  A：对 带上身份证就行 其他不用带
+  【4月4日】
+  B：我出发了
+  A：到了先取号 别跟人搭话
+  B：第一家取好了 五万
+  A：好 钱先别存一起 装包里换下一家
+  B：第二家四万 柜员多问了两句
+  A：你咋说的
+  B：我说家里买房急用 她没再问
+  A：聪明 还剩最后一家 取完给我打电话
+  B：第三家三万 一共十二万 现在去哪
+  A：到车站旁边那个快餐店 我的人在那等你
+  B：交出去了 对方点数了
+  A：尾款我转你 你把小票都撕了
+  B：撕了 但我心里还是不安
+  A：钱到手了还不安啥 回去好好睡一觉
+  B：到家了
+  A：下周还有一趟 你还去不去
+  B：我想想 这活我不敢长期干
+  A：干一次和干十次有啥区别 别矫情
+  【4月5日】
+  B：我昨晚把转账记录删了
+  A：对 就该这样 以后少留痕迹
+  B：你别再找我了 我怕
+  A：怕啥 钱一分没少你 别自己吓自己
+  B：中午没胃口 老觉得有人看我
+  A：心理作用 过两天就好了
+  B：希望吧
+  A：下周那趟你考虑好没
+  B：不去了 你找别人吧
+  A：行 但这事你烂肚子里 谁也别说
+  B：我知道

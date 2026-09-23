@@ -1,0 +1,248 @@
+{
+ "key": "b76c051",
+ "archetype_id": "ARC-000029",
+ "subtype": "batch_quantity_pickup",
+ "latent_intent": "供货的 A 和下游 B 全程只谈数量批次、交接地点和现结，从不说清货是什么，约在老地方分批交接，B 转一笔货款，明显是见不得光的买卖。",
+ "critical_facts": [
+  "A 和 B 只谈批次和数量，从不提货的具体名称",
+  "约定在“老地方”交接，避开白天和固定时段",
+  "A 要求现结、不留账、不要任何记录",
+  "B 转了一笔货款给 A",
+  "A 提醒 B 分批走，别一次拿太多"
+ ],
+ "benign_alternatives": [
+  "大宗商品的合法批发",
+  "朋友之间的正常代购"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "1月5日 21:30",
+   "speaker": "B",
+   "text": "哥 上一批卖得差不多了 还能再给点不"
+  },
+  {
+   "type": "message",
+   "time": "1月5日 21:34",
+   "speaker": "A",
+   "text": "能 你要几件 直接说数"
+  },
+  {
+   "type": "message",
+   "time": "1月5日 21:37",
+   "speaker": "B",
+   "text": "先来三件 好走就再来"
+  },
+  {
+   "type": "message",
+   "time": "1月5日 21:40",
+   "speaker": "A",
+   "text": "三件可以 有件大的 你自己看能不能带走"
+  },
+  {
+   "type": "message",
+   "time": "1月5日 21:43",
+   "speaker": "B",
+   "text": "大件我不碰 上次压手里一个月"
+  },
+  {
+   "type": "message",
+   "time": "1月5日 21:46",
+   "speaker": "A",
+   "text": "那就两件小的 一件中等的"
+  },
+  {
+   "type": "message",
+   "time": "1月6日 10:00",
+   "speaker": "B",
+   "text": "价格还是上次那个吗"
+  },
+  {
+   "type": "message",
+   "time": "1月6日 10:04",
+   "speaker": "A",
+   "text": "涨了点 最近这边管得紧"
+  },
+  {
+   "type": "message",
+   "time": "1月6日 10:07",
+   "speaker": "B",
+   "text": "涨多少"
+  },
+  {
+   "type": "message",
+   "time": "1月6日 10:10",
+   "speaker": "A",
+   "text": "一件加两百 现结的话给你抹个零"
+  },
+  {
+   "type": "message",
+   "time": "1月6日 12:10",
+   "speaker": "B",
+   "text": "中午凑合吃了碗粉"
+  },
+  {
+   "type": "message",
+   "time": "1月6日 12:13",
+   "speaker": "A",
+   "text": "吃你的 晚上老地方见"
+  },
+  {
+   "type": "message",
+   "time": "1月6日 12:15",
+   "speaker": "B",
+   "text": "几点 还是老地方那个仓库?"
+  },
+  {
+   "type": "message",
+   "time": "1月6日 12:17",
+   "speaker": "A",
+   "text": "别问几点 我到了叫你 你车停远点"
+  },
+  {
+   "type": "message",
+   "time": "1月6日 18:40",
+   "speaker": "B",
+   "text": "我下午把车洗了 干净点不显眼"
+  },
+  {
+   "type": "message",
+   "time": "1月6日 18:43",
+   "speaker": "A",
+   "text": "聪明 但别太干净 太干净反而招眼"
+  },
+  {
+   "type": "message",
+   "time": "1月6日 18:45",
+   "speaker": "B",
+   "text": "懂了"
+  },
+  {
+   "type": "message",
+   "time": "1月6日 22:10",
+   "speaker": "A",
+   "text": "到了 后门 你来吧"
+  },
+  {
+   "type": "message",
+   "time": "1月6日 22:14",
+   "speaker": "B",
+   "text": "马上到"
+  },
+  {
+   "type": "message",
+   "time": "1月6日 22:30",
+   "speaker": "A",
+   "text": "钱先转 数对了我再给你搬"
+  },
+  {
+   "type": "transfer",
+   "time": "1月6日 22:36",
+   "from": "B",
+   "to": "A",
+   "amount": 9600,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "1月6日 22:37",
+   "speaker": "B",
+   "text": "转了 你查"
+  },
+  {
+   "type": "message",
+   "time": "1月6日 22:40",
+   "speaker": "A",
+   "text": "收到 货在角落 你自己装 别开灯"
+  },
+  {
+   "type": "message",
+   "time": "1月6日 22:55",
+   "speaker": "B",
+   "text": "装好了 数量对"
+  },
+  {
+   "type": "message",
+   "time": "1月6日 22:57",
+   "speaker": "A",
+   "text": "记住 没来过 没买过 别跟任何人说"
+  },
+  {
+   "type": "message",
+   "time": "1月6日 22:59",
+   "speaker": "B",
+   "text": "我懂规矩"
+  },
+  {
+   "type": "message",
+   "time": "1月7日 09:30",
+   "speaker": "B",
+   "text": "到家了 累"
+  },
+  {
+   "type": "message",
+   "time": "1月7日 09:33",
+   "speaker": "A",
+   "text": "这几件你多久能走完"
+  },
+  {
+   "type": "message",
+   "time": "1月7日 09:36",
+   "speaker": "B",
+   "text": "半个月吧 看行情"
+  },
+  {
+   "type": "message",
+   "time": "1月7日 09:39",
+   "speaker": "A",
+   "text": "走完再来 别一次拿太多 上头查得严"
+  },
+  {
+   "type": "message",
+   "time": "1月7日 12:20",
+   "speaker": "B",
+   "text": "中午在家躺着 昨晚没睡好"
+  },
+  {
+   "type": "message",
+   "time": "1月7日 12:23",
+   "speaker": "A",
+   "text": "稳着点 这行急不得"
+  },
+  {
+   "type": "message",
+   "time": "1月7日 18:10",
+   "speaker": "B",
+   "text": "有人问我从哪拿的 我没说"
+  },
+  {
+   "type": "message",
+   "time": "1月7日 18:14",
+   "speaker": "A",
+   "text": "对 打死也不能说 出了事谁也保不了谁"
+  },
+  {
+   "type": "message",
+   "time": "1月7日 18:16",
+   "speaker": "B",
+   "text": "我嘴严"
+  },
+  {
+   "type": "message",
+   "time": "1月7日 20:30",
+   "speaker": "A",
+   "text": "这批完了先别联系 我这边消停几天"
+  },
+  {
+   "type": "message",
+   "time": "1月7日 20:33",
+   "speaker": "B",
+   "text": "行 到时候你呼我"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0001402",
+  "status": "accepted",
+  "errors": []
+ }
+}

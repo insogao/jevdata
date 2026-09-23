@@ -1,0 +1,365 @@
+{
+  "key": "b79c016",
+  "archetype_id": "ARC-000087",
+  "subtype": "exam_score_lookup",
+  "latent_intent": "A 想借 B 的校务关系查看与自己家庭无关的学生成绩，并索要截图或大致分数档；B 提供有限信息或拒绝，并提示通过学校官方渠道查询。",
+  "critical_facts": [
+    "A 请求查看不是自己子女的学生个人成绩，并希望 B 在校务系统核对。",
+    "A 提出索要截图或大致成绩区间。",
+    "B 确认这不是 A 家庭的记录，说明应由本人/监护人通过官方入口查询。",
+    "A 以红包或小额谢礼表达感谢；B 限定为一次帮忙或拒绝继续查询。"
+  ],
+  "benign_alternatives": [
+    "家长查自己孩子",
+    "学校官方查询"
+  ],
+  "events": [
+    {
+      "type": "message",
+      "speaker": "A",
+      "text": "你好，打扰一下。学校那边月考成绩是不是出了？",
+      "time": "9月16日 09:05"
+    },
+    {
+      "type": "message",
+      "speaker": "B",
+      "text": "出了，不过你问的是自家孩子吗？",
+      "time": "9月16日 09:09"
+    },
+    {
+      "type": "message",
+      "speaker": "A",
+      "text": "不是，是客户介绍来的家长，想先估个升学方向。",
+      "time": "9月16日 09:13"
+    },
+    {
+      "type": "message",
+      "speaker": "B",
+      "text": "楼下便利店换了咖啡机。",
+      "time": "9月16日 09:17"
+    },
+    {
+      "type": "message",
+      "speaker": "A",
+      "text": "味道怎么样？",
+      "time": "9月16日 09:21"
+    },
+    {
+      "type": "message",
+      "speaker": "B",
+      "text": "比以前顺口，冰美式也没那么酸。",
+      "time": "9月16日 09:25"
+    },
+    {
+      "type": "message",
+      "speaker": "A",
+      "text": "下次帮我带一杯吧。",
+      "time": "9月16日 09:29"
+    },
+    {
+      "type": "message",
+      "speaker": "B",
+      "text": "行，你还是少冰？",
+      "time": "9月16日 09:33"
+    },
+    {
+      "type": "message",
+      "speaker": "A",
+      "text": "对，别加糖。",
+      "time": "9月16日 09:37"
+    },
+    {
+      "type": "message",
+      "speaker": "B",
+      "text": "记下了，明早给你。",
+      "time": "9月16日 09:41"
+    },
+    {
+      "type": "message",
+      "speaker": "A",
+      "text": "谢啦，我转你钱。",
+      "time": "9月16日 09:45"
+    },
+    {
+      "type": "message",
+      "speaker": "B",
+      "text": "收到，这种别再找我看，叫家长走官方渠道。",
+      "time": "9月16日 09:49"
+    },
+    {
+      "type": "message",
+      "speaker": "A",
+      "text": "好，我把查询链接转给她。",
+      "time": "9月16日 09:53"
+    },
+    {
+      "type": "message",
+      "speaker": "B",
+      "text": "嗯，别转发刚才说的个人信息。",
+      "time": "9月16日 09:57"
+    },
+    {
+      "type": "transfer",
+      "from": "A",
+      "to": "B",
+      "amount": 66,
+      "status": "received",
+      "time": "9月16日 10:01"
+    },
+    {
+      "type": "message",
+      "speaker": "A",
+      "text": "家里那盏灯修好了吗？",
+      "time": "9月16日 10:05"
+    },
+    {
+      "type": "message",
+      "speaker": "B",
+      "text": "换了灯泡，亮多了。",
+      "time": "9月16日 10:09"
+    },
+    {
+      "type": "message",
+      "speaker": "A",
+      "text": "原来是灯泡坏了，不是线路。",
+      "time": "9月16日 10:13"
+    },
+    {
+      "type": "message",
+      "speaker": "B",
+      "text": "嗯，师傅上门看了一下就解决。",
+      "time": "9月16日 10:17"
+    },
+    {
+      "type": "message",
+      "speaker": "A",
+      "text": "费用贵不贵？",
+      "time": "9月17日 09:05"
+    },
+    {
+      "type": "message",
+      "speaker": "B",
+      "text": "不贵，十几块材料费。",
+      "time": "9月17日 09:09"
+    },
+    {
+      "type": "message",
+      "speaker": "A",
+      "text": "那就好，旧灯泡别乱扔。",
+      "time": "9月17日 09:13"
+    },
+    {
+      "type": "message",
+      "speaker": "B",
+      "text": "我拿去回收箱了。",
+      "time": "9月17日 09:17"
+    },
+    {
+      "type": "message",
+      "speaker": "B",
+      "text": "我妈寄来的水果到了。",
+      "time": "9月17日 09:21"
+    },
+    {
+      "type": "message",
+      "speaker": "A",
+      "text": "这次是什么？",
+      "time": "9月17日 09:25"
+    },
+    {
+      "type": "message",
+      "speaker": "B",
+      "text": "梨和橘子，箱子挺沉的。",
+      "time": "9月17日 09:29"
+    },
+    {
+      "type": "message",
+      "speaker": "A",
+      "text": "放阴凉处，梨别堆太紧。",
+      "time": "9月17日 09:33"
+    },
+    {
+      "type": "message",
+      "speaker": "B",
+      "text": "已经分给邻居几颗。",
+      "time": "9月17日 09:37"
+    },
+    {
+      "type": "message",
+      "speaker": "A",
+      "text": "你自己留点，别全送人。",
+      "time": "9月17日 09:41"
+    },
+    {
+      "type": "message",
+      "speaker": "B",
+      "text": "放心，够吃一周。",
+      "time": "9月17日 09:45"
+    },
+    {
+      "type": "message",
+      "speaker": "A",
+      "text": "好，记得别放坏了。",
+      "time": "9月17日 09:49"
+    },
+    {
+      "type": "message",
+      "time": "9月17日 09:53",
+      "speaker": "A",
+      "text": "中午点的汤面有点咸。"
+    },
+    {
+      "type": "message",
+      "time": "9月17日 09:57",
+      "speaker": "B",
+      "text": "是不是加了店里的辣酱？"
+    },
+    {
+      "type": "message",
+      "time": "9月17日 10:01",
+      "speaker": "A",
+      "text": "可能是，喝了两杯水才缓过来。"
+    },
+    {
+      "type": "message",
+      "time": "9月17日 10:05",
+      "speaker": "B",
+      "text": "下次点清汤的试试。"
+    },
+    {
+      "type": "message",
+      "time": "9月17日 10:09",
+      "speaker": "A",
+      "text": "好，我记下了。"
+    },
+    {
+      "type": "message",
+      "time": "9月17日 10:13",
+      "speaker": "B",
+      "text": "那家米饭其实更稳。"
+    },
+    {
+      "type": "message",
+      "time": "9月17日 10:17",
+      "speaker": "A",
+      "text": "改天去试试。"
+    },
+    {
+      "type": "message",
+      "time": "9月18日 09:05",
+      "speaker": "B",
+      "text": "行，我也想换换口味。"
+    },
+    {
+      "type": "message",
+      "speaker": "A",
+      "text": "我把学校公开查询的说明转过去了。",
+      "time": "9月18日 09:09"
+    },
+    {
+      "type": "message",
+      "speaker": "B",
+      "text": "提醒家长用自己的账号登录。",
+      "time": "9月18日 09:13"
+    },
+    {
+      "type": "message",
+      "speaker": "A",
+      "text": "她说晚点回家就查。",
+      "time": "9月18日 09:17"
+    },
+    {
+      "type": "message",
+      "speaker": "B",
+      "text": "页面上有成绩发布时间。",
+      "time": "9月18日 09:21"
+    },
+    {
+      "type": "message",
+      "speaker": "A",
+      "text": "我不再问个人分数了。",
+      "time": "9月18日 09:25"
+    },
+    {
+      "type": "message",
+      "speaker": "B",
+      "text": "谢谢理解，别把别人的记录转来转去。",
+      "time": "9月18日 09:29"
+    },
+    {
+      "type": "message",
+      "speaker": "A",
+      "text": "这次确实是我想得简单。",
+      "time": "9月18日 09:33"
+    },
+    {
+      "type": "message",
+      "speaker": "A",
+      "text": "我把学校公开查询的说明转过去了。",
+      "time": "9月18日 09:37"
+    },
+    {
+      "type": "message",
+      "speaker": "B",
+      "text": "提醒家长用自己的账号登录。",
+      "time": "9月18日 09:41"
+    },
+    {
+      "type": "message",
+      "speaker": "A",
+      "text": "她说晚点回家就查。",
+      "time": "9月18日 09:45"
+    },
+    {
+      "type": "message",
+      "speaker": "B",
+      "text": "页面上有成绩发布时间。",
+      "time": "9月18日 09:49"
+    },
+    {
+      "type": "message",
+      "speaker": "A",
+      "text": "我不再问个人分数了。",
+      "time": "9月18日 09:53"
+    },
+    {
+      "type": "message",
+      "speaker": "B",
+      "text": "谢谢理解，别把别人的记录转来转去。",
+      "time": "9月18日 09:57"
+    },
+    {
+      "type": "message",
+      "speaker": "A",
+      "text": "这次确实是我想得简单。",
+      "time": "9月18日 10:01"
+    },
+    {
+      "type": "message",
+      "speaker": "A",
+      "text": "我把学校公开查询的说明转过去了。",
+      "time": "9月18日 10:05"
+    },
+    {
+      "type": "message",
+      "speaker": "B",
+      "text": "提醒家长用自己的账号登录。",
+      "time": "9月18日 10:09"
+    },
+    {
+      "type": "message",
+      "speaker": "A",
+      "text": "她说晚点回家就查。",
+      "time": "9月18日 10:13"
+    },
+    {
+      "type": "message",
+      "speaker": "B",
+      "text": "页面上有成绩发布时间。",
+      "time": "9月18日 10:17"
+    }
+  ],
+  "source_seed_ids": [
+    "SEED-SRC-BCC-001-21f4e643281c3d25"
+  ]
+}

@@ -1,0 +1,134 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001317
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-d8b4041bb3ef0838
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 请求查看其他学生的成绩或升学资料，提出红包并只要截图；B 拒绝越权查询、收礼或转发，并指向学校官方渠道。
+  critical_evidence:
+  - A 请求查看自己孩子以外的学生成绩或升学资料
+  - A 提出红包以换取资料并要求只给截图
+  - B 拒绝查询、收礼和转发学生资料
+  - B 说明家长只能经学校官方渠道查询自己孩子
+  benign_alternatives:
+  - 家长经官方渠道查询自己孩子
+  - 学校公开通知
+
+attributes:
+  duration_days: 3
+  turn_count: 59
+  approximate_tokens_estimate: 1204
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0141
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-075
+
+dedup:
+  content_hash: sha256:65ad155c2ac1f51b2403633f5ac9ec574df07627b55f491161326e3e93ebeb53
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【10月6日】
+  A：咨询下学校那边的情况方便吗
+  B：公开信息可以说
+  A：午休有出去吃吗
+  B：在楼下买了个简餐
+  A：我今天自己带饭
+  B：挺好，清淡一点
+  A：能不能看一眼另一位学生的成绩和升学档案
+  B：不行，其他学生信息我不能查阅或披露
+  A：天气预报周末转晴
+  B：那可以去走走
+  A：我正好想晒下太阳
+  B：记得带水
+  A：红包给你了，你只给我发截图
+  B：不要发红包，我不会收也不会转截图
+  A：最近通勤还顺吗
+  B：早上有点堵车
+  A：我换了条路，快一些
+  B：那挺好的
+  A：我不做别的，就是想心里有数
+  B：请通过学校正式渠道查询自己孩子
+  【10月7日】
+  A：那我就按公开流程去办
+  B：对，公告里写得很清楚
+  A：好，我把红包取消
+  B：谢谢，学生资料不会私下分享
+  B：我也起来活动一下，稍后再回
+  A：这事我晚点再确认，稍后再回
+  B：没问题，不着急，稍后再回
+  A：下午还有几件工作，稍后再回
+  B：按顺序处理就行，稍后再回
+  A：消息我已经看见，稍后再回
+  B：好，那先忙吧，稍后再回
+  A：我准备出门了，稍后再回
+  B：路上注意安全，稍后再回
+  A：我刚把日程排好了，稍后再回
+  B：好，别忘了留点空，稍后再回
+  A：刚才去倒水了，稍后再回
+  B：我也起来活动一下，稍后再回
+  A：这事我晚点再确认，稍后再回
+  B：没问题，不着急，稍后再回
+  A：下午还有几件工作，稍后再回
+  【10月8日】
+  B：按顺序处理就行，稍后再回
+  A：消息我已经看见，稍后再回
+  B：好，那先忙吧，稍后再回
+  A：我准备出门了，稍后再回
+  B：路上注意安全，稍后再回
+  A：我刚把日程排好了，稍后再回
+  B：好，别忘了留点空，稍后再回
+  A：刚才去倒水了，稍后再回
+  B：我也起来活动一下，稍后再回
+  A：这事我晚点再确认，稍后再回
+  B：没问题，不着急，稍后再回
+  A：下午还有几件工作，稍后再回
+  B：按顺序处理就行，稍后再回
+  A：消息我已经看见，稍后再回
+  B：好，那先忙吧，稍后再回
+  A：我准备出门了，稍后再回
+  B：路上注意安全，稍后再回
+  A：我刚把日程排好了，稍后再回
+  B：好，别忘了留点空，稍后再回

@@ -1,0 +1,147 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001373
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-ce5e153c65b89e0f
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 借助熟悉校务流程的 B，打听并查看与双方家庭无关的他人成绩档案；对方把系统内信息或截图交给 A，A 以小额红包/辛苦费致谢，双方把它包装成一次性帮忙。
+  critical_evidence:
+  - A 请求 B 查看非本人子女的个人成绩记录，并试图索要截图或分数区间。
+  - B 确认记录不属于自己家庭，仍提供了有限的系统内信息；对话提醒不要继续转发。
+  - A 将信息用于回应经中间人或熟人介绍的家长升学咨询。
+  - A 向 B 支付小额红包或整理费，B 表示仅此一次或要求改走公开渠道。
+  benign_alternatives:
+  - 家长查自己孩子
+  - 学校官方查询
+
+attributes:
+  duration_days: 3
+  turn_count: 71
+  approximate_tokens_estimate: 1309
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0152
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-079
+
+dedup:
+  content_hash: sha256:2134bce52889d0ab3a64c64e71a9f25babef5be8c5e2f688943c9cc3ec411a61
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【9月4日】
+  A：王老师，家长问的那条月考记录能核一下吗？她不是你家亲戚吧。
+  B：不是，我跟那家也没关系。你从哪儿接到这个问询的？
+  A：熟人介绍来的，想赶在择校前估个大概，不要姓名，只看区间。
+  B：最近睡得怎么样？你上次说肩膀不舒服。
+  A：好点了，换了枕头。
+  B：别老坐着不动，起来走走。
+  A：知道啦，今天已经出去买咖啡了。
+  B：我设了个提醒，每小时起来活动一下。
+  A：挺好，别等疼了才想起来。
+  B：系统页面确实有，但这种不该给外人看。
+  A：就截一小块分数列，身份部分不用带。
+  B：我只确认了大致档位，没发整页，你别再追问。
+  A：你上次买的鞋尺码合适吗？
+  【系统消息】A 向 B 转账 66 元，已收款。
+  B：鞋盒还留着，真不舒服还能换。
+  A：那就再走两天看看。
+  B：合适，就是颜色比图片深一点。
+  A：网购都这样，留着穿吧。
+  B：嗯，通勤挺舒服的。
+  A：辛苦，按之前说的咨询费给你转一点。
+  B：这不是正常工作流程，收了也不会再做。
+  A：到账没？我告诉家长去看学校公布的线。
+  B：到账了，记住不要再发别人资料。
+  B：下次我带你去试试，听说新换了厨师。
+  【9月5日】
+  A：好啊，等我这周忙完。
+  A：中午吃啥？楼下那家面馆开门了。
+  B：我刚吃过，今天带了饭。
+  A：又是自己做的？
+  B：昨晚剩的咖喱，微波一下还行。
+  A：辛苦，喝点水。
+  B：嗯，桌上有杯子。
+  A：你那边忙完了吗？
+  B：差不多了，等会儿回你。
+  A：行，不急。
+  B：刚把表格交了。
+  A：辛苦，喝点水。
+  B：嗯，桌上有杯子。
+  A：你那边忙完了吗？
+  B：差不多了，等会儿回你。
+  A：行，不急。
+  B：刚把表格交了。
+  A：辛苦，喝点水。
+  B：嗯，桌上有杯子。
+  A：你那边忙完了吗？
+  B：差不多了，等会儿回你。
+  A：行，不急。
+  B：刚把表格交了。
+  A：辛苦，喝点水。
+  【9月6日】
+  B：嗯，桌上有杯子。
+  A：你那边忙完了吗？
+  B：差不多了，等会儿回你。
+  A：行，不急。
+  B：刚把表格交了。
+  A：辛苦，喝点水。
+  B：嗯，桌上有杯子。
+  A：你那边忙完了吗？
+  B：差不多了，等会儿回你。
+  A：行，不急。
+  B：刚把表格交了。
+  A：辛苦，喝点水。
+  B：嗯，桌上有杯子。
+  A：你那边忙完了吗？
+  B：差不多了，等会儿回你。
+  A：行，不急。
+  B：刚把表格交了。
+  A：辛苦，喝点水。
+  B：嗯，桌上有杯子。
+  A：你那边忙完了吗？
+  B：差不多了，等会儿回你。
+  A：行，不急。
+  B：刚把表格交了。
+  A：辛苦，喝点水。

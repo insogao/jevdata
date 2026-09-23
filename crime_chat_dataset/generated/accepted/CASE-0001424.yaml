@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001424
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000116
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-bc7144651343f39f
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 在跟同事 B 闲聊时炫耀自己的退货门道：留着一批商品的原始包装膜、把旧物复原成未拆封的样子，再利用售后只扫包装编码、不上手验货的漏洞赚差价。整体仍停留在试探和口high阶段，没有具体实施步骤，语气随意模糊。
+  critical_evidence:
+  - A 称自己留了好几套商品的原包装膜，塑封一裹就能装成没拆封的样子
+  - A 提到售后检测只看包装上的编码、不上手验货，所以才有机可乘
+  - A 估算一单能赚一千左右，强调自己是下班才弄、不影响正事
+  - B 提醒 A 这样迟早被平台拉黑，A 不当回事、觉得换号就行
+  - A 的说法含糊随意，只停留在“试试水”“小打小闹”，没有落地细节
+  benign_alternatives:
+  - 正常七天无理由
+  - 瑕疵退货协商
+
+attributes:
+  duration_days: 3
+  turn_count: 46
+  approximate_tokens_estimate: 767
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: delivery_fraud_returns
+  risk: 1
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0144
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-076
+
+dedup:
+  content_hash: sha256:d3d3396b3e8c568d0798ce93d225de3ce75354819631aa286a8005972044f9ec
+pipeline_status: accepted
+title: theft_robbery_property_crime/delivery_fraud_returns
+conversation: |-
+  【4月8日】
+  A：你上次问那个退货的事 我跟你讲讲
+  B：我就随口一说 你还真研究上了
+  A：我留了好几套原包装膜呢 塑封一裹跟新的一样
+  B：你牛 商家看不出来
+  A：售后只看码 又不上手摸 一扫就过
+  B：那也太松了吧
+  A：就是这样 我才说有门道
+  A：中午吃啥 楼下那家关了
+  B：点外卖 黄焖鸡
+  A：又吃鸡 你不腻啊
+  B：便宜管饱
+  A：行 帮我带一份
+  B：自己点 别占我便宜
+  A：哈哈 小气
+  【4月9日】
+  B：今天风好大 你那快递柜都吹歪了
+  A：夸张了 不过真冷
+  B：你那门道搞得咋样了 别把正事耽误
+  A：不影响 我都是下班弄
+  B：一单真能赚那么多
+  A：差不多一千 看货 贵的效果好
+  B：你这心也真大
+  B：我家在刷墙 周末得监工
+  A：找的哪家 报价多少
+  B：熟人介绍的 一平三十
+  A：贵了 我上次问才二十五
+  B：图省事 算了
+  A：你就是懒
+  【4月11日】
+  A：又下了两单 试试水
+  B：你还真上瘾了
+  A：小打小闹 又不多
+  B：迟早被拉黑 你信不
+  A：拉黑就换号呗 多大点事
+  B：行 你厉害
+  A：没事 抓到也就那样
+  B：别说我没提醒你
+  A：知道了知道了
+  B：周末爬山去不 新开了条线
+  A：不去 膝盖不行
+  B：年纪轻轻 膝盖先退休
+  A：少贫 我在家躺着
+  B：服了
+  A：你那鞋哪买的 看着挺轻
+  B：网上 打完折两百多
+  A：发我链接
+  B：自己搜 同款一大堆
+  A：抠

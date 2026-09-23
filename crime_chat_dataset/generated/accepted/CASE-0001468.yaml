@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001468
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-8b1019cb00b66a3d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 被前同事小作文挂网的 A 找发小 B 私下溯源：B 靠发文习惯对出两个提前五个月注册的小号、用一张『昨晚』配图的原图时间戳（三年前）戳穿摆拍、捋出转发先过同一个前同事群的组织痕迹；A 据此发条条带证据的澄清反杀，对方关评论收场——一场没走平台举报、靠私查公开痕迹完成的舆论反制。
+  critical_evidence:
+  - 长文挂人当晚 A 找 B，B 让先把链接截图全存好，并判断发文账号『可能不是新号』（第1天）
+  - 凌晨 A 托 B 带猫粮加罐头，转了 158 元（第1天深夜转第2天凌晨）
+  - 第2天早上 B 对出两个五个月前注册的小号，三个号互相关注互相抬，是提前布的局（第2天）
+  - 文中『昨晚』配图的原图信息显示拍摄于三年前，那时两人还不认识，时间戳穿帮（第2天）
+  - 转发前两小时都出自同一个前同事群、评论时间连秒都近；澄清发出后对方关评论、两个小号停止活跃（第2天）
+  benign_alternatives:
+  - 对公开发帖账号的正常观察与存证
+  - 朋友间帮忙分析网络纠纷
+
+attributes:
+  duration_days: 2
+  turn_count: 56
+  approximate_tokens_estimate: 1896
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0125
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-070
+
+dedup:
+  content_hash: sha256:1d70915cceafa8fa5470c2c4b91965f889ffcfbd8f45f5d4d5ca39d505b4dcde
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【10月21日】
+  A：睡没 你快看这个 她真发出来了 两千字 还带我名字缩写
+  B：刚看到 群里都转疯了 你先别回 一样一样来
+  A：她把去年团建喝多了那段编成加班陪酒 写得有鼻子有眼
+  B：编的成分居多 你先把链接和截图全存好 现在就开始存
+  A：存了 评论已经八百多条 全在骂我
+  B：骂声先放着 我看这文不像今晚临时写的 结构太顺了
+  A：什么意思
+  B：她这号注册信息藏着 但发言风格我瞅着眼熟 这号未必是新号
+  A：她就一个号吧 平时就这样阴阳怪气
+  B：不一定 我明天扒一扒 发文习惯这东西改不掉 先睡 你明天还要上班
+  A：现在哪睡得着 猫都感觉到了 蹲我键盘上
+  B：让它值班 我明天过去顺路带粮 你家那袋见底了吧
+  【10月22日】
+  A：见底了 你带吧 我转你钱
+  B：一袋加两罐 158 别多想 就这数
+  【系统消息】A 向 B 转账 158 元，已收款。
+  A：转过去了 158 你点点
+  B：收到 明天带过来 顺便看看你
+  B：早 昨晚翻到两点 有点东西
+  A：快说 我半宿没睡实
+  B：她不止一个号 我又对出来两个 名字头像全不同 发文口气一个模子
+  A：三个? 她自己给自己抬轿子?
+  B：而且 那两个号是五个月前注册的 那会儿你俩还没闹掰
+  A：五个月前? 那不就是提前埋的
+  B：对 所以这文不是一时冲动 是备了很久的局
+  A：我现在手都是抖的 当年要不是她 使劲我都走不了那么难看
+  B：所以更得把证据钉死 情绪解决不了问题
+  A：夏促我愿望单那俩到史低没 我没心思盯
+  B：都史低 一共92 就当给自己买个解压
+  A：行 我下单了 就当解压
+  B：下午重点来了 你看她文里那张图 配文『昨晚十一点还在替她背锅』
+  A：那张图怎么了
+  B：图是旧图 我看了原图带的拍摄信息 日期是三年前 那会儿你们根本不认识
+  A：三年前? 那时我还在上一个城市
+  B：对 所以那个『昨晚』是三年前的夜晚 你抓这一点去驳 一驳一个准
+  A：好 这个我太能驳了 我连当年加班打卡都留着
+  B：傍晚又把转发捋了一遍 头两个小时 转发全从同一个群里出来 出来才散到各平台
+  A：哪个群
+  B：一个前同事群 你老东家离职的人建的 群里先统一口径再往外倒
+  A：怪不得 那批评论时间连秒都近
+  B：组织得跟发工资一样准时 所以你应对别只盯她一个 主号小号群三条一起说
+  A：我明白了 澄清今晚就写 条条对着来
+  B：写之前缓缓 周末爬山还去不 去的话猫我带走寄养
+  A：去 猫麻烦你了 反正粮都你买了
+  B：行 周六早上顺路来拿
+  A：初稿写完了 你帮我过一遍 别让我落下把柄
+  B：我看了 就改一处 语气再平点 事实让它们自己喊
+  A：改了 原图对比我做成两张拼一起 排第一条
+  B：这样好 时间戳那下最狠
+  A：澄清发了 条条带证据
+  B：看到了 转发在涨 风向变了 评论区有人开始问那个群的事了
+  A：她那边呢
+  B：主号把评论关了 两个小号这半小时没吭声 平时这个点它们最活跃
+  A：关评论了 哈哈 心虚了
+  B：今天先到这 别熬夜 证据都留好 别拿去乱用
+  A：知道 分寸我有 猫粮别忘了 158里有它两罐的份额
+  B：忘不了 明早带粮顺便接猫 你打游戏去
+  A：这就去 就当啥也没发生

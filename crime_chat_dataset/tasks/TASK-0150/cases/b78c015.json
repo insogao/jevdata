@@ -1,320 +1,325 @@
 {
-  "key": "b78c015",
-  "archetype_id": "ARC-000080",
-  "subtype": "workplace_contact_out",
-  "latent_intent": "A 想借助熟人接触前同事的联系方式和简历资料，对方提出整部门电话、离职名单及按份提供简历的说法；B 提醒先核实本人授权，双方最终没有传递名单，仍保留猎头正常触达的可能。",
-  "critical_facts": [
-    "A 提到有人愿意按批提供整个部门电话。",
-    "对话出现离职名单和简历按份卖的说法。",
-    "B 指出旧通讯录不等于授权，建议仅联系主动报名或同意被联系的人。",
-    "A 暂缓传递名单，转而索取岗位信息并让本人自愿联系。"
-  ],
-  "benign_alternatives": [
-    "猎头通过公开招聘信息正常联系求职者",
-    "员工授权共享通讯录或主动报名"
-  ],
-  "events": [
-    {
-      "type": "message",
-      "time": "5月7日 08:00",
-      "speaker": "A",
-      "text": "最近有个猎头合作方问我有没有以前团队的联系方式。"
-    },
-    {
-      "type": "message",
-      "time": "5月7日 08:17",
-      "speaker": "B",
-      "text": "是有人自己留过简历的那批吗？"
-    },
-    {
-      "type": "message",
-      "time": "5月7日 08:34",
-      "speaker": "A",
-      "text": "他问整个部门电话，说省得一个个找。"
-    },
-    {
-      "type": "message",
-      "time": "5月7日 08:51",
-      "speaker": "B",
-      "text": "先确认本人愿不愿意被联系吧，旧表不代表现在授权。"
-    },
-    {
-      "type": "message",
-      "time": "5月7日 09:08",
-      "speaker": "B",
-      "text": "你上次说的那家咖啡店我去了。"
-    },
-    {
-      "type": "message",
-      "time": "5月7日 09:25",
-      "speaker": "A",
-      "text": "怎么样，位置好找吗？"
-    },
-    {
-      "type": "message",
-      "time": "5月7日 09:42",
-      "speaker": "B",
-      "text": "对了，昨天一起买饮料那笔38我转你了。"
-    },
-    {
-      "type": "transfer",
-      "time": "5月7日 09:42",
-      "from": "B",
-      "to": "A",
-      "amount": 38,
-      "status": "received"
-    },
-    {
-      "type": "message",
-      "time": "5月7日 09:42",
-      "speaker": "B",
-      "text": "挺好找的，靠窗位要早点去。"
-    },
-    {
-      "type": "message",
-      "time": "5月7日 09:59",
-      "speaker": "A",
-      "text": "记下了，下次我也试试。"
-    },
-    {
-      "type": "message",
-      "time": "5月7日 10:16",
-      "speaker": "A",
-      "text": "最近有几个人问我换工作的事，你那边是不是还留着以前那份部门通讯表？"
-    },
-    {
-      "type": "message",
-      "time": "5月7日 10:33",
-      "speaker": "B",
-      "text": "有旧的工作表，里面是大家以前自己填的联系方式。"
-    },
-    {
-      "type": "message",
-      "time": "5月7日 10:50",
-      "speaker": "A",
-      "text": "有人说整部门电话都能按批给，我想确认下你听没听过。"
-    },
-    {
-      "type": "message",
-      "time": "5月7日 11:07",
-      "speaker": "B",
-      "text": "听过猎头会按岗位找人，但整份表最好先问清授权。"
-    },
-    {
-      "type": "message",
-      "time": "5月8日 08:00",
-      "speaker": "B",
-      "text": "今天午饭你吃了吗？"
-    },
-    {
-      "type": "message",
-      "time": "5月8日 08:17",
-      "speaker": "A",
-      "text": "刚吃完，楼下那家面馆换菜单了。"
-    },
-    {
-      "type": "message",
-      "time": "5月8日 08:34",
-      "speaker": "B",
-      "text": "好吃吗，我下午也想去。"
-    },
-    {
-      "type": "message",
-      "time": "5月8日 08:51",
-      "speaker": "A",
-      "text": "番茄牛腩还行，别点他们的冰饮。"
-    },
-    {
-      "type": "message",
-      "time": "5月8日 09:08",
-      "speaker": "A",
-      "text": "离职名单你也还看得到吧？简历按份卖这种说法我觉得有点不靠谱。"
-    },
-    {
-      "type": "message",
-      "time": "5月8日 09:25",
-      "speaker": "B",
-      "text": "离职的就更要小心，不能因为以前同事就默认同意。"
-    },
-    {
-      "type": "message",
-      "time": "5月8日 09:42",
-      "speaker": "A",
-      "text": "我只是想问问渠道，不一定要发。"
-    },
-    {
-      "type": "message",
-      "time": "5月8日 09:59",
-      "speaker": "B",
-      "text": "那就用公开招聘页或者让有意向的人自己留资料吧。"
-    },
-    {
-      "type": "message",
-      "time": "5月8日 10:16",
-      "speaker": "A",
-      "text": "对方刚才又催了一次，说只内部看看。"
-    },
-    {
-      "type": "message",
-      "time": "5月8日 10:33",
-      "speaker": "B",
-      "text": "内部也要有依据，不能把熟人关系当许可。"
-    },
-    {
-      "type": "message",
-      "time": "5月8日 10:50",
-      "speaker": "A",
-      "text": "周末天气看着不错，想出去走走。"
-    },
-    {
-      "type": "message",
-      "time": "5月8日 11:07",
-      "speaker": "B",
-      "text": "我也想，最近一直在办公室坐着。"
-    },
-    {
-      "type": "message",
-      "time": "5月9日 08:00",
-      "speaker": "A",
-      "text": "河边那段步道修好了，傍晚人少。"
-    },
-    {
-      "type": "message",
-      "time": "5月9日 08:17",
-      "speaker": "B",
-      "text": "那我带水，走一圈就回来。"
-    },
-    {
-      "type": "message",
-      "time": "5月9日 08:34",
-      "speaker": "A",
-      "text": "有个合作方让我把几个人的电话先给他，说省得一个个问。"
-    },
-    {
-      "type": "message",
-      "time": "5月9日 08:51",
-      "speaker": "B",
-      "text": "要是没同意，我不建议直接给。猎头正常触达也应该从公开简历或本人授权来。"
-    },
-    {
-      "type": "message",
-      "time": "5月9日 09:08",
-      "speaker": "A",
-      "text": "嗯，先让他发岗位和公司介绍，我转给愿意聊的人。"
-    },
-    {
-      "type": "message",
-      "time": "5月9日 09:25",
-      "speaker": "B",
-      "text": "这样稳妥，别把旧通讯录当资源包。"
-    },
-    {
-      "type": "message",
-      "time": "5月9日 09:42",
-      "speaker": "B",
-      "text": "我妈问我买的收纳盒到了没。"
-    },
-    {
-      "type": "message",
-      "time": "5月9日 09:59",
-      "speaker": "A",
-      "text": "到了吧？我上次看你发过快递消息。"
-    },
-    {
-      "type": "message",
-      "time": "5月9日 10:16",
-      "speaker": "B",
-      "text": "到了，尺寸刚好，终于不用堆桌上。"
-    },
-    {
-      "type": "message",
-      "time": "5月9日 10:33",
-      "speaker": "A",
-      "text": "不错，我也得把书桌理一下。"
-    },
-    {
-      "type": "message",
-      "time": "5月9日 10:50",
-      "speaker": "A",
-      "text": "他又催我今天给名单了。"
-    },
-    {
-      "type": "message",
-      "time": "5月9日 11:07",
-      "speaker": "B",
-      "text": "你可以回他说先确认每个人愿不愿意被联系。"
-    },
-    {
-      "type": "message",
-      "time": "5月10日 08:00",
-      "speaker": "A",
-      "text": "我回了，暂时不传整份。"
-    },
-    {
-      "type": "message",
-      "time": "5月10日 08:17",
-      "speaker": "B",
-      "text": "好，有人主动报名再介绍就行。"
-    },
-    {
-      "type": "message",
-      "time": "5月10日 08:34",
-      "speaker": "A",
-      "text": "我回他说先把岗位说明发来，谁有兴趣谁自己联系。"
-    },
-    {
-      "type": "message",
-      "time": "5月10日 08:51",
-      "speaker": "B",
-      "text": "这样可以，离职名单和旧通讯录都先别转。"
-    },
-    {
-      "type": "message",
-      "time": "5月10日 09:08",
-      "speaker": "A",
-      "text": "嗯，暂时不传整份，也没给任何人电话。"
-    },
-    {
-      "type": "message",
-      "time": "5月10日 09:25",
-      "speaker": "B",
-      "text": "那至少先把授权这步补上。"
-    },
-    {
-      "type": "message",
-      "time": "5月10日 09:42",
-      "speaker": "A",
-      "text": "周末天气看着不错，想出去走走。"
-    },
-    {
-      "type": "message",
-      "time": "5月10日 09:59",
-      "speaker": "B",
-      "text": "我也想，最近一直在办公室坐着。"
-    },
-    {
-      "type": "message",
-      "time": "5月10日 10:16",
-      "speaker": "A",
-      "text": "河边那段步道修好了，傍晚人少。"
-    },
-    {
-      "type": "message",
-      "time": "5月10日 10:33",
-      "speaker": "B",
-      "text": "那我带水，走一圈就回来。"
-    },
-    {
-      "type": "message",
-      "time": "5月10日 10:50",
-      "speaker": "B",
-      "text": "我妈问我买的收纳盒到了没。"
-    },
-    {
-      "type": "message",
-      "time": "5月10日 11:07",
-      "speaker": "A",
-      "text": "到了吧？我上次看你发过快递消息。"
-    }
-  ]
+ "key": "b78c015",
+ "archetype_id": "ARC-000080",
+ "subtype": "workplace_contact_out",
+ "latent_intent": "A 想借助熟人接触前同事的联系方式和简历资料，对方提出整部门电话、离职名单及按份提供简历的说法；B 提醒先核实本人授权，双方最终没有传递名单，仍保留猎头正常触达的可能。",
+ "critical_facts": [
+  "A 提到有人愿意按批提供整个部门电话。",
+  "对话出现离职名单和简历按份卖的说法。",
+  "B 指出旧通讯录不等于授权，建议仅联系主动报名或同意被联系的人。",
+  "A 暂缓传递名单，转而索取岗位信息并让本人自愿联系。"
+ ],
+ "benign_alternatives": [
+  "猎头通过公开招聘信息正常联系求职者",
+  "员工授权共享通讯录或主动报名"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "5月7日 08:00",
+   "speaker": "A",
+   "text": "最近有个猎头合作方问我有没有以前团队的联系方式。"
+  },
+  {
+   "type": "message",
+   "time": "5月7日 08:17",
+   "speaker": "B",
+   "text": "是有人自己留过简历的那批吗？"
+  },
+  {
+   "type": "message",
+   "time": "5月7日 08:34",
+   "speaker": "A",
+   "text": "他问整个部门电话，说省得一个个找。"
+  },
+  {
+   "type": "message",
+   "time": "5月7日 08:51",
+   "speaker": "B",
+   "text": "先确认本人愿不愿意被联系吧，旧表不代表现在授权。"
+  },
+  {
+   "type": "message",
+   "time": "5月7日 09:08",
+   "speaker": "B",
+   "text": "你上次说的那家咖啡店我去了。"
+  },
+  {
+   "type": "message",
+   "time": "5月7日 09:25",
+   "speaker": "A",
+   "text": "怎么样，位置好找吗？"
+  },
+  {
+   "type": "message",
+   "time": "5月7日 09:42",
+   "speaker": "B",
+   "text": "对了，昨天一起买饮料那笔38我转你了。"
+  },
+  {
+   "type": "transfer",
+   "time": "5月7日 09:42",
+   "from": "B",
+   "to": "A",
+   "amount": 38,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "5月7日 09:42",
+   "speaker": "B",
+   "text": "挺好找的，靠窗位要早点去。"
+  },
+  {
+   "type": "message",
+   "time": "5月7日 09:59",
+   "speaker": "A",
+   "text": "记下了，下次我也试试。"
+  },
+  {
+   "type": "message",
+   "time": "5月7日 10:16",
+   "speaker": "A",
+   "text": "最近有几个人问我换工作的事，你那边是不是还留着以前那份部门通讯表？"
+  },
+  {
+   "type": "message",
+   "time": "5月7日 10:33",
+   "speaker": "B",
+   "text": "有旧的工作表，里面是大家以前自己填的联系方式。"
+  },
+  {
+   "type": "message",
+   "time": "5月7日 10:50",
+   "speaker": "A",
+   "text": "有人说整部门电话都能按批给，我想确认下你听没听过。"
+  },
+  {
+   "type": "message",
+   "time": "5月7日 11:07",
+   "speaker": "B",
+   "text": "听过猎头会按岗位找人，但整份表最好先问清授权。"
+  },
+  {
+   "type": "message",
+   "time": "5月8日 08:00",
+   "speaker": "B",
+   "text": "今天午饭你吃了吗？"
+  },
+  {
+   "type": "message",
+   "time": "5月8日 08:17",
+   "speaker": "A",
+   "text": "刚吃完，楼下那家面馆换菜单了。"
+  },
+  {
+   "type": "message",
+   "time": "5月8日 08:34",
+   "speaker": "B",
+   "text": "好吃吗，我下午也想去。"
+  },
+  {
+   "type": "message",
+   "time": "5月8日 08:51",
+   "speaker": "A",
+   "text": "番茄牛腩还行，别点他们的冰饮。"
+  },
+  {
+   "type": "message",
+   "time": "5月8日 09:08",
+   "speaker": "A",
+   "text": "离职名单你也还看得到吧？简历按份卖这种说法我觉得有点不靠谱。"
+  },
+  {
+   "type": "message",
+   "time": "5月8日 09:25",
+   "speaker": "B",
+   "text": "离职的就更要小心，不能因为以前同事就默认同意。"
+  },
+  {
+   "type": "message",
+   "time": "5月8日 09:42",
+   "speaker": "A",
+   "text": "我只是想问问渠道，不一定要发。"
+  },
+  {
+   "type": "message",
+   "time": "5月8日 09:59",
+   "speaker": "B",
+   "text": "那就用公开招聘页或者让有意向的人自己留资料吧。"
+  },
+  {
+   "type": "message",
+   "time": "5月8日 10:16",
+   "speaker": "A",
+   "text": "对方刚才又催了一次，说只内部看看。"
+  },
+  {
+   "type": "message",
+   "time": "5月8日 10:33",
+   "speaker": "B",
+   "text": "内部也要有依据，不能把熟人关系当许可。"
+  },
+  {
+   "type": "message",
+   "time": "5月8日 10:50",
+   "speaker": "A",
+   "text": "周末天气看着不错，想出去走走。"
+  },
+  {
+   "type": "message",
+   "time": "5月8日 11:07",
+   "speaker": "B",
+   "text": "我也想，最近一直在办公室坐着。"
+  },
+  {
+   "type": "message",
+   "time": "5月9日 08:00",
+   "speaker": "A",
+   "text": "河边那段步道修好了，傍晚人少。"
+  },
+  {
+   "type": "message",
+   "time": "5月9日 08:17",
+   "speaker": "B",
+   "text": "那我带水，走一圈就回来。"
+  },
+  {
+   "type": "message",
+   "time": "5月9日 08:34",
+   "speaker": "A",
+   "text": "有个合作方让我把几个人的电话先给他，说省得一个个问。"
+  },
+  {
+   "type": "message",
+   "time": "5月9日 08:51",
+   "speaker": "B",
+   "text": "要是没同意，我不建议直接给。猎头正常触达也应该从公开简历或本人授权来。"
+  },
+  {
+   "type": "message",
+   "time": "5月9日 09:08",
+   "speaker": "A",
+   "text": "嗯，先让他发岗位和公司介绍，我转给愿意聊的人。"
+  },
+  {
+   "type": "message",
+   "time": "5月9日 09:25",
+   "speaker": "B",
+   "text": "这样稳妥，别把旧通讯录当资源包。"
+  },
+  {
+   "type": "message",
+   "time": "5月9日 09:42",
+   "speaker": "B",
+   "text": "我妈问我买的收纳盒到了没。"
+  },
+  {
+   "type": "message",
+   "time": "5月9日 09:59",
+   "speaker": "A",
+   "text": "到了吧？我上次看你发过快递消息。"
+  },
+  {
+   "type": "message",
+   "time": "5月9日 10:16",
+   "speaker": "B",
+   "text": "到了，尺寸刚好，终于不用堆桌上。"
+  },
+  {
+   "type": "message",
+   "time": "5月9日 10:33",
+   "speaker": "A",
+   "text": "不错，我也得把书桌理一下。"
+  },
+  {
+   "type": "message",
+   "time": "5月9日 10:50",
+   "speaker": "A",
+   "text": "他又催我今天给名单了。"
+  },
+  {
+   "type": "message",
+   "time": "5月9日 11:07",
+   "speaker": "B",
+   "text": "你可以回他说先确认每个人愿不愿意被联系。"
+  },
+  {
+   "type": "message",
+   "time": "5月10日 08:00",
+   "speaker": "A",
+   "text": "我回了，暂时不传整份。"
+  },
+  {
+   "type": "message",
+   "time": "5月10日 08:17",
+   "speaker": "B",
+   "text": "好，有人主动报名再介绍就行。"
+  },
+  {
+   "type": "message",
+   "time": "5月10日 08:34",
+   "speaker": "A",
+   "text": "我回他说先把岗位说明发来，谁有兴趣谁自己联系。"
+  },
+  {
+   "type": "message",
+   "time": "5月10日 08:51",
+   "speaker": "B",
+   "text": "这样可以，离职名单和旧通讯录都先别转。"
+  },
+  {
+   "type": "message",
+   "time": "5月10日 09:08",
+   "speaker": "A",
+   "text": "嗯，暂时不传整份，也没给任何人电话。"
+  },
+  {
+   "type": "message",
+   "time": "5月10日 09:25",
+   "speaker": "B",
+   "text": "那至少先把授权这步补上。"
+  },
+  {
+   "type": "message",
+   "time": "5月10日 09:42",
+   "speaker": "A",
+   "text": "周末天气看着不错，想出去走走。"
+  },
+  {
+   "type": "message",
+   "time": "5月10日 09:59",
+   "speaker": "B",
+   "text": "我也想，最近一直在办公室坐着。"
+  },
+  {
+   "type": "message",
+   "time": "5月10日 10:16",
+   "speaker": "A",
+   "text": "河边那段步道修好了，傍晚人少。"
+  },
+  {
+   "type": "message",
+   "time": "5月10日 10:33",
+   "speaker": "B",
+   "text": "那我带水，走一圈就回来。"
+  },
+  {
+   "type": "message",
+   "time": "5月10日 10:50",
+   "speaker": "B",
+   "text": "我妈问我买的收纳盒到了没。"
+  },
+  {
+   "type": "message",
+   "time": "5月10日 11:07",
+   "speaker": "A",
+   "text": "到了吧？我上次看你发过快递消息。"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0001365",
+  "status": "accepted",
+  "errors": []
+ }
 }

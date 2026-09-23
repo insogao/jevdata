@@ -1,0 +1,144 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001183
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-e3c1c5a0bd401d5f
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 声称将 B 的匿名社交账号与本人联系起来，并有意在讨论区谈及；B 拒绝被关联或曝光，要求停止传播并使用平台隐私渠道。
+  critical_evidence:
+  - A 声称认出 B 的小号，并提及旧转发或相册原图时间，但不提供查找方法
+  - A 表示会在讨论区传播关联判断
+  - B 要求撤回、停止传播并拒绝公开确认
+  - 对话区分品牌公开舆情与针对个人的账号关联
+  benign_alternatives:
+  - 公开品牌舆情讨论
+  - 本人自愿公开且经授权的账号说明
+
+attributes:
+  duration_days: 3
+  turn_count: 68
+  approximate_tokens_estimate: 1402
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0132
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-072
+
+dedup:
+  content_hash: sha256:10fcb8339d7a1744d73c81631092acb8b1faef0316255500eb4ad41fc6e7adb3
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【9月5日】
+  A：我看了公开活动那条帖子，评论挺多
+  B：嗯，聊活动本身就行
+  A：最近通勤还顺吗
+  B：早上那段有点堵
+  A：我今天骑车快一点
+  B：天好时骑车挺舒服
+  A：你的小号我好像认出来了
+  B：请别公开关联
+  A：家里那盆花开了
+  B：颜色好看吗
+  A：淡黄色的，挺清爽
+  B：记得拍张照留着
+  A：相册原图时间和以前转发的东西看着像
+  B：不要把这些当成确认身份的理由
+  A：午饭后来得及吃吗
+  B：吃了点，今天还行
+  A：我中午带了便当
+  B：那挺方便的
+  A：有个群友想要截图看
+  B：我不同意传播，麻烦把帖子里那句删了
+  A：最近通勤还顺吗
+  B：早上那段有点堵
+  A：我今天骑车快一点
+  【9月6日】
+  B：天好时骑车挺舒服
+  A：已经删了
+  B：我会用平台举报隐私关联，别再继续
+  A：家里那盆花开了
+  B：颜色好看吗
+  A：淡黄色的，挺清爽
+  B：记得拍张照留着
+  A：好，后续只谈公开内容
+  B：谢了，个人账号别拿来讨论
+  A：刚刚午饭的钱我垫付了，你按AA转给我就好
+  【系统消息】B 向 A 转账 55 元，已收款。
+  B：没事，现在看到了，我收到了
+  A：我记到日历里了，我收到了
+  B：这样比较不容易忘，我收到了
+  A：我先去处理个工作消息，我收到了
+  B：行，晚点再聊，我收到了
+  A：外面风有点大，我收到了
+  B：那回去路上注意点，我收到了
+  A：我刚忙完手头这点事，我收到了
+  B：辛苦了，喝点水，我收到了
+  A：下午还得确认一个安排，我收到了
+  B：好，按你节奏来，我收到了
+  A：手机刚才没看到提醒，我收到了
+  B：没事，现在看到了，我收到了
+  【9月7日】
+  A：我记到日历里了，我收到了
+  B：这样比较不容易忘，我收到了
+  A：我先去处理个工作消息，我收到了
+  B：行，晚点再聊，我收到了
+  A：外面风有点大，我收到了
+  B：那回去路上注意点，我收到了
+  A：我刚忙完手头这点事，我收到了
+  B：辛苦了，喝点水，我收到了
+  A：下午还得确认一个安排，我收到了
+  B：好，按你节奏来，我收到了
+  A：手机刚才没看到提醒，我收到了
+  B：没事，现在看到了，我收到了
+  A：我记到日历里了，我收到了
+  B：这样比较不容易忘，我收到了
+  A：我先去处理个工作消息，我收到了
+  B：行，晚点再聊，我收到了
+  A：外面风有点大，我收到了
+  B：那回去路上注意点，我收到了
+  A：我刚忙完手头这点事，我收到了
+  B：辛苦了，喝点水，我收到了
+  A：下午还得确认一个安排，我收到了
+  B：好，按你节奏来，我收到了

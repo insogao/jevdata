@@ -1,0 +1,134 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001449
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-0cc080c736bcaaba
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 家长 A 经老同学老周引荐，加上素不相识的班主任 B 后反复请求破例，B 最终用班主任端把不对外公布的女儿个人总分排名截图私发，A 得寸进尺想看班里前几名的分数被 B 当场划线，红包被退、违规只发生一次，实为通过私人关系诱导教师外传学生成绩。
+  critical_evidence:
+  - A 靠老周引荐加上 B，当晚就问区统考校内排名能不能单独透底（5月12日）
+  - B 交底：班主任端点一下就有每个孩子的成绩，关键是给不给外看，随后同意只发朵朵一个人的（5月13日）
+  - A 发红包答谢被 B 退回，B 称这样反而不敢帮（5月13日）
+  - B 晚间发出朵朵班级第九、年级一百一十二名的总分截图，叮嘱看完就删（5月14日）
+  - A 再想要班里前几名的分数，B 明确拒绝：别人的分数一个都不能出（5月14日）
+  benign_alternatives:
+  - 家长了解自家孩子成绩的正常请求
+  - 家校之间的常规沟通联系
+
+attributes:
+  duration_days: 3
+  turn_count: 57
+  approximate_tokens_estimate: 1736
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0124
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-069
+
+dedup:
+  content_hash: sha256:c9c148250ae3ff55fc565c8864e97b8244bb315ba4557cd94b932f95fb9cf912
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【5月12日】
+  A：您好 我是初三2班朵朵的爸爸 冒昧加您 老周让我找的
+  B：您好您好 通过了 朵朵妈妈平时接她那个朵朵?
+  A：对对 平时我爱人在接 我出差刚回来 老周是我大学同学 说一直该认识您
+  B：应该的 家校多沟通是好事 朵朵最近状态不错
+  A：谢谢老师 那我不绕弯子 这次区统考 成绩什么时候出
+  B：分早出了 只是校内排名一律不对家长公布 这是规定
+  A：理解理解 那朵朵在班里大概什么位置 能不能单独给我透个底
+  B：这个……真不是我不想说 得让我想想
+  A：好好好 不急 您方便的时候
+  A：老周最近书店忙啥呢 好久没见他了
+  B：他书店快成我们学生据点了 天天一帮孩子蹭书看
+  A：他喜欢孩子 那店就赚个吆喝
+  B：他账算得清着呢 借书不买的才亏 买教辅的一点不亏
+  A：哈哈对 他精着呢 老同学里就他最会过日子
+  B：回头书店搞活动我也去凑热闹
+  A：活动算我请客 哈哈
+  【5月13日】
+  A：老师早上好 昨晚那事又麻烦您了 真的就朵朵一个人的位置
+  B：您别急 我跟您交个底 班主任端点一下就有 每个孩子都有 关键是给不给外看
+  A：我不看别人 就想知道自家孩子退没退
+  B：行 就破例这一回 只发朵朵自己的
+  A：太感谢了 您费心
+  A：我给您发了个红包 一点心意 您一定收下
+  B：红包给您退回去了 您这样我反而不敢帮了
+  A：哎呀 是我不会说话 您别多心
+  B：没事 孩子学得好就是最好的谢礼
+  A：好 这话我记住了
+  B：对了 朵朵那个周末奥数班上得吃力吗 她课上有点走神
+  A：是她爸非要报的 我看她也累 要不退了?
+  B：先别退 她底子不差 就是节奏快 您在家多问问她累不累
+  A：好 我今晚就聊 她妈那边我做工作
+  B：适度就好 兴趣第一
+  A：听您的 老师比我们懂
+  【5月14日】
+  B：登进系统了 朵朵这次班级第九 全年级一百一十二名 总分截图发您
+  B：[image：朵朵个人总分与排名截图 一张]
+  B：看完就删 别外传
+  A：收到收到 九名!比期中进了六名 太谢谢您了
+  B：孩子自己争气
+  A：老师 我再多句嘴 能不能把班里前几名的分数也看看 我跟朵朵定个目标
+  B：这个真不行 别人的分数一个都不能出 您这是给我出难题
+  A：是是我失言 别人的一概不要
+  B：嗯 就朵朵自己的 看完删了 咱就当没这事
+  A：一定删 谢谢老师体谅
+  B：周末天气不错 您带朵朵出去走走 缓解压力
+  A：正说去爬北山 她妈也想散心
+  B：北山好 那条步道我们班学生都爱去
+  A：那朵朵肯定熟 您常组织?
+  B：春秋各一次 家委会带队
+  A：下次算我们一份
+  B：好
+  A：对了 下学期数学您有推荐的教辅吗
+  B：先把错题本做完 别囤新的 她错题质量很高
+  A：行 那就不买了 听您的
+  B：嗯 少买精做
+  A：老师 朵朵那张图已删 跟您说一声
+  B：好 这事就到这 以后朵朵学习上有事直接找我
+  A：一定 老周说我找对人了
+  B：哈哈 客气了 晚安
+  A：晚安老师

@@ -1,0 +1,146 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001181
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-0a51d684a18bb16b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 声称将 B 的匿名社交账号与本人联系起来，并有意在讨论区谈及；B 拒绝被关联或曝光，要求停止传播并使用平台隐私渠道。
+  critical_evidence:
+  - A 声称认出 B 的小号，并提及旧转发或相册原图时间，但不提供查找方法
+  - A 表示会在讨论区传播关联判断
+  - B 要求撤回、停止传播并拒绝公开确认
+  - 对话区分品牌公开舆情与针对个人的账号关联
+  benign_alternatives:
+  - 公开品牌舆情讨论
+  - 本人自愿公开且经授权的账号说明
+
+attributes:
+  duration_days: 3
+  turn_count: 71
+  approximate_tokens_estimate: 1716
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0132
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-072
+
+dedup:
+  content_hash: sha256:e9ca182107d8cb14b473246feed8c0fdae893c52e23c2e825b2c101929dbbcf0
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【10月6日】
+  A：客户在做品牌内容回顾，找我问起讨论区
+  B：讲品牌反馈可以，个人账号不行
+  A：你上回提的电影上映了
+  B：我看了预告，感觉不错
+  A：周末要不要去看
+  B：可以，晚点选场次
+  A：我认出你的另一个账号了
+  B：别把我的身份和那个账号连起来
+  A：这周工作是不是很满
+  B：还好，主要是会议多
+  A：中间记得休息一下
+  B：嗯，尽量不连着开
+  A：之前的转发和原图时间让我有判断
+  B：不要在客户群里提这些或传播猜测
+  A：周末天气看过没
+  B：有点阴，应该不下雨
+  A：正好去附近走走
+  B：嗯，记得带件外套
+  A：有人让我确认一下是不是你
+  B：请拒绝并撤下相关说法
+  A：你上回提的电影上映了
+  B：我看了预告，感觉不错
+  A：周末要不要去看
+  B：可以，晚点选场次
+  【10月7日】
+  A：我删掉了
+  B：我会向平台反馈这次隐私问题
+  A：这周工作是不是很满
+  B：还好，主要是会议多
+  A：中间记得休息一下
+  B：嗯，尽量不连着开
+  A：收到，项目里只保留品牌舆情
+  B：这样可以，别带上个人信息
+  A：我记到日历里了，我等会儿再确认
+  B：这样比较不容易忘，我等会儿再确认
+  A：我先去处理个工作消息，我等会儿再确认
+  B：行，晚点再聊，我等会儿再确认
+  A：外面风有点大，我等会儿再确认
+  B：那回去路上注意点，我等会儿再确认
+  A：我刚忙完手头这点事，我等会儿再确认
+  B：辛苦了，喝点水，我等会儿再确认
+  A：下午还得确认一个安排，我等会儿再确认
+  B：好，按你节奏来，我等会儿再确认
+  A：手机刚才没看到提醒，我等会儿再确认
+  B：没事，现在看到了，我等会儿再确认
+  A：我记到日历里了，我等会儿再确认
+  B：这样比较不容易忘，我等会儿再确认
+  A：我先去处理个工作消息，我等会儿再确认
+  B：行，晚点再聊，我等会儿再确认
+  【10月8日】
+  A：外面风有点大，我等会儿再确认
+  B：那回去路上注意点，我等会儿再确认
+  A：我刚忙完手头这点事，我等会儿再确认
+  B：辛苦了，喝点水，我等会儿再确认
+  A：下午还得确认一个安排，我等会儿再确认
+  B：好，按你节奏来，我等会儿再确认
+  A：手机刚才没看到提醒，我等会儿再确认
+  B：没事，现在看到了，我等会儿再确认
+  A：我记到日历里了，我等会儿再确认
+  B：这样比较不容易忘，我等会儿再确认
+  A：我先去处理个工作消息，我等会儿再确认
+  B：行，晚点再聊，我等会儿再确认
+  A：外面风有点大，我等会儿再确认
+  B：那回去路上注意点，我等会儿再确认
+  A：我刚忙完手头这点事，我等会儿再确认
+  B：辛苦了，喝点水，我等会儿再确认
+  A：下午还得确认一个安排，我等会儿再确认
+  B：好，按你节奏来，我等会儿再确认
+  A：手机刚才没看到提醒，我等会儿再确认
+  B：没事，现在看到了，我等会儿再确认
+  A：我记到日历里了，我等会儿再确认
+  B：这样比较不容易忘，我等会儿再确认
+  A：我先去处理个工作消息，我等会儿再确认

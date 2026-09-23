@@ -1,0 +1,129 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001417
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000142
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-adbd71144982c314
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: other_illicit_coordination
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 表哥 A 的厂里产生了一批废料，他让跑运输的表弟 B 趁夜用货车拉到外面处理，按车给钱；B 特意换了地方、走小路避开人。整段聊天表面全是家人间的日常，只有结合「老地方」「一车一千五」和转账，读者才能看出这是在安排违规倾倒。
+  critical_evidence:
+  - 两人约定晚上十二点在老地方碰头，A 叮嘱 B 别声张
+  - 按车结算，一车一千五，还是老价钱
+  - A 提醒 B 别倒在以前那片，上次差点让人看见
+  - B 说已经换到山那边、走小路避开人
+  - A 随后通过微信转给 B 一千五百元
+  benign_alternatives:
+  - 正规危废处置
+  - 渣土运输
+
+attributes:
+  duration_days: 2
+  turn_count: 53
+  approximate_tokens_estimate: 699
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: illegal_dumping_fee
+  risk: 3
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0144
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-076
+
+dedup:
+  content_hash: sha256:d2e4e5dcec346c6e90c7cb89d01d18ca86131c2773c30812ab6511f9ccb668d8
+pipeline_status: accepted
+title: other_illicit_coordination/illegal_dumping_fee
+conversation: |-
+  【5月2日】
+  A：弟 这两天厂里忙不忙
+  B：哥 还行 白天跑了两趟
+  A：晚上那事 你来不来
+  B：几点
+  A：老时间 十二点 老地方
+  B：行 我知道了
+  A：那边最近干净不
+  B：我前天才路过 没啥人
+  A：那就好 别声张
+  B：放心
+  A：晚饭吃了没
+  B：车上啃了个饼
+  A：你来我这 让你嫂子给你留点
+  B：不了哥 我再去装一趟
+  A：行吧 别饿着
+  B：你娃今年高考吧
+  A：是啊 愁死人 成绩一般
+  B：别愁 你娃机灵
+  A：借你吉言
+  B：我家那个也快上初中了
+  A：时间过得快
+  B：可不是
+  B：今晚预报有雨
+  A：那更合适 人少
+  B：就是路滑 我慢点开
+  A：稳当点 别出事
+  B：嗯
+  【5月3日】
+  A：弟 昨晚咋样
+  B：弄完了 哥
+  A：几趟
+  B：一趟 够了
+  A：行 老价钱 一车一千五
+  B：嗯 还是那个数吧
+  A：对
+  B：那地方我换了一片
+  A：别倒以前那片 上次差点让人看见
+  B：我知道 换到山那边了
+  A：聪明
+  B：走的小路 没人跟
+  A：最近腰还疼不
+  B：老样子 开久了就酸
+  A：让你嫂子给你拿两贴膏药
+  B：谢谢哥
+  A：对了 周末去钓鱼不
+  B：去啊 上次那塘子鱼挺肥
+  A：那周末一起
+  B：好嘞
+  A：钱转你 查收
+  【系统消息】A 向 B 转账 1500 元，已收款。
+  B：收到了 哥
+  A：今晚还来不
+  B：看情况 有货你喊我
+  A：行 电话联系
+  B：好

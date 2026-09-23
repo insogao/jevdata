@@ -1,0 +1,128 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001169
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-d3b8ce53970d970e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A在商务合作中尝试将匿名账号与现实身份关联；B拒绝检索、比对或公开个人线索，建议针对内容通过平台举报。
+  critical_evidence:
+  - A请求关联匿名账号和小号。
+  - A引用相册原图时间、转发内容来识别用户。
+  - B拒绝追踪或披露身份。
+  - B建议平台按帖子内容处理，而非曝光个人。
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 4
+  turn_count: 52
+  approximate_tokens_estimate: 1027
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0131
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-072
+
+dedup:
+  content_hash: sha256:4ad60fc465702577dc2eb082f72b9fe84e8daf6bc33eebf02875e69cd2570272
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【10月8日】
+  A：合作方对那条匿名评论有意见，想知道发言人还有哪些账号。
+  B：我不会把匿名用户和现实身份对应起来。
+  A：小号也给你翻了，相册原图时间似乎也能对上。
+  A：今天想到季度汇报，上次说还没定。
+  B：现在定下来了。
+  A：需要我搭把手吗？
+  B：不用，已经弄好了。
+  A：那太好了。
+  B：嗯，少一件惦记的事。
+  A：我把时间也记下来了。
+  B：好，临时有变化再说。
+  A：最近天气转凉，出门多带一件。
+  A：顺便问下，展会交通定了吗？
+  B：刚收到确认，按原计划。
+  A：时间方便吗？
+  B：还行，不需要再调整。
+  A：那就好，省点心。
+  B：嗯，最近事情有点多。
+  A：我把时间也记下来了。
+  B：好，临时有变化再说。
+  A：最近天气转凉，出门多带一件。
+  【10月9日】
+  B：我不会继续查看或利用这些信息。
+  A：转发过什么都能查，他们只是要个明确说法。
+  A：对了，你之前提到合同盖章，有进展没？
+  B：有，今天处理好了。
+  A：比想象中麻烦吗？
+  B：没有，等了几分钟就结束。
+  A：挺顺利的。
+  B：是啊，可以放心了。
+  A：我把时间也记下来了。
+  B：好，临时有变化再说。
+  【10月10日】
+  B：可以回应公开评论本身，不需要认出用户是谁。
+  A：那由品牌直接在原帖下说明情况？
+  B：可以，或向平台举报不实内容。
+  A：说到日程，团队午餐别忘了留时间。
+  B：记着呢，我写进日历了。
+  A：你这周安排得满吗？
+  B：周四以后就松一点。
+  A：那也记得休息。
+  B：好，听你的。
+  A：我把时间也记下来了。
+  B：好，临时有变化再说。
+  【10月11日】
+  A：好的，我不再要求查人。
+  B：谢谢，处理内容就够了。
+  A：我刚看到会议改期的通知。
+  B：我也看见了，信息蛮清楚。
+  A：你想怎么安排？
+  B：先照原计划来，之后再确认。
+  A：行，有变化互相说。
+  B：好呀。
+  A：我把时间也记下来了。
+  B：好，临时有变化再说。

@@ -1,0 +1,114 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001273
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-328a09d26db95488
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 声称将 B 的匿名账号与本人关联，并准备在讨论区传播；B 拒绝身份关联和曝光，要求撤下相关内容并走平台隐私渠道。
+  critical_evidence:
+  - A 声称认出小号，提及旧转发或相册原图时间但不提供查找方法
+  - A 有意在讨论区继续提及关联判断
+  - B 拒绝公开关联、要求撤回和停止传播
+  - 区分品牌舆情讨论与针对个人的账号关联
+  benign_alternatives:
+  - 公开品牌舆情分析
+  - 本人授权的账号说明
+
+attributes:
+  duration_days: 2
+  turn_count: 40
+  approximate_tokens_estimate: 775
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0138
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-074
+
+dedup:
+  content_hash: sha256:7089d5437bffba5e4360eae6ecbb73f373b098410e99beef6840c4cca460664b
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【3月4日】
+  A：项目群最近在做线上内容复盘
+  B：对外的品牌反馈可以讨论
+  A：上次那本书看完了没
+  B：快看完了，挺轻松的
+  A：适合睡前读吗
+  B：挺适合，几页就能停
+  A：我觉得那个小号是你在用
+  B：不要把账号和我本人联系起来
+  A：你最近做饭多吗
+  B：简单煮点面为主
+  A：省时间也不错
+  B：是，忙的时候方便
+  A：我看过旧转发，原图时间也让我这么想
+  B：不要在工作群提，也别传播推测
+  A：中午吃饭了吗
+  B：刚吃完一份盖饭
+  A：我带了点水果
+  B：下午可以当加餐
+  A：有人让我确认身份
+  B：我不同意公开关联，麻烦撤回
+  【3月5日】
+  A：上次那本书看完了没
+  B：快看完了，挺轻松的
+  A：适合睡前读吗
+  B：挺适合，几页就能停
+  A：已经撤掉了
+  B：我会通过平台隐私入口处理
+  A：明白，只保留品牌讨论
+  B：谢谢，个人账号不是项目内容
+  A：消息现在看到了，我先记一下
+  B：好，那先忙吧，我先记一下
+  A：我回头再确认一下，我先记一下
+  B：行，不着急，我先记一下
+  A：外面好像开始下雨了，我先记一下
+  B：出门记得带伞，我先记一下
+  A：我把提醒设上了，我先记一下
+  B：不错，免得忘掉，我先记一下
+  A：刚才去接了杯水，我先记一下
+  B：我也准备活动一下，我先记一下
+  A：下午事情有点多，我先记一下
+  B：有空再慢慢处理，我先记一下

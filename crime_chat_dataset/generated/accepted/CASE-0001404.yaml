@@ -1,0 +1,110 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001404
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000014
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-a900fa720f13d33f
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 自称有内部关系的 A 向家长 B 兜售“内部名额”，说名额只剩一个、先交钱后签合同、笔试只是走过场，催 B 交钱并拉亲戚一起报，实为收钱办工作的骗局。
+  critical_evidence:
+  - A 说内部名额就剩一个，让 B 赶紧定下来
+  - A 要求 B 先交钱再签合同，说流程就是这样
+  - A 说笔试面试只是走过场，关系早就打点好了
+  - B 转了一笔名额费给 A
+  - A 催 B 把亲戚朋友也拉来一起报，多报有优惠
+  benign_alternatives:
+  - 正规的人才引进项目
+  - 事业单位的公开招聘
+
+attributes:
+  duration_days: 3
+  turn_count: 33
+  approximate_tokens_estimate: 812
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: inner_job_purchase
+  risk: 2
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0143
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-076
+
+dedup:
+  content_hash: sha256:48892bd21bfdcb0829aa6b044acf2e3310866d0ecf958831f3ad202085de09df
+pipeline_status: accepted
+title: fraud_scam/inner_job_purchase
+conversation: |-
+  【6月10日】
+  A：周姐 孩子工作的事考虑得咋样了
+  B：还在看 现在考试太难了
+  A：我这边有内部名额 就差最后一个了
+  B：内部名额? 靠谱吗
+  A：我做了八年了 送进去的孩子没有一百也有八十
+  B：要多少钱
+  A：这个数 先交一半定金 剩下的入职再补
+  B：得先签个合同吧
+  A：先交后签 我们这行都这样 合同是走个形式
+  B：中午跟孩子他爸商量了下 他不太信
+  A：不信很正常 等入职了你就知道我是干嘛的了
+  B：那笔试面试呢 孩子成绩一般
+  A：走过场 题我都打过招呼了 别紧张
+  【6月11日】
+  B：名额真的只剩一个了吗
+  A：骗你干啥 昨天还有人要 我先给你留着
+  B：那我交定金 你别给我弄丢了
+  A：放心 你转我 我今天就把名单报上去
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  B：转过去了 20万的一半 剩的入职给
+  A：收到 合同我下午发你电子版 你签个字就行
+  B：好 我等你
+  B：中午没啥胃口 一直盯着手机
+  A：别急 走流程要几天
+  B：我就怕耽误了
+  A：耽误不了
+  【6月12日】
+  A：对了 你妹妹家孩子不是也毕业了吗
+  B：是啊 她也愁
+  A：拉她一起报 一起报我给你各减五千
+  B：这还能团购?
+  A：名额是我手里的 我想给谁给谁
+  B：我妹说再看看 她怕是骗子
+  A：她不信算了 反正名额不等人
+  B：合同收到了 我签了发你
+  A：收到 接下来等笔试通知 到时候我告诉你几号去

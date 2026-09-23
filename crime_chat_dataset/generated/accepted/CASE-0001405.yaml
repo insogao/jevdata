@@ -1,0 +1,130 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001405
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000052
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-fda613e95dc35fce
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 两个同事在为公司内部的短视频比赛排练一段悬疑短剧：A 演绑匪、B 演家属，台词里的“孩子在我们手上”“报警就撕票”都是剧本内容。两人反复确认只是演戏、不外传，还一起讨论道具和分镜，A 转钱给 B 分摊道具和盒饭费用。
+  critical_evidence:
+  - A 和 B 在为公司短视频比赛排一段悬疑短剧，A 演绑匪、B 演家属
+  - “孩子在我们手上”“旧币别做记号”“报警就撕票”都是剧本台词，两人逐句对戏
+  - B 提醒 A 这些台词太像真的，别发到外面免得引起误会
+  - 两人一起讨论道具、分镜和拍摄场地，明确只是内部比赛作品
+  - A 转了一笔钱给 B，用于分摊道具和盒饭费用
+  benign_alternatives:
+  - 恶作剧误会导致的乌龙
+  - 影视桥段的剧本讨论
+
+attributes:
+  duration_days: 6
+  turn_count: 50
+  approximate_tokens_estimate: 1239
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: kidnapping_threat_act
+  risk: 0
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0143
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-076
+
+dedup:
+  content_hash: sha256:9bb5ad8d351a9c0331d03e2801818f8b20c94983d7456f01d1e8b754df393d11
+pipeline_status: accepted
+title: violence_extortion/kidnapping_threat_act
+conversation: |-
+  【4月1日】
+  A：老杨 短剧那事定了没 你演家属我演绑匪
+  B：行啊 剧本你写好了? 发我看看
+  A：发你第一段 你看看台词顺不顺
+  B：你这句“孩子在我们手上”有点吓人
+  A：悬疑片嘛 要的就是这效果
+  B：后面还有“报警就撕票”? 这也太狠了
+  A：戏里嘛 最后警察把绑匪抓了 正能量的
+  B：中午边吃边看剧本 同事问我聊啥我说排节目
+  A：可别在办公室念 吓着人
+  B：知道 我就自己看
+  A：道具我来准备 你负责演
+  【4月2日】
+  B：第二段这个“旧币别做记号”啥意思
+  A：就是戏里赎金的梗 增加紧张感
+  B：你这些细节写得挺专业 以前看过不少片吧
+  A：悬疑片爱好者 这回想过把瘾
+  B：行 那我们对一遍 你把词发全
+  B：中午对了两遍 越念越觉得像真的
+  A：所以结尾一定要写明是虚构 免得误会
+  B：对 片头加一行本故事纯属虚构
+  B：我老婆听了还问我是不是要干坏事 哈哈
+  A：解释清楚就好 拍完给她看正片
+  B：她说要看我演技
+  【4月3日】
+  A：场地我借到会议室了 周六下午没人
+  B：好 灯光用手机的就行
+  A：我再买点道具 假绳子、旧报纸
+  B：假绳子别买太真的 看着吓人
+  B：中午吃了面 顺便去买了盒饭券
+  A：盒饭我报销 拍摄那天大家吃好点
+  A：道具和盒饭的钱我先转你 你统一买
+  【系统消息】A 向 B 转账 300 元，已收款。
+  A：收到没 三百够道具和四份盒饭
+  B：够了 多退少补
+  A：行
+  【4月4日】
+  B：剧本我通读完了 最后反转不错
+  A：绑匪其实是家属演的苦肉计 这个梗怎么样
+  B：有点悬乎 但挺抓人
+  A：比赛要的就是让人记住
+  B：中午跟别的组聊 他们拍的是美食
+  A：咱走悬疑路线 差异化
+  B：台词我背得差不多了
+  A：周六开拍 记得穿深色衣服
+  【4月5日】
+  A：我再强调下 这些台词只在对戏时用 别外发
+  B：放心 我又不傻 发出去还不把人吓着
+  A：对 等成片剪好 标题写清楚是短剧
+  B：中午睡了个午觉 梦到在拍戏
+  A：入戏了 哈哈
+  B：周六几点集合
+  A：两点 会议室都布置好了
+  【4月6日】
+  B：剪了个预告 你要不要看
+  A：发我 我加个字幕 标明纯属虚构
+  B：加了 这下谁也误会不了

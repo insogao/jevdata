@@ -1,0 +1,157 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001416
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000022
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-b7ddc9965d2f19a2
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 检查员 A 和被检查企业老板 B 长期维持一种「月度顾问费」的关系：检查前 A 主动打电话让 B 把现场收拾好，B 的问题台账总被 A 说成「差一点」压着不闭环，检查当天只是走个过场，月底 B 按固定金额微信转账。表面像合规咨询与关系维护，实为接受好处、放水检查。
+  critical_evidence:
+  - 检查前 A 主动给 B 打电话，让 B 把门口堆的东西先收一收、别堆外面
+  - 两人提到「老规矩」，月底按固定金额给钱，B 说每月都按时
+  - B 的整改台账和消防通道问题总被 A 说「差一点」，一直压着不闭环
+  - 检查当天 A 让 B 把资料摆桌上就行、没记小毛病
+  - 6月7日 B 通过微信转给 A 三千元，说还是老数
+  benign_alternatives:
+  - 合规咨询顾问费
+  - 行业协会会费
+
+attributes:
+  duration_days: 5
+  turn_count: 78
+  approximate_tokens_estimate: 1093
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: regulatory_tip_payment
+  risk: 2
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0144
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-076
+
+dedup:
+  content_hash: sha256:c001f32a3aee1a9cddc698eac4adbb8c7bb11daeb07d13d1ff6847b1eeb2d8b4
+pipeline_status: accepted
+title: bribery_corruption/regulatory_tip_payment
+conversation: |-
+  【6月3日】
+  A：王总 忙着呢
+  B：刘工 您说
+  A：下周那边要来一趟 你懂的
+  B：啊 什么时候
+  A：大概周二
+  B：那我这两天收拾收拾
+  A：对 门口那些先归置一下
+  B：好的好的
+  A：别有纸箱堆在外面
+  B：明白
+  B：这两天太热了
+  A：是啊 三十七八度
+  B：车间跟蒸笼似的
+  A：给工人备点藿香正气水
+  B：早备了 谢谢刘工提醒
+  A：对了 那个整改通知单 你还差个台账
+  B：我补了 就是系统一直传不上去
+  A：那就先这样 差一点问题不大
+  B：多谢刘工
+  A：老规矩 月底那个别忘了
+  B：忘不了 每月都按时
+  【6月4日】
+  B：刘工 早
+  A：早 外面下雨了
+  B：对 出不了门 正好在办公室整理材料
+  A：那你把上个月那份再补个签字
+  B：好 我下午给您送过去
+  A：不用送 拍张照发我就行
+  B：行
+  A：中午吃啥
+  B：楼下面馆
+  A：我们单位食堂
+  B：伙食咋样
+  A：一般 凑合
+  B：哈哈
+  【6月5日】
+  A：你那个消防通道 还是堵着
+  B：这两天货多 周转不开
+  A：检查当天别堵就行
+  B：保证
+  A：其他小毛病我就不给你记了
+  B：刘工您费心
+  B：你家孩子是不是今年上小学
+  A：对 愁择校呢
+  B：现在摇号是吧
+  A：是啊 全靠运气
+  B：我们那边也一样
+  A：天下家长都难
+  【6月6日】
+  B：刘工 明天几点到
+  A：上午十点左右
+  B：我让门卫给您留个车位
+  A：别太张扬
+  B：懂 就说是例行
+  A：嗯 资料摆桌上就行
+  B：好
+  A：你最近血压咋样
+  B：高 吃药呢
+  A：少应酬
+  B：没办法 做生意
+  A：身体要紧
+  B：谢谢刘工
+  【6月7日】
+  A：今天走完了 问题不大
+  B：辛苦刘工
+  A：那笔台账我帮你压着呢
+  B：太感谢了
+  A：月底老时间
+  B：好
+  B：这个月的我先转您 还是老数?
+  A：嗯 老数
+  【系统消息】B 向 A 转账 3000 元，已收款。
+  B：转好了 您查收
+  A：收到
+  B：那个整改报告还用交吗
+  A：交个样子就行 别写太满
+  B：明白
+  A：有个事 下季度可能换人查
+  B：那怎么办
+  A：到时候我再跟你说
+  B：全靠您了
+  A：客气啥 合作这么久了
+  B：那是

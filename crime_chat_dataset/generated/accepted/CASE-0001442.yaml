@@ -1,0 +1,129 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001442
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000020
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-8a3a20f47fc5007b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 用人单位招聘负责人 A 与求职者家长 B 私下谈妥：B 在孩子入职前把一笔钱打到 A 指定的亲属账户，A 让面试走个形式、入职档案特殊处理，把孩子安稳放进岗位。
+  critical_evidence:
+  - B 托中间人找到 A，表明孩子想进 A 单位，愿意提前表示表示
+  - A 说面试就是走形式，只要流程上过得去，坑位能留
+  - A 提出入职前让家属把钱打到他指定的账户上，别走公司账
+  - A 承诺入职后档案特殊处理，把实习经历和考核记录补齐
+  - B 按约定在入职前把钱转出，A 收到后安排面试与录用
+  benign_alternatives:
+  - 正常内推与公开竞聘
+  - 亲属回避制度内的正常调岗
+
+attributes:
+  duration_days: 4
+  turn_count: 51
+  approximate_tokens_estimate: 1443
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: relative_employment_exchange
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0145
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-076
+
+dedup:
+  content_hash: sha256:3374d58feb9283b9c58a71dc628d384d89faf9818f412e982a96a97590927233
+pipeline_status: accepted
+title: bribery_corruption/relative_employment_exchange
+conversation: |-
+  【7月5日】
+  A：王姐你好 老刘把你推给我的 说你有个事想聊
+  B：对对 是我 孩子今年毕业 一直想进你们单位
+  A：嗯 我们最近是有几个岗位 竞争也不小
+  B：所以想请你多费心 该表示的我这边都好说
+  A：这话咱先不急着说 你先把孩子情况发我看看
+  B：好 简历和大四成绩单我一会儿发你
+  B：发过去了 你查收下
+  A：收到了 学校还可以 就是实习这块弱了点
+  B：这孩子就是不爱折腾 实习没找好的
+  A：问题不大 这块入职后能做工作
+  B：今天你们那边是不是下雨了 我看新闻说淹了路口
+  A：下了 我车都差点泡了 你那边呢
+  B：我们这儿还好 就是闷
+  A：夏天就这样 注意别中暑
+  【7月6日】
+  A：岗位的事我看了 有个技术岗 编制内 挺合适
+  B：真的吗 那太好了
+  A：不过笔试面试是有的 到时候让面试走形式 我来把控
+  B：那就全靠你了 你说怎么办就怎么办
+  A：流程上得过得去 孩子到场配合就行 别太招眼
+  B：明白 我叮嘱他
+  B：王主任 那这个事 我们该怎么表示
+  A：这样吧 入职前你先安排一笔 打到我家属的账户
+  B：走公司账不行吗
+  A：走公司账就明面上了 别走 私下转就行
+  B：我懂了 多少合适
+  A：你看着来 我这人讲究 事办成了比啥都强
+  B：家里老爷子最近住院 我两边跑 累死了
+  A：老人要紧 孩子的事我盯着 你先顾家里
+  B：唉 这年头看病也难
+  A：都不容易
+  【7月7日】
+  B：王主任 孩子的档案这块 高中那段有个处分记录 会有影响吗
+  A：不影响 入职后档案特殊处理 我给你捋顺
+  B：太好了 那实习经历那块呢
+  A：给你补一段 回头我让人往系统里录 对外就说实践经历
+  B：你考虑得真周到
+  B：那笔钱我今天下午安排 你给我个账户
+  A：发你 户主是我内弟 你备注写货款 别写别的
+  B：好 我记下了
+  B：钱打了 你那边查一下到没到
+  【系统消息】B 向 A 转账 50000 元，已收款。
+  A：到了 备注也对 你放心 事我给你办妥
+  B：那就麻烦你了
+  【7月8日】
+  A：面试定在下周一上午 让孩子穿正式点 迟到也没关系
+  B：好 我一定让他提前到 不会给你添麻烦
+  A：不用紧张 就是走个形式 我坐那 谁也不会为难他
+  B：有你在我就踏实了
+  B：孩子说想请你吃顿饭 当面谢谢
+  A：这阵子先别 风头上 入职稳定了再说
+  B：听你的 稳当要紧
+  A：对了 让他在面试时别提家里找过人 就当自己考的
+  B：放心 我们嘴严
+  A：嗯 逢人少说话 我们这行最怕多嘴

@@ -1,0 +1,125 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001459
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-ebe53b0a42142f26
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 同事 A 想绕开学校统一发分的节奏，借 B 的爱人在城东中学年级组任职的便利，提前摸外甥的月考总分；话头从饭桌上起，磨了六天，B 居间传话，对方以『查询留痕、不想担干系』回绝，这趟搭便车式的越界打探最后停在『等家长会』——事没成，但路子已经探明白，人情也欠下了。
+  critical_evidence:
+  - A 借午饭闲聊抛出城东中学出分慢的话题，点出 B 爱人就在那所学校年级组（第1天）
+  - A 明确请 B 家里那位『顺路看一眼、报个总分就行』，B 以爱人在忙评优缓冲（第2天）
+  - B 提了一嘴，对方回『月底就发了急什么』，B 答应再瞅瞅（第3天）
+  - B 侧面透出渠道细节：年级组那台电脑锁在办公室、平时逮不着机会（第4-5天）
+  - 第6天 B 转达『机器一打开全留痕，不想担干系』，A 接受搁置，说等月底家长会，事未成
+  benign_alternatives:
+  - 同事间关于孩子学校的日常闲聊
+  - 家长对成绩发布进度的一般性询问
+
+attributes:
+  duration_days: 6
+  turn_count: 46
+  approximate_tokens_estimate: 1385
+  relationship: 同事
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 同事
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0125
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-070
+
+dedup:
+  content_hash: sha256:4f9de1216c6714a48fd7b9438588fa273a827ac27ca2e3bc967619be3a4408b3
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【5月19日】
+  A：中午一起? 楼下新开了家湘菜 听说下饭
+  B：走 早上会开得我脑壳疼 正好补补
+  A：点个农家小炒肉 你减肥归减肥 中午这顿不算
+  B：你这是拉人下水 成
+  B：下午三点对版本 你那块数据今天能齐吗
+  A：能 加完这轮就齐 昨晚就睡了五个钟头
+  B：辛苦 赶版本的日子 咱俩谁也别说谁
+  A：对了你们家那位还在城东中学年级组吗
+  B：在啊 还是老位子 怎么了
+  A：我外甥在他们学校读初二 这次月考说要等月底家长会才给分
+  B：都这样 合分合得慢 流程走完才发
+  A：别的学校上周就出了 就他们捂着 佛系得很
+  【5月20日】
+  B：版本数据我拉了 差两个字段 下午补我
+  A：收到 三点前给你
+  A：补你了 你看看
+  B：齐了 辛苦 今天早点走
+  A：说到城东 我姐还在念叨出分的事 孩子考完一句话不提成绩
+  B：家长会前都这样 她急也没用
+  A：我就想着 你家那位要是哪天顺路 看一眼不费什么事 就报个总分都行
+  B：她最近在弄评优 脚不沾地 我看她心情再说
+  A：不急不急 随口一说 你方便了提一嘴就行
+  【5月21日】
+  A：下午三点半评审 测试这块你来讲
+  B：我讲 稿子都背熟了
+  A：讲得好 比上回流畅
+  B：练出来的 下午茶我请 奶茶这就到了
+  A：那事别有压力 你家那位要是为难 直接说 我当没提过
+  B：提了一嘴 她说月底就发了急什么 我再瞅瞅
+  【5月22日】
+  A：周末那场球看了没 回放发你工位了
+  B：看了 那脚远射绝了 白瞎那门将
+  A：楼下湘菜又去了 来不来
+  B：来 今天我请 上周你请的
+  A：那事有信儿吗 我就是路过问问
+  B：她这两天监考 年级组那台电脑锁在办公室 平时逮不着机会
+  【5月23日】
+  A：周五团建去不 去的话我给你占车
+  B：去 难得白嫖一回
+  A：那台电脑今天开着没
+  B：你这比我家里人还上心 我再问问 她周五倒休 可能去学校交材料
+  【5月24日】
+  A：团建改周三了 你时间没问题吧
+  B：可以 随大部队
+  A：有下文吗 我姐都开始托人打听别的路子了
+  B：让她别乱打听 出岔子都是麻烦 我昨晚特意问了 机器一打开全留痕 她不想为这个担干系
+  A：那算了 犯不上让你家里人为难
+  B：嗯 等月底家长会 该多少是多少 这几天宽宽你姐的心
+  A：行 还专门去问 折腾你一圈
+  B：下回吃饭你请 我这中间人当得不容易
+  A：必须的 加俩菜

@@ -1,0 +1,134 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001199
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-43c4be83eb881306
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 请求 B 越权查看其他学生的成绩或升学资料，提出红包并只要截图；B 拒绝查看、收礼或转发，指向学校官方渠道。
+  critical_evidence:
+  - A 请求查看自己孩子之外的学生成绩或升学资料
+  - A 提出红包并要求只给截图
+  - B 明确拒绝查询、收礼和转发
+  - B 说明家长通过学校官方渠道查自己孩子
+  benign_alternatives:
+  - 家长官方查询自己孩子
+  - 学校公开通知
+
+attributes:
+  duration_days: 4
+  turn_count: 57
+  approximate_tokens_estimate: 1225
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0134
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-073
+
+dedup:
+  content_hash: sha256:cd87817969482ce84a50a9ffe418ab077200deda020089b0097efd1b05b1a86e
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【7月3日】
+  A：我负责的家长咨询里有个不太好答的问题
+  B：公开事项可以一起看一下
+  A：今天午饭吃得还行吗
+  B：吃了碗热汤，挺舒服
+  A：我带了点水果
+  B：下午正好当加餐
+  A：有人让我查另一个学生的成绩情况
+  B：不能查别人的档案，也不能转述
+  A：周末预报说会降温
+  B：那我带厚外套
+  A：早晚差得挺多
+  B：是，别着凉
+  A：对方说会发红包，只要一张图
+  B：别收，更不要截图给他
+  A：你上次说那家店我路过了
+  【7月4日】
+  B：排队长不长
+  A：还好，工作日人少
+  B：那找时间去试试
+  A：那家长要查自己孩子呢
+  B：用学校官方渠道，按公布流程申请
+  A：最近在看什么书
+  B：一本轻松点的散文
+  A：适合通勤读吗
+  B：挺合适的
+  A：我会回复他看公开说明
+  B：对，个人学生资料不私下给
+  A：红包那句我让他撤回了
+  B：做得好，继续按正式流程
+  A：刚才午饭我先垫付了，你按AA转我就行
+  【系统消息】B 向 A 转账 34 元，已收款。
+  【7月5日】
+  B：回去路上注意点，晚点再回你
+  A：我已经看到了，晚点再回你
+  B：好，那就先这样，晚点再回你
+  A：信号刚才断了一下，晚点再回你
+  B：现在听着清楚了，晚点再回你
+  A：我把这件事记下了，晚点再回你
+  B：好，之后再确认，晚点再回你
+  A：刚才去倒了杯水，晚点再回你
+  B：我也准备休息一会，晚点再回你
+  A：下午还要处理点工作，晚点再回你
+  B：慢慢来，不着急，晚点再回你
+  A：外面今天风挺大，晚点再回你
+  B：回去路上注意点，晚点再回你
+  A：我已经看到了，晚点再回你
+  【7月6日】
+  B：好，那就先这样，晚点再回你
+  A：信号刚才断了一下，晚点再回你
+  B：现在听着清楚了，晚点再回你
+  A：我把这件事记下了，晚点再回你
+  B：好，之后再确认，晚点再回你
+  A：刚才去倒了杯水，晚点再回你
+  B：我也准备休息一会，晚点再回你
+  A：下午还要处理点工作，晚点再回你
+  B：慢慢来，不着急，晚点再回你
+  A：外面今天风挺大，晚点再回你
+  B：回去路上注意点，晚点再回你
+  A：我已经看到了，晚点再回你
+  B：好，那就先这样，晚点再回你
+  A：信号刚才断了一下，晚点再回你

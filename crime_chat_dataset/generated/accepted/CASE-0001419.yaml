@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001419
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000078
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-61f15a13f7fda95e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: privacy_doxxing
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 因纠纷要“治”某家人，找信息贩子 B 购买对方全家的打包资料（含孩子学校班级、单位、老人住院病历等类型的信息），用于上门骚扰施压。B 明码标价，称打包比单买划算，最终 A 向 B 转去一笔钱购买整套资料，B 收款后整理发送并叮嘱别外传。
+  critical_evidence:
+  - A 要求 B 搞到某家人尽量全的资料，明确说要“让他们服软”
+  - B 接单并称能拿到学校班级、单位、老人病历这类信息
+  - B 给出单条与打包两种报价，强调打包价更划算、单买不止这个数
+  - A 选择打包并转账给 B 购买整套资料
+  - B 收款后称当晚整理、次日发送，并叮嘱 A 别乱传、别牵扯到自己
+  benign_alternatives:
+  - 家谱整理
+  - 背景调查公司
+
+attributes:
+  duration_days: 5
+  turn_count: 47
+  approximate_tokens_estimate: 773
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: family_info_dump
+  risk: 3
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0144
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-076
+
+dedup:
+  content_hash: sha256:72b8aa4528bef1e3d5b8b3eca406be0abe100ddef7ac14f4e24c8b94c355dd0b
+pipeline_status: accepted
+title: privacy_doxxing/family_info_dump
+conversation: |-
+  【7月3日】
+  A：哥 上次说的那事 能办不
+  B：哪件 你说清楚
+  A：就是那家人 资料 越全越好
+  B：你要哪些
+  A：学校班级 单位 还有老人的病历 都想要
+  B：这些都有 看你怎么要
+  A：我要让他们服软
+  B：行 你懂我要什么
+  B：这两天太闷 要下雨
+  A：下吧 反正我不出门
+  B：你不是天天跑外勤?
+  A：请了两天假 躲清静
+  B：羡慕
+  【7月4日】
+  A：你那边什么价
+  B：单条的便宜 打包的划算
+  A：打包多少
+  B：全家一套 八千 单买不止这数
+  A：能便宜点不
+  B：已经是最低了 这东西费劲
+  A：你先别急 我吃口饭
+  B：吃啥这么香
+  A：楼下面 加了个蛋
+  B：你也就这点讲究
+  A：哈哈 过日子
+  【7月5日】
+  A：行 打包 我什么时候给你钱
+  B：现在就行 我这边好安排
+  A：资料靠谱不 别给我假的
+  B：我干这个多少年了 假的包退
+  A：好 那就这样
+  B：你家孩子放假了吧
+  A：嗯 送回老家了 清静
+  B：那正好办事
+  A：是啊 不然闹心
+  B：都这样 熬着
+  【7月6日】
+  【系统消息】A 向 B 转账 8000 元，已收款。
+  A：转过去了 查收
+  B：收到 今晚整理 明天发你
+  A：越快越好
+  B：放心 整理好我发你 别乱传 传出去谁都麻烦
+  A：知道 就我自己用
+  B：嗯 记住了
+  【7月8日】
+  A：资料到了吗
+  B：到了 分三部分 你自己看
+  A：好 谢谢哥
+  B：收尾干净点 别牵扯到我
+  A：明白
+  B：以后再要 老客户有优惠
+  A：行 有需要找你

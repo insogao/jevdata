@@ -1,0 +1,127 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001382
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-250b9d54c29e8c62
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 讨论者将公开社交线索拼接到匿名账号，试图确认背后身份；同事提醒公开信息汇总可能侵犯隐私，最终停止传播关联信息。
+  critical_evidence:
+  - 尝试把匿名小号与其他公开账号关联
+  - 借相册原图时间等线索推断账号属于同一人
+  - 提及可从公开转发记录继续归并账号活动
+  - 对方指出公开可见不等于可汇总曝光
+  - 停止分享可识别细节并将讨论转回公开内容
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 5
+  turn_count: 49
+  approximate_tokens_estimate: 1541
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0153
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-079
+
+dedup:
+  content_hash: sha256:84ce19aa1eade4ffefa52e9cd87d11e033349bd8c4d7bbea2a97e9f4634250bc
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【9月1日】
+  A：那个讨论串又有人提到上周的照片了，你看见没？
+  B：看到了，我只看公开页面，没去翻谁的私人内容。
+  A：我把相关公开帖整理了一下，小号也给你翻了，结果头像都换过。
+  B：这已经超出公开讨论了吧，匿名账号背后可能是普通人。
+  A：这两天一直下雨，你那边也降温了吗？
+  B：早晚凉了，我把薄外套翻出来了。
+  A：我昨天忘带伞，回家一路都湿了。
+  B：哈哈我包里常年放把折叠伞。
+  B：我把版规里关于个人信息的那段找出来了。
+  A：发我看看，我想把讨论拉回内容本身。
+  B：这样比较妥当，争议观点可以继续讨论。
+  A：已经改好了，评论区安静不少。
+  【9月2日】
+  A：相册原图时间能对上几次发帖，我才发现是同一个人。
+  B：时间信息也算隐私线索，别拼成身份判断再传出去。
+  A：他转发过什么都能查，公开动态确实留了不少痕迹。
+  B：公开可见不等于适合汇总曝光，尤其牵涉个人账号。
+  A：你上次说的那盆绿萝还活着吗？
+  B：活着，就是新叶长得慢。
+  A：少浇水，最近屋里不太通风。
+  B：好，我挪到窗边试试。
+  B：重点是不要猜测或传播现实身份。
+  A：明白，我在帖子里提醒一下就好。
+  B：我把版规里关于个人信息的那段找出来了。
+  A：发我看看，我想把讨论拉回内容本身。
+  【9月3日】
+  B：这样比较妥当，争议观点可以继续讨论。
+  A：已经改好了，评论区安静不少。
+  B：重点是不要猜测或传播现实身份。
+  A：明白，我在帖子里提醒一下就好。
+  【9月4日】
+  A：我本来只是想帮版主核对争议来源。
+  B：可以谈公开内容的观点和时间线，但别追匿名者是谁。
+  A：品牌舆情那套整理法我懂，针对品牌账号还行。
+  B：对，品牌账号是公开主体；个人小号不该被关联出来。
+  A：我妈最近迷上了做面包，家里全是面粉。
+  B：自己做的香是香，就是收拾台面麻烦。
+  A：她还让我买了个小秤，感觉要开店了。
+  B：哈哈做着玩挺好，记得少放糖。
+  B：我把版规里关于个人信息的那段找出来了。
+  A：发我看看，我想把讨论拉回内容本身。
+  B：这样比较妥当，争议观点可以继续讨论。
+  【9月5日】
+  A：那我把截图里的头像和时间细节都去掉，只留帖子观点？
+  B：如果讨论观点就直接引用公开文字，别留可识别的旁枝。
+  A：我不发那个关联表了，免得大家顺着猜。
+  B：挺好，版主可以提醒大家别把猜测当事实。
+  A：通勤那条路修好了，今天终于没堵。
+  B：太好了，我早上绕了半天。
+  A：导航还没更新，差点把我带进小巷。
+  B：我现在看路牌，不太信导航了。
+  B：重点是不要猜测或传播现实身份。
+  A：明白，我在帖子里提醒一下就好。

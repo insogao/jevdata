@@ -1,0 +1,117 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001466
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-73fba2ee23dafe69
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 猎头 A 借老同学交情向在公司行政口经手离职手续的 B 长期埋线：不碰花名册不碰电话表，只要离职动向的口头情报——谁想挪窝、谁在躲着接猎头电话；B 明知对方图什么，用『只说去向、不给联系方式』自我开脱，两头不得罪，第一份口头情报已经交出去了。
+  critical_evidence:
+  - 猎头 A 以老同学身份开口，向行政口的老同学 B 打听『你们那拨人里有想法的多不多』（第1天）
+  - B 透露上个月走了一批人、离职手续都经她的手（第1天）
+  - B 答应『留意着，就咱俩知道』，条件是 A 不能点着名去堵人（第1天）
+  - 第2天 B 口头报出两人动向：老周确定下月办手续回省城，小唐躲楼梯间接猎头电话，A 得到线头并约水库钓鱼继续聊
+  benign_alternatives:
+  - 老同学之间聊聊行业机会的闲谈
+  - 行政人员对人员流动的一般性观察
+
+attributes:
+  duration_days: 2
+  turn_count: 43
+  approximate_tokens_estimate: 1340
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0125
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-070
+
+dedup:
+  content_hash: sha256:1b3a287348e7a9a6c4ec96772f8ca42e40d21ea57180c3e898c09720211edfa7
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【9月3日】
+  B：刚出公司门 这会儿打车还得排队
+  A：加班到这钟点? 你们那行不是向来准点下班
+  B：上个月走了一批人 活儿全压给剩下的了 手续还是我办的
+  A：走了一批? 你们那种地方也留不住人啊
+  B：事多钱少 头都换了两茬了
+  A：我最近手上的位子倒是有几个 对你们那摊子的
+  B：你又想挖人 老同学我可得防着你点
+  A：什么挖不挖的 我就是帮人找活干 你们那拨人里 有想法的多不多
+  B：私下抱怨的多 真动的少
+  A：你家那只主子最近咋样 上回视频还挺肥
+  B：胖了二两 医生让减肥 现在定时定量喂
+  A：猫都健身了 你倒好 久坐不动
+  B：等这阵忙完我也去办卡 先把嘴上犒劳了
+  A：说正经的 你们要是有想看看机会的 你给我递个话 就当帮我个忙
+  B：我哪知道谁想走 又不能挨个问
+  A：不用你问 平时谁叹气多 谁半夜改简历勤 你心里没数?
+  B：嘴上没个把门的 传出去我在公司就完了
+  A：我嘴比你还严 这么多年你听我漏过谁的事
+  B：行 我留意着 但说好了 就咱俩知道
+  A：放心 我又不会点着名去堵人
+  B：哎对了 周六那场演唱会你抢到没
+  A：抢个鬼 开票十秒就没了 你呢
+  B：我找代拍 加了两百 手快有手慢无
+  A：行啊 回来给我带杯现场限定 就当补票了
+  【9月4日】
+  B：中午趁午休跟你说 上回你问的事 我数了数
+  A：你说
+  B：老周是真走定了 下个月就办手续 去向我都听说了
+  A：去哪儿 家门口还是外地
+  B：回省城了 家里给安排的 他那摊子以后八成要外包
+  B：小唐最近老躲楼梯间接电话 我撞见过两回 一听就是那类电话
+  A：这个我有点印象 之前有人跟我提过他 想动
+  A：还有呢 把有动静的都给我过一遍呗
+  B：再多了真没有了 就这俩算准的
+  A：成 这俩够我先递个材料 你可别回头不认账
+  B：认账认账 你别说是我讲的就行
+  A：昨晚说完健身 我今天真去问了卡价
+  B：多少 一年两千?
+  A：三千八 砍到三千 还送两节私教
+  B：你这砍价功力用我身上就好了
+  B：周末来钓鱼不 老蒋约了去水库 他点名要喊你
+  A：认识 老蒋当年还借过我的竿 那就去 你别又放我鸽子
+  B：这次不放 就是为这事他喊你 顺便聊聊
+  A：行 周六水库见 鱼获归我 竿你背

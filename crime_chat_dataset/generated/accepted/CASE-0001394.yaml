@@ -1,0 +1,113 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001394
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000072
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-2c99cc16705a274f
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 摄影师 A 用资源和“只有我能推你”的话术，连三天逼年轻模特 B 拍一组越来越出格的室内照，B 抗拒后 A 以断资源相要挟，最后 B 被迫在有人陪同、先审片的条件下答应，A 先转定金把人套住。
+  critical_evidence:
+  - A 约 B 拍室内私房，说“想红就别矫情”，还称这组只有他能拍
+  - B 明确说别扭、不愿穿太少，A 用“大家都这么拍”来消解她的顾虑
+  - A 暗示不答应就把下月封面内页安排给别人，B 的资源就断
+  - B 被迫谈条件：带人在场、成片先审，A 不情愿地答应
+  - A 先转一笔定金给 B，把档期锁死，让她不好反悔
+  benign_alternatives:
+  - 正规艺术约拍
+  - 经纪公司安排的试镜与成片拍摄
+
+attributes:
+  duration_days: 3
+  turn_count: 36
+  approximate_tokens_estimate: 837
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: photographer_private_pressure
+  risk: 3
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0143
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-076
+
+dedup:
+  content_hash: sha256:cc6d68d088e32eedb3b4e9712c95c51a75717d9191569052bffef7ffac4761d9
+pipeline_status: accepted
+title: sexual_transaction_exploitation/photographer_private_pressure
+conversation: |-
+  【9月1日】
+  A：小雅 睡没 这周给我留两天
+  B：拍啥 常规商拍我就去
+  A：室内的 老规矩那种 你懂的
+  B：那种我不太想拍 上次就挺勉强
+  A：想红就别矫情 这组只有我能拍出感觉
+  B：我拍商拍也能挣钱的
+  A：商拍能挣几个 你看看那些火的哪个不是这么出来的
+  【9月2日】
+  B：中午跟朋友吃饭 聊到工作好焦虑
+  A：焦虑就对了 趁年轻抓住机会
+  B：你说得轻松 挨骂挨压力的是我
+  A：这行就这样 熬出来就好了
+  A：下月新刊内页 我本来定的是你
+  B：那跟拍这个有关系吗
+  A：资源是一套的 你不配合 别人排队等着呢
+  B：……你这是拿资源逼我
+  A：我这是给你机会 说难听点过时不候
+  B：晚上去跑步了 心情好点了
+  A：保持身材 拍摄才好看
+  B：你就不能聊点别的
+  A：哈哈 职业习惯
+  【9月3日】
+  A：棚留到今晚十点 你来不来一句话
+  B：拍可以 但我要带小雅一起去
+  A：带人干啥 圈里谁这么拍
+  B：不带人我就不去 这是我底线
+  A：……行 带吧 成片得先给我选
+  B：成片我先审 不合格的删 不然免谈
+  A：你条件越来越多了 行行行 依你
+  B：说好了 别越线
+  【系统消息】A 向 B 转账 1500 元，已收款。
+  A：先转你点定金 档期锁死 别放我鸽子
+  B：定金可以收 条件你别忘了
+  A：忘不了
+  B：小雅那边她说陪我去 你放心
+  A：知道了 别搞得太正式
+  B：我妈让我周末回家吃饭
+  A：回你的 别影响档期就行
+  B：不会 说好了的事我认

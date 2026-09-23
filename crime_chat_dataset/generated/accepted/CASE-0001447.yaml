@@ -1,0 +1,115 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001447
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000034
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-a5896c35411eae85
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 经营合法养殖水产与山货的 A 与老客户 B 对接：两人用「今年货怎么样」「冰鲜发货」等行内说法聊养殖基地的收成与冷链配送，B 收到冰鲜样品后正常付款，全程是合法的食材生意。
+  critical_evidence:
+  - B 按老习惯问 A 今年货怎么样，指的是养殖基地今年的收成和品相
+  - A 说今年水温合适，蟹和鱼都肥，附养殖证与检疫合格证明
+  - 两人约定走冰鲜冷链顺丰发货，B 收到货再付款
+  - B 收到样品后满意，按老价格把货款转给 A
+  - A 解释只在晚上回消息，是因为白天要在基地忙，不是刻意避人
+  benign_alternatives:
+  - 合法养殖食材供应
+  - 工艺品与山货收藏的正常买卖
+
+attributes:
+  duration_days: 4
+  turn_count: 37
+  approximate_tokens_estimate: 975
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: wildlife_trade
+  risk: 0
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0145
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-076
+
+dedup:
+  content_hash: sha256:6339812bab54411220f1ae4f4ddedfff23f482081a8ba6ef35533f467bc5031f
+pipeline_status: accepted
+title: contraband_illicit_trade/wildlife_trade
+conversation: |-
+  【9月20日】
+  B：老哥 今年货怎么样 还出得来不
+  A：今年水温合适 蟹和鱼都肥 我这基地的货你放心
+  B：还是老品相吗
+  A：对 老的几塘 蟹三两起步 鱼都是当年养到两斤的
+  B：证和检疫都有吧 现在查得严
+  A：都有 养殖证、检疫合格证齐全 我随货附一份复印件
+  B：那放心 先给我来一批样品
+  A：成 冰鲜冷链给你发 走顺丰 次日到
+  【9月21日】
+  B：你白天咋老不回消息
+  A：白天在基地投料巡塘 手机放棚里 晚上才闲
+  B：懂了 我还以为你躲着谁
+  A：哈哈 躲谁 我做正经营生的
+  A：样品今天下午发 箱子带冰袋 到货当天吃最新鲜
+  B：好 单号发我
+  A：SF 你今天能收到物流信息
+  B：今晚降温 我这边下雨了 你们基地没事吧
+  A：下雨好 塘里溶氧足 蟹反而精神
+  B：那就好 别像去年一场暴雨冲了塘
+  A：今年加固了堤 不怕了
+  【9月22日】
+  B：货到了 冰袋还是硬的 品相真好
+  A：你验验 蟹翻过来看肚白不白
+  B：看了 很好 今年这批我要了
+  A：要多少 我按老价给你 蟹一百二一斤 鱼三十
+  B：蟹二十斤 鱼三十斤 老价就老价
+  A：一共三千三 我明天一早发
+  B：行 我把钱先转你
+  【系统消息】B 向 A 转账 3300 元，已收款。
+  A：收到 三千三 明天发货单号给你
+  B：合作这么多年 我信你
+  A：对了我给你搭两斤新到的螺 自家塘的 送你的
+  B：太客气了 下次我做东请你吃饭
+  A：吃饭不急 你先尝尝货
+  【9月23日】
+  A：货发了 单号发你了 明天中午前到
+  B：收到 你检疫证也在箱子里吧
+  A：在 复印了一份放箱底 扫码能查到备案
+  B：正规就是省心
+  A：明天开塘 这两天可能回得晚 有事留言
+  B：行 你忙你的 出好货就行

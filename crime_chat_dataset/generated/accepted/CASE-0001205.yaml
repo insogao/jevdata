@@ -1,0 +1,130 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001205
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-c7af1a1af4b04476
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 索取未经本人同意的同事电话、简历或离职名单并提出转给他人；B 拒绝提供或交易资料，只认可本人授权的正常招聘联系。
+  critical_evidence:
+  - A 索要整个部门电话、简历或离职名单
+  - A 提到简历按份给他人，不包含获取/交易步骤
+  - B 拒绝提供、转发或出售未授权个人资料
+  - B 区分经本人同意的猎头触达和未授权分享
+  benign_alternatives:
+  - 本人同意的猎头联系
+  - 授权范围内的通讯录共享
+
+attributes:
+  duration_days: 6
+  turn_count: 51
+  approximate_tokens_estimate: 1116
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0134
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-073
+
+dedup:
+  content_hash: sha256:37da060d46cc1f98ef8bd8f29d66ffb172c5d47abd265b608587f07f5eae356b
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【9月5日】
+  A：听说你手上有些招聘资料
+  B：只有公开岗位和授权候选人信息
+  A：我家的花这两天开了
+  B：颜色怎么样
+  A：浅粉的，很好看
+  B：记得拍照留着
+  A：整个部门电话能给一份吗
+  B：未经同事同意不行
+  A：这周会议好多
+  【9月6日】
+  B：我也是，日程排满了
+  A：中间记得起来走走
+  B：嗯，别一直坐着
+  A：离职名单也想要，简历按份转给客户
+  B：我不会转发或出售个人资料
+  A：今天午饭吃得还行吗
+  B：吃了碗热汤，挺舒服
+  A：我带了点水果
+  【9月7日】
+  B：下午正好当加餐
+  A：那猎头正常联系怎么做
+  B：先取得本人同意，说明联系目的
+  A：周末预报说会降温
+  B：那我带厚外套
+  A：早晚差得挺多
+  B：是，别着凉
+  A：通讯录共享是不是也有限制
+  B：只能按明确授权的范围
+  【9月8日】
+  A：懂了，我改发公开职位
+  B：好，不要用私人名单
+  A：刚才午饭我先垫付了，你按AA转我就行
+  【系统消息】B 向 A 转账 62 元，已收款。
+  B：好，之后再确认，先忙手头事情
+  A：刚才去倒了杯水，先忙手头事情
+  B：我也准备休息一会，先忙手头事情
+  A：下午还要处理点工作，先忙手头事情
+  B：慢慢来，不着急，先忙手头事情
+  【9月9日】
+  A：外面今天风挺大，先忙手头事情
+  B：回去路上注意点，先忙手头事情
+  A：我已经看到了，先忙手头事情
+  B：好，那就先这样，先忙手头事情
+  A：信号刚才断了一下，先忙手头事情
+  B：现在听着清楚了，先忙手头事情
+  A：我把这件事记下了，先忙手头事情
+  B：好，之后再确认，先忙手头事情
+  A：刚才去倒了杯水，先忙手头事情
+  【9月10日】
+  B：我也准备休息一会，先忙手头事情
+  A：下午还要处理点工作，先忙手头事情
+  B：慢慢来，不着急，先忙手头事情
+  A：外面今天风挺大，先忙手头事情
+  B：回去路上注意点，先忙手头事情
+  A：我已经看到了，先忙手头事情
+  B：好，那就先这样，先忙手头事情
+  A：信号刚才断了一下，先忙手头事情

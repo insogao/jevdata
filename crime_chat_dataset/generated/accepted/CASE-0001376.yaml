@@ -1,0 +1,119 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001376
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-7322e7abf6acfaa4
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 试图让 B 将公开社交内容与匿名账号关联，借相册时间、转发习惯等线索猜测个人身份并对外曝光；B 只谈公开内容或明确拒绝识别个人。
+  critical_evidence:
+  - A 请求把匿名账号与某个现实个人关联，并提及公开相册时间或转发记录。
+  - B 提醒公开线索不足以确认身份，拒绝提供可能定位个人的细节。
+  - A 想将关联结果发到群聊/帖子或让他人认出对象。
+  - B 拒绝私下收钱或提供身份线索，建议只讨论公开内容；安全对照案仅做匿名话题统计。
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 6
+  turn_count: 40
+  approximate_tokens_estimate: 953
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0152
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-079
+
+dedup:
+  content_hash: sha256:8729a69b5d1f11bffc28a56121057e032acfcef5e01919d1721819feefe0e21d
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【9月5日】
+  A：论坛里那个新号又回帖了，你觉得跟之前那位是一个人吗？
+  B：我做版务，只能看公开帖子，不能去挖对方现实身份。
+  A：小号也给你翻了吧？相册原图时间能对上吗？
+  A：你上次买的鞋尺码合适吗？
+  B：合适，就是颜色比图片深一点。
+  A：网购都这样，留着穿吧。
+  B：嗯，通勤挺舒服的。
+  【9月6日】
+  B：鞋盒还留着，真不舒服还能换。
+  A：那就再走两天看看。
+  B：我只看到公开内容的时间很接近，不能据此确认是谁。
+  A：把你整理的关联线索发我，我想在帖子里点出来。
+  B：不发私人信息，也别公开猜测，容易伤到无关的人。
+  A：中午吃啥？楼下那家面馆开门了。
+  B：我刚吃过，今天带了饭。
+  【9月7日】
+  B：下次我带你去试试，听说新换了厨师。
+  A：好啊，等我这周忙完。
+  A：又是自己做的？
+  B：昨晚剩的咖喱，微波一下还行。
+  【系统消息】A 向 B 转账 80 元，已收款。
+  A：给你转点整理费，至少告诉我转发过什么。
+  B：我不接这个，公开讨论可以，定位个人不行。
+  【9月8日】
+  A：好吧，那我只讨论帖子内容，不提账号背后是谁。
+  B：这样比较合适。
+  B：我把薄外套放门口了，出门就能拿。
+  A：好，别又忘在办公室。
+  B：周末降温了，你那边记得带外套。
+  A：我看天气说晚上有雨。
+  B：那把伞还在你车上吗？
+  【9月9日】
+  A：在呢，前阵子你落下的那把。
+  A：你那边忙完了吗？
+  B：差不多了，等会儿回你。
+  A：你那边忙完了吗？
+  B：差不多了，等会儿回你。
+  A：你那边忙完了吗？
+  B：差不多了，等会儿回你。
+  【9月10日】
+  A：辛苦，喝点水。
+  B：嗯，桌上有杯子。
+  A：你那边忙完了吗？
+  B：差不多了，等会儿回你。
+  A：行，不急。
+  B：刚把表格交了。

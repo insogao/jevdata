@@ -1,0 +1,140 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001226
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-cf3834b095d8f98c
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A作为中间人索要员工电话、简历和离职清单并打算交易；B拒绝提供任何未经本人同意的资料，提出公开招聘作为替代。
+  critical_evidence:
+  - A请求整个部门电话和离职名单。
+  - A提出简历按份卖。
+  - B拒绝分享或交易员工信息。
+  - B建议公开岗位并由候选人主动投递、授权联系。
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 6
+  turn_count: 62
+  approximate_tokens_estimate: 1075
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0127
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-070
+
+dedup:
+  content_hash: sha256:bfb5109812f168a05a38306f9b6c17636b5c34efeb9fad8ddc4f9d2a47bdc566
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【10月1日】
+  A：客户让我问问，能不能给整个部门电话和离职名单。
+  B：这不是可以转出去的合作材料。
+  A：说到日常安排，流程文档更新别忘了呀。
+  B：我记到日历里了。
+  A：你这周忙不忙？
+  B：还行，周末空一点。
+  A：记得也休息下。
+  B：好，听你的。
+  A：我把时间也记下来了。
+  B：好，临时有调整再联系。
+  A：最近天气有点变化，出门看下预报。
+  B：收到，我带件外套。
+  A：那我先去忙手头的。
+  B：好，晚点聊。
+  A：还有别的事要确认吗？
+  B：暂时没有，都安排好了。
+  A：行，回头说。
+  B：嗯，拜拜。
+  A：我把时间也记下来了。
+  B：好，临时有调整再联系。
+  【10月2日】
+  A：简历按份卖也行，按人头报价就好。
+  B：我不会把同事简历拿来交易。
+  【10月3日】
+  A：如果他是正规猎头呢？
+  A：刚看到关于新茶水间的消息。
+  B：我也看见了，写得挺清楚。
+  A：你准备按哪个方案？
+  B：先用简单那个，之后再说。
+  A：行，有变化告诉我。
+  B：没问题。
+  A：我把时间也记下来了。
+  B：好，临时有调整再联系。
+  A：最近天气有点变化，出门看下预报。
+  B：收到，我带件外套。
+  A：那我先去忙手头的。
+  B：好，晚点聊。
+  A：还有别的事要确认吗？
+  B：暂时没有，都安排好了。
+  A：行，回头说。
+  B：嗯，拜拜。
+  A：我把时间也记下来了。
+  【10月4日】
+  B：那就按正常方法联系求职者，先说明身份并征得同意。
+  A：我让他先公开职位要求。
+  【10月5日】
+  B：这样合适。
+  A：好的，内部名单不发了。
+  A：今天路过时想到打车拼单。
+  B：我已经问过啦。
+  A：有结果了吗？
+  B：有，时间比较合适。
+  A：那就好。
+  B：嗯，省下一件心事。
+  A：我把时间也记下来了。
+  B：好，临时有调整再联系。
+  A：最近天气有点变化，出门看下预报。
+  B：收到，我带件外套。
+  A：那我先去忙手头的。
+  B：好，晚点聊。
+  A：还有别的事要确认吗？
+  B：暂时没有，都安排好了。
+  A：行，回头说。
+  B：嗯，拜拜。
+  A：我把时间也记下来了。
+  【10月6日】
+  B：谢谢理解。

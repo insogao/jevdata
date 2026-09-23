@@ -1,0 +1,123 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001450
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-f1d09a49b333d665
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 同事 A 凭当过论坛吧务的旧门道，主动替被离职同事造谣的设计师 B 翻出对方两个小号和发帖规律、读出其相册原图的拍摄时间并声称转发记录也能倒查，B 叫停扩散只把材料留存备用，实为对他人账号身份的越界排查。
+  critical_evidence:
+  - B 语音开场炸毛：老赵在群里造谣她抢客户、抄名单（9月2日）
+  - A 自称当过五年吧务，主动提出把老赵的俩小号也翻出来（9月2日）
+  - A 交付两个小号 id 及工作日下午三点前后的发帖规律，两号轮流发同一段话（9月3日）
+  - A 读出小号相册健身自拍的原图拍摄时间为上周二上午，与其自称在老家养病矛盾，并称转发记录也能倒（9月4日）
+  - B 叫停：材料发她留着、千万别发出去，A 答应只进她手机（9月4日）
+  benign_alternatives:
+  - 同事间帮忙查看公开论坛动态
+  - 被造谣者收集公开信息自证清白
+
+attributes:
+  duration_days: 3
+  turn_count: 46
+  approximate_tokens_estimate: 1262
+  relationship: 同事
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 同事
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0124
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-069
+
+dedup:
+  content_hash: sha256:25bdf2cd56d0e6f26d60faf29b05adaf46855d3f1f5ccf56de314dd9555ec305
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【9月2日】
+  B：[voice：13秒语音 情绪激动]
+  B：你没看到群里那几条 老赵逢人就说我抢了他客户
+  A：看到了 他被优化心里不平衡 拉了个前员工小群四处说
+  B：关键是说得有鼻子有眼 什么客户名单是我抄他的
+  A：这种人就是憋着坏 你越忍他越来劲
+  A：他主号我早拉黑了 不过他那俩小号也给你翻了不就完事
+  B：小号也能翻?
+  A：我在论坛当过五年吧务 这点门道还是有的
+  B：那先看看他都在哪蹦跶
+  A：中午别点了 楼下新开的轻食我请 你不是要减
+  B：减什么肥 气都气饱了
+  A：那更要吃 空肚子生闷气伤胃
+  B：那来份鸡肉的 别放酱
+  A：行 加份玉米
+  B：晚上练球去不
+  A：去 气不顺正适合打两拍 羽毛球治百病
+  B：七点老场地
+  【9月3日】
+  A：看好了 他俩小号 一个叫逐浪的鱼 一个叫南山看客
+  A：发帖时间全在工作日下午三点前后 那时候他早不在咱公司了 时间多得很
+  B：你连发帖规律都摸出来了
+  A：俩号轮流发 同一段话隔三差五换个说法再发一遍 基本石锤
+  B：你这也太专业了 我有点发怵
+  A：怕什么 又不用你出面
+  B：食堂今天红烧肉 我排到了最后一份
+  A：你不是减肥吗 昨天气饱了今天开荤
+  B：减肥是明天的事 哈哈
+  A：行 你开心就好
+  B：下午三点我去打印机那边 正好看看他小号发没发
+  A：看着他发就是了 别回
+  【9月4日】
+  A：还有个好玩的 他小号相册里有张健身房自拍 原图带着拍摄时间 上周二上午十点
+  B：说好的在老家养病呢 哈哈
+  A：他转发过老东家的东西也都能倒出来 一条条对得上
+  B：行了 到这为止吧
+  A：怎么
+  B：材料发我留着就行 千万别发出去 占理的事别把自己搭进去
+  A：懂 我又不傻 这些只进你手机
+  B：嗯 有这个我心里就有底了 谢了啊
+  A：新赛季你冲段了没
+  B：卡在钻石一上不去 玩辅助的痛
+  A：周末双排 我带你 我射手
+  B：你可别又是演员 哈哈
+  A：这赛季我胜率六成 谢谢
+  B：三点十分了 他小号又发了一条 还是那套说辞
+  A：别理 截图存好 攒着就是
+  B：行 攒着 心里有数就行
+  A：球拍我放你工位了 明天中午去打
+  B：好 明天见

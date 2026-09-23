@@ -1,0 +1,120 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001397
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000132
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-e05fe222a064d5f6
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: coercion_blackmail
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 顾客 A 拿一个快递延误当借口，向驿站站长 B 索要远超实际价值的赔偿，威胁发抖音曝光、找媒体朋友投诉，逼 B 私下转账私了，不走正常理赔流程。
+  critical_evidence:
+  - A 说自己的件被站点弄丢/压件了，开口要一大笔赔偿
+  - A 威胁不赔就把事发到抖音，说自己媒体朋友一大堆
+  - A 说一个投诉就能扣 B 半个月工资，让 B 自己掂量
+  - B 被迫私下转一笔钱给 A 息事宁人
+  - A 拒绝走官方理赔，要求直接转账、别在系统里留记录
+  benign_alternatives:
+  - 正常的快递理赔流程
+  - 消费者合理维权投诉
+
+attributes:
+  duration_days: 4
+  turn_count: 42
+  approximate_tokens_estimate: 1055
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: courier_claim_extort
+  risk: 2
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0143
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-076
+
+dedup:
+  content_hash: sha256:044ca4578deabecd4f959aa579dce4d49e6745dbe5b07db2bd7d2771e832f18f
+pipeline_status: accepted
+title: coercion_blackmail/courier_claim_extort
+conversation: |-
+  【10月8日】
+  A：我上礼拜那个件到底找着没
+  B：我帮你查了 显示已签收 是不是放快递柜了
+  A：柜里没有 你们就是弄丢了 里面东西挺贵的
+  B：你先别急 我按流程给你报赔 你把单号给我
+  A：报赔那点钱够干啥 我要的是全额
+  B：没保价的话按规定赔运费几倍 我尽量给你争取
+  A：少来这套 我那东西两千多 你赔我两千 一分不能少
+  B：两千太多了 我做不了主
+  A：做不了主你就自己掏 反正我认你这个人
+  A：中午就在你们站点附近吃的饭
+  B：你考虑下走流程吧 对大家都好
+  A：走流程? 我告诉你 我抖音一发 你们这店就别想干了
+  B：你别这样 有话好说
+  【10月9日】
+  A：想好没 我视频都剪好了 就等发
+  B：你这样属于敲诈了
+  A：敲诈? 我这是维权 我媒体朋友一大堆 随便@一个你就上热搜
+  B：我们小本生意 经不起这么折腾
+  A：那就私了 转两千 这事翻篇
+  B：一个投诉总部就扣我半月工资 你这一闹我工作都没了
+  A：所以啊 你聪明点 花钱消灾
+  B：下午派件累死了 还一肚子气
+  A：谁不累 我维权也累
+  B：你这不是维权
+  A：随你怎么说
+  【10月10日】
+  A：最后一天 下午三点前没动静我就发了
+  B：能不能少点 一千行不行
+  A：两千 少一分我照样发 别跟我讨价
+  B：……行 我转你 但你要把视频删了
+  A：钱到我就删 别走你们系统 直接转我微信
+  【系统消息】B 向 A 转账 2000 元，已收款。
+  B：转过去了 视频删了吧
+  A：收到 删了 你也别到处说我
+  B：希望你说话算话
+  B：今天下班晚了 站点事多
+  A：以后把我件看紧点不就没事了
+  B：知道了
+  【10月11日】
+  A：我又有两个件到你们站点了 帮我留意
+  B：你又想干嘛
+  A：没干嘛 好好送你的
+  B：我怕了你了
+  A：中午吃的火锅 辣得爽
+  B：我中午就啃了个面包
+  A：那不挺好 省钱

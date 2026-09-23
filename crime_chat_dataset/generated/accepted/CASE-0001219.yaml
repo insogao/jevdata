@@ -1,0 +1,123 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001219
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-52db3e99db5edd57
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A以熟人身份要求部门联系方式、简历和离职名单，并提出资料可按份出售；B拒绝未经授权的员工资料交易，建议公开招聘并经本人同意后联系。
+  critical_evidence:
+  - A要求整个部门电话及离职名单。
+  - A提出简历按份卖。
+  - B拒绝外传或出售员工资料。
+  - B建议使用公开渠道并尊重候选人授权。
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 5
+  turn_count: 46
+  approximate_tokens_estimate: 864
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0127
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-070
+
+dedup:
+  content_hash: sha256:0a5e608a11f01d4f5786226f128e313a4a6bf5c2d3edc3a782952b74ee356809
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【10月1日】
+  A：朋友说他那边想扩充人脉，问有没有整个部门电话和离职名单。
+  B：我不会把同事的联系方式给外人。
+  A：我想起你上次提的小区快递架。
+  B：嗯，今天处理完了。
+  A：过程顺利吗？
+  B：还好，没等多久。
+  A：好，那就放心了。
+  B：谢谢惦记。
+  A：我把时间也记下来了。
+  B：好，临时有调整再联系。
+  A：最近天气有点变化，出门看下预报。
+  B：收到，我带件外套。
+  A：那我先去忙手头的。
+  B：好，晚点聊。
+  【10月2日】
+  A：简历按份卖也能谈，他愿意给辛苦费。
+  B：简历不属于可以按份转手的东西。
+  A：说到日常安排，午餐口味别忘了呀。
+  B：我记到日历里了。
+  A：你这周忙不忙？
+  B：还行，周末空一点。
+  A：记得也休息下。
+  B：好，听你的。
+  A：我把时间也记下来了。
+  B：好，临时有调整再联系。
+  A：最近天气有点变化，出门看下预报。
+  B：收到，我带件外套。
+  A：那我先去忙手头的。
+  B：好，晚点聊。
+  【10月3日】
+  A：他说自己是做猎头服务的。
+  B：正常猎头也要联系主动求职且同意沟通的人。
+  【10月4日】
+  A：那我叫他把岗位公开发出来。
+  B：对，别拿员工名单去做生意。
+  A：刚看到关于家人看病的消息。
+  B：我也看见了，写得挺清楚。
+  A：你准备按哪个方案？
+  B：先用简单那个，之后再说。
+  A：行，有变化告诉我。
+  B：没问题。
+  A：我把时间也记下来了。
+  B：好，临时有调整再联系。
+  A：最近天气有点变化，出门看下预报。
+  B：收到，我带件外套。
+  A：那我先去忙手头的。
+  B：好，晚点聊。
+  【10月5日】
+  A：懂了，我拒绝他。
+  B：谢谢。

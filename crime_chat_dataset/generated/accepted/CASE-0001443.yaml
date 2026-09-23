@@ -1,0 +1,125 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001443
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-9599f9d188aed541
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: privacy_doxxing
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 校外中介 A 找在校职员 B 帮忙，从班主任系统里点一下查几个孩子的成绩和去向，A 发红包当谢礼，B 截图发回，两人约好用学生的名字当暗号并删记录。
+  critical_evidence:
+  - A 找 B 说自己手上有几个家长想了解孩子的情况，请 B 在系统里点一下
+  - A 把几个学生的名字和班级发给 B，让 B 从班主任系统里调成绩
+  - A 表示红包已发，让 B 弄好直接截图就行
+  - B 调出成绩后截图发给 A，A 核对后表示还要看另一个班的
+  - 两人说好删掉聊天记录，用学生名字代称，不留纸面东西
+  benign_alternatives:
+  - 家长查询自己孩子的成绩
+  - 学校官方渠道的正规查询
+
+attributes:
+  duration_days: 4
+  turn_count: 47
+  approximate_tokens_estimate: 1179
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0145
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-076
+
+dedup:
+  content_hash: sha256:cb67a19b655c28e031f553dbd870ee0acca2305377522741274a40d4ce64fe17
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【11月3日】
+  A：陈老师 忙不忙 想请你帮个小忙
+  B：什么事 你说
+  A：我这边有几个家长 想早点知道孩子这次考得怎么样
+  B：成绩不是下周统一公布吗
+  A：家长着急 你在班主任系统点一下不就有了
+  B：这个不太方便吧 有规定的
+  A：就看一下 又不改 谁也不知道 我给你发个红包
+  B：红包就免了
+  A：别客气 你帮我这个忙 后面还有
+  A：我先发两个名字 你查查是不是你们年级的
+  B：你发吧 我看看
+  A：三班的李xx 五班的王xx 这两个
+  B：是我们年级的 你要什么
+  A：这次的分数 还有排名 顺便看看有什么评语
+  B：评语我看情况 分数截图给你
+  【11月4日】
+  B：昨晚我登了系统 这两个都有
+  A：截个图就行 不用转文字
+  B：截图会不会太明显 有名字有班级
+  A：你把名字打个码 只要分数和排名 我这边家长不要名字
+  B：行 我中午弄
+  A：中午了 弄好了吗
+  B：在食堂 回去弄 你别催
+  A：好 我下午等你
+  B：发你了 两张 名字打码了
+  A：收到 第二个分数比预估高 家长肯定高兴
+  B：别到处说 我这是违规的
+  A：放心 就我跟家长 不会牵出你
+  A：陈老师 还有个事 能不能看看五班那个的志愿填报倾向
+  B：这个系统里没有 你要求太多了
+  A：那看看他有没有加过分 竞赛那块
+  B：这个倒是能看 但你别外传
+  【11月5日】
+  A：红包我给你发过去了 你收一下
+  B：你这弄得我压力大
+  A：就一次 帮我把这批弄完 后面我不找你了
+  B：说好的 弄完这次别再找我
+  【系统消息】A 向 B 转账 800 元，已收款。
+  B：收到了
+  A：这几个弄完就结 你聊天记录记得删 我这头也清
+  B：名字我都不存 用代号
+  A：还有三班那个 你再点一下
+  B：我今天课多 晚上再说
+  A：行 不急这一会
+  B：弄好了 这是最后一个 我真不干了
+  A：辛苦 最后一个 这单我多给你点
+  B：不用多给 我只求这事到这就完
+  【11月6日】
+  A：以后还有家长问 我就说查不到 不烦你了
+  B：你最好真别找了 我这几天睡不好
+  A：放心 记录咱俩都删了 谁也不知道

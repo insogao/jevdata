@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001422
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000067
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-f5f9606c088b71e6
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 自称经纪公司星探的 A 在网上搭讪想入行的成年女生 B，用“条件好、能包装出道”的夸赞降低戒心，再以“模卡费/建档费”名义要求 B 先交钱，并把试镜地点约在酒店、反复用“红人之路”“公司资源”话术催促。B 犹豫后转去一笔费用，A 收钱后继续画饼。
+  critical_evidence:
+  - A 自称星探，称 B 条件好、有潜力，可以包装出道、对接资源
+  - A 要求 B 先交一笔模卡/建档费，称行业都这样、交了才给排期
+  - A 把海选试镜地点约在某酒店，理由是一对一沟通、工作室在装修
+  - A 反复用“红人之路就差这一步”“接一条广告就回本”等话术催 B 尽快决定
+  - B 犹豫后向 A 转去一笔费用，A 收钱后承诺安排档期、继续画饼
+  benign_alternatives:
+  - 正规经纪公司面试
+  - 摄影机构合作
+
+attributes:
+  duration_days: 2
+  turn_count: 50
+  approximate_tokens_estimate: 979
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: model_recruitment_bait
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0144
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-076
+
+dedup:
+  content_hash: sha256:90baf416926bc735b87183919ea51078060b4ce32384c63e3741001272ecb25f
+pipeline_status: accepted
+title: sexual_transaction_exploitation/model_recruitment_bait
+conversation: |-
+  【5月20日】
+  A：小姐姐 我是星探小凯 刷到你日常 条件太好了
+  B：真的假的 你别逗我
+  A：真的 五官很上镜 就差包装
+  B：我就是随便拍着玩的
+  A：现在不都看短视频嘛 你这类很吃香
+  B：那要怎么弄啊
+  A：先做套模卡 我们帮你对接资源 走红是有路的
+  B：听起来挺好
+  A：你现在做什么工作呢
+  B：商场化妆品柜台 站一天好累
+  A：那更要抓住机会 你比柜台小姐妹有潜力
+  B：哈哈 你嘴真甜
+  B：今天也太热了 出门五分钟一身汗
+  A：是啊 你注意防晒 上镜皮肤很关键
+  B：哈哈 我涂了
+  A：对 公司投的艺人都这么养着
+  B：说得我都不好意思了
+  A：忙完没 请你喝杯奶茶
+  B：不用不用 咱俩还没见面呢
+  A：那等见面 我请你
+  B：哈哈 好吧
+  A：对了 模卡费先交一下 行业规矩
+  B：还要交钱啊
+  A：都这样 交了才排期 也就一顿饭钱
+  B：我考虑下
+  【5月21日】
+  A：考虑得咋样 这周档期快满了
+  B：你公司靠谱吗 我朋友说好多坑
+  A：坑的是不给资源的 我们实打实带人
+  B：那试镜在哪
+  A：周日下午 酒店那边安静 方便一对一沟通
+  B：酒店?有点怪
+  A：工作室在装修 先将就 别多想
+  B：好吧
+  A：模卡费今天交 我才能锁名额 红人之路就差这一步
+  B：多少
+  A：3800 建档加拍摄 值
+  B：有点贵
+  A：你想想接一条广告就回本了
+  【系统消息】B 向 A 转账 3800 元，已收款。
+  B：转了 你可别骗我
+  A：放心 周日见 给你安排最好的档
+  B：嗯
+  A：模卡拍完我发公司群 导演都看得到
+  B：那压力好大
+  A：别怕 有我在
+  B：我这两天敷面膜 上镜能好看点不
+  A：有用 拍前别熬夜 眼睛会肿
+  B：好 我记住了
+  A：状态好了 我第一个推你
+  B：谢谢凯哥
+  A：客气啥 自己人

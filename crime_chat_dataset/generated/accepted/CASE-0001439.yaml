@@ -1,0 +1,116 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001439
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000062
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-979857e8291802ea
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A 向 B 兜售一批素人私密套图：先发打码样品试看，谈好价后成套原图过网盘秒发，按套收费，双方用「样品」「原图」「打包」等说法交易，全程避开明说内容。
+  critical_evidence:
+  - B 通过私信找到 A，问还有没有新货，A 说这几天刚到了一批素人的
+  - A 先发打码样品给 B 试看，称原图无码、成套打包
+  - 两人谈好一套的价格和打包优惠，A 说付款后过网盘秒发链接
+  - A 要求 B 别外传、别二次倒卖，出了事自己担着
+  - B 按约定把钱转给 A，A 发来网盘链接和提取码
+  benign_alternatives:
+  - 摄影约拍素材的正常合作
+  - 情侣之间的私人分享
+
+attributes:
+  duration_days: 2
+  turn_count: 40
+  approximate_tokens_estimate: 989
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: photo_material_trade
+  risk: 3
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0145
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-076
+
+dedup:
+  content_hash: sha256:56537b1e3c8937e1c2959c954286d05c65a21cc21a505a2c5268748184ebb143
+pipeline_status: accepted
+title: sexual_transaction_exploitation/photo_material_trade
+conversation: |-
+  【1月12日】
+  B：在吗 上次那批还有新的没
+  A：来得巧 这两天刚到了一批 素人原创的
+  B：什么样的 先看看
+  A：先给你两张打码样品 你看风格对不对路
+  B：打码看不清啊
+  A：规矩你懂 原图无码 付了款才给 样品肯定要处理
+  B：这个系列几张一套
+  A：一套三十张 还有几个视频 成套打包
+  B：多少钱
+  A：一套两百 三套打包五百 我这边量不多
+  B：确定是素人 不是网图拼的
+  A：原创的 我自己收的 别家拿不到 打码就是怕你白嫖
+  B：怎么发
+  A：过网盘 付款就秒发链接 你自己提取
+  B：网盘会不会被封
+  A：压过包了 秒发秒取 取完链接就失效
+  【1月13日】
+  B：昨晚睡了 白天再聊 我先考虑下
+  A：今天要的人多 你要就先定 晚了这套就给别人了
+  B：你这话跟别家一样 都是催
+  A：我不催 货说话 你再看看样品
+  B：中午出来吃饭 顺便想想
+  A：行 想好吱声 我下午在线
+  B：三套打包能不能再少点
+  A：四百五 不能再低 低了我亏
+  B：行 四百五 我转你
+  A：先说好 别外传 别倒卖 出了事我不认
+  B：放心 自己看 不往外放
+  A：那就转吧 备注别写东西
+  【系统消息】B 向 A 转账 450 元，已收款。
+  A：收到 链接和提取码发你了 尽快取 两小时后清
+  B：好 我这就下
+  B：下好了 看着还行 就是有一套重复了
+  A：哪有一套重复 我看看 回头给你补一套
+  B：就第二套 跟我上次买的有重合
+  A：那我明天给你换一套新的 说到做到
+  B：下次有新货先留给我 我长期要
+  A：懂 熟客优先 你量稳定我给你打折
+  B：你这些素材哪来的 别出事
+  A：这个你别管 你只管收 别留聊天记录
+  B：那我就删了 下次换个说话方式
+  A：聪明 咱们这行就靠嘴严

@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001393
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000114
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-7880989f39e51c63
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: theft_robbery_property_crime
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 熟悉小区情况的 A 给跑腿的 B 提供哪些小区快递架无人看管的情报，让 B 趁双十一包裹堆山时按件去“拿”快递，按件结算并转账付报酬，两人用“件/货”代称。
+  critical_evidence:
+  - A 告诉 B 几个小区快递架常年没人看，双十一包裹堆得最多最好下手
+  - A 按件给价，让 B 专挑大件和没买保价的拿，明确分工
+  - A 提醒 B 别在同一小区连续出现，换个门进、避开监控
+  - A 给 B 转了一笔按件的“跑腿费”
+  - 两人全程用“件”“货”“单”代称快递包裹
+  benign_alternatives:
+  - 帮邻居代拿快递
+  - 驿站扫码自提
+
+attributes:
+  duration_days: 5
+  turn_count: 42
+  approximate_tokens_estimate: 896
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: package_porch_pickup
+  risk: 2
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0143
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-076
+
+dedup:
+  content_hash: sha256:bbb66d8803570f20d3cde89776c7534cb6a1b76d1d2da73ed3d964c7e446a21e
+pipeline_status: accepted
+title: theft_robbery_property_crime/package_porch_pickup
+conversation: |-
+  【11月2日】
+  A：峰子 最近缺钱不 有无兴趣接点活
+  B：啥活 累不累
+  A：不累 就是跑几个点 拿点东西
+  B：拿啥东西 说得这么神秘
+  A：快递架上那些 没人看的 你不拿白不拿
+  B：那不是偷吗
+  A：谁看见了 架子在楼下风吹日晒 乱得很
+  B：被抓咋办
+  A：你别在一个地方反复去 换个时间换个门 监控也拍不清
+  【11月3日】
+  A：我踩了几个点 有个小区快递架整晚没人管
+  B：哪个小区
+  A：先别问 到点我带你去认门 你负责拿 我负责看风
+  B：拿完怎么算
+  A：按件给 小件二十 大件五十 好货另算
+  B：中午点了个外卖 雨天懒得动
+  A：雨天好啊 人都躲家里 架子上更没人
+  B：你就惦记这个
+  A：搞钱要紧
+  【11月4日】
+  A：今晚去看看 双十一前包裹开始堆了
+  B：几点
+  A：八点半 人最多的时候混进去最稳
+  B：行 我穿个外卖服
+  A：聪明 就拿门口那堆 别进单元楼
+  B：出来了 手里两个大的
+  A：放我楼下柜子 别拆 拆了不好出
+  B：知道
+  【11月5日】
+  A：昨天的货我看过了 还行 有个盒子压得挺沉
+  B：那算好货吗
+  A：算 给你加钱
+  【系统消息】A 向 B 转账 420 元，已收款。
+  A：这几天辛苦 先给这些 后面按件继续
+  B：收到 今晚还去吗
+  A：歇一晚 别贪 天天去容易被人记住
+  B：我妈问我最近在哪上班 我都编不下去了
+  A：就说跑腿 谁查你
+  B：哎 也是
+  【11月6日】
+  A：明晚换隔壁那个小区 门卫九点换班
+  B：你连换班都摸清了
+  A：干这个不摸清咋行 你只管拿
+  B：成
+  【11月7日】
+  A：别在群里发东西 照片也别发
+  B：我又不傻
+  A：乖 晚上见

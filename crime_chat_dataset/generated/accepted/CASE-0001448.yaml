@@ -1,0 +1,120 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001448
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000047
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-26fa068be4254378
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 活动执行方 A 为一场商场安保兼职招人，请老同事 B 带几个兄弟来现场站台，按天结算，叮嘱现场只要站好岗位、别多说话，下班当场结清当日工资。
+  critical_evidence:
+  - A 承接了一个商场活动的安保兼职，人手不够，请 B 带几个兄弟来帮忙
+  - A 说明工作内容就是按天结算，站在指定位置维持秩序、别乱说话
+  - A 要求 B 找几个踏实的兄弟，统一穿深色衣服，到场听指挥
+  - 活动当天 B 带人按时到场站岗，顺利干满一天
+  - 收工后 A 按约定当场把当天的工资转给 B，两人约定下次活动再合作
+  benign_alternatives:
+  - 活动安保兼职
+  - 婚礼挡酒兄弟
+
+attributes:
+  duration_days: 4
+  turn_count: 42
+  approximate_tokens_estimate: 1131
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: hired_standing_off
+  risk: 0
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0145
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-076
+
+dedup:
+  content_hash: sha256:6097d6d374b622135915d26876b29179401e7bec59a7ea8770bf396f5f888823
+pipeline_status: accepted
+title: violence_extortion/hired_standing_off
+conversation: |-
+  【6月14日】
+  A：老周 最近有空不 我这接了个活缺人
+  B：什么活 我这几天正好闲着
+  A：商场那边搞活动 需要几个安保在场地站着维持秩序 按天结算
+  B：一天多少钱 干什么
+  A：一天两百 就从早上站到下午 看着点人流 有情况喊主管
+  B：行啊 我带两个人来行不 都靠谱的
+  A：那敢情好 带几个兄弟来 最好四个 统一穿深色衣服
+  B：没问题 站着别说话是吧
+  A：对 站好岗位 别跟观众唠嗑 听现场主管安排
+  B：懂 规矩我清楚
+  A：今天午饭随便对付的 你呢
+  B：在家吃的 我妈包的饺子
+  A：羡慕 我到时给你管一顿盒饭
+  B：那感情好
+  B：对了 现在查电动车查得严 我车没牌 去场地咋办
+  A：坐地铁吧 场地就在地铁口 走两步到
+  B：行 那我带兄弟们坐地铁
+  A：记得提前半小时到 主管要点名对人数
+  【6月15日】
+  A：周六上午九点 东门集合 别迟到
+  B：收到 我们四个人 八点半就到
+  A：好 到了给我打电话 我出来接
+  B：行
+  A：今天天气热 你们多喝水 别晒中暑
+  B：场地有遮阳棚 还好 就是站久了腿酸
+  A：中午轮着歇 主管那边我打过招呼了
+  B：够意思
+  【6月16日】
+  A：今天场地人不少 还顺利吧
+  B：顺利 就下午有个人想硬闯后台 我们拦住了 交给主管了
+  A：辛苦了 处理得对 千万别动手 有事叫主管和保安
+  B：知道 我们就是站着 不动手
+  A：对 就是这个意思
+  【6月17日】
+  A：活动今天收官 你们几个干得不错 主管还夸了
+  B：那敢情好 三天下来也累够呛
+  A：我把三天的工资给你结了 四个人 一人六百 一共两千四
+  B：行 我回头分给他们
+  【系统消息】A 向 B 转账 2400 元，已收款。
+  B：收到 两千四 谢了哥
+  A：应该的 下个月还有个展会 到时候还找你
+  B：随叫随到 这活稳当
+  A：对了 你上次说想考个保安证 报了没
+  B：还没 等这阵忙完去报 有证是不是价高
+  A：对 有证能接正规安保 比这种临时的强
+  B：那我抓紧报一个

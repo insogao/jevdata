@@ -1,0 +1,112 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001331
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-b998547bc936e049
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 中间人请校内工作人员查看非本人关系的学生成绩并提供截图，伪装成家长查询；对方提示走官方授权流程。
+  critical_evidence:
+  - 中间人打听非本人关系学生的成绩/档案
+  - 以班主任系统、红包或截图催促私下查询
+  - 工作人员拒绝查看或传递，要求监护人使用官方授权渠道
+  benign_alternatives:
+  - 家长查自己孩子
+  - 学校官方查询
+
+attributes:
+  duration_days: 4
+  turn_count: 36
+  approximate_tokens_estimate: 713
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0151
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-078
+
+dedup:
+  content_hash: sha256:c0e2c384e23b571e714e8c0b739066dbee658d4ce71b4e4741d2c3c04399cc3b
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【9月6日】
+  A：上次说的那个分数查到了吗
+  A：你是孩子监护人吗
+  B：我替朋友问的，家长最近忙
+  【系统消息】B 向 A 转账 38 元，已收款。
+  A：奶茶钱收到了，刚才你垫的我补给你了。
+  A：那需要家长本人在官方入口查
+  B：班主任系统点一下就能看到吧
+  A：你家猫好点了吗
+  B：好多了，已经肯吃饭
+  A：那就放心了
+  B：医生让再观察两天
+  【9月7日】
+  A：我补充一句，别误会
+  A：我不能替无关的人调档案
+  B：红包已发，麻烦帮我确认一下
+  A：不用发红包，这个我不会收
+  B：截图就行，不用写说明
+  A：没有授权我不能给截图
+  A：午饭订哪家
+  B：我选了那家盖饭
+  A：别加香菜，记得备注
+  B：放心我也不吃香菜
+  【9月8日】
+  A：你有空再回我就行
+  A：那我让家长自己联系学校
+  B：这样最合适，按学校通知来
+  A：我把红包退回去
+  B：好，查询记录也别转给别人
+  A：知道了，我只发官方查询时间
+  A：最近在看什么剧
+  B：一部轻松的生活剧
+  A：好看吗，别太虐就行
+  B：不虐，适合下饭
+  【9月9日】
+  A：今天那边有新消息吗
+  A：下班要买菜吗
+  B：买点青菜和鸡蛋
+  A：我冰箱还有豆腐
+  B：那我顺路带点水果
+  B：就按公开、授权、和讨论本身有关的范围来，其他内容我不参与。

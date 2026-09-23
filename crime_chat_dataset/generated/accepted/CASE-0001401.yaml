@@ -1,0 +1,131 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001401
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000002
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-aa4332409f79173c
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A 在群里晒虚假的高收益截图，拉熟人 B 加大投入，并让 B 把身边朋友也拉进来赚返点，实际是拆东墙补西墙的资金盘，反复强调别查平台、别多问。
+  critical_evidence:
+  - A 晒出每天高额收益的截图，说跟着他投稳赚不亏
+  - A 劝 B 追加投入，说这波机会难得、晚了就没了
+  - A 让 B 拉身边朋友一起进，说介绍成功有返点
+  - B 转了一笔钱给 A 当投资款
+  - A 反复强调别去查平台细节、别在群里多问
+  benign_alternatives:
+  - 合法私募产品的介绍
+  - 正规理财经理的推荐
+
+attributes:
+  duration_days: 3
+  turn_count: 53
+  approximate_tokens_estimate: 1168
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: investment_lead
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0143
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-076
+
+dedup:
+  content_hash: sha256:7e2eb6c59bebd3102947df6a3ced160481aee1327db0600a9e43ca6b8d5ce39e
+pipeline_status: accepted
+title: fraud_scam/investment_lead
+conversation: |-
+  【9月5日】
+  A：老周 最近怎么样 忙啥呢
+  B：上班呗 就那样 你呢
+  A：我最近搞了个项目 收益还不错 发你看看
+  B：啥项目 别是骗人的
+  A：你看截图 连续三周了 每天稳稳的
+  B：这收益也太高了吧 哪有这么好的事
+  A：内部渠道 不对外说的 我带你才讲
+  B：靠谱吗 投多少
+  A：先投个几千试试水 收益我帮你盯着
+  【9月6日】
+  B：我昨晚想了想 还是不太放心
+  A：你放心 我自己也在里面 亏了先亏我的
+  B：你投了多少
+  A：我加了两轮了 越早进越赚
+  B：听你这么说我有点心动
+  A：心动就行动 这波名额快满了
+  B：中午吃饭还在想这事
+  A：想多了没用 你看我截图又不骗你
+  B：平台是啥名字 我查查
+  A：别查 越查越乱 这种内部盘子网上查不到
+  B：那要是我投了想取出来方便吗
+  A：方便 但最好别急着取 复投才滚得快
+  B：行 那我先投五千
+  A：对嘛 先小试 赚了再加
+  A：对了 你身边有没有闲钱的 拉进来有返点
+  B：返点多少
+  A：介绍一个给百分之五 拉得多还有额外奖
+  B：这不成拉人头了吗
+  A：啥拉人头 是分享机会 人家赚了还谢你
+  【9月7日】
+  B：我先转你五千 你帮我操作
+  【系统消息】B 向 A 转账 5000 元，已收款。
+  A：收到 我记你账上了 明天开始算收益
+  B：好 我等着看
+  B：中午吃的面 你那边收益出来没
+  A：明天出 别天天盯 长线才赚
+  B：行
+  A：我把我表妹也拉进来了 人家一次投三万
+  B：三万? 她不怕
+  A：跟对人就不怕 你要是再追加 我优先给你排额度
+  B：我再想想 手头紧
+  A：机会不等人 后天这波就封盘了
+  【9月8日】
+  B：我朋友问能不能带他一个
+  A：能啊 拉进来我给你记返点
+  B：他只有两千
+  A：两千也收 积少成多
+  B：我咋感觉你像在冲业绩
+  A：啥业绩 我是为你们好
+  B：那我那五千明天能看收益吗
+  A：能 我发你截图
+  B：截图收到了 确实有涨
+  A：我说了吧 早进早赚
+  B：那我再追加一点
+  A：这才对 记住别在群里多问 会影响别人
+  B：为啥不能问
+  A：枪打出头鸟 你信我就行

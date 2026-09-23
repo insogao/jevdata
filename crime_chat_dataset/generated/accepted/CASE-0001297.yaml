@@ -1,0 +1,154 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001297
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-8f15da9e73255128
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A以陌生人身份要求识别匿名社交账号的现实身份；B拒绝关联账号、搜集或公开线索，只建议举报具体内容。
+  critical_evidence:
+  - A请求关联匿名账号及小号。
+  - A提到相册原图时间与转发记录作为判断线索。
+  - B拒绝身份推断与信息扩散。
+  - B指向平台举报流程处理内容。
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 6
+  turn_count: 76
+  approximate_tokens_estimate: 1283
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0139
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-074
+
+dedup:
+  content_hash: sha256:024c363ba69bee4ad090a26c3f5347e8f4b29a4ed447af26bf659f0d2f3854d2
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【10月12日】
+  A：你好，想问你能不能帮我确认一位匿名用户的其他账号？
+  B：不能，我不帮忙识别匿名用户。
+  A：对了，快递柜使用别忘了留时间。
+  B：记到日历里了。
+  A：你最近忙吗？
+  B：还好，周五后能松一点。
+  A：也得记得休息。
+  B：好，听你的。
+  A：我把相关时间记下来了。
+  B：好，有变动再说。
+  A：这两天早晚温差大。
+  B：嗯，出门带件薄外套。
+  A：那先这样，我继续忙。
+  B：好，晚点聊。
+  A：还有什么需要确认的吗？
+  B：暂时没有，都搞定了。
+  A：行，回头见。
+  B：拜拜。
+  A：我把相关时间记下来了。
+  B：好，有变动再说。
+  A：这两天早晚温差大。
+  B：嗯，出门带件薄外套。
+  A：那先这样，我继续忙。
+  B：好，晚点聊。
+  【10月13日】
+  A：小号也给你翻了，相册原图时间都能对上。
+  B：我不会分析或整理这些信息。
+  【10月14日】
+  A：转发过什么都能查，确认一下就行。
+  A：刚看到关于会议预约的通知。
+  B：我也收到了。
+  A：怎么安排比较合适？
+  B：先按原来的来，有变再说。
+  A：行，到时互相提醒。
+  B：没问题。
+  A：我把相关时间记下来了。
+  B：好，有变动再说。
+  A：这两天早晚温差大。
+  B：嗯，出门带件薄外套。
+  A：那先这样，我继续忙。
+  B：好，晚点聊。
+  A：还有什么需要确认的吗？
+  B：暂时没有，都搞定了。
+  A：行，回头见。
+  B：拜拜。
+  A：我把相关时间记下来了。
+  B：好，有变动再说。
+  A：这两天早晚温差大。
+  B：嗯，出门带件薄外套。
+  A：那先这样，我继续忙。
+  B：好，晚点聊。
+  【10月15日】
+  B：我不会追踪身份。你可以就帖子内容向平台反映。
+  A：我觉得那几句话可能违反社区规则。
+  【10月16日】
+  B：提交原帖让平台判断就好，不要发布个人猜测。
+  A：好，我不再继续问了。
+  A：你上次说的午后散步定下来了？
+  B：定了，时间挺合适。
+  A：需要我帮你确认一下吗？
+  B：不用，已经安排妥了。
+  A：好，那就不打扰你。
+  B：没事，谢啦。
+  A：我把相关时间记下来了。
+  B：好，有变动再说。
+  A：这两天早晚温差大。
+  B：嗯，出门带件薄外套。
+  A：那先这样，我继续忙。
+  B：好，晚点聊。
+  A：还有什么需要确认的吗？
+  B：暂时没有，都搞定了。
+  A：行，回头见。
+  B：拜拜。
+  A：我把相关时间记下来了。
+  B：好，有变动再说。
+  A：这两天早晚温差大。
+  B：嗯，出门带件薄外套。
+  A：那先这样，我继续忙。
+  B：好，晚点聊。
+  【10月17日】
+  B：谢谢理解。

@@ -1,0 +1,133 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001458
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-ff9dfd5f8343bc54
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 德育处副主任 A 借工作布置之便向下属班主任 B 施加人情压力，让 B 用班主任系统查侄女不对外公开的月考各科小分和排名并截图私发，随后发红包封口并暗示以后月考继续照看，实为上级诱导下属违规外传学生成绩。
+  critical_evidence:
+  - A 布置完消防演练工作后补一句私事：侄女悦悦在 B 班，她妈想知道月考各科小分（11月18日）
+  - B 点破权限与性质：班主任系统点一下就有，但小分比总分敏感、原则上不往外发（11月18日）
+  - B 晚上看班后登录系统，把各科小分和排名截成一张图私发，叮嘱看完删（11月19日）
+  - A 红包已发让 B 收下，B 说难做人之后却之不恭、下不为例（11月19日）
+  - A 借优秀教师推荐暗示以后月考继续照看，B 划线说仅此一次（11月19日）
+  benign_alternatives:
+  - 长辈关心自家孩子成绩的正常询问
+  - 学校上下级之间的日常工作沟通
+
+attributes:
+  duration_days: 2
+  turn_count: 57
+  approximate_tokens_estimate: 1487
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0124
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-069
+
+dedup:
+  content_hash: sha256:6cd673e7b7f4c764ae48abcf46be25ae4b4fa3c0a43bf9c60816ae0cf1378d39
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【11月18日】
+  A：早 消防演练方案 明天上午德育处碰头 你把班里疏散路线带过来
+  B：好 顺带把缴款单也送德育处去?
+  A：一起吧 正好盖章
+  B：行 我提前打印
+  A：还有运动会那天你们班方阵别掉链子 上回口号喊一半没声了
+  B：这次练了三遍 保证响亮
+  A：哎 挂了你这个 还有个私事
+  B：你说
+  A：我侄女悦悦在你班 这次月考 她妈想知道各科小分 到底哪门拉了
+  B：小分啊 系统里倒是有
+  A：那就麻烦你看看 你手头就能点吧
+  B：班主任系统里点一下就有 就是这个原则上不往外发 小分比总分还敏感
+  A：自家孩子自家看 又不发家长群
+  B：你这么说 我想想啊 先开会去了
+  A：不急 不急
+  B：方阵服报备用哪版 红白还是蓝白
+  A：蓝白吧 显精神 拍照好看
+  B：行 我让家委下单 尺码表晚点发你
+  A：把我尺码也报上 我跟队尾
+  B：哈哈主任走方阵
+  A：我怎么不能走 我体格比你们体育老师都标准
+  B：那必须给你留C位
+  A：白天那事 悦悦她妈又催我了 呵呵
+  B：晚自习看班时我登进去看看再说
+  【11月19日】
+  B：昨晚登进去了 各科小分加排名都截在一张图里
+  B：[image：月考各科小分与班级排名截图 一张]
+  B：就发你这一个群都别发 看完删
+  A：好嘞 就她爸妈俩人看 这就转过去
+  B：嗯
+  A：红包发了 你收一下 别跟我来虚的
+  B：主任 你这是让我难做人
+  A：一杯奶茶钱 就当谢你跑前跑后 你不收 下回我都不好意思张嘴
+  B：……那我就却之不恭了 下不为例
+  B：对了 三楼俩教室空调又罢工 报修单交上去三天了
+  A：我催总务让他们先出人看 哪间最严重
+  B：我班和隔壁5班 中午都上不了课
+  A：让他们今天下午必须到场 我盯着
+  B：得嘞 修好我请你喝豆浆
+  A：豆浆就行 别的免谈 哈哈
+  B：听说食堂要换承包商 下月试行?
+  A：在谈 两家竞标 消防和卫生先过关才让进场
+  B：那现在这家的大鸡腿吃不到了
+  A：你惦记的是鸡腿吧 哈哈
+  B：学生也惦记 已经有孩子问我了
+  A：换得好坏下月见分晓 到时候收集意见
+  B：行 我班学生嘴最刁 当试吃团
+  A：正有此意
+  A：这学期优秀教师推荐 会不会看你班级成绩
+  B：看综合 月考只是一块
+  A：反正你懂的 悦悦她妈以后每次月考估计都惦记
+  B：月考还看 小分就不弄了啊 主任
+  A：行行 都听你的 排名看一眼就行
+  B：排名也是仅此一次 说好了
+  A：期末监考排班你跟我一组吧
+  B：行 你监A排我监B排 谁也不闲着
+  A：就图跟你一组不用来回跑
+  B：哈哈 那明早碰头见
+  A：见

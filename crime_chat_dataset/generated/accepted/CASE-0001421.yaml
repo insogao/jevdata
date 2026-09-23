@@ -1,0 +1,139 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001421
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000133
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-ad9667e724d646d0
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: coercion_blackmail
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 楼下住户 A 借楼上 B 家孩子跑跳扰民为由，把「举报扰民」当成筹码，扬言认识城管、能去查 B 的店铺，逼 B 按月给好处。表面是邻里噪音商量，实际是长期吃拿的软性勒索，最终 B 被迫以烟钱折算转账把这一月的事「摆平」。
+  critical_evidence:
+  - A 以 B 家孩子跑跳扰民为由，说录了音、扬言往上反映
+  - A 暗示自己认识城管老张，能去查 B 家店铺的招牌和消防
+  - A 提出「每月两条烟 这事就平」，要按月的固定好处
+  - B 讨价还价后，把烟折算成钱转给 A，一条六百、两条一千二
+  - A 收钱后说「这个月的」，并提醒下个月记得
+  benign_alternatives:
+  - 邻里噪音调解
+  - 物业投诉流程
+
+attributes:
+  duration_days: 2
+  turn_count: 63
+  approximate_tokens_estimate: 937
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: resident_noise_leverage
+  risk: 2
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0144
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-076
+
+dedup:
+  content_hash: sha256:27110bd51683f1701b346e0db6ec0b3c9db35dbe6a20adf5f8a654c80c0efcc2
+pipeline_status: accepted
+title: coercion_blackmail/resident_noise_leverage
+conversation: |-
+  【6月8日】
+  A：你家孩子能不能管管 早上跑到现在
+  B：不好意思 孩子放假在家
+  A：天天这样 楼下还睡不睡了
+  B：我这就说他
+  A：说有用吗 我录了音
+  B：都是邻居 至于吗
+  A：不至于 那你别怪我往上反映
+  B：反映呗 又不是什么大事
+  A：我认识城管的老张 到时候你家那店 招牌 消防 都聊聊
+  B：...你说什么呢
+  A：抬头不见低头见的 我也不想撕破脸
+  B：你到底想咋样
+  A：每月两条烟 这事就平
+  B：你这不是讹人吗
+  A：说话别难听 我这是给你省事
+  B：我要是不给呢
+  A：那你自己掂量 我这人闲 跑几趟的事
+  B：今天这雨真大
+  A：嗯 收衣服没
+  B：收了
+  A：那就行
+  A：菜市场那家排骨新鲜不
+  B：还行 我早上买的
+  A：多少钱一斤
+  B：三十八
+  A：贵了
+  B：是有点
+  B：烟的事 能不能少点
+  A：一个月两条 已经够意思了
+  B：我一个月才挣多少
+  A：你店里生意不差 我看得见
+  B：...
+  A：别磨叽 月底前给就行
+  B：你是不是把我车位上那电动车挪了
+  A：挡道了 我挪的
+  B：那是我的位置
+  A：你的 你交物业费了没 哈哈
+  B：行吧
+  【6月9日】
+  A：想好没
+  B：烟我给你买 但这事能不能就到这
+  A：到哪 这才刚开始
+  B：你别太过分
+  A：我认识城管的事 你也知道我啥意思
+  B：行 我给 你别去店里
+  A：懂事
+  B：两条烟 我直接给你钱行不 你自己买
+  A：也行
+  B：多少
+  A：一条六百 两条一千二
+  B：这么贵
+  A：这牌子的
+  B：转你了
+  【系统消息】B 向 A 转账 1200 元，已收款。
+  A：收到 这个月的
+  B：嗯
+  A：你爸腿好点没
+  B：还行 老毛病
+  A：让他别老爬楼
+  B：知道
+  A：下个月记得
+  B：...
+  A：抬头不见低头见的 别让我为难
+  B：知道了
+  B：睡吧

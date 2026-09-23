@@ -1,0 +1,141 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001434
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000015
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-3e11753f774dc695
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 自称名校退学名师的 A 混进家长群加上家长 B，以十节包提分、最后三个名额等话术制造紧迫感，催促 B 先交全款订课，收款后迟迟不开课、课程严重缩水。
+  critical_evidence:
+  - A 加 B 微信自称是清华退学的名师，专门带初三冲刺，手上有独家提分方法
+  - A 展示一堆所谓往届学员提分截图，催 B 赶紧给孩子占坑
+  - A 提出十节包提分、不过退费，原价八千，今天定只要五千
+  - A 制造紧迫感，称最后三个名额，今天不交钱就给别人了
+  - B 交钱后 A 一再拖延开课，只发来两个免费录播视频，退费也找不到人
+  benign_alternatives:
+  - 真实在线教育机构的试听报名
+  - 大学生家教上门辅导
+
+attributes:
+  duration_days: 4
+  turn_count: 61
+  approximate_tokens_estimate: 1696
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: video_coaching_parent_scam
+  risk: 2
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0145
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-076
+
+dedup:
+  content_hash: sha256:de3fbf5b273c392b5d38e65ae9bd90cef9861925eb86f56edd6c4f511347593c
+pipeline_status: accepted
+title: fraud_scam/video_coaching_parent_scam
+conversation: |-
+  【2月18日】
+  A：您好 是梓轩妈妈吧 我是李老师 在家长群里看到你的
+  B：你好 哪个群啊
+  A：初三冲刺那个群 我之前在群里发过提分案例 你点过头像
+  B：哦 你是那个清华的老师
+  A：对 我清华读到大三退了 觉得应试这块自己有套方法 专门做冲刺
+  B：梓轩数学一直上不去 一百出头
+  A：一百出头冲一百三是完全来得及的 就看方法对不对
+  B：他补了好几家了 都没啥效果
+  A：补课班人多 老师顾不过来 我带的是小课 一节一个题型
+  B：你把方法发我看看
+  A：方法得课上讲 我先给你看几个学生的截图
+  A：这几个都是去年带的 四十来天提二十多分
+  B：看着挺厉害 就是不知道真假
+  A：可以先试听一节 不满意不交钱
+  B：那行 试听怎么安排
+  【2月19日】
+  A：姐 孩子平时几点放学 我好排试听
+  B：他晚自习到九点 周末白天有空
+  A：那周六上午 我给你留一节
+  B：好 谢谢李老师
+  B：中午食堂人多 我随便吃点
+  A：姐你也别太累 孩子的事慢慢来
+  B：哎 当妈的哪有不操心的
+  A：理解 我带的都是这种焦虑的家长
+  A：姐 跟你说个事 我这期冲刺班只收八个 现在剩三个名额了
+  B：这么快 试听还没上呢
+  A：名额不等试听 报满了就没了 我可以先给你留着
+  B：多少钱
+  A：十节课 一节两小时 原价八千 今天定五千 不过退费
+  B：一下五千有点多
+  A：姐 冲一百三 一节课算下来才五百 值
+  A：而且今天交我再送你两节 一共十二节
+  B：我跟孩子他爸商量下
+  A：行 但名额真留不了多久 你尽快
+  【2月20日】
+  A：姐 剩两个了 你再不定我就给别人了
+  B：他爸说先试听
+  A：试听的名额也快满了 姐 你信我一回
+  B：那先进一千定金行吗
+  A：定金锁不住名额 得全款 姐你别让我为难
+  B：好吧 我转你 你可得好好带梓轩
+  A：放心 我带的没有不过的
+  【系统消息】B 向 A 转账 5000 元，已收款。
+  A：收到 姐你把孩子情况拍照发我 我做个方案
+  B：好 我把卷子拍给你
+  【2月21日】
+  B：李老师 周六的课几点开始
+  A：这周我在外地做讲座 先给孩子发两个录播看
+  B：不是说好小课吗
+  A：先铺垫基础 下周就正常了
+  【2月23日】
+  B：李老师 下周能排课了吗 孩子等着呢
+  A：我这还忙 你先让孩子把录播看完
+  B：录播就是网上免费的 我看过
+  A：那你先把孩子最近的卷子发我 我抽空看看
+  【2月24日】
+  B：李老师 我等了五天一节正课没上 你把钱退我吧
+  A：姐你怎么说退就退 方案我都快做完了
+  B：你说好的试听和课呢 我现在信不过你
+  A：退可以 但要扣材料费和方案费 只能退一半
+  B：你什么都没给我 扣什么
+  A：方案是无形的 你不懂 爱要不要
+  B：我去家长群问了下 好几个妈妈说你根本没开过课
+  A：那是同行抹黑 你别听风就是雨
+  B：你群都退了 我信你什么
+  A：随你 钱我是不会全退的
+  B：梓轩说妈妈别生气了 我听着更难受

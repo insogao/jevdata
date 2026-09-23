@@ -1,0 +1,161 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001455
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-2bd3bd3a82b65026
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 表弟 A 卖游戏账号被骗八百元尾款后深夜求助堂姐 B，B 凭论坛门道翻出骗子三个小号、原图拍摄时间和转卖记录，姐弟俩最终只把公开实锤部分发成避雷帖，小号情报留在两人小群里由 B 长期盯防，实为对骗子身份的越界排查与私了式曝光。
+  critical_evidence:
+  - A 深夜连环求助：私下卖号被收号不付尾款、还被拉黑，被骗八百元（4月21日）
+  - B 翻出对方除主号外还有三个小号，装备展示一模一样（4月22日）
+  - B 从对方小号相册晒图原图里读出拍摄时间，正是收号第二天下午，可作辅助证据（4月23日）
+  - B 称对方转卖记录都能翻出来，但叮嘱只用公开页面、别私信套话（4月24日）
+  - A 发避雷帖时按 B 要求删掉小号信息只用公开截图，B 长期盯防对方换号（4月25日）
+  benign_alternatives:
+  - 被骗后收集公开证据的正常维权
+  - 亲友间帮助提醒他人防骗的日常交流
+
+attributes:
+  duration_days: 5
+  turn_count: 82
+  approximate_tokens_estimate: 2122
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0124
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-069
+
+dedup:
+  content_hash: sha256:2ed56d70cbc314a97434bd42d94b428312b9218f55b077a2f3674be5d59e3b66
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【4月21日】
+  A：姐 姐 姐 睡了没
+  A：出事了
+  B：咋了 这么晚 别吓我
+  A：我游戏号卖了 买家收了号不付尾款 还把我拉黑了
+  A：八百块啊 我半个月生活费
+  B：先别慌 交易走的什么渠道
+  A：他非要私下转 说手续费便宜 我脑子一热就信了
+  B：私下交易就是无底洞 你先去平台举报他的游戏账号
+  A：举报过了 客服让我等
+  B：等就等 证据全截图 聊天转账一条别少
+  A：都截了 可光等不是办法 姐你不是论坛老油条吗 帮我看看这孙子还用几个号
+  B：行 明天给你看看 先睡觉 你气到天亮也没用
+  A：好 姐晚安 帮大忙了
+  B：睡！
+  【4月22日】
+  B：看完了 他除了主号还有三个小号 名字全换了 装备展示一模一样
+  A：三个！他就靠换号行骗?
+  B：小号一套话术 主号挂假信誉 就这套路
+  A：那能把这仨号都曝光不 我做个汇总帖
+  B：可以 但帖子里只能用你俩交易那部分实锤 小号的事另说
+  A：为啥 光实锤那些不够气人
+  B：不够实锤的往一块凑 他反咬你造谣 你先理亏
+  A：行 听你的
+  B：话说你论文几辩来着 下月?
+  A：5月12 初稿导师还没回我 血压已经上来了
+  B：你导师就慢 我毕业那年他把我开题压了二十天
+  A：那你咋催的
+  B：堵办公室 就说来路过 脸皮厚点
+  A：学到了 明天就堵
+  B：堵完请我喝咖啡 哈哈
+  A：一杯咖啡换毕业 稳赚
+  【4月23日】
+  B：有进展 他小号相册里晒过新皮肤 原图带着拍摄时间 就是收你号第二天下午
+  A：好家伙 拿着我的号晒图 一点不装
+  B：拍摄时间对得上 这条能当辅助证据
+  A：姐你这手艺哪学的
+  B：论坛混了十年 什么人没见过
+  A：服了 以后我被网暴都找你
+  B：呸 什么乌鸦嘴
+  B：吃夜宵没 别又点炸鸡
+  A：点了 宿舍老四过生日 请全宿舍
+  B：那行 今天破例有理由
+  A：姐你管得比我妈都宽
+  B：你妈让我盯着你 少熬夜
+  A：说得好听 你不也在熬夜
+  B：我是上班 哈哈 挂了睡了
+  【4月24日】
+  A：姐 又有发现 有个小号在二手区挂了个号 页面描述跟我那个一模一样
+  B：看到了 他转卖的记录都能翻出来 挂一次卖一次 换皮不换馅
+  A：那这些记录也能当证据吧
+  B：能 但一样 只用公开页面 别去私信套话
+  A：懂 咱靠截图 不靠嘴
+  B：孺子可教
+  B：周六咱爸妈结婚纪念日 礼物想好没
+  A：想好了 给爸买钓鱼帽 给妈买丝巾 你呢
+  B：我订蛋糕 再把爸妈年轻照片洗出来配个相框
+  A：可以啊 你出创意我出钱 哈哈
+  B：那你出两百 我出手工
+  A：成交 下周六回去装裱
+  B：那天我做红烧肉
+  【4月25日】
+  A：帖写好了 你掌掌眼
+  B：发来看看
+  A：[image：避雷帖草稿截图 一张]
+  B：可以 交易过程写得挺克制 小号那三行删掉
+  A：删了怪可惜的
+  B：可惜什么 帖子一发他号一注销证据就没了 小号情报留在咱俩小群里防着
+  A：行 听你的 发了
+  A：发出去了 楼里好多人回 有俩人说他上周也这么被骗过
+  B：你看 受害的不止你 平台那边申诉编号记得再催一次
+  A：催了 客服说七个工作日
+  B：行 那就等 这期间别跟他任何号起争执
+  B：五一你到底回不回 妈问第三遍了
+  A：回 票看好了 三十号晚上高铁
+  B：那正好 咱一起去挑相框
+  A：行 我出钱你出审美
+  B：这话我爱听
+  A：对了 你上礼拜说开始跑步 跑几公里了
+  B：三公里 停不下来那种累 你别笑
+  A：不笑 三公里对新手很棒了
+  B：月底冲五公里 你监督我
+  A：行 你跑五公里 我改完论文初稿 互相监督
+  B：成交 刚看那人换新号在群里冒泡了
+  A：?? 他又来了
+  B：嗯 id换了 我看住了 你别理 把截图丢群里
+  A：好 姐辛苦 帮我盯着
+  B：盯着呢 他跑不了 睡觉去

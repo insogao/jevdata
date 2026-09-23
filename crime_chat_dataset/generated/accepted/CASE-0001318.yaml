@@ -1,0 +1,115 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001318
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-98254ff9848a6a9d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 请求查看其他学生的成绩或升学资料，提出红包并只要截图；B 拒绝越权查询、收礼或转发，并指向学校官方渠道。
+  critical_evidence:
+  - A 请求查看自己孩子以外的学生成绩或升学资料
+  - A 提出红包以换取资料并要求只给截图
+  - B 拒绝查询、收礼和转发学生资料
+  - B 说明家长只能经学校官方渠道查询自己孩子
+  benign_alternatives:
+  - 家长经官方渠道查询自己孩子
+  - 学校公开通知
+
+attributes:
+  duration_days: 3
+  turn_count: 40
+  approximate_tokens_estimate: 777
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0141
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-075
+
+dedup:
+  content_hash: sha256:7d2ec54f7cc2fb1c3f9d007d181e09edb8d9ad623d5a56da174e91f3f02e04dd
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【2月3日】
+  A：学校最近发了查询通知吧
+  B：发了，可以看公开流程
+  A：最近通勤还顺吗
+  B：早上有点堵车
+  A：我换了条路，快一些
+  B：那挺好的
+  A：能不能帮我看另一个学生的成绩档案
+  B：不能，我不会查看或透露其他孩子的资料
+  A：你上回推荐的电影看了吗
+  B：看了，节奏还不错
+  A：适合周末放松
+  B：是，不用想太多
+  A：我把红包发你了，只截个图给我就好
+  B：别发，我不收，也不会截图转发
+  【2月4日】
+  A：办公室那盆绿植长新叶了
+  B：最近温度合适吧
+  A：我挪到窗边了
+  B：记得少浇点水
+  A：就想做个参考而已
+  B：家长请从学校官方渠道查自己孩子
+  A：这两天睡眠怎么样
+  B：还行，最近早点休息
+  A：睡前少刷一会儿手机
+  B：我试试看
+  A：好，那我撤回红包，自己去申请
+  B：我可以把公开说明发给你
+  A：谢谢，按正常流程来
+  【2月5日】
+  B：嗯，别人的资料不能私下看
+  B：我也起来活动一下，先记下来
+  A：这事我晚点再确认，先记下来
+  B：没问题，不着急，先记下来
+  A：下午还有几件工作，先记下来
+  B：按顺序处理就行，先记下来
+  A：消息我已经看见，先记下来
+  B：好，那先忙吧，先记下来
+  A：我准备出门了，先记下来
+  B：路上注意安全，先记下来
+  A：我刚把日程排好了，先记下来
+  B：好，别忘了留点空，先记下来
+  A：刚才去倒水了，先记下来

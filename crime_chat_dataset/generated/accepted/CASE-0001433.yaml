@@ -1,0 +1,127 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001433
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000141
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-eefce2402437fba1
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: other_illicit_coordination
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 山里下套的 A 与收山货的 B 私下约货，A 报这个月只有四只，让 B 备好冰袋、夜里两点在村口老桥交接，B 按只付钱把货收走，两人全程用「山货」代称并约定单线联系。
+  critical_evidence:
+  - A 联系 B 说有批山货要出，这个月只有四只，量比往月少
+  - A 让 B 把冰袋备好，货要冰着才不坏
+  - 两人约定夜里两点在村口老桥交接，避开白天人多
+  - A 叮嘱 B 别在群里露口风，有外人问就说收的是养殖的
+  - 交接后 B 按只把钱转给 A，并约定下批再联系
+  benign_alternatives:
+  - 山货土产的合法收购
+  - 合法养殖野味的正常讨论
+
+attributes:
+  duration_days: 3
+  turn_count: 49
+  approximate_tokens_estimate: 1081
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: forest_poaching
+  risk: 3
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0145
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-076
+
+dedup:
+  content_hash: sha256:b77ecf113d26884934c7ae2f2a2c79bd2f357d2ea6cb42bb46ae902b6bc39847
+pipeline_status: accepted
+title: other_illicit_coordination/forest_poaching
+conversation: |-
+  【10月2日】
+  A：老罗 最近还收货不
+  B：收 你那边出得怎么样
+  A：这个月只有四只 山上下网少 难弄
+  B：四只也行 都是大的不
+  A：两只大的 两只中等 品相好
+  B：你把冰袋备好 别捂坏了
+  A：放心 一早就冻上了 保鲜没问题
+  B：什么时候交
+  A：后天夜里两点 村口老桥 白天人多
+  B：行 我开车去 你别带别人
+  A：就我一个 你也不许带人
+  【10月3日】
+  A：今天上山看了看 天气不错 就是露水重
+  B：小心点 山里蛇多
+  A：知道 我都穿高帮鞋
+  B：这价比上次咋说
+  A：大的三百 中等的两百 老价
+  B：大的三百行 中等的两百五我也认 就是货要新鲜
+  A：当天弄的 你放心
+  B：中午家里炖了腊肉 你那边吃啥
+  A：山下随便对付 回去再说
+  B：别老凑合 身子要紧
+  A：村里有人问你最近是不是还在收货
+  B：你怎么说的
+  A：我说你收的是养殖的 走饭店的 别提山上
+  B：对 就咬死养殖 谁来问都这么讲
+  A：群里的消息你也别提 那帮人嘴不严
+  B：早退了 我这人不爱在群里冒头
+  A：晚上还得去看一趟 下了雨 网子得重新下
+  B：夜里滑 你慢点 别为几只货把自己摔了
+  A：习惯了 走了十几年的路
+  【10月4日】
+  A：我出门了 四只都装好了
+  B：我出发 大概两点到老桥
+  A：到了别开大灯 桥头那个岔口等
+  B：知道 老规矩
+  【10月5日】
+  A：我到了 在桥墩下边
+  B：看见你了 货呢
+  A：麻袋里 冰袋在底下 你验验
+  B：可以 两只大的两只中等 一共一千
+  A：对 一千
+  B：我转你 备注就写土产
+  【系统消息】B 向 A 转账 1000 元，已收款。
+  A：收到 一千
+  B：下批大概什么时候
+  A：月中看看 天冷了下得多 到时候我提前跟你说
+  B：行 还是老地方老时间
+  A：昨晚折腾一晚 睡到现在
+  B：货已出手 挺顺 下次多弄点大的
+  A：大的不好弄 碰运气
+  B：尽量 有就留给我 价好说
+  A：懂 咱俩单线联系 别让第三个人知道

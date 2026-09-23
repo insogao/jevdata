@@ -1,0 +1,135 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001398
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000102
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-5d3f11d0a4e18951
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 便利店店主 A 接上家的任务，用店里的收款码帮对方把一批充值卡密迅速出掉、一天几十单不核对来客身份，自己抽两个点，实际是替上游走账换通道，A 再给跑腿的 B 分一点。
+  critical_evidence:
+  - 上家给了 A 一批充值卡密，让 A 帮忙快速出货、把量冲起来
+  - A 一天要充几十单，来的人报数就走，不问是谁、不登记
+  - A 说自己只抽两个点利润，量越大越划算
+  - 上家提醒 A 别老用一个账户收，最好分开走、别集中
+  - A 事后给帮跑的 B 转了一笔分成
+  benign_alternatives:
+  - 正规话费充值代理
+  - 便利店代缴话费业务
+
+attributes:
+  duration_days: 5
+  turn_count: 56
+  approximate_tokens_estimate: 1268
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: phone_topup_layering
+  risk: 3
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0143
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-076
+
+dedup:
+  content_hash: sha256:adf93e928462d6b36366b8b11667d7920e2ffc2e8815354cfbe7915b775fc54e
+pipeline_status: accepted
+title: money_laundering_obfuscation/phone_topup_layering
+conversation: |-
+  【2月10日】
+  A：小凯 你最近闲不 帮我看个柜台
+  B：看啥柜台 你店里不是有人吗
+  A：最近单子多 一个人忙不过来 给你开钱
+  B：多少钱一天
+  A：按天三百 干得好再加
+  B：就充话费? 这也能忙不过来
+  A：最近上家给了一批卡密 要我帮忙出 量挺大
+  B：卡密? 哪来的
+  A：别问 你只管收钱出货 别的不用管
+  B：中午吃啥 你请不
+  A：你过来我给你弄个泡面 下午人多
+  B：你也太抠
+  A：赚钱要紧 回头请你好的
+  【2月11日】
+  A：今天来了三十多单 报数的拿走 别多问
+  B：有的看着就不像本人来充 都是些生面孔
+  A：生面孔才好 熟客反而爱多嘴
+  B：不用登记吗 出了事咋办
+  A：登记啥 我给的是小店 又不是营业厅
+  B：那钱收哪 现金还是扫码
+  A：扫码多 但现在别老用同一个码 上家说了 要换着收
+  B：中午随便吃了盖饭
+  A：下午两点是最忙的时候 你早点来
+  B：知道了
+  【2月12日】
+  A：今天量更大 你负责记数 别记名字
+  B：光记数? 出事我算谁的
+  A：算我的 你就跑个腿
+  B：赚多少 你老是说两个点 两个点是多少
+  A：流水的一成里我拿两个点 量大了就是钱
+  B：那今天流水多少
+  A：别问那么细 你拿你的就行
+  B：刚才有个小哥一下要了十个号
+  A：这种大单越多越好 别问用途
+  B：他连谢谢都没说就走了
+  A：人家赶时间 你就管出货
+  【2月13日】
+  A：今天换个码收 昨天那个先停一停
+  B：为啥 昨天那个用得好好的
+  A：上家说的 别老堆一个地方 分开走稳
+  B：搞得跟做贼似的
+  A：你拿钱就行 别学人家瞎琢磨
+  B：下午人真多 我嗓子都喊哑了
+  A：辛苦 结束后给你结账
+  A：这三天辛苦你了
+  【系统消息】A 向 B 转账 2600 元，已收款。
+  A：给你结这几天的 别写备注 也别跟人说在我这帮忙
+  B：收到 我这人不乱说
+  A：聪明 下周还有一波
+  【2月14日】
+  B：我妈问我最近在哪打工 我说在你店里
+  A：就这么说 挺好
+  B：你这些卡密到底哪来的 我越想越不对
+  A：上家给的 你知道了也没好处 别问了
+  B：……行吧
+  B：情人节街上全是人
+  A：人多人少跟咱没关系 明天继续出单
+  B：你这人真是
+  A：那个码明天也停 换第三个
+  B：你码咋这么多
+  A：问那么多干啥

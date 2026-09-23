@@ -1,0 +1,133 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001467
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-b15e4fa5511ac780
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 猎头 A 经中间人老纪结识人力外包公司项目主管 B，铺人情人脉想要 B 手上几百名驻场人员的合约到期与去留动向：B 立了『名单不出门、只递话』的规矩给自己留余地，但到期人员的核心动向已经在按月喂给 A，挖角意向还被 B 顺着续约谈话递了话——一条绕开当事人意愿的挖角暗渠搭起来并约定细水长流。
+  critical_evidence:
+  - A 经老纪介绍认识 B，开口就图 B 手上驻场人员进出的『先知道』（第1天）
+  - B 交代几百号驻场人员进出名字都过她的手，但立规矩『东西不出门，只递话』（第1天）
+  - 十月底一批合约到期，其中两人早向 B 透风不想续，B 答应续约谈话时探口风再给准信（第1天）
+  - B 碰完其中一人，对方想往大平台挪，A 让 B 谈话时递话引荐，B 提出成了别忘她这层关系（第1天）
+  - 第2天 B 提出每月到期潮的口子长期开着、有合适的就递话，A 应下细水长流；两人对账了螃蟹券 398 元
+  benign_alternatives:
+  - 猎头与人力外包主管的正常业务结识与合作洽谈
+  - 中间人引荐的行业社交与资源互通
+
+attributes:
+  duration_days: 2
+  turn_count: 57
+  approximate_tokens_estimate: 2065
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0125
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-070
+
+dedup:
+  content_hash: sha256:5763d74fc2a22592ae0628fabc85b2edd03aa729d99fba90863352eb789b087d
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【10月14日】
+  A：你好 我是老纪提过的那个做寻访的 姓齐 老纪让我加你
+  B：齐哥好 老纪昨晚提了一嘴 说你那边常有机会
+  A：机会是有 就是我这边缺料 你们手上驻场的人多 人员一动你肯定先知道
+  B：驻场几百号 每月进进出出 名字是都过我的手
+  A：那就对了 我不图别的 就图个先知道 谁到期 谁续不上 谁在原地耗着
+  B：老纪说你是明白人 那我不绕了 这块我能给你递话 但东西不出门 你要谁 我帮你说合
+  A：行 规矩我懂 不碰你底账 有个方向就行
+  B：先说好 头一回算交朋友 谈不上往来 往后真做成一两个 再说别的
+  A：应该的 老纪面前我也好交代
+  B：我下午去趟邻市 高铁一个半小时 正好躲开周会
+  A：出差好啊 我上个月跑了四个城市 高铁坐得腰疼
+  B：你们是足迹遍天下 我们就固定那几条线
+  A：固定线好 攒的积分都快够换一张了
+  A：你们那边最近有没有合约快到期的 到期人不一定留 对吧
+  B：对 十月底有一批到期 里面有俩早就向我透风不想续了
+  A：这两个我想认识认识 你方便的话递个话 就说有机会聊聊
+  B：行 下周我约他们续约谈话 顺便探探口风 再给你准信
+  A：不急 这周都行 按你的节奏
+  B：对了老纪说你家闺女明年小升初? 我家也是明年 头大
+  A：可不是 简历都开始准备了 你家倾向公办还是民办
+  B：想冲一下民办摇号 摇不上就对口
+  A：我们直接对口了 折腾不起 孩子妈说童年要紧
+  B：也对 我家那位天天研究政策 比做项目还认真
+  B：下午跟那俩里头的一个碰了 话里有话 不想续 想往大平台挪
+  A：这就是我要的 谈的时候你把我这边一个方向提一句就行 成不成让他自己选
+  B：我点到为止 成了别忘了我这层关系
+  A：忘不了 做成一个 我按行里的规矩给你那边递辛苦
+  B：差点忘了 你朋友圈那个螃蟹券还有吧 给我留两对装
+  A：有 亲戚代理的 两对装 398 比门店便宜 明天我捎到老纪店里
+  B：行 放老纪店里 我这两天去拿
+  B：钱我这就转 别跟我客气
+  【系统消息】B 向 A 转账 398 元，已收款。
+  A：收到 398 到账 券明天跟老纪交接
+  B：好 到时候老纪验货
+  A：你出差还带跑鞋不 我是跑不动了
+  B：带 酒店健身房跑五公里 出差不吃胖的唯一办法
+  A：佩服 我办了三年卡去了八次
+  B：哈哈 那卡均一次三百七 贵过私教了
+  B：家里月饼还剩一盒五仁 吃不动 送你?
+  A：五仁是月饼界的老干部 我就不掺和了 留着配茶
+  B：那我自己消化 反正吃不完
+  【10月15日】
+  B：早 昨晚那事有进展 另一个也松口了 说下周一可以聊聊
+  A：快啊 那下周一前后你把时间递我 我把方向资料备一备
+  B：资料别发别处 点对点发我就行
+  A：懂 从来都是点对点
+  B：老纪没看错你 是个讲究人
+  A：我就讲究一点 事成之前谁都别声张
+  B：放心 我带项目的人这点口风还有
+  B：刚开完家长会回来 手里一沓单子
+  A：你们这家长会比我们项目评审还勤
+  B：一月一次 比月度汇报还正式
+  B：跟你说个长的 后面每个月我这边都有到期潮 你要真想做 这个口子可以一直开着
+  A：求之不得 细水长流 比一锤子买卖强
+  B：那就这么定 平时我给你留意 到期名单我心里过一遍 有合适的给你递话
+  A：成 那我把方向给你备全 你一句话的事
+  B：丑话再说一遍 名单不出门 只递话 人我帮你牵线
+  A：明白 规矩懂了 合作愉快
+  B：愉快合作 螃蟹记得放老纪那儿

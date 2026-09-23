@@ -1,0 +1,118 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001374
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-fcfdc295e9ab5d22
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 曾想借 B 的校务关系打听他人成绩，但 B 拒绝查询并引导其使用学校公开渠道，未发生个人信息披露。
+  critical_evidence:
+  - A 提出查询与自己家庭无关的学生个人成绩。
+  - B 明确拒绝查看或提供个人档案，说明只能通过本人/监护人或学校公开渠道查询。
+  - A 接受拒绝，没有拿到个人成绩、姓名或截图。
+  benign_alternatives:
+  - 家长查自己孩子
+  - 学校官方查询
+
+attributes:
+  duration_days: 6
+  turn_count: 41
+  approximate_tokens_estimate: 898
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0152
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-079
+
+dedup:
+  content_hash: sha256:56bb9d46eb04d70c04c9eadf9121f0339abe9b80c6290d0b983d5b47b1c91ae4
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【9月6日】
+  A：同学家长在问成绩公布没，我想起你在学校做事，能不能看看公告？
+  B：公告是公开的，我可以把学校发布的链接给你。
+  A：我说的是系统里那条具体记录，不是我家孩子。
+  A：中午吃啥？楼下那家面馆开门了。
+  B：我刚吃过，今天带了饭。
+  A：又是自己做的？
+  B：昨晚剩的咖喱，微波一下还行。
+  【9月7日】
+  B：下次我带你去试试，听说新换了厨师。
+  A：好啊，等我这周忙完。
+  B：那我不能查给你，公开页面没有个人分数。
+  A：明白，是我问得不合适。你发公开查询说明就好。
+  B：我把学校通知转你了，按官方流程查。
+  B：周末降温了，你那边记得带外套。
+  A：我看天气说晚上有雨。
+  【9月8日】
+  B：我把薄外套放门口了，出门就能拿。
+  A：好，别又忘在办公室。
+  B：那把伞还在你车上吗？
+  A：在呢，前阵子你落下的那把。
+  A：谢谢，省得家长一直催。
+  B：没别的了吧？我不会看个人档案。
+  A：没了，收到通知就够了。
+  【9月9日】
+  B：好，别把公开线和个人成绩混在一起。
+  A：我爸还说要带点自家种的菜。
+  B：那我回去前给你发消息。
+  A：家里问你端午回不回去。
+  B：看排班，周六应该能走。
+  A：我可以顺路接你。
+  B：先别定，我确认完车票再说。
+  【9月10日】
+  A：你那边忙完了吗？
+  B：差不多了，等会儿回你。
+  A：你那边忙完了吗？
+  B：差不多了，等会儿回你。
+  A：你那边忙完了吗？
+  B：差不多了，等会儿回你。
+  A：辛苦，喝点水。
+  【9月11日】
+  B：嗯，桌上有杯子。
+  A：你那边忙完了吗？
+  B：差不多了，等会儿回你。
+  A：行，不急。
+  B：刚把表格交了。
+  A：辛苦，喝点水。

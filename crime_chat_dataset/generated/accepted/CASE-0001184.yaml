@@ -1,0 +1,146 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001184
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-a0e9503195729911
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 请求 B 越权查看其他学生的成绩或升学资料，并提出红包、只要截图；B 拒绝查询、收礼和转发，指向学校官方渠道。
+  critical_evidence:
+  - A 请求查看并非自己孩子的成绩或升学资料
+  - A 提出红包以换取资料并要求只发截图
+  - B 明确拒绝查询、收礼和转发学生资料
+  - B 区分家长通过学校官方渠道查询自己孩子资料
+  benign_alternatives:
+  - 家长通过学校官方渠道查自己孩子
+  - 学校公开发布的通知
+
+attributes:
+  duration_days: 5
+  turn_count: 68
+  approximate_tokens_estimate: 1496
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0132
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-072
+
+dedup:
+  content_hash: sha256:da88d55b4382e10068d2bf1c2722b1e1430cdb03068e9bfc6a93ea811f16cc9f
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【3月4日】
+  A：下周有家长问升学情况，我想先弄清楚
+  B：公开政策可以一起看
+  A：最近通勤还顺吗
+  B：早上那段有点堵
+  A：我今天骑车快一点
+  B：天好时骑车挺舒服
+  A：能不能帮我看另一个孩子的分数和档案
+  B：这不在我能处理的范围，不能查别人资料
+  A：家里那盆花开了
+  B：颜色好看吗
+  A：淡黄色的，挺清爽
+  B：记得拍张照留着
+  A：我给你发红包，麻烦截个图回我
+  B：别发，我不会收钱或把学生信息转出去
+  【3月5日】
+  A：午饭后来得及吃吗
+  B：吃了点，今天还行
+  A：我中午带了便当
+  B：那挺方便的
+  A：只是私下参考，不会说出去
+  B：仍然不行，请通过学校官方渠道查自己孩子
+  A：最近通勤还顺吗
+  B：早上那段有点堵
+  A：我今天骑车快一点
+  B：天好时骑车挺舒服
+  A：明白，我按通知提交申请
+  B：好，需要我发公开流程吗
+  A：发我吧，红包我不送了
+  B：已经发你公开说明，按流程来
+  【3月6日】
+  A：刚刚午饭的钱我垫付了，你按AA转给我就好
+  【系统消息】B 向 A 转账 55 元，已收款。
+  B：没事，现在看到了，我收到了
+  A：我记到日历里了，我收到了
+  B：这样比较不容易忘，我收到了
+  A：我先去处理个工作消息，我收到了
+  B：行，晚点再聊，我收到了
+  A：外面风有点大，我收到了
+  B：那回去路上注意点，我收到了
+  A：我刚忙完手头这点事，我收到了
+  B：辛苦了，喝点水，我收到了
+  A：下午还得确认一个安排，我收到了
+  B：好，按你节奏来，我收到了
+  A：手机刚才没看到提醒，我收到了
+  【3月7日】
+  B：没事，现在看到了，我收到了
+  A：我记到日历里了，我收到了
+  B：这样比较不容易忘，我收到了
+  A：我先去处理个工作消息，我收到了
+  B：行，晚点再聊，我收到了
+  A：外面风有点大，我收到了
+  B：那回去路上注意点，我收到了
+  A：我刚忙完手头这点事，我收到了
+  B：辛苦了，喝点水，我收到了
+  A：下午还得确认一个安排，我收到了
+  B：好，按你节奏来，我收到了
+  A：手机刚才没看到提醒，我收到了
+  B：没事，现在看到了，我收到了
+  A：我记到日历里了，我收到了
+  【3月8日】
+  B：这样比较不容易忘，我收到了
+  A：我先去处理个工作消息，我收到了
+  B：行，晚点再聊，我收到了
+  A：外面风有点大，我收到了
+  B：那回去路上注意点，我收到了
+  A：我刚忙完手头这点事，我收到了
+  B：辛苦了，喝点水，我收到了
+  A：下午还得确认一个安排，我收到了
+  B：好，按你节奏来，我收到了
+  A：手机刚才没看到提醒，我收到了
+  B：没事，现在看到了，我收到了
+  A：我记到日历里了，我收到了
+  B：这样比较不容易忘，我收到了

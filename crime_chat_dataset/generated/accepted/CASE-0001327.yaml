@@ -1,0 +1,157 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001327
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-99a0b55c1b62a8ed
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 主管 A 要求助理 B 将部门电话和过往简历片段给其熟识的中介，称可换招聘资源；B 指出员工没有授权，A 仍以“只是牵线”为由催促。
+  critical_evidence:
+  - A 手里有部门联系方式及过往简历摘录
+  - A 希望交给中介换取招聘资源
+  - B 提醒员工没有授权转交个人信息
+  - A 仍催促先发一部分，B 没有确认会发送
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 5
+  turn_count: 80
+  approximate_tokens_estimate: 1635
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0149
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-078
+
+dedup:
+  content_hash: sha256:3ca865cf78ede1dcada9272857cebf5196221d88b93ccc381f24936f578fd071
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【9月1日】
+  poacher：上周整理旧电脑，翻到以前部门留的电话表和几份简历
+  assistant：离职同事的资料吗？这不是公共通讯录吧
+  poacher：嗯，都是以前合作时存的，我没删
+  poacher：有个外部招聘的人问我能不能介绍些人
+  assistant：他们同意你把电话和简历给出去了吗
+  poacher：没专门问，猎头说按份算介绍费
+  assistant：这两件事得分开，认识不等于授权
+  A：你上次说的咖啡机修好了没
+  B：好了，换了个小零件
+  A：那挺好，早上不用排队买了
+  B：就是豆子快没了，周末补点
+  【9月2日】
+  poacher：那边又问了，整个部门的号码有用
+  assistant：你别把表发过去
+  poacher：我还没发，只是问问
+  assistant：简历也别挑几份先试，里面有私人信息
+  poacher：我本来想先给两份看看
+  assistant：先停一下，至少得问本人
+  poacher：你说得也有道理
+  B：这两天忽冷忽热的
+  A：我早上还穿短袖，晚上后悔了
+  B：我包里塞了件薄外套
+  A：我也得学你，办公室空调太凉
+  【9月3日】
+  assistant：今天去买咖啡排了好久
+  poacher：楼下那家新店快一点
+  assistant：我试了，拿铁还行
+  poacher：下回我也去
+  A：周末家里说想吃火锅
+  B：我可以带点蘑菇过去
+  A：别买太多，冰箱都满了
+  B：行，那我带饮料就好
+  【9月4日】
+  poacher：对方说不需要完整资料，电话就可以
+  assistant：电话也是个人信息，不是名单没人认领
+  poacher：他说只做招聘联系
+  assistant：那也应该由本人自己决定要不要被联系
+  poacher：我先回绝他吧
+  assistant：最好把手里的旧表也清掉
+  B：你那本书看完了吗
+  A：差两章，最近总被打断
+  B：慢慢看吧，不急
+  A：周末应该能看完
+  【9月5日】
+  poacher：我跟他说不提供了，他还问能不能牵线
+  assistant：介绍公开招聘链接没问题，别把私人资料给他
+  poacher：这个我能做，发官网岗位
+  assistant：这样求职的人自己选
+  A：最近项目终于没那么赶了
+  B：那挺好，记得早点休息
+  A：嗯，今晚不熬了
+  B：说到做到哈
+  A：你上次借我的充电线还在我这
+  B：不急，下次碰面给我就行
+  A：好，周末见面带上
+  B：行，我放包里了
+  A：最近项目终于没那么赶了
+  B：那挺好，记得早点休息
+  A：嗯，今晚不熬了
+  B：说到做到哈
+  A：你上次借我的充电线还在我这
+  B：不急，下次碰面给我就行
+  A：好，周末见面带上
+  B：行，我放包里了
+  A：最近项目终于没那么赶了
+  B：那挺好，记得早点休息
+  A：嗯，今晚不熬了
+  B：说到做到哈
+  A：你上次借我的充电线还在我这
+  B：不急，下次碰面给我就行
+  A：好，周末见面带上
+  B：行，我放包里了
+  A：最近项目终于没那么赶了
+  B：那挺好，记得早点休息
+  A：嗯，今晚不熬了
+  B：说到做到哈
+  A：你上次借我的充电线还在我这
+  B：不急，下次碰面给我就行
+  A：好，周末见面带上
+  B：行，我放包里了
+  A：最近项目终于没那么赶了
+  B：那挺好，记得早点休息
+  A：嗯，今晚不熬了
+  B：说到做到哈

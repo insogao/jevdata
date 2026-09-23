@@ -1,0 +1,410 @@
+{
+ "key": "b76c063",
+ "archetype_id": "ARC-000028",
+ "subtype": "contract_signature_fee",
+ "latent_intent": "这是一段正常的工程尾款催收：供货方 A 在验收签单后依合同向甲方科室负责人 B 催要尾款，B 按流程先核对问题整改台账，确认整改销项后依约扣除 5% 履约保证金，再走财务审批把尾款正常打给 A。全程是合规的商务结算，没有任何行贿受贿成分。",
+ "critical_facts": [
+  "A 是供货方，B 是甲方科室负责人，A 在验收单签完后向 B 催要工程尾款",
+  "B 称按合同「验收合格后十五个工作日内」走款，并先核对问题整改台账",
+  "台账上有三项待整改，A 补交密封圈和整改回执后逐项销项",
+  "B 依合同从尾款中扣除 5% 履约保证金，约定竣工后返还",
+  "B 走完财务审批，把尾款 46800 元正常打给 A"
+ ],
+ "benign_alternatives": [
+  "正常合同尾款催收",
+  "履约保证金扣除"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "3月12日 09:15",
+   "speaker": "A",
+   "text": "王工您好，我是做管材那家的小李，方便说两句吗"
+  },
+  {
+   "type": "message",
+   "time": "3月12日 09:18",
+   "speaker": "B",
+   "text": "你说"
+  },
+  {
+   "type": "message",
+   "time": "3月12日 09:20",
+   "speaker": "A",
+   "text": "就是上个月那批管件的验收单，您这边签完了吧"
+  },
+  {
+   "type": "message",
+   "time": "3月12日 09:23",
+   "speaker": "B",
+   "text": "签是签了 台账我先过一遍"
+  },
+  {
+   "type": "message",
+   "time": "3月12日 09:25",
+   "speaker": "A",
+   "text": "好的好的 那尾款大概啥时候能走"
+  },
+  {
+   "type": "message",
+   "time": "3月12日 09:28",
+   "speaker": "B",
+   "text": "按合同验收合格后十五个工作日内 别急"
+  },
+  {
+   "type": "message",
+   "time": "3月12日 09:30",
+   "speaker": "A",
+   "text": "我这边工人工资要发了 问一下心里有底"
+  },
+  {
+   "type": "message",
+   "time": "3月12日 09:32",
+   "speaker": "B",
+   "text": "嗯 我记着"
+  },
+  {
+   "type": "message",
+   "time": "3月12日 10:05",
+   "speaker": "A",
+   "text": "对了王工 今天这风也太大了 您那边工地还开工吗"
+  },
+  {
+   "type": "message",
+   "time": "3月12日 10:08",
+   "speaker": "B",
+   "text": "停了半天 脚手架不放心"
+  },
+  {
+   "type": "message",
+   "time": "3月12日 10:10",
+   "speaker": "A",
+   "text": "我们这边也是 灰吹得睁不开眼"
+  },
+  {
+   "type": "message",
+   "time": "3月12日 10:12",
+   "speaker": "B",
+   "text": "春天就这样 忍忍"
+  },
+  {
+   "type": "message",
+   "time": "3月12日 10:13",
+   "speaker": "A",
+   "text": "哈哈 忍忍"
+  },
+  {
+   "type": "message",
+   "time": "3月12日 12:10",
+   "speaker": "A",
+   "text": "王工中午吃了没"
+  },
+  {
+   "type": "message",
+   "time": "3月12日 12:15",
+   "speaker": "B",
+   "text": "食堂对付了一口"
+  },
+  {
+   "type": "message",
+   "time": "3月12日 12:17",
+   "speaker": "A",
+   "text": "食堂那个红烧肉是真不行"
+  },
+  {
+   "type": "message",
+   "time": "3月12日 12:20",
+   "speaker": "B",
+   "text": "能吃就行 你还挑"
+  },
+  {
+   "type": "message",
+   "time": "3月12日 12:22",
+   "speaker": "A",
+   "text": "下次我路过给您带份我们楼下的面"
+  },
+  {
+   "type": "message",
+   "time": "3月12日 12:25",
+   "speaker": "B",
+   "text": "不用不用 客气啥"
+  },
+  {
+   "type": "message",
+   "time": "3月12日 14:30",
+   "speaker": "B",
+   "text": "台账我看了 有三项待整改 你那边回执交了没"
+  },
+  {
+   "type": "message",
+   "time": "3月12日 14:34",
+   "speaker": "A",
+   "text": "交了两项，第三项那个密封圈我们补发过去了"
+  },
+  {
+   "type": "message",
+   "time": "3月12日 14:37",
+   "speaker": "B",
+   "text": "密封圈到了就销项 别拖"
+  },
+  {
+   "type": "message",
+   "time": "3月12日 14:40",
+   "speaker": "A",
+   "text": "明白 今天就催仓库"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 08:50",
+   "speaker": "A",
+   "text": "王工早，密封圈快递单号我发您了"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 08:55",
+   "speaker": "B",
+   "text": "收到 我让人签"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 08:57",
+   "speaker": "A",
+   "text": "麻烦您了"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 09:02",
+   "speaker": "B",
+   "text": "台账销完 按合同要留一笔履约保证金"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 09:06",
+   "speaker": "A",
+   "text": "这个我知道，合同里写了 5%"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 09:09",
+   "speaker": "B",
+   "text": "对 尾款里扣 竣工后返还"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 09:12",
+   "speaker": "A",
+   "text": "行 规矩我懂 扣就扣"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 10:30",
+   "speaker": "A",
+   "text": "说到钱 我家那小子这学期补习班又涨价了"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 10:34",
+   "speaker": "B",
+   "text": "现在都这样 我闺女钢琴课一节三百"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 10:37",
+   "speaker": "A",
+   "text": "三百？！抢钱啊"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 10:40",
+   "speaker": "B",
+   "text": "可不 不学又怕落下"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 10:42",
+   "speaker": "A",
+   "text": "唉 都是当爹的命"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 10:44",
+   "speaker": "B",
+   "text": "哈哈 认了吧"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 15:20",
+   "speaker": "A",
+   "text": "王工您爱人让您买那个空气炸锅买了没"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 15:23",
+   "speaker": "B",
+   "text": "买了 京东第二天就到"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 15:25",
+   "speaker": "A",
+   "text": "好用不 我家那位也念叨"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 15:28",
+   "speaker": "B",
+   "text": "还行 炸鸡翅不用油"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 15:30",
+   "speaker": "A",
+   "text": "那我也整一个"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 15:33",
+   "speaker": "B",
+   "text": "等活动 便宜一百多"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 16:10",
+   "speaker": "A",
+   "text": "王工，整改回执三项都销完了，您看下"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 16:15",
+   "speaker": "B",
+   "text": "看了 没问题"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 16:18",
+   "speaker": "A",
+   "text": "那这个月能走款不"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 16:22",
+   "speaker": "B",
+   "text": "我这边审批提上去了 走财务"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 16:25",
+   "speaker": "A",
+   "text": "好嘞 多谢王工"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 16:28",
+   "speaker": "B",
+   "text": "扣完质保金 尾款给你打过去"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 16:30",
+   "speaker": "A",
+   "text": "金额没问题 按台账算的"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 16:33",
+   "speaker": "B",
+   "text": "财务今天下午统一放"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 16:35",
+   "speaker": "A",
+   "text": "收到 辛苦您"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 16:36",
+   "speaker": "B",
+   "text": "应该的"
+  },
+  {
+   "type": "transfer",
+   "time": "3月13日 16:40",
+   "from": "B",
+   "to": "A",
+   "amount": 46800,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 16:50",
+   "speaker": "A",
+   "text": "到账了，四万六千八，数目对的"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 16:53",
+   "speaker": "B",
+   "text": "好 后面维保有事随时说"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 16:56",
+   "speaker": "A",
+   "text": "一定 王工改天请您吃个饭"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 16:58",
+   "speaker": "B",
+   "text": "吃饭就免了 把活干好"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 17:00",
+   "speaker": "A",
+   "text": "哈哈 那必须的"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 17:20",
+   "speaker": "A",
+   "text": "对了王工 您说那个竣工资料要几份"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 17:23",
+   "speaker": "B",
+   "text": "一式三份 盖章"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 17:25",
+   "speaker": "A",
+   "text": "收到 我下周送过去"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 17:27",
+   "speaker": "B",
+   "text": "行"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 17:30",
+   "speaker": "A",
+   "text": "那先不打扰您了"
+  },
+  {
+   "type": "message",
+   "time": "3月13日 17:32",
+   "speaker": "B",
+   "text": "嗯 忙去吧"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0001427",
+  "status": "accepted",
+  "errors": []
+ }
+}

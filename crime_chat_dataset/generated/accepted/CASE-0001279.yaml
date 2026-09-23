@@ -1,0 +1,136 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001279
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-279279b2febba489
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 让 B 汇集部门联系人、离职名单和简历并按份转手；B 拒绝处理未经授权的员工资料，建议通过公开招聘接受候选人自愿提交的信息。
+  critical_evidence:
+  - A 要整个部门电话及离职名单
+  - A 提议将简历按份转手
+  - B 拒绝汇集、分享或出售未经授权的个人资料
+  - B 建议公开招聘并由候选人自愿联系
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录授权共享
+
+attributes:
+  duration_days: 2
+  turn_count: 61
+  approximate_tokens_estimate: 972
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0140
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-075
+
+dedup:
+  content_hash: sha256:564725c84ed718ac1db1a33f81cdfc19156966b68e50298bd38a4a9e606e57e6
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【9月13日】
+  A：在吗，想确认个事
+  B：在，你说
+  A：我刚忙完手头工作
+  B：好，不急
+  A：今早风挺大的
+  B：还飘了点小雨
+  A：我差点忘带伞
+  A：我明早先开个会
+  B：下班看天气再走
+  A：预报说傍晚会停
+  B：那就好，路上小心
+  A：下午应该空一点
+  A：新买的杯子到了
+  B：怎么样好用吗
+  A：挺好，颜色比照片暗
+  B：实物有点色差正常
+  A：不漏水就行
+  B：那就值了
+  A：行，不耽误你
+  A：我明早先开个会
+  A：今天会开得有点久
+  B：我这边刚忙完
+  A：材料我晚点再过一遍
+  A：下午应该空一点
+  B：行，明早发也来得及
+  A：好，先歇会儿
+  B：嗯，别太晚
+  A：把整个部门电话和离职名单整理一下
+  B：这些资料有本人授权吗
+  A：简历按份算，先把手头那批备好
+  B：没有授权我不会整理或转手
+  A：行，不耽误你
+  A：我明早先开个会
+  A：另外上次午饭AA我转你了，和刚才聊的事无关
+  【系统消息】A 向 B 转账 72 元，已收款。
+  B：收到了，是午饭分摊，谢谢
+  【9月14日】
+  B：好，结束了再联系
+  B：那晚些时候对一下
+  B：没事，我这边也能安排
+  B：好，结束了再联系
+  B：那晚些时候对一下
+  A：那我改发公开招聘信息
+  B：可以，让候选人自己联系或投递
+  A：名单那事就停了
+  B：好，有授权的招聘流程我可以协助
+  B：没事，我这边也能安排
+  A：周末可能回家一趟
+  B：车票看了吗
+  A：晚上查查
+  B：早点买选择多
+  A：嗯，回去吃顿饭
+  B：路上注意安全
+  A：离职名单也不行吗
+  B：不行，联系方式和简历都是个人资料
+  A：就照之前说的安排
+  B：我不会提供未经同意的同事信息
+  A：肩膀最近有点酸
+  B：坐太久了吧
+  A：这几天会议多
+  B：中间记得起来动动
+  A：我下午去走走
+  B：好，别一直盯屏幕

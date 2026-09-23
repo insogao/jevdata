@@ -1,0 +1,121 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001200
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-e4eac36a5900f43c
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 声称将 B 的匿名社交账号与本人关联并准备在讨论区谈论；B 拒绝被关联和曝光，要求停止传播并走平台隐私渠道。
+  critical_evidence:
+  - A 声称认出 B 的小号，并提及旧转发或相册原图时间，但不提供查找方法
+  - A 表示会在讨论区继续提及关联判断
+  - B 要求撤回、停止传播并拒绝公开确认
+  - 区分品牌公开舆情讨论与个人账号关联
+  benign_alternatives:
+  - 公开品牌舆情讨论
+  - 本人授权的账号说明
+
+attributes:
+  duration_days: 3
+  turn_count: 45
+  approximate_tokens_estimate: 908
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0134
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-073
+
+dedup:
+  content_hash: sha256:aa58dcce349446de2f2410aaa17ac1d9cf19dae958af30ff42e7cdcfecb122af
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【6月2日】
+  A：刚才讨论区有人贴了活动内容
+  B：公开活动信息可以聊
+  A：我家的花这两天开了
+  B：颜色怎么样
+  A：浅粉的，很好看
+  B：记得拍照留着
+  A：我认出你的另一个账号了
+  B：请别把账号和我的身份联系起来
+  A：这周会议好多
+  B：我也是，日程排满了
+  A：中间记得起来走走
+  B：嗯，别一直坐着
+  A：之前的转发和相册原图时间挺像
+  B：不要再整理这些或发到群里
+  A：今天午饭吃得还行吗
+  【6月3日】
+  B：吃了碗热汤，挺舒服
+  A：我带了点水果
+  B：下午正好当加餐
+  A：有人追问我是不是认识你
+  B：麻烦删掉那句，不要帮忙确认
+  A：周末预报说会降温
+  B：那我带厚外套
+  A：早晚差得挺多
+  B：是，别着凉
+  A：我撤了
+  B：我会通过平台隐私渠道反馈，请停下
+  A：你上次说那家店我路过了
+  B：排队长不长
+  A：还好，工作日人少
+  B：那找时间去试试
+  【6月4日】
+  A：后面只谈品牌内容
+  B：好，别把个人账号当讨论素材
+  A：刚才午饭我先垫付了，你按AA转我就行
+  【系统消息】B 向 A 转账 62 元，已收款。
+  A：下午还要处理点工作，先忙手头事情
+  B：慢慢来，不着急，先忙手头事情
+  A：外面今天风挺大，先忙手头事情
+  B：回去路上注意点，先忙手头事情
+  A：我已经看到了，先忙手头事情
+  B：好，那就先这样，先忙手头事情
+  A：信号刚才断了一下，先忙手头事情
+  B：现在听着清楚了，先忙手头事情
+  A：我把这件事记下了，先忙手头事情
+  B：好，之后再确认，先忙手头事情
+  A：刚才去倒了杯水，先忙手头事情
+  B：我也准备休息一会，先忙手头事情

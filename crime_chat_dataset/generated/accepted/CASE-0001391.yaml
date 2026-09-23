@@ -1,0 +1,130 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001391
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000072
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-6f4a3871b777a173
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 摄影师 A 以杂志资源和推广机会为筹码，连续几天给年轻模特 B 施压，要求拍尺度更大的室内私房照；B 别扭地拒绝后被拿捏，只能压低底线谈条件，A 还先转一笔钱把人拴住。
+  critical_evidence:
+  - A 约 B 拍一组更大尺度的室内私房，开口就是“想红就别矫情”
+  - B 表示别扭、只想拍商拍，A 说这组只有他能拍，别的团队没这资源
+  - A 暗示不拍就把下月推的资源给别人，B 的推广就断了
+  - B 最终只肯在其带助理在场、成片先审的前提下松口，A 不情愿答应
+  - A 先转一笔预付款给 B，说是定金，先把人定下来
+  benign_alternatives:
+  - 正规艺术约拍合作
+  - 经纪公司安排的试镜与作品拍摄
+
+attributes:
+  duration_days: 6
+  turn_count: 50
+  approximate_tokens_estimate: 1194
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: photographer_private_pressure
+  risk: 2
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0143
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-076
+
+dedup:
+  content_hash: sha256:d5a7e9a38ffb5f1ade994f548508cc88719a333ba667bec753a70b3ce2f29106
+pipeline_status: accepted
+title: sexual_transaction_exploitation/photographer_private_pressure
+conversation: |-
+  【4月8日】
+  A：小瑜 下周有档期没 给你拍组室内的
+  B：又是私房那种吧 我不太想拍
+  A：艺术向的 光影为主 你这条件不拍可惜了
+  B：我上次拍那组就挺别扭的
+  A：想红就别矫情 哪个模特不是这么过来的
+  B：我没想大红 我就拍拍商拍挺好
+  A：商拍能挣几个钱 这组只有我能拍 你出去问问
+  B：中午随便吃了碗面
+  A：模特还吃面 你不控糖?
+  B：又不是天天 你管挺宽
+  A：哈哈 为你好
+  【4月9日】
+  A：考虑得咋样 棚我都订好了
+  B：哥 我真心不想拍那种 换个主题呗
+  A：你这心态不行 机会就一次 过时不候
+  B：那……要拍能多穿点吗
+  A：穿成粽子拍什么私房 你自己看看那些红的作品
+  B：我朋友说我适合小众风 不一定非要这样
+  A：你朋友是摄影师吗 你听我的没错
+  B：晚上去健身房了 累瘫
+  A：身材就得练 拍摄才上镜
+  B：你三句不离拍摄
+  A：职业习惯
+  【4月10日】
+  A：下月那本刊的内页 我本来主推你
+  B：那组我又没说不拍 你别拿这个压我
+  A：不是压你 资源有限 你懂的
+  B：……你这么一说我压力好大
+  A：压力才有动力 定了吧
+  B：我妈最近老催我找正经工作
+  A：你就说在做模特呗 等红了谁还说
+  B：红不红的 哪有那么容易
+  A：所以机会来了就得抓
+  【4月11日】
+  B：哥 我答应拍 但有几个条件
+  A：你说
+  B：换大点的棚 带我助理全程在 成片我先审 不合格的删掉
+  A：你这条件一堆 圈里谁这么拍
+  B：那就算了 杂志也不是只有你推
+  A：……行行行 依你 但风格听我的
+  B：风格可以商量 尺度你别越线
+  A：知道了 说好了别反悔
+  【系统消息】A 向 B 转账 2000 元，已收款。
+  A：先给你转点定金 把档期定死 别到时候又变卦
+  B：定金我收 拍完再谈尾款 条件你别忘
+  A：忘不了 就你事多
+  【4月12日】
+  B：这周忙完想出去走走 有啥推荐
+  A：近郊那个古镇挺出片 顺便给你拍两组
+  B：出去玩你还想着拍
+  A：职业病 哈哈
+  【4月13日】
+  A：周五棚见 记得带那套白衬衫
+  B：白衬衫行 尺度的事你别乱来
+  A：放心 我会拿捏
+  B：拿捏这词听着就怕

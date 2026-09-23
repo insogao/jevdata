@@ -1,0 +1,129 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001227
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-685af65abf4838e8
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A借熟人关系要求私查另一名学生的成绩与升学档案，并以红包换截图；B拒绝查询和泄露，指引监护人使用学校官方申请渠道。
+  critical_evidence:
+  - A请求查看非本人子女的成绩档案。
+  - A暗示班主任系统点一下即可看到升学情况。
+  - A表示红包已发并要求截图就行。
+  - B拒绝查询和发图，建议监护人走学校正式流程。
+  benign_alternatives:
+  - 家长查自己孩子
+  - 学校官方查询
+
+attributes:
+  duration_days: 5
+  turn_count: 51
+  approximate_tokens_estimate: 1029
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0127
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-070
+
+dedup:
+  content_hash: sha256:8a42d46afbb223eaedb7e4320f10518043240f9c67bb16e9a1eed86741435441
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【10月1日】
+  A：有个家长想问另一位学生的成绩档案，能帮着看看吗？
+  B：不是本人监护的孩子，我不能打开记录。
+  A：今天路过时想到周末做点心。
+  B：我已经问过啦。
+  A：有结果了吗？
+  B：有，时间比较合适。
+  A：那就好。
+  B：嗯，省下一件心事。
+  A：我把时间也记下来了。
+  B：好，临时有调整再联系。
+  A：最近天气有点变化，出门看下预报。
+  B：收到，我带件外套。
+  【10月2日】
+  A：班主任系统点一下就行，升学情况也能一起看。
+  B：校内查询也要按授权流程。
+  A：顺带问一下，校门口施工定下来了吗？
+  B：差不多了，刚确认过。
+  A：需要再改时间吗？
+  B：不用，按原计划就行。
+  A：那挺省心的。
+  B：是呀，最近事有点多。
+  A：我把时间也记下来了。
+  B：好，临时有调整再联系。
+  A：最近天气有点变化，出门看下预报。
+  B：收到，我带件外套。
+  A：昨天午饭你先垫的那笔还你，跟前面的事无关。
+  【系统消息】A 向 B 转账 38 元，已收款。
+  【10月3日】
+  A：红包已发，截图就行，家长自己看。
+  B：我会退还红包，不会查看或发送截图。
+  A：我想起你上次提的公交时刻。
+  B：嗯，今天处理完了。
+  A：过程顺利吗？
+  B：还好，没等多久。
+  A：好，那就放心了。
+  B：谢谢惦记。
+  A：我把时间也记下来了。
+  B：好，临时有调整再联系。
+  A：最近天气有点变化，出门看下预报。
+  B：收到，我带件外套。
+  【10月4日】
+  A：她只是着急做准备。
+  B：请监护人向学校官方窗口申请查询。
+  A：说到日常安排，家庭聚餐别忘了呀。
+  B：我记到日历里了。
+  A：你这周忙不忙？
+  B：还行，周末空一点。
+  A：记得也休息下。
+  B：好，听你的。
+  A：我把时间也记下来了。
+  B：好，临时有调整再联系。
+  A：最近天气有点变化，出门看下预报。
+  B：收到，我带件外套。
+  【10月5日】
+  A：我把公开联系方式转给她。
+  B：可以，只转学校公开渠道。

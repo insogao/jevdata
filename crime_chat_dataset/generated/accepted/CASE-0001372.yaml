@@ -1,0 +1,117 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001372
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-a77da74831ecbfc4
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 试图借 B 的公司内部接触机会取得同事联系方式、离职名单或简历库内容，并提出按份付费；B 只透露概况或拒绝交付资料。
+  critical_evidence:
+  - A 提出索取整个部门联系方式或离职名单，并提及按份购买简历。
+  - B 说明通讯录和简历含同事个人信息，未经授权不能共享。
+  - A 以招聘/猎头合作名义提出小额整理费；B 未交付完整名单或联系方式。
+  - B 引导 A 通过公开招聘或授权渠道接触候选人。
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 4
+  turn_count: 40
+  approximate_tokens_estimate: 964
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0152
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-079
+
+dedup:
+  content_hash: sha256:2084aa91b2cc0e58d75d2676fa4c76d665c32a7d397bec7264821d58bdd08129
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【9月9日】
+  A：这季度要补几个岗位，手上那份离职名单能不能匀我看看？
+  B：里面是同事的电话和履历，没同意前不能转。
+  A：我做猎头，想按份买简历，部门联系人也一起算。
+  B：最近睡得怎么样？你上次说肩膀不舒服。
+  A：好点了，换了枕头。
+  B：别老坐着不动，起来走走。
+  A：知道啦，今天已经出去买咖啡了。
+  B：我设了个提醒，每小时起来活动一下。
+  A：挺好，别等疼了才想起来。
+  B：公司没有授权共享，别把内部通讯录拿去卖。
+  A：你先给一个部门的数量和岗位方向，不要发完整资料。
+  【9月10日】
+  B：我只报了大概人数，没有给姓名电话。
+  A：你上次买的鞋尺码合适吗？
+  B：合适，就是颜色比图片深一点。
+  B：鞋盒还留着，真不舒服还能换。
+  A：那就再走两天看看。
+  A：网购都这样，留着穿吧。
+  B：嗯，通勤挺舒服的。
+  【系统消息】A 向 B 转账 100 元，已收款。
+  A：行，先把约定的整理费转你。
+  B：收到了，但简历不会给你。以后请走授权渠道。
+  【9月11日】
+  A：知道，外部候选人我自己找。
+  B：好，内部名单到此为止。
+  B：下次我带你去试试，听说新换了厨师。
+  A：好啊，等我这周忙完。
+  A：中午吃啥？楼下那家面馆开门了。
+  B：我刚吃过，今天带了饭。
+  B：我把薄外套放门口了，出门就能拿。
+  A：好，别又忘在办公室。
+  A：又是自己做的？
+  B：昨晚剩的咖喱，微波一下还行。
+  【9月12日】
+  B：周末降温了，你那边记得带外套。
+  A：我看天气说晚上有雨。
+  B：那把伞还在你车上吗？
+  A：在呢，前阵子你落下的那把。
+  A：你那边忙完了吗？
+  B：差不多了，等会儿回你。
+  A：辛苦，喝点水。
+  B：嗯，桌上有杯子。
+  A：你那边忙完了吗？
+  B：差不多了，等会儿回你。

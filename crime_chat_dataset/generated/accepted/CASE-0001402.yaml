@@ -1,0 +1,113 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001402
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000029
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-40fa3996d0cac607
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: contraband_illicit_trade
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 供货的 A 和下游 B 全程只谈数量批次、交接地点和现结，从不说清货是什么，约在老地方分批交接，B 转一笔货款，明显是见不得光的买卖。
+  critical_evidence:
+  - A 和 B 只谈批次和数量，从不提货的具体名称
+  - 约定在“老地方”交接，避开白天和固定时段
+  - A 要求现结、不留账、不要任何记录
+  - B 转了一笔货款给 A
+  - A 提醒 B 分批走，别一次拿太多
+  benign_alternatives:
+  - 大宗商品的合法批发
+  - 朋友之间的正常代购
+
+attributes:
+  duration_days: 3
+  turn_count: 36
+  approximate_tokens_estimate: 732
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: batch_quantity_pickup
+  risk: 3
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0143
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-076
+
+dedup:
+  content_hash: sha256:28958070a1615394daa9eb1952729b9c27cec01742a6f98973e934a207faefa1
+pipeline_status: accepted
+title: contraband_illicit_trade/batch_quantity_pickup
+conversation: |-
+  【1月5日】
+  B：哥 上一批卖得差不多了 还能再给点不
+  A：能 你要几件 直接说数
+  B：先来三件 好走就再来
+  A：三件可以 有件大的 你自己看能不能带走
+  B：大件我不碰 上次压手里一个月
+  A：那就两件小的 一件中等的
+  【1月6日】
+  B：价格还是上次那个吗
+  A：涨了点 最近这边管得紧
+  B：涨多少
+  A：一件加两百 现结的话给你抹个零
+  B：中午凑合吃了碗粉
+  A：吃你的 晚上老地方见
+  B：几点 还是老地方那个仓库?
+  A：别问几点 我到了叫你 你车停远点
+  B：我下午把车洗了 干净点不显眼
+  A：聪明 但别太干净 太干净反而招眼
+  B：懂了
+  A：到了 后门 你来吧
+  B：马上到
+  A：钱先转 数对了我再给你搬
+  【系统消息】B 向 A 转账 9600 元，已收款。
+  B：转了 你查
+  A：收到 货在角落 你自己装 别开灯
+  B：装好了 数量对
+  A：记住 没来过 没买过 别跟任何人说
+  B：我懂规矩
+  【1月7日】
+  B：到家了 累
+  A：这几件你多久能走完
+  B：半个月吧 看行情
+  A：走完再来 别一次拿太多 上头查得严
+  B：中午在家躺着 昨晚没睡好
+  A：稳着点 这行急不得
+  B：有人问我从哪拿的 我没说
+  A：对 打死也不能说 出了事谁也保不了谁
+  B：我嘴严
+  A：这批完了先别联系 我这边消停几天
+  B：行 到时候你呼我

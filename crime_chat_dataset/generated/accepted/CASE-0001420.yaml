@@ -1,0 +1,154 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001420
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000129
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-5e97f2cba0af3896
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 以一张找人做的孕检单子谎称怀了 B 的孩子，按月向 B 索要「抚养费」；B 不认账，A 就以挺着肚子去 B 单位找领导闹相威胁。表面像亲子与抚养费纠纷，实为用假报告进行勒索。
+  critical_evidence:
+  - A 告诉 B 自己怀孕了、孩子是 B 的，并说把单子拍给 B 看
+  - B 质疑单子日期对不上，A 承认「单子是我找人做的」但坚称孩子是真的
+  - A 要 B 每月给抚养费，先给三个月
+  - B 不认、提出做鉴定，A 威胁说挺着肚子去 B 单位找领导闹
+  - 7月6日 B 先通过微信转给 A 一万元稳住对方，A 收了钱同意暂缓做鉴定
+  benign_alternatives:
+  - 真实亲子纠纷
+  - 抚养费诉讼
+
+attributes:
+  duration_days: 6
+  turn_count: 74
+  approximate_tokens_estimate: 1170
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: fake_pregnancy_claim
+  risk: 3
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0144
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-076
+
+dedup:
+  content_hash: sha256:a0c6217e9dd4c751ba10e099e91bf4b4933d2753e671ca8e74cb53b0b9a50629
+pipeline_status: accepted
+title: coercion_blackmail/fake_pregnancy_claim
+conversation: |-
+  【7月1日】
+  A：在吗
+  B：你是
+  A：我 小林 上次饭局见过的
+  B：哦 想起来了 有事?
+  A：有件事想跟你说 你先别急
+  B：你说
+  A：我怀孕了
+  B：什么? 你别开玩笑
+  A：没开玩笑 是你的
+  B：这不可能的 我们才见过一面
+  A：就那一次
+  B：那天大家都喝多了
+  A：喝多也是事实
+  B：你怎么确定
+  A：我算了日子 就是那次
+  B：今天这么热 你注意点身体
+  A：你还知道关心我
+  B：我就是随口一说
+  【7月2日】
+  A：单子我拍给你发过去了 你自己看
+  B：这上面日期对不上吧
+  A：你又不是医生 你不懂
+  B：那去正规医院再查一次
+  A：没必要 我信我自己的单子
+  B：你吃饭了吗 别因为这事折腾身体
+  A：吃不下
+  B：那你多喝点汤
+  A：你倒是会心疼人 那就把钱的事定了
+  【7月3日】
+  A：你最近是不是升职了
+  B：你打听我?
+  A：朋友说的
+  B：跟你没关系
+  A：怎么没关系 孩子要养
+  A：我也不多要 你每月给个数就行
+  B：你这是要挟
+  A：我这是为孩子
+  A：我去买了点孕妇用的东西 花不少
+  B：…
+  A：以后都是开销 你得有准备
+  B：我真不信这孩子是我的
+  【7月4日】
+  A：你不信是吧
+  A：我跟你说实话 单子是我找人做的
+  B：什么? 那你就是造假
+  A：单子可以假 孩子是真的 你自己心里没数?
+  B：你这是敲诈
+  A：话别说那么难听 我要的是抚养费
+  B：你最近身体怎么样
+  A：孕吐得厉害
+  B：那你去医院看看
+  A：你不陪我去?
+  B：…
+  【7月5日】
+  A：我最后问你一句 认不认
+  B：不认 我们去做鉴定
+  A：鉴定可以 但你没诚意
+  A：你要是不认 我就去你单位找你们领导
+  B：你别乱来
+  A：我挺着肚子去 你说谁难看
+  B：你…
+  A：我不是吓你 我最烦的就是被赖账
+  B：那你到底要多少
+  A：一个月五千 你先给三个月
+  B：太多
+  A：那四千 少一分都不行
+  【7月6日】
+  B：我先转你一点 你把事压住
+  A：多少
+  B：先一万 剩下的再说
+  A：行 那我等你
+  【系统消息】B 向 A 转账 10000 元，已收款。
+  B：转好了
+  A：收到 早这样多好
+  B：那鉴定的事
+  A：不急 你先想想
+  A：中午吃啥
+  B：随便
+  A：态度能不能好点 好歹是孩他爸
+  B：…

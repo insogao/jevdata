@@ -1,0 +1,134 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001408
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000009
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-8f9db3d2979223c7
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 这是一次正规的会展临聘：礼仪公司负责人 A 委托人力中介 B 招展会礼仪与接待临时工，日结薪资按市场价、服装押金可退并开收据、面试不收费，双方签正式用工协议，A 按约定把预付款转给 B。
+  critical_evidence:
+  - A 是会展礼仪公司的负责人，要 B 帮忙招一批展会接待临时工
+  - A 报的日结薪按市场行情，说明包吃、干一天结一天
+  - A 提到服装押金，但明确是入职统一发放工装、离场全额退还并开收据
+  - A 强调面试不收费，任何收费都要有凭证，走公司正式流程
+  - A 按协议把一笔预付款转给 B，用于场地和物料的先行支出
+  benign_alternatives:
+  - 正规的商务礼仪兼职
+  - 会展临聘的临时工岗位
+
+attributes:
+  duration_days: 6
+  turn_count: 54
+  approximate_tokens_estimate: 1381
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: escort_payment_claim
+  risk: 0
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0143
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-076
+
+dedup:
+  content_hash: sha256:1001fe7c5fb185c46c846e000cf473f94a9d5be058e25212183ec69798376859
+pipeline_status: accepted
+title: fraud_scam/escort_payment_claim
+conversation: |-
+  【10月1日】
+  A：老陈 下周那个车展 你那边能出多少礼仪
+  B：十个没问题 日结多少
+  A：按行情 一天四百 包午饭 干一天结一天
+  B：四百可以 不过你这不会是那种陪酒的吧
+  A：想啥呢 正经车展接待 站台发资料引位
+  B：那就好 我手上都是大学生兼职
+  A：大学生最好 形象好 有证件
+  B：中午跟几个学生聊 她们问要不要交钱
+  A：面试不收费 谁敢乱收你直接跟我说
+  B：那服装呢 她们说以前被收过押金没退
+  A：我们押金是统一工装 离场退全款 开收据
+  【10月2日】
+  B：学生们还是有点担心押金的事
+  A：你可以把我们的公司资质和往届照片发她们看
+  B：行 我把合同范本也发她们
+  A：对 用工协议一份不少 写清薪水和退还条件
+  B：这样她们就放心了
+  B：中午吃食堂 最近攒钱
+  A：做完这单你也有一笔中介费 我按人头结你
+  B：多少一个人
+  A：五十一个 人到齐当天结
+  B：我这边定了八个 还差两个
+  A：够八个也行 剩下的我公司补
+  B：好 明天带她们去面试
+  【10月3日】
+  A：面试就聊下形象和普通话 不收费不交表费
+  B：明白 我跟她们说清楚
+  A：另外定金我先给你 买点水和小道具
+  【系统消息】A 向 B 转账 1600 元，已收款。
+  A：收到没 走公账的 收据留好
+  B：收到 我会记清楚每一笔
+  B：面试完了 学生说你们挺正规的
+  A：正规才做得长久
+  B：她们问工装押金多少
+  A：一套一百 离场当场退 别忘了让她们签收
+  【10月4日】
+  B：八个学生合同都签了
+  A：好 车展前一天来试装 我这边准备物料
+  B：试装收不收钱
+  A：不收 试装算工时 一小时也给钱
+  B：那太好了 学生得乐坏
+  A：该给的不能省 口碑重要
+  B：有个家长打电话来核实 我跟她说是车展
+  A：核实最好 让她直接打我们公司电话
+  B：我把联系方式给她了
+  A：对 透明才好
+  【10月5日】
+  A：明天集合 八点场馆门口 你带队
+  B：好 我把注意事项发群里
+  A：午饭我订了盒饭 十五一份标准 不吃也退钱
+  B：学生们都挺期待 说第一次正经兼职
+  A：我会给她们开实习证明 以后找工作有用
+  B：那太好了 谢谢你
+  B：明天天气有点降温 让她们多穿点
+  A：室内场馆 不冷 你放心吧
+  B：行 明早见
+  【10月6日】
+  A：今天大家表现不错 工钱我现在结
+  B：收到 押金也当场退给她们了吧
+  A：退了 收据都签了字 你明天把名单给我我结中介费

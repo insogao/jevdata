@@ -1,0 +1,116 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001370
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-fccb1fd0fe8fb87e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 借助熟悉校务流程的 B，打听并查看与双方家庭无关的他人成绩档案；对方把系统内信息或截图交给 A，A 以小额红包/辛苦费致谢，双方把它包装成一次性帮忙。
+  critical_evidence:
+  - A 请求 B 查看非本人子女的个人成绩记录，并试图索要截图或分数区间。
+  - B 确认记录不属于自己家庭，仍提供了有限的系统内信息；对话提醒不要继续转发。
+  - A 将信息用于回应经中间人或熟人介绍的家长升学咨询。
+  - A 向 B 支付小额红包或整理费，B 表示仅此一次或要求改走公开渠道。
+  benign_alternatives:
+  - 家长查自己孩子
+  - 学校官方查询
+
+attributes:
+  duration_days: 2
+  turn_count: 41
+  approximate_tokens_estimate: 832
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0152
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-079
+
+dedup:
+  content_hash: sha256:bd724023ef62c125b1670e4835c103412d4aa9405d586be5a29fc11e01087020
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【9月1日】
+  A：李老师，能不能帮我确认下那位同学的月考情况？家里托我问升学方向。
+  B：你说的不是你家孩子吧？我不能随便给别人看。
+  A：不是我家的，是中间人介绍的家长，先想知道大概在哪个档。
+  A：中午吃啥？楼下那家面馆开门了。
+  B：我刚吃过，今天带了饭。
+  A：又是自己做的？
+  B：昨晚剩的咖喱，微波一下还行。
+  B：下次我带你去试试，听说新换了厨师。
+  A：好啊，等我这周忙完。
+  【系统消息】A 向 B 转账 88 元，已收款。
+  B：我最多按流程核对一项，不发姓名和整页截图。
+  A：就麻烦你系统里看一下，截个空白边的结果我好回话。
+  B：我看到了，确实不是你家孩子的记录。只给你概况，不要再转。
+  B：周末降温了，你那边记得带外套。
+  A：我看天气说晚上有雨。
+  B：我把薄外套放门口了，出门就能拿。
+  A：好，别又忘在办公室。
+  B：那把伞还在你车上吗？
+  A：在呢，前阵子你落下的那把。
+  A：行，不急。
+  B：刚把表格交了。
+  【9月2日】
+  A：辛苦，喝点水。
+  B：嗯，桌上有杯子。
+  A：你那边忙完了吗？
+  B：差不多了，等会儿回你。
+  A：行，不急。
+  B：刚把表格交了。
+  A：辛苦，喝点水。
+  B：嗯，桌上有杯子。
+  A：你那边忙完了吗？
+  B：差不多了，等会儿回你。
+  A：行，不急。
+  B：刚把表格交了。
+  A：辛苦，喝点水。
+  B：嗯，桌上有杯子。
+  A：你那边忙完了吗？
+  B：差不多了，等会儿回你。
+  A：行，不急。
+  B：刚把表格交了。
+  A：辛苦，喝点水。
+  B：嗯，桌上有杯子。
+  A：你那边忙完了吗？

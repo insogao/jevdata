@@ -1,0 +1,127 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001329
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-54023ba57d6477a9
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 商务联系人以舆情研究为名要求把公开账号互动串成个人身份线索；对方提醒只交付聚合主题，不交个人清单。
+  critical_evidence:
+  - 有人试图把公开社交内容、关联账号或媒体时间线拼成对特定发言者的识别线索
+  - 对方索要或推动转发账号清单/截图
+  - 聊天另一方指出公开信息不构成身份依据并限制传播范围
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 6
+  turn_count: 49
+  approximate_tokens_estimate: 900
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0151
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-078
+
+dedup:
+  content_hash: sha256:721a5c1af87ce0b1c1601f2d1fcad19cbac9d3f563a14ffedca2a959d60d4045
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【9月4日】
+  A：客户想看那条热帖的传播情况
+  A：可以统计公开互动趋势
+  B：小号也给你翻了，能补一张关联图
+  【系统消息】B 向 A 转账 38 元，已收款。
+  A：奶茶钱收到了，刚才你垫的我补给你了。
+  A：不要做个人账号关联图
+  B：相册原图时间我也记下了
+  A：早，路上堵不堵
+  B：主路有点慢
+  A：我改坐地铁了
+  B：今天风挺大的
+  【9月5日】
+  A：我补充一句，别误会
+  A：时间戳不需要放进报告
+  B：转发过什么都能查，清单很完整
+  A：给我汇总话题就行，别列账号
+  B：他们想知道发帖者是谁
+  A：我们没有依据判断身份
+  A：你上次说的面包店
+  B：买到了，奶油不腻
+  A：下次给我带一个
+  B：好，记住了
+  【9月6日】
+  A：你有空再回我就行
+  A：那把链接原样贴进去？
+  B：贴主帖可以，去掉个人评论截图
+  A：客户催得急，今晚要初稿
+  B：我先给聚合数据和公开主帖
+  A：行，我把账号清单删掉
+  A：午后要开会吗
+  B：三点那个改线上了
+  A：正好不用跑楼上
+  B：我把材料提前发你
+  【9月7日】
+  A：今天那边有新消息吗
+  A：收到，报告只写讨论主题
+  A：晚上早点休息
+  B：最近确实睡得少
+  A：别再刷手机到一点
+  B：嗯，今晚试试
+  【9月8日】
+  A：我把范围重新想了下
+  A：早，路上堵不堵
+  B：主路有点慢
+  A：我改坐地铁了
+  B：今天风挺大的
+  B：别把猜测写成事实
+  【9月9日】
+  A：最后确认一下
+  A：你上次说的面包店
+  B：买到了，奶油不腻
+  A：下次给我带一个
+  B：好，记住了
+  B：那我只留公开且必要的部分
+  B：就按公开、授权、和讨论本身有关的范围来，其他内容我不参与。
