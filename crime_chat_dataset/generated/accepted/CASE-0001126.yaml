@@ -1,0 +1,136 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001126
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000100
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-c1dfb2ba81142ffd
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: money_laundering_obfuscation
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 安排下属 B 做挂名承接方：合同签在 A 指定主体上、回款走 B 对接的第三方账户，居间协议提前备好、分成与税点说定，并以一笔正常名目的小额转账先行铺路，借层层代理走账截留佣金。
+  critical_evidence:
+  - 合同签在A指定主体，回款走B对接的第三方账户
+  - 居间协议备好，按到账比例分成
+  - 税点由B这边承担
+  - 双方之间有一笔以正常名目结算的小额转账
+  benign_alternatives:
+  - 多层合法分销与联合执行
+  - 代理记账与报销安排
+
+attributes:
+  duration_days: 6
+  turn_count: 57
+  approximate_tokens_estimate: 1160
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: commission_layering
+  risk: 1
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0064
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-029
+
+dedup:
+  content_hash: sha256:84791c0e1d82f40bc49635e43f167857f9dd8e39800bcce65d2c9303648d7dfb
+pipeline_status: accepted
+title: money_laundering_obfuscation/commission_layering
+conversation: |-
+  【5月2日】
+  A：小郑，城北这个项目你挂名接一下
+  B：挂我的名？主体用哪家
+  A：签我这边指定那家，回款走你对接的账户
+  B：又是走第三方过账
+  A：对，账面上好看，流程也顺
+  B：分成和税怎么定
+  A：居间协议备好了，到账两个点，税我们担
+  B：明白，我照办
+  B：中午一起吃饭吗，我请你
+  A：行，楼下那家就行
+  B：那定个位置，我十一点半下去
+  A：协议我发你了，看下分成那条
+  B：看了，按到账分笔列，税写我方
+  A：对，钱不过公户，劳务名义直结
+  B：这我得留个底，别到时候说不清
+  A：留底可以，别外传
+  【5月3日】
+  A：甲方今天要资料，你备齐没
+  B：备齐了，主体和账户都按你说的
+  A：居间协议附上，盖章前核一遍账户
+  B：好，户名错一个字都不行
+  B：今天风大，你开车小心
+  A：嗯，走高架稳点
+  B：别赶时间，安全第一
+  A：资料递上去了，等甲方排期
+  B：排期给我一份，我好答话
+  A：晚上发你，口径就按联合执行
+  【5月4日】
+  A：上会过了，合同今天用印
+  B：章在哪方
+  A：我指定主体，你那边对接第三方盖
+  B：收到，预计什么时候回款
+  A：下周三前首笔，四成
+  B：我孩子学校要交材料，下午请个假
+  A：去吧，手头的事弄完就走
+  B：谢谢李经理
+  【5月5日】
+  A：首笔到账先别动，等我这边指令
+  B：好，我单独记一笔
+  A：上回你垫的差旅费我转你了，跟项目款分开
+  A：走个正常流程，别混在一起
+  B：收到，四百二，我对上了
+  【系统消息】A 向 B 转账 420 元，已收款。
+  B：谢谢，差旅那几张票我也留着
+  A：明细重发你一份，劳务从第三方走
+  B：不过公户，懂
+  A：对，名单备齐税务能对上
+  B：楼下新开了奶茶店，要不要尝尝
+  A：不了，我控糖
+  B：那我自己买一杯
+  【5月6日】
+  A：甲方说首笔本周五走
+  B：那我周五盯着网银
+  A：到账先扣两个点，税你处理
+  B：明白，剩的按明细分
+  B：周末你去钓鱼吗
+  A：去，新买的竿还没开光
+  B：那约上我，我也有空
+  【5月7日】
+  A：合同用印了，等款
+  B：排期表发你邮箱了
+  A：齐了，见款办事
+  B：放心，回款吱你

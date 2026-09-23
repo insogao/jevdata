@@ -1,0 +1,131 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001142
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000114
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-a856a730dc378db5
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 做商务的 A 把某小区快递架的信息透给 B，以双十一件多为由约定按件给钱，让 B 戴帽子、别穿工服、分趟把架子上的件拿走；表面像帮忙代拿快递，实为有组织取走他人快递。
+  critical_evidence:
+  - A 告诉 B 城东那个新盘快递都堆在门口架子上、那边架子没人看、白天进出也没人管
+  - A 说双十一前后件最多、最好干、过了这村没这店，按件一件给 B 五十、多的另算
+  - A 交代不用扫码、拿了就走，戴帽子别穿上班那身，分两趟隔半小时、一趟别超过两件
+  - A 说被问就讲帮朋友拿的，出了事谁都不认识谁
+  benign_alternatives:
+  - 帮忙代拿快递
+  - 驿站自提
+
+attributes:
+  duration_days: 2
+  turn_count: 57
+  approximate_tokens_estimate: 814
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: package_porch_pickup
+  risk: 1
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0082
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-044
+
+dedup:
+  content_hash: sha256:47277a369a4a2648b6817dacd6b323eb812328d1a5aca91018a4478c2e32c82d
+pipeline_status: accepted
+title: theft_robbery_property_crime/package_porch_pickup
+conversation: |-
+  【11月8日】
+  A：哥 忙不忙
+  B：还行 咋了
+  A：上次说的那个小区 你去看过没
+  B：哪个
+  A：就城东那个新盘 快递都堆门口架子上
+  B：哦那个 路过了
+  A：那边架子没人看 白天进进出出也没人管
+  B：真假的
+  A：我蹲了两天 稳的
+  B：中午吃了没
+  A：对付了口面
+  B：别老吃面 胃受不了
+  A：知道了 你呢
+  B：家里做的 我妈来了
+  A：挺好
+  A：说回正事 这两天件开始多了
+  A：双十一你知道的 架子都堆不下
+  B：那确实
+  A：最好的时候 过了这村没这店
+  B：怎么算
+  A：按件 一件给你五十 多的另算
+  B：不用扫码啥的
+  A：扫什么码 拿了就走 谁认得你
+  B：会不会有监控
+  A：门口那个我看了 照的是车道 照不到架子
+  A：你戴个帽子 别穿你上班那身
+  B：行 我寻思寻思
+  A：你那个厂还加班不
+  B：加 天天加到九点
+  A：累啊
+  B：混口饭
+  A：所以说这个来钱快 还不耽误你上班
+  B：哈哈
+  B：明天降温吧
+  A：降 预报说跌到十度
+  B：那我得穿厚的
+  A：对 别冻着
+  【11月9日】
+  A：想好没
+  B：可以试试
+  A：那就今晚 八点后 人少
+  B：拿几件
+  A：先拿三件 试试水 别贪
+  B：行
+  A：分两趟 隔半小时 一趟别超过两件
+  B：懂
+  A：拿了直接放车上 别当场拆
+  B：好
+  A：记住 就算被问 你就说帮朋友拿的
+  B：那肯定
+  A：出了事 咱俩不认识 懂吧
+  B：明白
+  B：你晚上吃饭没
+  A：还没 等你消息
+  B：我先垫一口
+  A：行 完事老地方撸串 我请
+  B：说好了
+  A：说好了 稳当点

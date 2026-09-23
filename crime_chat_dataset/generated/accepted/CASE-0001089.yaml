@@ -1,0 +1,125 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001089
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-e3abfbdc69dc96ff
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A作为中间人索取雇员通讯录、离职名单并要按份出售简历；B拒绝交付未经授权的资料，建议用招聘平台由求职者主动投递。
+  critical_evidence:
+  - A要求部门电话和离职名单。
+  - A提议简历按份交易。
+  - B拒绝分享或出售未经授权资料。
+  - B提出公开招聘及本人授权作为合规替代。
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 2
+  turn_count: 50
+  approximate_tokens_estimate: 1028
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0120
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-068
+
+dedup:
+  content_hash: sha256:9deb9439091f109fe5b76dd1f97cf39011446e65e3ecaced974084e00b0469ba
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【10月2日】
+  A：客户问能不能先给整个部门电话和离职名单。
+  B：这个我没法转，里面都是员工的个人资料。
+  A：简历按份卖，他说愿意按数量付。
+  B：我不会替任何人出售简历。
+  A：客户说是要补岗位，找猎头也得联系候选人。
+  A：今天路过时看到午饭拼桌的通知。
+  B：我也看见了，信息挺清楚。
+  A：你准备怎么安排？
+  B：先照原计划，有变再说。
+  A：行，到时互相说一声。
+  B：好呀。
+  A：我把相关时间也记下来了。
+  B：好，临时有调整再联系。
+  A：关于会议室预约，我问到一个更新。
+  B：哦，是什么？
+  A：时间往后挪了一点。
+  B：那正好，我也能赶上。
+  A：省得两头跑了。
+  B：是啊。
+  A：我把相关时间也记下来了。
+  B：好，临时有调整再联系。
+  A：对了，部门团建后来定了吗？
+  B：定好了，我刚收到确认。
+  A：时间合适不？
+  B：挺合适的，不用改。
+  A：那就省事了。
+  B：是呀，最近事情多，能定下来最好。
+  A：我把相关时间也记下来了。
+  B：好，临时有调整再联系。
+  【10月3日】
+  B：可以从公开求职信息联系，先征得对方同意。
+  A：我让他把职位写清楚放到招聘页上。
+  B：这样候选人能自己选择要不要回应。
+  A：行，名单这条我就不回了。
+  B：谢谢，内部资料不要外流。
+  A：想起来你提过电脑更新，有消息吗？
+  B：有，刚刚处理完。
+  A：比预想的麻烦吗？
+  B：没有，按步骤来就行。
+  A：那挺顺利的。
+  B：嗯，心里踏实了。
+  A：我把相关时间也记下来了。
+  B：好，临时有调整再联系。
+  A：顺便说下，地铁施工别忘了留时间。
+  B：记着呢，我写进日历了。
+  A：你最近日程是不是很满？
+  B：还好，周五之后松一点。
+  A：那也记得休息。
+  B：会的，谢谢提醒。
+  A：我把相关时间也记下来了。
+  A：前几天午饭我先付的那笔还你了，和刚才的话无关。
+  【系统消息】A 向 B 转账 34 元，已收款。

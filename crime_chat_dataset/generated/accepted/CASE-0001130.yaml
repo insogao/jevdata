@@ -1,0 +1,127 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001130
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000100
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-3d2b39a2592cc66e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: money_laundering_obfuscation
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 经老周牵线，中介 A 找上 B 借其公司账户走款：合同由 A 签、款项指定打入 B 公司，居间协议事先备好让 B 充当独立服务方，税点由 B 承担，靠多出来的这一层把佣金过账、拉开与甲方的直接关联。
+  critical_evidence:
+  - A 经中间人介绍找到 B，提出借 B 公司账户走一笔项目款
+  - A 说明合同由自己签、款打到 B 公司，居间协议已经备好只需 B 盖章
+  - A 强调税点由 B 出，剩下的两人再分
+  - A 先给 B 转了一笔款作为启动
+  benign_alternatives:
+  - 多层合法分销
+  - 代理记账服务
+
+attributes:
+  duration_days: 3
+  turn_count: 51
+  approximate_tokens_estimate: 972
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: commission_layering
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0065
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-029
+
+dedup:
+  content_hash: sha256:fef759394e3f8c60a5b1f125168f241aeabd707e444da78788fc026043c1b10e
+pipeline_status: accepted
+title: money_laundering_obfuscation/commission_layering
+conversation: |-
+  【3月5日】
+  A：你好 是老周给的我你微信
+  B：对 他说你有事找我
+  A：我这有个项目 想借你公司账户走笔款
+  B：走款？啥意思
+  A：合同我签 款打你公司 居间协议我备好了 你盖章就行
+  B：那我岂不是白拿钱
+  A：不是白拿 名目是渠道服务费 你出个名义收着
+  B：税点谁出
+  A：按行规税点你们出 剩下的咱俩分
+  B：老周知道这事吗
+  A：他介绍的就是他默许 你放心
+  B：我琢磨琢磨
+  A：可以 但别往外说 这事低调
+  B：你公司做哪块的
+  A：中介 介绍项目落地那种
+  B：现在行情一般啊
+  A：是 所以能多一条线是一条
+  【3月6日】
+  A：考虑得咋样 甲方那边催着定
+  B：协议发我看看
+  A：发了 你看下 名目写居间服务费 别写太细
+  B：我这边可没实际提供服务啊
+  A：走个形式 谁细查这个 老周那边也这么走的
+  B：款大概多少
+  A：一共十来万 分三笔走 别一次性太大
+  B：我先盖 第一笔你打过来我看看
+  A：痛快 我马上安排
+  【系统消息】A 向 B 转账 10000 元，已收款。
+  A：第一笔先到 你查收
+  B：收到了
+  A：后续两笔看进度 你留着别动 咱对完再分
+  B：行
+  B：中午跟老周吃了顿饭
+  A：他说啥没
+  B：就说你办事靠谱
+  A：那是 我从不坑合作伙伴
+  B：我最近在给孩子看学区房
+  A：那可不便宜
+  B：愁死了 首付还差一截
+  A：这波走完你就不愁了
+  B：但愿
+  【3月7日】
+  A：协议盖章件发我一份
+  B：好 我拍给你
+  A：我留档 后面有人问也有个说法
+  B：有人问会问到我这吗
+  A：不会 就是备着
+  B：行
+  B：老周说下个月有个项目也介绍给你
+  A：好啊 多多益善
+  B：那这条线就一直走着？
+  A：对 稳定点好 别乱折腾
+  B：晚上降温 你路上小心
+  A：好 你也注意

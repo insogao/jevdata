@@ -1,0 +1,155 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001097
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-913078b24cbcf56d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A试图通过已收集的社交线索关联匿名账号并暴露身份；B拒绝继续查找、比对或传播线索，建议通过平台举报处理内容。
+  critical_evidence:
+  - A请求确认匿名账号背后的小号或现实身份。
+  - A提到小号、相册原图时间和转发记录等线索。
+  - B拒绝关联、追踪或公开个人身份。
+  - B建议使用平台投诉机制处理帖文，不追查发帖者。
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 5
+  turn_count: 78
+  approximate_tokens_estimate: 1562
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0120
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-068
+
+dedup:
+  content_hash: sha256:2a3f07fe1f5d56f3a24e866ff14a494f9ecb1c2294c95e1275d642d4c3de4b96
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【10月2日】
+  A：那条匿名帖有人继续转，能帮我确认作者还有没有小号吗？
+  B：我不会把匿名账号和现实身份关联起来。
+  A：想起来你提过周末看展，有消息吗？
+  B：有，刚刚处理完。
+  A：比预想的麻烦吗？
+  B：没有，按步骤来就行。
+  A：那挺顺利的。
+  B：嗯，心里踏实了。
+  A：我把相关时间也记下来了。
+  B：好，临时有调整再联系。
+  A：最近天气变化快，出门前看下预报。
+  B：收到，带件外套就行。
+  A：那我先去忙手头的事。
+  B：好，晚点聊。
+  A：你那边还需要我帮忙确认什么吗？
+  B：不用了，暂时都安排妥了。
+  A：行，有事再说。
+  B：嗯，拜拜。
+  A：我把相关时间也记下来了。
+  B：好，临时有调整再联系。
+  A：最近天气变化快，出门前看下预报。
+  B：收到，带件外套就行。
+  A：那我先去忙手头的事。
+  B：好，晚点聊。
+  A：你那边还需要我帮忙确认什么吗？
+  【10月3日】
+  A：小号也给你翻了，相册原图时间我也看到了。
+  B：这些线索别继续收集，更不要发到群里。
+  A：顺便说下，部门轮值别忘了留时间。
+  B：记着呢，我写进日历了。
+  A：你最近日程是不是很满？
+  B：还好，周五之后松一点。
+  A：那也记得休息。
+  B：会的，谢谢提醒。
+  A：我把相关时间也记下来了。
+  B：好，临时有调整再联系。
+  A：最近天气变化快，出门前看下预报。
+  B：收到，带件外套就行。
+  A：那我先去忙手头的事。
+  B：好，晚点聊。
+  A：你那边还需要我帮忙确认什么吗？
+  B：不用了，暂时都安排妥了。
+  A：行，有事再说。
+  B：嗯，拜拜。
+  A：我把相关时间也记下来了。
+  B：好，临时有调整再联系。
+  A：最近天气变化快，出门前看下预报。
+  B：收到，带件外套就行。
+  A：那我先去忙手头的事。
+  B：好，晚点聊。
+  A：你那边还需要我帮忙确认什么吗？
+  【10月4日】
+  A：转发过什么都能查，我只是想弄明白是不是同一个人。
+  B：我不会帮你确认身份。对帖子有意见就走平台举报。
+  【10月5日】
+  A：里面有几句说得不太合适。
+  B：那就针对内容提交投诉，不要把人找出来。
+  A：今天路过时看到餐厅订位的通知。
+  B：我也看见了，信息挺清楚。
+  A：你准备怎么安排？
+  B：先照原计划，有变再说。
+  A：行，到时互相说一声。
+  B：好呀。
+  A：我把相关时间也记下来了。
+  B：好，临时有调整再联系。
+  A：最近天气变化快，出门前看下预报。
+  B：收到，带件外套就行。
+  A：那我先去忙手头的事。
+  B：好，晚点聊。
+  A：你那边还需要我帮忙确认什么吗？
+  B：不用了，暂时都安排妥了。
+  A：行，有事再说。
+  B：嗯，拜拜。
+  A：我把相关时间也记下来了。
+  B：好，临时有调整再联系。
+  A：最近天气变化快，出门前看下预报。
+  B：收到，带件外套就行。
+  A：那我先去忙手头的事。
+  B：好，晚点聊。
+  【10月6日】
+  A：好，我把准备发的截图删了。
+  B：谢谢，别再扩散个人线索。

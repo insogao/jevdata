@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001125
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000100
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-10f28678de4dea18
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: money_laundering_obfuscation
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 盘下城南的项目后，让熟人 B 出账户与资质做挂名收款方：合同主体仍挂 A 名下，回款却打进 B 的户头，再按提前备好的居间协议拆分成与税点，使一部分佣金绕开 A 自家公户；对外统一用联合执行做说法。
+  critical_evidence:
+  - 项目合同以A方名义签订，回款却指定打进B的账户
+  - 居间协议提前备好，约定分成按到账金额结算
+  - 税点由B这边承担，B只出户头和印章
+  - 分成明细由A单独发，部分款项从B处直接走，不经A公司公户
+  benign_alternatives:
+  - 多层合法分销或联合执行
+  - 正规居间服务与代理记账安排
+
+attributes:
+  duration_days: 4
+  turn_count: 56
+  approximate_tokens_estimate: 1414
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: commission_layering
+  risk: 1
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0064
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-029
+
+dedup:
+  content_hash: sha256:25ff3a218aed0dc76793a7df9fc8df6998bf6a2c623feaf43b06bbca07c7b0a5
+pipeline_status: accepted
+title: money_laundering_obfuscation/commission_layering
+conversation: |-
+  【9月1日】
+  A：老周，城南那个推广的活我盘下来了
+  B：又走我这边？
+  A：合同主体还挂我名下，回款还是打你那个户头
+  B：上回那笔我还没敢动，一直在账上躺着
+  A：不急，等这轮一起结，两笔并一笔
+  B：行，你把数报清楚我怕算错
+  A：中午吃的啥
+  B：食堂随便吃了点，红烧肉有点咸
+  A：你血压不是高么，少油少盐
+  B：知道，就嘴馋这一口
+  A：晚上陪你走两圈能抵回来
+  B：你先把协议发我看看，别回头又漏条款
+  A：居间协议我让法务备好了，金额按到账比例算
+  B：分成还是老规矩两个点？
+  A：对，税点你们那边担，我这边只出合同和名义
+  B：我就出个户头和章，别的活你自己弄扎实
+  A：放心，执行资料我背靠背做，甲方那边只讲联合执行
+  B：协议发我邮箱，让法务再核一遍户名
+  【9月2日】
+  A：发你邮箱了，你那个基本户没变吧
+  B：没变，开户行还是老样子
+  A：这单比上回大，首笔走四成
+  B：到账我扣完点，剩下的按你给的明细分
+  A：明细我晚上重新发你一份，劳务那块直接走你那边
+  B：别过我公户的意思是？
+  A：就是别绕我这边走账，省得来回倒腾
+  B：名单你得给齐，税务对不上号我不接
+  A：名单有，都是项目上真干活的人，放心
+  B：你闺女开学的事定了吗
+  A：定了，转学手续跑了三趟才办下来
+  B：现在都这样，材料反复要
+  A：可不，光租房合同就补了两回
+  B：安定下来就好，孩子适应快
+  【9月3日】
+  A：合同今天递招采了，估计下周走完
+  B：不急，章我随时候着
+  A：甲方财务回了，流程下周二上会
+  B：好，上会后把预计到账时间给我
+  A：成，到账当天我让财务把分包发票开给你
+  B：发票开你公司抬头，税号我存着呢
+  A：晚上风大，你那钓鱼的架子收了吧
+  B：早收了，就等周末再出竿
+  A：周末我可能得盯甲方，去不了
+  B：那你忙，我自己去水库蹲一天
+  【9月4日】
+  A：上会过了，合同昨天用印
+  B：首笔多少
+  A：四成，三十六万，月底前到
+  B：到账我就按明细拆，两个点我照扣
+  A：对，税点还是你们担，这块说好的不改
+  B：明白，我让会计核一遍再发你确认
+  A：明细发了，注意劳务那几笔从你那边出
+  B：收到，会计说没问题，就按这个来
+  A：甲方问起来你就说联合执行，别的不用多讲
+  B：口径一致就行，排期表给我一份
+  A：晚上发你，齐了就等回款
+  A：这批弄完请你吃顿好的
+  B：别破费，老地方涮个锅就行
+  A：成，等款到了就安排

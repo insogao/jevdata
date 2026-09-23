@@ -1,0 +1,144 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001122
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000100
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-af05a9c61fba0b4e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: money_laundering_obfuscation
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 以部门负责人身份安排下属 B 把项目合同签在 A 指定的主体上、回款走 B 对接的第三方账户，居间协议与分成提前定好，税点由 B 这边承担，借层层代理走账截留分成；表面可解释为分销与代理记账。
+  critical_evidence:
+  - 合同签在A指定主体，回款走第三方账户
+  - 居间协议备好并按到账比例分成
+  - 税点由B这边承担
+  - 分成与结算避开公司公户
+  benign_alternatives:
+  - 多层合法分销
+  - 代理记账服务
+
+attributes:
+  duration_days: 5
+  turn_count: 67
+  approximate_tokens_estimate: 1410
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: commission_layering
+  risk: 1
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0064
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-029
+
+dedup:
+  content_hash: sha256:af9db7bcf966530c3c60669efc0c630f89c1b18805566a962f5c40fce0cf1f9f
+pipeline_status: accepted
+title: money_laundering_obfuscation/commission_layering
+conversation: |-
+  【4月6日】
+  A：小周，这周把那个推广合同落一下
+  B：好的李经理，用哪个主体签
+  A：用我指定的那家，回款走之前联系的那边
+  B：第三方账户是吗
+  A：对，走他们过一道，账面上清楚
+  B：居间那部分要不要附协议
+  A：要，协议我昨天让法务备好了
+  B：分成比例按多少
+  A：按到账两个点，税点我们这边担
+  B：税也我们出？这成本不小
+  A：走量，别抠这点，后面还有二批
+  B：我先按你说的做，明细我留一份
+  B：中午订外卖吗，还是去食堂
+  A：食堂吧，外面太晒
+  B：那我去占位，今天有麻辣香锅
+  A：给我打一份，微辣
+  A：合同草稿发我，我看看主体和账户
+  B：发了，回款账户填的是第三方那个
+  A：对，居间协议附在后面
+  B：李经理，我多问一句，钱为什么不过公司账户
+  A：公司账户流程慢，走那边快，属于分销安排
+  B：我们的分成也走那边出吗
+  A：对，劳务名义直接结，别过公户
+  B：这样财务能对上账吗
+  A：你按协议做，账我这边统筹
+  【4月7日】
+  A：甲方今天要上会，材料齐了吗
+  B：齐了，分成明细也按笔列好了
+  A：好，税那条写我们承担
+  B：写了，不过我核了下，两个点覆盖不了税
+  A：量上来就覆盖了，先把这单跑通
+  B：下午开会你带电脑吗
+  A：带，投影线我也拿着
+  B：那我不用带了，省得重
+  A：上会过了，合同明天用印
+  B：用哪方的章
+  A：我指定的主体，你对接第三方盖章
+  B：明白了
+  【4月8日】
+  A：首笔款预计下周到，到账先别动
+  B：好，那笔我单独记
+  A：嗯，回款一到我让那边开分包发票
+  B：发票开我们抬头吗
+  A：开你对接的那家，税号我发你
+  B：这两天降温，办公室空调还开着冷风
+  A：物业抠门，我去跟他们说
+  B：我座位靠窗，冻得手都僵
+  A：先披件衣服，我下午协调
+  A：明细我重发一份，劳务那几笔从第三方走
+  B：还是不走公户对吧
+  A：对，省得来回倒，你只按明细结
+  B：行，那我把名单备齐
+  【4月9日】
+  A：甲方问了进度，你口径清楚点
+  B：我就说联合执行，多层的分销
+  A：对，别提走账细节
+  B：那我要不要做一份执行排期
+  A：做一份，甲方面前好交代
+  B：这周末你回老家吗
+  A：回，我妈生日，得赶回去
+  B：那路上慢点，别赶夜路
+  A：嗯，周五下班就走
+  【4月10日】
+  A：合同用印了，等回款
+  B：首笔多少
+  A：四成，三十多万
+  B：到账我按两个点留，税我这边担
+  A：对，明白就好，剩下的按明细分
+  B：排期表发你邮箱了
+  A：收到，齐了，就等见款
+  B：见款办事，你放心

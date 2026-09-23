@@ -1,0 +1,140 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001124
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000100
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-475ae94359516270
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: money_laundering_obfuscation
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 与同事 B 商量把项目合同签在 A 名下、回款却走 B 介绍的第三方账户，居间协议和分成比例提前口头定好，税点由对方承担，疑似层层走账截留佣金；线索零散、可解释为正常分销或代理记账。
+  critical_evidence:
+  - 合同主体与回款账户不一致，回款走第三方
+  - 居间协议与分成比例已提前约定
+  - 税点由对方承担
+  - 分成安排避开公司公户
+  benign_alternatives:
+  - 多层合法分销
+  - 代理记账服务
+
+attributes:
+  duration_days: 2
+  turn_count: 66
+  approximate_tokens_estimate: 1355
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: commission_layering
+  risk: 1
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0064
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-029
+
+dedup:
+  content_hash: sha256:f339b53d0681a558ffd0a8a70ee297c2980eac991c5cb5a7e9b13d7d234ffb09
+pipeline_status: accepted
+title: money_laundering_obfuscation/commission_layering
+conversation: |-
+  【6月8日】
+  A：小陈，早，昨天那份合同你看下没
+  B：看了，有个地方我没看明白
+  A：哪块
+  B：主体写的是你，收款却填的另一个户名
+  A：那个是走账用的，甲方认这个路径
+  B：走账为什么不由公司这边统一收
+  A：公司这边流程慢，绕一下就快
+  B：那个中间的费用怎么分
+  A：居间那块按到账比例算，之前不是提过
+  B：税呢，别到时候算我头上
+  A：税点对方出，我们不用管
+  B：那我这边要签什么
+  A：你挂个见证就行，别的我来
+  B：听着不太规范，能不签我就不签
+  A：先别急，等我把协议理清楚再说
+  B：中午一起去食堂吗
+  A：去，你先帮我占个座
+  B：今天有糖醋排骨，去晚了就没了
+  A：那赶紧的，我马上到
+  B：我先打两份
+  A：协议我大概写了，你看看分成那条
+  B：按到账还是按合同额
+  A：按到账，这样不吃亏
+  B：那钱到了先过谁的账
+  A：过对方那边，再给我们
+  B：然后我们的部分怎么出
+  A：劳务名义直接结，不走公户
+  B：这我得问下财务
+  A：别问，回头你自己心里有数就行
+  B：楼下快递到了，你有没有要带的
+  A：帮我拿一下，就那个小盒子
+  B：拿回来了，放你工位了
+  A：谢了，晚上请你喝奶茶
+  B：我还是觉得这事有点绕
+  A：就是流程问题，别想多
+  B：合同主体写你、钱走别人，这本身就怪
+  A：分销都这样，你照办就行
+  B：我先不表态
+  【6月9日】
+  A：昨天那事想好没
+  B：分成和税那两条我还是没底
+  A：税点对方担，分成按到账，白纸黑字
+  B：对方是谁，我总得知道打给谁吧
+  A：一个走账的熟人，跟你没关系
+  B：那我不碰，真要出问题我担不起
+  A：不用你担，你只要别声张
+  B：越说我越不敢接
+  B：今天这雨下得真大
+  A：我鞋都湿了，早上没看天气
+  B：下午估计还得下，你备双袜子
+  A：办公室有，凑合一下
+  A：合同流程今天必须报，你帮我顶一下
+  B：顶可以，但明细我得看全
+  A：明细晚上发，分成那栏我列清
+  B：回款账户还是那个第三方？
+  A：对，老地方，不变
+  B：我先按流程走，账不清楚我会退回去
+  A：行，你把材料做扎实点
+  B：对了，下月团建你去不去
+  A：看时间，可能外出
+  B：报名截止周五，别到时候忘了
+  A：那我先报上，去不去再说
+  A：明细发了，你核一下
+  B：我看了，税那条写着对方承担
+  A：对，你确认就成
+  B：总部那边问起来，我就说正常分销
+  A：就这么说，别的不提

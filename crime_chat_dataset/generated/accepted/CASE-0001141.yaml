@@ -1,0 +1,129 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001141
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000116
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-11945aeb82694d13
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 陌生人 A 通过介绍找到 B 走假退货流程套退款，A 留着原包装把旧货装回，B 对接售后收件、按单抽成，退款到账后 A 给 B 转了一笔正常分成。
+  critical_evidence:
+  - A 说原包装都留着、装回去跟新的一样
+  - B 说售后不拆箱、只看码、扫一下就过
+  - A 说一单赚一千、给 B 抽一百五
+  - B 处理了五单、过了四单，A 给 B 转了一笔六百的分成
+  benign_alternatives:
+  - 正常七天无理由
+  - 瑕疵退货协商
+
+attributes:
+  duration_days: 3
+  turn_count: 53
+  approximate_tokens_estimate: 544
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: delivery_fraud_returns
+  risk: 1
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0082
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-044
+
+dedup:
+  content_hash: sha256:6e679a648bd3ac2c69f9ae70b6aaf758888caf2a71278db361441ab589373c4e
+pipeline_status: accepted
+title: theft_robbery_property_crime/delivery_fraud_returns
+conversation: |-
+  【9月2日】
+  A：你好 是朋友介绍找你的
+  B：对 你是要办退货那种
+  A：嗯 一批
+  B：几单
+  A：先五单
+  B：你货啥情况
+  A：原包装都留着 装回去跟新的一样
+  B：那没问题
+  A：售后那边会拆吗
+  B：不拆 只看码 扫一下就过
+  A：好 那就省事
+  B：一单你赚多少
+  A：一千左右
+  B：我抽一百五
+  A：行
+  B：你晚饭吃没
+  A：点了麻辣烫
+  B：我也想吃
+  A：点呗
+  B：减肥
+  A：哈哈
+  A：你在这边租房贵不
+  B：还行 老小区
+  A：一个人住
+  B：对
+  A：清净
+  B：是
+  【9月3日】
+  A：五单寄出了
+  B：好 到了我扫
+  A：别拆
+  B：放心 我干这个的
+  A：多久出结果
+  B：三天内
+  A：等你信
+  B：昨晚开黑没
+  A：打了 输一晚上
+  B：你太坑
+  A：队友菜
+  B：哈哈
+  【9月4日】
+  B：过了四单
+  A：稳
+  B：有一单退回来了 说码不对
+  A：那单算了
+  B：嗯
+  A：四单钱到了吧
+  B：到了 四千
+  A：你那六百我给你
+  【系统消息】A 向 B 转账 600 元，已收款。
+  B：收到
+  A：下次还找你
+  B：随时
+  A：长期的话能不能便宜点
+  B：走量 一单一百
+  A：成交

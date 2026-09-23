@@ -1,0 +1,422 @@
+{
+ "key": "b29c012",
+ "archetype_id": "ARC-000100",
+ "subtype": "commission_layering",
+ "latent_intent": "A 与同事 B 商量把项目合同签在 A 名下、回款却走 B 介绍的第三方账户，居间协议和分成比例提前口头定好，税点由对方承担，疑似层层走账截留佣金；线索零散、可解释为正常分销或代理记账。",
+ "critical_facts": [
+  "合同主体与回款账户不一致，回款走第三方",
+  "居间协议与分成比例已提前约定",
+  "税点由对方承担",
+  "分成安排避开公司公户"
+ ],
+ "benign_alternatives": [
+  "多层合法分销",
+  "代理记账服务"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "6月8日 09:05",
+   "speaker": "A",
+   "text": "小陈，早，昨天那份合同你看下没"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 09:08",
+   "speaker": "B",
+   "text": "看了，有个地方我没看明白"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 09:11",
+   "speaker": "A",
+   "text": "哪块"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 09:14",
+   "speaker": "B",
+   "text": "主体写的是你，收款却填的另一个户名"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 09:17",
+   "speaker": "A",
+   "text": "那个是走账用的，甲方认这个路径"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 09:20",
+   "speaker": "B",
+   "text": "走账为什么不由公司这边统一收"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 09:23",
+   "speaker": "A",
+   "text": "公司这边流程慢，绕一下就快"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 09:26",
+   "speaker": "B",
+   "text": "那个中间的费用怎么分"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 09:29",
+   "speaker": "A",
+   "text": "居间那块按到账比例算，之前不是提过"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 09:32",
+   "speaker": "B",
+   "text": "税呢，别到时候算我头上"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 09:35",
+   "speaker": "A",
+   "text": "税点对方出，我们不用管"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 09:38",
+   "speaker": "B",
+   "text": "那我这边要签什么"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 09:41",
+   "speaker": "A",
+   "text": "你挂个见证就行，别的我来"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 09:44",
+   "speaker": "B",
+   "text": "听着不太规范，能不签我就不签"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 09:47",
+   "speaker": "A",
+   "text": "先别急，等我把协议理清楚再说"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 11:20",
+   "speaker": "B",
+   "text": "中午一起去食堂吗"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 11:23",
+   "speaker": "A",
+   "text": "去，你先帮我占个座"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 11:26",
+   "speaker": "B",
+   "text": "今天有糖醋排骨，去晚了就没了"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 11:29",
+   "speaker": "A",
+   "text": "那赶紧的，我马上到"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 11:32",
+   "speaker": "B",
+   "text": "我先打两份"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 14:10",
+   "speaker": "A",
+   "text": "协议我大概写了，你看看分成那条"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 14:13",
+   "speaker": "B",
+   "text": "按到账还是按合同额"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 14:16",
+   "speaker": "A",
+   "text": "按到账，这样不吃亏"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 14:19",
+   "speaker": "B",
+   "text": "那钱到了先过谁的账"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 14:22",
+   "speaker": "A",
+   "text": "过对方那边，再给我们"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 14:25",
+   "speaker": "B",
+   "text": "然后我们的部分怎么出"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 14:28",
+   "speaker": "A",
+   "text": "劳务名义直接结，不走公户"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 14:31",
+   "speaker": "B",
+   "text": "这我得问下财务"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 14:34",
+   "speaker": "A",
+   "text": "别问，回头你自己心里有数就行"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 16:00",
+   "speaker": "B",
+   "text": "楼下快递到了，你有没有要带的"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 16:03",
+   "speaker": "A",
+   "text": "帮我拿一下，就那个小盒子"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 16:06",
+   "speaker": "B",
+   "text": "拿回来了，放你工位了"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 16:09",
+   "speaker": "A",
+   "text": "谢了，晚上请你喝奶茶"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 17:20",
+   "speaker": "B",
+   "text": "我还是觉得这事有点绕"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 17:23",
+   "speaker": "A",
+   "text": "就是流程问题，别想多"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 17:26",
+   "speaker": "B",
+   "text": "合同主体写你、钱走别人，这本身就怪"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 17:29",
+   "speaker": "A",
+   "text": "分销都这样，你照办就行"
+  },
+  {
+   "type": "message",
+   "time": "6月8日 17:32",
+   "speaker": "B",
+   "text": "我先不表态"
+  },
+  {
+   "type": "message",
+   "time": "6月9日 09:10",
+   "speaker": "A",
+   "text": "昨天那事想好没"
+  },
+  {
+   "type": "message",
+   "time": "6月9日 09:13",
+   "speaker": "B",
+   "text": "分成和税那两条我还是没底"
+  },
+  {
+   "type": "message",
+   "time": "6月9日 09:16",
+   "speaker": "A",
+   "text": "税点对方担，分成按到账，白纸黑字"
+  },
+  {
+   "type": "message",
+   "time": "6月9日 09:19",
+   "speaker": "B",
+   "text": "对方是谁，我总得知道打给谁吧"
+  },
+  {
+   "type": "message",
+   "time": "6月9日 09:22",
+   "speaker": "A",
+   "text": "一个走账的熟人，跟你没关系"
+  },
+  {
+   "type": "message",
+   "time": "6月9日 09:25",
+   "speaker": "B",
+   "text": "那我不碰，真要出问题我担不起"
+  },
+  {
+   "type": "message",
+   "time": "6月9日 09:28",
+   "speaker": "A",
+   "text": "不用你担，你只要别声张"
+  },
+  {
+   "type": "message",
+   "time": "6月9日 09:31",
+   "speaker": "B",
+   "text": "越说我越不敢接"
+  },
+  {
+   "type": "message",
+   "time": "6月9日 11:00",
+   "speaker": "B",
+   "text": "今天这雨下得真大"
+  },
+  {
+   "type": "message",
+   "time": "6月9日 11:03",
+   "speaker": "A",
+   "text": "我鞋都湿了，早上没看天气"
+  },
+  {
+   "type": "message",
+   "time": "6月9日 11:06",
+   "speaker": "B",
+   "text": "下午估计还得下，你备双袜子"
+  },
+  {
+   "type": "message",
+   "time": "6月9日 11:09",
+   "speaker": "A",
+   "text": "办公室有，凑合一下"
+  },
+  {
+   "type": "message",
+   "time": "6月9日 14:00",
+   "speaker": "A",
+   "text": "合同流程今天必须报，你帮我顶一下"
+  },
+  {
+   "type": "message",
+   "time": "6月9日 14:03",
+   "speaker": "B",
+   "text": "顶可以，但明细我得看全"
+  },
+  {
+   "type": "message",
+   "time": "6月9日 14:06",
+   "speaker": "A",
+   "text": "明细晚上发，分成那栏我列清"
+  },
+  {
+   "type": "message",
+   "time": "6月9日 14:09",
+   "speaker": "B",
+   "text": "回款账户还是那个第三方？"
+  },
+  {
+   "type": "message",
+   "time": "6月9日 14:12",
+   "speaker": "A",
+   "text": "对，老地方，不变"
+  },
+  {
+   "type": "message",
+   "time": "6月9日 14:15",
+   "speaker": "B",
+   "text": "我先按流程走，账不清楚我会退回去"
+  },
+  {
+   "type": "message",
+   "time": "6月9日 14:18",
+   "speaker": "A",
+   "text": "行，你把材料做扎实点"
+  },
+  {
+   "type": "message",
+   "time": "6月9日 15:30",
+   "speaker": "B",
+   "text": "对了，下月团建你去不去"
+  },
+  {
+   "type": "message",
+   "time": "6月9日 15:33",
+   "speaker": "A",
+   "text": "看时间，可能外出"
+  },
+  {
+   "type": "message",
+   "time": "6月9日 15:36",
+   "speaker": "B",
+   "text": "报名截止周五，别到时候忘了"
+  },
+  {
+   "type": "message",
+   "time": "6月9日 15:39",
+   "speaker": "A",
+   "text": "那我先报上，去不去再说"
+  },
+  {
+   "type": "message",
+   "time": "6月9日 16:50",
+   "speaker": "A",
+   "text": "明细发了，你核一下"
+  },
+  {
+   "type": "message",
+   "time": "6月9日 16:53",
+   "speaker": "B",
+   "text": "我看了，税那条写着对方承担"
+  },
+  {
+   "type": "message",
+   "time": "6月9日 16:56",
+   "speaker": "A",
+   "text": "对，你确认就成"
+  },
+  {
+   "type": "message",
+   "time": "6月9日 16:59",
+   "speaker": "B",
+   "text": "总部那边问起来，我就说正常分销"
+  },
+  {
+   "type": "message",
+   "time": "6月9日 17:02",
+   "speaker": "A",
+   "text": "就这么说，别的不提"
+  }
+ ],
+ "source_seed_ids": [
+  "SEED-SRC-BCC-001-475ae94359516270"
+ ],
+ "_registered": {
+  "case_id": "CASE-0001124",
+  "status": "accepted",
+  "errors": []
+ }
+}

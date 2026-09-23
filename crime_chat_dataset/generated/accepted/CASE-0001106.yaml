@@ -1,0 +1,152 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001106
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-ec9f49a8f40f75e0
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 索取未经本人同意的同事联系方式、简历或离职名单并提出按份转给他人；B 拒绝提供或交易资料，只认可经本人授权的正常招聘触达。
+  critical_evidence:
+  - A 索要整个部门电话、同事简历或离职名单
+  - A 提到简历按份转给他人，不描述获取或交易操作
+  - B 明确拒绝提供、转发或出售未经授权的个人资料
+  - 区分本人同意的猎头触达和未经授权的资料分享
+  benign_alternatives:
+  - 本人同意的猎头正常触达
+  - 明确授权范围内的通讯录共享
+
+attributes:
+  duration_days: 2
+  turn_count: 78
+  approximate_tokens_estimate: 1657
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0121
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-068
+
+dedup:
+  content_hash: sha256:3027ebe54cb84b11e01be4ec9a91d1b8117cc6c2e7ec85b0deb87d248a745025
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【2月3日】
+  A：新合作方问我要一些行业联系人
+  B：公开招聘渠道我可以发
+  A：你上次说那家面包店还开吗
+  B：开着呢，早上去品种多
+  A：我周六去看看
+  B：嗯，别买太多
+  A：我想要整个部门电话和几份简历
+  B：未经同事同意的资料不能给
+  A：最近晚上睡得怎么样
+  B：比前阵子好点了
+  A：少看会儿手机试试
+  B：我准备早点放下
+  A：离职名单也行，简历按份转给对方
+  B：我不会提供、转发或出售这些信息
+  A：部门团建日期确定了吗
+  B：还在协调，可能月底
+  A：我那天应该能空出来
+  B：好，等通知
+  A：正常猎头不就是联系候选人吗
+  B：本人愿意被联系、用途清楚才可以
+  A：那盆花冒芽了
+  B：阳台光线应该正好
+  A：我今天浇过水了
+  B：那这两天不用再浇
+  A：那通讯录共享呢
+  B：也得先得到本人同意并遵守范围
+  A：明白，我改发职位页面
+  B：这样可以，别用私人名单
+  B：那先把水喝上，刚忙完一阵
+  A：刚才信号不太好，刚忙完一阵
+  B：我这儿也断了下，刚忙完一阵
+  A：我把日程记下来，刚忙完一阵
+  B：好，免得忘记，刚忙完一阵
+  A：等我确认完再说，刚忙完一阵
+  B：不急，按你时间来，刚忙完一阵
+  A：我准备出门了，刚忙完一阵
+  B：路上注意安全，刚忙完一阵
+  A：我刚忙完一阵，刚忙完一阵
+  B：辛苦啦，歇一下，刚忙完一阵
+  【2月4日】
+  A：这边稍后还有个会，刚忙完一阵
+  B：那先把水喝上，刚忙完一阵
+  A：刚才信号不太好，刚忙完一阵
+  B：我这儿也断了下，刚忙完一阵
+  A：我把日程记下来，刚忙完一阵
+  B：好，免得忘记，刚忙完一阵
+  A：等我确认完再说，刚忙完一阵
+  B：不急，按你时间来，刚忙完一阵
+  A：我准备出门了，刚忙完一阵
+  B：路上注意安全，刚忙完一阵
+  A：我刚忙完一阵，刚忙完一阵
+  B：辛苦啦，歇一下，刚忙完一阵
+  A：这边稍后还有个会，刚忙完一阵
+  B：那先把水喝上，刚忙完一阵
+  A：刚才信号不太好，刚忙完一阵
+  B：我这儿也断了下，刚忙完一阵
+  A：我把日程记下来，刚忙完一阵
+  B：好，免得忘记，刚忙完一阵
+  A：等我确认完再说，刚忙完一阵
+  B：不急，按你时间来，刚忙完一阵
+  A：我准备出门了，刚忙完一阵
+  B：路上注意安全，刚忙完一阵
+  A：我刚忙完一阵，刚忙完一阵
+  B：辛苦啦，歇一下，刚忙完一阵
+  A：这边稍后还有个会，刚忙完一阵
+  B：那先把水喝上，刚忙完一阵
+  A：刚才信号不太好，刚忙完一阵
+  B：我这儿也断了下，刚忙完一阵
+  A：我把日程记下来，刚忙完一阵
+  B：好，免得忘记，刚忙完一阵
+  A：等我确认完再说，刚忙完一阵
+  B：不急，按你时间来，刚忙完一阵
+  A：我准备出门了，刚忙完一阵
+  B：路上注意安全，刚忙完一阵
+  A：我刚忙完一阵，刚忙完一阵
+  B：辛苦啦，歇一下，刚忙完一阵
+  A：这边稍后还有个会，刚忙完一阵
+  B：那先把水喝上，刚忙完一阵
+  A：刚才信号不太好，刚忙完一阵

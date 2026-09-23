@@ -1,0 +1,142 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001110
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-6b79a079f5188fa6
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 要求 B 汇集部门电话、离职名单和简历并转售；B 拒绝处理未经授权的同事资料，建议通过公开招聘接收候选人自愿提交的信息。
+  critical_evidence:
+  - A 要求整个部门电话和离职名单
+  - A 提议按份出售简历
+  - B 拒绝分享或出售未经授权的个人资料
+  - B 建议公开招聘和自愿投递
+  benign_alternatives:
+  - 猎头正常触达
+  - 经授权的通讯录共享
+
+attributes:
+  duration_days: 6
+  turn_count: 63
+  approximate_tokens_estimate: 1051
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0122
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-069
+
+dedup:
+  content_hash: sha256:74d290c9fd095b565291c567d7a85f8ccbc8055e2f3bd2f01914105704cc120a
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【9月6日】
+  A：在吗，方便说两句吗
+  B：方便，你说
+  A：我刚忙完手头的事
+  B：好，不急
+  A：周末想回趟家
+  B：车票买了吗
+  A：我明早先去开个会
+  A：晚上看一下
+  B：早点订选择多些
+  A：好，回去吃顿饭
+  B：路上注意安全
+  A：我明早先去开个会
+  A：我明早先去开个会
+  A：我明早先去开个会
+  A：把整个部门电话和离职名单整理一份给我
+  B：这批资料有本人授权吗
+  A：简历按份卖，先把手头的收一收
+  B：没有授权我不会整理或出售
+  A：另外上次午饭AA我转你了，跟刚才的事无关
+  【系统消息】A 向 B 转账 65 元，已收款。
+  B：收到了，是午饭分摊，谢谢
+  【9月7日】
+  B：好，结束了再联系
+  B：好，结束了再联系
+  A：最近肩膀有点酸
+  B：坐久了吧
+  A：这两天确实没怎么动
+  B：中间起来走走
+  A：下午我去楼下转一圈
+  B：好，别一直看屏幕
+  B：好，结束了再联系
+  A：那几份简历也不能先给吗
+  B：不行，简历和联系人都属于个人资料
+  A：离职的也算？
+  B：一样需要本人同意，不能私下转交
+  【9月8日】
+  A：下午应该能空下来
+  A：下午应该能空下来
+  A：下午应该能空下来
+  A：我改成发公开招聘信息吧
+  B：可以，让候选人自己联系或投递
+  A：那份名单我不再要了
+  B：好，授权范围内的招聘我可以协助
+  【9月9日】
+  B：那我们晚点对一下
+  B：那我们晚点对一下
+  B：那我们晚点对一下
+  A：下午想喝点热的
+  B：附近茶店有桂花的
+  A：甜度能调吗
+  B：可以选少糖
+  A：那我试试
+  B：我等下也去买
+  【9月10日】
+  A：嗯，不耽误你
+  A：嗯，不耽误你
+  A：嗯，不耽误你
+  A：午饭吃什么
+  B：楼下新开的面馆还可以
+  A：我想吃清淡一点
+  B：有番茄汤底
+  A：那中午去试试
+  B：好，我一会儿下楼
+  【9月11日】
+  A：早，昨天说的我想清楚了
+  B：嗯，你说
+  B：没事，我这边也能安排
+  B：没事，我这边也能安排
+  B：没事，我这边也能安排

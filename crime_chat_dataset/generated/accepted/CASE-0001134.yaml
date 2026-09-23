@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001134
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000100
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-e154e01ee66a21c6
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: money_laundering_obfuscation
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 中介 A 在群里挑陌生人 B 谈合作，借 B 的公司账户收一笔项目居间费：合同由 A 签、款指定打入 B 公司，配一份居间协议，税点由 B 出，用陌生第三方多垫一层把佣金拆分过账、避开甲方直接关联。
+  critical_evidence:
+  - A 主动联系不认识的 B，提出渠道合作、借 B 公司名义收居间服务费
+  - A 说明合同自己签、款打到 B 公司，居间协议可以配一份
+  - A 强调税点由 B 那边出，B 拿分成
+  - A 先给 B 转了一笔定金/首款，B 确认到账
+  benign_alternatives:
+  - 多层合法分销
+  - 代理记账服务
+
+attributes:
+  duration_days: 3
+  turn_count: 56
+  approximate_tokens_estimate: 1036
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: commission_layering
+  risk: 1
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0065
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-029
+
+dedup:
+  content_hash: sha256:efc49976b243b04af33a8fa0bfcb12abfd807e902c2ec964ba0ef0abd69ecf38
+pipeline_status: accepted
+title: money_laundering_obfuscation/commission_layering
+conversation: |-
+  【1月9日】
+  A：您好 在同行群里看到您的 冒昧打扰
+  B：你是
+  A：我这边有个渠道合作的活 想跟您聊聊
+  B：什么活
+  A：借您公司名义收一笔居间服务费 合同我签 款打您账户
+  B：我不认识你 凭什么
+  A：所以先聊 有协议 你只出个名义 钱你收着
+  B：这不算洗钱吧
+  A：想哪去了 就是正常的渠道分销 税点你们出 剩下的分你
+  B：我怎么信你
+  A：我先打笔定金给你 你收着再说
+  B：多少
+  A：先一万 你查收
+  【系统消息】A 向 B 转账 10000 元，已收款。
+  A：到了吧
+  B：到了 你这出手挺大方
+  A：做生意讲信用 定金先到位
+  B：具体怎么弄
+  A：我发协议给你 你盖章回我 后面款到账我对账
+  B：协议写什么
+  A：居间服务费 别太细化 越简单越好
+  B：我看看再说
+  A：行 别跟人说这事 低调点
+  B：你公司在本地吗
+  A：不在 我在南边 项目全国跑
+  B：那见面都难
+  A：线上走就行 现在都这样
+  B：嗯
+  【1月10日】
+  A：协议看了没
+  B：看了 有一条写服务内容 我这边实际不提供服务啊
+  A：走形式而已 渠道费都这么开 没人追究
+  B：税点真我出？
+  A：说好的 你们出 但分成我多给你两个点 不亏
+  B：款一共多少
+  A：总包二十万 分四笔 别一次进太多
+  B：分四笔是为啥
+  A：稳当 银行那边也不注意 大家省事
+  B：行 我盖章
+  A：痛快 合作愉快
+  B：中午吃啥了
+  A：随便对付了口面
+  B：出差在外别老吃面
+  A：哈哈 习惯了
+  B：今天陪孩子写作业 气得我
+  A：都一样 我家那个也是
+  B：辅导班又贵
+  A：这波款到了你那点都不算啥
+  【1月11日】
+  A：协议盖章件发我
+  B：发你了
+  A：收到 我留档 第一笔这两天到
+  B：到了我告诉你
+  A：到账先别动 咱对完再分
+  B：懂
+  B：周末去钓鱼不 我这有个野塘
+  A：不在一个地方 去不了啊
+  B：哈哈 忘了
+  A：以后有机会见个面

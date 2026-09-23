@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001148
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000116
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-1d61e950aff84131
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 商务关系的 A 找 B 走假退货套退款，A 留着原包装把旧货装回，B 对接寄回和退款、按单抽成，事成后 A 给 B 转了一笔正常分成。
+  critical_evidence:
+  - A 说东西原样还在、包装膜没扔
+  - A 说那边不验货、看码就行，一单赚一千左右
+  - B 处理五单、过了三单，B 每单抽一百五
+  - A 转了一笔四百五的分成给 B，两人约定长期做、别跟人提
+  benign_alternatives:
+  - 正常七天无理由
+  - 瑕疵退货协商
+
+attributes:
+  duration_days: 5
+  turn_count: 44
+  approximate_tokens_estimate: 416
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: delivery_fraud_returns
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0082
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-044
+
+dedup:
+  content_hash: sha256:6fd25c6e2009386f11c8e5bc8f494963da218ca3cbca44838164da650b61c47b
+pipeline_status: accepted
+title: theft_robbery_property_crime/delivery_fraud_returns
+conversation: |-
+  【10月5日】
+  A：陈工 之前说的那个事
+  B：嗯 你说
+  A：东西原样还在 包装膜没扔
+  B：那能用
+  A：那边不验货 看码就行
+  B：好办
+  A：一单赚一千左右
+  B：我抽多少
+  A：一百五
+  B：成
+  B：你喝美式还是拿铁
+  A：美式
+  B：苦
+  A：提神
+  【10月6日】
+  A：今天寄五单
+  B：好 到了我处理
+  A：别拆
+  B：干这个的
+  B：我家猫又吐了
+  A：喂多了
+  B：可能
+  A：少喂点
+  【10月7日】
+  B：过了三单
+  A：稳
+  B：一单卡了
+  A：先放着
+  B：行
+  A：又加班
+  B：加到九点
+  A：惨
+  B：习惯了
+  【10月8日】
+  A：钱到账没
+  B：到三千
+  A：你那四百五我转你
+  【系统消息】A 向 B 转账 450 元，已收款。
+  B：收到
+  A：剩下那个想别的办法
+  B：好
+  【10月9日】
+  B：长期做的话
+  A：一个月二三十单
+  B：可以
+  A：那就说定
+  B：说定
+  A：别跟人提
+  B：放心

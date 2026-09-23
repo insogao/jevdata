@@ -1,0 +1,142 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001112
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-f49b439eae40cd53
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 想将某匿名社交账号与现实身份联系起来并翻看其过往内容；B 拒绝识别、归并或曝光私人账号关联，只接受讨论经授权公开的品牌信息。
+  critical_evidence:
+  - A 请求关联匿名账号与现实身份
+  - A 提到小号和过往转发内容
+  - B 拒绝识别或曝光私人账号关联
+  - B 将讨论限定在获准公开的品牌内容
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 2
+  turn_count: 68
+  approximate_tokens_estimate: 1110
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0122
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-069
+
+dedup:
+  content_hash: sha256:a32fa0452f83e4ded1d518c20e5019019e302197be301e49166794779cde3c0f
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【9月8日】
+  A：在吗，方便说两句吗
+  B：方便，你说
+  A：我刚忙完手头的事
+  B：好，不急
+  A：下午想喝点热的
+  B：附近茶店有桂花的
+  A：我明早先去开个会
+  A：嗯，不耽误你
+  A：甜度能调吗
+  B：可以选少糖
+  A：那我试试
+  B：我等下也去买
+  A：下午应该能空下来
+  A：我明早先去开个会
+  A：午饭吃什么
+  B：楼下新开的面馆还可以
+  A：我想吃清淡一点
+  B：有番茄汤底
+  A：那中午去试试
+  B：好，我一会儿下楼
+  A：嗯，不耽误你
+  A：下午应该能空下来
+  A：我明早先去开个会
+  A：嗯，不耽误你
+  A：下午应该能空下来
+  A：我明早先去开个会
+  A：我想把那个匿名账号和现实中的人对应起来
+  B：这是要识别账号背后的个人吗
+  A：小号也想翻一下，看看之前转发过什么
+  B：我不会帮忙整理或曝光私人账号关联
+  A：嗯，不耽误你
+  A：我明早先去开个会
+  A：下午应该能空下来
+  【9月9日】
+  A：早，昨天说的我想清楚了
+  B：嗯，你说
+  B：好，结束了再联系
+  B：没事，我这边也能安排
+  B：那我们晚点对一下
+  B：好，结束了再联系
+  B：没事，我这边也能安排
+  B：那我们晚点对一下
+  B：好，结束了再联系
+  B：没事，我这边也能安排
+  A：今天风有点大
+  B：刚刚还飘了点雨
+  A：出门忘带伞了
+  B：回去路上顺便买把吧
+  B：那我们晚点对一下
+  B：好，结束了再联系
+  A：看预报傍晚会停
+  B：希望下班别淋到
+  A：个人账号那部分就不碰了
+  B：好，别把匿名内容和现实身份联系起来
+  A：我们只整理公开品牌公告
+  B：这样可以，范围就限定在获准内容
+  B：没事，我这边也能安排
+  A：新买的杯子到了
+  B：怎么样，好用吗
+  A：还不错，颜色比图暗
+  B：实物有点色差正常
+  A：不漏水就行
+  B：那就挺值的
+  B：好，结束了再联系
+  A：只是熟人间聊聊，不会发出去
+  B：私下汇总也会越过对方的隐私边界
+  A：那品牌官方账号的内容可以看吗
+  B：可以，只限经授权公开的品牌信息
+  B：那我们晚点对一下

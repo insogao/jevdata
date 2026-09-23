@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001128
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000100
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-ca21710c0b220014
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: money_laundering_obfuscation
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 隐约向亲戚 B 提出借 B 的账户承接项目回款：合同以 A 名义签、款项走 B 账户，分成按到账约定、税点由 B 承担，B 含糊答应未细问；线索零散，可解释为亲属间正常代收与代理记账。
+  critical_evidence:
+  - 回款拟走B的账户，合同以A名义签订
+  - 分成按到账金额比例约定
+  - 税点由B这边承担
+  - 双方之间有一笔日常名义的小额转账
+  benign_alternatives:
+  - 亲属间正常代收
+  - 代理记账服务
+
+attributes:
+  duration_days: 4
+  turn_count: 49
+  approximate_tokens_estimate: 900
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: commission_layering
+  risk: 1
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0064
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-029
+
+dedup:
+  content_hash: sha256:a676fcc5c37b004ba001e56d622b60ff322c6738f4222966a1514b0c328d14f8
+pipeline_status: accepted
+title: money_laundering_obfuscation/commission_layering
+conversation: |-
+  【2月10日】
+  A：姐，年后我这边接了个活
+  B：好事啊，什么活
+  A：推广的项目，合同签我，回款想先走你卡
+  B：走我卡干嘛，你自己不有账户
+  A：过一下而已，走我这边不方便
+  B：那分成怎么算
+  A：按到账两个点给你，税你那边担
+  B：行，你说怎么弄就怎么弄
+  A：谢姐，明细我回头给你
+  B：晚饭吃了吗，妈包了饺子
+  A：吃了，在外面对付了一口
+  B：老在外面吃不好，周末回家吃
+  A：好，周末回去
+  【2月11日】
+  A：协议我大概弄了一下，你看看
+  B：我看不太懂，你定就行
+  A：分成按到账分笔列，税你担
+  B：嗯，我账户随时用
+  A：钱到了别急着动，等我招呼
+  B：好，我记着
+  B：外面下雪了，你路上慢点
+  A：嗯，刚到家，雪挺大
+  B：那别出门了，冷
+  【2月12日】
+  A：合同递上去了，这周用印
+  B：首笔大概多少
+  A：三成，十几万，月底到
+  B：这么多进我卡，不会有问题吧
+  A：过账而已，你别声张就行
+  B：那我不问那么多了
+  B：中午给爸送饭，你要不要一起
+  A：我这走不开，你帮我带个好
+  B：行，他天天念叨你
+  A：上会过了，合同今天用印
+  B：章用哪方的
+  A：签我的名，你只提供账户
+  B：好，那我等你通知
+  【2月13日】
+  A：这个月先给你转点，家里用
+  A：跟项目那笔分开
+  B：收到，两千，谢谢弟
+  【系统消息】A 向 B 转账 2000 元，已收款。
+  B：钱到了，家里我照看着
+  B：天冷，你加衣服没
+  A：加了，办公室暖气挺足
+  B：那就好，别感冒
+  A：回款一到扣两个点，剩下按明细分
+  B：税呢
+  A：税你担，说好的
+  B：成，听你的
+  A：对外就说联合执行，别的不用提
+  B：嗯，我不乱说
+  A：等款到就安排

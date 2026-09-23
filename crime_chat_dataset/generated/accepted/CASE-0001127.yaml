@@ -1,0 +1,137 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001127
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000095
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-54956f9c88c0256c
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: money_laundering_obfuscation
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 以高于市面的折扣从熟人 B 处大量回收京东卡、苏果卡等不记名购物卡，按九四折实结、凭卡密即付，把卡券快速折现；表面可解释为正规卡券回收或单位福利卡转让。
+  critical_evidence:
+  - A 提出购物卡按九四折实结回收
+  - A 明确京东卡苏果卡都要，量越大越好
+  - B 发卡密后 A 即时结款，卡密即付
+  - 双方有一笔按折扣结算的正常转账
+  benign_alternatives:
+  - 正规卡券回收平台
+  - 公司福利卡转让
+
+attributes:
+  duration_days: 2
+  turn_count: 62
+  approximate_tokens_estimate: 1475
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: gift_card_cashout
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0064
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-029
+
+dedup:
+  content_hash: sha256:cdacce63624ea378e8035497c3bc44837c17d17c3b4dad10fa4327f8cef89ac7
+pipeline_status: accepted
+title: money_laundering_obfuscation/gift_card_cashout
+conversation: |-
+  【10月12日】
+  A：老李，你那边还有卡要出吗，我这边收
+  B：京东卡行不，手上十来张，面额不齐
+  A：京东卡苏果卡都要，你有多少我收多少
+  B：折扣怎么算，先说好免得扯皮
+  A：九四折实结，卡密发我即付，当场结
+  B：九四折？别处才给九一，你这靠谱不
+  A：我走量，你只要货源稳，我价一直给你顶住
+  B：那先试一小批，成不成看结算快不快
+  A：放心，卡密一到我立刻转，从不压款
+  B：你这东西收这么多干嘛
+  A：转手给别人，我赚个差价，你就当正常回收
+  B：行吧，我单位每年发的都用不完
+  A：发的、送的都是这个，来源我不管，只看卡面
+  B：中午吃啥，楼下新开了家面馆
+  A：我随便，你点啥我跟着点
+  B：那要两份牛肉面，多放辣
+  A：行，我快到了先占位
+  A：你那批卡整理好了没，发我看看
+  B：拍了照片，面额都记上了
+  A：先发卡密吧，我核对完马上结
+  B：卡密发你了，五张一千的
+  A：收到，五千面额，九四折四千七，这就转你
+  B：好，到账我就放心了
+  【系统消息】A 向 B 转账 4700 元，已收款。
+  B：收到了，痛快
+  A：剩下那些也发我，一起结
+  B：苏果卡也有几张，回头一并给你
+  A：苏果卡我也收，折扣一样
+  B：你儿子那辆自行车买了吗
+  A：买了，昨天刚装好，骑得不肯回家
+  B：小孩都这样，安全第一，头盔戴好
+  A：戴了，我看着他
+  B：我表哥那边可能还有卡，能不能一起收
+  A：有多少收多少，你介绍来的我照样九四折
+  B：他不放心，问你结算多久
+  A：卡密一到账半小时内，压款的事我不干
+  B：行，我跟他说一声
+  【10月13日】
+  A：老李，昨天那批卡验证都没问题
+  B：那当然，都是正经渠道来的
+  A：今天还有吗，我这边等着要
+  B：我自己没了，等表哥那边凑一凑
+  A：你表哥拿货多的话，我可以再让半个点
+  B：让到九三五？那我更好跟他谈
+  A：量到十万以上可以，零散还是九四
+  B：明白了，我先问问
+  B：今天降温，你外套穿了没
+  A：穿了，早上出门还嫌冷
+  B：预报说明天还要降，注意点
+  A：知道，你也别硬扛
+  B：表哥回话了，说先出两万试试
+  A：两万也行，卡密备好我这边随时接
+  B：他卡比较杂，京东和超市的都有
+  A：都收，只要卡能用，渠道我不过问
+  B：他还有些加油卡，收不收
+  A：油卡折价低一点，九二，别的还是九四
+  B：行，我把价报给他
+  A：你这批量稳定，我可以长期结
+  B：只要钱到位，货源我有的是
+  A：那就这么说定，卡密即付
+  B：成交，晚点把两万那批发你
+  A：对了，别在群里说这事，私下对就行
+  B：知道，这种量大了传出去不好
+  A：嗯，卡密等你

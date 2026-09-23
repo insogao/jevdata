@@ -1,0 +1,160 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001147
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000116
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-b36d80944983eca8
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 把旧货套回留着的原包装，利用平台售后只看码不拆箱的流程做假退货套退款，中间人 B 负责对接寄回和退款流程、按单抽成，一单净赚约一千。
+  critical_evidence:
+  - A 说原包装膜还留着，装回去跟新的一样
+  - A 说售后那边不拆箱、只看码、扫一下就过，走个流程
+  - A 说一单能落一千、比上班强，B 每单抽两百
+  - B 负责对接寄回和退款，A 叮嘱别拆、原样退，有一单码对不上先压着别硬来
+  benign_alternatives:
+  - 正常七天无理由
+  - 瑕疵退货协商
+
+attributes:
+  duration_days: 2
+  turn_count: 86
+  approximate_tokens_estimate: 994
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: delivery_fraud_returns
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0082
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-044
+
+dedup:
+  content_hash: sha256:24ce72684415251d4566dc83e87c6353acdab974325059c7bf685f67b27cc115
+pipeline_status: accepted
+title: theft_robbery_property_crime/delivery_fraud_returns
+conversation: |-
+  【8月12日】
+  A：老陈 那个号你还在用吧
+  B：在 咋了
+  A：有批货想走你那边的流程
+  B：又来了 这次多少单
+  A：先六单试水
+  B：包装那些你搞定了
+  A：原包装膜我还留着 装回去跟新的一样
+  B：你也是绝了
+  A：放那也没用 正好
+  B：售后那边现在严不严
+  A：不严 他们不拆箱 只看码
+  B：扫码就行
+  A：扫一下就过 走个流程
+  B：那确实好办
+  A：一单能落一千 比上班强多了
+  B：我抽多少
+  A：老规矩 一单两百
+  B：行
+  A：你那边地址还是老地方
+  B：变过一次 我发你新的
+  A：好
+  B：中午吃的啥
+  A：外卖 黄焖鸡
+  B：又吃这个
+  A：省事
+  B：我煮了面 加了俩蛋
+  A：你日子过得细
+  B：你车修好没
+  A：修了 变速箱花了不少
+  B：肉疼
+  A：没办法
+  B：我最近都坐地铁
+  A：环保
+  B：穷
+  A：哈哈
+  A：说正事 六单今天寄 你注意收
+  B：好 到了我先扫
+  A：别拆 原样退
+  B：懂 拆了就露馅
+  A：对
+  B：那个剧你看了没
+  A：哪个
+  B：就那个刑侦的
+  A：看两集弃了 磨叽
+  B：后面好看
+  A：是吗 那再捡起来
+  B：你猜凶手是谁
+  A：不猜 你别说
+  B：哈哈
+  【8月13日】
+  B：到了四单
+  A：快
+  B：我扫了三单 过了
+  A：稳
+  B：有一单码对不上 卡住了
+  A：哪单
+  B：尾号那个
+  A：那单先放着 我想办法
+  B：行
+  A：别硬来 留记录就麻烦
+  B：放心
+  A：你血压最近咋样
+  B：还那样 吃着药
+  A：少熬夜
+  B：你不也一样
+  A：我这是没办法
+  B：我妈下周来住几天
+  A：那你得收拾屋子
+  B：是啊 头疼
+  A：请个钟点工
+  B：舍不得
+  A：挣这么多还舍不得
+  B：那是另一码事
+  A：退款到了没
+  B：到了三单 一共三千
+  A：好 你那六百我回头给你
+  B：不急
+  A：剩下那单搞定再说
+  B：好
+  A：这个月能出多少
+  B：看你货
+  A：我能凑二十单
+  B：那不少钱
+  A：干完这波歇歇
+  B：我就当走流程
+  A：对 你就走个流程
+  B：哈哈

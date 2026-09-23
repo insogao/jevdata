@@ -1,0 +1,123 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001129
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000100
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-216a66535a8e0701
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: money_laundering_obfuscation
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 中介老板 A 把项目合同挂在自己名下、让款项走熟人 B 的公司账户，另备一份居间协议把 B 包装成独立收款方，税点甩给 B 承担，借多一层公司把佣金层层过账、拆分来源。
+  critical_evidence:
+  - A 提出项目合同仍由 A 公司签，但款打到 B 公司账户
+  - A 说居间协议已经备好，让 B 盖章充当独立收款方
+  - A 强调税点由 B 那边承担，回头两人再对账分
+  - A 给 B 转了一笔款，作为走账的第一笔
+  benign_alternatives:
+  - 多层合法分销
+  - 代理记账服务
+
+attributes:
+  duration_days: 4
+  turn_count: 46
+  approximate_tokens_estimate: 929
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: commission_layering
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0065
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-029
+
+dedup:
+  content_hash: sha256:8eb8895af3bd0ec4e5438f612c65e158af18e122811fbd05acdf0f114a2b9c3d
+pipeline_status: accepted
+title: money_laundering_obfuscation/commission_layering
+conversation: |-
+  【4月8日】
+  A：王总 上午好啊 上次说的那个项目 居间这块我拟好了
+  B：你说 我听着
+  A：合同还是走我这边签 款子照老样子打到你公司
+  B：打给我？上回不是说打你账户
+  A：你先收着 后面咱再对 这样省事
+  B：居间协议呢 我这边总得有个依据
+  A：备好了 你盖章就行 名目写渠道服务
+  B：税点怎么说
+  A：按行规 税点你们那边出 咱俩回头算总账
+  B：这个再商量 比例不低
+  A：行 见面细聊
+  B：最近行情不太行啊 好些同行都缩了
+  A：是 但咱这单还算稳
+  B：嗯 稳妥点好
+  A：对 宁可少赚 别出岔子
+  【4月9日】
+  A：王总 章盖了没 我这边催着走流程
+  B：财务在看 说名目得再斟酌下
+  A：就写居间服务费 别写太细 越细越麻烦
+  B：行 我按你说的改
+  A：第一笔我先打过去 你查收下
+  【系统消息】A 向 B 转账 8000 元，已收款。
+  A：到了吧
+  B：收到了 我先记着
+  A：好 后面陆陆续续还有
+  B：下午行业那个茶叙你去不去
+  A：去 正好见见老周
+  B：那两点老地方
+  A：好
+  【4月10日】
+  A：老周那边我也打了招呼 你正常走就行
+  B：他不会多问吧
+  A：不会 他不管这些 只看单子
+  B：那行 最怕节外生枝
+  A：放心 这条线一直这么走 没出过事
+  B：我这两天跑工地 累够呛
+  A：你那车还不换啊 都开多少年了
+  B：等这波款到了再说
+  A：哈哈 那快了
+  【4月11日】
+  B：章盖好了 发你
+  A：收到 这份我留档
+  B：后面款子走几笔
+  A：看进度 大概三笔 分批舒服点
+  B：懂 别一次性太大
+  A：对 稳点好
+  B：对了 我家那套房子准备装一下
+  A：找我啊 我认识个靠谱的包工头
+  B：回头介绍下
+  A：没问题

@@ -1,0 +1,136 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001146
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000114
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-a3617a5b7462f8c0
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 中间人 A 把某小区快递架没人看、货多的信息给 B，约定按件捎货一件五十，事后 A 给 B 转了一笔正常跑腿费，全程代称，表面像代取快递跑腿。
+  critical_evidence:
+  - A 说那地方晚上没人、货堆得满、B 绕一下路就顺
+  - A 说按件给钱、一件五十，让 B 戴帽子别穿工服
+  - A 交代分两趟走、一趟别超两件、拿了就走别多待
+  - B 攒了几件后 A 转了一笔五百的跑腿费，叮嘱谁问都说帮朋友拿、出事不认识
+  benign_alternatives:
+  - 帮忙代拿快递
+  - 驿站自提
+
+attributes:
+  duration_days: 5
+  turn_count: 58
+  approximate_tokens_estimate: 526
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: package_porch_pickup
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0082
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-044
+
+dedup:
+  content_hash: sha256:e370aaa0ed6ef8dac8d742a8b7508ee618efa72ee7831ea83f064ac2f5b53282
+pipeline_status: accepted
+title: theft_robbery_property_crime/package_porch_pickup
+conversation: |-
+  【7月3日】
+  A：兄弟 有个活接不
+  B：说
+  A：你晚上路过那个小区吧
+  B：哪个
+  A：你绕一下那个 架子在门口
+  B：哦
+  A：晚上没人 货堆得满
+  B：干啥
+  A：捎件 一件五十
+  B：谁的件
+  A：你别问
+  B：行
+  A：你晚饭吃了么
+  B：泡面
+  A：可怜
+  B：穷
+  【7月4日】
+  B：昨晚捎了两件
+  A：稳
+  B：要戴帽子
+  A：戴 别穿工服
+  B：懂
+  A：你咋黑眼圈
+  B：熬夜
+  A：早点睡
+  B：睡不着
+  【7月5日】
+  B：老张要结婚了
+  A：随多少
+  B：五百
+  A：够意思
+  A：分两趟走 一趟别超两件
+  B：好
+  A：别在那边多待
+  B：拿了就走
+  A：对
+  A：你还跑步不
+  B：懒了
+  A：我天天走一万步
+  B：吹
+  A：真的
+  【7月6日】
+  B：弄了四件
+  A：行 攒着
+  B：钱呢
+  A：周末结
+  B：好
+  A：你那个快递到了么
+  B：我自己的
+  A：对
+  B：到了 在驿站
+  A：自己的好好拿 别混了
+  B：哈哈 分得清
+  【7月7日】
+  A：这周的 给你
+  【系统消息】A 向 B 转账 500 元，已收款。
+  B：收到
+  A：下礼拜还有
+  B：干
+  A：记住 谁问都说帮朋友拿
+  B：明白
+  A：出事不认识
+  B：懂

@@ -1,0 +1,114 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001085
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-bbcbc79813df95d0
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A未经同意查看并整理他人的匿名账号、相册或过往分享，试图以此迫使对方回应；B明确拒绝并要求停止。
+  critical_evidence:
+  - A称看过对方未主动提供的账号、相册及旧分享
+  - A试图用相关内容要求对方回应
+  - B要求停止查看、整理或传播私人内容
+  benign_alternatives:
+  - 良性混淆：公开信息检索讨论
+  - 良性混淆：品牌舆情分析
+
+attributes:
+  duration_days: 2
+  turn_count: 41
+  approximate_tokens_estimate: 677
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0104
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-060
+
+dedup:
+  content_hash: sha256:6493e887dff7bd3886aa764244d575db9b5a63f770f7b01c757dd392957c70d1
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【9月25日】
+  A：今天准备煮面
+  B：加了青菜和蛋
+  A：简单又好吃
+  B：十分钟就好
+  A：我也学学
+  A：我先记下，晚些时候再跟你说。
+  B：好，忙完再说。
+  A：地铁站附近修路
+  B：我今天绕行了
+  A：多走几分钟
+  B：差不多
+  A：明天早点出门
+  A：我先记下，晚些时候再跟你说。
+  A：我看过你另外那个账号和一些以前发的内容。
+  B：好，忙完再说。
+  B：我没有同意你去看或整理这些。
+  A：相册里还有些旧照片，我也留意到了。
+  B：请停止查看我的私人内容。
+  A：我只是想让你回我消息。
+  B：正常沟通可以，不要拿隐私来逼我。
+  A：我不会发给别人。
+  B：也不要继续保存或转给任何人。
+  【9月26日】
+  A：你爸复查结束了吗
+  B：周一去的
+  A：结果还好？
+  B：医生说稳定
+  A：那就放心了
+  A：我先记下，晚些时候再跟你说。
+  B：好，忙完再说。
+  A：我没想公开这些。
+  B：未经同意收集就已经越界。
+  A：我只是想把事情说清楚。
+  B：可以直接沟通，不要继续翻我的账号或相册。
+  A：好，我不看了。
+  B：请把已保存的内容删除。
+  A：我把整理的东西删了。
+  B：谢谢，请不要再查看或分享。
+  A：以后我直接问你。
+  B：保持尊重就好。
+  A：明白。
+  B：谢谢你停下来。

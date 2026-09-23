@@ -1,0 +1,150 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001143
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000114
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-d9dcca60d06cfec6
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 同厂的 A 把某小区快递架的信息透给同事 B，下班那条路顺，约定按件捎货给钱，两人全程用代称不点破，表面像帮忙代取快递。
+  critical_evidence:
+  - A 提到老地方架子上货堆得满、晚上没人、B 下班正好顺路
+  - A 说按件算、一件五十，让 B 戴帽子别穿厂里那身
+  - A 交代一趟别多拿、分两趟隔半个点走
+  - B 晚上先试了一趟拿两件，A 说钱攒着周末给，出了事两人不认识
+  benign_alternatives:
+  - 帮忙代拿快递
+  - 驿站自提
+
+attributes:
+  duration_days: 5
+  turn_count: 73
+  approximate_tokens_estimate: 728
+  relationship: 同事
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: package_porch_pickup
+  risk: 1
+  relationship: 同事
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0082
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-044
+
+dedup:
+  content_hash: sha256:acc82059ee6609a7b17e104bbfd561e6cc1a7a97646f79c3e06e3cdbb6d26d8b
+pipeline_status: accepted
+title: theft_robbery_property_crime/package_porch_pickup
+conversation: |-
+  【6月1日】
+  A：下了？
+  B：刚下
+  A：老地方那事 想好没
+  B：哪个老地方
+  A：就你回家那条路拐一下那个
+  B：哦 那架子
+  A：嗯 那边货现在堆得满
+  B：你咋知道
+  A：我天天路过
+  B：有人管不
+  A：白天有人 晚上就没
+  A：你下班十点 正好
+  B：这周排班出了没
+  A：出了 我夜班
+  B：我也夜
+  A：巧
+  B：夜班清净
+  A：就是困
+  【6月2日】
+  B：今天食堂那个鸡腿不错
+  A：我去晚了 没了
+  B：下次早点
+  A：你帮我占
+  B：行
+  A：一趟捎两件就行 别贪
+  B：五十一件
+  A：对 一件五十 多的另算
+  B：帽子要戴
+  A：戴 别穿厂里那身
+  B：工服太扎眼
+  A：对 你懂
+  B：我试试
+  【6月3日】
+  A：借根烟
+  B：你不是戒了
+  A：没忍住
+  B：没出息
+  A：哈哈
+  B：昨晚顺了一趟
+  A：几件
+  B：两件 稳
+  A：放哪了
+  B：车里
+  A：别拆 明天再说
+  B：懂
+  【6月4日】
+  A：你室友还打呼不
+  B：打 我戴耳塞
+  A：换房呗
+  B：贵
+  A：也是
+  A：今晚那边货更多
+  B：几趟合适
+  A：分两趟 隔半个点
+  B：好
+  A：记住 被问就说帮朋友拿
+  B：那肯定
+  A：出了事 咱俩不认识
+  B：明白
+  【6月5日】
+  B：周末你回不
+  A：回 我妈让带东西
+  B：我也回 顺路
+  A：那拼车
+  B：好
+  B：这两天弄了六件
+  A：钱我攒着 周末给你
+  B：行
+  A：别跟厂里人提
+  B：我又不傻
+  A：稳当点 这买卖能做长
+  B：知道
+  A：你腰还疼不
+  B：老毛病
+  A：少搬重的
+  B：干这行没办法
+  A：是啊

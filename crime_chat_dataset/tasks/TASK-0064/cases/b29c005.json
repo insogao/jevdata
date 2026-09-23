@@ -1,0 +1,334 @@
+{
+ "key": "b29c005",
+ "archetype_id": "ARC-000100",
+ "subtype": "commission_layering",
+ "latent_intent": "A 作为上级让下属 B 用个人账户代收项目回款，合同签在 A 名下，居间分成比例和税点提前说定，似乎是借下属账户层层走账、截留佣金；B 照办但账目含糊，线索较弱。",
+ "critical_facts": [
+  "合同以A名义签订，回款走B个人账户",
+  "居间分成比例已提前约定",
+  "税点由B这边承担",
+  "双方之间有一笔正常的小额转账"
+ ],
+ "benign_alternatives": [
+  "正常代收与报销安排",
+  "代理记账服务"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "7月14日 09:00",
+   "speaker": "A",
+   "text": "小刘，这个项目的合同你跟进一下"
+  },
+  {
+   "type": "message",
+   "time": "7月14日 09:03",
+   "speaker": "B",
+   "text": "好的张总，主体还是写咱们？"
+  },
+  {
+   "type": "message",
+   "time": "7月14日 09:06",
+   "speaker": "A",
+   "text": "主体写我，回款先走你那个账户"
+  },
+  {
+   "type": "message",
+   "time": "7月14日 09:09",
+   "speaker": "B",
+   "text": "走我个人卡吗"
+  },
+  {
+   "type": "message",
+   "time": "7月14日 09:12",
+   "speaker": "A",
+   "text": "嗯，你卡方便，公司账户流程太慢"
+  },
+  {
+   "type": "message",
+   "time": "7月14日 09:15",
+   "speaker": "B",
+   "text": "那中间那部分怎么算"
+  },
+  {
+   "type": "message",
+   "time": "7月14日 09:18",
+   "speaker": "A",
+   "text": "居间费按到账抽两个点，还是老规矩"
+  },
+  {
+   "type": "message",
+   "time": "7月14日 09:21",
+   "speaker": "B",
+   "text": "税呢"
+  },
+  {
+   "type": "message",
+   "time": "7月14日 09:24",
+   "speaker": "A",
+   "text": "税点你们出，我这只是过个名义"
+  },
+  {
+   "type": "message",
+   "time": "7月14日 09:27",
+   "speaker": "B",
+   "text": "行，我先照做"
+  },
+  {
+   "type": "message",
+   "time": "7月14日 11:30",
+   "speaker": "B",
+   "text": "张总中午吃饭吗，我下楼带"
+  },
+  {
+   "type": "message",
+   "time": "7月14日 11:33",
+   "speaker": "A",
+   "text": "带个盖饭就行，简单点"
+  },
+  {
+   "type": "message",
+   "time": "7月14日 11:36",
+   "speaker": "B",
+   "text": "好，还是青椒肉丝"
+  },
+  {
+   "type": "message",
+   "time": "7月14日 11:39",
+   "speaker": "A",
+   "text": "嗯，顺便把发票抬头确认下"
+  },
+  {
+   "type": "message",
+   "time": "7月14日 14:00",
+   "speaker": "A",
+   "text": "合同草稿出来了吗"
+  },
+  {
+   "type": "message",
+   "time": "7月14日 14:03",
+   "speaker": "B",
+   "text": "出来了，金额和主体都按你说的填"
+  },
+  {
+   "type": "message",
+   "time": "7月14日 14:06",
+   "speaker": "A",
+   "text": "回款账户记得填你自己的"
+  },
+  {
+   "type": "message",
+   "time": "7月14日 14:09",
+   "speaker": "B",
+   "text": "填了，但这种大额进我个人卡我有点怵"
+  },
+  {
+   "type": "message",
+   "time": "7月14日 14:12",
+   "speaker": "A",
+   "text": "怕什么，过一下账就转走，走量而已"
+  },
+  {
+   "type": "message",
+   "time": "7月14日 14:15",
+   "speaker": "B",
+   "text": "那我记个流水，回头对得上"
+  },
+  {
+   "type": "message",
+   "time": "7月14日 14:18",
+   "speaker": "A",
+   "text": "对，别留明细在公开的地方"
+  },
+  {
+   "type": "message",
+   "time": "7月14日 16:40",
+   "speaker": "A",
+   "text": "这月绩效我帮你争取了，别掉链子"
+  },
+  {
+   "type": "message",
+   "time": "7月14日 16:43",
+   "speaker": "B",
+   "text": "谢谢张总，我肯定配合"
+  },
+  {
+   "type": "message",
+   "time": "7月15日 09:20",
+   "speaker": "A",
+   "text": "甲方说下周走流程，你把材料备齐"
+  },
+  {
+   "type": "message",
+   "time": "7月15日 09:23",
+   "speaker": "B",
+   "text": "好，居间协议也一起附吗"
+  },
+  {
+   "type": "message",
+   "time": "7月15日 09:26",
+   "speaker": "A",
+   "text": "附上，按到账分成那条写清楚"
+  },
+  {
+   "type": "message",
+   "time": "7月15日 09:29",
+   "speaker": "B",
+   "text": "税那条还是写我方承担？"
+  },
+  {
+   "type": "message",
+   "time": "7月15日 09:32",
+   "speaker": "A",
+   "text": "写你们出，跟之前一样"
+  },
+  {
+   "type": "message",
+   "time": "7月15日 11:00",
+   "speaker": "B",
+   "text": "外面太阳挺大，你出门记得打伞"
+  },
+  {
+   "type": "message",
+   "time": "7月15日 11:03",
+   "speaker": "A",
+   "text": "不了，我开车"
+  },
+  {
+   "type": "message",
+   "time": "7月15日 11:06",
+   "speaker": "B",
+   "text": "那你注意别中暑"
+  },
+  {
+   "type": "message",
+   "time": "7月15日 15:10",
+   "speaker": "A",
+   "text": "首笔款到账后先别动，等我招呼"
+  },
+  {
+   "type": "message",
+   "time": "7月15日 15:13",
+   "speaker": "B",
+   "text": "好，那笔我先记着"
+  },
+  {
+   "type": "message",
+   "time": "7月15日 15:16",
+   "speaker": "A",
+   "text": "嗯，稳妥点"
+  },
+  {
+   "type": "message",
+   "time": "7月15日 17:00",
+   "speaker": "A",
+   "text": "上回你垫的打印费我转你了"
+  },
+  {
+   "type": "message",
+   "time": "7月15日 17:02",
+   "speaker": "A",
+   "text": "别跟项目款混一起"
+  },
+  {
+   "type": "message",
+   "time": "7月15日 17:04",
+   "speaker": "B",
+   "text": "收到，打印费八十六，我对上了"
+  },
+  {
+   "type": "transfer",
+   "time": "7月15日 17:05",
+   "from": "A",
+   "to": "B",
+   "amount": 86,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "7月15日 17:08",
+   "speaker": "B",
+   "text": "谢谢张总"
+  },
+  {
+   "type": "message",
+   "time": "7月16日 09:40",
+   "speaker": "A",
+   "text": "流程过了，合同用印了"
+  },
+  {
+   "type": "message",
+   "time": "7月16日 09:43",
+   "speaker": "B",
+   "text": "首笔多少"
+  },
+  {
+   "type": "message",
+   "time": "7月16日 09:46",
+   "speaker": "A",
+   "text": "三成，十几万，月底到"
+  },
+  {
+   "type": "message",
+   "time": "7月16日 09:49",
+   "speaker": "B",
+   "text": "到了我按两个点留，剩下转你"
+  },
+  {
+   "type": "message",
+   "time": "7月16日 09:52",
+   "speaker": "A",
+   "text": "对，税点你们担，别再问一遍"
+  },
+  {
+   "type": "message",
+   "time": "7月16日 09:55",
+   "speaker": "B",
+   "text": "记住了，我盯着到账"
+  },
+  {
+   "type": "message",
+   "time": "7月16日 11:20",
+   "speaker": "B",
+   "text": "张总，周末你有空吗，组里说聚一下"
+  },
+  {
+   "type": "message",
+   "time": "7月16日 11:23",
+   "speaker": "A",
+   "text": "看情况，先别算我"
+  },
+  {
+   "type": "message",
+   "time": "7月16日 11:26",
+   "speaker": "B",
+   "text": "好，定了再跟你说"
+  },
+  {
+   "type": "message",
+   "time": "7月16日 16:30",
+   "speaker": "A",
+   "text": "这笔完了还有下一批，你稳定做"
+  },
+  {
+   "type": "message",
+   "time": "7月16日 16:33",
+   "speaker": "B",
+   "text": "行，只要别让我公开明细就行"
+  },
+  {
+   "type": "message",
+   "time": "7月16日 16:36",
+   "speaker": "A",
+   "text": "放心，口径统一对外就说代收"
+  }
+ ],
+ "source_seed_ids": [
+  "SEED-SRC-BCC-001-b89ca210839e1f8d"
+ ],
+ "_registered": {
+  "case_id": "CASE-0001120",
+  "status": "accepted",
+  "errors": []
+ }
+}

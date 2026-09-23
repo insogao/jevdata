@@ -1,0 +1,135 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001119
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000100
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-21cbc564d023e94a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: money_laundering_obfuscation
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 找亲戚 B 出面做挂名收款人：项目合同签在 A 名下、回款却打进 B 的账户，居间分成与税点提前说好，以亲友身份和家庭往来掩盖层层走账；一笔钱以日常往来名义正常转入。
+  critical_evidence:
+  - 合同以A名义签订，回款走B的账户
+  - 居间协议备好，约定按到账分成
+  - 税点由B这边承担
+  - 有一笔以家庭日常往来名义的正常转账
+  benign_alternatives:
+  - 多层合法分销
+  - 亲属间正常资金往来与代理记账
+
+attributes:
+  duration_days: 6
+  turn_count: 56
+  approximate_tokens_estimate: 1181
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: commission_layering
+  risk: 1
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0064
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-029
+
+dedup:
+  content_hash: sha256:e3c2bbdc9b8ce9794d0e92079c05162cac00da154e242bc5a90d96b128fa5c4b
+pipeline_status: accepted
+title: money_laundering_obfuscation/commission_layering
+conversation: |-
+  【8月1日】
+  A：二舅，有个事想请你帮个忙
+  B：你说，跟我还客气
+  A：我接了个项目，合同签我名下，回款想走你账户过一下
+  B：走我账户？你自己的户不行吗
+  A：我这边不方便，走你那边账面上清爽
+  B：具体多少钱，别到时候我担责任
+  A：一期几十万，居间协议我都备好了，按到账分
+  B：分成给我多少，税谁出
+  A：两个点给你，税你那边担，我出名义
+  B：行吧，自家人的事我帮你一把
+  A：谢二舅，协议我明天发你
+  【8月2日】
+  B：早上好，你吃了吗
+  A：刚吃完，赶着去公司
+  B：别老不吃早饭，对胃不好
+  A：知道二舅，你也是
+  B：协议里分成要按笔列吗
+  A：要，按到账金额分笔列清
+  B：钱到你手走不走公户
+  A：不走，劳务那块直接从你那边结
+  B：为啥绕开你自己的
+  A：省得来回倒腾，你也少操心
+  B：家里腌的咸菜给你留了点，回头拿
+  A：太好了，我就好这口
+  B：周末你来家里吃饭顺便拿
+  A：行，我妈也念叨你呢
+  【8月3日】
+  A：甲方排期定了，合同这周用印
+  B：那我账户随时能用
+  A：对，税点还是你担，这条别改
+  B：知道了，你说了算
+  B：下午去公园遛弯，天不错
+  A：我这边忙，改天陪你
+  B：行，你忙你的
+  【8月4日】
+  A：上会过了，合同今天用印
+  B：首笔多少，到账我咋弄
+  A：四成，二十来万，到账先别动等我招呼
+  B：好，我记着
+  B：你表弟下月结婚，你去吗
+  A：去，礼金我包了
+  B：那咱们一块去，热闹
+  【8月5日】
+  A：这个月的家用我先转你，跟项目款分开
+  A：老人那边买药的钱别省
+  B：收到，三千，我记着呢
+  【系统消息】A 向 B 转账 3000 元，已收款。
+  B：钱收到了，家里的事你放心
+  A：明细发你邮箱了，劳务从你那边出
+  B：不过你公户，对吧
+  A：对，名单我备齐，税务对得上
+  【8月6日】
+  A：甲方说首笔这两天走
+  B：那我天天看手机银行
+  A：到账扣两个点，剩下按明细分
+  B：明白，税我处理
+  B：天热，你多喝水别中暑
+  A：在办公室还好，你出门打伞
+  A：对外的口径就说是联合执行
+  B：知道了，我不乱讲
+  A：回头这单结了我请你吃好的
+  B：哈哈，那我可就等着了

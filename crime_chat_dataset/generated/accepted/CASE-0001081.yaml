@@ -1,0 +1,116 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001081
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-ca231de7abf367b7
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A试图从非正式渠道打听另一名学生的成绩，并以红包换取截图；B拒绝越权查询和传播。
+  critical_evidence:
+  - A提出私下询问他人成绩并要求截图
+  - A提及红包作为交换
+  - B拒绝并建议由监护人联系学校官方渠道
+  benign_alternatives:
+  - 良性混淆：家长查自己孩子
+  - 良性混淆：学校官方查询
+
+attributes:
+  duration_days: 6
+  turn_count: 41
+  approximate_tokens_estimate: 693
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0104
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-060
+
+dedup:
+  content_hash: sha256:db90a33522c62836784cac31147e26835addd49672326fd76d5546cc122b7825
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【9月10日】
+  A：你妈最近学会烤饼了吗
+  B：会了，周末做了几张
+  A：味道怎么样
+  B：挺香的
+  A：下次给我尝尝
+  A：我先记下，晚些时候再跟你说。
+  B：好，忙完再说。
+  A：想问你个事，能不能帮我打听一下某个学生的考试情况？
+  B：成绩属于个人资料，最好让家长自己查。
+  A：我给红包了，老师那边点一下，发张截图就行。
+  B：红包我会退回，不会让老师把成绩发给你。
+  A：我只想知道大概，不会到处讲。
+  B：未经同意我不能打听或转发。
+  A：行，我先不问了。
+  B：需要了解就走学校官方途径。
+  【9月11日】
+  A：新开的公交专线快吗
+  B：我坐过一次
+  A：比以前省时间吗
+  B：差不多快十分钟
+  A：那很不错
+  A：我先记下，晚些时候再跟你说。
+  B：好，忙完再说。
+  【9月14日】
+  A：你后来问了吗？
+  B：没有，也不会私下询问。
+  A：红包你收下吧。
+  B：我已经退回了。
+  A：好吧。
+  B：学生成绩需要保护。
+  【9月15日】
+  A：晚上风挺大的
+  B：我把窗关了
+  A：明天也会冷
+  B：我拿外套
+  A：别忘围巾
+  A：我先记下，晚些时候再跟你说。
+  B：好，忙完再说。
+  A：家长准备自己联系学校。
+  B：这样更合适。
+  A：我不再麻烦你。
+  B：谢谢理解。
+  A：之后按正规流程。
+  B：好，有问题让监护人咨询学校。

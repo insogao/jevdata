@@ -1,0 +1,145 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001135
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000095
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-407bf4f1d5c6256c
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: money_laundering_obfuscation
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 熟人 A 以卡券回收生意为幌子，按九四折实结收购老李手上的京东卡、苏果卡，指定要卡密、不走平台、收到卡密即刻私人打款，实为帮上游把礼品卡折价变现、绕开可追溯的卡用途。
+  critical_evidence:
+  - A 提出按九四折实结回收礼品卡，强调走量、长期要
+  - A 明确只要京东卡和苏果卡，别的卡不要
+  - A 要求直接把卡密发过来、不走回收平台、收到就私人打款
+  - A 就这批卡给 B 转了一笔回收款，B 确认到账
+  benign_alternatives:
+  - 正规卡券回收平台
+  - 公司福利卡转让
+
+attributes:
+  duration_days: 6
+  turn_count: 66
+  approximate_tokens_estimate: 1331
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: gift_card_cashout
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0065
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-029
+
+dedup:
+  content_hash: sha256:4193e5b232a174a691caf44120a77ffb301feea41031d28f24319413e3e925ae
+pipeline_status: accepted
+title: money_laundering_obfuscation/gift_card_cashout
+conversation: |-
+  【9月2日】
+  A：老李 在忙不
+  B：刚开完会 咋啦
+  A：你那批卡还出不 就上回说公司发的那堆
+  B：出啊 放抽屉里也是放着
+  A：京东还是苏果
+  B：两种都有 你要哪种
+  A：都要 京东卡苏果卡我这边都不挑
+  B：啥价
+  A：老规矩 九四折实结 卡密发过来我立马打款
+  B：九四折有点低吧 上回不是这个数
+  A：最近行情就这样 我走量 你要嫌低也没事
+  B：行 那我理理看一共有多少
+  A：对了 你家小子开学了没
+  B：上礼拜开的 现在天天六点就得起
+  A：一样一样 我家那个也是 接送来回两趟
+  B：现在当家长比上班还累
+  A：可不是嘛 熬过这学期就好了
+  B：借你吉言 哈哈
+  【9月3日】
+  A：卡理出来没
+  B：昨晚数了下 京东四千多 苏果一千五
+  A：行 你方便就发卡密 我收到就结
+  B：走平台不行吗 我总怕出岔子
+  A：平台到账慢 咱老熟人了 我直接转你 还快
+  B：也是 那就直接发你
+  B：你们小区停车费是不是又涨了
+  A：涨了 一个月多八十 气得我
+  B：我们这也涨 车位还不够 天天抢
+  A：现在啥都涨就工资不涨
+  B：可不是
+  【9月4日】
+  A：卡密发我吧 今天给你结了
+  B：等下 我拍个照给你
+  A：直接发卡密就行 拍照看不清还容易错
+  B：好 那我一条条发你
+  B：发你了 你看下
+  A：收到 我对一下数
+  B：你快点啊 别给我弄丢了
+  A：放心 弄丢我赔你 差不了
+  【系统消息】A 向 B 转账 5170 元，已收款。
+  A：转你了 查收下
+  B：收到了 痛快
+  B：你中秋回老家不
+  A：回 我妈念叨好几回了
+  B：我也得回趟 老人年纪大了
+  A：是啊 趁还走得动多回去看看
+  B：说的对
+  【9月5日】
+  A：我昨天去体检 血压有点高
+  B：你少吃点咸的 少熬夜
+  A：医生也这么说 让多运动
+  B：咱这岁数 真该注意了
+  A：唉 愁人
+  【9月6日】
+  B：我同事那还有一批卡 你要不要
+  A：要啊 有多少
+  B：说是两三千京东的
+  A：一样九四折实结 卡密过来就转
+  B：你收这么久 不怕砸手里
+  A：我这边有出的路子 不愁
+  B：行 我问问她
+  B：双十一你囤啥了没
+  A：囤了两箱纸 便宜不少
+  B：我也买了点洗衣液
+  A：现在不囤好像亏了似的
+  【9月7日】
+  B：我同事说卡先不出了 她老公要用
+  A：行 有的话随时找我
+  B：你收卡这事 别往外说 我怕公司知道不好
+  A：晓得 我嘴严 你放一百个心
+  B：嗯 那就这样
+  A：好嘞 有卡喊我

@@ -1,0 +1,117 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001088
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-6f335422b9832fc8
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A未经授权出售员工联系方式、简历和离职相关资料；B拒绝交易或传播员工信息。
+  critical_evidence:
+  - A提出整批员工联系方式、简历和离职资料可按份出售
+  - B拒绝买卖、转发或联系买家
+  - B要求停止传播并按正规流程交回或删除资料
+  benign_alternatives:
+  - 良性混淆：猎头正常触达
+  - 良性混淆：通讯录共享授权
+
+attributes:
+  duration_days: 2
+  turn_count: 43
+  approximate_tokens_estimate: 754
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0104
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-060
+
+dedup:
+  content_hash: sha256:d34afe050bc88d02d8975296b432f3c56df0e08e46bbd4ad9ad41c6ef799c007
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【9月22日】
+  A：附近有家新咖啡店
+  B：我喝了热巧克力
+  A：天冷时挺好
+  B：是
+  A：下次我点拿铁
+  A：我先记下，晚些时候再跟你说。
+  B：好，忙完再说。
+  A：周会材料准备好了吗
+  B：还差一页
+  A：今天能补完
+  B：下班前发出
+  A：辛苦
+  A：我先记下，晚些时候再跟你说。
+  A：我手里有些旧的人事资料，想找个下家。
+  B：好，忙完再说。
+  B：是员工联系方式和简历吗？
+  A：整个部门的电话、简历按份卖，还有离职名单。
+  B：这些是个人信息，未经授权不能出售。
+  A：有人愿意收，价格也谈好了。
+  B：我不会买、转发或帮你找买家。
+  A：那我先留着。
+  B：请停止传播，按流程交回或删除。
+  【9月23日】
+  A：周末晴天
+  B：我想去公园走走
+  A：挺好的
+  B：带点水
+  A：好
+  A：我先记下，晚些时候再跟你说。
+  B：好，忙完再说。
+  A：上回拼单午饭的一百二我转给你了。
+  【系统消息】A 向 B 转账 120 元，已收款。
+  B：收到了，正好是饭钱。
+  A：对方又来问那批东西。
+  B：不要发给任何人。
+  A：他说只想看看一小部分。
+  B：一部分也不行，不要发送员工资料。
+  A：好，我拒绝他。
+  B：来源是单位的话交给人事或隐私负责人。
+  A：我把文件交回去了。
+  B：谢谢，记得不要留副本。
+  A：我也告诉对方不再联系。
+  B：好，个人信息只能在授权范围内使用。
+  A：明白。
+  B：招聘需求走公开渠道。

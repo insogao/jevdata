@@ -1,0 +1,149 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001121
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000100
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-28429458b4787e28
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: money_laundering_obfuscation
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 经人介绍找到陌生的 B，谈借 B 的公司账户走项目回款：合同签在 A 的关联主体上、款打到 B 公司账户，居间协议预先备好并约定分成，税点由 B 承担，实质是层层过账、截留本应进 A 公户的佣金；双方不熟，试探口吻。
+  critical_evidence:
+  - 合同以A方名义签订，回款打到B公司账户
+  - 居间协议提前备好，约定按到账分成
+  - 税点由B承担，B只出账户与资质
+  - 分成明细单独结，不经A公户
+  benign_alternatives:
+  - 多层合法分销
+  - 正规居间与代理记账
+
+attributes:
+  duration_days: 5
+  turn_count: 72
+  approximate_tokens_estimate: 1688
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: commission_layering
+  risk: 1
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0064
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-029
+
+dedup:
+  content_hash: sha256:8354a57bed4687678d9170a0203b17049a9a995730c756caefdb5cefee50bc40
+pipeline_status: accepted
+title: money_laundering_obfuscation/commission_layering
+conversation: |-
+  【3月2日】
+  A：你好，是赵总介绍我来的，说有合作想谈
+  B：你好，他跟我提过，你是做什么的
+  A：我做项目推广的，有笔回款想走你公司账过一下
+  B：走我账？详细说说
+  A：合同签我这边主体，回款打到你公司，你出账户和资质
+  B：那钱进了我账，怎么出来
+  A：按居间协议分成，我这边已经备好协议了
+  B：分成多少，税谁出
+  A：到账两个点给你，税点你们出，我就过个名义
+  B：我先了解，你方案发我看
+  A：好，协议和明细我整理发你
+  B：你先说下这单大概多大
+  A：一期六七十万，后面还有二期
+  B：量不小，我得看看合规不合规
+  A：对外就讲联合执行，资质你有，别的我来
+  B：我这边出人出力吗
+  A：不用，你只管收款开票，执行我背靠背做
+  【3月3日】
+  B：协议看了大半，分成那条要按笔列
+  A：改好了，按到账金额分笔列清
+  B：税点确定是我方承担？
+  A：对，说好的，我这边只出合同
+  B：还有个事，钱到你手里走不走你公户
+  A：不走，劳务那部分直接从你那边结
+  B：为什么绕开你自己的户
+  A：省得来回倒腾，流程也快
+  B：我审核一下再答复
+  B：你这单甲方是哪家
+  A：城南一个园区项目，合同主体是我这边的公司
+  B：那甲方为什么不直接打给你
+  A：甲方指定路径，走你们更好过审
+  B：我打听打听这个路径
+  A：你考虑得怎么样，甲方催流程了
+  B：我法务还在看协议
+  A：居间那块按到账两个点，不亏你
+  B：钱到位后多久能分出来
+  A：三个工作日内，结算很利索
+  B：最近天气干，你那边还下雪吗
+  A：没了，就是风大，出门得裹严实
+  B：我们这也降温，晚上零下
+  【3月4日】
+  A：赵总说你那边口风紧，办事靠谱
+  B：做生意讲个稳，我先问清楚再决定
+  A：明白，资料我全给你
+  B：协议里分成基数是含税还是不含税
+  A：按到账含税算，税你自己处理
+  B：那税负都在我这，点数得再加
+  A：两个点是行情，量大了我再让
+  B：你把上一批的结算样例给我看看
+  A：可以，明细我脱敏后发你
+  A：样例发了，你看下节奏
+  B：看到了，劳务那几笔确实没走你公户
+  A：对，都从你这边直结，省一道
+  B：我基本清楚了，明天给准话
+  【3月5日】
+  B：我想了一晚，这单我可以做
+  A：痛快，我把合同流程推起来
+  B：但口径统一，对外就说联合执行
+  A：当然，排期和资料我来做扎实
+  B：回款路径和分成按协议走，白纸黑字
+  A：成，甲方那边这两天就用印
+  B：对了我周末去看球，你也看吗
+  A：看，不过我是散场那队的
+  B：那咱俩别聊比分，省得伤和气
+  A：哈哈，谈钱就好
+  A：合同递上去了，等回款通知
+  B：好，到账我盯网银
+  A：明细我先发你，税点你们担那条别改
+  B：不改，收款后三个工作日结算
+  【3月6日】
+  A：赵总让我谢谢你，说这单成了长期合作
+  B：长期可以，规矩照这次来
+  A：行，下批我提前报给你
+  B：我这边会计也过了，没问题
+  A：那就等回款，到了你吱一声
+  B：放心，见款办事

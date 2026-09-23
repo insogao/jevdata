@@ -1,0 +1,127 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001144
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000113
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-b7ee4e58bdca9d94
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 中间人 A 把一批带锁机倒给做解锁的 B，按台抽成再出货，两人用带锁的、解完、成色等行话代称不点破，表面像二手手机回收生意。
+  critical_evidence:
+  - A 说有批带锁的、十台、成色好屏没花，让 B 解完他出
+  - A 说一台给 B 一百，B 答应能弄
+  - A 说批量优惠、问 B 能接多少，B 说二十台
+  - A 说这周的份子月底结，叮嘱客户问就说是回收的
+  benign_alternatives:
+  - 二手手机回收
+  - 失物招领
+
+attributes:
+  duration_days: 5
+  turn_count: 50
+  approximate_tokens_estimate: 392
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: phone_reset_resell
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0082
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-044
+
+dedup:
+  content_hash: sha256:f6dba178744167880fc190c5bf8959b645bdc5d110acfe49a93d4c51f652f77d
+pipeline_status: accepted
+title: theft_robbery_property_crime/phone_reset_resell
+conversation: |-
+  【5月6日】
+  A：兄弟 有批带锁的
+  B：多少
+  A：十台
+  B：成色
+  A：好 屏没花
+  A：你解完我出
+  B：一台多少
+  A：一百
+  B：行
+  B：你中午吃啥
+  A：盖饭
+  B：我也
+  A：你办卡了
+  B：办了 去了三次
+  A：浪费
+  B：哈哈
+  【5月7日】
+  A：货到了
+  B：我看看
+  A：都能开机 就是带锁
+  B：没事 能弄
+  B：周末回老家不
+  A：回
+  B：带啥
+  A：没啥
+  【5月8日】
+  B：弄好五台
+  A：快
+  B：熟了
+  A：剩下明天
+  B：好
+  A：新片看了没
+  B：没 票贵
+  A：我请
+  B：那去
+  【5月9日】
+  A：这五台出了
+  B：价咋样
+  A：好走
+  B：那多来
+  A：批量优惠 你能接多少
+  B：二十台
+  A：好
+  B：你那新机不错
+  A：凑合
+  B：贵吧
+  A：公司给的
+  【5月10日】
+  A：这周的份子记着 月底结
+  B：行
+  A：客户问就说回收的
+  B：明白
+  A：别乱说
+  B：放心

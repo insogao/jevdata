@@ -1,0 +1,148 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001133
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000095
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-0e72a9b93c236b4f
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: money_laundering_obfuscation
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 熟人 A 帮人代收礼品卡，按九四折从老友 B 手里收京东、苏果卡，指定发卡密、收到即私人转账，把面值卡悄悄折成现金，全程用日常话包着不点破。
+  critical_evidence:
+  - A 问 B 手里过节发的京东、苏果卡要不要出
+  - A 报价九四折，说给现钱、帮人代收
+  - A 只要京东和苏果卡，让 B 发卡密过来
+  - A 转了一笔回收款给 B，B 确认到账
+  benign_alternatives:
+  - 正规卡券回收平台
+  - 熟人之间福利卡转让
+
+attributes:
+  duration_days: 6
+  turn_count: 69
+  approximate_tokens_estimate: 1101
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: gift_card_cashout
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0065
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-029
+
+dedup:
+  content_hash: sha256:a0e85479c81b7459ea26ee3a34004755d0c41219becd195ce83b6b8f7b474db1
+pipeline_status: accepted
+title: money_laundering_obfuscation/gift_card_cashout
+conversation: |-
+  【10月8日】
+  A：在忙没
+  B：刚到家 咋了
+  A：问你个事 你手里还有那种卡没
+  B：什么卡
+  A：就过节发的那种 京东的苏果的
+  B：有几张 咋了
+  A：你不用的话我收 九四折给你现钱
+  B：你收这干啥
+  A：帮人代收的 放着也是放着 换钱实在
+  B：我想想
+  A：行 不着急
+  B：今天降温降得厉害 你穿厚点没
+  A：穿了 早上冻够呛
+  B：我妈还念叨你上次送的茶叶好喝
+  A：喜欢我下回再带点
+  B：那多不好意思
+  【10月9日】
+  A：卡的事想好了没
+  B：我数了 京东两张 苏果一张
+  A：多少面值
+  B：京东各五百 苏果三百
+  A：都要 九四折 一共一千二百多 我给你转
+  B：咋给我 发红包？
+  A：我直接转你 你把卡密发我就行
+  B：行 我拍给你
+  A：别拍 看不清 直接发卡密
+  B：好 发你
+  B：发过去了 你看下
+  A：收到 我对一下
+  A：核完了 转你
+  【系统消息】A 向 B 转账 1223 元，已收款。
+  A：到了吧
+  B：到了 谢啦
+  A：跟我客气啥
+  B：中午吃啥
+  A：带的饭 你呢
+  B：楼下随便吃点
+  A：别老对付 对胃不好
+  【10月10日】
+  B：我妹那边好像也有卡 要不要
+  A：要啊 京东苏果都行 一样的价
+  B：我先问问她
+  A：好 卡密过来我立马打
+  B：你怎么老要卡
+  A：给人搭个桥 赚点烟钱 不偷不抢
+  B：行 你心里有数就行
+  B：周末你去看球不
+  A：看 票都买好了
+  B：带上我呗
+  A：多买了一张 正好
+  【10月11日】
+  A：你妹那卡有信没
+  B：她说留着买家电 不出了
+  A：行 有需要再找我
+  B：你这收卡别让人知道啊
+  A：放心 就咱几个知道
+  B：我妈最近血压不稳 愁死我
+  A：带她去医院看看 别拖
+  B：约了下周的号
+  A：那就好 老人得上心
+  【10月12日】
+  B：你上次那事办得挺利索
+  A：小本买卖 讲个信用
+  B：以后有卡我还找你
+  A：随时 京东苏果都收
+  B：中午食堂排队排疯了
+  A：赶上饭点了呗
+  B：下次早点去
+  A：我也去 一起
+  【10月13日】
+  A：周末球赛记得啊
+  B：记着呢 几点
+  A：下午三点 老地方见
+  B：好嘞 到时候聊
+  A：行 回见

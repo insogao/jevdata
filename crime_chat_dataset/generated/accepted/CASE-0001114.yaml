@@ -1,0 +1,140 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001114
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-b5cb17804b9e3252
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 请求学校工作人员 B 越权查看非本人监护范围内学生的成绩档案，并以红包致谢、索要截图；B 拒绝调阅或泄露教育信息，建议由有权限的监护人走正式查询流程。
+  critical_evidence:
+  - A 请求私下查他人成绩档案
+  - A 提及红包并索要截图
+  - B 拒绝调阅、截图或传播成绩及升学信息
+  - B 指引监护人使用学校正式渠道
+  benign_alternatives:
+  - 家长查询自己孩子
+  - 学校官方查询
+
+attributes:
+  duration_days: 4
+  turn_count: 63
+  approximate_tokens_estimate: 1064
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0122
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-069
+
+dedup:
+  content_hash: sha256:28c09de38fd96d7b9231c7be33100d529cbf3f30e4d93eda6c795167102e78fc
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【9月7日】
+  A：在吗，方便说两句吗
+  B：方便，你说
+  A：我刚忙完手头的事
+  B：好，不急
+  A：最近肩膀有点酸
+  B：坐久了吧
+  A：我明早先去开个会
+  A：这两天确实没怎么动
+  B：中间起来走走
+  A：下午我去楼下转一圈
+  B：好，别一直看屏幕
+  A：嗯，不耽误你
+  A：下午应该能空下来
+  A：我明早先去开个会
+  A：嗯，不耽误你
+  A：能不能帮我看一下另一位学生的成绩档案
+  B：你是监护人吗
+  A：不是，不过班主任系统点一下就能看到
+  B：我不能私下查看他人的资料
+  A：下午应该能空下来
+  A：我明早先去开个会
+  A：另外上次午饭AA我转你了，跟刚才的事无关
+  【系统消息】A 向 B 转账 65 元，已收款。
+  B：收到了，是午饭分摊，谢谢
+  【9月8日】
+  B：好，结束了再联系
+  B：没事，我这边也能安排
+  A：下午想喝点热的
+  B：附近茶店有桂花的
+  A：甜度能调吗
+  B：可以选少糖
+  B：那我们晚点对一下
+  A：那我试试
+  B：我等下也去买
+  B：好，结束了再联系
+  B：没事，我这边也能安排
+  B：那我们晚点对一下
+  A：红包已发，给我截个图就行
+  B：我不会收这个，也不会截图或泄露成绩
+  A：我只是想知道升学情况
+  B：这也需要授权，不能绕开本人监护人
+  【9月9日】
+  A：下午应该能空下来
+  A：我明早先去开个会
+  A：嗯，不耽误你
+  A：下午应该能空下来
+  A：午饭吃什么
+  B：楼下新开的面馆还可以
+  A：我想吃清淡一点
+  B：有番茄汤底
+  A：那中午去试试
+  B：好，我一会儿下楼
+  A：我明早先去开个会
+  A：那怎么正式查询
+  B：请由监护人按学校公开流程申请
+  A：好，我去问家长
+  B：我可以提供学校办公室的公开联系方式
+  A：嗯，不耽误你
+  【9月10日】
+  A：早，昨天说的我想清楚了
+  B：嗯，你说
+  B：那我们晚点对一下
+  B：好，结束了再联系
+  B：没事，我这边也能安排
+  B：那我们晚点对一下
+  B：好，结束了再联系
+  B：没事，我这边也能安排

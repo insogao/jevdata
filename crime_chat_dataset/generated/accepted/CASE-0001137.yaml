@@ -1,0 +1,124 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001137
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000095
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-3285d113d93f9ba8
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: money_laundering_obfuscation
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 上级 A 私下做卡券折价回收，向手下 B 及同事低价收京东、苏果福利卡，按九四折实结、要卡密、强调别声张，把可追溯的福利卡换成现金。
+  critical_evidence:
+  - A 得知 B 领到公司季度福利卡后，提出按九四折收
+  - A 明确只要京东卡和苏果卡，说手上有变现渠道
+  - A 叮嘱 B 别声张、别让公司同事知道
+  - A 让 B 顺便把其他同事的卡也一起收过来
+  benign_alternatives:
+  - 公司福利卡转让
+  - 正规卡券回收平台
+
+attributes:
+  duration_days: 3
+  turn_count: 49
+  approximate_tokens_estimate: 859
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: gift_card_cashout
+  risk: 1
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0065
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-029
+
+dedup:
+  content_hash: sha256:ba5dec0ad37cbe41e1d85853ed008ddec4afeb2ef0aa96bfe6fb6add4aa3f297
+pipeline_status: accepted
+title: money_laundering_obfuscation/gift_card_cashout
+conversation: |-
+  【8月18日】
+  A：小张 忙不忙
+  B：王哥 不忙 您说
+  A：你们部门这季度福卡发了没
+  B：发了 一张五百的 还有两张两百
+  A：京东的还是苏果的
+  B：京东的 咋了
+  A：你要不用 可以给我 我按九四折收
+  B：九四折？公司发的卡也能出手啊
+  A：放着也是放着 我这边有渠道 帮你变个现
+  B：这……合适吗
+  A：有啥不合适的 好多人都这么弄 别声张就行
+  B：我回去想想
+  A：对了 昨天那个方案你改完没
+  B：改完了 发您邮箱了
+  A：好 我下午看
+  B：有问题您随时喊我
+  B：王哥 中午吃啥了
+  A：楼下那家面 凑合
+  B：我今天点的外卖 又贵又难吃
+  A：现在外卖都这德行
+  【8月19日】
+  B：王哥 那卡的事……
+  A：想好了？
+  B：我媳妇说还是留着买东西吧
+  A：京东卡买啥都行 但换成钱更灵活 九四折不少了
+  B：我再想想
+  A：行 你手头有别人的卡也可以一起给我 京东苏果都要
+  B：我帮您问问同事？
+  A：嗯 你嘴严点 别到处说是我收
+  B：明白
+  A：小张 那个报表今天能出吗
+  B：能 我核对下数字
+  A：辛苦 晚上早点走
+  B：谢谢王哥
+  B：又加班啊 头大
+  A：这个季度就这样 忍忍
+  B：啥时候能不这么忙
+  A：等项目结了吧
+  【8月20日】
+  B：王哥 我问了一圈
+  A：怎么样
+  B：大家基本都用掉了 没剩几张
+  A：那你自己那张给我呗
+  B：我留着买奶粉的 算了
+  A：行吧 不勉强
+  B：王哥 这事您别跟别人说 我怕人家多想
+  A：放心 我还能到处说不成
+  B：今天食堂有红烧肉
+  A：那必须去 哈哈
+  B：给您占个位
+  A：好嘞

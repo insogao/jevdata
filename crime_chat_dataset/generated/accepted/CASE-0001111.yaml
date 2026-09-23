@@ -1,0 +1,155 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001111
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-f5e6700487ce1d40
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 要求 B 汇集部门电话、离职名单和简历并转售；B 拒绝处理未经授权的同事资料，建议通过公开招聘接收候选人自愿提交的信息。
+  critical_evidence:
+  - A 要求整个部门电话和离职名单
+  - A 提议按份出售简历
+  - B 拒绝分享或出售未经授权的个人资料
+  - B 建议公开招聘和自愿投递
+  benign_alternatives:
+  - 猎头正常触达
+  - 经授权的通讯录共享
+
+attributes:
+  duration_days: 3
+  turn_count: 80
+  approximate_tokens_estimate: 1267
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0122
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-069
+
+dedup:
+  content_hash: sha256:836b33d244090a6683b1bd0adf1cba1adeb9e264fddd3468d2a0ca9c6912915e
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【9月3日】
+  A：在吗，方便说两句吗
+  B：方便，你说
+  A：我刚忙完手头的事
+  B：好，不急
+  A：今天风有点大
+  B：刚刚还飘了点雨
+  A：我明早先去开个会
+  A：我明早先去开个会
+  A：出门忘带伞了
+  B：回去路上顺便买把吧
+  A：看预报傍晚会停
+  B：希望下班别淋到
+  B：那我们晚点对一下
+  B：那我们晚点对一下
+  A：我明早先去开个会
+  A：我明早先去开个会
+  B：那我们晚点对一下
+  B：那我们晚点对一下
+  A：我明早先去开个会
+  A：我明早先去开个会
+  A：把整个部门电话和离职名单整理一份给我
+  B：这批资料有本人授权吗
+  A：简历按份卖，先把手头的收一收
+  B：没有授权我不会整理或出售
+  B：那我们晚点对一下
+  B：那我们晚点对一下
+  A：我明早先去开个会
+  A：我明早先去开个会
+  B：那我们晚点对一下
+  【9月4日】
+  B：好，结束了再联系
+  B：好，结束了再联系
+  A：嗯，不耽误你
+  A：嗯，不耽误你
+  A：新买的杯子到了
+  B：怎么样，好用吗
+  A：还不错，颜色比图暗
+  B：实物有点色差正常
+  A：不漏水就行
+  B：那就挺值的
+  B：好，结束了再联系
+  B：好，结束了再联系
+  A：嗯，不耽误你
+  A：嗯，不耽误你
+  B：好，结束了再联系
+  B：好，结束了再联系
+  A：嗯，不耽误你
+  A：嗯，不耽误你
+  B：好，结束了再联系
+  B：好，结束了再联系
+  A：那几份简历也不能先给吗
+  B：不行，简历和联系人都属于个人资料
+  A：离职的也算？
+  B：一样需要本人同意，不能私下转交
+  A：嗯，不耽误你
+  【9月5日】
+  A：早，昨天说的我想清楚了
+  B：嗯，你说
+  A：下午应该能空下来
+  A：下午应该能空下来
+  B：没事，我这边也能安排
+  B：没事，我这边也能安排
+  A：下午应该能空下来
+  A：下午应该能空下来
+  B：没事，我这边也能安排
+  B：没事，我这边也能安排
+  A：这周开会好多
+  B：我们也是，刚散会
+  A：材料我晚点再看一遍
+  B：好，明早发也来得及
+  A：那我先歇会儿
+  B：嗯，别太晚
+  A：下午应该能空下来
+  A：下午应该能空下来
+  A：我改成发公开招聘信息吧
+  B：可以，让候选人自己联系或投递
+  B：没事，我这边也能安排
+  B：没事，我这边也能安排
+  A：那份名单我不再要了
+  B：好，授权范围内的招聘我可以协助
+  A：下午应该能空下来
+  B：没事，我这边也能安排

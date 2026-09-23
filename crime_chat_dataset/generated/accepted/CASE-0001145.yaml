@@ -1,0 +1,148 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001145
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000113
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-47d11210e2a31df2
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 商务往来的 A 把一批带锁机交给 B 做解锁再出货、按台结算，全程用行话代称；货验完后 A 给 B 转了一笔正常手工费。
+  critical_evidence:
+  - A 说那批带锁的到了、十五台、让 B 上手
+  - A 说账号多、解完当新机走、别留痕
+  - A 说批量来更优惠、问 B 产能，B 报价一台一百五、一次能吃三十台
+  - B 交付十五台后 A 验货没问题，转了一笔两千二百五十的手工费
+  benign_alternatives:
+  - 二手手机回收
+  - 失物招领
+
+attributes:
+  duration_days: 6
+  turn_count: 69
+  approximate_tokens_estimate: 641
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: phone_reset_resell
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0082
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-044
+
+dedup:
+  content_hash: sha256:62e51fcf5dc5dc1c274c6bc1dcc23391b643654f563f463545d8c5cf9af9307e
+pipeline_status: accepted
+title: theft_robbery_property_crime/phone_reset_resell
+conversation: |-
+  【4月8日】
+  A：王工 那批到了
+  B：几台
+  A：十五台 都带锁
+  B：老规矩
+  A：对 你上手
+  B：账号的还是密码的
+  A：账号多
+  B：账号慢点
+  A：你能弄
+  B：能弄 就是费工夫
+  A：加钱
+  B：一台一百五
+  A：成
+  B：你这次出差几天
+  A：三天
+  B：那边热不
+  A：热 受不了
+  B：辛苦了
+  【4月9日】
+  A：先弄三台看看
+  B：好
+  A：解完当新机走 别留痕
+  B：懂
+  A：昨晚喝多了
+  B：又喝
+  A：没办法 客户
+  B：保重
+  A：嗯
+  【4月10日】
+  B：三台好了
+  A：快
+  B：说了费工夫
+  A：后面还有十二台
+  B：给我五天
+  A：行 我压着客户
+  A：你娃考上没
+  B：上了个二本
+  A：挺好
+  B：一般
+  A：有学上就行
+  B：也是
+  【4月11日】
+  A：批量来更优惠 你能吃多少
+  B：一次三十台
+  A：好 我跟上家说
+  B：别走生人
+  A：我过一手
+  B：你抽你的
+  A：成交
+  B：下雨了
+  A：带伞没
+  B：忘带了
+  A：打车吧
+  B：奢侈
+  A：报销
+  【4月12日】
+  B：十五台全好了
+  A：我验下
+  B：随便验
+  A：都没问题
+  B：那结账
+  A：这就转
+  【系统消息】A 向 B 转账 2250 元，已收款。
+  B：收到
+  A：下批周三到
+  B：好
+  【4月13日】
+  A：客户要的多 你撑得住不
+  B：加个人手就行
+  A：你找 别找嘴碎的
+  B：知道
+  A：别留地址 货放你那就行
+  B：放心
+  A：长期合作
+  B：好

@@ -1,0 +1,124 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001101
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-2e340f3f2ccbbf49
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 声称已把 B 的匿名社交账号与本人关联并准备在讨论区提及；B 拒绝这种个人关联和曝光，要求停止传播、转向平台隐私处理。
+  critical_evidence:
+  - A 声称认出 B 的小号，并提及旧转发或相册原图时间作为判断，但不描述任何查找方法
+  - A 表示会在讨论区继续谈及或传播账号关联判断
+  - B 明确反对身份关联和曝光，要求撤回、停止传播
+  - 区分公开品牌舆情讨论与针对个人的账号关联
+  benign_alternatives:
+  - 公开品牌内容的舆情讨论
+  - 本人自愿公开且经授权的账号说明
+
+attributes:
+  duration_days: 3
+  turn_count: 49
+  approximate_tokens_estimate: 984
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0121
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-068
+
+dedup:
+  content_hash: sha256:164065727ef1e3f58bf16b3a78ef78110bc3313ca2ec2451b792c26c3d015a6f
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【5月6日】
+  A：昨天那条讨论还在首页吗
+  B：好像还在，里面有活动信息
+  A：周末你打算出门吗
+  B：想去公园走走
+  A：预报好像多云
+  B：那正好，不晒
+  A：我认出你的小号了
+  B：别公开把账号和我连起来
+  A：你上次说那家面包店还开吗
+  B：开着呢，早上去品种多
+  A：我周六去看看
+  B：嗯，别买太多
+  A：以前的转发和原图时间看着像你
+  B：不要再根据这些谈论我，也别传播判断
+  A：最近晚上睡得怎么样
+  B：比前阵子好点了
+  A：少看会儿手机试试
+  【5月7日】
+  B：我准备早点放下
+  A：有人让我在评论里说破
+  B：请撤掉相关内容，不要回应
+  A：部门团建日期确定了吗
+  B：还在协调，可能月底
+  A：我那天应该能空出来
+  B：好，等通知
+  A：行，已经撤下
+  B：我会用平台隐私渠道报告，别再继续
+  A：之后只讨论公开活动
+  B：可以，品牌舆情不涉及我的账号
+  A：我刚忙完一阵，刚忙完一阵
+  B：辛苦啦，歇一下，刚忙完一阵
+  A：这边稍后还有个会，刚忙完一阵
+  B：那先把水喝上，刚忙完一阵
+  A：刚才信号不太好，刚忙完一阵
+  【5月8日】
+  B：我这儿也断了下，刚忙完一阵
+  A：我把日程记下来，刚忙完一阵
+  B：好，免得忘记，刚忙完一阵
+  A：等我确认完再说，刚忙完一阵
+  B：不急，按你时间来，刚忙完一阵
+  A：我准备出门了，刚忙完一阵
+  B：路上注意安全，刚忙完一阵
+  A：我刚忙完一阵，刚忙完一阵
+  B：辛苦啦，歇一下，刚忙完一阵
+  A：这边稍后还有个会，刚忙完一阵
+  B：那先把水喝上，刚忙完一阵
+  A：刚才信号不太好，刚忙完一阵
+  B：我这儿也断了下，刚忙完一阵
+  A：我把日程记下来，刚忙完一阵
+  B：好，免得忘记，刚忙完一阵
+  A：等我确认完再说，刚忙完一阵

@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001120
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000100
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-b89ca210839e1f8d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: money_laundering_obfuscation
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 作为上级让下属 B 用个人账户代收项目回款，合同签在 A 名下，居间分成比例和税点提前说定，似乎是借下属账户层层走账、截留佣金；B 照办但账目含糊，线索较弱。
+  critical_evidence:
+  - 合同以A名义签订，回款走B个人账户
+  - 居间分成比例已提前约定
+  - 税点由B这边承担
+  - 双方之间有一笔正常的小额转账
+  benign_alternatives:
+  - 正常代收与报销安排
+  - 代理记账服务
+
+attributes:
+  duration_days: 3
+  turn_count: 50
+  approximate_tokens_estimate: 1030
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: commission_layering
+  risk: 1
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0064
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-029
+
+dedup:
+  content_hash: sha256:7c598cc3757c21f34c78753540f80bff54f788d92172b5c1f973e8de91d98fb1
+pipeline_status: accepted
+title: money_laundering_obfuscation/commission_layering
+conversation: |-
+  【7月14日】
+  A：小刘，这个项目的合同你跟进一下
+  B：好的张总，主体还是写咱们？
+  A：主体写我，回款先走你那个账户
+  B：走我个人卡吗
+  A：嗯，你卡方便，公司账户流程太慢
+  B：那中间那部分怎么算
+  A：居间费按到账抽两个点，还是老规矩
+  B：税呢
+  A：税点你们出，我这只是过个名义
+  B：行，我先照做
+  B：张总中午吃饭吗，我下楼带
+  A：带个盖饭就行，简单点
+  B：好，还是青椒肉丝
+  A：嗯，顺便把发票抬头确认下
+  A：合同草稿出来了吗
+  B：出来了，金额和主体都按你说的填
+  A：回款账户记得填你自己的
+  B：填了，但这种大额进我个人卡我有点怵
+  A：怕什么，过一下账就转走，走量而已
+  B：那我记个流水，回头对得上
+  A：对，别留明细在公开的地方
+  A：这月绩效我帮你争取了，别掉链子
+  B：谢谢张总，我肯定配合
+  【7月15日】
+  A：甲方说下周走流程，你把材料备齐
+  B：好，居间协议也一起附吗
+  A：附上，按到账分成那条写清楚
+  B：税那条还是写我方承担？
+  A：写你们出，跟之前一样
+  B：外面太阳挺大，你出门记得打伞
+  A：不了，我开车
+  B：那你注意别中暑
+  A：首笔款到账后先别动，等我招呼
+  B：好，那笔我先记着
+  A：嗯，稳妥点
+  A：上回你垫的打印费我转你了
+  A：别跟项目款混一起
+  B：收到，打印费八十六，我对上了
+  【系统消息】A 向 B 转账 86 元，已收款。
+  B：谢谢张总
+  【7月16日】
+  A：流程过了，合同用印了
+  B：首笔多少
+  A：三成，十几万，月底到
+  B：到了我按两个点留，剩下转你
+  A：对，税点你们担，别再问一遍
+  B：记住了，我盯着到账
+  B：张总，周末你有空吗，组里说聚一下
+  A：看情况，先别算我
+  B：好，定了再跟你说
+  A：这笔完了还有下一批，你稳定做
+  B：行，只要别让我公开明细就行
+  A：放心，口径统一对外就说代收

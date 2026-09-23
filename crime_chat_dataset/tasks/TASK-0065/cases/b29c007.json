@@ -1,0 +1,337 @@
+{
+ "key": "b29c007",
+ "archetype_id": "ARC-000100",
+ "subtype": "commission_layering",
+ "latent_intent": "经老周牵线，中介 A 找上 B 借其公司账户走款：合同由 A 签、款项指定打入 B 公司，居间协议事先备好让 B 充当独立服务方，税点由 B 承担，靠多出来的这一层把佣金过账、拉开与甲方的直接关联。",
+ "critical_facts": [
+  "A 经中间人介绍找到 B，提出借 B 公司账户走一笔项目款",
+  "A 说明合同由自己签、款打到 B 公司，居间协议已经备好只需 B 盖章",
+  "A 强调税点由 B 出，剩下的两人再分",
+  "A 先给 B 转了一笔款作为启动"
+ ],
+ "benign_alternatives": [
+  "多层合法分销",
+  "代理记账服务"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "3月5日 10:00",
+   "speaker": "A",
+   "text": "你好 是老周给的我你微信"
+  },
+  {
+   "type": "message",
+   "time": "3月5日 10:03",
+   "speaker": "B",
+   "text": "对 他说你有事找我"
+  },
+  {
+   "type": "message",
+   "time": "3月5日 10:05",
+   "speaker": "A",
+   "text": "我这有个项目 想借你公司账户走笔款"
+  },
+  {
+   "type": "message",
+   "time": "3月5日 10:07",
+   "speaker": "B",
+   "text": "走款？啥意思"
+  },
+  {
+   "type": "message",
+   "time": "3月5日 10:08",
+   "speaker": "A",
+   "text": "合同我签 款打你公司 居间协议我备好了 你盖章就行"
+  },
+  {
+   "type": "message",
+   "time": "3月5日 10:10",
+   "speaker": "B",
+   "text": "那我岂不是白拿钱"
+  },
+  {
+   "type": "message",
+   "time": "3月5日 10:11",
+   "speaker": "A",
+   "text": "不是白拿 名目是渠道服务费 你出个名义收着"
+  },
+  {
+   "type": "message",
+   "time": "3月5日 10:13",
+   "speaker": "B",
+   "text": "税点谁出"
+  },
+  {
+   "type": "message",
+   "time": "3月5日 10:14",
+   "speaker": "A",
+   "text": "按行规税点你们出 剩下的咱俩分"
+  },
+  {
+   "type": "message",
+   "time": "3月5日 10:16",
+   "speaker": "B",
+   "text": "老周知道这事吗"
+  },
+  {
+   "type": "message",
+   "time": "3月5日 10:17",
+   "speaker": "A",
+   "text": "他介绍的就是他默许 你放心"
+  },
+  {
+   "type": "message",
+   "time": "3月5日 10:19",
+   "speaker": "B",
+   "text": "我琢磨琢磨"
+  },
+  {
+   "type": "message",
+   "time": "3月5日 10:20",
+   "speaker": "A",
+   "text": "可以 但别往外说 这事低调"
+  },
+  {
+   "type": "message",
+   "time": "3月5日 12:30",
+   "speaker": "B",
+   "text": "你公司做哪块的"
+  },
+  {
+   "type": "message",
+   "time": "3月5日 12:33",
+   "speaker": "A",
+   "text": "中介 介绍项目落地那种"
+  },
+  {
+   "type": "message",
+   "time": "3月5日 12:34",
+   "speaker": "B",
+   "text": "现在行情一般啊"
+  },
+  {
+   "type": "message",
+   "time": "3月5日 12:35",
+   "speaker": "A",
+   "text": "是 所以能多一条线是一条"
+  },
+  {
+   "type": "message",
+   "time": "3月6日 09:15",
+   "speaker": "A",
+   "text": "考虑得咋样 甲方那边催着定"
+  },
+  {
+   "type": "message",
+   "time": "3月6日 09:18",
+   "speaker": "B",
+   "text": "协议发我看看"
+  },
+  {
+   "type": "message",
+   "time": "3月6日 09:19",
+   "speaker": "A",
+   "text": "发了 你看下 名目写居间服务费 别写太细"
+  },
+  {
+   "type": "message",
+   "time": "3月6日 09:21",
+   "speaker": "B",
+   "text": "我这边可没实际提供服务啊"
+  },
+  {
+   "type": "message",
+   "time": "3月6日 09:22",
+   "speaker": "A",
+   "text": "走个形式 谁细查这个 老周那边也这么走的"
+  },
+  {
+   "type": "message",
+   "time": "3月6日 09:24",
+   "speaker": "B",
+   "text": "款大概多少"
+  },
+  {
+   "type": "message",
+   "time": "3月6日 09:25",
+   "speaker": "A",
+   "text": "一共十来万 分三笔走 别一次性太大"
+  },
+  {
+   "type": "message",
+   "time": "3月6日 09:27",
+   "speaker": "B",
+   "text": "我先盖 第一笔你打过来我看看"
+  },
+  {
+   "type": "message",
+   "time": "3月6日 09:28",
+   "speaker": "A",
+   "text": "痛快 我马上安排"
+  },
+  {
+   "type": "transfer",
+   "time": "3月6日 09:35",
+   "from": "A",
+   "to": "B",
+   "amount": 10000,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "3月6日 09:36",
+   "speaker": "A",
+   "text": "第一笔先到 你查收"
+  },
+  {
+   "type": "message",
+   "time": "3月6日 09:38",
+   "speaker": "B",
+   "text": "收到了"
+  },
+  {
+   "type": "message",
+   "time": "3月6日 09:39",
+   "speaker": "A",
+   "text": "后续两笔看进度 你留着别动 咱对完再分"
+  },
+  {
+   "type": "message",
+   "time": "3月6日 09:41",
+   "speaker": "B",
+   "text": "行"
+  },
+  {
+   "type": "message",
+   "time": "3月6日 12:10",
+   "speaker": "B",
+   "text": "中午跟老周吃了顿饭"
+  },
+  {
+   "type": "message",
+   "time": "3月6日 12:13",
+   "speaker": "A",
+   "text": "他说啥没"
+  },
+  {
+   "type": "message",
+   "time": "3月6日 12:14",
+   "speaker": "B",
+   "text": "就说你办事靠谱"
+  },
+  {
+   "type": "message",
+   "time": "3月6日 12:15",
+   "speaker": "A",
+   "text": "那是 我从不坑合作伙伴"
+  },
+  {
+   "type": "message",
+   "time": "3月6日 15:20",
+   "speaker": "B",
+   "text": "我最近在给孩子看学区房"
+  },
+  {
+   "type": "message",
+   "time": "3月6日 15:23",
+   "speaker": "A",
+   "text": "那可不便宜"
+  },
+  {
+   "type": "message",
+   "time": "3月6日 15:24",
+   "speaker": "B",
+   "text": "愁死了 首付还差一截"
+  },
+  {
+   "type": "message",
+   "time": "3月6日 15:25",
+   "speaker": "A",
+   "text": "这波走完你就不愁了"
+  },
+  {
+   "type": "message",
+   "time": "3月6日 15:26",
+   "speaker": "B",
+   "text": "但愿"
+  },
+  {
+   "type": "message",
+   "time": "3月7日 09:40",
+   "speaker": "A",
+   "text": "协议盖章件发我一份"
+  },
+  {
+   "type": "message",
+   "time": "3月7日 09:43",
+   "speaker": "B",
+   "text": "好 我拍给你"
+  },
+  {
+   "type": "message",
+   "time": "3月7日 09:44",
+   "speaker": "A",
+   "text": "我留档 后面有人问也有个说法"
+  },
+  {
+   "type": "message",
+   "time": "3月7日 09:46",
+   "speaker": "B",
+   "text": "有人问会问到我这吗"
+  },
+  {
+   "type": "message",
+   "time": "3月7日 09:47",
+   "speaker": "A",
+   "text": "不会 就是备着"
+  },
+  {
+   "type": "message",
+   "time": "3月7日 09:49",
+   "speaker": "B",
+   "text": "行"
+  },
+  {
+   "type": "message",
+   "time": "3月7日 10:10",
+   "speaker": "B",
+   "text": "老周说下个月有个项目也介绍给你"
+  },
+  {
+   "type": "message",
+   "time": "3月7日 10:12",
+   "speaker": "A",
+   "text": "好啊 多多益善"
+  },
+  {
+   "type": "message",
+   "time": "3月7日 10:13",
+   "speaker": "B",
+   "text": "那这条线就一直走着？"
+  },
+  {
+   "type": "message",
+   "time": "3月7日 10:14",
+   "speaker": "A",
+   "text": "对 稳定点好 别乱折腾"
+  },
+  {
+   "type": "message",
+   "time": "3月7日 16:00",
+   "speaker": "B",
+   "text": "晚上降温 你路上小心"
+  },
+  {
+   "type": "message",
+   "time": "3月7日 16:03",
+   "speaker": "A",
+   "text": "好 你也注意"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0001130",
+  "status": "accepted",
+  "errors": []
+ }
+}

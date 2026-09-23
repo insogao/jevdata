@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001087
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000113
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-7d196bf700e5b0b0
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A兜售来源不明的有锁手机并声称可以处理机主账户保护；B拒绝解锁、收购或转卖。
+  critical_evidence:
+  - A以低价和批量优惠兜售有锁手机
+  - A声称可以处理机主账户保护
+  - B拒绝协助解锁或转卖来历不明设备
+  benign_alternatives:
+  - 良性混淆：二手手机回收
+  - 良性混淆：失物招领
+
+attributes:
+  duration_days: 5
+  turn_count: 50
+  approximate_tokens_estimate: 819
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: phone_reset_resell
+  risk: 1
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0104
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-060
+
+dedup:
+  content_hash: sha256:8e990fe4aab9d3b12c1d1106074272c4e0a8dfb3da8f5610e09fec39e1639cde
+pipeline_status: accepted
+title: theft_robbery_property_crime/phone_reset_resell
+conversation: |-
+  【10月7日】
+  A：新显示器到货了吗
+  B：到了，桌面刚好放下
+  A：尺寸多大
+  B：二十七寸
+  A：用着舒服吗
+  A：我先记下，晚些时候再跟你说。
+  B：好，忙完再说。
+  A：我这有几台旧手机，价格很低。
+  B：来源和机主授权都能确认吗？
+  A：有锁的也能处理，批量拿更优惠。
+  B：没有合法来源我不看，也不收。
+  A：只要你帮我介绍客户就行。
+  B：我不会帮忙绕过账户保护或转卖可疑设备。
+  A：那就算了。
+  B：正规回收要核验所有权。
+  【10月8日】
+  A：食堂今天有咖喱饭
+  B：我点了不辣的
+  A：味道好吗
+  B：还不错
+  A：我明天试试
+  A：我先记下，晚些时候再跟你说。
+  B：好，忙完再说。
+  A：上回拼单午饭的一百二我转给你了。
+  【系统消息】A 向 B 转账 120 元，已收款。
+  B：收到了，正好是饭钱。
+  【10月10日】
+  A：最近办公室有点干
+  B：我放了小加湿器
+  A：效果如何
+  B：还可以
+  A：别放电脑旁边
+  A：我先记下，晚些时候再跟你说。
+  B：好，忙完再说。
+  A：那批手机还能再便宜点。
+  B：价格不能替代授权证明。
+  A：卖家说账户锁不是问题。
+  B：我不提供解锁或刷机帮助。
+  A：明白了。
+  B：只通过正规回收渠道处理。
+  【10月11日】
+  A：你周末去跑步吗
+  B：看天气
+  A：记得拉伸
+  B：知道
+  A：谢谢提醒
+  A：我先记下，晚些时候再跟你说。
+  B：好，忙完再说。
+  A：我把收货的事推掉了。
+  B：这样稳妥。
+  A：回收店说需要购买凭证。
+  B：按正规流程核实就好。
+  A：知道了。
+  B：别处理来源不明的设备。

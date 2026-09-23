@@ -1,0 +1,141 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001132
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000095
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-4fe54bb1db4104fb
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: money_laundering_obfuscation
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 部门经理 A 借职务之便，让下属 B 在组里代收公司过节发的京东、苏果卡，按九四折实结、要卡密、声称即付，把福利卡悄悄收拢变现，用绩效和人情拿捏下属配合。
+  critical_evidence:
+  - A 先给 B 评优示好，随即提出让 B 帮忙收组里的过节卡
+  - A 说按九四折实结，京东卡苏果卡都要，卡密即付
+  - A 让 B 去问组里同事谁不用卡，暗示这是举手之劳
+  - A 强调别让上面知道，说这是私下的事
+  benign_alternatives:
+  - 公司福利卡转让
+  - 正规卡券回收平台
+
+attributes:
+  duration_days: 2
+  turn_count: 67
+  approximate_tokens_estimate: 1235
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: gift_card_cashout
+  risk: 1
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0065
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-029
+
+dedup:
+  content_hash: sha256:8852cfdc795a4c9cb736eccd0b0c4a760482c3d9abeabe84e83b9be8bb9de6e7
+pipeline_status: accepted
+title: money_laundering_obfuscation/gift_card_cashout
+conversation: |-
+  【11月4日】
+  A：小李 你那个季度考核我看了
+  B：王经理 咋样啊
+  A：不错 我给你评了个优
+  B：谢谢经理 我会继续努力
+  A：对了 你们组那个过节卡发了没
+  B：发了 每人一张京东卡 五百的
+  A：你帮我收一下 组里谁不用就给我
+  B：收卡？
+  A：我按九四折结 京东苏果都要 卡密即付
+  B：经理 这个……合适吗
+  A：这有啥 举手之劳 你也不用白帮忙
+  B：我能拿多少
+  A：每张给你留五个点 收得多拿得多
+  B：我问问大家吧
+  A：嗯 嘴严点 别让上面知道 这是私下的
+  B：明白
+  A：下午那个周会你主持一下 我出去一趟
+  B：好 我准备下
+  A：讲得清楚点 新来的几个听着呢
+  B：放心
+  B：周会开完了 挺顺的
+  A：好 辛苦
+  B：组里小赵说他的卡想留着买了东西
+  A：京东卡买啥都行 但换钱更划算 你劝劝他
+  B：我试试
+  A：苏果卡也问 有人发的是苏果
+  B：好 我挨个问
+  B：经理 我这忙得脚不沾地 还得收卡
+  A：就这几天的事 忙完我记你一功
+  B：行吧
+  B：今天又加班到现在
+  A：这阵子项目紧 忍忍
+  B：啥时候是个头
+  A：年底前能松一松
+  A：卡问得咋样了
+  B：问了五六个 有三个人愿意出
+  A：不错 总共几张
+  B：三张京东 一张苏果
+  A：都要 让他们把卡密发你 你转我
+  B：直接发卡密啊 不用拍照留底？
+  A：拍照容易错 卡密即付 我收到就打钱
+  B：好 我明天让他们发
+  A：嗯 别一次性发太多 分开发
+  B：懂
+  【11月5日】
+  B：经理 那三张京东的卡密收齐了
+  A：发我 苏果那张呢
+  B：那个同事临时反悔了 说给她妈用
+  A：行 苏果的就算了 以后有机会再说
+  B：发你了 你看下
+  A：收到 我核一下
+  A：三张一千五 九四折算你一千四 加上你那份提成
+  B：我这边先垫给同事还是？
+  A：你先垫 回头一起给你 别一笔笔转留痕
+  B：好 我先垫
+  A：放心 少不了你的 我啥时候亏待过你
+  B：知道
+  B：中午和同事吃饭 提到年终奖的事
+  A：别乱传 上面还没定
+  B：我就随口说说
+  A：小心点 话多惹事
+  B：经理 我那份提成啥时候给
+  A：月底 跟工资分开 我给你现金
+  B：现金？
+  A：对 别走转账 省得麻烦
+  B：行 听你的
+  A：组里还有卡记得继续帮我收
+  B：好

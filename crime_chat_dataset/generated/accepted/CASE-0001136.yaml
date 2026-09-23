@@ -1,0 +1,118 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001136
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000095
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-aef3adbfc151e504
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: money_laundering_obfuscation
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 经中间人牵线，收卡方 A 联系上持卡人 B，按九四折收京东、苏果卡，要求发卡密、收到即付，双方不直接认识、只认中间人背书，把卡券折价过一手变现。
+  critical_evidence:
+  - A 自称是张哥介绍的，找 B 谈收卡的事
+  - A 报价九四折，明确京东、苏果卡都要
+  - A 要求 B 直接把卡密发过来，不走平台、收到即付
+  - A 强调都是张哥的熟人，让 B 放心，还说别到处讲
+  benign_alternatives:
+  - 正规卡券回收平台
+  - 朋友间福利卡转让
+
+attributes:
+  duration_days: 2
+  turn_count: 44
+  approximate_tokens_estimate: 744
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: gift_card_cashout
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0065
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-029
+
+dedup:
+  content_hash: sha256:5062bc19515d7ee8bf322804be80a44da581d2fe5c744dd948a191d58b0927a4
+pipeline_status: accepted
+title: money_laundering_obfuscation/gift_card_cashout
+conversation: |-
+  【12月2日】
+  A：你好 是张哥介绍的吧
+  B：对 他说你找我有点事
+  A：嗯 听说你手里有卡想出手
+  B：是有几张 你收？
+  A：收 京东苏果都要 九四折实结
+  B：张哥跟你说了？
+  A：说了 卡密发我就行 我即付
+  B：我跟你不熟 心里没底
+  A：都是张哥的熟人 放心 我不会坑你
+  B：我先问问他
+  A：行 你问 我等你
+  A：对了 你别到处讲这事 越少人知道越好
+  B：为啥
+  A：这行就这样 低调点大家都省心
+  B：你平时做啥的
+  A：做点小生意 倒腾点东西
+  B：现在生意不好做啊
+  A：是 能赚点是点
+  B：嗯
+  B：问过张哥了 说你还行
+  A：那必须的 我在这行口碑可以
+  B：我京东有两张 苏果一张
+  A：多少面值
+  B：京东各三百 苏果两百
+  A：都要 一共八百 九四折七百五 我转你
+  B：怎么给钱
+  A：你先发卡密 到账我马上转 不等平台
+  B：发照片不行吗
+  A：直接发卡密 照片糊 我这边要输机的
+  B：行 我发你
+  B：发了 你收到没
+  A：收到 我核下数 明天转你
+  B：不是说即付吗
+  A：今天晚了点 明天一早给你 放心
+  B：行 那你记得
+  B：今天降温了 你那边冷吗
+  A：冷 都穿羽绒服了
+  B：我这边也降温
+  A：注意别感冒
+  【12月3日】
+  B：钱转了吗
+  A：转了 你查收下
+  B：收到了
+  A：以后有卡还找我 京东苏果都收 卡密即付
+  B：好 有我再联系你
