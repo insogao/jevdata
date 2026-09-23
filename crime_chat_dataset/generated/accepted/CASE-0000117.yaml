@@ -1,0 +1,137 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000117
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000101
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-5750a95ec51ff77a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 表面同为“当天往返跑腿”，实际是公司正规加急件的专人递送：有出库交接单、园区登记与平台日结，资金只是运费垫付，全程无任何代收代送现金的安排。
+  critical_evidence:
+  - A 请 B 当天往返送公司加急的标书和投标样品，园区进门要登记身份证
+  - 交接凭出库单和交接单，签收拍照回传财务才算完成
+  - A 先垫付 288 元跑腿运费并备注用途，报酬走平台日结 200 一趟
+  - B 完成签收回传后，油费报销由 A 微信另结
+  benign_alternatives:
+  - 兼职跑腿平台接单
+  - 帮忙取送急件
+
+attributes:
+  duration_days: 5
+  turn_count: 59
+  approximate_tokens_estimate: 1218
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: help_move_fund_fee
+  risk: 0
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0016
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-013
+
+dedup:
+  content_hash: sha256:cb4dbc241c9c066a3a9c18d365f8a7d928ab79f09c2e61f5de3e8393e1f6b5a8
+pipeline_status: accepted
+title: money_laundering_obfuscation/help_move_fund_fee
+conversation: |-
+  【10月13日】
+  A：哟，最近上班没
+  B：还在家躺着呢，之前那家黄了
+  A：我这儿正好有个轻松活
+  B：什么活
+  A：跑腿，当天来回，不耽误晚上
+  B：具体干嘛的
+  A：我们公司的加急件，送到客户园区签收
+  B：就是送件啊
+  A：对，标书和投标样品，金贵，得专人送
+  B：这个我熟
+  A：周四老地方吃面，细节当面说
+  B：行，先说好我不垫钱
+  A：对了，你爸的玉米收完没
+  B：收完了，今年晒场都不够用
+  A：我家那堆还晾着，也不知道回不回得去
+  【10月14日】
+  A：想得咋样
+  B：为啥要我身份证
+  A：客户园区进门要登记，正常流程
+  B：报酬咋算
+  A：平台日结两百一趟，油费过路费实报实销
+  B：送个件两百？
+  A：加急件，人家赶投标，贵有贵的道理
+  B：那行，我要准备啥
+  A：出库单交接单财务都备好，你签字拍照回传就行
+  B：听着挺正规
+  A：必须正规，丢一件我年终奖就没了
+  B：哈哈那必须给您送好
+  A：你声音咋瓮声瓮气的
+  B：前天淋了场雨，有点感冒
+  A：吃药没
+  B：吃了，死不了
+  A：多喝热水，周六可别发烧
+  【10月15日】
+  A：想好没，就周六一趟
+  B：想好了，几点集合
+  A：路费我先垫给你，平台单我先挂上
+  【系统消息】A 向 B 转账 288 元，已收款。
+  A：转了你288，备注写的跑腿运费，收一下
+  B：收到，这就算接单了
+  A：对，平台上有记录，周六早七点高铁站东口
+  B：成，七点东口
+  A：中午我请你吃面
+  B：那必须的，第一天上岗
+  【10月16日】
+  A：周六流程：出站打车去园区，前台登记，交接单让对接人签字
+  B：签完拍照发你？
+  A：对，财务收到回传才算妥，箱子别压别摔
+  B：晓得，比我家猫还金贵
+  A：那可不，里面是投标样品
+  A：昨晚那场看了没，补时绝杀
+  B：看了，最后那脚太顶了
+  A：周五早睡，周六你有的跑
+  【10月17日】
+  A：起了没，降温了穿厚点
+  B：起了，今天咋这么冷
+  A：站里风大，帽子戴上
+  B：到东口了
+  A：我在你后面那节车厢，出站等我
+  B：签收单签好了，照片回传了
+  A：财务确认了，完美，客户还夸件护得好
+  B：那两百啥时候到
+  A：平台日结，今晚十二点前自动到账，油费报销我微信另给你
+  A：晚上吃面，我请，给你接风

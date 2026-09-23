@@ -1,0 +1,129 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000115
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000018
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-60b22b793fa83ac3
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 企业主通过商会初次聘请行业协会专家做技改评审，费用按商会公示标准一次一结、开票走账、留档签字，是一笔完全可查证的正常专家评审费，无任何按月挂名或空白合同成分。
+  critical_evidence:
+  - 双方经商会会长介绍初识，评审范围为生产线智能化改造项目
+  - 费用按商会公示标准一次一结 3000 元，含现场评审和书面意见，发票正常开
+  - 评审现场有签到表，书面评审意见一式三份并签字交付
+  - 转账备注写明项目用途，发票抬头开企业全称，约定下次评审提前一周预约
+  benign_alternatives:
+  - 真实行业顾问
+  - 专家评审费
+
+attributes:
+  duration_days: 3
+  turn_count: 53
+  approximate_tokens_estimate: 1288
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: consulting_fee_disguise
+  risk: 0
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0016
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-013
+
+dedup:
+  content_hash: sha256:7b86e08fe421c2d7b9b1660c5847f6fcc7e6c3ef7e9a9a746646ebce8636fb8c
+pipeline_status: accepted
+title: bribery_corruption/consulting_fee_disguise
+conversation: |-
+  【10月14日】
+  B：王工您好，我是恒达机械的陈总，商会李会长介绍的认识您
+  A：陈总好，会长跟我提过技改评审的事
+  B：对，生产线智能化改造，想请个第三方专家评审
+  A：可以。评审范围和资料清单让技术部发我邮箱
+  B：今天下午就发。费用这块怎么算
+  A：按商会公示的标准，专家评审费一次一结，三千，含现场评审和书面意见
+  B：明码标价，好
+  A：发票正常开，该走的流程都走
+  B：那就约本周三下午
+  A：周三下午可以，地点厂里，我带两名助手
+  B：这周连着下雨，厂区都在排水
+  A：我们楼下车库又淹了，年年如此
+  B：学我们，大门口砌两道坎
+  A：管用吗
+  B：管用，去年淹了一回就砌了
+  A：工博会的邀请函你收到没
+  B：收到了，订了两张票
+  A：展会上顺便聊聊设备选型
+  B：好，到时见
+  A：资料清单我发你邮箱了，照着备
+  【10月15日】
+  A：资料收到了，我列了一版评审要点，发你技术部对一下
+  B：收到，他们正愁没抓手
+  A：明天流程：现场看线、质询、出书面意见、签字
+  B：成，会议室备好，签到表也印了
+  A：好，评审意见一式三份
+  B：明天车直接进2号门，报车牌我让保安放行
+  A：好，车牌尾号519发你了
+  B：登记好了
+  A：看你朋友圈晒笋干，哪买的
+  B：我老家山货，回头给你寄两袋
+  A：那感情好，钱我微信你
+  B：谈钱伤感情，土产不值钱
+  A：那不行，该多少是多少
+  B：明天中午食堂安排工作餐，别嫌简单
+  A：盒饭正好，别的别搞，纪律上不允许
+  B：明白，就盒饭
+  【10月16日】
+  A：评审意见定稿了，三份签好字，下午会上给你们
+  B：效率真高，材料齐了
+  B：会议室备好了，两点开始，先看车间
+  A：到楼下了，先看线
+  B：辛苦各位，意见书三份收到，签到表归档了
+  A：申报时记得附意见书原件
+  B：评审费我现在转您
+  A：转，备注写清楚智能化改造项目专家评审费
+  【系统消息】B 向 A 转账 3000 元，已收款。
+  B：转了3000您查收
+  A：收到，发票明天寄出，抬头开公司全称对吧
+  B：对，开票信息发您微信了
+  A：好，账上好走
+  B：笋干寄出了，单号发您
+  A：好，到货我说一声。东西是东西，账是账
+  B：您这做派，会长没介绍错人
+  A：下次评审提前一周约，我档期排到下月了
+  B：一定提前，合作愉快

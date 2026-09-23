@@ -1,0 +1,131 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000119
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000018
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-60b22b793fa83ac3
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 生意人以“生产管理咨询顾问”合同为外壳，按月向审批主管的亲属支付固定“顾问费”，换取许可事项打招呼加快办理；空白服务内容、无交付成果、只口头递话构成权钱交易的隐晦闭环。
+  critical_evidence:
+  - A 自认其姐夫在主管审批的部门里“管这一摊”，由王总引荐与 B 建立联系
+  - 顾问合同服务内容一栏保持空白，只有姓名与金额，每月固定 15000 元按月支付
+  - A 明确“不出任何书面成果，只口头给信息，书面的东西一律不留”，并叮嘱有事别直接联系其姐夫
+  - 首笔 15000 元到账当天，A 即表示厂里许可事项“最快这周上会”
+  benign_alternatives:
+  - 真实行业顾问收取固定月费
+  - 专家咨询、评审类劳务费安排
+
+attributes:
+  duration_days: 3
+  turn_count: 55
+  approximate_tokens_estimate: 1830
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: consulting_fee_disguise
+  risk: 2
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0017
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-013
+
+dedup:
+  content_hash: sha256:5edfd0433f808e5f99cce5c3ea3d10477d046c5b435cc815cec821ef9434b6c9
+pipeline_status: accepted
+title: bribery_corruption/consulting_fee_disguise
+conversation: |-
+  【10月14日】
+  B：沈先生早，王总说您今天加我
+  A：B总好，我是小沈。王总提的事，电话里不方便，先微信上简单聊
+  B：您客气。厂里那个许可拖了大半年，我们是真的耗不起
+  A：找我就对了，我家那位在里头管这一摊，这个咱们心里有数就行
+  B：懂，懂。那您看这事怎么个章程
+  A：别急，这种事熟了才好说，周六上午喝个茶
+  B：好嘞，城南澜山茶舍，九点半，我订个安静点儿的包间
+  A：行，到时候见
+  A：对了，您是胶东人吧，听王总说您老家苹果有名
+  B：对，老家栖霞的，家里还种着几亩
+  A：那有口福了，我就好这一口脆的
+  B：等家里寄了给您捎一箱，自家树上的，不值钱
+  A：那就却之不恭了哈
+  A：周六的事，您把厂里现在卡在哪儿捋一捋，带上材料，我帮您递句话
+  B：好的，我把补正通知和这半年的往来都带上
+  A：嗯，材料齐全是基础，剩下的看怎么走
+  【10月16日】
+  A：B总早，到哪了
+  B：快到了，堵车，您先点茶
+  A：订的紫竹包间，进来吧
+  B：今天的聊法您看行不，您说的顾问那个形式，我回去就安排
+  A：对，明人不说暗话。我姐夫那层窗户纸我来捅，您这边走个正规名义，一份顾问合同，您按月打给我
+  B：明白。那合同内容怎么写
+  A：写个生产管理咨询就行，具体条款让法务拟，金额那栏填好，其他的您看着办
+  B：行。顾问费您说个数
+  A：就按我跟王总说的，一个月一万五，先按年走
+  B：一万五可以。说实话这个数比找代理省心多了
+  A：咱们是长期相处，您的事就是我的事。成果方面您也别指望我出报告，我都是口头给您信息，书面的东西一律没有，您也别留
+  B：懂，都懂，省得麻烦
+  B：回去了，下午让法务把合同拟出来发您
+  A：好嘞
+  A：哎，您孩子今年小升初吧，王总说他家那位愁得不行
+  B：可不是，我家老二明年也到，现在升学的事一家一个愁法
+  A：我家那个才幼儿园，已经卷起来了，周六三个班
+  B：等你们到我们这步就更热闹了，哈哈
+  B：合同拟好了发您过目，服务内容那栏您看还要不要加点
+  A：不用加，就保持空白，写多了反而缚手缚脚，你懂的
+  B：行，一式两份，周一给您送过去，公章我都带上
+  A：好，周一见
+  B：对了，茶舍那壶单丛叫什么，回头我买点送我岳父
+  A：鸭屎香，老板那儿有，报我名字便宜点
+  B：哈哈这名字绝了，谢谢
+  【10月19日】
+  A：B总早，合同带了吧，上午我过去拿
+  B：带了带了，两份都盖好了，您顺路来厂里，头一笔我一并安排
+  A：好，我十点到
+  B：沈先生慢走，合同您收好，我这边就等信儿了
+  A：回去等信儿就行，这周之内，许可的事就有动静
+  B：那太好了，回头我请您和王总吃饭
+  【系统消息】B 向 A 转账 15000 元，已收款。
+  B：沈先生，首月顾问费转您了，您查收，以后每月15号我按时转
+  A：收到了。您那材料我下午就递上去，最快这周上会
+  B：好，麻烦您费心，有信儿您随时跟我说
+  A：嗯，往后有事直接找我就行，别往我姐夫那儿打电话，他忙
+  B：明白，都记下了
+  A：对了，栖霞苹果等应季了您可别忘了哈
+  B：忘不了，下个月头一箱就是您的
+  A：哈哈，那我提前把茶位腾出来

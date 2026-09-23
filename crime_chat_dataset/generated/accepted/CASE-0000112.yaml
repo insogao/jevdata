@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000112
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000073
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-58077d294373b6b6
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 学姐以“轻松赚零花钱”为名，向刚入学的新生兜售只有晚间的“场子活”，一场三百现结，并叮嘱别在宿舍声张；全程不点破活的性质，靠时间、报酬与保密要求拼出轮廓。
+  critical_evidence:
+  - A 是大四学姐，以帮忙办理生活事务接近大一新生 B
+  - A 提出一周只占两个晚上、一场三百现结的“路子”，比发传单体面
+  - B 追问具体内容，A 只说晚上场子、倒茶聊天笑一笑，强调都成年了
+  - A 叮嘱此事别在宿舍说，并催 B 周五前给答复，称那边还等着人
+  benign_alternatives:
+  - 正规兼职群介绍
+  - 社团迎新活动
+
+attributes:
+  duration_days: 4
+  turn_count: 50
+  approximate_tokens_estimate: 1029
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: dorm_introduction_network
+  risk: 3
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0016
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-013
+
+dedup:
+  content_hash: sha256:211a0637026d1d9f88d33a7bdfe1e3545dfe238ec5eef887a98cbfb8942e469d
+pipeline_status: accepted
+title: sexual_transaction_exploitation/dorm_introduction_network
+conversation: |-
+  【9月8日】
+  A：新生吧？我是你们对接的学姐，有事找我
+  B：学姐好！我宿舍网一直连不上
+  A：明早去信息中心登记下就行，我带你去
+  B：那太谢谢了
+  A：小事。你们军训晒得惨不惨
+  B：惨，胳膊全是一个色号
+  A：哈哈正常，我们当年也这样
+  B：学姐哪个学院的呀
+  A：大四的，隔壁楼会计
+  B：哦哦，以后多多关照
+  A：缺啥生活用品跟我说，我熟
+  B：好嘞！
+  A：二楼麻辣烫窗口避雷，又贵又咸
+  B：收到，那我去一楼
+  A：一楼靠窗那家粥铺便宜
+  B：学姐简直是百科全书
+  【9月9日】
+  A：军训汇演彩排别迟到，教官凶
+  B：收到！
+  A：对了，想不想搞点零花钱
+  B：想啊，生活费紧
+  A：我这边有个路子，一周就占两个晚上，一场三百，现结
+  B：什么路子啊
+  A：场子上的活，去了就知道，轻松
+  B：有点懵，是发传单那种吗
+  A：比那体面，就是陪着坐坐，说说话
+  B：坐坐就有三百？？
+  A：学姐还能坑你？带你的是我
+  B：我……我考虑下
+  A：行，不急，周五前给我话
+  A：选课系统开了，通识课抢体育的羽毛球，快
+  B：抢到了！谢谢学姐
+  A：羽毛球老师给分好
+  【9月10日】
+  B：学姐，那个事……到底是干嘛的呀
+  A：晚上的场子，客人都是老板，你就倒倒茶，聊聊天，笑一笑
+  B：就这么简单？
+  A：简单，一场三百现结，比发传单强十倍
+  B：会不会不安全啊
+  A：有我在。都成年了，自己的事自己拿主意，学姐带过的都处得好
+  B：她们现在还在做吗
+  A：有的一周去两晚，生活费自己赚自己花
+  B：让我想想……
+  A：别在宿舍说这事，人多嘴杂，对你不好
+  B：嗯……
+  A：拼多多砍一刀帮我点下
+  B：点了，学姐还差多少
+  A：永远差那0.01%，算了
+  【9月11日】
+  A：想好没，周五晚上七点，我来带你
+  B：我再想想行吗，怕耽误晚自习
+  A：行，机会不等人，那边还等着人呢
+  B：我尽快给学姐答复

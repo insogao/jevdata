@@ -1,0 +1,124 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000108
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000051
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-31261e947c61c9fb
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 透过饭局中间人结识 B，出资让其核实仇家本人及家中老人的住址信息并合成一张图，准备同时发到约两千人的三个群里发动围攻，信息交付次日支付2000元'跑腿费'。
+  critical_evidence:
+  - A 让 B 核实目标所住小区门牌及'家里几口人、老人在哪儿住'等信息，'整理成一张图'
+  - A 称手里三个群加起来小两千人，要'一齐发出去让大家评评理'
+  - A 承诺2000元跑腿费，并在图片交付次日早上转账
+  - 两人由'强哥'介绍认识，A 暗示以后还有类似活儿，B 要求图里不能带出自己
+  benign_alternatives:
+  - 消费维权中征集不良商家信息的互助讨论
+  - 群友之间帮忙核实地址的日常小事
+
+attributes:
+  duration_days: 5
+  turn_count: 46
+  approximate_tokens_estimate: 1193
+  relationship: 中间人关系
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: online mob_doxx_attack
+  risk: 3
+  relationship: 中间人关系
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0015
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-013
+
+dedup:
+  content_hash: sha256:e486c9a1b31c773ab71612526ce9ce04db29fbc942337c7ce9e6464ae2c7ce80
+pipeline_status: accepted
+title: violence_extortion/online mob_doxx_attack
+conversation: |-
+  【10月20日】
+  A：老弟，睡了没
+  B：刚到家，哥啥事
+  A：上回饭局提的那位姓闫的，把我姐夫坑得差点没缓过来，这口气咽不下
+  B：强哥跟我提过一嘴，说这人做事是有点绝
+  A：光绝没用，他那些事，总得有人摆到台面上让大伙看看
+  B：哥想怎么个摆法
+  A：先不急，你帮我留意着，有动静我找你
+  【10月21日】
+  B：哥，周日江边走一波？听说最近口不错
+  A：行，我把新竿带上
+  B：都第三根了，嫂子不说你
+  A：她管天管地还管竿子。饵你备啊
+  【10月22日】
+  A：老弟，帮我个忙，你门路广
+  B：哥说
+  A：姓闫的换地方住了，具体哪个小区哪栋，帮我核一核
+  B：就地址？我表弟在他们那边跑腿，好办
+  A：不止他自己，他家里几口人、老人在哪儿住，都顺一遍
+  B：要这么细？
+  A：整理成一张图，清清爽爽的
+  B：哥，这会不会过了
+  A：又不动一根指头，就是让大家认认人。他怎么坑我姐夫的，我心里记着账
+  B：行，我问一圈，这两天给你信
+  A：跑腿费我出，两千，说话算话
+  B：哥，你家瓷砖贴完没
+  A：别提，师傅说美缝得再等一周
+  B：急啥，我家那会儿等了半个月
+  【10月23日】
+  B：哥，门牌问到了，17栋2单元。老人住城东老小区，也问出来了
+  A：效率可以，图今晚能给我不
+  B：晚上给你。哥，这图你打算咋用
+  A：我手里三个群，加起来小两千人，到时候一齐发，让大家评评理
+  B：两千人……那他一家算是站到聚光灯底下了
+  A：他坑人的时候咋不想想。你把图做好，后面的事不用你管
+  B：行吧
+  A：图收到了，做得很清楚，辛苦
+  B：说好的，发出去之后的事跟我无关
+  A：放心，你就是帮忙整理资料的，别的啥也不知道
+  B：哥，中秋那盒还订老张家？
+  A：订，年年排队。给你丈母娘也留俩
+  B：我已经让店里留了
+  【10月24日】
+  A：老弟，两千块这就转你
+  【系统消息】A 向 B 转账 2000 元，已收款。
+  B：收到了
+  A：这单利索。往后强哥那边再有类似的，我还找你
+  B：……图你保管好，别带出我来
+  A：谁也不带。周日钓鱼别忘了
+  B：周日见。你表弟那边嘴严不
+  A：严，他就是拿个跑腿钱
+  B：那就妥了

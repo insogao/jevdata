@@ -1,0 +1,139 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000099
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000002
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-91c9ca4626914aca
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 自称有内部通道的陌生人 A 用一周两位数收益的持仓截图取信 B，收两万元'体验仓'后劝其加仓至十万档，并以介绍奖励怂恿 B 把亲友也拉进场，疑似杀猪盘式荐骗局套。
+  critical_evidence:
+  - A 展示一周涨百分之十几的持仓截图，称来自内部通道单、大盘跌照样红
+  - 跟单资金直接转入 A 的个人收款码，备注'体验仓'，不走任何平台
+  - A 称两万只是体验仓，劝 B 下月升级十万档、收益翻一点五倍
+  - A 许诺按仓位一个点给介绍奖励，让 B 把刘哥、表哥等人也拉进场
+  benign_alternatives:
+  - 正规理财顾问展示历史业绩并推荐产品
+  - 朋友之间分享投资机会的日常闲聊
+
+attributes:
+  duration_days: 3
+  turn_count: 63
+  approximate_tokens_estimate: 1482
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: investment_lead
+  risk: 2
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0015
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-013
+
+dedup:
+  content_hash: sha256:0f373f2976114eeebd2b27bd0cd645d9dcd328dd80a1f9512ed6026f35981b27
+pipeline_status: accepted
+title: fraud_scam/investment_lead
+conversation: |-
+  【6月10日】
+  A：你好，我是凯哥群里那个阿哲，刘哥把你推给我的
+  B：哦你好，他说你在做理财这块
+  A：算不上理财，就是一个内部通道，外面没有的
+  B：通道？
+  A：这样，我先发你几张最近的持仓截图，你看看再说
+  B：看到了，这一周涨百分之十几？
+  A：通道单就是稳，大盘跌照样红
+  B：截图不会是P的吧，别介意，我谨慎点
+  A：应该的。你可以观察一周，我不催
+  B：你们那边下雨没，我们这梅雨下得人发霉
+  A：下了三天了，被子都是潮的
+  B：买俩除湿盒，好用
+  A：回头试试
+  A：下午又出一单，又是两位数
+  B：你天天都发，看得我心痒
+  A：想跟就说一声，体验仓两万起，我先给你留个名额
+  B：两万有点突然，让我想想
+  A：不急，名额给你留到明晚
+  B：你那个通道，钱是进平台还是进你个人？
+  A：通道走个人码统一划，平台那种散客池子不做的
+  【6月11日】
+  A：早，你摇到号没
+  B：摇了两年了，遥遥无期
+  A：我跟你说，真不如新能源，直接上
+  B：充电桩装不了，老小区
+  A：名额还给你留着呢
+  B：你那通道做了几年了
+  A：五年。头两年我也是跟单，后来熟了才给放名额
+  B：跟过的人都赚到没
+  A：我表弟跟了一年，车都换了。刘哥你也认识，他上个月刚加的仓
+  B：那我先跟个两万试试
+  A：爽快。今天下午三点前转都行，按今天点位算
+  B：转哪个码
+  A：码发你了，备注写体验仓，转完吱一声
+  B：转了，你看下
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  A：收到，给你登记上了。今晚开盘就进
+  B：这么快
+  A：通道单讲究时效。有动静我喊你
+  B：今晚怎么样
+  A：开局不错，你那仓已经红两个点了
+  B：真的假的，这么快
+  B：端午你们放假不
+  A：放，三天，抢票去了
+  B：早点抢，我去年没抢到
+  【6月12日】
+  B：你那健身餐还做着没
+  A：断了两周，应酬太多
+  B：挣钱的人身不由己
+  A：月底重新开灶
+  A：昨晚结算图出来了，发你
+  B：两万一天四百多？
+  A：通道单就是这节奏。所以说两万太小，体验仓而已
+  B：这要是稳定，谁还上班
+  A：下个月名额升级，十万档收益是现在的一点五倍，我建议你直接提到十万档
+  B：十万……我得跟家里人商量
+  A：商量可以，但名额不等人，通道一次就放俩
+  A：对了，把刘哥身边想上车的也推给我，介绍奖励一个点
+  B：还有介绍奖励？
+  A：通道要的就是规模。你拉三个人，你自己仓位我给免通道费
+  B：我表哥倒是念叨过想理财
+  A：那让他直接来，名额我给他留
+  B：行，我问他
+  A：想好没，十万档明晚截止
+  B：这月先不动，我看看这个月结算再说
+  B：嗯，先看看

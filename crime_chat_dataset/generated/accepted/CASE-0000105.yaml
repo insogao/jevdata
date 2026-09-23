@@ -1,0 +1,139 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000105
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000054
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-3bd3a6855ed5d577
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 被告一方的同事 A 以叙旧考勤关照为名接近将出庭作证的 B，打探其孩子放学接送等家庭日常，附5000元'给孩子买资料'的心意并反复暗示'想清楚再说话'，疑似软性施压证人。
+  critical_evidence:
+  - A 两次提及开庭日期，并约 B 在法院走廊'打个招呼'、发位置过去找他
+  - A 打听 B 孩子放学谁接，称路过'顺眼就多照应照应'、接孩子的站'人挺杂'
+  - A 要求 B 开口前'把看到的事再想清楚，对谁都好'，并强调一个单位抬头不见低头见
+  - A 转账5000元称给孩子买学习资料、不许推辞，B 表示要退回
+  benign_alternatives:
+  - 同事间对出庭事宜和家属的正常关心
+  - 数额不大的同事人情往来
+
+attributes:
+  duration_days: 4
+  turn_count: 62
+  approximate_tokens_estimate: 1418
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: witness_intimidation
+  risk: 3
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0015
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-013
+
+dedup:
+  content_hash: sha256:2e36900812b7206ad2d0697daa2b6163880bf34d41ca3c7b30e6c965dec29cd5
+pipeline_status: accepted
+title: violence_extortion/witness_intimidation
+conversation: |-
+  【11月17日】
+  A：峰子，来这么早
+  B：刚到。你今天不陪领导出差了？
+  A：改期了。对了，下周四你是不是得出趟门
+  B：……你咋知道
+  A：咱俩谁跟谁。那边日子定了，下周四嘛
+  B：嗯，通知是这么写的
+  A：这个月你请的那两天假，考勤上我给你兜着呢
+  B：多谢，我妈那阵子住院
+  A：老人家身体要紧，现在恢复咋样
+  B：能自己溜达了
+  A：那就好，回头我买点东西去看看老人
+  B：别客气，她自己能顾上
+  【11月18日】
+  A：昨天说的周四，你几点到那边
+  B：上午九点，还得提前取号
+  A：取号前在走廊能碰见不？到时候打个招呼，我陪你等
+  B：……你怎么也在那边
+  A：我表哥那案子，家人总得有人到场
+  B：哦，对
+  A：你家小宝上二年级了吧
+  B：嗯，二年级
+  A：放学谁接？你媳妇还是老人
+  B：一般我丈母娘接
+  A：挺好。那片放学点人多车杂，我有时候路过都替他们捏把汗，顺眼就多照应照应
+  B：……不用麻烦
+  A：今天真冷了，你们办公楼暖气来没
+  B：来了，烤得头疼
+  A：我们还没热，物业说周五试压
+  B：多穿点，你那老寒腿
+  A：知道，秋裤都套上了
+  A：晚上一起吃饭不，叫上老魏
+  B：改天吧，家里有事
+  A：行，家事要紧
+  【11月19日】
+  A：起这么早
+  B：睡不着。昨天说的走廊碰面，我觉得不合适，人多眼杂
+  A：打个招呼又不犯法。我就一句话，那天开口之前，把看到的事再想清楚
+  B：我看到什么就是什么，没法改
+  A：谁让你改了？我是说想清楚。有些话出口，对谁好对谁不好，得掂量
+  B：……
+  A：咱一个单位的，抬头不见低头见，你还要在圈里干，家里人还要过日子
+  B：你这是吓唬我
+  A：提个醒罢了。对了，转你五千，给孩子买点学习资料，别推辞
+  【系统消息】A 向 B 转账 5000 元，已收款。
+  B：这钱我不能收
+  A：跟我客气啥，叔叔给孩子的，不收就是不给面子
+  B：食堂今天有酱骨头，你打了没
+  A：打了，就是炖得柴
+  B：免费的还挑
+  A：哈哈，知足
+  A：下午的事别多心，哥是为你好
+  B：让我静一静
+  【11月20日】
+  A：明天就周四了，睡好了没
+  B：还行
+  A：明早我开车送你，顺道
+  B：不用，我坐地铁
+  A：随你。到走廊给我发个位置，我过去找你
+  B：……嗯
+  A：明天完了事儿哥带你钓鱼去，先说好
+  B：看情况吧
+  A：最后说一回，想清楚再说话，对谁都好。你丈母娘接孩子那个站，人挺杂
+  B：……你到底想让我说什么
+  A：我什么都没说，你心里有数就行。那五千收好，给孩子添件羽绒服
+  B：钱我明天退你
+  A：退就见外了。晚安，明天顺利

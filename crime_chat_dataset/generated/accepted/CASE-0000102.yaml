@@ -1,0 +1,121 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000102
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000121
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-3cbc29b5947136e2
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A 以整理照片之名义向已婚的周总示好，暗示手中留有其与第三者的合影并问候其妻儿施压，索要每月8日固定钱款，B 被迫先转8000元，A 以'照顾好你自己'持续施压。
+  critical_evidence:
+  - A 暗示留有 B 与'红裙姑娘'在宴会厅走廊的合影，称是'纪念'
+  - A 以问候'嫂子'和孩子升初中施压，要求每月8日固定给一万
+  - B 在8日上午转账8000元，称手头就这些、就这一次
+  - A 回应'照顾好你自己，血压高不能激动'，并称照片'相安无事就谁也看不见'
+  benign_alternatives:
+  - 生意人之间节日与人情往来的转账
+  - 情感纠纷双方私下经济协商
+
+attributes:
+  duration_days: 2
+  turn_count: 46
+  approximate_tokens_estimate: 1140
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: secret_affair_blackmail
+  risk: 3
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0015
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-013
+
+dedup:
+  content_hash: sha256:49b3864d1d407ae2a3f30f51edca1466576bd401b8ee7e49d483ca807ca76e30
+pipeline_status: accepted
+title: coercion_blackmail/secret_affair_blackmail
+conversation: |-
+  【11月7日】
+  A：周总早，我是老周引荐的小蒋，饭局上见过您一面
+  B：哦，小蒋。有事？
+  A：没事就不敢打扰您。前两天整理相册，翻到上个月青岛行业会那组
+  B：嗯，然后呢
+  A：您状态是真年轻。宴会厅走廊那张，您和那位红裙姑娘站一块，特别登对
+  B：小蒋，你发这张照片什么意思
+  A：没别的意思，留个纪念嘛，您别紧张
+  A：对了，朋友寄了点凤凰单丛，回头给您送两罐？听说您好这口
+  B：不必，家里茶叶喝不完
+  A：这不一样，老枞，市面上少见
+  B：有话直说
+  A：行，痛快人。您放心，我嘴最严
+  B：你想怎样
+  A：我能怎样呀。就是最近手头紧，做小买卖的都难。您看，明天都八号了
+  B：八号怎么了
+  A：我每月八号要还贷。往后每个月八号，您帮衬一把，一万，就当交个朋友
+  B：你在威胁我？
+  A：瞧您说的，我这叫求人办事。对了，嫂子最近身体还好吧，上次看她气色不错
+  B：……
+  A：孩子马上升初中了吧？这个节骨眼，家里得稳
+  B：小蒋，做人留一线
+  A：周三老周攒了个球局，都是熟人，您来不
+  B：看情况
+  A：来嘛，放松放松，打完球茶给您带上
+  B：先这样，开会
+  A：周总，我又想了想，看在老周面上，一万就一万，不加了
+  B：……明天再说
+  A：晚安周总，好梦
+  【11月8日】
+  A：早呀，今儿八号
+  B：转你了，就这一次
+  【系统消息】B 向 A 转账 8000 元，已收款。
+  A：收到了，周总爽快。咦，怎么是八千
+  B：手头就这些
+  A：八千就八千，下月八号补齐就行，我信您
+  B：没有下月
+  A：好好好，看您态度。照顾好你自己，别熬夜，血压高不能激动
+  B：照片删了
+  A：纪念嘛，舍不得。不过您放心，它就在我手机里躺着，只要相安无事，谁也看不见
+  A：中午吃了吗，城南新开家早茶，虾饺一绝
+  B：吃了，食堂
+  A：食堂干净。哪天打包份虾饺给您送楼上
+  B：不必
+  A：明白。往后我就每月八号问候一声，别的时候绝不打扰
+  B：最好
+  A：周三球局老周问您呢
+  B：去不了，下周都满的
+  A：那茶让老周捎给您，两罐，老枞

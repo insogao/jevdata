@@ -1,0 +1,136 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000106
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000009
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-a6340f0b999093a9
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A 以高额日结'商务陪同'兼职为饵，设服装押金、面试造型费等层层收费门槛且拒签任何书面协议，B 为每人200元抽成帮忙招人并垫付押金，疑似以招聘名义收费敛财。
+  critical_evidence:
+  - A 宣称展会陪同出场费日结800至1500元、形象过关即可，门槛极低
+  - 上岗前须先交1200元服装押金，面试当天另收300元造型费，称'行里都这样'
+  - B 提出签协议，A 以'走流程等批文黄花菜都凉了'拒绝，只靠口头承诺
+  - B 每推荐一人抽200元辛苦费，并垫付了1200元名额押金转入 A 个人收款码
+  benign_alternatives:
+  - 会展礼仪、商务接待兼职确有收服装押金、按场结算的行规
+  - 熟人之间帮忙介绍临时工作的正常合作
+
+attributes:
+  duration_days: 5
+  turn_count: 58
+  approximate_tokens_estimate: 1357
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: escort_payment_claim
+  risk: 2
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0015
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-013
+
+dedup:
+  content_hash: sha256:3cc17fb0f16290e850dbd45d126780f4bde678472dd18cbd25796c985653d997
+pipeline_status: accepted
+title: fraud_scam/escort_payment_claim
+conversation: |-
+  【8月18日】
+  A：强子，忙不
+  B：刚送完孩子，啥事
+  A：好事，九月初接了个大展会的接待单，缺人
+  B：要求高不
+  A：不高，形象过关、站得住台就行，待遇日结，一天八百到一千五，干完当天结
+  B：这么多？比上班强多了
+  A：老同学先挑，身边有合适的姑娘小伙都能推
+  B：那我呢，我有啥说法
+  A：你推荐一个做成一单，两百辛苦费，跟日结一起走
+  B：成，我问问人
+  B：老家寄的桃子到了，给你留一箱
+  A：替我谢谢你爸妈
+  B：周末回来拿，顺路带点土鸡蛋
+  A：行，正好
+  【8月19日】
+  A：有个姑娘简历没，形象过关就行
+  B：有，我表妹，刚毕业
+  A：发我看下。规矩先说：上场服装统一定制，每人一千二押金，走完单全额退
+  B：还要先交钱？
+  A：行里都这样，防放鸽子的，一场秀临时撂挑子损失谁担
+  B：……也对
+  A：面试不折腾，下周三茶楼坐坐，当天看人当天定
+  B：成
+  B：问你，你房贷利率降没
+  A：降了，一个月少还两百多
+  B：我才降一百八，气人
+  A：有得降就知足吧
+  【8月20日】
+  B：表妹想去，她同学也问了一句
+  A：好现象。你先替她们把名额占上，一人一千二
+  B：我先垫？
+  A：面试过了从第一笔日结里连本带利还你
+  B：要不要整个协议，万一……
+  A：签协议走流程等批文，黄花菜都凉了。老熟人，我做回头客生意
+  B：行吧
+  A：面试那天每人再备三百造型费，化妆师现场到位，不做可以不交
+  B：面试也要交钱？
+  A：给造型师的辛苦费，你先跟她们打好招呼
+  B：今晚跑不，江边
+  A：跑，今天吃多了
+  B：九点老地方
+  【8月21日】
+  B：定了，周三下午两点，临江茶楼二楼，我带人过去
+  A：找王经理，我那边有对接走不开，辛苦费照给
+  B：面完了，王经理让表妹当场交了三百，说周四出结果
+  A：流程就这样。俩人形象都行吧
+  B：表妹行，她同学悬
+  A：悬的退三百，押金留着，九月还有场次
+  B：……行
+  A：晚上客户送了两瓶酱香，给你拎一瓶
+  B：客气啥
+  A：家里还有，回头拿
+  【8月22日】
+  B：王经理说押金他不管，转给谁
+  A：转我个人码，备注表妹名字，我统一交财务
+  B：你那团队还有财务
+  A：正经团队嘛，转完截图收好
+  【系统消息】B 向 A 转账 1200 元，已收款。
+  B：转了，查收
+  A：收到。九月排期给你留着，再问问有没有人想进
+  B：押金说好走单就退吧
+  A：记在账上，你表妹第一场结束当场退。辛苦费一人两百别忘了
+  B：忘不了

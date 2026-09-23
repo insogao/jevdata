@@ -1,0 +1,145 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000123
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000099
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-a84caaade06d68e6
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: money_laundering_obfuscation
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 网店经营者借妹妹的银行卡代收来路不便明说的款项并原路退回指定卡，以 2% 手续费为对价形成“代收-回流”闭环，规避自身账户的大额流水，属典型的资金路径清洗安排。
+  critical_evidence:
+  - A 让 B 用“不常用的储蓄卡”代收一笔 30000 元，当天原路退回 A 指定的另一张卡
+  - B 抽 2% 手续费，实退 29400 元并按 A 要求留存回执截图
+  - A 称自己账户“被平台盯着”、大额进账不好看，要的是“流水好看”
+  - 两人约定每月固定再走两轮，并叮嘱此事连父母都不能说
+  benign_alternatives:
+  - 正常电商退款、代退款操作
+  - 亲友间资金周转
+
+attributes:
+  duration_days: 5
+  turn_count: 67
+  approximate_tokens_estimate: 2011
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: refund_cycle_wash
+  risk: 2
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0017
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-013
+
+dedup:
+  content_hash: sha256:7ea529c28e6f440ac2ab5d939b9d2d67eef843e0193d1a6cf6b93e48d1e55910
+pipeline_status: accepted
+title: money_laundering_obfuscation/refund_cycle_wash
+conversation: |-
+  【10月13日】
+  A：妹，爸这周六体检，你挂号还是我挂
+  B：我挂吧，我早上顺路，还是人民医院那个主任？
+  A：恩，还是他，上次血压那事让他再给看看
+  B：行，挂上了，周六早上八点，你别迟到，你回回迟到
+  A：保证不迟到，迟到我把车给你开
+  A：妹，跟你商量个事，哥这边最近有点不方便，想借你帮个忙
+  B：咋了哥，你那店出啥事了
+  A：店没事。是有笔货款走账不太方便，想从你卡上过一道，进多少你原样退回去，一分钟都不多留
+  B：过一道？听着咋这么玄乎
+  A：不玄乎，就是你收一笔钱，然后转回我发你的另一张卡，扣点辛苦费
+  B：为啥不直接让人转你卡上
+  A：有平台盯着我这账户，大额进来不好看，你那边干净
+  B：哥，我想了想，帮是可以帮，但你得跟我说明白点，这钱到底咋回事
+  A：妹，哥不坑你，就是让流水好看点，别的你别问，问多了你我都麻烦
+  B：行吧，那手续费咋算
+  A：两个点，老妹儿，哥亏待不了你
+  【10月14日】
+  B：哥，我嫂子那同事给我介绍了个相亲对象，说是个牙医
+  A：哟，可以啊，照片发来给哥掌掌眼
+  B：发你了，你看行不
+  A：浓眉大眼，看着挺正，见一面呗，不行就当吃饭了
+  B：那周末先见见，地点我都想好了，城西那家粤菜馆
+  A：行，穿正式点，别老一身卫衣
+  B：哥，那事具体咋操作，你给我个准话，我好把卡准备好
+  A：用你那张不常用的储蓄卡，日常那张别动。钱进来，挂账上别理财，当天原路退回我发你的卡号
+  B：当天就退？
+  A：当天，晚上八点前。退完你把回执截图发我一份，我自己留底
+  B：恩，那张卡里就两千块，大额进去会不会被银行问
+  A：恩……你就说是退款，正常，谁还没个退款
+  A：周六相亲记得给我直播，哥给你参谋
+  B：想得美，我凭实力单身
+  A：哈哈哈，行了，早点睡
+  【10月15日】
+  B：哥，昨晚那剧大结局了，男二居然是卧底
+  A：还没看，别剧透！我今晚回来补
+  B：那你快看，看完咱俩对线
+  A：行，明天再聊，谁剧透谁小狗
+  A：妹，钱这两天就到，你卡保持能进账的状态，别设限
+  B：恩，我问了，单笔五十万以下没事
+  A：用不了那么大，就三万
+  B：三万啊……那行
+  A：恩，到账我喊你
+  B：哥，我网购那个空气炸锅发货没
+  A：那不我店里的货嘛，给你发快递，后天到
+  B：那必须好评啊，给你带图的那种
+  A：带图的五星，懂事
+  B：哥，那笔到没，我下班回来瞅了一眼没有
+  A：明早到，急啥，又跑不了
+  B：恩，那我明早留意
+  【10月16日】
+  A：妹，到了没，你看下卡
+  B：到了，30000，看了
+  A：恩，晚上八点前退回我发你那个卡号，尾号0377那张
+  B：好，我下班就办
+  A：退完截图发我
+  B：哥，周末爬山那个事，同事组队走山涧那条线，你去不
+  A：我就不去了，店里走不开，你注意安全，穿那双新鞋
+  B：行吧，给你拍照
+  A：恩，拍好看点
+  A：对了，这个月再走两回，都是这个数，你别嫌麻烦，一个月六百块零花钱
+  B：恩……行吧，就当帮哥，但你得保证那钱干净，我可不进去陪着你
+  A：放心，妹，哥心里有数
+  【10月17日】
+  【系统消息】B 向 A 转账 29400 元，已收款。
+  B：哥，转你了，三万扣俩点，两万九千四，回执也发你了，你查
+  A：收到，干得漂亮，回头哥给你买个包
+  B：包就免了，下次这种事提前一天说，我卡里好留余量
+  A：行，以后都提前说。这事就咱俩，连妈都别说
+  B：知道啦，你啥时候让我省过心
+  B：哥，爸体检报告出来了没，周六那趟
+  A：出了，医生说挺好，让少盐，我买了限盐勺
+  B：那就好，那勺我也买一个去

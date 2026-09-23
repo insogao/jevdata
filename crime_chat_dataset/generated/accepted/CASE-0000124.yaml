@@ -1,0 +1,135 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000124
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000141
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-65a9279788fd762a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: other_illicit_coordination
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 山民与饭店老主顾深夜交易“仅剩四只”的野味：凌晨桥头交割、冰袋保温、即到即走、避开白天巡护时间，定金加按斤尾款的规矩，指向未经许可的猎捕收购链条，全程只用“货、收、山里那点东西”等说法带过。
+  critical_evidence:
+  - A 说这个月“货”只剩四只、几个山头就这几只，催 B 赶早并借稀缺抬价
+  - 交货定在凌晨两点进山口老桥头，特意避开白天“巡的”与路人，老规矩只发一个字
+  - B 需备好冰袋与泡沫箱，货到即装车离开不逗留，手机调静音
+  - B 先转 4000 元定金，尾款按斤现结，B 的三桌客人已收了定金等货
+  benign_alternatives:
+  - 山货土产的收购往来
+  - 养殖野味的合法买卖讨论
+
+attributes:
+  duration_days: 4
+  turn_count: 58
+  approximate_tokens_estimate: 2050
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: forest_poaching
+  risk: 2
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0017
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-013
+
+dedup:
+  content_hash: sha256:0037302f00b51083b388675c712a6bbcd93c10be5aeaf093a79ec097e5f907d5
+pipeline_status: accepted
+title: other_illicit_coordination/forest_poaching
+conversation: |-
+  【11月3日】
+  B：老覃，进城没，上回你捎的冬笋，客人吃了都问还有没
+  A：冬笋要等下霜，现在土里还嫩，急不得
+  B：不急不急，对了，你说的“那个”还有没，上回留的那批客人点名要
+  A：有，不过你晓得，这个就这点量，得赶早
+  B：今天镇上油价又涨了，零号柴油七块二了
+  A：涨嘛，我三轮车都不敢多开，进趟城油钱心疼
+  B：那你下回来，我给你报点路费，不能让你白跑
+  A：客气啥，老主顾了
+  B：你家孙子满月酒定日子没，上回喝你说的喜酒还没回本呢哈哈
+  A：定了，冬月初六，在镇上红梅饭店，你可得到
+  B：到到到，礼金我都想好了，我亲自去掌勺，给你添两个硬菜
+  A：那敢情好，我那几个山里朋友就馋你那手红烧肉
+  B：行，到时候我提前一天过去
+  【11月4日】
+  B：老覃，昨天说的“那个”，到底还剩几只，我这儿三桌老客等着，你别让我开天窗
+  A：跟你交个底，这个月就剩四只，两只肥的，两只一般，你要就全包，拖到后天就说不准了
+  B：四只……行，全要，你给我留着，别放给别人
+  A：恩，看你面子留着，但钱得先动起来，山里兄弟们垫了工钱
+  B：懂，规矩我懂，你开个数
+  A：定金四千，尾款按斤，还是老价
+  B：四千……你这是坐地起价啊
+  A：嗐，这个月货少，几个山头就这几只，你还想往年那个价？
+  B：行行行，四千就四千，谁让客人好这一口
+  A：哎，你店里那个酸汤鱼配方，上回让你教我媳妇，她学了个半吊子
+  B：哈哈那配方是从贵州传的，得用木姜子，你让她多放那个
+  A：木姜子县城有卖没
+  B：有，回头我给你捎两瓶
+  【11月5日】
+  A：今早山上起了大雾，露水把裤腿都打透了
+  B：我们县城还好，就是风大，你早点回来喝口热的
+  A：恩，腰这几天有点酸，贴了膏药顶着
+  B：你少背点，都五十的人了，东西让年轻人扛
+  B：老覃，交货的事你说个章程，怎么个交法
+  A：后半夜两点，进山口那个老桥头，老地方，你把车停桥那头树下
+  B：两点，这么晚
+  A：就得这么晚，白天人多眼杂，这条道晌午老有巡的，夜里清净，二十分钟利利索索
+  B：行，我熟，前年也是这么交的
+  A：你备好冰袋和泡沫箱，我这头用湿布捂着，到手你就装车走，别逗留
+  B：冰袋我今晚就去冷库订，泡沫箱库里还有几个
+  A：恩，车上再备瓶热水，山路冷
+  B：对了，给你留了两瓶镇上的苞谷烧，交货那天给你
+  A：哟，那我有口福了，正好冬月初六席上用
+  B：席上喝那么烈的，给客人上点温和的
+  A：自己人喝，客人喝你的酸汤配米酒
+  【11月6日】
+  A：老梁，今夜就是今夜，两点，老桥头，东西我下午就取回来捂着
+  B：收到，我十一点就出发，先把冰袋冻上
+  A：恩，手机今晚调静音，到了给我发个“到”字就行
+  B：懂，老规矩
+  【系统消息】B 向 A 转账 4000 元，已收款。
+  B：覃哥，定金四千转你，你点点，尾款货到按斤现结
+  A：到了。放心，四只都给你留着，两只肥的给你挑店里头牌那桌
+  B：行，那两桌客人我已经收了定金了，就等你这货
+  A：恩，你的客人就是我的衣食父母，糊弄不得
+  B：覃哥，冬月初六那桌，我给你配个全牛宴怎么样，牛腩牛杂都上
+  A：全牛宴好，我那些兄弟就好这口，再加个你那个酸汤鱼
+  B：行，木姜子我多给你捎两瓶，管够
+  B：老覃，今晚要是雾大，桥头看不清水面，你打个双闪我再过去
+  A：行，雾大我就往里挪五十米，老槐树底下
+  B：成，那今晚见，货真价实，别拿次的糊弄我
+  A：你这话说的，我啥时候糊弄过你，四只都是现收的，精神着呢
+  B：哈哈，那就好，晚上见

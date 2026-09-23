@@ -1,0 +1,134 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000116
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000039
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-4f34ebdb9bb936f9
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 货车司机深夜顺路问新开的私人加油站，站长全程按挂牌价、会员日立减、可开发票、车队卡月结来招揽，所有优惠对所有车主公开透明，是一笔正常零售加油款，无任何按吨私下报价或站外交油安排。
+  critical_evidence:
+  - B 是高速口新开加油站的站长，与 A 是老车队同事，站里24小时营业
+  - 价格体系为全站挂牌价、周三会员日每升立减五毛，谁来都一样
+  - A 加满 2680 元，电子发票可同时开公司抬头和个人抬头
+  - 车队量大办车队卡统一月结，仍按挂牌价执行，司机名单提前报备
+  benign_alternatives:
+  - 私人加油站优惠
+  - 工地内部加油
+
+attributes:
+  duration_days: 5
+  turn_count: 56
+  approximate_tokens_estimate: 1277
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: fuel_tax_evasion
+  risk: 0
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0016
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-013
+
+dedup:
+  content_hash: sha256:46195b3852d96f17d44a0cdc6138f212ce7aa9c6f793e86ad6229b318ad1a681
+pipeline_status: accepted
+title: contraband_illicit_trade/fuel_tax_evasion
+conversation: |-
+  【10月20日】
+  A：没睡吧，半夜打扰
+  B：咋了老哥
+  A：跑夜车呢，刚过你们那个高速口，站还亮着灯
+  B：我们站24小时营业，高速口下来右手边就是
+  A：哦哦，新站就是你们啊，牌子上优惠挺大
+  B：周三会员日每升立减五毛，全站挂牌价，谁来都一样
+  A：下回我过去加
+  B：来，给你办张会员卡
+  A：成
+  B：108国道最近查超载严不严
+  A：严，我们绕省道多跑四十分钟
+  【10月21日】
+  B：稳当点好，别为省时间吃罚单
+  A：谁说不是，罚一回白跑两天
+  A：昨晚真去你们站加了，机器好用
+  B：好用吧，厕所都给你扫干净了
+  A：发票怎么开，我要抬头
+  B：加油机旁边扫码，电子发票直接填公司全称
+  A：方便
+  B：按吨我们做不了，零售按升，明码标价
+  A：我也没指望按吨，哈哈
+  B：车队量大就办车队卡统一月结，也按挂牌价
+  A：回头我给车头们说说
+  B：儿子期中考试咋样
+  A：数学98，语文又拖后腿
+  B：跟我闺女一样，偏科
+  A：车该保养了，你们站边上有修理铺没
+  B：出站左转两百米，老周家的，手艺行
+  A：成，明天顺路过去
+  【10月22日】
+  A：今天会员日吧，我下高速加油
+  B：来，3号枪给你留着
+  A：加满了，2680，开两张票，一张公司抬头一张个人
+  【系统消息】A 向 B 转账 2680 元，已收款。
+  A：油钱转你了
+  B：收到，票开好发你邮箱了，会员积分也攒上了
+  A：行，比高速服务区一升省一块多
+  B：挂牌价加会员减，省的是辛苦钱
+  A：下周车队过路，我带三辆车来
+  B：欢迎都来，明码标价谁也一样
+  A：老周那给我换了刹车片，收我380，贵不
+  B：行价，他那不用假件
+  【10月23日】
+  A：车队定下周二过你那站，四辆车
+  B：行，我让班组长排开加油位，一次别堵枪
+  A：都办车队卡吗
+  B：一车一卡，月结也行，挂你公司账
+  A：成，我把司机名单发你
+  B：好，票价表我拍你一份
+  B：闺女作文得奖了，晒一下
+  A：可以啊，随你文采
+  【10月24日】
+  A：名单发你了，四个司机两班倒
+  B：收到，卡明天办好在站里等你
+  A：你这站刚开就这么多花样，生意行不
+  B：还行，跑长途的都认明码标价加能开发票
+  A：对，我们要票抵成本
+  B：下月站里上线洗车，免费给你们车队预约
+  A：那必须捧场
+  B：下周会员日照旧
+  A：照旧，提前半小时到

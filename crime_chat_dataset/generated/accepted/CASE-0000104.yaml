@@ -1,0 +1,135 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000104
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000104
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-dab6d23a729e8222
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 基金会老同学以'助学专项'为名，让 B 公司走对公账户捐赠十万、按全额开票，再私下返八万五到 B 个人卡，首笔五万已转，疑似借公益通道虚开票据、清洗资金。
+  critical_evidence:
+  - A 承诺捐十万返八万五，差额称'渠道费加兄弟们的辛苦钱'
+  - 发票按十万全额开具，批文、合同、票三方一致，用于 B 公司入账抵税
+  - 捐款走 B 公司对公账户'才好看'，返款却回 B 私人卡，两笔账刻意分开
+  - B 已首笔转账50000元，余款月底补齐，返款在补齐次日支付
+  benign_alternatives:
+  - 企业公益捐赠依法抵税并取得全额票据
+  - 基金会专项募捐确有配套文件与对公收款流程
+
+attributes:
+  duration_days: 6
+  turn_count: 56
+  approximate_tokens_estimate: 1467
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: charity_receipt_wash
+  risk: 3
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0015
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-013
+
+dedup:
+  content_hash: sha256:fb2779c11b7f17152bb1e2ec788c790cf273314a05a2c70c130cdcf97bd46d05
+pipeline_status: accepted
+title: money_laundering_obfuscation/charity_receipt_wash
+conversation: |-
+  【9月14日】
+  A：老孟，毕业十年了吧，一晃
+  B：可不，娃都上小学了。你那基金会还忙？
+  A：忙，帮人管管善款，操心
+  B：你们那行听着体面
+  A：体面是真体面，就是好事都靠熟人
+  B：啥好事
+  A：你公司今年账上做得咋样
+  B：建材生意，流水看着大，一年到头白忙活
+  【9月15日】
+  B：你上回说去体检，报告出了没
+  A：出了，脂肪肝，让我戒酒，戒三天了
+  B：三天？明天就破功
+  A：别咒我。你血压药还吃着没
+  B：吃着呢，复查都正常。你昨晚说有正事
+  A：说正事。基金会今年有个助学专项，指标还差一截
+  B：差多少
+  A：十万。你走对公捐过来，我按全额给你开票，八万五三个工作日回到你私人卡
+  B：……回来八万五？那一万五算啥
+  A：渠道费加兄弟们的辛苦钱。你票按十万入账，账面漂亮，还能抵税
+  B：这听着不对劲
+  A：你三叔公司去年不也做过？他没跟你说
+  B：他说基金会返礼，没说返这么多
+  A：他那是小额。你这十万是专项，名额就俩，我给你留的
+  B：让我消化消化
+  【9月16日】
+  B：你家那只橘的减肥成功没
+  A：越减越肥，兽医都笑话我
+  B：照片发张，给娃看看
+  A：发了，看这脸，行走的肉垫
+  A：想好没，对公户信息发你了
+  B：走对公不怕查？
+  A：对公才好看，合同、发票、专项文件一套齐，账上就是一笔正经公益捐赠
+  B：那返款呢
+  A：返款走你私人卡，跟公司账彻底分开，两笔谁也碰不着谁
+  B：票啥时候开
+  A：款到账次日开，抬头税号核对好发我
+  【9月17日】
+  B：我想了一宿。票真按十万开？到时候对不上呢
+  A：专项批文都下来了，票、合同、款三方一致，挑不出毛病
+  B：那行。就一样，返款必须按你说的时点
+  A：补齐尾款第二天，一分不少，老同学还能坑你
+  A：我妈又腌了两坛酱菜，回头拿一坛给你
+  B：要要要，去年那坛我媳妇念叨到现在
+  A：那你正事儿得办利索，不然酱菜不给
+  B：你这是拿酱菜绑架
+  B：先走一半行不
+  A：可以，先五万，月底补齐另五万，票我先按流程走
+  B：好，我今天安排
+  【9月18日】
+  B：五万转过去了，看下
+  【系统消息】B 向 A 转账 50000 元，已收款。
+  A：到账了。合同今天寄，票后天出，扫描件先发你
+  B：返的那八万五呢
+  A：尾款补齐第二天就动，专款通道
+  A：对了，班长说十一聚会，去不去
+  B：看工地排期，能溜就溜
+  A：聚会你别提基金会的事，我嫌解释麻烦
+  【9月19日】
+  B：尾款月底走完，你那边催紧点，工人等米下锅
+  A：放心，账走完当天动
+  B：行，就你我知道，工地来电话了，先这样
+  A：明白人。三叔那笔当年不也稳稳的

@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000100
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000108
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-1ab2986ce4c0e65b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: theft_robbery_property_crime
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 开锁师傅应旧货商之请，为某老小区住户私配两把原装钥匙，约定傍晚五点半以后'只去一趟'，事成后收取1500元'工钱'，双方约定翻篇、互不相识。
+  critical_evidence:
+  - A 称九十年代老小区那种锁'省事'，并顺路替 B 看过楼道环境（一层两户、没有探头）
+  - A 以每把八百、两把一千五的价格私配'原装的'钥匙，声明出了事各自担、我不认识你
+  - 两人约定傍晚五点半以后动手、只去一趟，门牌信息发完即删
+  - 事成后 B 转账1500元工钱，双方相约翻篇、以后不再联系
+  benign_alternatives:
+  - 锁匠为相熟客户配钥匙属正常业务
+  - 收货行业与锁匠之间存在换锁介绍往来
+
+attributes:
+  duration_days: 4
+  turn_count: 45
+  approximate_tokens_estimate: 1131
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: key_copy_burglary
+  risk: 3
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0015
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-013
+
+dedup:
+  content_hash: sha256:66ede11f4a43a41249044680eea593e8fa8e156ba791c29b81fcb00ac316c4e9
+pipeline_status: accepted
+title: theft_robbery_property_crime/key_copy_burglary
+conversation: |-
+  【10月13日】
+  B：强哥，忙着呢
+  A：刚从城西回来，换了一天锁。啥事
+  B：上回吃饭你说你主要接老旧小区的单？
+  A：对，新楼盘是物业集采，轮不上我。老小区散单，价还高
+  B：那你说，那种老小区是不是最好弄
+  A：你问这个干嘛
+  B：我收旧货，看中一个小区，东西多，就是主人家不好约
+  A：九十年代那种楼，锁七八年没换的，省事。哪家
+  B：铁路家属院，红砖楼那片
+  A：那片我熟，上个月刚在隔壁栋换过两户
+  B：你闺女开学适应没
+  A：还行，就是文具贵得离谱，一个笔袋八十九
+  B：都这样，我侄子书包六百多
+  A：钱好挣也不好挣
+  B：谁说不是
+  【10月14日】
+  A：你说的那栋我下午送钥匙时看了一眼，一层两户，楼道里没探头
+  B：你连这个都看了？
+  A：顺路。这种就适合干一回就收手，别恋战
+  B：我就一趟，得手就完
+  A：钥匙怎么弄
+  B：你帮我配两把原装的，别用市面上那种一眼假的
+  A：一把八百，两把一千五。先说好，出了事各自担，我不认识你
+  B：应该的。啥时候能给
+  A：后天。门牌信息发我，就发一次，发完删
+  B：4栋2单元501、502，两扇门都要？
+  A：502就行，501那户常有人，别贪
+  B：你腰咋样了，上回看你贴着膏药还扛梯子
+  A：老毛病，干这行十个九个腰不好
+  B：少扛点，钱挣不完
+  A：道理都懂。你那老胃病呢
+  B：改了，十一点前睡
+  【10月15日】
+  A：东西好了，今晚放你说的快递柜，取件码私发你
+  B：收到，周五我去办事
+  A：记住，就一趟，傍晚五点半以后再去，那会儿楼里最消停
+  B：五点半，就一趟
+  A：入秋了炖点汤，你那胃
+  B：我媳妇正炖萝卜排骨呢
+  A：比我强，我花椒面就蒜
+  【10月16日】
+  B：强哥，事办利索了，东西比想的多
+  A：人没事吧
+  B：没有，那会儿家里没人，前后二十分钟
+  A：行，这事到这儿翻篇，你我不认识
+  B：明白，工钱转你
+  【系统消息】B 向 A 转账 1500 元，已收款。
+  A：收了。以后别找我干这个，就这一次
+  B：就这一次，回头正经换锁的单子给你多介绍

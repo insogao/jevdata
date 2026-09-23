@@ -1,0 +1,140 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000120
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000143
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-69a34e35d374ba67
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: other_illicit_coordination
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 票头按月给会计下达开票指标，用“名单外”的新设公司集中补齐近百份缺口，并配平品名、金额与资金流水、制作截图备查，按份抽成，是有组织虚抵链条里的月度配合。
+  critical_evidence:
+  - A 按月给 B 排票量指标，本月缺口近百份，指定用“名单外”的新面孔公司顶上，老几家歇着避风头
+  - 要求品名与账面进销对应、四流配平，并单独做好资金流截图备查，个人卡部分单独记录不进账套
+  - 出票时点要错开，生面孔来仓库问话时仓、货、账分开并口径一致，显示两人清楚此事见不得光
+  - 月底冲完后 A 转 B 8000 元按份抽成，并预留下月指标、要求把新公司档案建厚
+  benign_alternatives:
+  - 代账公司开票与申报调度
+  - 税务筹划与用票安排讨论
+
+attributes:
+  duration_days: 2
+  turn_count: 65
+  approximate_tokens_estimate: 1916
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: false_invoicing_group
+  risk: 3
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0017
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-013
+
+dedup:
+  content_hash: sha256:355c4ab039dd3a52a3e4c3a3f3ea0563e6c0bb7baf8a00c1f6a40bdef29f6e67
+pipeline_status: accepted
+title: other_illicit_coordination/false_invoicing_group
+conversation: |-
+  【10月28日】
+  A：小唐，起了没，月底了，对个数
+  B：早强哥，正要找你，这个月票量不够，我手里几家都开到头了，缺口还差小一百份
+  A：我知道，所以提前找你。老几家这月先歇歇，风头上，这回用外头那几家新面孔，名单外边的
+  B：新那几家我还没建档，品名得重新配一遍
+  A：配嘛，老规矩，品名跟你们账上的进销对上，数量我给你拉单子
+  B：行，我按你的单子配，金额我来平
+  A：恩，还有，每家别超二十份，扎堆了显眼
+  B：强哥，中午老地方？给你带烧鹅饭
+  A：带带带，加例汤，昨天那份到你手里都凉透了
+  B：电梯人多，怪我咯
+  A：少贫，多加个卤蛋，再帮我带包烟
+  B：行，记得给我饭钱
+  A：对了，资金流的截图做好，别直接甩转账记录，做一份像样的，四流摆一块儿看着齐整
+  B：懂，合同流货物流资金流票流，我拿模板套，数值全配平
+  A：对。有两笔走个人卡的，你也照着各配一份，别串
+  B：个人卡那部分我单独记，不进账套，你放心
+  A：恩，你这脑子让人省心
+  B：哎我的腰，这月坐得我直不起来
+  A：让你去游泳你不去
+  B：哪有时间，你看我家小子上回上网课还偷开游戏
+  A：哈哈看见了，跟你一个德行，糊弄老师一套一套的
+  B：随我，没办法
+  A：周末带你娃来我这儿，我教他下棋，省得天天抱着手机
+  B：那他可开心了，有人陪他折腾
+  A：数量单子发你了，新面孔五家，品名分布开，别全挤在同一类上
+  B：收到，我核了一下，五家铺下来九十多份，缺口正好填上
+  A：对。留点余量，有退回的马上顶上
+  B：恩，我留了五个点的余量
+  B：强哥，品名初稿发你了，你过一眼，明早我改完就往外走
+  A：我看看……第九家数量大了，拆一半到第八家去，其他行
+  B：行，这就改
+  A：改完早点睡，明天硬仗
+  【10月29日】
+  B：强哥，改完发了，八家全过了一遍，数值全平
+  A：好，上午先出六十份，下午收尾，别拖到晚上，申报口明天就关
+  B：知道，我盯着呢
+  A：中午让外卖直接送公司，别下楼耽误事
+  B：行，还烧鹅饭
+  B：哎双十一你囤啥没，你家纸巾该补了吧
+  A：就囤了点咖啡，穷，你呢
+  B：我给娃囤绘本，别的先加购物车不掏钱
+  A：你这招叫只加不减，跟我学的吧
+  B：那必须，师傅领进门
+  A：下午出票的时点错开点，别一小时内全冒出来
+  B：恩，我按各客户上班的点散着排
+  A：对了，这两天有俩生面孔来仓库转悠问东问西，你们的货和车都按正常生意走，票的事一个字别提
+  B：明白，仓、货、账三个口我都分开的
+  A：恩，就该这样
+  A：收尾怎么样
+  B：最后一家在出了，五点前全齐，总数九十六份
+  A：行，多出来的是余量，好事
+  B：清单我整理好发你
+  B：强哥，全弄完了，清单发你了
+  A：辛苦，这个月抽成老规矩
+  B：恩，按九十六份算？
+  A：按份，凑个整，给你八千
+  B：又凑整，上回也是，你这账算得比我粗
+  A：粗有粗的境界
+  【系统消息】A 向 B 转账 8000 元，已收款。
+  A：转你八千，点点
+  B：到了，谢强哥。下月缺口你早点给我个数，我好提前配
+  A：恩，月初我就拉单子给你。名单外那几家，建档建厚点，资料弄得像那么回事
+  B：知道，资料我从他们那儿拿了一整套，连场地照片都有
+  A：行，你办事我放心
+  B：明早申报我七点到，汇总表今晚给我
+  A：这就发你，早点睡，别又腰疼
+  B：恩，晚安

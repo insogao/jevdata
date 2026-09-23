@@ -1,0 +1,120 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000127
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000125
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-fdaf2dc9c1c0d2e5
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 表面是同事间出现“录屏、转账两千、通讯录”等酷似视频敲诈的桥段，实为同事协助处理照片被盗用：录屏是投诉取证，转账是垫付公证费，通讯录只是平台过度索权被关闭。全程无任何胁迫意图。
+  critical_evidence:
+  - B 的登山照被某户外平台盗用当宣传图，B 录屏截图取证并向平台投诉，平台已下架并同意出具书面说明
+  - 平台注册时索要通讯录授权，B 已在设置中关闭授权并在投诉里要求整改
+  - B 为固定证据办理公证，公证费 2000 元由 A 垫付，B 明确记账并承诺发工资归还
+  - 所谓视频只是与网恋对象的日常视频聊天，A 仅给出收拾背景、打灯等正常建议
+  benign_alternatives:
+  - 隐私泄露维权（投诉盗图平台并公证取证）
+  - 网恋视频的日常调侃与同事出主意
+
+attributes:
+  duration_days: 3
+  turn_count: 44
+  approximate_tokens_estimate: 1418
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: naked_chat_recording
+  risk: 0
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0017
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-013
+
+dedup:
+  content_hash: sha256:438636c0f9532e7d5538a227e3b828cebdc8ac58a01914285f6a0f17e40caef5
+pipeline_status: accepted
+title: coercion_blackmail/naked_chat_recording
+conversation: |-
+  【10月13日】
+  A：早，楼下新开那家牛肉面，中午去不去
+  B：去啊，节后还没吃过一顿正经面
+  A：走不走，再磨蹭队就排到门口了
+  B：来了来了，占个四人桌，喊上老陈
+  A：占好了，他家红烧牛肉是真的香
+  B：哎，问你个事，你先别笑
+  A：说，笑不笑看内容
+  B：我网上认识那对象，今晚约了视频，第一次开摄像头，我有点慌
+  A：慌啥，背景收拾干净，头发抓一下，灯打亮点就完了
+  A：下午那版方案发老大没，他下午三点还在开会
+  B：发了，刚打回来，说第三页逻辑不对
+  A：今晚你几点走，我可能得磨到九点
+  B：等你，蹭你车，这个点地铁挤死了
+  B：哎烦死，刚发现个闹心事
+  A：咋了这是
+  B：我朋友圈那张登山照，被一个什么户外平台拿去当宣传图了，连名字都没换
+  A：真离谱，你先把原图和那边的页面都留好，别删聊天记录
+  【10月14日】
+  A：今晚健身房还去不，教练说你再鸽他就收保留费了
+  B：去，七点，你可别又放我鸽子
+  A：放心，昨晚撸完铁，胳膊现在还抬不起来
+  B：你那是姿势不对，回头让教练给你正正
+  B：上午打了那平台客服，让他们下架，客服让我提交证明材料
+  A：把带拍摄时间的原图导出来，再对着他们页面录个屏，一块交上去
+  B：录屏我已经弄好了，页面和编号也都截了图
+  B：最恶心的是注册的时候非要授权通讯录，我当时迷迷糊糊就同意了
+  A：通讯录授权去设置里关掉，投诉里也写上这条，让他们改
+  A：猫粮到了吗，我家那位绝食两天了
+  B：到了，晚上给你捎一袋，你家猫就是惯的，我家那傻猫给啥吃啥
+  A：它就是挑，非得罐头拌饭才赏脸
+  B：惯的，回头我把我家那款的配方发你
+  B：对了，我咨询了下，想把证据做个公证固定下来，公证费两千
+  A：两千手头紧不，不行我先垫上，发工资再还
+  B：那多不好意思……行，先记我账上
+  A：跟我客气啥，凭据留好就行
+  【10月15日】
+  【系统消息】A 向 B 转账 2000 元，已收款。
+  A：转你两千，公证别拖，证据越早固定越踏实
+  B：收到，太够了！发工资马上还你
+  A：客气啥，下午约上没
+  B：约了，公证处离公司就两站地
+  A：周六爬山去不，老陈约了北边那座山，说红叶刚开始
+  B：爬！新登山鞋还没开光呢
+  A：那你开车，我这周油价涨得肉疼
+  B：行，你负责买水和小面包
+  B：刚收到平台回复，那条宣传已经下架了，还说给我出书面说明
+  A：效率可以啊，公证也做了，这下稳了

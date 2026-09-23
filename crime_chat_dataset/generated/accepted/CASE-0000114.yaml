@@ -1,0 +1,116 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000114
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000040
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-f83d5d9c856b5797
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: contraband_illicit_trade
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 批发商老板与口岸线人长期配合，趁“那边的货”到岸压价两成、不走店内账目、仓库看货现金结算，定金走私人账户，一整套避开明面手续的拿货安排。
+  critical_evidence:
+  - B 是批发商老板，A 是其手下在口岸长期收货的线人，日常对账往来
+  - 同一种货分“店里的价”和便宜两成的“那边的价”，后者仓库看货再谈
+  - 约定周五晚八点仓库看货、现金结算、不走店里的账，B 转 5000 元定金到 A 私户
+  - 交接安排在后门进、只带少数人、现款点清，收货后碎损私下调换
+  benign_alternatives:
+  - 免税店代购讨论
+  - 正常卷烟批发
+
+attributes:
+  duration_days: 3
+  turn_count: 40
+  approximate_tokens_estimate: 772
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: tobacco_smuggle
+  risk: 2
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0016
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-013
+
+dedup:
+  content_hash: sha256:138bf92932bc3ad05ae19d2b7e564f046495f754ce3b50e6f0cdc8bbb97387c2
+pipeline_status: accepted
+title: contraband_illicit_trade/tobacco_smuggle
+conversation: |-
+  【11月11日】
+  B：上周的账对完了没
+  A：对完了，昨儿都结清了
+  B：行。这批硬壳的，现在拿货一条多少
+  A：哪种？店里摆的那种，还是那边的
+  B：俩价我都要
+  A：店里的照旧一条一百三；那边的，仓库看货再谈
+  B：差多少
+  A：便宜两成上下，货到了才算数
+  B：什么时候到
+  A：这周五前后，码头那边上来就叫我
+  B：到了先给我留两条尝
+  A：尝的给你留，多的按规矩来
+  B：陪儿子复习月考呢，头大
+  A：我们那时候抄完卷子就睡，哪像现在
+  B：时代不同了，家长也得跟着刷题
+  【11月12日】
+  A：货定了，周五晚上到
+  B：还是老规矩？
+  A：老规矩：仓库看货，现金结算，不留名字
+  B：不留名字是什么意思
+  A：不走店里的账，你少道手续
+  B：那价还能再压点不
+  A：两成已经是顶了，再压我就白跑
+  B：行，两成就两成，我先压点定金
+  A：定金转我私户，五千
+  B：行，老关系了
+  A：你那腰怎么样了
+  B：贴了膏药，好多了
+  A：少搬重货，喊小工去
+  B：舍不得那个钱
+  【11月13日】
+  A：今晚八点，仓房老位置，现金带够
+  B：好，定金我先转
+  【系统消息】B 向 A 转账 5000 元，已收款。
+  B：转了五千，查收
+  A：收到，晚上见，剩款现金点清
+  B：行，我带两个伙计
+  A：别带太多人，仓房小
+  B：到路口了
+  A：后门进，灯我留着
+  B：货点完了，两条碎的算我的
+  A：碎的换给你，下回补
+  B：成，现钱你点点

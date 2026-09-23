@@ -1,0 +1,136 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000113
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000062
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-3c10c00699d60f65
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A 长期向圈内买家兜售来路私密的“素人原创”照片素材，打码样品引流、付款后发未打码原片，B 作为回头客全程只谈价格与交付，交易闭环完整。
+  critical_evidence:
+  - A 声称新到一批素人原创素材，样品全部打码、原片只在付款后交付
+  - 整套原片报价 2888 元不拆卖，交付方式是网盘链接且仅保留二十四小时
+  - B 于看样两日后向 A 转账 2888 元，A 收款后立即发链接并当日失效
+  - A 承诺下批到货给老客户优先留货，暗示长期供货关系
+  benign_alternatives:
+  - 摄影约拍合作
+  - 情侣间分享照片
+
+attributes:
+  duration_days: 4
+  turn_count: 59
+  approximate_tokens_estimate: 1097
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: photo_material_trade
+  risk: 3
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0016
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-013
+
+dedup:
+  content_hash: sha256:5a5b60344dba9aca5317a7dbfff616a1396029d6c3a1480d3949bd408b75faf1
+pipeline_status: accepted
+title: sexual_transaction_exploitation/photo_material_trade
+conversation: |-
+  【9月22日】
+  B：老板，最近有上新吗
+  A：有，新到一批素人原创，还没往外放
+  B：老规矩先看样品
+  A：样品打码发你，原片只能付款后看
+  B：行，发来
+  A：九张发你微信了，全打码的
+  B：这批成色可以，怎么个价
+  A：整套原片2888，单买不拆
+  B：有点顶，上批可没这么贵
+  A：素人原创就这几套，卖完没补
+  B：我想想
+  A：行，不急，这周内给我信
+  B：你那支旧镜头还出吗
+  A：出，850你拿走，原装遮光罩都在
+  B：下回见面带给我
+  【9月23日】
+  B：那批素人的，能便宜点不，2700
+  A：不砍价，老客户了下批给你留优先
+  B：你这生意做的
+  A：爱买不买呗，后面还有人问
+  B：行吧行吧，周四给你信
+  A：明早台风外围，你那边下雨没
+  B：下了一上午，路都积水了
+  A：那你别骑车了
+  B：打车，命要紧
+  A：嗯，库里我都垫了防潮板
+  B：国庆那个影像展你去不
+  A：去，蹭同行票
+  B：带我一张
+  A：行，到时候给你留
+  B：好嘞
+  【9月24日】
+  B：想好了，整套要了，2888是吧
+  A：对，定好了随时转，转完就发
+  B：转完多久给
+  A：过网盘秒发，链接只留二十四小时
+  B：那我得赶紧存
+  A：对，过时不候，也别外传，圈里都是成年人，讲个规矩
+  B：懂，我从不外传
+  A：你最近还撸铁不
+  B：撸，一周三练，就是废
+  A：我办了卡又鸽了俩月
+  B：你这卡就是洗澡卡
+  A：哈哈至少澡洗得贵
+  B：快中秋了，你们那边五仁还横行吗
+  A：横行，我妈又买了两盒
+  B：我家囤了蛋黄的，回头给你捎俩
+  【9月25日】
+  B：转2888了，查收
+  【系统消息】B 向 A 转账 2888 元，已收款。
+  A：收到，链接发你邮箱了，网盘秒存
+  B：存了，密码对上了
+  A：嗯，链接我这边今天就失效
+  B：效率可以
+  A：下批周五到，老客户优先，要留我给你压着
+  B：留一套，钱到时候一样转
+  A：成
+  B：对了，上批那位的资料你收好吧，别混发
+  A：放心，一客一档，发错我这生意还做不做了
+  B：那行
+  A：影像展的票我拿到了，周六见
+  B：周六见，带镜头
+  A：行，等你

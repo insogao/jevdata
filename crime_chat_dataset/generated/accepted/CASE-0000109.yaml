@@ -1,0 +1,119 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000109
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000125
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-fdaf2dc9c1c0d2e5
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 偶然录下同事 B 与他人连麦的私密片段，连续数日以“删片段”为名索要钱款，收款后又暗示按月供奉，威胁持续升级。
+  critical_evidence:
+  - A 与 B 为同部门同事，声称掌握 B 的部门群与四十多号人的通讯录
+  - A 声称手机里存有 B 在工位外放连麦时的录屏，以此索要两千元
+  - B 于被威胁次日上午向 A 转账 2000 元
+  - A 收款当晚即暗示“下个月再表示表示”，B 无奈请假回避团建
+  benign_alternatives:
+  - 网恋视频误会
+  - 同事间过火的玩笑
+
+attributes:
+  duration_days: 3
+  turn_count: 43
+  approximate_tokens_estimate: 767
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: naked_chat_recording
+  risk: 3
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0016
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-013
+
+dedup:
+  content_hash: sha256:61027c88921fcae82087aa0e2715ac8b03fb8d0e0318faf8ed19cf9eea6c6824
+pipeline_status: accepted
+title: coercion_blackmail/naked_chat_recording
+conversation: |-
+  【11月4日】
+  A：早，周报别忘了今天交
+  B：收到，下午写
+  A：你上季度绩效不错啊
+  B：还行吧，都是该干的
+  A：拼单不，楼下奶茶买一送一
+  B：来杯四季春，三分糖
+  A：行，到了放你桌上
+  A：你今天怎么走得这么早
+  B：地铁口修路，得赶早
+  A：哦，我还堵在高架上
+  B：路上注意安全
+  A：睡了没
+  B：怎么了这么晚
+  A：上周五下午，你工位上外放的那段连麦
+  B：你说什么呢，我不懂
+  A：我这边全录屏了
+  B：你到底想干嘛
+  A：别紧张。先转两千，那段东西我就当没存在过
+  B：我们同事这么多年，你干这种事
+  A：想清楚，明晚之前给话
+  【11月5日】
+  B：昨晚你喝多了吧
+  A：我很清醒。两千，今晚之前
+  B：凭什么
+  A：凭我手机里那段。你们部门群四十多号人，通讯录我都拿到了
+  A：周五团建你报了没
+  B：没心思团建
+  A：报上，别让大家看出什么
+  B：我转你了，东西删干净
+  【系统消息】B 向 A 转账 2000 元，已收款。
+  A：收到，乖
+  B：说话算话
+  B：周五降温，团建改室内了，你知道吧
+  A：知道
+  B：删了没有
+  A：删了删了
+  A：不过，下个月这个时候，懂我意思吧
+  B：什么意思
+  A：表示表示，大家都体面
+  【11月6日】
+  B：我不可能月月给
+  A：那就看你想不想让更多人看到
+  B：两千我已经给了
+  A：那是买那段的，以后的事以后说
+  B：周六团建我请了假
+  A：随你，月底报表记得补
