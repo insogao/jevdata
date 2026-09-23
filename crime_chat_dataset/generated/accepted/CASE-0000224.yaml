@@ -1,0 +1,98 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000224
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000061
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-60f0edfe34d161c0
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 
+  critical_evidence:
+
+  benign_alternatives:
+  - 交友软件正常邀请
+  - 兴趣社群拉新
+
+attributes:
+  duration_days: 2
+  turn_count: 25
+  approximate_tokens_estimate: 648
+  relationship: 上下级
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: platform_referral
+  risk: 3
+  relationship: 上下级
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0028
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-017
+
+dedup:
+  content_hash: sha256:62d27c3a32d34e011646a3835c4ab3bd5642c9b266d37a007316ac49e0333b35
+pipeline_status: accepted
+title: sexual_transaction_exploitation/platform_referral
+conversation: |-
+  【6月7日】
+  A：这周新来的想进群，问我是不是有卡片那种介绍。
+  B：先把规则说清楚，别让人误会是普通兴趣群。
+  A：你发的图上只有代号，得私下问暗号才知道内容？
+  B：嗯，老客带新人还有返，听着就不太对劲。
+  A：有人问是不是约见服务，我没答应。
+  B：别继续拉人，也别收钱。把群停了，保护自己。
+  A：午饭的面坨了，外卖晚了半小时。
+  B：我也刚吃，今天雨大。
+  A：明天你还去看展吗？
+  B：去啊，票已经买了。
+  【6月8日】
+  A：昨晚又有人来问暗号，我没回。
+  B：把邀请入口关了吧，别替他们背书。
+  A：之前的新人我也要提醒一下别付款。
+  B：对，明确告诉他们不再安排任何见面。
+  【系统消息】A 向 B 转账 260 元，已收款。
+  A：周末展览几点？
+  B：两点，地铁口见。
+  A：好，我先把那张图删了。
+  B：留好聊天记录，必要时找平台处理。
+  A：展还不错，那个蓝色装置很漂亮。
+  B：是啊，拍照光线也好。
+  A：回头把照片发我。
+  【6月9日】
+  A：群已经解散，没再收任何钱。
+  B：做得对，后续陌生邀请都别接。
+  A：明白，这事我也跟平台举报了。
+  A：后续没有再收款，邀请也都关掉了。

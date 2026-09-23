@@ -1,0 +1,151 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000285
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000133
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-8445ee5b6787ad03
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: coercion_blackmail
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 管理服务方以噪音投诉施压，要求商户定期送烟并暗示有执法关系；商户接受合理检查但拒绝私下好处，要求书面物业流程。
+  critical_evidence:
+  - A以持续噪音投诉施压商户
+  - A要求每月送两条烟换取不再找城管
+  - A暗示熟悉城管并要求B识相
+  - B拒绝送物并要求物业书面处理
+  benign_alternatives:
+  - 邻里噪音调解
+  - 物业投诉流程
+
+attributes:
+  duration_days: 5
+  turn_count: 74
+  approximate_tokens_estimate: 1574
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: resident_noise_leverage
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0041
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-021
+
+dedup:
+  content_hash: sha256:262e5b44988677fa564f037a11d3cae15403171652bb760497ff3c28a2fd11c4
+pipeline_status: accepted
+title: coercion_blackmail/resident_noise_leverage
+conversation: |-
+  【9月1日】
+  A：你店收摊拖椅子的声音又传到楼上了。
+  B：我加了软垫，也把收摊时间提前。
+  A：我认识城管，往上反映事情就复杂。
+  A：这两天降温挺快。
+  B：早晚有点凉，我拿了薄外套。
+  A：我还穿短袖，早上有点后悔。
+  B：办公室放件外套方便。
+  A：嗯，记下了。
+  B：这周天气变化挺快。
+  B：有噪音问题请物业登记，我配合检查。
+  A：合作这么久，别弄得太僵。
+  B：我希望好好解决，但要书面沟通。
+  A：附近新开了家面馆，你吃过没？
+  B：还没，同事说汤底挺清爽。
+  A：我中午去试试，别又排队。
+  【9月2日】
+  B：早点去吧，十二点后人多。
+  A：好，回来给你反馈。
+  B：要是不错我也去。
+  A：每月两条烟，就当给周围人赔不是。
+  B：我不会私下送东西换处理结果。
+  A：你自己考虑，抬头不见低头见。
+  B：我会按租约和物业规定处理。
+  A：你家那盆绿植最近怎么样？
+  B：新长了两片叶子，挪到窗边了。
+  A：我办公室那盆还没动静。
+  B：别浇太勤，土干了再浇。
+  A：好，回头试试。
+  B：希望它快点长起来。
+  A：物业周五来看现场，你在不在？
+  B：我会在店里配合，也请物业记录。
+  【9月3日】
+  A：你这么认真，倒显得我难说话。
+  A：周末你准备做什么？
+  B：可能回家看看父母，带点水果。
+  A：橙子最近挺甜的。
+  B：我妈更喜欢梨，我买一小袋。
+  A：挺好，路上别赶。
+  B：嗯，坐地铁过去。
+  B：有记录大家都清楚，免得误会。
+  A：那周五见。
+  B：好，涉及投诉的内容请有物业人员在场。
+  A：你最近午饭还点那家盖饭吗？
+  B：换成楼下的馄饨了，出餐快。
+  A：我周末想把书架整理一下。
+  B：先把不用的书装箱，桌面会清爽很多。
+  A：今天早高峰地铁人多吗？
+  【9月4日】
+  B：还好，我提前一站下车走过来的。
+  A：附近超市的梨最近挺甜。
+  B：我上周买过，价格也还行。
+  A：你那双鞋修好了吗？
+  B：好了，换了鞋跟还能穿一阵。
+  A：周末天气预报说会晴。
+  B：那正好把被子拿出去晒晒。
+  A：你最近晚上还在看书吗？
+  B：睡前看几页，眼睛累了就停。
+  A：我想换个保温杯，旧的漏水。
+  B：买个简单的就行，容量别太大。
+  A：楼下早餐店换了菜单。
+  B：我看到多了豆浆和饭团。
+  A：这周办公室空调有点冷。
+  B：我放了件薄外套在椅背上。
+  【9月5日】
+  A：你家猫还喜欢蹲窗台吗？
+  B：喜欢，早上总盯着外面的鸟看。
+  A：我昨晚做了番茄鸡蛋面。
+  B：简单又快，适合下班晚的时候。
+  A：你上次推荐的播客我听了两期。
+  B：还不错吧？我通勤时经常听。
+  A：门口那家修车铺还开着吗？
+  B：开着，我昨天去给车打了气。
+  A：最近晚上风大，晾衣服要夹牢。
+  B：是啊，我昨天差点把袜子吹走。
+  A：周末你准备去哪里走走？
+  B：可能去河边，不想跑太远。
+  A：我把手机壳换成透明的了。
+  B：挺好，旧的那个边角都裂了。

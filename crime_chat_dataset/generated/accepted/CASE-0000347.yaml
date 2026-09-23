@@ -1,0 +1,139 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000347
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000006
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-b7d0ad47d04b5b67
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 亲戚 A 帮手头紧的 B 走正规渠道周转：在银行 App 上如实申请、按流程查征信，A 还特意提醒凡是'不看征信秒批''先交保证金'的都是坑；合同在 App 里可查可验。A 先垫借 B 两万过渡，B 后面按代扣正常还。
+  critical_evidence:
+  - A 帮 B 在自己手机银行 App 上如实申请消费贷，查征信走官方流程
+  - A 提醒合同在 App 里可查可验，凡是图片版、先交保证金的都别信
+  - A 强调正规贷款不会让先交保证金，'不看征信秒批'是骗人的话术
+  - A 先垫借 B 两万过渡，B 后面按银行正常代扣还款
+  benign_alternatives:
+  - 正规银行贷款流程
+  - 亲友借款
+
+attributes:
+  duration_days: 6
+  turn_count: 60
+  approximate_tokens_estimate: 1437
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: loan_fee_bait
+  risk: 0
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0036
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-020
+
+dedup:
+  content_hash: sha256:ff618eec540ef3537e13c7a7f1e46ee3a127d3e26750f8927cd6e30cb352826d
+pipeline_status: accepted
+title: fraud_scam/loan_fee_bait
+conversation: |-
+  【2月10日】
+  B：姐 最近手头有点紧 想周转一下
+  A：要多少 先跟我说清楚干啥用
+  B：店里进货压了款 差两三万
+  A：别碰那些小广告 我帮你在手机上正经申请
+  B：网上说有不看征信秒批的 那种快
+  A：快什么快 不看征信秒批的都是骗局 正规银行哪有不查征信的
+  B：那要交保证金吗
+  A：正规的绝不让先交保证金 凡是放款前要你交钱的 立刻拉黑
+  B：懂了 那要走什么流程
+  A：我把你信息填我手机银行 如实报 征信查了没问题就批
+  B：会不会影响我以后买房
+  A：正常还款不影响 按时还就是好记录
+  B：中午了 你吃饭没
+  A：刚在家煮了面 你呢
+  B：店里叫的外卖
+  A：少吃点外卖 胃要紧
+  B：刚才有人给我发合同图片 说先交五百保证金就放款
+  A：立马删了 那合同是图片没法核实 真合同都在官方App里能查
+  B：看着还挺正规的
+  A：图片谁都能P 你点开App看电子合同才是真的
+  B：好 我不理他了
+  【2月11日】
+  A：申请提交了 银行那边要核对上班时间
+  B：要多久
+  A：正常一两天 我盯着进度
+  B：谢谢姐
+  B：今天降温了 你出门多穿点
+  A：嗯 你也是 店里暖气足吗
+  B：还行 客人不多
+  A：银行那边说额度初核两万 利率也还行
+  B：两万够了 利息多少
+  A：年化几个点 都在合同里写着 你签之前自己看一遍
+  B：好
+  【2月12日】
+  B：昨天那批货到了 忙到半夜
+  A：别太累 身体是本钱
+  B：没办法 自己不盯就乱
+  A：你之前借我那两千 先不用急着还 专心周转
+  B：那不行 亲兄弟明算账 我月底还你
+  A：随你 别为这个跟我客气
+  【2月13日】
+  A：审批过了 银行说今天放款
+  B：真的 太好了
+  A：合同App里已经能看了 你先看一眼再点确认
+  B：看了 条款都写得很清楚
+  A：那就行 我这边同步点了
+  B：到账了 真快
+  A：正规渠道就这样 不会跟你玩花样
+  B：姐 我另外还差一点 能不能先跟你借两万 我这边货款回来就还你
+  A：行 亲戚之间帮一把 我现在转你
+  【系统消息】A 向 B 转账 20000 元，已收款。
+  A：两万转你了 收一下 不急着还
+  B：收到了 姐你真是帮我大忙
+  A：用好了把店撑住就行
+  【2月14日】
+  B：银行那边扣款日是每月几号来着
+  A：App里写着 每月十八号自动代扣 你卡里提前留够
+  B：好 我设个提醒
+  A：中午吃了没
+  B：吃了 今天自己做的饭
+  A：这就对了 少油少盐
+  【2月15日】
+  B：下月我把借你的两万先还一半
+  A：不用赶 你店里顺了再说
+  B：不行 说好的就得算数
+  A：行 那我等着

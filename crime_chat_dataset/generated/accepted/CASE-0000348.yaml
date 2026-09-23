@@ -1,0 +1,136 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000348
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000020
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-5ed66945689708ad
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 招聘负责人 A 正常受理老同学 B 的内推：材料走公开招聘流程、面试正常打分不走形式、亲属关系按回避制度如实申报、档案按统一规定处理。B 顺手把之前借 A 的私房钱还上，纯属私人往来，与招聘无关。
+  critical_evidence:
+  - B 正常内推孩子，材料按公开招聘流程提交
+  - A 说明面试会正常打分，不会走形式，亲属关系按规定申报
+  - A 说档案按统一规定处理，不存在特殊操作
+  - B 把之前借 A 的私人借款还上，与招聘无关
+  benign_alternatives:
+  - 正常内推
+  - 亲属回避制度内调岗
+
+attributes:
+  duration_days: 6
+  turn_count: 57
+  approximate_tokens_estimate: 1410
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: relative_employment_exchange
+  risk: 0
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0036
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-020
+
+dedup:
+  content_hash: sha256:4ac8b38db596707272232294a5711841a48768dc6b0ba27393aa7383865cb55e
+pipeline_status: accepted
+title: bribery_corruption/relative_employment_exchange
+conversation: |-
+  【8月6日】
+  A：老吴 孩子的事你考虑得怎么样了
+  B：想走内推 靠谱吗 现在不都挺严的
+  A：内推只是帮着递材料 面试还得正常打分 我不会给他走形式
+  B：那孩子笔试还行 面试怕紧张
+  A：紧张也没关系 大家一样考 我把岗位要求先发你 让他准备
+  B：要不要给你表示点什么
+  A：别来这套 入职前我们不收家属一分钱 这是纪律
+  B：我就是客气客气
+  A：咱俩这关系不用客气 我按规矩办 你也别让我为难
+  B：行 听你的
+  A：我跟孩子有点亲属关系 按规定得先申报 我会如实报上去
+  B：那会不会影响他
+  A：申报了才合规 不报才出事 放心
+  B：中午吃了没
+  A：刚吃完 食堂今天有排骨
+  B：你这单位伙食不错
+  A：还行 孩子真来了也能吃上
+  【8月7日】
+  B：孩子面试通知收到了 下周几来着
+  A：下周四 早上九点 你让他准时到 带齐材料
+  B：要提前准备点什么
+  A：身份证 毕业证 还有作品 岗位说明里都写了
+  B：今天雨大 你开车慢点
+  A：嗯 你也注意
+  B：孩子他妈这两天激动得睡不着
+  A：让她宽心 平常心考就行
+  【8月8日】
+  B：孩子说想打听面试官是谁
+  A：这不能说 面试官随机抽 提前知道就不公平了
+  B：那算了 让他自己发挥
+  A：这就对了 把专业准备扎实比啥都强
+  B：之前借你那两千 我今天先还你
+  A：那是家里急用的钱 你宽裕了再还 跟孩子的事没关系
+  B：一码归一码 我这就转你
+  A：行 那我收着 你踏实点
+  【系统消息】B 向 A 转账 2000 元，已收款。
+  B：转你了 查收
+  A：收到了 咱俩的账两清
+  【8月9日】
+  B：孩子昨天面试说挺顺利
+  A：顺利就好 成绩这周公示 咱们都等结果
+  B：结果什么时候出
+  A：官网会公示 你盯着看就行
+  B：中午跟你嫂子在外面吃了顿好的
+  A：等结果的事 别急着庆祝
+  A：公示了 孩子过了 靠他自己
+  B：太好了 真要谢谢你
+  A：谢啥 我按规矩递的 分是他自己考的
+  B：那也承你的情
+  【8月10日】
+  B：孩子档案那边需要他本人去吗
+  A：按统一规定转递 他本人带身份证去人才中心办就行 没有特殊通道
+  B：好 我让他按流程走
+  A：下周一让他来报到 带身份证就行
+  B：好 谢谢 改天请你吃饭
+  A：吃饭可以 别整别的
+  B：孩子说想去谢谢叔叔 你看方便不
+  A：让他来单位好好干就是谢了
+  B：行 那我转告他
+  【8月11日】
+  A：今天周一 孩子来报到了 手续走完了
+  B：顺利就好 谢谢你
+  A：好好干 别辜负机会

@@ -1,0 +1,149 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000289
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000036
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-9152331eea2ac3f6
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: contraband_illicit_trade
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 供货的A私下给开小卖部的熟人B留了一批非国标水果味电子烟弹，用「新口味到了」「整条拿更划算」「别摆出来」等暗语敲定私下拿货；B嘴上说最近查得紧，最后还是答应把货压在里屋偷偷卖。
+  critical_evidence:
+  - A用「新口味到了」的暗号告诉B货已经到了，并报出芒果/荔枝/青提几个口味
+  - A称整条拿货比单盒便宜，能顶上散拿两盒的价，劝B多拿
+  - A反复叮嘱这批不对外摆，只留给问上门的熟客，有人问就说断货
+  - B担心被查，但仍同意先压一条、把货放在里屋箱子不挂正柜
+  benign_alternatives:
+  - 合规电子烟经销渠道的正常补货与订货
+  - 水果味合法市场的公开讨论与测评
+
+attributes:
+  duration_days: 4
+  turn_count: 73
+  approximate_tokens_estimate: 1236
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: e_cigarette_illegal_flavor
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0034
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-019
+
+dedup:
+  content_hash: sha256:5461128133b635904f670d770ace0e5a9bc80fce266d72dda9786ec36465a26a
+pipeline_status: accepted
+title: contraband_illicit_trade/e_cigarette_illegal_flavor
+conversation: |-
+  【9月2日】
+  A：在忙不
+  B：刚理完货 咋了
+  A：跟你说个事 那批新的到了
+  B：哪几个口味
+  A：你上回看的那几个 芒果 荔枝 还有个青提
+  B：青提不错 我这边老有人问
+  A：嗯 量不多 我先给你留着
+  B：先别急 最近查得紧
+  A：放心 老规矩 不摆出来
+  B：你手里现在多少
+  A：整条走的话 比单盒划得来
+  B：差多少
+  A：你拿一整条 顶上散着拿两盒的价
+  B：这么划算 不会有问题吧
+  A：我自己走的路子 你还不清楚
+  B：对了 这两天热死了 你那仓库不闷吗
+  A：开着风扇呢 这玩意怕潮 我垫了纸箱
+  B：我家那口子昨天中暑了 头晕
+  A：让他多喝水 别老在外面跑
+  B：说了不听 倔得很
+  A：都这样 哈哈
+  B：你晚上吃的啥
+  A：楼下炒了个面 凑合
+  B：我炖了汤 给你留一碗?
+  A：心意领了 我明天过去拿货顺路
+  【9月3日】
+  A：想好没 要不要我先给你压两条
+  B：两条多了吧 万一…
+  A：卖熟客 一周就空了
+  B：我怕有人较真
+  A：所以说不摆出来 有人要才拿
+  B：那你先留一条 试试水
+  A：行 我先给你压一条
+  B：别放正柜 放里屋那个箱子
+  A：懂 老位置
+  B：你那边还有别的口味不
+  A：过两天还到个葡萄的
+  B：到了言语一声
+  B：这两天铺租又涨 房东催着呢
+  A：涨多少
+  B：一个月多三百
+  A：那得卖点走量的补回来
+  B：可不 所以我才想多进点
+  A：那就多拿 整条我给你留
+  B：你先把这条给我留稳
+  【9月4日】
+  A：葡萄那批到了
+  B：这么快 你放哪了
+  A：还在车上 晚上给你送过去
+  B：别送门口 让人看见不好
+  A：我停后面巷子 你出来接一下
+  B：行 几点
+  A：八点半
+  B：好 我把里屋腾一下
+  A：还有件事 这批别对外说
+  B：知道 我又不傻
+  A：有人问就说没有
+  B：嗯 就说断货了
+  B：你家小子开学了吧
+  A：开学了 天天赖床
+  B：我闺女也一样 早上喊不动
+  A：现在孩子都这样
+  B：辅导班又交了一笔钱
+  A：都是花销
+  【9月5日】
+  A：昨晚那两条摆好了没
+  B：摆里屋了 没敢挂出来
+  A：有没有人问
+  B：有个熟客拿了两盒 说味道正
+  A：那就行 你这路子对
+  B：下回还有别的口味?
+  A：有 但得等
+  B：行 你到货就告诉我
+  A：老样子 到了给你留
+  B：嗯 别声张
+  A：放心

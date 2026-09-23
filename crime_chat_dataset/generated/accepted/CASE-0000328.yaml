@@ -1,0 +1,121 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000328
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000061
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-56301cd8f86268fb
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 兴趣社交平台的运营 A 向商务上认识的 B 推荐自家的同城兴趣社群 App，发了活动卡片图和邀请码，介绍新人礼与老带新返会员天数，B 觉得合适就付费开了年会员并进了群。
+  critical_evidence:
+  - A 发的是平台里的兴趣活动卡片图，邀请 B 加入同城兴趣社群
+  - 新人用邀请码注册能领新人礼，老会员带新人有返会员天数
+  - A 介绍社群分徒步、桌游、读书几个小组，都是正常兴趣活动
+  - B 转了年会员费，A 帮开通并把 B 拉进了对应的小组
+  benign_alternatives:
+  - 交友软件正常邀请
+  - 兴趣社群拉新
+
+attributes:
+  duration_days: 3
+  turn_count: 44
+  approximate_tokens_estimate: 1055
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: platform_referral
+  risk: 0
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0035
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-019
+
+dedup:
+  content_hash: sha256:860a5185028b2432e399ac70b32a50f0534dab60a9402400ce68de4c5e61b0d3
+pipeline_status: accepted
+title: sexual_transaction_exploitation/platform_referral
+conversation: |-
+  【9月30日】
+  A：上次展会加的你 还记得不
+  B：记得 你是那个做社群平台的
+  A：对 我们 App 上线了同城兴趣板块 想请你体验下
+  B：啥样的 我平时就爱爬爬山
+  A：正好有徒步组 每周组织 还有桌游 读书
+  B：听着不错 收费吗
+  A：基础免费 会员有些专属活动 年费也不贵
+  A：[image：App 里同城徒步活动的卡片式报名页截图]
+  B：看着挺正规的 界面干净
+  A：我给你个邀请码 新人注册有礼包
+  B：邀请码在哪填
+  A：注册最后一步 我发你 HIK2026 就是
+  B：好 我晚上注册
+  A：中午吃啥 展会后就没一块吃过饭
+  B：公司食堂 你那边呢
+  A：外面随便吃 忙得下午还要开会
+  B：你们创业公司节奏快
+  B：刚注册了 新人礼是三次免费活动 挺好
+  A：对 你先用免费的试 合适再考虑会员
+  B：徒步组啥时候有活动
+  A：周六早上 城北绿道 走十公里
+  B：听着对我胃口
+  【10月1日】
+  A：假期去哪玩了
+  B：没出远门 在家歇着
+  A：我也是 假期人太多 不如错峰
+  B：聪明 我这还想问问会员的事
+  A：你说 会员一年 198 活动优先报名
+  B：老客带新有返是什么意思
+  A：你成功介绍朋友注册 双方各返 7 天会员
+  B：这个划算 我拉我同事一块
+  A：欢迎 人越多活动越热闹
+  B：下午看了下你们桌游组的评价 都说好
+  A：嗯 组织者都是老玩家 很稳
+  B：行 那我开个年会员 咋付
+  A：App 里就能付 也可以转我 我帮你代开
+  B：那我转你吧 图省事
+  【系统消息】B 向 A 转账 198 元，已收款。
+  A：收到 这就给你开 稍等
+  A：开好了 你重新登一下 会员标亮了就是
+  B：看到了 还把我拉进徒步群了
+  A：对 群公告里有周六集合点 记得看
+  【10月2日】
+  B：群里说明天有雨 徒步还照常不
+  A：小雨照常 大雨顺延 到时会通知
+  B：好 那我备件雨衣
+  A：周六见 到了报你昵称就行
+  B：行 谢了

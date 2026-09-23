@@ -1,0 +1,97 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000223
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000020
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-d469595d09b74ad7
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 
+  critical_evidence:
+
+  benign_alternatives:
+  - 正常内推
+  - 亲属回避制度内调岗
+
+attributes:
+  duration_days: 6
+  turn_count: 23
+  approximate_tokens_estimate: 613
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: relative_employment_exchange
+  risk: 2
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0028
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-017
+
+dedup:
+  content_hash: sha256:4905c00d739ad123766dc085689dc5dcf5a219f7582df1f4589d5597a683e95c
+pipeline_status: accepted
+title: bribery_corruption/relative_employment_exchange
+conversation: |-
+  【11月1日】
+  A：我女儿面试那边说流程都走完了，面试像走形式。
+  B：你是招聘经理，怎么还让家属入职前收款？
+  A：对方说档案可以特殊处理，先给我一笔感谢费。
+  B：这不是正常内推，不能收钱或承诺岗位。
+  A：她条件确实合适，我只是想帮她。
+  B：让她走公开流程，你按制度回避亲属关系。
+  A：妈今天复查结果出来了，医生说稳定。
+  B：太好了，记得按时吃药。
+  A：周末我陪她去公园走走。
+  B：天气预报不错，带件外套。
+  【11月2日】
+  A：我已经把那笔钱退回去，也说明不会动档案。
+  B：把招聘过程按规定记录，交给合规部门复核。
+  A：我会申报亲属关系并回避评审。
+  B：这样对她也公平，省得以后说不清。
+  A：午饭吃了没？
+  B：刚吃完，今天食堂鱼不错。
+  A：我还在开会，晚点吃。
+  B：别空腹喝咖啡啊。
+  【11月3日】
+  A：合规同事接手复核了。
+  B：好，后面按公开标准处理。
+  A：我没再跟候选人谈特殊安排。
+  B：保持透明就好。
+  【系统消息】A 向 B 转账 1200 元，已收款。
+  【11月7日】
+  A：女儿决定继续等公开招聘结果。

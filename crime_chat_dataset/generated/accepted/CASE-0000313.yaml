@@ -1,0 +1,146 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000313
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000121
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-e5937f2cce0f914f
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 同事 B 掌握着已婚上司 A'那晚'的私密记录，以'兄弟帮忙''手头紧'为名，要求 A 从下月起每月八号固定转 8000 元；A 求缓被拒、只能按期付款，B 全程不动声色地用'嫂子知道这事吗''照顾好你自己''我只是嘴严'等话敲边——没有一句直接挑明威胁，但每句都在提醒 A：不继续付钱，事情就会捅到他家里和单位。
+  critical_evidence:
+  - B 翻出'那晚的事'并约 A 在楼梯间单独谈，A 第一反应是'我家里经不起折腾'（第1天）
+  - B 提出'从下个月开始 每月八号 转我八千'，被嫌多后抬出'A 手机里那些东西 比这难听多了'（第2天）
+  - B 点出'嫂子知道这事吗'并留下'照顾好你自己'，A 当场语塞（第2天）
+  - 6月8日 A 准时转账 8000 元，B 回'你办事就是让人放心'，还顺口打听 A 女儿的学校和年级（第3天，转账事件）
+  - A 求缓一个月，B 拒绝并强调'规矩别破'，末尾再补一句'好好上班 照顾好你自己'（第4天）
+  benign_alternatives:
+  - 同事之间情感纠纷的私下协商
+  - 双方拟协议离婚前的补偿安排
+
+attributes:
+  duration_days: 4
+  turn_count: 68
+  approximate_tokens_estimate: 1384
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: secret_affair_blackmail
+  risk: 3
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0029
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-017
+
+dedup:
+  content_hash: sha256:9137aea0766815e1b4fcbcb119acf43b4a6520eb43d08ee3fa1f9edc31f6d52a
+pipeline_status: accepted
+title: coercion_blackmail/secret_affair_blackmail
+conversation: |-
+  【6月5日】
+  B：张哥 下午会议室碰见你嫂子了 她说你这几天在杭州出差?
+  A：临时加的行程 懒得挨个说
+  B：哦 这样
+  B：那晚的事 我想了想 咱还是聊聊吧
+  A：…聊什么
+  B：电话里不方便 明早你早点到 咱楼梯间说
+  A：你别乱来 我家里经不起折腾
+  B：看你态度嘛
+  B：下午三点评审你别迟到 上次你迟到被点了名
+  A：知道 这季度指标压得我喘不过气
+  B：你还行 我这半年没休过一个整周末
+  A：等这阵过去 请你吃饭
+  【6月6日】
+  B：早
+  A：到了 你说吧
+  B：那晚的事 你放心 我不是要闹
+  B：我最近手头紧 想请你帮个忙
+  A：多大忙
+  B：不大 从下个月开始 每月八号 转我八千
+  A：八千?? 你这是抢
+  B：张哥 话难听了 你手机里那些东西 比这难听多了
+  A：……
+  B：就当哥哥照顾兄弟生活 我也没别的意思
+  A：凭什么是我每月给
+  B：凭我嘴严 嫂子知道这事吗
+  A：……你别拿她说事
+  B：我提她干啥 我提的是你 照顾好你自己
+  A：让我想想
+  B：中午食堂有糖醋排骨 你去不去
+  A：没胃口 你去吧
+  B：行 给你带杯豆浆?
+  A：不用
+  B：想开点 排骨它不香吗
+  A：你吃你的
+  【6月8日】
+  B：八号了 张哥
+  A：转了 看手机
+  【系统消息】A 向 B 转账 8000 元，已收款。
+  B：收到 你办事就是让人放心
+  A：说到什么时候为止
+  B：什么叫到什么时候 咱这是兄弟帮忙 你别把话说难听了
+  A：行 行
+  B：那个包你上回不是问我还背着吗 你看 我也没乱花 你给的都是正经开销
+  A：我没说你不正经
+  B：那就好 对了 你闺女是不是快小升初了
+  A：明年 你问这干嘛
+  B：随口一问 她成绩肯定随你
+  A：……你别打听孩子
+  B：瞧你紧张 关心同事孩子怎么了 哈哈
+  B：晚上去游泳不 我办了张年卡 一次合十几块
+  A：不去 你去吧
+  B：你这颈椎再不练 以后抱闺女都费劲
+  A：嗯 等忙完这阵
+  【6月15日】
+  A：下个月…能不能缓一缓 这个月房贷刚扣完
+  B：张哥 你这说的 嫂子管账这么严啊
+  A：你就说行不行
+  B：每月八号 这个数 我也难 反正规矩别破
+  A：……好
+  B：对了 下周部门团建 你去不
+  A：去 有啥办法
+  B：带上嫂子呗 一起热闹
+  A：她不一定有空
+  B：哈哈 那也是
+  A：我对你够意思了 你也别得寸进尺
+  B：得寸进尺? 我可什么都没做过 我就是嘴严而已
+  B：那些东西我一次都没给人看过 你信我吧
+  A：我信
+  B：这就对了 好好上班 照顾好你自己
+  A：……知道了
+  B：八号见
+  A：嗯

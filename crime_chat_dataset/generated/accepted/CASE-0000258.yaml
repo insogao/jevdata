@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000258
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000061
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-920839f637ab6ca1
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 中间人 A 把 B 拉进自己运营的正规兴趣社群，通过平台官方邀请码入群，群内凭邀请码按公开规则报名活动，平台有正规老带新返现；B 正常支付会员费并领取平台返现。
+  critical_evidence:
+  - A 通过平台官方邀请码把 B 拉进自己运营的兴趣社群
+  - 群内凭邀请码按平台公开规则报名活动
+  - 平台有正规的老带新返现活动，走官方账户
+  - B 正常支付会员费并收到平台合规返现
+  benign_alternatives:
+  - 交友软件的正常好友邀请
+  - 兴趣社群的正常拉新活动
+
+attributes:
+  duration_days: 6
+  turn_count: 46
+  approximate_tokens_estimate: 886
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: platform_referral
+  risk: 0
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0033
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-019
+
+dedup:
+  content_hash: sha256:ad0d9d8164855f1c5e9336a1b76c7bd121f437b439516927b624ac842b466687
+pipeline_status: accepted
+title: sexual_transaction_exploitation/platform_referral
+conversation: |-
+  【7月1日】
+  A：兄弟 上次说的那个群 我给你拉进去
+  B：哪个群
+  A：就我管的那个 登山徒步群 周末常组织活动
+  A：[image：平台官方邀请卡片图：带小程序二维码和邀请码]
+  B：这卡片是啥
+  A：官方邀请卡 你扫码用上面的邀请码进群就行
+  B：要收费吗
+  A：进群免费 报活动才收 规则群公告都写着
+  B：中午吃了没
+  A：刚吃 你呢
+  B：随便对付了
+  【7月2日】
+  A：周末那条线报名了没 名额不多了
+  B：怎么报名
+  A：群里点报名 填邀请码就成 保险平台统一买
+  B：懂了
+  A：平台有老带新活动 你介绍朋友来 官方给你返现
+  B：你自己不亏?
+  A：平台拉新的预算 走官方账户 跟我没关系
+  B：最近忙不
+  A：忙 项目收尾
+  B：那挺好啊
+  B：明天降温
+  A：你注意点 别感冒
+  【7月3日】
+  B：上次那条线挺好 下回还去
+  A：是吧 我跟领队熟 有好线喊你
+  B：返现到账了 官方那个
+  A：对 拉新平台统一打 不用给我
+  B：行 我问问兄弟去不去
+  A：球赛看了没 昨晚那场
+  B：看了 加时太刺激
+  A：今晚继续 老地方
+  【7月4日】
+  A：周末回不回家 你妈念叨了
+  B：回 买了点东西带回去
+  A：孝顺
+  B：我介绍俩兄弟进群了
+  A：行 报名让他们走小程序 平台统一安排
+  【7月5日】
+  B：这周忙完没
+  A：差不多了 你要来的话提前说
+  B：好
+  【系统消息】B 向 A 转账 300 元，已收款。
+  B：周末活动费三百 我先转你 你帮我一起交
+  A：收到了 我截图发群里公示
+  B：好 谢了
+  【7月6日】
+  A：今天雨大 出门带伞
+  B：知道了
+  B：晚上有空不 出来吃个饭
+  A：行 老地方
+  B：我请

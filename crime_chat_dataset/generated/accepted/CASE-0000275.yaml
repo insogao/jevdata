@@ -1,0 +1,123 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000275
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000095
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-a0aef5582538df39
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: money_laundering_obfuscation
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 收集购物卡后以折价快速结算变现，明确偏好多种卡券并要求即时交付卡密；B 以熟人商业往来名义提供卡券。
+  critical_evidence:
+  - A 表示按九四折实结收卡
+  - A 同时询问京东卡与苏果卡
+  - A 要求收到卡密后即付，双方按此约定完成一笔普通生活费用转账，卡券交易本身不发生转账事件
+  benign_alternatives:
+  - 正规卡券回收平台
+  - 公司福利卡转让
+
+attributes:
+  duration_days: 5
+  turn_count: 46
+  approximate_tokens_estimate: 817
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: gift_card_cashout
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0040
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-021
+
+dedup:
+  content_hash: sha256:38c1739e78686173cd75865e420ed9da5f3125e353bf9bcfcc4bd50e0d6d2441
+pipeline_status: accepted
+title: money_laundering_obfuscation/gift_card_cashout
+conversation: |-
+  【9月6日】
+  A：最近手里卡券多吗
+  B：有几张公司发的 你收吗
+  A：收 九四折实结
+  B：都是面额不大的
+  A：京东卡苏果卡都要 不挑
+  A：你上次借的书我放前台了
+  B：收到 我晚点下楼拿
+  A：封面有点折别介意
+  B：没事 我主要看里面
+  A：看完给我说说结尾
+  B：行 我还没读到最后
+  【9月7日】
+  B：公司福利卡我得先确认能不能转
+  A：你先看清楚来源 别为难
+  B：我问过了 可以自己处理
+  A：把面值和期限说下就行
+  B：你拿到卡密即付？
+  A：新开的咖啡店你去了吗
+  B：去了 人不多
+  A：豆子偏酸吗
+  B：有点 但奶咖还行
+  A：我点美式可能会踩雷
+  B：那你试试燕麦拿铁
+  【9月8日】
+  A：对 收到确认后就结
+  B：我不想在聊天里放太多卡号
+  A：理解 具体就当面说清楚
+  B：那先试一张小面额的
+  【系统消息】A 向 B 转账 168 元，已收款。
+  A：天气热起来了
+  B：中午出去晒得头晕
+  A：喝点水别只喝咖啡
+  B：我刚买了瓶水
+  A：晚上还要加班吗
+  B：今天不用 可以早点回
+  【9月9日】
+  A：可以 你确认有效再算
+  B：我今天晚点整理给你
+  A：别赶时间 看好再决定
+  B：嗯 我先把福利说明翻出来
+  A：你家楼下快递柜修好了吗
+  B：修好了 昨天能正常取
+  A：太好了别再堆门口了
+  B：物业也贴了通知
+  A：我有个包裹明天到
+  B：到了我帮你留意
+  【9月10日】
+  A：如果不方便就算了
+  B：确认能转了 我再约你
+  A：好 这周五我有空
+  B：我回头跟你说

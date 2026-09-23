@@ -1,0 +1,154 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000268
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000066
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-f12d7f42bafb4e8b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A通过长期住房资助维系与成年B的隐秘亲密往来，并要求避开其婚姻家庭知情；B试图区分实际报销与关系压力。
+  critical_evidence:
+  - A提出固定月度资助并主动承担B租房费用
+  - B反复要求资助仅限实际房租且不代表接受亲密关系安排
+  - A表示不要让配偶知道两人往来，B明确要求停止隐瞒
+  benign_alternatives:
+  - 互相尊重的恋爱伴侣分担房租
+  - 家庭或雇主提供的透明住房补助
+
+attributes:
+  duration_days: 5
+  turn_count: 78
+  approximate_tokens_estimate: 1815
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: long_term_support_exchange
+  risk: 1
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0039
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-021
+
+dedup:
+  content_hash: sha256:741bec0b826b01d8dbcd216bd446e805ad98f88731bb165b88933b72eef6c8c2
+pipeline_status: accepted
+title: sexual_transaction_exploitation/long_term_support_exchange
+conversation: |-
+  【5月6日】
+  A：这月的支持我按之前说的转给你，房租也一起算。
+  B：月度那笔和房租分开记吧，我只接受实际租房报销。
+  A：你别这么见外，我们不是普通的房东租客。
+  B：所以我才要讲清楚，钱不能代表我答应什么。
+  A：你愿意继续和我保持亲密关系，我就一直照顾你。
+  B：把资助和见面绑在一起，我会觉得被逼着回应。
+  A：我只是想知道我们是不是还维持之前那样。
+  B：我还没想好，先不要用住房费用催我。
+  A：那边的事先别告诉我爱人，家里会多想。
+  B：你有家庭却让我一直瞒着，这对我不公平。
+  A：现在说出来只会弄得更复杂，先低调点。
+  B：我不想继续保密往来了，请把报销处理得透明。
+  A：你这样我以后也很难帮你了。
+  B：房租我会自己想办法，别把帮助当条件。
+  A：你那边搬家箱够吗？
+  B：还差两个大号的。
+  【5月7日】
+  A：楼下便利店有卖，挺结实。
+  B：我周末去看看。
+  A：记得量一下柜子尺寸。
+  B：已经量了，笔记在手机里。
+  A：做得好，不然箱子进不去电梯。
+  A：好，我按账单报这一次，之后我们再谈。
+  B：不用再谈关系了，钱和关系分开就到这里。
+  A：我把上个月的费用明细整理好了。
+  B：我只核对实际房租，不核对见面次数。
+  A：明白，月底前把账单给我就行。
+  B：还有，之后不要在晚上突然问我在哪。
+  A：我只是关心你有没有回住处。
+  B：这种询问让我觉得要向你交代行踪。
+  A：好，我不会再追问。
+  B：你之前说报销要看我有没有继续见你。
+  A：那句话我收回，房租和关系分开。
+  【5月8日】
+  B：我需要时间确认自己想不想继续联系。
+  A：上次的胃药还有效吗？
+  B：好多了，医生让我少喝冰的。
+  A：那你最近喝温水吧。
+  B：办公室有热水壶。
+  A：我也去买个保温杯。
+  B：选轻一点的，天天带着方便。
+  A：好，我看看评价。
+  A：我不会用钱逼你给答复。
+  B：也请不要再提你配偶不知道这件事。
+  A：我会处理好自己的家庭，不让你替我承担。
+  B：我不想卷进你的家庭安排。
+  A：你愿意的话这周我把账单打给你。
+  B：发明细就好，不要附带见面要求。
+  A：好，我只按实际支出处理。
+  【5月9日】
+  B：如果你做不到，我会停止接受这笔帮助。
+  A：我听明白了，之后都按你说的边界。
+  B：我们先暂停聊关系。
+  A：可以，我不再追着问。
+  B：谢谢，至少这次把话说清楚。
+  A：楼下装修声停了吗？
+  B：今天没听见电钻。
+  A：可能他们周末休息。
+  B：终于能午睡半小时了。
+  A：你最近加班还多吗？
+  B：这周少一点，月底再忙。
+  A：那先把觉补回来。
+  A：我原来觉得支持你就能让你安心。
+  B：真正让我安心的是没有交换条件。
+  A：我会把这个区别记住。
+  B：那就先到这里，账单有需要再联系。
+  【5月10日】
+  A：好的，接下来我不主动催你。
+  B：也不用替我做决定。
+  A：知道了。
+  B：嗯。
+  A：房东发来的票据我已经看到了。
+  B：按上面实际金额报就可以。
+  A：会照票据处理，不再多加别的。
+  B：谢谢，之后保持清楚就好。
+  A：你还记得猫粮牌子吗？
+  B：蓝色袋子的那款。
+  A：我家那只最近挑食。
+  B：换口味试试，别一下买太多。
+  A：嗯先拿小包装。
+  B：它肯吃就好。
+  A：挑食猫真的很会拿捏人。

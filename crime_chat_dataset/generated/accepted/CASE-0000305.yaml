@@ -1,0 +1,148 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000305
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000111
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-d2bb841727338581
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: theft_robbery_property_crime
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 向素不相识的二手车贩 B 出手三台不许问来路、里程反常的九五新电动车：车架上的字码要自己弄干净、三天内必须出手、只走熟人圈、在老桥底下单独交割，B 压价到八千二全收后两天内转卖出手，实为收赃销赃的电动车黑市链条。
+  critical_evidence:
+  - A 自称来路不能问、只在晚上发照片，三台九五新车的里程少得反常
+  - 带牌那台可加三百，车架上的字码 A 让 B 收前自己弄干净，说是老规矩
+  - A 要求三天内出手、熟人圈里过一过就行，约老桥底下单独交割
+  - B 压价后以八千二收三台，当日下午转账并拉走车
+  - 当晚 B 称已出两台、带牌那台明后天出
+  benign_alternatives:
+  - 个人闲置电动车的二手转让
+  - 车行正常收车再转卖
+
+attributes:
+  duration_days: 2
+  turn_count: 72
+  approximate_tokens_estimate: 1466
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: electric_bike_resale_chain
+  risk: 3
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0027
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-017
+
+dedup:
+  content_hash: sha256:b36cfa929f71502a296747685e09d9ce3321e23afeddcc632ef45bcd5e7807f0
+pipeline_status: accepted
+title: theft_robbery_property_crime/electric_bike_resale_chain
+conversation: |-
+  【7月19日】
+  B：哥们儿你好 老周说你手上有车 要出新?
+  A：是他说的吧 对 三台 都是新的 骑了没几天
+  B：哪来的货
+  A：兄弟 别问来路 问就是自己骑腻了
+  B：行 行规我懂 照片有吗
+  A：晚上发你
+  B：成 什么车
+  A：市面上跑量的那两款 一款两台 一款一台
+  B：成色呢
+  A：九五新 有台连牌带充电器都在
+  B：带牌的能多要钱
+  A：那当然 带牌贵三百
+  B：牌能过户不
+  A：牌的事你别管 有本事你当没牌的卖
+  B：先看照片再说
+  A：兄弟干哪行的
+  B：城北修车铺 捎带卖二手 你呢
+  A：我跑物流 夜班多 时间自由
+  B：夜班伤身 啥时候补觉
+  A：白天睡 老习惯了
+  B：那晚上联系正方便
+  B：今儿这天闷得要命 你那边下雨没
+  A：阴着 像要憋一场大的
+  B：下雨照片也得发啊 哈哈
+  A：急什么 晚上八九点准时
+  B：你那放车的地方漏不漏雨
+  A：不漏 放心
+  A：图发了 三张 你看
+  B：收到……这台里程才两百多公里?
+  A：说了 骑了没几天 那台基本没怎么骑
+  B：车架那排字呢 照片上糊的
+  A：眼尖 那排字收之前你自己弄干净 老规矩
+  B：懂 那这台价呢
+  A：带牌的三千五 两台无牌的各两千八
+  B：我压压价 明天回你
+  A：行 丑话说前头 货不压手 三天内得出
+  B：干我们这行收了货也睡不踏实 走 桥头吃烤串 我请
+  A：刚下夜班正饿 那我就不客气
+  B：你多给我讲讲车的事就行 哈哈
+  【7月20日】
+  B：哥 带牌的三千 无牌两台各两千五 三台八千 全要
+  A：你这是砍到骨头了
+  B：行情就这样 车行压得更狠 我加价都难出
+  A：八千五 不能再少
+  B：八千二 行就成 不行我找别家
+  A：八千二就八千二 交个朋友 下回有货先紧着你
+  B：爽快 怎么交
+  A：下午四点 老桥底下 你一个人来
+  B：不去你铺子吗
+  A：我不固定铺面 熟人都这么交割
+  B：行 四点见
+  A：昨天淋了点雨 嗓子冒烟
+  B：我箱里有感冒药 下午给你带一板
+  A：那敢情好 你还备着药
+  B：常年桥底下吹风 不备不行
+  A：都是辛苦钱
+  B：中午吃了没 桥头羊汤开到两点
+  A：交割完再吃 心里不落地
+  B：成 交完我请
+  A：出发了
+  B：我也走起
+  【系统消息】B 向 A 转账 8200 元，已收款。
+  B：转你八千二 点收 三台我拉走了
+  A：收到 尽快出 三天内 带牌那台你心里有数
+  B：放心 朋友圈一发 老主顾分分钟
+  A：熟人圈里过一过就行
+  B：懂 都熟人
+  A：下回有货第一个找你
+  B：成 随时
+  B：哥 晚上真下雨了 你到家没
+  A：到了 出手了吱声
+  B：已出两台 带牌的明后天
+  A：行 三天内解决就算你本事
+  B：睡了 明儿见

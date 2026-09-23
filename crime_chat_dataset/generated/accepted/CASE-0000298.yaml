@@ -1,0 +1,147 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000298
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-3a6f0d07584c5f0c
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: privacy_doxxing
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 做招聘中介的A通过某公司里的助理B，弄整个部门的通讯录和离职名单，简历按份收，跟B谈好一份多少钱，先转一笔定金，说以后长期要。
+  critical_evidence:
+  - A要B弄一份整个部门的电话名单
+  - A说简历按份收，一份给多少钱
+  - A还问有没有离职名单，离职的更好谈
+  - A先转了一笔定金给B
+  benign_alternatives:
+  - 猎头对候选人的正常触达
+  - 经同事授权的通讯录共享
+
+attributes:
+  duration_days: 3
+  turn_count: 71
+  approximate_tokens_estimate: 1251
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0034
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-019
+
+dedup:
+  content_hash: sha256:891d2341d78b5d15077e2357075499ea881913a21ef1045cd19c73d6765f9617
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【11月3日】
+  A：小B 忙不忙
+  B：刚打完会议纪要 咋了
+  A：上次说的那个事 你那边方便不
+  B：哪个
+  A：你们部门那个通讯录 能给我一份不
+  B：全部门的?
+  A：对 整个部门 我这边要用
+  B：这不太好吧 都是内部的东西
+  A：没人会知道 你就导一份
+  B：你要来干嘛
+  A：我有用 不会害你 也不会写你名
+  B：多少钱
+  A：一份名单我给你一千五 先转你
+  B：就一份名单?
+  A：有简历更好 简历按份算 一份五十
+  B：简历我哪有一堆
+  A：你们收的简历不是都存在系统里
+  B：…你倒是清楚
+  A：还有离职名单 离职的更好谈
+  B：离职名单也有 但那个敏感
+  A：敏感才值钱 我给你加钱
+  B：让我想想
+  A：中午一起吃个饭?
+  B：不了 我在食堂对付
+  A：行 那下午再聊
+  B：你那边是做什么的
+  A：帮公司找人 说白了就是拉人跳槽
+  B：那你要名单是挖人
+  A：对 你帮我 我也给你分成
+  B：被公司发现我工作就没了
+  A：发现不了 我做事很干净
+  A：今天给你转定金 你先弄名单
+  【系统消息】A 向 B 转账 1500 元，已收款。
+  B：收到 我先弄通讯录
+  A：对 简历和离职名单慢慢来
+  B：今天降温 你那边冷不冷
+  A：冷 办公室暖气还没开
+  B：多喝热水 别感冒
+  【11月4日】
+  B：通讯录我导好了 怎么给你
+  A：发我邮箱 用那个新号
+  B：好 你查收
+  A：收到了 挺全 你们部门一百多号人
+  B：嗯 都在这了
+  A：简历呢 先弄二三十份
+  B：我下班拷 别催
+  A：行 一份五十 你弄多少我收多少
+  B：中午食堂有红烧肉
+  A：你日子过得挺滋润
+  B：就指着这口吃的了
+  A：哈哈 回头分成了想吃啥吃啥
+  B：刚拷了四十份简历 私你
+  A：好 这就补你两千
+  B：那离职名单要不要
+  A：要 尤其是今年走的 名单单独给我
+  B：行 我明天弄
+  A：晚上别加班太晚
+  B：还早 手头活没完
+  A：注意别用公司网传 用自己流量
+  B：知道 我有数
+  【11月5日】
+  B：离职名单发你了
+  A：收到 这批质量好
+  B：这单结一下
+  A：好 名单加简历一起算
+  B：以后长期要吗
+  A：长期要 你每季度给我更新一次
+  B：行 那我把时间表定一下
+  A：别在公司留痕迹 每次都清干净
+  B：放心 我也怕
+  A：周末有空喝一杯
+  B：看情况 得看孩子
+  A：行 你定
+  B：嗯

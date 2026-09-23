@@ -1,0 +1,130 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000299
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000032
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-08489bd44f8e742b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: contraband_illicit_trade
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 药贩 B 找中间人 A 长期进睡觉用的那种处方药：A 手里几张每月额度空着的卡、卡主愿意借出来帮忙开药，按板一百二结算、先转账后夜里在城西面馆后巷口泡沫箱交货五十板，全程不提药名只谈板数和额度，实为倒卖医保药品的地下供货线。
+  critical_evidence:
+  - B 要五十板往上的睡觉用的那种药，A 称老几家每月额度空着、得拆两家凑
+  - A 透露有张卡额度空着、卡主愿意借出来每月帮着开，另一家额度被人用了只能缩量
+  - 按板计价一板一百二，约城西面馆后巷口晚九点交货
+  - B 先转六千元货款再当面点货五十板，塑封齐全
+  - A 称下月额度一放出来就继续供货，有多的再喊 B
+  benign_alternatives:
+  - 帮亲戚代买常备用药
+  - 药品的正规渠道调货
+
+attributes:
+  duration_days: 4
+  turn_count: 52
+  approximate_tokens_estimate: 1161
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: prescription_diversion
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0027
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-017
+
+dedup:
+  content_hash: sha256:f5796a17b9cd27c3f0df35755c84c89bbd74224c5679114a437ede70ee86fbbd
+pipeline_status: accepted
+title: contraband_illicit_trade/prescription_diversion
+conversation: |-
+  【6月10日】
+  B：兄弟 上回那种睡觉用的 还有路子吗
+  A：有 老几家都稳 每月额度空着呢
+  B：这边催得急 能凑多少
+  A：先说量 上回那点不够你走吧
+  B：这回要五十板往上
+  A：五十板 得拆两家凑 给我两天
+  B：行 价还按老规矩?
+  A：按板算 到时候对数
+  A：你闺女中考完了吧
+  B：完了 分没出 天天在家躺着
+  A：躺几天没事 考完就该松快
+  B：她妈带她短途玩了两天
+  A：去哪玩了
+  B：邻省水乡 高铁俩小时
+  【6月11日】
+  A：情况变了 有家这个月额度被人用了 只能先凑三十来板
+  B：三十就三十 先发三十
+  A：差的二十等周三 有一张卡额度空着 卡主愿意借出来每月帮着开
+  B：行 都是你熟人才放心
+  B：今儿这天闷得很 你那边下雨没
+  A：淅淅沥沥下了一上午 菜都没法买
+  B：我这边也是 外卖都懒得叫
+  A：凑合吃点 完事请你喝茶
+  B：就喝你那罐自带的龙井
+  A：小气 茶叶管够
+  【6月12日】
+  A：周三的二十板齐了 加前头三十 一共五十板 明晚交
+  B：效率 老地方?
+  A：城西面馆后头巷口 晚九点
+  B：行 我开车过去
+  A：板盒检查好 塑封都在 别压坏
+  B：你老寒腿好点没 昨天雨大
+  A：贴了膏药 走路还行 你颈椎呢
+  B：天天低头看单子 前天去按了一次
+  A：管用就多去 别舍不得钱
+  B：谁说不是
+  【6月13日】
+  A：今晚九点不变 东西装好了
+  B：好 九点前到
+  B：中午吃了没 巷口新开了家牛肉面
+  A：吃过了 你们当老板的口福不如我们跑腿的
+  B：晚上交完货我请你 就那家
+  A：成 我加个蛋
+  B：兄弟 价再对一遍 五十板 一板一百二 没变吧
+  A：没变 六千整
+  B：行 我先把款走你 明晚当面点货
+  【系统消息】B 向 A 转账 6000 元，已收款。
+  A：六千收到
+  B：下个月那位卡主还帮着开不
+  A：帮 额度一放出来我就告诉你 有多的再喊你
+  A：到巷口了 面馆门口那盏灯底下
+  B：看到了 泡沫箱给你
+  A：五十板 整 塑封全的 你点
+  B：对上了 辛苦 下批早说
+  A：慢走 雨又下起来了 带伞没
+  B：后备箱有 哥回吧

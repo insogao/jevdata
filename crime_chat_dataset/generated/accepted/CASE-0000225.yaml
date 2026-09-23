@@ -1,0 +1,97 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000225
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000047
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-6a926dc688793f59
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 
+  critical_evidence:
+
+  benign_alternatives:
+  - 活动安保兼职
+  - 婚礼挡酒兄弟
+
+attributes:
+  duration_days: 6
+  turn_count: 23
+  approximate_tokens_estimate: 532
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: hired_standing_off
+  risk: 3
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0028
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-017
+
+dedup:
+  content_hash: sha256:33f977b2e680246e159881b08749c4a0c8208f60517e9fdf3a254c4e2812a4c3
+pipeline_status: accepted
+title: violence_extortion/hired_standing_off
+conversation: |-
+  【8月3日】
+  A：那边欠款还是拖着，今天要不要过去谈？
+  B：你说带几个人站旁边就行，别吵也别动手？
+  A：按天结算，只要站着别说话，让他知道我们重视。
+  B：这种安排容易变成威胁，我不接。
+  A：我只是想把账谈下来。
+  B：走书面催款或调解，别让任何人去施压。
+  A：午饭吃什么？
+  B：附近新开了家砂锅，去试试。
+  A：好，我请。
+  B：不用，AA吧。
+  【8月4日】
+  A：对方说愿意约时间在中介处把账对清。
+  B：那就只你本人和第三方在场，保持正常沟通。
+  A：我把之前说的按天请人取消了。
+  B：谢谢，别把兄弟们牵进来。
+  A：周末球赛你还去吗？
+  B：去啊，票在我这。
+  A：那周六地铁站见。
+  B：好，别迟到。
+  【8月5日】
+  A：中介定了下周一，我们带账目去。
+  B：保持冷静，有分歧就继续走调解。
+  A：明白，不带其他人。
+  B：这样稳妥。
+  【系统消息】A 向 B 转账 800 元，已收款。
+  【8月9日】
+  A：调解时间确认好了，下周按流程去。

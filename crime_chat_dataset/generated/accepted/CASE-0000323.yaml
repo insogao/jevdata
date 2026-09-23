@@ -1,0 +1,140 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000323
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000111
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-4b07e48960752661
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: theft_robbery_property_crime
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 二手车行老板 B 收小工 A 弄来的成色太新的电动车，交代把车架号处理干净再出手，新车三天内就走、带牌能多要钱，两人按批结算，全程不必点破车的来路。
+  critical_evidence:
+  - A 弄来的车都很新，B 说这种车三天内就能出掉，不愁压手里
+  - B 交代 A 把车架上的记号磨掉重新打，说这样才敢摆出来
+  - B 说带牌的那种能多卖几百块，让 A 尽量把牌也一起弄来
+  - 两人按批结账，B 给 A 转了一笔货款，约好下次多带几辆
+  benign_alternatives:
+  - 二手电动车交易
+  - 车辆过户流程
+
+attributes:
+  duration_days: 6
+  turn_count: 61
+  approximate_tokens_estimate: 1412
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: electric_bike_resale_chain
+  risk: 2
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0035
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-019
+
+dedup:
+  content_hash: sha256:cf05ac08d340683163247480cc6a3a3b4fa5efc1199cebfe761a87d58ecd0d2c
+pipeline_status: accepted
+title: theft_robbery_property_crime/electric_bike_resale_chain
+conversation: |-
+  【9月12日】
+  B：小 A 昨天那两辆车我看了 成色可以
+  A：那必须的 我挑的都是新的
+  B：这种车三天就能出 别压手里 越新越好卖
+  A：店里那俩客户定了没
+  B：一个定了 另一个嫌没牌 说要带牌的
+  A：带牌的贵点也正常 我尽量找来
+  B：对 带牌更贵 能多要好几百 你懂的
+  A：明白 那记号那事还是照老样子弄
+  B：架子磨掉重打 别留原来的号 弄利索点
+  A：晓得 磨完我再喷层漆 看不出来
+  B：嗯 别声张 来店里就说收来的旧车
+  A：放心 嘴严
+  A：哥 中午吃啥 我出去带
+  B：给我带份盖饭 少辣
+  A：好嘞 顺路给车充个电
+  B：今晚有货过来不 库房腾出位了
+  A：有两辆 晚点过去 别让隔壁看见
+  B：走后面小巷 到门口先给我信息
+  A：行
+  【9月13日】
+  B：早 昨晚那两辆我看了 有一辆牌还在
+  A：对 那辆是带牌的 你别急着摘
+  B：带牌的我单独摆 问的人多 价格往上提
+  A：行 那辆多卖的钱算我的不
+  B：算 咱按辆结 你送多少我结多少
+  A：那行 这两天我多跑两趟
+  B：不过你悠着点 太频繁容易被人盯
+  A：知道 我换着地方弄
+  B：下午房租交了 这月又涨两百
+  A：房东真黑 我那边也快到期
+  B：再挣几个月我给你涨点工钱
+  A：哥你够意思
+  【9月14日】
+  A：哥 今天又弄到一辆 新的 膜都没撕
+  B：这种最好 三天内肯定走 你磨号了吗
+  A：还没 晚上弄 磨完重打
+  B：打完漆喷匀 别一块新一块旧
+  A：放心 我手稳
+  B：中午吃烧烤去不 隔壁那家新开的
+  A：行啊 我请 昨天多卖那辆算我的
+  B：哈哈 那我就不客气了
+  【9月15日】
+  B：前两天那批出的差不多了 剩一辆带牌的
+  A：这么快 三天都不到
+  B：新车不愁卖 你下次多弄两辆带牌的
+  A：带牌的不容易 我尽量
+  B：行 那我先把这几天的一起结你
+  A：好 你算算多少
+  B：五辆 一辆八百 一共四千 转你了
+  【系统消息】B 向 A 转账 4000 元，已收款。
+  A：收到 哥爽快
+  B：彼此 下次多带几辆 带牌的加钱
+  【9月16日】
+  A：哥 今天下雨 还去库房不
+  B：雨不大 你去把前面那辆挪进去 别淋着
+  A：好 我这就去
+  A：雨天生意还行 来了俩看车的
+  B：卖了一个 就那辆带牌的 要走了
+  A：带牌的果然好卖
+  B：所以让你多弄带牌的 钱说话
+  【9月17日】
+  B：这周辛苦了 下周再上一批
+  A：行 我这边盯着 有合适的就弄
+  B：记住老规矩 磨干净 别留尾巴
+  A：晓得 哥你放心
+  A：哥 我妈生日我请两天假回老家
+  B：去吧 店里我盯着 回来再干

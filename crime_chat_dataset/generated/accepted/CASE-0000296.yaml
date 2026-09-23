@@ -1,0 +1,134 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000296
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000073
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-0530f8f8fffd6b81
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 高年级学姐A以「带你赚点生活费」「认识几个靠谱的人」为名，拉低年级学妹B晚上出去陪人喝酒，说一场三百、车费报销、第一次她全程带着；A反复叮嘱B别在宿舍说、也别让家里知道，B犹豫之后答应先跟去一次看看。
+  critical_evidence:
+  - A说有个晚上的活，就是陪人喝喝酒、说说话，一场三百，车费她出，当天结
+  - A自称学姐会带着B，第一次她全程陪着，让B不用怕
+  - A反复叮嘱B别在宿舍说，也别告诉家里，说室友嘴杂、家里会多想
+  - B犹豫后答应先跟去看一次，说好不行就撤
+  benign_alternatives:
+  - 正规兼职群里的日结接待与活动工作
+  - 社团组织的对外接待与志愿活动
+
+attributes:
+  duration_days: 6
+  turn_count: 56
+  approximate_tokens_estimate: 1091
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: dorm_introduction_network
+  risk: 3
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0034
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-019
+
+dedup:
+  content_hash: sha256:e755dd4a2fdae179b36dd879c68da004c861559ca5e84761db25cc5df64e7058
+pipeline_status: accepted
+title: sexual_transaction_exploitation/dorm_introduction_network
+conversation: |-
+  【3月1日】
+  A：学妹 认识我不 我大三那个
+  B：学姐好 有点印象
+  A：跟你说个事 手头是不是有点紧
+  B：还行 怎么了
+  A：有个晚上的活 陪人喝喝酒聊聊天 一场三百
+  B：陪酒那种?我不太会
+  A：不用会 就坐坐 说说话 人都挺斯文
+  A：学姐带你 第一次我全程陪着 怕啥
+  B：我妈要是知道肯定不让
+  A：所以别在宿舍说 室友嘴杂
+  A：也别跟家里提 就说做家教
+  B：我有点怕
+  A：先跟去看一次 不行随时撤
+  B：…那我想想
+  A：不着急 明天给我信
+  【3月2日】
+  B：学姐 今天选课你选了吗
+  A：选了 那个给分高的老师我帮你抢了
+  B：真的假的 谢谢学姐
+  A：小事 你绩点要保住 别挂科
+  B：嗯 我最近在补高数
+  A：有不会的问我
+  B：食堂那个新窗口你尝了吗
+  A：尝了 油大 我在减肥不敢多吃
+  B：哈哈哈 我晚上都不吃饭
+  A：那正好 那个活都是晚上 不耽误吃
+  B：你又说这个
+  A：就提一嘴 想好没
+  B：学姐 你之前去过几次啊
+  A：不少次了 就喝点酒 拿钱走人
+  B：会不会有人动手动脚
+  A：有我在 我给你挡着 谈不拢就走
+  B：一次真给三百?
+  A：当场结 车费另算 我什么时候骗过你
+  【3月3日】
+  A：周五晚上有一场 你去不去
+  B：我还没想好
+  A：就一次 看看合不合适 不合适以后不去
+  B：穿什么啊
+  A：裙子 化个淡妆 别太学生气
+  B：…行 就这一次
+  A：好 我在南门等你 别跟人说
+  B：嗯
+  【3月4日】
+  B：我室友问我去哪 我怎么说
+  A：说去亲戚家 或者说社团聚餐
+  B：好 那我晚点回 宿舍查寝咋办
+  A：让你室友帮你应一声 我以前都这么干
+  【3月5日】
+  A：周五那场定了 七点半 别迟到
+  B：知道了 我有点紧张
+  A：紧张啥 跟着我
+  B：我妈今天还打电话让我别乱跑
+  A：别跟她说 说了你就出不来了
+  B：嗯 我不说
+  【3月6日】
+  A：昨晚还行吧 没事吧
+  B：还行 就是有点累
+  A：下周还有 去不去
+  B：…看情况吧 学姐
+  A：行 想好了跟我说

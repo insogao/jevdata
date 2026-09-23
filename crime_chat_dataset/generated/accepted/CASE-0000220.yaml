@@ -1,0 +1,97 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000220
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000008
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-65c67c328fbbd909
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: fraud_scam
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 
+  critical_evidence:
+
+  benign_alternatives:
+  - 帮朋友代收快递
+  - 合法兼职发传单
+
+attributes:
+  duration_days: 3
+  turn_count: 23
+  approximate_tokens_estimate: 564
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: account_lending
+  risk: 3
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0028
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-017
+
+dedup:
+  content_hash: sha256:5c3fa12057734e4ca2aab2b8c11aeb2f857b470a91462be3129a668191d12ce7
+pipeline_status: accepted
+title: fraud_scam/account_lending
+conversation: |-
+  【12月5日】
+  A：有人问一张卡多少钱，还说开网银带U盾就行。
+  B：账户给他用？这种事千万别答应。
+  A：他说强调无风险，借几天就还。
+  B：卡和网银设备只能自己控制，不能交出去。
+  A：按张收费听着像真兼职，我差点信了。
+  B：正规工作不会要你出租账户，先拒绝并留记录。
+  A：学校图书馆今天人好多。
+  B：期末周嘛，我占到靠窗的位置。
+  A：晚上一起复习？
+  B：好，带上统计课笔记。
+  【12月6日】
+  A：我回绝了，他又保证不会有事。
+  B：不要再回复，必要时向平台或警方咨询。
+  A：银行提醒我改了密码，也确认没有授权。
+  B：很好，U盾一直自己收好。
+  【系统消息】A 向 B 转账 500 元，已收款。
+  A：复习完去吃饭吗？
+  B：去，想吃馄饨。
+  A：那我先去排队。
+  B：马上到。
+  【12月7日】
+  A：对方账号我举报了，聊天也留着。
+  B：做得好，以后找学校就业中心核实岗位。
+  A：嗯，不会把卡交给任何人。
+  B：安心准备考试吧。
+  【12月8日】
+  A：考试结束啦，终于能睡个好觉。

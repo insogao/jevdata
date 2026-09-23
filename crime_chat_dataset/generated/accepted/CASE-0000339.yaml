@@ -1,0 +1,143 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000339
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000106
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-d2903b3257ea5ad5
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: theft_robbery_property_crime
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 仓库内鬼 A 给外面的 B 递点：赶在周三盘点前，从没监控的西门把货顺出去，A 在台账上做手脚平账，B 按件给 A 结钱，长期合作。
+  critical_evidence:
+  - A 让 B 赶在周三盘点前动手，盘点一过就平了
+  - A 指明走西门，那边没监控
+  - A 负责在台账上做手脚把数抹平
+  - B 按件给 A 结钱，两人约定长期合作
+  benign_alternatives:
+  - 仓库 Normal 出货
+  - 库存调拨
+
+attributes:
+  duration_days: 5
+  turn_count: 65
+  approximate_tokens_estimate: 1149
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: insider_stocktip_theft
+  risk: 3
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0036
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-020
+
+dedup:
+  content_hash: sha256:dab8256231e80449ee61bf51c23b3cd0537cb2fae8c2e852c92d6d638ae56c46
+pipeline_status: accepted
+title: theft_robbery_property_crime/insider_stocktip_theft
+conversation: |-
+  【7月8日】
+  A：强哥 最近那边还收货不
+  B：收 什么货
+  A：我这边仓里那批硬货 你懂的
+  B：量有多少
+  A：这批走完差不多三十箱 得挑时候
+  B：什么时候方便
+  A：周三盘点前动手 盘过就清账了
+  B：盘点前不是更查得严
+  A：查前那两天最松 都忙着整单子
+  B：走哪个门
+  A：西门 那边没监控 我提前把锁给你留着
+  B：台账那边怎么办
+  A：我在系统里做点损耗 数就对上了 不用你管
+  B：怎么给你
+  A：按件结 一件五十 你出手我不管价
+  B：行 别一次搬空 慢慢来
+  A：懂 细水长流 一次拿十几件
+  B：那就这么定
+  B：明天热 你夜班顶得住不
+  A：习惯了 仓库有风扇
+  B：多喝水
+  【7月9日】
+  A：今晚动手方便 库管早走
+  B：几点
+  A：十一点后 我从里面给你递出来
+  B：你人在场不是显眼
+  A：我值夜班 正好 我盯屏幕
+  B：行 我车停后巷
+  A：中午食堂吃了啥
+  B：在外面对付了 你呢
+  A：食堂的红烧肉还行
+  B：晚上干活前先吃饱
+  A：到了没
+  B：到后巷了 西门我看了 锁开着
+  A：进来吧 我把货推到门口了
+  B：搬十二件 先试水
+  A：行 轻点 别磕出声
+  B：装好了 走了
+  A：路上稳点 明天我平账
+  【7月10日】
+  A：昨晚十二件 系统里已经算损耗了
+  B：这么快
+  A：我值夜班顺手就改了 查不出来
+  B：钱我出手一批再结你
+  A：别拖太久 我这边记账
+  B：中午出来吃个饭
+  A：不行 白天我睡觉 晚上还上班
+  B：行 那改天
+  A：我表哥也想要点 能不能多拿
+  B：先别贪 一次太多容易露
+  A：懂 那就按原计划
+  【7月11日】
+  B：昨晚那批出得不错 给你结一半
+  A：行
+  【系统消息】B 向 A 转账 300 元，已收款。
+  A：收了 十二件六百 还差三百
+  B：剩下那批出手就给你
+  A：好 周三盘点前都能动
+  B：盘点定在周几
+  A：周三 还有两天 够了
+  B：那后天再走一趟
+  A：行 老时间老地方
+  A：今晚风大 后巷灯坏了 更好下手
+  B：别得意 稳着来
+  A：知道
+  【7月12日】
+  B：周末两天你休息不
+  A：排休一天 剩下补觉
+  B：盘完点给你结剩下的
+  A：好 周一开始新一批

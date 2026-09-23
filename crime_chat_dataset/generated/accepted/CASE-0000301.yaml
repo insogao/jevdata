@@ -1,0 +1,137 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000301
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-544fb55d14cd5e87
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 公司公关 A 因匿名账号连年发文曝公司的问题被董事长施压，聘舆情顾问 B 顺藤摸瓜：靠发文时段、用词习惯翻出对方五年前的小号，用小号相册一张原图的拍摄时间坐实同一人，再把两年四百多条转发点赞全部捋清，最后 A 拿着一页纸私下约谈，逼对方删号写说明，实为借公开痕迹拼出个人的完整网络画像并施压。
+  critical_evidence:
+  - A 被董事长点名一周内给说法，聘 B 弄清发帖人是谁，费用按老规矩月结
+  - B 靠发文时段与用词锁定对方是圈内老人，并翻出其五年前注册、头像换过三次的小号
+  - 小号相册一张原图的拍摄时间与大号晒加班那晚重合，坐实同一人
+  - B 能捋清对方两年四百多条转发和点赞记录，其中三条涉供应商，A 让压箱底不外传
+  - A 拿材料当面谈不加码，对方删号并写情况说明，B 清掉备份只留底稿
+  benign_alternatives:
+  - 品牌舆情监测的正常业务委托
+  - 对公开网络信息的合规检索分析
+
+attributes:
+  duration_days: 6
+  turn_count: 58
+  approximate_tokens_estimate: 1574
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0027
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-017
+
+dedup:
+  content_hash: sha256:5b7ec9b85cad334677e7872e8c7acadbaa49a51a26e7271bc577f9c7ebc1fe2d
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【5月12日】
+  A：周老师 早 那个号昨晚又发了一篇 阅读量破十万了
+  B：看了 老套路 挑情绪最足的放头图
+  A：董事长上午点名了 让我这周给个说法
+  B：光删帖没用 删一篇他换俩号 你得知道对面是谁
+  A：能查到吗 都两年了
+  B：写东西的人留痕比你想象多 发文时段 用词习惯 都对得上
+  A：那拜托了 费用按上回的来
+  B：先说好 你那边保密 法务别下场
+  A：懂 不惊动任何人
+  A：外头这雨下得 人都要发霉了
+  B：梅雨季 我阳台衣服三天没干过
+  A：买台烘干机吧 一顿饭钱的事
+  B：租的房子 将就几个月
+  A：那也得对自己好点
+  B：上午把发文时段捋了一遍 每晚十一点到一点 固定夜猫子
+  A：下班后写 东家八成不知道
+  B：而且用词带行业黑话 基本圈定是圈内老人
+  【5月13日】
+  B：有进展 他有个小号 五年前注册的 头像换过三次
+  A：小号都翻出来了?
+  B：小号最老实 没删过东西 比大号信息多
+  A：只看不动 别打草惊蛇
+  B：放心 我只围观 从不点赞关注
+  A：你声音怎么哑了
+  B：昨晚赶您的活 凌晨三点才睡
+  A：那也得睡 拿身体换钱不划算
+  B：知道 咖啡都换成枸杞了
+  A：哈哈 今晚早点收工
+  【5月14日】
+  B：小号相册存了张原图 拍摄时间和大号晒加班那晚对上了 位置也重合 一个人
+  A：稳 两年前的帖子咬定是他 他还嘴硬?
+  B：原图时间做不了假
+  A：先别外传 我只要个底
+  B：明白 材料归拢好只发你一个
+  A：中午怎么安排 又外卖?
+  B：楼下便当 十五块管饱
+  A：周五我做东 订了潮汕牛肉 犒劳你
+  B：客气 那我周五空着肚子来
+  A：带上结论 边吃边聊
+  【5月15日】
+  B：他转发过什么都能顺出来 两年四百多条 连给同行点过赞都有数
+  A：四百多条?把之前几家都得罪遍了
+  B：有三条涉及你们供应商 我没放进正文
+  A：这些压箱底 别动
+  B：懂分寸 你要的是人 不是把他往死里整
+  A：董事长又问了 周内能给完整的吗
+  B：周五一页纸 来龙去脉 时间线 全在里面
+  【5月16日】
+  B：初稿好了 他本人姓什么做什么的 我都核了两遍
+  A：好 周五当面聊 不走邮件
+  B：聊的时候你唱红脸 我不露面
+  A：行 别让他觉得被冒犯 事解决就好
+  B：雨总算停了 你讲完早点回 别又熬夜
+  A：借你吉言 这周过了补你两天假
+  【5月17日】
+  A：汇报提前到今天下午 董事长等不及 东西发我
+  B：发了 一页纸 时间线加三组对得上的截图 原图时间那条最硬
+  A：收到 下午照着聊
+  B：谈崩了也别加码 有些人吃软不吃硬
+  A：谈完了 他承认了 同意删号 还写了情况说明
+  B：顺利 我这边备份清掉 只留底稿
+  A：清吧 结算的事你跟财务对 月结老规矩
+  B：好 合作愉快

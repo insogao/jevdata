@@ -1,0 +1,113 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000334
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000104
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-0f8db8ffcf7d4b76
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 基金会联系人 A 与做生意的同事 B 商定一笔“捐款返点”：B 捐十万、A 私下返八万五，发票按全额开，走对公账户把账做漂亮。
+  critical_evidence:
+  - A 说捐十万可以私下返八万五，返点不走账
+  - 发票按十万全额开具
+  - 款项走对公账户，账面看起来正规好看
+  - B 同意并约定到账开票的时间
+  benign_alternatives:
+  - 合法公益捐赠抵税
+  - 基金会募捐
+
+attributes:
+  duration_days: 6
+  turn_count: 35
+  approximate_tokens_estimate: 642
+  relationship: 同事
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: charity_receipt_wash
+  risk: 3
+  relationship: 同事
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0037
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-020
+
+dedup:
+  content_hash: sha256:e1cf6573638c3010a8b8aaac3d5398cb3a86091d9c8677990593447a35059167
+pipeline_status: accepted
+title: money_laundering_obfuscation/charity_receipt_wash
+conversation: |-
+  【9月10日】
+  A：陈总 之前说的公益那事 你考虑得怎么样
+  B：怎么个操作
+  A：你捐十万 我们返你八万五 发票按十万全额开
+  B：那不是
+  A：账面上你做了公益 抵税也有说法 走对公 好看
+  B：返点怎么给
+  A：私下走 不走账 现金或者别的渠道
+  B：发票什么时候开
+  A：到账就开 全额
+  B：中午了 先吃饭
+  A：好 改天一起 我请
+  B：你那边忙不忙
+  A：月底项目多 忙
+  【9月11日】
+  B：十万有点多 五万行不行
+  A：五万返四万二 比例一样
+  B：我考虑一下 最近资金紧
+  A：这单月底之前要 名额不多
+  【9月12日】
+  A：降温了 注意身体
+  B：你也是 感冒的人多
+  A：孩子上学还顺利吧
+  B：还行 补课费贵
+  【9月13日】
+  B：这样 我按十万走 对公分两笔
+  A：可以 分两笔更像正常捐赠
+  B：返点到时候给我现金
+  A：放心 老规矩 不会少
+  B：发票抬头写我公司全称
+  A：知道 全额十万 一分不少
+  【9月14日】
+  A：款到了 我这就安排开票
+  B：好 票据寄我公司
+  A：明后天到 返点的部分我周末给你
+  B：行 别让人知道
+  A：你知我知
+  【9月15日】
+  B：周末有空喝茶不
+  A：周六下午吧
+  B：行 老地方

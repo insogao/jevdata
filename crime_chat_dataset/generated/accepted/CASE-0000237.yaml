@@ -1,0 +1,113 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000237
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000052
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-48c2e6acd50e9cb4
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 一群人围读绑架题材剧本，A扮演绑匪和B对戏搭建情节，台词纯属虚构桥段讨论，回应到孩子被藏起来最后发现是场乌龙。
+  critical_evidence:
+  - A和B在为一场绑架戏搭台词，说明是虚构情节
+  - 讨论到旧钞别做记号这种桥段合理性
+  - A强调这是戏里威胁家里报案就出事的设计
+  - 最后揭示孩子其实是在小区同学家，全是误会
+  benign_alternatives:
+  - 恶作剧误会导致
+  - 影视桥段讨论
+
+attributes:
+  duration_days: 4
+  turn_count: 36
+  approximate_tokens_estimate: 693
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: kidnapping_threat_act
+  risk: 0
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0032
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-018
+
+dedup:
+  content_hash: sha256:10821c1d7a784699913d90b44aad376f43a615bc89525ed4c53fb02c701d50b6
+pipeline_status: accepted
+title: violence_extortion/kidnapping_threat_act
+conversation: |-
+  【9月2日】
+  A：B，那段戏咱俩先对一遍台词
+  B：行，我演家属你演绑匪对吧
+  A：对，剧本里绑匪第一句是孩子在我们手上
+  B：这词有点糙，现实里哪有这么直白
+  A：戏嘛，就得夸张点才有张力
+  B：中午试镜组管饭不
+  A：管，盒饭
+  B：那还行
+  A：凑合吃吧
+  【9月3日】
+  A：第二段我加了句旧币别做记号
+  B：为什么是旧币
+  A：戏里说新钞连号容易被追嘛
+  B：有点道理，观众爱看这种细节
+  A：对，显得绑匪老练
+  B：你这剧本结局想好了没
+  A：想好了，最后是个乌龙
+  B：怎么说
+  A：孩子其实在同学家写作业，全家虚惊一场
+  【9月4日】
+  A：第三段家属要回一句报警就撕票
+  B：这句我不敢念，太狠了
+  A：念吧，这是戏里威胁，不是真的
+  B：那行，我尽量
+  A：今天你穿这身挺上镜
+  B：剧组借的，平时哪穿这个
+  A：戏服就是讲究
+  B：对了，我家娃今天还真吓了我一跳
+  A：咋了
+  B：放学没回家，我以为出事了
+  A：后来呢
+  B：结果在同学家写作业，虚惊一场
+  【系统消息】B 向 A 转账 50 元，已收款。
+  B：转你五十，把剧本打印出来明天用
+  A：收到，明早给你带过去
+  【9月5日】
+  A：昨天那场对得很顺
+  B：嗯，后面就照这个来
+  A：导演说要的就是这种反差
+  B：行

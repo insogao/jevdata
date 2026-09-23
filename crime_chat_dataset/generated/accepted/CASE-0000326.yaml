@@ -1,0 +1,147 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000326
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000097
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-de42b51b75536863
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 做壳的中介 A 向买家 B 推销一批现成的空壳公司：执照、公章、对公账户、网银额度一应俱全，承诺法人过户能走通，全程用行话代称，只等 B 打款配合走壳。
+  critical_evidence:
+  - A 手上有一批成立满一年、没做过业务的公司壳，带对公账户带章
+  - A 保证网银额度已经开通，转进来转出去都顺畅
+  - A 承诺法人变更和股权过户能办妥，材料齐全包过
+  - B 关心壳的年限和干净程度，问能不能马上配合走账
+  - 双方约好线下看材料、当面交接公章和网银 U 盾
+  benign_alternatives:
+  - 公司转让正常流程
+  - 代办执照服务
+
+attributes:
+  duration_days: 2
+  turn_count: 70
+  approximate_tokens_estimate: 1760
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: company_shell_transfer
+  risk: 3
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0035
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-019
+
+dedup:
+  content_hash: sha256:55986a7a0a2320c6c153dc5af81944658d05f90b95f0ac7db6759749978faac4
+pipeline_status: accepted
+title: money_laundering_obfuscation/company_shell_transfer
+conversation: |-
+  【9月10日】
+  A：在吗 朋友介绍来的 说你要找干净的
+  B：对 你那边现在有什么货
+  A：成立满一年的三个 商贸两个 科技一个
+  B：带对公带章吗
+  A：标配 执照 章 对公 网银 U盾 全套
+  B：网银额度开了没 我怕限额卡脖子
+  A：开通网银额度了 单笔够你用 日常走账没问题
+  B：哪家行 稳不稳
+  A：两家商行一家农商 都是常见的那种
+  B：法人那边好变不 我不想后面出岔子
+  A：法人变更包过 你只要给身份证正反面就行
+  B：股权也一起过?
+  A：对 一起过 走完就是你的 没有任何牵连
+  B：之前有没有开过票 有没有诉讼
+  A：壳就是壳 没业务没税没纠纷 干净得很
+  B：价格呢 三个一起拿有没有优惠
+  A：一个两万八 三个一起八万 老关系介绍我再让两千
+  B：行 我先看材料 眼见为实
+  A：没问题 材料拍给你看 章你都认认
+  A：[image：三本营业执照与一套公章平铺在桌面]
+  B：看着还行 成立日期都是去年
+  A：满一年的壳才值钱 新立的银行不认
+  B：约个时间当面看原件 顺便把U盾试了
+  A：下午三点我这边 你来就行
+  B：先说好啊 我要的是能马上用的 别给我拖
+  A：当天签当天交 网银密码都给你留好
+  B：中午吃啥呢 我在外面随便找一家
+  A：楼下快餐 天天吃腻了
+  B：我这也一样 凑合吧
+  A：下午见 到了给我电话
+  B：到了 楼下那个蓝色卷帘门是吧
+  A：对 上二楼 左手边
+  B：章是真的 材料也对得上 就它了
+  A：痛快点好 我这边走手续快
+  B：那三个我留两个 科技那个我不要 太扎眼
+  A：行 两个五万六 定金先给一万
+  B：明天上午我给你转 顺便把身份证给你
+  A：可以 我今晚先把变更材料备好
+  B：今天这天真闷 要下雨的样子
+  A：预报说有雷阵雨 你带伞没
+  B：没带 打车回去算了
+  A：这个点堵得很 你等会儿再走
+  B：行 那我再坐会儿
+  A：晚上那球看了没 又输了
+  B：看了半场就关了 气得睡不着
+  A：哈哈 别气 明天还有正事
+  B：知道 材料我明天带齐
+  【9月11日】
+  A：早 变更那边催了 你今天几点到
+  B：十点前 身份证正反面我拍你
+  B：[image：身份证正反面照片]
+  A：收到 我这就递给办的人
+  B：法人变更几天能完
+  A：走加急 今天递明天出 包过
+  B：那U盾和密码呢 我现在就想试试
+  A：当面给你 密码我贴便签上 你回去自己改
+  B：往来的记录干净不 我不想到手一堆账
+  A：壳没走过账 流水就几笔年费 你放心
+  B：行 我到了 你开门
+  A：定金到了一万 剩下的等变更完再给
+  B：可以 我信你 公章先给我吧
+  A：两个公司的章 财务章 法人章 都在袋里 你点点
+  B：齐了 那网银U盾呢
+  A：在这儿 两个 密码便签也在 你收好
+  B：好 那我回去先登一下看额度
+  A：登不上给我说 我远程教你 别乱点
+  B：放心 我做过这个 明天法人出来我再付尾款
+  A：成交 以后要补壳还找我 货源不断
+  B：中午没胃口 昨天那顿饭吃坏了
+  A：喝点热水 别硬扛 药吃了没
+  B：吃了点冲剂 好多了
+  A：那就好 下午我催下变更进度
+  B：辛苦 出来再说

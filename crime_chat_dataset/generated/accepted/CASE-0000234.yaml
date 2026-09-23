@@ -1,0 +1,111 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000234
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000055
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-6458c819bf93ff49
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A的表弟开车被B撞伤，A带一帮兄弟以谈私了为名压场，逼B写下远超实际的赔偿字据并按手印，威胁不给钱就动手。
+  critical_evidence:
+  - A约B见面谈私了，强调要去他那边的场子
+  - A带兄弟到场压场，暗示不赔就动手
+  - A逼B按远超实际金额写赔偿字据并按手印
+  - B被迫答应先付一部分，剩余限期补齐
+  benign_alternatives:
+  - 正常交通事故私了
+  - 保险理赔协商
+
+attributes:
+  duration_days: 3
+  turn_count: 35
+  approximate_tokens_estimate: 655
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: settlement_by_force
+  risk: 3
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0032
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-018
+
+dedup:
+  content_hash: sha256:5b0b37568f52d888eecb60491460762f765d0c5a4b2b7fbada19e36c3cf0aa9e
+pipeline_status: accepted
+title: violence_extortion/settlement_by_force
+conversation: |-
+  【9月10日】
+  A：B哥，下午三点老地方见一面
+  B：什么事这么急
+  A：我弟那条腿的事，得当面说
+  B：医药费我一直在垫，走保险不就完了
+  A：走保险那套太慢，我等不了
+  A：他这月复查单子又出来了，你自己看
+  B：复查单我认，但数目得按实际来
+  A：按实际？我弟半年干不了活，你算算
+  B：中午你那食堂的菜还行不
+  A：一般，凑合吃
+  B：天热，别上火
+  【9月11日】
+  A：到了没，兄弟们都在等你
+  B：…你们几个人
+  A：就几个朋友，来看看你态度
+  B：有话好好说，别这样
+  A：好好说可以，字据先写了
+  B：什么字据
+  A：赔偿的数，按手印，省得以后扯皮
+  B：这个数我拿不出来
+  A：拿不出来也得写，不赔就卸你一条腿
+  B：你别乱来
+  A：兄弟们等着吃饭呢，别让我为难
+  B：我先给一部分，剩下的宽限几天
+  A：宽限可以，罚则也写上
+  B：…行，我签
+  A：这才像话，按手印吧
+  【系统消息】B 向 A 转账 30000 元，已收款。
+  B：先转三万，字据我留一份
+  A：留吧，白纸黑字谁也赖不掉
+  B：晚上还去打球不
+  A：不去了，累
+  B：那改天
+  【9月12日】
+  A：剩下的这个月内清，别拖
+  B：我尽量凑
+  A：不是尽量，是必须
+  B：知道了

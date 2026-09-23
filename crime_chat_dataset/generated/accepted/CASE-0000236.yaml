@@ -1,0 +1,133 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000236
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000109
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-87f6f8937e8f5a45
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 银行设备巡检员A与金融安防顾问B就一批到货的检测读卡模块展开合规讨论，安排高峰时段巡检与分批测试，全程资质在册、流程留痕。
+  critical_evidence:
+  - A通知到货的是合规检测读卡模块，用于安全测试
+  - 两人商定按取款高峰时段开展巡检以覆盖真实负载
+  - 装备分两批是为了分阶段测试、留完整记录
+  - B负责现场配合，A出具巡检报告，全程在册可查
+  benign_alternatives:
+  - 银行设备巡检
+  - 金融安防讨论
+
+attributes:
+  duration_days: 4
+  turn_count: 55
+  approximate_tokens_estimate: 1048
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: atm_skim_team
+  risk: 0
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0032
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-018
+
+dedup:
+  content_hash: sha256:ab61bdd1249b85921c23c44977cc0dc56186f4b11818657c20117e367bcaf383
+pipeline_status: accepted
+title: theft_robbery_property_crime/atm_skim_team
+conversation: |-
+  【9月2日】
+  A：早，昨天那份巡检表你看了吗
+  B：看了，你标的几个点负载都还行
+  A：这周先别急，等检测件到位
+  B：嗯，我这边把时间摸清楚
+  A：中午又吃那家黄焖鸡？
+  B：便宜量大，主要是快
+  A：你行，天天吃不腻
+  B：月底钱紧，将就下
+  【9月3日】
+  A：检测读卡模块到了，资质文件和说明书都在
+  B：全到了？过检没有
+  A：到了，跟你上回量的那个口子对得上
+  B：那就好，装不上白跑一趟
+  A：不会，型号早就对过了
+  B：你那孩子这学期还报奥数不
+  A：报，周末两天全搭进去了
+  B：现在孩子苦，家长也苦
+  A：没办法，班里都报
+  【9月4日】
+  B：算了两天，取款高峰就那两段
+  A：哪两段，写进巡检计划
+  B：早上上班前，还有傍晚下班的点
+  A：高峰期测才反映真实负载
+  B：对，这个时段最有参考价值
+  A：我先把计划报上去备案
+  B：晚上风大，你那窗户关没
+  A：关了，我媳妇嫌吵
+  B：降温了，明天加件衣服
+  A：知道，你比我妈还啰嗦
+  【9月5日】
+  A：检测件我分了，分两批走
+  B：为啥分批
+  A：分阶段测试，每批留完整记录
+  B：行，听你的，第一批几个点
+  A：三个，剩下看结果再安排
+  B：那我提前去配合，你到了我登记
+  A：嗯，现场按规范站位就行
+  B：懂，老规矩
+  A：你上次说的那个二手电瓶车还在不
+  B：早卖了，你要买去闲鱼看
+  A：算了，懒得折腾
+  B：你那车不是还挺好
+  A：费油
+  【9月6日】
+  A：第一批三个点的检测都做完了
+  B：这么快，数据正常吧
+  A：正常，每台都留了报告
+  B：那第二批什么时候上
+  A：等这批报告归档了再说，稳点
+  B：嗯，慢就是快
+  B：楼下新开了家面馆，去尝没
+  A：还没，好吃吗
+  B：一般，牛肉切得薄
+  A：那不去踩雷了
+  B：还是老地方靠谱
+  【9月7日】
+  A：汇总数据出来了，报告我明天交
+  B：嗯，安全起见周末先停
+  A：行，你收尾，我归档
+  B：收到，保持联系

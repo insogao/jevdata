@@ -1,0 +1,124 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000271
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000133
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-473bec4fd8de4e9b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: coercion_blackmail
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 利用邻里噪音争议持续向 B 索要定期好处，暗示可动用熟悉的城管关系影响处理；B 为避免冲突被迫谈长期送烟，反映非正常利益交换。
+  critical_evidence:
+  - A 把噪音投诉与每月两条烟的好处挂钩，声称如此事情就平
+  - A 提及认识城管，暗示可以影响投诉处理
+  - B 指出双方抬头不见低头见，因邻里关系压力接受定期给付安排
+  benign_alternatives:
+  - 邻里噪音调解
+  - 物业投诉流程
+
+attributes:
+  duration_days: 4
+  turn_count: 48
+  approximate_tokens_estimate: 906
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: resident_noise_leverage
+  risk: 1
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0040
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-021
+
+dedup:
+  content_hash: sha256:ab5c315362c6d389b0b3249e2738ab4270a672b64f5a1dffb19bddab9144a8c9
+pipeline_status: accepted
+title: coercion_blackmail/resident_noise_leverage
+conversation: |-
+  【9月4日】
+  A：昨晚又听到椅子拖地声了
+  B：不好意思 我家孩子睡前挪了桌子
+  A：这都第三回了 我认识城管
+  B：你可以先跟物业反映 我们愿意配合
+  A：每月两条烟这事就平
+  A：你家那盆薄荷长得怎么样
+  B：最近冒了好多新叶
+  A：能摘来泡水吗
+  B：可以 但我还没剪
+  A：我周末去你那拿一点
+  B：好 到时给你装一小袋
+  B：你这是要我固定送东西？
+  A：邻居之间意思一下 以后就不提了
+  B：噪音我们会处理 但送东西不合适
+  A：别这么较真 抬头不见低头见
+  B：我知道天天会遇见 但还是按物业流程吧
+  【9月5日】
+  A：早上楼道灯坏了
+  B：我也看见了 太暗
+  A：物业报修了吗
+  B：已经在群里说了
+  A：他们说今天来换
+  B：希望别拖到晚上
+  A：物业那边我也认识人
+  B：那更该让他们来协调
+  A：你回去跟家里商量下
+  B：我会先把椅脚垫好
+  A：只垫东西不解决咱俩的关系
+  【系统消息】A 向 B 转账 240 元，已收款。
+  【9月6日】
+  A：你们最近装修忙不忙
+  B：差不多收尾了
+  A：地板颜色好看吗
+  B：选了浅木色
+  A：耐脏不
+  B：应该还行 我挺喜欢
+  B：我不想把关系弄僵 但不接受每月送烟
+  A：你再想想 别闹得大家难看
+  B：周末我去物业登记一下时间
+  A：你这是不给面子
+  B：我会正常配合处理噪音
+  【9月7日】
+  A：外面雨好大
+  B：我刚把窗户关上
+  A：阳台别忘了收衣服
+  B：已经收了 谢谢提醒
+  A：今天下班早点吧
+  B：好 不在外面吃了
+  A：那我先等你消息
+  B：我不承诺送东西 只能承诺改善声音
+  A：行 我明天再找你
+  B：先让物业一起到场说吧

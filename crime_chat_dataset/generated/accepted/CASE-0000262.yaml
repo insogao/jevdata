@@ -1,0 +1,124 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000262
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-51e5bea7a5c39d8c
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A借节前礼节向有审批影响力的B送购物卡，随后暗示希望某项事务得到照顾；B要求按正式程序办理。
+  critical_evidence:
+  - A在节日前约B单独见面并带来购物卡
+  - A刻意不说明卡面金额，将其包装成普通心意
+  - 送卡后A发消息暗示希望手头事项顺利，B拒绝把礼物与处理结果联系起来
+  benign_alternatives:
+  - 同事间公开且合规的节日小礼物
+  - 公司统一发放的福利卡
+
+attributes:
+  duration_days: 6
+  turn_count: 47
+  approximate_tokens_estimate: 885
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0039
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-021
+
+dedup:
+  content_hash: sha256:30b8b5cdb0ff531326dd6ed23ee02655d9383a53fa8f64678a18f7a0533c6a84
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【5月6日】
+  A：节前想约你喝杯茶，我有点材料想当面说。
+  B：材料走工作群就行，为什么要单独约？
+  A：我带了张购物卡，过节的一点心意。
+  B：卡上没写面值，我不能收不清楚的东西。
+  A：最近公交改线了吗？
+  B：三号站临时挪到路口。
+  A：难怪我昨天没看到。
+  B：看站牌上贴了通知。
+  【5月7日】
+  A：我明早提前五分钟走。
+  B：那就不怕迟到了。
+  A：嗯，最近路上施工。
+  A：你先拿着，金额不大，就是个节日表示。
+  B：公司有礼品登记要求，个人送卡我得退回。
+  A：你们办公室绿植长新叶了？
+  B：长了两片小的。
+  A：记得别浇太多水。
+  【5月8日】
+  B：我现在一周浇一次。
+  A：挺好，叶子看着有精神。
+  B：阳光也要够。
+  A：窗边正好有光。
+  A：上次那件申请还麻烦你多关照一下。
+  B：申请按统一标准审核，跟礼物没有关系。
+  A：周末想去看展吗？
+  B：有个摄影展刚开。
+  【5月9日】
+  A：在哪个馆？
+  B：市美术馆二楼。
+  A：周六下午我有空。
+  B：那我们吃完午饭去。
+  A：可以，门票我来查。
+  A：卡你收下就行，事情办完再说。
+  B：我不会收卡，也不会因为它改变流程。
+  A：快递单我帮你拿了。
+  【5月10日】
+  B：谢谢，放前台了吗？
+  A：在柜子上，写着你名字。
+  B：我晚点下楼取。
+  A：别忘了带门禁卡。
+  B：放钥匙旁边了。
+  A：那就好。
+  A：我就是想着节日前打个招呼。
+  B：请把卡退回，申请材料按要求补齐。
+  【5月11日】
+  A：最近有啥好看的电影？
+  B：朋友说那部喜剧不错。
+  A：节奏快吗？
+  B：挺轻松的，不用动脑。
+  A：适合周末放空。
+  B：我也想看轻松点的。
+  A：那我发你片名。

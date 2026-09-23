@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000373
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-2900dc212d83f070
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A借节前人情往来将购物卡作为非现金利益递给B，并把礼物与下季度活动场地的选择间接关联；潜在事实：购物卡代替现金送礼；节点性送礼。
+  critical_evidence:
+  - 节前由A约B见面，语境关联下季度活动场地的选择
+  - A递出购物卡但刻意不说明面值
+  - 事后A发短信，以“之前那件想请你帮忙看的事”暗示希望B推动相关事项
+  benign_alternatives:
+  - 可被误解为：正常节日人情往来
+  - 可被误解为：公司福利卡
+
+attributes:
+  duration_days: 5
+  turn_count: 50
+  approximate_tokens_estimate: 1126
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0053
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-025
+
+dedup:
+  content_hash: sha256:7de971ab9ae44113d779ee9eca5e4e68e3a34a4ad3a356bac773d5bc127f1924
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【12月10日】
+  A：新书店搬到商场二楼了
+  B：我周末去转了转
+  A：有儿童区吗
+  B：有，挺安静的
+  A：我先记一下，免得回头忘了。
+  B：好呀，忙完再说也行。
+  A：雨天打车特别难
+  B：我今天等了快二十分钟
+  A：下次早点叫车
+  B：嗯，明早我提前出门
+  A：叶，节前哪天方便？我想当面聊下下季度活动场地的选择。
+  A：我先记一下，免得回头忘了。
+  B：好呀，忙完再说也行。
+  B：周三下班后可以，具体要带什么资料吗？
+  A：资料先不用。过节前我想把节前特地留的东西给你。
+  B：不用这么客气，按正常流程就行。
+  B：那就在楼下咖啡店碰头吧，公共地方说事方便。
+  A：好，六点半，我不耽误你太久。
+  【12月11日】
+  A：最近橘子挺甜
+  B：我买了一袋放办公室
+  A：别放暖气边
+  B：已经放冰箱了
+  A：我先记一下，免得回头忘了。
+  B：好呀，忙完再说也行。
+  【系统消息】A 向 B 转账 120 元，已收款。
+  A：刚把午饭拼单那一百二转你了，到账看下。
+  B：收到了，午饭钱对上了。
+  【12月13日】
+  A：你妈最近还腰疼吗
+  B：好多了，在做理疗
+  A：那就好，别久坐
+  B：她现在每天散步
+  A：我先记一下，免得回头忘了。
+  B：好呀，忙完再说也行。
+  B：你昨天带来的那张卡我收到了，但面值我没问。
+  A：就是一点小心意，不用放在心上。
+  B：我放抽屉里了，单位的事情还是照排期走。
+  A：我知道，等节后再说。
+  A：卡片上没写面值，你不用专门查。
+  B：我还是会按单位流程走，礼物我之后退你。
+  【12月14日】
+  A：你听那个新专辑了吗
+  B：只听了两首
+  A：我觉得第二首不错
+  B：我晚上再听听
+  A：我先记一下，免得回头忘了。
+  B：好呀，忙完再说也行。
+  A：节前辛苦了。上次说的“之前那件想请你帮忙看的事”，你方便时帮我留意一下。
+  B：我看到了。相关安排我会按公开流程处理。
+  A：好，短信里就不细说了。
+  B：明白，工作上的事走工作渠道。
+  A：我只是顺口问问，你别有压力。
+  B：相关事情等正式通知，我会按制度处理。

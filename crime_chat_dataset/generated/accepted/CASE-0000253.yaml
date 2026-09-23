@@ -1,0 +1,115 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000253
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000131
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-de9627a590e12b14
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 放贷的同事 A 见 B 的欠款到期还不上，提出让 B 跟人走一趟、到场子那边住着干活抵账，吃住由 A 这边管、让 B 别跟家里声张，还清才来接人；B 出发前先给 A 转了一笔路费表诚意。
+  critical_evidence:
+  - B 欠 A 的钱到期还不上，A 说没抵押就走另外那条路
+  - A 让 B 人先跟我们走，到场子那边吃住他们管，别跟家里说
+  - A 说还清来接，暗示不还清回不来
+  - B 出发前给 A 转了一笔路费表诚意
+  benign_alternatives:
+  - 正常劳务派遣与外地务工介绍
+  - 亲友间的债务协商与延期还款计划
+
+attributes:
+  duration_days: 4
+  turn_count: 38
+  approximate_tokens_estimate: 669
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: agent_debt_bodily_collateral
+  risk: 3
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0033
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-019
+
+dedup:
+  content_hash: sha256:b4fc2fb74d7b019c0986d756fa95b0c71136091a848842b51b6cb58c5557b110
+pipeline_status: accepted
+title: coercion_blackmail/agent_debt_bodily_collateral
+conversation: |-
+  【6月1日】
+  A：阿强 月底那笔数 你打算怎么弄
+  B：哥 真凑不上 再宽我几天
+  A：宽不了 上头盯着呢 你手上又没抵押
+  B：那我拿什么顶啊
+  A：还有另外那条路 人先跟我们走
+  B：走哪儿
+  A：场子那边 安排你干活 吃住我们管
+  B：家里那边咋说
+  A：先别说 说清楚更麻烦 就当你出门打工
+  B：这两天降温 你那边冷不冷
+  A：别管天冷 你就说想好没有
+  B：让我再想想
+  【6月2日】
+  A：想好没 车后天就走
+  B：要去多久
+  A：干到还清 还清来接 你自己算
+  B：我有点怕
+  A：怕就别欠 这会儿说这些没用
+  A：跟家里说去外地进厂了 那边手机可能不方便回
+  B：知道了
+  B：厂里老张问你这周咋没来
+  A：你少跟人说 就说我出差
+  B：嗯
+  A：晚饭吃了没
+  B：没胃口
+  A：吃完 明天路远
+  【6月3日】
+  A：明早六点 老地方等
+  B：我要带啥
+  A：别带多 身份证带上 别的我们给
+  B：我得给家里打个电话
+  A：打可以 别多话
+  B：哥 这点路费 我表个心意
+  【系统消息】B 向 A 转账 3000 元，已收款。
+  A：收到了 明早准时
+  【6月4日】
+  A：到了没
+  B：到路口了
+  A：上车 别回头 到了给家里报个平安
+  B：好
+  A：那边有人接你 一切听安排
+  B：嗯

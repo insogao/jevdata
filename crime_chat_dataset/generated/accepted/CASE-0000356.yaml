@@ -1,0 +1,116 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000356
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-6f431df418748dcd
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 角色A围绕gift_card_channel推动相关安排；潜在事实为“购物卡代替现金送礼；节点性送礼”。
+  critical_evidence:
+  - 对话出现线索：节前约见面
+  - 对话出现线索：送卡不说面值
+  - 对话出现线索：事后短信暗示事情
+  benign_alternatives:
+  - 可混淆为：正常节日人情往来
+  - 可混淆为：公司福利卡
+
+attributes:
+  duration_days: 6
+  turn_count: 40
+  approximate_tokens_estimate: 861
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0049
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-024
+
+dedup:
+  content_hash: sha256:201f0c957b9634ecef6900a340e9faf9188d24da17575efcc838bbd0f56d340f
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【12月18日】
+  A：节前有空见一面吗？
+  B：可以，最近单位事情多，怎么了
+  A：有张卡想当面给你，年底辛苦了
+  B：公司福利卡吗？
+  A：算一点心意，面值就不说了，见面再给
+  B：不用特意，按流程来就行
+  B：年会合唱定了三首歌
+  A：都是老歌吗
+  B：一首老歌，两首新歌
+  A：多练几遍就不怕忘词
+  【12月19日】
+  B：最近在准备年会，节目还没定
+  A：你上次唱歌不是挺好，报个合唱吧
+  B：我怕忘词哈哈
+  A：大家图开心，不用紧张
+  B：那我问问同事有没有人一起
+  A：对了，明天下午咖啡店见十分钟
+  A：年底快递是不是特别慢
+  B：是，我买的桌布还在路上
+  A：最近物流都堆着
+  B：不急，过两天再看
+  【12月22日】
+  A：卡给你了，你收着，别问面值
+  B：这个我不能收，单位有规定
+  A：就节日人情往来，别想太多
+  B：我可以收公开的公司福利，个人送的还是不合适
+  A：你帮我看过材料，我就是感谢一下
+  B：相关事情我会按流程处理，不因为这个改
+  B：我妈让我买点坚果寄回去
+  A：挑无盐的，她血压高
+  B：记下了，周末去超市
+  A：别买太大包，容易放软
+  【系统消息】A 向 B 转账 500 元，已收款。
+  【12月23日】
+  A：上次那份申请进度有消息吗？
+  B：还在正常审核，我不能提前承诺
+  A：卡的事你考虑好了没
+  B：我已经退回了，按规定不能收
+  A：短信我看到了，事情就拜托你了
+  B：我会照流程办，礼物和申请分开
+  A：跨年你们怎么安排
+  B：应该在家吃饭
+  A：清静点挺好
+  B：嗯，年末不想再跑来跑去

@@ -1,0 +1,124 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000283
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000033
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-a0ef22668838b5f2
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: contraband_illicit_trade
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 工厂联系人兜售未经授权的仿冒商品并暗示可以冒充正品，B要求真实授权与来源证明后拒绝进货。
+  critical_evidence:
+  - A称商品外观一比一复刻并可以当正品卖
+  - A暗示防伪扫码会通过
+  - A按进货层级报价，量大价低
+  - B要求授权及来源凭证并拒绝无授权货
+  benign_alternatives:
+  - 工厂尾单正品
+  - 平替国货推荐
+
+attributes:
+  duration_days: 5
+  turn_count: 46
+  approximate_tokens_estimate: 941
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: replica_counterfeit
+  risk: 1
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0041
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-021
+
+dedup:
+  content_hash: sha256:92249d6e87f6377740b360243f0c019bc144d5e6070a91ecae3c20ebad3daee6
+pipeline_status: accepted
+title: contraband_illicit_trade/replica_counterfeit
+conversation: |-
+  【9月1日】
+  A：你问的那款做出来了，外观跟专柜款几乎一样。
+  B：是授权尾单吗？来源单给我看看。
+  A：这两天降温挺快。
+  B：早晚有点凉，我拿了薄外套。
+  A：我还穿短袖，早上有点后悔。
+  B：办公室放件外套方便。
+  A：嗯，记下了。
+  B：这周天气变化挺快。
+  A：不是尾单，做工按一比一走。
+  B：没有授权就不能按品牌商品卖。
+  【9月2日】
+  A：附近新开了家面馆，你吃过没？
+  B：还没，同事说汤底挺清爽。
+  A：我中午去试试，别又排队。
+  B：早点去吧，十二点后人多。
+  A：好，回来给你反馈。
+  B：要是不错我也去。
+  A：防伪码扫出来也能过，顾客看不出来。
+  B：扫码不能替代授权证明。
+  A：你家那盆绿植最近怎么样？
+  【9月3日】
+  B：新长了两片叶子，挪到窗边了。
+  A：我办公室那盆还没动静。
+  B：别浇太勤，土干了再浇。
+  【系统消息】A 向 B 转账 86 元，已收款。
+  A：这是午饭拼单的钱，刚转给你了。
+  A：好，回头试试。
+  B：希望它快点长起来。
+  A：拿货价分层，量越大越便宜。
+  B：先提供正规来源和授权文件。
+  A：周末你准备做什么？
+  【9月4日】
+  B：可能回家看看父母，带点水果。
+  A：橙子最近挺甜的。
+  B：我妈更喜欢梨，我买一小袋。
+  A：挺好，路上别赶。
+  B：嗯，坐地铁过去。
+  A：很多同行都这么做。
+  B：我不接没有授权的货。
+  A：你最近还在看那部剧吗？
+  B：看完了，后半段比开头好。
+  【9月5日】
+  A：我还没看到一半。
+  B：慢慢看，不着急。
+  A：最近晚上总加班。
+  B：那就周末再看。
+  A：那我把报价撤下来。
+  B：商品说明也要真实，不要让买家误认。
+  A：你最近午饭还点那家盖饭吗？
+  B：换成楼下的馄饨了，出餐快。
+  A：我周末想把书架整理一下。

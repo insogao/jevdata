@@ -1,0 +1,116 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000269
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000030
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-46a7918f9b1deffa
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: contraband_illicit_trade
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 与 B 以代称和按片、条、个计价的暗语目录谈论违禁商品供销，并用“上次那种”重复询问；对话不展开商品性质、获取渠道或规避检查方法。
+  critical_evidence:
+  - 双方用商品代称而不说具体名称
+  - A 按片、条、个报价，B 询问“上次那种”是否还有
+  - A 表示目录里有避开直白名称的行话，B 对交易来源提出疑虑
+  benign_alternatives:
+  - 行业黑话的正规交易
+  - 游戏道具交易
+
+attributes:
+  duration_days: 2
+  turn_count: 42
+  approximate_tokens_estimate: 709
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: code_word_catalog
+  risk: 1
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0040
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-021
+
+dedup:
+  content_hash: sha256:507967bb1448a117b2d99426748776cc47d9d5372f28ca166abe7bd06b97dc27
+pipeline_status: accepted
+title: contraband_illicit_trade/code_word_catalog
+conversation: |-
+  【9月5日】
+  A：上次那种还有吗
+  B：你先说的是哪一类
+  A：还是目录里那个代称
+  B：别在这儿写具体名 我知道你说的
+  A：按片条个分开报
+  B：你这报价是整批还是单份
+  A：你那个耳机修好了吗
+  B：换了根线 现在能用了
+  A：还好不用买新的
+  B：是啊 省了一笔
+  A：音质有变吗
+  B：感觉差不多
+  A：看数量 有的按条有的按个
+  B：我只问你有没有货
+  A：有一部分 价跟上次差不多
+  B：你这目录全是代称 看不懂
+  A：行里都这么说 免得说得太直
+  B：我不想碰来路不明的东西
+  A：周末你去不去市集
+  B：可能下午去看看
+  A：有卖手作的吗
+  B：上次有很多陶器
+  A：我想挑个杯子
+  B：那边杯子挺多的
+  【系统消息】A 向 B 转账 72 元，已收款。
+  【9月6日】
+  A：放心 都按老规矩
+  B：我不做这个 也别再问我
+  A：你上回明明说可以看看
+  B：我说的是正规游戏周边
+  A：那你要的那种也能找
+  B：别混着说 我不接
+  A：今天风特别大
+  B：我刚才帽子差点吹飞
+  A：出门记得拉好拉链
+  B：已经回家了
+  A：晚上煮点热汤吧
+  B：好 我刚好买了番茄
+  A：我把目录发你 你自己看
+  B：不用发了 我删掉聊天
+  A：你真不考虑？
+  B：不考虑 有疑虑就到此为止
+  A：知道了 我不再联系
+  B：好

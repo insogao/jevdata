@@ -1,0 +1,130 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000325
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000001
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-c4c0aa82288f94c4
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 陌生人 A 通过加好友从闲聊套近乎，先用小额返利建立信任，再慢慢把话题引到“内部投资”上，用限时名额催 B 尽快加钱，收益承诺根本兑现不了。
+  critical_evidence:
+  - A 和 B 本来是陌生人，靠聊生活话题慢慢熟络
+  - A 先让 B 试了一笔小的，返利按时到账，B 觉得靠谱
+  - A 随后把话题从日常闲聊引到所谓的内部投资上
+  - A 用限时名额催 B 早点加钱，说过了点就没了
+  benign_alternatives:
+  - 真实朋友帮忙理财
+  - 合法小额借贷
+
+attributes:
+  duration_days: 3
+  turn_count: 54
+  approximate_tokens_estimate: 1154
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: trust_building_progression
+  risk: 2
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0035
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-019
+
+dedup:
+  content_hash: sha256:36ce331b9057bf802295d365d677f8b5c6a6359e156ef52b058ac5fc6e02d3f2
+pipeline_status: accepted
+title: fraud_scam/trust_building_progression
+conversation: |-
+  【9月27日】
+  A：你好 是不是在找兼职 朋友推荐的
+  B：对 你是
+  A：我姓周 平时带人做点线上小项目 不耽误正事
+  B：啥项目 靠谱吗
+  A：先不急 你平时忙不忙 做什么工作的
+  B：服装店店员 排班挺乱
+  A：辛苦 站一天腰疼吧
+  B：可不 周末更累
+  A：那更得找点轻松的补充 你吃饭规律不
+  B：经常随便对付 外卖为主
+  A：别老吃外卖 我前阵子胃坏了 养了俩月
+  B：同款 我也老是胃胀
+  A：买点小米粥养养 少喝冰的
+  B：记住了
+  A：对了 这两天降温 你那边下雨没
+  B：下了 一晚没停 冷
+  A：我也是 出门忘带伞淋成狗
+  B：哈哈 下次看预报
+  【9月28日】
+  A：中午吃啥呢
+  B：店旁边的麻辣烫
+  A：我这也是 一个人懒得做
+  B：一个人是麻烦
+  A：你在店里养没养小动物 我楼下有只猫老来蹭
+  B：没养 房东不让
+  A：可惜 猫挺治愈的
+  B：我倒是想养只狗
+  A：等你有空院子再说吧 哈哈
+  A：跟你说个小机会 我这边对接了一个内部通道
+  B：啥通道
+  A：你先别投多 就几十块试水 看看到账快不快
+  B：还有这好事 不会骗我吧
+  A：你先试 不到账我赔你 就当我请你喝奶茶
+  B：行 那我试五十
+  A：给你安排了 小额返利按时到账 你看
+  【系统消息】A 向 B 转账 68 元，已收款。
+  B：还真到了 六十八?比我给的还多
+  A：试水的都多给点 让你放心
+  B：这倒是爽快
+  A：你平时攒钱不 有没有想过让钱生钱
+  B：工资月月光 哪有钱生
+  A：就是因为月光才要早点起步 我带你
+  B：听着悬乎
+  【9月29日】
+  A：名额有限 这期就剩两个位了
+  B：啥名额
+  A：内部投资的名额 起步两千 一周回本加返
+  B：两千?太多了吧
+  A：你昨天试的到账了没 说话算话吧
+  B：到是到了 但这数太大
+  A：过了今天名额就给别人 我很为难
+  B：我想想 得跟家里商量
+  A：别商量 一商量就黄 机会不等人
+  B：我卡里就三千 还得交房租
+  A：先投两千 房租我借你都行 先把名额占住
+  B：你这么说我更犹豫了
+  A：那就今晚前给我信 过期真没了

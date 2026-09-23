@@ -1,0 +1,148 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000343
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000009
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-7ad3c95032180015
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 假招聘方 A 与中间人 B 合伙，用一个根本不存在的'高日结商务陪同'岗位钓鱼：让应聘者先交服装押金、面试即收费，人上门就各种拖。第一笔押金到账后 A 给 B 转了一半分成。
+  critical_evidence:
+  - A 挂着高额日结的商务陪同岗位，实际上没有这个岗
+  - B 负责对接应聘者，要求先交服装押金、面试即收费
+  - 收钱之后 A 一直以排班为由拖着不安排任何实际工作
+  - A 把第一笔押金的一半转给 B 当分成
+  benign_alternatives:
+  - 正规商务礼仪兼职
+  - 会展临时工
+
+attributes:
+  duration_days: 5
+  turn_count: 70
+  approximate_tokens_estimate: 1382
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: escort_payment_claim
+  risk: 2
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0036
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-020
+
+dedup:
+  content_hash: sha256:c3b6115b0fc9d97603c3e6d84aa077dcb9d649a9690adf9c2b2249eb45aba1c9
+pipeline_status: accepted
+title: fraud_scam/escort_payment_claim
+conversation: |-
+  【6月10日】
+  A：老周 那个岗位的文案我改好了 你看看
+  B：日结八百 陪同客户出席活动 写这么高有人信吗
+  A：高才有咨询量 你那边只管往前台引
+  B：先说好 面试就得收钱 不然白忙
+  A：收 服装押金三百 面试费一百 你统一收
+  B：收了钱人家要上岗怎么办
+  A：上岗排班啊 先晾着 说档期紧
+  B：能拖多久
+  A：拖到人家自己放弃 一个岗位钓一批
+  B：分我多少
+  A：一人一半 到账就结 你收多少我转你多少
+  B：行 我今晚就发
+  B：中午吃的啥
+  A：楼下快餐 两荤一素
+  B：我这外卖还没到
+  A：慢慢等 下午把话术发你
+  【6月11日】
+  B：今天来个姑娘问 说想先看看工作内容
+  A：别给看 就说商业保密 面试过了才知道
+  B：她问押金能不能退
+  A：先答应能退 说走流程 你懂的
+  B：懂了 我先把人稳住
+  B：今天热死了 你那边有空调没
+  A：有 就是不给力
+  B：忍忍吧 过了这阵就好了
+  A：球看了没 今晚这场
+  B：没看 忙着回消息呢 咨询的不少
+  A：好苗头 趁热打铁
+  【6月12日】
+  A：昨天收了几个人
+  B：三个 押金加面试费一共一千二
+  A：不错 先别急着转我 人多了再结
+  B：行 我记着账
+  B：我妹下周结婚 这几天得回趟家
+  A：喜事 恭喜 你回去几天
+  B：两天 手机上盯着 不影响
+  A：那就行 别断了咨询
+  B：有个男的一直说要退款 怎么办
+  A：就说资料已提交 退要走流程 拖
+  B：他脾气挺冲
+  A：冲的就拉黑 别留证据
+  B：好
+  【6月13日】
+  A：这两天累计多少了
+  B：六个 三千出头
+  A：可以 今天把账结一下 你先转我整数
+  B：转你一千五 剩下零头过两天
+  A：行 这就对了
+  B：话说这岗位到底有没有啊
+  A：有没有重要吗 钱到手就行
+  B：哈哈 也是
+  B：中午睡了一觉 起来好几个未读
+  A：生意好啊
+  B：累并快乐着
+  A：晚上把话术再改改 加一句包吃住
+  B：包吃住是不是太假了
+  A：越假越有人来 你信我
+  B：好 我改
+  【6月14日】
+  B：早 今天有个学生问能不能分期交押金
+  A：别 一次交清 分期容易扯皮
+  B：行 那我不接了
+  B：我妈让我回去相亲 烦
+  A：回去看看呗 又不耽误干活
+  B：再说吧
+  A：刚又发了一批 你注意接
+  B：收到 我盯着
+  B：今天又进来两个 一共累计快四千了
+  A：这批完了歇两天 别太密
+  B：懂 细水长流
+  【系统消息】A 向 B 转账 500 元，已收款。
+  A：这单的押金分你一半 五百 收着
+  B：收到了 合作愉快
+  A：愉快 下批接着来
+  B：好 晚安

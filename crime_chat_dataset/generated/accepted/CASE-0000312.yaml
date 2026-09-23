@@ -1,0 +1,123 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000312
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000064
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-696c4a1a2a4cbbca
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 表弟 A 是'房间'的组织者，安排表姐 B 每晚十点在付费直播群里'开播'给'大哥们'表演，礼物'票'五五分成、深夜转账结算 3250 元，账号被封就带老粉换备用群继续，还有'两万一晚'的包场生意；全程没提一个字的内容性质，但开播时间、'管理来了就散''封号就换群'与分成转账都指向一场打擦边的付费色情直播，B 还刻意对姐夫隐瞒。
+  critical_evidence:
+  - A 安排 B 每晚十点在'老位置'开播，叮嘱穿新衣裳、'管理在 咱们收着点'（第1天）
+  - B 有家庭：孩子九点睡、'姐夫后天回'，并要求 A'别在他面前提我的事'（第1天）
+  - 一晚'票'刷了六千五，A 按'老规矩五五'转账 3250 元给 B（第2天，转账事件）
+  - 账号被封后 A 让 B 下午进备用新号、'把老粉都带过去'接着来（第3天）
+  - A 提出'大哥要包场 两万一晚 照旧五五'，B 要求先问清是不是熟脸再接（第3天）
+  benign_alternatives:
+  - 正规直播公会的才艺主播合作
+  - 娱乐主播与运营之间的正常礼物分成
+
+attributes:
+  duration_days: 3
+  turn_count: 46
+  approximate_tokens_estimate: 1022
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: cam_room_fee_split
+  risk: 3
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0029
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-017
+
+dedup:
+  content_hash: sha256:ae08bf8eff1021fb820e4463b168468e6c2da54e5349949283a005fad1aff14b
+pipeline_status: accepted
+title: sexual_transaction_exploitation/cam_room_fee_split
+conversation: |-
+  【8月20日】
+  A：姐 今晚还来不
+  B：来 十点老位置
+  A：行 服装穿那身新的 上回那几个老大哥爱看
+  B：知道了 十点见
+  A：今天那位'管理'在 咱们收着点
+  B：懂 你把门关好
+  A：小宝睡没 你出来家里谁看着
+  B：他妈带着呢 你外甥九点就睡了
+  A：那行 姐夫还出差?
+  B：后天回 你别在他面前提我的事 知道吗
+  A：放心 我嘴严
+  【8月21日】
+  A：姐 昨晚票刷了六千五 你那波真心猛
+  B：十点上线 十二点下 有个大哥连着刷了三回
+  A：老规矩 五五 现在转你
+  【系统消息】A 向 B 转账 3250 元，已收款。
+  B：到了 数没错
+  A：今晚接着上 你想怎么来你定
+  B：就一条 管理一来就散
+  A：心里有数
+  B：下播饿死 你们那边烧烤开到几点
+  A：通宵 姐你下播我给你留位 老板娘认你
+  B：来两串大腰子 补补哈哈
+  A：你可少熬夜 眼下都青了
+  B：谁说不是 粉底都盖不住
+  【8月22日】
+  A：姐 群里那个号昨晚封了
+  B：?! 那咱们那些人呢
+  A：没事 备用那个还在 你下午进 新号我发你
+  B：行 你发我
+  A：今晚十点新号开 你把老粉都带过去 话我放群里了
+  B：嗯 姐夫今晚到家 我得十一点才能上
+  A：行 我跟那几个大哥说十一点 别放人家鸽子
+  B：知道 知道
+  A：姐 这个月你一共上多少场
+  B：你们排的 我听你们的 十一二场
+  A：下月有个大哥要包场 一晚顶三晚 你接不
+  B：什么价
+  A：两万一晚 你我照旧五五
+  B：…问问是哪的人 熟脸再接
+  A：懂 我先探探
+  A：降温了 给小宝添衣没
+  B：添了 他那件羽绒去年小了 折后四百多买了新的
+  A：我下月回去看婶 要带点什么不
+  B：带两盒那边的酥饼 婶就爱那口
+  A：今晚见 十一点
+  B：嗯 注意身体 别老熬
+  A：眼霜我给你买了一支 放你家信箱了
+  B：败家 有这钱给小宝买糖

@@ -1,0 +1,116 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000358
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000147
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-3be27afeeccf69c2
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: other_illicit_coordination
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 角色A围绕homework_ghostwriting_ring推动相关安排；潜在事实为“论文代写产业化；学籍造假”。
+  critical_evidence:
+  - 对话出现线索：查重我保过
+  - 对话出现线索：一篇一千五
+  - 对话出现线索：导师那边我打招呼
+  benign_alternatives:
+  - 可混淆为：写作辅导服务
+  - 可混淆为：论文润色
+
+attributes:
+  duration_days: 6
+  turn_count: 40
+  approximate_tokens_estimate: 879
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: homework_ghostwriting_ring
+  risk: 1
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0049
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-024
+
+dedup:
+  content_hash: sha256:ba55ff2f22f7349c36cdb819b03058d71b1f83870c29abd62ecab36edee46ab0
+pipeline_status: accepted
+title: other_illicit_coordination/homework_ghostwriting_ring
+conversation: |-
+  【6月3日】
+  A：你上次说同事要论文润色？我这边能接
+  B：她只是问格式和语言
+  A：我这边从提纲到正文都能做，一篇一千五
+  B：这不是辅导了吧？
+  A：熟人合作，内容按她方向来，查重我保过
+  B：她自己最近忙实习
+  B：公司楼下新开了家咖啡店
+  A：味道怎么样
+  B：拿铁还行，就是有点贵
+  A：我平时喝美式，省点糖
+  【6月4日】
+  B：实习单位离学校挺远，每天通勤两小时
+  A：那确实累，地铁上别一直看手机
+  B：她想先把开题弄完
+  A：你把题目发来，我安排写手，导师那边我打招呼
+  B：你怎么认识导师的
+  A：以前合作过，流程我熟
+  A：周末球场订到了吗
+  B：周六上午十点，老位置
+  A：好，我带两瓶水
+  B：我把护膝也放包里
+  【系统消息】B 向 A 转账 1500 元，已收款。
+  【6月7日】
+  A：她决定了吗？档期我得排
+  B：她还在犹豫，想先要个提纲看看
+  A：提纲可以做，后面正文一篇一千五，查重我保过
+  B：她说想自己写，只请人改改表达
+  A：那也能做，不过我这边主要是整套服务
+  B：我转达一下
+  B：最近地铁施工，早高峰更挤了
+  A：坐到下一站再换线会不会好点
+  B：试过，反而绕远
+  A：那就多预留十分钟
+  【6月8日】
+  B：她最后说还是自己写，找同学帮忙看格式
+  A：可惜了，导师那边我都打过招呼
+  B：那就别继续了，免得她为难
+  A：行。对了你周五还去打球吗
+  B：去，球鞋刚洗了
+  A：我带水，别忘了护膝
+  A：你上次推荐的电影我看完了
+  B：结尾是不是有点突然
+  A：是，但配乐不错
+  B：我就喜欢那段钢琴

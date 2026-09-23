@@ -1,0 +1,120 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000270
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000149
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-fc938c1889931fdd
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: other_illicit_coordination
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 组织人员在公共区域大量张贴未经许可的贷款中介广告，按楼栋计酬并惩罚撕除广告的张贴者；B 受雇参与但逐渐意识到这不是正规广告投放。
+  critical_evidence:
+  - A 要求一夜贴完一个区的广告，内容导向贷款中介
+  - A 按栋结钱，并以撕了扣钱约束张贴者
+  - B 对未经许可的张贴和扣钱安排表示担忧
+  benign_alternatives:
+  - 正规广告投放
+  - 社区通知张贴
+
+attributes:
+  duration_days: 6
+  turn_count: 42
+  approximate_tokens_estimate: 736
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: informal_loan_ads_network
+  risk: 1
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0040
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-021
+
+dedup:
+  content_hash: sha256:510876f2cb6ce533684eb5486a79dba89610d7aa942a0e192f030ddb7ea4d51f
+pipeline_status: accepted
+title: other_illicit_coordination/informal_loan_ads_network
+conversation: |-
+  【9月10日】
+  A：今晚那片你能接吗
+  B：具体是哪种宣传
+  A：贷款咨询的小广告 一夜贴完一个区
+  B：这是物业同意的点位吗
+  A：不用问那么细 按栋结钱
+  B：如果贴上去被撕了呢
+  A：你们那边午饭怎么解决
+  B：楼下有个食堂
+  A：菜怎么样
+  B：家常菜还行
+  A：有面条吗
+  B：有的 我一般吃番茄面
+  【9月11日】
+  A：撕了扣钱 你自己留意
+  B：这不太像正规广告投放
+  A：按要求做就有钱拿
+  B：我之前只贴过店铺传单
+  A：都一样 贴完拍个数
+  B：没有许可我不想贴楼道
+  【9月12日】
+  A：我买了个新水杯
+  B：保温的吗
+  A：对 颜色选了蓝灰
+  B：看着挺耐看
+  A：下次带给你看
+  B：好呀 我也想换一个
+  【系统消息】A 向 B 转账 126 元，已收款。
+  【9月13日】
+  A：我认识那边的人 不会有事
+  B：那你把书面授权发我看看
+  A：不用走那么正式
+  B：那我这单不接了
+  A：你都答应了 怎么临时变
+  B：我问清楚才发现没授权
+  【9月14日】
+  A：这周是不是要降温
+  B：周四开始会凉一点
+  A：我得把薄外套找出来
+  B：早晚温差挺大
+  A：骑车记得戴手套
+  B：我最近都坐公交了
+  【9月15日】
+  A：扣你这两天的工钱了
+  B：工作做了的部分你照结 这批我不贴
+  A：我会再找别人
+  B：我把剩下的宣传页还你
+  A：算了放门卫那里吧
+  B：我等下送过去

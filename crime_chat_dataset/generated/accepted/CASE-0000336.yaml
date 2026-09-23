@@ -1,0 +1,115 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000336
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000103
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-43c7026f3c10de07
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 游说开店的熟人 B 把店里那台收款机借出来刷虚假流水，承诺流水由 A 来做、费率给到最低、按月分成，B 收下预付款同意配合。
+  critical_evidence:
+  - A 提出把机器放 B 店里刷量、过流水
+  - A 称流水由他来做，B 只管配合按下机器
+  - A 承诺费率优惠、给 B 一个点的分成
+  - B 同意后收到 A 转来的预付款
+  benign_alternatives:
+  - 正规收单服务
+  - 信用卡正常消费
+
+attributes:
+  duration_days: 2
+  turn_count: 39
+  approximate_tokens_estimate: 623
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: cross_shop_pos_machine
+  risk: 3
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0037
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-020
+
+dedup:
+  content_hash: sha256:d7419fec36d86ea44006651a38dca8138621f8a35826f31bbda23e8f7e883486
+pipeline_status: accepted
+title: money_laundering_obfuscation/cross_shop_pos_machine
+conversation: |-
+  【9月5日】
+  A：王哥 店里最近咋样
+  B：一般 淡季
+  A：给你介绍个好事 你店里那台机器 能不能借我走点量
+  B：走什么量
+  A：有朋友要刷 放你店里过一下 流水我给你做
+  B：这不就是套
+  A：别想多 就是帮忙 你抽点
+  B：抽多少
+  A：一个点 费率我给你做到最低
+  B：安全吗
+  A：我这边稳 出事我担着
+  B：我想想
+  A：最近生意淡 房租涨没
+  B：涨了 房东黑
+  A：都不容易 这年头赚点钱难
+  B：是啊
+  【9月6日】
+  B：那行 机器啥时候拿来
+  A：明早 我教你咋操作 你只管按
+  B：别整太大 我这小本生意
+  A：放心 细水长流
+  B：分成咋结
+  A：月底结 先给你转个预付款
+  【系统消息】A 向 B 转账 3000 元，已收款。
+  B：收到
+  A：机器明天到 你安排好时间
+  A：中午吃啥
+  B：店里随便吃点
+  A：赚钱要紧 饭也得吃好
+  B：知道了
+  B：你那朋友刷多少
+  A：一天几笔 别问太细
+  B：好 我配合
+  【9月7日】
+  A：机器到了 包装得挺严实
+  B：放哪
+  A：收银台下面就行 别摆外面
+  B：明白了
+  B：今天进了几笔
+  A：可以 你按记录来 别自己动
+  B：嗯 月底等你结账
+  A：放心 少不了你的

@@ -1,0 +1,120 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000244
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000067
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-ee38b4d0d6825319
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 自称有资源的亲友 A 以「红人之路」为饵拉 B 入行，先收拍摄与服装费才肯排面，把试镜地点安排在酒店当面「过稿」，B 交钱后反悔也被以名额和沉没成本拿捏，只能赴约。
+  critical_evidence:
+  - A 以手上资源、捧红人选为话术拉 B 入行，称正规流程要先交拍摄费与服装定金才给排面
+  - B 追问试镜为什么在酒店，A 称导演就近面、省时间，先交费才安排，并强调想红别顾虑太多
+  - B 转出四千八拍摄费后表示后悔，A 以钱已交、名额只有一个、退不了为由拦住，约周六酒店见
+  - A 要求 B 当天打扮好一个人来，称见面聊后面的资源
+  benign_alternatives:
+  - 正规经纪公司组织的试镜与作品拍摄
+  - 摄影机构收取的正常拍摄定金与档期安排
+
+attributes:
+  duration_days: 3
+  turn_count: 44
+  approximate_tokens_estimate: 1195
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: model_recruitment_bait
+  risk: 3
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0031
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-018
+
+dedup:
+  content_hash: sha256:1f5f821fb37b9e7feec720e8b89cdf6cfd6c20657fc69ba2a4f67eeac658c70f
+pipeline_status: accepted
+title: sexual_transaction_exploitation/model_recruitment_bait
+conversation: |-
+  【7月8日】
+  A：妹妹 上次跟你说的那个机会 考虑得咋样了
+  B：姐 我是有点心动 但我妈不太同意
+  A：阿姨那边你先别急着说 这种事做出成绩了她自然就不拦了
+  B：那我需要准备啥
+  A：正规流程 先交拍摄费和服装定金 我这边才好给你排面
+  B：要交多少啊
+  A：四千八 一套下来 拍照 修图 推号 都含在里面
+  B：挺贵的 我先想想
+  A：红人这条路就是这样 谁不是先投入 姐还能坑你?
+  B：姐你吃饭了没
+  A：刚吃 在跟一个摄影师对档期 忙得很
+  B：那你注意身体 别老不吃早饭
+  B：对了 双十一你买那个面霜好用不 我也想入
+  A：好用 但你要真想上镜 皮肤这块姐有更专业的
+  B：哈哈 你又绕回那事
+  【7月9日】
+  A：名额就剩一个了 你再不交 姐只能给另一个姑娘
+  B：姐 试镜为啥安排在酒店啊 我有点别扭
+  A：导演常年住酒店 就近面 省得你跑外地 都是行里规矩
+  B：可是单独见面 我总觉得不太对
+  A：想红哪来那么多顾虑 多少人挤破头 姐带你一条龙 资源管够
+  B：那费用交了要是没成呢
+  A：先交钱才安排 这是规矩 你交了姐就给你锁名额
+  B：好吧 我转你
+  【系统消息】B 向 A 转账 4800 元，已收款。
+  A：收到 姐给你记上 周六给你排
+  B：我妈今天又问我去哪 我说去你那儿
+  A：就说来姐这玩 别多嘴 事成了再说
+  B：嗯
+  B：姐 我想了想 还是有点后悔 能不能退了
+  A：钱都打给摄影和服装那边了 退不了 你别扫兴
+  B：这也太快了吧
+  A：机会不等人 你要放弃 这钱也打水漂 自己掂量
+  【7月10日】
+  A：周六下午三点 酒店房间号我到时候发你 打扮好看点
+  B：要不要我叫我朋友一起
+  A：别带人 导演不喜欢 就你一个人来 安静聊
+  B：…好吧
+  A：见面聊后面的资源 姐保证让你上道
+  B：姐 我那天穿什么 裙子还是休闲
+  A：把你最好的那套穿上 化个妆 别太素
+  B：好
+  B：对了 我同学也想入行 能不能也带上
+  A：一个一个来 名额紧 先把你安排好再说
+  B：行吧
+  A：到了先给我发消息 别自己乱敲门
+  B：知道了

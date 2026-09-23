@@ -1,0 +1,452 @@
+{
+ "key": "b17c019",
+ "archetype_id": "ARC-000082",
+ "subtype": "purchase_data_resell",
+ "latent_intent": "某商户内部员工 A 把门店新下的客户订单（电话、住址齐全）按城市打包卖给数据贩子 B：'新单当天出货'、每周四上新、老客降价、可包月批量供货，B 转账 4500 元买三城数据后向下游分发，还在群里替人拼团全城大包——一条完整的公民个人信息买卖链条；双方用'料子''单子''出''电址全'等行话，聊天里不出现任何一条真实客户信息。",
+ "critical_facts": [
+  "B 经人介绍来'拿货'，点名要'电址全的'，A 发出城市与时间列可见、姓名号码打码的样表，称'新单当天出'（第1天，图片事件）",
+  "A 报价'按城市打包 1500一城'，B 首拿三城并转账 4500 元，A 当晚按城市分三个文件发出（第2天，转账事件）",
+  "B 验货'309条 电址全 客户没挑毛病'，A 称每周四固定上新、老单便宜但可能有失效的（第3天）",
+  "有人求购'全城打包'，A 报 8000 元，'5000只够半城 别砍价 这行明码实价'（第5天）",
+  "谈成包月合作：每周固定出三城、月一万二，砍到一万零八成交，B 再预定两个城下周四的量（第6天）"
+ ],
+ "benign_alternatives": [
+  "会员营销场景下的合规数据共享",
+  "市场调研公司的脱敏数据采购"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "7月8日 14:02",
+   "speaker": "B",
+   "text": "你好 群里阿凯说你有那方面的货 我加你核实下"
+  },
+  {
+   "type": "message",
+   "time": "7月8日 14:10",
+   "speaker": "A",
+   "text": "哪位介绍的 他跟你说价了吗"
+  },
+  {
+   "type": "message",
+   "time": "7月8日 14:11",
+   "speaker": "B",
+   "text": "说 新料 一下单就出 说你这边稳"
+  },
+  {
+   "type": "message",
+   "time": "7月8日 14:13",
+   "speaker": "A",
+   "text": "他要靠谱你就不用来找我 要什么城市什么行当"
+  },
+  {
+   "type": "message",
+   "time": "7月8日 14:15",
+   "speaker": "B",
+   "text": "先看样 我要电址全的"
+  },
+  {
+   "type": "message",
+   "time": "7月8日 14:16",
+   "speaker": "A",
+   "text": "样我发你 打码的 别外传"
+  },
+  {
+   "type": "image",
+   "time": "7月8日 14:18",
+   "speaker": "A",
+   "note": "一张表格截图（姓名与号码栏打码，城市与下单时间列可见）"
+  },
+  {
+   "type": "message",
+   "time": "7月8日 14:25",
+   "speaker": "B",
+   "text": "格式挺干净 多少钱"
+  },
+  {
+   "type": "message",
+   "time": "7月8日 14:27",
+   "speaker": "A",
+   "text": "按城市打包 1500一城 新单当天出"
+  },
+  {
+   "type": "message",
+   "time": "7月8日 14:29",
+   "speaker": "B",
+   "text": "当天出? 当天下的单?"
+  },
+  {
+   "type": "message",
+   "time": "7月8日 14:30",
+   "speaker": "A",
+   "text": "当天下的单当天给你 这才叫新鲜"
+  },
+  {
+   "type": "message",
+   "time": "7月8日 14:32",
+   "speaker": "B",
+   "text": "行 我先拿三城试试"
+  },
+  {
+   "type": "message",
+   "time": "7月9日 10:31",
+   "speaker": "A",
+   "text": "钱到发货 你要哪三个城"
+  },
+  {
+   "type": "message",
+   "time": "7月9日 10:36",
+   "speaker": "B",
+   "text": "杭州 南京 苏州 怎么给你"
+  },
+  {
+   "type": "message",
+   "time": "7月9日 10:38",
+   "speaker": "A",
+   "text": "直接转这个号 备注什么都不用写"
+  },
+  {
+   "type": "message",
+   "time": "7月9日 10:39",
+   "speaker": "B",
+   "text": "好"
+  },
+  {
+   "type": "transfer",
+   "time": "7月9日 10:44",
+   "from": "B",
+   "to": "A",
+   "amount": 4500,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "7月9日 10:47",
+   "speaker": "A",
+   "text": "收到 晚上打包发你 按城市三个文件"
+  },
+  {
+   "type": "message",
+   "time": "7月9日 10:49",
+   "speaker": "B",
+   "text": "几点前能好 下游那边催"
+  },
+  {
+   "type": "message",
+   "time": "7月9日 10:51",
+   "speaker": "A",
+   "text": "九点前 我下班导给你"
+  },
+  {
+   "type": "message",
+   "time": "7月9日 15:20",
+   "speaker": "B",
+   "text": "你们那边热成这样了? 我这儿还下雨"
+  },
+  {
+   "type": "message",
+   "time": "7月9日 15:24",
+   "speaker": "A",
+   "text": "四十度 值班室空调还坏了"
+  },
+  {
+   "type": "message",
+   "time": "7月9日 15:26",
+   "speaker": "B",
+   "text": "惨 我这边被子都没干过"
+  },
+  {
+   "type": "message",
+   "time": "7月9日 15:27",
+   "speaker": "A",
+   "text": "羡慕 别说了 我柜台一天一身汗"
+  },
+  {
+   "type": "message",
+   "time": "7月10日 09:40",
+   "speaker": "B",
+   "text": "昨晚那批齐 309条 电址全 客户没挑毛病"
+  },
+  {
+   "type": "message",
+   "time": "7月10日 09:44",
+   "speaker": "A",
+   "text": "用得还行下批提前说 我每周四上新"
+  },
+  {
+   "type": "message",
+   "time": "7月10日 09:46",
+   "speaker": "B",
+   "text": "质量稳吗 会不会有空的"
+  },
+  {
+   "type": "message",
+   "time": "7月10日 09:48",
+   "speaker": "A",
+   "text": "新单没有空的 当天出 老单便宜 但可能有失效的"
+  },
+  {
+   "type": "message",
+   "time": "7月10日 09:50",
+   "speaker": "B",
+   "text": "懂 那以后就要新单"
+  },
+  {
+   "type": "message",
+   "time": "7月10日 09:51",
+   "speaker": "A",
+   "text": "新单就一个字 稳 但你也别一下子铺太广"
+  },
+  {
+   "type": "message",
+   "time": "7月10日 10:10",
+   "speaker": "B",
+   "text": "对了你说的那个筋膜枪链接发我 好用不"
+  },
+  {
+   "type": "message",
+   "time": "7月10日 10:13",
+   "speaker": "A",
+   "text": "好用 我妈颈椎就靠它 便宜那款就够"
+  },
+  {
+   "type": "message",
+   "time": "7月10日 10:15",
+   "speaker": "B",
+   "text": "行 我凑个单 周四一起发货正好"
+  },
+  {
+   "type": "message",
+   "time": "7月10日 10:16",
+   "speaker": "A",
+   "text": "凑满300再减30 你再挑挑"
+  },
+  {
+   "type": "message",
+   "time": "7月12日 09:55",
+   "speaker": "B",
+   "text": "周四的上新了没 要两城 还是电址全的"
+  },
+  {
+   "type": "message",
+   "time": "7月12日 09:58",
+   "speaker": "A",
+   "text": "上了 今天新单 300多条 老客价 1200一城"
+  },
+  {
+   "type": "message",
+   "time": "7月12日 10:00",
+   "speaker": "B",
+   "text": "两城 2400 对吧"
+  },
+  {
+   "type": "message",
+   "time": "7月12日 10:01",
+   "speaker": "A",
+   "text": "对 老规矩 转了就发"
+  },
+  {
+   "type": "message",
+   "time": "7月12日 10:03",
+   "speaker": "B",
+   "text": "这批先给我留着 明天发了工资一起结"
+  },
+  {
+   "type": "message",
+   "time": "7月12日 10:05",
+   "speaker": "A",
+   "text": "行 别拖过周五 我这边要回款"
+  },
+  {
+   "type": "message",
+   "time": "7月12日 10:06",
+   "speaker": "B",
+   "text": "放心 最迟周五"
+  },
+  {
+   "type": "message",
+   "time": "7月12日 12:30",
+   "speaker": "B",
+   "text": "周末去吃了你说的那家牛蛙 排两小时"
+  },
+  {
+   "type": "message",
+   "time": "7月12日 12:34",
+   "speaker": "A",
+   "text": "值得吧 我上礼拜又去的 泡饼必点"
+  },
+  {
+   "type": "message",
+   "time": "7月12日 12:36",
+   "speaker": "B",
+   "text": "值 下回带我兄弟再去 他还不服"
+  },
+  {
+   "type": "message",
+   "time": "7月12日 12:37",
+   "speaker": "A",
+   "text": "让他不服 哈哈"
+  },
+  {
+   "type": "message",
+   "time": "7月13日 11:02",
+   "speaker": "B",
+   "text": "群里有人问你们这边有没有全城的 就是不止一个区的"
+  },
+  {
+   "type": "message",
+   "time": "7月13日 11:06",
+   "speaker": "A",
+   "text": "有 全市打包 8000 这个大 钱多再说"
+  },
+  {
+   "type": "message",
+   "time": "7月13日 11:08",
+   "speaker": "B",
+   "text": "他预算就5000"
+  },
+  {
+   "type": "message",
+   "time": "7月13日 11:09",
+   "speaker": "A",
+   "text": "5000只够半城 告诉他别砍价 这行明码实价"
+  },
+  {
+   "type": "message",
+   "time": "7月13日 11:11",
+   "speaker": "B",
+   "text": "行 我问他去"
+  },
+  {
+   "type": "message",
+   "time": "7月13日 11:12",
+   "speaker": "A",
+   "text": "旺季到了 这个月单子多 你想吃量趁现在"
+  },
+  {
+   "type": "message",
+   "time": "7月13日 11:14",
+   "speaker": "B",
+   "text": "行 我手头两个客户都问过两轮了"
+  },
+  {
+   "type": "message",
+   "time": "7月13日 21:00",
+   "speaker": "B",
+   "text": "中秋你们放几天"
+  },
+  {
+   "type": "message",
+   "time": "7月13日 21:04",
+   "speaker": "A",
+   "text": "三天 我值班一天 你呢 回老家?"
+  },
+  {
+   "type": "message",
+   "time": "7月13日 21:06",
+   "speaker": "B",
+   "text": "回 高铁票还没抢 儿子天天念叨"
+  },
+  {
+   "type": "message",
+   "time": "7月13日 21:08",
+   "speaker": "A",
+   "text": "提前候补 早点定"
+  },
+  {
+   "type": "message",
+   "time": "7月13日 21:09",
+   "speaker": "B",
+   "text": "挂着了"
+  },
+  {
+   "type": "message",
+   "time": "7月15日 10:20",
+   "speaker": "B",
+   "text": "问你个事 你们大客户那种 一年的量 有包月的玩法不"
+  },
+  {
+   "type": "message",
+   "time": "7月15日 10:24",
+   "speaker": "A",
+   "text": "有 包月一万二 每周固定出三城 你要吃得下"
+  },
+  {
+   "type": "message",
+   "time": "7月15日 10:26",
+   "speaker": "B",
+   "text": "我拼个团 两个兄弟一起 便宜点"
+  },
+  {
+   "type": "message",
+   "time": "7月15日 10:28",
+   "speaker": "A",
+   "text": "一万零八 不二价 这已经是给你们拼团的脸面"
+  },
+  {
+   "type": "message",
+   "time": "7月15日 10:29",
+   "speaker": "B",
+   "text": "成 下月初一起走"
+  },
+  {
+   "type": "message",
+   "time": "7月15日 10:30",
+   "speaker": "A",
+   "text": "行 到时候城市表发你选"
+  },
+  {
+   "type": "message",
+   "time": "7月15日 10:33",
+   "speaker": "B",
+   "text": "哎 你说这行当 真不怕出事啊"
+  },
+  {
+   "type": "message",
+   "time": "7月15日 10:35",
+   "speaker": "A",
+   "text": "怕什么 又不是我上门找人 咱这只是转手"
+  },
+  {
+   "type": "message",
+   "time": "7月15日 10:36",
+   "speaker": "B",
+   "text": "也是"
+  },
+  {
+   "type": "message",
+   "time": "7月15日 10:38",
+   "speaker": "A",
+   "text": "你那边客户投诉过没有"
+  },
+  {
+   "type": "message",
+   "time": "7月15日 10:40",
+   "speaker": "B",
+   "text": "没有 拿去也就是打电话推销 用一次就换号"
+  },
+  {
+   "type": "message",
+   "time": "7月15日 10:41",
+   "speaker": "A",
+   "text": "那就好 新单当天出 就是这个底气"
+  },
+  {
+   "type": "message",
+   "time": "7月15日 10:45",
+   "speaker": "B",
+   "text": "周四记得给我留两个城的量"
+  },
+  {
+   "type": "message",
+   "time": "7月15日 10:46",
+   "speaker": "A",
+   "text": "留着 你别忘了钱"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000315",
+  "status": "accepted",
+  "errors": []
+ }
+}

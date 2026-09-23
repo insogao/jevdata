@@ -1,0 +1,120 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000257
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000147
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-875c07e717659f00
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 论文辅导机构 A 与兼职写手 B 正常合作：只做论文润色与写作辅导、明示不代写，按篇结算稿酬走公户，查重由学校认可系统完成；A 按期给 B 转一笔正常稿酬。
+  critical_evidence:
+  - A 只承接论文润色与写作辅导，明示不代写
+  - A 按篇给 B 结算稿酬，一篇一千五，走公户
+  - 查重用学校认可的系统，A 只做规范提醒
+  - A 按期给 B 转一笔正常稿酬
+  benign_alternatives:
+  - 正规论文写作辅导与润色服务
+  - 学术写作交流社群的正常订单
+
+attributes:
+  duration_days: 3
+  turn_count: 43
+  approximate_tokens_estimate: 874
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: homework_ghostwriting_ring
+  risk: 0
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0033
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-019
+
+dedup:
+  content_hash: sha256:47e20bb4ee47a313a805d6393c20f64e4bc2b426d7b07e5ce2ef3cc9a5a63954
+pipeline_status: accepted
+title: other_illicit_coordination/homework_ghostwriting_ring
+conversation: |-
+  【9月1日】
+  A：老陈 这学期辅导单还接不接
+  B：接 什么样的 说清楚别擦边
+  A：就润色加结构辅导 帮学生梳逻辑 不代写
+  B：一篇一千五 按篇结 走公户
+  A：查重那块呢
+  B：用学校认可的系统 学生自己上传 我只提醒规范引用
+  A：行 那我把学生的稿子转你 你标修改建议
+  B：可以 但我只批注 不改主体内容
+  A：跟学生说清楚 免得误会
+  B：好
+  B：中午吃啥
+  A：食堂 今天有红烧肉
+  B：行 你占座
+  【9月2日】
+  A：第一篇稿子和要求发你邮箱了
+  B：收到 我按周给学生反馈
+  A：这月起量 后面还有几篇
+  B：量大有优惠 还是老价?
+  A：老价 明码标价 学生也认
+  B：行
+  B：球赛看不 今晚有中超
+  A：看 但我得先把学生的问题回完
+  B：不急 明天也行
+  【9月3日】
+  A：有个学生催得急 想一周内看到批注
+  B：加急加三百 我这边排个时间
+  A：行 批注写详细点 让他自己改
+  B：放心 我逐段写
+  B：今年查重系统是不是又升级了
+  A：升级了 所以更要规范引用 别整段搬
+  B：嗯 我多提醒几句
+  A：晚上我请 楼下小炒
+  B：行 六点半
+  【9月4日】
+  B：第一篇批注出来了 发你了
+  A：收到 我转学生
+  B：他引用的那几段标红了 让他改
+  A：好 这篇按一千五给你结
+  B：剩下的几篇材料呢
+  A：下午一起打包给你
+  B：行 慢慢来不赶
+  A：好 我走公户把稿酬一起打你
+  【系统消息】A 向 B 转账 1500 元，已收款。
+  A：第一篇稿酬一千五 公户转你 查收
+  B：收到 发票我周一带公司
+  B：周末降温 你出门穿厚点
+  A：好 你也是

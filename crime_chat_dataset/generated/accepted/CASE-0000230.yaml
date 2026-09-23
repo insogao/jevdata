@@ -1,0 +1,113 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000230
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000021
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-369e1da61e1e95ea
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: bribery_corruption
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 招标方委员A在评审前把标底和品牌参数暗示给熟人承包商B，约定中标后按合同额返点，B中标后深夜转账兑现。
+  critical_evidence:
+  - A要求B按带量报价，透露要在参数里埋条件
+  - A把标底和指定品牌参数私下透露给B
+  - 两人约定中标后按合同额的比例返点
+  - B中标后深夜转账给A兑现
+  benign_alternatives:
+  - 合法分包合作
+  - 居间佣金合规申报
+
+attributes:
+  duration_days: 6
+  turn_count: 34
+  approximate_tokens_estimate: 584
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: project_bid_kickback
+  risk: 3
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0032
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-018
+
+dedup:
+  content_hash: sha256:bc9e78e6997e5a7659bfdb45bdff7159d4cc34d8bf69780a86ca92335ed4c011
+pipeline_status: accepted
+title: bribery_corruption/project_bid_kickback
+conversation: |-
+  【9月2日】
+  A：那份报价你看了吗
+  B：看了，量按你说的带上去了
+  A：嗯，参数那边我会想办法
+  B：你可得稳一点，别让人看出来
+  A：放心，指定品牌那条写得合规
+  B：中午吃啥
+  A：随便对付一口
+  B：你最近瘦了
+  A：忙的
+  【9月3日】
+  A：标底我给你透个数，你照着调
+  B：多少
+  A：比你现在报的高一点，别贴太近
+  B：懂了，我重做一版
+  A：中标的把握很大的，你安心准备
+  B：这次成了，怎么算
+  A：按合同额那个老比例
+  B：几个点
+  A：别在微信说，见面讲
+  【9月4日】
+  B：你孩子上学的事定了吗
+  A：还在托人
+  B：需要我帮忙说话不
+  A：不用，你先忙项目
+  【9月5日】
+  A：评审安排在下周，你那边材料齐了没
+  B：齐了，技术那部分我按你给的方向写的
+  A：嗯，稳妥
+  【9月6日】
+  B：结果出来了，公示了
+  A：恭喜，按说好的来
+  B：嗯，明天弄
+  【9月7日】
+  【系统消息】B 向 A 转账 50000 元，已收款。
+  B：到了，你查一下
+  A：收到
+  A：这事就烂在肚子里
+  B：废话，我还能说出去
+  A：行情不好，往后还有得合作
+  B：你多关照

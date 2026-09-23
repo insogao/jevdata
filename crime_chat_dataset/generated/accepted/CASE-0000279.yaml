@@ -1,0 +1,156 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000279
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000066
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-f77dae3f5c639c96
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 熟人向成年朋友固定提供每月生活及租房资金，并期待对方亲密陪伴作为回报且要求对配偶隐瞒；B拒绝把资助与关系义务挂钩并要求停止转账。
+  critical_evidence:
+  - A每月固定转生活费并补贴租金
+  - A期待持续陪伴并将其与经济支持绑定
+  - A要求不要让配偶知道
+  - B拒绝保密条件并要求停止固定转账
+  benign_alternatives:
+  - 正常恋爱开销
+  - 助学金资助
+
+attributes:
+  duration_days: 6
+  turn_count: 77
+  approximate_tokens_estimate: 1723
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: long_term_support_exchange
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0041
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-021
+
+dedup:
+  content_hash: sha256:672b1d9b086efac0d53b968ee47b8012d4beaa747ec4e9a96a5e622998a081fa
+pipeline_status: accepted
+title: sexual_transaction_exploitation/long_term_support_exchange
+conversation: |-
+  【9月1日】
+  A：我把这个月房租补贴转过去了，生活费也一起。
+  B：看到了，咱们得聊聊每月转账这件事。
+  A：之前不是说好了吗，我照顾你，你多陪陪我。
+  B：我以为是朋友间帮忙，不是把陪伴当回报。
+  A：这两天降温挺快。
+  B：早晚有点凉，我拿了薄外套。
+  A：我还穿短袖，早上有点后悔。
+  B：办公室放件外套方便。
+  A：嗯，记下了。
+  B：这周天气变化挺快。
+  A：你最近总推掉见面，我也会不舒服。
+  B：我有权决定见不见面，钱不该成为条件。
+  A：别跟我爱人提这些，家里知道了麻烦。
+  【9月2日】
+  B：我不接受需要对你配偶隐瞒的安排。
+  A：附近新开了家面馆，你吃过没？
+  B：还没，同事说汤底挺清爽。
+  A：我中午去试试，别又排队。
+  B：早点去吧，十二点后人多。
+  A：好，回来给你反馈。
+  B：要是不错我也去。
+  A：租金我下个月还会转，你放心。
+  B：这笔我会退回，之后不要再固定转账。
+  A：你是不是遇到什么事了？
+  B：没有，只是要把边界说清楚。
+  A：你家那盆绿植最近怎么样？
+  B：新长了两片叶子，挪到窗边了。
+  【9月3日】
+  A：我办公室那盆还没动静。
+  B：别浇太勤，土干了再浇。
+  A：好，回头试试。
+  B：希望它快点长起来。
+  A：我帮你这么久，你至少该接电话。
+  B：帮助不能换取随时联系或亲密关系。
+  A：那我不打扰了。
+  B：谢谢，请尊重我的决定。
+  A：你最近午饭还点那家盖饭吗？
+  B：换成楼下的馄饨了，出餐快。
+  A：我周末想把书架整理一下。
+  B：先把不用的书装箱，桌面会清爽很多。
+  【系统消息】A 向 B 转账 1200 元，已收款。
+  【9月4日】
+  A：这是之前合订杂志的分摊款，和其他事无关。
+  A：今天早高峰地铁人多吗？
+  B：还好，我提前一站下车走过来的。
+  A：附近超市的梨最近挺甜。
+  B：我上周买过，价格也还行。
+  A：你那双鞋修好了吗？
+  B：好了，换了鞋跟还能穿一阵。
+  A：周末天气预报说会晴。
+  B：那正好把被子拿出去晒晒。
+  A：你最近晚上还在看书吗？
+  B：睡前看几页，眼睛累了就停。
+  A：我想换个保温杯，旧的漏水。
+  B：买个简单的就行，容量别太大。
+  【9月5日】
+  A：楼下早餐店换了菜单。
+  B：我看到多了豆浆和饭团。
+  A：这周办公室空调有点冷。
+  B：我放了件薄外套在椅背上。
+  A：你家猫还喜欢蹲窗台吗？
+  B：喜欢，早上总盯着外面的鸟看。
+  A：我昨晚做了番茄鸡蛋面。
+  B：简单又快，适合下班晚的时候。
+  A：你上次推荐的播客我听了两期。
+  B：还不错吧？我通勤时经常听。
+  A：门口那家修车铺还开着吗？
+  B：开着，我昨天去给车打了气。
+  A：最近晚上风大，晾衣服要夹牢。
+  【9月6日】
+  B：是啊，我昨天差点把袜子吹走。
+  A：周末你准备去哪里走走？
+  B：可能去河边，不想跑太远。
+  A：我把手机壳换成透明的了。
+  B：挺好，旧的那个边角都裂了。
+  A：你最近早餐吃得规律吗？
+  B：尽量吃点，不然上午容易饿。
+  A：小区门口的路修好了吗？
+  B：还没，公交暂时还是绕行。
+  A：我打算买点水果带回家。
+  B：苹果和梨都挺耐放的。
+  A：你上回说的电影我看完了。
+  B：结尾怎么样？

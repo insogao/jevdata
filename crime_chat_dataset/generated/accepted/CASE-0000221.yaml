@@ -1,0 +1,97 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000221
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000137
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-8771a0d355d326b2
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: other_illicit_coordination
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 
+  critical_evidence:
+
+  benign_alternatives:
+  - 体彩店讨论
+  - 彩票合买
+
+attributes:
+  duration_days: 5
+  turn_count: 23
+  approximate_tokens_estimate: 630
+  relationship: 上下级
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: illegal_lottery_chain
+  risk: 3
+  relationship: 上下级
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0028
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-017
+
+dedup:
+  content_hash: sha256:ad045d0a43409d735824dc54baa0676694805e16709b7ac6b2e7290bd015840e
+pipeline_status: accepted
+title: other_illicit_coordination/illegal_lottery_chain
+conversation: |-
+  【10月2日】
+  A：今晚那边又问开什么，熟客都在等消息。
+  B：你说外围的事别在群里讲，账上还要吃两个点？
+  A：之前我按约留了一笔退水给熟人。
+  B：这已经不是体彩合买的样子了，别继续收款或报结果。
+  A：有人催我今晚照旧。
+  B：明确停掉，别再替人代收。
+  A：店里中午人多，饭都没顾上吃。
+  B：我给你带了包子，放柜台了。
+  A：谢了，下午我去补点货。
+  B：别太累，早点休息。
+  【10月3日】
+  A：我通知他们不再接外围，也没发今晚的数。
+  B：好，把之前的账目整理清楚，寻求正规法律咨询。
+  A：有个人说要我继续，语气挺急。
+  B：不要单独处理冲突，必要时找警方或可信的人陪同。
+  A：店里新到的饮料卖得不错。
+  B：下次给我留一瓶柠檬茶。
+  A：行，给你放冰箱。
+  B：周五我休假，能不能换班？
+  【10月4日】
+  A：已经把相关群退出了。
+  B：稳妥，店里只做合规的体育彩票业务。
+  A：嗯，之后不碰熟客说的那套。
+  B：有疑问就先问监管和专业人士。
+  【系统消息】A 向 B 转账 300 元，已收款。
+  【10月7日】
+  A：这几天店里正常营业，没再收外围的钱。

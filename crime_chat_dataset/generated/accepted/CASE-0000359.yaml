@@ -1,0 +1,130 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000359
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-4dbac4e9337dc6c7
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A为申请人，B负责社区活动场地申请相关审核。临近节日，A借正常走访之机给B一张未说明面值的购物卡，希望B在其申请审核中给予照顾；B收下后，A事后发消息暗示希望事项有进展。
+  critical_evidence:
+  - 节日前 A 主动约 B 见面，理由是沟通社区活动场地申请。
+  - A 将购物卡作为节日心意送给 B，未提及卡面金额，B 收下。
+  - 之后 A 询问排期进度并以含蓄措辞暗示此前的卡与申请有关。
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司福利卡
+
+attributes:
+  duration_days: 5
+  turn_count: 53
+  approximate_tokens_estimate: 1477
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0052
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-025
+
+dedup:
+  content_hash: sha256:b003166bfe7f0146c4d0c37fa84410787a9d1af9dd5fa01a97364223865f67ad
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【5月3日】
+  A：最近打扰你一下，社区活动场地申请的材料我补齐了，想找时间当面请教。
+  B：可以，社区服务站旁那边方便吗？我下午有半小时。
+  A：行，节前大家都忙，我带点小东西过去。
+  B：不用特意准备，材料带上就行。
+  A：收到。排期这块我还是不太熟，怕来回耽误。
+  B：先按清单走，缺什么我会告诉你。
+  A：这两天降温了，你那边也下雨没？
+  B：刚停，路上都是水，鞋都湿了。
+  A：我早上出门还穿的薄外套，失策。
+  B：晚上记得带伞，天气预报说还要下。
+  A：对了，节日快到了，这张购物卡你收着，算一点心意。
+  【5月4日】
+  B：你太客气了，卡我先收下，面值多少？
+  A：没多少，就想着你平时也用得上。
+  B：你上次交的场地方案我看过了，有一页需要补签。
+  A：好，我今天回去处理，其他都齐了吗？
+  B：暂时看着齐，后面按流程还要等通知。
+  A：明白，我不急，缺什么你直接说。
+  B：你上次说的饺子店还开着吗？
+  A：开着呢，中午人挺多的。
+  B：那我改天去试试，最近食堂吃腻了。
+  A：它家分量大，别点多了。
+  A：补签页发你了，麻烦看下格式行不行？
+  【5月5日】
+  B：收到了，格式可以，我放进材料里。
+  A：感谢，跑这趟手续比想象的细。
+  B：正常的，资料完整一点省得来回补。
+  A：顺便上次午饭的钱我转你了，六十八，别忘了收。
+  B：看到了，这个是饭钱我收了。
+  【系统消息】A 向 B 转账 68 元，已收款。
+  A：周末家里要来亲戚，我还没买水果。
+  B：附近超市打折，晚上去看看吧。
+  A：好，顺便把快递取了。
+  B：我也是，柜子里堆了好几个。
+  A：最近排期有消息吗？我看系统还是显示处理中。
+  B：还在排队，节日前事情多，我有进展告诉你。
+  【5月6日】
+  A：理解，之前那点心意你也别有压力。
+  B：嗯，知道了，材料我会按顺序看。
+  A：今天路过你说的地方，想起社区活动场地申请这事了。
+  B：放心，流程内能办的我会跟进。
+  A：好，那我等你消息，不催。
+  B：排期那边有初步反馈了，你的申请可以继续往下走。
+  A：太好了，辛苦你帮忙看着。
+  B：先别急着庆祝，后面还有一步确认。
+  A：明白，我按通知补东西。
+  B：目前没看到新的缺项。
+  A：那就好。节日后我请你喝咖啡。
+  【5月7日】
+  B：不用了，工作上的事按流程来就行。
+  A：还是谢谢你，之前送的那张卡你留着用吧。
+  B：嗯，知道。
+  A：刚看了系统，状态更新了一下。
+  B：嗯，今天刚有一条进度。
+  A：后面要补什么你发我，我随时处理。
+  B：暂时不用，等正式通知就好。
+  A：节前麻烦你了，那份小心意就当过节问候。
+  B：好，我知道了，后续按流程走。

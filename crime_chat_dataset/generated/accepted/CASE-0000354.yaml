@@ -1,0 +1,110 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000354
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000133
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-cd80c137b7a54659
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: coercion_blackmail
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 角色A围绕resident_noise_leverage推动相关安排；潜在事实为“以举报扰民勒索好处；长期吃拿”。
+  critical_evidence:
+  - 对话出现线索：每月两条烟这事就平
+  - 对话出现线索：我认识城管
+  - 对话出现线索：抬头不见低头见
+  benign_alternatives:
+  - 可混淆为：邻里噪音调解
+  - 可混淆为：物业投诉流程
+
+attributes:
+  duration_days: 3
+  turn_count: 36
+  approximate_tokens_estimate: 829
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: resident_noise_leverage
+  risk: 1
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0049
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-024
+
+dedup:
+  content_hash: sha256:5d8ffa9f9be451f0097fbce7a5c588ebd679dd80c53871844609627c1c647e2d
+pipeline_status: accepted
+title: coercion_blackmail/resident_noise_leverage
+conversation: |-
+  【5月2日】
+  A：叔，昨晚楼上又弄到很晚？
+  B：孩子练琴，结束快十点了，吵到你了？
+  A：我认识城管，真要投诉就不是邻里小事了
+  B：我们尽量早点结束，你别动不动提投诉
+  A：每月两条烟这事就平，大家都省心
+  B：这算什么话，我家又没做错事
+  B：我妈复诊完想吃清淡点
+  A：附近新开了家粥店
+  B：好啊，周末带她去
+  A：我给你发位置
+  【5月3日】
+  B：昨天物业来听过，说隔音一般
+  A：我跟物业熟，抬头不见低头见的，别闹僵
+  B：我愿意按物业建议铺地垫
+  A：地垫也解决不了所有问题
+  B：我今天还得陪我妈复诊，先不聊了
+  A：老人最近身体怎么样？
+  A：楼下快递柜又满了
+  B：我昨天也没取到件
+  A：物业说会加一组柜子
+  B：那就方便多了
+  B：血压稳定了，医生让她少吃咸的
+  A：那挺好，我爸也在控盐
+  B：你平时少抽烟吧
+  A：知道。楼上这边你再想想我说的，每月两条烟就别往物业报
+  B：我不会拿烟换安静，真有问题走物业流程
+  A：我认识城管，你自己掂量
+  B：今天风大，我把阳台花盆挪进来了
+  A：小心别碰到叶子
+  B：那盆绿萝挺耐折腾
+  A：绿萝好养，记得偶尔擦擦叶片
+  【5月4日】
+  B：物业建议我们晚上九点后不练琴，也请你别在群里说要投诉
+  A：抬头不见低头见，别把关系弄难看
+  B：我会按约定做，其他就交物业沟通
+  A：烟的事呢？
+  B：不可能。你要投诉就按流程，我也会保留物业记录
+  A：行，随你

@@ -1,0 +1,127 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000239
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000052
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-48c2e6acd50e9cb4
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 控制住 B 的孩子后通过微信向家属索赎，先收一笔诚意金证明配合，再不断以不许报警、不许做记号、按指定要求等条件施压，逼 B 尽快筹钱，全程不透露位置。
+  critical_evidence:
+  - A 直接告知孩子在自己手上，警告 B 不许报警，否则别想见到人
+  - B 求听孩子声音、看孩子，A 只回一句到时让你知道，并索要一笔诚意金
+  - B 转出两千诚意金后，A 收下并要求后续按自己说的做，索要旧钞且叮嘱别做记号
+  - A 再次以报警就撕票相威胁，要求 B 尽快凑钱、一个人按安排来
+  benign_alternatives:
+  - 剧本杀、影视桥段讨论中的虚构情节
+  - 亲友间恶作剧误会导致的虚惊一场
+
+attributes:
+  duration_days: 4
+  turn_count: 49
+  approximate_tokens_estimate: 1335
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: kidnapping_threat_act
+  risk: 3
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0031
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-018
+
+dedup:
+  content_hash: sha256:7ab37938d3538f088beff2b45994ff80e25f079298798f69f74190ae4a010dbf
+pipeline_status: accepted
+title: violence_extortion/kidnapping_threat_act
+conversation: |-
+  【9月12日】
+  A：你女儿在我们这里
+  B：你谁 我女儿怎么了 你别吓我
+  A：别报警 报警你就见不到人了
+  B：我不报警 你要什么 你说
+  A：先别问钱 让你做什么你就做什么 别耍花样
+  B：我要听孩子的声音 求你让我听一下
+  A：到时候会让你知道 现在先把钱准备好
+  A：票子要旧的 别做记号 做完记号这事就难说了
+  B：好好好 我不做 你们千万别伤害她
+  A：手机快没电了 明天再说 别打这个号
+  B：外面雨下得很大 你们别让孩子淋着
+  A：她在我这儿冻不着 你操心钱就行
+  【9月13日】
+  A：诚意金先转两千 表示你配合
+  B：转了就行了吗 孩子能回来吗
+  A：先转 后面的按我说的来 少问
+  【系统消息】B 向 A 转账 2000 元，已收款。
+  A：收到 算你识相
+  B：能给我一张孩子的照片吗 我看看她还好不好
+  A：[image：一张光线昏暗的室内照片]
+  B：她怎么低着头 你们打她了吗
+  A：配合就不会有事 不配合就不好说
+  B：我中午没胃口 一口饭都吃不下
+  A：饿不饿是你的事 钱备齐了没有
+  B：我在想办法 银行取现要预约
+  A：别拿银行说事 我只要结果
+  B：孩子明天要上学 书包还在家里 我跟老师怎么交代
+  A：就说病了 请几天假 你敢跟外人说一个字试试
+  B：我不敢 我真的不敢
+  【9月14日】
+  A：钱凑得怎么样了
+  B：我在找人借了 你再宽限一天
+  A：我今天就要看到东西 别逼我
+  B：我今天一定凑到 你别动孩子
+  A：再说一遍 报警就撕票 你想清楚
+  B：我不会报警 我只要孩子平安 求你了
+  A：手机又没电了 我去充电 你别乱发消息
+  B：你充好电回我一句也行 让我知道孩子还在
+  A：在 别老追问 问多了我烦
+  B：我不问了 你让我怎么做我怎么做
+  B：我把我妹的车挂出去卖了 明天能到账
+  A：别跟买车的人多嘴 就说是急用钱
+  B：我就说家里有事 没提别的
+  【9月15日】
+  A：东西准备得差不多了吧
+  B：差不多了 你说在哪 我送过去
+  A：明天下午等我安排 你一个人来 别带人
+  B：好 我一个人 几点你说了算
+  A：到点我发你 别提前 别迟到
+  B：孩子明天还穿那件红外套吗 我给她带了件衣服
+  A：用不着 少整这些 见着人你就知道了
+  B：我就想让她穿得暖和点
+  A：记住了 明天一个人 东西按数 别做手脚
+  B：知道了 我一定照做

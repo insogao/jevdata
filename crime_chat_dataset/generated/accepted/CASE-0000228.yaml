@@ -1,0 +1,98 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000228
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000008
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-65c67c328fbbd909
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 
+  critical_evidence:
+
+  benign_alternatives:
+  - 帮朋友代收快递
+  - 合法兼职发传单
+
+attributes:
+  duration_days: 3
+  turn_count: 24
+  approximate_tokens_estimate: 651
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: account_lending
+  risk: 0
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0028
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-017
+
+dedup:
+  content_hash: sha256:aaf6175d379139981a37f1e51e6aada86f65c952b728536947eb9847ffeeb3b5
+pipeline_status: accepted
+title: fraud_scam/account_lending
+conversation: |-
+  【9月10日】
+  A：同学说有兼职，一张卡给几百，强调无风险。
+  B：他让你开网银还带U盾吗？这明显不是发传单。
+  A：说只是帮忙收快递款，账户给他用几天。
+  B：账户和U盾都不能交给别人，拒绝并联系银行确认。
+  A：我还没给资料，先问问你。
+  B：别提供密码、验证码或设备，正常兼职不会要这些。
+  A：食堂今天有糖醋里脊。
+  B：我排队半天才买到，确实还行。
+  A：下午小组会别忘了。
+  B：我做完幻灯片了，发你看。
+  【9月11日】
+  A：我回绝了，对方还说我想多了。
+  B：别争辩，保存记录，把招工信息报给平台。
+  A：银行客服也说不要把账户交别人使用。
+  B：听银行的，网银设备自己保管。
+  A：组会改到下午三点，你有空吗？
+  B：有，我把数据图再改一下。
+  A：我请奶茶。
+  B：无糖就行哈哈。
+  A：打印社团宣传单的钱我先转你了，收据回头报销。
+  【系统消息】A 向 B 转账 75 元，已收款。
+  【9月12日】
+  A：那人还发消息，我已经拉黑并举报。
+  B：好，账户没给出去吧？
+  A：没有，密码和U盾一直在我这。
+  B：那就好，兼职还是走正规招聘。
+  【9月13日】
+  A：招聘平台回复会核查那个虚假兼职。

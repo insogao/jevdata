@@ -1,0 +1,150 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000315
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000082
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-7ea6e299171dcc1c
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: privacy_doxxing
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 某商户内部员工 A 把门店新下的客户订单（电话、住址齐全）按城市打包卖给数据贩子 B：'新单当天出货'、每周四上新、老客降价、可包月批量供货，B 转账 4500 元买三城数据后向下游分发，还在群里替人拼团全城大包——一条完整的公民个人信息买卖链条；双方用'料子''单子''出''电址全'等行话，聊天里不出现任何一条真实客户信息。
+  critical_evidence:
+  - B 经人介绍来'拿货'，点名要'电址全的'，A 发出城市与时间列可见、姓名号码打码的样表，称'新单当天出'（第1天，图片事件）
+  - A 报价'按城市打包 1500一城'，B 首拿三城并转账 4500 元，A 当晚按城市分三个文件发出（第2天，转账事件）
+  - B 验货'309条 电址全 客户没挑毛病'，A 称每周四固定上新、老单便宜但可能有失效的（第3天）
+  - 有人求购'全城打包'，A 报 8000 元，'5000只够半城 别砍价 这行明码实价'（第5天）
+  - 谈成包月合作：每周固定出三城、月一万二，砍到一万零八成交，B 再预定两个城下周四的量（第6天）
+  benign_alternatives:
+  - 会员营销场景下的合规数据共享
+  - 市场调研公司的脱敏数据采购
+
+attributes:
+  duration_days: 6
+  turn_count: 69
+  approximate_tokens_estimate: 1741
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: purchase_data_resell
+  risk: 3
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0029
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-017
+
+dedup:
+  content_hash: sha256:af9249e8ef12260eed4d668d2ba37f09b6d5db5b1d344384699f5f05f43b98a9
+pipeline_status: accepted
+title: privacy_doxxing/purchase_data_resell
+conversation: |-
+  【7月8日】
+  B：你好 群里阿凯说你有那方面的货 我加你核实下
+  A：哪位介绍的 他跟你说价了吗
+  B：说 新料 一下单就出 说你这边稳
+  A：他要靠谱你就不用来找我 要什么城市什么行当
+  B：先看样 我要电址全的
+  A：样我发你 打码的 别外传
+  A：[image：一张表格截图（姓名与号码栏打码，城市与下单时间列可见）]
+  B：格式挺干净 多少钱
+  A：按城市打包 1500一城 新单当天出
+  B：当天出? 当天下的单?
+  A：当天下的单当天给你 这才叫新鲜
+  B：行 我先拿三城试试
+  【7月9日】
+  A：钱到发货 你要哪三个城
+  B：杭州 南京 苏州 怎么给你
+  A：直接转这个号 备注什么都不用写
+  B：好
+  【系统消息】B 向 A 转账 4500 元，已收款。
+  A：收到 晚上打包发你 按城市三个文件
+  B：几点前能好 下游那边催
+  A：九点前 我下班导给你
+  B：你们那边热成这样了? 我这儿还下雨
+  A：四十度 值班室空调还坏了
+  B：惨 我这边被子都没干过
+  A：羡慕 别说了 我柜台一天一身汗
+  【7月10日】
+  B：昨晚那批齐 309条 电址全 客户没挑毛病
+  A：用得还行下批提前说 我每周四上新
+  B：质量稳吗 会不会有空的
+  A：新单没有空的 当天出 老单便宜 但可能有失效的
+  B：懂 那以后就要新单
+  A：新单就一个字 稳 但你也别一下子铺太广
+  B：对了你说的那个筋膜枪链接发我 好用不
+  A：好用 我妈颈椎就靠它 便宜那款就够
+  B：行 我凑个单 周四一起发货正好
+  A：凑满300再减30 你再挑挑
+  【7月12日】
+  B：周四的上新了没 要两城 还是电址全的
+  A：上了 今天新单 300多条 老客价 1200一城
+  B：两城 2400 对吧
+  A：对 老规矩 转了就发
+  B：这批先给我留着 明天发了工资一起结
+  A：行 别拖过周五 我这边要回款
+  B：放心 最迟周五
+  B：周末去吃了你说的那家牛蛙 排两小时
+  A：值得吧 我上礼拜又去的 泡饼必点
+  B：值 下回带我兄弟再去 他还不服
+  A：让他不服 哈哈
+  【7月13日】
+  B：群里有人问你们这边有没有全城的 就是不止一个区的
+  A：有 全市打包 8000 这个大 钱多再说
+  B：他预算就5000
+  A：5000只够半城 告诉他别砍价 这行明码实价
+  B：行 我问他去
+  A：旺季到了 这个月单子多 你想吃量趁现在
+  B：行 我手头两个客户都问过两轮了
+  B：中秋你们放几天
+  A：三天 我值班一天 你呢 回老家?
+  B：回 高铁票还没抢 儿子天天念叨
+  A：提前候补 早点定
+  B：挂着了
+  【7月15日】
+  B：问你个事 你们大客户那种 一年的量 有包月的玩法不
+  A：有 包月一万二 每周固定出三城 你要吃得下
+  B：我拼个团 两个兄弟一起 便宜点
+  A：一万零八 不二价 这已经是给你们拼团的脸面
+  B：成 下月初一起走
+  A：行 到时候城市表发你选
+  B：哎 你说这行当 真不怕出事啊
+  A：怕什么 又不是我上门找人 咱这只是转手
+  B：也是
+  A：你那边客户投诉过没有
+  B：没有 拿去也就是打电话推销 用一次就换号
+  A：那就好 新单当天出 就是这个底气
+  B：周四记得给我留两个城的量
+  A：留着 你别忘了钱

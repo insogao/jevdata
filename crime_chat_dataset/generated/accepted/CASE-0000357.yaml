@@ -1,0 +1,111 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000357
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000015
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-890c8f06be59c7b2
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: fraud_scam
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 角色A围绕video_coaching_parent_scam推动相关安排；潜在事实为“以辅导孩子为名骗课时费；资质造假”。
+  critical_evidence:
+  - 对话出现线索：清华退学名师
+  - 对话出现线索：十节包提分
+  - 对话出现线索：最后三个名额
+  benign_alternatives:
+  - 可混淆为：真实在线教育
+  - 可混淆为：大学生家教
+
+attributes:
+  duration_days: 3
+  turn_count: 36
+  approximate_tokens_estimate: 865
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: video_coaching_parent_scam
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0049
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-024
+
+dedup:
+  content_hash: sha256:57d8704d6f318c9e33fd6653a7b6ac6c3bbf78e655654996d664ad292bfe2cc2
+pipeline_status: accepted
+title: fraud_scam/video_coaching_parent_scam
+conversation: |-
+  【10月6日】
+  A：您好，之前咨询的数学提升班我这边跟进一下
+  B：我先问下，老师的履历方便发吗
+  A：是清华退学名师，经验很强，资料稍后补
+  B：课程是线上还是线下？
+  A：线上，一对一为主，十节包提分
+  B：孩子设备还可以，我回去问问他
+  B：孩子最近迷上篮球卡片
+  A：别一次买太多，容易上头
+  B：我跟他说每周只买一包
+  A：有规则就好
+  【10月7日】
+  B：我家孩子最近迷上篮球，作业总拖到很晚
+  A：可以先定固定学习时间，运动也别完全停
+  B：嗯，周末带他去买个新球
+  A：课程可以排在周中晚些时候
+  B：你们合同里写的提分保障怎么执行？
+  A：如果没变化可以补课，具体条款签约时给
+  A：你们附近停车方便吗
+  B：晚上还行，白天车位紧张
+  A：我上次去绕了两圈
+  B：可以停商场地下，走几分钟
+  A：现在只剩最后三个名额，您如果要报我先占位
+  B：我还没看到老师证书和合同样本
+  A：名师资料我得问本人，先支付才能锁档期
+  B：那不行，资料和条款都要先看
+  A：您可以放心，很多家长在上
+  B：我会再问问其他家长
+  B：学校食堂最近换菜单了
+  A：孩子喜欢吗
+  B：他说鸡腿饭不错
+  A：至少午饭能吃饱
+  【系统消息】B 向 A 转账 800 元，已收款。
+  【10月8日】
+  B：孩子说想参加学校的晚自习，暂时不加课了
+  A：晚自习也行，但一对一提分更快
+  B：我们先按学校节奏来
+  A：名额今天就截止了
+  B：谢谢，没核实清楚之前不付款
+  A：理解，那以后有需要再联系

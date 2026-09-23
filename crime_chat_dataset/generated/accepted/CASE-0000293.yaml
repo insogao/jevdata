@@ -1,0 +1,152 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000293
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000103
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-e342c8883d9575ed
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: money_laundering_obfuscation
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 做收单的A找开小店的B，提出把自己的一台机器放到B店里刷，流水由A自己来走，给B一条更低的费率当好处，让账从B店面上过。B觉得能省点手续费、又有点怕出事，犹豫后答应先放一台。A转了一笔钱给B当分成。
+  critical_evidence:
+  - A提出把自己的机器放到B店里刷
+  - A说流水由他来走，不用B操心
+  - A承诺给B更低的费率、有好处
+  - A转了一笔钱给B当分成
+  - B担心出事，但还是答应先放一台试
+  benign_alternatives:
+  - 正规收单机构的商户服务合作
+  - 信用卡在店内的正常消费结算
+
+attributes:
+  duration_days: 5
+  turn_count: 73
+  approximate_tokens_estimate: 1301
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: cross_shop_pos_machine
+  risk: 2
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0034
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-019
+
+dedup:
+  content_hash: sha256:9c6ac4b0cfae2d0c294dde8a521ad83fee29e643f4a723d34af96083ebbe15b5
+pipeline_status: accepted
+title: money_laundering_obfuscation/cross_shop_pos_machine
+conversation: |-
+  【2月3日】
+  A：老板 上次在展会上见过 还记得我不
+  B：有点印象 你是做那个的
+  A：对 收单的 想跟你合作个事
+  B：你说
+  A：我想放台机器在你店里刷
+  B：放我这刷?谁的流水
+  A：我的 流水我自己做 你只管收钱
+  B：这不合规矩吧
+  A：都是这么走的 你又不用干啥
+  B：对我有啥好处
+  A：费率我给你压到最低 手续费省一半
+  B：省一半?
+  A：而且每台我一个月再给你补贴
+  B：钱从我这过 我账不是乱了吗
+  A：就借你个名头 账跟你没差
+  B：我考虑考虑
+  B：中午忙死了 一波人
+  A：你店位置好 人流量大
+  B：位置好就是租金高
+  A：所以才要薅点羊毛 我这事就是给你补的
+  B：哈哈 你倒会算
+  【2月4日】
+  A：想好没 机器我都准备好了
+  B：我媳妇说怕出事
+  A：出啥事 就是个收款工具
+  B：钱干净吗
+  A：都是正经生意的钱 你别想歪
+  B：放一台试试 出事我可不认
+  A：放心 有我担着
+  A：机器我下午给你送过去 放收银台旁边
+  B：别太显眼 放里间
+  A：行 你怎么方便怎么来
+  A：到了 你在店里吗
+  B：在 你进来 后门
+  A：装好了 你试刷一笔看看
+  B：刷多少
+  A：一千 走完立刻返回来
+  B：好 到了
+  A：秒返 你看 没问题吧
+  B：还行
+  A：以后流水我来做 你别动这机器
+  B：那我怎么知道走了多少
+  A：月底我给你对账 补贴按笔数给
+  B：行 说好了 出事你负责
+  【2月5日】
+  A：昨晚走了几笔 都干净
+  B：我没管 你别整大的就行
+  A：都小笔 分散 看不出来
+  B：银行不会打电话吧
+  A：这么多店都这么干 轮不到你
+  B：今天降温 你穿厚点
+  A：跑外面的人不怕冷
+  B：哈哈 中午来吃点热的
+  A：改天 今天跑两个店
+  B：刚才有个客人看我那机器一眼
+  A：没事 你就说是收银用的
+  B：我这心里不踏实
+  A：月底补贴给你 就踏实了
+  【2月6日】
+  A：给你转点补贴先
+  【系统消息】A 向 B 转账 800 元，已收款。
+  B：收到 这么多
+  A：走得顺 你收益就高
+  B：行 那我收着
+  B：我闺女这周考试 愁死了
+  A：现在孩子压力大 你多陪陪
+  B：我哪有空 守着店
+  A：等赚钱了就请个人
+  【2月7日】
+  A：想不想再加一台 两个点走得更快
+  B：先一台吧 我胆小
+  A：行 你稳点也好
+  B：这机器不会被停吧
+  A：不会 有我呢
+  B：那就先这样
+  A：中午记得吃饭
+  B：知道了 你也是
+  A：嗯 有事喊我

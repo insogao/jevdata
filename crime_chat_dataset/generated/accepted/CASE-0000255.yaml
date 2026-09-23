@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000255
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000021
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-91b726015cfdd2b4
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: bribery_corruption
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 评标委员 A 与承包商 B 是亲戚，A 在评标环节为 B 的公司倾斜：授意 B 按指定品牌参数带量报价、把评分口径往 B 这边引；B 中标后分几次答谢，其中一次是深夜转账。
+  critical_evidence:
+  - A 与 B 是亲戚，A 在评标环节为 B 的公司倾斜
+  - A 授意 B 按指定品牌参数带量报价、把评分口径往 B 这边引
+  - B 中标后分几次答谢，其中一次深夜给 A 转账
+  benign_alternatives:
+  - 公开招标下依招标文件正常投标
+  - 亲属间正常资金往来
+
+attributes:
+  duration_days: 6
+  turn_count: 43
+  approximate_tokens_estimate: 868
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: project_bid_kickback
+  risk: 3
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0033
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-019
+
+dedup:
+  content_hash: sha256:9ad4c4de21c27325145492bba422367f637d825a055c9db4d5aded3803ba6a13
+pipeline_status: accepted
+title: bribery_corruption/project_bid_kickback
+conversation: |-
+  【7月10日】
+  A：表弟 你们那个园区智能化项目 报名了吧
+  B：报了 就是评分细则还没完全吃透
+  A：参数那栏别写通用 按你们代理那两家的型号写 分高
+  B：那不是等于给别人设门槛
+  A：你看细则 技术响应那块就是这么给的 别多想
+  B：量那档呢
+  A：带量报价 报到我们内部那档 说了你不一定信
+  B：懂了 哥你多费心
+  A：自家人 说这个见外
+  B：中午一起吃不 我去找你
+  A：行 老地方 你先到坐
+  B：我请你 顺便把那版给你看看
+  A：东西别在店里拿出来
+  B：知道
+  【7月11日】
+  B：今晚球看不
+  A：看 但不出去 这两天不方便
+  B：行 我在家看 有事你说
+  【7月12日】
+  A：开完了 你们第一档 但别声张
+  B：真的?太好了哥
+  A：公示前谁问都别提我
+  B：放心 我心里有数
+  B：你家小子中考完了没
+  A：完了 分还没出 心里悬着
+  B：肯定没问题 有需要说话
+  A：嗯
+  【7月13日】
+  B：哥 公示期过了吧
+  A：过了 合同走流程了
+  B：那你把账号给我 我意思一下
+  A：别在这个上面说 见面聊
+  B：晚上有空没 我过去
+  A：九点后吧 楼下
+  【7月14日】
+  A：你上次放这那盒东西我收了 别再拎了
+  B：小事 后面还有大单子 跟着哥干
+  A：先把眼前这个干利索
+  B：今天热 你注意防暑
+  A：知道了
+  【7月15日】
+  B：哥 第一笔你先收着 后面分次给你
+  【系统消息】B 向 A 转账 15000 元，已收款。
+  B：这么晚打扰 一点心意
+  A：收到了 早点休息
+  B：好
+  A：这事到此为止 别再提
+  【7月16日】
+  B：周末回老家不 我妈念叨你
+  A：回 到时候说

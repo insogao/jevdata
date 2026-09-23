@@ -1,0 +1,111 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000353
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000012
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-2646254366d4e643
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: fraud_scam
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 角色A围绕second_hand_deposit_run推动相关安排；潜在事实为“二手平台引流线下骗定金；收款拉黑”。
+  critical_evidence:
+  - 对话出现线索：明显低价
+  - 对话出现线索：催走微信私下交易
+  - 对话出现线索：发假物流单号
+  benign_alternatives:
+  - 可混淆为：真实二手交易
+  - 可混淆为：朋友间转让
+
+attributes:
+  duration_days: 3
+  turn_count: 37
+  approximate_tokens_estimate: 767
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: second_hand_deposit_run
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0049
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-024
+
+dedup:
+  content_hash: sha256:a25c6372b2672659877ac2311245aade1d4f0c7edf6a2c72a910b045960fc80f
+pipeline_status: accepted
+title: fraud_scam/second_hand_deposit_run
+conversation: |-
+  【4月1日】
+  A：那台相机还在吗？我朋友想要
+  B：在，平台挂了一万二，箱说齐全
+  A：我看照片了，价格明显低，八千就出吧
+  B：这么低？
+  A：我帮你省平台费，微信私下交易更快
+  B：还是走平台稳妥
+  B：搬家纸箱我买了十个，够不够
+  A：相机包装单独放，别压着
+  B：嗯，镜头都收回原盒了
+  A：搬家当天叫朋友帮你抬
+  【4月2日】
+  A：你最近是不是要搬家，东西多很麻烦
+  B：月底搬，正在清东西
+  A：那就别拖，买家等着，转定金我帮你留
+  B：平台下单就能锁定呀
+  A：他不会用平台，直接加我谈了，你把收款方式发来
+  B：不行，我还是用平台
+  A：最近菜市场草莓便宜了
+  B：我昨天买了一盒，挺甜
+  A：洗之前别泡太久
+  B：我妈也这么说
+  A：买家说已经付款了，你看下微信
+  B：没收到。你发的物流截图怎么是别人的单号？
+  A：系统延迟，先把货寄出去
+  B：我查过，单号查不到这台相机
+  A：别磨蹭了，地址我等会发你
+  B：我不会私下寄，先把平台订单发出来
+  B：新房的窗帘选好了
+  A：什么颜色
+  B：浅灰，跟墙面比较搭
+  A：挺耐看的
+  【4月3日】
+  B：你说的买家一直催我走微信，太奇怪了
+  A：他着急用嘛
+  B：我问了平台客服，根本没有订单
+  A：那可能他取消了
+  B：你还让我发假物流单号，别再联系我了
+  A：你误会了
+  B：我已经把聊天留存了

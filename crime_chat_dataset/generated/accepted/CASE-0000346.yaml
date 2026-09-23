@@ -1,0 +1,129 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000346
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000073
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-c99767b9723e56aa
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 学姐 A 把学妹 B 拉进自己管理的正规校外兼职群，介绍的其实是酒店宴会厅晚班餐饮服务：穿统一工服、领班带队、日结一场三百。A 只提醒别在宿舍张扬，怕名额被抢、辅导员来问；B 做完第一场后收到正常工资转账。
+  critical_evidence:
+  - A 把 B 拉进自己管理的正规校外兼职群，介绍的是酒店宴会厅晚班餐饮服务
+  - A 说明是穿统一工服、领班带队、日结一场三百的宴会服务，不是别的
+  - A 提醒 B 别在宿舍说，怕人多抢名额、学校不提倡校外兼职惹来辅导员
+  - B 到场做完第一场后，收到 A 转来的正常工资三百
+  benign_alternatives:
+  - 正规兼职群
+  - 社团活动
+
+attributes:
+  duration_days: 2
+  turn_count: 54
+  approximate_tokens_estimate: 1216
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: dorm_introduction_network
+  risk: 0
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0036
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-020
+
+dedup:
+  content_hash: sha256:c52ee62109e45fb30f56e0404d6bfb8ea15e4a1e4b21b3a1153d22feb3910704
+pipeline_status: accepted
+title: sexual_transaction_exploitation/dorm_introduction_network
+conversation: |-
+  【10月12日】
+  A：学妹 在忙不
+  B：不忙 学姐咋啦
+  A：上次跟你说的那个兼职群 我给你拉进去了
+  B：哪个群呀
+  A：我管的那个 周末晚上有场的
+  B：什么场子
+  A：酒店宴会厅 晚上餐饮服务 端茶递水那种 有营业执照的正规场
+  B：晚上要陪酒吗
+  A：想啥呢 就是宴会服务 穿统一工服 有领班带着 客人酒水归服务员管 不陪酒
+  B：一场多少钱
+  A：晚上一场三百 日结 当场给 你干了就知道
+  B：这么高
+  A：宴会厅夜班本来就高 站一晚上也不轻松
+  B：要去哪报名
+  A：群里点报名 用我给你的那个邀请码 领班好排班
+  B：懂了 会不会要交押金啥的
+  A：押什么金 正规群按场结钱 要交钱的都是骗子 你别乱给
+  A：对了 别在宿舍说 知道的人多了名额抢不上
+  B：行 我嘴严 学姐放心
+  B：中午吃啥了
+  A：食堂 番茄牛腩 今天阿姨手不抖
+  B：我点的外卖 随便对付一口
+  A：少吃外卖 又贵又不干净
+  B：下周三那门选修你选了吗
+  A：选了 学分好拿 老师给分也大方
+  B：那我也选 上课点名严不严
+  A：平时分占一半 别翘课就行
+  B：收到
+  B：今晚降温了 你出门多穿点
+  A：嗯 明晚你要来场子 路上带件外套 厅里暖气足 路上冷
+  B：好 我记下了
+  【10月13日】
+  A：群里报名我看了 给你排今晚第一场
+  B：好 几点到
+  A：五点半到酒店后门 我带你换工服 领班是我熟人
+  B：学姐你也在啊 那我不慌了
+  A：在的 就是站一晚上脚酸 穿双舒服的鞋
+  B：收到 白色运动鞋行不
+  A：行 别穿高跟 后厨地上滑
+  B：对了 周末社团招新你去不
+  A：去 我在那边给新生做登记
+  B：那我到你那报 给我留个位置
+  A：没问题 到时候报我名字就行
+  A：到了没
+  B：到后门了
+  A：进来右转第一个门 工服在柜子里 我标了你名字
+  B：换好了 有点大
+  A：凑合一晚 明天给你换小号
+  B：好嘞
+  A：今晚辛苦 领班夸你了 说你手脚麻利
+  B：哈哈 还行 就是腿酸
+  A：工资我帮你带结了 现在转你 三百
+  【系统消息】A 向 B 转账 300 元，已收款。
+  B：收到了 谢谢学姐
+  A：下周还有场 想干我再喊你
+  B：好 有场就叫我

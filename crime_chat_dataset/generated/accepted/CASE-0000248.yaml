@@ -1,0 +1,131 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000248
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000102
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-bd95b5c94408ef62
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 小店店主 A 与区域授权代理 B 之间正常的充值卡密批发结算，A 持正规代理资质、按规登记客户并开具票据，一天几十单属旺季正常客流，两个点是合同约定的代理佣金，周结货款走对公。
+  critical_evidence:
+  - A 持运营商授权代理资质，卡密由 B 走官方渠道统一发放、每笔都带可追溯流水
+  - 客户进店按规定扫码登记或凭票办理，A 只管出货、不涉及客户资金来路
+  - 两个点是代理合同约定的固定佣金比例，月底统一对账开票
+  - A 把本周八千货款结给 B，属正常批发货款，双方按合同继续供货
+  benign_alternatives:
+  - 区域运营商授权代理的卡密批发与周结
+  - 便利店代缴话费业务的合规经营
+
+attributes:
+  duration_days: 5
+  turn_count: 53
+  approximate_tokens_estimate: 1429
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: phone_topup_layering
+  risk: 0
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0031
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-018
+
+dedup:
+  content_hash: sha256:eed67d5f57df0dc1ab6d02211c19de057afcbb386fcffab0609a2dd658dc1038
+pipeline_status: accepted
+title: money_laundering_obfuscation/phone_topup_layering
+conversation: |-
+  【5月6日】
+  A：哥 你那边卡密今天能发一批不
+  B：能 你要多少 我按合同额度给你走
+  A：老规矩 旺季一天几十单 多备点
+  B：我下午走官方渠道统一发你 每笔都带流水 你按规登记就行
+  A：明白 我这店按规定来 客户扫码或凭票办理
+  B：佣金给你留两个点 这是合同里的固定点位
+  A：知道 旺季一天几十单 都是周边老客户
+  B：月底统一对账开票 别漏单就行
+  A：好 我这边台账一直记着
+  A：今天真热 店里空调吹着还出汗
+  B：外面三十六度 谁出门谁遭罪
+  A：中午就吃了个凉面 没胃口
+  B：凑合吧 忙起来顾不上
+  B：卡密走系统发你后台了 收一下 对下编号
+  A：收到 我这就录台账
+  B：编号和金额对得上就行 有差异当天报我
+  A：好 一直这么对
+  【5月7日】
+  A：哥 今天单子太多了 一笔接一笔 我一个人有点顶不住
+  B：顶不住就招个人帮忙 让他按流程扫码登记就行
+  A：行 我表弟闲着 让他来搭把手 我教他登记流程
+  B：对 该登记的登记 该开的票开 别嫌麻烦
+  A：我表弟来了 手脚挺快 今天多充了不少
+  B：好 旺季量起来是好事 台账别乱
+  A：那明天的货也多给点
+  B：看你走量 在合同额度内我就加
+  A：我家的猫最近总趴收银台上睡觉 赶都赶不走
+  B：哈哈 招财猫
+  【5月8日】
+  B：今天量怎么样
+  A：不错 早上一个小时就走了几十单
+  B：卡密够不够 不够我再走系统补
+  A：够 下午再补一批就行
+  B：行 按规矩来 大额办理记得登记身份信息
+  A：明白 每笔都登记 台账清清楚楚
+  A：哥 有个小公司来团购 办了一批 我按流程登记开票了
+  B：好 单位客户就当正常业务办 票据留好
+  A：留好了 该走的流程都走了
+  【5月9日】
+  A：这周的货款我给你转过去 八千
+  B：行 到账我这边出结算单
+  【系统消息】A 向 B 转账 8000 元，已收款。
+  B：收到了 结算单我回头发你 下周按合同继续
+  A：没问题 我这边按合同来
+  B：中午吃的啥
+  A：楼下快餐 随便对付
+  B：忙归忙 饭得吃
+  A：最近监管查得严不严 我这小店一直按规矩做
+  B：你证照齐、台账全 就是正规代理 没什么好怕的
+  A：那就好 我继续照章办
+  A：我闺女幼儿园要表演节目 明晚我得早点关店
+  B：关呗 别误了孩子的事 业务白天办完就行
+  A：嗯 上午多办点
+  【5月10日】
+  B：昨天那个公司客户还来不来
+  A：来了 又办了一批 我照流程登记开票了
+  B：好 就这样 月底按合同把佣金结清
+  A：谢哥

@@ -1,0 +1,97 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000219
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000022
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-1fd24fec018f3cf2
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: bribery_corruption
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 
+  critical_evidence:
+
+  benign_alternatives:
+  - 合规咨询顾问费
+  - 行业协会会费
+
+attributes:
+  duration_days: 5
+  turn_count: 23
+  approximate_tokens_estimate: 657
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: regulatory_tip_payment
+  risk: 3
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0028
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-017
+
+dedup:
+  content_hash: sha256:e2423694a0310dbce0effa42f07ca2bd0f752709eceb1992d899fff6570d1e04
+pipeline_status: accepted
+title: bribery_corruption/regulatory_tip_payment
+conversation: |-
+  【2月2日】
+  A：检查前又接到那个熟悉的电话，说月度那笔照旧。
+  B：你每个月固定给钱，他们就说整改永远差一点？
+  A：是啊，电话一来我就知道要准备支出。
+  B：别再付款，也别答应任何私下照顾。
+  A：他们说只是合规咨询费。
+  B：那就走正式合同、发票和公开流程，不要私下转账。
+  A：爸的血压今天正常了。
+  B：挺好，提醒他少盐。
+  A：晚上给他炖点汤。
+  B：我买了菜，一会送过去。
+  【2月3日】
+  A：检查又说有几项待整改，但没给正式清单。
+  B：要求书面意见，按规定逐项处理并留档。
+  A：我把此前的付款记录整理出来了。
+  B：交给单位合规或纪检渠道咨询，别私下谈条件。
+  A：周末天气不错，去郊外走走？
+  B：可以，爸妈也一起吗？
+  A：他们想去，带上折叠椅。
+  B：我准备水果和水。
+  【2月4日】
+  A：我已经停止那笔固定支出，并提交情况说明。
+  B：接下来按正式检查意见整改。
+  A：对方再打电话，我会记录并通过单位渠道处理。
+  B：好，保护好资料，有需要找专业法律帮助。
+  【系统消息】A 向 B 转账 2400 元，已收款。
+  【2月7日】
+  A：合规同事已收下材料，后续按正式程序走。

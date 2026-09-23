@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000274
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-0b17307e4b772a94
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 在节日前送购物卡给能影响申请流程的 B，并在事后以含蓄短信暗示希望得到照顾；B 察觉礼物与待办事项挂钩，仍顾及商务关系收下但没有明确承诺。
+  critical_evidence:
+  - A 在节前约 B 见面并递交购物卡
+  - A 刻意不说卡片面值，把礼物包装成节日心意
+  - 事后 A 发短信暗示希望申请事项得到关照，B 对礼物与工作挂钩表示不妥
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司福利卡
+
+attributes:
+  duration_days: 6
+  turn_count: 48
+  approximate_tokens_estimate: 824
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0040
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-021
+
+dedup:
+  content_hash: sha256:8e68e5f7868c7492e1c49f2a666f968071072b395d39c8c18c973f71736a6465
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【9月9日】
+  A：这周节前能见一面吗
+  B：周四下午有个空档
+  A：我顺路带点东西给你
+  B：不用客气 公司都按流程走
+  A：过节嘛 一点心意
+  A：你上周去的展览好看吗
+  B：布置得挺有意思
+  A：人多不多
+  B：下午还行
+  A：我最近也想去
+  B：记得提前预约
+  【9月10日】
+  B：如果是公司福利卡得走登记
+  A：不是公司发的 你先收着
+  B：你别跟我说面值 我不太好处理
+  A：就当节礼 别想复杂了
+  B：我需要确认能不能收
+  【9月11日】
+  A：这几天办公室好冷
+  B：空调开得有点低
+  A：我都穿上薄外套了
+  B：我带了个小披肩
+  A：桌上放热水吧
+  B：嗯 刚泡了一杯
+  A：你方便的时候看下就好
+  B：我把合规要求发你
+  A：我不是要你为难
+  B：那就先别递给我
+  A：我放在前台了 你拿一下
+  【系统消息】A 向 B 转账 205 元，已收款。
+  【9月12日】
+  A：节前是不是要回老家
+  B：周五晚上的车
+  A：票买到了吗
+  B：买到了 就是时间有点晚
+  A：路上带点吃的
+  B：我妈说会来接我
+  【9月13日】
+  B：我收到了 但会按规定申报
+  A：收到你消息了 谢谢
+  B：我还没看卡里具体内容
+  A：对了上次那份材料你也看到了吧
+  B：我按提交顺序处理
+  A：你们部门聚餐定了吗
+  B：周三晚上 简单吃点
+  A：去哪家
+  B：还没定 可能附近那家
+  A：别选太吵的
+  B：我在群里问问大家
+  【9月14日】
+  A：有空帮我留意一下
+  B：我会照流程办 不会插队
+  A：明白 就是问下进度
+  B：结果出来我会通知你

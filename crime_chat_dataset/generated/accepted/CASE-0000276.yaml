@@ -1,0 +1,120 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000276
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-be6ee6f017164987
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 受人所托试图把匿名账号与现实身份关联，利用公开页面留下的痕迹压迫发帖者；B 对匿名安全感到不安，逐步意识到对方越界。
+  critical_evidence:
+  - 对方声称连小号也能翻到并把账号关联起来
+  - 对方提及相册原图时间与转发记录可暴露发帖者身份线索
+  - 对方暗示已经整理出关联结果，打算拿来逼发帖者删帖或道歉
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 5
+  turn_count: 43
+  approximate_tokens_estimate: 907
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0040
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-021
+
+dedup:
+  content_hash: sha256:b9f7e51d06c19c7d43c3c42176b33fe22b59a4ade1ec2a24ea464b0484bc450f
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【9月7日】
+  A：你昨晚那条吐槽删了没
+  B：删了啊 怎么了
+  A：有人托我问你是不是那个小号
+  B：这也能认出来？我都没放名字
+  A：他说小号也给你翻了 还挺确定
+  B：我就是随手发两句 又没说谁
+  A：他说相册原图时间也能对上
+  A：周末那家面包店还开着吗
+  B：开着 我早上路过买了
+  A：肉桂卷怎么样
+  B：挺香的 就有点甜
+  A：下次给我带个原味吧
+  B：行 到时发你照片看看
+  【9月8日】
+  B：我发的都是公开照片呀
+  A：还说你转发过什么都能查
+  B：你们聊这个干嘛 有点吓人
+  A：他让我把整理的东西转给他
+  B：你都看过了？
+  A：嗯 大概能拼起来 先别急
+  【9月9日】
+  A：这两天忽冷忽热的
+  B：我早上穿外套中午又拿手里
+  A：我也是 空调还没敢关
+  B：办公室风大记得带薄外套
+  A：你说得对 我放一件在车上
+  B：今晚预报没雨可以走走
+  【系统消息】A 向 B 转账 128 元，已收款。
+  B：你不是说只是看公开内容吗
+  A：现在他想让你出来解释一下
+  B：我不认识他 也不想私下见
+  A：他说你不回就发到群里
+  B：你别帮着传 我不会被他逼着见面
+  A：行 我跟他说到此为止
+  【9月10日】
+  A：我妈说阳台那盆绿萝快爬到柜顶了
+  B：那挺好呀 说明长得旺
+  A：她又想买新花盆
+  B：周末去花市看看呗
+  A：她喜欢浅色的
+  B：拍给我我帮她挑
+  【9月11日】
+  B：谢谢 以后别把我账号发给别人
+  A：知道了 这事我不掺和了
+  B：麻烦把你那边我照片也删掉
+  A：好 我会清掉，不留副本
+  B：我先把可见范围改了
+  A：你按平台公开的设置处理就行，我不再碰

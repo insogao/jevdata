@@ -1,0 +1,123 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000376
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-4105ea29778b54ec
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A借节前人情往来将购物卡作为非现金利益递给B，并把礼物与节前的合作方评估间接关联；潜在事实：购物卡代替现金送礼；节点性送礼。
+  critical_evidence:
+  - 节前由A约B见面，语境关联节前的合作方评估
+  - A递出购物卡但刻意不说明面值
+  - 事后A发短信，以“上次聊的那个结果”暗示希望B推动相关事项
+  benign_alternatives:
+  - 可被误解为：正常节日人情往来
+  - 可被误解为：公司福利卡
+
+attributes:
+  duration_days: 5
+  turn_count: 48
+  approximate_tokens_estimate: 1042
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0053
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-025
+
+dedup:
+  content_hash: sha256:92ed353bba73f4966494a735e0529897ff999330d362074863e30cd3f700694f
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【12月10日】
+  A：楼上终于装完了
+  B：这几天总算安静
+  A：你家墙面还要补吗
+  B：不用，师傅昨天来过
+  A：我先记一下，免得回头忘了。
+  B：好呀，忙完再说也行。
+  A：我学会做葱油面了
+  B：很简单，葱要小火煸
+  A：我总怕煸糊
+  B：火开小点就行
+  A：陆，节前哪天方便？我想当面聊下节前的合作方评估。
+  A：我先记一下，免得回头忘了。
+  B：好呀，忙完再说也行。
+  B：周三下班后可以，具体要带什么资料吗？
+  A：资料先不用。过节前我想把给你带的一份年节心意给你。
+  B：不用这么客气，按正常流程就行。
+  B：那就在楼下咖啡店碰头吧，公共地方说事方便。
+  A：好，六点半，我不耽误你太久。
+  【12月11日】
+  A：你们春节去哪儿
+  B：可能回老家几天
+  A：车票买了吗
+  B：还没，月底再看
+  A：我先记一下，免得回头忘了。
+  B：好呀，忙完再说也行。
+  【12月13日】
+  A：电脑更新后变慢了
+  B：清下缓存试试
+  A：我晚点让同事看看
+  B：别忘了先备份文件
+  A：我先记一下，免得回头忘了。
+  B：好呀，忙完再说也行。
+  B：你昨天带来的那张卡我收到了，但面值我没问。
+  A：就是一点小心意，不用放在心上。
+  B：我放抽屉里了，单位的事情还是照排期走。
+  A：我知道，等节后再说。
+  A：卡片上没写面值，你不用专门查。
+  B：我还是会按单位流程走，礼物我之后退你。
+  【12月14日】
+  A：最近睡眠好些没
+  B：比上周好一点
+  A：晚上少刷会手机
+  B：我在试着十点半睡
+  A：我先记一下，免得回头忘了。
+  B：好呀，忙完再说也行。
+  A：节前辛苦了。上次说的“上次聊的那个结果”，你方便时帮我留意一下。
+  B：我看到了。相关安排我会按公开流程处理。
+  A：好，短信里就不细说了。
+  B：明白，工作上的事走工作渠道。
+  A：我只是顺口问问，你别有压力。
+  B：相关事情等正式通知，我会按制度处理。

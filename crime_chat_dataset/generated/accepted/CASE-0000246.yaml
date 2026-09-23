@@ -1,0 +1,121 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000246
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000111
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-a23c0d6ed1111c57
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: theft_robbery_property_crime
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 把来路不正的电动自行车成批交给做二手转卖的亲友 B，B 收货后处理车架与号牌再高价出手，两人按车况分成，新车出手快、带牌的车还能加价，长期形成收赃销赃链。
+  critical_evidence:
+  - A 称新到手的车成色新、三天内就能出，B 负责收下处理再转卖
+  - B 询问车架和号怎么弄，A 让 B 按老办法磨掉重打、别在原处留痕
+  - B 表示带牌的车更好卖、能加价，A 说下一批尽量挑带牌的送过去
+  - B 按约定把上一批的车款两千五转给 A，两人约定下周再交接一批
+  benign_alternatives:
+  - 亲友之间正规的二手电动车买卖与过户
+  - 车行收购旧车翻新后合法转售
+
+attributes:
+  duration_days: 6
+  turn_count: 42
+  approximate_tokens_estimate: 1184
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: electric_bike_resale_chain
+  risk: 3
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0031
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-018
+
+dedup:
+  content_hash: sha256:3548f7ef1d0ff6ee52ee6a0371d8e2451a7263b5d75aca84338c82bb7e0e2ae8
+pipeline_status: accepted
+title: theft_robbery_property_crime/electric_bike_resale_chain
+conversation: |-
+  【8月5日】
+  A：哥 最近手上有批车 新得很 你要不要接
+  B：什么样 别又是难出手的款
+  A：都是好款 成色新 三天内就能出 你收着稳赚
+  B：车架和号你怎么弄的 别给我留尾巴
+  A：老办法 磨掉重打 不在原处留痕 你接手就行
+  B：行 你这话我听着 下次带牌的多弄点
+  A：带牌的贵 出手也快 我尽量挑带牌的给你
+  B：对 带牌的车加价也有人要 上回那辆当天就被骑走
+  A：哥 你闺女中考完了吧
+  B：完了 上了市里那个普高 不算好也不算差
+  A：挺好 我表弟当年也是那 后来考得不错
+  【8月6日】
+  B：昨晚那批什么时候送过来
+  A：今晚就送 三辆 你别在门口接 我放后院
+  B：行 后院没人 你放下就走
+  A：放好了 都盖着布 你自己看
+  B：收到 明天我处理一下
+  【8月7日】
+  B：看了 成色确实好 有一辆架子上原号还在 我得先弄
+  A：你按老办法来 别急 弄干净再摆出去
+  B：知道 我这几天慢慢出 分着卖 不扎眼
+  A：今天太热了 我跑一趟一身汗
+  B：中午三十八度 谁出门谁遭罪
+  A：你店里空调还没修?
+  B：修了 又不行了 下午叫人来
+  【8月8日】
+  B：出一辆了 卖了八百 比上回强
+  A：可以 剩下的慢慢来 别一次全摆出来
+  B：懂 一天摆一辆 问的人也多
+  B：哥 上一批的车款我算了下 给你转两千五 对吧
+  A：对 就这个数 剩下的出了再结
+  【系统消息】B 向 A 转账 2500 元，已收款。
+  A：收到 下周还有一批 我带牌的给你留两辆
+  B：好 带牌的最省事 客户还认
+  【8月9日】
+  B：小区门口最近装了新监控 你送货注意点
+  A：我知道 我走后面小路 不进正门
+  B：行 稳妥点 这阵子查得也比以前多
+  A：所以我说分着出 卖了就完了
+  A：中午吃的啥
+  B：媳妇包了饺子 韭菜的 撑得我直打嗝
+  A：有口福 我啃了个面包
+  B：回头来家里吃 让你嫂子多包点
+  【8月10日】
+  A：下一批定了 四辆 其中两辆带牌 你准备好地方
+  B：好 后院腾出来了 你啥时候送
+  A：明晚 还是老点 你别接 放下我走
+  B：行 都听你的 这批尾款到时候一起算

@@ -1,0 +1,127 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000304
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000031
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-dd01334fba9e494e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: contraband_illicit_trade
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 表哥以茶叶生意为皮长期给表弟发货：要求换箱分装、原包装撕净、外层垫真茶叶做掩护，收件人写化名、电话只留铺子，不走实名站点专走熟人线，大额货款两万一备注成茶叶款，双方从不点破货的真实名目，实为跨省寄送来路不明的违禁货。
+  critical_evidence:
+  - A 要求换掉太新的原箱、茶叶盒套一层再裹膜、分散着装
+  - 收件人不写 B 的名字，写周记茶行王师傅收，电话只留铺子，别人问就说是茶叶
+  - A 把原箱压扁处理、贴纸字样撕净、箱内垫茶叶，专走老宋的熟人线不走站点，运费另结
+  - B 转货款加运费两万一，备注写茶叶款，A 称账心里有数
+  - 货到后 B 称下批铺开量还要加，让 A 提前半个月备货
+  benign_alternatives:
+  - 亲戚间的茶叶土特产邮寄往来
+  - 正常跨省铺货的茶叶批发生意
+
+attributes:
+  duration_days: 5
+  turn_count: 48
+  approximate_tokens_estimate: 1210
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: cross_region_shipping
+  risk: 2
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0027
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-017
+
+dedup:
+  content_hash: sha256:32b1e345f6f1e9b0569c9f4359526b432cf5816158ad890b623b62fea4ebfec2
+pipeline_status: accepted
+title: contraband_illicit_trade/cross_region_shipping
+conversation: |-
+  【7月8日】
+  A：表弟 入伏了 这边荔枝便宜 给你留了两箱 就爱吃这个吧
+  A：对了 上回那批东西 茶行催得急 你啥时要
+  B：下周吧 铺子腾出货架就通知你
+  A：行 到时候箱子我给换了 原来那种太新 扎眼
+  B：嗯 分散着装 别一箱沉甸甸的
+  A：懂 茶叶盒套一层 外面再裹膜
+  【7月9日】
+  B：哥 你们那边台风走了没 新闻说暴雨
+  A：昨晚刮了一宿 今早出太阳 菜市场照开
+  B：那就好 别耽误事
+  A：你那边热成啥样
+  B：店里跟蒸笼似的 空调都不顶用
+  A：熬吧 立秋就好了
+  A：收件人信息我填哪个
+  B：别写我名字 写“周记茶行 王师傅收” 电话留铺子那个
+  A：行 老规矩
+  B：店里就我一个人对接 别人问就说是茶叶
+  A：明白
+  【7月10日】
+  A：弟 箱子收拾出来了 分六件 原来的箱子全压扁处理了
+  B：贴纸字样都撕干净
+  A：早撕了 里面垫的茶叶 拆开也就是茶
+  B：行 这批比上回多 一次发得完吗
+  A：老宋那边发 熟人线 站点那些就不走了 运费你出一千二
+  B：应该的 跟货款一起结
+  A：中午吃啥 我这边遍地大排档
+  B：泡了碗面 忙完这阵再吃好的
+  A：亏 你那边酱牛肉给我馋的
+  B：下回给你寄一斤
+  A：那说好了
+  【7月11日】
+  B：哥 货款加运费两万一 我现在转你 备注写“茶叶款”
+  A：收到 账我心里有数
+  【系统消息】B 向 A 转账 21000 元，已收款。
+  A：明早老宋来拿件 六件 你留意手机
+  B：对了 咱妈问你中秋回不回来
+  A：回 摊子我提前收两天
+  B：她念叨你呢 让把弟妹也带上
+  A：一定 嫂子做的腊肠给我留点
+  B：早给你挂阳台上了
+  A：哈哈 中秋有口福了
+  B：今儿搬箱子闪了下腰 贴了膏药躺着呢
+  A：让伙计搬啊 你个老板逞什么能
+  B：伙计回去了 不碍事
+  A：那也得养 落下病根老了遭罪
+  B：知道了 枸杞都泡上了 哈哈
+  【7月12日】
+  A：件一早带走了 三天到 你留意手机
+  B：哥 到了 六件全乎 外面一点没破
+  A：拆的时候细着点 垫的茶叶别糟蹋了 能喝
+  B：知道 尾款月底一起给你
+  B：下批铺子铺开了 量还得加 提前半个月跟你说
+  A：行 货源稳 你放心

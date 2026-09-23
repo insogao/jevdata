@@ -1,0 +1,130 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000260
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-f0d3059306c0afac
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A请求学校工作人员B查看并转发非本人授权的学生成绩信息，还提出红包作为感谢；B要求通过正式授权渠道查询。
+  critical_evidence:
+  - A想让B进入班主任系统查看另一学生的成绩档案
+  - A提出发红包并要求截图，显示希望私下获取升学信息
+  - B拒绝越权查询，要求家长通过学校官方渠道并取得授权
+  benign_alternatives:
+  - 家长通过授权账号查询自己孩子成绩
+  - 学校正式发布并授权共享的成绩通知
+
+attributes:
+  duration_days: 6
+  turn_count: 53
+  approximate_tokens_estimate: 1056
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0039
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-021
+
+dedup:
+  content_hash: sha256:e4ec5322f313b2bd820244b00a9b87e0c5e5af8a8fd34d56f365b97b5beb06f8
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【5月6日】
+  A：你们班主任系统里能看到上周那次成绩吗？
+  B：哪位学生的？我不能随便查别人的记录。
+  A：我想看看我外甥的，家里不方便问。
+  B：要由监护人通过学校授权账号查询。
+  A：今天食堂的汤怎么样？
+  B：番茄蛋汤还不错。
+  A：比昨天的紫菜汤好喝。
+  B：昨天盐放多了。
+  A：我没喝出来，可能我口重。
+  【5月7日】
+  B：你最近少吃咸的。
+  A：知道啦。
+  A：你帮我点一下就行，红包我已经发了。
+  B：红包我会退回，私下查询不合适。
+  A：我只要张截图，不会往外传。
+  B：截图同样是个人信息，我不能发给你。
+  A：你看到新通知了吗？
+  B：看到了，周五要交表。
+  A：我已经填完了。
+  【5月8日】
+  B：还得家长签字。
+  A：我回去提醒一下。
+  B：别忘了让孩子带回来。
+  A：嗯，贴冰箱上了。
+  A：家里只是想知道升学情况，急着做安排。
+  B：让监护人联系班主任走正式流程，我可以告诉他们入口。
+  A：那你把查询方式发我，我转给家里。
+  B：我发学校通知里的官方说明，不提供任何成绩内容。
+  A：这周嗓子好点没？
+  【5月9日】
+  B：好多了，不怎么咳。
+  A：多喝温水。
+  B：办公室有热水。
+  A：晚上早点休息。
+  B：最近确实熬夜。
+  A：少看会手机吧。
+  A：我问过家里了，他们会联系班主任。
+  B：那就按官方通知里的步骤申请。
+  A：红包我撤回不了的话你就退给我。
+  【5月10日】
+  B：已经退回了，记录也留着。
+  A：学校门口修路结束了吗？
+  B：还没，东门暂时封着。
+  A：那明天走西门。
+  B：我发群里提醒大家。
+  A：挺好，免得绕错。
+  B：公交站也挪了一点。
+  A：我看到临时牌子了。
+  A：明白，我不再让你看系统内容。
+  【5月11日】
+  B：谢谢，学生信息只能按授权范围处理。
+  A：周末家长会你去吗？
+  B：去，我已经调好班。
+  A：要带什么材料吗？
+  B：通知里说带学生手册。
+  A：那我今晚找出来。
+  B：放书包侧袋比较好。
+  A：谢谢提醒。

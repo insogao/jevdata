@@ -1,0 +1,102 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000337
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-f54c3f7d1fd9c2d5
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 托在学校工作的亲戚 B，用班主任账号顺手查一个非本人孩子分到哪个班，发红包答谢，B 起初觉得不合规还是查了并把结果截图发了过去。
+  critical_evidence:
+  - A 想查一个别人家孩子的分班/成绩情况
+  - B 说班主任账号能点一下，但按理不该查别人家孩子
+  - B 用系统查了之后把结果截图发给 A
+  - A 发红包答谢，B 收下并说下不为例
+  benign_alternatives:
+  - 家长查自己孩子
+  - 学校官方查询
+
+attributes:
+  duration_days: 2
+  turn_count: 26
+  approximate_tokens_estimate: 513
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0037
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-020
+
+dedup:
+  content_hash: sha256:1b50bb767ff38624f511bdf42ee9608f27f165e24635310ac2e34f6f1af38e82
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【9月6日】
+  A：妹 在忙吗
+  B：姐 刚下课 咋了
+  A：问你个事 你们学校那个系统 能看学生成绩不
+  B：能啊 班主任账号能看本班的
+  A：我同事托我 想查下她外甥 分班分到哪了
+  B：这不太合规吧 一般不让查别人家孩子
+  A：就看一下 又不改啥
+  B：哪个班的
+  A：初二三班 你查名单就知道
+  B：我回头看看 别声张
+  A：你晚饭吃了吗
+  B：食堂对付了 今天有红烧肉
+  A：少吃点油腻
+  B：知道了姐
+  【9月7日】
+  B：姐 那个孩子 分到三班了 重点班
+  A：这么快 谢啦
+  B：顺手点了一下系统 截图给你？
+  A：截图就行
+  B：[image：系统查询结果截图]
+  A：辛苦 给你发个红包 买奶茶
+  【系统消息】A 向 B 转账 200 元，已收款。
+  B：姐你太客气了 下不为例啊
+  A：嗯 就这一次
+  A：这两天降温 记得加衣
+  B：嗯 姐你也是
+  A：你妈让周末回家吃饭
+  B：看情况 可能要值班
+  A：尽量回吧 你爸念叨你

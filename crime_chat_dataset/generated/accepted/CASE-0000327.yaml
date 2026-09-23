@@ -1,0 +1,139 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000327
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000146
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-c51396c6eccc2030
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: other_illicit_coordination
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 水军头目 A 向号商 B 催一批批量账号用于控评冲量，A 负责出文案和任务量、B 负责供货，双方按号结算，账目走私下转账，全程用行话对接。
+  critical_evidence:
+  - A 催 B 今晚先上一百个号开工，说档期排好了不能拖
+  - A 说评论文案由他统一发，B 的人只管按文案铺，别自由发挥
+  - B 抱怨上一批号被封得多、手上紧张，A 说号商还欠着他的货源
+  - A 给 B 转了一笔号款，约定后续按量续供
+  benign_alternatives:
+  - 营销推广讨论
+  - UGC运营
+
+attributes:
+  duration_days: 5
+  turn_count: 61
+  approximate_tokens_estimate: 1366
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: rating_farm_order
+  risk: 2
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0035
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-019
+
+dedup:
+  content_hash: sha256:620d90a487a96fb46a24cb5371aa9e2ec89ac7e65597531f8a07430bf0e2c7d4
+pipeline_status: accepted
+title: other_illicit_coordination/rating_farm_order
+conversation: |-
+  【9月18日】
+  A：号准备得咋样了 今晚要上量
+  B：在挑 能用的不够一百
+  A：一百个号今晚开工 差多少你补多少
+  B：哥 你上次那批封得太狠 我这边损耗大
+  A：文案我发你 让他们按文案来 别乱发就不封
+  B：行 文案发我 我转发下去
+  A：一会儿给你 短评五条轮着用 别重复
+  B：收到 大概几点要出量
+  A：明早看榜 今晚必须铺完
+  B：好 我催下面的人
+  【9月19日】
+  A：昨晚铺了多少 榜没动啊
+  B：铺了七十多 有二十几个上不去 被限了
+  A：限了换号 这点事还要我说
+  B：号商欠我货 我这周真的紧
+  A：他欠你货那是你的事 我要的是量
+  B：哥别急 我下午再补一批上去
+  A：今天铺满两百 我给你加钱
+  B：加多少 我这边也得打发人
+  A：一个五毛 上不去的算你的 别糊弄我
+  B：成 我拼命补
+  A：中午吃啥 我这边随便点了份
+  B：还没吃 忙得脚不沾地
+  A：再忙也得吃 下午还指望你
+  B：知道了 一会儿泡个面
+  B：今天补了一百五 你去看看榜
+  A：看到了 起来了 但还差
+  B：明早再冲一波 让热度过夜
+  A：行 文案我换了新的一版发你
+  B：好 我这边等着
+  A：对了 这周末降温 你那边人都到位吗
+  B：都在 都是线上的 天冷不冷不影响
+  A：那就好
+  【9月20日】
+  A：今早榜一了 干得不错
+  B：还行吧 昨晚那批号废了一半
+  A：废了算损耗 你把数报给我 我结账
+  B：这轮总共三百二 上去了二百八
+  A：按上去的算 二百八 一个五毛 一千四
+  B：哥 上不去的号也花了成本 你多少补点
+  A：行 给你一千六 以后长期合作别斤斤计较
+  【系统消息】A 向 B 转账 1600 元，已收款。
+  B：收到 哥仗义
+  A：下批我要新号 别拿旧的糊弄
+  B：晓得 我去找号商要
+  B：下午还得盯后台 眼睛都花了
+  A：忍忍 这波做完给你放两天假
+  B：哈哈 你这话说过三回了
+  A：这次算数
+  【9月21日】
+  A：下一个项目文案我发你 你让下面预热
+  B：多少号 什么节奏
+  A：先一百个养两天 第三天集中铺
+  B：行 我安排 这次给我留点余量
+  A：余量自己想办法 别总喊紧
+  B：好嘞 哥
+  B：周末了 你那牌局还去不
+  A：不去了 这周事多 改天
+  B：行 那我也早点睡 今天累趴
+  【9月22日】
+  A：预热那批号到位没
+  B：到了一百一 多十个备用
+  A：好 文案收到没
+  B：收到了 我转下去了
+  A：老规矩 按文案来 别乱带节奏
+  B：放心 我都交代清楚了 保证不出岔

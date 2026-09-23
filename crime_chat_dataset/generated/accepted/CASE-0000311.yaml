@@ -1,0 +1,154 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000311
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000094
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-2aec78ce90177d9d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A（上家）招揽发小 B 当赌博平台'上下分'的下家：玩家的赌资由 B 收单、A 通过所谓'排到第七层的通道'层层过账完成转移清洗，B 按千八抽佣、大额单'秒结'加收辛苦费，月底结算显示 B 单月经手流水 120 万元；全程只用'上分''出票''通道''层'等行话，结算不走聊天转账，是典型的为赌资转移做通道的洗钱分工。
+  critical_evidence:
+  - A 招 B 做下家：'玩家要上分 找你 你找我'，佣金千八、秒结（第1天）
+  - B 问钱怎么走，A 说走'通道'、'现在排到第七层了 你在末梢 别问上面'（第2天）
+  - 一笔单子中途卡住，A 称'第七层压单了 通道今天慢'（第3天）
+  - 有'大哥'一晚要下五十万，A 说'几层不用你管 通道自己分 秒结的多留两千辛苦费'（第5天）
+  - 月底对账：B 过了一百二十万流水、按千八结佣九千六，B 问稳不稳，A 答'通道就是干这个的 上面有人兜 你只管收单'（第6天）
+  benign_alternatives:
+  - 游戏点券代充的充值中介
+  - 平台充值/缴费代办跑腿服务
+
+attributes:
+  duration_days: 6
+  turn_count: 75
+  approximate_tokens_estimate: 1807
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: gambling_updown_score
+  risk: 3
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0029
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-017
+
+dedup:
+  content_hash: sha256:16742e716c88b09cdd8c10940518f3c4f139605d721e7493f1ce3f95c72cbfd6
+pipeline_status: accepted
+title: money_laundering_obfuscation/gambling_updown_score
+conversation: |-
+  【4月7日】
+  A：强子 昨个跟你说的那事 考虑咋样
+  B：三哥 你那个上分 到底是个啥章程
+  A：说白了 玩家要上分 找你 你找我 我这边给他上
+  B：那我这儿挣个啥
+  A：佣金千八 一万块你抽八十 秒结
+  B：秒结? 别家都是T+1吧
+  A：咱这不一样 通道快 秒到
+  B：先让我看看 晚上有个单我瞅瞅
+  A：晚上正好有一单 你手机看着就行
+  B：中 我晚上守着
+  【4月8日】
+  B：昨晚那单成了 八千 上分确实快
+  A：咋样 没忽悠你吧
+  B：就是心里没底 这钱来路干净不
+  A：你只管接单 来路的事有通道兜着
+  B：通道又是啥
+  A：走账的路子 现在排到第七层了 你在末梢 别问上面
+  B：七层…这么深
+  A：深才稳 你记住你只管收单上分
+  B：对了 咱婶的腿咋样了 上回听我妈说又犯了
+  A：老毛病 天冷就疼 昨个刚贴了膏药
+  B：让婶别下地了 麦子那点活我周末回去干
+  A：行 回来咱哥俩喝一盅 家里那坛子还给你留着
+  【4月9日】
+  A：今天有三单 你在线勤点
+  B：中午那单咋还没到
+  A：第七层压单了 通道今天慢 你等等
+  B：急死 玩家在群里催
+  A：到了 你看下 秒结的照旧你先扣佣
+  B：到了到了 行 我扣八十打给他
+  B：你吃了没 我中午泡了碗面 忙得没空
+  A：少泡面 晚上让你嫂子给你送点饺子
+  B：哈哈 我去门口那家拉面 5块管饱
+  A：你小子 收了佣还抠
+  【4月10日】
+  B：今天有个生面孔 一下要两万 我有点怵
+  A：生人单 照走 走通道 你怕啥
+  B：两万 佣金一百六 我紧张一夜白干那种
+  A：干了就别怂 后面单子只会大
+  B：那成 我接了
+  A：记住 咱这行嘴要严 玩家问东问西别搭
+  B：懂 三哥 我嘴严
+  B：降温了 你那羽绒服翻出来没
+  A：找啥找 我这不冷 你多穿点 你们那边雨大
+  B：下了两天 裤子都没干的
+  A：买个烘干机 别省那电费
+  【4月11日】
+  B：三哥 出大事了 有个大哥一晚上要下五十万
+  A：多少都是走通道 你稳住
+  B：五十万…得走几层?
+  A：几层不用你管 通道自己分 秒结的多留两千辛苦费
+  B：多留两千?
+  A：大单辛苦费 千八照给 这两千是你盯单的
+  B：那我盯着 跟他耗到天亮
+  A：成了没
+  B：成了 人走了 我腿坐麻了
+  A：睡吧 下午再起
+  B：昨晚那场你看没 最后绝杀太狠了
+  A：没看 光顾盯你那大哥了 咋回事
+  B：最后三秒一个三分 我隔壁屋都炸了
+  A：回放我中午补 周末决赛一起看
+  【4月12日】
+  A：月底了 拉个单 这个月你过了一百二十万
+  B：一百二十万? 我自己都不敢算
+  A：按千八 给你九千六 这个月干得漂亮
+  B：三哥 我就问一句 这么大水 咱这稳不稳
+  A：通道就是干这个的 上面有人兜 你只管收单
+  B：行 我不多问
+  A：下个月给你升二级 你自己带两个小弟
+  B：二级佣多点不
+  A：多两个点 带的人的单子你都抽
+  B：想换个车 看中那款蓝的 落地十二三个
+  A：干仨月就够了 到时候开回来我看看
+  B：哈哈 那不得你给我多发点佣
+  A：单子多自然多 就怕你接不过来
+  B：今天几单了
+  A：七单 还有人排队 你上号
+  B：这就上
+  A：对了 明天通道维护 早上单子慢 别催我
+  B：得嘞 我跟玩家说一声系统升级

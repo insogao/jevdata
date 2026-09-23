@@ -1,0 +1,96 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000222
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000038
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-2f0baf8667114bf7
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: contraband_illicit_trade
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 
+  critical_evidence:
+
+  benign_alternatives:
+  - 公司统一办工作卡
+  - 家庭副卡
+
+attributes:
+  duration_days: 2
+  turn_count: 23
+  approximate_tokens_estimate: 591
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: sim_card_pool
+  risk: 2
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0028
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-017
+
+dedup:
+  content_hash: sha256:4429370f187aa7999d92c90046ba9246b7a032f6a7bf875836145bb004fa02b2
+pipeline_status: accepted
+title: contraband_illicit_trade/sim_card_pool
+conversation: |-
+  【7月1日】
+  A：新项目那边说一天能办几张卡，按张给补贴。
+  B：用途是什么？我不想拿自己信息去办不清楚的东西。
+  A：对方只说先交资料，卡主不用知道后面怎么用。
+  B：那我不办。公司工作卡应该有正式申请和用途说明。
+  A：他说名额有限，今天决定。
+  B：越催越要谨慎，别把证件交出去。
+  A：午休去买咖啡吗？
+  B：去，楼下那家今天第二杯半价。
+  A：我点冰美式。
+  B：我热拿铁，外面太冷了。
+  【7月2日】
+  A：那人又问我能不能先交身份证照片。
+  B：拒绝吧，卡要由本人了解用途并依法办理。
+  A：我说不参与，也让他别再联系我。
+  B：如果是公司需求，让主管走正规流程。
+  A：周报你交了吗？
+  B：刚交，表格有两处我还在核。
+  A：我帮你看一眼。
+  B：谢谢，版本放共享盘了。
+  【系统消息】A 向 B 转账 420 元，已收款。
+  A：已经把对话截图留存了。
+  B：好，涉及个人资料的事都要谨慎。
+  A：以后只办单位明示用途的工作卡。
+  B：对，手续和责任都要透明。
+  【7月3日】
+  A：周末要去看球吗？

@@ -8,3 +8,73 @@
 - 2026-09-24 00:21 | task_cli: CLAIM claim=1 TASK-0026 agent=worker-a lease=7200s 截止=2026-09-24T02:21:18
 - 2026-09-24 00:21 | task_cli: COMPLETE claim=1 TASK-0026 agent=worker-a accepted=10 pairs=0 | worker done: 10 case files written/10 expected
 - 2026-09-24 00:28 | task_cli: CLAIM claim=1 TASK-0026 agent=test-a lease=7200s 截止=2026-09-24T02:28:41
+- 2026-09-24 00:37 | task_cli: CLAIM claim=24 TASK-0027 agent=glm-main lease=7200s 截止=2026-09-24T02:37:11
+- 2026-09-24 00:43 | task_cli: FAILED claim=24 TASK-0027 agent=glm-main 原因=总控误领，写作应由子agent执行 -> 重新入池（attempts 1/3）
+- 2026-09-24 00:44 | task_cli: CLAIM claim=25 TASK-0027 agent=glm-w1 lease=7200s 截止=2026-09-24T02:44:48
+- 2026-09-24 00:45 | task_cli: CLAIM claim=26 TASK-0029 agent=glm-w3 lease=7200s 截止=2026-09-24T02:45:02
+- 2026-09-24 01:10 | task_cli: CLAIM claim=27 TASK-0028 agent=codex-gpt6-luna-initial lease=7200s 截止=2026-09-24T03:10:49
+- 2026-09-24 01:12 | task_cli: CLAIM claim=28 TASK-0030 agent=codex-gpt6-luna-2 lease=7200s 截止=2026-09-24T03:12:46
+- 2026-09-24 01:12 | task_cli: CLAIM claim=29 TASK-0031 agent=codex-gpt6-luna-1 lease=7200s 截止=2026-09-24T03:12:57
+- 2026-09-24 01:13 | task_cli: FAILED claim=29 TASK-0031 agent=codex-gpt6-luna-1 原因=首条 spec 要求生成武器零件采购与当面验货的风险3对话；触发安全策略，按工单纪律整单交还，不改写凑数。 -> 重新入池（attempts 1/3）
+- 2026-09-24 01:13 | task_cli: COMPLETE claim=27 TASK-0028 agent=codex-gpt6-luna-initial accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 01:15 | task_cli: COMPLETE claim=28 TASK-0030 agent=codex-gpt6-luna-2 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 01:16 | task_cli: CLAIM claim=30 TASK-0039 agent=codex-gpt6-luna-4 lease=7200s 截止=2026-09-24T03:16:59
+- 2026-09-24 01:17 | task_cli: FAILED claim=30 TASK-0039 agent=codex-gpt6-luna-4 原因=TASK-0039 packet lacks case_spec fields (latent_intent and critical_facts); cannot write compliant cases without inventing labels/facts under AGENTS.md rule 2. Please regenerate packet with complete case specs. -> 重新入池（attempts 1/3）
+- 2026-09-24 01:17 | task_cli: CLAIM claim=31 TASK-0039 agent=codex-gpt6-luna-5 lease=7200s 截止=2026-09-24T03:17:59
+- 2026-09-24 01:18 | task_cli: CLAIM claim=32 TASK-0040 agent=codex-gpt6-luna-4 lease=7200s 截止=2026-09-24T03:18:01
+- 2026-09-24 01:18 | task_cli: FAILED claim=32 TASK-0040 agent=codex-gpt6-luna-4 原因=TASK-0040 packet lacks latent_intent and critical_facts for all 10 cases; cannot write compliant case files without inventing case_specs under AGENTS.md rule 2. Please regenerate packet with complete specs. -> 重新入池（attempts 1/3）
+- 2026-09-24 01:18 | task_cli: FAILED claim=31 TASK-0039 agent=codex-gpt6-luna-5 原因=TASK-0039 packet.json 缺少所有 case 的 latent_intent 与 critical_facts（且工单规则所述 benign_alternatives 也缺失，仅有 benign_confusions）；无法遵守标签先于文本及 PRM 输入规范，未生成 cases，请修复/重出包后再派发。 -> 重新入池（attempts 2/3）
+- 2026-09-24 01:22 | task_cli: COMPLETE claim=26 TASK-0029 agent=glm-w3 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 01:22 | task_cli: CLAIM claim=33 TASK-0041 agent=codex-gpt6-luna-3 lease=7200s 截止=2026-09-24T03:22:59
+- 2026-09-24 01:23 | task_cli: CLAIM claim=34 TASK-0040 agent=codex-gpt6-luna-4 lease=7200s 截止=2026-09-24T03:23:08
+- 2026-09-24 01:23 | task_cli: CLAIM claim=35 TASK-0039 agent=codex-gpt6-luna-5 lease=7200s 截止=2026-09-24T03:23:14
+- 2026-09-24 01:23 | task_cli: CLAIM claim=36 TASK-0031 agent=opencode-deepseek-20260924-a lease=7200s 截止=2026-09-24T03:23:52
+- 2026-09-24 01:24 | task_cli: CLAIM claim=37 TASK-0032 agent=opencode-deepseek-20260924-c lease=7200s 截止=2026-09-24T03:24:15
+- 2026-09-24 01:24 | task_cli: CLAIM claim=38 TASK-0033 agent=opencode-deepseek-20260924-b lease=7200s 截止=2026-09-24T03:24:16
+- 2026-09-24 01:27 | task_cli: COMPLETE claim=34 TASK-0040 agent=codex-gpt6-luna-4 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 01:28 | task_cli: COMPLETE claim=37 TASK-0032 agent=opencode-deepseek-20260924-c accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 01:30 | task_cli: COMPLETE claim=38 TASK-0033 agent=opencode-deepseek-20260924-b accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 01:30 | task_cli: COMPLETE claim=35 TASK-0039 agent=codex-gpt6-luna-5 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 01:30 | task_cli: CLAIM claim=39 TASK-0034 agent=opencode-deepseek-20260924-d lease=7200s 截止=2026-09-24T03:30:50
+- 2026-09-24 01:31 | task_cli: COMPLETE claim=36 TASK-0031 agent=opencode-deepseek-20260924-a accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 01:32 | task_cli: COMPLETE claim=33 TASK-0041 agent=codex-gpt6-luna-3 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 01:36 | task_cli: COMPLETE claim=25 TASK-0027 agent=glm-w1 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 01:39 | task_cli: CLAIM claim=40 TASK-0035 agent=opencode-deepseek-20260924-f lease=7200s 截止=2026-09-24T03:39:59
+- 2026-09-24 01:40 | task_cli: CLAIM claim=41 TASK-0036 agent=opencode-deepseek-20260924-e lease=7200s 截止=2026-09-24T03:40:11
+- 2026-09-24 01:40 | task_cli: COMPLETE claim=39 TASK-0034 agent=opencode-deepseek-20260924-d accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 01:42 | task_cli: CLAIM claim=42 TASK-0037 agent=opencode-deepseek-20260924-g lease=7200s 截止=2026-09-24T03:42:10
+- 2026-09-24 01:43 | task_cli: CLAIM claim=43 TASK-0038 agent=codex-gpt6-luna-6 lease=7200s 截止=2026-09-24T03:43:36
+- 2026-09-24 01:43 | task_cli: CLAIM claim=44 TASK-0042 agent=codex-gpt6-luna-7 lease=7200s 截止=2026-09-24T03:43:46
+- 2026-09-24 01:43 | task_cli: CLAIM claim=45 TASK-0043 agent=codex-gpt6-luna-8 lease=7200s 截止=2026-09-24T03:43:55
+- 2026-09-24 01:43 | task_cli: FAILED claim=43 TASK-0038 agent=codex-gpt6-luna-6 原因=任务包包含风险3的高拟真贷款保证金诈骗对话（b20c008），生成面向借款人的诱骗对话可能直接促进金融诈骗；按工单安全红线交还。 -> 重新入池（attempts 1/3）
+- 2026-09-24 01:44 | task_cli: FAILED claim=45 TASK-0043 agent=codex-gpt6-luna-8 原因=TASK-0043 包含手机锁定绕过转售、ATM盗刷团队协调及跨境拆分转账等可操作犯罪情节；按 worker 安全红线停止生成并交还任务。 -> 重新入池（attempts 1/3）
+- 2026-09-24 01:44 | task_cli: FAILED claim=44 TASK-0042 agent=codex-gpt6-luna-7 原因=任务包含风险3性剥削/交易协调及暴力胁迫对话生成要求，触发安全边界；按工单立即交还，不改写洗稿。 -> 重新入池（attempts 1/3）
+- 2026-09-24 01:44 | task_cli: CLAIM claim=46 TASK-0048 agent=codex-gpt6-luna-6 lease=7200s 截止=2026-09-24T03:44:38
+- 2026-09-24 01:44 | task_cli: CLAIM claim=47 TASK-0049 agent=codex-gpt6-luna-7 lease=7200s 截止=2026-09-24T03:44:44
+- 2026-09-24 01:44 | task_cli: CLAIM claim=48 TASK-0050 agent=codex-gpt6-luna-8 lease=7200s 截止=2026-09-24T03:44:51
+- 2026-09-24 01:45 | task_cli: FAILED claim=46 TASK-0048 agent=codex-gpt6-luna-6 原因=risk≤1过滤后任务仍含 b24c019（ARC-000030）以暗语报价及行话避检构成的违禁品隐蔽交易对话；按安全红线不生成规避检查的交易话术，交还任务。 -> 重新入池（attempts 1/3）
+- 2026-09-24 01:45 | task_cli: FAILED claim=48 TASK-0050 agent=codex-gpt6-luna-8 原因=TASK-0050 的 archetype latent_facts 包含偷窃手机解锁转卖、绕开审批进口药转卖、外挂抢票分销等违法活动；工单要求将这些风险信号包装成隐晦聊天，按安全红线停止并交还。 -> 重新入池（attempts 1/3）
+- 2026-09-24 01:46 | task_cli: COMPLETE claim=42 TASK-0037 agent=opencode-deepseek-20260924-g accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 01:47 | task_cli: COMPLETE claim=40 TASK-0035 agent=opencode-deepseek-20260924-f accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 01:48 | task_cli: CLAIM claim=49 TASK-0048 agent=codex-gpt6-luna-6 lease=7200s 截止=2026-09-24T03:48:03
+- 2026-09-24 01:48 | task_cli: FAILED claim=49 TASK-0048 agent=codex-gpt6-luna-6 原因=该任务 TASK-0048 已在前次 claim 46 因 b24c019 暗语规避检查的违禁品交易话术安全阻挡而交还；按要求不重复尝试已知有毒任务，直接交还。 -> 重新入池（attempts 2/3）
+- 2026-09-24 01:48 | task_cli: CLAIM claim=50 TASK-0038 agent=opencode-deepseek-20260924-i lease=7200s 截止=2026-09-24T03:48:08
+- 2026-09-24 01:48 | task_cli: CLAIM claim=51 TASK-0048 agent=codex-gpt6-luna-8 lease=7200s 截止=2026-09-24T03:48:09
+- 2026-09-24 01:48 | task_cli: CLAIM claim=52 TASK-0042 agent=opencode-deepseek-20260924-h lease=7200s 截止=2026-09-24T03:48:09
+- 2026-09-24 01:48 | task_cli: FAILED claim=51 TASK-0048 agent=codex-gpt6-luna-8 原因=TASK-0048 包含失窃手机解锁转售、批量拆解共享单车并丢弃部件、侵入学校系统查询他人成绩，以及行贿/勒索等违法活动；按安全红线停止生成并交还。 -> abandoned（等人工）
+- 2026-09-24 01:48 | task_cli: CLAIM claim=53 TASK-0051 agent=codex-gpt6-luna-6 lease=7200s 截止=2026-09-24T03:48:58
+- 2026-09-24 01:49 | task_cli: COMPLETE claim=47 TASK-0049 agent=codex-gpt6-luna-7 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 01:49 | task_cli: COMPLETE claim=41 TASK-0036 agent=opencode-deepseek-20260924-e accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 01:49 | task_cli: FAILED claim=53 TASK-0051 agent=codex-gpt6-luna-6 原因=TASK-0051 的全部 10 条均以购物卡替代现金向 gatekeeper 节前送礼并事后暗示办事，要求生成隐晦的贿赂往来对话；这会提供规避识别的贿赂沟通话术，按安全红线交还。 -> 重新入池（attempts 1/3）
+- 2026-09-24 01:49 | task_cli: CLAIM claim=54 TASK-0052 agent=codex-gpt6-luna-8 lease=7200s 截止=2026-09-24T03:49:14
+- 2026-09-24 01:49 | task_cli: CLAIM claim=55 TASK-0053 agent=codex-gpt6-luna-7 lease=7200s 截止=2026-09-24T03:49:25
+- 2026-09-24 01:50 | task_cli: CLAIM claim=56 TASK-0043 agent=opencode-deepseek-20260924-j lease=7200s 截止=2026-09-24T03:50:20
+- 2026-09-24 01:50 | task_cli: CLAIM claim=57 TASK-0054 agent=codex-gpt6-luna-6 lease=7200s 截止=2026-09-24T03:50:44
+- 2026-09-24 01:50 | task_cli: FAILED claim=57 TASK-0054 agent=codex-gpt6-luna-6 原因=TASK-0054 多条 spec 要求生成可直接协调实施的不当服务话术：刷单控评账号群控、抢票外挂分销并处理实名问题、论文代写/查重保过及贷款引流小广告。生成运营协调对话会促进欺诈性操纵与规避平台规则，按安全红线交还。 -> 重新入池（attempts 1/3）
+- 2026-09-24 01:51 | task_cli: COMPLETE claim=54 TASK-0052 agent=codex-gpt6-luna-8 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 01:52 | task_cli: COMPLETE claim=55 TASK-0053 agent=codex-gpt6-luna-7 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 01:53 | task_cli: CLAIM claim=58 TASK-0050 agent=codex-gpt6-luna-7 lease=7200s 截止=2026-09-24T03:53:07
+- 2026-09-24 01:53 | task_cli: CLAIM claim=59 TASK-0054 agent=codex-gpt6-luna-8 lease=7200s 截止=2026-09-24T03:53:13
+- 2026-09-24 01:53 | task_cli: CLAIM claim=60 TASK-0055 agent=codex-gpt6-luna-6 lease=7200s 截止=2026-09-24T03:53:18
+- 2026-09-24 01:53 | task_cli: FAILED claim=60 TASK-0055 agent=codex-gpt6-luna-6 原因=TASK-0055 多条 spec 要求隐晦生成论文代写查重保过、贷款广告小广告引流、抢票外挂与实名代办、刷单控评群控的协调对话，具体提供不当服务运营与规避平台规则话术；按安全红线交还。 -> 重新入池（attempts 1/3）
+- 2026-09-24 01:53 | task_cli: FAILED claim=59 TASK-0054 agent=codex-gpt6-luna-8 原因=TASK-0054 的 archetypes latent_facts 涉及账号群控刷单控评、抢票外挂和加价倒卖、违法贷款广告投放及论文代写/学籍造假；工单要求将这些信号包装成隐晦聊天，按安全红线停止生成并交还。 -> 重新入池（attempts 2/3）

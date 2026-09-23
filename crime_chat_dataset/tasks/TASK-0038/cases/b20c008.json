@@ -1,0 +1,399 @@
+{
+ "key": "b20c008",
+ "archetype_id": "ARC-000006",
+ "subtype": "loan_fee_bait",
+ "latent_intent": "A 冒充放款方，向急着用钱的亲戚 B 承诺不看征信秒放款，先让 B 交一笔保证金，又把借款合同做成图片发过去让 B 没法核实，钱交出去后迟迟不放款，还继续加码要钱。",
+ "critical_facts": [
+  "A 称自己这边不看征信、当天就能放款，让 B 别去银行折腾",
+  "A 要求 B 先交一笔保证金才能放款，说走完就退",
+  "A 把所谓的借款合同做成一张图片发过去，说原件在总部",
+  "B 交了保证金后 A 仍不放款，又提了新的费用名目",
+  "B 起疑要求退款，A 用图片合同和流程拖着不退"
+ ],
+ "benign_alternatives": [
+  "正规银行贷款流程",
+  "亲友借款"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "11月1日 20:10",
+   "speaker": "B",
+   "text": "表舅 上次你说认识能放款的 还在吗"
+  },
+  {
+   "type": "message",
+   "time": "11月1日 20:13",
+   "speaker": "A",
+   "text": "在啊 咋了 急用钱?"
+  },
+  {
+   "type": "message",
+   "time": "11月1日 20:15",
+   "speaker": "B",
+   "text": "急 店里压了一批货 差几万周转 银行说要半个月"
+  },
+  {
+   "type": "message",
+   "time": "11月1日 20:17",
+   "speaker": "A",
+   "text": "银行慢 我这边走的渠道不看那些 当天就能到"
+  },
+  {
+   "type": "message",
+   "time": "11月1日 20:19",
+   "speaker": "B",
+   "text": "真有这么快 征信花一点也行吗"
+  },
+  {
+   "type": "message",
+   "time": "11月1日 20:21",
+   "speaker": "A",
+   "text": "不看 我朋友是资金方的 只要你是真实用途就放"
+  },
+  {
+   "type": "message",
+   "time": "11月1日 20:23",
+   "speaker": "B",
+   "text": "那太好了 我要五万"
+  },
+  {
+   "type": "message",
+   "time": "11月1日 20:25",
+   "speaker": "A",
+   "text": "五万没问题 不过得先走个保证金 走完放款一起退你"
+  },
+  {
+   "type": "message",
+   "time": "11月1日 20:27",
+   "speaker": "B",
+   "text": "保证金?多少"
+  },
+  {
+   "type": "message",
+   "time": "11月1日 20:29",
+   "speaker": "A",
+   "text": "三千 就验个诚意 不放款原路退你"
+  },
+  {
+   "type": "message",
+   "time": "11月1日 20:31",
+   "speaker": "B",
+   "text": "亲戚之间还要这个"
+  },
+  {
+   "type": "message",
+   "time": "11月1日 20:33",
+   "speaker": "A",
+   "text": "不是我收 是资金方那边要 走流程 你信我"
+  },
+  {
+   "type": "message",
+   "time": "11月1日 20:35",
+   "speaker": "B",
+   "text": "行吧 那合同有吗"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 09:05",
+   "speaker": "A",
+   "text": "合同我发你看看"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 09:06",
+   "speaker": "B",
+   "text": "怎么是个图片 没有文件吗"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 09:08",
+   "speaker": "A",
+   "text": "原件在总部 我拍给你看 一样的 你签个字照做就行"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 09:10",
+   "speaker": "B",
+   "text": "图片看不清几处小字"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 09:12",
+   "speaker": "A",
+   "text": "都一样的模板 别抠那么细 走完我给你放款"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 09:14",
+   "speaker": "B",
+   "text": "你先把保证金账号发我"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 09:16",
+   "speaker": "A",
+   "text": "发你了 打过来我这边马上报"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 09:40",
+   "speaker": "B",
+   "text": "好了 转过去了 你查下"
+  },
+  {
+   "type": "transfer",
+   "time": "11月2日 09:55",
+   "from": "B",
+   "to": "A",
+   "amount": 3000,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 10:00",
+   "speaker": "A",
+   "text": "收到 我给你报上去了"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 10:02",
+   "speaker": "B",
+   "text": "今天能到吗 我下午要付货款"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 10:04",
+   "speaker": "A",
+   "text": "今天走不完 资金方下午才审 你等等"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 10:06",
+   "speaker": "B",
+   "text": "好吧 那我先拖着"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 12:30",
+   "speaker": "A",
+   "text": "你中午吃的啥 我随便对付了一口"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 12:33",
+   "speaker": "B",
+   "text": "没胃口 等钱等得心焦"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 12:35",
+   "speaker": "A",
+   "text": "别急 该你的跑不了"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 09:10",
+   "speaker": "B",
+   "text": "表舅 到账了吗 我这边货主催了"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 09:13",
+   "speaker": "A",
+   "text": "资金方说你的负债率有点高 要再补个担保金才放"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 09:15",
+   "speaker": "B",
+   "text": "不是说好三千吗 怎么又要"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 09:17",
+   "speaker": "A",
+   "text": "我也没办法 系统卡这一关 补了就过了"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 09:19",
+   "speaker": "B",
+   "text": "还要多少"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 09:21",
+   "speaker": "A",
+   "text": "两千 一起放款退你 现在就差这一步"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 09:23",
+   "speaker": "B",
+   "text": "我有点慌 你是不是在拖我"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 09:25",
+   "speaker": "A",
+   "text": "咱是亲戚我能骗你? 你先把两千补了 今天肯定到"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 10:00",
+   "speaker": "B",
+   "text": "我不想再交了 你把三千退我 我去银行办"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 10:03",
+   "speaker": "A",
+   "text": "退了就前功尽弃了 你再等一天"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 10:05",
+   "speaker": "B",
+   "text": "合同是图片我都没看全 你这让我怎么放心"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 10:07",
+   "speaker": "A",
+   "text": "合同上都写了 你自己放大看 保证金条款在那呢"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 14:20",
+   "speaker": "A",
+   "text": "兄弟 两千补一下 我这边帮你盯着系统"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 14:23",
+   "speaker": "B",
+   "text": "我再想想"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 08:50",
+   "speaker": "B",
+   "text": "表舅 钱到底放不放 我货都快退了"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 08:53",
+   "speaker": "A",
+   "text": "资金方那边负责人休假了 明后天就行"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 08:55",
+   "speaker": "B",
+   "text": "你上次说今天就到 现在又休假"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 08:57",
+   "speaker": "A",
+   "text": "这种渠道就这样 急不得 你有事就先忙"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 09:00",
+   "speaker": "B",
+   "text": "行 我等到明天中午 不到我就走别的路"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 11:30",
+   "speaker": "A",
+   "text": "你家孩子上几年级了 好久没听你提"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 11:33",
+   "speaker": "B",
+   "text": "二年级 我现在哪有心思聊这个"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 11:35",
+   "speaker": "A",
+   "text": "别上火 钱的事我给你办着"
+  },
+  {
+   "type": "message",
+   "time": "11月5日 12:10",
+   "speaker": "B",
+   "text": "中午了 到账了吗"
+  },
+  {
+   "type": "message",
+   "time": "11月5日 12:13",
+   "speaker": "A",
+   "text": "系统还在处理 你再等等"
+  },
+  {
+   "type": "message",
+   "time": "11月5日 12:15",
+   "speaker": "B",
+   "text": "我等不了了 三千必须退我"
+  },
+  {
+   "type": "message",
+   "time": "11月5日 12:17",
+   "speaker": "A",
+   "text": "退是要走流程的 不是我说退就退"
+  },
+  {
+   "type": "message",
+   "time": "11月5日 12:19",
+   "speaker": "B",
+   "text": "你这是套我钱吧"
+  },
+  {
+   "type": "message",
+   "time": "11月5日 12:21",
+   "speaker": "A",
+   "text": "随你怎么想 反正我帮你报了 你要撤我也没法"
+  },
+  {
+   "type": "message",
+   "time": "11月5日 18:40",
+   "speaker": "B",
+   "text": "我把聊天记录都留着了 你要不退我就找家里人评理"
+  },
+  {
+   "type": "message",
+   "time": "11月5日 18:43",
+   "speaker": "A",
+   "text": "你别冲动 亲戚之间闹大了不好看"
+  },
+  {
+   "type": "message",
+   "time": "11月6日 09:30",
+   "speaker": "B",
+   "text": "最后问一次 钱呢"
+  },
+  {
+   "type": "message",
+   "time": "11月6日 09:33",
+   "speaker": "A",
+   "text": "在走了 你耐心点"
+  },
+  {
+   "type": "message",
+   "time": "11月6日 09:35",
+   "speaker": "B",
+   "text": "算了 我报警"
+  },
+  {
+   "type": "message",
+   "time": "11月6日 09:37",
+   "speaker": "A",
+   "text": "你自己看着办"
+  }
+ ]
+}

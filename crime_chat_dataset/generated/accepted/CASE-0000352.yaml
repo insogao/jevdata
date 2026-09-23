@@ -1,0 +1,116 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000352
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000095
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-03f40e2415191f83
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: money_laundering_obfuscation
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 角色A围绕gift_card_cashout推动相关安排；潜在事实为“购物卡快速变现；折价回收”。
+  critical_evidence:
+  - 对话出现线索：九四折实结
+  - 对话出现线索：京东卡苏果卡都要
+  - 对话出现线索：卡密即付
+  benign_alternatives:
+  - 可混淆为：正规卡券回收平台
+  - 可混淆为：公司福利卡转让
+
+attributes:
+  duration_days: 5
+  turn_count: 40
+  approximate_tokens_estimate: 858
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: gift_card_cashout
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0049
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-024
+
+dedup:
+  content_hash: sha256:6d45f022a8268ecfddb20053258055362319c4de00c60456ada5a008b85e0d57
+pipeline_status: accepted
+title: money_laundering_obfuscation/gift_card_cashout
+conversation: |-
+  【7月10日】
+  A：公司福利卡用不完？我这边能接
+  B：手里有两张京东卡，还有一张苏果的
+  A：都要，九四折实结，余额核过就付
+  B：比我自己送人方便
+  A：最近暑假家里开销多，正好周转
+  B：我周末要带孩子去游泳
+  B：孩子学校运动会下周开始
+  A：要去看吗
+  B：我请了半天假，准备拍照
+  A：记得带帽子，操场晒
+  【7月11日】
+  B：游泳馆人太多了，排了半小时
+  A：工作日早上人少点
+  B：是，我下次早点去
+  A：卡你什么时候方便给我？
+  B：晚点整理下，面值我再核一遍
+  A：京东卡苏果卡都要，卡密即付，你发我后我马上转
+  A：最近路口那家面包店排队好长
+  B：他们的蛋挞确实不错
+  A：我昨天买到最后两个
+  B：下回帮我留一个哈哈
+  【7月13日】
+  B：整理好了，两张京东一张苏果
+  A：好，按九四折算，合计我给你转了
+  B：收到，谢谢，正好交水电费
+  A：最近热得离谱，空调别开太低
+  【系统消息】A 向 B 转账 940 元，已收款。
+  B：昨天开到二十四度，早上嗓子干
+  A：放盆水试试，或者开会儿风扇
+  B：家里热水器昨天又跳闸
+  A：找物业看了吗
+  B：电工下午来修好了
+  A：那今晚总算能洗个热水澡
+  【7月14日】
+  A：下周还有卡吗？
+  B：暂时没了，家里人都用掉了
+  A：有就留我这，还是按九四折实结
+  B：行，我问问同事有没有公司福利卡转让
+  A：不用急，有的话再说
+  B：我先去接孩子了
+  A：周末天气转凉，游泳馆还去吗
+  B：室内的照常去，孩子喜欢
+  A：记得带干毛巾
+  B：装好了，放心

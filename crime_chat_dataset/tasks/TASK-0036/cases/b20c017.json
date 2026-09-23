@@ -1,0 +1,468 @@
+{
+ "key": "b20c017",
+ "archetype_id": "ARC-000086",
+ "subtype": "courier_info_leak",
+ "latent_intent": "快递网点员工 A 把当天新到的面单信息成批卖给收料的 B：截图上有收件人电话和住址，按条计价四块一条，先发一批试水，B 转账后长期要货。",
+ "critical_facts": [
+  "A 给 B 发当天新单的截图，截图里带收件人电话和住址",
+  "A 按条卖，四块一条，量大批量更便宜",
+  "B 先要了一批试水，验证信息真实后决定长期合作",
+  "B 按条数给 A 转账，A 承诺每天固定供货"
+ ],
+ "benign_alternatives": [
+  "快递理赔核实",
+  "驿站正常登记"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "5月16日 20:00",
+   "speaker": "A",
+   "text": "周哥 上次说的事 有眉目了"
+  },
+  {
+   "type": "message",
+   "time": "5月16日 20:03",
+   "speaker": "B",
+   "text": "哪方面"
+  },
+  {
+   "type": "message",
+   "time": "5月16日 20:05",
+   "speaker": "A",
+   "text": "我这边每天经手的单子多 你要的那种名单"
+  },
+  {
+   "type": "message",
+   "time": "5月16日 20:07",
+   "speaker": "B",
+   "text": "带电话和地址不"
+  },
+  {
+   "type": "message",
+   "time": "5月16日 20:09",
+   "speaker": "A",
+   "text": "面单上都有 电话住址清清楚楚"
+  },
+  {
+   "type": "message",
+   "time": "5月16日 20:11",
+   "speaker": "B",
+   "text": "怎么算"
+  },
+  {
+   "type": "message",
+   "time": "5月16日 20:13",
+   "speaker": "A",
+   "text": "四块一条 比外面便宜 熟人价"
+  },
+  {
+   "type": "message",
+   "time": "5月16日 20:15",
+   "speaker": "B",
+   "text": "先给我来一批看看"
+  },
+  {
+   "type": "message",
+   "time": "5月16日 20:17",
+   "speaker": "A",
+   "text": "行 今晚我给你截当天的 新的才值钱"
+  },
+  {
+   "type": "message",
+   "time": "5月16日 20:19",
+   "speaker": "B",
+   "text": "要的就是当天的 旧的没用"
+  },
+  {
+   "type": "message",
+   "time": "5月16日 20:21",
+   "speaker": "A",
+   "text": "懂 都是当天新单 一会发你"
+  },
+  {
+   "type": "message",
+   "time": "5月16日 21:30",
+   "speaker": "A",
+   "text": "发了 二十条 你数数"
+  },
+  {
+   "type": "message",
+   "time": "5月16日 21:32",
+   "speaker": "B",
+   "text": "收到 我抽两个打打看"
+  },
+  {
+   "type": "message",
+   "time": "5月16日 21:34",
+   "speaker": "A",
+   "text": "别打太多 别让人起疑"
+  },
+  {
+   "type": "message",
+   "time": "5月16日 21:36",
+   "speaker": "B",
+   "text": "知道分寸"
+  },
+  {
+   "type": "message",
+   "time": "5月17日 09:00",
+   "speaker": "B",
+   "text": "昨天那批不错 都是真的"
+  },
+  {
+   "type": "message",
+   "time": "5月17日 09:02",
+   "speaker": "A",
+   "text": "那必须的 我亲手挑的"
+  },
+  {
+   "type": "message",
+   "time": "5月17日 09:04",
+   "speaker": "B",
+   "text": "钱怎么给你"
+  },
+  {
+   "type": "message",
+   "time": "5月17日 09:06",
+   "speaker": "A",
+   "text": "微信转我 二十条八十块"
+  },
+  {
+   "type": "message",
+   "time": "5月17日 09:08",
+   "speaker": "B",
+   "text": "好 我先转你"
+  },
+  {
+   "type": "transfer",
+   "time": "5月17日 09:10",
+   "from": "B",
+   "to": "A",
+   "amount": 80
+  },
+  {
+   "type": "message",
+   "time": "5月17日 09:12",
+   "speaker": "A",
+   "text": "收到了 以后每天给你留新单"
+  },
+  {
+   "type": "message",
+   "time": "5月17日 09:14",
+   "speaker": "B",
+   "text": "能保证量不"
+  },
+  {
+   "type": "message",
+   "time": "5月17日 09:16",
+   "speaker": "A",
+   "text": "我这条线一天几百单 你随便挑"
+  },
+  {
+   "type": "message",
+   "time": "5月17日 09:18",
+   "speaker": "B",
+   "text": "那行 先每天给我五十条"
+  },
+  {
+   "type": "message",
+   "time": "5月17日 09:20",
+   "speaker": "A",
+   "text": "没问题 一天两百 走量"
+  },
+  {
+   "type": "message",
+   "time": "5月17日 12:10",
+   "speaker": "A",
+   "text": "中午吃什么"
+  },
+  {
+   "type": "message",
+   "time": "5月17日 12:12",
+   "speaker": "B",
+   "text": "快餐 你呢"
+  },
+  {
+   "type": "message",
+   "time": "5月17日 12:14",
+   "speaker": "A",
+   "text": "网点食堂 凑合"
+  },
+  {
+   "type": "message",
+   "time": "5月17日 12:16",
+   "speaker": "B",
+   "text": "你们食堂还行吧"
+  },
+  {
+   "type": "message",
+   "time": "5月17日 12:18",
+   "speaker": "A",
+   "text": "就那样 吃饱就行"
+  },
+  {
+   "type": "message",
+   "time": "5月17日 14:00",
+   "speaker": "B",
+   "text": "今天下午你忙不"
+  },
+  {
+   "type": "message",
+   "time": "5月17日 14:02",
+   "speaker": "A",
+   "text": "忙 派件高峰 单子多"
+  },
+  {
+   "type": "message",
+   "time": "5月17日 14:04",
+   "speaker": "B",
+   "text": "越忙越好 我等着"
+  },
+  {
+   "type": "message",
+   "time": "5月17日 18:30",
+   "speaker": "B",
+   "text": "天黑了 你下班没"
+  },
+  {
+   "type": "message",
+   "time": "5月17日 18:32",
+   "speaker": "A",
+   "text": "刚收工 累瘫了"
+  },
+  {
+   "type": "message",
+   "time": "5月17日 18:34",
+   "speaker": "B",
+   "text": "辛苦了 钱我明天一起结"
+  },
+  {
+   "type": "message",
+   "time": "5月17日 18:36",
+   "speaker": "A",
+   "text": "行"
+  },
+  {
+   "type": "message",
+   "time": "5月18日 08:30",
+   "speaker": "A",
+   "text": "今天到货早 我一会给你截"
+  },
+  {
+   "type": "message",
+   "time": "5月18日 08:32",
+   "speaker": "B",
+   "text": "好 昨天的也一起"
+  },
+  {
+   "type": "message",
+   "time": "5月18日 08:34",
+   "speaker": "A",
+   "text": "昨天五十 今天先给三十 一会都发你"
+  },
+  {
+   "type": "message",
+   "time": "5月18日 08:36",
+   "speaker": "B",
+   "text": "行"
+  },
+  {
+   "type": "message",
+   "time": "5月18日 10:00",
+   "speaker": "A",
+   "text": "发了 一共八十条 你核对"
+  },
+  {
+   "type": "message",
+   "time": "5月18日 10:02",
+   "speaker": "B",
+   "text": "收到 我抽几条"
+  },
+  {
+   "type": "message",
+   "time": "5月18日 10:04",
+   "speaker": "A",
+   "text": "今天这批有几个是老旧小区的 地址全"
+  },
+  {
+   "type": "message",
+   "time": "5月18日 10:06",
+   "speaker": "B",
+   "text": "正好 我要的就是这种"
+  },
+  {
+   "type": "message",
+   "time": "5月18日 10:08",
+   "speaker": "A",
+   "text": "那以后我给你优先挑"
+  },
+  {
+   "type": "message",
+   "time": "5月18日 12:30",
+   "speaker": "B",
+   "text": "中午随便吃了点 你今天呢"
+  },
+  {
+   "type": "message",
+   "time": "5月18日 12:32",
+   "speaker": "A",
+   "text": "赶件 啃了个面包"
+  },
+  {
+   "type": "message",
+   "time": "5月18日 12:34",
+   "speaker": "B",
+   "text": "别饿着"
+  },
+  {
+   "type": "message",
+   "time": "5月18日 15:00",
+   "speaker": "B",
+   "text": "这个月你手上量稳不稳"
+  },
+  {
+   "type": "message",
+   "time": "5月18日 15:02",
+   "speaker": "A",
+   "text": "稳 站点天天爆仓"
+  },
+  {
+   "type": "message",
+   "time": "5月18日 15:04",
+   "speaker": "B",
+   "text": "那就好 我这边也要长期"
+  },
+  {
+   "type": "message",
+   "time": "5月18日 15:06",
+   "speaker": "A",
+   "text": "长期合作价再商量"
+  },
+  {
+   "type": "message",
+   "time": "5月18日 17:30",
+   "speaker": "B",
+   "text": "今天降温 你骑车注意"
+  },
+  {
+   "type": "message",
+   "time": "5月18日 17:32",
+   "speaker": "A",
+   "text": "嗯 加了件衣服"
+  },
+  {
+   "type": "message",
+   "time": "5月18日 17:34",
+   "speaker": "B",
+   "text": "好"
+  },
+  {
+   "type": "message",
+   "time": "5月19日 09:00",
+   "speaker": "A",
+   "text": "周哥 前两天的钱结一下 三百二"
+  },
+  {
+   "type": "message",
+   "time": "5月19日 09:02",
+   "speaker": "B",
+   "text": "转你 顺便问问能不能便宜点"
+  },
+  {
+   "type": "message",
+   "time": "5月19日 09:04",
+   "speaker": "A",
+   "text": "长期要三万条以上给你降到三块五"
+  },
+  {
+   "type": "message",
+   "time": "5月19日 09:06",
+   "speaker": "B",
+   "text": "成交 我这就能吞"
+  },
+  {
+   "type": "message",
+   "time": "5月19日 09:08",
+   "speaker": "A",
+   "text": "那行 以后每天给你留一百条"
+  },
+  {
+   "type": "message",
+   "time": "5月19日 09:10",
+   "speaker": "B",
+   "text": "好 钱转你了"
+  },
+  {
+   "type": "message",
+   "time": "5月19日 12:00",
+   "speaker": "A",
+   "text": "中午出去吃了一顿 改善生活"
+  },
+  {
+   "type": "message",
+   "time": "5月19日 12:02",
+   "speaker": "B",
+   "text": "挣着钱了 该吃"
+  },
+  {
+   "type": "message",
+   "time": "5月19日 12:04",
+   "speaker": "A",
+   "text": "哈哈 借你光"
+  },
+  {
+   "type": "message",
+   "time": "5月19日 14:20",
+   "speaker": "B",
+   "text": "下午再给我补一批昨天的"
+  },
+  {
+   "type": "message",
+   "time": "5月19日 14:22",
+   "speaker": "A",
+   "text": "昨天的不多了 我给你凑凑"
+  },
+  {
+   "type": "message",
+   "time": "5月19日 14:24",
+   "speaker": "B",
+   "text": "凑够就发我"
+  },
+  {
+   "type": "message",
+   "time": "5月19日 16:00",
+   "speaker": "A",
+   "text": "发了 二十条 太平点"
+  },
+  {
+   "type": "message",
+   "time": "5月19日 16:02",
+   "speaker": "B",
+   "text": "收到"
+  },
+  {
+   "type": "message",
+   "time": "5月19日 19:00",
+   "speaker": "A",
+   "text": "今天收工早 回去看球"
+  },
+  {
+   "type": "message",
+   "time": "5月19日 19:02",
+   "speaker": "B",
+   "text": "看吧 保持联系"
+  },
+  {
+   "type": "message",
+   "time": "5月19日 19:04",
+   "speaker": "A",
+   "text": "好 明天见"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000342",
+  "status": "accepted",
+  "errors": []
+ }
+}

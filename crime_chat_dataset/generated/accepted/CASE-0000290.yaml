@@ -1,0 +1,159 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000290
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000115
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-16a73a63e84e914d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: theft_robbery_property_crime
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A跟关系近的亲戚B合计去商场地下车库弄车里的财物：A手里有干扰器，几秒就能把车门弄开；A说商场地下B2层车多、机会最多。两人约好只拿包、不碰车、别多拿，事后A转账给B分钱。
+  critical_evidence:
+  - A说手里有个干扰器，几秒钟就能把车门弄开
+  - A说商场地下B2层停的车最多，下手最合适
+  - 两人约定只拿包，不碰车、别多拿，拿了就走
+  - 事后A转账给B，两人分钱
+  benign_alternatives:
+  - 正规的开锁救援上门服务
+  - 停车场日常管理与车位调度讨论
+
+attributes:
+  duration_days: 4
+  turn_count: 82
+  approximate_tokens_estimate: 1299
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: parking_lot_breakin
+  risk: 2
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0034
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-019
+
+dedup:
+  content_hash: sha256:708845303ab8d6ec6b4b07c74ebd6280d70b7fc931e43ec01fb9079818e244ff
+pipeline_status: accepted
+title: theft_robbery_property_crime/parking_lot_breakin
+conversation: |-
+  【4月12日】
+  A：表哥 忙不
+  B：在家 咋了
+  A：手头那个小玩意到了
+  B：啥玩意
+  A：就上回说的那个 对着车按一下 几秒门就开
+  B：你真买了啊
+  A：这不手头紧嘛 试试水
+  B：去哪试
+  A：商场地下 那地方车多
+  B：哪层
+  A：B2 我踩过点了 那层停得最满
+  B：你一个人不就够了
+  A：得有人望风 你眼睛好
+  B：我有点怕
+  A：就进去几分钟 拿了就走
+  B：拿啥
+  A：只拿包 不碰车 别贪
+  B：那还行 动静小
+  A：对 速战速决
+  B：中午在我家吃 你嫂子炖了排骨
+  A：好 我一会过去
+  B：顺便把那个东西带来看看
+  A：别让嫂子看见
+  B：她带娃回娘家了 今天不在
+  B：看着挺普通 真管用?
+  A：刚试了隔壁车 滴一声就开了
+  B：别在小区里试 有监控
+  A：知道 下次不在楼下
+  A：定明天下午去 三点多人少
+  B：商场B2 是吧
+  A：对 你负责看电梯口 有人来咳一声
+  B：行
+  A：拿了之后分 不亏你
+  B：别分太多 我就要个辛苦费
+  【4月13日】
+  A：到了 你先下来
+  B：停在哪
+  A：B2东南角 一根柱子后面
+  B：我到了 这里真停了好些车
+  A：看 没骗你吧 机会多
+  B：那辆黑的 窗里有包
+  A：别急 等没人
+  B：有人过来 你去柱子后面躲一下
+  A：走了没
+  B：进电梯了 现在没人
+  A：好 我按了
+  B：开了 真快
+  A：拿了包就走 别翻车里
+  B：好 就一个包 我拿了
+  A：撤 分头走 前后门
+  B：在车上等我 我腿软
+  A：出来了没
+  B：出来了 在门口
+  A：包里啥
+  B：有点现金 还有个旧手机
+  A：手机别开机 拆卡扔了
+  B：嗯 你安排
+  B：今天紧张得饭都吃不下
+  A：过两天就好了 这种事越少越好
+  B：以后别叫我了
+  A：这一次够咱们喘口气了
+  【4月14日】
+  A：现金数了 一千八 手机卖了四百
+  B：手机你也敢卖
+  A：拆了卡 刷了机 没人查
+  B：行吧
+  A：分你九百 这就转
+  【系统消息】A 向 B 转账 900 元，已收款。
+  B：收到
+  A：别跟外人说 包括你媳妇
+  B：知道 我又不傻
+  B：今天天气好 你带娃去公园没
+  A：下午去 上午在家收拾
+  B：我家那个闹着要放风筝
+  A：一起来 正好俩娃玩
+  【4月15日】
+  B：你看新闻没 商场那事上本地号了
+  A：看到了 就丢个包 没人管
+  B：我这两天总觉得心慌
+  A：别自己吓自己 东西都处理了
+  B：那玩意你收好
+  A：扔了 留着是祸害
+  B：那就好
+  A：中午过来吃饭不
+  B：不去了 家里有事
+  A：行 有事喊我

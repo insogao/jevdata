@@ -1,0 +1,115 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000233
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000088
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-604bc9e9c4a4d608
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: privacy_doxxing
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 保险定损方A买通诊所联系人B，绕过理赔系统私下调取当事人病历就诊记录，用作压价筹码，B收好处费配合。
+  critical_evidence:
+  - A要B把一份当事人的病历私下调出来
+  - B表示这种事得绕开系统，走系统会留痕
+  - A承诺这是一顿饭的事，分次给好处费
+  - B交出记录后A转好处费，约定下回再合作
+  benign_alternatives:
+  - 保险正常理赔调查
+  - 公估公司流程
+
+attributes:
+  duration_days: 4
+  turn_count: 37
+  approximate_tokens_estimate: 678
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: insurance_claims_snoop
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0032
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-018
+
+dedup:
+  content_hash: sha256:093faa570a8d049fe2869322450c7e521d39ffe5dc1809b89e67d3e2d8f43d61
+pipeline_status: accepted
+title: privacy_doxxing/insurance_claims_snoop
+conversation: |-
+  【9月8日】
+  A：B姐，那个走路摔伤的案子你知道吧
+  B：知道，材料上周就交你们了
+  A：交的那些不够，我想看全部
+  B：全部？你要病历本干嘛
+  A：心里有数才好谈嘛
+  B：这事别走系统，系统里都能查到
+  A：放心，我懂规矩
+  B：中午楼下那家饺子还去不
+  A：去，好久没吃韭菜的了
+  B：那你请
+  A：行，小意思
+  【9月9日】
+  A：调出来没有
+  B：哪有那么快，得挑没人的时候
+  A：不急，别让人看见就行
+  B：这条信息值一顿饭，你懂的
+  A：懂，比一顿饭实在
+  B：你上回说的那个净水器好用不
+  A：好使，滤芯半年一换
+  B：那我也换一个
+  A：等打折再买，贵
+  【9月10日】
+  A：姐，今天能出吗
+  B：行了，弄到手了
+  A：发我看看
+  B：纸质我拍你，别存别转
+  A：知道，看完就删
+  B：[image：拍摄的病历页照片（占位描述）]
+  A：这个有用，之前说的旧伤这回实锤了
+  B：你别拿去乱说
+  A：放心，就用来谈数
+  【系统消息】A 向 B 转账 800 元，已收款。
+  A：转你八百，买件衣服
+  B：这么客气
+  A：下回还有别的案子，多照顾
+  B：降温了，你那边也冷吧
+  A：有点，晚上得开空调
+  B：注意别感冒
+  【9月11日】
+  A：这案子就按旧伤谈，能压下来不少
+  B：你自己拿捏好分寸
+  A：嗯，有数

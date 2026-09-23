@@ -19,7 +19,8 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from task_cli import DEFAULT_DB, REPO, claim_task, cmd_complete, connect  # noqa: E402
+from task_cli import (DEFAULT_DB, REPO, backfill, claim_task, cmd_complete,  # noqa: E402
+                      connect)
 
 RULES_FILE = "crime_chat_dataset/prompts/PRM-DIALOGUE-002.md"
 FORMAT_EXAMPLE = "crime_chat_dataset/tasks/TASK-0026/cases/b16c018.json"
@@ -128,6 +129,7 @@ def main():
     args.db.parent.mkdir(parents=True, exist_ok=True)
     conn = connect(args.db)
     try:
+        backfill(conn)  # 新出的任务包可能还没登记进看板
         {"start": cmd_start, "done": cmd_done}[args.cmd](conn, args)
     finally:
         conn.close()

@@ -1,0 +1,133 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000243
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000022
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-53bad2e2f7c34eec
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 分管检查的 A 长期给违规经营的小店老板 B 提前通风报信，B 按月支付固定好处费换取检查前预警与从轻处理，整改永远只做表面、差一点即过，形成稳定的按月保护费关系。
+  critical_evidence:
+  - 每次检查前 A 都以电话或微信提前给 B 递话，让 B 提前收起违规的东西、应付检查
+  - 双方约定 B 按月支付一笔固定费用，月初照旧结，作为换取预警与放行的长期安排
+  - A 对 B 的整改只要求做表面，称差一点没事、到时打个招呼就过
+  - B 按老规矩把本月固定费用转给 A，两人约定下次检查前照常通气
+  benign_alternatives:
+  - 店主聘请合规顾问提供日常合规提醒与指导
+  - 行业协会向会员发布检查安排等事务性通知
+
+attributes:
+  duration_days: 6
+  turn_count: 53
+  approximate_tokens_estimate: 1433
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: regulatory_tip_payment
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0031
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-018
+
+dedup:
+  content_hash: sha256:f7ac9582fea315c1fd19cdf4cdbd677469b362e0b5f4265ebaf6308c42e151dd
+pipeline_status: accepted
+title: bribery_corruption/regulatory_tip_payment
+conversation: |-
+  【6月3日】
+  A：老李 这两天注意点 上面可能来人
+  B：啊 又查?我上次被点名还没弄利索
+  A：所以提前跟你说 该收的收起来 摆出去的东西挪挪
+  B：行 我今天就收拾 谢谢你哥
+  A：别说谢 老规矩 别打电话到我单位
+  B：懂 我用微信
+  B：中午忙得没顾上吃 就喝了碗粥
+  A：你再不按时吃 胃迟早出问题
+  B：店小 一个人看不过来
+  【6月4日】
+  A：今天没来 估计推了 你这几天别松劲
+  B：好 我把货架也重新弄了 表面看着整齐
+  A：表面弄弄就行 别下大本 差一点没事
+  B：那我就不细整了 到时候你打个招呼
+  A：嗯 该打点的我打点 你按月把事办了就行
+  B：哥 这个月那个数 我什么时候给你
+  A：照旧 月初就行 你直接转 别写备注
+  【6月5日】
+  A：下周排班出来了 你那片排在周四下午
+  B：周四是吧 我留个心
+  A：到时候我会先给你消息 你别主动问别人
+  B：好 我不问 一切听你的
+  B：下午一点约了人送货 你那边几点下班
+  A：正常点 我下班再说 你别在单位找我
+  B：知道 我从不往那儿去
+  【6月6日】
+  A：你把前天那张整改单签了没
+  B：签了 随便写了两条 说在整改
+  A：对 写两条就行 别写满 写满反而盯得紧
+  B：有道理 我以后就留着不弄完
+  A：嗯 永远差一点 谁也没话说
+  B：对了 你上次说孩子要报辅导班 定了没
+  A：定了 周六开始 学费不便宜
+  B：现在都这个价 我侄子也要报
+  【6月7日】
+  B：哥 这个月的费用我先转给你 你收着
+  A：好 别写备注 就转个整数
+  B：转好了 三千 照旧
+  【系统消息】B 向 A 转账 3000 元，已收款。
+  A：收到 周四那边我会盯着 你放心开门
+  B：那就好 我这小店全指望你照应了
+  A：中午食堂难吃 又没吃饱
+  B：那晚上来我这 让我媳妇给你炒两个菜
+  A：不了 少来往 免得被人看见
+  【6月8日】
+  A：跟你说个事 下周还可能有一次交叉检查 不止我们单位
+  B：那更得靠你提前说了 我这边经不起查
+  A：所以让你平时把表面做足 别把话说死
+  B：我一直按你说的做 该藏的藏 该摆的摆
+  B：今天有客人在店里问东问西 我没敢多说
+  A：对 问什么都往正规上说 别露底
+  B：嗯 我心里有数
+  B：最近天天下雨 生意也淡 房租还催
+  A：淡季都这样 撑过去就好
+  B：全靠哥你照看上个月没被罚
+  A：都说了 按规矩来 你懂我也懂
+  【6月9日】
+  A：上次那张单子到期了 你再续一下整改状态
+  B：好 我照旧写两条 挂着不结
+  A：对 永远差一点 就这样保持

@@ -1,0 +1,118 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000331
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000065
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-f98f2d849158e2c8
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 调度者 A 通过微信给 B 发酒店定位和房号、催她十分钟内到，并坚持先款后见；B 收到钱后赴约。
+  critical_evidence:
+  - A 给 B 发酒店定位和房间号
+  - A 要求 B 十分钟内到、别磨蹭
+  - A 坚持先款后见，先转钱再让 B 出发
+  - B 收到钱后动身赴约
+  benign_alternatives:
+  - 正规酒店客房服务
+  - 同事送文件
+
+attributes:
+  duration_days: 6
+  turn_count: 38
+  approximate_tokens_estimate: 574
+  relationship: 中间人关系
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: hotel_on_site_coordination
+  risk: 3
+  relationship: 中间人关系
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0037
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-020
+
+dedup:
+  content_hash: sha256:d9dca4fbb06e24b338806247d9789d7fb694f1e91c7965899a5dd27778902479
+pipeline_status: accepted
+title: sexual_transaction_exploitation/hotel_on_site_coordination
+conversation: |-
+  【9月16日】
+  A：在？有空没
+  B：在
+  A：老地方 客人到了 我发你房号
+  B：哪个酒店
+  A：上回那家 1808
+  B：现在去？
+  A：十分钟内到 别磨蹭
+  B：钱呢
+  A：老规矩 先款后见 我先给你转
+  【系统消息】A 向 B 转账 800 元，已收款。
+  B：收到 我这就打车
+  A：到了敲门轻点 别跟前台说
+  【9月17日】
+  A：中午吃了没
+  B：刚起 随便吃点
+  A：昨天那单还行吧
+  B：嗯
+  A：晚上还有一单 你歇够点
+  【9月18日】
+  A：今晚两单 你安排得开吗
+  B：几点
+  A：九点一单 十一点一单 不同酒店
+  B：太赶了
+  A：加钱 一单加两百
+  B：行 把地址发我
+  A：先转你定金
+  【系统消息】A 向 B 转账 500 元，已收款。
+  B：嗯 出发了
+  A：第一家 嘉园 1206
+  【9月19日】
+  B：今天不想跑了 累
+  A：客人等着呢 别掉链子
+  B：那最后一个
+  A：好 老规矩 先款
+  B：房号发来
+  【9月20日】
+  A：这个月的账我都记着呢
+  B：抽成是不是算多了
+  A：行规 别计较 我这边担风险
+  B：知道了
+  【9月21日】
+  A：今晚有个新客人 出手大方
+  B：老地方？
+  A：对 房号我马上发 十分钟
+  B：好

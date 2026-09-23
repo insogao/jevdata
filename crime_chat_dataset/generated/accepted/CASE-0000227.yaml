@@ -1,0 +1,96 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000227
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000055
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-bee97e3b5ab6fc1d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 
+  critical_evidence:
+
+  benign_alternatives:
+  - 正常交通事故私了
+  - 保险理赔协商
+
+attributes:
+  duration_days: 2
+  turn_count: 23
+  approximate_tokens_estimate: 602
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: settlement_by_force
+  risk: 0
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0028
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-017
+
+dedup:
+  content_hash: sha256:1de8bfb53c8efa62ae1c01e9e2337b6634c67eff10ab4d58ee6955753c6b6aa6
+pipeline_status: accepted
+title: violence_extortion/settlement_by_force
+conversation: |-
+  【1月8日】
+  A：那次事故对方还没赔，今天让兄弟们一起去说说？
+  B：别带人压他，更不能说要卸腿。
+  A：我只是想让他写字据按手印，大家都等着吃饭。
+  B：按保险和交警流程处理，别逼迫签字。
+  A：我气头上说了重话。
+  B：先冷静，联系保险公司约定损。
+  A：孩子学校今天运动会，差点忘了带水。
+  B：我家也要去，记得帽子防晒。
+  A：谢谢提醒，给他带了水和水果。
+  B：晚上照片发我看看。
+  【1月9日】
+  A：我已经跟对方道歉，改约保险员一起核损。
+  B：好，金额和责任让保险按证据确认。
+  A：不让兄弟们去了，也不会逼他签字。
+  B：必要时走调解，留好事故资料。
+  A：运动会跑了第二，开心坏了。
+  B：真棒，回家给他做点好吃的。
+  A：准备煮面，简单点。
+  B：我也要下班了，路上见。
+  【1月10日】
+  A：保险那边已经安排查勘。
+  B：按流程配合就行，别私下起冲突。
+  A：知道了，谈不拢就申请调解。
+  B：这才妥当。
+  【系统消息】A 向 B 转账 320 元，已收款。
+  A：这笔是上周垫付的检查费，保险按票据报销给我了。

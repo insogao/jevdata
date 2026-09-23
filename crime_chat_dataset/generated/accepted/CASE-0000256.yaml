@@ -1,0 +1,116 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000256
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000021
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-af392128e3cdea59
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 承包商 B 就市政中心项目向评标委员 A 咨询投标口径，A 只按公开招标文件与官方答疑回复，要求带量报价和品牌参数一律照技术规格书写、评标全程留痕；B 中标后走公户支付招标代理的合规居间佣金，并归还先前向 A 借的周转款。
+  critical_evidence:
+  - A 只按公开招标文件与官方答疑回复，参数是技术规格书里公开写的
+  - A 明确带量报价照文件要求、全程留痕，不允许打听底价
+  - B 中标后走公户支付招标代理的合规居间佣金并开票申报
+  - B 归还先前向 A 借的周转款，属正常个人往来
+  benign_alternatives:
+  - 公开招标下依招标文件正常投标
+  - 企业间合法分包与居间合作
+
+attributes:
+  duration_days: 2
+  turn_count: 41
+  approximate_tokens_estimate: 766
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: project_bid_kickback
+  risk: 0
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0033
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-019
+
+dedup:
+  content_hash: sha256:3e06dff1ea9531f7696419a39f7c7e8995034a3deb3dd797366d7cae59a45ec7
+pipeline_status: accepted
+title: bribery_corruption/project_bid_kickback
+conversation: |-
+  【6月3日】
+  A：老李 明早市政中心那个标 你那版定稿没
+  B：差不多了 就是参数那栏拿不准 通用型号还是写具体品牌
+  A：都按招标文件来 参数是技术规格书里公开写的 答疑也挂网了
+  B：那带量那档也照文件报?
+  A：对 文件怎么要求怎么写 别自己加东西
+  B：底价我就不打听了
+  A：本来就不能打听 全程留痕 按流程来
+  B：行 听你的哥
+  A：不是听我的 是听文件的
+  B：中午吃啥
+  A：楼下牛肉面 一起
+  B：行 我请 你老帮我
+  A：少来 各付各的
+  B：今晚球看不 辽宁打广东
+  A：看 老地方烧烤
+  B：几点
+  A：七点半 我去占座
+  B：好嘞
+  【6月4日】
+  A：今天降温 外套带上 会场冷
+  B：知道了 你到了没
+  A：到了 别迟到
+  B：你家小子期末考咋样
+  A：别提 数学又没上九十
+  B：补课呗 我家那个请了个一对一的
+  A：贵不
+  B：一小时三百 肉疼
+  A：回头把老师推我
+  B：行
+  B：上次借你周转那五千 我转你了
+  【系统消息】B 向 A 转账 5000 元，已收款。
+  A：收到了 不急的
+  A：开完了 你分第一档 客观分摆在那
+  B：全靠流程规范
+  A：材料都在 谁评都一样
+  B：对了 居间那块佣金 招标代理让我走公户
+  A：对 开票申报 别走私人账
+  A：你那车年检过了没
+  B：过了 就是胎该换了
+  A：换吧 别省这个
+  B：周末去
+  B：周末请你吃饭 谢你一直照应
+  A：客气啥

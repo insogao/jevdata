@@ -1,0 +1,141 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000341
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000124
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-222b3e27f5d08964
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 放贷人 A 逼久拖不还的借款人 B 重新签一张金额虚高、利息栏空着的借条，并把 B 的房子写进抵押。签约那天午后 A 把 B 扣在屋里，扬言不签就出不去，B 被迫先转了一笔钱当所谓保证金。
+  critical_evidence:
+  - A 逼 B 重签一张金额比原来高、利息栏空着的借条，说利息不用管先签
+  - A 要求 B 把房子写进借条做抵押
+  - 签约当天 A 把 B 扣在屋里，称不签就出不去
+  - B 被逼先转了一笔钱给 A 当保证金
+  benign_alternatives:
+  - 正规借条签订
+  - 担保公司流程
+
+attributes:
+  duration_days: 5
+  turn_count: 63
+  approximate_tokens_estimate: 1301
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: debt_note_forced
+  risk: 3
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0036
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-020
+
+dedup:
+  content_hash: sha256:3dbc3c743da7525b0c0f984875cc0c9ea87eef736e1ff50579e7b896819a0844
+pipeline_status: accepted
+title: coercion_blackmail/debt_note_forced
+conversation: |-
+  【3月3日】
+  A：老李 那笔钱到底什么时候能还
+  B：再宽几天 手头是真紧
+  A：宽几天 上个月你也是这么说的
+  B：这回是真的 货款压着没回
+  A：行 我给你条路 晚上过来把条子重新签一下
+  B：什么条子
+  A：就原来那张 换一张规整点的 好算账
+  B：好 我晚上过去
+  B：中午吃了吗
+  A：吃了 你呢
+  B：面条 随便对付一口
+  A：欠着钱还吃得挺稳
+  B：人是铁饭是钢啊
+  A：人呢 说好过来 没见你
+  B：临时有事 明天 明天一定
+  A：别跟我玩这套 我等你到八点半
+  B：对不住 家里孩子发烧了
+  【3月4日】
+  A：孩子好点没
+  B：退了 谢谢你惦记
+  A：惦记归惦记 钱的事不能拖
+  B：知道 我今天一定去
+  B：今天雨下得真大
+  A：嗯 出门带伞 别淋着
+  B：在办公室 没出去
+  A：那就早点来我这儿
+  A：球赛看了没 今晚有
+  B：哪有心看球
+  A：我看你倒是有心躲我
+  【3月5日】
+  A：今晚必须来 别找借口
+  B：好 六点 利息怎么算 你让我心里有个数
+  A：利息你不用管 先签 后面都好商量
+  B：利息不写清楚 我这心里没底啊
+  A：签个条子而已 你信不过我 房子那栏也写上 我这边要有保障
+  B：房子 那不行 一家老小住着呢
+  A：写上又不是真要你房子 走个形式 该还的钱还上就行
+  B：我再想想吧
+  B：孩子下周开家长会 老师点名让我去
+  A：你先把正事办了 家长会不急
+  B：在你那儿 什么算正事
+  A：你说呢
+  【3月6日】
+  A：晚上七点 老地方 别迟到
+  B：知道了
+  B：我妈最近身体不好 老念叨
+  A：老人就这样 你多回去看看 别拿这个当推辞
+  B：我不是推辞
+  【3月7日】
+  A：到了没
+  B：在门口
+  A：进来 后屋说
+  A：看看 名字签这儿 手印按这儿
+  B：金额怎么比原来多了这么多
+  A：利息滚进去的 你慢慢还就是
+  B：利息那栏怎么是空的 一个字没有
+  A：利息你不用管先签 我还能坑你不成
+  B：房子那栏我不签
+  A：房子抵押写上 不然这钱我怎么放心 你拿什么担保
+  B：我真不能签这个
+  A：签不签你自己想清楚 不签今天出不去
+  B：……你别这样 我签就是了
+  A：先转五千过来 当这一期的保证金 表示个诚意
+  B：我卡里就这么多了
+  A：先转 剩下的月底前补齐
+  【系统消息】B 向 A 转账 5000 元，已收款。
+  A：收着了 条子收好 月底我等你
+  B：知道了

@@ -1,0 +1,116 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000235
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000128
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-b3128880d78bfc64
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 竞争对手A以隔壁奶茶店被泼漆的下场敲打店主B，提出每月三千平安费，暗示不接受明天就见分晓，B被迫先付第一笔。
+  critical_evidence:
+  - A提到隔壁奶茶店被泼漆的下场
+  - A提出每月三千的平安费说法
+  - A暗示不接受就明天见分晓
+  - B被迫先转第一笔三千，约定月中再付
+  benign_alternatives:
+  - 商业竞争摩擦
+  - 物业纠纷
+
+attributes:
+  duration_days: 3
+  turn_count: 39
+  approximate_tokens_estimate: 580
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: competitor_sabotage_threat
+  risk: 3
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0032
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-018
+
+dedup:
+  content_hash: sha256:94b85e4a73867efde99f28efa4ad4c0eb5125704c325b9ee56f93e2ffb3ca2d5
+pipeline_status: accepted
+title: coercion_blackmail/competitor_sabotage_threat
+conversation: |-
+  【9月3日】
+  A：B老板，生意不错啊
+  B：还行，混口饭吃
+  A：这条街就你家人气旺
+  B：运气好
+  A：对面那家新开的你尝没
+  B：没去
+  A：开不了几天
+  B：谁知道呢
+  【9月4日】
+  A：隔壁奶茶店你知道的吧
+  B：哪个
+  A：就是上个月被泼了漆那家
+  B：听说了，怎么了
+  A：没怎么，就是提醒你一句
+  B：你什么意思
+  A：没什么意思，做生意都不容易
+  B：你上回买的那个收银机好用不
+  A：凑合，偶尔卡
+  B：我也想换一个
+  A：先别急着换
+  【9月5日】
+  A：每月三千，保你平安
+  B：你这不就是敲诈
+  A：话别说那么难听，叫辛苦费
+  B：我不给
+  A：那就明天见分晓
+  B：你到底想干嘛
+  A：想让你安安稳稳做买卖
+  A：中午吃面还是吃饭
+  B：没胃口
+  A：那我先去吃了
+  B：我先给一个月，你别乱来
+  A：这就对了，识时务
+  【系统消息】B 向 A 转账 3000 元，已收款。
+  B：转了三千，你查收
+  A：收到，月中记得
+  【9月6日】
+  A：你店里那台空调该洗了
+  B：不用你操心
+  A：我这是为你好
+  B：知道了
+  A：下个月照旧，别让我跑第二趟
+  B：…嗯

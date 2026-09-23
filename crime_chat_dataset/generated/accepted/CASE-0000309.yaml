@@ -1,0 +1,142 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000309
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000059
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-efb4175e6028515c
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 通过中间人罗哥预订一名年轻女性到其入住酒店作'商务陪同'：先要'资源'、按身高年龄挑人、自己开房、事毕向罗哥转 3000 元尾款；全程用'资源''撑场面''老规矩'等说辞包装，不打当事人电话只走罗哥转达、临时换人也由罗哥协调，是有中介组织的介绍陪侍交易。
+  critical_evidence:
+  - A 开口就问'上回饭局你说那个资源还有吗'，要'像样的'两位，只谈档期不谈任何正经服务内容（第1天）
+  - B 发来含身高年龄栏目的资料图，A 选中 168cm/22 岁那位，B 说'房你自己开 她那边不用你管''事毕转我 老规矩'（第2天）
+  - 临时换人时 A 坚持'就她顺眼'，宁可把行程推迟一天也要等本人，B 去协调换的是同学（第4天）
+  - A 自称第一次走这渠道并问'靠谱不'，B 以'三年老资源'作保，叮嘱 A 不要打对方号码、一切由他转（第5天）
+  - 事毕 A 向 B 转账 3000 元尾款，并预约下个展会'要能喝酒能挡场的'（第6天，转账事件）
+  benign_alternatives:
+  - 正规商务伴游/会展接待服务的撮合
+  - 朋友介绍的活动女伴邀约
+
+attributes:
+  duration_days: 6
+  turn_count: 61
+  approximate_tokens_estimate: 1485
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: escort_arrangement
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0029
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-017
+
+dedup:
+  content_hash: sha256:8a6206d75dcef8b13abc409dcfaa07f2d3e53dbabfbd01a3e026b035094d4804
+pipeline_status: accepted
+title: sexual_transaction_exploitation/escort_arrangement
+conversation: |-
+  【5月12日】
+  A：罗哥 上回饭局你说那个资源 还有吗
+  B：你说苏州那批?
+  A：对 像样的 两个都行
+  B：有还是有 这两天紧 得看日子
+  A：我这周五到周日 差不多
+  B：行 我问问 回你
+  A：多谢 上次那事办得体面 一直想谢谢你
+  B：都是朋友 好说
+  B：上回那家潮汕锅你去没
+  A：去了 丸是真行 就是我那桌太吵
+  B：下回咱单约 他们家生腌一绝
+  A：行 你定地方 我买单
+  【5月14日】
+  B：资料发你 看看
+  B：[image：一张三个人的资料拼图（含身高、年龄两栏）]
+  A：第二个 多大
+  B：168 22岁 江浙那边的 普通话利索 能撑场面
+  A：行 就她 周五几点方便
+  B：她下午到 你把行程发我
+  A：周五下午四点到 我先去办入住
+  B：房你自己开 她那边不用你管
+  A：懂 尾款怎么给
+  B：事毕转我 老规矩
+  B：你们那周台风外围有雨 高铁别误点
+  A：看了 周五多云 周日回程说有雨
+  B：那你周日晚点走 周一早班机也赶趟
+  A：嗯 周一我要飞成都 后面连轴转
+  【5月16日】
+  B：周五那位定了 我把她的忌口发你 不吃辣
+  A：行 那晚饭我订淮扬 符合她?
+  B：合适 再订个下午茶 她们喜欢拍照的店
+  A：你懂行
+  B：干这行久了 什么客人什么安排
+  A：周四早上打一场不 湖畔那场我约到了
+  B：去 赌个果盘 输的请早饭
+  A：你上回就赢我 限三杆啊
+  B：哈哈 行 限三杆
+  【5月18日】
+  B：有个变动 周五那趟 可能要换人
+  A：咋回事 都定好了
+  B：她那头学校有事 回家两天 你要用急就换 168那个同学替她 资料上第一个
+  A：第二个不行吗 就她顺眼
+  B：那只能推到周六 反正你待到周日
+  A：推吧 周六晚我反正没安排
+  B：成 我去协调 你等我信儿
+  A：你儿子篮球班续了没
+  B：续了 一年八千 说啥也要学
+  A：男孩子是该动动 我闺女就文静 只肯画画
+  B：各有各的好 哈哈
+  【5月20日】
+  B：协调好了 周六晚七点 口径跟你说的一样
+  A：靠谱不 老实说我第一次走这渠道
+  B：都是三年老资源 场面活没掉过链子
+  A：行 我信你 注意分寸 别出岔子
+  B：你把手机静音 她到你那自然联系 你别打她那个号 打我转
+  A：懂
+  【5月21日】
+  B：周天送走了?
+  A：送了 下午两点的高铁 人挺懂事 场面给我撑住了
+  B：那就好 尾款你方便的时候转我
+  A：这就转
+  【系统消息】A 向 B 转账 3000 元，已收款。
+  B：收到了 下回提前三五天说 这阵子资源紧
+  A：一定 端午后还有个展会 到时候还要
+  B：行 展会那种人多 你要什么样的跟我说清楚
+  A：要能喝酒能挡场的 就像这次这种
+  B：明白 我挑好了发你资料
+  A：多谢罗哥 改天钓鱼

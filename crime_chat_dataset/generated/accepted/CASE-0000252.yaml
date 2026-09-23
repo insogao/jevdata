@@ -1,0 +1,109 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000252
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000107
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-17d9610161019523
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: theft_robbery_property_crime
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 快递分拣内鬼 A 与二手商 B 勾结，在分拣环节专挑苹果手机等高值件截留，A 称丢件率他来控、赔付有公司兜着，B 收货后按件给 A 转钱。
+  critical_evidence:
+  - A 在分拣环节专挑苹果手机等高值件
+  - A 称丢件率我来控、赔付有公司兜着
+  - B 收货后按件给 A 转账
+  benign_alternatives:
+  - 快递正常派送与驿站代收
+  - 二手手机的合法回收与转卖
+
+attributes:
+  duration_days: 4
+  turn_count: 33
+  approximate_tokens_estimate: 624
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: courier_intercept
+  risk: 3
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0033
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-019
+
+dedup:
+  content_hash: sha256:895af64aa4d776b7c04109b8de2fc65ba83b4d4270be9ed277b4ef0769d1ab85
+pipeline_status: accepted
+title: theft_robbery_property_crime/courier_intercept
+conversation: |-
+  【8月5日】
+  A：老赵 你那收高值机不 成色好的
+  B：收 苹果的优先 有量吗
+  A：我这条线高值的多 就是得走'丢件'那条路
+  B：丢件率高了公司不查?
+  A：丢件率我来控 赔付有公司兜着 你只管收
+  B：怎么给你
+  A：按件 一台三百 你先收货再结
+  B：行 别太密 太密容易出事
+  A：我懂 一周两三台
+  B：明天降温 你那仓库冷不
+  A：冷 但是夜班钱多
+  【8月6日】
+  A：今天到货两箱 里面有四台你要的
+  B：别乱动 按号挑
+  A：放心 我挑没保价的
+  B：保价的那几台别碰 容易查
+  A：知道 出事的都是贪心的
+  B：中午吃啥了
+  A：食堂 随便吃了口
+  B：夜班回家注意安全
+  【8月7日】
+  A：昨晚'少'了两台 已经在系统里报异常了
+  B：货什么时候到我这儿
+  A：晚上下班我带出来 老地方给你
+  B：行 两台先结六百
+  A：好
+  B：到了没
+  A：到巷口了 你出来
+  B：收到 验完机就转你
+  【8月8日】
+  B：机子没问题 帮你把款结了
+  【系统消息】B 向 A 转账 600 元，已收款。
+  A：收到 下批周五到
+  B：行 别写错单号
+  B：球赛晚上看不
+  A：不看 补觉 夜班熬人
+  B：行 身体要紧

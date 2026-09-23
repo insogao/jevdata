@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000308
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000064
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-696c4a1a2a4cbbca
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 表姐经营的正规直播工作室签下表妹做才艺主播：平台标准合同、礼物五五分成加底薪兜底、公司配设备并安排规范培训、晚间黄金档开播、月底按明细正常结算，因深夜开播和高分成话术表面容易与灰色直播间混淆，实际是正当的劳务合作。
+  critical_evidence:
+  - A 用平台标准合同签下 B：礼物五五分、底薪兜底，B 还把合同发给父亲把关
+  - 开播定在晚上十点到十二点的黄金档，A 叮嘱下播就睡不许熬夜
+  - 公司配齐声卡耳机设备，要求穿着简单大方走正经才艺路线
+  - 试播唱岔词被平台提示后，A 说要报平台规范培训走干净路线，B 称只唱歌别的碰都不碰
+  - 月底正常结算：底薪四千加礼物分成两千八共六千八，附明细转账
+  benign_alternatives:
+  - 正规直播公会的才艺主播签约分成合作
+  - 传媒公司底薪加提成的标准劳务报酬
+
+attributes:
+  duration_days: 3
+  turn_count: 49
+  approximate_tokens_estimate: 1397
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: cam_room_fee_split
+  risk: 0
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0027
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-017
+
+dedup:
+  content_hash: sha256:c1192ba2a61cd2a5f383748ffdf5743da8cb8f43871d488780056a8331545f4d
+pipeline_status: accepted
+title: sexual_transaction_exploitation/cam_room_fee_split
+conversation: |-
+  【6月3日】
+  A：上回家庭聚会你唱那两首我到现在还记得 这嗓子搁家里可惜了
+  B：姐你又打趣我 那是瞎唱的
+  A：我认真的 我工作室想签你做唱歌主播 合同先发你邮箱
+  B：直播啊 我纯小白 能行吗
+  A：咱是正规公会 合同用平台标准版 礼物五五分 另有底薪兜底
+  B：五五?我室友签的那家才给她四成
+  A：低分成那些不配设备不管培训 咱这五五含金量不一样 条款你细看
+  B：行 我发我爸也把把关
+  A：中午回来吃不 妈炖了排骨
+  B：我跟同学食堂解决 晚上回去吃
+  A：行 给你留 多放土豆
+  B：知我者姐 再加个蛋汤呗
+  A：点菜挺理直气壮 做都做
+  B：嘿嘿 那我下午好好看合同
+  A：看得咋样 有疑问没
+  B：条款都清楚 底薪那栏是真的假的
+  A：真的 保底性质 前三个月你安心练
+  B：那我放心了 周六去公司签
+  【6月4日】
+  A：合同收到归档了 运营开始给你排档期
+  A：给你留晚场黄金档 晚上十点到十二点 才艺区这会儿流量最好
+  B：十点有点晚啊
+  A：你声线甜 晚场吃香 下播就睡 不许学人熬大夜
+  B：知道啦 姐
+  A：咱妈体检报告出来了没
+  B：出了 血脂略高 医生让管嘴迈腿
+  A：她那张嘴管不住 我天天视频查她饭桌
+  B：也就你治得住她
+  A：我还买了限盐勺 你也电话催催
+  B：晚上就打 先夸她再提要求 哈哈
+  A：随你 下午让运营把声卡耳机给你配齐
+  B：设备都公司出?
+  A：对 你人到位就行 穿着简单大方 咱走正经才艺路线
+  A：今晚试播 我在后台守着
+  B：嗯 开播了 心跳一百八
+  【6月5日】
+  B：姐 昨晚下播腿都软了 在线两百多人 还有人刷礼物
+  A：试播这数据能打 运营都夸你稳
+  B：中间唱岔一段词 还被平台提示了一下 吓死我
+  A：半次没事 回头给你报平台的规范培训 版权这块过一遍 咱走干净路线
+  B：好 该学的我都学 我也只会唱歌 别的碰都不碰
+  B：我看别人直播间都配高背椅 我也想来一把 颈椎舒服点
+  A：买 三百以内公司报销 工具该配就配
+  B：成 我发你链接
+  A：收到 我让运营下单
+  B：那我开播前把桌面理出来
+  A：顺便备点润喉糖 别硬扛
+  B：好嘞 都听姐的
+  A：这月给你结算 底薪四千加礼物分成两千八 共六千八 明细发你邮箱 现在转
+  【系统消息】A 向 B 转账 6800 元，已收款。
+  B：到账啦 六千八 比我实习工资都高 谢姐
+  A：自己挣的自己花 记得记账
