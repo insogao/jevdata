@@ -1,0 +1,134 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002550
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-292251772a37faa5
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 借节日前的见面送给 B 一张购物卡，不说明卡面数额，之后提到自己关心的事项并希望 B 留意；B 依规登记或退还礼物，并坚持用公开的一致流程处理事项。
+  critical_evidence:
+  - 节日前 A 主动约 B 见面
+  - A 交给 B 一张购物卡但未说明面值，将其说成节日心意
+  - A 之后联系时提起自己的事项并希望 B 留意；B 清楚表示按公开流程处理、不提供特别照顾
+  benign_alternatives:
+  - 普通节日礼节和关系往来中的小礼物
+  - 公司统一的福利卡，未必与具体事项相连
+
+attributes:
+  duration_days: 4
+  turn_count: 58
+  approximate_tokens_estimate: 1502
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0259
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-114
+
+dedup:
+  content_hash: sha256:60326f5a7451f52da020676ba9d2a5f279fce24b2d848a76855f7b38329e47c1
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【4月7日】
+  A：假期前想当面聊几句，我周三会到你那一带。
+  B：周四我在，王经理。午后过来吧。
+  A：行，我就顺道带个小东西，聊两句就走。
+  A：我妈寄来的橘子到了，挺甜的。
+  B：那你留点，别一次吃太多。
+  A：已经分给隔壁同事一些了。
+  B：正好，大家都尝尝。
+  B：好啊，最近我这边会比较忙，别买太多。
+  A：这张购物卡给你，面值我没特意看，节前意思一下。
+  B：谢谢，不过我先查下规定，礼品我得按要求登记或退回。
+  A：没问题，你按规矩处理就好。
+  A：上回说的那件事我把资料递上去了。
+  A：你推荐的那本书我读完了，结尾没想到。
+  B：我也被最后一章绕进去了。
+  A：中间有几段写得挺慢的。
+  【4月8日】
+  B：当休息看还不错，作者的新书也出了。
+  B：收到后会统一核对，缺什么我会照清单通知你。
+  A：我那件事你有空想起时看一眼就行，不急。
+  B：我能提醒公开的要求，处理次序对大家都是一样的。
+  【系统消息】B 向 A 转账 60 元，已收款。
+  A：好，我不想因为这个让你难做。
+  B：这张卡不会影响办理，我也不会为谁另开方便。
+  A：我想把家里那盏落地灯换个位置。
+  B：线够长吗，别绊到人。
+  A：量过了，靠墙放刚好。
+  B：好，晚上看书会亮堂点。
+  A：明白，卡你看着制度处理。
+  B：嗯，之后有进展会统一通知。
+  A：那我先不打扰啦，节日快乐。
+  B：节日快乐，回头聊。
+  【4月9日】
+  A：你推荐的那本书我读完了，结尾没想到。
+  B：我也被最后一章绕进去了。
+  A：中间有几段写得挺慢的。
+  B：当休息看还不错，作者的新书也出了。
+  A：我把会议室的白板擦干净了，明天可以直接用。
+  B：谢谢，我明早有个小会，正好。
+  A：笔还剩蓝色和黑色，红色没找到。
+  B：我抽屉里有，明天带过去。
+  B：园区门口多了个快递柜，取件不用排队了。
+  A：这个方便，我昨天还等了十分钟。
+  B：手机上能看格口号，别忘了取。
+  A：好，我今天下班去拿。
+  A：我想把家里那盏落地灯换个位置。
+  B：线够长吗，别绊到人。
+  A：量过了，靠墙放刚好。
+  【4月10日】
+  B：好，晚上看书会亮堂点。
+  A：我把会议室的白板擦干净了，明天可以直接用。
+  B：谢谢，我明早有个小会，正好。
+  A：笔还剩蓝色和黑色，红色没找到。
+  B：我抽屉里有，明天带过去。
+  B：园区门口多了个快递柜，取件不用排队了。
+  A：这个方便，我昨天还等了十分钟。
+  B：手机上能看格口号，别忘了取。
+  A：好，我今天下班去拿。
+  A：我妈寄来的橘子到了，挺甜的。
+  B：那你留点，别一次吃太多。
+  A：已经分给隔壁同事一些了。
+  B：正好，大家都尝尝。
+  A：我把会议室的白板擦干净了，明天可以直接用。

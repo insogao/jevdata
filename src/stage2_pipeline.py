@@ -88,6 +88,16 @@ def program_checks(case):
         errs.append("transfer event present but has_transfer=false")
     if case["labels"]["risk"] == 0 and case["attributes"].get("suspicious_transfer_count", 0) > 0:
         errs.append("risk0 with suspicious transfer count > 0")
+    # 转账锚定检查：每笔转账金额必须出现在前后 3 条消息的台词里，
+    # 防止"系统事件有转账但对话只字未提"的孤立转账（0188/0203/0208 批缺陷）
+    for i, e in enumerate(events):
+        if e["type"] != "transfer":
+            continue
+        window = events[max(0, i - 3):i + 4]
+        anchored = any(w.get("type") == "message" and str(e.get("amount", "")) in w.get("text", "")
+                       for w in window)
+        if not anchored:
+            errs.append(f"unanchored transfer: {e.get('amount')} 元 @事件{i} 附近台词未提及金额")
     return errs
 
 

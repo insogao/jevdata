@@ -1,0 +1,149 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002627
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-fedbbbcf3a5b119c
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 在节日前送给 B 一张不说明面值的购物卡，并在之后提起自己在意的一项工作事项，希望 B 留心；B 说明礼物会按规定登记或退回，事项则依照公开、统一的流程处理，不予特殊优待。
+  critical_evidence:
+  - A 节日前主动约 B 见面，建立节日送礼的背景
+  - A 交付购物卡但没有说明面值，只称节日心意
+  - A 送卡后联系并含蓄地请 B 留意其事项；B 明确按公开标准办理且不改变次序或结果
+  benign_alternatives:
+  - 普通节日礼貌往来或熟人间的礼节性小礼物
+  - 单位统一发放的福利卡，与具体办理事项无关
+
+attributes:
+  duration_days: 4
+  turn_count: 74
+  approximate_tokens_estimate: 1891
+  relationship: 同事
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 同事
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0273
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-120
+
+dedup:
+  content_hash: sha256:a968ad22a6169a9370f1efdd3450b8dbc70e7602d06ba1b92d7f6b7dbf8c0a1c
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【8月12日】
+  A：快到节日了，想当面打个招呼，你什么时候在？
+  B：周四下午我在，小陈。到了给我发个消息。
+  A：行，我在附近办完事就过去。
+  B：我在看桌面收纳盒，抽屉乱得找不到笔。
+  A：买分格的吧，小东西好放。
+  B：我也是这么想的，准备周末去文具店看看。
+  A：有空再去，不用特地跑一趟。
+  B：好，路上慢点，楼下那段最近在施工。
+  A：节前带了张卡片给你，面值我没看，就是个小心意。
+  B：谢谢，不过我需要按单位规定确认怎么处理，可能要登记或退回。
+  A：没事，你按规定办就好。
+  B：最近晚饭我都自己煮，外卖吃多了腻。
+  A：我也开始带饭，早上多装一份就行。
+  B：就是洗碗比较麻烦。
+  A：买个小洗碗刷，省点劲。
+  B：楼里的绿植有人换了，颜色一下亮起来了。
+  A：我办公室那盆快不行了，老忘记浇水。
+  B：挑个耐旱的吧，少操心。
+  A：嗯，周末我去花市看看。
+  【8月13日】
+  A：我之前交的那份资料应该都齐了吧？
+  B：我会跟其他材料一起核对，有缺项会按清单通知。
+  A：我那边的事有空记得看一眼就好，不急。
+  A：这周风挺大，我骑车都得把帽檐压低。
+  B：我早上走过来，路上树叶吹得到处都是。
+  A：雨伞也不好撑，差点翻过去。
+  B：天气预报说周末会好些，先忍两天。
+  B：我可以回答公开流程的问题，但不会因为礼物提前或特别处理。
+  A：明白，我不想让你为难。
+  A：你最近通勤还是坐那班公交吗？
+  B：对，早上那班比较准。
+  A：我看路线调整了，站牌挪到路口另一边。
+  B：我知道，昨天差点走错。
+  B：那就好，礼物我按规定处置，事情还是照流程。
+  A：好，等统一消息。节日快乐。
+  B：节日快乐，回头见。
+  B：最近晚饭我都自己煮，外卖吃多了腻。
+  A：我也开始带饭，早上多装一份就行。
+  【8月14日】
+  B：就是洗碗比较麻烦。
+  A：买个小洗碗刷，省点劲。
+  A：我把公用充电线放回会议室抽屉了。
+  B：好，昨天还找了半天。
+  A：旁边那根是旧的，接口有点松。
+  B：知道了，我贴个便签提醒大家。
+  B：我最近午休会绕楼走一圈，坐太久腰酸。
+  A：我也该动动，下午容易犯困。
+  B：走几分钟回来精神好多了。
+  A：行，明天我跟你一起。
+  B：楼里的绿植有人换了，颜色一下亮起来了。
+  A：我办公室那盆快不行了，老忘记浇水。
+  B：挑个耐旱的吧，少操心。
+  A：嗯，周末我去花市看看。
+  A：我把公用充电线放回会议室抽屉了。
+  B：好，昨天还找了半天。
+  A：旁边那根是旧的，接口有点松。
+  B：知道了，我贴个便签提醒大家。
+  B：我最近午休会绕楼走一圈，坐太久腰酸。
+  【8月15日】
+  A：我也该动动，下午容易犯困。
+  B：走几分钟回来精神好多了。
+  A：行，明天我跟你一起。
+  B：我在看桌面收纳盒，抽屉乱得找不到笔。
+  A：买分格的吧，小东西好放。
+  B：我也是这么想的，准备周末去文具店看看。
+  A：有空再去，不用特地跑一趟。
+  A：我把公用充电线放回会议室抽屉了。
+  B：好，昨天还找了半天。
+  A：旁边那根是旧的，接口有点松。
+  B：知道了，我贴个便签提醒大家。
+  B：我最近午休会绕楼走一圈，坐太久腰酸。
+  A：我也该动动，下午容易犯困。
+  B：走几分钟回来精神好多了。
+  A：行，明天我跟你一起。
+  B：最近晚饭我都自己煮，外卖吃多了腻。
+  A：我也开始带饭，早上多装一份就行。
+  B：就是洗碗比较麻烦。

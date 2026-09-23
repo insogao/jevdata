@@ -1,0 +1,141 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002539
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-05cdd5cdfbc2a64a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 借客户满意度回访周私人送礼卡表达谢意，刻意不说面值，并在送卡前后暗示希望负责流程的B留意其申请；B指出礼物不得影响审批，拒收个人礼卡并要求申请继续走公开规则。
+  critical_evidence:
+  - A 在节前主动约见掌握流程的B
+  - A 提议送购物卡并刻意不说明面值
+  - A 在送礼前后暗示希望B留意或优先处理自己的申请
+  - B 区分个人礼物与单位福利卡，拒绝收礼并坚持公开流程
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司福利卡
+
+attributes:
+  duration_days: 4
+  turn_count: 64
+  approximate_tokens_estimate: 1423
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0260
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-115
+
+dedup:
+  content_hash: sha256:8f7edcf212e5bcb7323ce8d6cebb1b52ae28a5d95d63e079927ce85a5cdb8657
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【10月6日】
+  A：你好，听说你负责客户满意度回访周那批申请，想当面请教一下
+  B：你好，流程和材料清单在官网上，先看那里吧
+  A：我也想带张卡表达感谢，面值就不说了
+  A：最近通勤路上修路，公交绕了一站
+  B：我也发现了，早上多留十分钟
+  A：今天差点迟到，幸好会议也晚了
+  B：希望下周能修好
+  B：我不接受个人礼品。请不要送到办公室或家里
+  A：只是购物卡，很多人客户满意度回访周都会互相送
+  B：公司福利卡由单位统一发放，个人卡不同，请退回
+  A：你午饭吃什么了
+  B：食堂今天有番茄牛腩，还不错
+  A：我去晚了只剩面条
+  B：下次早点，十二点人最多
+  A：我那份申请能不能帮忙早点看
+  B：只能按提交顺序审核。补充材料请走窗口
+  【10月7日】
+  A：明白，我不会送卡了
+  B：外面风挺大，你带外套没
+  A：带了，早上看天气预报说降温
+  B：我穿少了，办公室空调也冷
+  A：我抽屉有件薄开衫，你要可以借
+  B：谢谢，之后请用公开联系方式咨询
+  A：收到，我先把资料核对完整
+  B：有需要就按流程提问
+  A：好的，晚点还要处理手头工作
+  B：忙完记得休息一下
+  A：谢谢提醒，我先去开会
+  B：好，有消息走系统通知
+  A：收到，我先把资料核对完整
+  B：有需要就按流程提问
+  A：好的，晚点还要处理手头工作
+  B：忙完记得休息一下
+  【10月8日】
+  【系统消息】A 向 B 转账 36 元，已收款。
+  A：谢谢提醒，我先去开会
+  B：好，有消息走系统通知
+  A：收到，我先把资料核对完整
+  B：有需要就按流程提问
+  A：好的，晚点还要处理手头工作
+  B：忙完记得休息一下
+  A：谢谢提醒，我先去开会
+  B：好，有消息走系统通知
+  A：收到，我先把资料核对完整
+  B：有需要就按流程提问
+  A：好的，晚点还要处理手头工作
+  B：忙完记得休息一下
+  A：谢谢提醒，我先去开会
+  B：好，有消息走系统通知
+  A：收到，我先把资料核对完整
+  B：有需要就按流程提问
+  【10月9日】
+  A：好的，晚点还要处理手头工作
+  B：忙完记得休息一下
+  A：谢谢提醒，我先去开会
+  B：好，有消息走系统通知
+  A：收到，我先把资料核对完整
+  B：有需要就按流程提问
+  A：好的，晚点还要处理手头工作
+  B：忙完记得休息一下
+  A：谢谢提醒，我先去开会
+  B：好，有消息走系统通知
+  A：收到，我先把资料核对完整
+  B：有需要就按流程提问
+  A：好的，晚点还要处理手头工作
+  B：忙完记得休息一下
+  A：谢谢提醒，我先去开会
+  B：好，有消息走系统通知

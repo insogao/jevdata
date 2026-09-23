@@ -1,0 +1,147 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002594
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-a3a3dfbc2cfac89a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 利用节日前见面的机会送出一张未说面值的购物卡，之后提及自己的一项申请或工作事项，希望 B 留心；B 依据单位规定处理礼物并表示按统一公开程序办理，不会给予特殊优待。
+  critical_evidence:
+  - 节日前 A 主动提出见面
+  - A 交付购物卡但没有说面值，只说是节日心意
+  - 送卡后 A 提及一件事项并请 B 留意；B 明确按相同公开标准处理并拒绝特别安排
+  benign_alternatives:
+  - 普通节日礼物或关系往来的礼节性表示
+  - 公司或团队发的福利卡，与事项无直接联系
+
+attributes:
+  duration_days: 2
+  turn_count: 74
+  approximate_tokens_estimate: 1987
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0264
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-116
+
+dedup:
+  content_hash: sha256:9e2e031dba11ecb4b53e458b7a0ddbb3eedc5ff1d282cc175c410c107a735269
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【9月10日】
+  A：这周找个时间见一面吧，我要去附近办点事。
+  B：我周三在办公室，老方。午后吧。
+  A：行，我正好要去附近，停一会就走。
+  B：我把家里的旧照片扫进电脑了，找到了好多小时候的。
+  A：我妈也总翻那些相册，说每张都有故事。
+  B：有几张我完全不记得拍过。
+  A：小时候的事都模糊了，挺有意思的。
+  B：好，到了告诉我，楼下最近在修门。
+  A：节日前这个给你，购物卡一张，具体面值我没留心。
+  B：谢谢你。我得先确认规定，礼物可能需要登记或者退回。
+  A：没事，按你们要求处理就好。
+  B：我们楼下新添了几张长椅，午休可以坐会儿。
+  A：挺好，屋里坐久了也该出去透气。
+  B：就是中午太阳有点晒。
+  A：带本书找阴凉处就行。
+  A：今天的会提前结束了，下午总算空出来。
+  B：太好了，手上的表格能慢慢核对。
+  A：我先把重复项标出来。
+  B：别着急，核完再发最终版。
+  A：我前阵子交的那份申请现在应该齐了。
+  B：我会照清单统一核对，有缺项会按相同方式联系。
+  A：我的申请能不能先看一下？我知道最后还是得按流程。
+  B：最近我在学做汤，昨晚第一次没煮咸。
+  A：进步很大啊，我每次都要加水补救。
+  B：这次照着菜谱少放了一点盐。
+  A：记下来，下回还按这个量。
+  B：我只能按队列办，不能因为这份心意调顺序。
+  A：知道的，不想让你不好做。
+  A：今天的会提前结束了，下午总算空出来。
+  B：太好了，手上的表格能慢慢核对。
+  A：我先把重复项标出来。
+  B：别着急，核完再发最终版。
+  B：那就好，礼物也会按规定处置。
+  A：行，后面有消息再说，先祝你假期愉快。
+  B：谢谢，你也好好休息。
+  B：我们楼下新添了几张长椅，午休可以坐会儿。
+  A：挺好，屋里坐久了也该出去透气。
+  【9月11日】
+  B：就是中午太阳有点晒。
+  A：带本书找阴凉处就行。
+  A：我把门禁卡套换了个颜色，省得跟公交卡弄混。
+  B：我也经常拿错，后来就贴了个小贴纸。
+  A：这个办法简单，我回去找一个。
+  B：别贴到芯片那面就行。
+  B：你们那边打印店开到几点？
+  A：好像七点半，我下班晚的话就赶不上。
+  B：附近商场里也有一家，周末才关门。
+  A：那我周末去，正好顺路买东西。
+  B：最近我在学做汤，昨晚第一次没煮咸。
+  A：进步很大啊，我每次都要加水补救。
+  B：这次照着菜谱少放了一点盐。
+  A：记下来，下回还按这个量。
+  A：我把门禁卡套换了个颜色，省得跟公交卡弄混。
+  B：我也经常拿错，后来就贴了个小贴纸。
+  A：这个办法简单，我回去找一个。
+  B：别贴到芯片那面就行。
+  B：你们那边打印店开到几点？
+  A：好像七点半，我下班晚的话就赶不上。
+  B：附近商场里也有一家，周末才关门。
+  A：那我周末去，正好顺路买东西。
+  B：我把家里的旧照片扫进电脑了，找到了好多小时候的。
+  A：我妈也总翻那些相册，说每张都有故事。
+  B：有几张我完全不记得拍过。
+  A：小时候的事都模糊了，挺有意思的。
+  A：我把门禁卡套换了个颜色，省得跟公交卡弄混。
+  B：我也经常拿错，后来就贴了个小贴纸。
+  A：这个办法简单，我回去找一个。
+  B：别贴到芯片那面就行。
+  B：你们那边打印店开到几点？
+  A：好像七点半，我下班晚的话就赶不上。
+  B：附近商场里也有一家，周末才关门。
+  A：那我周末去，正好顺路买东西。
+  B：我们楼下新添了几张长椅，午休可以坐会儿。
+  A：挺好，屋里坐久了也该出去透气。
+  B：就是中午太阳有点晒。

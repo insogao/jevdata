@@ -1,0 +1,117 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002446
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-14830214c66c4400
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 在节日前送给 B 一张未说明面值的购物卡，之后含蓄地提及自己关注的一件办理事项，希望 B 多加留意；B 按单位制度处理礼物，说明事项将依统一公开程序推进。
+  critical_evidence:
+  - A 在节日前主动约 B 见面，说明节日节点
+  - A 递给 B 一张购物卡但未说具体面值，称是节日心意
+  - A 在送卡后提及自己的事项并希望 B 留意；B 拒绝特别对待，明确按公开流程和相同标准处理
+  benign_alternatives:
+  - 普通节日问候或关系熟悉者的礼节性小礼物
+  - 团队统一采购或发放的福利卡
+
+attributes:
+  duration_days: 2
+  turn_count: 44
+  approximate_tokens_estimate: 1109
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0249
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-111
+
+dedup:
+  content_hash: sha256:d5eec23f1828d00e4ba76d41b8e5f2c0b93c314ffd8994838d5f50364730b657
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【10月9日】
+  A：假期前我会到你那边一趟，想当面问候下。
+  B：可以，阿凯。我周五在单位，下午方便。
+  A：好，我把东西顺手带来，咱们聊一会就行。
+  A：我最近午饭自己带，少点外卖。
+  B：省钱也清淡些。
+  A：昨晚多做了一点，今天正好吃。
+  B：不错，记得放冰箱。
+  B：别买太多，节前大家都忙。
+  A：就购物卡，具体面值我没看，算个节日问候。
+  B：谢谢你，不过我们这边收礼有要求，我得按规矩登记或者退回。
+  A：好，听你安排，我不想让你为难。
+  A：我换了个通勤路线，早上能少等一班车。
+  B：那挺好，最近站台人特别多。
+  A：就是得多走几分钟，算锻炼吧。
+  B：嗯，走走也舒服些。
+  A：我前两天交的申请已经补齐了。
+  B：我看到了，后面按统一顺序核对，有问题会一次性通知。
+  A：我之前提的事情你记得就行，有空再说。
+  B：周末附近有市集，听说有手作摊位。
+  A：我看到了，想去买个杯垫。
+  B：我也想逛逛，别太早去就行。
+  A：好，睡够了再出门。
+  【10月10日】
+  B：我会按所有人的标准处理，不会因为这份心意改变顺序。
+  A：明白，我就是节前来看看你，事情照常办。
+  B：上周买的那盆薄荷长新叶了。
+  A：放窗边吗？我那盆晒太多反而蔫了。
+  B：我挪到散光的地方就好多了。
+  A：我回去也试试看。
+  B：那就好，礼物也会按规定处理。
+  A：行，等消息吧，祝你假期轻松点。
+  B：谢谢，也祝你假期愉快。
+  A：办公室打印机又卡纸了，今天折腾半天。
+  B：是不是纸放太满？
+  A：可能吧，我叫同事看了下，已经好了。
+  B：那就好，别耽误你交材料。
+  B：我把上次借的书放前台了，空了拿一下。
+  A：看到了，多谢，我这几天正好想读。
+  B：里面有张书签，别夹丢了。
+  A：好，回头还你。
+  A：你们楼下那家早餐店还开着吗？
+  B：开着呢，豆浆换了新杯子，别的没变。
+  A：哈哈，杯子倒是比以前好拿。
+  B：是吧，我今天还顺手买了个包子。
+  A：我最近午饭自己带，少点外卖。

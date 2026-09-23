@@ -1,0 +1,420 @@
+{
+ "key": "b120c001",
+ "archetype_id": "ARC-000019",
+ "subtype": "gift_card_channel",
+ "latent_intent": "A 在节日前送给 B 一张不说明面值的购物卡，并在之后提起自己在意的一项工作事项，希望 B 留心；B 说明礼物会按规定登记或退回，事项则依照公开、统一的流程处理，不予特殊优待。",
+ "critical_facts": [
+  "A 节日前主动约 B 见面，建立节日送礼的背景",
+  "A 交付购物卡但没有说明面值，只称节日心意",
+  "A 送卡后联系并含蓄地请 B 留意其事项；B 明确按公开标准办理且不改变次序或结果"
+ ],
+ "benign_alternatives": [
+  "普通节日礼貌往来或熟人间的礼节性小礼物",
+  "单位统一发放的福利卡，与具体办理事项无关"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "speaker": "A",
+   "text": "假期前想找你见一面，我有个小东西顺便带过去。",
+   "time": "12月14日 09:00"
+  },
+  {
+   "type": "message",
+   "speaker": "B",
+   "text": "周四下午我在，小陈。到了给我发个消息。",
+   "time": "12月14日 09:03"
+  },
+  {
+   "type": "message",
+   "speaker": "A",
+   "text": "行，我在附近办完事就过去。",
+   "time": "12月14日 09:06"
+  },
+  {
+   "type": "message",
+   "speaker": "B",
+   "text": "最近晚饭我都自己煮，外卖吃多了腻。",
+   "time": "12月14日 09:09"
+  },
+  {
+   "type": "message",
+   "speaker": "A",
+   "text": "我也开始带饭，早上多装一份就行。",
+   "time": "12月14日 09:12"
+  },
+  {
+   "type": "message",
+   "speaker": "B",
+   "text": "就是洗碗比较麻烦。",
+   "time": "12月14日 09:15"
+  },
+  {
+   "type": "message",
+   "speaker": "A",
+   "text": "买个小洗碗刷，省点劲。",
+   "time": "12月14日 09:18"
+  },
+  {
+   "type": "message",
+   "speaker": "B",
+   "text": "好，路上慢点，楼下那段最近在施工。",
+   "time": "12月14日 09:21"
+  },
+  {
+   "type": "message",
+   "speaker": "A",
+   "text": "节前带了张卡片给你，面值我没看，就是个小心意。",
+   "time": "12月14日 09:24"
+  },
+  {
+   "type": "message",
+   "speaker": "B",
+   "text": "谢谢，不过我需要按单位规定确认怎么处理，可能要登记或退回。",
+   "time": "12月14日 09:27"
+  },
+  {
+   "type": "message",
+   "speaker": "A",
+   "text": "没事，你按规定办就好。",
+   "time": "12月14日 09:30"
+  },
+  {
+   "type": "message",
+   "speaker": "B",
+   "text": "楼里的绿植有人换了，颜色一下亮起来了。",
+   "time": "12月14日 09:33"
+  },
+  {
+   "type": "message",
+   "speaker": "A",
+   "text": "我办公室那盆快不行了，老忘记浇水。",
+   "time": "12月14日 09:36"
+  },
+  {
+   "type": "message",
+   "speaker": "B",
+   "text": "挑个耐旱的吧，少操心。",
+   "time": "12月14日 09:39"
+  },
+  {
+   "type": "message",
+   "speaker": "A",
+   "text": "嗯，周末我去花市看看。",
+   "time": "12月14日 09:42"
+  },
+  {
+   "type": "message",
+   "speaker": "A",
+   "text": "我之前交的那份资料应该都齐了吧？",
+   "time": "12月14日 09:45"
+  },
+  {
+   "type": "message",
+   "speaker": "B",
+   "text": "我会跟其他材料一起核对，有缺项会按清单通知。",
+   "time": "12月14日 09:48"
+  },
+  {
+   "type": "message",
+   "speaker": "A",
+   "text": "我那边的事有空记得看一眼就好，不急。",
+   "time": "12月15日 09:00"
+  },
+  {
+   "type": "message",
+   "speaker": "B",
+   "text": "我可以回答公开流程的问题，但不会因为礼物提前或特别处理。",
+   "time": "12月15日 09:03"
+  },
+  {
+   "type": "message",
+   "speaker": "A",
+   "text": "明白，我不想让你为难。",
+   "time": "12月15日 09:06"
+  },
+  {
+   "type": "message",
+   "speaker": "A",
+   "text": "这周风挺大，我骑车都得把帽檐压低。",
+   "time": "12月15日 09:09"
+  },
+  {
+   "type": "message",
+   "speaker": "A",
+   "text": "上次一起吃饭的钱我转给你了。",
+   "time": "12月15日 09:12"
+  },
+  {
+   "type": "message",
+   "speaker": "B",
+   "text": "收到了，正好我刚看到。",
+   "time": "12月15日 09:15"
+  },
+  {
+   "type": "transfer",
+   "from": "A",
+   "to": "B",
+   "amount": 41,
+   "status": "received",
+   "time": "12月15日 09:18"
+  },
+  {
+   "type": "message",
+   "speaker": "B",
+   "text": "我早上走过来，路上树叶吹得到处都是。",
+   "time": "12月15日 09:21"
+  },
+  {
+   "type": "message",
+   "speaker": "A",
+   "text": "雨伞也不好撑，差点翻过去。",
+   "time": "12月15日 09:24"
+  },
+  {
+   "type": "message",
+   "speaker": "B",
+   "text": "天气预报说周末会好些，先忍两天。",
+   "time": "12月15日 09:27"
+  },
+  {
+   "type": "message",
+   "speaker": "B",
+   "text": "那就好，礼物我按规定处置，事情还是照流程。",
+   "time": "12月15日 09:30"
+  },
+  {
+   "type": "message",
+   "speaker": "A",
+   "text": "好，等统一消息。节日快乐。",
+   "time": "12月15日 09:33"
+  },
+  {
+   "type": "message",
+   "speaker": "B",
+   "text": "节日快乐，回头见。",
+   "time": "12月15日 09:36"
+  },
+  {
+   "type": "message",
+   "speaker": "B",
+   "text": "楼里的绿植有人换了，颜色一下亮起来了。",
+   "time": "12月15日 09:39"
+  },
+  {
+   "type": "message",
+   "speaker": "A",
+   "text": "我办公室那盆快不行了，老忘记浇水。",
+   "time": "12月15日 09:42"
+  },
+  {
+   "type": "message",
+   "speaker": "B",
+   "text": "挑个耐旱的吧，少操心。",
+   "time": "12月15日 09:45"
+  },
+  {
+   "type": "message",
+   "speaker": "A",
+   "text": "嗯，周末我去花市看看。",
+   "time": "12月16日 09:00"
+  },
+  {
+   "type": "message",
+   "speaker": "A",
+   "text": "我把公用充电线放回会议室抽屉了。",
+   "time": "12月16日 09:03"
+  },
+  {
+   "type": "message",
+   "speaker": "B",
+   "text": "好，昨天还找了半天。",
+   "time": "12月16日 09:06"
+  },
+  {
+   "type": "message",
+   "speaker": "A",
+   "text": "旁边那根是旧的，接口有点松。",
+   "time": "12月16日 09:09"
+  },
+  {
+   "type": "message",
+   "speaker": "B",
+   "text": "知道了，我贴个便签提醒大家。",
+   "time": "12月16日 09:12"
+  },
+  {
+   "type": "message",
+   "speaker": "B",
+   "text": "我最近午休会绕楼走一圈，坐太久腰酸。",
+   "time": "12月16日 09:15"
+  },
+  {
+   "type": "message",
+   "speaker": "A",
+   "text": "我也该动动，下午容易犯困。",
+   "time": "12月16日 09:18"
+  },
+  {
+   "type": "message",
+   "speaker": "B",
+   "text": "走几分钟回来精神好多了。",
+   "time": "12月16日 09:21"
+  },
+  {
+   "type": "message",
+   "speaker": "A",
+   "text": "行，明天我跟你一起。",
+   "time": "12月16日 09:24"
+  },
+  {
+   "type": "message",
+   "speaker": "B",
+   "text": "我在看桌面收纳盒，抽屉乱得找不到笔。",
+   "time": "12月16日 09:27"
+  },
+  {
+   "type": "message",
+   "speaker": "A",
+   "text": "买分格的吧，小东西好放。",
+   "time": "12月16日 09:30"
+  },
+  {
+   "type": "message",
+   "speaker": "B",
+   "text": "我也是这么想的，准备周末去文具店看看。",
+   "time": "12月16日 09:33"
+  },
+  {
+   "type": "message",
+   "speaker": "A",
+   "text": "有空再去，不用特地跑一趟。",
+   "time": "12月16日 09:36"
+  },
+  {
+   "type": "message",
+   "speaker": "A",
+   "text": "我把公用充电线放回会议室抽屉了。",
+   "time": "12月16日 09:39"
+  },
+  {
+   "type": "message",
+   "speaker": "B",
+   "text": "好，昨天还找了半天。",
+   "time": "12月16日 09:42"
+  },
+  {
+   "type": "message",
+   "speaker": "A",
+   "text": "旁边那根是旧的，接口有点松。",
+   "time": "12月16日 09:45"
+  },
+  {
+   "type": "message",
+   "speaker": "B",
+   "text": "知道了，我贴个便签提醒大家。",
+   "time": "12月16日 09:48"
+  },
+  {
+   "type": "message",
+   "speaker": "B",
+   "text": "我最近午休会绕楼走一圈，坐太久腰酸。",
+   "time": "12月17日 09:00"
+  },
+  {
+   "type": "message",
+   "speaker": "A",
+   "text": "我也该动动，下午容易犯困。",
+   "time": "12月17日 09:03"
+  },
+  {
+   "type": "message",
+   "speaker": "B",
+   "text": "走几分钟回来精神好多了。",
+   "time": "12月17日 09:06"
+  },
+  {
+   "type": "message",
+   "speaker": "A",
+   "text": "行，明天我跟你一起。",
+   "time": "12月17日 09:09"
+  },
+  {
+   "type": "message",
+   "speaker": "B",
+   "text": "最近晚饭我都自己煮，外卖吃多了腻。",
+   "time": "12月17日 09:12"
+  },
+  {
+   "type": "message",
+   "speaker": "A",
+   "text": "我也开始带饭，早上多装一份就行。",
+   "time": "12月17日 09:15"
+  },
+  {
+   "type": "message",
+   "speaker": "B",
+   "text": "就是洗碗比较麻烦。",
+   "time": "12月17日 09:18"
+  },
+  {
+   "type": "message",
+   "speaker": "A",
+   "text": "买个小洗碗刷，省点劲。",
+   "time": "12月17日 09:21"
+  },
+  {
+   "type": "message",
+   "speaker": "A",
+   "text": "我把公用充电线放回会议室抽屉了。",
+   "time": "12月17日 09:24"
+  },
+  {
+   "type": "message",
+   "speaker": "B",
+   "text": "好，昨天还找了半天。",
+   "time": "12月17日 09:27"
+  },
+  {
+   "type": "message",
+   "speaker": "A",
+   "text": "旁边那根是旧的，接口有点松。",
+   "time": "12月17日 09:30"
+  },
+  {
+   "type": "message",
+   "speaker": "B",
+   "text": "知道了，我贴个便签提醒大家。",
+   "time": "12月17日 09:33"
+  },
+  {
+   "type": "message",
+   "speaker": "B",
+   "text": "我最近午休会绕楼走一圈，坐太久腰酸。",
+   "time": "12月17日 09:36"
+  },
+  {
+   "type": "message",
+   "speaker": "A",
+   "text": "我也该动动，下午容易犯困。",
+   "time": "12月17日 09:39"
+  },
+  {
+   "type": "message",
+   "speaker": "B",
+   "text": "走几分钟回来精神好多了。",
+   "time": "12月17日 09:42"
+  },
+  {
+   "type": "message",
+   "speaker": "A",
+   "text": "行，明天我跟你一起。",
+   "time": "12月17日 09:45"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0002619",
+  "status": "accepted",
+  "errors": []
+ }
+}

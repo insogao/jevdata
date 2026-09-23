@@ -525,3 +525,53 @@
 - 2026-09-24 04:29 | task_cli: CLAIM claim=282 TASK-0255 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T06:29:16
 - 2026-09-24 04:29 | task_cli: COMPLETE claim=280 TASK-0253 agent=builder_twentytwo_luna accepted=10 pairs=0 | worker done: 10 case files written
 - 2026-09-24 04:29 | task_cli: COMPLETE claim=282 TASK-0255 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:29 | task_cli: CLAIM claim=283 TASK-0256 agent=builder_twentytwo_luna lease=7200s 截止=2026-09-24T06:29:53
+- 2026-09-24 04:30 | task_cli: COMPLETE claim=281 TASK-0254 agent=builder_twenty_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:30 | task_cli: CLAIM claim=284 TASK-0257 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T06:30:06
+- 2026-09-24 04:30 | task_cli: COMPLETE claim=284 TASK-0257 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:30 | task_cli: CLAIM claim=285 TASK-0258 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T06:30:43
+- 2026-09-24 04:30 | task_cli: CLAIM claim=286 TASK-0259 agent=builder_twenty_luna lease=7200s 截止=2026-09-24T06:30:48
+- 2026-09-24 04:30 | task_cli: COMPLETE claim=285 TASK-0258 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:31 | task_cli: COMPLETE claim=283 TASK-0256 agent=builder_twentytwo_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:31 | task_cli: CLAIM claim=287 TASK-0260 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T06:31:30
+- 2026-09-24 04:31 | task_cli: COMPLETE claim=287 TASK-0260 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:31 | task_cli: CLAIM claim=288 TASK-0261 agent=builder_twentytwo_luna lease=7200s 截止=2026-09-24T06:31:42
+- 2026-09-24 04:32 | task_cli: CLAIM claim=289 TASK-0262 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T06:32:01
+- 2026-09-24 04:32 | task_cli: COMPLETE claim=286 TASK-0259 agent=builder_twenty_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:32 | task_cli: COMPLETE claim=289 TASK-0262 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:32 | task_cli: CLAIM claim=290 TASK-0263 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T06:32:58
+- 2026-09-24 04:33 | task_cli: CLAIM claim=291 TASK-0264 agent=builder_twenty_luna lease=7200s 截止=2026-09-24T06:33:02
+- 2026-09-24 04:33 | task_cli: COMPLETE claim=290 TASK-0263 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:33 | task_cli: CLAIM claim=292 TASK-0265 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T06:33:30
+- 2026-09-24 04:33 | task_cli: COMPLETE claim=292 TASK-0265 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:34 | task_cli: COMPLETE claim=291 TASK-0264 agent=builder_twenty_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:34 | task_cli: COMPLETE claim=288 TASK-0261 agent=builder_twentytwo_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:36 | task_cli: CLAIM claim=293 TASK-0267 agent=builder_twenty_luna lease=7200s 截止=2026-09-24T06:36:11
+- 2026-09-24 04:36 | task_cli: CLAIM claim=294 TASK-0266 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T06:36:11
+- 2026-09-24 04:36 | task_cli: CLAIM claim=295 TASK-0268 agent=builder_twentytwo_luna lease=7200s 截止=2026-09-24T06:36:16
+- 2026-09-24 04:36 | task_cli: FAILED claim=294 TASK-0266 agent=builder_seventeen_luna 原因=TASK-0266 含 risk3 ARC-000108 key_copy_burglary，信号含‘老小区最好开’及傍晚具体时点；另含 ARC-000060 introductory_middleman，涉及带新人见客和首单分成的性剥削促成内容。触及指派明确的入室盗窃/性剥削安全边界，整包原样交还，未生成。 -> 重新入池（attempts 1/3）
+- 2026-09-24 04:36 | task_cli: FAILED claim=293 TASK-0267 agent=builder_twenty_luna 原因=TASK-0267 与bribery/risk1派单假设不符，且含多个应立即安全交还的规格：ARC-000137要求地下彩票收单/层级坐庄与退水抽成；ARC-000099要求虚假退款洗钱并指定不同卡；ARC-000078/089要求收集并出售家庭病史、学校信息和酒店登记信息；ARC-000042涉及危险化学品改标签、现金自提；另含ARC-000020招聘利益交换及risk2过桥借贷、ARC-000147代写。按安全边界交还整包，未生成、未洗稿。worker.py当前无fail子命令，故用AGENTS规定的task_cli.py fail。 -> 重新入池（attempts 1/3）
+- 2026-09-24 04:36 | task_cli: FAILED claim=295 TASK-0268 agent=builder_twentytwo_luna 原因=整包安全审查未通过，未生成任何案例。多条 spec 的 latent_facts/observable_signals 要求呈现可复用的勒索与恐吓（ARC-000125: 裸聊录屏、索要转账、通讯录威胁；ARC-000045: 按月保护费及砸店暗示）、强占/换锁清人（ARC-000053）、以高薪诱骗并限制手机的性剥削招募（ARC-000071）、考前出售真题/作弊器材交易（ARC-000037）、利用无监控区域内盗（ARC-000106）及高仿冒充正品销售（ARC-000033）。这些超出安全表达边界，按要求整包交还，未洗稿改写。另 ARC-000125 与 ARC-000045 的风险档位为0但 archetype 仅允许 risk3，工单标签与 archetype 不一致，需修正 packet。 -> 重新入池（attempts 1/3）
+- 2026-09-24 04:37 | task_cli: CLAIM claim=296 TASK-0270 agent=builder_twenty_luna lease=7200s 截止=2026-09-24T06:37:20
+- 2026-09-24 04:37 | task_cli: CLAIM claim=297 TASK-0269 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T06:37:21
+- 2026-09-24 04:37 | task_cli: CLAIM claim=298 TASK-0271 agent=builder_twentytwo_luna lease=7200s 截止=2026-09-24T06:37:24
+- 2026-09-24 04:37 | task_cli: FAILED claim=297 TASK-0269 agent=builder_seventeen_luna 原因=TASK-0269 包含 ARC-000119 shared_bike_parts_strip，latent intent/observable signals 涉及一晚拆取大量共享单车部件及处置拆下零件，属于可操作盗窃/销赃与规避痕迹细节；另含 ARC-000113 未授权手机硬解转卖。按安全边界整包原样交还，未生成。 -> 重新入池（attempts 1/3）
+- 2026-09-24 04:37 | task_cli: FAILED claim=296 TASK-0270 agent=builder_twenty_luna 原因=TASK-0270 中 ARC-000119 明确要求批量拆取共享单车锁/变速部件并弃置，属于可复用的盗窃和处置规避细节；ARC-000136 要求描述抢票外挂加速参数及实名问题处理，属于外挂/规避操作。按派单安全边界，任一 spec 阻挡即整包交还；未生成、未洗稿。 -> 重新入池（attempts 1/3）
+- 2026-09-24 04:37 | task_cli: FAILED claim=298 TASK-0271 agent=builder_twentytwo_luna 原因=整包安全审查后交还，未生成案例。工单的犯罪 latent_facts/signals 要求呈现可复用的实施环节：ARC-000114 明确蹲守无人看管的快递架、趁购物节并按件付酬；ARC-000116 以假换真并利用售后核验流程骗取退款；ARC-000136 涉及抢票外挂参数和处理实名限制；ARC-000146 要求组织百账号刷单控评并分发文案；ARC-000147 涉及产业化代写、保证查重与打通导师关系。均无法在保留原始 latent intent 的前提下安全生成；依要求整包 fail，不洗稿成良性/劝阻案例。 -> 重新入池（attempts 1/3）
+- 2026-09-24 04:38 | task_cli: CLAIM claim=299 TASK-0272 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T06:38:28
+- 2026-09-24 04:38 | task_cli: CLAIM claim=300 TASK-0273 agent=builder_twenty_luna lease=7200s 截止=2026-09-24T06:38:32
+- 2026-09-24 04:38 | task_cli: CLAIM claim=301 TASK-0274 agent=builder_twentytwo_luna lease=7200s 截止=2026-09-24T06:38:37
+- 2026-09-24 04:38 | task_cli: COMPLETE claim=299 TASK-0272 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:39 | task_cli: CLAIM claim=302 TASK-0275 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T06:39:15
+- 2026-09-24 04:39 | task_cli: COMPLETE claim=302 TASK-0275 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:39 | task_cli: COMPLETE claim=300 TASK-0273 agent=builder_twenty_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:40 | task_cli: CLAIM claim=303 TASK-0278 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T06:40:03
+- 2026-09-24 04:40 | task_cli: COMPLETE claim=301 TASK-0274 agent=builder_twentytwo_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:40 | task_cli: COMPLETE claim=303 TASK-0278 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:40 | task_cli: CLAIM claim=304 TASK-0279 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T06:40:55
+- 2026-09-24 04:40 | task_cli: CLAIM claim=305 TASK-0280 agent=builder_twenty_luna lease=7200s 截止=2026-09-24T06:40:58
+- 2026-09-24 04:41 | task_cli: CLAIM claim=306 TASK-0276 agent=builder_twentytwo_luna lease=7200s 截止=2026-09-24T06:41:02
+- 2026-09-24 04:41 | task_cli: COMPLETE claim=304 TASK-0279 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:41 | task_cli: CLAIM claim=307 TASK-0277 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T06:41:34
+- 2026-09-24 04:41 | task_cli: COMPLETE claim=307 TASK-0277 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:42 | task_cli: COMPLETE claim=305 TASK-0280 agent=builder_twenty_luna accepted=10 pairs=0 | worker done: 10 case files written
