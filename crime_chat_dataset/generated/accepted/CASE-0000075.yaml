@@ -1,0 +1,144 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000075
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000011
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-a84caaade06d68e6
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 冒充航司客服以“航班取消、全额退票加补偿”为饵，诱导出差乘客安装会议软件、交出短信数字，并先行转入2000元“验证金”，次日再加码时被乘客识破。
+  critical_evidence:
+  - A主动来电称航班取消，可全额退票并另付800元补偿
+  - 引导乘客下载“云会通”会议软件，由“专员”远程引导操作
+  - 索要银行短信中的六位数字，并要求向指定账户转2000元“验证金”且备注留空
+  - 次日以“二次核验”追加5000元，乘客致电航司官方核实后识破并报警
+  benign_alternatives:
+  - 航司真实退改签回电服务
+  - 订票平台客服的正常理赔流程
+
+attributes:
+  duration_days: 2
+  turn_count: 69
+  approximate_tokens_estimate: 1960
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: customer_service_reverse
+  risk: 2
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0012
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-012
+
+dedup:
+  content_hash: sha256:12195b33fbd5d2fe985627dc7a906d48fbf9da7789638c3651f50c50931fb6e3
+pipeline_status: accepted
+title: fraud_scam/customer_service_reverse
+conversation: |-
+  【10月12日】
+  B：您好，刚才接到电话说我明早的航班取消了，让我加这个号核实，是您这边吗
+  A：您好，我是云程航空客服专员小安，工号1029。朱先生是吧，您明早7点20的云程2157
+  B：对，是我，怎么回事啊，我明早还要赶签约会
+  A：系统显示该航班机械故障取消，公司统一为旅客办理全额退票，另有延误补偿800元
+  B：票是平台上买的，也一起退吗
+  A：平台只管出票，补偿金走公司内部通道，我这边一对一给您办
+  B：哦哦，要多久，我晚上还有个应酬
+  A：快的话十几分钟，您配合就行
+  A：为保障办理过程安全，您先下载“云会通”会议软件，专员远程引导您操作
+  B：还要装软件啊，有点麻烦
+  A：补偿通道是内部端口，普通页面进不去，装机是标准流程，您放心
+  B：行吧，装好了
+  A：进我发的会议室，稍后别挂断，我一步步带您走
+  B：嗯嗯
+  A：先核对信息：朱先生，身份证尾号6607，手机尾号3309，对吧
+  B：对的
+  A：现在为您提交补偿，稍后银行发来一条带六位数字的短信，您把数字报给我录入
+  B：还要短信数字啊，不是直接退卡里吗
+  A：那是通道授权凭据，不录入就锁单，补偿作废
+  B：哦……好，等下
+  A：收到了吗
+  B：收到了，337415
+  A：已录入，系统处理中，请勿挂断
+  B：专员，我托运的行李怎么办，改签信息里没提
+  A：已自动带上行李额度，您明早正常值机就行
+  B：那我这套西装就不用拎着了
+  A：不用，祝您签约顺利
+  A：朱先生，系统提示您的银行卡接收通道异常，补偿被冻结了
+  B：怎么会异常呢
+  A：需转入2000元资金验证金激活通道，赔付和验证金一起退回，是通行流程
+  B：赔800要先转2000？
+  A：验证金只是过账，五分钟原路退回，好多旅客都在办
+  B：转哪个账户
+  A：系统生成的安全账户，我发您，备注什么都不要写
+  B：……行，我转
+  【系统消息】B 向 A 转账 2000 元，已收款。
+  A：收到，通道激活中，最迟今晚十二点赔付到账
+  B：专员，我去饭局了，手机调静音，有进展微信说
+  A：好，到账前保持畅通
+  【10月13日】
+  A：朱先生早，您的补偿已出账，请查收
+  B：没到啊，卡里没动静
+  A：可能到账延迟，我帮您催办
+  B：还没到！你们到底靠不靠谱，我航班都误了
+  A：您的账户触发二次核验，需再转5000元解冻金，退赔时一并返还
+  B：又要转？！
+  B：我早上打了云程官方电话，人家说航班根本没取消，正常飞，也没有什么补偿
+  A：官方客服只受理普通业务，内部通道他们看不到
+  B：那这个会议软件算什么，官方说从没让乘客装过
+  A：朱先生别激动，这个流程每年服务上万人……
+  B：把2000还我，不然我报警
+  A：您这是误解，资金都在系统里……
+  B：通话我录了，会议记录也在
+  A：……
+  A：朱先生冷静，都是误会，钱今天安排退
+  B：合同倒是签完了，就等你那笔钱，下午三点前到账
+  A：恭喜朱先生，我加急
+  B：这天说冷就冷，你们那儿呢
+  A：也降温了，您添衣
+  B：跟你说天气回得挺快，说钱就打太极
+  A：……
+  B：晚饭都没心思吃，点了碗粥对付
+  A：朱先生，2000今晚一定安排
+  B：看你表现
+  B：还没到账，你到底是不是云程的人
+  A：朱先生，实在抱歉，公司流程复杂……
+  B：我不管了，派出所笔录都做完了，转账记录、录音、会议软件全交上去了
+  B：警官说你们这种号很快会被处理，2000就当买个教训，你收手吧
+  A：朱先生，话别说这么绝……
+  B：没什么好说的，等警察找你
+  A：……

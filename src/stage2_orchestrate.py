@@ -166,7 +166,7 @@ def register_batch(task_ids):
         pkt = json.loads((TASKS / tid / "packet.json").read_text(encoding="utf-8"))
         for c in pkt["cases"]:
             packets[c["key"]] = c
-        for f in sorted((TASKS / tid / "cases").glob("case_*.json")):
+        for f in sorted((TASKS / tid / "cases").glob("*.json")):
             try:
                 gen = json.loads(f.read_text(encoding="utf-8"))
                 spec = packets[gen["key"]]
@@ -235,7 +235,7 @@ def judge_inputs(task_ids):
     out.mkdir(parents=True, exist_ok=True)
     n = 0
     for tid in task_ids:
-        for f in sorted((TASKS / tid / "cases").glob("case_*.json")):
+        for f in sorted((TASKS / tid / "cases").glob("*.json")):
             gen = json.loads(f.read_text(encoding="utf-8"))
             reg = gen.get("_registered")
             if not reg or reg["status"] != "accepted":
@@ -251,7 +251,7 @@ def compare(judgement_file):
     rows = [json.loads(l) for l in Path(judgement_file).read_text(encoding="utf-8").splitlines() if l.strip()]
     agree = disagree = 0
     for r in rows:
-        if r.get("judge") != "PRM-RISKJUDGE-001":
+        if r.get("pass") != "risk":
             continue
         cid, jr = r["case_id"], r["out"]["operational_risk"]
         tr = conn.execute("SELECT risk, status FROM cases WHERE case_id=?", (cid,)).fetchone()

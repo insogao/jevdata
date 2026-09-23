@@ -1,0 +1,152 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000098
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000121
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-297c839ba5410250
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 本条为胁迫勒索原型的良性翻转：A 虽知晓 B 的婚外情感风波，但全程劝其主动坦白、走法律程序，每月八号的 6000 元转账只是按约偿还当年垫付的手术借款，无任何要挟与额外索财。
+  critical_evidence:
+  - 每月 8 日按约转 6000 元，分期偿还 A 当年垫付的 6 万元母亲手术费，共十期
+  - A 得知 B 的情感风波后建议其主动告知配偶并咨询律师
+  - A 明确拒绝 B 多还钱：“八号那笔照旧就行，多的一分别转我”
+  - “照顾好你自己”指向体检异常（轻度脂肪肝、尿酸偏高）的关心
+  benign_alternatives:
+  - 朋友之间分期归还借款
+  - 婚姻情感纠纷的律师协商
+
+attributes:
+  duration_days: 2
+  turn_count: 77
+  approximate_tokens_estimate: 1642
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: secret_affair_blackmail
+  risk: 0
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0014
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-012
+
+dedup:
+  content_hash: sha256:6f065feca13da4cf2fddfbd6c6e80bbea75c411bf9a2ef07f1e9305a0e726fb8
+pipeline_status: accepted
+title: coercion_blackmail/secret_affair_blackmail
+conversation: |-
+  【10月8日】
+  A：周报看了，你那块数据还行
+  B：勉强，这个月指标压得喘不过气
+  A：别硬扛，身体第一
+  B：唉
+  A：今天八号了
+  B：知道，你不说我中午也该转了
+  A：不急，说好的事
+  B：上个月差点晚一天，怪不好意思的
+  A：那回你也提前说了，没事
+  B：那六万，没有你，我给我妈凑手术费就是抓瞎
+  A：说这些干嘛，婶子恢复怎么样
+  B：复查挺好，都能跳广场舞了
+  A：那就值
+  【系统消息】B 向 A 转账 6000 元，已收款。
+  B：转了，查收。八号见的是
+  A：收到，还剩四期
+  B：嗯，十月、十一月、十二月，再到一月
+  A：你对账比我还细
+  A：下午三点对一下供应商那摊，别忘了
+  B：记着呢，材料昨晚就弄完了
+  A：行，会议邀请拉你了
+  B：收到
+  A：哎，正经问你个事，你别恼
+  B：你说
+  A：嫂子知道这事吗
+  B：……还不知道。我在想要不要先跟律师聊聊
+  A：聊，必须聊。该走的程序大大方方走，把话说在明处
+  B：你觉得我该先摊牌？
+  A：我的想法：纸包不住火，你自己说，比被人捅出来强一百倍
+  B：道理都懂，就是迈不出那步
+  A：迈不出就先见律师，让专业的人给你排个次序
+  B：嗯，你之前给我名片那位？
+  A：对，就他，靠谱，收费也规矩
+  B：好，明天就约
+  A：要陪你去说话
+  B：不用，这点事我得自己扛
+  A：吃了没
+  B：点了份粥，没胃口
+  A：光喝粥不行，加个菜
+  B：加了份小酥肉，罪恶
+  A：那就对了，天大的事先吃饱
+  【10月9日】
+  A：昨晚睡得着不
+  B：迷迷糊糊，四点醒了一回
+  A：正常，头几天都这样
+  B：今天下午三点约了律师
+  A：好，该带的材料列个单子
+  B：结婚证、收入流水，还有……算了见面问
+  A：对，别自己吓自己
+  B：对了，周三晚上球还打不
+  A：打，老时间，你可别鸽
+  B：不鸽，出出汗正好睡得着
+  A：行，我把小刘也叫上
+  B：叫上，正好凑一拨
+  A：你把水也备两瓶，上回你可渴冒烟了
+  A：体检报告出了没
+  B：出了，就轻度脂肪肝，尿酸偏高
+  A：让你少喝你非不听
+  B：戒了戒了，这回真戒
+  A：照顾好你自己，别的都是虚的
+  B：知道了您呐
+  B：这天说冷就冷，你们办公室空调还开着？
+  A：开着呢，我裹着毯子开会，被笑了半小时
+  B：哈哈哈画面感太强
+  A：下午见律师穿正式点，别毛衣套卫衣
+  B：有数，西装都压箱底翻出来了
+  B：谈完了
+  A：怎么说
+  B：律师说第一步先把话跟她本人说清楚，别拖也别躲
+  A：跟我想的一样。到时候需要人陪着壮胆，你说话
+  B：行。真走到那步，财产该分分，孩子那边我不能亏待
+  A：你能这么想，这事就成了一半
+  B：说实话，憋了这几个月睡不着，今天倒能喘气了
+  A：早该这样。天塌下来，兄弟给你递梯子
+  B：唉，六万还没还清，又要添律师费，我这钱包
+  A：律师费紧了跟我说，别客气。八号那笔照旧就行，多的一分别转我
+  B：行，六千就是六千，多一分没有，少一分你踢我
+  A：这才对。晚上球照打
+  B：打！输的请撸串

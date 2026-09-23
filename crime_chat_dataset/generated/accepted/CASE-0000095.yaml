@@ -1,0 +1,137 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000095
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000049
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-74d0bd81ac4542fc
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 作为资方代言人，用“小周摔下楼梯”“办事的有分寸”等影射性暴力暗示，胁迫前同事撤回劳动仲裁并删帖，换取 28000 元“和解费”，实为借他人之口实施的恐吓与勒索。
+  critical_evidence:
+  - A 两次约地下车库当面谈，提及“小周下楼梯摔的”作为影射
+  - A 暗示“有人认得你那台车”、办事的人“别出人命就行，你也规矩点”
+  - 价码从两万谈到两万八，条件是撤仲裁、删帖、往后一字不提
+  - B 撤诉当日向 A 转账 28000 元
+  benign_alternatives:
+  - 劳动争议的私下和解补偿
+  - 公司管理层与离职员工的纪律谈话
+
+attributes:
+  duration_days: 6
+  turn_count: 58
+  approximate_tokens_estimate: 1243
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: beat_example_warning
+  risk: 3
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0014
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-012
+
+dedup:
+  content_hash: sha256:9c8416dd81b8902c14eff4fc2963c860109f7f79d3b6eda840bc33d3b0f600dc
+pipeline_status: accepted
+title: violence_extortion/beat_example_warning
+conversation: |-
+  【10月8日】
+  A：还没睡？
+  B：刚到家，这个月天天磨到十点
+  A：听说你把仲裁材料交上去了
+  B：嗯，忍不了了，八个月加班费呢
+  A：何必呢，抬头不见低头见的
+  B：王哥，道理在我这边，总得有个说法
+  A：我提你一句，那篇帖子先别发
+  B：什么帖子？
+  A：你草稿箱里那篇，写得挺带劲，就是发出去对谁都没好处
+  【10月9日】
+  A：中午吃的啥
+  B：楼下盒饭，十四块，土豆比肉多
+  A：苦哈哈
+  B：你不也一样天天陪笑
+  A：今晚有空没，地库聊聊，B2 我车位边上
+  B：聊什么，电话里说不行？
+  A：公司的意思当面说清楚，对你有好处
+  B：……行，七点
+  【10月11日】
+  A：到了？
+  B：车停好了
+  A：上回小周的事，你听说了吧
+  B：听了个尾巴，说是下楼梯摔的
+  A：嗯，那楼梯是陡，人有时候就是那么巧
+  A：哥的意思很简单：材料撤了，帖子删了，大家体面
+  B：那我八个月的钱呢
+  A：你先表个态，钱的事我去替你磨
+  B：我得想想
+  A：想可以，别想太久，周四之前给准话
+  【10月13日】
+  B：王哥，孩子学校要个在校证明模板，你那边有现成的没
+  A：有有有，回头发你
+  B：谢了
+  A：模板发你了，改个名就能用
+  B：收到，解燃眉之急
+  A：想得怎么样
+  B：我不想把事闹大，但钱得给够
+  A：两万，材料一撤当场结，哥拍胸脯
+  B：两万？八个月加班费都不止这个数
+  【10月15日】
+  A：昨晚那球看了没，补时绝平，看得我心脏疼
+  B：看了，我吼得楼下敲暖气管
+  A：哈哈都一样都一样
+  B：你这球迷当得比上班上心多了
+  A：那必须的
+  A：说正事，我去磨了，两万五，顶天了
+  B：三万。我删帖、撤材料，往后一字不提
+  A：我再去说。这几天你自己别去找他
+  B：什么意思？
+  A：没什么意思，你安静几天，有人认得你那台车
+  B：……行，等你话
+  A：哥松口了，两万八，明天一手撤一手结
+  B：好，还是地库？
+  A：老地方，把撤诉回执带好。放心，办事的有分寸，别出人命就行，你也一样，规矩点
+  【10月16日】
+  B：仲裁今天撤了，回执我拍照发你
+  A：好，帖子呢
+  B：今晚就删
+  【系统消息】B 向 A 转账 28000 元，已收款。
+  A：收到，这页翻篇了
+  B：希望说到做到
+  A：哥什么时候食过言
+  A：往后好好上你的班，别的事少打听
+  B：嗯，各自安好

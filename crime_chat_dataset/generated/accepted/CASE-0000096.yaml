@@ -1,0 +1,148 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000096
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000022
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-d4cb23eb26319f9d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 餐馆老板每月固定给在执法所里工作的表哥转 3000 元“给婶子添置东西”，实际换取的是检查日期的提前通风，店内隐患整改则一拖再拖，永远“下下周弄”。
+  critical_evidence:
+  - 每月月初固定转 3000 元，名义是“给婶子买药、添置东西”
+  - B 打听“上头有动静没”，A 提前四天告知“下周二上头来人转一圈”
+  - 后厨通道、台账整改回回“下下周弄”，检查当天才临时腾完
+  - 检查结束后 B 称“那我月底照旧”，A 未拒绝
+  benign_alternatives:
+  - 晚辈每月孝敬长辈的固定家用
+  - 请亲友做合规顾问的顾问费
+
+attributes:
+  duration_days: 5
+  turn_count: 70
+  approximate_tokens_estimate: 1507
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: regulatory_tip_payment
+  risk: 2
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0014
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-012
+
+dedup:
+  content_hash: sha256:45510b72bf13782b1f9d412c01643f1493cadd0c740635f33d5bd1aff9076ae3
+pipeline_status: accepted
+title: bribery_corruption/regulatory_tip_payment
+conversation: |-
+  【10月8日】
+  B：哥，国庆回老家没？听说咱村玉米都收完了
+  A：回了三天，帮爸掰了两天棒子，腰快断了
+  B：您那腰悠着点，别逞强
+  A：老了不中用了
+  B：我今年没回去，店里走不开
+  A：你那店国庆生意行吧
+  B：不错，天天翻台
+  A：行，好好干
+  B：哥，月初了，给婶子添置东西那三千，我还转老地方？
+  A：又来，跟你说过别月月转
+  B：亲戚归亲戚，婶子的血压药、过节的东西不能省
+  A：你开店也不容易
+  B：生意还行，不差这点
+  【系统消息】B 向 A 转账 3000 元，已收款。
+  A：收了，我给妈报个信
+  B：跟婶子说别舍不得吃
+  A：知道了，你忙你的
+  【10月9日】
+  B：哥，后厨那个通道还是没腾出来，堆着货呢，下下周一定弄
+  A：下下周……你上个月就说下下周
+  B：唉，一忙就忘，这不是生意好嘛
+  A：灭火器倒是换了？
+  B：换了换了，上礼拜刚充的
+  A：台账也补一补，别空着
+  B：行行，我让媳妇晚上弄
+  A：嗯，该齐的尽量齐
+  B：哥，最近上头有动静没
+  A：你问这个干嘛
+  B：心里有数好安排，我那通道还没弄利索
+  A：大概下周二吧，上头来几个人转一圈，常规的
+  B：常规的也架不住我堆一通道的箱子啊
+  A：我就知道这么多，你别到处说
+  【10月11日】
+  A：我家小子这礼拜月考，愁人
+  B：你家那个不是成绩挺稳嘛
+  A：数学又没上九十
+  B：让他跟我家闺女取取经，那丫头刷题狂魔
+  A：行啊，回头让他问问
+  B：周末俩人视频着学呗
+  A：对了，台账弄得怎么样了
+  B：补了大半，就剩几张进货单
+  A：健康证有过期的没
+  B：有俩人十一月底到期，正打算去续
+  A：尽早点，别掐着点
+  B：明白，周一就去
+  A：通道的事，能腾就先腾出来
+  B：我今晚就让伙计搬
+  【10月13日】
+  A：降温了，晚上收摊让伙计们加衣服
+  B：是，今早出门我都套上绒衣了
+  A：婶子那药续上没，上月那盒该吃完了
+  B：续着呢，我上回回去顺道买的，那个牌子她吃着说好
+  A：行，回头我去拿
+  B：跟我客气啥
+  A：你家闺女这礼拜考完没
+  B：考完了，错一道大题，回家哭一场
+  A：哈哈随你，当年物理不及格也哭
+  B：别埋汰我
+  B：哥，明天那个……还照旧不
+  A：上午十点前后到。你正常开门营业，该忙忙你的
+  B：箱子全腾完了，台账也齐了
+  A：嗯，那就没什么可挑的
+  【10月14日】
+  B：走了？
+  A：走了，这拨算顺，就通道那块提了一嘴限期
+  B：唉，又是通道
+  A：你别再拖了，下回再提就不是提一嘴的事了
+  B：这周末真弄，说真的
+  A：行，我下月再看一眼
+  B：得嘞，那我月底照旧
+  A：你这人
+  B：中午吃了没？来店里，给你留了水煮鱼
+  A：中午不行，下午还有会
+  B：那晚上打包给你送家去
+  A：行，让嫂子少放辣

@@ -1,0 +1,444 @@
+{
+ "key": "b12c024",
+ "archetype_id": "ARC-000011",
+ "subtype": "customer_service_reverse",
+ "latent_intent": "冒充航司客服以“航班取消、全额退票加补偿”为饵，诱导出差乘客安装会议软件、交出短信数字，并先行转入2000元“验证金”，次日再加码时被乘客识破。",
+ "critical_facts": [
+  "A主动来电称航班取消，可全额退票并另付800元补偿",
+  "引导乘客下载“云会通”会议软件，由“专员”远程引导操作",
+  "索要银行短信中的六位数字，并要求向指定账户转2000元“验证金”且备注留空",
+  "次日以“二次核验”追加5000元，乘客致电航司官方核实后识破并报警"
+ ],
+ "benign_alternatives": [
+  "航司真实退改签回电服务",
+  "订票平台客服的正常理赔流程"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "10月12日 10:08",
+   "speaker": "B",
+   "text": "您好，刚才接到电话说我明早的航班取消了，让我加这个号核实，是您这边吗"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:10",
+   "speaker": "A",
+   "text": "您好，我是云程航空客服专员小安，工号1029。朱先生是吧，您明早7点20的云程2157"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:12",
+   "speaker": "B",
+   "text": "对，是我，怎么回事啊，我明早还要赶签约会"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:13",
+   "speaker": "A",
+   "text": "系统显示该航班机械故障取消，公司统一为旅客办理全额退票，另有延误补偿800元"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:15",
+   "speaker": "B",
+   "text": "票是平台上买的，也一起退吗"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:16",
+   "speaker": "A",
+   "text": "平台只管出票，补偿金走公司内部通道，我这边一对一给您办"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:18",
+   "speaker": "B",
+   "text": "哦哦，要多久，我晚上还有个应酬"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:19",
+   "speaker": "A",
+   "text": "快的话十几分钟，您配合就行"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:22",
+   "speaker": "A",
+   "text": "为保障办理过程安全，您先下载“云会通”会议软件，专员远程引导您操作"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:24",
+   "speaker": "B",
+   "text": "还要装软件啊，有点麻烦"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:25",
+   "speaker": "A",
+   "text": "补偿通道是内部端口，普通页面进不去，装机是标准流程，您放心"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:27",
+   "speaker": "B",
+   "text": "行吧，装好了"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:28",
+   "speaker": "A",
+   "text": "进我发的会议室，稍后别挂断，我一步步带您走"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:29",
+   "speaker": "B",
+   "text": "嗯嗯"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:35",
+   "speaker": "A",
+   "text": "先核对信息：朱先生，身份证尾号6607，手机尾号3309，对吧"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:36",
+   "speaker": "B",
+   "text": "对的"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:38",
+   "speaker": "A",
+   "text": "现在为您提交补偿，稍后银行发来一条带六位数字的短信，您把数字报给我录入"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:39",
+   "speaker": "B",
+   "text": "还要短信数字啊，不是直接退卡里吗"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:40",
+   "speaker": "A",
+   "text": "那是通道授权凭据，不录入就锁单，补偿作废"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:41",
+   "speaker": "B",
+   "text": "哦……好，等下"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:44",
+   "speaker": "A",
+   "text": "收到了吗"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:45",
+   "speaker": "B",
+   "text": "收到了，337415"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:46",
+   "speaker": "A",
+   "text": "已录入，系统处理中，请勿挂断"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 11:02",
+   "speaker": "B",
+   "text": "专员，我托运的行李怎么办，改签信息里没提"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 11:03",
+   "speaker": "A",
+   "text": "已自动带上行李额度，您明早正常值机就行"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 11:04",
+   "speaker": "B",
+   "text": "那我这套西装就不用拎着了"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 11:05",
+   "speaker": "A",
+   "text": "不用，祝您签约顺利"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 11:20",
+   "speaker": "A",
+   "text": "朱先生，系统提示您的银行卡接收通道异常，补偿被冻结了"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 11:21",
+   "speaker": "B",
+   "text": "怎么会异常呢"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 11:22",
+   "speaker": "A",
+   "text": "需转入2000元资金验证金激活通道，赔付和验证金一起退回，是通行流程"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 11:24",
+   "speaker": "B",
+   "text": "赔800要先转2000？"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 11:25",
+   "speaker": "A",
+   "text": "验证金只是过账，五分钟原路退回，好多旅客都在办"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 11:27",
+   "speaker": "B",
+   "text": "转哪个账户"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 11:28",
+   "speaker": "A",
+   "text": "系统生成的安全账户，我发您，备注什么都不要写"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 11:30",
+   "speaker": "B",
+   "text": "……行，我转"
+  },
+  {
+   "type": "transfer",
+   "time": "10月12日 11:33",
+   "from": "B",
+   "to": "A",
+   "amount": 2000
+  },
+  {
+   "type": "message",
+   "time": "10月12日 11:34",
+   "speaker": "A",
+   "text": "收到，通道激活中，最迟今晚十二点赔付到账"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 18:40",
+   "speaker": "B",
+   "text": "专员，我去饭局了，手机调静音，有进展微信说"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 18:41",
+   "speaker": "A",
+   "text": "好，到账前保持畅通"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 08:50",
+   "speaker": "A",
+   "text": "朱先生早，您的补偿已出账，请查收"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 08:55",
+   "speaker": "B",
+   "text": "没到啊，卡里没动静"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 08:56",
+   "speaker": "A",
+   "text": "可能到账延迟，我帮您催办"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 09:30",
+   "speaker": "B",
+   "text": "还没到！你们到底靠不靠谱，我航班都误了"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 09:31",
+   "speaker": "A",
+   "text": "您的账户触发二次核验，需再转5000元解冻金，退赔时一并返还"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 09:32",
+   "speaker": "B",
+   "text": "又要转？！"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 09:35",
+   "speaker": "B",
+   "text": "我早上打了云程官方电话，人家说航班根本没取消，正常飞，也没有什么补偿"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 09:36",
+   "speaker": "A",
+   "text": "官方客服只受理普通业务，内部通道他们看不到"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 09:37",
+   "speaker": "B",
+   "text": "那这个会议软件算什么，官方说从没让乘客装过"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 09:38",
+   "speaker": "A",
+   "text": "朱先生别激动，这个流程每年服务上万人……"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 09:40",
+   "speaker": "B",
+   "text": "把2000还我，不然我报警"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 09:41",
+   "speaker": "A",
+   "text": "您这是误解，资金都在系统里……"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 09:42",
+   "speaker": "B",
+   "text": "通话我录了，会议记录也在"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 09:43",
+   "speaker": "A",
+   "text": "……"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 09:44",
+   "speaker": "A",
+   "text": "朱先生冷静，都是误会，钱今天安排退"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 12:10",
+   "speaker": "B",
+   "text": "合同倒是签完了，就等你那笔钱，下午三点前到账"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 12:11",
+   "speaker": "A",
+   "text": "恭喜朱先生，我加急"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 15:20",
+   "speaker": "B",
+   "text": "这天说冷就冷，你们那儿呢"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 15:22",
+   "speaker": "A",
+   "text": "也降温了，您添衣"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 15:23",
+   "speaker": "B",
+   "text": "跟你说天气回得挺快，说钱就打太极"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 15:24",
+   "speaker": "A",
+   "text": "……"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 18:30",
+   "speaker": "B",
+   "text": "晚饭都没心思吃，点了碗粥对付"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 18:35",
+   "speaker": "A",
+   "text": "朱先生，2000今晚一定安排"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 18:36",
+   "speaker": "B",
+   "text": "看你表现"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 20:15",
+   "speaker": "B",
+   "text": "还没到账，你到底是不是云程的人"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 20:20",
+   "speaker": "A",
+   "text": "朱先生，实在抱歉，公司流程复杂……"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 20:25",
+   "speaker": "B",
+   "text": "我不管了，派出所笔录都做完了，转账记录、录音、会议软件全交上去了"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 20:35",
+   "speaker": "B",
+   "text": "警官说你们这种号很快会被处理，2000就当买个教训，你收手吧"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 20:40",
+   "speaker": "A",
+   "text": "朱先生，话别说这么绝……"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 20:41",
+   "speaker": "B",
+   "text": "没什么好说的，等警察找你"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 20:42",
+   "speaker": "A",
+   "text": "……"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000075",
+  "status": "accepted",
+  "errors": []
+ }
+}

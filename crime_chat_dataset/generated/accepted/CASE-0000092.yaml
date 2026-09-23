@@ -1,0 +1,121 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000092
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000138
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-a21f81a10bb596fd
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: other_illicit_coordination
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 表哥以“月息三分、保本”为饵吸收亲戚的闲散资金入伙，许诺拉人头返两个点，并要求追加只收现金、不走流程，实为无资质向亲友吸收资金。
+  critical_evidence:
+  - 宣称“月息三分，保本，亏了算哥的”
+  - “拉一个返两个点”，被拉的人不断进钱就月月拿
+  - 加金“就给现金，不走那些流程”，不留书面凭证
+  - B 首笔转入 20000 元，对方许诺下月 8 日付息 600
+  benign_alternatives:
+  - 亲友间约定利息的民间借贷
+  - 正规理财产品的熟人推荐
+
+attributes:
+  duration_days: 3
+  turn_count: 45
+  approximate_tokens_estimate: 1002
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: illegal_fundraising
+  risk: 2
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0014
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-012
+
+dedup:
+  content_hash: sha256:31b779f20bb358dc56d1f03b1f2c61ee8a778416baab5a93696ce816795cfa96
+pipeline_status: accepted
+title: other_illicit_coordination/illegal_fundraising
+conversation: |-
+  【10月8日】
+  A：弟，国庆没回来？你嫂子腌的腊肠给你寄了
+  B：寄了？我正好没了，炒蒜苗一绝
+  A：单号发你了，记得收
+  B：收到收到
+  A：正事，哥这边有个门路，月息三分，保本
+  B：三分？表哥你别是被什么盘子忽悠了吧
+  A：什么忽悠，哥跑这个两年了，息一分没差过
+  B：那么高，靠什么赚出来的
+  A：靠什么你甭管，见钱说话，按月打息
+  B：本金要是折了呢
+  A：保本！亏了算哥的
+  B：让我琢磨琢磨
+  A：琢磨可以，坑位不多，这期就剩俩
+  B：我那可是留着付首付的钱
+  A：哎，你那结节复查没
+  B：复了，良性，一年随访就行
+  A：那就好，吓我一跳
+  B：医生说少熬夜，行，我先睡了
+  【10月9日】
+  A：想好没
+  B：先上两万试试，多了没有
+  A：行。两万先转我，往后要加就给现金，咱不走那些流程
+  B：为啥加钱要现金
+  A：现金利索，自家亲戚，签那些多生分
+  B：……行吧，先转这两万
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  A：收到，这期算你入了，下月八号头一笔息六百准时到
+  B：六百，是挺可观
+  A：降温了，秋裤安排上没
+  B：安排了，这边雨下得人发霉
+  A：潮湿就被褥多晒晒
+  B：没太阳，晒了个寂寞
+  A：你三姨介绍那姑娘见了没
+  B：见了，人挺好，就是异地
+  A：处处看嘛，你都二十九了
+  B：催催催，跟催命似的
+  【10月10日】
+  B：双十一你购物车囤啥呢
+  A：一箱酒，还有给侄子的球鞋
+  B：我就等付尾款了
+  A：省钱小能手是你
+  A：诶，昨晚有个老客户又加了五万，你也考虑考虑加一笔
+  B：再看，首付的钱不敢全动
+  A：那个老张都跟了哥两年多，月月息一分不少
+  B：哦……他两年多了？
+  A：比你早多了，突然问这个干嘛
+  B：没什么，随便问问
+  A：拉一个返两个点的事你记着，同事里有闲钱的提我一句

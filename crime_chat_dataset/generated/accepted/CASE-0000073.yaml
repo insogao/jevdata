@@ -1,0 +1,146 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000073
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000008
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-570b6f3d84aee336
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A以“公司走账、躺着拿钱、绝无问题”的话术，诱使找兼职的大四学生新办银行卡并开通网银交出U盾，按月支付八百元租金。
+  critical_evidence:
+  - 按张计酬：一张卡每月800元，介绍人老凯手里四张卡月入1600
+  - A反复强调“代收代付做生意的都这么走，一点毛病没有”，让学生放心
+  - 要求开通手机银行、网银并领U盾、开大额转账后再上交
+  - 先转800元首月租金巩固信任，B交卡后按叮嘱对身边人隐瞒
+  benign_alternatives:
+  - 帮朋友代收代管物品
+  - 正规兼职（发传单、实习）
+
+attributes:
+  duration_days: 6
+  turn_count: 67
+  approximate_tokens_estimate: 1965
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: account_lending
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0012
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-012
+
+dedup:
+  content_hash: sha256:e9aec0f4bdbaaea1e8a0bbe7b6c5ef37205ed2a847eee283726f9c4e32384539
+pipeline_status: accepted
+title: fraud_scam/account_lending
+conversation: |-
+  【10月10日】
+  B：辉哥好，我是老凯介绍的小唐，说您这边有兼职介绍
+  A：哦小唐啊，老凯提过你，大四了吧
+  B：对，这学期基本没课，在找实习，也想做点兼职
+  A：发传单一百一天那种活儿你也干过吧，又累又没油水
+  B：干过，站一天腿都直了
+  A：我这边有个轻松的，动动手续，躺着拿钱
+  B：什么活儿这么好
+  A：你去办几张新的储蓄卡，开通手机银行，办好了放我这儿用
+  B：用我的卡干什么呢
+  A：我们公司走账用，公对私不方便，借你户头过一过，一张卡一个月八百
+  B：八百？放着不动就有？
+  A：对，卡里进来出去都是公司的钱，跟你一毛钱关系没有
+  【10月11日】
+  B：辉哥，我室友说，把自己的卡借给别人好像有问题的
+  A：谁说的，老凯干了两年，他出过事吗
+  B：那倒没有……
+  A：这叫代收代付，做生意的都这么走，一点毛病没有，密码你自己设，心里踏实
+  A：对，卡和U盾放我这儿，密码你记牢，想查随时来查，账目清清楚楚
+  B：U盾是啥
+  A：网银那个盾，办卡时跟柜员说开通网银领U盾，再开大额转账，齐活
+  B：那要是卡里的钱出问题呢
+  A：公司的钱进公司的账，能有什么问题，你放心数钱就行
+  B：让我再想想
+  【10月12日】
+  B：辉哥，我又上网搜了搜，越搜越慌
+  A：网上啥都有，老凯人家月月拿一千六，也没见少块肉
+  B：一千六？两张卡？
+  A：对，他上个月又办了两张，现在四张在手，新手机就是那么来的
+  B：这么好……
+  A：你一张就八百，先把生活费赚出来，别整天啃馒头咸菜
+  B：我这几天真在啃馒头，实习还没着落
+  A：所以先把这钱拿着，实习的事我也能帮你留意，我认识人多
+  B：那您帮我留意着，简历我都投了三十多份了
+  A：行，卡的事你抓紧，月底这批就要定了
+  【10月13日】
+  B：辉哥，办卡要带啥
+  A：身份证手机，学生证带上，就说日常开销用，别提别的
+  B：嗯，办哪家都行吗
+  A：都行，最好两家不同，一家一张
+  B：好，我下午就去
+  B：我们宿舍楼下新开了家麻辣拌，排队五十米
+  A：学校的生意就是好做，我们公司楼下那家黄了三回了
+  B：黄了正常，学生放假就没人
+  A：也是，你们放寒暑假，商家跟着吃土
+  B：辉哥，办好了，两张，网银和U盾都开了
+  A：麻利，明天送来，这个月的钱先结你
+  B：好嘞
+  【10月14日】
+  B：辉哥，卡给你送来了，两张卡两个U盾，密码都是我设的
+  A：好，我登个记，这是你这个月的，八百，点点
+  【系统消息】A 向 B 转账 800 元，已收款。
+  B：收到了！第一次躺着赚钱，哈哈
+  A：老凯一开始也这么说，后来都懒得数了
+  B：那这几张卡平时怎么用，我不用管吧
+  A：不用管，进进出出都是公司的事，你就当卡是寄存的
+  B：哦哦，那我要用钱怎么办
+  A：你另办一张自己日常用，别跟这几张混着，干净
+  B：明白，分开用
+  A：实习的事有着落了，我朋友公司缺个助理，下周去见一面
+  B：真的吗！太谢谢辉哥了
+  A：谢啥，你懂事我自然上心
+  【10月15日】
+  B：辉哥早，今天去见实习那边，紧张
+  A：别虚，就当聊天，穿精神点
+  B：嗯嗯，我昨天熨了衬衫
+  B：见完了！那边让我下周一来试工
+  A：稳了，晚上请宿舍兄弟搓一顿
+  B：必须的，就说我找到金主了哈哈
+  A：哈哈，卡的事别跟人提，闷声拿钱
+  B：懂，我谁也没说
+  A：下个月还有个名额，你要不要再来一张
+  B：再想想呗，先看看这个月怎么样
+  A：也行，想好了言语一声，八百块可不长腿自己跑

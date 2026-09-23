@@ -1,0 +1,121 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000071
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000053
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-0fce95b7bd8cd477
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 有势力的“坤哥”借旧日人情和不明人员的暗示施压，逼迫面馆老板让出店铺，并在次日上午前支付两万元“辛苦费”免遭麻烦。
+  critical_evidence:
+  - A宣布“明天起这铺子我来打理”，让B先收拾值钱物件
+  - A明确让B“合同就别找了”，并以前年出面帮忙的旧人情施压
+  - “兄弟们手上痒、别让他们白跑”暗示不明人员次日到场，大件设备被搬走
+  - B在限期内转账20000元辛苦费，转账后店铺随即易手
+  benign_alternatives:
+  - 商铺转让纠纷正走法务沟通
+  - 房东正常收铺并安置原租户设备
+
+attributes:
+  duration_days: 2
+  turn_count: 46
+  approximate_tokens_estimate: 1233
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: asset_seizure_force
+  risk: 3
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0012
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-012
+
+dedup:
+  content_hash: sha256:488b2b363fa0241551653707ef0110a8178e75f7258788c88536b00e40ef7421
+pipeline_status: accepted
+title: violence_extortion/asset_seizure_force
+conversation: |-
+  【10月12日】
+  B：坤哥早，昨晚歇得好不
+  A：睡不着，想你铺子的事想得多。那地段多值钱，你守着个小面馆，屈才了
+  B：干了八年了，就指着它吃饭呢
+  A：明天起这铺子我来打理，你把值钱的物件先收拾出来
+  B：啊？这……合同可还在我手里
+  A：合同就别找了，找回来也是一张纸。前年那事，你还记得吧
+  B：前年多亏坤哥出面，这份情我一直记着
+  A：记着就好。人情是人情，铺子是铺子
+  A：你家那碗牛肉面，我惦记好久了
+  B：中午给您留座，老三样加双份牛肉，再拍个黄瓜
+  A：再来瓶冰啤，就齐了
+  A：下午我让兄弟们过去量量尺寸，你搭把手
+  B：这么急？总得给我几天腾地方吧
+  A：兄弟们闲了俩月手上痒，你就别让他们白跑一趟
+  B：坤哥，我这些货架冰柜呢
+  A：小件你拉走，大件先留下给兄弟们使
+  B：闺女下周期中考，我这心里乱得很
+  A：孩子念书是正事。铺子的事，别跟她妈提
+  B：家里我一个字都没说
+  A：明白人就该这样
+  B：坤哥，这事真没有转圜了？
+  A：也有。明天兄弟们出力，辛苦钱你总得意思意思
+  B：要多少
+  A：两万，就当给弟兄们买烟买水
+  B：我今晚去凑
+  A：明早八点前，过了点我可兜不住他们
+  【10月13日】
+  B：坤哥，钱凑齐了
+  A：转过来吧，兄弟们等着开张呢
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  A：收到。九点兄弟们过去，你把卷帘门支起来
+  B：都听坤哥安排
+  A：后头仓库给你留个角落，你想接着干面也行，租金回头说
+  B：……行，我听您的
+  A：这雨说下就下，搬东西都麻烦
+  B：立秋后就晴过三天
+  A：让弟兄们慢点搬，雨天路滑，东西不急
+  B：仓库屋顶我下午再补一补
+  B：中午的面还是给您留着，双份牛肉
+  A：就喜欢你这份讲究，怪不得回头客多
+  B：就剩这点念想了
+  A：往后中午还来蹭面，就是换个桌坐
+  B：坤哥，东西都搬完了？
+  A：完了。你那两台冰柜兄弟们先拉去用了
+  B：冰柜里还有我闺女的雪糕……算了
+  B：那份合同，就真不作数了？
+  A：什么纸不纸的，往后这片铺子的事就是我的事。想开点，跟着我干比你自己守着强
+  B：……我明白了，明早我去仓库找您

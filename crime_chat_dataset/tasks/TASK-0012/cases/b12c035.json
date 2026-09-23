@@ -1,0 +1,366 @@
+{
+ "key": "b12c035",
+ "archetype_id": "ARC-000027",
+ "subtype": "invoice_rebate",
+ "latent_intent": "对话带着“点数、税点、结算”的行业话术腔，实际是公司财务与差旅平台代理之间的正常月度结算：发票全部对应真实行程，转账只是平台服务费。",
+ "critical_facts": [
+  "全部发票对应真实差旅行程，行程单与发票号码一一对应，平台后台可随时导出",
+  "专票抬头税号为公司真实信息，服务费188元按订单数计算且账单带批注",
+  "转账188元与账单服务费金额一致，B承诺随下月账单附上收据",
+  "退票款走原支付渠道三到五个工作日到账，可查进度"
+ ],
+ "benign_alternatives": [
+  "公司与差旅平台代理的正常月度结算",
+  "财务对差旅报销单据的正常归档核对"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "10月14日 09:32",
+   "speaker": "B",
+   "text": "何会计早，上季度贵司的差旅账单我这边整理出来了"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:35",
+   "speaker": "A",
+   "text": "康哥早，正等你呢，财务这边要给老板交三季度的差旅汇总"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:36",
+   "speaker": "B",
+   "text": "一共137人次，机票酒店高铁都有，明细发你邮箱了"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:38",
+   "speaker": "A",
+   "text": "收到，我先过一遍，有几个人的行程单要补"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:39",
+   "speaker": "B",
+   "text": "平台后台都能导出，你说名单，我一条条给你打出来"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:41",
+   "speaker": "A",
+   "text": "好嘞，老规矩，行程单和发票号码一一对应上"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 12:05",
+   "speaker": "A",
+   "text": "康哥，中午吃了吗"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 12:06",
+   "speaker": "B",
+   "text": "刚点了份猪脚饭，你呢"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 12:07",
+   "speaker": "A",
+   "text": "我带饭，昨晚媳妇烧的排骨"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 12:08",
+   "speaker": "B",
+   "text": "有口福啊，我这纯粹将就"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 14:15",
+   "speaker": "A",
+   "text": "康哥，王总的行程单怎么显示两段航班，他不是只去了上海吗"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 14:17",
+   "speaker": "B",
+   "text": "他在上海中转去了趟苏州见客户，行程连着的，系统自动出两段"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 14:18",
+   "speaker": "A",
+   "text": "哦对，他是提过去苏州，那没问题"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 14:19",
+   "speaker": "B",
+   "text": "你们报销要行程一致，我都给你对齐了，放心"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 14:20",
+   "speaker": "A",
+   "text": "嗯，我们制度卡得严，超出行程一概不报"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 16:40",
+   "speaker": "A",
+   "text": "康哥，专票寄出来没"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 16:41",
+   "speaker": "B",
+   "text": "寄了，快递今天揽收，单号发你了"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 16:42",
+   "speaker": "A",
+   "text": "好，我盯一下物流"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 09:20",
+   "speaker": "A",
+   "text": "康哥，专票到了，三张，金额跟你账单一致"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 09:22",
+   "speaker": "B",
+   "text": "对上就好，电子版也在你邮箱，你看下抬头税号"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 09:23",
+   "speaker": "A",
+   "text": "抬头税号都没问题，我录进系统了"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 09:25",
+   "speaker": "B",
+   "text": "那这个月的服务费你看下账单，一共188，按订单算的"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 09:26",
+   "speaker": "A",
+   "text": "我看看……137人次，怎么是188"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 09:27",
+   "speaker": "B",
+   "text": "有人的行程改签过，一单拆两条记录，服务费跟着订单走，我给你标了批注"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 09:28",
+   "speaker": "A",
+   "text": "哦哦，看到了，批注很清楚，那我按188转你"
+  },
+  {
+   "type": "transfer",
+   "time": "10月15日 10:05",
+   "from": "A",
+   "to": "B",
+   "amount": 188
+  },
+  {
+   "type": "message",
+   "time": "10月15日 10:06",
+   "speaker": "B",
+   "text": "收到，收据随下个月账单一并给你附上"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 12:30",
+   "speaker": "B",
+   "text": "何会计，你家娃上小学了吧，适应不"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 12:31",
+   "speaker": "A",
+   "text": "二年级了，作业多，天天陪写到九点"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 12:32",
+   "speaker": "B",
+   "text": "我家那个更头疼，幼儿园大班就鸡飞狗跳"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 12:33",
+   "speaker": "A",
+   "text": "都一样哈哈，熬吧"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 15:10",
+   "speaker": "A",
+   "text": "康哥，下季度我们销售部要加三条线路，你那边能出协议价不"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 15:12",
+   "speaker": "B",
+   "text": "能，报价单发你，比市场价低一成，协议我整理好发你盖章"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 15:13",
+   "speaker": "A",
+   "text": "行，老板就认这个便宜"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 15:14",
+   "speaker": "B",
+   "text": "稳住，合作愉快"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 17:50",
+   "speaker": "A",
+   "text": "这两天降温了，康哥多穿点"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 17:51",
+   "speaker": "B",
+   "text": "是，秋裤都上身了"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 17:52",
+   "speaker": "A",
+   "text": "我们办公室空调还开着，冻得我"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 09:40",
+   "speaker": "A",
+   "text": "康哥，我们总监要抽两个人的差旅单看原始凭证，我把行程单发票都归档了"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 09:42",
+   "speaker": "B",
+   "text": "没问题，你随时要，我随时从后台导，一张不差"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 09:43",
+   "speaker": "A",
+   "text": "好，这月多亏你，我汇总表一次就过了"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 09:44",
+   "speaker": "B",
+   "text": "应该的，咱账面干净，谁来查都不怕"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 10:30",
+   "speaker": "B",
+   "text": "何会计，周末看球不，德比大战"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 10:31",
+   "speaker": "A",
+   "text": "看，啤酒都备上了"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 10:32",
+   "speaker": "B",
+   "text": "我押主队赢，输了请你喝奶茶"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 10:33",
+   "speaker": "A",
+   "text": "行，输了别赖账"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 14:20",
+   "speaker": "A",
+   "text": "康哥，小李的退票款怎么还没到账，他催我了"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 14:22",
+   "speaker": "B",
+   "text": "退票走原渠道，一般三到五个工作日，我查下进度……嗯，昨天已经退出了"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 14:23",
+   "speaker": "A",
+   "text": "哦，那让他再等等，单号我转给他"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 14:24",
+   "speaker": "B",
+   "text": "对，让他盯着点银行卡，到账有短信"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 14:25",
+   "speaker": "A",
+   "text": "好"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 17:30",
+   "speaker": "A",
+   "text": "下班去趟菜场，听说猪肉降了"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 17:31",
+   "speaker": "B",
+   "text": "降了两块呢，我媳妇今天炖了一锅"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 17:32",
+   "speaker": "A",
+   "text": "那我也来两斤，周末炖排骨"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 17:45",
+   "speaker": "A",
+   "text": "康哥，这个季度就辛苦你，下季度账单还是老时间"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 17:46",
+   "speaker": "B",
+   "text": "好嘞，月底给你，保证干干净净"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 17:47",
+   "speaker": "A",
+   "text": "合作愉快"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000078",
+  "status": "accepted",
+  "errors": []
+ }
+}

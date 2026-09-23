@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000087
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000005
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-829e7ed9802b42b3
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 首单秒返、批量任务、群晒收益,套路长得像刷单兼职,实际是正规众包平台的数据标注:不收押金、不垫付,结算永远由平台打给做单的人。
+  critical_evidence:
+  - 新人首单35元当天进平台APP余额可提现,全程未收任何费用
+  - 明确不垫付——谁让先垫钱就拉黑,结算永远由平台打给做单的人
+  - 群里晒的是官方正常结算截图,并提醒提防私加的所谓内部渠道
+  - 周五平台结算286元,备注写明众包结算周期
+  benign_alternatives:
+  - 正规众包平台接单
+  - 朋友介绍的线上兼职
+
+attributes:
+  duration_days: 5
+  turn_count: 54
+  approximate_tokens_estimate: 1385
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: part_time_task
+  risk: 0
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0013
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-012
+
+dedup:
+  content_hash: sha256:5ad91bb315b925ce9b8169488332a9dd8e991364720a133b68f111f263cc6e7f
+pipeline_status: accepted
+title: fraud_scam/part_time_task
+conversation: |-
+  【10月10日】
+  A：小蕊是吧,你表姐把你微信推给我,说你想找个线上兼职
+  B：对,我下班后时间多,想找个靠谱的
+  A：我们平台做数据标注和问卷校对,按单结算,先注册,我给你派个新人任务
+  B：要交押金不,我朋友之前被坑过
+  A：一分钱不用交,谁让你先垫钱你直接拉黑,咱这永远是平台打钱给你
+  B：那我就放心了
+  A：新人任务十道标注题,验收过给你三十五,当天进APP余额,随时提现
+  B：这就去做
+  B：提交了,验收快不
+  A：快的。楼下奶茶店第二杯半价,你喝不
+  B：喝,杨枝甘露
+  A：那下午给你带一杯,顺路
+  A：验收过了,三十五已经进你APP余额,看下
+  B：秒到!这平台可以啊
+  【10月11日】
+  B：国庆调休方案出了,我要连上七天
+  A：惨,我十四号补一天就完事
+  B：你们互联网就是灵活
+  A：灵活地加班,哈哈
+  A：今天派你个批量任务,两百条问卷,按验收量算,今晚十点前交多少算多少
+  B：行,做到哪算哪
+  B：先交八十条,去睡了,明早继续
+  A：好,明早给你验收
+  A：验完,七十六条合格,四条返工,单子在你账号里
+  B：返工的啥问题
+  A：选项填串行了,重勾一下就行
+  B：改好了
+  A：收到,一起算进周五结算
+  【10月12日】
+  B：你家橘猫又营业了,头像都换了
+  A：换了,它比我上镜
+  B：哈哈,橘座威武
+  A：新手群拉你进了。群里只发官方任务,有人私加你说什么内部渠道,一律别理
+  B：好,防骗意识我有
+  A：群里晒收益的也别焦虑,都是正常结算截图,你慢慢就上来了
+  B：今天接到个语音转写,时薪看着高
+  A：要求也高,错一个标点都返工,先从小单试
+  B：交了,帮我看看
+  A：有一处时间轴错位,其他OK,改完就齐
+  【10月13日】
+  A：明天周五结算,你绑的卡没变吧
+  B：没变,这周结算多少
+  A：验收合计二百八十六,明细截图发你了
+  B：好嘞,比我想的多
+  A：你表姐没介绍错人,手快心细
+  B：双十一购物车清了没
+  A：清了,给我猫囤了半年粮
+  B：你这是猫的双十一
+  【10月14日】
+  B：又下雨,通勤地狱
+  A：我拖鞋上班,谁也拦不住我
+  B：哈哈画面感有了
+  A：结算提前发了,二百八十六,看下
+  【系统消息】A 向 B 转账 286 元，已收款。
+  B：到了!备注写的『众包结算1023周』,好正规
+  A：平台都这样,每笔都对得上账
+  B：下周我拉室友也来,她打字快
+  A：可以,还是那句话,不收任何费用,让她自己注册
+  B：放心,你的防骗三连我都会背了

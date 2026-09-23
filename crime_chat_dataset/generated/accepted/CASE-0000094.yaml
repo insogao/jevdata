@@ -1,0 +1,137 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000094
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000117
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-6ea6556bf6aac4ae
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: theft_robbery_property_crime
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 浇地队工头趁夜里把灌溉用的旧电机当废铜运给收购站老板，“村口狗多绕后”、按称重结算，两人心照不宣，还谋划把邻村的“货”也统着收。
+  critical_evidence:
+  - “浇完这轮就收”，后半夜绕小路把电机送到收购站
+  - “铜价现在高”，按铜芯净重结算，转账 3200 元
+  - B 明知来路仍问“村里知不知道”，A 以“队里让我处理的，有账可对”作交代
+  - 谋划李庄的“货”由 A 统收，B 放话“有多少要多少”
+  benign_alternatives:
+  - 村里统一处置报废农机设备
+  - 正常废铜回收的称重交易
+
+attributes:
+  duration_days: 4
+  turn_count: 60
+  approximate_tokens_estimate: 1373
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: farm_irrigation_motor_theft
+  risk: 2
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0014
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-012
+
+dedup:
+  content_hash: sha256:6ea9f46cfb262a0de6bc3b0b44bbbf25712549bdf907177062f6497ecc436bd8
+pipeline_status: accepted
+title: theft_robbery_property_crime/farm_irrigation_motor_theft
+conversation: |-
+  【10月8日】
+  A：老板，起了没
+  B：起了，你那片浇完了？
+  A：浇完这轮就收，地里就剩管子了
+  B：收下来那些，还按老规矩？
+  A：老规矩，过磅，按当天价
+  B：行。铜价现在高，你赶巧了
+  A：那敢情好
+  A：那几台电机用得久，壳都花了，你别嫌相不好
+  B：我看的是里头的铜，又不是看壳
+  A：晚上我拉过去，你提前给我留着磅
+  B：后半夜也开，你直接来
+  A：今年棒子长得不赖，一亩能多打二百斤
+  B：那你今年能落个痛快钱
+  A：痛快啥，工钱还没结齐呢
+  B：所以说浇完就收，落袋为安
+  【10月9日】
+  A：老板，昨晚那批称了多少
+  B：称了，除去壳子皮子，铜芯净重一百来斤
+  A：按今天价给我算多少
+  B：你那几台是老式的，我得再拆拆，钱今天下午给你
+  A：行，不急这一时
+  B：不过兄弟，你这货的来路我得问一嘴，村里知不知道
+  A：浇完地淘汰的旧设备，队里让我处理的，有账可对
+  B：有账就行，我就走走嘴
+  A：你安心，又不是一回两回了
+  B：懂懂懂
+  A：你那膏药还有没，再给我拿两贴
+  B：有，晌午放门口纸箱里
+  A：这腰一泡水就废，蹲一天直不起来
+  B：你少扛点，让小年轻干
+  A：小年轻毛手毛脚，不如我自己来
+  【10月10日】
+  A：老板，今晚还有一拨，浇完东头那几户就齐了
+  B：东头那片不是还有两天
+  A：催他们提前浇完，趁月黑头好办事
+  B：村口狗多，你绕后头那条土路进来，别按喇叭
+  A：知道，老路了
+  B：到了喊我，我给你留门
+  A：这拨里有两台大的，铜厚
+  B：大的按好的算，给你多称二斤人情
+  A：明儿逢集不
+  B：逢，老王家出摊
+  A：那明早去喝羊汤，你请
+  B：行，割二斤肉，正好补补你那腰
+  A：那我先谢过老板
+  B：少来这套
+  【10月11日】
+  A：老板，东头那拨齐了，后半夜送到
+  B：好，磅给你留着
+  A：这拨完了可就真收尾了，地里明儿就翻
+  B：那今年就算齐活
+  A：对了，邻村李庄那片也快浇完，他们管事的跟我沾点亲
+  B：你意思是还能收到货
+  A：差不多这意思，你要吃得下，我统着收
+  B：吃得下，铜价高着呢，有多少要多少
+  A：那就这么定，我给他们带话
+  B：带话留意点，别见人就讲从我这儿走
+  A：懂，咱这行讲究闷声办事
+  B：昨晚那拨称完了，净重一百三十斤，按今早牌价
+  A：多少钱
+  B：三千二，膏药钱就算里头，凑整给你转三千二
+  A：就服你抹零还往上抹
+  【系统消息】B 向 A 转账 3200 元，已收款。
+  B：老主顾了，收一下

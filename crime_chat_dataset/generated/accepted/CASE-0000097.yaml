@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000097
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-aa01d81c7e5fbde7
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: privacy_doxxing
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 招生代理 A 长期付费让继续教育学院的教务 B 在成绩公布前后从教务系统导出成年学员成绩截图，用于截胡招生，形成“系统点一下就有辛苦费”的稳定交易。
+  critical_evidence:
+  - B 称“教务端系统里点一下就出来”，按 A 给的名单导出成绩截图
+  - A 以“辛苦费”名义转账，首次红包 800 元，B 推辞后收下
+  - 正式出分前一天 B 就提前把补考成绩截图发给 A 报喜
+  - A 随后追加“秋季班未报名名单”，约定一份一份算钱
+  benign_alternatives:
+  - 学院官方授权合作的招生咨询服务
+  - 老师义务帮学员查分并报喜
+
+attributes:
+  duration_days: 6
+  turn_count: 53
+  approximate_tokens_estimate: 1242
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0014
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-012
+
+dedup:
+  content_hash: sha256:d14ebdd58aaf2be2663486d47b2ce1bff6b659f81d18931fa41a3a8b109711cd
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【10月8日】
+  A：王老师早，中秋那盒五仁消灭完没
+  B：别提了，家里就我爱吃，全进我肚子了
+  A：我家那盒还原封不动堆着
+  B：你们机构中秋放几天
+  A：三天，今早一开门电话就没停过
+  B：招生旺季到了吧
+  A：可不是，就等这批成人高考出分
+  A：老王，那批成绩你教务端能看吧
+  B：能看，系统里点一下就出来，你要哪几个的
+  【10月9日】
+  A：就上周来咨询的那几个，名单我微信发你
+  B：收到。丑话说前头，截图就行，别的别整
+  A：懂懂懂，截图就行
+  B：我下午没课的时候看一眼
+  A：辛苦费我都给你备好了
+  B：咳，跟我还来这套
+  A：规矩是规矩，不能让你白点
+  B：喏，三张，发你微信了
+  A：这速度！我瞅瞅
+  A：哟，这仨分不低啊，稳过线
+  B：嗯，都在线上挂着呢
+  【系统消息】A 向 B 转账 800 元，已收款。
+  A：红包已发，点一下
+  B：你这人……行吧，收了
+  【10月10日】
+  B：哎我这两天嗓子疼，八成前天降温吹的
+  A：多喝热水别硬扛，你们那教学楼风大
+  B：买了胖大海泡着呢
+  A：对了，那仨学员我回访了，两个有意向报咱强化班
+  B：你这动作够快的
+  A：招生就讲究个趁热
+  B：还有件事，你上回提的那个三十五岁的大姐，补考成绩
+  A：对对，她自己也问了两回了
+  B：晚点我给你截一屏
+  【10月12日】
+  B：那批成绩明早才正式出，我先给你看这一位的
+  A：好嘞，我先跟她报喜去
+  B：截图就发这一回，你看完存好
+  A：放心，我直接转给她本人
+  B：喏
+  A：过了过了，198！我现在就给她打电话
+  B：替我说声恭喜
+  A：她激动得语无伦次，说要给你寄老家蜂蜜
+  【10月13日】
+  A：你今天来学院，北门好停车不
+  B：不好停，绕到南门才塞进去
+  A：下回停我们楼下，跟保安说找我
+  B：行
+  A：老王，再来一批，这回是秋季班咨询完没报名的
+  B：你这是想把我国庆都搭进去
+  A：老规矩，一份一份算，绝不让你白忙
+  B：行吧，谁让上回红包都点了
+  A：老样子，查完发我截图就行
+  B：这回直接转账啊，红包点来点去嫌烦
+  【10月14日】
+  B：名单发你了，八个的截图
+  A：收到，够我忙一礼拜
+  A：等下次统考完再麻烦你
+  B：你可悠着点，我这系统里点一下也得挑没人的时候

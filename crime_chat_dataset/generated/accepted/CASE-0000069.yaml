@@ -1,0 +1,147 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000069
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000136
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-1aa8f17d84519f5d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: other_illicit_coordination
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 对话里全是“加速包、抢票、三百一张”的话头，实际全程走官方候补渠道帮家人买春运火车票，所谓酬金被明确拒绝，转账只是票款本身。
+  critical_evidence:
+  - 全程使用12306候补和官方App加速包，A明确说脚本会封号、不顶用
+  - 乘车人实名是家人身份证信息，属于正常购票实名要求
+  - 转账756元为两张下铺票款本身（378元×2），有订单截图和乘车人核对
+  - “成功一张给三百”被A严肃拒绝：“票钱行，跑腿费免谈”
+  benign_alternatives:
+  - 家人之间代购春运火车票
+  - 亲友帮忙并谢绝跑腿费
+
+attributes:
+  duration_days: 2
+  turn_count: 72
+  approximate_tokens_estimate: 1876
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: ticket_scalp_bot
+  risk: 1
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0012
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-012
+
+dedup:
+  content_hash: sha256:907d0b522c6a5ccef5c5497d38e80b9471017cd42c3845bf9beb4fb27b7fafe5
+pipeline_status: accepted
+title: other_illicit_coordination/ticket_scalp_bot
+conversation: |-
+  【12月18日】
+  B：哥，在吗，急事
+  A：说，天塌了？
+  B：春节回家的票抢不到啊，腊月二十九那趟K字头
+  A：哪天的车，咱市到县里那趟？
+  B：对对，就那趟，年年难抢
+  A：那趟车你早点说啊，前两天放票的时候你在干嘛
+  B：忙忘了，想起来就剩眼馋了
+  A：你在12306上把候补先挂上，几个时段都挂
+  B：挂了，显示排队200多位
+  A：200多位悬，你把乘车人信息发我，我账号里也帮你挂一路
+  B：候补乘车人要实名的吧
+  A：要，你俩身份证号发我，就正常填乘车人，跟去年叔和妈那两张一样
+  B：发你了，麻烦哥了
+  A：家里人道啥麻烦，去年不也是我弄的，稳稳当当
+  B：哥，我看你朋友圈说你早年写过抢票小工具？安排一个呗
+  A：早八百年前的事了，现在平台管得邪乎，脚本一跑号就封，别想了
+  B：那咋整，干等？
+  A：老实候补，再把App里官方那个加速包买上，多几个通道
+  B：加速包管用吗，我看网上有人说智商税
+  A：说不好，花钱买个心安，参数我给你调好，放票前我手机定三个闹钟
+  B：成，全听你的
+  A：妈今天灌腊肠呢，问我你啥时候回
+  B：29号到家的话，年三十正好赶上灌好的
+  A：她说给你留两挂，你那份肥瘦三七
+  B：还是妈疼我，哥你那份就肥瘦对半吧哈哈
+  A：滚，我这体质也得吃三七的
+  B：哥，候补排到多少位了
+  A：你那个100位，我这个30位，加了加速包的通道动得快些
+  B：咱爸妈那两张呢
+  A：老早候补上了，稳的，明天应该出票
+  B：行，那今天先睡，明天看你的
+  B：县里今冬第一场雪，群里照片你看了没
+  A：看了，房顶全白，有点想家了
+  B：你那市区下不
+  A：就飘了点渣，落地就化，没劲
+  A：闹钟定好了，明早九点放票，你手机充满电，出票提醒一响就付
+  【12月19日】
+  B：哥！！出了没
+  A：别催，放票刚过五分钟，页面刷着呢
+  B：紧张，比等我发工资还紧张
+  A：出了！两张下铺，12号13号，挨着的
+  B：牛！！哥你是神
+  A：运气加手速，缺一不可
+  B：说好的，成功一张给三百，两张六百，我给你转
+  A：打住，什么三百六百，自家人提钱伤感情
+  B：那不行，票钱必须我出，你敢不收我翻脸
+  A：票钱行，跑腿费免谈，就当我提前给你拜年
+  B：成交，票钱照付
+  A：卧铺一张378，两张756，订单截图发你了
+  【系统消息】B 向 A 转账 756 元，已收款。
+  A：收到，订单明细再核对下，名字日子都别记错
+  B：都对，稳了，年三十前准到家
+  B：对了，小侄子期末成绩出来没
+  A：语文98数学92，他妈奖了个新球鞋
+  B：可以啊，数学基因没浪费
+  A：他数学随他妈，我就出个饭量
+  B：哈哈那小家伙得多嫌弃你
+  A：妈问你29号到家想吃啥，她说给你炖鸡
+  B：让妈别忙活，随便吃点
+  A：你说这话她能听？腊八就开始晒菜干了
+  B：哈哈行，那我想吃她腌的酸豆角
+  A：这我好使，已经记小本本上了
+  B：哥，叔伯那边问年货捎不捎，你拿主意
+  A：捎两箱苹果，再给三叔带条烟，你出钱我出面
+  B：没问题，年货钱回头一并转你
+  A：行，记账上了
+  B：哥，爸妈那两张票出了没
+  A：早出了，你咋比他们还上心
+  B：亲爸妈，我能不上心吗
+  A：行了孝子，票在我这，29号早上直接站里取
+  B：嗯嗯，到时候站里碰头
+  A：带好身份证，别又落家里
+  B：就丢过一回！三年前的事还提
+  A：哈哈，记你一辈子的戳

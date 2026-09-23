@@ -1,0 +1,149 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000088
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000090
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-928a5d54efdbb623
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 满口日结、合影、额度,听着像收卡的灰产生意,实际是银行备案驻点推广的提成日结,加上社区废品回收小程序攒环保积分,全是正当副业。
+  critical_evidence:
+  - A是银行备案的驻点推广员,穿统一马甲挂工牌,办卡提成由行里日结
+  - 合影是行里要求的业绩核销凭证,只拍客户与新卡且现场遮挡信息
+  - B分得的160元是帮忙发传单的推荐提成分成,行内备案渠道结算
+  - A的回收副业是小程序碳积分额度,纸箱等可兑换米面油
+  benign_alternatives:
+  - 银行卡新户推广活动
+  - 废品回收积分创业讨论
+
+attributes:
+  duration_days: 2
+  turn_count: 74
+  approximate_tokens_estimate: 1982
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: card_four_piece_pool
+  risk: 0
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0013
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-012
+
+dedup:
+  content_hash: sha256:9300ad087f7539fb8ef31be658614dde9ba68d05dbccc6504fdffe0f26fe6407
+pipeline_status: accepted
+title: money_laundering_obfuscation/card_four_piece_pool
+conversation: |-
+  【10月24日】
+  B：康哥早,今天周六你还去网点蹲点
+  A：周末人流大,商超门口那个驻点,行里排的我
+  B：穿工装不
+  A：穿,行里统一马甲,工牌挂好,不然大堂经理不认
+  B：辛苦费怎么算
+  A：办成一张储蓄卡行里给提成,日结,上周末我一天五百二
+  B：这么香,那我帮你吆喝
+  A：来,正好缺人发传单,管午饭
+  B：午饭吃啥,驻点旁边那家肉夹馍
+  A：行,再加瓶汽水,绝配
+  B：那你垫付,我转你
+  A：小钱,抹了
+  A：记住,客人先在APP上约,然后柜台开卡,完事我拍张业绩照,人和新卡合影,行里核销用
+  B：合影会不会人家不愿意拍
+  A：礼貌问,不拍也不能强求,行里有话,不许硬来
+  B：明白,正规军
+  B：上午成了几张
+  A：三张,都是约好的老主顾,搂草打兔子
+  B：新户礼发了没
+  A：一提抽纸加五十话费,当场到账,客人笑得合不拢嘴
+  B：我电动车又没电了,推了一路
+  A：你那电池该换了,几年了
+  B：三年,换块要八百,肉疼
+  A：以旧换新有补贴,你去问问
+  A：上午四张了,你嗓子喊哑没
+  B：哑了,但饭到了,肉夹馍真香
+  A：吃完好干活,下午还有一场
+  B：下午几点收
+  A：五点,收了我去驿站盘今天的纸箱
+  B：你那个回收副业还搞着呢
+  A：搞,小程序上攒额度,纸箱、旧书、易拉罐都收,额度越大越好,月底能换米面油
+  B：环保达人,回头我们组的快递箱都给你留着
+  A：多多益善,秤上见真章
+  B：你工位那盆多肉又胖了
+  A：少浇水,它就知足
+  B：我那盆都浇死了,唉
+  A：你那是劝退式养法
+  A：收摊,今天六张,创纪录
+  B：六张!提成多少
+  A：一张八十上下,五百多,行里日结,晚上到
+  B：羡慕,我正职都没这日结爽
+  【10月25日】
+  B：昨晚那个纪录片看了没,讲你老家那条江的
+  A：看了,拍得真好,看得我想家
+  B：下月院线有部新片,组队
+  A：组,我先建个接龙
+  B：康哥,问你个正经的,你们这个拉新办卡,合规不,我看你天天广场上摆摊
+  A：合规,行里备案的驻点,活动方案红头文件我手机里存着,你不放心周末来网点看,大堂经理都认识我
+  B：那合影那些,也是行里要求的
+  A：对,业绩核销凭证,只拍卡面和客户,信息现场都遮住,行长签字才能领提成
+  B：懂了,那我能兼职干不
+  A：你有兴趣,先去人事备案,行里允许员工推荐,提成一样日结
+  B：那我报个名,正好想换手机
+  B：对了,回收小程序今天上线没,我们组攒了一堆箱子
+  A：上了,下午我顺路来公司拉,你放前台就行
+  B：好嘞,额度又涨了
+  A：到你楼下了,箱子搬下来吧
+  B：十斤半,小程序显示能攒八十克碳积分
+  A：可以,月底你也能换桶油
+  B：环保的钱,挣得踏实
+  A：对了,昨天你帮工的分成,行里今天结算了,你看下到账
+  【系统消息】A 向 B 转账 160 元，已收款。
+  B：收到,分成真快,日结名不虚传
+  A：行里的钱,一分不少,也不多拿
+  B：康哥,周一我跟人事提兼职的事,你帮我递个表
+  A：行,表我明天带给你,先说好,该走的流程一步不能少
+  B：必须的,咱不挣糊涂钱
+  A：今天回收额度破千了,小程序给我弹了个环保之星
+  B：恭喜环保之星,晚上加个腿
+  A：加,你请,谁让你今天白拿积分
+  B：行行行,火锅
+  B：对了下周网点还有活动没,我把丈母娘约去开张卡,新户礼那油挺好
+  A：有,周六上午,丈母娘那单提成还归你,哈哈
+  B：那我是不是该谢谢丈母娘
+  A：你这是把亲情也盘出额度了
+  B：哈哈,晚安,环保之星

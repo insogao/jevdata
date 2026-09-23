@@ -1,0 +1,468 @@
+{
+ "key": "b12c025",
+ "archetype_id": "ARC-000099",
+ "subtype": "refund_cycle_wash",
+ "latent_intent": "商户配合中间人，用安排好的大额订单让来路不明的资金以“订单退款”名义流回指定银行卡，抽取两个点手续费，同时把店铺流水做漂亮。",
+ "critical_facts": [
+  "B安排人向A的店铺下单付款，A随后走“退货退款”，钱退到B指定的另一张卡（与付款卡不同）",
+  "手续费按两个点从退款中扣除（8000退7840、15000退14700）",
+  "动机台词：B称替朋友“过一下钱”，A在意“这个月流水顶过去仨月”的账面效果",
+  "交易分批进行且换单继续（8000→15000→12000），中途更换退款卡号"
+ ],
+ "benign_alternatives": [
+  "正常电商大额退货退款中商户与买家的沟通",
+  "门店与供货商之间的正常返款结算"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "10月12日 09:12",
+   "speaker": "B",
+   "text": "周哥，忙不，问你个事"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 09:14",
+   "speaker": "A",
+   "text": "刚开门，说"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 09:15",
+   "speaker": "B",
+   "text": "上回饭局提的那个，钱过一下你店里，你考虑得咋样"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 09:17",
+   "speaker": "A",
+   "text": "就是走订单退款那个？退到指定卡上？"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 09:18",
+   "speaker": "B",
+   "text": "对，我安排人拍单付款，你后台走退款，退到我发你的卡上"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 09:20",
+   "speaker": "A",
+   "text": "退款卡跟付款卡不是同一张，平台不管吗"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 09:21",
+   "speaker": "B",
+   "text": "你走正常退货流程，理由写客户不要了，谁看都挑不出毛病"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 09:23",
+   "speaker": "A",
+   "text": "你到底图啥，平白让我涨流水"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 09:24",
+   "speaker": "B",
+   "text": "我收两个点辛苦费，你流水做起来了，年底评优贷款都硬气"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 09:25",
+   "speaker": "A",
+   "text": "行，先来一单小的试试"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 12:31",
+   "speaker": "A",
+   "text": "中午吃啥，点外卖不"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 12:32",
+   "speaker": "B",
+   "text": "不点了，楼下面馆对付一口，你呢"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 12:33",
+   "speaker": "A",
+   "text": "我媳妇往店里送饺子，荠菜馅的"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 09:20",
+   "speaker": "B",
+   "text": "周哥，单子下了，8000那单，你后台瞅一眼"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 09:22",
+   "speaker": "A",
+   "text": "看到了，货款到收款码了"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 09:23",
+   "speaker": "B",
+   "text": "你下午就点退款，备注照我发你的抄"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 09:24",
+   "speaker": "A",
+   "text": "退的还是昨天那张卡吧"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 09:25",
+   "speaker": "B",
+   "text": "对，就那张，别弄错"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 15:40",
+   "speaker": "B",
+   "text": "这天说冷就冷，早上骑车手都冻木了"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 15:42",
+   "speaker": "A",
+   "text": "秋裤都安排上了，店里小太阳也搬出来了"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 15:43",
+   "speaker": "B",
+   "text": "你那小太阳去年就闹脾气，还没换呢"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 15:45",
+   "speaker": "A",
+   "text": "凑合用，省点电费"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 18:33",
+   "speaker": "B",
+   "text": "到账了，7840，一个子儿不差"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 18:34",
+   "speaker": "A",
+   "text": "嗯，对上就行，下一单啥时候"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 18:35",
+   "speaker": "B",
+   "text": "明天缓缓，大单周四走"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:18",
+   "speaker": "A",
+   "text": "周四那单多大"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:20",
+   "speaker": "B",
+   "text": "一万五，你上午先挂个冷门商品，标价一万五"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:21",
+   "speaker": "A",
+   "text": "挂个高档按摩仪行不，没人比价"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:22",
+   "speaker": "B",
+   "text": "行，就这种没人问的省事"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 14:02",
+   "speaker": "A",
+   "text": "下午孩子学校开运动会，我过去看两小时"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 14:03",
+   "speaker": "B",
+   "text": "好久不见你家小子了，又长高了吧"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 14:04",
+   "speaker": "A",
+   "text": "猛蹿一截，今天跑了个小组第二"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 14:05",
+   "speaker": "B",
+   "text": "可以啊，随你，你当年不就好动"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 14:06",
+   "speaker": "A",
+   "text": "哈哈我这体格哪叫好动，主要是孩子自己爱跑"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 16:20",
+   "speaker": "A",
+   "text": "对了，退款还是退你那张老卡？"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 16:21",
+   "speaker": "B",
+   "text": "就那张，别换，换了对不上账"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 16:22",
+   "speaker": "A",
+   "text": "明白，那周四见真章"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 16:23",
+   "speaker": "B",
+   "text": "慌啥，流程你都走熟了"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 10:11",
+   "speaker": "B",
+   "text": "下单了，一万五那单，你看着点"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 10:12",
+   "speaker": "A",
+   "text": "到账了，比你说的还快"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 10:13",
+   "speaker": "B",
+   "text": "赶四点前退掉，别压着"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 10:14",
+   "speaker": "A",
+   "text": "好嘞，扣两个点，退你14700"
+  },
+  {
+   "type": "transfer",
+   "time": "10月15日 11:02",
+   "from": "A",
+   "to": "B",
+   "amount": 14700
+  },
+  {
+   "type": "message",
+   "time": "10月15日 11:05",
+   "speaker": "B",
+   "text": "到了，麻利"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 11:06",
+   "speaker": "A",
+   "text": "这单量不小，你那边稳吧"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 11:07",
+   "speaker": "B",
+   "text": "放心，我朋友就认你这块牌子"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 11:08",
+   "speaker": "A",
+   "text": "一个月两拨到头了，别太密"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 11:09",
+   "speaker": "B",
+   "text": "看行情，量再大给你涨到三个点"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 16:40",
+   "speaker": "A",
+   "text": "帮我收个快递呗，一个机械键盘，家里没人"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 16:41",
+   "speaker": "B",
+   "text": "行，放我店里，晚上来拿"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 16:42",
+   "speaker": "A",
+   "text": "回头给你带杯奶茶，少糖去冰"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 09:30",
+   "speaker": "A",
+   "text": "键盘用上了，手感是真好"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 09:31",
+   "speaker": "B",
+   "text": "我推荐的东西啥时候翻过车"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 09:32",
+   "speaker": "A",
+   "text": "这个月流水顶过去仨月，有点虚"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 09:33",
+   "speaker": "B",
+   "text": "虚啥，账面漂亮就行，年底前再冲一波"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 09:34",
+   "speaker": "A",
+   "text": "心里没底，别太猛"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 09:35",
+   "speaker": "B",
+   "text": "流程都是平台自己的退款，谁查也是正常退货"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 20:15",
+   "speaker": "B",
+   "text": "昨晚那场球看了没，补时绝平"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 20:16",
+   "speaker": "A",
+   "text": "看了，点球丢了还想赢，气死"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 20:17",
+   "speaker": "B",
+   "text": "周末还有一场，来我店里整点啤酒"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 20:18",
+   "speaker": "A",
+   "text": "行，我带卤味"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 21:02",
+   "speaker": "A",
+   "text": "下单的事按老时间，别提前"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 21:03",
+   "speaker": "B",
+   "text": "成，等你信儿"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 10:22",
+   "speaker": "A",
+   "text": "今天单子多大"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 10:23",
+   "speaker": "B",
+   "text": "一万二，已经拍了，你留点神"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 10:24",
+   "speaker": "A",
+   "text": "看到了。退款卡还是老卡？"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 10:25",
+   "speaker": "B",
+   "text": "换新卡了，卡号我发你，记好"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 10:26",
+   "speaker": "A",
+   "text": "行，下午退"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 14:50",
+   "speaker": "A",
+   "text": "退了，你盯着点手机"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 14:51",
+   "speaker": "B",
+   "text": "到了喊我"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 16:30",
+   "speaker": "B",
+   "text": "到账，这单利索"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 16:31",
+   "speaker": "A",
+   "text": "成，下个月这时候再来"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 16:32",
+   "speaker": "B",
+   "text": "周哥办事就是稳"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 16:33",
+   "speaker": "A",
+   "text": "少来，两个点一个子儿不能少"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000076",
+  "status": "accepted",
+  "errors": []
+ }
+}

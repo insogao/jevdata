@@ -1,0 +1,152 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000076
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000099
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-91e1cf0cc39f3f11
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: money_laundering_obfuscation
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 商户配合中间人，用安排好的大额订单让来路不明的资金以“订单退款”名义流回指定银行卡，抽取两个点手续费，同时把店铺流水做漂亮。
+  critical_evidence:
+  - B安排人向A的店铺下单付款，A随后走“退货退款”，钱退到B指定的另一张卡（与付款卡不同）
+  - 手续费按两个点从退款中扣除（8000退7840、15000退14700）
+  - 动机台词：B称替朋友“过一下钱”，A在意“这个月流水顶过去仨月”的账面效果
+  - 交易分批进行且换单继续（8000→15000→12000），中途更换退款卡号
+  benign_alternatives:
+  - 正常电商大额退货退款中商户与买家的沟通
+  - 门店与供货商之间的正常返款结算
+
+attributes:
+  duration_days: 6
+  turn_count: 73
+  approximate_tokens_estimate: 1709
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: refund_cycle_wash
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0012
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-012
+
+dedup:
+  content_hash: sha256:5c491a2bd8a595f4c69beb8c61d682fda26cccd626cd0ad73c296420baa4628a
+pipeline_status: accepted
+title: money_laundering_obfuscation/refund_cycle_wash
+conversation: |-
+  【10月12日】
+  B：周哥，忙不，问你个事
+  A：刚开门，说
+  B：上回饭局提的那个，钱过一下你店里，你考虑得咋样
+  A：就是走订单退款那个？退到指定卡上？
+  B：对，我安排人拍单付款，你后台走退款，退到我发你的卡上
+  A：退款卡跟付款卡不是同一张，平台不管吗
+  B：你走正常退货流程，理由写客户不要了，谁看都挑不出毛病
+  A：你到底图啥，平白让我涨流水
+  B：我收两个点辛苦费，你流水做起来了，年底评优贷款都硬气
+  A：行，先来一单小的试试
+  A：中午吃啥，点外卖不
+  B：不点了，楼下面馆对付一口，你呢
+  A：我媳妇往店里送饺子，荠菜馅的
+  【10月13日】
+  B：周哥，单子下了，8000那单，你后台瞅一眼
+  A：看到了，货款到收款码了
+  B：你下午就点退款，备注照我发你的抄
+  A：退的还是昨天那张卡吧
+  B：对，就那张，别弄错
+  B：这天说冷就冷，早上骑车手都冻木了
+  A：秋裤都安排上了，店里小太阳也搬出来了
+  B：你那小太阳去年就闹脾气，还没换呢
+  A：凑合用，省点电费
+  B：到账了，7840，一个子儿不差
+  A：嗯，对上就行，下一单啥时候
+  B：明天缓缓，大单周四走
+  【10月14日】
+  A：周四那单多大
+  B：一万五，你上午先挂个冷门商品，标价一万五
+  A：挂个高档按摩仪行不，没人比价
+  B：行，就这种没人问的省事
+  A：下午孩子学校开运动会，我过去看两小时
+  B：好久不见你家小子了，又长高了吧
+  A：猛蹿一截，今天跑了个小组第二
+  B：可以啊，随你，你当年不就好动
+  A：哈哈我这体格哪叫好动，主要是孩子自己爱跑
+  A：对了，退款还是退你那张老卡？
+  B：就那张，别换，换了对不上账
+  A：明白，那周四见真章
+  B：慌啥，流程你都走熟了
+  【10月15日】
+  B：下单了，一万五那单，你看着点
+  A：到账了，比你说的还快
+  B：赶四点前退掉，别压着
+  A：好嘞，扣两个点，退你14700
+  【系统消息】A 向 B 转账 14700 元，已收款。
+  B：到了，麻利
+  A：这单量不小，你那边稳吧
+  B：放心，我朋友就认你这块牌子
+  A：一个月两拨到头了，别太密
+  B：看行情，量再大给你涨到三个点
+  A：帮我收个快递呗，一个机械键盘，家里没人
+  B：行，放我店里，晚上来拿
+  A：回头给你带杯奶茶，少糖去冰
+  【10月16日】
+  A：键盘用上了，手感是真好
+  B：我推荐的东西啥时候翻过车
+  A：这个月流水顶过去仨月，有点虚
+  B：虚啥，账面漂亮就行，年底前再冲一波
+  A：心里没底，别太猛
+  B：流程都是平台自己的退款，谁查也是正常退货
+  B：昨晚那场球看了没，补时绝平
+  A：看了，点球丢了还想赢，气死
+  B：周末还有一场，来我店里整点啤酒
+  A：行，我带卤味
+  A：下单的事按老时间，别提前
+  B：成，等你信儿
+  【10月17日】
+  A：今天单子多大
+  B：一万二，已经拍了，你留点神
+  A：看到了。退款卡还是老卡？
+  B：换新卡了，卡号我发你，记好
+  A：行，下午退
+  A：退了，你盯着点手机
+  B：到了喊我
+  B：到账，这单利索
+  A：成，下个月这时候再来
+  B：周哥办事就是稳
+  A：少来，两个点一个子儿不能少
