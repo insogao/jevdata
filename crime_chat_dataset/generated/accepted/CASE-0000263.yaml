@@ -1,0 +1,142 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000263
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000116
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-a9290fa40eb68111
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: theft_robbery_property_crime
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A利用售后只验证码、原包装膜可还原的漏洞做退货套利，借公司地址收货掩人耳目，并以一单分一千拉同事入伙。
+  critical_evidence:
+  - A称手上有原包装膜，货能封回得跟柜台上拿的一模一样
+  - A称售后环节只认码、不拆开细看
+  - A算账称一单利润一千出头，承诺分B一千
+  - 确认收货当天A立即转给B 1000元分成
+  benign_alternatives:
+  - 正常的七天无理由退货
+  - 商品瑕疵与商家协商退款
+
+attributes:
+  duration_days: 2
+  turn_count: 67
+  approximate_tokens_estimate: 1581
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: delivery_fraud_returns
+  risk: 2
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0031
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-018
+
+dedup:
+  content_hash: sha256:0b594e28b45f0016dc8609323025f07dfb247ee630bf3c4a8cddc1916144cd54
+pipeline_status: accepted
+title: theft_robbery_property_crime/delivery_fraud_returns
+conversation: |-
+  【10月15日】
+  A：早，昨晚那场绝杀看了没
+  B：看了，最后那球离谱
+  A：跟你商量个事，别往外说
+  B：啥事这么神秘
+  A：我最近摸着个小门路，手机这块，一个来回利润不小
+  B：手机？你上班哪有空
+  A：线上操作，关键要个靠谱收货地址，咱公司这里正好
+  B：你想寄公司？让前台代收？
+  A：对，你帮我盯一下，到了说一声就行
+  B：能行吗，别给部门惹麻烦
+  A：放心，流程我摸得门儿清，售后那边只认码，码对就过，不拆开细看
+  B：只验个码就给退？
+  A：对，所以稳。膜的事更不用你操心，原包装膜我手里有的是，封回去跟柜台上拿的一模一样
+  B：听得我心虚
+  A：心虚啥。你只管帮忙收个货，一单利润一千出头，有你一份
+  B：先不说了，组长过来了
+  A：行，中午细说
+  B：中午吃啥，楼下麻辣烫排疯了
+  A：去对面商场，顺便帮我带杯杨枝甘露，大杯少冰
+  B：你不是戒糖吗，上周还说胖了
+  A：戒糖跟奶茶是两码事哈哈，我请
+  B：行，看在你请客份上
+  B：对了周四晚还有一场，老地方看？
+  A：去，输的请宵夜
+  A：下午三点有个件到，帮我留意前台
+  B：行，到了喊你。你这门路到底咋回事，我还是没想明白
+  A：不用想明白。货到、你说一声、完事一千进你卡，就够了
+  B：货你自己处理？
+  A：嗯，到手我当天出清，不留尾巴
+  B：行，先说好，就帮这一次
+  A：好嘞，就一次哈哈
+  B：周六值班你调不调，排班表有你
+  A：调，下月要回老家，攒着换休
+  B：回去干啥
+  A：收核桃，我妈催三回了
+  B：好东西，回来带点，要真空包装的
+  A：行，给你留最大的两袋
+  【10月16日】
+  A：件到了没，物流显示上午签收
+  B：前台刚给我，放你工位底下了
+  A：好兄弟，下午我就安排
+  B：别虚的，说好的一千
+  A：少不了你
+  B：你今天声音咋哑了
+  A：开窗睡的，降温着凉了
+  B：吃药没，别硬扛
+  A：吃了感冒灵，扛两天就过
+  B：中午给你带个热粥
+  A：加个茶叶蛋，谢了
+  B：双十一购物车清了没，我加一堆舍不得付
+  A：我就等那天换剃须刀
+  B：我加了空气炸锅、毛衣、颈椎枕，纠结
+  A：颈椎枕有用，我这脖子就是坐出来的
+  B：听你的，付了
+  A：痛快
+  B：你说的那个安排到底是啥，你今天心不在焉的
+  A：在等那边确认收货，一确认这单就走完了
+  B：前脚刚拿到后脚就退？
+  A：所以叫门路啊。码我核过两遍，售后只认码，闭眼过
+  B：行吧，我啥也没看见
+  A：你当啥也没发生，晚上不聚了，直接给你转
+  B：成
+  【系统消息】A 向 B 转账 1000 元，已收款。
+  A：到了吧，说好的一千，一分不少
+  B：收到。说实话，这钱拿得烫手
+  A：烫手啥，凭本事。下月还来一波，你继续躺分
+  B：下月再说，最近部门查工位，我可啥都没放
+  A：嘴严点就出不了事。周四球赛还去不
+  B：去，你嗓子行吗，别喊不动

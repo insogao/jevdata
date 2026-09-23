@@ -1,0 +1,155 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000249
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000020
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-8c7e6497214dd1cd
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 老同学借掌管招聘之便为故人之子铺路：面试走过场、档案走加急，家长在孩子入职前以中秋心意为名转来两万元，双方都不把话说破。
+  critical_evidence:
+  - A明言面试就是个流程、走个过场，重点只在笔试
+  - A称已和人力刘姐打过招呼，让人对其档案单独盯着、走加急
+  - B在录用流程进行中向A转账20000元，名义是中秋心意
+  - 转账后数日内孩子进面、拿offer，约定下月入职
+  benign_alternatives:
+  - 老同学间正常内推与求职咨询
+  - 亲友间中秋人情往来送礼
+
+attributes:
+  duration_days: 3
+  turn_count: 79
+  approximate_tokens_estimate: 2082
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: relative_employment_exchange
+  risk: 2
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0030
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-018
+
+dedup:
+  content_hash: sha256:f286da384351710c2584ab13edb8667b78b763ff0b79396617294c2c3021ec24
+pipeline_status: accepted
+title: bribery_corruption/relative_employment_exchange
+conversation: |-
+  【10月12日】
+  A：建国，好久没冒泡了，最近忙啥
+  B：老周！稀客啊，刚开完周会
+  A：我这不还是设计院那摊子事嘛
+  B：你都管招人了还装辛苦
+  A：什么管招人，就是干活的，顺带盯着招聘这块
+  B：你家闺女呢，去年不是才上高中
+  A：高二了，住校，一回来就抱着手机
+  B：一样，我家那个高三，天天刷题到十二点
+  A：那你更操心，伙食跟上没
+  B：跟着呢，他妈天天研究菜谱，核桃鱼油买一堆
+  A：高三就熬这一年，过去了就好了
+  A：对了，你阳澄湖那朋友今年还寄螃蟹不
+  B：寄，下周第一网，给你留一箱
+  A：多放公蟹，我妈爱吃膏多的
+  B：没问题，公四母六，老配置
+  A：还是院里老地址，保安室代收
+  B：行，发货了给你单号
+  B：哎，正好有个事想问你
+  B：我家小子今年大四，土木的，想投你们院，有戏不
+  A：可以啊，让他网申走流程，简历再发我一份
+  B：他成绩中上，就是没啥实习
+  A：实习不急，进来都能学，先把笔试过了
+  B：我尽量不给他压力，怕孩子崩
+  A：你这心态好，尽力就行
+  【10月14日】
+  A：早上陪我爸去医院复查，排队排到怀疑人生
+  B：老爷子身体咋样
+  A：老毛病，腰椎间盘，医生让少坐
+  B：你也少坐，你去年不还贴膏药
+  A：贴着呢，工位常备，跟小药铺似的
+  B：回头我捎两盒我们市的膏药，贼好使
+  A：那敢情好
+  B：简历小宇昨晚发你邮箱了，瞅了没
+  A：看了，排版不行，内容还凑合，让他重排
+  B：行，今晚就说他
+  A：笔试下周二，网上题库让他刷刷
+  B：面试呢，也要刷吗
+  A：面试你放心，就是个流程，走个过场，重点在笔试
+  B：那我就踏实了
+  B：还有，他档案在学校，到时候咋弄
+  A：档案你别管，人力刘姐我打过招呼，让她单独盯着走加急，别卡在流程上
+  B：得嘞，专业
+  A：你家那老房子装完没
+  B：装完了，光橱柜磨了俩月，甲方都没这么难伺候
+  A：哈哈，我书房那盏灯拖了半年
+  B：找施工队找我表弟，给你成本价
+  B：哎对了，快中秋了，给孩子买了点东西
+  A：买啥东西，八字还没一撇呢
+  B：啥八字不八字的，老同学的一点心意，茶和干货，你这不是帮着看简历嘛
+  A：你这搞得我怪不好意思的
+  B：拿着，孩子的事你多上心，比啥都强
+  A：行吧，心意领了，丑话说前头，笔试过不了我也没法子
+  B：应该的，还得靠他自己
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  A：哎哟，你这转这么个数，回头中秋来家吃饭，螃蟹宴管够
+  B：一箱螃蟹换一顿饭，我血赚
+  A：笔试成绩出来我告诉你，别让孩子背包袱
+  B：懂，全当锻炼
+  【10月16日】
+  A：院里发月饼了，五仁的，猜我给谁了
+  B：给我了？哈哈
+  A：留着中秋，闺女回来吃
+  B：跟你汇报，小宇笔试成绩出了，83，进面了
+  A：可以啊，比我预想的高，面试周五下午两点，让他把自我介绍背熟
+  B：就背自我介绍就行？
+  A：对，面试官都熟人，正常发挥就行，不会为难他
+  B：要穿正装吗
+  A：衬衫就行，别太板正也别太随意
+  B：好，今晚带他去买
+  A：对了，他团员材料记得盖章，档案里少一张都麻烦，我让刘姐再核一遍
+  B：收到，今晚就催
+  B：面试完了！小宇说聊得挺好，面试官还夸了他的课程设计
+  A：我在走廊听了一耳朵，确实可以，等通知吧
+  B：得嘞，等你消息
+  A：通知来了，offer发了，下月8号入职，先签三年
+  B：太好了！大恩不言谢，螃蟹再加一箱
+  A：螃蟹免了，让他好好干，试用期六个月
+  B：入职前还要备啥，体检材料这些
+  A：体检报告、调档函、身份证复印件，齐了就行，档案我今天又跟刘姐确认过
+  B：妥了，晚上让他妈做顿好的
+  A：行，替我问嫂子好，中秋快乐
+  B：中秋快乐，常联系

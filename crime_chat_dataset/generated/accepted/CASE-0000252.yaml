@@ -1,0 +1,151 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000252
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000057
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-8cec412b71dde996
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 大二学长借老乡会之名接近大一新生，先请客拉近关系，再以东门外停车有人照应为名收每天十块的费用，用前任车主的遭遇和车筐里的烟头施压，钱到手后叮嘱每周日交、不许跟辅导员提、不许在宿舍声张。
+  critical_evidence:
+  - 学长借老乡关系请奶茶请麻辣烫套近乎，随后挑明东门外那片归他们照应，一天十块、包月三百
+  - 施压手段是点破不交钱的下场：上学期有新生车后座天天丢、整个座被卸走，随后B车筐里出现烟头
+  - B被迫周结70元转账，学长要求以后每周日转、别断，断了不好续
+  - 学长明确叮嘱别跟辅导员提、别在宿舍嚷嚷，并自称我就是帮你看了下车，没凭没据
+  benign_alternatives:
+  - 同学间借钱
+  - 小卖部赊账
+
+attributes:
+  duration_days: 3
+  turn_count: 75
+  approximate_tokens_estimate: 1896
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: campus_periphery_intimidation
+  risk: 3
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0030
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-018
+
+dedup:
+  content_hash: sha256:f93f3b073b09a8bc1ea42143be57a12cf610a20930de0600254d7f4b784e2209
+pipeline_status: accepted
+title: violence_extortion/campus_periphery_intimidation
+conversation: |-
+  【10月13日】
+  A：兄弟，吃饭没，二食堂三楼新开的麻辣烫
+  B：还没，学长你是……
+  A：蒋昊，大二的，上回老乡会咱坐斜对面，你还给我递过纸巾
+  B：哦哦想起来了，学长好
+  A：一个人吃啥，下来，学长请你
+  B：这多不好意思
+  A：客气啥，都是老乡
+  A：你们军训刚完吧，黑印子还在不
+  B：在呢，胳膊俩色号
+  A：正常，过个冬天就白了
+  B：学长选课有推荐不，明早就开系统了
+  A：体育选羽毛球，给分高；选修影视鉴赏，点名少
+  B：记小本本上了
+  A：有事随时找学长，咱老乡在校门口那片横着走
+  B：哈哈好嘞
+  A：你们宿舍几零几，回头串门
+  B：512，欢迎学长
+  A：恩，回头带罐老家辣酱给你们
+  B：学长太够意思了
+  【10月15日】
+  A：起了没，问你个事
+  B：起了学长，咋了
+  A：你是不是在东门租了辆电动车
+  B：对，停东门车棚，咋了
+  A：东门外头那片归我们照应，你懂的，新来的都这样
+  B：照应？啥意思呀学长
+  A：就是没人动你车，没人划你座，下雨天还有人帮你挪棚里，多好
+  B：这……要花钱吗
+  A：不多，一天十块，包月三百，你看咋方便
+  B：一天十块也太贵了吧学长，我一个月生活费才一千五
+  A：那你想想，上学期有个新生没交，车后座天天丢东西，最后整个座都被人卸了
+  B：那……我再想想
+  A：行，不急，想想再回我，别怪学长没提醒你
+  A：中午奶茶拼单不，第二杯半价
+  B：拼吧，我杨枝甘露
+  A：成，给你们宿舍也带四杯，算我请，就当交个朋友
+  B：这怎么好意思
+  A：没事，跟你宿舍老三都是球友
+  B：学长，那个钱……能少点不，我真没啥钱
+  A：兄弟，一天十块还砍价，一根烟钱都不到，你看隔壁宿舍小李主动包月，车天天停最里头最好的位置
+  B：我考虑考虑，这几天行吗
+  A：行吧，但学长丑话说前头，别等我提醒第二回
+  A：对了，周三下午院系篮球赛，来看不，我首发
+  B：看看看，我给你带水
+  A：上道，穿件我们队颜色的衣服
+  【10月17日】
+  A：兄弟，昨天那球看了没，最后那个三分帅不
+  B：帅！我录了视频发宿舍群了
+  A：回头把视频发我，我发朋友圈
+  B：好
+  A：哎，你车今天还好停不
+  B：还行，就是今早车筐里多了个烟头，怪膈应人的
+  A：看见没，没人照应就这待遇，东门那片新来了几拨人，可不都跟我这么讲道理
+  B：学长，我交，我交还不行嘛
+  A：这就对了嘛，先交这周的，一周七十
+  B：好吧
+  【系统消息】B 向 A 转账 70 元，已收款。
+  A：收到，这周你就踏实骑，车有我看着
+  B：哎学长，这钱……到底算什么名目啊，总得有个说法吧
+  A：什么名目，兄弟间的照应费呗，你买东西我还能给你打折呢
+  B：行吧
+  A：记住，以后每周日转我，别断，断了可就不好续了
+  B：知道了
+  A：对了兄弟，这事别跟辅导员提，也别在宿舍嚷嚷，对你对我都没好处
+  B：我知道……这种事能提吗
+  A：提了也没用，你没凭没据，我也就是帮你看了下车，怕什么
+  B：唉，好吧
+  B：学长，高数期中是不是很难，我一轮复习脑子全是浆糊
+  A：我去年期中68，考前刷老师划的例题就行，回头把笔记拍给你
+  B：多谢学长！
+  A：客气啥，谁让咱是兄弟
+  A：夜宵吃不，南门烧烤摊，学长带你开荤
+  B：今天不去了，宿舍要查寝
+  A：行，下周日那事记牢，别让我说第二遍
+  B：记着呢……
+  A：对了，比赛视频记得发我
+  B：今晚就发
+  A：乖，睡吧

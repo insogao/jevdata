@@ -1,0 +1,130 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000257
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000063
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-5c49d0f927cb50c1
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 表面是成年亲属与孩子私聊、要照片、瞒着家长的模式，实际是舅舅日常照看外甥：问成绩、辅导作业、要的是素描作品照片用于给妈妈装裱生日惊喜，1500元转账是明账的素描班学费垫付。
+  critical_evidence:
+  - 舅舅问的是开学摸底考成绩和班里排名，属于长辈日常关心
+  - 要的照片是外甥的素描作品，用途是把外婆家院子那幅装裱起来给妈妈当生日礼物
+  - 别告诉你妈指的是生日惊喜保密，只瞒到下礼拜生日当天
+  - 转账1500元是素描班学费垫付，约定交给王老师并开写外甥名字的收据，妈妈出差回来归还
+  benign_alternatives:
+  - 亲戚照看孩子
+  - 兴趣班老师沟通
+
+attributes:
+  duration_days: 3
+  turn_count: 54
+  approximate_tokens_estimate: 1411
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: minor_grooming_signal
+  risk: 0
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0030
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-018
+
+dedup:
+  content_hash: sha256:9c877a5ba86ef091207948165be2d1be7ade6dfa0fd2dd8a2c9a6f637fed309c
+pipeline_status: accepted
+title: sexual_transaction_exploitation/minor_grooming_signal
+conversation: |-
+  【10月13日】
+  A：小宇，写完作业没
+  B：舅舅！还差一道数学题，好难
+  A：发来我看看，舅舅当年数学还行
+  B：拍了，就这道追及问题
+  A：你先画线段图，把两个人走的路画出来，试试
+  B：画了！是不是先算出360米那步？
+  A：对了，往下推
+  B：哦哦算出来了！舅舅你真厉害
+  A：是你自己算出来的，别谦虚
+  B：舅舅，周五体育课打篮球，你那双旧球鞋还留着不
+  A：留着呢，44码，你现在脚多长
+  B：刚好42，凑合能穿
+  A：下回给你买双新的，让你舅妈挑
+  【10月14日】
+  A：小宇，开学摸底考成绩出了没
+  B：出了，数学96，语文88，班主任说进步挺大
+  A：可以啊，中午加个鸡腿，班里排第几
+  B：第7！比上次进步5名
+  A：行啊小子，别翘尾巴，继续保持
+  B：知道啦
+  A：对了，素描班这个周末继续不
+  B：上呢，王老师说我对光影有点感觉了
+  A：那你把最近画的拍两张发我看看
+  B：发了，一张静物，一张外婆家院子
+  A：画得可以啊，尤其院子那张，外婆看了肯定高兴
+  B：外婆还夸过这画呢
+  A：我有个想法先跟你说，你妈生日不是下礼拜嘛
+  B：对，10月21
+  A：舅舅想把你画的外婆家院子打印装裱起来送她，你保密，别告诉你妈
+  B：好！我保证不说，弄完给我也看看
+  A：成，原图最晚周日前发我，要高清的
+  A：周日来外婆家吃饭不，你姥姥炖红烧肉
+  B：来！我妈说带我去看姥姥
+  A：行，带上素描本，外婆让你现场画
+  【10月15日】
+  B：舅舅，明天素描班的学费该交了，1500，我妈这两天出差
+  A：这样，学费舅舅先垫上，你明天直接交王老师，回头你妈回来给她转
+  B：好嘞，王老师说交学费给收据，我让妈妈拍照留底
+  A：恩，收据抬头写你名字
+  【系统消息】A 向 B 转账 1500 元，已收款。
+  B：收到！明天一定交给王老师，绝不乱花
+  A：知道你不会，你啥时候乱花过钱
+  B：舅舅，周六篮球你来看不，我们跟三班打友谊赛
+  A：看，给你带水，你可别又把同学盖帽盖哭了
+  B：哈哈那是他先撞我的
+  A：打球归打球，别伤着同学，友谊第一
+  B：知道啦
+  A：小宇，生日惊喜进展汇报：装裱店选好了，实木框
+  B：太好了！妈还问我怎么老躲屋里画画
+  A：你就说帮舅舅画着玩，哈哈
+  B：舅舅你可真会编
+  A：生日那天咱俩一个送画一个送蛋糕，你妈肯定哭
+  B：那她哭了算谁的责任
+  A：算你数学考不了一的责任
+  B：那必须考好，等着我考第一
+  A：行，装裱好了周六你去店里看实物
+  B：成！那周六穿新球鞋去，双喜临门

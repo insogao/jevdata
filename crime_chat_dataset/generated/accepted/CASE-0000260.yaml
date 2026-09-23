@@ -1,0 +1,147 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000260
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000089
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-e3a1a59e52d4d545
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: privacy_doxxing
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 酒店夜班前台受线上上家单向派单，只在夜班时段把刚入住客人的登记信息即时转出，按次从上家抽成，两人用行话交流、从不点破信息来源。
+  critical_evidence:
+  - 单子只出现在A的夜班时段，与其能接触前台系统的时段重合
+  - 客人刚办完入住几分钟内信息就在B那边出货，时序严丝合缝
+  - 按次结算一单两百，A累计收到B转来的1050元
+  - 全程用单子、出了、核一下等行话，不点破信息是什么、从哪来
+  benign_alternatives:
+  - 前台对入住问题的正常答疑
+  - 警方依法调取住宿登记信息
+
+attributes:
+  duration_days: 3
+  turn_count: 71
+  approximate_tokens_estimate: 1365
+  relationship: 上下级
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: hotel_register_leak
+  risk: 3
+  relationship: 上下级
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0031
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-018
+
+dedup:
+  content_hash: sha256:64c2f0710cc715c80fc3b99ae301135b19d6c1f7cee5bfb002f0326c73974058
+pipeline_status: accepted
+title: privacy_doxxing/hotel_register_leak
+conversation: |-
+  【10月5日】
+  B：接班没
+  A：刚坐下，今晚就我一个，清净
+  B：老地方挂了两个单，自己看
+  A：看见了，一个姓王一个姓刘
+  B：夜里的单天亮前出掉，规矩不用我教吧
+  A：教过八百遍了
+  A：哥，点了炒粉，给你捎份烤肠不
+  B：捎，记账上
+  A：再加俩鸡腿？
+  B：你当自己是老板呢，加
+  A：好嘞，四十分钟到
+  B：吃完盯你的活，别光顾吃
+  【10月6日】
+  A：姓王的刚办完，进电梯了
+  B：利索点
+  A：出了，核一下
+  B：齐，这单成了
+  A：外面风呜呜的，台风外围了吧
+  B：大厅伞架收拾好，别积水滑了客人
+  A：你还管伞架，跟我妈似的
+  B：客人摔了算你班上事故，你顶雷还是我顶雷
+  A：行行，领导说得对
+  B：收拾完继续盯第二单
+  A：下班！姓刘的也出了，一晚俩
+  B：记着，一单两百，今晚一起结，回去睡你的
+  B：睡醒没
+  A：刚醒，昨晚两单都利索
+  B：记着呢。今晚还有两单，都在你班里
+  A：好嘞，我买完菜看店
+  A：新赛季开了，你段位掉没
+  B：掉麻了，昨晚连跪五把，卸载了
+  A：上号，我带你，辅助保你
+  B：你辅助？上回抢我人头的是谁
+  A：那叫补伤害！
+  B：算了，先干正事
+  B：挂单了，姓陈的，急单，加五十
+  A：收到，人刚到大厅，正在办
+  A：出了，验一下
+  B：完整，行，这单两百五记你头上
+  A：加五十是加我头上还是……算了你说了算
+  B：自然是给你，哥亏过你吗
+  【10月7日】
+  A：没单了，我眯会儿
+  B：眯吧，手机开响
+  A：对了明晚我姨生日，我想换休
+  B：不批，周五单子多，生日补个红包就行
+  A：早，睡醒了没
+  B：醒了，昨晚给你结账：五个单，一个加急，一千零五十
+  【系统消息】B 向 A 转账 1050 元，已收款。
+  A：点了，到账，哥痛快
+  B：你出活我也痛快
+  A：楼下豆浆王开了，给你带了油条豆浆
+  B：还热乎？行啊，算你有良心
+  A：给你买的无糖豆浆，你血糖高
+  B：无糖难喝，但你买的，喝了
+  A：记你账上，两块五
+  B：两块五也记？出息
+  B：傍晚挂两单，都在你班里，出利索了这个月给你包个红包
+  A：那我提前谢哥
+  A：第一单出了
+  B：收到。第二单人带俩箱子，别看走眼
+  A：到了，在办，稍等
+  A：出了，自己核
+  B：齐，一字不差，今晚收工
+  A：红包呢哥
+  B：过节补你，跑不了
+  A：明天中秋诶，你回家吃饭不
+  B：回，我妈喊三遍了。你值班？
+  A：值到十二点，下台去你那蹭月饼
+  B：五仁的，管够
+  A：五仁，月饼界的集体记忆
+  B：少贫，十二点楼下等我
+  A：得嘞，带上茶
+  B：就知道吃，滚去上班

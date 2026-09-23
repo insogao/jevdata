@@ -1,0 +1,130 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000255
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000097
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-b2842de3240b5253
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 表面像买卖带账户带章的空壳公司，实际是公司为满足投标主体成立满两年的硬指标，通过正规代办收购一家干净现成的小公司，尽调、合同、发票、工商变更一应俱全。
+  critical_evidence:
+  - 收购目的是投标资质：下月智慧园区项目要求投标主体成立满两年
+  - 标的为成立两年、连续零申报、无异常纳税记录的干净公司，自带对公账户、公章和两把U盾，过户当天银行重绑手机号
+  - 法人变更由代办约在市场监管局办理，材料由中介包递，协议经法务和尽调报告把关
+  - A转给B8000元代付服务费，要求收据、发票、转让协议、交接清单四样全部留档报销
+  benign_alternatives:
+  - 公司转让正常流程
+  - 代办执照服务
+
+attributes:
+  duration_days: 3
+  turn_count: 54
+  approximate_tokens_estimate: 1626
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: company_shell_transfer
+  risk: 0
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0030
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-018
+
+dedup:
+  content_hash: sha256:84ceb67525ad91f9ad3e5e5846f49d7e5df56c72ae411d010d671ae68fdfab50
+pipeline_status: accepted
+title: money_laundering_obfuscation/company_shell_transfer
+conversation: |-
+  【10月9日】
+  A：小郑，例会改十点，别忘了
+  B：收到，周总，PPT昨晚改好了
+  A：恩，散会留一下，给你派个新活
+  B：好嘞
+  A：事情这样：下月智慧园区项目投标，要求投标主体成立满两年，咱们新注册的子公司不够格
+  B：明白，那收购一家现成公司最省时间
+  A：对，我联系了家代办，有家干净公司，成立两年连续零申报，带对公账户带章，一并过户
+  B：行，联系人发我，我先拉个尽调清单
+  A：中介姓吴，微信推你，价钱我谈，你盯流程和材料
+  B：成，债权债务这块必须让他们出承诺函
+  A：应该的，协议让法务老李把关
+  B：周总，尽调清单发您邮箱了，重点查隐性担保和未结税款
+  A：恩，查仔细点，别图快
+  B：明白，明天约会计师事务所
+  B：周总，车库您那个充电位明天用不，我下午来辆车
+  A：你用，我明天打车，顺路理个发
+  【10月10日】
+  B：周总，中介把材料发来了：章程、股东会决议、两年纳税申报，我翻了没异常
+  A：恩，隐性负债呢
+  B：报表干净，我还是约了事务所出尽调报告，三天出
+  A：好，费用公司走，发票开咱们抬头
+  B：网银那边，吴经理说这公司网银额度是现成的，两把U盾，过户当天银行重绑手机号就行
+  A：行，U盾交接那天你亲自去，别让中介代拿
+  B：明白，公章财务章我也列了交接清单，一枚一枚对
+  A：细心，就这么办
+  B：周总，行政问中秋礼盒给客户寄多少份，您定个数
+  A：大客户二十份，三百一档那款，别超
+  B：好，下午让采购下单
+  A：盒里放张卡片，手写中秋快乐那种
+  B：安排
+  A：老李那边协议看得咋样
+  B：看完了，说转让条款没坑，债务切割写得很清，就是让补一份税务承诺
+  A：该补就补，稳妥第一
+  【10月11日】
+  B：周总，尽调报告出了，无异常，可以推进。法人变更约的明天上午，市场监管局，材料吴经理他们包递
+  A：好，服务费谈成多少
+  B：八千，含代办和过户的全部工本费，我比过市场价，不算贵
+  A：行，我先转你八千，你转给吴经理，收据发票要齐，回来一起报销
+  B：好，收款码发您
+  【系统消息】A 向 B 转账 8000 元，已收款。
+  B：收到了，这就转吴经理，发票明天让他开好
+  A：恩，发票、收据、转让协议、交接清单，四样全留档给老李
+  B：放心，一样不会少
+  B：转给吴经理了，收据拍照发我了，您过目
+  A：恩，收好
+  A：今天堵不，你骑车还是地铁
+  B：骑车，晚高峰比地铁快
+  A：注意安全，下雨别骑
+  B：好嘞周总
+  A：明天变更完，新执照正副本拍照发我
+  B：好，完事当天我把银行重绑也约了，网银密码重置后当面交您
+  A：恩，办完这一套，下月投标就齐了
+  B：多亏您提前谋划，不然等新公司注册黄花菜都凉了
+  A：做事就得往前赶，那八千记得贴发票
+  B：都在报销系统里了，您批一下就行
+  A：明天批，早点休息
+  B：好嘞，周总再见

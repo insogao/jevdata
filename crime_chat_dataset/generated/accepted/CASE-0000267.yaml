@@ -1,0 +1,139 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000267
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000138
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-11aac6be18e42699
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: other_illicit_coordination
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A向经中间人引荐的B兜售月息三分保本保息的项目，以拉人返两个点刺激其向亲友集资，大额只收现金不留凭证，具有典型违规集资结构。
+  critical_evidence:
+  - A承诺月息三分、保本保息，远超正常收益并口头保本
+  - A给B拉一人返两个点的介绍返点，B随即准备向小舅子等亲友拉钱
+  - 大额要求现金交付、称转账留痕多事，仅先转两万占名额
+  - 无合同无公章，只有一页纸资料和口头承诺
+  benign_alternatives:
+  - 银行理财产品的正常推荐
+  - 亲友间的借款周转
+
+attributes:
+  duration_days: 2
+  turn_count: 64
+  approximate_tokens_estimate: 1607
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: illegal_fundraising
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0031
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-018
+
+dedup:
+  content_hash: sha256:00fd585d41255a6393a974dd0983cc30f9b0e43c0333c70d9f25657c0e879d63
+pipeline_status: accepted
+title: other_illicit_coordination/illegal_fundraising
+conversation: |-
+  【10月17日】
+  A：喂，王哥吧？老周让我联系你，我是小马
+  B：哦哦小马，老周提过，说你在南边搞项目
+  A：对，手上有个盘子利息做得好看，老周让你了解下
+  B：他跟我说了，月息三分？比银行强太多了
+  A：三分月息按月返，本金随时退，保本保息，老周自己都在里头
+  B：保本？现在哪还有保本的说法
+  A：咱这不一样，钱都压在实处。老周的为人你知道，他敢放你就敢放
+  A：中午我请你，城西那家蟹庄，老周本来也来
+  B：好啊，十一点半到
+  B：到了，哪个包间
+  A：天字三号
+  A：尝尝，老板说今早刚到的湖蟹
+  B：膏挺满。老周呢
+  A：他临时有事，让我跟你细聊。你打算放多少
+  B：先放五万试试
+  A：五万行。不过这期名额紧，你要能拉亲戚朋友一起，给你返两个点
+  B：两个点？拉五万返一千
+  A：对，他们的利息我按月代发，你等于白拿一份
+  B：吃好了，下回我请
+  A：下回你拿利息请
+  B：借你吉言
+  A：这家九月底开湖，过阵子更肥，下月再来
+  B：成，下月带我家那位
+  A：带，让她也听听，多个人多份底气
+  B：我回店里了，名额的事我考虑下
+  A：行，晚上给你发资料
+  B：你家孩子补习班在哪家？我儿子想换
+  A：实验中学对面那家，王老师带得严
+  B：贵不
+  A：一学期八千，效果真有，我家那个数学提了二十分
+  B：比之前那家强，我去问问
+  A：先试听，别听顾问忽悠
+  B：懂，货比三家
+  A：资料晚八点发你，看完早点歇
+  【10月18日】
+  B：资料看了，就一页纸？章都没有
+  A：咱这行都这样，规矩在人情里，自己人不搞那些虚的
+  B：万一有个闪失……
+  A：老周放了两年了，你去问他。再说本金随时退，进退都由你
+  B：行，先把我的五万放了
+  A：好。钱的事，大头你取现金给我，现金方便，转账留痕多事
+  B：全现金不行吗
+  A：行是行，今天来不及。你先转两万占个名额，剩下三万明天现金带过来
+  B：也行，名额要紧
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  A：收到，名额占上了，这期还差两个满额就停
+  B：那我抓紧拉人，小舅子手里有闲钱
+  A：拉成了两个点马上返你。上个月老周拉他连襟，返点当天结清
+  B：周日水库开钓不？老张喊了
+  A：去，我新竿还没开光
+  B：那正好把小舅子约上，边钓边聊
+  A：聪明，钓鱼桌上谈事成功率高
+  B：他就知道吃，鱼获全靠咱俩
+  A：让他吃，吃人嘴软嘛
+  B：降温了，秋裤穿没
+  A：穿了，这是对秋天起码的尊重
+  B：哈哈我还没穿，扛扛
+  A：扛啥，老寒腿不开玩笑
+  B：行行，晚上翻出来
+  A：店里空调关了吧，费电
+  B：关了，现在自然凉正好
+  B：小舅子说今晚过来，三万现金他先垫给我
+  A：快手啊。现金到了直接给我，我给他也占个号
+  B：号是啥，排队吗
+  A：份额编号，有号才算进这期，月底统一返头一次利息
+  B：明白，晚上现金给你送去

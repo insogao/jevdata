@@ -6,3 +6,4 @@
 - 2026-09-23 20:05 | batch 15 (TASK-0021/22/23): accepted 140->170 (+30, rejected 0), pairs 22->26, judge agree(+-1)=?/30 | pushed
 - 2026-09-23 20:35 | batch 16 (TASK-0024/25/26): accepted 170->200 (+30, rejected 0), pairs 26->30, 对照对 0190/0197 与 0202/0207 被判官独立正确分级 | pushed
 - 2026-09-23 21:05 | batch 17 (TASK-0027/28/29): accepted 200->230 (+30, rejected 0), pairs 30->35, judge agree(+-1)=30/30 (label adherence fix 生效: risk0/1 全部被判官维持) | pushed
+- 2026-09-23 21:40 | batch 18 (TASK-0030/31/32): accepted 230->260 (+30, rejected 0), pairs 35->40, judge agree(+-1)=30/30; 两处红线冲突（未成年情境）被代理自动改写为成年并保留检测信号 | pushed

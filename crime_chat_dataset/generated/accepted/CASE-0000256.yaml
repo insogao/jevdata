@@ -1,0 +1,149 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000256
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000089
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-e3a1a59e52d4d545
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 表面像夜班前台倒卖住客信息的路数（客人刚入住就冒出单子、按次结账、只在夜里联系），实际是OTA同住人补录订单、按班次发的夜班补贴和民警依流程的例行核验，每一笔都有登记本和考勤表可查。
+  critical_evidence:
+  - 1908客人刚办完入住，平台就推送同住人补录订单，前台逐单登记交接本并调整房间
+  - 辖区民警出示证件依流程核验1203住客信息，前台登记警号事由、登记本放在监控可见处，经理确认这是每月例行
+  - 夜班补贴按班次结算：15个班每班50共750元，考勤表核过两遍，含替小周顶的班
+  - 转账750元与考勤一一对应，经理当场说明了构成，前台当场复核
+  benign_alternatives:
+  - 前台正常入住登记
+  - 警方依法查询
+
+attributes:
+  duration_days: 3
+  turn_count: 72
+  approximate_tokens_estimate: 1985
+  relationship: 上下级
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: hotel_register_leak
+  risk: 0
+  relationship: 上下级
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0030
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-018
+
+dedup:
+  content_hash: sha256:ac6773da96b5207e25c6692abf702b73a010e462f9ab9f43c9d423711a712a1d
+pipeline_status: accepted
+title: privacy_doxxing/hotel_register_leak
+conversation: |-
+  【10月10日】
+  B：小赵，今晚满房不
+  A：满，国庆后第一拨会务团，三楼住满了
+  B：有事随时呼我，我在家没睡死
+  A：好嘞经理
+  B：1908那位刚办完入住，系统又推了个同住人补录单进来，看到没
+  A：看到了，家属后到，我把两间调挨着了，客人挺满意
+  B：平台补录的最容易漏，你盯紧，别漏记房号
+  A：放心，每一单我都记在交接本上了
+  B：好
+  A：经理，前台能点外卖不，饿得前胸贴后背了
+  B：点，我请，就当夜班福利
+  A：那我点个砂锅粥加小菜，你也来份不
+  B：我吃过了，加根烤肠，赔你上回没赶上的班车
+  A：哈哈那我不客气了
+  B：对了三楼那个会，明早七点提前摆水牌，交班时跟小白说一声
+  A：记下了，水牌名单我这就有
+  【10月11日】
+  A：经理，1908的同住人到了，身份证按流程补登了
+  B：恩，登完把两张房卡一起给，别让客人跑两趟
+  A：好的，人已上楼
+  A：大堂灯坏了一排，工程部报了没
+  B：你报一下，让明早来换
+  A：报了，师傅说天亮就弄
+  B：恩，夜班辛苦
+  A：经理，刚有位穿制服的同志到前台，说核验住客登记信息，证件我看了，是辖区派出所的
+  B：按流程来：先登记他的警号和事由，写进来访登记本，再配合他查系统
+  A：登好了，核的是1203那位，说例行核验，五分钟就完了
+  B：恩，人家办完倒杯水，这种例行公事每月都有
+  A：好的，签字完了，登记本我放监控能拍到的格子里了
+  B：细心，就该这么干
+  B：你嗓子咋哑了
+  A：前天吹风了，有点鼻塞，含着润喉糖呢
+  B：药房买盒感冒灵，夜班别硬扛
+  A：白天补了半天觉，好多了
+  A：经理，1203那位又下来问早餐厅几点开
+  B：六点半，给人家送两张早餐券，客诉就没了
+  A：送了，还夸咱服务好
+  B：那就好
+  A：经理，十一后排班表出了没，我妈让我中秋回家吃饭
+  B：出了，你十五十六休，正好周六日，回吧
+  A：太好了，你排班最讲理
+  B：少拍马屁，忙去吧
+  A：巡完楼了，三楼两间亮着灯，其余都睡了
+  B：恩，亮灯的记一下房号，夜班表里写一笔
+  A：写了
+  B：去值班室眯会儿，四点半叫你
+  【10月12日】
+  B：小赵，1908那个团明早退十二间，账单提前打好
+  A：打好了，三间要开发票，抬头我抄下来了
+  B：抬头一个字别错，有限公司和有限责任公司都核对三遍
+  A：核了三遍了，放心
+  B：昨天那位同志后来还来不
+  A：没来，听说昨晚在隔壁酒店也核了一轮，就是轮着查
+  B：恩，配合就好，来访登记本月底交我归档
+  A：好，快写满半本了
+  A：经理，凌晨两点下班地铁没了，打车票能报不
+  B：能，月底跟考勤表一起贴着报
+  A：好，我这半个月攒了一沓了
+  B：攒着，一张别丢
+  B：1908退房时提醒客人带好发票抬头，省得明早堵大堂
+  A：提前给领队发消息了，他说会转告
+  B：行，你办事我放心
+  【10月13日】
+  A：经理，二楼咖啡机的豆子没了
+  B：先挂个设备维护的牌子，别让客人白等
+  A：挂了
+  A：二轮巡楼完，都睡了，走廊地毯有块鼓包，我贴了标记
+  B：恩，明早让工程部看，别绊着人
+  A：好嘞
+  A：经理，我下班了，交班给小白了，交接本签完了
+  B：辛苦，夜班补贴我算好了：这个月十五个班，一个班五十，共七百五，刚转你
+  【系统消息】B 向 A 转账 750 元，已收款。
+  A：收到！是不是多算了，我记得是十四个班
+  B：没多算，考勤表我对了两遍，上月10号替小周顶的那个班也算进去了
+  A：那谢谢经理，回头给你带我妈做的酱菜
+  B：酱菜来两瓶，哈哈，快去补觉

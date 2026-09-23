@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000273
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000031
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-b023c760e52471ac
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: contraband_illicit_trade
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 上级发货、下级跨省收货，用化名收件人、小号联系、换外箱和不落名字的现结渠道运送说不清来路的货，货放老地方不外流，并支付运费加辛苦费。
+  critical_evidence:
+  - 收件人用化名周工、联系电话是小号，不写真实姓名
+  - 要求更换外箱、内部原样，走只收现结、不落名字的老渠道
+  - 货到验数后放老地方，并叮嘱别往外倒、等通知
+  - A 转 B 2500 元运费加辛苦费，并预告下月还有两批
+  benign_alternatives:
+  - 正常跨省网购寄递
+  - 土特产邮寄
+
+attributes:
+  duration_days: 2
+  turn_count: 51
+  approximate_tokens_estimate: 1023
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: cross_region_shipping
+  risk: 2
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0032
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-018
+
+dedup:
+  content_hash: sha256:fc60cbe933401d822fba45af958cb23afa3b9c2c892153a4a96ea7c5c04ea2e5
+pipeline_status: accepted
+title: contraband_illicit_trade/cross_region_shipping
+conversation: |-
+  【9月19日】
+  A：货明早从这边发，收货信息定了吗
+  B：定了，收件人写“周工”，别写我名字
+  A：电话用哪个
+  B：我小号，尾号3302那个，你存一下
+  A：行，外箱按我昨晚发你那张图换掉，里头原样别动
+  B：懂，纸箱我昨天就备好了，尺寸一样
+  A：还走老渠道？不落名字那种
+  B：嗯，就那家，只收现结
+  A：运费加辛苦费两千五，货到了结你
+  B：成
+  A：中秋你们放几天
+  B：三天，票还没抢到，抢不到就高铁
+  A：让你姨给你留两盒月饼，五仁的
+  B：好嘞，替我谢谢姨
+  A：装好了把外面拍张照给我看
+  B：拍了发你，就是个普通纸箱，啥标识没有
+  A：可以，就这么发
+  B：那我下午三点前送过去
+  A：发出去了吗
+  B：发了，回单拍你，后天上午到
+  A：好，到了先验，再放老地方
+  B：行
+  B：晚上那场看了没，最后那个绝杀绝了
+  A：看了，我押的居然赢了
+  B：你还有这运气，下回带上我
+  A：带你，输了别哭
+  B：哈哈哈，说定了
+  【9月20日】
+  B：到了，外箱角压瘪了点，里面完好
+  A：人到就行，点一下数
+  B：点了，一件不少，放老地方了
+  A：好，这两天别往外倒，等我信儿
+  B：知道，我不问
+  B：哥，你帮我问的血脂体检套餐有信没
+  A：问了，改成早上空腹去，还便宜两百多
+  B：行，那我周末去
+  A：记得别吃早饭
+  A：你爸妈那边秋收开始没
+  B：开始了，我爸说今年雨水多，收得慢
+  A：你忙完这阵回去搭把手
+  B：嗯，月底请几天假
+  A：上面来信儿了，这个月你那份给你结了
+  B：行
+  【系统消息】A 向 B 转账 2500 元，已收款。
+  B：到了，谢哥
+  A：下个月还有两批，你把库容腾一腾
+  B：腾好了，东边小仓库空出来了
+  A：嗯，钥匙还放你那儿
+  B：放我这儿就行
+  B：哥，后天我表妹结婚，我得去喝喜酒
+  A：去吧，这边等你回来再动
+  A：晚上早点睡，别老熬夜
+  B：好嘞，晚安哥

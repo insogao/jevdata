@@ -1,0 +1,130 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000271
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000097
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-b2842de3240b5253
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 老板让下属出面收购一家无实际经营的旧公司（带对公带章并开通大额网银），法人变更包过，拿到后由下属代管网银，为公司日后走账做准备并对外切割。
+  critical_evidence:
+  - 花四万八打包购入2019年注册、无实际经营的旧公司，带对公账户和全套印章
+  - 专门要求开通单日两百万额度的网银，U盾由下属保管并盯日切
+  - 中介承诺法人变更包过、一周下证，先付定金一万五
+  - 老板要求对外只称筹备新业务，往来账目用只有两人知道的表格记录
+  benign_alternatives:
+  - 公司转让的正常流程
+  - 代办执照的中介服务
+
+attributes:
+  duration_days: 3
+  turn_count: 54
+  approximate_tokens_estimate: 1136
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: company_shell_transfer
+  risk: 3
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0032
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-018
+
+dedup:
+  content_hash: sha256:a10737697ca465f51db8673700ca3aff55e5bb51d51130cd67ca5b9556a51d3f
+pipeline_status: accepted
+title: money_laundering_obfuscation/company_shell_transfer
+conversation: |-
+  【9月15日】
+  A：上回让你问的那个东西，有信了吗
+  B：问到一个，2019年注册的老公司，一直没实际经营，干净
+  A：对公和章都还在吗
+  B：在，带对公带章，一套全，执照正副本也齐
+  A：网银呢
+  B：网银也能弄，开通网银额度，单日两百万的那种，要加点钱
+  A：加多少
+  B：全套打包四万八，含那个额度
+  A：资料下午发我看一眼
+  B：好
+  A：下午的会改到四点，你们把月报带上
+  B：收到，正在赶
+  A：加完班楼下奶茶一人一杯，我请
+  B：老板大方，那我点双料的
+  A：随便点
+  B：资料发您了，您过目
+  A：看了，公司名太扎眼，变更的时候一并换掉
+  B：懂，名称和地区都能改
+  A：嗯，先这样，忙去吧
+  【9月16日】
+  B：老板，那家法人变更包过，中介拍了胸脯，一周下证
+  A：他凭什么打包票
+  B：流程他们天天跑，都是回头客
+  A：行，就这家
+  B：定金一万五，尾款下证再付
+  A：我转你了
+  【系统消息】A 向 B 转账 15000 元，已收款。
+  B：收到，我这就给那边
+  A：周六有空吗，老周约了水库钓鱼
+  B：周六下午我妈生日，我吃了午饭过去
+  A：那你早上来，钓到中午
+  B：行，鱼竿用您的
+  A：我给你备套新的
+  B：变更材料明早交，周四出结果
+  A：出了第一时间告诉我
+  B：知道，这单我全程盯着
+  A：以后对外就说是筹备新业务，别的少提
+  B：明白
+  【9月17日】
+  B：老板，出了，核准通知书下来了，照片发您
+  A：比说好的还快
+  B：尾款三万三，我先把中介那边垫上了
+  A：下午让财务走
+  A：新执照和章一套，我让行政去取，回来放我办公室柜里
+  B：对公的U盾放我这儿吗
+  A：嗯，你先拿着，网银你帮我盯日切
+  B：行，单日两百万的额度我记着呢
+  B：我闺女家长会挪到周五晚上了
+  A：去吧，周五下午提前走
+  B：谢老板
+  A：以后有些往来从这家走，按我发你的表记
+  B：表我建好了，就咱俩有
+  A：嗯，去忙吧
+  B：哎，那中秋礼盒还按去年的标准订吗
+  A：订，给合作方那几家一家一份
+  B：好，我列个单子您过目
+  A：不急，周一再说

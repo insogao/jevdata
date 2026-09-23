@@ -1,0 +1,138 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000265
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000133
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-64b8c17c477d1924
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: coercion_blackmail
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 楼下熟人借装修噪音半开玩笑地索要好处（每月两条烟）、顺嘴炫耀认识城管物业的人，但全程无支付闭环，噪音问题最终走物业正常解决，转账另有明确对价。
+  critical_evidence:
+  - A半开玩笑提出每月两条烟这事就平，并自称认识城管物业的人（单一弱信号）
+  - B从未同意也未支付任何好处，两条烟被双方确认为逗闷子
+  - 转账200元对价明确：A代找搬运工帮忙抬冰箱并垫付200元搬运费，与噪音话题无关
+  - 噪音争议通过物业核对施工时段、外机加减震垫正常解决
+  benign_alternatives:
+  - 熟人邻里间的玩笑式抱怨
+  - 物业流程内的噪音调解
+
+attributes:
+  duration_days: 6
+  turn_count: 59
+  approximate_tokens_estimate: 1452
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: resident_noise_leverage
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0031
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-018
+
+dedup:
+  content_hash: sha256:68b87a643ea986ca8480ee438b6a855dbf2bfacf3f5eb5a0c40d92ccd6c82188
+pipeline_status: accepted
+title: coercion_blackmail/resident_noise_leverage
+conversation: |-
+  【10月9日】
+  A：老弟，你家这电钻一下午了，我下夜班的睡不着
+  B：对不住哥，装修打孔，今天最后一天钻孔
+  A：下午那音响嗡嗡的也凑热闹
+  B：我媳妇跳操呢，我让她以后去广场跳
+  A：咱邻居抬头不见低头见的，有事早说早好
+  B：对了，楼下新开那家牛肉面你吃了没
+  A：吃了，辣子太狠，半碗冒汗
+  B：我媳妇爱吃，说够味
+  A：跟老板提一句辣子分开放，能多揽客
+  B：跟老板熟，回头就说
+  A：顺便让给老邻居打折哈哈
+  【10月10日】
+  A：早，昨晚清净了，睡个整觉
+  B：今天木工进场，白天弄，六点前收工
+  A：你家老大月考咋样
+  B：数学拉了，愁人
+  A：报个班吧，别报太贵的，老周家一万八的成绩照旧
+  B：一万八？！先找个便宜的
+  A：那是，钱花刀刃上
+  B：嗯，回头比比
+  A：老弟商量个事。装修吵归吵，我这脾气你清楚，火上来爱找物业找城管，我认识的人你也知道
+  B：哥，你这是啥意思
+  A：没啥意思，你要是每月给我两条烟，我耳朵自动过滤，这事就平了
+  B：哈哈两条烟，够我媳妇念叨一年
+  A：半开玩笑，你看着办，反正抬头不见低头见
+  B：烟就免了哥，装修完请你喝酒，我家有存货
+  A：酒行啊，我等着
+  【10月11日】
+  B：哥，菜市场东头那家螃蟹靠谱不
+  A：靠谱，买了五年，就说老周介绍的
+  B：明天买几只，丈母娘来
+  A：挑活的，别要绑绳的
+  B：还有这讲究，学了
+  A：绳比蟹还压秤
+  B：物业让核对装修时段，你有要求趁早提
+  A：十二点到两点别动电钻，我午休
+  B：成，让师傅准时停
+  A：有事说事，找物业挺好
+  【10月12日】
+  A：今晚大降温，你空调别开太猛，去年外机半夜嗡嗡响
+  B：哥记性好，外机上个月加了减震垫
+  A：新垫子管用吧
+  B：师傅说能降十来个分贝
+  A：今晚听听效果
+  B：你也备副耳塞，双保险哈哈
+  B：哥，下午方便不，新冰箱到了，楼道窄得找俩人抬
+  A：我歇班，叫上收废品的小马，一人一根烟的事，烟钱你出哈哈
+  B：成，工钱加烟钱多少，你说个数
+  A：小马搬运费两百，烟免了，谁跟你要那个
+  B：那我转你两百，你给他
+  【系统消息】B 向 A 转账 200 元，已收款。
+  A：收到，这就给小马，装完你验收
+  【10月13日】
+  A：周日水库开钓，去不，我多带一根竿
+  B：去啊，装修收尾正好放松
+  A：带嫂子不
+  B：带上，就图个玩
+  A：说定了，渔具借你一套
+  B：哥装备真全
+  【10月14日】
+  B：哥，木工全完工了，剩装灯刷漆，动静小
+  A：熬到头了。周六来我家，开那瓶存十年的
+  B：烟就真免了啊哈哈
+  A：免了免了，逗闷子呢，你还当真
+  B：哈哈，周六见

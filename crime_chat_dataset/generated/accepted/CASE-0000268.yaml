@@ -1,0 +1,120 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000268
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000053
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-1c5beb8e6219dcc5
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A仗着表哥身份纠集人手强行接管B经营的铺面，无视合同与补偿，B被迫转账两万换取缓兵之计。
+  critical_evidence:
+  - A宣称铺子明天起归他用，B的合同就别找了
+  - A说已叫好兄弟们带车来搬货清场
+  - B被迫先转2万元安兄弟们的心换取缓一缓，转款紧跟A给出的期限
+  - 威胁始终不落纸面，全用家务事、照应等家人说法包装
+  benign_alternatives:
+  - 商业纠纷走法务途径解决
+  - 房东依合同正常收铺
+
+attributes:
+  duration_days: 2
+  turn_count: 45
+  approximate_tokens_estimate: 1224
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: asset_seizure_force
+  risk: 3
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0031
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-018
+
+dedup:
+  content_hash: sha256:16dac44ed143c4508137844bb7c4bfe0e4fb94e9b01a609c15d86d570f03ae3c
+pipeline_status: accepted
+title: violence_extortion/asset_seizure_force
+conversation: |-
+  【10月20日】
+  A：弟，大伯血压咋样，上回你说偏高
+  B：还那样，药没断，昨天量150上下
+  A：让他少盐，老头嘴硬
+  B：谁说不是，我妈说他偷吃咸菜
+  A：过阵子我回去看他，带点黑茶
+  B：行，他就爱喝你带的茶
+  A：对了，跟你商量个事，你那铺子我打算接手做点买卖
+  B：接手？哥，铺子我签了三年合同，才开一年
+  A：合同是死的，人是活的。这位置以后值钱，我不能便宜外人
+  B：我装修投了二十多万，客源刚养起来
+  A：你这么算账就没意思了。明天上午我带两个兄弟过去，帮你把东西挪挪，腾地方
+  B：挪啥？哥，一家人，有事好好说
+  A：我就是好好说。明天铺子归我用，你东西让兄弟们搬去仓库，丢不了
+  B：这真不行，我得跟我媳妇商量
+  A：商量啥，这是跟媳妇没关系的家务事
+  A：对了，小宝奥数班还上着呢吧
+  B：上着，一周两次，学到八点
+  A：好好学，现在不刷题以后吃亏
+  B：昨晚做到十点，小家伙直哭
+  A：哭也得学，你当年就是心软
+  B：唉，慢慢来吧
+  【10月21日】
+  A：台风昨晚过了吧，家里没事吧
+  B：没事，门口积水，卷帘门差点卡住
+  A：去年就说让你换门，你不听
+  B：换啥，凑合能用
+  A：行，正好地上湿，等下搬东西都小心点
+  B：……哥，昨天的事再商量商量行不行
+  A：九点到，兄弟们车大，把门口三轮挪一下
+  B：一夜没睡。合同拿出来，白纸黑字谈补偿
+  A：合同就别找了，找出来也是添堵。谈补偿？想让哥空手来空手回？
+  A：对了，十一月带你去水库钓鱼，新买了两根竿
+  B：现在哪儿有心情……
+  A：鲈鱼正肥，你来不来
+  B：来来来，都听哥的
+  B：哥，宽限到月底行不行，我跟房东把转让谈清楚
+  A：兄弟们车都约好了。这样，你先转两万安兄弟们的心，月底铺子的事缓一缓
+  B：两万……行，我转，别让兄弟们动我东西
+  B：现在就转
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  A：收到了，懂事。周末兄弟们先不叫，你抓紧腾地方
+  B：哥，说好的缓一缓……
+  A：缓了呀，周末变月底了不是。以后有你好处
+  B：唉，知道了
+  A：水库的事定了啊，鲈鱼我可想吃了
+  B：行，我陪哥去
+  A：晚上请你喝酒，别苦着脸
