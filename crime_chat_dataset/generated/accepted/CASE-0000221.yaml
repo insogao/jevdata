@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000221
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000084
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-3e3178320fc35ba7
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: privacy_doxxing
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: B出钱雇A长期按月导出配偶毫不知情的微信聊天记录，用于私下盯梢对方，属受雇窃取他人通讯隐私的持续交易。
+  critical_evidence:
+  - B只要目标人（其爱人）的微信聊天记录，别的都不用动
+  - A声称安卓苹果都能搞，过程客户不用管，并叮嘱自己稳住别打草惊蛇
+  - 交付为按月打包、每月月初发私人邮箱，格式整理成可翻阅样式
+  - 单月2500元、首付三个月共7500元已转，备注刻意写成设备咨询，且约定微信少聊、对任何人都保密
+  benign_alternatives:
+  - 本人手机数据恢复服务
+  - 企业合规审计取证
+
+attributes:
+  duration_days: 4
+  turn_count: 44
+  approximate_tokens_estimate: 1228
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: chat_log_export
+  risk: 3
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0027
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-017
+
+dedup:
+  content_hash: sha256:6d986f9d9b52be47f8e22775904751f4eff13e2180c14e09ba398129af1f6c59
+pipeline_status: accepted
+title: privacy_doxxing/chat_log_export
+conversation: |-
+  【7月14日】
+  A：赵总，上次展会上聊得投缘，加了微信总算用上了
+  B：哈哈是啊，你那张名片我一直留着
+  A：展会那几天累够呛，回来歇了好几天
+  B：每年都那样，展位一天站八小时
+  A：今年听说你们展台人气最旺
+  B：找你是有点私事，你那边能接吗
+  A：先说说看，能接就接
+  B：我只要一个人的微信记录，别的都不用动
+  A：聊天记录啊……这个敏感，先问一句，是谁的
+  【7月15日】
+  A：早上好，这天出门五分钟，流汗两小时
+  B：谁说不是，我车里温度计都快爆表了
+  A：你那健身房有空调，多去去
+  B：说正事，昨晚想了一宿，还是跟你说实话吧
+  A：你说，我听着
+  B：记录是我爱人的，她用的苹果，最新那款
+  A：安卓苹果都能搞，型号有了就行，过程你不用管
+  B：她那边一点都不能让她发觉，她多疑得很
+  A：放心，她要是能发觉，我这行就不用干了
+  B：第一批多久能出来
+  A：前后一周，后面顺了就快
+  【7月16日】
+  A：中午吃了吗，热得没胃口
+  B：点了个轻食，医生说我血脂高
+  A：我也该减了，肚子一圈
+  B：我要的不是一次性的，她聊得勤，要按月导
+  A：可以，按月给你打包，每月月初发你
+  B：格式要能翻的，别给我一堆乱码
+  A：整理好的文本加图片，跟手机里看的一样
+  B：价钱怎么算
+  A：单月2500，长期的话头一次先付三个月，7500
+  B：行，先来三个月
+  A：爽快，转我这个微信，备注写设备咨询
+  【7月17日】
+  B：起了吗，这就转你
+  【系统消息】B 向 A 转账 7500 元，已收款。
+  A：收到，三个月的，我这边排期，下周给你第一批
+  B：好，到时候发我私人邮箱，微信里别留
+  A：规矩说前头：这事微信上少聊，以后要沟通就打电话，就说设备维修
+  B：懂，我干工程的，这点谨慎有
+  A：还有，这事就你我知道，对谁都别提，包括你那帮哥们
+  B：知道，这种事我谁也不说
+  A：格式给你截了个样，你过目
+  A：[image：一张截图样张：聊天记录排版样式，头像与昵称位置均已打码]
+  B：可以，就这格式
+  B：周末去看球不，我多一张票
+  A：去啊，正好活动下颈椎，天天对电脑
+  B：说定了，赢了我请小龙虾
+  A：那你最好祈祷主队争气

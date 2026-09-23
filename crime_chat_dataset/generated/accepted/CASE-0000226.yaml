@@ -1,0 +1,149 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000226
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000103
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-49e8dbf62a15bc75
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 持牌支付机构的渠道经理为个体餐饮商户正常办理商户收款服务，费率、押金、结算和退订规则全程公开透明，资金只进商户自己的对公账户，属正规收单展业。
+  critical_evidence:
+  - A是持牌支付机构（央行发牌、官网可查）的渠道经理，为B的早餐店办理商户码和POS机
+  - 费率0.38%写入合同、涨费率需提前三十天书面通知，T+1自动结算到B店铺的对公账户
+  - 机器押金299元，流水满十万由系统原路退还，A当场开收据
+  - B转299元押金后次日装机试付一元，后台流水B自己登录可查，到账逐笔核对一致
+  benign_alternatives:
+  - 正规收单服务商办理收款设备
+  - 商户日常收款升级
+
+attributes:
+  duration_days: 6
+  turn_count: 70
+  approximate_tokens_estimate: 2336
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: cross_shop_pos_machine
+  risk: 0
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0027
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-017
+
+dedup:
+  content_hash: sha256:4e6291e29c1ee669a8a6bf47e2d22490f994554aec1b12fd216e7c7317648f23
+pipeline_status: accepted
+title: money_laundering_obfuscation/cross_shop_pos_machine
+conversation: |-
+  【6月10日】
+  A：林姐早，我是商会群里老陈介绍的小杜，做支付服务的
+  B：哦哦小杜你好，老陈提过你
+  A：路过您店门口，看生意挺好，想跟您聊聊收款这块
+  B：收款啊，我一直用的个人码，凑合用
+  B：你吃过早饭没，刚出炉的烧饼给你留一个
+  A：吃过啦，您这待客跟自家亲戚似的
+  B：做小生意的嘛，和气生财，你要不忙进来坐
+  A：先不打扰您营业，中午再来
+  A：林姐，中午方便吗，我过来了
+  B：来吧来吧，正好刚过饭点
+  A：您现在个人码收款，钱进的是个人卡，对账、开票、以后上平台都不方便
+  B：是这么说，但我不懂这些，怕麻烦
+  【6月11日】
+  A：您隔壁那家奶茶店装修一个多月了，吵不吵
+  B：吵！电钻从早响到晚，耳朵都起茧子了
+  A：等他开张您又多一个竞争对手喽
+  B：不怕，我做了十五年早饭，他卷不过我
+  A：给您个方案：办个商户码加一台POS，费率0.38%，比您现在攒零钱找零强
+  B：0.38？我现在个人码进账倒是不要钱
+  A：个人码方便，但提现、对账、开票都受限，您以后想上外卖平台必须有商户号
+  B：上外卖倒是想过，儿子老念叨
+  A：那就是了，机器收款是T+1自动结算，直接到您店里对公账户
+  B：钱直接到我账上？不用每天跑银行存了？
+  A：对，第二天一早自动到账，小票留底，月底还有电子对账单
+  B：听着是省心，那办手续麻烦不
+  【6月12日】
+  B：小杜，你说我孙女报跆拳道好还是画画好
+  A：看孩子兴趣，好动就跆拳道，坐得住就画画
+  B：她是坐不住那个，昨天还把面粉当颜料了
+  A：哈哈那是面点师苗子，随您
+  A：手续不麻烦：营业执照、身份证、门店照片、对公户信息，四样就行
+  B：执照有，对公户前年开的，一直没用过哈哈
+  A：正好激活，我们公司是持牌的，央行发的牌照，官网能查
+  B：持牌的啊，那就不是街边推机器那种了
+  A：对，签银联标准商户协议，一式两份，您留一份
+  B：那费率以后会不会偷偷涨
+  A：合同里写死0.38%，涨要提前三十天书面通知，您不满意随时注销
+  B：行，那你把合同带来我看看
+  【6月13日】
+  A：合同带来了您慢慢看，第三条是押金：机器押金299，流水满十万原路退您
+  B：机器还要押金？
+  A：机器成本一百多一台，押金防的是拿了不用，您流水达标当天系统自动原路退
+  B：行，这个说得清楚，我认，299是吧
+  【系统消息】B 向 A 转账 299 元，已收款。
+  A：收到，收据我现在开好拍给您，退的时候这笔有据可查
+  B：那机器收的钱进我个人卡还是哪
+  A：进您店里对公户，绑定时就用执照上的户名和账号，跟您个人卡完全不搭
+  B：后台我自己能看吗
+  A：能，小程序您自己登录，每笔流水、费率、到账时间，清清楚楚
+  B：好，那明天来装吧，我把柜台边清出来
+  A：好嘞，明天上午十点，装好教您用到会为止
+  【6月14日】
+  B：小杜，今早买菜没？刚到的枇杷，甜得很，拿两个尝
+  A：您留着卖，我吃过早饭了
+  B：两个枇杷而已，再推我生气了
+  A：好好好，那我收下一个，真甜
+  A：机器装好了，拿您手机，我教您查第一笔
+  B：来来来，我自己扫码付一块钱试试
+  A：付吧，明天到账一分不少，就扣0.38分的费率
+  B：后台我看到了，一笔一块，状态是明日到账
+  A：对，明天上午十点前准到，您对下账就踏实了
+  B：比我想的简单，还以为要记一堆密码
+  A：就一个登录密码，您别用生日就行
+  【6月15日】
+  B：快端午了，我包了粽子，蛋黄肉的，明天给您拿几个
+  A：那我可不客气了，我妈就爱这口
+  B：管够，您帮我多介绍介绍
+  A：哈哈好，回头在商户群里帮您吆喝一句
+  A：林姐，昨天的到账您看了吗
+  B：看了，昨晚二十几笔一分不少全到了，我截屏给儿子看了
+  A：那就好，月底的电子对账单会自动推到您小程序
+  B：对了，儿子说下月帮我在外卖平台上架，用的就是这个户吧
+  A：对，对公户和商户号直接关联，他弄起来快
+  B：那感情好，早知道早点办了，个人码用了这么多年
+  A：不晚，您这店还要开十五年呢
+  B：借你吉言，中午别走，烧饼管够

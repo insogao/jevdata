@@ -1,0 +1,474 @@
+{
+ "key": "b17c034",
+ "archetype_id": "ARC-000077",
+ "subtype": "travel_record_query",
+ "latent_intent": "无隐匿意图：行政助理向差旅票务代理查询领导酒店与同行人信息，全部服务于改签、差旅补贴表与报销存档，转账为改签差价加服务费并走对公报销。",
+ "critical_facts": [
+  "A是公司行政，查询「他这几天住哪」是为了做差旅补贴表，每晚一档",
+  "B是差旅票务代理，从订票后台导出正式行程单、酒店确认单与专票",
+  "同行人李工、张会计的机票三张一起改签，会员系统里存的姓名信息为准",
+  "转账1460为三张机票改签差价1260加服务费200，走公司对公并开「改签差价及服务费」专票"
+ ],
+ "benign_alternatives": [
+  "票务代理正常查询",
+  "秘书安排行程"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "5月20日 09:30",
+   "speaker": "A",
+   "text": "康哥，忙不，打扰一下"
+  },
+  {
+   "type": "message",
+   "time": "5月20日 09:35",
+   "speaker": "B",
+   "text": "小唐啊，说"
+  },
+  {
+   "type": "message",
+   "time": "5月20日 09:36",
+   "speaker": "A",
+   "text": "我们王总下周去广州那趟要调整，得改签"
+  },
+  {
+   "type": "message",
+   "time": "5月20日 09:38",
+   "speaker": "B",
+   "text": "哪一段，京广那班？"
+  },
+  {
+   "type": "message",
+   "time": "5月20日 09:40",
+   "speaker": "A",
+   "text": "对，27号CA1301那班，三张一起改，同行还有李工和张会计"
+  },
+  {
+   "type": "message",
+   "time": "5月20日 09:42",
+   "speaker": "B",
+   "text": "三张一起改手续费划算，改成哪天"
+  },
+  {
+   "type": "message",
+   "time": "5月20日 09:45",
+   "speaker": "A",
+   "text": "王总想提前到25号晚上，说广州那边谈判提前了"
+  },
+  {
+   "type": "message",
+   "time": "5月20日 09:47",
+   "speaker": "B",
+   "text": "行，我查一下25号晚上的位子"
+  },
+  {
+   "type": "message",
+   "time": "5月20日 09:50",
+   "speaker": "A",
+   "text": "麻烦康哥。另外帮我拉一下他这几天全程的住店记录"
+  },
+  {
+   "type": "message",
+   "time": "5月20日 09:52",
+   "speaker": "B",
+   "text": "要住宿明细做什么，报销啊？"
+  },
+  {
+   "type": "message",
+   "time": "5月20日 09:53",
+   "speaker": "A",
+   "text": "对，人事那边要做差旅补贴表，一晚一档，我把天数报上去"
+  },
+  {
+   "type": "message",
+   "time": "5月20日 09:56",
+   "speaker": "B",
+   "text": "明白，他这趟住四晚：前两晚广州珠江新城那家，25、26号；后两晚佛山，27、28号"
+  },
+  {
+   "type": "message",
+   "time": "5月20日 09:58",
+   "speaker": "A",
+   "text": "好嘞我记一下。佛山那家是全季还是？补贴档次不一样"
+  },
+  {
+   "type": "message",
+   "time": "5月20日 10:00",
+   "speaker": "B",
+   "text": "是全季，广州那家是假日，都是一个档"
+  },
+  {
+   "type": "message",
+   "time": "5月20日 10:02",
+   "speaker": "A",
+   "text": "那省事。后台能导行程单不，我存档用"
+  },
+  {
+   "type": "message",
+   "time": "5月20日 10:03",
+   "speaker": "B",
+   "text": "能，我从订票后台直接出，下午发你"
+  },
+  {
+   "type": "message",
+   "time": "5月20日 10:30",
+   "speaker": "A",
+   "text": "康哥，你们楼下那家咖啡店是不是关了"
+  },
+  {
+   "type": "message",
+   "time": "5月20日 10:33",
+   "speaker": "B",
+   "text": "关了，房租涨得离谱，老板回老家了"
+  },
+  {
+   "type": "message",
+   "time": "5月20日 10:34",
+   "speaker": "A",
+   "text": "可惜，他家澳白好喝"
+  },
+  {
+   "type": "message",
+   "time": "5月20日 10:36",
+   "speaker": "B",
+   "text": "现在改喝公司茶水间的速溶了，命是苦的"
+  },
+  {
+   "type": "message",
+   "time": "5月20日 10:38",
+   "speaker": "A",
+   "text": "哈哈，回头我给你寄两包我们仓库的豆子"
+  },
+  {
+   "type": "message",
+   "time": "5月20日 10:40",
+   "speaker": "B",
+   "text": "那敢情好"
+  },
+  {
+   "type": "message",
+   "time": "5月20日 14:20",
+   "speaker": "B",
+   "text": "对了，25号那个舱位还按原来公务舱改吗"
+  },
+  {
+   "type": "message",
+   "time": "5月20日 14:25",
+   "speaker": "A",
+   "text": "对，王总腰不好，长航班不坐经济舱"
+  },
+  {
+   "type": "message",
+   "time": "5月20日 14:26",
+   "speaker": "B",
+   "text": "懂，老客户的讲究我都记着"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 09:10",
+   "speaker": "B",
+   "text": "小唐，25号晚上的位子锁到了，三张都有"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 09:15",
+   "speaker": "A",
+   "text": "效率太高了，差价多少"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 09:17",
+   "speaker": "B",
+   "text": "每张补420，三张1260，出票后我把付款链接发你对公"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 09:20",
+   "speaker": "A",
+   "text": "好，走公司账户。保险要不要重新勾"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 09:22",
+   "speaker": "B",
+   "text": "改签自带航延险，不用另外买"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 09:24",
+   "speaker": "A",
+   "text": "行，那你出吧"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 10:30",
+   "speaker": "B",
+   "text": "你们那边的梅雨季开始没"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 10:33",
+   "speaker": "A",
+   "text": "开始了，天天潮得能拧出水"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 10:35",
+   "speaker": "B",
+   "text": "我们广州早开始了，西装挂三天都不干"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 10:36",
+   "speaker": "A",
+   "text": "哈哈，王总上回出差带了两套"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 10:40",
+   "speaker": "B",
+   "text": "让他带除湿袋，酒店空调房一挂就好"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 11:00",
+   "speaker": "A",
+   "text": "对了，住宿那两家的确认单也发我一份，补贴表要附凭证"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 11:02",
+   "speaker": "B",
+   "text": "一起打包给你：酒店行程单、机票改签单、保险单，一个PDF"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 11:03",
+   "speaker": "A",
+   "text": "康哥你这份心，人事都夸你单据齐"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 11:05",
+   "speaker": "B",
+   "text": "干这行的，单据就是命"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 11:20",
+   "speaker": "A",
+   "text": "对了王总说他想要25号那班靠走道的"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 11:22",
+   "speaker": "B",
+   "text": "记上了。25号三张：王总走道，李工靠窗，张会计中间，还是老搭配？"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 11:24",
+   "speaker": "A",
+   "text": "对，他们仨十年都这么坐"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 11:25",
+   "speaker": "B",
+   "text": "习惯比什么都重要"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 11:28",
+   "speaker": "A",
+   "text": "行程单上同行人姓名别写错，李工是李建军，建军节的建"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 11:30",
+   "speaker": "B",
+   "text": "放心，系统会员信息里存的就是这个名字"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 11:33",
+   "speaker": "A",
+   "text": "稳。哦对了，王总佛山那两晚能开专票吗，抬头发你了"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 11:35",
+   "speaker": "B",
+   "text": "能，抬头发我邮箱，我让酒店直接开好寄过去"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 11:36",
+   "speaker": "A",
+   "text": "明天上午发你"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 11:38",
+   "speaker": "B",
+   "text": "成"
+  },
+  {
+   "type": "message",
+   "time": "5月22日 09:40",
+   "speaker": "B",
+   "text": "小唐，三张票出好了，新行程单发你邮箱了，核对下"
+  },
+  {
+   "type": "message",
+   "time": "5月22日 09:45",
+   "speaker": "A",
+   "text": "收到我看下……没毛病，25日22:15起飞，三张同行人都对"
+  },
+  {
+   "type": "message",
+   "time": "5月22日 09:47",
+   "speaker": "B",
+   "text": "那这笔改签差价1260加服务费200，一共1460，你对公转吧"
+  },
+  {
+   "type": "message",
+   "time": "5月22日 09:50",
+   "speaker": "A",
+   "text": "好，今天就让财务走。发票开「改签差价及服务费」对吧"
+  },
+  {
+   "type": "message",
+   "time": "5月22日 09:52",
+   "speaker": "B",
+   "text": "对，专票，周四之前寄到你们财务"
+  },
+  {
+   "type": "transfer",
+   "time": "5月22日 14:40",
+   "from": "A",
+   "to": "B",
+   "amount": 1460
+  },
+  {
+   "type": "message",
+   "time": "5月22日 14:45",
+   "speaker": "A",
+   "text": "转了1460，你看下到账没"
+  },
+  {
+   "type": "message",
+   "time": "5月22日 14:46",
+   "speaker": "B",
+   "text": "到了，票款两清"
+  },
+  {
+   "type": "message",
+   "time": "5月22日 15:00",
+   "speaker": "A",
+   "text": "顺利。王总还问下月东京展位那趟，能不能提前锁团队票"
+  },
+  {
+   "type": "message",
+   "time": "5月22日 15:03",
+   "speaker": "B",
+   "text": "可以，下月10号放票，我提前帮你占位，名单到时候给我"
+  },
+  {
+   "type": "message",
+   "time": "5月22日 15:05",
+   "speaker": "A",
+   "text": "好，我收集护照信息给你"
+  },
+  {
+   "type": "message",
+   "time": "5月22日 15:30",
+   "speaker": "A",
+   "text": "康哥你会抢票不，下周周杰伦开票"
+  },
+  {
+   "type": "message",
+   "time": "5月22日 15:32",
+   "speaker": "B",
+   "text": "会啊，我们干票务的手速是基本功"
+  },
+  {
+   "type": "message",
+   "time": "5月22日 15:33",
+   "speaker": "A",
+   "text": "帮我也抢两张，我闺女点名要"
+  },
+  {
+   "type": "message",
+   "time": "5月22日 15:35",
+   "speaker": "B",
+   "text": "行，你把场次和价位发我，开票那天我帮你盯"
+  },
+  {
+   "type": "message",
+   "time": "5月22日 15:36",
+   "speaker": "A",
+   "text": "太感谢了，抢到了请你吃饭"
+  },
+  {
+   "type": "message",
+   "time": "5月22日 15:38",
+   "speaker": "B",
+   "text": "小事，抢不到你再上别的渠道"
+  },
+  {
+   "type": "message",
+   "time": "5月22日 16:20",
+   "speaker": "B",
+   "text": "对了，王总25号那天要不要安排接送机"
+  },
+  {
+   "type": "message",
+   "time": "5月22日 16:22",
+   "speaker": "A",
+   "text": "要，广州那边老规矩，接机的师傅姓陈那个"
+  },
+  {
+   "type": "message",
+   "time": "5月22日 16:24",
+   "speaker": "B",
+   "text": "记上了，我把航班号推给陈师傅，他认人"
+  },
+  {
+   "type": "message",
+   "time": "5月22日 16:26",
+   "speaker": "A",
+   "text": "康哥你这服务，比订票平台app省心一百倍"
+  },
+  {
+   "type": "message",
+   "time": "5月22日 16:28",
+   "speaker": "B",
+   "text": "那必须的，做回头客生意的"
+  },
+  {
+   "type": "message",
+   "time": "5月22日 16:30",
+   "speaker": "A",
+   "text": "下月东京那单也拜托你了"
+  },
+  {
+   "type": "message",
+   "time": "5月22日 16:32",
+   "speaker": "B",
+   "text": "放心，放票我第一时间锁位"
+  },
+  {
+   "type": "message",
+   "time": "5月22日 16:35",
+   "speaker": "A",
+   "text": "好，回聊，我给王总报行程去了"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000248",
+  "status": "accepted",
+  "errors": []
+ }
+}

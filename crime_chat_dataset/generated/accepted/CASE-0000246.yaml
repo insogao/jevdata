@@ -1,0 +1,131 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000246
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000137
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-dfb6a34101e4b413
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: other_illicit_coordination
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 收单的B把手上几个点的散单和外围散户都引给站点老板A吃单，A按两个点抽退水、大单拆分承接，深夜大额结单款，整套只靠行话运作。
+  critical_evidence:
+  - 每晚固定「两点半出号」，B收单后报给A接，A承诺保出
+  - A吃单给B的退水照旧两个点，大客户吃三个点，从回水里扣佣
+  - B名下连A共四个点，散户和外围的单都往A这儿引，大单八万拆半走A
+  - B深夜转4万单款给A、备注老规矩，剩余四万次日开奖后一并结
+  benign_alternatives:
+  - 体彩店代购业务讨论
+  - 彩民合买分账
+
+attributes:
+  duration_days: 4
+  turn_count: 54
+  approximate_tokens_estimate: 1310
+  relationship: 中间人关系
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: illegal_lottery_chain
+  risk: 3
+  relationship: 中间人关系
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0029
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-017
+
+dedup:
+  content_hash: sha256:17ebd85ec1093ba074bea12640cf6849ae3b8aa5c977508782ae5011374ba369
+pipeline_status: accepted
+title: other_illicit_coordination/illegal_lottery_chain
+conversation: |-
+  【6月20日】
+  B：龙哥，睡没
+  A：刚关店，说
+  B：今晚开什么，群里都在问
+  A：老三样，两点半出号
+  B：行，我这边的单子给你报过去，老规格
+  A：报吧，过了两点半别怪我不吃
+  B：你这退水还两个点？外头有人放三个点了
+  A：放三个点的那家上个月跑没跑？本金都要不回来
+  B：也是，稳当比啥都强
+  A：我的退水照旧两个点，你的单我保你出
+  B：关店了吃夜宵没
+  A：泡了碗面凑合
+  B：我这儿卤味剩了点，明天给你捎过去
+  B：单子发你了，你过目
+  【6月21日】
+  A：昨晚的账对了吧，出号那几分钟单子全压上了
+  B：对完了，你这头是净的，就那几张大的退了
+  A：大的也得给退，规矩不能坏
+  B：明白，所以散客都愿意跟你做
+  A：你手上现在几个点
+  B：连你四个，城东俩，城中村一个
+  A：行，外头那些散户认准你就往我这儿引，外围的就找你，别自己兜
+  B：懂，我也兜不起
+  B：你家小子中考完了吧
+  A：完了，等出分，天天在家打游戏
+  B：出分再管，这几天随他去
+  A：也行，他妈天天盯，我落得清闲
+  B：今晚开什么
+  A：老三样，两点半出号
+  【6月22日】
+  A：你楼上那间租出去没
+  B：挂了一个月，租客嫌贵
+  A：降两百试试，现在行情不好
+  B：中介也这么说，周末改一下
+  B：龙哥，昨晚那个大客户又来问今晚的了
+  A：让他压，他那种玩法我欢迎
+  B：他这次说押八万，我就怕你吃不下
+  A：八万一口我也疼，这样，你自己先吃一半，剩下的走我
+  B：成，那转账按老账号来？
+  A：嗯，还是那个号，备注老规矩
+  【系统消息】B 向 A 转账 40000 元，已收款。
+  A：四万到了
+  B：剩下四万我压着，明晚开完一并结
+  B：昨晚那场球看了没，最后那个点球绝了
+  A：看了，我买主队让半，白高兴一场
+  B：哈哈你也有看走眼的时候
+  【6月23日】
+  A：今晚开完早点把账发我，明早我去老丈人家
+  B：好嘞。那大客户要提两成的佣，给不给
+  A：提佣可以，从他回水里扣，别动本金
+  B：明白，那他的单也照三个点记？
+  A：他吃三个点，你的照旧两个点，别搞混
+  B：收到。对了明天有台风，你店门口那招牌压一下
+  A：提醒了，我拿钢丝再拉一遍
+  B：上回那场风把我家阳台的花全掀了
+  A：哈哈你没被砸到算运气
+  B：今晚开什么
+  A：台风天照开，老时间两点半，号出来我发你

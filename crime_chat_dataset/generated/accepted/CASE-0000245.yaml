@@ -1,0 +1,142 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000245
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000098
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-51648f41412ff18e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 主管借员工每周例行往返过关之便，把十六万现金拆成八趟、卡着一人一天两万的额度带出去交给「只收现金」的客户，跑腿费按份计、月底随工资发。
+  critical_evidence:
+  - A让天天过关送样机的同事B顺路带现金，客户「只收现的」
+  - 一人一天两万是上限，十六万拆成一周八趟，每次尽量多带点、卡上限走
+  - 现金放公司楼下18号储物柜交接，B每份当面点两遍，客户还过验钞机
+  - 报酬一份三百、八份两千四，月底随工资一起发；事后叮嘱「谁问就说送样机」
+  benign_alternatives:
+  - 合理使用换汇与携带额度
+  - 替客户捎带现金结货款
+
+attributes:
+  duration_days: 4
+  turn_count: 66
+  approximate_tokens_estimate: 1569
+  relationship: 同事
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: cross_border_smurfing
+  risk: 3
+  relationship: 同事
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0029
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-017
+
+dedup:
+  content_hash: sha256:4cf2670c6b59a3c4767a97ec5a9b92ea6807530381ce9d8947abeb9a21feace5
+pipeline_status: accepted
+title: money_laundering_obfuscation/cross_border_smurfing
+conversation: |-
+  【3月11日】
+  A：小蒋，明天是不是又要过珠海
+  B：对，这周排了好几趟，客户那边的样机要来回送
+  A：正好，你帮我带点现金过去给那边的客户，他只收现的
+  B：带多少
+  A：这周先带十六万，别一次带，一天一个人过关口两万是上限
+  B：两万？那十六万得跑八趟
+  A：对，你反正天天过，一趟捎一份
+  B：行吧，正好顺路，就是兜里揣着有点沉
+  A：每次尽量多带点，卡着上限走，效率高
+  B：说到这个，我上个月的高铁票还没报
+  A：你贴好单子放我桌上，我周三一起签
+  B：还有两晚住宿的发票，公司那个系统真难用
+  A：忍忍吧，新系统上线都这样
+  B：那边客户收现金不签字吗
+  A：老客户了，点清就完事，你数两遍
+  B：懂
+  【3月12日】
+  B：今天过了两趟了，手酸
+  A：辛苦，还有六趟
+  B：一趟两万，八趟十六万，我这算盘都替你打好了
+  A：哈哈，回头你那份不会少
+  B：中午食堂有酸菜鱼不
+  A：周三才有，今天红烧肉
+  B：红烧肉也行，帮我留一份，我三点才回
+  A：给你留大块的
+  B：钱是今天当面给你还是怎么弄
+  A：放到公司楼下那个储物柜，晚上我来取
+  B：哪个柜子
+  A：18号，密码还是老四位数，我微信发你
+  B：好，今天这两份四万我先放进去
+  A：放好了回我一个字
+  B：每次多带点的话，我能不能一天跑三趟
+  A：别贪，三趟容易被盯，两万一天的线卡死
+  【3月13日】
+  B：今天又是四趟，过关口排队排麻了
+  A：还剩两趟，明天收尾
+  B：你晚上还去撸铁不
+  A：去，今天练背，你那蛋白粉喝完没
+  B：见底了，回头帮我也带一罐
+  A：行，还是老牌子那个
+  A：前四份客户那边都点清了吧
+  B：点清了，他每次当面数两遍，还拿验钞机过
+  A：稳妥点好，他做的是现金生意，谨慎
+  B：他那个档口看着不小，怎么全用现金
+  A：他有他的讲究，你别多问
+  B：懂，我啥也没看见
+  A：明天最后两份带完，这单就算齐了
+  B：后天我休一天，累死了
+  A：该休，回头我给你补调休单
+  B：你家猫最近咋样
+  A：胖了两斤，兽医说不让喂了
+  【3月14日】
+  B：最后两份也交柜了，八趟齐活
+  A：好，晚上我取了给客户送去
+  B：数过没，我放之前每份都点过
+  A：回头我复核，差不了
+  B：哥你看没看城东那个新盘，开盘价出来了
+  A：看了，三万八，比预期低点
+  B：我算了算，首付还是差一口气
+  A：别急，再攒一年，等利率再动动
+  B：说起来，我这趟跑腿的怎么算
+  A：按老规矩，一份三百，八份两千四，月底随工资一起
+  B：成，那我年底买车能添个轮子
+  A：哈哈，你那电驴换四个轮子的？
+  B：汽车轮子，做梦先做上
+  A：对了，这单完这几天别再接这活了，客户下个月才来
+  B：明白，闷声干活
+  A：对，谁问就说帮客户送样机
+  B：本来也是送样机，哈哈

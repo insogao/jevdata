@@ -1,0 +1,140 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000224
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000014
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-5b69eb3e7a310c70
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A以『仅剩名额』为饵，让家长先付高额定金再补手续，把公开招考做成走过场，实为向家长售卖岗位，且不开票、改名目，事后难以追责。
+  critical_evidence:
+  - A称参公事业单位名额只剩一个，要求B两天内定下来
+  - 流程为先交三万定金、后签协议，理由是『名额要占位』
+  - 笔试只是走过场，面试材料按A给的模板包装，『人到了就行』
+  - 总费用6.8万，只收转账不开票、账面记作咨询费，并要求对外只说孩子是正常考进去的
+  benign_alternatives:
+  - 正规人才引进服务
+  - 事业单位公开招聘咨询
+
+attributes:
+  duration_days: 4
+  turn_count: 63
+  approximate_tokens_estimate: 1845
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: inner_job_purchase
+  risk: 2
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0027
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-017
+
+dedup:
+  content_hash: sha256:ad6ac3b85983b54c70db0cfd33173dc902220acf73048d31dd3c46b80b563ad7
+pipeline_status: accepted
+title: fraud_scam/inner_job_purchase
+conversation: |-
+  【8月19日】
+  A：赵总早，上次饭局说的那事，我这边有准信了
+  B：这么快？快说说
+  A：市里那个参公的事业单位，今年就放两个名额，一个已经内部定了
+  B：那就剩一个了？
+  A：对，名额就剩一个，你要，这两天就得定下来
+  B：丫头倒是很想要个稳定岗，今年硕士毕业，考了两回都没上
+  A：考试这条路太挤了，走人才引进就不用挤独木桥
+  B：人才引进不是也有笔试面试吗
+  A：形式不一样，回头细说，你先跟家里通个气
+  B：好，中午我给孩她妈打电话
+  A：午了吗，最近这桑拿天，出门五分钟流汗两小时
+  B：谁说不是，我仓库里四十度，跟蒸笼一样
+  A：你们建材生意现在是旺季吧，装修的多
+  B：还行，就是账难收，都在拖
+  B：家里都同意，就说怎么操作吧
+  A：好，今晚把要准备的材料单子发你
+  【8月20日】
+  A：昨晚材料单发你了吧，收到回个话
+  B：收到了，毕业证学位证成绩单，还有获奖证明，齐活
+  A：对，先把硬的备齐
+  B：那个……合同什么时候签？我做事习惯先把条款看清楚
+  A：协议肯定有，但流程上是先交定金、后签协议，名额要占位
+  B：先交后签？万一呢……
+  A：赵总，名额就这一个，我拿信用给你担保，咱俩什么关系
+  B：话是这么说，但你得让我心里有个底
+  A：底就是：定金转了，名额锁死，协议我后天当面跟你签
+  B：……行吧，生意场上我也懂，占位费嘛
+  B：笔试面试总得过吧，丫头底子一般
+  A：笔试就是走过场，题不难，别有心理负担
+  B：面试呢？她见了生人就结巴
+  A：面试更简单，材料按我给你的模板准备，人到了就行
+  B：模板？履历还能用模板？
+  A：表述上的事，突出匹配度，专业的来
+  【8月21日】
+  A：我后天去你那边，顺道把协议签了
+  B：来了一定来家里吃饭，让你尝尝嫂子做的藕汤
+  A：藕汤免了，正事要紧，吃完就走
+  B：费用咱先对个数，别到时候扯皮
+  A：一共六万八，含全部环节，录用通知下来再结尾款
+  B：六万八……这钱都花在哪
+  A：材料包装、流程对接、还有中间环节的沟通成本，一句两句说不清
+  B：懂，反正就是那个……打点的意思吧
+  A：你心里有数就行，账面上这一块都叫咨询费
+  B：那发票呢
+  A：发票开不了，公司走咨询服务，你懂就行
+  B：行，你专业的，你说了算
+  A：定金三万，转公司账户还是我微信都行
+  B：转你微信吧，快
+  【系统消息】B 向 A 转账 30000 元，已收款。
+  A：收到了，名额从现在起就是丫头的
+  B：唉，钱花出去我这心里才算落一半
+  【8月22日】
+  B：给你寄了两箱阳光玫瑰，孩子他舅园子里摘的
+  A：客气了客气了，回头我这边的新茶给你留着
+  B：哈哈你这来而不往非礼也用得好
+  A：做人嘛，就是相互想着
+  A：材料模板我微信发你，让她照着一字一句写
+  B：好，晚上就让她改
+  A：笔试那天别紧张，正常发挥就行
+  B：场子里真有照应？
+  A：有数，你不用管那么细
+  B：懂懂懂，我啥也没问
+  A：这事儿就咱俩知道，对外就说正常招聘考进去的，孩子脸面也好看
+  B：明白，我嘴严，我跟她妈都不提
+  B：丫头听说有眉目了，这几天学做饭呢，说要请你吃饭
+  A：饭就不用了，等录用通知下来，让她请我喝茶就行
+  B：一定一定，大恩不言谢

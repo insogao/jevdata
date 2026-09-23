@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000223
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000108
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-fb10a3e9d13cecd6
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: theft_robbery_property_crime
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: B以替亲戚取落下的物品为名，重金雇开锁师傅傍晚进入无人的老小区住户家中，实为入室行窃的前置安排；A明知价钱和时点蹊跷仍收下定金接单。
+  critical_evidence:
+  - A称『那种老小区最好开』，对老式楼锁门儿清
+  - 约定傍晚五点半动手，B确认目标住户这几天无人在家、窗帘一直拉着
+  - B强调『只去一次』，事成补两千并互删微信
+  - B转账2000元定金、事成再补两千，远超正常开锁费（约一百五），A自己都觉得不对劲
+  benign_alternatives:
+  - 正规上门开锁服务
+  - 物业委托的应急开门
+
+attributes:
+  duration_days: 3
+  turn_count: 56
+  approximate_tokens_estimate: 1856
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: key_copy_burglary
+  risk: 3
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0027
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-017
+
+dedup:
+  content_hash: sha256:05e8462c98a92169478bd4044ce57913c696c18376c94a269c4457caf9d3d7cd
+pipeline_status: accepted
+title: theft_robbery_property_crime/key_copy_burglary
+conversation: |-
+  【11月3日】
+  B：你好，是开锁的王师傅吗，贴吧上看到你电话加的微
+  A：是我，哪里的锁打不开了
+  B：是这样，我姑家老房子，我想进去取点东西
+  A：先说好，正规开锁得能证明房子是你的，物业证明或者户口本
+  B：证明确实没有，我姑人在外地，就取点旧东西
+  A：那你这单我不好接
+  B：师傅你先别急着拒绝，价钱好商量
+  A：你哪里人，听口音不是本地的吧
+  B：皖北的，来这边跑业务，你听出来了？
+  A：我老婆也是皖北的，老乡见老乡
+  B：哈哈那咱算半个老乡，好说话
+  B：那房子是九十年代的老小区，六楼，铁门木门两道
+  A：那种老小区最好开，老式锁我入行第一年就练熟了
+  B：那你肯定没问题，就六楼那一家，别家都不用动
+  A：话说回来，没有证明我真不能随便开，被居委会看见说不清
+  B：所以才找你帮这个忙嘛，明天详聊，我先请你吃个饭？
+  【11月4日】
+  A：你说的那条街的烧烤是真不错，腰子烤得地道
+  B：我跑业务全靠这家续命，老板都认识我了
+  A：下回我带我徒弟来，让他见识见识
+  B：行啊，我请，就当交个朋友
+  B：正经事，我姑那房子，其实是想让我把里面一个箱子取出来
+  A：箱子？里头啥呀这么金贵
+  B：老照片和存折之类的，我姑急用，她又赶不回来
+  A：那你让她把钥匙寄给你，开正门，光明正大
+  B：钥匙找不到了，所以才找你嘛，你们干这个的不就是没钥匙也能进
+  A：没钥匙也能进，但邻居看见会问的，这不一样
+  B：所以选傍晚五点半，那会儿楼里没几个人，上班的也还没下班回来
+  A：五点半啊……行吧，就当帮老乡一把
+  B：价钱你说个数，别不好意思
+  A：老小区这种，平时上门也就一百五，还得看锁
+  B：我给你两千定金，事成之后再补两千，就当你担风险
+  A：两千……你这价钱开得我心里发毛，这哪是开锁的钱
+  B：你只管开门，进去取东西我自己来，十分钟，别的我碰都不碰
+  A：……行，周三傍晚，你把定位发我
+  B：定位现在就发你，城东文星巷老粮食局宿舍
+  【系统消息】B 向 A 转账 2000 元，已收款。
+  A：定金收到了，先说好，我就管开门这一下
+  【11月5日】
+  B：东西巷37栋，单元门锁坏了半年没人修，直接推就开
+  A：我知道那片，前年给那儿的物业配过一批钥匙
+  B：那家这几天都没人，窗帘一直拉着，我瞅了两天了
+  A：你可真是……行了，别说这些，我心里有数
+  A：中午看球了吗，最后那个绝杀太离谱
+  B：看了！我押的居然真中了，晚上加个鸡腿
+  A：你还有这运气，帮我也看看下一场
+  B：哈哈行，跟我买，输了别怪我
+  B：再确认下，就今天傍晚五点半，只去一次，取完就完
+  A：知道，一趟就撤，多余的事我不沾
+  B：对，就那个铁皮箱子，我提着就走
+  A：你动作快点，我就在楼下等着，办完各自回家
+  B：好，办完这两千补给你，然后咱俩微信删了吧，省得我徒弟看见多嘴
+  A：老家那窝狗崽咋样了，你之前说帮我留一只
+  B：问了，我二叔家那窝下个月出窝，给你留最壮的
+  A：行，回头给你拿两条烟钱
+  B：烟就免了，给我留个开锁的vip价就行
+  A：我出发了，你直接到楼下别上来
+  B：好，五点四十见
+  A：记住，就这一回，以后这种忙别再找我
