@@ -1,0 +1,135 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002917
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000041
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-06e676ea430a943c
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: contraband_illicit_trade
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 社区团购团长 B 找展会认识的跨境代购供应商 A 团购进口益生菌（群里惯称蓝盒那款），「整盒拿更划算」「比专柜便宜三成」「冷链我包」这些行话听着像倒药的口吻，实为正规保健食品的海淘团购：凑够十四盒、一次结清团款、全程冷链发货。
+  critical_evidence:
+  - B 开口问展会那款蓝盒的还能团吗，A 称渠道还在、整盒拿更划算十盒起（3月3日）
+  - 按盒报价230、比专柜三百出头便宜约三成，A 承诺冷链我包、泡沫箱冰袋（3月3日）
+  - B 群里摸底凑了14盒，对价3220元（3月4日）
+  - B 团款收齐转3220元，A 排单周四发、按嘱咐冰袋加固到六个（3月5-6日，转账）
+  - 到货开箱冰袋还剩大半，团友反馈好、催下一期，A 答应下期优先留量（3月7日）
+  benign_alternatives:
+  - 正规海淘保健食品的社群团购
+  - 进口食品经销商给老客户的常态让利活动
+
+attributes:
+  duration_days: 5
+  turn_count: 56
+  approximate_tokens_estimate: 1269
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: medicine_crossborder_resale
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0235
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-106
+
+dedup:
+  content_hash: sha256:8fac1f36f43ebc13177828095b9e1fbaf93d1b4d846bfc914e6f1b70ded1f49b
+pipeline_status: accepted
+title: contraband_illicit_trade/medicine_crossborder_resale
+conversation: |-
+  【3月3日】
+  B：您好 上回展会加的您 想问下那款蓝盒的 还团得着不
+  A：在的 渠道还有 整盒拿更划算 十盒起
+  B：价跟展会说的一样吗
+  A：一盒230 专柜那边三百出头 您算差价
+  B：差得是真不少 团里问的人不少
+  A：冷链我包 泡沫箱冰袋 到手您放心
+  B：行 我先在群里摸个底
+  A：好 货源给您压到周五
+  B：上回展会您那个展位人多 排队
+  A：是 那几天嗓子都讲哑了
+  B：今年秋季展您还去不
+  A：去 档期早定了 还在老馆
+  B：行 到时候我去摊上找您
+  A：好 给您留茶
+  【3月4日】
+  B：摸底完了 14盒 群里手慢的没抢到
+  A：行 14盒 3220 您核下
+  B：对的 我跟团员收完款转您
+  A：不急 您收齐再转 我先排单
+  B：好的 明后天转
+  B：最近汇率又涨了吧 您这边成本压力大不
+  A：有点 上月又抬了一点 我吃下大半 团价先不动
+  B：那您厚道
+  A：老客户 不能价一熟就涨
+  B：那物流呢 春天慢不
+  A：还好 前阵子慢 现在恢复正常 走得稳
+  B：行 那我心里有数了
+  【3月5日】
+  B：团款收齐了 现在转您3220
+  【系统消息】B 向 A 转账 3220 元，已收款。
+  A：3220收到了 排单 周四发货
+  B：好 麻烦冰袋多放俩 上回有个团友说化得快
+  A：行 这批我加固一层
+  A：您上次说开始晨跑 坚持没
+  B：断了 春天风大 又改在家跳操了
+  A：在家跳好 刮风下雨都不误
+  B：您呢 还每天两杯美式
+  A：改一杯了 晚上睡得踏实
+  B：我也想戒 一到下午就困 哈哈
+  A：那您这杯戒不掉
+  【3月6日】
+  A：发走了 单号晚上拍给您 冰袋按6个装的
+  B：好 到了我在群里发开箱
+  A：开箱注意 先整箱进冰箱回温半天 口感最稳
+  B：学到了 群里都问这茬
+  B：单号收到了
+  A：到了喊我 售后找我
+  B：对了 下个月有没有囤货的档
+  A：有在做计划 到时候先给您留量
+  B：行 群里已经有人催下期
+  A：您团做得细 下期给您优先
+  【3月7日】
+  B：显示派送了
+  A：嗯 今儿应该能到 天气好 路上没耽误
+  B：到了 开箱 冰袋还剩大半 状态好
+  A：稳 那这批就踏实了
+  B：团友反馈都好 都问啥时候下一期
+  A：我问下渠道 有准信第一个告诉您
+  B：好的 合作愉快
+  A：合作愉快 冰袋留着 下期还能用
+  B：哈哈 您这精打细算 我服

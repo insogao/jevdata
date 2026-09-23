@@ -1,0 +1,135 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002920
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000036
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-0a52082496338fdc
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: contraband_illicit_trade
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 前同事 B 开了便利店，向在品牌区域经销的前同事 A 备货新款电子烟（上市在即的国标口味），新品发文前按行规保密、到货暗语沟通、整条拿货让价，外人看着像私下流通违禁口味，实为合规经销的正常上市前备货，进货款一次结清、条码全过系统入库。
+  critical_evidence:
+  - B 问新款到没到，A 称到了、就那三个味，先留两条、上架等通知上市前别摆（4月8日）
+  - 按条计价：单盒25、一条七盒整条240等于一条让5，B 决定拿7条（4月8日）
+  - B 转1680元排单，A 收款后约周三前送到店后门（4月9日，转账）
+  - 到货 B 清点七条、条码扫码全部过系统入库（4月11日）
+  - A 说官方发文一到就摆、建议收银台边新品架先少摆，卖完提前说下批压货防断（4月11-12日）
+  benign_alternatives:
+  - 合规电子烟经销的正常进货
+  - 新品上市前按行规保密备货的正常操作
+
+attributes:
+  duration_days: 5
+  turn_count: 56
+  approximate_tokens_estimate: 1126
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: e_cigarette_illegal_flavor
+  risk: 1
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0235
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-106
+
+dedup:
+  content_hash: sha256:5910f918763a1a0ea92a73bcb32183e78310cddc22d323e41471cc8c23772374
+pipeline_status: accepted
+title: contraband_illicit_trade/e_cigarette_illegal_flavor
+conversation: |-
+  【4月8日】
+  B：哥 新款到没
+  A：到了 就那三个味 先给你留两条
+  B：上架呢
+  A：等通知 上市前别摆 老规矩
+  B：懂 那我先进多少
+  A：你店的话 整条走 单盒25 一条七盒 拿整条240 等于一条让5
+  B：行 我拿7条
+  A：7条 先备着 上市前货在你库里也稳当
+  B：嗯 反正到期不怕 这东西放着不坏
+  A：对 这个没有效期焦虑 哈哈
+  A：对了 下月老部门聚会 你来不
+  B：来 老张张罗的吧
+  A：是 他订了河边的馆子
+  B：行 那天我把店交给店员
+  A：你现在也是甩手掌柜了
+  B：哪有 天天守到晚上十点
+  【4月9日】
+  B：哥 昨天说的7条 今天能定不
+  A：能 你转我就排单
+  B：那1680我现在转
+  【系统消息】B 向 A 转账 1680 元，已收款。
+  A：1680收到了 排单了 周三前到
+  B：辛苦 到了直接送店里后门
+  A：行 老地方
+  B：你们大厂这阵还天天加班不
+  A：加 新项目上线 连轴转
+  B：后悔出来不
+  A：不后悔 时间自由 就是收入看天
+  B：我现在也看天 生意好就多俩钱
+  A：所以咱俩才聚得上 哈哈
+  B：那倒是 都是给自己干
+  【4月10日】
+  A：你现在还骑小电驴通勤
+  B：骑 店近 五分钟
+  A：那好 我这地铁一个钟头 腻了
+  B：地铁还能眯一会 你赚了
+  A：也是 就是挤 凌晨都人
+  B：你们那站换乘长不长
+  A：长 走断腿 现在我背个双肩包
+  B：哈哈 打工人标配
+  A：货在路上了 明早到 给你发后门
+  B：好 我让店员收
+  【4月11日】
+  A：到了 七条 点好吱声
+  B：收了 点了 7条齐 条码都在
+  A：行 扫的时候有识别不了的喊我
+  B：好
+  B：扫完了 全过 入库了
+  A：稳 上市通知一下来你就摆
+  B：摆哪个位置 你给个建议
+  A：收银台边上 新品架 先少摆点 卖动再补
+  B：听你的
+  【4月12日】
+  B：哥 上市通知有信没
+  A：快了 这两天 官方一发文你就能摆
+  B：行 那我周末先理货
+  A：理 对了 7条卖完提前说 我下批给你压两条免得断
+  B：行 断货最伤客
+  A：那是 做店就怕这个
+  B：条码全录进系统了 就等一声令下
+  A：稳 就等发文

@@ -1,0 +1,129 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002918
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000041
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-f9ecb6d571e34a33
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: contraband_illicit_trade
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 团购接龙人 B 受群里几户邻居和自己父亲的托付，找海外代购 A 咨询代购原研药：「比医院便宜吗」「整盒拿更划算」「冷链我包」像一桩跨境药买卖的开局，但 B 坚持先问医生，复诊后发现医院有进医保的替代方案、自付几十块，最终决定不走代购、也劝群里等集采，交易从未发生、闭环没有完成。
+  critical_evidence:
+  - B 开口就问原研那款是不是比医院便宜，A 称整盒拿划算、价差明显、可发药盒实拍带小票（11月4日）
+  - A 报了量与冷链安排：一次两三盒没问题、冷链我包加冰袋，B 说要先问医生、A 表示不催（11月4日）
+  - A 发药盒正反面实拍、核过批号近效期，B 说带父亲复诊一并问（11月5日）
+  - B 复诊后反馈医生给了进医保的替代方案、自付几十块，决定不走代购并劝群里等集采，A 表示理解、稳妥要紧（11月6-7日）
+  - 双方友好收尾，B 谢耐心解答、A 说没买也随时可以问，全程未发生任何转账（11月8日）
+  benign_alternatives:
+  - 正规海外代购的售前咨询（未成交）
+  - 群邻里互相打听用药信息与渠道比价
+
+attributes:
+  duration_days: 5
+  turn_count: 50
+  approximate_tokens_estimate: 1373
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: medicine_crossborder_resale
+  risk: 1
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0235
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-106
+
+dedup:
+  content_hash: sha256:3cf5b301889816b43826a061d4670a5827bcddb06bcf8b5b8762e4781ae35d21
+pipeline_status: accepted
+title: contraband_illicit_trade/medicine_crossborder_resale
+conversation: |-
+  【11月4日】
+  B：您好 群里朋友介绍的 想问下原研那款 是不是比医院便宜 我爸长期吃 群里也有几户在问
+  A：是我 我常走 老版一盒装 整盒拿划算 单盒也行 群里凑单按团购价
+  B：医院那边一盒要小三百
+  A：我这边常价不到两百 带小票 盒底批号都能给您
+  B：老人长期吃 量不小
+  A：一次带两三盒没问题 冷链我包 需要冷藏的加冰袋
+  B：行 我先记下 我还是想先问下医生
+  A：应该的 问好再来 我不催
+  A：我这边刚早上了 时差十二个钟头
+  B：那您那边现在冷不
+  A：下了头场雪 路上撒了沙
+  B：这边还穿薄外套呢
+  A：你们那边冬天舒服 我最怕头场雪 开车打滑
+  B：那您慢点开
+  【11月5日】
+  A：给您拍了药盒实拍 正面背面都有 小票随货
+  A：[image：药盒正反面实拍照片]
+  B：收到 图看清楚了 盒子挺新
+  A：都是近效期的 批号我核过
+  B：嗯 我今天带爸去复诊 一并问问
+  A：好 听医生的最稳妥
+  B：您在那边几年了 我们前年去玩过 一路往北
+  A：五年了 那条线熟 你们走到哪儿了
+  B：到了湖边小镇 住了一晚 木屋
+  A：那地方夏天舒服 我周末常去钓鱼
+  A：钓鳟鱼 烤了吃 就是刺多
+  B：哈哈 那画面有了
+  【11月6日】
+  A：你爸平时锻炼不
+  B：每天早上去公园快走 风雨无阻
+  A：这习惯好 我爸就坐不住 一坐一天
+  B：拉他去公园走走 顺便看人下棋
+  B：老头都爱支招 还被人嫌 哈哈
+  B：复诊回来了 医生说有个进医保的替代方案 剂型不一样 效果差不多
+  A：那挺好 医保能报 长期吃省不少
+  B：嗯 那我先不走代购了 医院的开起来再说 群里那几户我也劝等集采落地
+  A：行 稳妥要紧 不用觉得不好意思
+  【11月7日】
+  B：医院的药今天开上了 报完下来一盒自付几十块
+  A：那比我这强多了 长期吃更划算
+  B：是 以后保健品啥的要是在您那儿有合适的 我再找您
+  A：随时 那些我一直做 常发的几样熟
+  A：你们那边快供暖了吧
+  B：下周开始 今年冷得晚
+  B：您出门帽子戴好
+  A：戴着呢 羽绒服也上身了
+  【11月8日】
+  B：爸吃了两天新药 说没那股子味儿了 顺口
+  A：那就好 适应了就固定方案 别老换
+  B：嗯 谢谢您前两天耐心解答
+  A：应该的 没帮上啥忙
+  B：帮上了 至少知道价和渠道 心里有底
+  A：以后有要问的随时来 不买也问
+  B：好的 您生意兴隆
+  A：借您吉言

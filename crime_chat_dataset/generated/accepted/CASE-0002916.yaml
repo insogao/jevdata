@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002916
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000030
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-767804f24f990716
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: contraband_illicit_trade
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 钓鱼论坛认识的网友 B 向自配饵料的作坊主 A 回购鱼饵，开口「上回那种腥的还有没」、按包报价、味型全用「老三样」「腥的」这类行话，又因怕同行抄方子限量两百包、说话吞吞吐吐，外人看着像违禁品暗号交易，实为小作坊渔具饵料的正常回购，三百五十元一次结清。
+  critical_evidence:
+  - B 开口问「上回那种腥的」还有没，A 答老三样都齐、这批只做两百包卖完等下月（8月20日）
+  - A 解释限量是怕同行拿去抄方子、熟人先紧着（8月20日）
+  - 按包报价：一包15、小药一瓶40、加运费10，共350元，B 现在转、A 回收到（8月20日，转账）
+  - A 发打包实拍、气泡膜缠好次日走件，B 周四收件一包没破（8月21-22日）
+  - 两人约周六东湾坎位拼船夜钓、船钱AA（8月21-22日）
+  benign_alternatives:
+  - 自制渔具饵料的正常网购回购
+  - 钓友圈里小批量定制作坊料的常态交易
+
+attributes:
+  duration_days: 3
+  turn_count: 43
+  approximate_tokens_estimate: 848
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: code_word_catalog
+  risk: 1
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0235
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-106
+
+dedup:
+  content_hash: sha256:1ca67b32853f9c96253d72f164d5804977471419854565f4c7c65ed7c9cfaee9
+pipeline_status: accepted
+title: contraband_illicit_trade/code_word_catalog
+conversation: |-
+  【8月20日】
+  B：上回那种腥的 还有没
+  A：有 老三样都齐 这批就做了两百包 卖完等下月
+  B：咋又限量
+  A：怕同行拿去抄方子 熟人先紧着
+  B：行 留20包 小药带一瓶
+  A：一包15 小药40 加运费10 一共350
+  B：成 现在转
+  【系统消息】B 向 A 转账 350 元，已收款。
+  A：350收到 明天走件
+  B：辛苦 周四前到就行
+  B：你那水库水位咋样 上游放水没
+  A：降了两米 老钓位都露底了
+  B：那鱼全聚深水了
+  A：这阵得钓远 抛投累死
+  A：周六预报有雨 看没
+  B：看了 周六多云 周日小雨
+  A：那周六走 正好
+  B：小雨口好 就是人遭罪
+  【8月21日】
+  A：打包好了 20包缠了气泡膜 明早件
+  B：这么结实 哈哈
+  A：上回有人到货压散了 学乖了
+  A：[image：饵料打包实拍照片]
+  B：看着踏实 周四收件
+  B：作坊这阵忙不
+  A：忙 产量翻倍 就我一个动手 老婆帮着装袋
+  B：那得歇歇 别累出毛病
+  B：我也一样 项目一天三个会
+  A：你老板还画饼不
+  B：画 天天画 我当连环画看
+  A：心态可以
+  B：上周那场渔获给你看
+  B：[image：渔获照片一盆板鲫]
+  A：板鲫啊 位置给我留一手
+  A：东湾那片? 我收了摊也去 拼船不
+  B：拼 船钱AA
+  A：行 周六见
+  【8月22日】
+  B：到件了 包得像砖头 一包没破
+  A：那就行 用着反馈
+  B：明晚先试 开饵手法回头发你
+  A：发 我学学
+  B：周六夜钓带啥吃的 你安排
+  A：泡面加蛋 再烤俩玉米
+  B：就这? 加根火腿肠呗
+  A：行 管够
+  B：周六晚八点 东湾停车场见
+  A：见 我带竿不带伞 小雨淋着爽

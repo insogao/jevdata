@@ -1,0 +1,144 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002911
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000030
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-13b068a62a627d8f
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: contraband_illicit_trade
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 便利店王老板向食品批发业务员小王进临期零食饮料：开口「上回那种还有没」指到期剩俩月的那批、报价按「件」、老规矩结款，外人听着像囤灰色货源的黑话目录，实为临期特卖行业的正规进货——到期日写明、堆头挂「临期」招牌明卖，货款一千八一次结清。
+  critical_evidence:
+  - B 问「上回那种还有没」（到期剩俩月那种），A 答有批新的6月28到期（5月6日）
+  - 报价按件：果汁一件52（15瓶）、饼干一件38（24包）（5月6日）
+  - B 定果汁饼干各20件共1800，A 发库存明细图、到期日都标了（5月7日）
+  - 送货点数后 B 现转1800元货款，A 回收到、票随货月底一起开（5月9日，转账）
+  - 交接时 B 把堆头「临期」招牌和到期日写显眼、A 提醒现在管得严，卖剩的离到期一个月内找 A 调货（5月9-10日）
+  benign_alternatives:
+  - 临期食品批发的正规特卖渠道进货
+  - 便利店店庆活动的常规补货
+
+attributes:
+  duration_days: 6
+  turn_count: 62
+  approximate_tokens_estimate: 1395
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: code_word_catalog
+  risk: 1
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0235
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-106
+
+dedup:
+  content_hash: sha256:2798bd066b237aa4e5d01afe11431a44ae97dd36d26d6f4ddbe690000402c378
+pipeline_status: accepted
+title: contraband_illicit_trade/code_word_catalog
+conversation: |-
+  【5月6日】
+  B：小王 上回那种 还有没 到期剩俩月那种
+  A：有批新的 6月28到期 王老板又要做堆头?
+  B：对 特价区周转快
+  A：报你价 果汁一件52 饼干一件38 按件算
+  B：果汁一件多少瓶
+  A：15瓶 饼干一件24包
+  B：行 我先各要10件 你把到期日明细发我
+  A：下午发你 库里刚盘完
+  B：最近生意淡不
+  A：淡 夏天没到 饮料还没起量
+  B：我店也 降两成 就等天热
+  A：一热全回来 每年都这规律
+  B：行 那我赌一把 天热前铺满柜
+  A：赌得对 你那个位置 上班族多
+  【5月7日】
+  A：明细发你了 到期日都标了
+  A：[image：库存明细照片两张]
+  B：收到 我看看
+  B：行 果汁饼干各来20件
+  A：一共1800 你这手笔 堆头不小
+  B：周末店庆 五一后补一波
+  A：行 单子记了 送货安排后天
+  B：昨晚暴雨 你仓库没进水吧
+  A：老仓库后墙又渗 抽了一上午水
+  B：得修啊 淹一批哭都来不及
+  A：跟老板提了 拖着 说等雨季过了
+  B：省小钱误大事
+  A：谁说不是 我那批纸箱全换新的
+  B：你倒是细心
+  【5月8日】
+  A：货在装车了 明早送你店
+  B：行 明早我在后门等
+  B：对了 你招人没 上回你说仓库缺个手
+  A：面了俩 一个嫌累 一个嫌远
+  B：仓库活是累 我店招店员也难
+  A：现在年轻人宁可送外卖 不进仓
+  B：外卖自由 哈哈 也确实挣得多点
+  A：我自己顶两周 先这样
+  【5月9日】
+  B：小王 今天货几点到
+  A：十点前 司机老周 你认识
+  B：认识 他拉我三年了
+  A：货到了 20件果汁20件饼干 你点
+  B：点完了 一共1800对吧 我现在转
+  【系统消息】B 向 A 转账 1800 元，已收款。
+  A：1800收到了 票随货给你
+  B：收到了 发票月底一起开也行
+  A：开 我给你留底
+  B：堆头我下午摆 特价签让店里印
+  A：摆的时候到期日写显眼点 现在管得严
+  B：懂 临期两个字挂招牌上 顾客还觉得实惠
+  A：对 大行家
+  【5月10日】
+  B：堆头摆出来了 拍给你看
+  B：[image：店内特价堆头照片]
+  A：位置正 就在门口 不卖爆没天理
+  B：下午卖掉果汁六瓶 饼干四包 开张了
+  A：这速度 周末翻倍
+  B：但愿 卖不完的月底你给我调走不
+  A：剩的离到期一个月内你找我 我给你换着调
+  B：行 这服务可以
+  【5月11日】
+  B：昨天卖的咋样 你猜
+  A：果汁两件起 饼干一件半?
+  B：果汁一件半 饼干两件 饼干爆了
+  A：下批饼干给你加量
+  B：行 下批啥时候有信
+  A：我问厂家回货 到了给你留 周三前给你话
+  B：成 周三等信
+  A：好嘞 王老板 周末忙去吧
