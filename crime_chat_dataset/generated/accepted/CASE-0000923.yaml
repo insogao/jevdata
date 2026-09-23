@@ -1,0 +1,137 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000923
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000012
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-14aed7fe1b349945
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: fraud_scam
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 老同学 A 以搬家急出手为由，把一台明显低于市价的二手相机卖给 B，又说走平台麻烦、都是熟人，催 B 先微信转定金，收到两千后发来一个查不到的快递单号，之后一直用物流拖延。
+  critical_evidence:
+  - A 以搬家急用钱为由，出价明显低于市价的二手相机给老同学 B
+  - A 说走平台要扣手续费、太麻烦，让 B 直接微信私下转定金
+  - A 收到定金后发来一个查不到的快递单号
+  - B 几天追问物流无果，A 用件多、回头催之类的说法一直拖延
+  benign_alternatives:
+  - 熟人之间真实的二手闲置转让
+  - 朋友急用钱低价出物并按约定发货
+
+attributes:
+  duration_days: 6
+  turn_count: 58
+  approximate_tokens_estimate: 919
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: second_hand_deposit_run
+  risk: 1
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0057
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:c92bbc92def44c8b4b03f07340990cdd860d059228aaf5a6741d265a7a2e62e5
+pipeline_status: accepted
+title: fraud_scam/second_hand_deposit_run
+conversation: |-
+  【8月20日】
+  A：老同学 在吗
+  B：在 咋了
+  A：我那台相机想出 你不是一直想入一台
+  B：真的假的 什么价
+  A：急用钱 给你四千五 成色九成
+  B：也太便宜了吧 不会有问题吧
+  A：自己人我能坑你? 搬家急着出手
+  B：那还行
+  B：晚上吃的啥
+  A：楼下馄饨 凑合
+  B：你搬家搬得顾不上了吧
+  A：可不是 一堆东西没打包
+  A：这两天热死了
+  B：空调开了一天
+  A：电费肉疼
+  【8月21日】
+  B：相机有发票吗
+  A：有 回头拍给你看
+  B：走平台还是怎么弄
+  A：走平台扣手续费 直接微信吧 都是熟人
+  B：那也行
+  A：你先转点定金 我给你留着 别人也在问
+  B：要多少
+  A：先两千 我这两天就给你寄
+  B：今天加班到几点
+  A：八点 刚到家
+  B：你还真忙
+  A：所以急出 腾地方
+  A：最近睡不好 老做梦
+  B：少喝点咖啡
+  A：嗯 你也早点睡
+  【8月22日】
+  B：两千转你了
+  【系统消息】B 向 A 转账 2000 元，已收款。
+  A：收到 我明天给你寄
+  B：好
+  B：那个原厂包一起出吗
+  A：包我留着 给你带条背带当配件
+  B：行 谢了
+  【8月23日】
+  A：单号给你 SF 7712 8899 0043
+  B：收到 谢谢
+  B：我姐也想买个二手的 你那还有别的不
+  A：回头再有我跟你说
+  【8月24日】
+  B：单号查不到啊
+  A：可能在揽收 明天再看
+  B：好吧
+  A：搬家累瘫了 今天不聊了
+  B：嗯 早点休息
+  【8月25日】
+  B：还是查不到 你到底寄没寄
+  A：快递点说件多 我催了
+  B：你电话多少 我自己问下快递
+  A：我回头说 这会儿忙着
+  B：你到底靠不靠谱啊
+  A：至于吗 都是老同学
+  B：那尾款还付不付了
+  A：晚点聊 我忙
+  B：看到回我一下
+  B：在吗
+  B：你要是不方便就说一声
+  A：嗯 在弄 别催
+  B：好吧

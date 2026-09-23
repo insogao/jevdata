@@ -1,0 +1,129 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000922
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000012
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-6a31e5f94f990386
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: fraud_scam
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 亲戚 A 以搬家清货为由，把一台低价二手电脑转给表弟 B，说走平台麻烦、让 B 直接微信转定金，收钱后迟迟不发货，用物流在揽收之类的话拖延，B 碍于亲戚关系也不好深究。
+  critical_evidence:
+  - A 以亲戚身份、搬家急出手为由，低价把二手电脑转给表弟 B
+  - A 说走平台麻烦，让 B 直接微信私下转定金，没走任何担保流程
+  - A 收到定金后迟迟不发货，用物流慢、回头催之类的说法拖延
+  - B 碍于亲戚关系没追究，也没有要回定金
+  benign_alternatives:
+  - 亲戚之间真实的闲置转让
+  - 家里长辈牵线的正常二手买卖
+
+attributes:
+  duration_days: 2
+  turn_count: 54
+  approximate_tokens_estimate: 805
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: second_hand_deposit_run
+  risk: 1
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0057
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:d2eda0bcee209e9e1ac6de4ff4ff595ccdb74695ba3488ca6ce3bfd6a640bcab
+pipeline_status: accepted
+title: fraud_scam/second_hand_deposit_run
+conversation: |-
+  【9月16日】
+  A：表弟 你那台旧电脑是不是要换
+  B：是啊哥 卡得不行了
+  A：我这台要出 搬家清货 给你一千二
+  B：这么便宜 啥配置
+  A：去年买的 办公够用 游戏也能跑
+  B：那挺好 走平台吗
+  A：亲戚走啥平台 直接转我就行
+  B：也是 那回头我给你钱
+  A：你先转五百定金 我好给你留着
+  B：行 哥还能坑我
+  B：中午吃饭没 我妈做了红烧肉
+  A：在搬东西 还没顾上
+  B：那来家里吃点
+  A：不了 忙完再说
+  B：转你五百了
+  【系统消息】B 向 A 转账 500 元，已收款。
+  A：收到 我这两天寄
+  B：好 不急
+  A：搬家真累 一屋子纸箱
+  B：要不要我去帮忙
+  A：不用 快弄完了
+  B：行 需要喊我
+  B：电脑可别忘了给我寄
+  A：忘不了 明后天
+  【9月17日】
+  A：今天下雨 搬家更烦
+  B：是啊 出门带伞
+  A：嗯
+  B：哥 寄了吗
+  A：还没 东西还没打包好
+  B：行 那你弄完说声
+  B：午饭吃的啥
+  A：路边随便吃的
+  B：搬完请你吃饭 别客气
+  A：好 这顿你跑不了
+  B：单号有了吗
+  A：刚叫了快递 可能明天才揽收
+  B：那你把单号先发我
+  A：回头发你
+  B：表妹说周末来家里聚 你来不
+  A：看搬完没 尽量
+  B：来吧 好久没见
+  A：再说
+  B：哥 单号到底有没有
+  A：在找 别催了
+  B：我不催 就是想有个准信
+  A：明天肯定给你
+  B：那尾款我等你寄到再给
+  A：行 随你
+  B：哥 你要是有难处就说
+  A：能有啥难处
+  B：那行
+  A：早点睡
+  B：嗯 晚安
+  B：明天记得发我单号
+  A：知道了

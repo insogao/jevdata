@@ -1,0 +1,133 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000927
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000012
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-d6747fb7d136b986
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: fraud_scam
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 中间人 A 牵线把“朋友的”低价二手手机转给 B，让 B 绕过平台私下微信转定金占位，说货主不出面、走平台两边都麻烦，收到定金后发来一个查不到的物流单号，B 想找卖家核实却始终被挡。
+  critical_evidence:
+  - A 以中间人身份牵线，称朋友手里有台低价出掉的高配二手手机
+  - A 让 B 绕过平台私下微信转定金，说货主不出面、走平台麻烦
+  - A 收到定金后发来一个无法查证的物流单号
+  - B 想直接找卖家核实，A 只说货主不露面、让自己放心
+  benign_alternatives:
+  - 朋友委托代卖的真实二手交易
+  - 二手平台上有中间商赚差价的正常买卖
+
+attributes:
+  duration_days: 2
+  turn_count: 58
+  approximate_tokens_estimate: 1033
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: second_hand_deposit_run
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0057
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:61911ae97ea6484dada9b542973af0169b3834bcb44f22470f742ead6b116f9f
+pipeline_status: accepted
+title: fraud_scam/second_hand_deposit_run
+conversation: |-
+  【9月10日】
+  A：哥 你不是要换手机吗
+  B：是啊 预算有限
+  A：我朋友手里有台高配的 成色很好 要出
+  B：什么价 型号说一下
+  A：去年旗舰 别人回收报三千五 他急着出两千八
+  B：这么低 靠谱吗
+  A：我牵的线你放心 我和他认识好几年
+  B：能当面验机不
+  A：货主不太方便出面 东西寄过来一样
+  B：中午吃啥呢
+  A：食堂 随便扒拉两口
+  B：我这边楼下面馆还行
+  A：改天你带我去
+  A：对了 你走平台还是怎么弄
+  B：平台吧 有个保障
+  A：平台要实名挂货 货主嫌麻烦 私下转就行
+  B：那出问题找谁
+  A：找我啊 我还能跑 先转个定金占了
+  B：多少
+  A：一千五 我让他明天就发
+  B：今天降温 你多穿点
+  A：穿了 这两天风大
+  B：我有点感冒 头沉
+  A：喝点热水 别硬扛
+  B：再问下 那台电池健康多少
+  A：九十几 我朋友用的很爱惜
+  B：行 我再想想
+  A：想啥 这个价明天就没了
+  【9月11日】
+  A：哥 定不定 那边催我回话
+  B：那转你一千五
+  【系统消息】B 向 A 转账 1500 元，已收款。
+  A：收到 我让他今天就发
+  B：你把他微信推我 到时我好问物流
+  A：他不爱加人 有事你问我就行
+  B：那也行 有单号发我
+  B：今天客户特别难缠
+  A：做销售的都这样 忍忍
+  B：唉 想换手机犒劳下自己
+  A：这不就给你安排上了
+  A：单号 7731 2266 5580
+  B：收到
+  B：这个单号查不到
+  A：刚揽收 系统慢 明早再看
+  B：好吧
+  B：晚上吃点啥 我煮了粥
+  A：我点个炒饭
+  B：养生点 别老外卖
+  A：知道了哈哈
+  B：尾款我等你寄了再转
+  A：行 随你
+  B：你把发货视频发我看看行不
+  A：朋友发的 我没拍
+  B：那你拍个快递底单也行
+  A：明天翻出来给你
+  B：行吧
+  B：对了 你要是方便 把他电话给我
+  A：他隐私 不好给 我担保就行了
+  B：你这担保 我心里还是没底
+  A：都是哥们 你还信不过我

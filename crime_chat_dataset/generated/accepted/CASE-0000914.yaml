@@ -1,0 +1,139 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000914
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000136
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-04c6e19b8b976fda
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: other_illicit_coordination
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 给熟人 B 写抢票“加速”工具并调好参数，B 用它批量抢票加价出手，成功一张给 A 三百，实名核验的坎由 A 打点解决。
+  critical_evidence:
+  - A 说加速包参数调好了，让 B 今晚按新参数试一轮
+  - 两人谈好成功一张给 A 三百，其余归 B
+  - B 提实名卡壳，A 说实名问题我来搞，B 只管收单
+  - 两人对了这轮的号数量与分成，商量下次加大
+  benign_alternatives:
+  - 候补购票技巧
+  - 正规代购
+
+attributes:
+  duration_days: 6
+  turn_count: 60
+  approximate_tokens_estimate: 1085
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: ticket_scalp_bot
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0056
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:f7bf94955d209cfcadbcf166ca21c6c4460a2b1fde26084bdc1c74b9cdd3cd95
+pipeline_status: accepted
+title: other_illicit_coordination/ticket_scalp_bot
+conversation: |-
+  【1月5日】
+  A：参数调好了 你今晚试一轮
+  B：这次稳不稳 上次卡了半小时
+  A：这次把并发压下去了 稳
+  B：行 我开五个先试
+  A：别贪多 先摸清节奏
+  B：懂 老规矩 出一张给你三百
+  A：对 剩下的你拿
+  B：出了两张 你这参数真行
+  A：废话 我熬了两晚
+  B：那明天我多开点
+  A：先别 我看下风控加没加
+  【1月6日】
+  B：起来了没 昨晚那两张出掉了
+  A：动作挺快
+  B：约在商场当面 收现金 稳妥
+  A：可以 别在线上聊价格
+  B：知道 我一向谨慎
+  B：对了你手机屏碎成那样还不换
+  A：凑合用 换屏太贵
+  B：我认识个修手机的 便宜 回头给你推
+  A：行 谢了
+  A：今晚可以多开了 我盯着后台
+  B：好 我开二十个 分三批
+  A：记住一张三百 出多了也是这个价
+  B：放心 一分不少你的
+  B：有几个卡实名的 过不去
+  A：实名问题我来搞 你把号发我
+  B：发你了 五个
+  A：给我半小时
+  【1月7日】
+  A：好了 你把那五个号重启一下
+  B：通了 牛 这也行
+  A：有门路 你别问
+  B：行 不该问的不问
+  B：昨晚一共出了六张 记上了
+  A：一千八 攒着一起结
+  B：好 我要去健身 下午再说
+  A：你还有闲心健身
+  B：身体是本钱 你也该动动
+  B：晚上点外卖 你吃啥
+  A：随便 你点啥我点啥
+  B：那家川菜 上次你说辣
+  A：微辣就行 我胃不行
+  【1月8日】
+  A：这波风控降了 可以放开跑
+  B：那我加大 号商那边又给我一批
+  A：多少
+  B：五十个 够聊半个月
+  A：稳着点 别一下全用
+  【1月9日】
+  B：我妈催我相亲 烦死了
+  A：去见见呗 万一合适
+  B：没那心思 先把钱挣了
+  A：也是 有钱才有底气
+  B：今晚出了九张 累
+  A：好 这批结束我给你算总账
+  B：别总转账 太扎眼
+  A：知道 到时候当面
+  【1月10日】
+  B：上次帮你说好那部电影票 我买了两张
+  A：谢了 多少钱我给你
+  B：88 两张
+  【系统消息】A 向 B 转账 88 元，已收款。
+  A：转你了
+  B：收到 周末一起看
+  A：行 这波结束歇两天

@@ -1,0 +1,140 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000919
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000015
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-fb7d4e0a1a05d178
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: fraud_scam
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 自称清华退学的“名师”A 借着在公司里是 B 的上级这层关系，向担心孩子数学成绩的家长 B 兜售“十节课包提分”的小班课，用“最后三个名额”连日催促，B 在没签合同、没核实资质的情况下微信转账交了课程费。
+  critical_evidence:
+  - A 自称清华退学后一直带提分小班，宣称十节课包提分，提不上退一半
+  - A 和 B 在同一家公司是上下级，借工作关系反复劝 B 给孩子报课
+  - A 用“最后三个名额”制造紧迫感，催 B 当天就定下来
+  - B 没签合同也没核实机构资质，直接微信转账交了课程费，A 只给口头承诺
+  benign_alternatives:
+  - 真实在线教育机构的正常课程推销
+  - 大学生家教按课时收费的正常接单
+
+attributes:
+  duration_days: 5
+  turn_count: 62
+  approximate_tokens_estimate: 1294
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: video_coaching_parent_scam
+  risk: 1
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0057
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:10ef872b5545a0bba2596c22a53dacad41cb06e2b0232c3264269946661ee64f
+pipeline_status: accepted
+title: fraud_scam/video_coaching_parent_scam
+conversation: |-
+  【9月1日】
+  A：小李 在忙吗 跟你说个事
+  B：张哥 您说
+  A：你家娃不是高二嘛 数学是不是一直上不去
+  B：是啊 愁死我了 上次月考又没及格
+  A：我周末带了个小班 专治你这种
+  B：您还带课呢?
+  A：早年的事 清华没读完就出来了 手一直没生
+  A：咱这行认口碑不认文凭 你信我
+  B：那肯定信您 您带新人就有耐性
+  A：哈哈 教娃更得用心 不然砸招牌
+  B：对了张哥 今晚降温 您记得添件衣服
+  A：知道 你也是 别光顾着盯娃
+  B：嗯 这两天风是真大
+  【9月2日】
+  A：说正事 我这边数学提分小班 一共十节
+  B：十节就能提?
+  A：包提 提不了我退一半 我有名额的
+  B：大概什么价位
+  A：一对一贵 你走小班 十节三千八
+  B：我回去跟他妈商量下
+  A：行 你抓紧 我这名额不多
+  B：张哥 下午那个汇报我先发您过一眼
+  A：收到 我晚点给你意见
+  B：好 谢谢张哥
+  A：你最近状态不错 就是家里事多
+  B：唉 孩子的事最费神
+  【9月3日】
+  A：娃的事考虑得咋样了
+  B：我老婆说想再看看别的机构
+  A：别的机构都是大班糊弄 哪有我盯着
+  A：我这可是清华退学出来的 你上哪找
+  B：是是 我没别的意思
+  A：就剩最后三个名额了 今天定我给你留着
+  B：这么急啊
+  A：好老师就抢手 晚了真没了
+  B：娃昨晚说不想补课 说累
+  A：现在孩子都这样 逼一逼就好了
+  B：我也怕逼紧了逆反
+  A：你信我 分提上去他自己就有信心了
+  B：唉 但愿吧
+  A：中午吃啥了
+  B：随便对付了口面
+  A：别老对付 胃要紧
+  B：忙 没办法
+  A：我晚上点外卖 要不要给你捎一份
+  B：不用不用 谢谢张哥
+  【9月4日】
+  A：小李 想好没 最后一个名额了
+  B：张哥 主要是没合同 我心里没底
+  A：自己人还签啥合同 我还能骗你不成
+  A：转账备注写学费就行 我给你开收据
+  B：那我今晚转?
+  A：越快越好 这周就开课
+  B：行
+  B：我妈让我买点降压药 您知道哪个牌子好
+  A：去药店问问 我血压也偏高
+  B：那您也少熬夜
+  A：没办法 项目赶
+  【9月5日】
+  B：张哥 三千八转过去了 您查收
+  【系统消息】B 向 A 转账 3800 元，已收款。
+  A：收到 我登记上 周三开课
+  B：好 那教材啥的?
+  A：我发你电子版 打印就行
+  B：行 谢谢张哥
+  A：客气啥 提分了你请我吃饭
+  B：一定一定

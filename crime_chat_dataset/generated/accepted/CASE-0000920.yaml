@@ -1,0 +1,120 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000920
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000015
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-c1fc23de554f90b9
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: fraud_scam
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 陌生人 A 从家长群里私加 B，自称名校退学出来带提分班的名师，用“十节课包提分”“就剩三个名额”反复催 B 交钱，被追问资质时含糊其辞，收到微信转账的课程费后只答应晚上发资料，始终没有合同也没有机构信息。
+  critical_evidence:
+  - A 通过家长群私加 B，自称名校没读完出来带提分小班的名师
+  - A 反复用“十节课包提分”“就剩三个名额”催 B 尽快交钱占位
+  - A 回避 B 对机构和资质的追问，只说过往成绩、圈里口碑
+  - B 微信转账课程费后 A 才答应发资料，全程没有合同也没有收据
+  benign_alternatives:
+  - 正规在线教育机构的课程咨询
+  - 家长群里真实的老师私下答疑
+
+attributes:
+  duration_days: 2
+  turn_count: 45
+  approximate_tokens_estimate: 813
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: video_coaching_parent_scam
+  risk: 1
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0057
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:2f1461d30b88a3c5f1bf758856aea25c8b956ce30ea3c1ce3079ade934cad84b
+pipeline_status: accepted
+title: fraud_scam/video_coaching_parent_scam
+conversation: |-
+  【9月6日】
+  A：家长您好 我是群里发资料的陈老师
+  B：您好 哪个群
+  A：高二冲刺那个群 看您问过数学的事
+  B：哦哦 是 我家那个数学是短板
+  A：我这边带小班 就群里几个孩子
+  B：您是哪个学校的老师
+  A：说来话长 名校没读完 圈里认能力不认牌子
+  B：这样啊
+  A：十节课 包提分 我盯得紧
+  B：怎么收费
+  A：小班三千二 现在还剩三个名额
+  B：我再想想
+  A：别想了 好资源不等人
+  B：今天雨好大
+  A：是啊 我这边都堵上了
+  B：出门带伞了吗
+  A：带了 谢谢关心哈哈
+  A：孩子平时爱吃啥 补课累 得补营养
+  B：就爱吃炸鸡 管不住
+  A：那不行 正长身体
+  B：唉 说多少回了
+  【9月7日】
+  A：家长 定不定 今天这最后一个名额定不定给别人
+  B：能先试听一节吗
+  A：我们不走试听 都是直接跟
+  B：那我不太放心
+  A：您这么谨慎 外面大机构也不见得多好
+  B：那您给个机构名 我查查
+  A：结果重要 说多了没意思
+  B：好吧 那我转您
+  A：转的时候备注学费就行
+  【系统消息】B 向 A 转账 3200 元，已收款。
+  B：转了 三千二
+  A：收到 我拉您进学习群
+  B：好
+  A：资料我晚上发你
+  B：嗯 麻烦您
+  B：孩子最近有点叛逆 说啥都顶嘴
+  A：正常的 盯紧点就好
+  B：唉 心累
+  A：跟我课上一段时间就顺了
+  A：群里有团购错题本 要不要带一本
+  B：不用了 家里有好几本
+  A：行
+  B：资料发了吗 我等着打印
+  A：在整理 明早给你
+  B：好吧

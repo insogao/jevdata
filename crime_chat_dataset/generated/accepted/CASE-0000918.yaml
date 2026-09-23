@@ -1,0 +1,118 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000918
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000146
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-68f2f36816b41048
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: other_illicit_coordination
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 经人介绍找到陌生号商 B，下单要一百个号连夜刷评，统一文案，催 B 补上欠货；费用线下另谈，不走账户。
+  critical_evidence:
+  - A 通过介绍人加到 B，开口就要一百个号今晚开工
+  - A 说文案我发你，要求口径统一、按单子去发
+  - B 说号商欠他货，A 让他催并先用旧号顶
+  - A 和 B 约定费用线下给，不留下转账记录
+  benign_alternatives:
+  - 营销推广讨论
+  - UGC运营
+
+attributes:
+  duration_days: 3
+  turn_count: 43
+  approximate_tokens_estimate: 788
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: rating_farm_order
+  risk: 1
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0056
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:600a31708bfde444e543346552f28a3ccfc4b235e7ad155a208a38b98d69bdb3
+pipeline_status: accepted
+title: other_illicit_coordination/rating_farm_order
+conversation: |-
+  【6月11日】
+  A：你好 老陈介绍我来的 说你能搞号
+  B：老陈啊 认识 你要多少
+  A：一百个 今晚就要开工
+  B：一百个不少 今天有点紧
+  A：客户催 你想想办法
+  B：号商还欠我一批 我给你凑八十先
+  A：行 缺的先拿旧号顶 别空着
+  B：旧号掉得快 你有心理准备
+  A：顶一晚够了 明天补新的
+  B：行 文案呢
+  A：文案我发你 照字发 一个字别改
+  B：懂 统一口径
+  A：发完截图我 我要对数
+  B：老规矩 明白
+  B：你这行做多久了 我头回接你
+  A：好几年了 客户稳定 量管够
+  B：那可靠 我就怕做一单就散
+  A：放心 后面每月都有
+  B：行 长期最好
+  B：这两天平台严 你这行好做不
+  A：严也是机会 客户就图这个效果
+  B：也是 需求在就有量
+  B：号凑齐八十 已经在上第一批
+  A：好 我看评论 节奏别太齐
+  B：我隔几分钟发一条
+  A：对 太整齐一眼假
+  B：八十个上完了 等新号
+  A：催号商 欠货还不上道
+  B：我催了 说明晚到
+  A：那明天必须齐 客户中午要结
+  【6月12日】
+  A：新号到了吗
+  B：到了 二十个 这就补上
+  A：文案还是那份 别改
+  B：知道 一模一样
+  B：一百个齐了 截图打包给你
+  A：收到 我去跟客户对
+  B：钱怎么给
+  A：线下给 别走账户 你懂
+  B：懂 那约个地方
+  【6月13日】
+  A：客户说数据还行 尾款我当面给
+  B：好 下午老陈那块见
+  A：行 下波还找你 保持联系
+  B：没问题 量管够

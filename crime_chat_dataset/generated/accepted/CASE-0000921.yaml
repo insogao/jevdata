@@ -1,0 +1,116 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000921
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000015
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-779cc253c139a624
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: fraud_scam
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 中间人 A 向 B 推荐“熟人开的”提分小班，称帮亲戚孩子报名时多留了几个内部名额，用“十节课包提分”“就剩三个名额”催 B 微信转定金占位，被问机构和师资时只说是圈里人、不方便细说。
+  critical_evidence:
+  - A 以中间人身份推荐提分小班，称是自己熟人开的班、帮忙留的内部名额
+  - A 用“十节课包提分”“还剩三个名额”催 B 尽快转定金占位
+  - A 回避机构和师资资质问题，只说都是圈里人、不方便细说
+  - B 微信转账课程定金，A 只给口头承诺，没有合同和收据
+  benign_alternatives:
+  - 熟人帮忙推荐的正常辅导班
+  - 社区里口碑不错的线下小班课
+
+attributes:
+  duration_days: 2
+  turn_count: 41
+  approximate_tokens_estimate: 826
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: video_coaching_parent_scam
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0057
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:230204f2f4c3ac4c960a4ebb9db7c9b5a5ea00573f68fbb7c52aec7dad75bd31
+pipeline_status: accepted
+title: fraud_scam/video_coaching_parent_scam
+conversation: |-
+  【9月12日】
+  A：在忙吗 跟你说个好事
+  B：啥好事
+  A：我表哥朋友开的数学小班 我帮亲戚孩子报的
+  B：你家孩子不也高二吗 效果咋样
+  A：刚上十节 上次月考提了二十多分
+  B：这么神 多少钱
+  A：内部价三千 对外是四千五 还剩三个名额
+  B：是哪个机构 老师什么背景
+  A：圈里人 不方便细说 反正靠谱
+  B：我得跟我老婆商量下
+  A：行 你抓紧 名额留不了太久
+  B：今天食堂的菜好咸
+  A：哈哈 我们楼下也一样
+  B：改天自己带饭算了
+  A：我也是这么想的
+  B：问下 那班在哪上课
+  A：线上 时间灵活 方便
+  B：线上啊 那不还是网课
+  A：网课咋了 分提上去才关键
+  B：那老师能看看资质吗
+  A：都熟人 别这么见外 先占名额要紧
+  B：晚上带娃去公园跑了跑步
+  A：好习惯 我家这个就知道玩手机
+  B：都这样 慢慢管
+  A：对了 名额的事定没
+  B：我再确认下时间安排
+  【9月13日】
+  A：就剩最后一个名额了 我先帮你占上
+  B：那你先占着 要交定金吗
+  A：先转我一千当定金 剩下的开课前给
+  B：好 我这就转
+  【系统消息】B 向 A 转账 1000 元，已收款。
+  A：收到 我给你记上
+  B：有收据吗
+  A：熟人的班 走啥收据 放心
+  B：行吧 那你把开课时间发我
+  A：我问问 回头告诉你
+  B：我妈血压有点高 你有靠谱的体检中心吗
+  A：社区医院就行 别乱花冤枉钱
+  B：有道理 谢谢
+  B：开课时间问到了吗
+  A：下周 具体我让他发你
+  B：好 尽快啊

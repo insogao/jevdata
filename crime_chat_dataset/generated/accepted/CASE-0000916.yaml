@@ -1,0 +1,140 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000916
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000146
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-9fd2349631f88b0f
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: other_illicit_coordination
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 上家 A 向下属兼号商 B 下单，要一百个账号连夜开工刷评，文案由 A 统一发，号商欠货要催；费用走线下，另有一笔正常报销转账。
+  critical_evidence:
+  - A 要 B 今晚把一百个号开起来，说文案我发你，照单子去发
+  - B 抱怨号商欠他货，A 让他去催，缺号就先用旧号顶
+  - A 把统一的文案和话术发下来，要求口径一致
+  - 两人对接了这批的量、进度与结算，A 要求别留下转账痕迹
+  benign_alternatives:
+  - 营销推广讨论
+  - UGC运营
+
+attributes:
+  duration_days: 3
+  turn_count: 64
+  approximate_tokens_estimate: 1228
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: rating_farm_order
+  risk: 1
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0056
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:ef01e1d1f54b215b01c23b7ec04589a7647e25ec1c09cd31f9e439e350520916
+pipeline_status: accepted
+title: other_illicit_coordination/rating_farm_order
+conversation: |-
+  【4月8日】
+  A：今天这波要一百个号 今晚开工
+  B：一百个?上一批才五十
+  A：这波量大 客户催 文案我发你
+  B：号商那边还欠我货 上一批没补齐
+  A：你去催 缺的先用旧号顶
+  B：旧号容易掉 你心里有数
+  A：顶一晚就行 明天新号到位
+  B：行 文案发我 我先排版
+  A：发你了 照上面的字发 别自己加
+  B：统一口径 懂
+  A：发完把截图收好 我要对数
+  B：知道 老规矩
+  B：对了公司团建你去不 周末
+  A：去 露个脸 老板都去
+  B：爬山还是吃饭
+  A：先去农庄吃饭 下午自由活动
+  B：行 我把手头活排开
+  A：带上你媳妇 我带我老婆孩子
+  B：好 热闹
+  A：号齐了没 今晚就指望这个
+  B：催了 号商说今晚先给八十
+  A：八十先八十 剩下的明天必须补
+  B：他说最近风控紧 出号慢
+  A：风控紧就分批上 别一次全开
+  B：好 我分三批
+  B：第一批三十个上好了 文案发完
+  A：收到 我看后台 数据还行
+  B：评论清一色 会不会假
+  A：客户就要这个效果 你别操心
+  B：行 我接着上第二批
+  B：第二批也完了 手都点麻
+  A：辛苦了 第三批明早
+  B：明早怕来不及 客户几点要
+  A：中午前 你抓紧
+  【4月9日】
+  B：新号到了 二十个 我这就上
+  A：好 文案还是那份 别改字
+  B：知道 一模一样
+  A：进度
+  B：一百个齐了 截图我打包发你
+  A：干得漂亮 客户那边我去交代
+  B：款什么时候结
+  A：这周内 你别在群里发 私聊我
+  B：我最近想换房 首付还差点
+  A：房价这德行 再等等
+  B：孩子要上学 学区得考虑
+  A：那倒是 该买还是得买
+  B：可不 压力大
+  A：这几波多接点 挣够了再说
+  A：今晚再看看 有没有掉号
+  B：掉了七八个 旧的果然不稳
+  A：掉的就让号商补 别自己扛
+  B：他欠着我的 哪敢再要
+  A：你就说客户催 他不敢赖
+  【4月10日】
+  A：客户反馈不错 说数据好看
+  B：那就好 我这批算交了
+  A：嗯 款我现金给你 别走账 你懂
+  B：懂 这类钱走账麻烦
+  B：上次你说要的那两条烟 我买好了
+  A：多少钱
+  B：三百二 两条
+  【系统消息】A 向 B 转账 320 元，已收款。
+  A：转你了 烟周一给我带来
+  B：行 团建那天给你
+  A：好 这波结束 下一波等我通知
+  B：收到

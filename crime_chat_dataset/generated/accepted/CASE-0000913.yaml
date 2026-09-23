@@ -1,0 +1,151 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000913
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000149
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-664aaa47de2625c5
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: other_illicit_coordination
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 拉熟人 B 夜里到居民区逐栋张贴“贷款”小广告，按栋结钱、被撕扣钱；工钱走现金，另有一笔正常的私人转账。
+  critical_evidence:
+  - A 安排 B 今晚把那个小广告一个区贴完，说熟手一夜就能贴完
+  - A 讲好按栋结钱，不按张算，撕了的要扣钱
+  - A 让 B 走楼梯间和电表箱，避开早上巡逻的物业
+  - A 结了这批工钱，并要求以后这类钱尽量走现金
+  - A 另外转给 B 一笔钱，是还上次托 B 代买的东西
+  benign_alternatives:
+  - 正规广告投放
+  - 社区通知张贴
+
+attributes:
+  duration_days: 4
+  turn_count: 73
+  approximate_tokens_estimate: 1365
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: informal_loan_ads_network
+  risk: 1
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0056
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:7b02ac1aa5ecc87f0db79fb486c3226230081b438b9aa29ebe6623812e96b558
+pipeline_status: accepted
+title: other_illicit_coordination/informal_loan_ads_network
+conversation: |-
+  【12月1日】
+  A：老李 晚上有活 你来不来
+  B：又是那个?最近查得紧吧
+  A：紧啥 你按我说的来就行
+  B：什么价
+  A：还是按栋结钱 一栋几块 一个区一晚上
+  B：一个区太多了吧
+  A：你手快 一夜贴完一个区 别人我还不找
+  B：那纸还是老样子?
+  A：对 就那行字 电话换了新的
+  B：行 给我吧 反正闲着
+  A：晚上十点半后开工 白天别去
+  B：知道 物业早上才撕
+  B：你家小子期末考咋样
+  A：别提 数学又不及格 气得我
+  B：男孩开窍晚 我家的也皮
+  A：你家那个还学奥数不
+  B：停了 费钱 先顾着学校
+  A：也是 都不容易
+  B：货到手了 这一大摞
+  A：省着点用 一卷胶贴不了几栋
+  B：我先从东头那几栋来
+  A：对 别贴正门 贴楼梯间
+  【12月2日】
+  B：五栋了 脚底板疼
+  A：坚持 天亮前搞定
+  B：你这活不是人干的
+  A：哈哈 钱好挣的轮不到咱
+  B：昨晚上贴到三点 还剩一半区
+  A：你磨蹭了 别人一夜一个区
+  B：我中间歇了 实在困
+  A：今晚接着 把这区收尾
+  B：行 钱呢
+  A：贴完一起结 别急
+  B：昨晚那场球看了没
+  A：看了 最后那球气死人
+  B：教练该换人了 排兵有问题
+  A：年年这么说 也没见换
+  B：看个乐呵得了
+  B：去菜市场不 今天排骨便宜
+  A：去 顺路 你几点
+  B：四点 老地方等
+  A：行 我骑电动车去
+  A：今晚别忘 剩下的区
+  B：记得 我早点出来
+  【12月3日】
+  B：又被人撕了一栋的 刚贴完就没了
+  A：那栋算你头上 撕了扣钱
+  B：凭啥 又不是我撕的
+  A：规矩就是这样 贴得不牢怪谁
+  B：服了 下次我多按两下
+  B：好了 整个区跑完 收工
+  A：行 你回去睡 我明天算账
+  B：我妈老家那房子要修屋顶 愁钱
+  A：乡下房子就是个无底洞
+  B：不修下雨漏得没法住
+  A：先凑凑 这批活完了给你多派点
+  B：行 靠你了
+  A：对了你手机套餐换了没 我这边流量不够
+  B：换了 新套餐便宜 回头推给你
+  A：好 省点话费
+  B：账算了没
+  A：算了 扣完被撕的 一个数
+  B：多少
+  A：明天楼下给你 发现金 这类钱别走账
+  B：懂 现金稳当
+  【12月4日】
+  A：钱到了 老地方
+  B：知道了 这就下去
+  B：对了上次托你买的那箱牛奶 钱我给你
+  A：别给了 就当我请你家孩子
+  B：那不行 一码归一码
+  A：行行 你转我 我收着
+  【系统消息】B 向 A 转账 128 元，已收款。
+  A：收到 下次还托我买啥尽管说
+  B：好 晚上有活再喊我
+  A：最近消停几天 风头过了再干
+  B：行 我等你消息

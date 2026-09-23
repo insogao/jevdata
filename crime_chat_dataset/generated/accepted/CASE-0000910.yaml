@@ -1,0 +1,144 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000910
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000136
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-cad291093b1f3949
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: other_illicit_coordination
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 商务合作名义下，A 向 B 提供抢票脚本并调好“加速”参数，B 批量抢票加价出手，成功一张给 A 三百，实名问题由 A 打点。
+  critical_evidence:
+  - A 说加速包参数调好了，让 B 今晚这场就试，商务上只说代订服务
+  - 两人谈好成功一张给 A 三百，其余归 B
+  - B 说实名卡住，A 说实名问题我来搞，B 只管放量
+  - 两人对了这批的出单与分成，并约好款项线下结
+  benign_alternatives:
+  - 候补购票技巧
+  - 正规代购
+
+attributes:
+  duration_days: 2
+  turn_count: 69
+  approximate_tokens_estimate: 1130
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: ticket_scalp_bot
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0056
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:662e08baa42239c55a00d1d767ffb152bb95f7d9149a83e3a8304439e5adf777
+pipeline_status: accepted
+title: other_illicit_coordination/ticket_scalp_bot
+conversation: |-
+  【7月14日】
+  A：参数调好了 今晚上新 你抓紧
+  B：这么快 我这边客户都排着队
+  A：对 对外就说代订服务 别多讲
+  B：懂 我一直按商务口径
+  A：成功一张三百 老规矩
+  B：放心 一分不少你的
+  A：先开二十个 稳着来
+  B：好 我分两批压节奏
+  B：先喝个咖啡 提提神
+  A：你倒悠闲 我这边还在改代码
+  B：别改了 再改又出bug
+  A：这版加了个新逻辑 更稳
+  B：行 那我等你测
+  A：测完了 你上吧
+  B：好 第一批十个
+  B：出了两张 这版真快
+  A：废话 我熬半夜
+  B：那你补个觉 我盯着
+  B：中午客户请吃饭 我去应酬下
+  A：行 别喝多了
+  B：知道 下午回来接着跑
+  B：回来了 有几张实名卡住
+  A：实名问题我来搞 号发我
+  B：发你了 四个
+  A：好了 重启再试
+  B：通了 牛
+  A：有门路 别的别问
+  B：行 不该问的不问
+  B：今晚还要加班 困
+  A：这波完了歇两天
+  B：歇不了 客户一个接一个
+  A：有钱挣还嫌累
+  B：身体是本钱啊
+  B：今晚开三十个 风控降了吗
+  A：降了 可以放开
+  B：好 那我加量
+  A：记住三百一张
+  B：出了六张 手都点抽筋
+  A：效率高 明天一起结
+  B：别转账 太扎眼
+  A：知道 当面给 这类钱不走账
+  【7月15日】
+  A：昨晚一共出了八张 对吧
+  B：对 两张还是白天出的 一共十张
+  A：那就是三千 我算好了
+  B：一分不差
+  B：我这边有个客户要搬家 我去帮衬下
+  A：你还做搬家 真是全能
+  B：多条路多口饭
+  A：也是 这行不能只靠一条线
+  B：对 风险分散
+  B：搬完累瘫 晚上还跑不跑
+  A：再跑一晚 这场是热门
+  B：行 钱到位就好
+  A：线下给 你放心
+  B：昨晚上那场球看了没
+  A：看了 加时绝杀 太爽
+  B：我也看了 值了
+  A：看球归看球 今晚照跑
+  B：放心 两不误
+  B：开跑了 今晚号源够
+  A：好 我盯后台 不稳喊我
+  B：行
+  B：又三张 这批稳
+  A：漂亮 明天把总账清了
+  B：对了上次帮你带的烟钱 你给我
+  A：多少
+  B：210 一条
+  【系统消息】A 向 B 转账 210 元，已收款。
+  A：转你了 明天见面结总账 长期合作
+  B：行 就这么定
