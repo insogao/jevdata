@@ -653,3 +653,6 @@
 - 2026-09-24 05:22 | task_cli: CLAIM claim=346 TASK-0168 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T07:22:50
 - 2026-09-24 05:23 | task_cli: FAILED claim=345 TASK-0232 agent=builder_twentytwo_luna 原因=安全审查未通过，未生成案例。工单中 ARC-000015 要求冒用名校资历、承诺十节提分并制造最后名额的虚假紧迫感以诱导家长付费；ARC-000012 要求以明显低价诱导脱离平台交易、再发送虚假物流单号并收款拉黑。均属可复用诈骗话术/执行手法，按要求整包交还，不改写成劝阻或良性案例。 -> 重新入池（attempts 2/3）
 - 2026-09-24 05:23 | task_cli: FAILED claim=346 TASK-0168 agent=builder_seventeen_luna 原因=重领 TASK-0168 后确认仍含同一组可操作财产犯罪规格（有锁手机解锁转卖及按件取走快递），因此按安全边界再次整包交还；未生成案例。 -> abandoned（等人工）
+- 2026-09-24 05:23 | task_cli: FAILED claim=344 TASK-0231 agent=builder_twenty_luna 原因=整包 risk1 fraud_scam 规格要求编写可复用的诈骗话术与流程线索：ARC-000012 以明显低价引流、劝买家离开平台付款、随后发假物流信息；ARC-000015 用虚假名校资历、包提分承诺和名额紧迫感招揽家长。这些会形成可直接复用的欺诈脚本，按安全边界原样交还，未改写成劝阻/科普案例。 -> 重新入池（attempts 2/3）
+- 2026-09-24 05:23 | task_cli: CLAIM claim=347 TASK-0231 agent=builder_twenty_luna lease=7200s 截止=2026-09-24T07:23:24
+- 2026-09-24 05:23 | task_cli: FAILED claim=347 TASK-0231 agent=builder_twenty_luna 原因=默认max-risk1队列再次分配了已核验含同一欺诈操作性话术的TASK-0231（ARC-000012低价引流/站外付款/假物流；ARC-000015虚假资历与保证提分、限额施压）。安全阻挡未变化，原样退回；未生成内容。 -> abandoned（等人工）
