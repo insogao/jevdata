@@ -13,6 +13,7 @@ import random
 import shutil
 import sqlite3
 import sys
+import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -70,6 +71,9 @@ def build_packets(n_agents=3, per_agent=10, seed=23, batch_no=2):
     seed_refs = _load_seed_refs()
     usage_path = ROOT / "registry" / "seed_usage.json"
     usage = json.loads(usage_path.read_text(encoding="utf-8")) if usage_path.exists() else {}
+    # 样式参考一次性台账：用过即焚，保证每个 agent 拿到的参考案例全局全新
+    style_usage_path = ROOT / "registry" / "style_seed_usage.json"
+    style_usage = json.loads(style_usage_path.read_text(encoding="utf-8")) if style_usage_path.exists() else {}
 
     def pick_ref(kind):
         pool = [r for r in seed_refs[kind] if usage.get(r["seed_id"], 0) < 5] or seed_refs[kind]
@@ -77,16 +81,22 @@ def build_packets(n_agents=3, per_agent=10, seed=23, batch_no=2):
         usage[r["seed_id"]] = usage.get(r["seed_id"], 0) + 1
         return r
 
-    def pick_refs(kind, n):
-        """n 条互不相同的样式参考（吃同一 usage cap；只供参考思路，不写入 source_seed_ids）"""
-        pool = [r for r in seed_refs[kind] if usage.get(r["seed_id"], 0) < 5] or seed_refs[kind]
+    def pick_fresh_refs(kind, n, case_key):
+        """n 条一次性样式参考：排除台账里已用过的（全局唯一），案例内也互不重复。
+        只供参考思路，不写入 source_seed_ids；池子耗尽时回退到台账复用并标记 reuse。"""
+        pool = [r for r in seed_refs[kind] if r["seed_id"] not in style_usage]
+        fallback = not pool
+        if fallback:
+            pool = seed_refs[kind]
         seen, out = set(), []
         while len(out) < n and len(seen) < len(pool):
             r = rng.choice(pool)
             if r["seed_id"] in seen:
                 continue
             seen.add(r["seed_id"])
-            usage[r["seed_id"]] = usage.get(r["seed_id"], 0) + 1
+            style_usage[r["seed_id"]] = {"case_key": case_key, "batch": batch,
+                                         "ts": time.strftime("%Y-%m-%dT%H:%M:%S"),
+                                         **({"reuse": True} if fallback else {})}
             out.append(r)
         return out
     # globally unique keys: b<batch>c<seq>
@@ -120,11 +130,11 @@ def build_packets(n_agents=3, per_agent=10, seed=23, batch_no=2):
             "roles": arc["roles"], "signals": arc["observable_signals"],
             "benign_confusions": arc["benign_confusions"],
             "seed_reference": pick_ref("harmful" if risk >= 2 else "normal"),
-            # 样式参考：风险案例多看"意图如何藏在正常话题里"，良性案例多看真实对话节奏。
-            # 参考只给思路，禁止抄台词（见 PRM-DIALOGUE-002）。
+            # 样式参考一次性发放：风险案例多看"意图如何藏在正常话题里"，良性案例多看真实对话节奏。
+            # 参考只给思路，禁止抄台词（见 PRM-DIALOGUE-002）；用过即焚，跨批次不重复。
             "style_references": {
-                "concealment_like": pick_refs("harmful", 2 if risk >= 1 else 1),
-                "natural_rhythm_like": pick_refs("normal", 1 if risk >= 1 else 2),
+                "concealment_like": pick_fresh_refs("harmful", 2 if risk >= 1 else 1, key),
+                "natural_rhythm_like": pick_fresh_refs("normal", 1 if risk >= 1 else 2, key),
             },
             "sibling_of": None, "variant": "v01", "flip_hint": None,
             "axes": {
@@ -183,7 +193,9 @@ def build_packets(n_agents=3, per_agent=10, seed=23, batch_no=2):
         }, ensure_ascii=False, indent=1), encoding="utf-8")
         print(f"{tid}: {len(chunk)} specs -> {d / 'packet.json'}")
     usage_path.write_text(json.dumps(usage, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"total {len(specs)} specs, {n_pairs} contrastive pairs planned, seed_usage saved")
+    style_usage_path.write_text(json.dumps(style_usage, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"total {len(specs)} specs, {n_pairs} contrastive pairs planned, "
+          f"seed_usage saved, style refs consumed: {len(style_usage)}")
 
 
 def register_batch(task_ids):
