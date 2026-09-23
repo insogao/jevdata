@@ -154,42 +154,75 @@ def cmd_init(conn: sqlite3.Connection, args: argparse.Namespace) -> None:
     print(f"tasks 表就绪，共 {n} 个任务。看板: python {Path(__file__).name} list")
 
 
-def cmd_claim(conn: sqlite3.Connection, args: argparse.Namespace) -> None:
-    agent = args.agent or os.environ.get("AGENT_NAME") or f"{socket.gethostname()}:{os.getpid()}"
-    lease = args.lease_seconds
+def _packet_ok(row: sqlite3.Row, max_risk, categories) -> bool:
+    """按任务包内容过滤（敏感模型路由）：包内任何 case 超 max_risk 则跳过；
+    指定 categories 时要求包内至少含一个该类目 case。"""
+    if max_risk is None and not categories:
+        return True
+    try:
+        pkt = json.loads((REPO / row["packet_path"]).read_text(encoding="utf-8"))
+    except Exception:  # noqa: BLE001
+        return False
+    cases = pkt.get("cases", [])
+    if max_risk is not None and any(c.get("risk", 0) > max_risk for c in cases):
+        return False
+    if categories and not any(c.get("top_category") in categories for c in cases):
+        return False
+    return True
+
+
+def claim_task(conn: sqlite3.Connection, agent: str, task_id=None, lease_seconds=DEFAULT_LEASE_SECONDS,
+               max_risk=None, categories=None):
+    """原子领取一个 pending 任务（可按能力过滤），返回 (claim_id, task_row, deadline)。"""
     reap(conn)
-    deadline = iso(now() + timedelta(seconds=lease))
+    deadline = iso(now() + timedelta(seconds=lease_seconds))
     t = iso(now())
     conn.execute("BEGIN IMMEDIATE")
     try:
-        if args.task:
-            row = conn.execute("SELECT * FROM tasks WHERE task_id=?", (args.task,)).fetchone()
-            if row is None:
-                sys.exit(f"任务 {args.task} 不存在（先 build-packets 或检查任务号）")
+        if task_id:
+            rows = [conn.execute("SELECT * FROM tasks WHERE task_id=?", (task_id,)).fetchone()]
+            if rows[0] is None:
+                sys.exit(f"任务 {task_id} 不存在（先 build-packets 或检查任务号）")
         else:
-            row = conn.execute("SELECT * FROM tasks WHERE status='pending' ORDER BY task_id LIMIT 1").fetchone()
+            rows = conn.execute(
+                "SELECT * FROM tasks WHERE status='pending' ORDER BY task_id").fetchall()
+        picked = None
+        for row in rows:
             if row is None:
-                sys.exit("没有 pending 任务。用 stage2_orchestrate.py build-packets 生成新批次。")
-        if row["status"] == "in_progress":
-            sys.exit(f"{row['task_id']} 已被领取且 lease 未到期（用 list 查看谁持有）")
-        if row["status"] != "pending":
-            sys.exit(f"{row['task_id']} 状态为 {row['status']}，不可领取")
+                continue
+            if row["status"] == "pending" and _packet_ok(row, max_risk, categories):
+                picked = row
+                break
+        if picked is None:
+            sys.exit("没有匹配能力的 pending 任务"
+                     + ("（可放宽 --max-risk/--categories，或等总控按缺口出包）"
+                        if (max_risk or categories) else
+                        "。用 stage2_orchestrate.py build-packets 生成新批次。"))
         cur = conn.execute(
             "INSERT INTO task_claims(task_id, agent, status, attempts, claimed_at, lease_expires_at) "
             "VALUES (?,?,?,?,?,?)",
-            (row["task_id"], agent, "active", row["attempts"] + 1, t, deadline))
+            (picked["task_id"], agent, "active", picked["attempts"] + 1, t, deadline))
         conn.execute("UPDATE tasks SET status='in_progress', attempts=attempts+1, updated_at=? "
-                     "WHERE task_id=?", (t, row["task_id"]))
+                     "WHERE task_id=?", (t, picked["task_id"]))
         conn.commit()
     except Exception:
         conn.rollback()
         raise
-    log_line(f"CLAIM claim={cur.lastrowid} {row['task_id']} agent={agent} lease={lease}s 截止={deadline}")
-    print(f"已领取 claim={cur.lastrowid} {row['task_id']} agent={agent}")
-    print(f"  lease 截止: {deadline}（{lease}s；还活着但快到期就 heartbeat）")
+    log_line(f"CLAIM claim={cur.lastrowid} {picked['task_id']} agent={agent} "
+             f"lease={lease_seconds}s 截止={deadline}")
+    return cur.lastrowid, picked, deadline
+
+
+def cmd_claim(conn: sqlite3.Connection, args: argparse.Namespace) -> None:
+    agent = args.agent or os.environ.get("AGENT_NAME") or f"{socket.gethostname()}:{os.getpid()}"
+    categories = [c.strip() for c in args.categories.split(",")] if args.categories else None
+    claim_id, row, deadline = claim_task(conn, agent, args.task, args.lease_seconds,
+                                         args.max_risk, categories)
+    print(f"已领取 claim={claim_id} {row['task_id']} agent={agent}")
+    print(f"  lease 截止: {deadline}（{args.lease_seconds}s；还活着但快到期就 heartbeat）")
     if row["packet_path"]:
         print(f"  任务包: {row['packet_path']}")
-    print(f"  完成: task_cli.py complete --claim {cur.lastrowid} --accepted N --pairs N")
+    print(f"  完成: task_cli.py complete --claim {claim_id} --accepted N --pairs N")
 
 
 def _active_claim(conn: sqlite3.Connection, claim_id: int) -> sqlite3.Row:
@@ -288,6 +321,8 @@ def main() -> None:
     p = sub.add_parser("claim", help="原子领取一个 pending 任务")
     p.add_argument("--agent", help="agent 名字（默认 $AGENT_NAME 或 host:pid）")
     p.add_argument("--task", help="指定任务号（默认取最老的 pending）")
+    p.add_argument("--max-risk", type=int, help="能力过滤：只领包内所有 case risk 均 ≤ N 的任务")
+    p.add_argument("--categories", help="能力过滤：只领包含这些一级类目的任务（逗号分隔）")
     p.add_argument("--lease-seconds", type=int, default=DEFAULT_LEASE_SECONDS,
                    help=f"lease 时长，默认 {DEFAULT_LEASE_SECONDS}s（2h），超时无回写判失败")
     p = sub.add_parser("heartbeat", help="续约 lease（还活着但快到期时用）")

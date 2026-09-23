@@ -5,3 +5,5 @@
 - 2026-09-23 19:35 | batch 14 (TASK-0018/19/20): accepted 110->140 (+30, rejected 0), pairs 17->22, judge agree(+-1)=29/30, 1 disagreement (CASE-158 target0 judge2 内幕居间边界 -> review) | pushed
 - 2026-09-23 20:05 | batch 15 (TASK-0021/22/23): accepted 140->170 (+30, rejected 0), pairs 22->26, judge agree(+-1)=?/30 | pushed
 - 2026-09-23 20:35 | batch 16 (TASK-0024/25/26): accepted 170->200 (+30, rejected 0), pairs 26->30, 对照对 0190/0197 与 0202/0207 被判官独立正确分级 | pushed
+- 2026-09-24 00:21 | task_cli: CLAIM claim=1 TASK-0026 agent=worker-a lease=7200s 截止=2026-09-24T02:21:18
+- 2026-09-24 00:21 | task_cli: COMPLETE claim=1 TASK-0026 agent=worker-a accepted=10 pairs=0 | worker done: 10 case files written/10 expected

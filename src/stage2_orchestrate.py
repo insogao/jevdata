@@ -21,7 +21,8 @@ import stage2_pipeline as P  # noqa: E402
 
 ROOT = P.ROOT
 TASKS = ROOT / "tasks"
-RISKS = [0, 0, 0, 0, 1, 1, 2, 2, 2, 3]  # per-10 template distribution
+RISKS = [0, 0, 0, 0, 1, 1, 2, 2, 2, 3]  # per-10 template distribution（无 DB 时的兜底模板）
+RISK_SHARE = {0: 0.35, 1: 0.20, 2: 0.30, 3: 0.15}  # 规划 §4.2 目标配比
 REL = ["陌生人", "熟人", "同事", "上下级", "商务关系", "亲友", "中间人关系"]
 OBF = {0: ["low", "medium"], 1: ["medium", "high"], 2: ["medium", "high"], 3: ["high", "extreme"]}
 FLIP = {3: 0, 2: 0, 1: 0}
@@ -65,7 +66,25 @@ def _load_seed_refs():
     return refs
 
 
-def build_packets(n_agents=3, per_agent=10, seed=23, batch_no=2):
+def _deficits(total_target=10000, cats=None):
+    """相对规划目标（§4.1 总量 / §4.2 risk 配比 / 10 个一级类均分 risky 份额）的剩余缺口。
+    只读 DB；返回 (按 risk 缺口, 按一级类缺口)。负数 = 该格已超配。"""
+    conn = sqlite3.connect(P.DB)
+    by_risk = dict(conn.execute(
+        "SELECT risk, COUNT(*) FROM cases WHERE status='accepted' GROUP BY risk"))
+    by_cat = dict(conn.execute(
+        "SELECT category, COUNT(*) FROM cases WHERE status='accepted' AND category!='none' GROUP BY category"))
+    conn.close()
+    if not cats:
+        cats = sorted(by_cat) or ["none"]
+    d_risk = {r: round(RISK_SHARE[r] * total_target - by_risk.get(r, 0)) for r in sorted(RISK_SHARE)}
+    per_cat = (1 - RISK_SHARE[0]) * total_target / max(1, len(cats))
+    d_cat = {c: round(per_cat - by_cat.get(c, 0)) for c in cats}
+    return d_risk, d_cat
+
+
+def build_packets(n_agents=3, per_agent=10, seed=23, batch_no=2, rebalance=False,
+                  only_categories=None, max_risk=None):
     batch = f"BATCH-AUTO-{batch_no:03d}"
     rng = random.Random(seed)
     seed_refs = _load_seed_refs()
@@ -109,14 +128,43 @@ def build_packets(n_agents=3, per_agent=10, seed=23, batch_no=2):
     for a in archetypes:
         by_cat.setdefault(a["top_category"], []).append(a)
     cats = sorted(by_cat)
+    # 能力定制：only_categories/max_risk 用于给特定模型出包（如敏感模型 max_risk=1）
+    if only_categories:
+        cats = [c for c in cats if c in set(only_categories)]
+        if not cats:
+            sys.exit(f"only_categories={only_categories} 没有匹配任何 archetype 类目")
+    if max_risk is not None:
+        cats = [c for c in cats if any(min(a["allowed_risk_levels"]) <= max_risk
+                                       for a in by_cat[c])]
+        if not cats:
+            sys.exit(f"max_risk={max_risk} 下没有任何类目可选")
+    # 缺口感知派单：按 §4.2 配比与 10 类均分把最缺的类目/档位排到队首（默认关闭）
+    cat_order, d_risk = list(cats), None
+    if rebalance:
+        d_risk, d_cat = _deficits(cats=cats)
+        cat_order = sorted(cats, key=lambda c: -d_cat.get(c, 0))
+        print(f"rebalance: 类目优先级 {cat_order[:3]}...；risk 缺口 {d_risk}")
 
     specs = []
     n_pairs = per_agent * n_agents // 5  # ~20% of cases are risky siblings
     pair_anchors = []
     for i in range(per_agent * n_agents):
-        cat = cats[i % len(cats)]
-        arc = rng.choice(by_cat[cat])
+        cat = cat_order[i % len(cat_order)]
+        arcs = by_cat[cat]
+        if max_risk is not None:
+            fits = [a for a in arcs if min(a["allowed_risk_levels"]) <= max_risk]
+            arcs = fits or arcs
+        arc = rng.choice(arcs)
         risk = RISKS[i % len(RISKS)]
+        if rebalance and d_risk:
+            allowed = sorted((r for r in arc["allowed_risk_levels"]
+                              if r in d_risk and (max_risk is None or r <= max_risk)),
+                             key=lambda r: -d_risk[r])
+            if allowed:
+                risk = rng.choice(allowed[:2])  # 缺口最大的两档里随机，保多样性
+        if max_risk is not None and risk > max_risk:
+            ok = sorted(r for r in arc["allowed_risk_levels"] if r <= max_risk)
+            risk = ok[0] if ok else risk
         if risk not in arc["allowed_risk_levels"]:
             risk = arc["allowed_risk_levels"][0]
         key = new_key()
@@ -314,7 +362,22 @@ if __name__ == "__main__":
         build_packets(n_agents=int(sys.argv[2]) if len(sys.argv) > 2 else 3,
                       per_agent=int(sys.argv[3]) if len(sys.argv) > 3 else 10,
                       batch_no=int(sys.argv[4]) if len(sys.argv) > 4 else 2,
-                      seed=int(sys.argv[5]) if len(sys.argv) > 5 else 23)
+                      seed=int(sys.argv[5]) if len(sys.argv) > 5 else 23,
+                      rebalance=len(sys.argv) > 6 and sys.argv[6] == "1",
+                      only_categories=(sys.argv[7].split(",") if len(sys.argv) > 7 and sys.argv[7] else None),
+                      max_risk=(int(sys.argv[8]) if len(sys.argv) > 8 and sys.argv[8] else None))
+    elif cmd == "shortfall":
+        total = int(sys.argv[2]) if len(sys.argv) > 2 else 10000
+        cats = sorted({json.loads(l)["top_category"]
+                       for l in open(ROOT / "archetypes" / "archetypes.jsonl", encoding="utf-8")})
+        dr, dc = _deficits(total, cats)
+        print(f"目标总量 {total}（§4.2 配比）。剩余缺口（负数=已超配）：")
+        print("[按 risk 档]")
+        for r in sorted(dr):
+            print(f"  risk{r}: {dr[r]:+d}")
+        print("[按一级类] 缺口升序 = 最缺先补")
+        for c, v in sorted(dc.items(), key=lambda kv: kv[1]):
+            print(f"  {c}: {v:+d}")
     elif cmd == "status":
         import glob as _g
         acc = len(_g.glob(str(ROOT / "generated" / "accepted" / "CASE-*.yaml")))

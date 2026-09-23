@@ -63,39 +63,43 @@ python3 src/task_cli.py fail --claim N --reason "..."                # 做不完
 - 任务被超时判死 3 次后自动 `abandoned`，等人工处理，不要反复重试同一毒任务——先查它是否缺上下文（如 gated 数据、判官不可用）。
 - 每次 claim/complete/fail/expired 都会自动追加到 `report/ORCHESTRATOR_LOG.md`，**日志是机器写的，不要手改**。
 
-## 4. 标准工作流（生成分支）
+## 4. 标准工作流
+
+### 4.1 子 agent（生成方，只有三步）
 
 ```bash
-# 0. orchestrator 出包（一般由主控做，3 任务 × 10 条 = 一批 30）
-python3 src/stage2_orchestrate.py build-packets 3 10 <batch_no> <seed>
+# ① 领单（打印工单：任务 id + 任务包/规则/输出样例路径 + 写回位置）
+python3 src/worker.py start --agent <你的名字>
+#    能力声明（敏感模型务必带上，过滤掉写不了的包）：
+python3 src/worker.py start --agent <你的名字> --max-risk 1
+python3 src/worker.py start --agent <你的名字> --categories "fraud_scam,travel"
 
-# 1. 领取
-python3 src/task_cli.py claim --agent <你的名字>     # 假设领到 TASK-0027
+# ② 按工单写作：读任务包 + 写作规则 + 样式参考，
+#    为每条 case spec 写一个 tasks/<任务id>/cases/<key>.json（结构照抄工单里的样例）
 
-# 2. 读任务包
-crime_chat_dataset/tasks/TASK-0027/packet.json       # case specs（含 style_references 样式参考）
-crime_chat_dataset/prompts/PRM-DIALOGUE-002.md       # 对话生成规则（版本化，勿自创）
-#    spec.style_references 从公开真实语料采出且**一次性发放**（用过即焚、跨批次零重复，
-#    台账见 registry/style_seed_usage.json）：concealment_like 学"意图怎么藏"，
-#    natural_rhythm_like 学真实对话节奏。只借鉴手法，禁止抄台词/复现其内容。
-
-# 3. 为每个 case spec 写生成结果
-#    tasks/TASK-0027/cases/<key>.json，格式照抄同目录已有文件：
-#    {key, latent_intent, critical_facts[], benign_alternatives[], events[]}
-#    events 元素: {"type":"message"|"transfer", "time":"5月9日 10:20", "speaker":"A", "text":...}
-
-# 4. 注册 + 程序验收（天数/事件一致性、转账互验、risk0 禁可疑转账、元词汇泄漏、content-hash 去重）
-python3 src/stage2_orchestrate.py register-batch TASK-0027
-
-# 5. 判官
-python3 src/stage2_orchestrate.py judge-inputs TASK-0027        # 导出判官输入
-#    分别按 PRM-FACTJUDGE-001 / PRM-RISKJUDGE-001 跑双判官
-python3 src/stage2_orchestrate.py compare <risk判官输出.jsonl>   # 分歧≥2档自动进 review
-
-# 6. 回写 + 提交
-python3 src/task_cli.py complete --claim <N> --accepted <通过数> --pairs <新增对照对>
-git add -A && git commit -m "data: TASK-0027 accepted=+10 pairs=+2"
+# ③ 回写完成
+python3 src/worker.py done --task <任务id> --agent <你的名字>
 ```
+
+红线：样式参考只借鉴手法禁止抄台词；不要跑 register/judge（总控的事）；
+快超时就 `task_cli.py heartbeat --claim N`；做不完就 fail 交还。
+
+### 4.2 总控（派单/注册/判官）
+
+```bash
+python3 src/stage2_orchestrate.py shortfall [总目标]        # 缺口报表（§4.2 配比），决定下一批补什么
+python3 src/stage2_orchestrate.py build-packets 3 10 <批号> <seed> 1   # 末尾参数: 1=缺口rebalance
+#   敏感模型专用包: build-packets 1 10 <批号> <seed> 1 "fraud_scam,coercion_blackmail" 1
+#                 （第7参=只出这些类目, 第8参=max_risk）
+python3 src/task_cli.py list                                # 看板：谁持有、谁超时
+python3 src/stage2_orchestrate.py register-batch TASK-XXXX  # 子 agent done 之后：程序验收+入库
+python3 src/stage2_orchestrate.py judge-inputs TASK-XXXX    # 导出双判官输入
+python3 src/stage2_orchestrate.py compare <risk判官.jsonl>  # 分歧≥2档自动进 review
+python3 src/stage2_orchestrate.py status                    # 总量与配比快照
+```
+
+派单原则：先 `shortfall` 看缺口 → 用 rebalance 出包让最缺的类目/档位优先；
+某些模型不肯写的敏感类目，用 only_categories/max_risk 出专用包派给能力强的模型。
 
 ## 5. 验收红线（程序会拦，别挑战）
 
