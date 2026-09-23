@@ -1,0 +1,114 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001252
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-f5f3131750b65cd9
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 在商务合作的名义下，A 向 B 要整个部门电话和离职名单做“人才盘点”，提出简历按份卖、长期合作；B 用行业话应对，先把公开渠道的候选人信息给过去，个人资料那部分含糊拖着。
+  critical_evidence:
+  - A 以“人才盘点”为名向 B 要整个部门的电话和离职名单。
+  - A 提出简历可以按份卖，愿意长期合作。
+  - B 用行业话谈，说公开渠道的能给，个人资料要“再商量”。
+  - B 先把公开岗位和候选人信息给了 A，关键资料含糊拖延。
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 2
+  turn_count: 39
+  approximate_tokens_estimate: 672
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0123
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-069
+
+dedup:
+  content_hash: sha256:1a4d2c2fcd4c62616f2ca04f829538ca3049ef3a442e5ebb79fb3c82eb400647
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【11月3日】
+  A：王经理早 上次聊的合作 我这边想推进
+  B：李总早 你说
+  A：想做个人才盘点 要你们整个部门电话
+  B：通讯录涉及个人资料 不能给
+  A：那离职名单呢 我只看趋势
+  B：离职记录也不外传
+  A：简历总行吧 我按份付费
+  B：简历按份卖不合规
+  A：公开渠道那些 我先要
+  B：公开岗位和自愿投递的 可以给
+  A：个人资料那块 咱再商量
+  B：那个先不谈
+  A：长期合作嘛 价格好说
+  B：先把公开的这批走完再看
+  A：行 你把公开的整理给我
+  B：下午发你
+  A：王经理午饭吃了没
+  B：吃了 李总呢
+  A：刚应酬完
+  B：辛苦
+  A：这份是上次的合作服务费 先结给你
+  【系统消息】A 向 B 转账 3000 元，已收款。
+  B：收到 我这边开票
+  A：不着急
+  B：公开的岗位清单发你邮箱了
+  A：收到 我看看
+  A：你们大楼停车还难停不
+  B：难 得早去
+  A：那我明天早点
+  B：嗯
+  【11月4日】
+  A：清单看了 不够 还是要部门里直接的联系
+  B：那个真不能给 别让我为难
+  A：那名单一小部分也行
+  B：个人资料一律不给 咱们按合规的来
+  A：行 那这份先放着
+  B：嗯 公开的还能继续做
+  A：中午一起吃?
+  B：今天约了人
+  A：那改天
+  B：好

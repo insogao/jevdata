@@ -1,0 +1,116 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001250
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-3d6e32f54055f42a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 熟人 A 向在公司做内勤的 B 要整个部门电话和离职名单，提出简历按份卖；B 用行业话谈数、谈价，最后只肯给公开能查到的岗位表，把员工个人资料扣住不给。
+  critical_evidence:
+  - A 向熟人 B 要整个部门的电话和离职名单。
+  - A 提出简历可以按份卖，按人头结算。
+  - B 用“名册”“按份”这类行话谈价，说能给只有公开岗位表。
+  - B 明确把员工个人资料扣住不给。
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 2
+  turn_count: 42
+  approximate_tokens_estimate: 537
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0123
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-069
+
+dedup:
+  content_hash: sha256:c7bc5d3929474f8c61cbe08ae87a24382e0fb790ed10799c82184224578f1f3e
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【8月12日】
+  A：老同学 帮我个忙
+  B：你说
+  A：你们部门最近走的人多不
+  B：问这个干嘛
+  A：我这边招人 想拿份离职名单
+  B：名单不外给
+  A：那整个部门电话总行吧
+  B：那是员工名册 也不行
+  A：简历呢 我按份收 按人头结
+  B：简历更不能卖
+  A：都是熟人 通融下
+  B：能给的只有公开挂的岗位表
+  A：那个我自己也能下
+  B：那就自己下 别的我不给
+  A：行吧 你先忙
+  A：中午吃啥
+  B：带的饭
+  A：贤惠
+  B：少来
+  A：改天请你吃饭
+  B：行 记着
+  A：下午那条岗位表发我看看
+  B：公开网站上有
+  A：你顺手发我不就完了
+  B：这个可以 我发链接
+  A：嗯
+  A：晚上打球不
+  B：今天不了 累
+  A：那改天
+  B：好
+  【8月13日】
+  A：昨天那事 真一点都不能通融
+  B：不能 别让我为难
+  A：好吧 那我不提了
+  B：嗯 谢谢理解
+  A：今天外卖点了没
+  B：点了 你呢
+  A：还没 不知道吃啥
+  B：随便点一个
+  A：周末约球不
+  B：看情况 膝盖不太行
+  A：那你歇着
+  B：嗯

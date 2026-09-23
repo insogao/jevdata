@@ -1,0 +1,125 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001247
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000119
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-0516c628fa8eb09e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 中间人 A 帮拆件的人牵线下家，把从共享单车上弄下来的锁和变速按套批量出掉，全程用代词和旧称，不点破来源。
+  critical_evidence:
+  - A 问 B 手里这批'件'有多少，指的是锁和变速
+  - B 说路线熟了，一晚能出二十来组的量
+  - A 联系下家收货，谈按套给价、走线下结
+  - B 提到把剩下的架子处理掉
+  benign_alternatives:
+  - 共享单车运维
+  - 旧货市场
+
+attributes:
+  duration_days: 3
+  turn_count: 50
+  approximate_tokens_estimate: 728
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: shared_bike_parts_strip
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0106
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-060
+
+dedup:
+  content_hash: sha256:0ca55fe186f348067e977beda1e8a16d8f979b759a589a2af01faaaca790ce25
+pipeline_status: accepted
+title: theft_robbery_property_crime/shared_bike_parts_strip
+conversation: |-
+  【7月8日】
+  A：在吗 那边有货没
+  B：有 攒了点
+  A：老样的还是新的
+  B：都是那两种 只要那两样 你知道的
+  A：量多大 我这边有人等着
+  B：路线熟了 一晚能出二十来组
+  A：二十来组 那够一车了
+  B：得看天 天不好就少
+  A：价我探过了 一组给到三十五
+  B：三十五可以 谁收
+  A：还是老李那边 他不问来路
+  B：行 那就走
+  A：钱按老规矩 线下给你 别走账
+  B：懂
+  A：架子别留印子 处理干净
+  B：老办法 沉下去了
+  A：那就稳了
+  A：中午吃了吗
+  B：刚吃 盖饭
+  A：天太热 没胃口
+  B：喝点绿豆汤
+  A：回头弄点
+  【7月9日】
+  A：昨晚出了多少
+  B：十八组 够意思了
+  A：有点少 你那边是不是眼线多
+  B：周末人多 得挑后半夜
+  A：那今晚补一补 我这边催
+  B：行 叫上人
+  A：别贪 一次别超三十 太扎眼
+  B：明白 稳着来
+  A：你娃考试完了没
+  B：刚考完 放假了
+  A：带去玩玩 别老关家里
+  B：哪有钱玩
+  A：这单结了就有了
+  B：希望
+  【7月10日】
+  A：老李催了 今晚能交不
+  B：能 攒够一车了
+  A：地址还是老仓库 后门进
+  B：几点
+  A：后天凌晨 三点 我盯着
+  B：好 到了给你信
+  A：路上别停 别走大路
+  B：知道 老规矩
+  A：下雨了 你那下没
+  B：刚下 今晚估计动不了
+  A：那就等天晴 不急这一晚
+  B：嗯 正好歇歇
+  A：注意别着凉
+  B：好

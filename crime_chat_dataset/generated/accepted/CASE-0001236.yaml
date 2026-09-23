@@ -1,0 +1,118 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001236
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000114
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-326c887b7ef2ee7f
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 在亲友聊天里反复试探，转述一个「按件给钱」的夜间活儿，实为趁购物季从无人看管的快递架上取走他人包裹并统一转手；B 听出问题后接连拒绝，最后劝 A 走正规临时工渠道。
+  critical_evidence:
+  - A 提到楼下快递架没人看、购物季东西堆不下，说有个按件给钱的活儿
+  - A 解释活儿内容是把架子上的包裹收走由对方统一分，B 指出这是拿别人的快递
+  - A 想让 B 帮忙在楼下看着点、或再拉一个人，B 拒绝参与也不介绍人
+  - B 建议 A 去物流分拣等正规临时岗位，A 最终回绝了那个活儿
+  benign_alternatives:
+  - 帮忙代拿快递
+  - 驿站自提
+
+attributes:
+  duration_days: 3
+  turn_count: 43
+  approximate_tokens_estimate: 840
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: package_porch_pickup
+  risk: 1
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0105
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-060
+
+dedup:
+  content_hash: sha256:a1b8baa89b78642d087a71f618c9421c1b4b6eee9bc382308f836d9e1312bf73
+pipeline_status: accepted
+title: theft_robbery_property_crime/package_porch_pickup
+conversation: |-
+  【11月8日】
+  A：哥 双十一你买的东西到了没
+  B：到了两件 驿站堆成山
+  A：我们楼下那个架子更夸张 摆一天都没人看着
+  B：那你们物业不管吗
+  A：管不过来 晚上连灯都没开
+  B：那容易被拿错
+  A：有个哥们说这会儿最好干 按件给钱 一晚上不少
+  B：什么活能按件给钱
+  A：就是把架子上的东西收走 他那边统一分 不用自己操心
+  B：那不就是拿别人的快递
+  A：也不算 好些放好几天都没人要
+  B：没人取也是别人的 得放驿站或者交物业
+  A：你咋这么死板 当我没说
+  B：今天风大 我阳台的花盆都吹倒了
+  A：我这窗户响了一晚上
+  B：出门加件衣服
+  A：嗯 把冲锋衣翻出来了
+  B：别冻着 早晚温差大
+  A：中午吃啥了
+  B：楼下馄饨 汤一般
+  A：我煮了面 卧了个蛋
+  B：简单点也好
+  A：晚上想点个外卖
+  B：少吃点重口的
+  【11月9日】
+  A：那哥们说多的能翻倍 让我再拉个人
+  B：我不去 也不帮你找人
+  A：不用你下手 你在楼下看着点就行
+  B：望风也不干 这是帮忙拿别人东西
+  A：真有那么严重?
+  B：你要是真缺钱 我帮你看看正规临时工
+  A：算了 我再想想
+  B：周末回家吃饭不
+  A：回 我妈说炖排骨
+  B：那我也回去
+  A：你带点水果
+  B：家里有 别乱花钱
+  【11月10日】
+  A：我想通了 回了他
+  B：回得对
+  A：你之前说的临时工在哪报
+  B：物流分拣 招聘平台上都有 走正规的
+  A：行 我下午去看看
+  B：有合同、按工时结的再去
+  A：知道了 谢了哥

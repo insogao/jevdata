@@ -1,0 +1,154 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001246
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000119
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-94bc5b6f1f138baa
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 安排 B 晚上带人拆共享单车，只要锁和变速，一晚上弄二十辆，拆完车架扔河里，零件由 A 转手，按件给钱；表面像旧件回收。
+  critical_evidence:
+  - A 让 B 组织人晚上去拆共享单车的锁和变速，其他不要
+  - A 说一晚上能弄二十辆，让 B 别声张
+  - 两人谈好按件给钱，零件交给 A 转手
+  - 拆完剩下的车架让 B 直接扔河里
+  benign_alternatives:
+  - 共享单车运维
+  - 旧货市场
+
+attributes:
+  duration_days: 2
+  turn_count: 78
+  approximate_tokens_estimate: 1152
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: shared_bike_parts_strip
+  risk: 1
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0106
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-060
+
+dedup:
+  content_hash: sha256:fe1937d312080b35137e5ce03245dd48c89788c07077e059959ec63fb715572b
+pipeline_status: accepted
+title: theft_robbery_property_crime/shared_bike_parts_strip
+conversation: |-
+  【6月3日】
+  A：在忙不 有个活给你
+  B：哥你说
+  A：晚上能不能叫几个人 去弄点东西
+  B：弄啥
+  A：路边那些单车 只要锁和变速
+  B：整车拆？没人管吗
+  A：后半夜哪有人管 弄了推走就是
+  B：那车架咋整
+  A：拆完扔河里 别堆一块
+  B：一晚上能弄多少
+  A：熟了一晚上二十辆没问题
+  B：锁不好弄吧 带定位的
+  A：你只管拆 别管定位 运走就不查了
+  B：给我多少钱
+  A：按件给 一套锁加变速给你三十
+  B：三十少了 干到后半夜
+  A：三十五 一天二十套就是七百
+  B：行 我叫俩兄弟一起来
+  A：别声张 弄回来先堆仓库 我找买家
+  B：明白
+  A：中午吃的啥
+  B：楼下面条
+  A：加肉没
+  B：加了个蛋
+  A：晚上干活前吃饱点
+  B：放心 饿不着
+  A：晚上有球赛你看不
+  B：几点的
+  A：九点 不过你今晚有活
+  B：那看不了了 回来补
+  A：干完给你发比分
+  B：哈哈 行
+  A：那边下雨不 下雨不好弄
+  B：预报没雨 就是闷
+  A：没雨就好 带个手电
+  B：带了
+  A：先转你五百 当定金
+  【系统消息】A 向 B 转账 500 元，已收款。
+  B：收到 明晚开干
+  A：今晚先踩点 别急着动手
+  B：好 我先看看哪段多
+  A：找那种一排排停的
+  B：知道
+  【6月4日】
+  A：昨晚踩得咋样
+  B：地铁口那排多 能有四五十辆
+  A：就那儿 后半夜去 两点以后
+  B：工具我备好了
+  A：记住只要锁和变速 别的一概别拿
+  B：为啥只要这俩
+  A：这俩值钱 好出手 别的没人要
+  B：懂了
+  A：中午吃啥
+  B：家里带的饭
+  A：省啊
+  B：最近手头紧
+  A：干完这单就宽裕了
+  B：但愿
+  A：你那房租多少一个月
+  B：一千二 合租
+  A：不贵 我那边贵多了
+  B：地段不一样
+  A：也是
+  A：你妈身体好点没
+  B：吃着药呢 好多了
+  A：那就行 别让她操心
+  B：嗯 不敢跟她说这些
+  A：对 少说
+  A：准备出发没
+  B：在路上了 兄弟俩到齐了
+  A：注意安全 别弄出声
+  B：知道
+  【6月5日】
+  B：弄完了 二十多套
+  A：车架呢
+  B：按你说的 全扔河里了
+  A：好 东西先放仓库 白天别露面
+  B：嗯 剩下钱啥时候给
+  A：我点完数下午给你结 一分不少
+  B：行 睡了
+  A：辛苦 去吧

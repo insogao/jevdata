@@ -1,0 +1,110 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001231
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-cacfe60f7425aeea
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 以合作人才对接为由，向 B 索要整部门电话、离职名单和简历，并愿意按份付费，甚至发红包；B 拒绝外发未授权人员资料，只提供公开岗位与本人授权的渠道，A 转而走正规入口。
+  critical_evidence:
+  - A 索要整个部门的联系方式，想直接逐人触达
+  - A 问离职名单并称简历可按份买，还发了一个红包示意
+  - B 拒绝提供员工电话、离职名单和简历，指出需本人授权，退回红包
+  - B 只提供公开招聘链接，A 最终接受正常招聘渠道
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 2
+  turn_count: 35
+  approximate_tokens_estimate: 651
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0105
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-060
+
+dedup:
+  content_hash: sha256:614a736b085fd70b80534f3f590bdc01c21cfd31368cbe9fdddc0adcaf6deebd
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【3月5日】
+  A：你们部门最近人手够吗
+  B：还缺两个岗 挂着招
+  A：我这边有候选人 想直接拿到你们整个部门电话逐个聊
+  B：员工电话我不能给
+  A：那有没有离职名单 我想联系几个熟手
+  B：没有 也不方便提供
+  A：简历按份结算行不行 我不想白麻烦你
+  B：未经同意卖简历不行
+  A：你别多想 就是同行互相帮衬
+  B：帮衬也得分什么 资料不能给
+  B：可以走公开发布的岗位 让候选人自己投
+  A：行 那发我岗位页面
+  B：稍后整理给你 上面有投递入口
+  A：中午吃个饭 我请
+  B：今天有约了 改天
+  A：行 你忙
+  B：楼下那家新开的玉子烧不错
+  A：我改天去尝尝
+  B：十一点半前去不用排
+  A：昨天一起吃的饭钱我转你了
+  【系统消息】A 向 B 转账 46 元，已收款。
+  B：收到了 多谢
+  【3月6日】
+  A：岗位页面收到了
+  B：嗯 让他们按流程投
+  A：我不碰你们内部资料了
+  B：这样最好
+  A：简历我让候选人自己发
+  B：对 本人自愿就行
+  A：今天降温了
+  B：我把羽绒服又穿上了
+  A：我还冻着
+  B：赶紧加衣服
+  A：周末想去爬山
+  B：哪座
+  A：城北那个 一个小时能上
+  B：天冷注意防风

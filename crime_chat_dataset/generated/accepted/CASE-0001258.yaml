@@ -1,0 +1,127 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001258
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-43f2ba9cf027f72d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 论坛里的陌生网友 A 想核实一个匿名小号是不是某位老用户，托 B 顺手看看；B 展示自己会翻小号历史、比对相册原图时间、翻转发记录，A 半推半就默认，全程拿“公开信息检索”当幌子。
+  critical_evidence:
+  - A 私信素不相识的 B，想确认匿名小号“半盏茶”和论坛老用户“南巷旧影”是不是同一个人。
+  - B 说靠相册原图的时间和转发记录就能把两个号对上，并称“小号也给你翻了”。
+  - A 强调自己只是想公开检索核实，没有别的意思。
+  - B 把关联线索串好后，A 没有制止，只叮嘱“你先别发出去”。
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 2
+  turn_count: 52
+  approximate_tokens_estimate: 879
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0123
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-069
+
+dedup:
+  content_hash: sha256:0928b914291895db7412b55aa2e6ca3715219e612fdb7bfd45b13e4c3f5937b8
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【3月12日】
+  A：你好 是出老镜头那位吧
+  B：对 是我 你要哪只
+  A：先不急 想问你个别的
+  B：你说
+  A：论坛那个南巷旧影 你熟吗
+  B：不太熟 就评论区聊过
+  A：我怀疑他小号是半盏茶
+  B：哦 为啥这么觉得
+  A：说话口气像 发图风格也像 但我找不着实锤
+  B：这种我一般看两样
+  B：相册原图时间 还有转发过什么都能查
+  A：原图时间你是说 照片带的那串时间
+  B：对 导出来对一下 同一天拍的基本跑不掉
+  A：这还是公开信息吧
+  B：当然 都是他自己发出来的
+  A：我就是想核实 没别的意思
+  B：懂 我一会给你看看
+  A：对了 那只35定 成色咋样
+  B：九成新 前组无灰 后盖有点磕
+  A：多少钱出
+  B：380 包顺丰
+  A：行 我转你
+  【系统消息】A 向 B 转账 380 元，已收款。
+  B：收到 明天给你发
+  A：好嘞
+  A：你中午吃了没
+  B：刚吃 楼下面
+  A：我也是 天天外卖吃腻了
+  B：自己做点 省钱
+  A：一个人懒得做
+  B：那没办法
+  【3月13日】
+  B：查了下 两个号有关系
+  B：小号也给你翻了
+  B：他小号去年转过一帖 只有南巷旧影转过
+  A：这么巧
+  B：还有 相册那张原图时间 是同一台机
+  A：那基本就是一个人了
+  B：八九不离十
+  A：你先别发出去
+  B：放心 我就给你说
+  A：我怕到时候搞错人
+  B：错了也是他自己留的痕迹
+  A：下月那个摄影展你去吗
+  B：想去 票还没买
+  A：我多买了一张 要的话给你
+  B：那谢了 钱我转你
+  A：送你的 别客气
+  B：那多不好意思
+  A：就一张票 别见外
+  B：行 记你个人情
+  A：客气啥
+  B：我去打包镜头了
+  A：好 辛苦

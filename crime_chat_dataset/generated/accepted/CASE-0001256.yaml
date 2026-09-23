@@ -1,0 +1,114 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001256
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-fbd8089ace74f604
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 熟人之间，A 托 B 把一个匿名账号跟共同认识的人对上；B 直接把相册原图时间、转发链和小号历史摊开，A 嘴上说只想心里有数，却让 B 别外传。
+  critical_evidence:
+  - A 托熟人 B 把匿名账号和共同认识的人对上。
+  - B 用相册原图时间和转发记录把两个号对上，并说“小号也给你翻了”。
+  - B 把线索说得更实：同一天发帖、同一台设备的原图痕迹。
+  - A 让 B 别外传，说自己只是想心里有数。
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 2
+  turn_count: 39
+  approximate_tokens_estimate: 610
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0123
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-069
+
+dedup:
+  content_hash: sha256:ab00d98300a422e3059d83afc279560ea31e263d31312680451b3e0f17d8fa35
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【7月15日】
+  A：问你个事 你别说出去
+  B：你说
+  A：还记得老周吗
+  B：记得 咋了
+  A：那个匿名的号 我觉得就是他
+  B：哪个号
+  A：总在群里说话的 头像是个相机那个
+  B：哦 那个 我早看出来了
+  A：你怎么看出来的
+  B：相册原图时间 用的是他那台
+  B：转发过什么都能查 他转过老周朋友圈那条
+  B：小号也给你翻了 就是他没跑
+  A：你连小号都翻了
+  B：都是公开的 谁让他自己发
+  A：这事就咱俩知道 别外传
+  B：放心 我又不傻
+  A：我就想自己心里有个数
+  B：嗯 你别去跟人说就行
+  A：对了 你上次帮修的那组图多少钱
+  B：给个50就行
+  A：那怎么好意思 转你80
+  【系统消息】A 向 B 转账 80 元，已收款。
+  B：太多了
+  A：应该的
+  A：你周末去看那个展不
+  B：看情况 人多就不去
+  A：我周五去 帮你看看值不值
+  B：行
+  【7月16日】
+  B：再提醒你一句 别拿这个去说他
+  A：知道 我就放着
+  B：嗯
+  A：中午吃啥了
+  B：盖饭 你呢
+  A：泡面 懒得下楼
+  B：注意点身体
+  A：知道啦
+  A：展看了 一般般
+  B：那我省了
+  A：哈哈 请你喝奶茶抵了
+  B：成交

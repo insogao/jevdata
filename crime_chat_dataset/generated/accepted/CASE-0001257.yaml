@@ -1,0 +1,112 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001257
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-c11400f972cb8e18
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 同事 A 对匿名号起疑，随口让 B 顺手看看；B 含糊提了两句公开线索，A 也没深追，整段更像午休闲聊，越界的痕迹很淡，稍不留意就滑过去。
+  critical_evidence:
+  - A 随口提了一句某个匿名号像部门里的人。
+  - B 说看发帖时间、相册原图时间大概能猜出来。
+  - B 提了句“小号也翻得到”。
+  - A 没有继续，只说“不确定就算了”。
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 4
+  turn_count: 35
+  approximate_tokens_estimate: 495
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0123
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-069
+
+dedup:
+  content_hash: sha256:cc284dd17307cf18f863fa3165b5a80d76934c48ce1229b4a28ecf456ac617f8
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【5月20日】
+  A：你刷到那个吐槽帖没
+  B：哪个
+  A：说咱组那个 匿名发的
+  B：哦 有点像咱组的人
+  A：是吧 你也这么觉得
+  B：发帖时间跟咱午休对得上
+  B：相册原图时间也能看 小号也翻得到
+  A：真的假的
+  B：猜的 不确定
+  A：那算了 别乱猜
+  B：嗯 闲聊聊
+  A：你下午喝咖啡不 我拼单
+  B：来一杯 热的
+  A：好 我转你AA
+  【系统消息】A 向 B 转账 18 元，已收款。
+  B：收到
+  【5月21日】
+  A：昨天那个表你填完没
+  B：填了一半
+  A：要不要我帮你看下格式
+  B：行 多谢
+  B：下班一起走不
+  A：我加会班 你先走
+  B：好 路上小心
+  【5月22日】
+  A：今天食堂有糖醋排骨
+  B：去晚了就没了
+  A：那赶紧
+  B：走
+  【5月23日】
+  B：那个匿名帖被删了
+  A：是吗 谁删的
+  B：不知道 版主吧
+  A：那就别管了
+  B：嗯 本来也没啥
+  A：周末带娃去哪
+  B：公园 别的地方太挤
+  A：也是 我们可能去郊区
+  B：挺好 凉快

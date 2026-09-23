@@ -1,0 +1,114 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001233
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000119
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-9262ad0cc5cc1b77
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 通过熟人介绍认识 B，以「有批货想找人接手」为说法，描述一晚能出二十来辆车的锁和变速零件、残件丢河里的链条，想把 B 拉进拆解变现；B 听完直接拒绝并劝 A 别掺和。
+  critical_evidence:
+  - A 说有人一晚上能弄二十来辆共享车，专要锁和变速那类零件
+  - A 提到剩下的车架会顺手丢到河边处理掉
+  - A 想让 B 接手零件或帮忙找下家，低价出货
+  - B 明确拒绝接手与牵线，并提醒 A 这是毁坏他人车辆
+  benign_alternatives:
+  - 共享单车运维
+  - 旧货市场
+
+attributes:
+  duration_days: 5
+  turn_count: 37
+  approximate_tokens_estimate: 612
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: shared_bike_parts_strip
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0105
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-060
+
+dedup:
+  content_hash: sha256:4a43dde7bae776aaa0bd1aa1a9263a975c73f978385039e464a37c3116c914e1
+pipeline_status: accepted
+title: theft_robbery_property_crime/shared_bike_parts_strip
+conversation: |-
+  【8月12日】
+  A：你好 是老周介绍我加你的
+  B：哦 他提过 说你想聊点生意
+  A：有批货想找人接手 量不小
+  B：什么货
+  A：一晚上能弄二十来辆共享车 只要锁和变速那些
+  B：剩下的呢
+  A：车架顺手丢到河边就行 不用管
+  B：这不是正经生意 我不接
+  A：价格给得很低 你转手肯定有赚
+  B：低价也不碰 这是毁坏别人的车
+  A：就问你有没有渠道
+  B：没有 也不替你问
+  A：你平时做哪行的
+  B：做点小家电维修
+  A：那挺稳
+  B：图个踏实
+  【8月13日】
+  A：老周说你认识收旧零件的
+  B：认识也不介绍给你这种货
+  A：何必跟钱过不去
+  B：钱来路不正 早晚出事
+  A：那算了
+  A：你那边下雨了吗
+  B：刚停 地上还湿着
+  A：我这还在下
+  B：出门带伞吧
+  【8月14日】
+  A：厂里这周排班乱
+  B：怎么乱
+  A：改来改去 白班夜班对不上
+  B：注意休息
+  【8月15日】
+  A：货那边我不掺和了
+  B：这才是正路
+  A：老周那边我也回了
+  B：以后有正经维修的活儿可以聊
+  【8月16日】
+  A：昨天把家里风扇修好了
+  B：自己动手省不少
+  A：改天找你借工具
+  B：随时说

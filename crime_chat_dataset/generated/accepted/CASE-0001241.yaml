@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001241
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000119
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-beeb9c853b2faa54
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 中间人 A 定期上门收走 B 从共享单车上弄下来的锁和变速，按套结算转卖，两人用旧称和代词交流，不提来源。
+  critical_evidence:
+  - A 来收 B 攒的'件'，指的是锁和变速
+  - B 说路线熟了，一晚上能出小二十组
+  - 两人按套结算，A 转账把货款给 B
+  - B 说剩下的架子照旧处理掉
+  benign_alternatives:
+  - 共享单车运维
+  - 旧货市场
+
+attributes:
+  duration_days: 4
+  turn_count: 46
+  approximate_tokens_estimate: 575
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: shared_bike_parts_strip
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0106
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-060
+
+dedup:
+  content_hash: sha256:40fa2cd93da45820df4e26773fb71dabebf9b4e2212fb4510bb82fe29f5d57da
+pipeline_status: accepted
+title: theft_robbery_property_crime/shared_bike_parts_strip
+conversation: |-
+  【8月5日】
+  A：这周货攒得咋样
+  B：小二十组 够了
+  A：还是那两样吧
+  B：嗯 锁和那个 别的没动
+  A：好 我今晚过来拉
+  B：几点
+  A：十一点后 别开灯
+  B：知道
+  A：架子呢
+  B：照旧 沉了
+  A：行 稳当
+  A：午饭吃没
+  B：吃了 炒面
+  A：天热别中暑
+  B：晚上干活才热
+  A：带瓶水
+  A：你老婆知道你这活不
+  B：不知道 就说打零工
+  A：那别说 省得吵
+  B：嗯
+  A：到了 后门
+  B：来了
+  A：点过了 十九组 一组三十五 六百六十五
+  B：凑个整呗
+  A：行 七百 多的算跑腿
+  【系统消息】A 向 B 转账 700 元，已收款。
+  B：收到
+  A：下周还这个量 别断
+  B：看天 天好就多
+  【8月6日】
+  A：昨晚货出手了 价不错
+  B：那还行
+  A：这批成色好 下批挑新点的
+  B：新的都在大路上 不好下手
+  A：那就稳着来 别冒
+  B：嗯
+  A：你家老人身体咋样
+  B：还行 定期拿药
+  A：药费贵不
+  B：一个月小一千
+  A：难怪你这么拼
+  B：没办法
+  【8月7日】
+  A：这周末查得紧 歇两天
+  B：咋了
+  A：有人在那片拍照 先躲躲
+  B：行 正好补觉
+  A：周一再动 别撞枪口
+  B：懂

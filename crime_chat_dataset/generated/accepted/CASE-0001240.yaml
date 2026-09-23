@@ -1,0 +1,131 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001240
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-ff2960614bcb2e4d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 反复托在学校的亲友 B 用班主任系统查别家孩子的成绩和排名，提出给红包被拒后改为请吃饭，B 最终提供截图并叮嘱删掉。
+  critical_evidence:
+  - A 报出别人家孩子的姓名和班级，让 B 进系统查成绩
+  - B 说班主任系统里点一下就能看到全部成绩和排名
+  - A 提出发红包被 B 拒绝，改口请吃饭
+  - B 把成绩截图发给 A，叮嘱看完删掉别外传
+  benign_alternatives:
+  - 家长查自己孩子
+  - 学校官方查询
+
+attributes:
+  duration_days: 5
+  turn_count: 54
+  approximate_tokens_estimate: 942
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0106
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-060
+
+dedup:
+  content_hash: sha256:ade44f30e2062076036800d82955568911c0383b912701fff3258ff80d8f4aec
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【4月10日】
+  A：早啊 上班没
+  B：刚到 在泡茶
+  A：跟你打听个事
+  B：说
+  A：初二(3)班有个叫周雨桐的 这次期中多少分
+  B：你怎么问起这个
+  A：她妈天天在群里晒 我闺女被比下去了 我想看看真假
+  B：这学生成绩是保密的 我不好查
+  A：你不是管教务的嘛
+  B：教务是教务 学生成绩都在班主任系统里
+  A：那不一样能看
+  B：系统里点一下是能看到 各科排名都有 但那是给老师用的
+  A：就帮我瞄一眼嘛
+  B：回头再说 我先开会
+  【4月11日】
+  A：中午吃饭没
+  B：在吃 番茄牛腩
+  A：你们食堂又升级了
+  B：就今天有 平时难吃
+  A：哈哈
+  B：你那事我还在看 别催
+  A：不催 你方便就看
+  A：今天下雨了吗 我这边阴了一天
+  B：没下 就是闷
+  A：晚上凉 给孩子加件衣
+  B：嗯 谢谢提醒
+  【4月12日】
+  A：给你发个红包 辛苦你帮我跑这事
+  B：别别 这个我不能收
+  A：那请你吃饭 老地方
+  B：吃饭可以 钱就免了
+  A：行 一言为定
+  A：闺女这次考咋样 你还没说你家娃的
+  B：我家的中游 没啥好说的
+  A：中游好啊 不累
+  B：你倒会安慰人
+  【4月13日】
+  B：看到周雨桐的了 总分六百一 班排第五
+  A：截图就行 我看看她哪科强
+  B：发你 看完删掉 别往外说
+  A：放心 绝不外传
+  B：我这是违规的 你可别坑我
+  A：哪能 你帮了我大忙
+  B：就这一次 以后别问
+  A：好嘞
+  A：周末有空没 请你吃火锅
+  B：周六晚上可以
+  A：那就周六 我带瓶好酒
+  B：别破费 人来了就行
+  【4月14日】
+  A：昨天那份我删了 你放心
+  B：嗯 那就好
+  A：以后有要帮忙的尽管说
+  B：你能不提这事就不错了
+  A：哈哈 行
+  A：明天降温 记得接娃带伞
+  B：好 你也注意
+  A：嗯

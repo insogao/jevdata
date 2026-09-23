@@ -1,0 +1,127 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001244
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000114
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-a2004301b66b7c2b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 让亲戚 B 帮忙去小区快递架把没人看管的包裹取走，按件给现金；双十一件多，两人约定避开监控、随时换地方。
+  critical_evidence:
+  - A 说小区快递架没人看，让 B 去取件
+  - A 称双十一前后件多，最好干
+  - 两人谈好按件给钱，现金结，不走转账
+  - 约定戴口罩、避开监控，取完换小区
+  benign_alternatives:
+  - 帮忙代拿快递
+  - 驿站自提
+
+attributes:
+  duration_days: 4
+  turn_count: 51
+  approximate_tokens_estimate: 691
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: package_porch_pickup
+  risk: 1
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0106
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-060
+
+dedup:
+  content_hash: sha256:4a8b3ccb405ade2936a8617c853b2126b102628234d316bcea9b4dd89ca71a1f
+pipeline_status: accepted
+title: theft_robbery_property_crime/package_porch_pickup
+conversation: |-
+  【11月8日】
+  A：表弟 有个来钱的活
+  B：啥活哥
+  A：小区楼下快递架 晚上没人看 去拿几件
+  B：那不是别人的快递吗
+  A：现在双十一 一堆堆的 少了没人查 最好干的时候
+  B：给多少
+  A：按件给 一件二十五 大件四十
+  B：现金还是转
+  A：现金 别留记录
+  B：知道了
+  A：口罩戴上 挑没人的时候
+  B：监控呢
+  A：走架空层 那边镜头是坏的
+  B：行
+  A：中午吃啥
+  B：泡面
+  A：咋又吃泡面
+  B：省钱
+  A：干两天就有钱了
+  B：嗯
+  A：今晚九点后去 那时人少
+  B：哪个小区
+  A：你家后面那个 上次你帮我搬东西的
+  B：知道
+  【11月9日】
+  A：昨晚拿了几件
+  B：六件 有几个盒子挺大
+  A：大的明天带过来 我处理
+  B：面单撕了
+  A：聪明 盒子压扁扔别处
+  B：知道
+  A：今天换一个 别连去一家
+  B：换哪个
+  A：前面那条街的 门口也有架子
+  B：行
+  A：你对象知道你干这个不
+  B：不知道 说了要吵
+  A：那就别说 挣了钱再说
+  B：嗯
+  【11月10日】
+  A：物业今天在群里说丢件了
+  B：那还去吗
+  A：歇两天 等他们松
+  B：正好歇歇
+  A：钱先给你结这几次的
+  B：多少
+  A：十一件 三百二 明晚给你现金
+  B：好
+  【11月11日】
+  A：钱给你 在楼下老地方
+  B：马上到
+  B：拿到了 数对
+  A：下波双十二 提前盯点
+  B：行

@@ -1,0 +1,154 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001245
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000113
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-c0dd311de2ea46fd
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 上级 A 把一批带锁机器交给懂技术的下属 B，让 B 硬解 ID 刷机洗白后转卖，许诺按月给分成，叮嘱别声张；表面像内部翻新。
+  critical_evidence:
+  - A 拿来一批带锁机器，让 B 帮忙硬解 ID
+  - B 说能解，解完当正常机出手看不出痕迹
+  - A 谈按台分成、月底现金结，让 B 别跟同事说
+  - B 答应批量处理，提醒东西走线下别走公司渠道
+  benign_alternatives:
+  - 二手手机回收
+  - 失物招领
+
+attributes:
+  duration_days: 6
+  turn_count: 76
+  approximate_tokens_estimate: 1177
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: phone_reset_resell
+  risk: 1
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0106
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-060
+
+dedup:
+  content_hash: sha256:682a2472b7278339afe7e7c93847be5e23cf183b20a49d7a1d2b154ee5b8bdce
+pipeline_status: accepted
+title: theft_robbery_property_crime/phone_reset_resell
+conversation: |-
+  【9月1日】
+  A：小 B 来我办公室一趟
+  B：好的李总 马上
+  A：刚给你看的那箱东西 你能弄吧
+  B：都带锁 是二手的吧
+  A：嗯 锁死的 你能刷开不
+  B：ID 我这边能硬解 解完跟正常机一样
+  A：硬解要多久
+  B：一台半小时 一批一天能弄完
+  A：好 这批你拿回去弄 弄完给我
+  B：给钱不
+  A：按台给 一台给你八十 月底现金结
+  B：八十太少了 解一台费脑子
+  A：一百 这批二十台 就是两千 别嫌少
+  B：行吧 解完当正常机卖
+  A：对 我找下家 一台能出到一千多
+  B：那你赚大头
+  A：风险我担 你只管技术 别声张
+  B：知道 不跟人说
+  B：李总 中午食堂您去不
+  A：你自己去 我外面有约
+  B：好
+  A：东西带回去了没
+  B：带了 用黑袋子装的
+  A：好 别放工位 直接带回家
+  B：嗯
+  【9月2日】
+  A：昨晚弄了几台
+  B：五台 有两台锁特别死
+  A：能弄开就行 慢点没事
+  B：解完的系统要重装 装完查不出
+  A：好 别留旧数据
+  B：放心
+  B：今天下雨 您带伞没
+  A：车里有
+  B：那就好
+  【9月3日】
+  A：那批下家催了 快不快
+  B：今晚能全弄完 十来台了
+  A：好 明晚给我 我装箱
+  B：去哪交
+  A：别来公司 我开车去你楼下拿
+  B：行 走线下稳
+  A：对 别走公司渠道 也别开发票
+  B：明白
+  B：李总 下午开会您去不
+  A：我去 你替我把报表带上
+  B：好
+  A：家里都好吧
+  B：挺好 娃刚睡
+  A：辛苦 钱到手给娃买东西
+  B：哈哈 那必须
+  【9月4日】
+  A：听说你那边有个同事也懂刷机
+  B：有 但嘴不严 别用他
+  A：那还是你来 我只信你
+  B：嗯 我来就行
+  A：这批结了给你加量
+  B：加量得加钱
+  A：自然 一台一百二
+  B：这还差不多
+  B：解的时候发现有几台是补过屏的
+  A：能卖就行 别挑
+  B：好
+  【9月5日】
+  A：昨晚全弄完了没
+  B：全好了 二十台
+  A：好 今晚我去拿 钱一起给
+  B：几点
+  A：九点 现金 别声张
+  B：知道
+  B：李总到了吗
+  A：到了 楼下
+  A：点过了 两千 下批还找你
+  B：收到 谢李总
+  A：嘴上把好门 这事谁都不能说
+  B：放心 烂肚子里
+  【9月6日】
+  A：下批周五到 你先备工具
+  B：好 这次多少台
+  A：先三十台 弄好再补
+  B：行 我安排时间

@@ -1,0 +1,135 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001249
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-47ae100c37327079
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 中间人 A 连日打探 B 手上的人手资料能不能出一份，用代称和省略暗示想要离职名单和部门联系方式；B 顺着行业话含糊应承又反复拖延，双方都不点破到底在买卖什么。
+  critical_evidence:
+  - 中间人 A 多日反复问 B 手上“那份东西”能不能出。
+  - B 用“名单”“料”等代称，说风险大、要慢慢来。
+  - A 说要“按份”收，客户一直在催。
+  - B 始终含糊应承，既没把话挑明，也没彻底拒绝。
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 5
+  turn_count: 58
+  approximate_tokens_estimate: 673
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0123
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-069
+
+dedup:
+  content_hash: sha256:045b670885b5b0fd49957636919c8eace757e39745320530c6027b519bd0a05e
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【2月3日】
+  A：年前那事 你考虑得咋样
+  B：哪件
+  A：就你手上那份
+  B：那个不好动
+  A：客户等着呢 你说个价
+  B：先缓缓 最近查得紧
+  A：按份收 不会亏你
+  B：料不多 得慢慢来
+  A：行 我等
+  A：中午吃啥
+  B：随便对付一口
+  A：别老对付 胃要紧
+  B：知道了
+  【2月4日】
+  A：有进展没
+  B：别天天催
+  A：客户催我 我也难
+  B：急也没用
+  A：先给一点 试试水
+  B：再说
+  A：你娃开学的东西买齐没
+  B：买了 书包贵死
+  A：现在啥都涨
+  B：可不
+  A：我上次那家店便宜 推你
+  B：好
+  【2月5日】
+  A：那份东西还没好?
+  B：在弄 别老问
+  A：我就问问 没别的
+  B：料要一份份凑
+  A：行 凑齐了先给我看
+  B：嗯
+  A：今天天气不错 出去走走
+  B：上班呢 走啥
+  A：晚上呗 公园那圈
+  B：看情况
+  【2月6日】
+  A：想好没 我这边压不住了
+  B：你那边什么人
+  A：老客户 靠谱
+  B：再等等 我看看
+  A：别又拖没了
+  B：知道了
+  A：晚饭吃了没
+  B：刚吃
+  A：我也刚吃完 今天做了个鱼
+  B：可以啊
+  【2月7日】
+  A：早 那份有信没
+  B：先给你看一小部分
+  A：总算 发我
+  B：看完处理掉
+  A：老规矩
+  A：这一小份不够 客户还要
+  B：剩下的难弄
+  A：难弄才值钱
+  B：我再想
+  A：周末去哪玩
+  B：在家歇着
+  A：也行 省心
+  B：嗯

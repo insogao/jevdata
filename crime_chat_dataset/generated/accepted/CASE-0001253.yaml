@@ -1,0 +1,127 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001253
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-3d7220e2dbe0cc93
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 做中间人的 A 帮客户要一份厂里的部门通讯录和离职名单，找到在厂里能接触到资料的 B，用行业说法谈数量和价钱，说简历按份卖、先拿样品，并叮嘱别用工作机留痕。
+  critical_evidence:
+  - 中间人 A 向厂内的 B 要整个部门的电话和离职名单。
+  - A 提出简历按份卖，先要几份“样品”看看成色。
+  - B 用“名单”“货”这类行话谈数量和价钱，提醒别用工作机。
+  - 两人约定先小批试一次，验过再谈长期。
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 2
+  turn_count: 52
+  approximate_tokens_estimate: 713
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0123
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-069
+
+dedup:
+  content_hash: sha256:8c2eddd41276720ce6a35941be5769dc25407d93de01720c687bf8b5f9e3ce89
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【1月8日】
+  A：老弟 手上那批货有信没
+  B：什么货
+  A：你们部门的名单啊 说好的
+  B：整个部门电话可不好整
+  A：就要那份 加上要走的
+  B：离职名单更敏感
+  A：行情你懂的 一份多少钱
+  B：看多少条 按份走
+  A：简历呢 按份我收
+  B：先给你几份样品 你看看成色
+  A：行 客户要能直接联系的
+  B：别用工作机加我 用你私号
+  A：懂 老规矩
+  B：东西别外传 出了事我不管
+  A：放心 客户那边我压得住
+  B：先小批 试一次
+  A：成 验过再谈长线
+  A：中午吃了没
+  B：吃了 食堂
+  A：你们食堂还行吧
+  B：一般 便宜
+  A：改天我请你吃好的
+  B：行
+  A：上次托你带的茶叶钱 转你
+  【系统消息】A 向 B 转账 460 元，已收款。
+  B：收到了 谢
+  A：客气啥
+  A：晚上还加班不
+  B：加到八点
+  A：辛苦 你们最近忙啥
+  B：盘点 月底都这样
+  A：那有空再聊
+  B：嗯
+  【1月9日】
+  A：样品弄到没
+  B：弄了几份 你先看
+  A：发我私号
+  B：已发
+  A：成色不错 客户要加量
+  B：加量价钱另说
+  A：好说 我要整个部门那份
+  B：那个风险大 你等等
+  A：别拖 客户催得紧
+  B：知道 我尽量
+  A：老规矩 别留痕
+  B：嗯
+  A：周末球赛看没
+  B：没看 没意思
+  A：我也没看 睡了一天
+  B：挺好
+  B：部门那份整理中 明天给你
+  A：好 等你
+  B：东西看完删掉
+  A：知道

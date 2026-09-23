@@ -1,0 +1,110 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001238
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000113
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-95c143620738b5aa
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 以亲戚关系向 B 推介一批来路不明的「有锁机」，称能硬解机主 ID、批量更便宜，想让 B 帮忙看货或出手；B 拒绝处理来源不明的设备，坚持要购机凭证和机主授权，A 最后放弃。
+  critical_evidence:
+  - A 说有锁的手机便宜出，对方能绕过原机主 ID，批量拿更优惠
+  - A 让 B 帮着看看成色或找下家，说不会让 B 承担风险
+  - B 要求购买凭证和机主授权，拒绝查验或代卖来源不明的手机
+  - A 停止收那批机子，改去要凭证的正规回收点
+  benign_alternatives:
+  - 二手手机回收
+  - 失物招领
+
+attributes:
+  duration_days: 5
+  turn_count: 32
+  approximate_tokens_estimate: 537
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: phone_reset_resell
+  risk: 1
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0105
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-060
+
+dedup:
+  content_hash: sha256:1449a19919c42755ea21b80f834a05fdb536c29cb57f5215080ea510500f76ae
+pipeline_status: accepted
+title: theft_robbery_property_crime/phone_reset_resell
+conversation: |-
+  【2月8日】
+  A：弟 你那个二手手机还卖吗
+  B：早卖了 怎么了
+  A：朋友那有批有锁的机子 便宜出
+  B：有锁的什么来路
+  A：对方说能硬解机主ID 批量更优惠
+  B：绕过机主保护的我不要
+  A：你帮我看看成色就行 不用你担风险
+  B：来源不明我看都不看
+  A：你就是死脑筋
+  【2月9日】
+  B：中午妈做了藕汤
+  A：我在这边吃外卖
+  B：少点外卖
+  A：知道了
+  【2月10日】
+  A：那批机子对方催我拿货
+  B：先看有没有购机凭证和授权
+  A：这种哪有凭证
+  B：没有就别碰
+  A：那算了
+  A：你上次借我的充电宝放哪了
+  B：在我抽屉里 改天还你
+  【2月11日】
+  B：今天降温 记得加衣服
+  A：穿了 早上真冷
+  B：别又感冒
+  A：嗯
+  【2月12日】
+  B：充电宝我给孩子带回去了
+  A：不急 放你那
+  A：机子的事我不弄了
+  B：这就对了
+  A：昨天吃饭你垫的那份我转你
+  【系统消息】A 向 B 转账 88 元，已收款。
+  B：收到了
+  A：下次回家一起吃饭
+  B：行 提前说一声

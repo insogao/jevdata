@@ -1,0 +1,124 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001254
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-1f00cac9a3785945
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 论坛上素不相识的两人，A 想弄清一个匿名账号背后是谁，B 用省略和代称暗示自己能顺着旧图时间线和转发链把人找出来，全程没人把话挑明，A 心照不宣。
+  critical_evidence:
+  - A 与 B 并不相识，却直接开口打听一个匿名账号背后的人。
+  - B 全程不直说找人，只提“旧图的时间线”和“转过的那点东西”。
+  - B 表示连那人的另一个“壳”也顺手翻过了，并提到相册原图时间和转发都能查。
+  - A 没有制止，只反复提醒 B 别外传。
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 2
+  turn_count: 49
+  approximate_tokens_estimate: 707
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0123
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-069
+
+dedup:
+  content_hash: sha256:efc9940e943becf9d38bab96d3c9260aa0fd014d72bdc8ade6cbea3387021354
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【6月2日】
+  A：在吗 看你挺懂论坛那套的
+  B：咋了
+  A：有个号 一直发些阴阳怪气的东西
+  B：哪个
+  A：id 是 栖迟
+  B：想干嘛
+  A：就……想知道是个什么人
+  B：他主页翻过没
+  A：翻了啊 没什么
+  B：要看旧图的时间线
+  B：还有转过的那点东西
+  A：这你都能看
+  B：他发出来的 自然看得
+  A：那帮我看看
+  B：行 我瞅瞅
+  A：对了 你那个三脚架还在不
+  B：在 碳纤的 没怎么用
+  A：多少出
+  B：260 自提
+  A：行 我转你 快递到付
+  【系统消息】A 向 B 转账 260 元，已收款。
+  B：收到 明早给你寄
+  A：好 对了 你健身那个课还续不续
+  B：不续了 太贵
+  A：我这边有个转卡的 便宜一半
+  B：靠谱吗
+  A：同事转的 应该行
+  B：那回头看看
+  【6月3日】
+  B：有眉目了
+  B：小号也给你翻了
+  B：相册原图时间对上了 同一台机
+  B：转发过什么都能查 他转过一条 只有一个小号转过
+  A：…你还真翻到了
+  B：都是公开的 没动别的
+  A：你查完别跟人说
+  B：懂
+  A：我也就自己心里有个数
+  B：嗯 那我删记录了
+  A：快递到哪了
+  B：查下 下午到
+  A：好 我等着
+  B：收到看看有问题说
+  A：架到了 挺好
+  B：那就行
+  A：周末那块有人约拍不
+  B：没定 太晒了
+  A：也是 我这几张全废了
+  B：早晚光线好点上
+  A：行 那下次叫上你
+  B：成

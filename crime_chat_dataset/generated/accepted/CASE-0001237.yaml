@@ -1,0 +1,112 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001237
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000113
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-818ca74ce13ff203
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 作为中间人牵线，向做数码生意的 B 推销一批「有锁的便宜机」并声称能硬解机主 ID、批量更优惠；B 追问来源与授权后拒绝验收和代卖，只接受有购机凭证的正规回收。
+  critical_evidence:
+  - A 说有批有锁的旧手机便宜出，能绕过原机主 ID，批量还有优惠
+  - A 只让 B 帮忙验机，称不用 B 动手
+  - B 要求购买凭证和机主授权，拒绝验收来源不明的设备、也不帮联系买家
+  - A 最终停掉收货的事，转去要购机凭证的正规回收点
+  benign_alternatives:
+  - 二手手机回收
+  - 失物招领
+
+attributes:
+  duration_days: 4
+  turn_count: 36
+  approximate_tokens_estimate: 692
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: phone_reset_resell
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0105
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-060
+
+dedup:
+  content_hash: sha256:a0b6e76e64e97f87bc43b003788800963fffdb49f851ab6361b84326ac2bd4c8
+pipeline_status: accepted
+title: theft_robbery_property_crime/phone_reset_resell
+conversation: |-
+  【7月3日】
+  A：老哥 最近生意怎么样
+  B：还行 走量一般
+  A：有批有锁的旧手机 价格便宜 想让你看看
+  B：有购买凭证和机主授权吗
+  A：对方说能绕过原机主ID 批量拿更优惠
+  B：我不会协助绕过账户保护 也不转卖来历不明的手机
+  A：只是帮我验下机 不用你动手
+  B：来源不明我就不验 也不帮你联系买家
+  A：价格真的很低 错过就没了
+  B：低不代表能要 手续齐全才行
+  A：你家小孩最近开学了吧
+  B：上周刚开学
+  A：适应吗
+  B：还行 就是早起费劲
+  【7月4日】
+  A：对方还在催我 说可以再降
+  B：先核实合法来源和所有权 不能只看价格
+  A：有锁的确实便宜不少
+  B：便宜不代表可以绕过机主保护
+  A：那批量优惠也没意义了
+  B：正规回收会核验手续
+  A：中午吃啥
+  B：楼下快餐
+  A：我也是 随便对付
+  【7月5日】
+  A：我把收货的事停了
+  B：好 别碰可疑设备
+  A：问了正规回收点 他们要购机凭证
+  B：按他们要求办就行
+  A：明白
+  B：以后只接来源清楚、授权完整的设备
+  A：晚上去河边走走不
+  B：今天有点累 改天
+  A：行 那你早点休息
+  【7月6日】
+  A：昨天睡了个好觉
+  B：那就好
+  A：以后有事还找你
+  B：手续齐全的随时找我
