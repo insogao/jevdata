@@ -1,0 +1,130 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000438
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000048
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-c967a4096d29af5f
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 生意上被合伙人坑害的人雇人摸清对方每日行踪规律，索要上下班路线、到家时间和本人照片确认，为私自报复做准备，但始终不明说用途。
+  critical_evidence:
+  - A 委托 B 盯住与其有生意纠纷的孙某，只要时间规律不要动手
+  - A 要清孙某每天几点下楼、走哪个方向、开车还是地铁、晚上几点进小区住哪栋
+  - A 要求 B 让手下拍到孙某本人照片发来确认，强调别认错了人
+  - A 转给 B 定金 2000 元，尾款办完再结，并称剩下的不用你管、把行踪记准就行
+  benign_alternatives:
+  - 商务纠纷中催收前的正常了解
+  - 委托朋友帮忙搬家盯物流
+
+attributes:
+  duration_days: 3
+  turn_count: 54
+  approximate_tokens_estimate: 1341
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: revenge_stalking_plan
+  risk: 3
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0048
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-024
+
+dedup:
+  content_hash: sha256:06d733d35c4a732c5693a6a07b9a82b98dfe5bfbb66f5fa1e6def242cb4b2abb
+pipeline_status: accepted
+title: violence_extortion/revenge_stalking_plan
+conversation: |-
+  【10月17日】
+  B：韩总，上次说好的饭局这周五，还作数不
+  A：作数，定好地方发你
+  B：那家粤菜馆要提前订包间
+  A：让秘书去订，你带人就行
+  B：行，那我周五下午空出来
+  A：嗯，先这样
+  A：老崔，私下问你个事
+  B：你说
+  A：你手下那几个跑腿的，靠谱不
+  B：干搬运盯货那几个，都跟了我三四年，嘴严
+  A：帮我盯个人，就盯几天。孙某，你知道的那个
+  B：跟你打官司那个姓孙的？
+  A：嗯，就是他。细节明天说，饭局照旧
+  【10月18日】
+  B：韩总，今天秋风一起，早上冷得很
+  A：是，我加了个外套。你嗓子好点没
+  B：好多了，含了两天胖大海
+  A：少抽烟，你那嗓子就是烟熏的
+  B：争取戒，都戒三回了
+  A：哈哈，那就再戒第四回
+  A：事情是这样，我不要你动他一根指头，你只要把他的时间摸清楚
+  B：摸到什么程度
+  A：他公司在新洲路那边，你弄清楚他每天几点下楼，走哪个方向，开车还是地铁
+  B：然后呢
+  A：晚上几点进小区，住哪栋哪户，你手下跟两三天就清楚了
+  B：这活能干，就是得换个生面孔，他见过我们搬运队的人
+  A：换人，费用按天算，别让他起疑
+  B：行，我今晚先派人去他公司楼下踩个点
+  A：嗯，明天这个点给我信
+  B：韩总，晚饭吃没，我这边刚收工
+  A：刚吃完，应酬，一身烟味
+  B：你也注意身体，别天天喝
+  A：没法子，甲方喝了才签字
+  B：那你早点歇着
+  A：嗯，明天见
+  【10月19日】
+  B：早，昨晚落雨了，你上班带伞
+  A：带了。你们那边路淹没
+  B：有点积水，不碍事
+  A：行，今天的事记得
+  B：忘不了，人已经到位了
+  B：韩总，周五饭局订好了，粤味轩，七点
+  A：好，订八位的
+  B：我带俩兄弟过去，都是自己人
+  A：行，别喝多，第二天还有事
+  B：知道，我如今也就两杯的量
+  A：那也比我强
+  B：韩总，摸清了。他每天六点十分下楼，开辆灰色的车，走滨河大道，六点五十进小区，就停地下车库
+  A：中午呢，人在不在公司
+  B：在，基本叫外卖，不常出来
+  A：行。你让兄弟拍张他本人的照片发我，别认错了人，就下车进楼那段拍
+  B：好，明早的照片准有
+  A：定金我先转你，两千，尾款等办完
+  【系统消息】A 向 B 转账 2000 元，已收款。
+  B：收到了。韩总，多问一句，你盯他打算干什么
+  A：他拿走的东西，总得有个说法。剩下的不用你管，你把行踪记准就行
+  B：懂了，我只管记录，别的没看见

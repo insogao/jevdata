@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000441
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000023
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-9a6a10c30405a81b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 采购负责人 A 与独家供应商 B 合谋抬高续单报价，发票只开笼统品名、到货验货即过，B 以节礼名义向 A 私下转账返点八千元。
+  critical_evidence:
+  - B 是唯一供应商，报价抬升近两成仍照走流程
+  - 发票品名只写设备配件一批，不附明细
+  - 到货走急件流程验货即过，绕开正常验收
+  - B 以节礼为名私转 A 八千元并特意分开处理
+  benign_alternatives:
+  - 正常独家议价采购
+  - 节日客户往来礼节
+
+attributes:
+  duration_days: 2
+  turn_count: 51
+  approximate_tokens_estimate: 1609
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: procurement_price_padding
+  risk: 2
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0049
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-024
+
+dedup:
+  content_hash: sha256:e5887c70127413a4f9bf0e2133d616823d03cca69bea8046335f30d44bc3dfb0
+pipeline_status: accepted
+title: bribery_corruption/procurement_price_padding
+conversation: |-
+  【9月28日】
+  B：陈哥,阳澄湖的券我搞了几张,给你留两张
+  A：又让你破费,去年那两张还没吃完呢
+  B：今年个头大,四两的公蟹,孩子肯定爱吃
+  A：行,那我就却之不恭了
+  A：说正事,这季度那批检测设备的续单,你们报的价我看了,单台比去年高了快两成
+  B：行情在那摆着嘛,芯片人工哪样不涨
+  A：涨归涨,可你现在是我们唯一能供货的,我这个做采购的总得把账做平,你懂的
+  B：懂懂,价就按报的走,差价那份,中秋先给你结一部分
+  A：发票注意下,品名别写细,就开设备配件一批,明细不用附
+  B：放心,我们财务干这个熟,品名一贯笼统,谁也看不出啥
+  A：还有验收,到货你直接找库房小刘,走急件流程验货即过,不用等我签字
+  B：好嘞,小刘那边打过交道,熟
+  A：这批量大,别出岔子,出了岔子你我都不好看
+  B：质量你放心,原厂的,差价的事你我心里有数就行
+  B：你中秋回老家不,新闻说30号高速要堵爆
+  A：回,我请了29号下午的假,错峰走
+  B：聪明,我干脆初一夜里走,服务区睡觉
+  A：你这是把服务区当酒店了
+  B：哈哈,省钱小能手
+  A：你堵怕了吧,去年你堵了六个钟头
+  B：别提了,提起来就想卖车
+  A：你家小子围棋考级没,上回说冲一段
+  B：冲上了!上周刚拿的证书,给我长脸
+  A：可以啊,中秋让他跟陈叔叔下一盘,我学两招
+  B：他现在见谁都想下,你想好了
+  A：行,让他把棋盘带上
+  B：你腰咋样了,上回还贴着膏药
+  A：好多了,就是久坐还僵,推拿店一周去两次
+  B：推拿有用,我这老毛病也是压下去的,就是费钱
+  A：费钱也得弄,咱这行腰就是本钱
+  B：就是这个理
+  【9月29日】
+  A：恶心,老家房子顶楼又漏了,我爸电话里念叨一早上
+  B：找物业啊,顶楼一到雨季就遭罪
+  A：物业就那样,拖字诀,我打算自己花钱做遍防水
+  B：防水这行水也深,找正规点的,别贪便宜
+  A：嗯,让我哥在那边盯着
+  B：陈哥,合同我们财务走流程了,就等你们回传盖章
+  A：好,今天让法务过一遍,下午给你
+  B：对了节礼的事,下午让司机给你送点茶叶和蟹券,还是老地址
+  A：老地址就行,跟他们说放前台就走,别打电话
+  B：懂,悄无声息的
+  A：另外那份别夹在礼里,你直接转我那张老卡,老规矩
+  B：明白,我私下转你,不走公司账
+  A：行,这季度辛苦,下一批我争取再给你们加点量
+  B：有你这句话就行,长期合作,都按老规矩来
+  【系统消息】B 向 A 转账 8000 元，已收款。
+  A：收到了,东西也齐了,替我谢谢你家老板娘
+  B：她还说要给你绣面锦旗呢
+  A：有心了,节后我头一件事就是催验收,货一到你联系小刘
+  B：好,6号发车,节后第二天准到
+  B：蟹券到了放冰箱,这天放外头容易坏
+  A：知道,你比我妈还操心

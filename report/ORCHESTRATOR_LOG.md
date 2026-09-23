@@ -12,3 +12,4 @@
 - 2026-09-24 11:00 | batch 21 (TASK-0039/40/41): accepted 320->350 (+30, rejected 0), pairs 54, judge agree(+-1)=30/30 | pushed
 - 2026-09-24 11:50 | batch 22 (TASK-0042/43/44): accepted 380 (+30, rejected 0), pairs 59, judge agree(+-1)=30/30（judge 首次触发内容过滤后改为 3×10 拆分盲判成功，流程固化）| pushed
 - 2026-09-24 12:30 | batch 23 (TASK-0045/46/47): accepted 410 (+30, rejected 0), pairs 63, judge agree(+-1)=26/30, 4 disagreements (404/405/420/421 -> review; 生成端 risk1/3 标签遵循波动，判官拦截正常) | pushed
+- 2026-09-24 13:15 | batch 24 (TASK-0048/49/50): accepted 440 (+30, rejected 0), pairs 67, judge agree(+-1)=30/30 | pushed

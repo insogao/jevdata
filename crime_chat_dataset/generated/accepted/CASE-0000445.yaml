@@ -1,0 +1,135 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000445
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000016
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-9cd0edf722a2b013
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 相机维修店主 A 在修卡时把客户 B 早已删除的私密旧照一并恢复并私下留存备份，暗示内容有意思让 B 不安，再以深度清理加保密处理为名加价收钱，且不提供任何凭证。
+  critical_evidence:
+  - A 把客户此前已删除的旧照片一并恢复并称留了备份
+  - A 暗示照片内容挺有意思，让 B 产生顾虑
+  - A 借口深度清理加保密处理加收一千五
+  - 收款后 A 只口头承诺删干净，不给任何凭证
+  benign_alternatives:
+  - 正规数据恢复与深度清理服务
+  - 婚庆摄影器材维修交付
+
+attributes:
+  duration_days: 4
+  turn_count: 58
+  approximate_tokens_estimate: 1753
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: camera_sd_recovery_fraud
+  risk: 2
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0049
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-024
+
+dedup:
+  content_hash: sha256:21f982322786d6b0b4ffe990d3322f37228f57b5baefa3d3cfb60dd9d21751c2
+pipeline_status: accepted
+title: fraud_scam/camera_sd_recovery_fraud
+conversation: |-
+  【10月9日】
+  B：师傅,我那台相机卡槽读不出卡了,你店今天开门不
+  A：开着,带卡一起拿过来,我看看是卡的问题还是机身
+  B：好,下午过去,卡里这个月的片子还没导,有点急
+  A：行,一般这种能救,数据尽量保
+  B：到了,在你店门口
+  A：进来,顺便帮你那支变焦头擦一擦,上次就说镜片有霉点
+  B：麻烦你了,除霉多少钱
+  A：老客户,八十,拆机另算
+  B：行,都弄上吧
+  A：先看卡啊,擦镜头是顺手的事
+  A：卡好了,是触点氧化,片子都导出来了,一个G没丢
+  B：太好了!改天请你喝酒
+  A：对了,你这卡里不止这个月的片子啊,去年删掉的那些,也都找回来了
+  B：哪些?哦那些,那些是我故意删的,不用管
+  A：我看了一张,挺有意思的啊,拍得不错
+  B：你别看那些,算了,都是过去式
+  A：我就随手划拉了两下,哈哈。恢复出来的东西我留了个备份在我电脑上,防手滑,职业习惯
+  B：备份就删了吧,那些没什么用
+  A：行,回头我看看,有空给你清一清
+  【10月10日】
+  B：师傅,十一月那场的司仪黄了一个,你那边有认识的没
+  A：有,我表弟就干这个,口才好,价格实在
+  B：推个微信我,合影的时候我给你俩都拍好看点
+  A：哈哈行,推你,你这生意越来越大了
+  B：还行,秋天旺季,忙是忙点
+  A：明天台风,你户外那场还拍吗
+  B：改到酒店室内了,新人也怕刮风
+  A：明智,去年台风天我招牌都被掀了
+  B：那么猛?还好你人没事
+  A：人没事,钱遭殃
+  B：我爸寄了点秋茶,给你留一罐,你上次不是说爱喝浓的
+  A：哎哟那感情好,我这人就这点爱好
+  B：明天取机器的时候带给你
+  A：你这客户当得比朋友还到位
+  【10月11日】
+  A：台风过去了,机器弄好了,镜头也除完霉,一共八十
+  B：好,下午过去取
+  A：另外你说的那个清一清我想了想,能弄。深度清理加保密处理,店里统一收一千五,弄完那些东西就真没了
+  B：真没了?备份呢
+  A：备份也一起清,清完给你看,眼见为实。不过这活儿费工夫,得单独排期
+  B：一千五,行吧,谁让东西在您那儿呢
+  A：嗯,你转我就行,弄完我叫你
+  B：你店对面那个健身房怎么样,我想办卡,天天开车腰疼
+  A：别办那家,跑路过一次,换老板了,课都约不上
+  B：这样啊,那我去江边跑步算了,不要钱
+  A：跑步好,我晚上也去江边遛弯,说不定碰上
+  B：行啊,碰上请你喝豆奶
+  【10月12日】
+  B：师傅,一千五我转你了,你查收
+  【系统消息】B 向 A 转账 1500 元，已收款。
+  A：收到了,今天下午就给你排,弄完拍视频给你确认
+  B：好,那些照片导出的时候你都没往网盘存吧
+  A：你放心,弄完真没了,咱做这行的,口碑第一
+  B：嗯,那就麻烦你了
+  A：对了,这个月的片子记得早点拿走,我店里硬盘小,过两天要清机器
+  B：好的,明天上午来拿
+  A：司仪加你了没,我表弟说你俩聊得挺好
+  B：加了,档期都定上了,谢谢你牵线
+  A：谢啥,都是缘分
+  B：机器我今天先不拿了,店里忙,明天上午
+  A：行,给你留好,清理的视频晚上发你
+  B：好,辛苦师傅

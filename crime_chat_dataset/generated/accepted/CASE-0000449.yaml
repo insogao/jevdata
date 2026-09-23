@@ -1,0 +1,158 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000449
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000008
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-a6340f0b999093a9
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 自称电商供应链的收卡人借兼职名目接近在校大学生，用'帮公司收货款走流水'话术收购其名下储蓄卡并要求开通网银U盾，实为囤积他人银行账户供资金流转使用。
+  critical_evidence:
+  - A 按'一张800'明码收费收购 B 名下储蓄卡
+  - A 反复向 B 强调'无风险''都是真实订单货款'的话术
+  - A 明确要求开卡时开通网银并领取U盾，供其'财务对接'
+  - A 面交收走卡和U盾后当即转800元对价，并追加收购 B 同学的卡
+  benign_alternatives:
+  - 正常兼职中介的线下推广日结工作
+  - 学生帮熟人代收快递的委托
+
+attributes:
+  duration_days: 5
+  turn_count: 80
+  approximate_tokens_estimate: 2720
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: account_lending
+  risk: 2
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0050
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-024
+
+dedup:
+  content_hash: sha256:472fc9f3af0dc06152eaab8583b8c42bf6953aa7fe9a3b81c79e1af5f9e6281d
+pipeline_status: accepted
+title: fraud_scam/account_lending
+conversation: |-
+  【10月13日】
+  A：小柯是吧 群里加的你 看到你问兼职的事了
+  B：对 学长好 我在群里看到你说有线上兼职
+  A：别叫学长 我叫阿锋 做电商供应链的 公司在广州这边
+  B：锋哥好 我现在大三 课不算多 想找个周末或者线上的活
+  A：学生不容易 我那时候也天天泡食堂省饭钱
+  B：哈哈我们现在也一样 今天食堂新开的麻辣香锅排队排了二十分钟
+  A：香锅好东西 我们公司楼下那家我都吃腻了 天天外卖
+  B：外卖吃多了不健康 锋哥你还是少吃点
+  A：你说得对 你发传单那些一天能给多少
+  B：上次发传单一百一天 站一天挺累的
+  A：那确实辛苦 我这边的活不用站也简单 过两天跟你说 你先了解一下
+  B：好嘞 锋哥
+  A：吃了没 我还在公司对账 这月流水有点大 头都大了
+  B：刚下晚自习 吃了个炒饭 流水大是生意好啊
+  A：生意还行 就是回款账户不够用 这个回头跟你说
+  B：好 锋哥忙
+  【10月14日】
+  A：小柯 昨天说的活 今天有空聊不
+  B：锋哥早 我第二节课下了就回你
+  B：下课了 锋哥你说
+  A：是这样 我这边收货款需要多几个收款账户 你办一张储蓄卡放我这边用 一张我给你800
+  B：卡给你用？那里面要是放我自己的钱不安全吧
+  A：卡是你名字的 密码你自己设 你随时能挂失 主动权在你 我就用来收收货款
+  B：你们公司自己的账户不够用吗
+  A：电商你懂的 平台多店铺多 账户跟不上 同行都是这么操作的 很常见
+  B：这样啊 我考虑考虑
+  A：行 不着急 想好了跟我说
+  B：锋哥 晚上吃了没 我问你个事
+  A：刚吃完外卖 你说
+  B：就是你说的那个卡 我用我自己的身份证办 算我名下的财产吧
+  A：当然 卡就是你名下的 你人不到场谁也动不了里面你自己的钱 我们用的时候只进我们的货款
+  B：懂了大概了 我再想想
+  A：嗯 这事你不做也有人做 我就是看你在群里问兼职 想着帮你多挣点
+  【10月15日】
+  A：早 考虑得咋样
+  B：锋哥 我有点怕怕的 这种会不会有啥问题啊
+  A：你放心 无风险的 卡里走的是我们自己店铺的真实订单货款 每一笔都对得上单 不是什么灰色的事
+  B：那为啥不直接用你们自己员工的卡
+  A：员工卡额度早用满了 财务说的 新店放量快 你这张卡就是救个急
+  B：哦哦这样
+  A：你要是办的话 记得开通网银 带U盾那种 我们财务对接对账要用
+  B：U盾我知道 去银行柜台办的时候说一声就行吧
+  A：对 跟柜员说开网银领U盾 别的什么都不用动 密码还是你自己设
+  B：行 我明天上午没课 去学校旁边的支行问问
+  A：好 办成了跟我说 800一张 多办不算哈 就先一张
+  B：那要是卡丢了或者我想注销呢
+  A：你带上身份证随时去柜台注销 挂失也是你的权利 这卡从头到尾都是你的
+  B：锋哥 你做电商几年了呀
+  A：五六年了 从摆摊卖手机壳干起的 不容易
+  B：厉害 我现在还在纠结要不要考研 还是早点出来干活
+  A：边干边看呗 电商这行实践比学历重要 当然你能考上更好
+  【10月16日】
+  B：锋哥早 今天降温了 你那边冷不
+  A：广州今天还短袖呢 你多穿点 学生别只要风度
+  B：嘿嘿 我已经把外套翻出来了 昨天风一吹有点嗓子疼
+  A：多喝热水 严重的去校医院看看 别拖
+  B：嗯嗯 谢谢锋哥
+  B：锋哥 卡办好了 网银也开了 U盾也领了 柜员还问我是不是要网购 哈哈
+  A：效率可以啊 跟你说的事你办得挺利索
+  B：那明天把卡带给你？我在东区上课
+  A：明天中午12点 你们学校东门那家肯德基 我过去 请你吃个饭
+  B：太客气了锋哥
+  A：应该的 合作嘛
+  A：明天记得卡和U盾都带上 身份证不用带 东西放好别弄丢了
+  B：好的 放我抽屉锁上了
+  【10月17日】
+  A：出发了 你先点餐 到了直接吃
+  B：好嘞 我先到东门 穿黑色外套
+  A：到了 蓝衣服那个是我
+  B：锋哥好
+  A：来来 先吃 边吃边说
+  A：东西我收了 卡和U盾都在吧
+  B：都在 密码是我设的 没告诉你哦
+  A：对对 就要这样 密码你自己留着 这才对你没风险
+  【系统消息】A 向 B 转账 800 元，已收款。
+  B：收到收到 800 锋哥爽快
+  A：说好的价 一张800 以后卡里有流水 你自己都能查
+  B：嗯 我到时候看看账单
+  B：对了卡我手机银行也绑了 有动静我能看见
+  A：绑着好 你随时能看到就放心
+  A：对了 你舍友或同学要有人想挣这个钱的 一张也是800 介绍一个我再给你200辛苦费
+  B：我回去问问吧 不过他们跟我一样估计也得琢磨琢磨
+  A：没事 让他们加我聊 把无风险这点讲清楚就行
+  B：好 我先回宿舍睡个午觉 下午还有课
+  A：去吧 路上慢点 有事随时微信

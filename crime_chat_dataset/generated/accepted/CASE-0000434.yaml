@@ -1,0 +1,141 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000434
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000089
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-bcbcb4434f306adb
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: privacy_doxxing
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 酒店夜班前台利用当班便利长期向前同事出售住客入住登记信息，按次收费、只在夜班操作，帮助对方连续追踪一名躲债人的落脚点。
+  critical_evidence:
+  - B 只在夜班帮 A 查人，白班有经理盯着不敢动，两人约定白天谁也不提，形成固定默契
+  - 住客刚办完入住几分钟内 B 就把房号和登记信息发给 A，刚入住就出单
+  - 费用按次结算，一次五百，昨晚加之前两回一共三单凑整一千五
+  - A 凭 B 提供的入住记录连续多日锁定躲债人纪某的行踪，并要求 B 继续留意
+  benign_alternatives:
+  - 前台同事间正常的工作互助
+  - 酒店按流程配合的住客查询
+
+attributes:
+  duration_days: 4
+  turn_count: 64
+  approximate_tokens_estimate: 1602
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: hotel_register_leak
+  risk: 3
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0048
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-024
+
+dedup:
+  content_hash: sha256:d461635debf2649a07f68928784cfedac684e02ef8d8fb2a6ae155d0f4b3c269
+pipeline_status: accepted
+title: privacy_doxxing/hotel_register_leak
+conversation: |-
+  【10月10日】
+  A：还没睡？这个点你该上班了吧
+  B：在打卡了，夜班命。你这么晚干嘛
+  A：睡不着，刷手机
+  B：羡慕能失眠的，我一上夜班困得要死
+  A：你们酒店最近生意行不行
+  B：一般，周一到周四空得很
+  A：哦，那清净
+  B：你别光哦，早点睡，黑眼圈都到下巴了
+  A：哎对了，求你个事。咱老同事了——帮我留个心，姓纪那个，就我跟你说过的那个
+  B：你还惦记他呢
+  A：废话，卷了我八十万跑掉的人。他来开房总得用他自己的身份证
+  B：人在前台一挂证我就知道了呗
+  A：就这意思。到没到吱一声
+  B：行，我今晚先盯着，你睡你的
+  【10月11日】
+  A：睡不着，问一句，有动静没
+  B：暂时没，才十二点多，急啥
+  A：行，辛苦，有他消息第一时间喊我
+  B：下班，腿站麻了，早八的地铁都不敢坐，怕坐过
+  A：回去补觉吧，辛苦
+  B：你上班别摸鱼
+  A：摸一会，中午还约了人吃饭
+  B：又是饭局，你这月第几顿了
+  A：数不清，老板画饼局
+  A：想起个事，你白天能帮我看一眼系统不
+  B：白天不行，白班俩人盯着，经理办公室就在后头，我白天连前台都站不上去
+  A：那只能等你夜班
+  B：嗯，夜班就我一个，经理十一点就走，我干活没人盯
+  A：那就辛苦你夜班，白天咱俩谁也别提这事
+  B：懂，我又不傻
+  A：事成之后不会亏你
+  B：先说好，我就帮你看一眼，别整出别的事
+  A：能有啥事，我就是想找人把话说开
+  【10月12日】
+  A：中午吃的啥
+  B：楼下便当，卤鸡腿那款
+  A：天天便当，你就不能自己做
+  B：做什么做，出租屋连个灶都没有
+  A：那你工资都花哪了
+  B：买衣服，喝奶茶，快乐穷
+  A：下回带你吃顿好的，犒劳你上夜班
+  B：到了到了！姓纪的刚在前台办完入住，302，刚办的，身份证我都过目了
+  A：真的？！你看准了没
+  B：错不了，照片对得上，名字也是那三个字
+  A：我马上过来
+  B：你别在前台晃啊，我还在班上
+  A：我就在大堂坐坐，不给你惹麻烦
+  B：他人上楼了，你悠着点，别在我班上出事
+  A：我就跟他聊聊。你把登记那页拍给我留个底
+  B：拍了发你了。就这一回啊，下回可不一定
+  【10月13日】
+  B：昨晚折腾到三点，今天眼睛肿成核桃
+  A：昨天多亏你，事情有眉目了
+  B：找到他人了？
+  A：嗯，总算逮着尾巴了，这几个月没白等
+  B：那挺好，心里石头落地了
+  A：落地一半，钱还没着落呢
+  B：缺钱吱声，我这还有点，先给你周转
+  A：昨天那单怎么算，你说个数
+  B：按老规矩呗，一次五百
+  A：加上之前那两回，一共三单，一起算吧
+  B：三单啊……那你给个整，一千五
+  A：就一千五，转你了，别嫌少，往后还靠你
+  【系统消息】A 向 B 转账 1500 元，已收款。
+  B：收到，行吧，看在你找人的份上
+  A：他这几天肯定还在附近，你多留意
+  B：只限夜班啊，我可说好了
+  A：知道，夜班夜班，你有数就行

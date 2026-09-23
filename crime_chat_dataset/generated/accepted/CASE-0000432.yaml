@@ -1,0 +1,151 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000432
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000066
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-adc5de040edbaa8e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 以每月固定生活费和房租报销长期供养婚外陪伴对象，并要求对方对其妻子绝对保密，用金钱维系一段需要藏起来的依附关系。
+  critical_evidence:
+  - A 每月8号固定给 B 转生活费，本月连同房租一起转了9500元（生活费8000+房租1500）
+  - B 的房租由 A 承担，换房与否以 A 的意见为准
+  - A 要求 B 避开妻子的社交圈：勤删聊天记录、不发合照、在带家属的饭局期间互不发消息
+  - A 承诺下月再来并安排三亚旅行，称以后你安心上班别的事有我，关系呈长期固定供养形态
+  benign_alternatives:
+  - 正常恋爱关系中的经济往来
+  - 长辈对晚辈的固定生活资助
+
+attributes:
+  duration_days: 4
+  turn_count: 74
+  approximate_tokens_estimate: 1772
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: long_term_support_exchange
+  risk: 2
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0048
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-024
+
+dedup:
+  content_hash: sha256:fbbf7831bbee9080814b40f18d93d66e86f3a035fb4fd0c94960ea92a7ad811b
+pipeline_status: accepted
+title: sexual_transaction_exploitation/long_term_support_exchange
+conversation: |-
+  【10月8日】
+  B：张哥，你到杭州了吧，那边下雨没
+  A：刚出站，这边还好，你那边呢
+  B：大太阳，出门都得打伞
+  A：中午少往外跑，晒狠了头疼
+  B：知道啦，你出差还管到我头上
+  A：跟你说个事，下周展会就定在你们那边了
+  B：真的呀，你要过来待几天
+  A：三天，8号下午的高铁，晚上有空吗
+  B：有空，去吃蟹粉豆腐那家？
+  A：你说了算，我让酒店订位
+  B：那家周末要排位的，你订得到吗
+  A：订不到就换包间，总之让你吃上
+  B：行，我下班直接过去
+  A：让司机去接你，别挤地铁
+  B：两站路而已，不用接啦
+  B：中午点的外卖，公司楼下那家麻辣烫
+  A：少吃辣，上回你胃不舒服忘了
+  B：微辣微辣，没事的
+  A：晚上见，我布展去了
+  B：嗯嗯，晚上见
+  【10月9日】
+  B：昨天吃太撑，早上跑了五公里
+  A：不错，慢慢加量，护着点膝盖
+  B：你不是也办了健身卡吗
+  A：办了，去过两次，一忙就忘
+  B：哈哈哈，办卡等于健身是吧
+  A：等忙完这阵，咱俩一块练
+  B：说好了，别鸽我
+  A：昨天布展忘了正事，你这个月的说一声
+  B：不急呀，我又不是等米下锅
+  A：说好每月8号，是我记岔了，别跟我客气
+  B：那就还按老数？
+  A：嗯。房租那块也一起算，房子住着还行吧
+  B：挺好的，离公司骑车十分钟
+  A：那先住着，租金我来，你别操心
+  B：张哥，你这弄得我都不好意思了
+  A：我乐意，别多想，转你了查收
+  【系统消息】A 向 B 转账 9500 元，已收款。
+  B：收到啦，怎么还带个零头，9500
+  A：生活费8000，房租1500，一块算的
+  B：嗯，我记到小本本上啦
+  【10月10日】
+  B：商场今天周年庆，下班去逛逛
+  A：去吧，看中什么拍给我
+  B：就随便看看，想买支粉底
+  A：买好点的，别在脸上省
+  B：知道啦，您比我妈还操心
+  A：入秋了皮肤干，注意保湿
+  A：晚上我跟李总他们吃饭，带家属的那种，你别发消息来
+  B：好嘞，你有应酬我哪敢打扰
+  A：不是那个意思。李总夫人跟嫂子的闺蜜认识，万一刷到不好
+  B：明白，咱俩的聊天我从来不外说
+  A：平时聊天记录也勤删着点，手机别老攒着
+  B：嗯，我定期都清的
+  A：朋友圈别发咱俩合照，去年那张你删了吧
+  B：早删啦，就展会那张合影
+  A：不是信不过你，家里那位心思重，看见点影子能翻一星期
+  B：我懂，放心，我从没跟人提过你
+  A：你懂事，这也是护着你。逛完早点回
+  【10月11日】
+  A：展会昨天收尾，我下午的飞机回去
+  B：这么快，感觉你刚来呢
+  A：下月中旬再来，到时候带你去三亚待两天
+  B：三亚？我刚换岗位，怕走不开
+  A：请几天假，机票酒店我来安排
+  B：让我想想哈，突然请长假有点纠结
+  A：有啥纠结的，你就是闷，该出去走走
+  A：以后你安心上班，别的事有我
+  B：张哥，有时候我觉得这样挺不像话的
+  A：我对你好还需要理由？先登机了，落地聊
+  B：对了我妈上礼拜体检，血压有点高
+  A：严重吗，吃药没有
+  B：医生说不重，先饮食调理
+  A：少吃咸的，我认识个内科主任，要紧的话帮你约
+  B：先不用麻烦，她自己挺乐呵
+  A：有事随时说，别自己扛着
+  B：早上的三亚，我想好了，去！
+  A：这才对，行程我排好发你

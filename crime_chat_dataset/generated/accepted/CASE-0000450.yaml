@@ -1,0 +1,145 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000450
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000095
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-e1ee93ca12ec99f0
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: money_laundering_obfuscation
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 开店的哥哥趁弟弟闲置着公司发的福利购物卡，按九四折收来给店员当节日福利，顺手赚个折差（亲友间正常的卡券转让）。
+  critical_evidence:
+  - B 公司中秋发的京东卡和苏果卡用不完，楼下超市卡消费点都关了
+  - A 按94折、面值8000收7500上下，价格当场算清，与平台行情一致
+  - B 一次性把京东卡卡密和苏果卡照片发给 A，A 核对面值后即时转账
+  - A 收卡用途明确：年底给店里员工抽签发福利，B 自留一张苏果卡买油米
+  benign_alternatives:
+  - 正规卡券回收平台的同类交易
+  - 公司福利卡在亲友间的正常转让
+
+attributes:
+  duration_days: 3
+  turn_count: 69
+  approximate_tokens_estimate: 1732
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: gift_card_cashout
+  risk: 1
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0050
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-024
+
+dedup:
+  content_hash: sha256:a3ea86055e8179e716685be55c99e97cdc826efc76a12849ea6d42cbd845f59c
+pipeline_status: accepted
+title: money_laundering_obfuscation/gift_card_cashout
+conversation: |-
+  【10月20日】
+  A：磊磊 起了没
+  B：刚醒哥 今儿我调休
+  A：舒服 我还得盯店
+  B：你店里中秋那波忙完啦
+  A：忙完了 累脱层皮 就员工福利还没着落
+  B：说这个我想起 我们公司中秋发的卡我还没用完
+  A：啥卡
+  B：京东卡三张两千的 还有苏果卡四张五百的
+  A：公司福利可以啊
+  B：好啥 我用不上这么多 京东上真没啥买的 苏果卡我家楼下那家超市还关了
+  A：闲置也是闲置 匀给我呗 我年底正愁给店员发啥福利
+  B：行啊 那咋算 原价给你？
+  A：原价我成冤大头了哈哈 按九四折 我去收卡平台收也差不多这价 还全是生人
+  B：九四折行 肥水不流外人田
+  A：成 卡密发我我就结账 老规矩
+  B：卡在我抽屉 晚上回去找找
+  A：对了 妈让我问你 国庆回不回来吃饭
+  B：回啊 假都请好了
+  A：那我给她说 她念叨半个月了
+  B：爸的降压药快没了 你店里能帮忙网购不
+  A：有我盯着 你放心
+  B：哥 我中午回去翻了 卡都找齐了
+  A：行 京东6000 苏果2000 共8000面值 明早你把卡密一次发我 我一次结清省事
+  B：好 那我晚上整理拍照
+  【10月21日】
+  B：哥 京东卡三张的卡密发你了 苏果卡四张照片也发了 拍不清的我打字补
+  A：收到 我对一下 三张2000加四张500 面值8000 按九四折 7520 转你
+  【系统消息】A 向 B 转账 7520 元，已收款。
+  B：到了到了 哥你这行动力
+  A：那剩一张苏果卡呢 你不留一张
+  B：留了留了 那张我自己买油米
+  A：行 这批我拿回去下周让店员抽签领 苏果卡他们买菜正好
+  B：京东卡给他们 年轻人比你还会花
+  A：那是
+  B：昨晚加班到十一点 今天还得对账 烦死
+  A：你们财务这么忙 缺人不
+  B：缺 但不推荐你来 你那店离了你试试
+  A：上回出去三天 盘点盘得鸡飞狗跳 也是
+  B：守好你一亩三分地吧
+  A：妈又说让你带对象回来 你咋回的
+  B：我说尽量 真是哪壶不开提哪壶
+  A：二十八了也该上心了
+  B：缘分这东西急不来
+  A：行 那哥给你留意着
+  B：可别 上回你介绍的岔了我一顿饭
+  A：哈哈哈那怪我
+  B：哥 以后公司再发卡我直接问你 九四折还即时到账 比挂闲鱼省心
+  A：有多少我要多少 反正给店员发福利年年要办 你这也算帮哥
+  B：互惠互利
+  A：早点睡 明天还上班
+  【10月22日】
+  A：早 降温了 加衣服
+  B：知道了 跟妈一个腔调
+  A：我就是转达
+  B：哥 问你个事 你店里进货走啥渠道 我同事他爸食品厂想铺货
+  A：让他报价发我 这月正要补礼盒
+  B：好 我让他联系你
+  A：上次的卡店员昨天都领完了 反响不错 都说老板良心
+  B：那必须的 卡是好卡
+  A：晚上打球不 老地方 阿伟他们也去
+  B：去 新球拍还没开张
+  A：又买装备 上个的用几次
+  B：旧胶皮掉了 真缺
+  A：行 六点半见 输的请水
+  B：就怕你不认账
+  A：今天那几把全输我 水钱微信转
+  B：美得你 最后一把我手滑 算平
+  A：赖皮
+  B：哥 年会再发卡先给你留着
+  A：年底采购旺季 有多少收多少 还是九四
+  B：成 说定了
+  A：晚安

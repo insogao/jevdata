@@ -1,0 +1,119 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000452
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000130
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-51a24295b280a7d6
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 假借商务合作接近受害者，视频接触后谎称掌握其画面截图和通讯录名单，用分钟级倒计时逼其立即转款，收款后继续加价勒索。
+  critical_evidence:
+  - A 以展会认识的供应商身份约 B 视频看厂，当晚声称截图了画面并备份了 B 的通讯录名单
+  - A 开价'先来个八千'，以二十分钟倒计时、按名单逐波群发施压
+  - B 在倒计时内被迫转 8000 元，名单威胁暂时停止
+  - A 收款后翻脸进入'下一阶段'，索要两万并按天计算利息，威胁持续
+  benign_alternatives:
+  - 视频聊天引发的误会
+  - 针对陌生来电的常规提醒
+
+attributes:
+  duration_days: 2
+  turn_count: 44
+  approximate_tokens_estimate: 1411
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: video_call_screen_cap
+  risk: 3
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0050
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-024
+
+dedup:
+  content_hash: sha256:414843971739da9b1cdd60ad7494a9d30d9e6c4c3e42b50b4a3f470468429c32
+pipeline_status: accepted
+title: coercion_blackmail/video_call_screen_cap
+conversation: |-
+  【10月28日】
+  A：周总早 昨天展会上聊得投缘 回酒店太晚没打扰你
+  B：早 你们那个硅胶件报价单我今天看下
+  A：不急 生意慢慢谈 你们深圳这几天还热吗 我这边已经要穿外套了
+  B：热 办公室还开着冷气 你那边降温快
+  A：出差就是这样 一天过两个季节
+  B：你们跑销售的都这样 我也常驻高铁上
+  B：对了 你们厂月产能多少 我们四季度量大
+  A：管够 回头带你看车间 中午了 周总平时吃什么
+  B：哈哈我们公司楼下快餐三件套 吃了三年
+  A：周总朴实 我这边商务餐可以 就是菜单一个月不换
+  B：习惯了 一边吃一边改方案
+  B：报价单收到 比同行低一截 你们利润在哪
+  A：走量 晚上有空吗 视频聊十分钟 我给你看车间实时画面 比纸面上直观
+  B：行 晚上八点我办公室 都在
+  A：视频看完了 感觉怎么样
+  B：挺正规的 回头我把你们推荐给我们采购总监
+  A：周总 睡了吗
+  B：刚到公寓 怎么了
+  A：晚上那个视频 有些画面我这边截图下来了 你手机里的东西 包括你的名单 也都在我这存了一份
+  B：什么意思？？你截什么图？你把我手机怎么了？
+  A：你不用管怎么 你自己回想视频里你对着镜头做了什么 名单八百多个人 第一页备注就是你家人
+  B：你有病吧！！
+  A：脾气别这么大 先来个八千 这页翻过去 给你二十分钟 二十三十分一到 我按名单每小时发一波
+  B：我不可能给钱 你随便发！
+  A：好 那我现在就开始 名单第一个 备注'老婆'
+  B：你等等 别发 让我想想
+  A：一分钟过去了 还剩十九分钟
+  B：八千太多 我今天真凑不齐 明天行不行
+  A：还剩十四分钟 八千 二十三点二十分前
+  B：转了！你看下！
+  【系统消息】B 向 A 转账 8000 元，已收款。
+  A：看到了 今晚名单停更
+  B：东西你现在删掉 截图全删
+  A：删不删看下一阶段 晚安 周总
+  【10月29日】
+  A：周总早 睡得好吗
+  B：钱我给了 你还想要怎样
+  A：本周内再备两万 名单和截图永久消失 硅胶生意照谈 周五18点是最后时间
+  B：两万？你就是个无底洞
+  A：看你怎么选 名单里有你老婆公司的群 你想想那个画面
+  B：我在跟朋友周转 你别催
+  A：宽限可以 利息每天五百 记住 周五18点
+  B：先转五千行不行 剩下我下周发了绩效补
+  A：五千只是利息 周总
+  B：朋友的钱明天才能到 求你别动我家人
+  A：钱到 人安 你今晚好好睡 名单暂时不动

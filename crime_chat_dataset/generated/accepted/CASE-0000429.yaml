@@ -1,0 +1,146 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000429
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000127
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-76e3b026133d86d9
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A 拿着当年合作项目留下的一箱原始单据要挟 B，以拿给老朋友们看相逼，索要五万换取沉默，让 B 花钱买回自己的名声。
+  critical_evidence:
+  - A 反复暗示手里留着当年项目的一箱原始单据，签收底联俱全，多年未处理
+  - A 以给老朋友们看、这事对你名声不好施压，称别闹大对 B 没好处
+  - A 开价五万一次清，当面烧掉单据且保证不再提，拒绝 B 的一万和三万还价，最终让步到四万五
+  - 施压持续多日步步升级并设定最后期限，双方始终不点破单据的具体用途
+  benign_alternatives:
+  - 旧项目尾款或赔偿的私下和解
+  - 因人身损害赔偿进行的调解协商
+
+attributes:
+  duration_days: 5
+  turn_count: 69
+  approximate_tokens_estimate: 1682
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: victim_silence_fee
+  risk: 3
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0048
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-024
+
+dedup:
+  content_hash: sha256:8d9a2ce3c0584cef854d6c6d9e1a6f127b7d37be44ac05c1496e0d3b66d39e63
+pipeline_status: accepted
+title: coercion_blackmail/victim_silence_fee
+conversation: |-
+  【10月10日】
+  B：老郑？好几年没冒泡了吧
+  A：方总，最近生意兴隆啊
+  B：混口饭吃。你怎么想起我了
+  A：前两天回老家收拾屋子，翻出些老物件，想起当年一块干项目的日子
+  B：哈哈，都老黄历了
+  A：老黄历也有值钱的，回头聊
+  A：睡了没
+  B：还没，怎么了
+  A：收拾出来一只箱子，全是咱俩当年那个项目的原始单子，签收底联都在
+  B：那些东西你怎么还留着
+  A：我这人念旧，一直没舍得扔
+  B：都过去这么多年了，纸都潮了吧
+  A：纸没潮，字都清楚着呢
+  B：……你想说什么
+  A：没什么，就是念旧。改天喝茶
+  【10月11日】
+  A：昨晚说了让你没睡好？
+  B：老郑，这么多年了，你到底想干嘛
+  A：我什么都没干啊。就是几个老哥们聚会，聊起当年，都说那份单子神神秘秘的
+  B：那都是按公司流程走的，经得起看
+  A：经不经得起，外人只看热闹。这事要是传出去，对你名声不好啊，方总
+  B：你这是威胁我？
+  A：瞧你说的，老朋友叙旧罢了。我先忙
+  B：有话你就直说
+  A：周四晚上你方便吗，出来坐坐
+  B：坐可以
+  B：中午食堂又是那几样，吃腻了
+  A：你们大公司食堂还挑什么
+  B：天天吃谁不腻。你中午吃的啥
+  A：楼下牛肉面，加了双份肉
+  B：行啊，日子不错
+  A：凑合活着
+  【10月12日】
+  A：到了，老地方旁边的茶馆
+  B：来了
+  A：茶给你点好了
+  B：有话就说吧
+  A：那箱东西放我这儿一天，我心里就堵一天。你我都是要脸面的人
+  B：所以呢
+  A：五万，一次清。东西我当着你的面烧了，往后烂在肚子里，谁也不提
+  B：五万？你抢钱呢
+  A：方总，你如今开好车住大平层，五万对你算什么
+  B：最多一万，就当老哥几个的喝茶钱
+  A：一万是打发叫花子。这个价我没法跟自己交代
+  B：那没得谈，你爱怎么办怎么办
+  A：别急着走。回去想想，周五之前给我个话
+  【10月13日】
+  B：早，今天降温了，你加衣服
+  A：加了，老骨头不经冻
+  B：你儿子今年高考完了吧
+  A：完了，考上省内一所大学，挺好
+  B：恭喜啊，回头请我喝酒
+  A：想得怎么样了
+  B：老郑，做人留一线
+  A：我就是留了一线才先来找你，没直接往外送
+  B：你就不怕我把当年你的事也抖出来
+  A：我光脚的不怕。你不一样，你输不起这个名声
+  B：……你不要欺人太甚
+  A：我这是最后一次好好说话。别闹大，对你没好处，你小儿子还在上高中吧，家长群里什么嘴都有
+  B：你敢牵扯家里人试试
+  A：瞧你急的，打个比方。五万，明天中午之前
+  B：容我到明天
+  【10月14日】
+  B：三万行不行，我现在就能去凑
+  A：四万五，不能再少，这是我最后的让步
+  B：你这是往死里逼
+  A：我等了这么多年，不差这一天。今天中午十二点前，老规矩，现金
+  B：中午我凑不齐
+  A：那就下午五点前。过了今晚，我箱子直接拎去给老哥们开开眼
+  B：给我到晚上十点
+  A：行，看在多年交情上，十点，过时不候
+  B：钱凑得差不多了，地方你定
+  A：还是那个茶馆包间，你一个人来
