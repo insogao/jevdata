@@ -1,0 +1,125 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000405
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000146
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-53ac02bddace6418
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: other_illicit_coordination
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 运营主管与合作方按统一排期指挥上百个账号同步发布同一文案并维护评论区，疑似组织化造势控评，但话术与资金流均可作正常营销解释。
+  critical_evidence:
+  - 一百个自有矩阵号今晚八点按统一排期发布同一文案
+  - B文案随发随改，供应商另欠三组素材待催
+  - A按发票金额860元归还B垫付的物料印刷款并索要收据
+  - 评论区两班倒维护、日报汇报属常规运营动作
+  benign_alternatives:
+  - 企业新媒体矩阵统一投放预热
+  - 合作方垫付物料按发票报销
+
+attributes:
+  duration_days: 6
+  turn_count: 46
+  approximate_tokens_estimate: 1029
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: rating_farm_order
+  risk: 1
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0045
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:c9b534722dc6136569861acd8c0d319254218d1a4dd24146f0beac922aa8b2f6
+pipeline_status: accepted
+title: other_illicit_coordination/rating_farm_order
+conversation: |-
+  【10月9日】
+  A：下周双十一预热方案定了没
+  B：定了 排期发你了 一百个号都排进去 今晚八点统一发
+  A：行 文案用终版
+  B：文案我发你邮箱了
+  A：收到 我过下措辞
+  B：有要改的随时说
+  A：中午吃啥 楼下又排长队
+  B：点外卖吧 带你一家卖拌鸡的
+  A：行 拼个满减
+  B：链接发你了
+  【10月10日】
+  B：预告数据出来了 曝光还行
+  A：行 今晚正片按点发 别提前也别拖
+  B：知道 定时都设好了
+  A：对了物料印刷你垫的钱 我今天走流程转你
+  B：嗯 发票昨天就开好了 抬头是公司全称
+  B：预报说明天有台风 下班早点
+  A：知道 外卖估计也停
+  B：我囤了两箱泡面
+  A：行动派
+  【10月11日】
+  A：台风过了没 你们那边
+  B：停了一晚上 早上已经小了
+  A：昨晚一百个号那条 数据我拉了 整体齐整
+  B：在预期里 后面还有两波
+  A：供应商那批素材呢
+  B：上次那家还欠我们三组图 我今天催
+  A：物料款转你了 对一下 就按发票数
+  【系统消息】A 向 B 转账 860 元，已收款。
+  B：收到 收据随后给你 票随报销单一并给你
+  【10月12日】
+  A：第二波今晚发 排期再发我一遍
+  A：没问题就锁 评论区按预案维护
+  B：锁了 两班倒
+  A：明早老板看数 日报模板理一版
+  B：下午给你 周五团建我报了桌游组
+  A：输了你请奶茶
+  B：赢了你请 双份浓缩那种
+  【10月13日】
+  B：日报发你邮箱了 对比图在附页
+  A：看到 转大群了 数据拿得出手
+  B：今晚最后一波 发完收工
+  A：收完做复盘 明天碰一下
+  A：颈椎咋样 上回你说疼
+  B：贴了膏药 好多了
+  A：跟我练游泳 颈椎救星
+  B：行 办卡喊我凑个同行价
+  【10月14日】
+  A：最后一波稳了 整周期曝光破预期
+  B：复盘明早给你全的 欠的三组图也追上了 明晚交
+  A：好 下周排期你先出个草稿
+  B：下午发你

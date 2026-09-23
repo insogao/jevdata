@@ -1,0 +1,124 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000426
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000096
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-8050ad4f4c736c7d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 只是想借 B 的卡代收自己批发部双十一期间的顾客货款，一早统一转回对公账户，属熟人间的正常资金周转帮忙。
+  critical_evidence:
+  - 过夜的钱是 A 自己批发部的顾客扫码货款，每笔对应后台订单，可逐笔核对
+  - A 主动提出按千分之三给 B 补手续费，B 全程知情、随时可以叫停
+  - 钱一早转回 A 的对公账户，不涉及贷款、不查 B 的征信
+  - A 主动出示营业执照和订单明细供 B 验证，双方把话说透
+  benign_alternatives:
+  - 帮忙代收货款
+  - 亲属账户周转
+
+attributes:
+  duration_days: 3
+  turn_count: 49
+  approximate_tokens_estimate: 1408
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: borrow_passbook_clean
+  risk: 0
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0047
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:195419bc806a45c2ce04f191a225b12e33e767cce5326ad19296b9e4bb1c3a52
+pipeline_status: accepted
+title: money_laundering_obfuscation/borrow_passbook_clean
+conversation: |-
+  【10月20日】
+  A：老周 睡没 跟你商量个事
+  B：说 你那嘴皮子 我先听听
+  A：双十一我这批发部货款爆了 自己卡不够使 想借你卡放你卡里过一夜 第二天一早转回我对公户
+  B：过夜? 就在我卡里躺一晚?
+  A：对 不动你一分钱 手续费我按千分之三给你补 不能让你白帮忙
+  B：你这生意做得可以啊 我想想
+  B：哎不说了 先给我点杯奶茶 加班的命
+  A：行 杨枝甘露? 你就这点出息
+  B：加珍珠 七分糖 谢啦
+  A：下单了 半小时到 搬砖去吧
+  B：话说你批发部一天要过几十笔货款?
+  A：双十一囤货的顾客扫码付的 每笔都挂着订单 我执照挂店里 你又不是没见过
+  B：到账的都啥人啊
+  A：都是店会员的名字 你要不放心 我把后台订单截给你 一笔一笔对得上
+  【10月21日】
+  A：昨晚那场看了没 绝杀!
+  B：没 加班到家十一点 看集锦了
+  A：可惜了 你要是早睡十分钟……
+  B：行了别补刀 气死
+  A：想好没 事情不复杂
+  B：我这卡是工资卡 不会有啥影响吧
+  A：征信不影响 又不是贷款 不查你征信也不占额度 钱进来一早转回我对公户
+  B：我卡里就多一笔货款呗
+  A：对 你的流水清清爽爽 就当帮我个忙
+  B：为啥不用你老婆的卡
+  A：本来第一个就想着你 你人就一个稳字
+  B：……行吧 那我到时候看一眼订单
+  B：双十一购物车你清了没 我囤了六箱纸
+  A：我等零点付尾款 你帮我看看那个空气炸锅值不值
+  B：链接发来 我帮你比价
+  A：行 中午吃完饭发你
+  A：周四晚上开始进账 你把卡号发我
+  B：卡号发你了 你可说好就过一夜
+  【10月22日】
+  A：昨晚到账正常 一早全转回对公户了 你看卡里是不是清的
+  B：清了 一分不剩 对得挺快啊
+  A：做生意的讲究及时 你要核对我把昨天的订单号发你 后台一笔一笔能对上
+  B：行 手续费呢
+  A：千分之三 中午给你现金 你点清楚
+  B：周四还有?
+  A：嗯 周五还有一批 半夜到账 早上七点前全转走 不耽误你上班
+  B：行 说好了就过一夜 多一分钟都不行
+  B：办了张健身卡 陪我去不 明晚
+  A：就你? 跑十分钟就得躺
+  B：爱来不来 自己撸铁多无聊
+  A：行 明晚陪你 但说好练完你请夜宵
+  A：记得 周五晚上手机别静音 到账我喊你
+  B：喊我干嘛 我又不操作
+  A：你把到账短信截给我核数额 转完我回你一句
+  B：这么讲究
+  A：做生意的就讲究个及时 结算不隔夜 你就当帮我搭把手

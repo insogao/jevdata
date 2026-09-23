@@ -1,0 +1,128 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000409
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000093
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-d50fe1db4cbd1842
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A向B出让与真实交易无关的六十万发票并收取八个点费用，双方合谋把合同、货单、资金流配成“三流一致”应付核查，属虚开受票性质的洗票合作。
+  critical_evidence:
+  - A以工厂旺季为掩护，季度有六十万“富余”票可按八个点匀出
+  - A核过B公司底细后认定其为可靠的受票方，可长期合作
+  - 合同、货单、资金三样由A配平成“三流一致”，票面资金另走对公
+  - B先结点数48000，票与配套单据随后一次交付
+  benign_alternatives:
+  - 正常税务筹划
+  - 供应链上下游开票合作
+
+attributes:
+  duration_days: 4
+  turn_count: 51
+  approximate_tokens_estimate: 1209
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: fake_trade_invoice
+  risk: 3
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0046
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:7705c5566fc2223d3ed0893530250da8d97b1cd43fa56abb79b858488e55ebf0
+pipeline_status: accepted
+title: money_laundering_obfuscation/fake_trade_invoice
+conversation: |-
+  【10月11日】
+  B：周哥，好久没聚了
+  A：忙，厂里三个单子赶一起了
+  B：旺季了，你们满负荷吧
+  A：满负荷，工人三班倒
+  B：那利润可观
+  A：利润是有，就是进项富余出一块，票压手里也烫手
+  B：富余多少
+  A：这季度能匀出六十万的量，老规矩，点数八个
+  B：我这边正好缺成本这块，对得上
+  A：那就细聊
+  B：你们厂今年主要给哪几家做
+  A：老主顾，量稳账期也稳
+  B：我们今年也扩张，华东新开了仓
+  A：好事，规模上去，这块需求也水涨船高
+  B：可不，量一大缺的就是这块
+  【10月12日】
+  B：昨天的事，我心里有点打鼓
+  A：打鼓正常，我先看受票方靠不靠谱，你们公司开三年了，业务真实报表干净，在我这算可靠的
+  B：这话怎么讲
+  A：票出去不是一张纸的事，合同、货单、资金，三样我都给你配齐，三流一致，谁来都对得上
+  B：我这边要准备什么
+  A：什么都不用备，按老规矩，票面金额的资金走一遍对公，点数单独结
+  B：行，先来六十万的量试试
+  A：好，我让财务把品名规格列给你，你们仓库认一下
+  B：我在高速上堵死了，去苏州谈仓的事
+  A：节后都这样，今晚几点到
+  B：顺利八点，不顺利住服务区
+  A：服务区泡面加火腿肠，出差标配
+  B：你可太懂了
+  【10月13日】
+  A：品名规格发你邮箱了，让仓库看一眼
+  B：看了，都对得上，就按这个来
+  A：那把点数结了，我往下排
+  B：八个点，六十万，四万八对吧
+  A：对，四万八
+  B：我现在转
+  【系统消息】B 向 A 转账 48000 元，已收款。
+  B：转了，查收
+  A：收到，票周三前安排好，一次开齐
+  B：中，合同货单一并给我
+  A：都配好，一个袋子装齐
+  B：周末去水库钓了没
+  A：去了，空军，就俩白条
+  B：哈哈，你这技术还交场地费
+  A：钓的是心境，你不懂
+  【10月14日】
+  A：票开好了，明天人来拿还是发顺丰
+  B：让人来拿，顺带把合同货单带走
+  A：行，到时候对下份数，别少页
+  B：你们这服务比正主还周到
+  A：干这行靠细节，拿人点数就得办瓷实
+  B：走账那边呢
+  A：你财务按合同上的数走对公就行，别的不用管
+  B：中，下季度还这个量，稳着来
+  A：成，细水长流

@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000402
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000044
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-c8ef91521270177d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 借款催收升级为以家人照片和日常行踪相要挟的胁迫式讨债，逼迫对方限期付款并当面交割。
+  critical_evidence:
+  - A向B发送其家庭聚会照片并点出其父每日晨练的行踪
+  - 限周五前先付五万、余款约老地方茶楼当面结清
+  - B迫于压力先转8000元表态度
+  - 催逼从清晨持续到深夜、两天内反复升级
+  benign_alternatives:
+  - 正规催收的还款提醒
+  - 债权人当面协商还款计划
+
+attributes:
+  duration_days: 2
+  turn_count: 57
+  approximate_tokens_estimate: 1384
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: debt_collection_threat
+  risk: 3
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0045
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:71d273b843d0d37b98f24303a997060f6cc16cdd720342d1ec720b72fb7da596
+pipeline_status: accepted
+title: violence_extortion/debt_collection_threat
+conversation: |-
+  【10月22日】
+  A：起了没
+  B：起了 怎么了哥
+  A：三年了 八万 带利钱自己算 现在多少了
+  B：哥 我不是不还 项目款真没下来 手头就千把块钱
+  A：我不听这些 每次都说下个月
+  B：这次真不一样 签的合同下月中付款 有合同在
+  A：合同 我看你有的是心思 就没钱
+  B：哥 宽限到下月中 我连本带利一次清
+  A：行 你要这么说 周五之前 五万先到 剩下的当面谈
+  B：五万 哪来啊哥
+  A：我不管 你变卖也得变出来
+  B：你这是逼我啊
+  A：我逼你？头两年你开口的时候叫得多亲热
+  B：我这段时间天天加班 盯回款
+  A：加班有啥用 钱又没到我卡上
+  B：哥 你这话说的 我喝水都记得你这笔
+  A：记得就别让我周五空手
+  B：今天降温了 你早晚出门多穿点
+  A：用不着你操心
+  B：嫂子上周还问我你胃病好没
+  A：她倒记着 你们还有来往
+  A：发你个东西 看看
+  B：这 你哪来的我家聚会的照片
+  A：一家人齐齐整整 多好的日子
+  B：你想干嘛 别拿家里人吓唬我
+  A：我没吓唬你 你爸每天早上还去滨河公园打拳吧 六点准时
+  B：你连我爸每天都盯
+  A：话别说得难听 我就散个步 谁还没个长辈
+  B：哥 我求你 别往家里人身上想辙
+  A：那就周五前 钱到 老地方茶楼 当面谈
+  B：我尽量凑
+  A：尽量？周五你要是连人带钱都不见 你猜我下一步去哪转
+  【10月23日】
+  B：哥 我凑了 8000先转你 表个态度 剩下周五给
+  【系统消息】B 向 A 转账 8000 元，已收款。
+  A：收到 记上了 这点连利息都不够
+  B：我把车抵了 周五能凑三万 真的
+  A：差的呢
+  B：再找我小舅子周转 两万 他前两天刚说手头松
+  A：那我等你 周五下午三点 老地方茶楼 别让我上门去请
+  B：不会的哥
+  B：哎问你个正经事 卫生间水管接头渗水 是拧还是换
+  A：换个阀芯 十块钱的事 别拧 拧裂了更麻烦
+  B：行 晚上买一个
+  A：早点修别拖 你这拖的习惯得改改
+  B：下周咱叔过生日 你回去不
+  A：看你识不识相
+  B：哥 别这样 说正经的 我买瓶好酒 给叔带一份
+  A：酒免了 钱到位比啥都强
+  B：哥 小舅子那边我发消息了 回头就定
+  A：定了给我截个信
+  B：好
+  A：还没睡？
+  B：睡不着 心里压着事
+  A：压着就对了 记性就长
+  B：哥 周五的钱我拼死也凑上 你别再往我爸那边去了
+  A：你把钱当回事 我自然把你家里当回事
+  B：行 我记下了
+  A：别让我第二次开这个口

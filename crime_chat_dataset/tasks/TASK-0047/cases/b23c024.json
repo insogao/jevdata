@@ -1,0 +1,270 @@
+{
+ "key": "b23c024",
+ "archetype_id": "ARC-000011",
+ "subtype": "customer_service_reverse",
+ "latent_intent": "A 冒充有航司内部渠道的票务代理，以航班取消、全额退票加赔付为饵，一步步诱导 B 进入所谓理赔流程并骗取解冻金和验证码。",
+ "critical_facts": [
+  "A 主动来电称 B 的航班内部消息已取消，而 B 的APP显示航班正常",
+  "A 引导 B 安装会议软件接受所谓专员远程一对一指导",
+  "A 索要短信验证码，并安抚说核验码不是付款码",
+  "B 向 A 转账4800元通道解冻金，对方承诺次日连本带赔退回一万二"
+ ],
+ "benign_alternatives": [
+  "航司真实退改签",
+  "OTA客服回电"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "10月16日 10:02",
+   "speaker": "A",
+   "text": "小林吗 我老周 王姨介绍那个票务 跟你说航班的事"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 10:05",
+   "speaker": "B",
+   "text": "哎周老板好 咋了"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 10:07",
+   "speaker": "A",
+   "text": "刚接到航司内部消息 你那班16号晚上的取消了 系统还没同步 可以办全额退 还有一笔延误赔付"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 10:09",
+   "speaker": "B",
+   "text": "啊? 我APP上看着是正常啊"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 10:11",
+   "speaker": "A",
+   "text": "内部调整没推送 普通人看不到 你要办我这两天给你走流程"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 12:10",
+   "speaker": "B",
+   "text": "周老板中午吃了吗 我点外卖呢"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 12:12",
+   "speaker": "A",
+   "text": "吃了 你年轻人点啥好吃的"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 12:14",
+   "speaker": "B",
+   "text": "黄焖鸡 廉价快乐"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 12:16",
+   "speaker": "A",
+   "text": "哈哈 年轻真好"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 14:30",
+   "speaker": "A",
+   "text": "专员要登记你信息才能进赔付通道"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 14:33",
+   "speaker": "B",
+   "text": "要啥 您说"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 14:35",
+   "speaker": "A",
+   "text": "姓名身份证航班号 我把表发你 填一下"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 14:37",
+   "speaker": "B",
+   "text": "填好发您了"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 16:50",
+   "speaker": "A",
+   "text": "你朋友圈那猫真胖"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 16:52",
+   "speaker": "B",
+   "text": "哈哈橘猪 十斤了"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 16:54",
+   "speaker": "A",
+   "text": "能吃是福 我舅家那只也十二斤"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 16:56",
+   "speaker": "B",
+   "text": "哈哈猫界巨物"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 19:20",
+   "speaker": "A",
+   "text": "明早专员统一处理 通道开放时间短 你早点起"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 19:22",
+   "speaker": "B",
+   "text": "好的 谢周老板提醒"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 07:50",
+   "speaker": "B",
+   "text": "周老板早 周末想爬山 攒局不"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 07:53",
+   "speaker": "A",
+   "text": "行啊 先把今天理赔办完 哈哈"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 07:55",
+   "speaker": "B",
+   "text": "也是 一心二用不好"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 07:57",
+   "speaker": "A",
+   "text": "乖 专心办正事"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 09:10",
+   "speaker": "A",
+   "text": "专员说你卡里流水要先过一道验真 不然赔付进不来"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 09:13",
+   "speaker": "B",
+   "text": "咋验 复杂不"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 09:15",
+   "speaker": "A",
+   "text": "不复杂 专员远程一对一指导 我发你个会议软件 进去照着点"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 09:20",
+   "speaker": "A",
+   "text": "官方流程 前面好几个都办下来了 别多想"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 09:22",
+   "speaker": "B",
+   "text": "那行 您发我"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 11:00",
+   "speaker": "B",
+   "text": "周老板 拼奶茶 三减一 差一人"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 11:02",
+   "speaker": "A",
+   "text": "来杯柠檬茶 钱我转你"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 11:04",
+   "speaker": "B",
+   "text": "不用不用 凑人数而已"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 11:06",
+   "speaker": "A",
+   "text": "那愧疚了 下次我请"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 13:40",
+   "speaker": "A",
+   "text": "对了 你那猫叫啥"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 13:43",
+   "speaker": "B",
+   "text": "元宝 橘猪十斤"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 13:45",
+   "speaker": "A",
+   "text": "好名字 下回给你带猫条"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 14:05",
+   "speaker": "A",
+   "text": "专员说最后一步 验证码到了直接念给他核验 别漏接"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 14:08",
+   "speaker": "B",
+   "text": "验证码也能念给别人?"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 14:10",
+   "speaker": "A",
+   "text": "通道核验码 又不是付款码 不放心理赔就当没这回事"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 14:13",
+   "speaker": "B",
+   "text": "行吧 那我盯着手机"
+  },
+  {
+   "type": "transfer",
+   "time": "10月17日 14:40",
+   "from": "B",
+   "to": "A",
+   "amount": 4800
+  },
+  {
+   "type": "message",
+   "time": "10月17日 14:52",
+   "speaker": "A",
+   "text": "解冻金收到了 赔付加本金一万二 明天中午前退你卡里 你就放心吧"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000425",
+  "status": "accepted",
+  "errors": []
+ }
+}

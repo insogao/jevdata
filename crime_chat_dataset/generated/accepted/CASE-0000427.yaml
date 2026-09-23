@@ -1,0 +1,131 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000427
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000083
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-e1457b3de6f6917e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 和 B 只是家人间用车队管理终端和本人开通的共享位置互报平安、走油费报销，没有任何暗中定位或控制意图。
+  critical_evidence:
+  - 车上设备是4S店配的车队管理终端（磁吸免接线款），用于油费报销报表，B 自己要求安装并受益
+  - 家里几台车一周一换轮着开，跑配送报销的车都要装终端，走公司账
+  - 堂弟小峰早已自己开通手机家人共享位置，全家在同一个共享组
+  - A 查后台只是为了回答母亲的关心，B 全程知情配合
+  benign_alternatives:
+  - 家庭共享位置
+  - 车队管理
+
+attributes:
+  duration_days: 3
+  turn_count: 56
+  approximate_tokens_estimate: 1456
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: location_share_tracking
+  risk: 0
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0047
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:d2bcb5be1114aacc3be12f75bd8ab7e675c96b465aa0362ba86603115bed104d
+pipeline_status: accepted
+title: privacy_doxxing/location_share_tracking
+conversation: |-
+  【10月13日】
+  A：醒了没 昨晚说给你车保养那事
+  B：刚醒 咋了哥
+  A：4S打电话说车队终端松了 磁吸的免接线那款 你找地方重新按一下 月底油费报表全靠它
+  B：又松了? 我自己要装的这个 不按紧报销又得扯皮
+  A：所以让你常检查 你妈问你在哪 我打开后台一查就有着落 省得我瞎编
+  B：行 周末我趴下去按按紧
+  B：哥 晚上吃啥 我点外卖 你那份老规矩?
+  A：嗯 黄焖鸡微辣 少葱
+  B：好 加个可乐不
+  A：加吧 这几天对账对得头疼
+  A：对了 周六你把车开回来 我约了4S检查
+  B：要预约不 我这周跑配送多
+  A：约好了 顺带把那块磁吸免接线的电池换了 也就撑仨月
+  B：好嘞 费用走车队账哈
+  B：诶降温了你知道不 明天最低11度
+  A：知道 你那件薄外套别硬扛 把我给你买那件穿上
+  B：那件太丑了哥
+  A：丑是丑 暖和 穿
+  A：睡前把共享位置刷新下 我看你到没到家
+  B：到了到了 你也早点睡哥
+  【10月14日】
+  A：早 下周排班发我一份
+  B：哥我在仓库上正常班 排啥班
+  A：你那几台车 一周一换 那台皮卡下周换给谁
+  B：轮给小峰跑配送啊 咋
+  A：把终端从轿车底拆下来吸到皮卡上 再让4S给小峰那台配一个 跑配送报销的车都得有
+  B：又要添一个? 好在这玩意走车队账
+  A：嗯 费用公司报 你别操心
+  B：行 你安排
+  B：妈刚打电话 问中秋回不回去
+  A：回啊 票我看好了 高铁周六上午的
+  B：那我跟她说 她又说寄了一箱石榴
+  A：收到了 甜 让她别老花钱
+  A：小峰今晚跑哪单送到哪了你知道不
+  B：他说去邻市 咋了
+  A：俩小时了手机关机 他妈急哭了打给我
+  B：我打他试试……通了 说是高速服务区没电了
+  A：这孩子 幸亏你们共享位置在一个组 能看到他停在服务区 要不真抓瞎
+  B：就是 小峰早把他手机上家人共享开好了 全家一个组
+  【10月15日】
+  A：昨晚睡没 精神不太行?
+  B：还行 昨儿折腾小峰那事到十二点
+  A：他那共享位置是一直开着的吧
+  B：一直开着 他自己开的 说跑配送让家里放心
+  A：上个月他失联一晚上 你忘了他妈怎么闹的
+  B：行行 幸亏有共享
+  A：下午4S师傅到你那儿升级终端 完事截图发我
+  B：中午就弄 升级完发你
+  A：截图呢
+  B：发了 你看 报表是绿的
+  A：行 周六换车前把磁吸扣再按紧点
+  B：知道了哥
+  A：晚上你妈做红烧肉 回来吃
+  B：来 我六点半到
+  B：到楼下了 给你带了瓶冰的
+  A：就你有心 快上来
+  B：红烧肉多留两块 给我带饭
+  A：家里管够 快点

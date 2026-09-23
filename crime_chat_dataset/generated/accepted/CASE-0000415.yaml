@@ -1,0 +1,144 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000415
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000116
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-303c94ee054f315e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: theft_robbery_property_crime
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 上级组织者利用下属的售后放行权限，把自购商品拆封保留的原厂封膜复原后申请退款，机器另售、货款两头赚，并按三七分成。
+  critical_evidence:
+  - A拆封时完整揭下原包装膜留作退货复原用
+  - 平台售后只核对机身码与包装码一致即放行退款
+  - 单笔一单赚一千，A、B三七分成
+  - B负责在售后后台放行退款单，A出货并控制节奏
+  benign_alternatives:
+  - 正常七天无理由退货
+  - 有瑕疵商品的协商退款
+
+attributes:
+  duration_days: 3
+  turn_count: 68
+  approximate_tokens_estimate: 1616
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: delivery_fraud_returns
+  risk: 2
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0046
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:ba39c00f7e06a1c9919462ec902c567ff23672e86c215afd59e4eaa2a170e680
+pipeline_status: accepted
+title: theft_robbery_property_crime/delivery_fraud_returns
+conversation: |-
+  【10月14日】
+  A：在吗老弟，晚上出来坐坐
+  B：领导今天这么有空
+  A：上午把那批东西理完了，下午没事
+  B：你最近神神秘秘的，又折腾啥呢
+  A：好事，晚上当面说
+  B：行，老地方
+  A：你现在还去撸铁不
+  B：去啊一周三次，胸肌快练没了，天天加班
+  A：我那张健身卡办了一年就去了两次，白瞎两千八
+  B：你就是懒，跟我晨跑三天都坚持不了
+  A：上次跑完膝盖疼了一礼拜
+  B：你热身没做够，下次先拉伸十分钟
+  A：说正事，上次提的那个路子，想好没
+  B：你先说清楚，我心里没底
+  A：底都在我这边，货我进渠道我熟，你就管售后那一关
+  B：我就是个打工的，那一关得过系统流程
+  A：流程是死的，他们售后只看码，机身码跟包装码对上就放行
+  B：真就这么简单？
+  A：就这么简单，原包装膜我有，拆的时候连封口都完整揭下来了，回头原样贴回去
+  B：那机器本身呢
+  A：机器走渠道直接出，一单赚一千，你我三七
+  B：你七我三？
+  A：我出货我担着，你就动动手指，三成哪里少了
+  B：晚上吃啥，小区门口新开了家牛肉面
+  A：昨天去过了，料给得少，汤倒还行
+  B：那换路口那家酸菜鱼
+  A：行你定位置，我六点半到
+  【10月15日】
+  A：早，昨晚想得怎么样
+  B：睡前又琢磨了下，前几单我先帮你盯着
+  A：行，先跑通一单看看水
+  B：那你今天下单，单号发我
+  A：下了，收货写驿站代收，单号发你了
+  A：记得下午盯一下进度
+  B：后台看到件了，备注我先写成正常七天无理由
+  A：这么写最稳，别多一个字
+  B：对了降温了，你秋装整了没
+  A：抢了件冲锋衣，直播间比店里便宜两百
+  B：发我链接看看
+  A：回头发你，那家发货慢，急穿别买
+  B：不急，备着过年穿
+  A：到手记得验下线头，我上回那件拉链是坏的
+  B：中，那单子现在啥进度了
+  A：你后台看下过了没
+  B：过了，钱原路退回去了
+  A：机器我这边有人接了，这单稳的
+  B：节奏别太快，一个月限个量
+  A：放心，量我控制着，专挑大促后单量大的时候
+  A：明天再来一单，老配置
+  B：行，单号早点给我，我下午三点后都在后台
+  【10月16日】
+  B：早，昨天那两单都走完了
+  A：到账了，速度挺快
+  B：我看了流水，来钱比工资快
+  A：少得意，这周就到这，见好就收
+  B：听你的，那我这周算交差了
+  B：周五团建你去吗
+  A：去，听说泡温泉，记得带泳裤
+  B：就你讲究，上次泡脚你都嫌烫
+  A：那不是烫，那年脚上的伤没好利索
+  B：行行行，你说了算
+  A：带你那件新冲锋衣，山上风大
+  A：这三单你的份子我算好了
+  B：三七的话是九百
+  A：给你凑个整
+  【系统消息】A 向 B 转账 1000 元，已收款。
+  B：到账了，还真给凑整了
+  A：说好的数就得给够，后面有的是
+  B：下周的单子提前一天说，我好排后台
+  A：成，都听你的，周一见
+  B：周一见，温泉泳裤别忘了

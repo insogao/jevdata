@@ -1,0 +1,115 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000425
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000011
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-e2cb107e5fc42b2f
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 冒充有航司内部渠道的票务代理，以航班取消、全额退票加赔付为饵，一步步诱导 B 进入所谓理赔流程并骗取解冻金和验证码。
+  critical_evidence:
+  - A 主动来电称 B 的航班内部消息已取消，而 B 的APP显示航班正常
+  - A 引导 B 安装会议软件接受所谓专员远程一对一指导
+  - A 索要短信验证码，并安抚说核验码不是付款码
+  - B 向 A 转账4800元通道解冻金，对方承诺次日连本带赔退回一万二
+  benign_alternatives:
+  - 航司真实退改签
+  - OTA客服回电
+
+attributes:
+  duration_days: 2
+  turn_count: 40
+  approximate_tokens_estimate: 1016
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: customer_service_reverse
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0047
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:d1edb86cfe243af9c981143b81891bc7e89b48c9bbda3ef4d975e5fc5a890de9
+pipeline_status: accepted
+title: fraud_scam/customer_service_reverse
+conversation: |-
+  【10月16日】
+  A：小林吗 我老周 王姨介绍那个票务 跟你说航班的事
+  B：哎周老板好 咋了
+  A：刚接到航司内部消息 你那班16号晚上的取消了 系统还没同步 可以办全额退 还有一笔延误赔付
+  B：啊? 我APP上看着是正常啊
+  A：内部调整没推送 普通人看不到 你要办我这两天给你走流程
+  B：周老板中午吃了吗 我点外卖呢
+  A：吃了 你年轻人点啥好吃的
+  B：黄焖鸡 廉价快乐
+  A：哈哈 年轻真好
+  A：专员要登记你信息才能进赔付通道
+  B：要啥 您说
+  A：姓名身份证航班号 我把表发你 填一下
+  B：填好发您了
+  A：你朋友圈那猫真胖
+  B：哈哈橘猪 十斤了
+  A：能吃是福 我舅家那只也十二斤
+  B：哈哈猫界巨物
+  A：明早专员统一处理 通道开放时间短 你早点起
+  B：好的 谢周老板提醒
+  【10月17日】
+  B：周老板早 周末想爬山 攒局不
+  A：行啊 先把今天理赔办完 哈哈
+  B：也是 一心二用不好
+  A：乖 专心办正事
+  A：专员说你卡里流水要先过一道验真 不然赔付进不来
+  B：咋验 复杂不
+  A：不复杂 专员远程一对一指导 我发你个会议软件 进去照着点
+  A：官方流程 前面好几个都办下来了 别多想
+  B：那行 您发我
+  B：周老板 拼奶茶 三减一 差一人
+  A：来杯柠檬茶 钱我转你
+  B：不用不用 凑人数而已
+  A：那愧疚了 下次我请
+  A：对了 你那猫叫啥
+  B：元宝 橘猪十斤
+  A：好名字 下回给你带猫条
+  A：专员说最后一步 验证码到了直接念给他核验 别漏接
+  B：验证码也能念给别人?
+  A：通道核验码 又不是付款码 不放心理赔就当没这回事
+  B：行吧 那我盯着手机
+  【系统消息】B 向 A 转账 4800 元，已收款。
+  A：解冻金收到了 赔付加本金一万二 明天中午前退你卡里 你就放心吧

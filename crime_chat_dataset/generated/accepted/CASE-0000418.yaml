@@ -1,0 +1,149 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000418
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000004
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-2dd5917119a08ac5
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 无隐藏意图：熟人店主因商品批次缺陷主动联系召回退款，全程官方渠道原路退回，还主动提醒对方防范验证码与屏幕共享，属正常售后与人情往来。
+  critical_evidence:
+  - B是A的老同学兼网店店主，后台天然可见A的订单信息
+  - 加湿器该批次有异响问题，B主动召回并承担运费退款
+  - 退款全程在App订单内原路退回，B明确劝阻验证码与屏幕共享、不引导任何外部链接
+  - 退款到账后B另转50元奶茶钱致歉，属人情往来，无后续索取
+  benign_alternatives:
+  - 真实平台退款流程
+  - 商家主动补偿
+
+attributes:
+  duration_days: 6
+  turn_count: 70
+  approximate_tokens_estimate: 1656
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: refund_deposit_bait
+  risk: 0
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0046
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:ac1ba2862fd4d359a937c70d15d9a1b5297555c0fae8eb7cc53bc3e99d68d6b5
+pipeline_status: accepted
+title: fraud_scam/refund_deposit_bait
+conversation: |-
+  【10月9日】
+  B：在没，跟你说个事
+  A：在，咋了这是，主动找我
+  B：你上上周是不是在我店里拍了个加湿器
+  A：拍了啊，给我妈买的，咋了
+  B：你那单我后台看到了，10月2号下的，牛奶白那款
+  A：咋，发货有问题？
+  B：不是发货，那批有批次问题，厂里发通知了，插电有异响
+  A：还没拆呢，难怪
+  B：先别拆，那批全部召回，我挨个联系
+  A：行，我等通知
+  B：退货我这边走，运费我出，你一分不花
+  A：这还差不多，老同学没白认
+  B：那必须的
+  A：你店现在做多大点了
+  B：俩人小作坊，加上我妹仨人，混口饭
+  A：上次同学聚会你也没来，都问你了
+  B：那阵子在广东看厂，实在走不开
+  A：年底再组一局，你可得来
+  B：来，提前把日子留出来
+  【10月10日】
+  B：退款我这边申请好了，你瞅下订单
+  A：我看看……看到退款入口了
+  A：要我配合弄啥不，我同事上回被骗就是发了验证码
+  B：千万别，验证码打死不给别人，连我都不能给
+  A：那要我共享屏幕帮你操作不
+  B：更不用，你自己手机上点就行，别跟任何人共享屏幕
+  A：行，我直接在订单里点
+  B：对，全程就在App订单里，别的链接一个都别点
+  A：点了，显示处理中
+  B：嗯，钱原路退回，一到三天到账
+  A：中，比想的痛快
+  B：这天气爬山正合适，你周末去不去香山
+  A：去啊，我们几个约了周六
+  B：带我一个呗，好久没出了
+  A：行，你开车还是地铁
+  B：开车，顺路捎你
+  A：那周六早上七点半小区门口见
+  【10月11日】
+  A：退款到账了，199一分不少
+  B：嗯，原路回去的，你看下订单状态关了没
+  A：关了，显示交易关闭
+  B：行，这单就算了了
+  A：你家那只橘猫咋样了，上次照片胖成球
+  B：十二斤了，兽医让减肥，它听见俩字就躲
+  A：跟我似的，喊减肥五年胖了八斤
+  B：哈哈哈，你俩一起减
+  A：它起码有人喂，我是自己喂自己
+  B：回头发你它戴嘴套的惨照
+  【10月12日】
+  B：对了，给你添麻烦了，奶茶钱安排上
+  【系统消息】B 向 A 转账 50 元，已收款。
+  A：你干啥，退款都收了还发啥红包
+  B：一码归一码，那是我店里的责任，这是请你喝奶茶
+  A：那我收了，周六爬山我请你吃烤肠
+  B：成，一人一根别铺张
+  A：那个职场剧你追没，又更了
+  B：追了，女主辞职那段拍案叫绝
+  A：我老婆非说男主是渣男，吵了一晚上
+  B：你老婆说得对，站你老婆
+  A：完了你俩单独辩论去吧
+  B：行，下周复盘群见
+  【10月13日】
+  A：周六天气预报多云，不晒
+  B：完美，我后备箱放两把折叠椅
+  A：你这是爬山还是搬家
+  B：有备无患，跟我妈出门养成的毛病
+  B：另外那单你看着给个评价就行，写不写都行，别勉强
+  A：必须写，就夸你售后敞亮
+  B：别夸我，夸产品就行，我就一转述的
+  A：行行行，听老板安排
+  【10月14日】
+  B：明早七点半，我发你定位
+  A：收到，水和面包我背上
+  B：少背点，山上有卖的，就是贵
+  A：那我背个空胃上去
+  B：哈哈哈，周六见
