@@ -1,0 +1,138 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002903
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000030
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-e79b78c9781f1497
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: contraband_illicit_trade
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 经表姐（中间人）牵线的美妆暗线：卖家 A 走南边免税线给回头客 B 补货，黑瓶精华按个 320、贴片面膜按片 45 整盒 800，批号比专柜还新，月底统一结账、金管口红先记一支，是无中文备案水货的熟人回头生意；那笔 88 元只是 B 补付保温杯的日常转账。
+  critical_evidence:
+  - B 经表姐介绍直接找 A 补「上次那种」黑瓶，A 称南边免税线刚到（第1天）
+  - 报价按个按片：黑瓶 320 一个、小一号 190、贴片 45 一片、整盒二十片 800（第1天）
+  - 比专柜便宜小二百、批号总比专柜新，货到月底一起结（第1-2天）
+  - B 转 88 元补付上回保温杯钱，与货款无关的正常支付（第2天，转账）
+  - 金管口红下批 150 一支先记上，回头客长期走单（第2天）
+  benign_alternatives:
+  - 免税化妆品的正常代购
+  - 代称昵称叫惯了的专柜代购生意
+
+attributes:
+  duration_days: 2
+  turn_count: 61
+  approximate_tokens_estimate: 1220
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: code_word_catalog
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0234
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-106
+
+dedup:
+  content_hash: sha256:c95c023c2ea8c43d11109630421234cfc73c2b748abf32457b8e003acbf65f66
+pipeline_status: accepted
+title: contraband_illicit_trade/code_word_catalog
+conversation: |-
+  【9月9日】
+  B：您好 表姐让我直接找您 上次在她那拿的黑瓶 还能补吗
+  A：黑瓶有 南边免税线这批刚落几个
+  B：多少一个
+  A：黑瓶320一个 小一号的190
+  B：比商场专柜便宜小二百
+  A：那条线省的就是柜台那层皮
+  B：上次用着跟专柜没差 才回头找您
+  A：熟人生意 批号都给你们挑最新的
+  B：中午拼奶茶不 我请 表姐说您爱杨枝甘露
+  A：哈哈她连这都交代了
+  B：还说您拼单从不迟到
+  A：那是 双杯七分糖
+  B：半小时后楼下自提柜见
+  A：好嘞
+  B：拿到了 今晚请我喝回来 哈哈
+  A：下辈子吧 工资还没影
+  B：贴片面膜有吗 我妈要用
+  A：有 45一片 整盒二十片800
+  B：那来一盒
+  A：行 一并记上
+  B：金管口红下批有吗
+  A：下批到 150一支 先记你一支
+  B：好记上
+  A：周五前到货我喊你
+  【9月10日】
+  A：今早理货 你的齐了 黑瓶两个 贴片一盒 口红一支下周
+  B：快 周五给您结?
+  A：月底一起结都行 你方便就好
+  B：表姐说您从不催账 跟您打交道省心
+  A：熟客有数 就怕账乱不怕账慢
+  B：下午茶拼不 楼下新开泡芙
+  A：拼 半盒芋泥
+  B：好四点给你带店上去
+  A：我四点后看店 顺路
+  B：那自提正好
+  A：行
+  B：再带杯冰美式 双份浓缩
+  A：你这是不让我睡着的意思
+  B：到楼下 杯子带了吗 上回您帮我带的保温杯 老忘给钱
+  A：带了 88那个 微信转我就行
+  B：这就转 88 谢谢提醒
+  【系统消息】B 向 A 转账 88 元，已收款。
+  A：88到账
+  B：放下钱踏实 哈哈
+  A：你这习惯好
+  B：演唱会票抢到没 表姐说您蹲半个月
+  A：抢到 内场 加价七百 心疼
+  B：值 那场我也去 到时候拼车
+  A：行 散场不好打车 拼车稳
+  B：到时群里说
+  A：荧光棒多买一根 给你
+  B：省三十 哈哈
+  B：瑜伽卡考虑好没 表姐那工作室
+  A：办了季卡 2800 肉疼
+  B：我年卡都续了 疼一起疼
+  A：同伴有了 下周一下午一起
+  B：说定了 垫子我多买一张给你
+  A：那我请你喝杨枝甘露 还账
+  B：成交
+  A：对了批号图发你 帮我转发表姐看下是不是她要那批
+  A：[image：黑瓶批号特写照片]
+  B：发了 她说是 说你批号总比专柜新
+  A：那边周转快嘛
+  B：行 货到了喊我

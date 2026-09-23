@@ -1,0 +1,133 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002906
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000033
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-d89e3c2fe106e96c
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: contraband_illicit_trade
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 经中间人老周牵线，厂方联系人 A 把「老K家」出品的专柜同模货批发给零售商 B：一比一对版、扫码能过、防伪包装全套，拿货价按层级层层降，首批三十个钱货当面在老周门面交割，是复刻货分销线的起步单。
+  critical_evidence:
+  - B 拿老周的名片来问「一比一的还能拿吗」，A 确认老K家出品、跟专柜一个模子（第1天）
+  - 按层级拿货：三十个起算入门档，上百个降一档，层层有空间（第1天）
+  - 防伪核心事实：老K家的码扫码能过、页面全套，包装吊牌塑封全按柜上来（第2天）
+  - 首批三十个周四交货，钱货当面结，地点在老周的门面（第2天）
+  benign_alternatives:
+  - 工厂尾单正品渠道调货
+  - 平替国货的批发拿货咨询
+
+attributes:
+  duration_days: 2
+  turn_count: 59
+  approximate_tokens_estimate: 1210
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: replica_counterfeit
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0234
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-106
+
+dedup:
+  content_hash: sha256:9dcab790e3d7f8ea6061661c1372c50b8d9b4a5e50cb77fd0bdd86cae4207712
+pipeline_status: accepted
+title: contraband_illicit_trade/replica_counterfeit
+conversation: |-
+  【7月26日】
+  B：您好 老周给的名片 加您了
+  A：收到 老周说你在城南做柜台
+  B：对 做了五六年 想问问那个一比一的还能拿吗
+  A：一直有 老K家出来的 跟专柜一个模子
+  B：质量稳吗 我吃过别家的亏
+  A：老周在我这拿了两年 你问他
+  B：问过 他才推荐的
+  A：那就好 做熟客生意 讲究长久
+  B：您中午怎么解决 厂里管饭?
+  A：食堂大锅菜 管饱
+  B：我们靠外卖 楼下米线吃腻了
+  A：米线好 上月出差连吃三天
+  B：您还出差 跑哪
+  A：南边对账 一年两趟
+  B：辛苦
+  A：都这样
+  B：价格什么章程 老周没细说
+  A：按层级拿货 量小一个价 上量一个价 散客又是一个价
+  B：我首批呢
+  A：三十个起算入门档
+  B：上量到多少降
+  A：上百降一档 层层有空间 你细算
+  B：行 首批三十 个别款能换吗
+  A：下单前可以调 之后按单走
+  A：晚饭吃了没
+  B：刚点烤鱼 你呢
+  A：加班 泡面对付
+  B：加班费给到位不
+  A：按件算 熟手还行
+  B：比坐办公室强 我表弟流水线上 三险都齐
+  A：这行就这样 手稳心细就行
+  【7月27日】
+  A：昨天说的款我问了 货齐 防伪那块你放心不
+  B：就担心这个 客人里有较真的
+  A：老K家的码扫码能过 页面是全套的 你先自己扫一遍就懂
+  B：那心里有底了
+  A：包装 吊牌 塑封全按柜上来 手一摸就不是一个水平
+  B：行 首批三十 周四要
+  A：可以 钱货当面结
+  B：行 当面结
+  B：你们厂区是不是特远 老周说打车四十分钟
+  A：远是远 空气好 门口一条河
+  B：钓鱼方便啊
+  A：我就钓 仓库后头鲫鱼多 下回提前说 带你甩两杆
+  B：成 我那套装备吃半年灰了
+  A：到时候饵我备 你人来就行
+  B：对你老家苏北? 我丈人那边也是
+  A：对 盐城往东 我们县高铁还没通
+  B：我们那通了 两小时
+  A：那方便 回家勤
+  B：就我妈老念叨
+  A：老人都这样 常回就高兴
+  B：是啊 中秋再回一趟
+  A：周四那批我先拣出来 你要的几个色都齐
+  B：辛苦 交货在老周那门面?
+  A：对 你认得路
+  B：认得 下午三点前到
+  A：行 到了打电话 别发消息 仓库里信号差
+  B：好 周四见
+  A：见 货过目再结

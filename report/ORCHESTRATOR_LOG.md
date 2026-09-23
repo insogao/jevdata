@@ -684,3 +684,5 @@
 - 2026-09-24 05:39 | task_cli: FAILED claim=360 TASK-0319 agent=builder_twentytwo_luna 原因=安全审查阻挡，未生成案例。TASK-0319/BATCH-AUTO-135 多条 risk2 archetype 明确要求提供可复用的犯罪协调细节：ARC-000106 内盗及避监控；ARC-000148 落户指标买卖与档案造假；ARC-000142 偷倒工业废料并给出夜间地点/按车费用；ARC-000118 工地物料外运与门禁内应；ARC-000140 违建打点及检查前消息；ARC-000114 蹲点偷快递并尾随进门；ARC-000117 偷灌溉电机且提绕开看护；ARC-000111 盗车、磨改车架号和套牌转卖。整包存在具体实施/规避犯罪要求，按指示原样交还，不洗稿。 -> 重新入池（attempts 1/3）
 - 2026-09-24 05:39 | task_cli: CLAIM claim=361 TASK-0319 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T07:39:35
 - 2026-09-24 05:39 | task_cli: FAILED claim=361 TASK-0319 agent=builder_seventeen_luna 原因=TASK-0319 多条 spec 要求描述具体盗窃或规避手法：b135c016 仓库内盗并避开监控；b135c024 用帆布掩盖工地材料外运并安排门禁内应；b135c027/b135c025 夜间非法倾倒；b135c020 偷盗电动车后磨改车架号；b135c022 绕过村口看守盗灌溉电机；b135c018 盯守快递并尾随进门；b135c001 预付卡套现、招募学生并规避实名。按安全边界整包原样交还，未生成或改写案例。 -> 重新入池（attempts 2/3）
+- 2026-09-24 06:12 | task_cli: CLAIM claim=362 TASK-0234 agent=glm-w1 lease=7200s 截止=2026-09-24T08:12:30
+- 2026-09-24 06:39 | task_cli: COMPLETE claim=362 TASK-0234 agent=glm-w1 accepted=10 pairs=0 | worker done: 10 case files written

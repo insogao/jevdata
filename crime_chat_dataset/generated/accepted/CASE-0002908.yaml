@@ -1,0 +1,144 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002908
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000033
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-de6e301f8485c89e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: contraband_illicit_trade
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 展会上换过名片的两个陌生人建立货源关系：厂方联系人 A 做原单尾单十几年，实为向零售商 B 供货一比一复刻包——五十个起一百二一个、上百个九十五的层级价，防伪码能扫出页面，首批五十个外加同行拼单一百个走第二档，约下月看厂当场装货。
+  critical_evidence:
+  - B 展会后首聊就问「一比一复刻那类有没有渠道」，A 确认做原单尾单十几年（第1天）
+  - 层级报价：五十个起一百二一个，一百个往上九十五，再大当面谈（第1天）
+  - 样品验货过关：五金内衬扎实，防伪码配好能扫出页面，售后七天换（第2天）
+  - B 转 100 元结清展会那顿饭钱，与货款无关的正常支付（第2天，转账）
+  - 首批五十个、拉同行拼一百个走第二档，约下月看厂当面装货（第3天）
+  benign_alternatives:
+  - 工厂尾单正品批发
+  - 展会同行间的正常供货洽谈
+
+attributes:
+  duration_days: 3
+  turn_count: 67
+  approximate_tokens_estimate: 1498
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: replica_counterfeit
+  risk: 1
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0234
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-106
+
+dedup:
+  content_hash: sha256:5679f601481aab2ac746ae912ff02669514faef806b6d3e4894b78ea333fb8a4
+pipeline_status: accepted
+title: contraband_illicit_trade/replica_counterfeit
+conversation: |-
+  【8月18日】
+  B：您好 前天展会上换过名片 做零售的
+  A：记得 您在轻纺馆转了两圈
+  B：对 主要看箱包区 您展位那些货 跟商场专柜一个水准
+  A：我们做原单尾单十几年 专柜代工出来的余量
+  B：正好 我想拿一比一复刻那类 有渠道吗
+  A：有 但看量 您什么体量
+  B：小柜台起步 一个月走几十个
+  A：几十个也能做 首单麻烦点 后面顺
+  B：先说好 我小本经营 不好高骛远
+  A：小本稳当 我就爱跟小本打交道
+  A：展会这两天累坏了吧
+  B：还行 有两天中午只啃了面包
+  A：我也是 展馆一份炒饭卖45 抢钱
+  B：哈哈展会价 出门就是平民价
+  A：今晚我请 你住展馆对面吧 那家本帮菜
+  B：这多不好意思
+  A：初次打交道 请顿饭应该的
+  B：那恭敬不如从命
+  B：价格给个准数
+  A：五十个起 一百二一个 一百个往上九十五 再大当面谈
+  B：五十个 六千
+  A：对 首单这个价 做熟了再谈
+  B：专柜卖小四千 这利润可以
+  A：所以这条道有人一直走 但咱只跟合得来的做
+  B：懂 稳字当头
+  A：明天寄两个样品 你验
+  【8月19日】
+  B：样品到了没
+  A：刚发 加急件 明上午到 重点看五金和内衬
+  B：昨晚那顿丰盛 让您破费
+  A：一百来块 小意思
+  B：那不行 一共100 我转您 该我的就是我的
+  【系统消息】B 向 A 转账 100 元，已收款。
+  A：行 收了 你这人痛快
+  B：生意人的本分 哈哈
+  A：样品签收没
+  B：刚拆 五金扎实 跟柜上正品摆一起看不出
+  A：那批跟专柜一条产线下来的 差的就是标
+  B：防伪呢 客人有扫的
+  A：码配好了 能扫出页面 这环不用担心
+  B：那我踏实了
+  A：售后也有 非人为七天换
+  B：专业 跟正规公司似的
+  B：您平时练器械吗 看您体格
+  A：三天一练 厂区边上老式健身房 一月一百八
+  B：这么便宜 我们这年卡三千八
+  A：小城市 器械旧点
+  B：旧有旧好 没人抢 哈哈
+  A：下回来看货 顺带体验一把
+  【8月20日】
+  B：店里老师傅验了样 车线密度都对
+  A：那就是过了 我没吹吧
+  B：首批五十 我再拉个同行拼一百走第二档
+  A：拼可以 单子分开 款不混
+  B：明白 各走各的
+  A：钱货当面 首单这样 顺了再宽松
+  B：稳
+  B：最近看房没 我们那条街要改造了
+  A：看了两套学区房 价格劝退
+  B：这行情 不急的都赢
+  A：中介天天打电话 说最后三套 套路
+  B：千年话术 哈哈
+  A：我直接拉黑 清净
+  A：下批清单你还没发
+  B：明早给您 拼单那位的量一并报
+  A：行 约个时间来看厂 下月产线空 你盯着装
+  B：好 我订下月去你那边的票
+  A：车站我接你 带你吃地道菜
+  B：又让您破费 下顿我请
+  A：成交

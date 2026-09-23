@@ -1,0 +1,150 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002905
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000036
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-94e29c7526a84bdd
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: contraband_illicit_trade
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 物流公司同事 A 暗中做禁售果味电子烟弹的地下供货，「杨梅下来了／杨梅熟了」是新口味到货暗号，整条拿货更便宜，要求 B 家饮品店藏进柜台抽屉只卖熟客、不摆不宣传，形成每周五一次的长期补货暗线。
+  critical_evidence:
+  - A 用「杨梅下来了」点破新口味（蜜瓜、葡萄冰）到货，只有圈内人听得懂（第1天）
+  - 报价：零拿一盒 55，整条拿便宜按 50 一条二十盒约一千（第2天）
+  - A 立规矩：不对外摆、柜台底下抽屉收着、熟客问再拿、菜单不挂朋友圈不发（第3天）
+  - 周四晚「杨梅熟了」到货，面交现结，保温袋外套零食箱，东门打卡机旁自取（第4天）
+  - 约定以后每周五到新货、一次一条，按周长期走货（第5天）
+  benign_alternatives:
+  - 合规电子烟经销的同行调货
+  - 同事间聊水果味电子烟市场行情
+
+attributes:
+  duration_days: 5
+  turn_count: 72
+  approximate_tokens_estimate: 1635
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: e_cigarette_illegal_flavor
+  risk: 1
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0234
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-106
+
+dedup:
+  content_hash: sha256:6e8ab702bb094e9af0a0876303c5fa0b6e5d59f6d1d033a60e290e0f793e87b2
+pipeline_status: accepted
+title: contraband_illicit_trade/e_cigarette_illegal_flavor
+conversation: |-
+  【7月14日】
+  A：楼下那家黄焖鸡排到马路上了
+  B：所以我吃了食堂 蒜苔炒肉咸得齁人
+  A：食堂那勺盐不要钱似的
+  B：下午还开季度会 更没劲
+  A：会上别接话 上回你被点名讲了十分钟
+  B：那不是你挑的话头 冤枉
+  A：行行行 替我带杯冰美式 我请你
+  B：对了 昨天去我媳妇店里搭手 听她念叨半天
+  A：妹子那店最近咋样
+  B：有客人问有没有水果味那种弹 她答不上
+  A：你这话是问我 还是考我
+  B：当然问你 部门里谁不知道你懂行
+  A：就是有几个老朋友在那条线上 杨梅下来了 你听懂没
+  B：没懂 但觉得很对
+  A：就是新口味到了 蜜瓜 葡萄冰都有 店里要的话下班细聊
+  【7月15日】
+  B：昨晚我媳妇拍板了 细聊一下 店里想上一批
+  A：行 先说规矩 我这量不大 但稳
+  B：多少起拿
+  A：零拿三盒起 整条拿便宜 一条二十盒
+  B：整条什么价
+  A：零拿一盒55 整条按50 一条一千上下
+  B：比她现在托的那家便宜一截
+  A：那是二道贩子 我这条近 一周能补一回
+  B：行 先来一条试试水
+  A：好 周四到 我喊你
+  B：豆豆篮球班你续了没
+  A：续了 一期又两千八 烧钱
+  B：我家画画班也这数 机构怕不是串通好的
+  A：报班联盟 专割咱这波中年人
+  B：周六友谊赛 来看不
+  A：去 给孩子扛两箱牛奶
+  【7月16日】
+  A：下午摸鱼 说到哪了
+  B：周四一条蜜瓜一条葡萄 她店员也想带两盒
+  A：带可以 但规矩得说前头
+  B：你说
+  A：不对外摆 柜台底下抽屉收着 熟客问再拿 菜单不挂 朋友圈不发
+  B：懂 她家奶茶隐藏菜单一直这么玩
+  A：一个道理 别高调 人多嘴杂
+  B：回头我专门跟店员交代一遍
+  A：还有 就咱俩知道 别往外传 平时上班我低调
+  B：放心 我嘴比保险柜严
+  A：新家装修到哪步了
+  B：瓦工刚完 木工下周进 乱成一锅粥
+  A：我上月刚装完 血泪教训 水槽上大单槽
+  B：记下了 洗碗机后悔没
+  A：零后悔 懒人救星
+  B：回头把你那篇攻略翻出来再看看
+  【7月17日】
+  A：杨梅熟了 今晚到
+  B：收到 蜜瓜葡萄各一条?
+  A：对 你带回去还是给她送店里
+  B：我直接带回去省事 钱怎么给 现金?
+  A：面交现结 老规矩
+  B：懂 十点前我都在
+  A：行 给你装保温袋 外头套零食箱
+  B：专业 里面塞几包薯片更像
+  A：谨慎点没坏处 就这点讲究
+  B：到了 东门还是北门
+  A：东门打卡机边上 我拎着箱子
+  B：看到了 过来
+  【7月18日】
+  B：昨晚点了一条没少 媳妇验了说比上家那批正
+  A：我这条线从来不开盲盒
+  B：店员试了颗蜜瓜 说口感顺
+  A：卖得动就说 每周五到新货
+  B：行 按周走 一次一条 先跑一个月
+  A：可以 老规矩 柜台底下见
+  B：哈哈这话说的 像接头
+  A：差不多得了 季度会开了没
+  B：开完俩字 加薪
+  A：恭喜 下午茶我请 算份子
+  B：冰美式加浓 别抠
+  A：中午一块走 周五犒劳
+  B：走着

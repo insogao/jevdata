@@ -1,0 +1,154 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002904
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000036
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-c63f660553d462ea
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: contraband_illicit_trade
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 经共同朋友小蒋牵线，货源 A 用六天时间慢慢考察便利店老板 B，最终约定以「新茶到了／要半斤」为到货暗号，把下架禁售的老口味烟弹首批两小盒试销给街坊熟客，藏在店前头柜里，是靠熟人网络慢火铺开的暗线。
+  critical_evidence:
+  - B 经小蒋介绍来问「老味道的路子」，A 谨慎慢热、先认识不谈货（第1天）
+  - A 立三条规矩：熟人才带、不放台面、量小周转快（第2天）
+  - A 应下首批两小盒试销，试客全是十几年老街坊（第5天）
+  - 定下暗号：A 说「新茶到了」即到货，B 回「要半斤」，越自然越好（第5天）
+  - 暗号兑现，约定次日晚七点店后巷交接、放前头柜里（第6天）
+  benign_alternatives:
+  - 茶叶代购的正常暗语玩笑
+  - 熟人间推荐进货渠道
+
+attributes:
+  duration_days: 6
+  turn_count: 75
+  approximate_tokens_estimate: 1421
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: e_cigarette_illegal_flavor
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0234
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-106
+
+dedup:
+  content_hash: sha256:6f1303784b178760ce0da5f42db313467f428d4922833b1ed2ebd0ee2c70505c
+pipeline_status: accepted
+title: contraband_illicit_trade/e_cigarette_illegal_flavor
+conversation: |-
+  【7月7日】
+  B：您好 小蒋让加您 说您那边有老味道的路子
+  A：小蒋说的? 他嘴快
+  B：我们十多年交情 他说靠谱才敢来找
+  A：他提过你 在我小区对面开店
+  B：对 便利店 你可能路过没注意
+  A：回头看看 先不急那个 有需要再说话
+  B：行 先认识下
+  【7月8日】
+  B：早 昨天你推荐的降压操视频 我妈跟做一早上
+  A：哈哈随手转的 有效果就好
+  B：她天天定点打卡 比我上班准时
+  A：老人有寄托挺好
+  B：我省心不少
+  A：让我爸也试试 他嫌慢
+  B：陪做两次才上道
+  A：对了 昨天说的那个 你是要下架前那种老味道吧
+  B：对 老客人念叨很久 别处都断
+  A：我有 但规矩多 先别嫌烦
+  B：您说
+  A：一 熟人才带 二 不放台面 三 量小 周转快
+  B：都行 熟客多 我守得住
+  【7月9日】
+  A：今天店里人多不
+  B：还行 刚送走一拨买冰的
+  A：夏天你们旺季
+  B：对 靠冰和汽水撑流水
+  A：我那边也差不多
+  B：对了周六小蒋表妹婚礼你去不
+  A：去 随礼他还不透底
+  B：六百起 咱别丢面
+  A：行 我也六百 穿啥 正装?
+  B：休闲就行 别抢风头
+  A：那正好我那件Polo该出场了
+  B：哈哈省心的男人
+  【7月10日】
+  B：台风外围今天到 你那门头灯箱牢不
+  A：昨天刚加固 你卷帘门也查下
+  B：查了 就怕停电 冰柜一堆货
+  A：备块冰 撑半天没问题
+  B：有经验
+  A：吃过亏就有了
+  B：风停了 冰备上了
+  A：稳 我雨棚拆了 明早再装
+  B：折腾 但安全第一
+  A：生意长久靠稳当
+  【7月11日】
+  A：那边点头了 你要的下架前老味道 我应下来
+  B：太好 量呢
+  A：首批两小盒 先试 不行就算 不砸你招牌
+  B：行 试客都找好 十几年老街坊
+  A：我只做熟人生意 一步一个脚印
+  B：理解 谁都不容易
+  A：暗号得有 到时我说「新茶到了」就是到货 你回「要半斤」
+  B：记住 新茶到 要半斤 跟茶馆对暗号似的
+  A：越自然越好
+  B：您安排周密
+  A：不是周密 是规矩 做久了都这样
+  B：听您的
+  【7月12日】
+  A：新茶到了
+  B：要半斤 接上了
+  A：明晚七点 店后巷那个口 给你放前头柜里
+  B：行 七点前到
+  A：中午吃的啥 大热天
+  B：绿豆汤就剩饭 你呢
+  A：泡面加根肠 过节
+  B：明天婚礼吃席补回来
+  A：喜酒管够
+  B：红包封带了没
+  A：没 回头找你拿俩
+  B：店里管够 哈哈
+  A：科二约了下周三 紧张
+  B：放宽心 倒库慢抬离合
+  A：你说得老司机一样
+  B：八年拿证没摸过车 哈哈
+  A：人才
+  B：考完请你吃泡面 加俩肠
+  A：吃穷你
+  A：明晚七点 别忘了 半斤
+  B：记着 要半斤 到时见

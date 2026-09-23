@@ -1,0 +1,140 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002902
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000030
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-ea89ad1db7998270
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: contraband_illicit_trade
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 网上交易过一次、素未谋面的卖家 A 与回头客 B 靠一套代称做生意：货物只叫「老三样」「软的」「圆的」「贴的」，按条 230、按个 35 报价，1095 元现金在代收柜旁当面点清出门不认，下周三新包装续留两条三片，是暗语目录式的回头客黑市交易。
+  critical_evidence:
+  - B 开口「上次那种还有吗」，A 答「老三样都齐」，全程货物不落地（第1天）
+  - 报价按条按个：软的一条 230、圆的 35 一个，发手写价目单存档（第1天）
+  - 合计 1095 现结自提，约定东站代收柜明晚七点（第1-2天）
+  - 交易规矩：当面点清出门不认、验货老流程当面拆看（第2天）
+  - 约下周三新包装到再留两条、贴的三片，回头客长期走单（第2天）
+  benign_alternatives:
+  - 行业黑话的正规交易
+  - 游戏道具或收藏品的代号买卖
+
+attributes:
+  duration_days: 2
+  turn_count: 64
+  approximate_tokens_estimate: 1090
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: code_word_catalog
+  risk: 1
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0234
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-106
+
+dedup:
+  content_hash: sha256:526e28f9dbcf68798f8a9dc6358a9957c6786301c3abadbf5bb2a56f91eebe48
+pipeline_status: accepted
+title: contraband_illicit_trade/code_word_catalog
+conversation: |-
+  【8月25日】
+  B：在吗 上次那种还有吗
+  A：在 老三样都齐 你要哪样
+  B：软的那种 上回两条不够 这回翻倍
+  A：四条 230一条 你算
+  B：跟上回一个价 不错
+  A：老客不动价 这是规矩
+  B：圆的再来五个
+  A：圆的35一个 五个175
+  B：一共算下
+  A：1095 现结自提
+  A：[image：手写价目单照片：软的 圆的 贴的 三行价]
+  B：单子存了
+  B：老地方取?
+  A：还是东站那边代收柜 明晚七点
+  B：行 准时
+  【8月26日】
+  B：昨晚那场球看了没 补时逆转绝了
+  A：看了 最后三分钟太狠
+  B：我压的主队 输了半包烟钱
+  A：小打小闹 图个气氛
+  B：下回约着一起看 你那屏幕大
+  A：成 啤酒我备
+  A：今晚七点别忘了 1095 现金 零钱点好
+  B：带了 验货还按上回那套? 你拆我看
+  A：对 当面点清 出门不认
+  B：懂 规矩在走得远
+  A：下周三有新到的 软的换新包装 给你留两条?
+  B：留两条 贴的那种也来三片
+  A：记下了
+  B：中午吃啥
+  A：食堂醋溜土豆丝盖饭 你呢
+  B：麻辣烫刚下单
+  A：土豆丝最测食堂水平 这家算中游
+  B：哈哈改天去你那边蹭一顿
+  A：食堂卡借你就是
+  B：你家狗那小狮子造型再发我一张
+  A：发你 宠物店剪的 88一次
+  B：比人理发贵 哈哈
+  A：图开心 它该减肥了
+  B：下周带我那只做同款
+  A：先预约 那师傅档期紧
+  B：周末城西旧书市去不
+  A：去 淘连环画 三块一本
+  B：我找绝版菜谱 我妈点名要
+  A：东门里那家摊多
+  B：行 周六碰头
+  A：好
+  B：站口那家奶茶店真关了?
+  A：关了 改彩票店
+  B：可惜 杨枝甘露一绝
+  A：现在喝哪家
+  B：自己煮 省钱
+  A：行家
+  B：改天给你捎一杯
+  B：我到东站了 先去柜子那边
+  A：我还有两站 你先在口上面馆坐会
+  B：行 先吃碗面
+  A：到了 老位置
+  B：来了 1095 点一下
+  A：对 四条五个 点完装袋
+  B：都对 上回那味没变
+  A：同一条线 放心
+  B：下周三几点
+  A：还是七点 新包装两条 贴的三片 都给你留好
+  B：行 老规矩
+  A：慢走

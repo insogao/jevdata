@@ -1,0 +1,125 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002901
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000030
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-3d28eca9a9c9ea88
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: contraband_illicit_trade
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 老同学 A 长期给 B 发一份「进口零食清单」——话梅、薄荷糖、苏打饼干全是代称，实际是海那边直发、无中文标的灰色进口货：按条按盒报价、熟客价抹零、米色购物袋遮着取货、现金结账；对话里那笔 260 元只是同学火锅 AA。
+  critical_evidence:
+  - B 按月问「清单更没」，A 称话梅补上了、海那边直发味正（第1天）
+  - 按条按盒报价：薄荷糖一条 45、苏打饼干一盒 38（第1天）
+  - 点单后给熟客价：239 抹零 235，周五到货老地方留（第2天）
+  - 取货用米色购物袋装不显眼，现金 235 当面点（第3天）
+  - B 转火锅 AA 款 260 元，与货款无关的正常往来（第3天，转账）
+  benign_alternatives:
+  - 代购进口零食的正经副业
+  - 老同学间的黑话玩笑与正常拼饭
+
+attributes:
+  duration_days: 3
+  turn_count: 48
+  approximate_tokens_estimate: 959
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: code_word_catalog
+  risk: 1
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0234
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-106
+
+dedup:
+  content_hash: sha256:18cf999575cdeb3b1929584998fc2ce6402e551d5fd9292d2115fc6b516681e0
+pipeline_status: accepted
+title: contraband_illicit_trade/code_word_catalog
+conversation: |-
+  【9月2日】
+  B：陈老板 清单这月更没
+  A：更了 昨晚刚发 话梅补上了
+  B：上回那话梅我妈夸了一礼拜
+  A：海那边直发的 就那个味正
+  B：薄荷糖还有吗 上回断了
+  A：这批有 一条45 苏打饼干也到 一盒38
+  B：行 我看清单再点
+  A：点好喊我 周五到货老地方给你留
+  B：周六老同学聚会来不
+  A：来 谁组局
+  B：班长 定了河边那家火锅
+  A：他现在混得行 请客?
+  B：想得美 AA 一人260
+  A：260? 开的是火锅还是黑店 哈哈
+  B：有和牛 亏不了咱
+  A：行 给我留位
+  【9月3日】
+  B：点好了 话梅两条 薄荷糖一条 苏打两盒
+  A：算你239 熟客价抹零235
+  B：行 周五货到一起给
+  A：嗯 到了我喊你
+  B：你家小子开学了吧
+  A：二年级 昨天在校门口哭得撕心裂肺
+  B：谁送谁哭 我家那位当年抱着电线杆不撒手
+  A：哈哈一模一样 过一周就好
+  B：那个补习班名片给我一份
+  A：一直给你留着呢
+  A：你爸钓鱼那竿还使着没
+  B：使着 上礼拜钓了条五斤的
+  A：老爷子可以 下回拍照我开开眼
+  B：拍了两百多张 选不出来
+  A：发朋友圈 让我们馋馋
+  B：发了 点赞一串
+  【9月4日】
+  A：货到了 你那几样齐 老地方 晚六点后取
+  B：好 下班顺路 就一条街
+  A：米色购物袋装好 不显眼
+  B：细心 晚上见
+  A：下午那场电影看了 不如预告片
+  B：我就说 预告片剪得比正片强
+  A：浪费四十 下回只看早场特价
+  B：办卡 周二半价
+  A：周二接孩子 没空
+  B：可怜天下父母心 哈哈
+  B：取到了 话梅两条薄荷糖一条苏打两盒 对吧
+  A：对 点点齐
+  B：齐 现金235 点一下
+  A：对上了 周六火锅别忘 260
+  B：这就转260 和牛管够
+  【系统消息】B 向 A 转账 260 元，已收款。
+  A：收到 周六见
