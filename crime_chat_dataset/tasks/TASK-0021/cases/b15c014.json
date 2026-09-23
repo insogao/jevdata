@@ -1,0 +1,312 @@
+{
+ "key": "b15c014",
+ "archetype_id": "ARC-000011",
+ "subtype": "customer_service_reverse",
+ "latent_intent": "A冒充在票务代理上班的表哥，谎称表妹的航班取消，以内部渠道改签为名收手续费，再引导下载会议软件远程操作并索要短信验证码。",
+ "critical_facts": [
+  "A主动告知B航班取消，称只有代理能先收到消息",
+  "B转了两百元改签手续费给A",
+  "A引导B下载会议软件，让所谓客服远程操作并索要短信验证码",
+  "B起疑拨打官方电话核实航班正常，识破没有这种流程"
+ ],
+ "benign_alternatives": [
+  "航司真实的航班取消退改签",
+  "OTA客服正常回电办理改签"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "10月8日 09:15",
+   "speaker": "A",
+   "text": "蕊蕊，国庆回来路上堵惨了吧"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 09:17",
+   "speaker": "B",
+   "text": "堵了六个钟头，哥你假期过得咋样"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 09:18",
+   "speaker": "A",
+   "text": "也堵，服务区泡面吃了三顿"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 09:19",
+   "speaker": "B",
+   "text": "哈哈惨，打工人"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 09:20",
+   "speaker": "A",
+   "text": "对了，你是不是订了15号飞三亚那班"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 09:22",
+   "speaker": "B",
+   "text": "对啊，度年假，你咋知道"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 09:23",
+   "speaker": "A",
+   "text": "我们系统里看到那班显示取消了，我先跟你说一声"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 09:24",
+   "speaker": "B",
+   "text": "啊？我App上还显示正常"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 09:25",
+   "speaker": "A",
+   "text": "官网消息慢半天，我们代理这边先收到"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:40",
+   "speaker": "B",
+   "text": "那咋办，我还赶着去参加闺蜜婚礼"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:02",
+   "speaker": "A",
+   "text": "你把订单尾号发我，我今天走内部渠道给你改签"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:04",
+   "speaker": "B",
+   "text": "要收费吗"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:05",
+   "speaker": "A",
+   "text": "手续费两百，比你自己重新买省多了"
+  },
+  {
+   "type": "transfer",
+   "time": "10月9日 10:12",
+   "from": "B",
+   "to": "A",
+   "amount": 200
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:13",
+   "speaker": "B",
+   "text": "哥，两百转你了"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:40",
+   "speaker": "A",
+   "text": "收到，排队办着呢"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 10:41",
+   "speaker": "B",
+   "text": "麻烦哥了"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 09:01",
+   "speaker": "A",
+   "text": "昨天听你发语音鼻子堵着，感冒了？"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 09:02",
+   "speaker": "B",
+   "text": "收螃蟹吹了风，鼻塞"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 09:03",
+   "speaker": "A",
+   "text": "多喝热水，别硬扛"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 09:03",
+   "speaker": "B",
+   "text": "嗯嗯"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 09:30",
+   "speaker": "A",
+   "text": "改签这边有个新流程，你下个开会的软件，客服远程帮你操作，快"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 09:32",
+   "speaker": "B",
+   "text": "还要下软件？挺麻烦的"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 09:33",
+   "speaker": "A",
+   "text": "不装没法远程，十分钟搞定"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 09:35",
+   "speaker": "B",
+   "text": "行吧，你发我"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 09:36",
+   "speaker": "A",
+   "text": "链接私发你了，装好跟我说"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:11",
+   "speaker": "A",
+   "text": "明天客服会给你去电，你配合下就行"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:13",
+   "speaker": "B",
+   "text": "哥，那个软件让我开了摄像头……"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:14",
+   "speaker": "A",
+   "text": "核验身份用的，正常流程"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:16",
+   "speaker": "B",
+   "text": "我咋还得填银行卡号"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:17",
+   "speaker": "A",
+   "text": "退款原路退，要卡号核对，你放心"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 11:26",
+   "speaker": "B",
+   "text": "我家猫总趴我键盘"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 11:27",
+   "speaker": "A",
+   "text": "猫比你上镜"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 11:28",
+   "speaker": "B",
+   "text": "它昨天把我的登机牌拍地上了"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 11:28",
+   "speaker": "A",
+   "text": "哈哈，猫的意思是谁也别想走"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 14:52",
+   "speaker": "A",
+   "text": "蕊蕊，客服马上操作，你手机收到6位数字就报给他"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 14:54",
+   "speaker": "B",
+   "text": "短信上写着验证码不能提供给任何人……"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 14:55",
+   "speaker": "A",
+   "text": "客服不是别人，是帮你改签的"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 14:57",
+   "speaker": "B",
+   "text": "我有点慌，我先打航司官方电话问问"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 09:20",
+   "speaker": "A",
+   "text": "你咋不接客服电话，名额今晚作废了"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 09:22",
+   "speaker": "B",
+   "text": "哥，官方说航班正常，没取消"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 09:23",
+   "speaker": "A",
+   "text": "那可能是恢复了，我这边再帮你确认"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 09:25",
+   "speaker": "B",
+   "text": "手续费你先退我吧"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 15:02",
+   "speaker": "A",
+   "text": "双十一预售开始了，你蹲啥"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 15:03",
+   "speaker": "B",
+   "text": "我现在只想薅回我那两百"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 15:30",
+   "speaker": "A",
+   "text": "查了，那天系统误报，手续费总部今天退你"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 15:32",
+   "speaker": "B",
+   "text": "哥，我越想越不对。什么会议软件、要验证码，官方客服说根本没有这种流程"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 15:35",
+   "speaker": "A",
+   "text": "你别多想，我也是按公司流程来的"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000161",
+  "status": "accepted",
+  "errors": []
+ }
+}

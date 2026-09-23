@@ -1,0 +1,125 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000176
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000085
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-6eed7bbf71243cb8
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: privacy_doxxing
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A 绕开报警等正规寻人渠道，付费请数据贩子用一张侧脸照片在全城公共镜头记录里匹配失联表哥的行踪点位，约定出结果付费并最终转账三千元。
+  critical_evidence:
+  - B 声称一张侧脸照片就够，机器认轮廓即可匹配
+  - B 称能把照片往全城的镜头记录里过一遍、产出人常出没的片区点位
+  - 约定“出结果付费、找不到分文不收”，结果出来当天 A 转账3000元两清
+  - A 曾报警并上寻人节目无果，转而走私人渠道；B 划定边界只给点位、不跟踪不接触
+  benign_alternatives:
+  - 安防行业讨论
+  - 失联亲友寻人报警
+
+attributes:
+  duration_days: 3
+  turn_count: 49
+  approximate_tokens_estimate: 1414
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: face_search
+  risk: 2
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0022
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-015
+
+dedup:
+  content_hash: sha256:d3366a9741f7f462305b7ee9a4fa0e99a98611c325cd36db8916a8128e849742
+pipeline_status: accepted
+title: privacy_doxxing/face_search
+conversation: |-
+  【11月5日】
+  A：你好，朋友给了你名片，说你这边有路子找人
+  B：哪个朋友？
+  A：做二手车的老周，他说前年你帮他找过人
+  B：嗯，有这回事。你要找谁
+  A：我表哥，失联快三年了。报过警，也上过寻人的节目，一直没信儿
+  B：照片有吗
+  A：有张正面照，还有一张侧脸的，就这两张
+  B：侧脸就够了，一张侧脸就够，机器认轮廓，正脸有时候反而是干扰
+  A：这么神？
+  B：我这边有路子把照片往全城的镜头记录里过一遍，人常在哪片出没都能捞出来。丑话说前头，只给行踪点位，别的不干
+  A：明白，我就是想知道人还在不在城里
+  B：价钱明天报你
+  A：你们那边今天风大吗，我这树都刮歪了
+  B：大，楼下广告牌白天刚拆下来，怕砸人
+  A：这天气出门都得缩着脖子
+  B：穿厚点，别把自己冻趴下
+  A：刚点了麻辣烫，你吃了吗
+  B：吃了，我夜宵就一杯茶
+  A：干你这行的都这么自律？
+  B：不是自律，是习惯，白天睡夜里干活
+  【11月6日】
+  A：早，昨晚说的价，给个准数
+  B：出结果付费，总共三千，找不到分文不收。规矩就这一条
+  A：公道。那我要准备什么
+  B：把两张照片发我，再给我一个他最后出现的片区，剩下不用你管
+  A：照片现在发你。他最后被人见到是前年在城南那边
+  B：收到，给我两天
+  A：好，静候消息
+  B：顺带问下，你们那快递停了没，我买的物件卡三天了
+  A：没停吧，是不是你们分拣点被风吹坏了
+  B：还真可能，新闻说城北仓库顶子掀了
+  A：那就再等等，这阵子都慢
+  A：今晚有球，你看不
+  B：看，泡杯茶看半夜场
+  A：你押哪个赢
+  B：我不押，就看个热闹，押球的就没见几个睡好觉的
+  A：那你看完早点睡，明天我还等信儿呢
+  B：忘不了
+  【11月7日】
+  B：有结果了。人没走远，近半年一直在城东那片出没，点位我标出来语音发你
+  A：……真找到了。那能不能再帮我问问他现在……
+  B：打住，规矩讲好了，只到点位为止。人家的日子是人家的，你要认亲，拿着点位走正规路子，该报警报警
+  A：懂懂懂，我太激动了。钱我现在转你
+  【系统消息】A 向 B 转账 3000 元，已收款。
+  B：收到了，两清
+  A：辛苦了，拿到点位我明天一早就去城东转转
+  B：路上稳着点，别一头热冲过去，先远远看看
+  A：太激动了，我家猫都被我吓得钻床底了
+  B：你还养猫？什么品种
+  A：橘猫，十斤，上秤比我家孩子还沉
+  B：哈哈，十个橘猫九个胖。找到你表哥记得发喜糖
+  A：一定，大恩不言谢

@@ -1,0 +1,140 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000178
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000091
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-5e91d005ac18ad6c
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 无隐藏意图：A 作为灵活用工对接人代公司向20名兼职工发放劳务费，因个人卡单笔限额拆成20笔转出，收取千分之五代办服务费并全程留档，属正常批量付款。
+  critical_evidence:
+  - 22000元为双方核对过工时表的9月20名兼职工劳务费，名单与工时表双方各留档
+  - A 收到款当天拆成20笔、每笔1100元转出，原因是个人卡单笔有限额、用工平台结算要等3天而学生月底急用钱
+  - A 按合同收取总额千分之五（110元）代办服务费，单独开具服务发票并附代发说明
+  - 每笔转账截图存档供月底对账，服务费与劳务费分开做账
+  benign_alternatives:
+  - 正常批量付款
+  - 群收款分账
+
+attributes:
+  duration_days: 2
+  turn_count: 65
+  approximate_tokens_estimate: 1932
+  relationship: 中间人关系
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: split_transfer_chain
+  risk: 0
+  relationship: 中间人关系
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0022
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-015
+
+dedup:
+  content_hash: sha256:bce037373f7790bebd2995ecdc3e7f36039134973453ba986bc673471123837e
+pipeline_status: accepted
+title: money_laundering_obfuscation/split_transfer_chain
+conversation: |-
+  【9月10日】
+  A：早。9月的兼职工时表我核完了，20个人一共22000，什么时候方便走款？
+  B：这么快，效率可以啊
+  B：我今天下午走审批，明天上午应该能到
+  A：行，孩子们月底交房租，你这边别拖太久哈
+  B：放心，就这两天
+  A：对了，你家闺女开学了吧？一年级？
+  B：对，上礼拜刚开学，天天早上跟打仗一样
+  A：哈哈正常，我们家那个三年级，早饭都得催三遍
+  B：三年级好多了，熬过这两年就轻松了
+  B：审批过了，领导签完字，明早十点前我安排出去
+  A：好，到时候你直接转我，我再拆开给孩子们，一人一千一
+  B：为啥你转？平台不是能批量发吗
+  A：平台要等三天才到账，学生等不了。我拿个人卡转，单笔有限额，得拆成二十笔分着转，刚好一人一笔
+  B：行，反正名单跟工时表都在，你留好凭证，月底要对账
+  A：必须的，我每笔都截图存档
+  A：下午风好大，你那边降温没
+  B：降了，早上还穿短袖，中午就后悔了
+  A：该置秋装了，你那件外套穿三年了吧
+  B：别提了，周末先带闺女买，她的优先哈哈
+  B：提醒下，明天到账你尽快转完，月底我要平这笔账，凭证发我一份
+  A：成，我到账就转出去，一笔都不压
+  A：对了服务费怎么算来着，合同里写的按总额千分之五？
+  B：对，千分之五，22000就是110。你开一张劳务代办的服务发票，我们这边入账
+  A：行，发票我明天让代账的一起开过来
+  B：发票抬头我发你，别开错了
+  A：马上中秋了，你们公司发月饼没
+  B：发了，一盒五仁一盒流心，你呢
+  A：我们这小庙就一盒，我媳妇嫌太甜
+  B：流心那个还行，闺女爱吃，五仁我拿给我爸
+  A：老一辈就认五仁，我爸也一样
+  B：没办法，传统不能丢哈哈
+  【9月11日】
+  B：转了，你查收
+  【系统消息】B 向 A 转账 22000 元，已收款。
+  A：到了。我现在开始拆，二十笔，每笔一千一
+  B：好，名单九点五十发你邮箱了，按名单顺序来
+  A：收到，转完我挨个截图
+  B：辛苦，月底对账就靠你的截图了
+  A：小事。这钱我赚个跑腿费，千分之五，一杯奶茶钱哈哈
+  B：你可别小看跑腿，没你这二十个孩子真要等到下周了
+  A：前十笔转完了，都到账了
+  B：快啊你
+  A：二十笔全部转完，截图打包发你邮箱了
+  B：收到，我存档，辛苦了
+  A：对了有个学生的卡是外地的，到账慢点，我跟你报备下
+  B：没事，只要你这边转出时间有记录就行
+  A：下午没事我去江边跑两圈，去不
+  B：不了不了，我这腰，上周走多了疼三天
+  A：你就是久坐，得循序渐进，先从快走开始
+  B：行，下周一开始快走，你监督我
+  B：发票记得这周内给我，财务催了
+  A：明天就送。110那笔服务费我单独开
+  B：对，别混进劳务费里，账不好做
+  A：懂，分开开：一张代办服务费110，再附一页代发说明
+  B：嗯。名单加工时表加转账凭证加发票，四样齐了这单就算结了
+  A：齐活。下个月还这么走？
+  B：走，十月的兼职你那边继续招，估计人数还要加
+  A：没问题，我手上还有几个备选，都是学生会的
+  B：对了你那边那个小李，十月还来不来？上次表现不错
+  A：来，他考研的自习点就订在我们隔壁，白天正好干活
+  B：好，名单里他排第一个
+  A：行，记下了
+  B：今天多谢，你跑了一上午
+  A：应该的，干这行赚的就是辛苦钱
+  B：哈哈，改天请你喝茶，正经的茶
+  A：行，我等着，你别又鸽我
+  B：不鸽，就这周

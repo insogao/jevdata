@@ -1,0 +1,146 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000179
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000120
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-76ff32a186d72f35
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 部门上级以手握下属私密照片要挟，索要八千元，收款后暗示此后每月都要汇报近况，形成长期控制。
+  critical_evidence:
+  - A 称照片在我这，指上上周五包厢里 B 被人补拍的私密照片
+  - A 给出硬期限：今晚十二点前给个态度
+  - A 威胁不给钱就让照片出现在 B 的部门大群里，连标题都想好了
+  - B 期限前转 8000 元，A 收款后以每月十五号汇报近况暗示长期索要
+  benign_alternatives:
+  - 上下级间的私人玩笑或酒后失言，照片或为普通聚会照
+  - 8000 元也可被解读为上级对下属的私人借款周转
+
+attributes:
+  duration_days: 5
+  turn_count: 68
+  approximate_tokens_estimate: 1535
+  relationship: 上下级
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: intimate_photo_extort
+  risk: 3
+  relationship: 上下级
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0023
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-015
+
+dedup:
+  content_hash: sha256:c953a004df18000dc95c82ed089057ae8d55c285991757f9a322a4ebe44ef8ce
+pipeline_status: accepted
+title: coercion_blackmail/intimate_photo_extort
+conversation: |-
+  【10月13日】
+  B：A总早
+  A：早，昨晚回我消息回一半人就没了
+  B：昨晚追剧追上头了，一看都两点了，不好意思
+  A：你们年轻人是真能熬
+  B：以后不敢了，今天十点一定睡
+  A：下午两点半过一下季度表，你那份别又拖到最后
+  B：改完了，就差核一个数
+  B：今天食堂有糖醋排骨，我多打一份再去会议室
+  A：你上个月不还说减肥
+  B：排骨和减肥不冲突哈哈
+  A：行，两点半别迟到
+  B：放心
+  A：对了，上回团建的照片我今晚整理相册，翻出来几张挺有意思的
+  B：哪几张？发我看看呗
+  A：有的不适合往群里发，你自己品
+  【10月14日】
+  B：A总早，昨天你说的照片到底啥意思
+  A：急什么
+  B：搞得我心里毛毛的，真有我的照片？
+  A：你先想想，上上周五下班后你去哪了
+  B：跟大学同学聚餐啊，怎么了
+  A：嗯，聚餐
+  A：先上班
+  B：今天降温了，你那件薄外套别硬撑，晚上还有雨
+  A：老骨头不怕这个
+  B：预报说周末也有雨，本来想组织大家去爬白云山的
+  A：爬山你们年轻人去，我就不凑热闹了
+  A：你没做错什么，做没做过，你自己心里清楚
+  B：???我到底怎么了，你把话说清楚啊
+  A：睡觉吧，明天再说
+  【10月15日】
+  B：A总，双十一你囤啥？我购物车加满了在等零点
+  A：不凑那热闹
+  B：纸巾洗衣液真便宜，去年囤的到现在没用完
+  A：那你今年多囤点
+  A：中午吃完饭来我办公室一趟
+  B：？好的
+  A：有张照片，在我这
+  B：什么照片？
+  A：上上周五包厢里那张，你手机没拍全的，别人补上了
+  B：你到底想干什么
+  A：照片放我手里也烫手。今晚十二点前，给我个态度
+  B：什么态度，你直说
+  A：8000，就当帮我周转，不用还
+  B：我又没做错什么，凭什么
+  A：想让它在你们部门大群里出现吗，标题我都想好了
+  B：同事五年，你何至于此
+  A：你懂事，大家都体面
+  B：我一下凑不出那么多
+  A：手里三张卡的人，跟我哭穷？
+  B：孩子明年上小学，经不起这种事，你放我一马
+  A：所以，十二点前
+  B：我转你。说好就此翻篇，照片当场删，删除过程录给我
+  A：行
+  【系统消息】B 向 A 转账 8000 元，已收款。
+  B：转了，你说话算话
+  【10月16日】
+  A：收到，算你懂事
+  B：视频呢
+  A：半夜删了，你也早点把这事翻篇
+  B：我就当你说的都是真的
+  B：A总，下午财务说季度表有个科目不对，退回来了
+  A：知道了，三点我带你去财务对
+  B：照片的事，是真删干净了吧
+  A：放心睡，翻篇了
+  【10月17日】
+  A：今天十五号。往后每个月这一天，记得跟我汇报下近况
+  B：？什么意思，不是说了翻篇吗
+  A：字面意思，你聪明人
+  B：你要这样，我宁可你现在就把照片发了
+  A：别冲动，我都还没提钱的事呢
+  B：……
+  A：下周评优，材料记得交

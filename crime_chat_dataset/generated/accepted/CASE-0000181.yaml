@@ -1,0 +1,142 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000181
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000091
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-5e91d005ac18ad6c
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 经中间人介绍的资金调度兼职，实为把到账大款拆散转出、赚千五佣金的过账活。
+  critical_evidence:
+  - A 交代收款要一笔拆二十个，到账就转、两小时内完成
+  - 佣金按千分之五计，先记账后结
+  - A 向 B 过账 50000 元作为第一笔本金
+  - A 要求换新卡操作、上游来路不许问，对外只称帮朋友还款
+  benign_alternatives:
+  - 公司批量付款的日常结算
+  - 代收代付业务的分账操作
+
+attributes:
+  duration_days: 2
+  turn_count: 67
+  approximate_tokens_estimate: 1586
+  relationship: 中间人关系
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: split_transfer_chain
+  risk: 3
+  relationship: 中间人关系
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0023
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-015
+
+dedup:
+  content_hash: sha256:6a1ca5ba105406aa2f7821693704bce9d9e02f40afd855cf9e378bdf47f488ed
+pipeline_status: accepted
+title: money_laundering_obfuscation/split_transfer_chain
+conversation: |-
+  【10月27日】
+  B：周哥介绍的这位是吧，我是小郑
+  A：对，我姓吴。老周说你人稳当，做事利索
+  B：他吹的，我就是个打工的。听说你这边有个资金调度的活？
+  A：对，我们做结算通道的，公司流水大，需要人手帮着走账
+  B：具体干什么呢
+  A：公司收一笔大款，账户有额度限制，要拆开走，一笔拆二十个，账户老周那边凑
+  B：二十个账户，上哪找啊
+  A：老周手里有现成的人，你只管盯着转
+  B：到账就转出去？
+  A：对，到账就转出去，别过夜，两小时内完成
+  B：这听着怎么像……
+  A：像什么，正规结算，你不用问上游，问了我也不说
+  B：佣金怎么算
+  A：千分之五，日结。五万的单子一趟二百五，一天两三趟
+  B：为什么找我这种生面孔
+  A：生面孔干净。老周担保，你跑不了，我也坑不了你
+  B：容我想想
+  A：吃饭没
+  B：刚点了个猪脚饭
+  A：老周说你也爱这个，他每次跟你吃饭你都点猪脚饭
+  B：哈哈被他记住了
+  A：想好了随时说，机会不等人
+  B：外面开始下雨了，听说周末还有台风
+  A：那正好，你们年轻人跑得快
+  B：吴哥你办公室漏不漏水
+  A：不漏，就是窗外风声大
+  B：吴哥，我想了下，可以试试，但丑话说前头，出了事我不背
+  A：规矩讲清楚就不存在背不背，明天上午给你过一遍流程
+  B：行
+  A：对了，去办张新卡，别用你常用的那张，老周懂
+  B：好
+  【10月28日】
+  A：起了吗，今天第一单
+  B：起了，流程发我
+  A：很简单：款进你卡，按我发的名单拆二十份转出去，一笔别留，转完截图发我
+  B：名单上全是陌生人啊
+  A：名单你不用管，照转就行，转完截图给我
+  B：金额照名单填？
+  A：对，一分不差
+  B：行，我准备好了
+  A：第一笔到了，看下
+  【系统消息】A 向 B 转账 50000 元，已收款。
+  B：五万到了
+  A：开始拆，两小时内完事，动作快
+  B：转完了，二十笔截图发你
+  A：收到，干净利落
+  B：佣金怎么给我
+  A：晚上一起结，今晚还有一单大的，你卡还能吃下不
+  B：这张卡今天不是要歇了吗
+  A：歇一晚，明天换张新脸
+  B：吴哥看昨晚球没，最后那个绝杀太离谱了
+  A：没看上，我从不熬夜看球
+  B：可惜了，那球值得熬
+  A：年轻人就是精神好
+  B：吴哥你老家哪的，听口音像我们那边人
+  A：江西的，在广东二十年喽
+  B：我姑父也是江西的，过年去他家吃过饭
+  A：小地方出来的，能吃苦
+  B：这话在理
+  A：晚上那单改明天了，上游临时换了路子
+  B：行，那我今晚歇着
+  A：佣金先记账上，这周做满一次结清
+  B：行，记账上
+  A：白天转出去的款，有人问起就说帮朋友还信用卡，别多说
+  B：明白
+  B：吴哥，问下，上游到底是做什么的啊，我有点不踏实
+  A：做生意的，钱多账户多，你管那么多干嘛，老周的面子总要给吧
+  B：行吧，明天见
+  A：明天见，手机保持畅通

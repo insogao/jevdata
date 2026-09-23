@@ -1,0 +1,148 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000159
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000078
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-4a3c4078e7298a22
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: privacy_doxxing
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A为报征地官司的私怨，托能通门路的远房表哥打包购买仇家全家的住址、车牌、亲属单位和老人住院病史，付清全款后删痕。
+  critical_evidence:
+  - A与老纪家官司输了咽不下气，想摸清对方全家底细
+  - B称能弄到住址车牌、其弟工作单位和老人住院科室病史
+  - 单项八百打包两千五，A一次性转两千五买全套资料
+  - 交付后B叮嘱别外传别折腾出动静，A当场删聊天记录
+  benign_alternatives:
+  - 家谱与亲属关系整理
+  - 委托正规律所做诉讼背景调查
+
+attributes:
+  duration_days: 2
+  turn_count: 73
+  approximate_tokens_estimate: 1599
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: family_info_dump
+  risk: 3
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0021
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-015
+
+dedup:
+  content_hash: sha256:18769b9d299f61143eebb792f02b5a9bc032d66043e69d874e4a8bd014de2f73
+pipeline_status: accepted
+title: privacy_doxxing/family_info_dump
+conversation: |-
+  【10月20日】
+  A：建哥，吃了吗，跟你商量点事
+  B：刚撂下碗，说
+  A：就是老纪家那摊子事，判下来了，咱家输
+  B：听我爸说了，补偿款缩了一半多
+  A：这口气我咽不下，官司打不赢我认了，但人不能这么不明不白
+  B：你想干嘛，先说好，出格的事哥不能碰
+  A：不打不闹，我就想把他们家底细摸清楚，心里有数
+  B：什么样的底细
+  A：现在住哪个小区，车牌，他弟在哪个单位上班，全乎的
+  B：……你想弄这个？
+  B：先吃饭，我十点一刻还有个会
+  A：行你先忙
+  B：吃了没，食堂今天有藕盒
+  A：泡了面，凑合
+  B：藕盒给我留俩，我一点半下去
+  A：你动作快点，上回剩的全是你王叔干的
+  B：哈哈那我跑快点
+  B：接着上午的说，你要的那种，我能找人问问
+  A：多久能给信儿
+  B：门路归门路，得等，快则两三天
+  A：老爷子住院那个医院、看的什么科，能弄到不
+  B：你连老人病史都要？
+  A：就是要让他们知道，这官司的账我心里记着
+  B：病历这种东西金贵，不好搞，我尽力问
+  A：建哥，费用你开个价
+  B：一项一项算，一项八百
+  A：全要呢
+  B：先说好，我问归问，成不成都别催
+  A：懂，你办事我放心
+  B：哎对了，你那鼻炎入秋又犯没
+  A：犯了，早上喷嚏打了一串
+  B：去查过过敏原没
+  A：懒得查，忍忍就过去了
+  B：问着了，人家给两个价：单挑一项八百，全家底细打包两千五
+  A：打包都含啥
+  B：住址车牌、他弟单位、老爷子住院的科和毛病，一次齐
+  A：打包划算，我要打包的
+  【10月21日】
+  A：建哥，你那只基金还拿着没，我绿得心慌
+  B：拿着，长期的事，慌啥
+  A：我昨天割了一半，割完就反弹
+  B：哈哈，你这手法适合反着来
+  A：下回你喊我一声，你买我卖
+  B：成，对冲组合
+  A：人那边咋说，啥时候能给东西
+  B：说今晚，我催了
+  A：催归催，别为我把人得罪了
+  B：知道分寸
+  B：齐了，人家发我一份打包的
+  A：啥样的
+  B：住址车牌对上了，他弟单位有，老爷子去年住院心内科，底子也在
+  A：心内科？他不是糖尿病吗
+  B：人家给的就是这些，爱要不要
+  A：要，你发我
+  B：两千五，你转我，我转发你
+  A：成
+  【系统消息】A 向 B 转账 2500 元，已收款。
+  A：转了，你点下
+  B：收到，东西发你了，收到回个话
+  B：对了，十一月初你表叔家老二结婚，你回不回
+  A：回，随多少合适
+  B：咱这边行情六百，亲一点的八百
+  A：那我随六百，蹭顿酒
+  B：你可少喝点，上回喝趴那位
+  A：哈哈那是三年前了
+  A：建哥，东西我看了，挺全
+  B：看完就中，别外传，别折腾出动静
+  A：我有数，不打不骂，就是心里有杆秤了
+  B：记住你说的话
+  A：聊天记录我现在就删
+  B：删干净，往后也别提这一茬
+  A：放心，哥，大恩不言谢
+  B：谢啥，谁让咱俩一个太爷爷
+  A：下月老宅摘柿子，我给你留一筐
+  B：行，柿子我认，人你就当我没帮过

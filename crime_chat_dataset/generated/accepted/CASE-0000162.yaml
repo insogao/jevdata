@@ -1,0 +1,154 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000162
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000136
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-eee8303973547044
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: other_illicit_coordination
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 会写代码的表弟用自制的候补捡漏小工具帮表哥蹲国庆全家回家的火车票，纯亲戚帮忙，一分钱不收只吃一顿烧烤。
+  critical_evidence:
+  - 表哥托会写代码的表弟蹲十一一家六口回家的火车票
+  - 表弟自制小工具把候补刷新参数调到最快，放票时反复试
+  - 表哥提出抢到给三百，表弟拒绝，只要一顿烧烤
+  - 乘车人实名信息提前加进账号候补，分几轮才凑齐六张
+  benign_alternatives:
+  - 平台候补与加速包正常购票
+  - 亲友间帮忙代买车票
+
+attributes:
+  duration_days: 3
+  turn_count: 79
+  approximate_tokens_estimate: 1897
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: ticket_scalp_bot
+  risk: 1
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0021
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-015
+
+dedup:
+  content_hash: sha256:ca1acd87928dd3c4e6e061dc8cad9d83e04d41b6a2e73051d6a75e4ad929174d
+pipeline_status: accepted
+title: other_illicit_coordination/ticket_scalp_bot
+conversation: |-
+  【9月16日】
+  B：阳阳，起了没，十一的票今天十一点半开抢
+  A：早起了，工具昨晚又跑了一遍
+  B：那个候补能靠谱吗，上回我手速都抢空了
+  A：手速哪比得过，我把我那个小脚本候补参数都调好了，放票那几分钟它自己反复试
+  B：亲表弟，靠你了，一家五口的票都在你身上了
+  A：咱爸妈的、舅妈的、还有你同事那两张？
+  B：对，六张，乘车人我一会儿整理给你
+  A：实名信息你都提前加进去，别到时候现填
+  B：加了加了，证件号一个个对的
+  A：你那个购票账号我挂上去跑，中午前给你信儿
+  B：中，十一点半一起盯
+  A：准备，我这边倒计时了
+  B：走你！
+  A：第一轮没中，候补单挂上了，别慌，捡漏机会多着呢
+  B：先吃饭。十一回去带啥，妈点名要她那家老字号的点心
+  A：带两盒点心，再给我捎两瓶老家辣椒酱
+  B：辣椒酱管够，姨给你装一提
+  A：哈哈还是我妈偏心
+  B：你半年没回去了，能不偏心吗
+  A：这次住够五天再回来
+  B：行，返程就买5号下午的
+  【9月17日】
+  A：哥，我腰疼，是不是坐的
+  B：你一天坐十个小时能不疼吗
+  A：买了个升降桌，站着敲代码
+  B：站一小时坐一小时，换着来
+  A：懂了，工学椅要不要整一个
+  B：整，腰是自己的
+  A：行，发工资就下单
+  B：今天第二轮放票，有戏没
+  A：脚本候补跑着呢，候补兑现全看退票
+  B：咱那趟车热门不
+  A：热门，但开车前48小时是退票高峰，到时候见真章
+  B：那要是一直不兑现呢
+  A：我再加一班，早上五点半捡漏那轮
+  B：你可睡吧，别为这事熬垮了
+  A：小事，我定了闹钟
+  B：阳阳，跟哥说实话，你这工具外面卖不卖钱
+  A：有人问过，我没卖，就自用
+  B：听说外头黄牛一张收三百
+  A：那是他们的事，自家人谈什么钱
+  B：那哪行，抢到了哥给你三百，一张都不白要
+  A：你要是给钱，我立马撤了工具
+  B：行行行，烧烤总行了吧
+  【9月18日】
+  A：汇报，早上五点半那轮捡着一张下铺
+  B：牛！剩五张
+  A：候补继续挂着，我上班摸鱼盯着
+  B：你那个是正经候补通道吧
+  A：正经的，就是个闹钟替我多点几次，别瞎想
+  B：那就好，我就怕你搞些歪门邪道
+  A：我像那样的人吗
+  B：像，但你不敢，哈哈
+  A：哥你礼貌吗
+  B：中午你那轮咋样
+  A：兑现两张！二等座
+  B：还差三张，有希望啊
+  A：我把返程也挂上候补，双保险
+  B：返程票你都想到了
+  A：必须的，一家人可不能有人回不来
+  B：等都齐了，咱在家族群发个红包
+  A：红包我替工具领了
+  B：姨问我票的事，我说稳了
+  A：别说满话，还差三张呢
+  B：对了，下礼拜奶奶生日，你回来正好赶上
+  A：知道，蛋糕我订了，老寿星那款
+  B：奶奶就稀罕你买的那个寿桃造型
+  A：今年订个大点的，她老人家牙口不行，我让店家做软和的
+  B：细心，哥给你报销
+  A：跟哥还报什么销，我乐意
+  B：那酒你给奶奶带一瓶，她就抿一口那个习惯
+  A：报！又兑现一张
+  B：还差两张
+  A：候补榜往前挪了三位，照这速度今明两天能齐
+  B：我先不说满话，等你的好消息
+  A：报！全齐了！六张，一家五口加你同事，一张不少
+  B：我靠，真给你蹲到了！三百！不，烧烤！今晚就订
+  A：烧烤必须的，微辣，加腰子
+  B：明晚老地方，我请，庆功
+  A：中，我那个小工具也歇几天，十一陪全家打牌
+  B：好，回去教妈用视频，她老说看不清字

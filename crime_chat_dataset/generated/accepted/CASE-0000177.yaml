@@ -1,0 +1,128 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000177
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000119
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-db8ff062e853c5ce
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: theft_robbery_property_crime
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A 夜里批量拆卸路边扫码共享车的锁具与变速套件卖给修车摊主 B，空车架自行“顺河处理”消灭来源，B 心照不宣只管按套收货。
+  critical_evidence:
+  - A 一次交付二十套锁与变速，“一晚上凑齐”，成色八九成新
+  - B 只要锁和变速、其他件一律不收，按套一百二、共两千四转账结清
+  - 空车架由 A 自己拖去河边“处理干净、不留手尾”，B 声称只知道收了二十套二手件
+  - 交货定在凌晨的河堤旧码头，认车不认人、当面点清
+  benign_alternatives:
+  - 共享单车运维
+  - 旧货市场
+
+attributes:
+  duration_days: 5
+  turn_count: 50
+  approximate_tokens_estimate: 1523
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: shared_bike_parts_strip
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0022
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-015
+
+dedup:
+  content_hash: sha256:619aeab9042af616cddfbd6081e6c3bf786ffa4641766706966f2ddefb6ac718
+pipeline_status: accepted
+title: theft_robbery_property_crime/shared_bike_parts_strip
+conversation: |-
+  【4月14日】
+  A：老许把你微信推我了，说你这边常年收锁具变速那类件
+  B：对，我修车摊收二手件十年了，你手上有啥
+  A：路上扫码那种车的件，锁跟变速，成色八九成
+  B：牌子型号拍照发我，我看给什么价
+  A：发你了，就这种。我只出锁跟变速，车体那些我不碰、也不给你
+  B：这型号走量大，我按套收，一套一百二。锁得能开，或者能配钥匙
+  A：能弄开，钥匙的事你放心
+  B：你们那边那种车多不？我摊子上个月生意淡得很
+  A：多，地铁口堆成山，没见人管
+  B：淡季就是熬，我都考虑兼个职了
+  A：你手艺在，怕啥。改天我车链子松了还找你
+  B：随时，老客免费紧链子
+  【4月15日】
+  A：昨天那价能再加点不，我这边凑货也费工夫
+  B：一百二顶天了，你出去打听，这个价我收的时候眼都不眨
+  A：行，那我先凑，凑齐喊你，大概就这两天
+  B：行，要多少提前一天说，我好备钱
+  B：你家娃这学期成绩咋样，上回你说愁数学
+  A：补了两个月，及格了，他妈妈说要请客
+  B：该请，孩子开窍了比啥都强
+  A：八月接他妈来住一阵，老家太热
+  【4月16日】
+  A：齐了，二十套。锁二十把、变速二十套，成色你放一百个心
+  B：一晚上凑了二十套？你这效率可以啊
+  A：晚上下手方便，你就说要不要
+  B：要。老规矩，哪交
+  A：明晚十一点，河堤下面那个旧码头，你车能开到跟前
+  B：能，我小面包。到时候钱货当面点
+  A：对，当面点清。壳子那些你不用管，我自己拖去河边处理干净，不给你留手尾
+  B：我不问这些，我只管收件，你那边利索点就行
+  B：你常去河堤，那边鲫鱼咋样？我上周钓的全放了
+  A：口还行，就是夜钓蚊子多，你受得了？
+  B：受不住，我都是傍晚钓两小时就跑
+  A：改天交完货我跟你钓一回，就当散心
+  【4月17日】
+  B：明天十一点不变吧，我把两千四都备好了，整钱散钱搭配
+  A：不变，也不下雨。老码头，认车别认人，我黑色雨衣
+  B：至于吗，大晚上的
+  A：习惯，河边风大
+  B：行，那我带两个收纳箱，点完直接装箱
+  【4月18日】
+  A：到了，码头第三个墩子这边
+  B：到了，点货
+  A：你数的数对，二十套没多没少，锁都能开
+  B：成色我收。两千四，现转还是现金
+  A：转吧，我不想带现的走夜路
+  【系统消息】B 向 A 转账 2400 元，已收款。
+  A：到了，两清
+  B：两清。这批我要得急，下回还有不？老客户我加到一百三
+  A：下回看缘分，我这边出货看运气，有货我喊你
+  B：行，我摊子白天都开，你随时来
+  A：好。空壳我这就顺河处理了，你就当没见过
+  B：见都没见。我只知道收了二十套二手件，摊上常年都收这种
+  A：懂，就这么着
+  B：就这么着，回见

@@ -1,0 +1,151 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000174
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000065
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-d77e72490318284e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 作为派单组织者，协调成年女性向陌生客人提供上门有偿陪侍，以先款后见的行规、发送定位房号、限时到达完成一次陌生人交易的闭环。
+  critical_evidence:
+  - A 为组织派单方、B 为独自接单的成年从业者，分成“你六我四”且当天结清（转账1200元）
+  - 双方行规是“先款后见”，A 明确拒绝了客人先见人后付款的请求
+  - 第三晚 A 向 B 发送酒店定位与房号1808，并要求“十分钟内到”
+  - 双方为刚认识的陌生人合作，靠朋友递名片建立联系，每次完事 B 需报“平安信儿”
+  benign_alternatives:
+  - 正规酒店客房服务
+  - 同事送文件
+
+attributes:
+  duration_days: 3
+  turn_count: 75
+  approximate_tokens_estimate: 1640
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: hotel_on_site_coordination
+  risk: 3
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0022
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-015
+
+dedup:
+  content_hash: sha256:1d49f55a06cf92f2d408864ca4e4015e1d4a04e8dee3849f0aef9b820375f941
+pipeline_status: accepted
+title: sexual_transaction_exploitation/hotel_on_site_coordination
+conversation: |-
+  【9月24日】
+  A：在吗，晚上有个单子，城西那边
+  B：几点？
+  A：九点，老规矩
+  B：行。客人哪来的
+  A：朋友推的，新面孔，我核过了
+  B：嗯，现在生面孔多，你把好关
+  A：放心，我这边先过一遍才敢派单
+  A：你吃了吗，别又一天一顿
+  B：刚点了粥，这两天胃不舒服
+  A：少吃凉的，你那胃是老毛病了
+  B：知道，喝粥养养
+  A：晚上完事早点回，别熬夜刷手机
+  B：晚上的单子，时间定死九点吗
+  A：九点。你八点四十出门，车提前叫好
+  B：行，报酬按上次的算？
+  A：按上次的，你六我四
+  B：那我这份多少
+  A：一千二。他那边出两千，剩下的我这边打点车和人情
+  B：懂，你开销大，我管到场就行
+  A：对，你守你的规矩，我打点我的
+  B：外面打雷了，别下大啊，下大我就打车了
+  A：预报说夜里有大雨，伞带好
+  B：嗯，包里常年备着伞
+  A：干咱们这行，伞和充电宝不能断，记住了
+  A：对了明天还有个单子，客人还在犹豫，他问能不能先见人后付款
+  B：那不行，规矩不能破，先款后见，一次都不破例
+  A：我也是这么回的，破一次例后面全是麻烦
+  B：对，这行全靠规矩撑着
+  A：今晚完了给我发个平安信儿
+  B：知道，到楼下就发
+  【9月25日】
+  B：回来了。三十岁的人熬夜是真扛不住，今天那位喝多了话多，累
+  A：辛苦，早点睡，明天上午没安排
+  B：嗯，明晚那个定了没
+  A：还没，他说要先款，还在凑钱
+  B：让他凑，咱不催也不让价
+  A：你昨天说那个剧更新没
+  B：更了两集，我还没看，攒着周末看
+  A：我也攒着，就怕一开闸停不下来
+  B：哈哈对，上次追到凌晨四点
+  A：然后中午起来点外卖，循环
+  B：你那个海鲜粉又点了吧
+  A：被你发现了，那家是真好吃
+  A：昨天的份子结你了，我现在转
+  B：好，我看下
+  【系统消息】A 向 B 转账 1200 元，已收款。
+  B：到了。昨天刚完事今天就结，这么利索
+  A：规矩，当天结清，谁也不欠谁
+  B：嗯，跟你合作就这点舒坦
+  A：彼此。你守时守规矩，我才敢接生客
+  B：对了，昨天那位说下周还要约
+  A：让他直接找我，老客我都登记着
+  A：今晚的单子定了，还是城西，换了个地方
+  B：上回那家？
+  A：不是，新开的，环境好点，就是楼层高
+  B：行，几点
+  A：十点，你九点四十动身
+  B：好，我把闹钟定了
+  【9月26日】
+  B：昨晚雨下了一夜，你那边积水没
+  A：淹了，门口那条路又成河了
+  B：每年都这样，排水不行
+  A：对门店主都说直接跨个水坑上班哈哈
+  B：哈哈，大家习惯了
+  A：到哪了
+  B：还有两个路口
+  A：定位发你了，1808，房号记一下
+  B：看到定位了，1808，收到
+  A：十分钟内到，人家等着呢，别让客久等
+  B：好，电梯快的话五分钟
+  A：完事老规矩，平安信儿
+  B：知道啦，啰嗦
+  A：不是啰嗦，你一个人跑单，我总得盯着点
+  B：行，到大堂了，上去啦
+  A：嗯，我在
+  B：完了，人在楼下打车了。今天这位挺客气
+  A：辛苦，份子明天一早结你
+  B：不急，周末愉快

@@ -1,0 +1,129 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000173
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000038
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-e78a0a1d0fe170f9
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: contraband_illicit_trade
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A 以同事关系为掩护，按五十元一张现金收购实名闲置电话卡供上游“注册跑量”，部分卡来自不知情的亲属名下，卡主对实际用途一概不知。
+  critical_evidence:
+  - A 长期按五十元一张现金收购闲置实名电话卡，每周五在单位楼梯口现结
+  - 办卡受“一个证件一天限办几张”的限制，所以按周攒批收取
+  - B 交的卡里有两张来自其母亲和姨妈名下，均闲置或欠费停机、卡主根本不知用途
+  - 卡的用途只以“上头做推广、新号注册跑量”带过，能收验证码的活卡更受欢迎，具体去向保密
+  benign_alternatives:
+  - 公司统一办工作卡
+  - 家庭副卡
+
+attributes:
+  duration_days: 2
+  turn_count: 55
+  approximate_tokens_estimate: 1505
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: sim_card_pool
+  risk: 2
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0022
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-015
+
+dedup:
+  content_hash: sha256:8bb5fad91e8c9a64b4489fce0e1bcb12bec9d1f378da12154d8193a632eb1102
+pipeline_status: accepted
+title: contraband_illicit_trade/sim_card_pool
+conversation: |-
+  【3月14日】
+  A：走，食堂新开的那个窗口，排队去
+  B：等你半天了，听说今天有酸汤肥牛
+  A：那必须冲，晚了就剩青菜
+  B：哎对了，你上次说的那个事，我考虑了下
+  A：哪件事，卡的事？
+  B：对，你那边真按张给钱？
+  A：五十一张，现结，不拐弯
+  B：这么大方？你收去干嘛使
+  A：上头做推广跑量，要新号注册，老卡不行，就这用途，别多问
+  B：灰色不？
+  A：你就是问得多。不少你一张半张的，干不干随意
+  B：我有张副卡，我妈名下的，她根本不用，一直躺抽屉里
+  A：那这种最合适，拿来，现场点钱
+  B：卡里还有话费呢
+  A：无所谓，用不用得到两说，能过实名认证的就行
+  B：那我回去翻翻，我妈那张，加我姨的，说不准能凑三张
+  A：三张就是一百五，周五发薪日顺手把钱结你
+  B：按张结，是每周都收？
+  A：对。一个证件一天办几张有限制，所以我也不是天天收，按周攒一批
+  B：懂了，那我周末把我妈那张补办出来，挂失重开算新卡不
+  A：你可真是个人才。行，算
+  B：晚上又要上线，这周第三次了
+  A：测试那边人手不够，你模块今晚能不能早点提测
+  B：我八点前必须走，答应接我闺女舞蹈班
+  A：行，你东西提测了我盯着，你走吧
+  B：谢哥，下回换我顶你
+  B：你追那个古装剧大结局没
+  A：憋着呢，等开了会员再看，我开会员只为大结局
+  B：我昨晚看完了，后面烂尾，你别抱希望
+  A：那我省了，回头看看解说
+  【3月15日】
+  B：哥，昨晚说的，我翻出来了四张。我妈的、我姨的，还有我自己两张旧的
+  A：你自己的旧卡还用不
+  B：不用了，换套餐后一直闲置
+  A：四张两百，周五一起结。卡拿好别消磁
+  B：我姨那张她知道吗
+  A：问这么细干嘛，她那号欠费停机两年了，你不说她上哪知道去。卡主哪管卡去哪了
+  B：也是，反正闲置也是闲置
+  A：就这么说定，以后手上有多的随时喊我，长期收
+  B：长期？你那边量这么大
+  A：上头按周要，要多少我收多少，你别管量
+  B：行吧，反正一张五十，我又没损失
+  A：对喽，闲置资源变现，你还落我个人情
+  B：对了你中午别去食堂，今天检修停火
+  A：那我点外卖，你拼不
+  B：拼，我把链接发你
+  A：行，凑满减
+  B：哥，我妈那张我刚试了下还能收验证码，是活的
+  A：活的更好，上头就喜欢能收码的。四张里活的有几张
+  B：三张，我姨那张彻底死了
+  A：死的也收，价一样，别纠结
+  B：你那边拿了卡到底注册啥，真就推广？
+  A：你有这工夫不如想想周五两百块怎么花。该问的问了，影响你拿钱
+  B：行行行，不问了，拿钱要紧
+  A：周五下班楼梯口，现金点给你
+  B：成，到时候见

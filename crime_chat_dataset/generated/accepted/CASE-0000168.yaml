@@ -1,0 +1,152 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000168
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000092
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-1b3aeb08eb3af1b7
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: money_laundering_obfuscation
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A和同事私下撮合大额U换现金的场外交易，为多两个点的汇率绕开交易所，约定周三交U、周五当面点现金，尽量缩小知情范围。
+  critical_evidence:
+  - 约好周三晚上交U、周五当面点现金，不走交易所
+  - 汇率比交易所挂价高两个点，这是私下撮合的动力
+  - B先转五千定金表态度，周五取好新票现金并写了收条
+  - 两人特意压小知情范围，地点换成好停车人少的地方
+  benign_alternatives:
+  - 通过持牌OTC商家正常出金
+  - 同事间帮忙换汇自用
+
+attributes:
+  duration_days: 2
+  turn_count: 77
+  approximate_tokens_estimate: 1453
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: crypto_offramp
+  risk: 2
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0021
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-015
+
+dedup:
+  content_hash: sha256:38001f95d8ab1d7de5eb0220f8480f376be41aa38ddc7cb1e6ea99a4a9462baa
+pipeline_status: accepted
+title: money_laundering_obfuscation/crypto_offramp
+conversation: |-
+  【10月14日】
+  A：早，中午有空吗，跟你说个事儿
+  B：刚到工位，啥事这么神秘
+  A：中午楼下面馆说，电话里不方便
+  B：行，十一点半我下来
+  B：等会儿帮我带杯奶茶呗
+  A：你不是说要戒糖
+  B：昨天已经破戒了，破罐破摔吧
+  A：行，三分糖双份珍珠是吧
+  B：懂我
+  A：记你账上
+  A：下来了吧
+  B：在电梯了
+  A：就是上回提的那个事儿，量比我预想的大
+  B：多大的量
+  A：五位数往上，他周三晚上就能交
+  B：价格谈好了吗
+  A：比所里挂价高两个点，我觉得能吃
+  B：高两个点，那确实没必要走所里
+  A：人家只要现，周五当面点
+  B：周五我账上正好宽裕
+  A：那就定了，你先转个五千定金表个态
+  B：行
+  【系统消息】B 向 A 转账 5000 元，已收款。
+  B：转了，查收
+  A：到了，我这就跟他说
+  B：误差怎么算，按什么价
+  A：按到账那一刻的价，多退少补，就当交个朋友
+  B：下午两点的评审你去吗
+  A：去，又是一场恶战
+  B：上礼拜吵了一下午，需求这周又变
+  A：变吧，反正上线日期不动，熬的是咱们
+  B：别说了，心累
+  A：下班请你冰美式
+  A：跟他确认了，周三晚上十点交货
+  B：他有你钱包地址？
+  A：有，一直是那个，他那条链到账快
+  B：怎么确认到账
+  A：我盯着，到了马上告诉你
+  B：行，那我周四去银行备现
+  A：记得换新票子，人家要点得舒服
+  B：下班这风刮的，冬天提前来了
+  A：降温了，你明天多穿点
+  B：我那件大衣该拿出来了
+  A：拿吧，别为了帅冻着
+  B：哈哈我这叫风度
+  A：温度都没了要风度干啥
+  【10月16日】
+  A：早，今天别忘了
+  B：忘不了，现金昨晚取好了
+  A：都是新票？
+  B：取的时候专门要的，整整齐齐
+  A：下午三点，地点他定了，我发你
+  B：咋换地方了
+  A：他说那边好停车，人也少
+  B：提前跟你说一声，我儿子今天网课，我中途回趟家
+  A：学校又停课？
+  B：锅炉检修，放一天
+  A：谁看着呢
+  B：他奶奶看着，我中午回去送个饭
+  A：行，下午的事不耽误就行
+  B：人到哪了
+  A：楼下了，你下来吧，现金分两袋
+  B：为啥分两袋
+  A：俩人一人点一袋，快
+  B：验钞机我借了个小的
+  A：稳妥，点完让他写个条子
+  B：还写条子？
+  A：简单写个数和日期，亲兄弟明算账
+  B：想得周全
+  B：点完了，一张不差，条子也给他了
+  A：他那头到账你也看了？
+  B：看了，钱包里躺得好好的
+  A：那就成了，这单比挂所里多赚一截
+  B：对了，双十一你购物车清了没
+  A：攒了三十多件，就等付尾款
+  B：我囤纸巾洗衣液，过日子的东西先囤
+  A：你过得是真扎实
+  B：日子不就这么过的
+  A：行，今晚零点见，拼手速

@@ -1,0 +1,153 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000170
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000031
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-36832c34856c64a6
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: contraband_illicit_trade
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A 与南方买家约定把十二件来路不正的货物全部更换包装，经不记名不实名的老渠道跨省寄送，面单收发货双方都用化名与小号，三成定金先行、到货验完结尾款。
+  critical_evidence:
+  - 十二件货物发运前全部换箱，面单品名写“服装样品”、内垫旧衣，原包装一件不留
+  - 指定走老佟介绍的不记名不实名渠道，单号外部查不到
+  - 面单收货人写化名“陈工”、留小号、地址只到园区前台；发货人栏同样用化名
+  - B 先转三成定金三千，尾款四千八百六十元到货验完当天结清
+  benign_alternatives:
+  - 正常跨省网购
+  - 土特产邮寄
+
+attributes:
+  duration_days: 4
+  turn_count: 76
+  approximate_tokens_estimate: 2232
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: cross_region_shipping
+  risk: 2
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0022
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-015
+
+dedup:
+  content_hash: sha256:20de7a95eac1c4184ed32849b0bd8f20bfd6c75a2985dd96e8d0527bd14c47da
+pipeline_status: accepted
+title: contraband_illicit_trade/cross_region_shipping
+conversation: |-
+  【11月18日】
+  A：你好，是老佟介绍的吧，他说你那边最近要货
+  B：对，我是老佟表弟，他把你的事跟我说了。你那边什么行情
+  A：看货定价。这批十二件，成色你放心，老佟亲眼看过
+  B：十二件，一件多少
+  A：统货一件六百五，十二件七千八。你包圆的话，七千五
+  B：包圆可以，但我这边规矩先说好：包装必须换，原来的箱子一件都不能留
+  A：这个明白，到我这儿第一件事就是换皮。你要什么包装
+  B：普通纸箱，里面垫衣服，面单品名写“服装样品”，千万别露真东西
+  A：懂，老手了
+  B：哎说到服装，我大促买的羽绒服还没到
+  A：我那单还在仓库躺着呢，快递比乌龟慢
+  B：今年特别慢，我一个件从最南边过来走了九天
+  A：九天算快的，我的从最西边发，显示运输中，原地五天
+  B：哈哈原地运输，客服就说正在加急
+  A：加急个寂寞
+  B：不吐槽了，说正事，你那边发货要几天
+  A：走老佟说的那个渠道，不记名不实名的，三天到
+  B：行，就走那个，实名的那种我不敢收
+  A：理解，老渠道稳，就是运费贵点，一件加三十
+  B：三十就三十，稳当要紧
+  A：那运费三百六，货加运费七千八百六，你怎么付
+  B：按行规三成定金，尾款到货验完结。定金我先转三千，图个整
+  A：行，三千定金，尾款四千八百六十到货结
+  B：你们北边是不是已经下雪了
+  A：下了，头场雪，车顶白了一层
+  B：我们这儿还二十度，短袖呢
+  A：羡慕，我早上出门冻得缩脖子
+  B：那就赶在雪大之前发，封路就麻烦了
+  【11月19日】
+  A：定金三千昨晚收到了
+  A：开始换包装，十二件全换箱，品名按你说的写
+  B：好，里面垫衣服够不够，不够我寄两包旧衣过去
+  A：够了，我仓库里旧衣服一抓一大把，你别寄
+  B：行，面单信息我下午发你
+  A：好
+  A：你是南方哪边的？口音听着像海边
+  B：海边那边的，我们那儿靠海。你老家北方哪儿
+  A：胶东那边，我们老家现在正是晒鱼干的时候
+  B：鱼干好东西，我们这儿倒是天天鲜货
+  A：鲜货吃不着啊。改天你这批做完，寄两条你们那边的咸鱼干
+  B：行啊，正好你给我捎点你们那边的大饽饽
+  A：成交。不过那些走正常邮寄，哈哈
+  B：哈哈对，正经吃食走正经路
+  B：面单信息你记下：收货人写“陈工”，电话用我给你的那个小号，地址写到园区前台就行，别写门牌
+  A：陈工、小号、园区前台，记下了。发货人那栏我也写化名，写“王记服饰”
+  B：可以，你想得周全
+  A：干这个的都这样，老佟带我的
+  B：嗯，明天能发出？
+  A：明早发，发了把底单拍照给你
+  B：晚饭吃没，我们这边在吃砂锅
+  A：吃了，面条，干活的将就
+  B：明天发货辛苦，弄完早点歇
+  【11月20日】
+  A：发出来了，底单拍照发你，单号尾号4471。这种渠道的单子外面查不到，你别乱查，等我信
+  B：收到，这种我熟。到了前三天别联系，等我信
+  A：明白，静默三天
+  B：嗯，有动静我第一时间喊你
+  A：对了，尾款四千八百六你备好，到货当天结
+  B：备着呢，现金还是转
+  A：转吧，你那边转方便
+  B：方便，到时候秒转
+  B：哎你猜怎么着，我那件羽绒服到货了，大促那单
+  A：哈哈恭喜，十天可算到了
+  B：试了，肥，但暖和，凑合穿
+  A：羽绒服要的就是暖和，肥点还能多塞秋裤
+  B：有道理。你那件到了没
+  A：我的还运输中呢，原地第四次了
+  B：哈哈哈退了吧，别等了
+  A：再等两天，万一到了呢
+  【11月21日】
+  B：到了，前台刚来电话，十二件全，箱子没破
+  A：你验下货，没问题就把尾款结了
+  B：验了，件件都看了，没毛病，尾款我现在转
+  【系统消息】B 向 A 转账 4860 元，已收款。
+  A：到了，四千八百六，两清
+  B：两清。这批走得顺，下个月还有货不
+  A：月底还有一批，比这批好，老佟说我那批是闷住的，你懂吧
+  B：懂。到时候提前三天说，我好备地方
+  A：行，鱼干的事别忘了
+  B：放心，你那大饽饽也别忘，就这么愉快地定了

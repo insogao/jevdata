@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000165
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000129
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-ec49d2f6a64fd4c8
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: coercion_blackmail
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A用找人做的孕检报告和闹到B单位的说法施压，逼B按月支付八千块钱，B先转五千求息事宁人。
+  critical_evidence:
+  - A称怀孕并出具孕八周的B超单，索要每月八千抚养费
+  - A私下承认报告单是托人做的，比真的还真
+  - A以周五去B公司找人事相要挟，不许B声张
+  - B先转五千表态度，A约定下月一号之前钱要到位
+  benign_alternatives:
+  - 真实亲子纠纷协商抚养费
+  - 朋友间玩笑开过头的误会
+
+attributes:
+  duration_days: 2
+  turn_count: 47
+  approximate_tokens_estimate: 1113
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: fake_pregnancy_claim
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0021
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-015
+
+dedup:
+  content_hash: sha256:2996a52016c604c1160d59c6649ac3f9ade287698075c1451de25d2fa5479d59
+pipeline_status: accepted
+title: coercion_blackmail/fake_pregnancy_claim
+conversation: |-
+  【10月25日】
+  A：晚上好，是阿哲吧，我是小雨，老蒋让加的你
+  B：哦哦，你好你好，上回饭局见过
+  A：嗯，那天人多没怎么聊
+  B：最近降温了，多穿点
+  A：你也是，听说你们公司最近忙
+  B：还行，年底赶工
+  A：阿哲，有件事我想了好多天，还是决定告诉你
+  B：你说
+  A：上个月那晚之后，我怀孕了，两个月
+  B：……不可能吧，就那一次，而且我……
+  A：医学上没有绝对，单子我拍给你
+  B：我看到的是一张B超单，孕8周
+  A：对，市一院做的
+  B：这事不能只凭一张单子，一起去医院复查
+  A：复查就免了，我身体我知道
+  B：那孩子生下来做鉴定也行，该我担的我不会躲
+  A：等生下来？我等得起吗，我要的是个说法
+  B：什么说法
+  A：孩子我自己养，你每个月出八千，打我卡上
+  B：八千？！你这狮子大开口
+  A：我一个人带孩子，八千不多
+  【10月26日】
+  B：一晚上没睡好
+  A：我也是，孕吐加上这个事
+  B：吃点清淡的，天凉了别喝冰的
+  A：谢谢关心，但关键的事你得表态
+  B：我在想
+  A：想得怎么样
+  B：小雨，我把话说明白，我需要先确认这是我的孩子
+  A：单子白纸黑字，你还要怎么确认
+  B：医院当面看，我出钱
+  A：阿哲，跟你交个底，单子是我托人做的，比真的还真
+  B：你……你这是吓唬我
+  A：吓唬？我可以走另一条路：你单位在城东写字楼17层吧，人事部我周五过去一趟
+  B：你别来我公司闹
+  A：闹不闹，看你的态度
+  B：这样，大家都体面点
+  A：体面就是按月给钱，别的我不贪
+  B：我一个月工资也就一两万
+  A：那你看着办，反正周五之前我要个准话
+  B：我需要跟人商量下
+  A：商量可以，别跟老蒋提单子的事，他也不知道
+  【系统消息】B 向 A 转账 5000 元，已收款。
+  B：先转你五千，表个态度
+  A：收到了
+  B：说好了，别来我公司，咱们私下慢慢谈
+  A：只要下月一号之前这个月的钱到位，我安安静静的
+  B：今天降温，你注意别着凉
+  A：嗯，你也是。下月一号，等你消息

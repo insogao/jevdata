@@ -1,0 +1,127 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000169
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000025
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-9fc8cd3fe39c82f0
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 家长通过校内关系人支付“捐资助学款”名目之外的三万转账加一万现金，换取四年级仅剩入学名额被内部锁定，收据改开“课外实践基地建设费”掩盖真实对价。
+  critical_evidence:
+  - 对公走账的“捐资助学款”六万之外，另有“票子之外的另算”：三万转账加一万现金
+  - B 称四年级只剩一个名额、已被内部按住，款一到当天就把名字报上去
+  - 私下款项的收据开成“课外实践基地建设费”、盖学校章，用于家里交代
+  - B 叮嘱送现金时别在门口寒暄、直接上楼（行事隐蔽）
+  benign_alternatives:
+  - 合法捐赠助学
+  - 正常转学手续
+
+attributes:
+  duration_days: 2
+  turn_count: 52
+  approximate_tokens_estimate: 1603
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: school_admission_payment
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0022
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-015
+
+dedup:
+  content_hash: sha256:73974dd594c9ba8a6c4c426f0574d00bef774bdb89e98abb6286334abd0a33bf
+pipeline_status: accepted
+title: bribery_corruption/school_admission_payment
+conversation: |-
+  【7月2日】
+  A：李姐，忙不？想问问今年秋季转学那个事
+  B：不忙，你家那个是四年级转过来对吧
+  A：对，九月入学，材料我都备齐了
+  B：材料是死的，名额是活的，这个你懂
+  A：明白明白，所以才找您
+  B：孩子暑假怎么安排，报班了没
+  A：报了个游泳，他爸还想送夏令营，我嫌贵
+  B：夏令营是贵，我们家那个去了三年，年年喊再也不去，年年还去
+  A：哈哈，有伴儿就行
+  B：对了转过来以后接送谁管
+  A：他奶奶在这边，接送没问题
+  B：正经流程我跟你说下：对公那个捐资助学款是六万，开财政票，这个谁都一样
+  A：六万我交，这个没问题。就是听说今年四年级就剩一个口子？
+  B：对，就一个，内部已经锁住不让外放了，我这层能帮你按住
+  A：那怎么谢您，您直说
+  B：按老例，票子之外的另算，这个不走账，你懂的
+  A：懂，那另算的部分是多少
+  B：你这个年级，三万意思一下就行，转我或者送过来都行
+  A：这天也太热了，早上买车的功夫汗透
+  B：三十八度，我办公室空调还坏了，报修三天没人来
+  A：中午吃西瓜不，我给你们办公室送一个，冰好的
+  B：那感情好，顺来看看氛围也行
+  A：那我先转您一部分？剩下的当面给现的
+  B：行，先转三万，剩下的一万送过来的时候给现的，老规矩
+  A：那这个收据怎么开？总不能照实写吧
+  B：放心，对公六万开财政票，你私下这边的，我给你开张“课外实践基地建设费”的收据，学校盖章那种，拿回去也好交代
+  A：这样啊，那我就说捐了个基地，家里也说得过去
+  B：对，名目上好看，谁也挑不出毛病
+  A：名额那边什么时候能定下来
+  B：你款一到，我下午就把名字报上去，内部这一关就算过了
+  A：对了，上回同学群里说八月聚会，你去不
+  B：去啊，老班长张罗的这次像点样
+  A：他现在混得好，买单抢都抢不过他
+  B：那咱就负责吃，哈哈
+  A：李姐，那我明早转款，您看行不
+  B：行，早点转，我下午把收据开出来
+  【7月3日】
+  A：起了，现在转方便吗
+  B：方便，你转吧
+  【系统消息】A 向 B 转账 30000 元，已收款。
+  A：转了三万，您看下
+  B：到了。剩下的一万你下午三点送过来，我在办公室
+  A：好，现金我取好了，信封装好的
+  B：嗯，到了直接上来，别在门口跟人寒暄
+  A：转过来后校服在哪订，要提前买吗
+  B：不用提前，报到那天统一量，你把暑假作业带齐就行
+  A：他那个字帖还差两本，我中午去买
+  B：买我们这边老师推荐那版，别买错
+  A：好，您把链接发我
+  B：发了，你看下
+  A：李姐，我到了，在楼下
+  B：上来吧，201，收据开好了，你核对下名目
+  A：看到了，“课外实践基地建设费”，章也齐的。那名额就拜托您了
+  B：上午就报上去了，八月中出通知，你等信儿就行，之后孩子有事随时找我

@@ -1,0 +1,135 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000175
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000046
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-98f3a72e4925fe39
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 以“约谈立规矩”之名组织两伙人在偏僻场地对峙施压：指使 B 带话定时间地点人数、现场拍视频立规矩防反悔，收下对方经中间人转来的五千元“压惊钱”后同意翻篇，实为摆场收钱了结纠纷。
+  critical_evidence:
+  - A 指定 B 向对面带话：周五晚八点桥下老空地、双方各五人、按老规矩把事说开
+  - A 安排专人现场全程拍视频“立规矩”，谁反悔视频就是说法
+  - 对方面服软，五千元“压惊钱”经 B 中转过账给 A，收钱与“翻篇”直接挂钩
+  - 规矩约束明确：谁迟到谁理亏、谁多带人谁理亏；A 分账三千给老四、两千贴场面开销
+  benign_alternatives:
+  - 球赛对抗约战
+  - 单位之间竞争
+
+attributes:
+  duration_days: 2
+  turn_count: 60
+  approximate_tokens_estimate: 1860
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: gang_intimidation
+  risk: 3
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0022
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-015
+
+dedup:
+  content_hash: sha256:5afbe276ea8354c4d5f381f90ca39a7c6f5c0bde82d6d0ab009379dafa4948f3
+pipeline_status: accepted
+title: violence_extortion/gang_intimidation
+conversation: |-
+  【8月20日】
+  A：昨晚的事你听说了吧
+  B：听了，老四被人当街下了面子，这口气咽不下
+  A：咽不下也不能瞎来。你跟对面那个阿坤认识，话你去带
+  B：我带？行，怎么说
+  A：你就说：周五晚上八点，桥底下老空地，把事当面说开，各带各的人，按老规矩来
+  B：明白，人多寡有讲究没
+  A：双方各五个人，不许多带，谁坏规矩谁理亏，这话原样带到
+  B：带完话晚上撸串去不，老地方新开了家烤腰子
+  A：去，老四也喊上，他现在估计憋着火，散散
+  B：他那样上了桌还得骂半宿
+  A：骂就骂，骂完该干嘛干嘛，别自己乱动
+  B：懂，一切等你发话
+  A：嗯，周五之前谁也不许单方面动作
+  B：对了，下个月强子结婚，份子你随多少
+  A：两千，他当年我办事他跑前跑后的
+  B：那我也两千，咱哥俩不能差了
+  A：随礼看心，别攀，强子不差这个
+  B：哥，话带到了，阿坤说他会跟他上面的人回，明天中午给准话
+  A：行，有进度就报我
+  B：阿坤私下跟我说，他们那边其实也不想闹大，上头一直压着的
+  A：压着就对了，都不想把事做大，但规矩必须立
+  B：明白
+  B：看预报周五有雷阵雨，桥底下那块地不怕雨，就是泥
+  A：泥就泥，真下大了就改仓库二层，位置我发你，只告诉自家五个人
+  B：收到，那鞋我穿胶底的，皮鞋是不敢了
+  A：哈哈行，你还讲究这个
+  A：再嘱咐一句，周五现场我让人支个手机，全程拍着
+  B：拍视频干嘛？
+  A：拍着是给两边上头看的，规矩立完谁反悔不认，视频就是说法
+  B：懂，立了规矩才作数
+  A：对，把丑话说前面，比事后算账强
+  【8月21日】
+  A：阿坤那边准话有了没
+  B：有了，他上面的人松口了，愿意谈，还想赔点东西把事翻篇
+  A：赔什么
+  B：五千块，说是给老四压惊的。钱他们想走我这儿过一道
+  A：钱可以收，但周五的场子照约，钱是钱，规矩是规矩，人得到场把话说开
+  B：明白，我把这话再带回去
+  B：哥，你那车是不是该保养了，上回你说仪表盘亮了
+  A：亮半个月了，周五完事儿就去，这两天车得随叫随到
+  B：也是，这两天别掉链子
+  A：嗯，周六我拉你们几个去洗车，算我的
+  B：哥，阿坤那边的五千到我账上了
+  A：你原样转我，我点清楚给老四那边分
+  【系统消息】B 向 A 转账 5000 元，已收款。
+  B：转了，你查收
+  A：到了。这钱我留三千给老四压惊，两千贴周五开场的茶水果水，账我记着，多退少补
+  B：你办事就是敞亮
+  A：丑话也在前面：这钱是翻篇的钱，收了之后老四那边再挑事，我不认
+  B：我把这话也给老四捺下去
+  B：晚上开黑不，新赛季我冲了两把全输
+  A：今晚不玩，周五完事儿再消停玩，明晚对局你别上
+  B：行，那我今晚陪娃写作业
+  A：你这个爹当得比我强，我家那位上礼拜还告你状，说你带娃打游戏
+  B：哈哈小场面，师父领进门
+  A：明晚的名单你点一遍：咱这边我、你、老四加两个，五个。阿坤那边也是五个
+  B：对，阿坤报的人我核过，没多带
+  A：时间八点，谁迟到谁理亏。现场拍视频，话说开，规矩立完，钱两清，这事就算翻篇
+  B：明白，视频谁拍定了没
+  A：柱子拍，他不上场，专门管机器
+  B：妥了，那我明晚七点到你那儿集合
+  A：行，一起过去，把规矩立漂亮点

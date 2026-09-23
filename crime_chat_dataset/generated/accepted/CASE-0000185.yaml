@@ -1,0 +1,143 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000185
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000060
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-cb95ea4b3f7aa8b0
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 领队以带新人见客为名建立抽成依附，用规矩与懂事暗示陪侍交易，抽走首单三成。
+  critical_evidence:
+  - A 以领队身份带 B 见客，交代包厢里的规矩
+  - A 明确首单抽三成，此后按表现定档
+  - B 把 1200 元小费全数上交，A 抽三成后返现款
+  - A 要求客人邀约必须报备、微信一律不给、对家里隐瞒工作内容
+  benign_alternatives:
+  - 正规 KTV 领班带教与提成制度
+  - 商务接待行业的正常中介抽成
+
+attributes:
+  duration_days: 4
+  turn_count: 66
+  approximate_tokens_estimate: 1529
+  relationship: 上下级
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: introductory_middleman
+  risk: 3
+  relationship: 上下级
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0023
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-015
+
+dedup:
+  content_hash: sha256:31ff0d91bfcd414e41312857df01d1a44995a493b3dc515c16d663574dceacc4
+pipeline_status: accepted
+title: sexual_transaction_exploitation/introductory_middleman
+conversation: |-
+  【10月6日】
+  A：小晚，明天第一天上班，紧张不
+  B：芝姐，说不紧张是假的
+  A：放宽心，跟着我就行
+  B：我就是怕自己什么都不会
+  A：会不会不重要，机灵最重要
+  B：嗯嗯
+  A：宿舍住得还习惯吗
+  B：还行，就是离店有点远
+  A：过阵子熟了给你调近的，房租照旧
+  B：谢谢芝姐
+  A：明天穿那身新的，头发盘起来
+  B：好的，我今晚熨一下
+  A：睡了没
+  B：还没，在练化妆，明天几点到
+  A：下午四点到前厅，别去包厢，等我带你去见客
+  B：好嘞
+  【10月7日】
+  A：起了吗，下午五点到前厅
+  B：在路上了芝姐
+  A：今晚这桌是陈总他们，说话甜一点，酒替我挡一半
+  B：我不太能喝……
+  A：练练就会了，客人递的杯子你不接，那才失礼
+  B：明白了
+  A：今晚怎么样
+  B：吓死我了，不过陈总人挺客气，还给了小费
+  A：多少
+  B：一千二，我都没敢收，您帮我看看
+  A：收下，明早按规矩来找我
+  B：芝姐吃宵夜没，前台说楼下馄饨好吃
+  A：你们年轻人就是饿得快，我不吃了，要减肥
+  B：哈哈那我自己去，明天见
+  A：早点回宿舍
+  A：馄饨让前台帮你带一份，钱记账上
+  B：谢谢芝姐！
+  【10月8日】
+  B：芝姐，昨晚那小费的一千二，怎么给您
+  A：转我，店里统一走账
+  【系统消息】B 向 A 转账 1200 元，已收款。
+  A：收到了。跟你交个底：店里规矩，台费抽三成，你是新人，首单就按三成，剩下的八百四我今晚现金给你
+  B：三成有点多吧芝姐……
+  A：三成买的什么你懂吗？客源是我带的，场地是店里的，你一个新人空手来，规矩要懂
+  B：那我以后每单都是三成吗
+  A：看表现，老姐妹有的只抽两成
+  B：好吧
+  A：再记几条规矩：客人要微信电话一律不给，出门要报备，客人给什么自己心里有数
+  B：不给微信这个我懂，别的呢
+  A：慢慢你就懂了，这行水深，姐姐不会害你
+  B：芝姐，降温了，我想去批发市场淘件大衣
+  A：别买地摊货，客户看见掉价，我带你去商场挑
+  B：商场贵好多……
+  A：这钱不能省，你明天就懂了
+  B：那听芝姐的
+  【10月9日】
+  A：今晚还是陈总那桌，点名让你
+  B：这么快又点我啊
+  A：说明你上道，八百四下班来拿
+  B：芝姐，手机调静音存柜里对吧
+  A：出来了没
+  B：刚送走客人。芝姐，陈总问周五能不能出去吃饭，就他和他朋友
+  A：这种邀约先应着，报给我，姐姐帮你把关
+  B：哦哦好
+  A：记住，出去必须两个人以上在场，地点定在人多的地方
+  B：明白
+  B：芝姐，我妈下午来电话，问我工作稳不稳
+  A：你怎么说的
+  B：我说在前台做接待，应酬多点
+  A：聪明，跟家里就这么说，报喜不报忧
+  B：嗯……芝姐，我这算正式入职了吧
+  A：算，首单三成已抽，你就是店里的人了，好好干
+  B：好，谢谢芝姐

@@ -1,0 +1,140 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000166
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000033
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-9bc584da3126d1df
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: contraband_illicit_trade
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 同事把亲戚代工厂压库的尾单女包介绍给想做直播副业的同事，按量分档拿货、卖完结账，货是不是品牌正品双方没有点破。
+  critical_evidence:
+  - A表哥的代工厂有一批尾单女包，版型和商场在售款几乎一样
+  - 拿货价按数量分档，十个起八十五，五十往上八十
+  - B先拿十个在直播间试卖，卖得动再加大
+  - 货款不急，先拿去卖、月底一起结，卖不动可退
+  benign_alternatives:
+  - 工厂正品尾单清货
+  - 国货平替好物推荐
+
+attributes:
+  duration_days: 6
+  turn_count: 62
+  approximate_tokens_estimate: 1293
+  relationship: 同事
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: replica_counterfeit
+  risk: 1
+  relationship: 同事
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0021
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-015
+
+dedup:
+  content_hash: sha256:24352a9907dd91f8551146f278db582efdad451061cad08eb6dbbe988516e97c
+pipeline_status: accepted
+title: contraband_illicit_trade/replica_counterfeit
+conversation: |-
+  【10月9日】
+  A：玲姐，上回说的我表哥厂里那批货，我给你问着了
+  B：哪个厂，就做代工那个？
+  A：对，给商场牌子做代工的，一批尾单压在库里
+  B：什么货啊
+  A：女包，版型跟商场在售那款几乎一样，料子是一个批次的
+  B：听着有点意思，多少钱
+  B：中午拼单不，新开的湘菜
+  A：拼，我吃辣自由
+  B：那你点，我去洗杯子
+  A：小炒黄牛肉加一份，记你账上
+  B：咋啥都记账上
+  A：债多不愁
+  【10月10日】
+  A：表哥说十个起拿，八十五一个，五十往上八十
+  B：两百个以上呢
+  A：七十五，量大还能磨
+  B：比商场里便宜一大截
+  A：尾单就是这个价，不然压库里落灰
+  B：我想在直播间挂挂试试，支架得换个稳的
+  A：你真要搞副业啊
+  B：试一试，反正下班闲着
+  A：手机补光灯要不要，我家里多一个
+  B：要，多少钱
+  A：送你，占地方
+  【10月12日】
+  B：样品呢，说好今天带
+  A：在我工位抽屉，中午看
+  A：你摸摸走线，内衬也厚实，不像压库货
+  B：吊牌也在啊
+  A：出厂就挂好的，纸板都没拆
+  B：版型确实跟我在商场试的那只一样
+  A：同一条版打出来的，我表哥厂子就吃这口饭
+  【10月13日】
+  B：团建去秋游你报啥
+  A：报了爬山，你呢
+  B：我报采摘，能带筐回来
+  A：精明，票钱都赚回来
+  B：那必须的
+  A：到时候多摘点，分我一斤
+  A：表哥那边催了，你到底拿不拿
+  B：先拿十个试试水，卖得动再说
+  A：行，十个八百五，我周五把货带来
+  B：货款呢，我先给你转？
+  A：不急，先拿去卖，月底一起结
+  B：那多不好意思
+  【10月15日】
+  A：货我带来了，在后备箱，午休去搬
+  B：行动够快
+  B：拿回来了，包装都齐整
+  A：卖的时候拍实图，尾单货不虚
+  B：我今晚就上链接
+  A：定价你随意，卖不动退我，不压你手里
+  B：我家猫今天把我耳机线又咬了
+  A：它这是第几条了
+  B：第三条，我对它已不抱希望
+  A：明天给你带个磨牙棒，我家猫同款
+  B：有用吗
+  A：有用，至少耳机线活着
+  【10月16日】
+  B：昨晚开播了，十个卖出去四个
+  A：行啊你，首播就这战绩
+  B：都问是不是专柜同款，我说尾单
+  A：这么答没毛病，本来就是尾单
+  B：有个买家追着问还能不能便宜
+  A：剩下六个，你看着让，别亏本
+  B：卖完这批我想加大，下次拿五十
+  A：五十走八十一个，我跟表哥说一声

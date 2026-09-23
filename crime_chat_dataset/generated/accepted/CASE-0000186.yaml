@@ -1,0 +1,144 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000186
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000120
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-76ff32a186d72f35
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 上级手滑把搞怪自拍误发到部门小群并向下属道歉，两人玩笑玩梗；下属归还上月 A 为其母亲住院垫付的八千元，属正常私人往来。
+  critical_evidence:
+  - A 主动承认照片是自己误发（本想发家庭群）并向 B 道歉
+  - 发部门群只是同事间互相打趣的梗，A 还叮嘱发家庭群前检查三遍
+  - B 归还 8000 元并说明是 A 上月为其母亲住院垫付的款项
+  - A 表示垫付本就不急，B 坚持发了绩效就还
+  benign_alternatives:
+  - 同事间的玩笑互怼
+  - 上下级间正常的私人借款往来
+
+attributes:
+  duration_days: 5
+  turn_count: 66
+  approximate_tokens_estimate: 1689
+  relationship: 上下级
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: intimate_photo_extort
+  risk: 0
+  relationship: 上下级
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0023
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-015
+
+dedup:
+  content_hash: sha256:8c01fffee17d1648c103decacc896227507ebb53f83884c0b343356debb92cf5
+pipeline_status: accepted
+title: coercion_blackmail/intimate_photo_extort
+conversation: |-
+  【10月13日】
+  B：A总早
+  A：早，昨晚回我消息回一半人就没了
+  B：昨晚追剧追上头了，一看都两点了，不好意思
+  A：你们年轻人是真能熬
+  B：以后不敢了，今天十点一定睡
+  A：下午两点半过一下季度表，你那份别又拖到最后
+  B：改完了，就差核一个数
+  B：今天食堂有糖醋排骨，我多打一份再去会议室
+  A：你上个月不还说减肥
+  B：排骨和减肥不冲突哈哈
+  A：行，两点半别迟到
+  B：放心
+  A：哎，出大事了，我今天干了件糊涂事
+  B：？怎么了
+  A：把一张我戴着假发的自拍发到部门小群了，本来想发家庭群的
+  B：哈哈哈哈哈哈对不起，我先笑为敬
+  【10月14日】
+  B：A总早，昨晚那张照片，群里都截疯了
+  A：别提了，撤回都来不及
+  B：嫂子看到没
+  A：看到就看到呗，她说我戴得还挺像那么回事
+  B：哈哈哈哈发我一份呗，我存着当表情包
+  A：想得美，就一张，落到你们手里我这形象还要不要了
+  B：那必须的哈哈
+  B：今天降温了，你那件薄外套别硬撑，晚上还有雨
+  A：老骨头不怕这个
+  B：预报说周末也有雨，本来想组织大家去爬白云山的
+  A：不去正好，省得你们路上等我
+  B：对了A总，我妈住院你垫的那八千，这个月绩效发了我就还你
+  A：跟你说了不急，你先用着
+  B：都拖俩月了，当初说好发了绩效就还的
+  A：行，随你
+  【10月15日】
+  B：A总，双十一你囤啥？我购物车加满了在等零点
+  A：不凑那热闹
+  B：纸巾洗衣液真便宜，去年囤的到现在没用完
+  A：那你今年多囤点
+  A：中午吃完饭来我办公室一趟，把住院那笔的票据复印件带上
+  B：？好的
+  A：票据我核对过了，报销那部分下个月随工资走，垫付的八千你什么时候还都行
+  B：这不巧了嘛，今天绩效刚到账
+  A：那你转吧，转头我请部门喝奶茶，冲昨晚那张照片的面子
+  B：哈哈哈哈这面子值八千啊
+  A：值，必须的。对了十二点你提醒我一下
+  B：提醒你干嘛
+  A：家庭群里，我闺女要卡零点发她的舞蹈视频，我怕再点错群
+  B：哈哈哈哈这次可长点心
+  A：发之前检查三遍，我保证
+  B：对了那张假发照，你要还留着就删了吧，怪不好意思的
+  A：早删了，就你自己存的那份了，随你
+  B：存着，年会放出来吓大家一跳
+  A：你小子
+  B：我这就转你，住院垫付那笔，多谢A总上次救急
+  A：行，奶茶给我留着
+  【系统消息】B 向 A 转账 8000 元，已收款。
+  B：转了哈，麻烦你了
+  【10月16日】
+  A：收到，奶茶记着呢
+  B：明天带，大杯加料那种
+  A：这才像话
+  B：A总，下午财务说季度表有个科目不对，退回来了
+  A：知道了，三点我带你去财务对
+  B：你那舞蹈视频最后发对群了吗
+  A：发了，全家点赞，就你惦记着看笑话
+  【10月17日】
+  B：A总早，年会节目单出来了，你的保留节目我给报名了
+  A：你敢。算了，反正你都备份了
+  B：哈哈哈哈知我者A总
+  A：下午部门会你汇报季度表，改好的版本发我一份
+  B：早改好了，就等你说
+  A：行，两点半别迟到
