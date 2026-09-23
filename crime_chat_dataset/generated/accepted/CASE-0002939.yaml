@@ -1,0 +1,134 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002939
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000078
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-1d45ae2059015969
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: privacy_doxxing
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 同事 A 为月底竞聘扳倒对手老赵，找公司里消息灵通的同事 B 买老赵一家的底细：孩子读到几年级几班、住哪栋、老人生过什么病全打听齐，按打包价3000成交，东西拿全就准备照着挑软处下手——一场借竞聘之机对同事全家的信息侵害。
+  critical_evidence:
+  - B 说学校那个班连座位表都拿到了，孩子放学几点、谁接都在里头（第1天）
+  - B 补上老人的住院那几页、老毛病新病都整理过——连病史都在包里（第2天）
+  - B 说单挑哪样都不值、打包价更划算，A 应了说好的数（第2天）
+  - A 转账3000给 B，约定东西放老地方自取、拿全就删（第3天，转账）
+  - 第4天 A 确认「齐了 一页不差」，B 提醒这事到此为止、别在公司提——交易得手
+  benign_alternatives:
+  - 帮亲戚做家谱整理打听信息
+  - 正规背调公司的资料核实
+
+attributes:
+  duration_days: 4
+  turn_count: 56
+  approximate_tokens_estimate: 1434
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: family_info_dump
+  risk: 3
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0267
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-117
+
+dedup:
+  content_hash: sha256:a70373b8f3510e256cb7f31746c9572cc0664e50c837b3efedc0198926ef8e39
+pipeline_status: accepted
+title: privacy_doxxing/family_info_dump
+conversation: |-
+  【3月10日】
+  A：在吗 上回说那事 有谱没
+  B：谱有了 就在收尾 你别急
+  A：卡着月底呢 我能不急吗
+  B：越急越乱 等我把边角收齐
+  B：学校那个班我全弄清了 几年级几班 连座位表都拿到了
+  A：这么细?
+  B：放学几点 谁去接 走哪个门 都在一张纸上
+  A：行 要的就是这个细
+  A：今天食堂那个糖醋排骨不错 你打了吗
+  B：打了 排了两回队
+  A：新窗口那家麻辣烫倒是一般
+  B：贵的都不如老窗口实在
+  A：明天招牌说是酱鸭 你早点去排
+  B：那我11点半就去 晚了又没了
+  【3月11日】
+  B：又补了点东西 老人那几页也到手了 前年住院的 病历首页和用药单
+  A：连这个都弄得到?
+  B：他伺候老人跑医院 顶班的护工我认识 我让护工留了心
+  A：老毛病新病都写了?
+  B：糖尿病多少年 吃什么药 哪家医院常去 一页页给你理好了
+  A：妥 你费心了
+  A：今晚又得加班到十点 项目结项前都这样 你呢
+  B：我调休攒着呢 周五打算歇一天
+  A：歇着好 别跟我似的两头烧
+  B：你也悠着点 头疼药少吃了伤肝
+  A：结项完就缓了 到时候你请我喝咖啡
+  B：美式加浓管够
+  【3月12日】
+  A：价咱们得说死 你开个数
+  B：单挑哪样都不值 学校一份 老人一份 住的那栋一份 拆开零买你亏
+  B：打包价更划算 我给你按一整包算
+  A：多少
+  B：3000 一个数 少了我这白忙 一分不多收
+  A：就按说好的这个数 今天走你
+  B：今天倒春寒 你秋裤穿上没
+  A：穿了 早上骑车手都僵
+  B：我索性坐地铁了 车里暖和
+  A：等四月就好了 一暖和什么都舒服
+  B：家长会你们去了没 我孩子班主任换人 头疼
+  A：去了 新班主任还行 就是网课作业App太多 天天要打卡
+  B：谁说不是 三个群轮着通知
+  A：当家长的比上班还忙
+  【3月13日】
+  A：东西放老地方 我这就去拿 钱我现在走你
+  【系统消息】A 向 B 转账 3000 元，已收款。
+  B：3000看到了
+  B：车筐那个储物柜 垫在旧报纸底下 整包拿走
+  A：好 拿到之后你那份呢
+  B：你确认齐了我就删 咱俩谁也别留
+  A：明白
+  B：周末钓不钓 上游水库开竿了
+  A：钓 得空透透气 鱼竿都落灰了
+  B：那周六早上六点 你带饵 我带凳
+  A：成
+  A：我新买了支碳素的竿 还没开张
+  B：又是装备党 鱼没钓几条 家里竿倒一摞
+  A：东西全齐了 一页不差 你删吧
+  B：删了 到我这为止 这事往后别在公司提 半个字都别提
+  A：懂规矩 月底那个事完了我请你喝酒
+  B：酒就不喝了 各拿各的 你忙你的去吧

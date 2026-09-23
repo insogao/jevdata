@@ -1,0 +1,143 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002928
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000106
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-a73832b374ee81be
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: theft_robbery_property_crime
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 仓管 A 与网上搭上线的二手商 B 陌生交易：A 利用周三盘点前账目可平的空档，把库里的平板耳机按 150 元一件倒给 B，专挑没监控的西门交货、交货一次结清，首单 40 件 6000 元得手后立刻谈下一批一百件的长期合作，是一条里应外合、监守自盗的仓库出货线，全程只用“处理”“出来”“按件结”这类行话。
+  critical_evidence:
+  - A 自报物流园仓管身份，称库里的平板耳机是一批“处理出来”的量、按件结 150 元一件，专挑周三盘点前出手（第1天）
+  - B 压价 6000 元交货一次结，A 约在“西门 没监控”交货、车停门外人出来接（第2天）
+  - 周三早七点西门装车，40 件清点无误，B 当场转 6000 元（第3天，转账）
+  - A 交底“盘点表我做的 想平就平”，B 确认这批神不知鬼不觉（第3天）
+  - 次日 B 称货已出、下批要一百件并压价到 135 元，长期出货线谈成（第4天）
+  benign_alternatives:
+  - 仓库正常处理呆滞库存
+  - 内部调拨的账面操作
+
+attributes:
+  duration_days: 4
+  turn_count: 65
+  approximate_tokens_estimate: 1437
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: insider_stocktip_theft
+  risk: 3
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0266
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-117
+
+dedup:
+  content_hash: sha256:d311de074324d98984c440b44a1cbc7f7d4f206fcc75d244e1cf003de244eb92
+pipeline_status: accepted
+title: theft_robbery_property_crime/insider_stocktip_theft
+conversation: |-
+  【10月12日】
+  A：在吗 群里老K说你收数码货 真的假的
+  B：收 但看货 什么货
+  A：我在物流园干仓管 手上有路子 你懂我意思吧
+  B：什么路子 说清楚
+  A：库里的平板和耳机 一批量 处理出来 按件结
+  B：货怎么证明 空口无凭
+  A：我拍照给你 型号序列号都拍 周三盘点前这几天正好
+  B：盘点前 什么讲究
+  A：明说 盘完账就平了 这批出来谁也看不出 数目对不上才麻烦
+  B：价怎么走
+  A：一百五一件 行情你打听去
+  B：先来十件试试水 货好再放量
+  A：你吃饭没 我刚下夜班 一碗泡面
+  B：吃了 你夜班到几点
+  A：十点 十点后看库 没人管
+  B：辛苦 睡了 明天联系
+  【10月13日】
+  A：货拍好了 四十件 平板十二 耳机二十八 你看
+  B：图收到 型号对得上 一百五不二价
+  A：四十件才六千 你转手一台就回本了
+  B：我要压资金 六千顶天 交货一次结
+  A：六千就六千 地方你说
+  B：你熟 你定
+  A：西门 没监控 卸货的都走这门 明早七点我值班
+  B：西门哪边 发个定位
+  A：到了打电话 我出来接 车别太扎眼
+  B：开面包车 懂
+  A：吃了没 我啃面包
+  B：点了猪脚饭 你哪的人
+  A：江西的 你口音像湖南
+  B：郴州的 挨着
+  A：老乡啊 难怪聊得来
+  B：哈哈 明早见
+  A：对了 交货要不要我拆两趟 人少稳当
+  B：一趟 快进快出
+  A：行 听你的 你爽快
+  B：彼此彼此
+  【10月14日】
+  A：起了没 七点西门 纸箱八个分两摞
+  B：到楼下了 面包车
+  A：进来吱一声 我开侧门
+  B：装完了 清点 四十件没错 质保卡都在
+  A：全新未拆 封条齐的 你走西门直接出 别倒车太久
+  B：6000我现在转你 你点一下
+  【系统消息】B 向 A 转账 6000 元，已收款。
+  A：六千收到 这批神不知鬼不觉 盘点表我做的 想平就平
+  B：痛快 你这渠道稳不稳
+  A：稳 下月一号还进新货
+  A：降温了 你秋装翻出来没
+  B：前天刚翻 你库房冷不
+  A：仓库风口 冷得快 明年想换白班
+  B：白班好 好好干
+  【10月15日】
+  B：昨天的货出了两件 没毛病 后面还有量吗
+  A：有 下月一号到岗 那批更新
+  B：下次来一百件 我要批量价 一百三
+  A：一百三太狠 一百四 我也担干系
+  B：一百三十五 长期合作
+  A：一百三五 你真会讲价 成
+  B：哈哈 做生意嘛
+  A：下次还是西门 熟门熟路
+  B：行
+  A：话说我手机屏前几天摔碎了 修要多少
+  B：外屏一百五 内屏贵 你拿来我瞧瞧
+  A：行 改天捎给你
+  B：哈哈 手艺人就吃这碗饭
+  A：下一批货到了我喊你 你把资金备足
+  B：备着呢 等你信
+  A：好 睡了

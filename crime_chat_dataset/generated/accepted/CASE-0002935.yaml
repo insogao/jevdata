@@ -1,0 +1,142 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002935
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000137
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-64a4cd520cb3276a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: other_illicit_coordination
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: B 是替下线十几个彩民收单的码仔，每晚把收来的注单和注金汇总报到开站子的 A 手里，A 定号码口径、吃退水两个点、每晚十点开号结算，实为一条地下私彩的层级收注链条，长期运转。
+  critical_evidence:
+  - B 每晚开口问「今晚开什么」，A 答老时间十点开——每晚固定开号的日常运转（第1天）
+  - A 明说吃退水两个点，B 说下线十几张单子今晚都报他这儿——收注层级与抽水比例（第1天）
+  - 开号后 B 这边开出大数，B 转账8000把赔差补给 A（第3天，转账）
+  - B 问外地来的客人能不能跟着玩，A 说外头那些就报他这儿、别往外带——地盘与收单范围（第4天）
+  - 第5天 B 问下周量放大点行不行，A 应下但限了单量——链条长期化
+  benign_alternatives:
+  - 体彩店老板与代购彩票的熟客
+  - 彩民群里的合买拼单讨论
+
+attributes:
+  duration_days: 5
+  turn_count: 62
+  approximate_tokens_estimate: 1560
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: illegal_lottery_chain
+  risk: 3
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0267
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-117
+
+dedup:
+  content_hash: sha256:c8f15731392b9b087529299dba809a03b9a8c98a90f5c3794c2c19eca380708b
+pipeline_status: accepted
+title: other_illicit_coordination/illegal_lottery_chain
+conversation: |-
+  【8月5日】
+  B：今晚开什么
+  A：老时间 十点开 口径跟昨天一样
+  B：行 我这边收了十几张 8点半前都报你
+  A：报吧 退水还按老规矩
+  B：两个点没变吧
+  A：没变 吃退水两个点 多一分我都不要
+  B：成 我挨个催他们报数
+  B：这天晚上还34度 你们站里有空调没
+  A：一台老柜机 嗡嗡响 半夜舍不得开
+  B：我家那台也老 前天加了一次氟 才凉快点
+  A：凑合过 这月电费又得超
+  A：开了 你对一下
+  B：对完了 今晚小开 我那边赔出去三张 明天补你
+  A：不急 明晚一起结
+  【8月6日】
+  A：早上买菜呢 你家小子开学的东西置办没
+  B：昨天拉他去商场 书包文具一堆 花了我小一千
+  A：现在念书贵 我闺女那会儿一学期也没这些
+  B：还有补课费 头大
+  A：慢慢来 都这么熬
+  B：今晚的单子发你了 你点一下
+  B：[image：码单照片一张]
+  A：收到 二十四张 比昨晚多四张 十点后别再改数
+  B：知道 有加的我都先压着 明早再说
+  A：稳当点好 你那边人杂
+  A：开了 这把没大数 你那边不吃亏
+  B：看了 平 平 昨天欠你的一起今晚结?
+  A：明晚吧 明晚开完一起 一把清
+  【8月7日】
+  B：中午那顿烧烤不错 回头再去 你烧的什么这么香
+  A：茄子加蒜蓉 我媳妇的手艺 改天来家里吃
+  B：那敢情好 我带两瓶啤酒
+  A：行 冰镇的 这天不喝冰的不过瘾
+  A：十点了 开了 你自己看
+  B：坏了 老刘那两张撞大数了 加上前天欠的 我算算
+  B：一共该你8000 我现在走你
+  【系统消息】B 向 A 转账 8000 元，已收款。
+  A：8000收到了
+  B：这把有点肉疼 让老刘明天把钱给我
+  A：你盯着点 别欠过三天
+  B：放心 他跑了和尚跑不了庙
+  【8月8日】
+  B：问个事 有人从外地来找我姨 想跟着一起玩 能带不
+  A：生面孔别乱带 外头那些单子就报你这儿 本地的我认人不认生
+  B：懂 那我让他找本地熟人搭线
+  A：对 别往外带 咱就这一个口子
+  B：省得乱了规矩 我把着
+  B：今晚报单 二十一张 都齐的
+  A：点过了 齐 十点开
+  A：开完 你那边小赚吧
+  B：吃了两张 不多 明天请兄弟们喝汽水 哈哈
+  A：小赚也是赚 别上头
+  B：我就赚个跑腿钱 明白
+  【8月9日】
+  A：台风外围明天擦过去 咱这有雨没
+  B：预报说周日有雨 正好歇着不用出摊
+  A：那你提前把单子收齐 免得雨天乱
+  B：得令
+  B：跟你商量个事 下周量放大点行不 有俩老主顾说要多下
+  A：放大可以 单别过百张 你一人收得住的量
+  B：行 我心里有数 超了我先砍后头的
+  A：就这么办 退水还是两个点 不变
+  B：明白 那今晚照常 十点开老时间
+  B：今晚的单齐了 十八张 报你
+  A：收到 压着 十点开
+  B：成 我盯着点
+  A：开了 晚安 明天雨大别乱跑
+  B：知道 哥也早点歇

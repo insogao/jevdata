@@ -1,0 +1,140 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002933
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000020
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-71e19fc23cd2563d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: bribery_corruption
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 老同事 B 求刚升任用人部门负责人的 A 把自家娃弄进公司：面试两轮只是走个过场、题目提前划好、入职材料绕开系统单独处理，入职之前家里先把20000块转给 A，一句「老规矩」把这场内定交易说得像家常往来——一次全程不点破的权钱交换。
+  critical_evidence:
+  - B 开口就是「娃那个事全仰仗你」，A 应「两轮面就是带他走走过场」——面试走形式（第1天）
+  - A 说娃的材料不进系统、单独做出来先放他柜子里——档案特殊处理（第1天）
+  - B 提入职之前家里的意思一定到，A 应「老规矩」——入职前家属付款的默契（第1天）
+  - B 转账20000给 A，A 收下并说事成之前不动这笔——钱先到位（第2天，转账）
+  - A 说题目提前给娃划一划、让他当天装得紧张些，周五等信——内定流程敲定（第2天）
+  benign_alternatives:
+  - 正常内推
+  - 亲属回避制度内调岗
+
+attributes:
+  duration_days: 2
+  turn_count: 64
+  approximate_tokens_estimate: 1895
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: relative_employment_exchange
+  risk: 3
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0267
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-117
+
+dedup:
+  content_hash: sha256:3a56a49cbae9bb3a526d04a3a16ebeee29648de781b8ca8128e69db64f602ec9
+pipeline_status: accepted
+title: bribery_corruption/relative_employment_exchange
+conversation: |-
+  【6月11日】
+  B：听说你升了 部门一把手 大喜事啊
+  A：就是换个办公室 多扛点活 哈哈
+  B：那也得贺一贺 正好我有事求你
+  A：你这就见外了 说
+  B：娃不是今年毕业嘛 他那个事 全仰仗你了
+  A：他那简历发我 门槛上他都够 这个月就一批名额
+  B：简历我下午让娃发你 就一个事 那两轮面你多抬手
+  A：两轮面就是带他走走过场 前头我都打过招呼了 你让娃放一百个心
+  B：有你这话 我觉都踏实了
+  A：新办公室就是窗大 上午晒得睁不开眼
+  B：配个遮光帘 报行政批得快
+  A：回头你就知道 当领导的连盆绿萝都申请不来
+  B：哈哈那我送你一盆 家里养爆盆的那棵分一枝
+  B：对了 升职宴摆不
+  A：不摆 就跟几个老伙计简单吃个饭
+  B：算我一个 地方你挑
+  A：对了 娃那个材料 到时候不进系统 我让人单独做出来 先放我柜子里 入职再一起补归档
+  B：这样更稳 就按你说的办
+  A：系统里那些表审批人杂 单独做省得人多嘴杂
+  B：考虑得周到 娃跟了你是福气
+  B：新食堂三楼那个面馆开没 前天路过闻着挺香
+  A：开了 牛肉面一绝 中午陪你走一趟
+  B：加个蛋我请 升官的喜面
+  A：那你可得多加一份牛肉 我请不起自己
+  A：面馆十二点人爆多 咱十一点半就去
+  B：行 我这就下楼
+  B：问你个事 咱小区隔壁那个新盘你看了没 一平又涨了两千
+  A：看了 涨得心慌 我那套老房子倒跟着沾光
+  B：娃要进公司了 我寻思把现在这套卖了 换公司旁边去住
+  A：通勤十分钟 这钱花得值
+  B：也是 就看这几个月手头宽松不
+  B：中介还说老小区能挂三百多万
+  A：那更不急 卖在高点 着什么急
+  A：晚上楼下跑了五公里 你最近还跑不
+  B：膝盖闹脾气 停了俩月 改走路了
+  A：走路也好 我配速早掉光了 就是出出汗
+  B：改天陪你暴走一圈 就当散心
+  【6月12日】
+  B：还有个事得跟你交个底 娃入职之前 家里的意思一定先到 你别推
+  A：老规矩 了 心意到了就行 咱这交情你搞这么客气
+  B：不成规矩不成方圆 事办利索了 当家长的腰杆才直
+  A：那行 事成之前这钱我一分不动 给娃办事就上心到底
+  B：就冲你这话 两万我现在走你 你收着
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  A：20000收到了
+  B：别嫌少 落地之后家里另有表示
+  A：先把事办成 再说以后
+  A：周五面的题我中午抽空给娃划一划 让他把项目那段讲熟
+  B：好 我今晚就让他背 你说还要注意啥
+  A：让他当天装得紧张点 太顺溜反倒假 三个考官都看着呢
+  B：这个讲究 明白 我教他
+  A：完了他直接回去等信 周五下午就有结果
+  A：茶水间新上的挂耳咖啡不错 你尝了没
+  B：喝了 比楼下便宜还正
+  A：行政说以后天天有
+  B：那这福利比涨工资实在
+  B：今年高考分出来了 老家侄子考得不赖 你家那个明年就轮到了
+  A：明年再说 头疼 志愿这个事比考试还熬人
+  B：到时候问我 我当年给我娃选学校研究半个月
+  A：行 一言为定
+  B：中午那碗面确实可以 下周再来
+  A：来 下回我请你 喜面得吃两回
+  B：最好下回吃的是娃的入职面 哈哈
+  A：快了 周五等着接电话
+  B：那我回去给娃道喜去了 提前喝了这杯
+  A：心意我领了 事上见

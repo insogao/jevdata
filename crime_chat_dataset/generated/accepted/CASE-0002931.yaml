@@ -1,0 +1,140 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002931
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000042
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-70158f6874aa355b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: contraband_illicit_trade
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 中间人 B 替下游东家向有库房的 A 求购一批桶装化工原料：这批货不能见账、出厂字要磨掉换牌子、买家拿去做什么 A 从不过问，定金转账9000、尾款现金夜里自提——一条把管制原料改头换面倒给不明用途买家的灰色供货线。
+  critical_evidence:
+  - B 半夜来问货，要上回那种二十桶，A 说库里还剩一批原装的（第1天）
+  - A 关照桶身上的出厂字要磨掉、换成水处理用料的样子再出门——改头换面出库（第2天）
+  - B 想打听货的去处，A 直接堵回去：别问拿去做什么，问了我也不会答（第2天）
+  - A 定死交易方式：这货走不了账，现金、夜里自提；B 先转9000定金、尾款现结（第3天，转账）
+  - 第4-5天 A 把二十桶磨好字码进库角，夜里交接完，嘱咐下回提前一周说——长期供货
+  benign_alternatives:
+  - 正规化工原料采购备货
+  - 实验室试剂的正常调拨
+
+attributes:
+  duration_days: 5
+  turn_count: 61
+  approximate_tokens_estimate: 1740
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: shell_chemical_diversion
+  risk: 3
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0267
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-117
+
+dedup:
+  content_hash: sha256:626d18874be5be5d9aa8b99636a4a84cf0b47bf8fea530b5d5aec301eb330e82
+pipeline_status: accepted
+title: contraband_illicit_trade/shell_chemical_diversion
+conversation: |-
+  【7月14日】
+  B：睡没 打扰一下
+  A：没呢 说
+  B：东家又要上回那种 二十桶 你库里还有没
+  A：还有一批 原封的 就看你怎么来拿
+  B：老规矩来 你说个数
+  A：明早再说 大半夜不谈钱
+  B：行 那你早点歇
+  A：嗯 刚给库里的绿植浇完水 这才坐下
+  【7月15日】
+  A：昨晚那事 二十桶可以 一桶四百五 你给他算
+  B：行 这个数能交代 就一个事 桶面得弄干净吧
+  A：我弄 出厂那行字我给磨掉 外头贴水处理用料那种牌子 谁看着都挑不出
+  B：稳妥 东家就认你这手
+  A：丑话前头 他拿去做什么我不管也别让我知道 别问用途 问了我不答
+  B：知道 我也不问 你这脾气我熟
+  A：多问一句都是祸 咱只管出货
+  B：这天热得邪乎 你库房里多少度
+  A：风扇对着吹 也得三十七八 货倒不怕 怕人中暑
+  B：多备点藿香正气水
+  A：买了两盒 搁传达室 你也拿一盒
+  B：你库上那两个招工的招到没
+  A：难招 年轻人不干这行 就剩我俩老头扛
+  B：工资加点上人就来
+  A：加了也留不住 都嫌闷 你那边有合适的老乡给我留意
+  B：行 回头我给你问问
+  B：对了 我表弟今年五十 想找个看库的活 人老实
+  A：让他来找我 白班 一个月休两天 管一顿午饭
+  【7月16日】
+  B：跟你讨个主意 你开车省油有啥门道 我那皮卡喝油跟喝水似的
+  A：匀速开 少急刹 再一个胎压打足点 一个月能省一箱
+  B：学到了 回头试试
+  A：别整那些添加剂 纯糊弄钱
+  B：钱的事东家点头了 就是问一句 能不能走账 他想开票
+  A：不能 这货走不了账 一分票都没有 现金 自提
+  B：那我跟他说 其实现金他也认 就是来取的时间得挑挑
+  A：夜里来 大门外头的侧门 灯你别开 我给人留门
+  B：明白 哪天
+  A：后天周五 周五厂里休息 看不见人
+  【7月17日】
+  A：定金9000我先收 剩下的现结 一分不能差
+  B：好 我这就走你9000
+  【系统消息】B 向 A 转账 9000 元，已收款。
+  A：9000到了 周五夜里等他
+  B：剩下现金他用车带来 你点清
+  B：我家那小子暑假作业拖到最后三天 火大
+  A：都这样 我孙子的补课班今早还催缴费
+  B：补课费一学期比我一箱油还贵
+  A：咬牙交吧 谁让咱那时候没念出来
+  B：他奶奶还天天护着 说是老师留多了
+  A：隔辈亲都这样 我家也一个样
+  【7月18日】
+  A：备好了 二十桶 字都磨平 牌子贴齐 码在库角
+  B：效率 我今晚跟他说死 十一点到
+  A：让他开那辆灰面的 别停大门口
+  B：行 车他懂 停侧门里头
+  A：夜宵吃了没 我煮了面 就点花生米
+  B：刚吃了 回头等他装车完我还得盯账上这笔
+  A：那你辛苦 剩的钱你当面点再让他走
+  B：放心 我带着验钞的小紫灯
+  B：他那车斗矮 我让他垫了两层木板
+  A：行 桶别摞超过两层 夜里路上空 让他慢点开
+  B：装完了 点清了 车走了 你那边锁门没
+  A：锁了 今晚的事到这就翻篇
+  B：东家说下月还要 我先跟你打招呼
+  A：要就提前一周说 我得腾库磨桶 不是随到随有
+  B：记下了 提前一周 睡吧哥

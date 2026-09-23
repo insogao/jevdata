@@ -1,0 +1,124 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002932
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000013
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-c7a3d9df959cb894
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 做资金生意的熟人 A 借给开店压款的 B 五万周转：先扣两个月利息六千、到手四万四，到期还不上就介绍 B 再借另一家的钱来还这笔、利息一层摞一层——熟人面目包装下的高利过桥套路，B 明知是坑也接了。
+  critical_evidence:
+  - B 不好意思开口，还是为门店进货周转借5万（第1天）
+  - A 开条件：先扣两个月利息6000，到手44000——砍头息先行（第1天）
+  - A 明说到期转不动就介绍别家、借新还旧、利息一层摞一层（第2天）
+  - A 转账44000给 B，B 确认到账、6000已先扣（第3天，转账）
+  - A 反复强调记住六月二十的期限、逾期按天算——把人往续借的套里带
+  benign_alternatives:
+  - 正常过桥资金拆借
+  - 亲友之间的应急借款
+
+attributes:
+  duration_days: 3
+  turn_count: 47
+  approximate_tokens_estimate: 1359
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: loan_bridge_interest_rollover
+  risk: 2
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0267
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-117
+
+dedup:
+  content_hash: sha256:54faff19a91913639b26e59fe7ec7687739221c446e32bd84c91a5c4e87e10da
+pipeline_status: accepted
+title: fraud_scam/loan_bridge_interest_rollover
+conversation: |-
+  【5月20日】
+  B：哥 在不 有个事 一直张不开嘴
+  A：说 咱俩谁跟谁
+  B：店里这批货压了款 供应商催得紧 想周转5万 就俩月
+  A：5万有 规矩你懂吧 我这也不是开银行的
+  B：你说
+  A：月息3个点 先扣两个月利息 6000 到手44000 到期还5万整
+  B：先扣? 那我到手就四万四了
+  A：都这么办 先扣两个月利息 你利息都在前头付了 后面清净
+  B：让我想想 今天答复你
+  A：想可以 别过夜 这钱下午还有人来问
+  B：接孩子碰上了 你家老大又长高了
+  A：跟着他姨家长个 就是费鞋 三个月一双
+  B：我家那个跟她一个班 天天一块疯
+  A：下月家长会你去不
+  B：去 咱俩又是同桌 哈哈
+  B：哥 我接了 明天你方便转不
+  A：明天上午转 你把字据写好 一分不能少
+  【5月21日】
+  B：哥 还有个事 我得提前问清楚 到期那几天货款要是没回来呢
+  A：转不动就吱声 我给你介绍一家 先借他的还我这笔 完了你再慢慢还他
+  B：那不就是拆东墙补西墙 利息不越滚越多
+  A：话难听理不糙 你货款一回来就把那头结了 不就断了? 干我们这行的都是这么个接法
+  B：一层摞一层 听着心慌
+  A：熟人我还能害你? 真到那步我介绍的这家还是熟人 利息只贵半点
+  B：行吧 我尽量不走到那步
+  A：就这么说 日子你记住 六月二十 一天都不能差 逾期按天算
+  B：明晚球赛看不 我攒了个局 就咱几个老伙计
+  A：看 在哪聚
+  B：我店里 投影 冰啤我备
+  A：行 我带卤味 到时候别聊钱 扫兴
+  B：放心 明天钱一到 这心事就落一半了
+  【5月22日】
+  B：哥 卡号发我一份 我把字据也拍你
+  A：发你了 字据写清5万 先扣息6000 实付44000 按个手印
+  B：写好了 拍过去了
+  A：齐了 我现在转 44000你点
+  【系统消息】A 向 B 转账 44000 元，已收款。
+  B：44000收到了 那六千就算先付的利息
+  A：对 两个月的一起清了 你把货款追紧点
+  B：供应商答应月底结一半 我盯着
+  A：月底结一半 六月二十前再结一多半 你就算安稳落地
+  B：我尽量 到时候真差一口 我再跟你张嘴
+  A：别跟我张 跟我介绍的那位张 就一行字的事
+  B：但愿用不上
+  A：这天热起来了 晚上冰管够 你多备两件
+  B：西瓜也切一个 沙瓤的刚上市
+  A：就着卤味看球 美得很
+  B：七点半开球 别迟到
+  A：错不了 六月二十记牢咯
+  B：记着呢 日历上都画圈了

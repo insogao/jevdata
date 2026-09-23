@@ -1,0 +1,144 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002938
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000147
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-37c071f5e6704691
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: other_illicit_coordination
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 老同学 A 开的写作工作室期末单子爆满，把写手老同学 B 拉进派单池：一篇一千五、写手拿八百，A 承诺查重保过、连对方导师那边都提前打过招呼；B 交稿后 A 按约定结了800稿费——一个熟面孔搭起来的课业代笔小作坊，属于灰色但不算重的那类。
+  critical_evidence:
+  - A 期末催单：你那边还能接几篇，B 答两篇封顶——派单池运作（第1天）
+  - A 报价一篇一千五、写手拿八百、他抽七百——分成规则（第2天）
+  - A 承诺查重我保过、交了就有人兜后面的检测（第3天）
+  - A 透露熟客那一单的导师那边已打过招呼、答辩问起来有人接（第3天）
+  - B 交稿后 A 转账800结稿费，写作服务的正常结算（第4天，转账）
+  benign_alternatives:
+  - 写作辅导服务
+  - 论文润色
+
+attributes:
+  duration_days: 4
+  turn_count: 66
+  approximate_tokens_estimate: 1943
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: homework_ghostwriting_ring
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0267
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-117
+
+dedup:
+  content_hash: sha256:375a5491dd53facde243d66fc8a26e471a8cb5ab9b471d31d2a343b4ee608439
+pipeline_status: accepted
+title: other_illicit_coordination/homework_ghostwriting_ring
+conversation: |-
+  【6月16日】
+  A：老周 期末到了 我这边单子爆了 你那边手还能接几篇
+  B：你也知道我这月赶自家项目 两篇封顶
+  A：两篇就两篇 先给我占上 都是回头客 不好推
+  B：什么科目 先说好 理工科带公式的不接
+  A：放心 全是文科的 一门近代史 一门管理案例分析
+  B：近代史闭眼写 案例那篇给我三天
+  A：给你三天 客户那边我拖住了
+  B：对了 你这工作室开一学期了 接了多少
+  A：四十几单 手底下像你这样的写手五个 我就是转接头
+  B：怪不得你朋友圈天天晒奶茶
+  A：熬夜费 得拿奶茶续命
+  B：你从大厂出来单干半年 适应没
+  A：自由是真自由 穷也是真穷 哈哈 不过这学期转正了
+  B：羡慕 我还给你那前东家打工呢
+  A：撑住 早点跳出来找我喝酒
+  B：先把这两篇写了再谈酒
+  【6月17日】
+  B：价格再对一遍 我给学弟都报不清楚
+  A：一篇一千五 你拿八百 我抽七百 老规矩
+  B：行 你抽的里头含售后不 万一要改
+  A：含 两篇之内随便改 朝我说话 别理客户
+  B：那行 近代史我今晚就能动笔
+  A：提一句 客户是个大二的小姑娘 胆子小 你别直接联系她
+  B：懂 都走你这儿 我从来不加客户
+  A：就冲这个 我才爱跟你合作 省心
+  B：今晚有球 半决赛 你看哪队
+  A：看老熟人那队 就是熬夜扛不住 十一点就睡
+  B：没劲 你现在比我爸还养生
+  A：等你写稿写到三点你就懂了
+  B：明天比分出来你千万别剧透
+  A：拉黑你都行 哈哈
+  【6月18日】
+  A：跟你同步下 近代史那单是熟客介绍的 后头还有一串等着
+  B：熟客? 又是那个研究生?
+  A：对 就是那位 他导师那边我打过招呼了 万一答辩问起来 有人接得住
+  B：你这服务真是全方位 售后都包到导师那头了
+  A：不周到不行 人家是长期客户 一学期四单
+  B：那篇案例我写到一半 结构想好了 案例拆三层
+  A：不用整太花 客户就要个不挂科 分都不重要
+  B：明白 保底思维
+  A：还有句要紧的 你只管写 查重我保过 交上去之后那边的检测我兜底
+  B：你这口气比检测系统还足
+  A：三年了 一单没出过事 靠的就是这层
+  B：正找房子呢 帮我留意 你那个小区还有出租没
+  A：有三栋常出 二居室一千八 你搬来咱还能撸串
+  B：一千八带家具不 我家具全卖了
+  A：带 就差个洗衣机 前租户留了个二手的 能用
+  B：那等我稿费到手就去交定金
+  【6月19日】
+  B：两篇齐了 打包发你 长的那篇一万一千字
+  A：收到 我过一眼就转客户
+  A：过了 写得比你上回那批稳 客户那边不用愁了
+  B：稳就行 这单钱什么时候结
+  A：客户下午点货 我五点结你 八百一分不少
+  A：客户点完货了 这单结你800 现在转
+  【系统消息】A 向 B 转账 800 元，已收款。
+  B：800收到了 到账挺快
+  A：说好五点就是五点 你这写手我得长期供着
+  B：下学期要提前排不
+  A：要 开学一周内单子就满 你这俩名额我给你留年度的
+  B：行 到时候再谈价 我这文笔也该涨涨了
+  A：涨 涨到八百五 再多我真抽不起
+  B：成交 哈哈
+  B：稿子交完 犒劳自己 烧烤走不走
+  A：走 老地方 你请 你刚进账
+  B：小气鬼 行我请 但啤酒你对半
+  A：依你 七点后到 我先去占靠里的桌
+  B：好路上
+  A：对了 定金那事 房东我帮你问了 随时能看房
+  B：神速 那周末就去看 看完这顿烧烤我更得吃了

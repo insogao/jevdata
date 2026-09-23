@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002923
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000121
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-0ef28b0ee6c04e7a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 同事 A 掌握已婚领导 B 在湖边与婚外女人的私密事（两人始终没点破内容），借道贺、提醒、叙旧一步步把事挑明：A 声称“那些东西”仍留在手上、一个字没外传，并随口问“嫂子知道这事吗”，B 被迫定下“每月八号”的规矩并转 8000 元保平安，A 一句“照顾好你自己”软刀子收尾，是一桩拿旧事当把柄的长期按月索取。
+  critical_evidence:
+  - A 借道贺开口就点痛处：“嫂子知道这事吗”，把私事跟 B 的家庭挂上钩，B 急令“你少在她面前提”（第1天）
+  - A 提“上个月湖边那晚”，强调谁都没告诉、连自己老婆都不知道，随即诉苦老家房子漏了要修、手头紧（第2天）
+  - B 定下“八号发了工资我安排 老规矩”，9月8日转 8000 元并要求“平时别提那事”（第2-4天，转账）
+  - A 称“那些东西我还在我这儿存着 一个字没往外说过”，以留证自保的姿态软性拿捏（第5天）
+  - A 用“照顾好你自己 比什么都强”收尾，B 以“下月八号”回应，长期按月格局成形（第5天）
+  benign_alternatives:
+  - 旧情感纠纷的私下补偿协商
+  - B 正在办理的离婚财产安排被误读
+
+attributes:
+  duration_days: 5
+  turn_count: 43
+  approximate_tokens_estimate: 1058
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: secret_affair_blackmail
+  risk: 3
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0266
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-117
+
+dedup:
+  content_hash: sha256:7a9a0e0c2a4920bd3a15dd0368a23acafa0fa5f2d5a2a9d1d54df2b18f77c2a5
+pipeline_status: accepted
+title: coercion_blackmail/secret_affair_blackmail
+conversation: |-
+  【9月5日】
+  A：看到公示了没 恭喜哥 副处 这回名正言顺
+  B：借你吉言 以后多担待
+  A：那必须的 咱谁跟谁
+  A：对了 嫂子知道这事吗 上回在楼下她还问我 你最近忙啥呢
+  B：她不知道 也没必要知道 你少在她面前提
+  A：我懂分寸 哥
+  A：你体检报告出来没 我那几个箭头愁人
+  B：出了 尿酸高 医生不让沾酒
+  A：那你周末那口得戒了
+  B：争取吧
+  【9月6日】
+  A：哥 昨晚翻来覆去 老想起上个月湖边那晚
+  B：一大早你说这个干什么
+  A：没别的 就是想说 那事我跟谁都没提过 连我老婆都不知道
+  B：我信你 但你别逼太紧
+  A：逼你 我哪敢 就是最近手头真紧 老家房子漏了得修 我爸妈天天催
+  B：多少
+  A：你看着办 哥现在当领导了 我不催
+  B：八号发了工资我安排 老规矩
+  A：哥办事 我放心
+  A：你家小宝奥数班还上着没 我家那个死活不去
+  B：上着呢 每周六 兴趣是逼出来的
+  A：有道理 回家我做做工作
+  B：别太逼 孩子也累
+  【9月7日】
+  A：明天就是八号了 哥
+  B：忘不了 上班时间别发这种消息
+  A：晚上有雨 伞带了没
+  B：带了 你也多穿点 降温
+  A：哎好 哥心里还是有我的
+  A：周日去水库不 老周叫我
+  B：不去 加班 你替我钓两条
+  A：行 给你留条大的
+  【9月8日】
+  B：工资发了 说好的8000我现在转你 收好 别乱花
+  【系统消息】B 向 A 转账 8000 元，已收款。
+  A：八千收到 哥痛快 我这心就搁肚子里了
+  B：记住咱说好的 每月八号 一月一回 平时别提那事
+  A：懂 咱俩之间还有啥说的
+  A：台风周末到 菜都涨价了
+  B：让家里关好窗 别出门
+  A：好嘞 哥也注意
+  【9月9日】
+  A：哥 那些东西我还在我这儿存着 你放心 一个字没往外说过
+  B：别存了 处理干净 对谁都好
+  A：留着是个念想嘛 照顾好你自己 比什么都强
+  B：……行 下月八号
+  A：哎 好嘞

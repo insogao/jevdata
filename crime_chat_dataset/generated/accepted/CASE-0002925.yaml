@@ -1,0 +1,153 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002925
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000126
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-9f76b57fdcb1d209
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 在表哥 B 的软件公司干了八年的 A 决定离职，因三年分账被拖而摊牌：手里留着自己写的核心代码拷贝，要求 B 一次说清该给的十二万、并签下“竞业赔偿免了、协议不启动”，否则只能给同行邮箱发一份过去。B 权衡家族脸面后全盘接受，分三个月付清、A 当着律师删除拷贝，钱款约定走公司账、月底开始、尚未发生。亲戚加雇佣的双重关系让这场以技术资料为筹码的离职摊牌格外拧巴。
+  critical_evidence:
+  - A 提离职并点破三年没给的分账，B 用“公司什么光景你不知道 我在扛”挡（第1天）
+  - A 摊出底气：八年代码一行一行是我敲的，“我拷自己写的东西”给自己留后路（第1-2天）
+  - A 开价十二万、分三个月每月四万走公司账，并要求竞业那一页“赔偿免了、协议不启动”签字（第2-3天）
+  - A 亮底牌：“不然我只能给同行邮箱发一份过去 各走各的路”（第2天）
+  - B 全盘接受：白纸黑字签“竞业赔偿免了”，A 当着律师删拷贝，第一笔钱月底走账（第4-5天）
+  benign_alternatives:
+  - 离职交接与补偿的劳资协商
+  - 技术方案的内部转让谈判
+
+attributes:
+  duration_days: 6
+  turn_count: 74
+  approximate_tokens_estimate: 1994
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: trade_secret_threat
+  risk: 3
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0266
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-117
+
+dedup:
+  content_hash: sha256:bc2a21bcc3302d1920bea42ef21760ad46cfcca06740c8faf2ec9289c1bd4249
+pipeline_status: accepted
+title: coercion_blackmail/trade_secret_threat
+conversation: |-
+  【12月8日】
+  B：听说你真要走 人事把单子放我这儿了
+  A：嗯 表哥 辞职报告交了 下月底走
+  B：八年 说走就走 哪点委屈你了
+  A：哥 咱就事论事 年终那笔说好的分账 三年了一直说明年
+  B：公司什么光景你不知道 我在扛
+  A：我知道 所以我两年没提 今年必须提清楚 我后头的路也要走
+  B：你想怎么样
+  A：两件事 一 该我的那笔一次说清 二 竞业那一页 赔偿免了 协议不启动 你签字
+  B：你手里那点东西 我知道你留着 现在拿来压自家哥
+  A：什么压不压 我给自己留后路罢了 八年的代码一行一行是我敲的 我拷自己写的东西 不过分吧
+  B：呵 行 明天说
+  A：周六姥姥生日 你回不
+  B：回 咱俩这副样子 见了姥姥怎么演
+  A：该怎么演怎么演 家是家 事是事
+  B：你买什么
+  A：羊绒围巾 你呢
+  B：订了蛋糕 就等你这句话
+  【12月9日】
+  B：想了一夜 那笔钱先给一半 分六个月 你先把手里那份交回来
+  A：交回来 哥 东西在我手里 你才有谈的诚意 它不是筹码 是我的工钱凭证
+  B：公司的东西一份份进你U盘 这叫什么 你心里清楚
+  A：我清楚 我拷的是我写的模块 加班到凌晨的提交记录我都有 就这么简单
+  B：你这是把家当战场
+  A：我不想想 你不逼我 它就当不存在
+  B：你侄子期中考进前十了
+  A：真行 随你 脑子活
+  B：他还问你什么时候带他打球
+  A：等这阵忙完 周末约
+  B：好 他念叨好久了
+  A：嗯
+  A：哥 把话放这 该我的一分不少 竞业赔偿免了 白纸黑字 东西我当面删给你看 不然我只能给同行邮箱发一份过去 各走各的路
+  B：你这是要撕破脸
+  A：我不想撕 给我个不撕的办法
+  B：容我想两天
+  B：明天降温 秋裤穿没
+  A：穿了 嫂子嘱咐过
+  B：她让你来家吃饭 你别多心 她不知道咱俩的事
+  A：知道 家常饭照吃
+  【12月10日】
+  A：哥 我不是要闹僵 八年 饭桌上你给我夹菜我都记得
+  B：少来这套 说数
+  A：十二万 三年分账按当年的数 你自己算
+  B：十二万 公司账上要活
+  A：分三个月 每月四万 走公司账 我不为难你的现金流
+  B：三个月……竞业那边 真一字不提
+  A：赔偿免了 协议不启动 我换个赛道都行 但字要签
+  B：明天给我答复
+  A：你那车该保养了 仪表老提示
+  B：知道 周末去 借我的工具记得还
+  A：在后备箱 回头捎给你
+  B：行
+  【12月11日】
+  B：想通了 钱按你说的 三个月 竞业不启动 协议作废 明天来公司 律师在场 把字签了
+  A：哥 这就对了
+  B：先别高兴 东西呢 当着律师面 把拷的那份删了 我要看着
+  A：应该的 删之前让你验 就一份 没扩散 一张图都没往外发过
+  B：没发过最好 发了谁都不好收场
+  A：哥 我要成心害你 不会等到今天
+  B：妈来电话 问你怎么半年没回
+  A：忙 元旦我回去 你跟妈说我挺好的
+  B：自己说 她念叨你 让你置办厚被子
+  A：知道 北方冷 下周去买
+  B：嗯
+  【12月12日】
+  A：字签了 竞业赔偿免了那页 红章也盖了 我拍照存档了
+  B：存你的 东西删干净没
+  A：当着律师删的 回收站都清了 这页翻篇
+  B：翻篇 第一笔月底走账
+  A：嗯
+  【12月13日】
+  B：周六姥姥生日 蛋糕订了两层的
+  A：姥姥高兴 围巾我包好了
+  B：饭桌上别提公司 一个字都别提
+  A：放心 只给姥姥敬酒
+  B：新工作找得怎么样
+  A：有同行挖我 隔壁市 合适就去
+  B：白纸黑字免了竞业 你去哪哥都管不着 好好干
+  A：谢 哥
+  B：该挣的挣 兄弟还是兄弟

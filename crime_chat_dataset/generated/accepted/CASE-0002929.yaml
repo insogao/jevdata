@@ -1,0 +1,151 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002929
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000093
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-7fc6853b4f3e40d2
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 采购同事 B 遇上小供应商开不出专票，有中间人向 B 兜售“收八个点”的门路，B 来问财务票据岗同事 A；A 当场拒绝来路不正的票，带着 B 走正路：推供应商去税务窗口代开、补签合同、对公户收 30000 元定金，合同货单资金三流一致后按合同开具并寄出发票，最后 B 把借的 2000 元备用金归还出纳平账。表面像一桩“票”“点数”的敏感买卖，决定性事实全是合规协作。
+  critical_evidence:
+  - 中间人向 B 出主意“他有门路 票能快点出来 收八个点”，A 当场打住：“票要从正经道上来 再快也不能乱来”（第1天）
+  - 小作坊开不出专票，A 指路税务代开，B 次日陪对方会计跑窗口办成（第1-2天）
+  - A 要求补签合同、对公户收款、“合同资金货单三流一致”，客户 30000 元定金对公到账（第2-3天）
+  - 发票按合同提前开具并寄出，B 把单号转给客户，整单干净落地（第3天）
+  - B 归还此前借的 2000 元备用金给出纳 A 平账（第3天，转账）
+  benign_alternatives:
+  - 正常的税务筹划流程
+  - 供应链上下游的合规开票协作
+
+attributes:
+  duration_days: 3
+  turn_count: 74
+  approximate_tokens_estimate: 1887
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: fake_trade_invoice
+  risk: 0
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0266
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-117
+
+dedup:
+  content_hash: sha256:b044a8270c64618e571469f38d8ca0a686238c46470942e057cbf49a303ba496
+pipeline_status: accepted
+title: money_laundering_obfuscation/fake_trade_invoice
+conversation: |-
+  【9月10日】
+  B：A姐 客户又在催票 那批阀门的专票
+  A：供应商那边开了没
+  B：卡着 小作坊 说他们开不出来
+  A：开不出来就走代开 让他们去税务窗口 代开专票 现在很方便
+  B：他们嫌麻烦 倒是有个中间人跟我说 他有门路 票能快点出来 收八个点
+  A：打住 这种来路的你碰都别碰
+  B：不一样吗 票反正是真的
+  A：票是真的 业务对不上也不行 合同资金货单三样缺一样 一查一个准 咱不能干这事
+  B：行行行 你说了算
+  A：我说了也不算 规矩说了算 咱走正的
+  B：中午食堂有糖醋排骨 你占座不
+  A：占 给你留靠窗那桌
+  B：好嘞 再给你带碗酸梅汤
+  A：心灵手巧
+  B：那必须 十二点见
+  A：下午我得请两小时假 娃开家长会
+  B：去吧 这里有我 你班的消息我盯
+  A：好 家长会完我回来接着对数据
+  B：不急 慢点开
+  A：谢啦
+  B：我又想了下 那作坊代开要是嫌麻烦 咱换家供应商行不
+  A：可以 但货得一样 这批阀门是客户指定型号 换供应商客户要重新验货
+  B：那就还是推着作坊去代开 我明天陪他们会计跑一趟
+  A：好 带齐材料 营业执照 合同 第一趟就能办好
+  B：学到了
+  A：顺便把合同补签了 金额型号对上 票据资金货单三流一致 后面谁查都不怕
+  【9月11日】
+  B：姐 陪跑成功 人家会计十分钟就办完了 就出了点工本费
+  A：我说了不难 专票几个工作日能下来
+  B：说是三个工作日 客户那边我回话了
+  A：好 让客户放心 票随货走 分毫不差
+  B：还有那个中间人 又来问我 要不要拉黑他
+  A：拉黑 下次他再找你 你把话放这 咱公司不接这种活
+  B：得嘞
+  B：周末去爬香山不 部门群在约
+  A：去 我家那位也去 他非说要抢第一班缆车
+  B：哈哈 让他抢 咱坐第二班
+  A：行 山上见 带点牛肉干
+  B：收到 我背吃的
+  A：下午有雨 你伞带没
+  B：带了 那把大黄伞 巨显眼
+  A：哈哈 显眼好 淋不着
+  B：姐你呢 我这儿有备用折叠的
+  A：我有 我工位常年备一把
+  B：细节控
+  A：财务的通病
+  B：对了 客户说定金明天走对公 30000 到咱们户头 你盯一下
+  A：好 我明天上午对网银 到了给你信 附言让客户写清合同号
+  B：已嘱咐 他们老板都说你们财务较真
+  A：较真才睡得着觉
+  【9月12日】
+  A：定金30000到了 对公户头 合同号都对
+  B：稳 剩余款客户说货到验收后结
+  A：行 发票我今天开 三个工作日的票提前拿到了 一并寄出
+  B：神速 客户得夸你
+  A：夸不夸无所谓 单子干净要紧
+  B：昨晚那剧你追没 第八集反转了
+  A：追了 我猜那律师是卧底
+  B：嘘 别剧透 我今晚才看到
+  A：行行 看完聊
+  B：哈哈
+  A：哦对 你上回借的备用金还在账上挂着 月底要平
+  B：差点忘了 2000块我现在还你 你点一下
+  【系统消息】B 向 A 转账 2000 元，已收款。
+  A：两千收到 账平了 凭据我给你贴好
+  B：贴心
+  B：票寄了没 客户问单号
+  A：顺丰寄出 单号发你邮箱了 查收
+  B：好 我转给客户 这一单总算踏实了
+  A：以后再有人跟你说八个点搞票 直接给我拉黑名单
+  B：早拉了 那人现在朋友圈天天卖茶叶 哈哈
+  A：哈哈 活该
+  B：下周那批新订单 你把税率帮我核一下
+  A：发我合同初稿 我核完标注给你
+  B：好 晚点发
+  A：嗯 早点回 周五了
+  B：好嘞
