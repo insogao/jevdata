@@ -1,0 +1,133 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001857
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-c3c996758837efca
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 做门店生意的 A 想让检查环节顺利过关，通过朋友辗转加到负责这片的 B，借着节前先后送了张购物卡、又转了一笔钱，都推说是'过节的一点心意'和'上次托你买东西的钱'；B 收下后话不多，只在最后含糊表示到时候会'按老规矩'，让 A 把材料准备好。
+  critical_evidence:
+  - A 通过朋友介绍联系上 B，借节前约着见了一面
+  - A 送购物卡时不提金额，只说一点心意
+  - A 又转了一笔钱，推说是托 B 买东西的钱
+  - 事后 B 含糊表示到时候按老规矩，让 A 备好材料
+  benign_alternatives:
+  - 陌生人之间托人代购商品的钱款往来
+  - 正常的节日人情问候
+
+attributes:
+  duration_days: 5
+  turn_count: 53
+  approximate_tokens_estimate: 913
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0167
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-084
+
+dedup:
+  content_hash: sha256:8a14d6e8cd6a6a6f37858105bb110f585224f8cffa4556b8cb98709cf77b8833
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【9月20日】
+  A：你好 是王姐给的我你微信
+  B：嗯 你好 王姐跟我说了
+  A：我开了个小店 有点事想请教
+  B：你说
+  A：就是你们那边检查这块 我材料老差点
+  B：这个按流程来就行 具体我不好说
+  A：明白 改天请你喝茶当面聊
+  B：再说吧
+  A：对了王姐最近咋样 好久没见她
+  B：挺好的 刚出去旅游回来
+  A：挺会享受
+  B：人家孩子都大了 该享福
+  【9月21日】
+  A：今天风大 你那边玻璃没事吧
+  B：没事 就吹落几盆花
+  A：我店门口招牌吹歪了 下午修
+  B：注意安全
+  【9月22日】
+  A：哥 明晚有空不 我订了位置
+  B：请我吃饭干啥
+  A：就认识认识 交个朋友
+  B：行吧 那明晚
+  【9月23日】
+  B：晚上几点
+  A：六点半 就城南那家家常菜
+  B：好
+  A：哥 这点心意你拿着 给嫂子买点
+  B：你太客气了
+  A：过节嘛 不值钱 你别嫌弃
+  B：那行 我收着
+  【9月24日】
+  A：哥 早 昨天没喝多吧
+  B：没有 就喝了点
+  A：那就好 下次再约
+  B：嗯
+  A：哥 上次托你买的那东西 钱给你转过去
+  【系统消息】A 向 B 转账 2000 元，已收款。
+  B：那才多少钱 你转这么多
+  A：哥别多想 一点心意
+  B：行 收下了 你别老这样
+  B：你店里秋装上了没
+  A：上了 卖得还行
+  B：今年生意不好做吧
+  A：难 房租又涨
+  B：慢慢来
+  【9月25日】
+  A：哥 材料我按你上次说的整理了
+  B：发我看看
+  A：发了 你瞅瞅还缺啥
+  B：回头我看看 到时候按老规矩来
+  A：好嘞 麻烦哥了
+  B：嗯
+  A：哥 我闺女明天生日 我早点关店
+  B：给孩子买点好的
+  A：嗯 订了个蛋糕
+  【9月26日】
+  A：哥 早 这几天降温 注意身体
+  B：知道了
+  A：有消息跟我说一声就行
+  B：放心 有我呢

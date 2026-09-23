@@ -1,0 +1,120 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001858
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000119
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-90e016ad4698d937
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 熟人 A 夜里沿街把停在路边的共享单车零件拆下来，只取锁和变速器，一晚能弄二十来辆，车架拆完扔进河里处理；B 表面做二手配件生意，按件收货并微信给 A 结算货款，双方都心照不宣地把这套流程说成普通的旧件回收。
+  critical_evidence:
+  - A 告诉 B 晚上能弄到车上的件，顺手一晚二十辆上下
+  - A 只取锁和变速器，别的零件不要
+  - A 说车架已经处理掉，跑远了扔河里
+  - B 按老价按件收下并给 A 微信转了货款
+  benign_alternatives:
+  - 共享单车运维公司回收报废车的旧零件
+  - 旧货市场正常收售二手自行车配件
+
+attributes:
+  duration_days: 2
+  turn_count: 45
+  approximate_tokens_estimate: 730
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: shared_bike_parts_strip
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0167
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-084
+
+dedup:
+  content_hash: sha256:bfcb9f83721a1b34f4e6d2834f972ce421906cb0aeb174de44d40954633c53f4
+pipeline_status: accepted
+title: theft_robbery_property_crime/shared_bike_parts_strip
+conversation: |-
+  【9月12日】
+  A：在忙不
+  B：刚忙完 咋了
+  A：晚上那批件 你要不要
+  B：哪个件
+  A：就上回说的那种 锁跟变速
+  B：成色咋样 别又给我一堆锈的
+  A：基本都新 车也没放多久
+  B：一晚能搞多少
+  A：顺手的话二十辆上下
+  B：这么多 你咋弄的
+  A：别问 你就说收不收
+  B：收 老价 锁八块 变速十五
+  A：行 那今晚先给你凑一批
+  B：你晚饭吃了没
+  A：还没 忙到现在
+  B：别老不吃饭 你胃不是不好
+  A：知道了 等会下碗面
+  B：我这边今天也忙 库房刚盘完
+  A：你那库房现在堆多少了
+  B：三百来件吧 走得挺快
+  A：那敢情好
+  【9月13日】
+  B：昨晚咋样
+  A：弄了一晚上 二十来辆
+  B：车架呢
+  A：处理了 都扔河里了 干净
+  B：别在城边上扔 容易被人看见
+  A：知道 跑远了才扔的
+  B：我妈今天打电话 又催我相亲
+  A：哈哈哈哈 你都多大了
+  B：三十出头咋了 单着挺好
+  A：行行行 你潇洒
+  B：对了 你那货我下午来拉
+  A：来呗 我放巷子口老地方
+  B：钱怎么给你
+  A：老规矩 微信转我就行
+  【系统消息】B 向 A 转账 260 元，已收款。
+  B：转你了 你收一下
+  A：收到
+  B：我昨天网上买那个扳手 还没到
+  A：哪家买的
+  B：就之前那家 物流贼慢
+  A：下次我给你找 便宜
+  B：行 你路子野
+  A：那必须的
+  B：那先这样 我晚点过去
+  A：成

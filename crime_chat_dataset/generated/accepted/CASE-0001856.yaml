@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001856
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000113
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-bd312f9b12462f20
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 做二手机生意的 A 手里压着一批带账号锁的机器，找号称能'硬解'的 B 批量处理，讲明有锁的便宜出、解锁刷干净再销；B 说账号锁能解开、批量还有优惠，两人谈好数量和价格，把这事说成普通的刷机翻新生意。
+  critical_evidence:
+  - A 说手上有一批带锁的机器 想便宜出
+  - B 说自己账户锁能硬解 解完能正常用
+  - B 说批量拿更优惠 按台数分层报价
+  - 两人谈好先寄五台试解 好的话再走大批
+  benign_alternatives:
+  - 二手手机回收后的正常刷机翻新
+  - 失物招领归还后处理的旧手机
+
+attributes:
+  duration_days: 2
+  turn_count: 48
+  approximate_tokens_estimate: 795
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: phone_reset_resell
+  risk: 1
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0167
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-084
+
+dedup:
+  content_hash: sha256:bd6ffea087249d73baf99a1dad53c2df8eae94122419bcc12759199d152bf65d
+pipeline_status: accepted
+title: theft_robbery_property_crime/phone_reset_resell
+conversation: |-
+  【7月12日】
+  A：在吗 有批机器想找你
+  B：在 什么机器
+  A：一批二手的 但都带锁
+  B：账户锁还是屏幕锁
+  A：账户锁 有ID的
+  B：那个能硬解 就是费点事
+  A：你真能解?
+  B：做过不少了 解完能正常开机用
+  A：那敢情好 我有十来个
+  B：什么型号 报价不一样
+  A：新旧都有 老款多点
+  B：老款一台八十 新款一百五
+  A：有锁的本来就便宜 你这价还行
+  B：批量拿更优惠 二十台以上七折
+  A：那我先寄五台 你看下活
+  B：行 解好了拍给你
+  A：你那边快递能收吗 我发顺丰
+  B：能 地址还是老的那个
+  A：好 下午发
+  B：中午吃没
+  A：还没 在打包
+  B：先吃饭 别饿着
+  A：马上 打完这几箱
+  B：今天你那下雨没
+  A：下了点 闷
+  B：我这边也是 仓库潮
+  A：机器得放干燥点 不然主板锈
+  B：知道 我放了干燥剂
+  【7月13日】
+  A：五台昨天发了 单号发你
+  B：收到 明天到
+  A：解的时候轻点 壳别撬花
+  B：放心 我拆机有工具
+  A：那台金色的你留着 成色好
+  B：行 我看看能不能当样机
+  B：你孩子放暑假了没
+  A：放了 天天在家打游戏
+  B：现在孩子都这样
+  A：管不住 一没收手机就闹
+  B：给他报个班
+  A：报了游泳 上了两天又不去了
+  B：五台到了 我今晚开始解
+  A：好 不急 解好跟我说
+  B：顺利的话后天给你结果
+  A：行 那批大货我等你信
+  A：晚上早点收 别弄太晚伤眼睛
+  B：知道了 你也是
+  A：嗯 明天聊
+  B：好

@@ -1,0 +1,129 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001854
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000119
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-f8ceb5bf5a7240f5
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 表哥 A 白天打零工、晚上沿路拆共享单车零件，专挑锁和变速器下手，让做修车摊位生意的表弟 B 帮忙代卖；B 嘴上劝他别弄这些，实际还是把件收下挂到摊上卖，两人用'旧件''收来的货'含糊带过。
+  critical_evidence:
+  - A 说晚上沿路能弄到车上的锁和变速，一晚上二十来辆
+  - A 说别的零件不拆，只取锁和变速好出手
+  - A 提到车架拆完拉走扔水里
+  - B 劝了两句还是答应把件收下放摊上代卖
+  benign_alternatives:
+  - 共享单车运维人员处理报废车辆零件
+  - 修车摊正常收售二手配件
+
+attributes:
+  duration_days: 4
+  turn_count: 53
+  approximate_tokens_estimate: 912
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: shared_bike_parts_strip
+  risk: 1
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0167
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-084
+
+dedup:
+  content_hash: sha256:efbad58788d55139315f34b50f14f343139f73722d86041cbb00d6a4d001b71a
+pipeline_status: accepted
+title: theft_robbery_property_crime/shared_bike_parts_strip
+conversation: |-
+  【8月5日】
+  A：弟 睡了没
+  B：没 收摊刚回 咋了哥
+  A：我这儿有批件 你摊上要不要
+  B：啥件
+  A：锁 还有变速器 成色都行
+  B：你哪来这么多
+  A：晚上出去转一圈就有 一晚上二十来辆
+  B：哥 这不合适吧
+  A：有啥不合适 我又没拿整车
+  B：人家查出来呢
+  A：就俩件 混在一堆旧件里谁看得出来
+  B：那车架子呢 那么大你藏哪
+  A：拆完拉到河边扔了 没人捞
+  B：……你这也太野了
+  A：缺钱没办法 你就说帮不帮
+  B：行吧 你拿来 我摆里面点
+  A：够意思
+  B：舅妈身体最近咋样
+  A：老样子 腿疼 天天贴膏药
+  B：让她少爬楼
+  A：说了不听 倔得很
+  【8月6日】
+  B：早 今天出摊 你把货拿来吧
+  A：好 我十点到你摊上
+  B：来的时候装个袋子 别敞开
+  A：知道
+  B：东西收到了 一共三十七个 锁十五 变速二十二
+  A：数得挺准
+  B：我按件给你算 卖出去再结
+  A：行 你看着给
+  A：中午吃点啥
+  B：摊子旁的面 凑合
+  A：天天吃面 换换样
+  B：省事 下午还得看摊
+  B：今天卖了四个锁 两个变速
+  A：挺快啊
+  B：学生开学 修车的多
+  A：那再给你补点
+  B：别太勤 卖太快反而扎眼
+  【8月7日】
+  A：昨晚下雨 没出去
+  B：正好歇歇 你连着几天了
+  A：四天了 腰酸
+  B：悠着点 别把身体搞垮
+  B：对了 我儿子开学要买校服 你那边有便宜的吗
+  A：我去市场给你问问
+  B：行 不急 开学前就行
+  A：今晚出去转一圈 明天给你带
+  B：路上小心点
+  【8月8日】
+  A：昨晚弄了十八辆 手都磨破了
+  B：破了就歇两天 我给你拿点创可贴
+  A：没事 皮外伤
+  B：件我给你放里屋了 慢慢卖
+  A：成交了记得跟我说
+  B：放心

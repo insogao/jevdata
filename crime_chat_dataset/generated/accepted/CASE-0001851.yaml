@@ -1,0 +1,119 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001851
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-c81b4c37026a4a3c
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 通过群里认识负责审批的 B，借着节前由头约见面，送上一张购物卡只说'过节意思一下'、绝口不提金额，随后又转了一笔钱说是补上次的茶钱；B 没有明说要办什么，只在事后含糊回一句'你那事我知道了'，两人全程绕着弯子说。
+  critical_evidence:
+  - A 借过节由头约素未深交的 B 见面
+  - A 送上一张购物卡，只说意思一下，始终不提金额
+  - A 随后给 B 转了一笔钱，说是补茶钱
+  - 事后 B 回消息含糊表示那事知道了，让 A 等信
+  benign_alternatives:
+  - 陌生人之间正常的节日问候与往来
+  - 托朋友代购商品时给的钱款
+
+attributes:
+  duration_days: 3
+  turn_count: 42
+  approximate_tokens_estimate: 709
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0167
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-084
+
+dedup:
+  content_hash: sha256:79dcf407106074f4a9d0d62abfd8f012502d487a46565285e528350fd5e1fa9a
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【9月22日】
+  A：你好 是李哥介绍的 说我找你
+  B：哦 老李说过 你好
+  A：最近忙不 想请你喝个茶
+  B：客气了 有啥事
+  A：没啥事 就聊聊天 交个朋友
+  B：行 那后天下午吧
+  A：好 我来安排地方
+  B：你平时做哪行
+  A：做点小工程 跑跑腿
+  B：那行当不容易
+  A：是啊 全靠朋友帮衬
+  【9月23日】
+  A：李哥 明天下午有空不 地方定好了
+  B：我有 你发我地址
+  A：就城南那家茶馆 两点
+  B：行
+  B：今天降温 你那边阴天没
+  A：阴 还飘了点雨
+  B：出门带伞
+  A：带了 谢谢李哥
+  【9月24日】
+  A：我到了 坐靠窗那桌
+  B：马上到
+  A：李哥 一次见面没什么好带的 一点心意你收着
+  B：你这就见外了
+  A：过节嘛 也不值几个钱 你别嫌
+  B：那……行 不说这个了
+  A：我那边有个事 改天细说
+  B：嗯 你先说个大概
+  A：就是资质那块 想请你指条路
+  B：回头看看 别在这说
+  A：好 听李哥的
+  A：李哥 上次茶钱我还没给你 转你
+  【系统消息】A 向 B 转账 1200 元，已收款。
+  B：这茶才多少钱 你转多了
+  A：应该的 李哥别客气
+  B：行 收下了
+  【9月25日】
+  A：李哥 早
+  B：你那事我知道了 等我消息
+  A：好 麻烦李哥 不急
+  B：嗯
+  A：李哥 中午记得吃饭
+  B：知道了
+  A：我这两天出差 回来再去看你
+  B：不用跑 有事电话说

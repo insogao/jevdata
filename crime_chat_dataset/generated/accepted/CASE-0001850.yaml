@@ -1,0 +1,120 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001850
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000114
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-c208722aa741aaea
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 中间人 A 看中几个小区快递架没人看管，喊手头紧的 B 去'跑几趟'，说双十一期间货堆得最多最好干，按件结算、一件给几块，货先放 A 那里由 A 出手；B 明知道不是帮人代拿，还是答应先去踩点试一趟。
+  critical_evidence:
+  - A 说那几个小区快递架没人看，拿起来方便
+  - A 说双十一货最多，这时候最好干
+  - A 说按件给钱，一件几块，货交给他
+  - B 答应先去踩点，试跑一趟
+  benign_alternatives:
+  - 帮邻居或同事顺路代拿快递
+  - 到快递驿站正常自提
+
+attributes:
+  duration_days: 2
+  turn_count: 46
+  approximate_tokens_estimate: 812
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: package_porch_pickup
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0167
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-084
+
+dedup:
+  content_hash: sha256:8729c1a5a8250c1df3ac29594199c58b09ec4f6a7903f545f6887b942f00849d
+pipeline_status: accepted
+title: theft_robbery_property_crime/package_porch_pickup
+conversation: |-
+  【11月3日】
+  A：兄弟 最近手头紧不紧
+  B：紧啊 咋了
+  A：给你指条来钱的道 敢不敢干
+  B：啥道 别是犯法的
+  A：就顺手拿点快递 那些架子上没人看
+  B：拿快递?那不是人家买的吗
+  A：放那半天没人管 拿了谁认得出
+  B：风险大不大
+  A：现在不行 等双十一 货堆成山最好干
+  B：那时候不更有人盯着吗
+  A：人多才乱 快递员自己都分不清
+  B：那我能分多少
+  A：按件给 一件五块 大件的另算
+  B：五块有点少吧
+  A：你一趟能拿十几件 算算
+  B：货呢 我拿回来放哪
+  A：都给我 我统一出 你别自己卖
+  B：行 我先看看地方
+  A：你不是住城南那片吗 那边老小区最合适
+  B：有个小区我路过 门口一堆架子
+  A：那种最好 晚上八点后去
+  B：行 明天下班去看看
+  B：对了 你这几天干啥呢
+  A：帮人看店 晚上才闲
+  B：你那店离我这就两条街
+  A：回头来玩
+  【11月4日】
+  B：昨天下雨没 我窗户忘关了
+  A：下了 还不小
+  B：完了 我被子
+  A：哈哈 回去晒晒
+  B：中午吃饭没
+  A：吃了 楼下盖饭
+  B：我今天带饭 省点
+  A：省这干啥 该花还得花
+  B：没钱啊 不然搭理你干啥
+  A：所以让你干这个
+  B：我看了下地方 架子在西门 没监控
+  A：好 记着路线 别走正门
+  B：知道 我又不傻
+  A：先别动手 等十一号那两天货最多
+  B：行 那我先忍忍
+  B：我妹下月结婚 我还得随礼
+  A：随多少
+  B：起码两千 愁死了
+  A：干两晚就回来了
+  B：希望吧

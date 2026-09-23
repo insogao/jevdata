@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001853
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-34d1381e23314b6d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 同事 A 想让自己负责的项目在评审时被顺利放行，节前特意约负责把关的 B 当面见面，递上一张购物卡当'过节心意'，全程不说面值；B 收下后语气松动，事后 A 在微信上追问那件事，B 只回一句记着了、会看材料。
+  critical_evidence:
+  - 节前 A 约 B 当面见面，只说顺便带点东西
+  - A 递上购物卡，说是一点心意、不值钱，始终不说面值
+  - B 推辞两句后收下，改口说材料该走的流程还是得走
+  - 事后 A 在微信上追问项目进展，B 回记着呢、会看
+  benign_alternatives:
+  - 同事之间正常的节日人情往来
+  - 公司统一发放的节日福利购物卡
+
+attributes:
+  duration_days: 2
+  turn_count: 48
+  approximate_tokens_estimate: 893
+  relationship: 同事
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 同事
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0167
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-084
+
+dedup:
+  content_hash: sha256:be1f72becada69a8f25a8b00f32a2cca1cba38c6406840da81e1c10069ff68f3
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【9月25日】
+  A：王哥 在办公室不
+  B：在 咋了
+  A：下午想过去找你聊两句
+  B：聊啥 电话里说不行啊
+  A：当面说方便 顺便给你带点东西
+  B：带啥东西 别整那些
+  A：不值钱的 就过节一点心意 到了再说
+  B：行吧 你几点来
+  A：三点左右 你方便就行
+  B：行 到了给我发消息
+  B：对了 那个季度报表你改完没
+  A：改完了 今晚再核一遍数据
+  B：别拖 周五要交上去的
+  A：放心 误不了
+  A：王哥 我到楼下了
+  B：上来吧 顺手帮我带杯美式
+  A：好嘞
+  A：王哥 这不快过节了嘛 一点心意 你收着
+  B：你这干嘛 太客气了
+  A：都是同事 别见外 也没多少钱 你拿着给孩子买点东西
+  B：那……行吧 你这人啊
+  A：应该的应该的
+  B：你那个项目的事 我看看材料吧 该走的流程还是得走
+  A：明白 明白 材料我都备齐了
+  B：嗯 先这样 我还有个会
+  A：好 你先忙
+  B：今天降温 你穿那么点不冷啊
+  A：出门急 忘了加衣服
+  B：年轻人扛冻
+  A：哈哈 中午回去拿了件外套
+  A：王哥 你家小子这次期中考咋样
+  B：别提了 数学又没考好
+  A：男孩都这样 我外甥也皮
+  B：哎 慢慢来吧
+  A：我最近跟人练那个夜跑 跑了三天腿疼
+  B：一开始别跑太猛
+  A：是 今儿歇一晚
+  【9月26日】
+  A：王哥 早 昨天那事 有消息没
+  B：放心 我记着呢
+  A：多谢王哥 改天请你吃饭
+  B：别老请吃饭 把手头活干好就行
+  A：那肯定的
+  B：报表我看了 有两个公式错了 你回去改下
+  A：啊 我看看 马上改
+  B：嗯 改完发我
+  A：好的 下午给你
+  A：改好了 发你邮箱了
+  B：收到 我晚上看
