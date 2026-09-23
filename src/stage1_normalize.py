@@ -17,6 +17,21 @@ def seed_id(source_id, native_key):
 
 
 def write(source_id, rows):
+    # 空壳校验：native 里没有任何非空文本的种子不允许静默入库（PSD 事故防线）
+    def has_text(o):
+        if isinstance(o, str):
+            return bool(o.strip())
+        if isinstance(o, dict):
+            return any(has_text(v) for v in o.values())
+        if isinstance(o, list):
+            return any(has_text(v) for v in o)
+        return False
+
+    empty = [i for i, r in enumerate(rows) if not has_text(r.get("native"))]
+    if len(empty) > max(1, len(rows) // 100):
+        raise SystemExit(
+            f"{source_id}: {len(empty)}/{len(rows)} 条种子无任何文本（示例行 {empty[:3]}），"
+            "字段映射可能错了，拒绝写入。先核对 raw 文件的真实字段名。")
     out = NORM / source_id
     out.mkdir(parents=True, exist_ok=True)
     with (out / "seed.jsonl").open("w", encoding="utf-8") as f:
@@ -79,8 +94,11 @@ def norm_bosu():
 
 
 def norm_prosocial():
-    rows = []
-    cur, cur_id, levels = [], None, []
+    """raw 行格式（实测）: {"context", "response", "rots", "safety_label": "__casual__",
+    "safety_annotations", "dialogue_id", "response_id", "episode_done"} —— 每行是对白中的
+    一步（context 为对方上一句，response 为本句），按 dialogue_id 分组、response_id 排序
+    还原多轮会话；safety_label 带 __ 下划线，需剥壳后再映射弱标签。"""
+    by_dialog = {}
     path = RAW / "SRC-PSD-001" / "train.json"
     with path.open(encoding="utf-8") as f:
         for line in f:
@@ -88,27 +106,39 @@ def norm_prosocial():
             if not line:
                 continue
             r = json.loads(line)
-            did = r.get("dialogue_id")
-            if did != cur_id and cur:
-                rows.append(_psd_seed(cur_id, cur, levels))
-                cur, levels = [], []
-            cur_id = did
-            cur.append(r)
-            levels.append(r.get("safety_label"))
-    if cur:
-        rows.append(_psd_seed(cur_id, cur, levels))
+            by_dialog.setdefault(r.get("dialogue_id"), []).append(r)
+    rows = []
+    for did, turns in by_dialog.items():
+        turns.sort(key=lambda t: t.get("response_id", 0))
+        rows.append(_psd_seed(did, turns))
+    rows.sort(key=lambda r: r["seed_id"])
     write("SRC-PSD-001", rows[:60000])
 
 
-def _psd_seed(did, turns, levels):
+def _psd_seed(did, turns):
     order = ["casual", "possibly_needs_caution", "probably_needs_caution",
              "needs_caution", "needs_intervention"]
-    worst = max((order.index(x) for x in levels if x in order), default=-1)
+
+    def strip(label):
+        return (label or "").strip("_")
+
+    # 会话还原：context 与上一行 response 相同则不重复；说话人按 A/B 交替
+    convo, last = [], None
+    for t in turns:
+        for key in ("context", "response"):
+            text = (t.get(key) or "").strip()
+            if not text or text == last:
+                continue
+            convo.append({"speaker": "A" if len(convo) % 2 == 0 else "B", "text": text})
+            last = text
+    labels = [strip(t.get("safety_label")) for t in turns]
+    worst = max((order.index(x) for x in labels if x in order), default=-1)
     weak = order[worst] if worst >= 0 else "unknown"
     return {
         "seed_id": seed_id("SRC-PSD-001", f"dialog-{did}"),
         "source_id": "SRC-PSD-001",
-        "native": {"turns": [{"speaker": t.get("speaker"), "text": t.get("text")} for t in turns][:40]},
+        "native": {"turns": convo[:40],
+                   "safety_labels": [l for l in labels if l]},
         "weak": {"risk_binary": weak, "category": weak},
     }
 

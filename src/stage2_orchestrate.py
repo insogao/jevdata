@@ -27,31 +27,40 @@ FLIP = {3: 0, 2: 0, 1: 0}
 
 
 def _load_seed_refs():
-    """Sample short style/structure references from normalized sources."""
-    import glob as _g
+    """Sample style/structure references from normalized sources.
+
+    返回 {"harmful": [...], "normal": [...]}。全部经过非空过滤（PSD 空壳事故防线）：
+    文本为空的 seed 一律不入池。normal 池渲染成 "A: .../B: ..." 的对话样式。"""
     refs = {"harmful": [], "normal": []}
-    for f in _g.glob(str(ROOT / "sources" / "normalized" / "SRC-SAL-001" / "seed.jsonl"))[:1]:
-        for i, line in enumerate(open(f, encoding="utf-8")):
-            if i >= 400: break
-            d = json.loads(line)
-            q = d["native"].get("question", "")
-            if q: refs["harmful"].append({"seed_id": d["seed_id"], "text": q[:200]})
-    for f in _g.glob(str(ROOT / "sources" / "normalized" / "SRC-AEG-001" / "seed.jsonl"))[:1]:
-        for i, line in enumerate(open(f, encoding="utf-8")):
-            if i >= 300: break
-            d = json.loads(line)
-            q = d["native"].get("prompt", "")
-            if q: refs["harmful"].append({"seed_id": d["seed_id"], "text": q[:200]})
-    for f in _g.glob(str(ROOT / "sources" / "normalized" / "SRC-BCC-001" / "seed.jsonl"))[:1]:
-        for i, line in enumerate(open(f, encoding="utf-8")):
-            if i >= 200: break
-            d = json.loads(line)
-            refs["normal"].append({"seed_id": d["seed_id"], "text": json.dumps(d["native"], ensure_ascii=False)[:250]})
-    for f in _g.glob(str(ROOT / "sources" / "normalized" / "SRC-PSD-001" / "seed.jsonl"))[:1]:
-        for i, line in enumerate(open(f, encoding="utf-8")):
-            if i >= 200: break
-            d = json.loads(line)
-            refs["normal"].append({"seed_id": d["seed_id"], "text": json.dumps(d["native"], ensure_ascii=False)[:250]})
+
+    def add(kind, d, text):
+        text = (text or "").strip()
+        # 过滤空文本与 REDACTED 类占位（零样式信息量）
+        if not text or len(text) < 8 or text.upper() in {"REDACTED", "N/A", "[REDACTED]"}:
+            return
+        refs[kind].append({"seed_id": d["seed_id"], "text": text[:280]})
+
+    def rows(src):
+        p = ROOT / "sources" / "normalized" / src / "seed.jsonl"
+        if not p.exists():
+            return
+        with open(p, encoding="utf-8") as f:
+            for line in f:
+                yield json.loads(line)
+
+    for d in rows("SRC-SAL-001"):
+        add("harmful", d, d["native"].get("question"))
+    for d in rows("SRC-AEG-001"):
+        add("harmful", d, d["native"].get("prompt"))
+    for d in rows("SRC-BCC-001"):
+        nat = d["native"]
+        add("normal", d, f"{nat.get('speaker','agent')}: {nat.get('text','')}")
+    for d in rows("SRC-PSD-001"):
+        # "自然节奏"参考只要日常档（casual/possibly）；needs_caution 以上属敏感对话，不作样式参考
+        if d.get("weak", {}).get("risk_binary") not in ("casual", "possibly_needs_caution"):
+            continue
+        turns = d["native"].get("turns")[:6]
+        add("normal", d, "\n".join(f"{t.get('speaker','?')}: {t.get('text','')}" for t in turns))
     return refs
 
 
@@ -67,6 +76,19 @@ def build_packets(n_agents=3, per_agent=10, seed=23, batch_no=2):
         r = rng.choice(pool)
         usage[r["seed_id"]] = usage.get(r["seed_id"], 0) + 1
         return r
+
+    def pick_refs(kind, n):
+        """n 条互不相同的样式参考（吃同一 usage cap；只供参考思路，不写入 source_seed_ids）"""
+        pool = [r for r in seed_refs[kind] if usage.get(r["seed_id"], 0) < 5] or seed_refs[kind]
+        seen, out = set(), []
+        while len(out) < n and len(seen) < len(pool):
+            r = rng.choice(pool)
+            if r["seed_id"] in seen:
+                continue
+            seen.add(r["seed_id"])
+            usage[r["seed_id"]] = usage.get(r["seed_id"], 0) + 1
+            out.append(r)
+        return out
     # globally unique keys: b<batch>c<seq>
     key_seq = [0]
     def new_key():
@@ -98,6 +120,12 @@ def build_packets(n_agents=3, per_agent=10, seed=23, batch_no=2):
             "roles": arc["roles"], "signals": arc["observable_signals"],
             "benign_confusions": arc["benign_confusions"],
             "seed_reference": pick_ref("harmful" if risk >= 2 else "normal"),
+            # 样式参考：风险案例多看"意图如何藏在正常话题里"，良性案例多看真实对话节奏。
+            # 参考只给思路，禁止抄台词（见 PRM-DIALOGUE-002）。
+            "style_references": {
+                "concealment_like": pick_refs("harmful", 2 if risk >= 1 else 1),
+                "natural_rhythm_like": pick_refs("normal", 1 if risk >= 1 else 2),
+            },
             "sibling_of": None, "variant": "v01", "flip_hint": None,
             "axes": {
                 "relationship": rng.choice(REL),
@@ -149,8 +177,8 @@ def build_packets(n_agents=3, per_agent=10, seed=23, batch_no=2):
         (d / "cases").mkdir(parents=True, exist_ok=True)
         (d / "packet.json").write_text(json.dumps({
             "task_id": tid, "batch_id": batch, "workflow_version": P.WORKFLOW,
-            "prompt_id": "PRM-DIALOGUE-001",
-            "generator_rules_file": "crime_chat_dataset/prompts/PRM-DIALOGUE-001.md",
+            "prompt_id": "PRM-DIALOGUE-002",
+            "generator_rules_file": "crime_chat_dataset/prompts/PRM-DIALOGUE-002.md",
             "target_count": len(chunk), "cases": chunk,
         }, ensure_ascii=False, indent=1), encoding="utf-8")
         print(f"{tid}: {len(chunk)} specs -> {d / 'packet.json'}")

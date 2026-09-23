@@ -23,7 +23,8 @@ contrastive 对照对 30 对。
 | 案例/对照对/ID 计数 | `registry/dataset_registry.sqlite` | cases、pairs、counters、tasks、task_claims 五张表 |
 | 任务领取与超时 | 同上 `tasks` + `task_claims` 表 | 通过 `src/task_cli.py` 操作，**禁止直接 UPDATE** |
 | 单条案例母数据 | `generated/accepted/CASE-*.yaml` | DB 里 `yaml_path` 指向它（相对路径） |
-| 大规模种子 | `sources/normalized/<SRC-ID>/seed.jsonl` | 不进 SQLite |
+| 大规模种子 | `sources/normalized/<SRC-ID>/seed.jsonl` | 不进 SQLite；14.3 万条已提交（PSD 曾全空壳已修复+空壳校验） |
+| 原始公开数据 | `sources/raw/<SRC-ID>/` | **gitignore 不入库**；本机已下载 5 源 1.2GB；换机后跑 `src/stage1_download.py`（HF 直连不通时自动走 hf-mirror） |
 | 数据源登记 | `registry/source_registry.yaml` | 9 个固定 SRC-ID，license/状态 |
 | 进程内互斥 | `registry/orchestrator.lock` | orchestrator 写入时持有 |
 | 人读快照 | `registry/id_counters.yaml` | **只是快照**，由 `task_cli.py sync-counters` 生成，别手改 |
@@ -71,8 +72,10 @@ python3 src/stage2_orchestrate.py build-packets 3 10 <batch_no> <seed>
 python3 src/task_cli.py claim --agent <你的名字>     # 假设领到 TASK-0027
 
 # 2. 读任务包
-crime_chat_dataset/tasks/TASK-0027/packet.json       # case specs + 生成规则引用
-crime_chat_dataset/prompts/PRM-DIALOGUE-001.md       # 对话生成规则（版本化，勿自创）
+crime_chat_dataset/tasks/TASK-0027/packet.json       # case specs（含 style_references 样式参考）
+crime_chat_dataset/prompts/PRM-DIALOGUE-002.md       # 对话生成规则（版本化，勿自创）
+#    spec.style_references 从公开真实语料采出：concealment_like 学"意图怎么藏"，
+#    natural_rhythm_like 学真实对话节奏。只借鉴手法，禁止抄台词/复现其内容。
 
 # 3. 为每个 case spec 写生成结果
 #    tasks/TASK-0027/cases/<key>.json，格式照抄同目录已有文件：
