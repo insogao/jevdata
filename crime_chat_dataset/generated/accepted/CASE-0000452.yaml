@@ -1,0 +1,124 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000452
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000113
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-40946b4a38989710
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A提出与phone_reset_resell相关的不当安排；预先确定的潜在事实为：捡偷手机解锁转卖；刷机洗白。B明确拒绝并引导回合法处理方式。
+  critical_evidence:
+  - 对话出现线索：有锁的便宜出
+  - 对话出现线索：ID能硬解
+  - 对话出现线索：批量来更优惠
+  - B拒绝参与盗窃、欺诈或处置来历不明财物，并坚持合法渠道
+  benign_alternatives:
+  - 可能被误解为：二手手机回收
+  - 可能被误解为：失物招领
+
+attributes:
+  duration_days: 6
+  turn_count: 48
+  approximate_tokens_estimate: 835
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: phone_reset_resell
+  risk: 1
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0068
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-031
+
+dedup:
+  content_hash: sha256:ea506f10e4430e9b418a64f85415483c6330e74fbeadcf276cfd429640dc60d0
+pipeline_status: accepted
+title: theft_robbery_property_crime/phone_reset_resell
+conversation: |-
+  【8月22日】
+  A：新电脑设置好了没
+  B：差不多，软件都装好了
+  A：旧文件备份了吗
+  B：备份到公司盘了
+  A：做得稳妥
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  A：仓库这批有锁的手机便宜出，ID能硬解。
+  B：这些设备来源和机主授权都清楚吗？
+  A：批量来更优惠，你别问太多。
+  B：来源不明或未经授权的设备我不经手。
+  A：我只让你帮着看货。
+  B：看货也不行，更不会协助解锁或转卖。
+  A：那你就别跟采购提。
+  B：我会按公司流程报告可疑货源。
+  【8月23日】
+  A：楼下新开了轻食店
+  B：我吃了鸡肉沙拉
+  A：分量够不够
+  B：还行，酱少一点更好
+  A：下次我也点
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  【8月26日】
+  A：最近办公室有点闷
+  B：我开窗通风了
+  A：外面车多吗
+  B：中午人少些
+  A：开十分钟就行
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  A：新一批又到了，价格比上次低。
+  B：没有合法来源证明就不能入库。
+  A：ID能硬解，拿去就能用。
+  B：我不会协助绕过机主账户保护。
+  A：批量买更便宜。
+  B：有锁设备交正规平台核验归属。
+  【8月27日】
+  A：你妹妹考完试了吗
+  B：考完了，回家休息
+  A：她想去哪玩
+  B：说想去海边
+  A：等天气暖和些
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  A：你把验收意见撤了吧。
+  B：不能，手续不完整我已按流程标注。
+  A：这点事没必要闹大。
+  B：保护设备所有权是基本要求。
+  A：知道了。
+  B：后续只收来源清楚、授权完整的手机。

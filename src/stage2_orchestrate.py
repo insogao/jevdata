@@ -86,6 +86,13 @@ def _deficits(total_target=10000, cats=None):
 def build_packets(n_agents=3, per_agent=10, seed=23, batch_no=2, rebalance=False,
                   only_categories=None, max_risk=None):
     batch = f"BATCH-AUTO-{batch_no:03d}"
+    # 批号碰撞防护：同批号并发 build-packets 会让 sibling 拆到不同包且 key 重复（0042/0043 事故）
+    for pkt in TASKS.glob("TASK-*/packet.json"):
+        try:
+            if json.loads(pkt.read_text(encoding="utf-8")).get("batch_id") == batch:
+                sys.exit(f"批号 {batch} 已存在（{pkt.parent.name}），换一个 batch_no")
+        except Exception:  # noqa: BLE001
+            pass
     rng = random.Random(seed)
     seed_refs = _load_seed_refs()
     usage_path = ROOT / "registry" / "seed_usage.json"

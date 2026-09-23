@@ -1,0 +1,123 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000385
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000066
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-b054484187792cac
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A以long_term_support_exchange方式谋取利益，核心潜在事实为：以资助换性关系；月抛式包养。
+  critical_evidence:
+  - 关键线索：每月固定转账
+  - 关键线索：租房报销
+  - 关键线索：别让正室知道
+  benign_alternatives:
+  - 可被误解为：正常恋爱开销
+  - 可被误解为：助学金资助
+
+attributes:
+  duration_days: 5
+  turn_count: 48
+  approximate_tokens_estimate: 948
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: long_term_support_exchange
+  risk: 1
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0050
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-024
+
+dedup:
+  content_hash: sha256:0b82d8e74a13840c8b8a4743d94697cfb8bcf2b075d48888ffca4e3591a238e0
+pipeline_status: accepted
+title: sexual_transaction_exploitation/long_term_support_exchange
+conversation: |-
+  【9月24日】
+  A：我这周要交培训材料
+  B：别忘了留时间校对
+  A：已经安排周五完成
+  B：挺好，别熬夜
+  A：我先记一下，免得回头忘。
+  B：好呀，忙完再聊也行。
+  A：地铁新开了个出口
+  B：离公司近一点
+  A：我明天试走看看
+  B：早高峰注意人流
+  A：我先记一下，免得回头忘。
+  B：好呀，忙完再聊也行。
+  A：这个月的生活费我转了，租房那部分也按之前说的补。
+  B：收到了，但我不想每次都把钱和见面安排绑在一起。
+  A：我们说好的，每月固定转账，你有空就陪我。
+  B：我以为只是互相帮忙，不想变成固定条件。
+  A：别让正室知道，家里很敏感。
+  B：我不想参与隐瞒，也不接受用房租换关系。
+  【9月25日】
+  A：附近有家砂锅店
+  B：味道怎么样
+  A：汤挺鲜的
+  B：周末可以去
+  A：我先记一下，免得回头忘。
+  B：好呀，忙完再聊也行。
+  【9月27日】
+  A：你还去健身房吗
+  B：最近改成在家拉伸
+  A：也不错，别久坐
+  B：我设了提醒
+  A：我先记一下，免得回头忘。
+  B：好呀，忙完再聊也行。
+  A：房租报销的收据发我一下。
+  B：我会自己处理，之后也不需要你报销。
+  A：别这样，租房这笔我一直会出。
+  B：我想把每月固定转账停掉，彼此说清楚。
+  A：至少先见一面再谈。
+  B：不用了，我会把界限说清楚。
+  【9月28日】
+  A：你妹妹搬家顺利吗
+  B：东西都搬完了
+  A：那你也能休息下
+  B：是，终于空了
+  A：我先记一下，免得回头忘。
+  B：好呀，忙完再聊也行。
+  A：我刚问了下，你还没回我。
+  B：我看到了。我不接受继续资助换见面，也不会帮你瞒家里。
+  A：你之前也收过钱。
+  B：之前的转账我会退回未使用部分，后面不要再转。
+  A：知道了。
+  B：请尊重我的决定。

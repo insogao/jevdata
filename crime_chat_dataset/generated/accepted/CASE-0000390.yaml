@@ -1,0 +1,130 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000390
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000007
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-7ec1af000a961668
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: fraud_scam
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 建立亲密关系的对方长期关心目标对象，随后以稳赚为由引导其投资；目标对象提现时被要求另交费用，最终停止付款并求助正规渠道。
+  critical_evidence:
+  - 长期嘘寒问暖建立信任
+  - 对方引导参与所谓稳赚投资
+  - 提现时突然要求先缴费用
+  - 目标对象拒绝继续付款并寻求正规核实
+  benign_alternatives:
+  - 真实异地恋互助
+  - 合法情感咨询
+
+attributes:
+  duration_days: 4
+  turn_count: 53
+  approximate_tokens_estimate: 1119
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: romance_pig_butchering
+  risk: 3
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0030
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-018
+
+dedup:
+  content_hash: sha256:deb825fffdec9701eb948bbb7633292d1a73bcb58e674b56dd2474fa079b0bbd
+pipeline_status: accepted
+title: fraud_scam/romance_pig_butchering
+conversation: |-
+  【6月5日】
+  A：今天降温了，你那边记得加衣
+  A：我自己做了很久，稳赚的，你先看页面
+  A：系统要先缴一笔费用才能提现
+  A：别跟别人说，他们不懂我们
+  A：你把页面再打开看看
+  A：周末你回家吗
+  B：看工作安排，可能周六晚上
+  A：路上别赶，最近车站挺挤
+  B：知道啦，我先把票看好
+  A：我刚看到消息，上午一直在开会
+  B：没事，我也忙到现在
+  【6月6日】
+  B：谢谢，最近事情多还好有你问问
+  B：上面数字挺高，但平台我没听过
+  B：提现为什么还要再交钱？我不会转
+  B：我会找银行和警方咨询，不再付钱
+  B：我已经保存记录并联系平台官方核实
+  A：你上回说的耳机买了吗
+  B：还没，挑半天都差不多
+  A：我买了个基础款，通勤够用
+  B：那发我看看型号吧
+  A：你那边今天还顺利吗
+  B：还行，就是事情有点杂
+  【6月7日】
+  A：我一直惦记你，想带你看看我平时做的投资
+  A：先小额试试，我陪你一起弄
+  A：就差这一步，交完马上到账
+  A：你是不相信我吗
+  【系统消息】A 向 B 转账 2000 元，已收款。
+  A：午饭吃了吗
+  B：刚吃了楼下的面，今天人好多
+  A：我带了饭，结果忘记拿筷子
+  B：哈哈去前台借一双呗
+  A：那先忙你的，晚点再说
+  B：好，回头联系
+  【6月8日】
+  B：我不太懂这些，收益可靠吗
+  B：你之前说随时能取，怎么现在显示审核
+  B：请给我平台的正规资质和客服信息
+  B：我不能把感情当成核验依据
+  A：这两天一直下雨
+  B：我早上没带伞，鞋都湿了
+  A：我车里有把折叠伞，下次拿给你
+  B：好啊，天气预报说周末转晴
+  A：我刚看到消息，上午一直在开会
+  B：没事，我也忙到现在
+  A：你那边今天还顺利吗
+  B：还行，就是事情有点杂
+  A：那先忙你的，晚点再说
+  B：好，回头联系
+  A：对了，最近睡得怎么样
+  B：一般，昨晚又熬夜了
+  A：早点休息，别老盯屏幕
+  B：嗯，今晚尽量早点睡
+  A：我去处理点事，等会儿回
+  B：好，不急
+  A：我刚看到消息，上午一直在开会

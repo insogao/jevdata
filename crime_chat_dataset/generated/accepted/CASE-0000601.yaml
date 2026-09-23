@@ -1,0 +1,124 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000601
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000116
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-2669a1f5dc833915
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A提出与delivery_fraud_returns相关的不当财物处置或欺诈安排；潜在事实预先确定为：掉包退货骗差价；假货换真货。B拒绝参与并坚持正规途径。
+  critical_evidence:
+  - A提议利用包装和售后漏洞进行虚假退货赚差价；B拒绝伪造信息并要求按实际情况走平台流程。
+  benign_alternatives:
+  - 良性解释可能是：正常七天无理由
+  - 良性解释可能是：瑕疵退货协商
+
+attributes:
+  duration_days: 6
+  turn_count: 50
+  approximate_tokens_estimate: 822
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: delivery_fraud_returns
+  risk: 1
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0080
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-042
+
+dedup:
+  content_hash: sha256:888f3c9a293d65d14f4816244b79938c110a8c3a89773ec92c3429c2671c2638
+pipeline_status: accepted
+title: theft_robbery_property_crime/delivery_fraud_returns
+conversation: |-
+  【8月22日】
+  A：你周五出差？
+  B：去苏州一天
+  A：车票订了吗
+  B：还没，等下午
+  A：别买太晚的
+  A：我记下了，晚些时候再聊。
+  B：好，不急。
+  A：我听说有个售后办法能多拿点钱。
+  B：订单和商品都真实吗？
+  A：他说原包装膜能弄到，还说售后有漏洞，一单赚一千。
+  B：这听起来像假退货，我不帮。
+  A：只要你帮我看下申请。
+  B：我不会伪造退货信息或骗取差价。
+  A：我以为你熟悉流程。
+  B：我只会按平台规则处理真实售后。
+  【8月23日】
+  A：楼下新开了轻食店
+  B：我点了沙拉
+  A：好吃吗
+  B：酱少一点不错
+  A：我下次试试
+  A：我记下了，晚些时候再聊。
+  B：好，不急。
+  A：上次午饭拼单的钱一百二转你了。
+  【系统消息】A 向 B 转账 120 元，已收款。
+  B：收到了，正好是饭钱。
+  【8月26日】
+  A：周报模板换了
+  B：我刚收到
+  A：这周五前交
+  B：我记下了
+  A：别忘附件
+  A：我记下了，晚些时候再聊。
+  B：好，不急。
+  A：那批东西我还没寄。
+  B：先停下，别拿别的东西冒充退货。
+  A：他说操作起来很简单。
+  B：我不会帮你利用售后漏洞。
+  A：一单一千挺吸引人的。
+  B：不要为了钱承担违法后果。
+  【8月27日】
+  A：你家孩子最近练琴吗
+  B：每天半小时
+  A：邻居会不会嫌吵
+  B：九点前结束
+  A：挺好
+  A：我记下了，晚些时候再聊。
+  B：好，不急。
+  A：我取消申请了。
+  B：好，真实问题就联系平台客服。
+  A：东西我留下，不再折腾。
+  B：按实际情况处理就行。
+  A：明白。
+  B：以后不要让我做虚假售后。

@@ -1,0 +1,127 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001041
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000012
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-959908a922113903
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: fraud_scam
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 供应商以远低于行情的批量二手笔记本报价吸引小公司采购，绕开正规合同与平台让采购先转定金，收钱后只发来一个查不到的物流单号，催发货就推脱。
+  critical_evidence:
+  - A 以低于行情不少的单价向 B 的小公司推销批量九成新笔记本
+  - A 说走私人转账、不走公司对公流程，能省手续费和税点
+  - A 让 B 先转六百元定金锁定这批货
+  - A 发来一个物流单号，B 查不到，A 以发货量大、系统慢等理由推脱
+  benign_alternatives:
+  - 正规渠道的企业办公设备采购
+  - 供应商之间正常的分批付款与发货
+
+attributes:
+  duration_days: 6
+  turn_count: 48
+  approximate_tokens_estimate: 1049
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: second_hand_deposit_run
+  risk: 1
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0059
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:20655439228e0eb7d047071d4c0c7ef864cf877e1c179857dc2588da429736ff
+pipeline_status: accepted
+title: fraud_scam/second_hand_deposit_run
+conversation: |-
+  【4月8日】
+  A：王总 上次说的笔记本我这边到货了
+  B：多少台 什么价
+  A：十台 九成新 一台两千三 比行情低七八百
+  B：这么便宜 来路正吗
+  A：公司换代淘汰的 成色好 都能开机验
+  B：走对公吗 我们要入账
+  A：对公麻烦 你私人转我 省税点 价格才能压这么低
+  B：不开票我不好交代
+  A：开个收据给你 老客户都这么走
+  B：我先看下成色
+  A：王总 午饭吃了没
+  B：刚吃 员工餐
+  A：你们公司伙食不错吧
+  B：还行 就是涨价了
+  【4月9日】
+  B：你发的照片看了 键盘都有油光 不像九成新
+  A：办公本都这样 核心配置没问题
+  B：能先发一台样品吗
+  A：批量走不拆样 你要就先交定金 整批给你留
+  B：定金多少
+  A：六百 转完我明天安排发货
+  B：公司最近要搬新办公室 忙死了
+  A：那正好 这批货搬完就能用
+  B：我财务那边还得问下
+  A：别走财务 私人转最快
+  【4月10日】
+  A：王总 有同行也在问这批 你要不要定
+  B：你这货催得紧 我有点不踏实
+  A：紧俏啊 配置好 谁抢到算谁的
+  B：那我先转定金 但你要给我发货单
+  A：没问题 转完就安排
+  【系统消息】B 向 A 转账 600 元，已收款。
+  A：收到 明天发
+  B：你周末那个项目谈得咋样
+  A：还在磨 客户难缠
+  B：生意都不好做
+  A：是啊 互相体谅
+  【4月11日】
+  A：单号发你了 到货签收
+  B：我让人查下
+  B：行政说单号查不到
+  A：发大件慢 明天再查
+  【4月12日】
+  B：还是查不到 你那边什么情况
+  A：物流爆仓 件都压着呢 我也急
+  B：我员工下周就到岗 电脑得配齐
+  A：我知道 我催着呢
+  【4月13日】
+  B：两天了 你要不发就退我定金
+  A：发都发了 退不了 你再等等
+  B：你这是拿我的钱不当钱
+  A：王总 我做生意十几年了 不会为六百块砸招牌
+  B：明天再没物流记录 我就走法律程序
+  A：行行行 我明天给你准信

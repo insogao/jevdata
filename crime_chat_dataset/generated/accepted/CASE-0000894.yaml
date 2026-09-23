@@ -1,0 +1,127 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000894
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-ffe510fa4c96baa8
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A并非学生监护人，却请求学校工作人员 B 查看该生的成绩并发送截图；A以红包或关系施压，B拒绝提供并指向正式查询渠道。对话不含学生身份、分数或访问方法。
+  critical_evidence:
+  - A请求查看并截图一名非其监护学生的成绩。
+  - A提到红包或人情并继续索要截图；B拒绝。
+  - B明确成绩只向授权监护人反馈；对话不包含学生身份或分数。
+  benign_alternatives:
+  - 家长查自己孩子
+  - 学校官方查询
+
+attributes:
+  duration_days: 4
+  turn_count: 52
+  approximate_tokens_estimate: 1014
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0107
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-061
+
+dedup:
+  content_hash: sha256:3bf5b73b142cd292b78ff0c48a14e0a085dd2d99c1db1da9efe6dc6b6a9925ca
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【10月3日】
+  A：我想打听一下那位孩子的考试情况。
+  B：抱歉，我不能向非监护人透露。
+  A：午休我打算去附近走走。
+  A：我们平时也熟，别太正式嘛。
+  B：外面阳光挺好的。
+  B：楼下的咖啡机修好了没？
+  A：修好了，今天早上我试了一下。
+  A：我晚饭准备做点清淡的。
+  B：那午休我去买一杯。
+  A：好像还换了新的豆子。
+  B：最近吃清淡些舒服。
+  B：熟悉归熟悉，成绩还是隐私。
+  A：班主任那边看一眼就能确认吧？
+  【10月4日】
+  A：快递通知今天送到了。
+  B：我不会私下查看或提供记录。
+  A：家里人说周末要来吃饭。
+  B：下班后顺路去拿。
+  B：提前把菜单想好就行。
+  A：他们每次都带很多水果。
+  A：我把杯子洗好放桌上了。
+  B：那就不用准备太多甜点。
+  A：节日群红包我已经发了，你看到了。
+  B：这样等下想喝水就方便。
+  B：看到了，但这不改变我的答复。
+  A：截图发我就行，不用写名字。
+  A：楼下新开了个水果摊。
+  【10月5日】
+  B：也不行，截图仍属于个人信息。
+  B：你最近有没有开始看那本书？
+  A：看了几章，节奏还挺慢的。
+  B：我路过时也看到了。
+  B：慢慢看也挺好，睡前不费脑子。
+  A：我准备每天看十分钟。
+  A：价格看着还可以。
+  A：家里问得急，我才来找你。
+  B：请让监护人通过学校联系。
+  A：好，我把话带到。
+  B：买当季的会新鲜些。
+  A：今早路上施工，公交晚了几分钟。
+  B：我看路口围起来了，可能还得一阵。
+  【10月6日】
+  A：这周事情有点多，我慢慢排一下。
+  A：下周我早点出门。
+  B：这样不用一路赶。
+  B：谢谢。
+  B：先处理有截止时间的。
+  A：我不再提成绩了。
+  B：好的。
+  A：今天窗边挺亮的。
+  B：外面云少，太阳出来了。
+  A：我把闹钟往前调了五分钟。
+  B：早上就不会那么赶。
+  A：晚点要去买点日用品。
+  B：列个单子，免得漏掉。

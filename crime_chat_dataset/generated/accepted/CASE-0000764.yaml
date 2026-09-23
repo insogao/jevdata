@@ -1,0 +1,130 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000764
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-34cb63e3c61c680e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A想通过非正式渠道查看另一名学生的成绩记录，并以红包换取截图；B拒绝越权查询和传播学生信息。
+  critical_evidence:
+  - A提出私下查看他人成绩并索取截图
+  - A提到红包作为交换条件
+  - B拒绝并建议由监护人通过学校官方渠道查询
+  benign_alternatives:
+  - 良性解释可能是：家长查自己孩子
+  - 良性解释可能是：学校官方查询
+
+attributes:
+  duration_days: 6
+  turn_count: 55
+  approximate_tokens_estimate: 846
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0094
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-053
+
+dedup:
+  content_hash: sha256:3f5618072b35c46a6f880b9400ef7963b3fbae6b6e80904abd6fc1e1716d89b4
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【5月6日】
+  A：最近有部喜剧上映
+  B：我看了，挺轻松
+  A：周末去看吗
+  B：可以约朋友
+  A：我问问
+  A：我先记下，之后再跟你说。
+  B：好，忙完再说。
+  A：今天吃的什么
+  B：鸡肉饭
+  A：辣不辣
+  B：微辣
+  A：正好
+  A：我先记下，之后再跟你说。
+  A：我想打听一下那位学生最近的成绩。
+  B：好，忙完再说。
+  B：成绩是个人资料，应该由家长自己查询。
+  A：能不能私下问问老师？红包我已经发了，给张截图就行。
+  B：红包我会退回，老师也不能把别人的成绩发出来。
+  A：我只想知道个大概。
+  B：没有监护人同意，我不会打听或转发。
+  A：好吧，那先算了。
+  B：有需要就走学校官方渠道。
+  【5月7日】
+  A：你姐姐最近搬家吗
+  B：下个月搬
+  A：东西多不多
+  B：还好，先整理衣柜
+  A：慢慢来
+  A：我先记下，之后再跟你说。
+  B：好，忙完再说。
+  【5月10日】
+  A：地铁口又开了一个
+  B：离公司近一点
+  A：我明天走新出口
+  B：别走错方向
+  A：我看地图
+  A：我先记下，之后再跟你说。
+  B：好，忙完再说。
+  A：你问到结果了吗？
+  B：没有，也不会私下去问。
+  A：红包你留着吧。
+  B：我已经退回了。
+  A：你太谨慎了。
+  B：学生成绩和升学信息都需要保密。
+  【5月11日】
+  A：你窗台的花开了吗
+  B：开了一朵白色的
+  A：真好看
+  B：我拍了照片
+  A：发我看看
+  A：我先记下，之后再跟你说。
+  B：好，忙完再说。
+  A：家长说准备自己登录学校平台查。
+  B：这样处理合适。
+  A：我不再让你找老师。
+  B：谢谢理解。
+  A：以后按正式流程来。
+  B：好的，有问题联系学校。

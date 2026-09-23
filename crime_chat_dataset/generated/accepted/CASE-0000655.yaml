@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000655
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000114
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-170628bf86334906
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A提出与package_porch_pickup相关的不当财物处置或欺诈安排；预先固定的潜在事实为：蹲点偷快递；尾随进门。B明确拒绝并坚持正规途径。
+  critical_evidence:
+  - A提议趁购物高峰从无人看管处拿快递并按件付酬；B拒绝并建议找正规兼职。
+  benign_alternatives:
+  - 良性解释可能是：帮忙代拿快递
+  - 良性解释可能是：驿站自提
+
+attributes:
+  duration_days: 2
+  turn_count: 51
+  approximate_tokens_estimate: 818
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: package_porch_pickup
+  risk: 1
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0085
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-046
+
+dedup:
+  content_hash: sha256:a089716186cb6195011599c4b415f1b816c4e1c0c4e9e43fcd03cf0291abfd9b
+pipeline_status: accepted
+title: theft_robbery_property_crime/package_porch_pickup
+conversation: |-
+  【6月8日】
+  A：你哥周末来吗
+  B：周六下午到
+  A：要不要去接
+  B：他说自己坐地铁
+  A：那挺方便
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  A：附近的粥店还开吗
+  B：早上七点开门
+  A：对了，这件小事我回头再跟你说。
+  A：我想去买一份
+  B：好，等你有空。
+  B：南瓜粥不错
+  A：明天可以试
+  A：我先记下，回头再聊。
+  A：有人说购物节前有个轻松的活。
+  B：好，忙完再说。
+  B：是什么？
+  A：小区快递架没人看，他说双十一最好干，按件给钱。
+  B：那是在提偷拿包裹，我不参与。
+  A：他说有些件没人来取。
+  B：没取不代表无主，交给物业或快递点。
+  A：你别跟别人说。
+  B：我不会帮你拿，也不会替你隐瞒。
+  A：我只是随口问问，不用为难。
+  B：这种事我不会接，也别再把我算进去。
+  【6月9日】
+  A：对了，这件小事我回头再跟你说。
+  B：好，等你有空。
+  A：早上风挺大的
+  B：我穿了件外套
+  A：下午会暖和吗
+  B：预报说会
+  A：晚上还是加一件
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  A：他说报酬还能加。
+  B：不管多少钱都不能拿别人东西。
+  A：就一次。
+  B：我不去，也劝你拒绝。
+  A：那我找正规的临时工作。
+  B：物流站有招聘，走正规流程。
+  A：那我自己再想想。
+  B：请按正规要求处理，别找我绕流程。
+  A：我回绝了。
+  B：做得对。
+  A：明天去物流站问夜班。
+  B：先确认工时和工资。
+  A：好。
+  B：祝你顺利。
+  A：之后我只问你正常的工作。
+  B：可以，别涉及别人的财物就行。

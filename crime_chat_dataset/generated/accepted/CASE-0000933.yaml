@@ -1,0 +1,100 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000933
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-b1ff0b3b3357f2e6
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 通过中间人索要并售卖同事联系方式和简历；中间人拒绝交付未经授权的资料，要求对方走招聘平台的自愿投递流程。
+  critical_evidence:
+  - 对方索要整个部门电话及离职名单。
+  - 对方提出简历按份卖，显示要商业化员工资料。
+  - 中间人拒绝分享或出售员工联系方式、简历。
+  - 中间人建议发布岗位并由求职者自行授权联系。
+  benign_alternatives:
+  - 家长查自己孩子
+  - 学校官方查询
+
+attributes:
+  duration_days: 3
+  turn_count: 24
+  approximate_tokens_estimate: 524
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0110
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-062
+
+dedup:
+  content_hash: sha256:100b5e524884fba2392d58ce03cea82058eeda6d8e5905827a3e8acf60571ee9
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【9月3日】
+  A：能把整个部门的电话和离职名单给我吗？
+  A：简历按份卖，价格好谈。
+  A：先说个别的，我把会议纪要发到项目群了。
+  B：哈哈，这事倒简单。
+  A：你最近忙吗？
+  B：还行，手头都收尾了。
+  A：那挺好，别熬太晚。
+  B：嗯，等会儿去弄。
+  【9月4日】
+  B：我不会分享或出售未经授权的员工联系方式和简历。
+  B：你可以发布岗位，让候选人自行投递并授权联系。
+  A：上次你垫的午饭钱我还你了，和刚才说的事无关。
+  【系统消息】A 向 B 转账 40 元，已收款。
+  A：对了，楼下新开了家水果店，草莓挺甜。
+  B：我也觉得。
+  A：你一般怎么安排？
+  B：看当天吧，不赶时间。
+  A：好，那我记一下。
+  B：行，回头再聊。
+  【9月5日】
+  B：没有本人授权，我不会碰这些资料。
+  A：插一句，周三的班车时间改到八点半。
+  B：真的？我还不知道。
+  A：你试过吗？
+  B：上周刚弄过，挺方便。
+  A：收到，我也试试。
+  B：嗯，别忘了就好。

@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001026
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-0e0b028cdc3bb8ea
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 向 B 索取未经本人同意的同事电话、简历或离职名单，并提到按份转给他人；B 拒绝提供或转发个人资料，只认可明确授权的正常招聘联系。
+  critical_evidence:
+  - A 索要整个部门电话、简历或离职名单等同事资料
+  - A 提到简历按份转给他人，但不说明获取或交易操作
+  - B 明确拒绝提供、转发或出售未经授权的个人资料
+  - B 区分本人同意的猎头触达与未经授权的资料分享
+  benign_alternatives:
+  - 本人同意的猎头正常触达
+  - 明确授权范围内的通讯录共享
+
+attributes:
+  duration_days: 3
+  turn_count: 51
+  approximate_tokens_estimate: 1120
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0118
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-067
+
+dedup:
+  content_hash: sha256:3c51c87f6016932e1cf2c50fd2353ff7b2a6df28553593d05339c096e3dbb8ee
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【2月4日】
+  A：团队招人时有些资料想让你帮忙问一下
+  B：你要公开职位信息还是经授权的候选人？
+  A：你上次推荐的书我看到一半
+  B：后面节奏会快一点
+  A：适合睡前看
+  B：别熬太晚就行
+  A：我想要整个部门的电话，再要几份简历
+  B：未经本人同意的同事资料我不能给
+  A：家里那盆绿植长新叶了
+  B：最近光照合适吧
+  A：我挪到窗边了
+  B：记得别浇太勤
+  A：离职名单也算，简历可以按份转给合作方
+  B：我不会提供或出售这些个人资料
+  A：早上地铁比平常挤
+  B：我今天错开了高峰
+  A：那路上舒服不少
+  【2月5日】
+  B：是，少站几分钟
+  A：那正常猎头也不能联系？
+  B：本人同意并清楚用途的正常触达可以
+  A：咖啡店出了新口味
+  B：你试了吗
+  A：还没，想等周末
+  B：到时告诉我怎么样
+  A：通讯录共享呢
+  B：也只能在明确授权的范围内，不能扩用
+  A：明白，我改用公开招聘信息
+  B：这样合适，我不会发私人名单
+  B：那就一件件来，我这会儿在路上
+  A：刚才消息没加载出来，刚忙完一阵
+  B：现在能看到了，我这会儿在路上
+  A：嗯我晚点再确认，刚忙完一阵
+  B：好，不着急，我这会儿在路上
+  A：这周事情有点多，刚忙完一阵
+  【2月6日】
+  B：慢慢处理就行，我这会儿在路上
+  A：我先去接杯水，刚忙完一阵
+  B：好，休息一下，我这会儿在路上
+  A：你那边忙完了吗，刚忙完一阵
+  B：差不多了，准备收尾，我这会儿在路上
+  A：我把日程记好了，刚忙完一阵
+  B：收到，谢啦，我这会儿在路上
+  A：我刚从会议出来，刚忙完一阵
+  B：辛苦，先歇会儿，我这会儿在路上
+  A：下午安排还挺满，刚忙完一阵
+  B：那就一件件来，我这会儿在路上
+  A：刚才消息没加载出来，刚忙完一阵
+  B：现在能看到了，我这会儿在路上
+  A：嗯我晚点再确认，刚忙完一阵
+  B：好，不着急，我这会儿在路上
+  A：这周事情有点多，刚忙完一阵
+  B：慢慢处理就行，我这会儿在路上

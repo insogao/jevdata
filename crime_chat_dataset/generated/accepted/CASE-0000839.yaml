@@ -1,0 +1,115 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000839
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-f454e75c07519cc8
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 试图越权查询并获取他人的考试成绩或升学资料；B 拒绝查阅、收受红包或截图，并要求走正式授权渠道。
+  critical_evidence:
+  - A 请求工作人员查看他人学生成绩或升学档案
+  - A 提出红包并要求截图
+  - B 拒绝越权查询、收礼和传播资料，建议通过学校正式渠道核验权限
+  benign_alternatives:
+  - 家长查自己孩子
+  - 学校官方查询
+
+attributes:
+  duration_days: 5
+  turn_count: 38
+  approximate_tokens_estimate: 744
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0102
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-058
+
+dedup:
+  content_hash: sha256:d35f76a5ced9892dd10e3c2814caf817e1abb57ad14b51de15216c9e99923e5c
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【9月10日】
+  A：家长会上有人问升学排名，你能从班主任系统帮忙看一下吗？
+  B：只可以查自己负责且授权范围内的学生记录。
+  A：你那边最近早晚温差大吗？
+  B：挺明显的，早上要穿外套。
+  A：我差点穿短袖去上班。
+  B：中午热一点，带件薄的方便。
+  A：我把围巾也放包里了。
+  B：这个季节挺实用。
+  A：下周看起来会降温。
+  B：那就提前把厚衣服翻出来。
+  A：周末整理一下。
+  B：别忘了晒晒。
+  【9月11日】
+  A：我转个红包，你截个图就行，不用写名字。
+  B：我把红包退回，任何学生成绩都不会私下截屏。
+  【9月12日】
+  A：我只是想有个参考。
+  B：请看学校发布的匿名统计，个人档案要由监护人正式申请。
+  B：最近听说社区有旧书交换。
+  A：我有几本闲置的小说。
+  B：周六下午可以拿过去。
+  A：需要提前登记吗？
+  B：群公告里有表格。
+  A：我晚上填。
+  B：我也找几本带去。
+  A：到时一起过去。
+  B：好。
+  A：顺便喝杯咖啡。
+  【9月13日】
+  A：好，我会按流程问，不再私下打听。
+  【9月14日】
+  B：这样就可以。
+  A：中午想吃点清淡的。
+  B：园区旁边新开了粥铺。
+  A：走路远吗？
+  B：五分钟就到。
+  A：那我下楼看看。
+  B：可以点小份试试。
+  A：味道挺好的。
+  B：下回我也去。
+  A：我把地址记下了。
+  B：周围还有家卖豆花的。
+  【系统消息】A 向 B 转账 36 元，已收款。

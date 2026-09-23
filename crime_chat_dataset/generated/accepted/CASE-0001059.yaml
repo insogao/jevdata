@@ -1,0 +1,137 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001059
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000095
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-42c196725ca1f9f6
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: money_laundering_obfuscation
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 中间人老李帮卡商阿凯牵线，把别人手里用不掉的京东卡、苏果卡按九四折收兑，卡密一发过来就结现钱，用卡券回收的名义把资金快速折出来，中间人只负责牵线赚个介绍费。
+  critical_evidence:
+  - 阿凯要京东卡、苏果卡，其他卡看折率再定，九四折实结
+  - 卡密发过来就付款，量大可以分批发分批结
+  - 老李只做中间牵线，赚介绍费，不直接出面
+  - 不走实名、不留直连，收卡走券码/卡密形式
+  benign_alternatives:
+  - 正规卡券回收平台
+  - 公司福利卡转让
+
+attributes:
+  duration_days: 3
+  turn_count: 62
+  approximate_tokens_estimate: 1226
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: gift_card_cashout
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0063
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-029
+
+dedup:
+  content_hash: sha256:9e490731aaaa7c5136a602374e3152d1e6fee4b6c4cfb31ba4e70c968d17b4fc
+pipeline_status: accepted
+title: money_laundering_obfuscation/gift_card_cashout
+conversation: |-
+  【9月10日】
+  A：凯哥 我这边攒了一批卡 你那边还收不
+  B：收 你手上什么卡
+  A：京东的多 还有几张苏果 别的也有点
+  B：京东和苏果都要 其他看折率再说
+  A：折率还是老规矩?
+  B：九四折实结 你懂的 现在都这价
+  A：行 那几张苏果呢
+  B：苏果看面额 五百的收 一百的不要
+  A：懂了 我整理一下给你
+  B：好 发码就结 别拖
+  A：中午吃的啥 我在公司楼下随便对付
+  B：外卖 难吃 凑合
+  A：我这边新开了家小炒 下次你来尝尝
+  B：行 有功夫去
+  A：第一批弄好了 五张京东 面额一千
+  B：发码吧
+  A：这就发 你数一下
+  B：收到四张 还有一张夹在下面 看见
+  A：哦对 往下翻
+  B：齐了 五千的九四折 四千七 转你
+  A：收到 爽快
+  【9月11日】
+  A：早上那个大雾 高速都封了 我送货绕了好久
+  B：我们这也雾蒙蒙的 能见度低
+  A：开车小心点
+  B：嗯 你也是
+  B：今天还有码吗
+  A：有 苏果那几张我拍照给你 你扫一下
+  B：拍照不行 要码 刮开那种
+  A：明白 我回去刮了发你
+  B：嗯 刮的时候注意 别发错群
+  A：放心 我知道轻重
+  A：这两张苏果 五百的 你先看看
+  B：两张可以 九百四 一起转你
+  A：好
+  B：对了 量大的话分批发 一次别太多 走账不好看
+  A：懂 我分批给你
+  B：老李 你这边介绍费我月底一起结
+  A：不急 按笔来就行
+  B：晚上没事吧 我这边有个人手里还有货
+  A：谁 靠谱吗
+  B：以前合作过的 手上有面额大的
+  A：那别直接给我 你私下对接 我就牵个线
+  B：对 就这意思 你牵线我出货
+  【9月12日】
+  A：昨晚那个人的卡我看了 有几张不太行
+  B：哪几张
+  A：几张杂牌商超的 折率太低 我没要
+  B：那不要 就要京东苏果
+  A：好 京东那几张我扫了发你
+  B：成
+  A：发过去了 三张 一张两千两张一千
+  B：收到 验过 三千七六 转你
+  A：收到 今天这波够数了
+  B：嗯 明天再收 别一次压太多
+  A：我下午接孩子放学 先忙
+  B：去吧 我这也多
+  A：幼儿园老师又让买绘本 一套两百多
+  B：现在什么都贵
+  A：可不是
+  B：下周量大的话你提前说 我留现金
+  A：好 我这边尽量凑整
+  B：嗯 就喜欢跟你这样利索的
+  A：彼此彼此

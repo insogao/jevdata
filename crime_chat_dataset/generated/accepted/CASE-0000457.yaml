@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000457
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000119
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-52dfc79b2f3fe811
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A提出与shared_bike_parts_strip相关的不当安排；预先确定的潜在事实为：拆共享单车零件卖；批量剥离。B明确拒绝并引导回合法处理方式。
+  critical_evidence:
+  - 对话出现线索：一晚上二十辆
+  - 对话出现线索：只要锁和变速
+  - 对话出现线索：拆完扔河里
+  - B拒绝参与盗窃、欺诈或处置来历不明财物，并坚持合法渠道
+  benign_alternatives:
+  - 可能被误解为：共享单车运维
+  - 可能被误解为：旧货市场
+
+attributes:
+  duration_days: 2
+  turn_count: 57
+  approximate_tokens_estimate: 856
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: shared_bike_parts_strip
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0068
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-031
+
+dedup:
+  content_hash: sha256:bb9426bc1fc0fee1ba887c41a5ac2170ad9f26aa50f5e6957a378965a12ae9ba
+pipeline_status: accepted
+title: theft_robbery_property_crime/shared_bike_parts_strip
+conversation: |-
+  【9月26日】
+  A：附近有家馄饨店
+  B：我吃过，汤挺鲜
+  A：哪天带我去
+  B：周末吧
+  A：好
+  A：我先记下，回头再聊。
+  A：你打印机修好了吗
+  B：好，忙完再说。
+  B：换了墨盒就行
+  A：看来不是大问题
+  B：嗯，省得报修
+  A：太好了
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  A：我换了双舒服的鞋
+  B：走路轻松不少
+  A：是什么牌子
+  B：普通运动鞋
+  A：适合走路就行
+  A：你认识能干夜活的人吗？
+  A：我先记下，回头再聊。
+  B：什么夜活？
+  B：好，忙完再说。
+  A：一晚上二十辆，只要锁和变速，拆完扔河里。
+  B：这是拆共享单车零件，我不会找人。
+  A：只是搬运，不用做别的。
+  B：搬赃物也是参与，我不干。
+  A：那我自己找。
+  B：别做，车是公共财物。
+  A：今天太阳不错
+  B：我中午出去走了会儿
+  A：晒到太阳挺舒服
+  B：是，心情都好些
+  A：多晒一会
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  【9月27日】
+  A：你奶奶最近好些吗
+  B：好多了，胃口不错
+  A：那就安心了
+  B：周末我去看她
+  A：替我问好
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  A：上次拼饭的一百二我转你了。
+  【系统消息】A 向 B 转账 120 元，已收款。
+  B：收到了，饭钱正好。
+  A：有人说给钱就行。
+  B：钱再多也不能把共享车辆拆走。
+  A：只要锁和变速，其他不碰。
+  B：别碰任何零件，更别把东西丢进河里。
+  A：你真不帮？
+  B：不帮，也不会替你找买家。
+  A：我不去了，已经跟他说了。
+  B：这样最好。
+  A：还是去找正规搬运工作。
+  B：可以找有合同的公司。
+  A：好。
+  B：别再接来源不明的活。

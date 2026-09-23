@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000993
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-2aeff9f8a5634a43
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 向 B 索要未经本人同意的同事联系方式、简历或离职人员名单，并提出将资料按份提供给他人；B 拒绝查看、转发或交易个人资料，限定在经本人授权的正常招聘触达。
+  critical_evidence:
+  - A 请求整个部门的电话、简历或离职名单等同事资料
+  - A 提到把简历按份提供给他人或从中获利，但不说明获取或交易操作
+  - B 明确拒绝提供、转发或出售未经授权的个人资料
+  - B 区分本人同意的猎头联系/授权通讯录共享与未经授权的资料流转
+  benign_alternatives:
+  - 经本人同意的猎头正常触达
+  - 明确授权范围内的通讯录共享
+
+attributes:
+  duration_days: 6
+  turn_count: 48
+  approximate_tokens_estimate: 864
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0115
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-066
+
+dedup:
+  content_hash: sha256:e001e58ba0b707bf01855fed0a380b06583776fa3dc1e3c58f9dcb33aab02518
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【3月3日】
+  A：客户团队让我补充招聘资源，你手上有联系人吗
+  B：只有官方对外邮箱和经授权的候选人
+  A：我想要整个部门电话，离职名单也算
+  B：这类同事资料不能给你
+  A：假期车票定了吗
+  B：还没，先看下哪天方便
+  A：别太晚订就好
+  B：是，今晚和家里商量
+  【3月4日】
+  A：楼下咖啡店换豆子了
+  B：难怪今天味道不一样
+  A：你觉得之前那款好吗
+  B：我还是喜欢浅烘的
+  A：简历按份给我，我转给外面的顾问
+  B：未经本人同意不能转发，更不能拿去交易
+  A：如果是猎头合作呢
+  B：本人同意被联系、用途清楚，才是正常触达
+  【3月5日】
+  A：午饭吃了吗
+  B：刚吃完，今天食堂的面还行
+  A：我点了盖饭，分量有点大
+  B：下午走一圈消消食
+  A：那我不找你要名单了
+  B：请用公开招聘页面，授权范围也要写清
+  A：懂了，我去更新需求
+  B：有需要我可以给你官方招聘链接
+  【3月6日】
+  A：下午还有个会
+  B：那我晚点回你
+  A：刚才网络卡了
+  B：我这边也断了一下
+  A：收到，我看到了
+  B：好，先忙手头的
+  A：我这边先去处理下别的事
+  A：这个不用今天决定
+  【3月7日】
+  B：行，明天再说
+  A：我去倒杯水
+  B：记得起来活动下
+  A：我先记一下
+  B：嗯，别急着定
+  A：我这边先去处理下别的事
+  A：下午还有个会
+  B：那我晚点回你
+  【3月8日】
+  A：刚才网络卡了
+  B：我这边也断了一下
+  A：收到，我看到了
+  B：好，先忙手头的
+  A：我这边先去处理下别的事
+  A：这个不用今天决定
+  B：行，明天再说
+  A：我去倒杯水

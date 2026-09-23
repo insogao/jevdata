@@ -1,0 +1,145 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001078
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-4ff359406b747161
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 给学校供建材的家长 A 借生意交情反复铺垫，又送烟茶又发红包，想让教务职员 B 用班主任账号偷查合伙人孩子的大考排名截图，属于利用职务权限窥探学生隐私的请托。
+  critical_evidence:
+  - A 开口求 B「班主任那个系统里点一下、截个图」，要初二大联考一个孩子的分数（第1天）
+  - A 点明查的不是自己孩子而是合伙人家的，两家孩子一直暗中较劲（第1-2天）
+  - A 让人送烟茶又发微信红包，B 拒收红包、退回茶叶（第3-4天）
+  - B 明确抵触：排名是人家孩子的分数、借号传出去要丢饭碗，且那个班主任账号平时不在他手上（第4-5天）
+  - B 松口「周一早自习试一回」，A 叮嘱「截图只发小号、别走文字」（第6天）
+  benign_alternatives:
+  - 家长查询自己孩子的成绩
+  - 学校行政人员按流程帮家长代查信息
+
+attributes:
+  duration_days: 6
+  turn_count: 66
+  approximate_tokens_estimate: 1749
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0066
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-024-RES
+
+dedup:
+  content_hash: sha256:4a6a0eaa82f847c5d7277037cce1f09ae12e7fde8990d19bc669639e8e344724
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【5月12日】
+  A：周工 龙骨明天一早送工地 那批料你到时验个色
+  B：行 后天封图书馆顶子 正好赶趟
+  A：放心 料我亲自盯的
+  A：哎 正好有个事想求你帮个忙
+  B：你说
+  A：初二年级上次大联考的排名出来没 我想知道一个孩子的分
+  B：谁家孩子 你自己家的你还不知道?
+  A：不是我家 是我合伙人家的 跟我们家老大一个班
+  B：这事不好办 成绩是人家孩子的隐私
+  A：你就班主任那个系统里点一下 截个图 名字都不用给我
+  B：回头再说 中午食堂有狮子头 下来吃不
+  A：不去了 我跟工头吃盒饭 你给我带个萝卜排骨?
+  B：行 一会儿搁传达室
+  A：谢了 回头请你抽烟
+  B：少来这套 哈哈
+  A：玩笑玩笑
+  【5月13日】
+  B：昨天那事我问了 教务端查全年级要走审批
+  A：你不是兼着年级干事嘛 班主任那个入口你不是也有
+  B：入口有 我点谁的一查一个准
+  A：你就说看自己孩子的 捎带扫一眼 截图就行
+  B：再让我想想 今天先收你们那批龙骨
+  A：料你放心 我亲自验过
+  A：合伙人老婆今天又来我办公室坐了一下午 唉
+  B：至于吗 一个排名
+  A：两家孩子从小比到大 你不懂那种滋味
+  B：排名又定不了终身
+  A：话是这么说 心里那口气顺不过来
+  【5月14日】
+  A：东西让小刘给你送去了 一点心意 别推
+  B：哎呀你这 干嘛这么客气
+  A：两条烟一盒茶 红包也发你微信了 你点一下
+  B：红包我没收 你整这一出我压力大了
+  A：你不收我心里不踏实 这忙就你顺手的事
+  B：说压力是真有压力 脖子疼半个月了
+  A：少低头盯屏幕 过来我这有家老推拿店
+  B：我天天盯系统盯表格 能不疼嘛
+  A：周五下班一起去 我请
+  B：行 哪家
+  A：银行后街那家 老师傅
+  【5月15日】
+  B：红包我真不能收 茶叶我让门卫放你车上了
+  A：你这人 那红包你先拿着 权当我存你那
+  B：存也不行 这事八成办不成
+  A：你就当帮我 合伙那头我总得有个交代
+  B：我这号借出去看过一回班级课表 已经够心虚了
+  A：课表都能借 排名怎么就不行
+  B：课表谁都能看 排名是人家孩子的分数!
+  A：我又不外传 就你知我知
+  【5月16日】
+  A：改天请你喝酒 河边那家 地道
+  B：酒先欠着 你这事我心里还堵着
+  A：酒归酒 事归事 我没催你现在答
+  B：那个页面得用班主任的号 平时号不在我这
+  A：初二(3)班那班主任跟你一桌吃饭的老周啊
+  B：借号传出去要丢饭碗的
+  A：就手滑点开 截完就删 谁看得出来
+  B：你说得轻巧
+  B：先不说这个 我儿子要买球鞋 一千多 抢钱呢
+  A：上千的鞋穿一学期就废 别惯
+  B：他拿压岁钱 说自己出
+  A：压岁钱也是钱 六百封顶
+  B：行 就这么定 他要是闹你帮我劝
+  A：哈哈 好嘞
+  【5月17日】
+  B：周一早自习 那个号平时就挂我手机上 我看看再说
+  A：别勉强 真不方便就当我没提
+  B：你这么一说我倒好受点 就试一回 不行你另找人
+  A：行 有截图只发我小号 别走文字
+  B：知道 周末钓鱼别叫我了 陪家里买菜
+  A：成 家要紧

@@ -1,0 +1,125 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001009
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-3bc4301db5eb1f5a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 作为亲友请求学校工作人员私查别人的成绩和升学档案，并称已送红包只需截图；B 拒绝越权查询，指引监护人使用学校正式渠道。
+  critical_evidence:
+  - A 请求查看非本人子女的成绩档案。
+  - A 以班主任系统点一下即可获取作暗示。
+  - A 表示红包已发，并要求截图就行。
+  - B 拒绝查询和转发，要求监护人走学校官方流程。
+  benign_alternatives:
+  - 家长查自己孩子
+  - 学校官方查询
+
+attributes:
+  duration_days: 5
+  turn_count: 47
+  approximate_tokens_estimate: 1129
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0117
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-067
+
+dedup:
+  content_hash: sha256:759d6de0970901f2e0f6bd9dc0d7289aa04fdc5c2972c941b67417ee776468b8
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【9月15日】
+  A：我家亲戚想问另一个孩子的成绩档案，能帮忙看一下吗？
+  B：你不是监护人，我不能查那位学生的记录。
+  A：今天聊到家中窗帘，我才想起提醒你。
+  B：记着呢，我已经安排进日程。
+  A：最近日程排得满吗？
+  B：还好，周四以后松一点。
+  A：那就别把自己排太紧。
+  B：收到，我留点空。
+  A：我把家中窗帘的时间记下来了。
+  B：好，免得临时忘。
+  A：最近天气变化快，出门看一眼预报。
+  B：嗯，我会带件外套。
+  A：那先这样，我去处理手头的事。
+  B：好，忙完再聊。
+  【9月16日】
+  A：班主任系统点一下就能看到，顺便看看升学信息。
+  B：系统里有权限要求，不能因为亲戚关系就打开。
+  A：我路上看到爷爷的生日饭相关的通知了。
+  B：我也看见了，信息挺清楚。
+  A：你觉得要改计划吗？
+  B：先按原来安排，到时再看。
+  A：行，有变化再说。
+  B：好，回头联系。
+  A：我把爷爷的生日饭的时间记下来了。
+  B：好，免得临时忘。
+  A：最近天气变化快，出门看一眼预报。
+  B：嗯，我会带件外套。
+  A：那先这样，我去处理手头的事。
+  B：好，忙完再聊。
+  A：前两天你替我垫的午饭钱我还你了，跟工作上说的事分开算。
+  【系统消息】A 向 B 转账 49 元，已收款。
+  【9月17日】
+  A：红包已发给你了，截图就行，别让家里人干等。
+  B：我会退回红包，也不会截屏或转发成绩。
+  【9月18日】
+  A：家长只是想早点准备，不会往外传。
+  B：请孩子的监护人联系学校正式窗口，按授权步骤查询。
+  A：顺便问下，周末接孩子后来有着落了吗？
+  B：有了，刚刚确定下来。
+  A：你选了哪个方案？
+  B：就选简单那个，省心。
+  A：那挺好，少操点心。
+  B：嗯，最近事情有点多。
+  A：我把周末接孩子的时间记下来了。
+  B：好，免得临时忘。
+  A：最近天气变化快，出门看一眼预报。
+  B：嗯，我会带件外套。
+  A：那先这样，我去处理手头的事。
+  B：好，忙完再聊。
+  【9月19日】
+  A：好，我让他们自己问学校。
+  B：这样最合适，别人的学业信息要由本人家长申请。

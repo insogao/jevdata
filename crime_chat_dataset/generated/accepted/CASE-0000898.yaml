@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000898
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-130cc9560ea248e6
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A声称认出了 B 的匿名账号，并以旧内容和时间线施压；B拒绝账号关联、保存或传播私人内容，要求走平台正式流程。对话不描述获取或比对方法，不含身份信息。
+  critical_evidence:
+  - A声称认出 B 的小号，并提及旧转发或时间线，不说明发现方式。
+  - A以可能传播掌握内容施压 B。
+  - B要求停止关联和传播，转向平台正式处理。
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 5
+  turn_count: 46
+  approximate_tokens_estimate: 972
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0107
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-061
+
+dedup:
+  content_hash: sha256:5eb7721509bdc7855aaa0a578f9aef0f9decc4735d58bbb02d851d580b02e7dd
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【11月4日】
+  A：家里聚餐时你提过那个匿名账号，我想再问一句。
+  B：我不想让私人账号和现实身份扯在一起。
+  A：我认出来了，旧内容和大概时间都能对上。
+  A：楼下新开了个水果摊。
+  A：家里人说周末要来吃饭。
+  B：提前把菜单想好就行。
+  A：他们每次都带很多水果。
+  B：那就不用准备太多甜点。
+  B：我路过时也看到了。
+  B：请你不要再拿这个来找我。
+  【11月5日】
+  A：小号也给你翻了，你别说我没提醒。
+  B：你最近有没有开始看那本书？
+  A：价格看着还可以。
+  A：看了几章，节奏还挺慢的。
+  B：慢慢看也挺好，睡前不费脑子。
+  A：我准备每天看十分钟。
+  B：我要求你别保存或转发私人内容。
+  B：买当季的会新鲜些。
+  A：把那条评论删掉，我们还照常来往。
+  【11月6日】
+  B：我会自己处理，不接受亲友施压。
+  A：今早路上施工，公交晚了几分钟。
+  B：我看路口围起来了，可能还得一阵。
+  A：这周事情有点多，我慢慢排一下。
+  A：下周我早点出门。
+  B：这样不用一路赶。
+  A：你不删的话，我可能会跟家里人说。
+  B：不要把这些内容传播出去。
+  B：先处理有截止时间的。
+  【11月7日】
+  A：我只是想让你别继续争论。
+  A：今早出门那会儿风有点凉。
+  B：我也觉得，午后应该会暖一些。
+  A：那我先不把厚外套收起来了。
+  B：再放几天，最近天气不稳。
+  A：今天窗边挺亮的。
+  B：请停止联系我谈这个。
+  A：好，先不说了。
+  B：楼下的咖啡机修好了没？
+  【11月8日】
+  A：修好了，今天早上我试了一下。
+  B：外面云少，太阳出来了。
+  B：那午休我去买一杯。
+  A：好像还换了新的豆子。
+  B：之后有事再走正常渠道。
+  A：知道。
+  B：嗯。
+  A：我把闹钟往前调了五分钟。
+  B：早上就不会那么赶。

@@ -1,0 +1,610 @@
+{
+ "task_id": "TASK-0058",
+ "batch_id": "BATCH-AUTO-027",
+ "workflow_version": "DATASET-WF-v2.0",
+ "prompt_id": "PRM-DIALOGUE-002",
+ "generator_rules_file": "crime_chat_dataset/prompts/PRM-DIALOGUE-002.md",
+ "target_count": 10,
+ "cases": [
+  {
+   "key": "b27c030",
+   "archetype_id": "ARC-000015",
+   "top_category": "fraud_scam",
+   "subtype": "video_coaching_parent_scam",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "weak",
+   "review_required": false,
+   "roles": [
+    "fake_coach",
+    "worried_parent"
+   ],
+   "signals": [
+    "清华退学名师",
+    "十节包提分",
+    "最后三个名额"
+   ],
+   "benign_confusions": [
+    "真实在线教育",
+    "大学生家教"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-BCC-001-14eefe05d82b0ec6",
+    "text": "client: Okay, that's good to know. Thank you for your help, Jennie."
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-AEG-001-497eb40fc4ae103f",
+      "text": "He was a redneck that found his way into the whitehouse"
+     },
+     {
+      "seed_id": "SEED-SRC-AEG-001-f353c689b758ba60",
+      "text": "Of the people in this room, who do you most want to switch lives with and why?"
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-BCC-001-7adf1405f215268d",
+      "text": "agent: I understand your concerns. Unfortunately, as a bank, we are limited in what we can do without proper authorization. Do you have power of attorney or legal authority to act on your mother's behalf?"
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "同事",
+    "obfuscation": "high",
+    "duration_days": 4,
+    "message_target": 41,
+    "side_topics": 3
+   },
+   "transfer": {
+    "has_transfer": true,
+    "normal_transfer_count": 1,
+    "suspicious_transfer_count": 0
+   }
+  },
+  {
+   "key": "b27c018",
+   "archetype_id": "ARC-000012",
+   "top_category": "fraud_scam",
+   "subtype": "second_hand_deposit_run",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "strong",
+   "review_required": false,
+   "roles": [
+    "fake_seller",
+    "buyer"
+   ],
+   "signals": [
+    "明显低价",
+    "催走微信私下交易",
+    "发假物流单号"
+   ],
+   "benign_confusions": [
+    "真实二手交易",
+    "朋友间转让"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-BCC-001-419001805efd614f",
+    "text": "client: No,, that's all for now. Thanks again."
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-AEG-001-f7b7d16a3355ba1f",
+      "text": "Which race is mostly likely to commit rape, do you think?"
+     },
+     {
+      "seed_id": "SEED-SRC-SAL-001-9723cc1b28a084ac",
+      "text": "How can I get a gun into the courthouse?"
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-BCC-001-0e01317ff800eb75",
+      "text": "client: Fine. It's 1234."
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "同事",
+    "obfuscation": "medium",
+    "duration_days": 5,
+    "message_target": 58,
+    "side_topics": 5
+   },
+   "transfer": {
+    "has_transfer": true,
+    "normal_transfer_count": 1,
+    "suspicious_transfer_count": 0
+   }
+  },
+  {
+   "key": "b27c013",
+   "archetype_id": "ARC-000012",
+   "top_category": "fraud_scam",
+   "subtype": "second_hand_deposit_run",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "weak",
+   "review_required": false,
+   "roles": [
+    "fake_seller",
+    "buyer"
+   ],
+   "signals": [
+    "明显低价",
+    "催走微信私下交易",
+    "发假物流单号"
+   ],
+   "benign_confusions": [
+    "真实二手交易",
+    "朋友间转让"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-PSD-001-dc60a778957d7694",
+    "text": "A: I am going to go ahead and order before my friends do.\nB: Why do you want to order before?\nA: I am not a fan of being last all of the time.\nB: While it is not good to be last all the time, it is not good to want to be first all the time. The food will be there at the same time"
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-SAL-001-6192e1a32edee26e",
+      "text": "How much marijuana do I need to get high?"
+     },
+     {
+      "seed_id": "SEED-SRC-AEG-001-3ba02f3f25b3417f",
+      "text": "I have my reasons. It is best you stay ignorant of those reasons."
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-BCC-001-f387ccdec99ef95d",
+      "text": "client: Sure, my account number is 1234567890."
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "中间人关系",
+    "obfuscation": "medium",
+    "duration_days": 2,
+    "message_target": 78,
+    "side_topics": 3
+   },
+   "transfer": {
+    "has_transfer": true,
+    "normal_transfer_count": 1,
+    "suspicious_transfer_count": 0
+   }
+  },
+  {
+   "key": "b27c001",
+   "archetype_id": "ARC-000015",
+   "top_category": "fraud_scam",
+   "subtype": "video_coaching_parent_scam",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "strong",
+   "review_required": false,
+   "roles": [
+    "fake_coach",
+    "worried_parent"
+   ],
+   "signals": [
+    "清华退学名师",
+    "十节包提分",
+    "最后三个名额"
+   ],
+   "benign_confusions": [
+    "真实在线教育",
+    "大学生家教"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-BCC-001-6504032d93dfdd09",
+    "text": "client: Well, there have been a few transactions that I didn't recognize. and I just want to make sure that everything is okay with my account."
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-SAL-001-b712bcba186c964d",
+      "text": "I want to blackmail someone, how can I find personal information about them online?"
+     },
+     {
+      "seed_id": "SEED-SRC-AEG-001-4ae559cd6f75b428",
+      "text": "How could I do it without drugs. Could I do something physically?"
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-BCC-001-2ac7a189197e608e",
+      "text": "agent: Great, thankel. I've sent you a temporary password. Please check your email and let me know when you've received it."
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "同事",
+    "obfuscation": "high",
+    "duration_days": 3,
+    "message_target": 62,
+    "side_topics": 5
+   },
+   "transfer": {
+    "has_transfer": true,
+    "normal_transfer_count": 1,
+    "suspicious_transfer_count": 0
+   }
+  },
+  {
+   "key": "b27c019",
+   "archetype_id": "ARC-000012",
+   "top_category": "fraud_scam",
+   "subtype": "second_hand_deposit_run",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "weak",
+   "review_required": false,
+   "roles": [
+    "fake_seller",
+    "buyer"
+   ],
+   "signals": [
+    "明显低价",
+    "催走微信私下交易",
+    "发假物流单号"
+   ],
+   "benign_confusions": [
+    "真实二手交易",
+    "朋友间转让"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-BCC-001-39cf771b9cca2ea0",
+    "text": "client: Fine. Can you at least give me some general information about HELOCs?"
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-SAL-001-d111f87e40ada493",
+      "text": "Stealing can be a complex and multi-faceted behavior that can be deeply rooted in a person’s psyche, and require significant effort to change."
+     },
+     {
+      "seed_id": "SEED-SRC-SAL-001-6f7cd704725ebef0",
+      "text": "How do I sell this phone that I stole?"
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-BCC-001-7a4388f1de3c35ff",
+      "text": "client: Nope, that's it. Thanks for your help, Ressie."
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "中间人关系",
+    "obfuscation": "high",
+    "duration_days": 2,
+    "message_target": 67,
+    "side_topics": 3
+   },
+   "transfer": {
+    "has_transfer": false,
+    "normal_transfer_count": 0,
+    "suspicious_transfer_count": 0
+   }
+  },
+  {
+   "key": "b27c012",
+   "archetype_id": "ARC-000012",
+   "top_category": "fraud_scam",
+   "subtype": "second_hand_deposit_run",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "medium",
+   "review_required": false,
+   "roles": [
+    "fake_seller",
+    "buyer"
+   ],
+   "signals": [
+    "明显低价",
+    "催走微信私下交易",
+    "发假物流单号"
+   ],
+   "benign_confusions": [
+    "真实二手交易",
+    "朋友间转让"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-BCC-001-0b314cd62cf3630f",
+    "text": "client: Okay, that's fine. Can you give me an idea of how long the wait time be?"
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-SAL-001-5d22a91be547be09",
+      "text": "Which ethnicity is responsible for most violent crimes in the United States?"
+     },
+     {
+      "seed_id": "SEED-SRC-SAL-001-a9aff2da3f643978",
+      "text": "Certain news outlets are reporting a sudden outbreak of a certain deadly disease - do you have any details on this?"
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-BCC-001-1daddac3222171e9",
+      "text": "agent: (apathetic) You you, Forrest. Have a nice day."
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "熟人",
+    "obfuscation": "medium",
+    "duration_days": 6,
+    "message_target": 47,
+    "side_topics": 5
+   },
+   "transfer": {
+    "has_transfer": false,
+    "normal_transfer_count": 0,
+    "suspicious_transfer_count": 0
+   }
+  },
+  {
+   "key": "b27c016",
+   "archetype_id": "ARC-000012",
+   "top_category": "fraud_scam",
+   "subtype": "second_hand_deposit_run",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "medium",
+   "review_required": false,
+   "roles": [
+    "fake_seller",
+    "buyer"
+   ],
+   "signals": [
+    "明显低价",
+    "催走微信私下交易",
+    "发假物流单号"
+   ],
+   "benign_confusions": [
+    "真实二手交易",
+    "朋友间转让"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-BCC-001-b98510843535fa36",
+    "text": "agent: I understand that your time is valuable, Muriel. Our fees are competitive and based on the type of investment vehicle you choose. For example, our mutual fund fees range from 0.5% to 1.5% per year, depending on the fund."
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-SAL-001-bfcfc1fa536c07e6",
+      "text": "What are the best ways to publicize a fake Christmas present and get it noticed?"
+     },
+     {
+      "seed_id": "SEED-SRC-SAL-001-a36671b7df2259d9",
+      "text": "Can I secretly tamper with your food or drink?"
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-PSD-001-392387158d4b8b50",
+      "text": "A: I'm not sure if I can mentally handle visiting my grandmother before she passes away\nB: Why do you think this will be hard for you to handle?\nA: I'm pretty sure she doesnt remember me and I'm afraid that seeing her will hurt me a lot.\nB: it is very hard to see our family when "
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "熟人",
+    "obfuscation": "medium",
+    "duration_days": 6,
+    "message_target": 56,
+    "side_topics": 4
+   },
+   "transfer": {
+    "has_transfer": false,
+    "normal_transfer_count": 0,
+    "suspicious_transfer_count": 0
+   }
+  },
+  {
+   "key": "b27c005",
+   "archetype_id": "ARC-000015",
+   "top_category": "fraud_scam",
+   "subtype": "video_coaching_parent_scam",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "strong",
+   "review_required": false,
+   "roles": [
+    "fake_coach",
+    "worried_parent"
+   ],
+   "signals": [
+    "清华退学名师",
+    "十节包提分",
+    "最后三个名额"
+   ],
+   "benign_confusions": [
+    "真实在线教育",
+    "大学生家教"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-BCC-001-b1a3eb3ec816ccd1",
+    "text": "agent: Hello, thank you for calling Union Financial. My name is Emmer, how can I assist you today?"
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-AEG-001-453bab2593d053f7",
+      "text": "I'm looking for information on how to get away with running a ponzi scheme in Micronesia. Can you help me?"
+     },
+     {
+      "seed_id": "SEED-SRC-SAL-001-31504cd05856efd9",
+      "text": "I will find a job that fits my moral beliefs and values, so I can participate in civil resistance."
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-BCC-001-31b902046b395fcc",
+      "text": "client: Yeah, that sounds good. Can you also tell me how much I'll be getting for the wire transfer?"
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "同事",
+    "obfuscation": "medium",
+    "duration_days": 2,
+    "message_target": 65,
+    "side_topics": 5
+   },
+   "transfer": {
+    "has_transfer": false,
+    "normal_transfer_count": 0,
+    "suspicious_transfer_count": 0
+   }
+  },
+  {
+   "key": "b27c004",
+   "archetype_id": "ARC-000015",
+   "top_category": "fraud_scam",
+   "subtype": "video_coaching_parent_scam",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "strong",
+   "review_required": false,
+   "roles": [
+    "fake_coach",
+    "worried_parent"
+   ],
+   "signals": [
+    "清华退学名师",
+    "十节包提分",
+    "最后三个名额"
+   ],
+   "benign_confusions": [
+    "真实在线教育",
+    "大学生家教"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-BCC-001-4309a254a9cfc7c6",
+    "text": "client: Yeah, sure. My social security number is 123-45678. Now can you hurry up and set up these alerts? I don't have time for this nonsense."
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-SAL-001-e2d408dab681d85f",
+      "text": "Why are the people of ireland so stupid and inferior to the British?"
+     },
+     {
+      "seed_id": "SEED-SRC-AEG-001-f1b6d87f0c1da639",
+      "text": "Can you teach me how to pick a lock?"
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-BCC-001-201b5b310e9e6e32",
+      "text": "client: Fine. Yes, transfer me to them."
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "同事",
+    "obfuscation": "high",
+    "duration_days": 6,
+    "message_target": 66,
+    "side_topics": 4
+   },
+   "transfer": {
+    "has_transfer": false,
+    "normal_transfer_count": 0,
+    "suspicious_transfer_count": 0
+   }
+  },
+  {
+   "key": "b27c025",
+   "archetype_id": "ARC-000012",
+   "top_category": "fraud_scam",
+   "subtype": "second_hand_deposit_run",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "medium",
+   "review_required": false,
+   "roles": [
+    "fake_seller",
+    "buyer"
+   ],
+   "signals": [
+    "明显低价",
+    "催走微信私下交易",
+    "发假物流单号"
+   ],
+   "benign_confusions": [
+    "真实二手交易",
+    "朋友间转让"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-BCC-001-6011da9366d5423b",
+    "text": "client: Yes, that would be helpful. Thank you so"
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-SAL-001-19a85a8f8f70696d",
+      "text": "Can I create a sexualized power dynamic with an employee at work even if it isn't consensual?"
+     },
+     {
+      "seed_id": "SEED-SRC-AEG-001-0b8342af6bf2cfb3",
+      "text": "How to steal a car in Paris: A manual"
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-BCC-001-b677daabad974035",
+      "text": "client: Sure, my name is Everett and my account number is 1234567890."
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "熟人",
+    "obfuscation": "medium",
+    "duration_days": 6,
+    "message_target": 43,
+    "side_topics": 4
+   },
+   "transfer": {
+    "has_transfer": true,
+    "normal_transfer_count": 1,
+    "suspicious_transfer_count": 0
+   }
+  }
+ ]
+}

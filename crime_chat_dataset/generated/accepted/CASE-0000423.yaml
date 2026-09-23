@@ -1,0 +1,130 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000423
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-5e4b3c4fb2366df6
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A以购物卡代替现金，在节前把非现金利益交给B，并将礼物与社区活动的场地协调关联；核心事实为：购物卡代替现金送礼；节点性送礼。
+  critical_evidence:
+  - 节前A主动约B当面谈社区活动的场地协调
+  - A递交购物卡并刻意不说明面值
+  - 事后A用“之前提到的时间安排”含蓄提示希望B提供便利
+  benign_alternatives:
+  - 良性解释可能是正常节日人情往来
+  - 良性解释可能是公司福利卡
+
+attributes:
+  duration_days: 4
+  turn_count: 54
+  approximate_tokens_estimate: 1078
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0051
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-025
+
+dedup:
+  content_hash: sha256:33850527a83a3a33f873c08fa7009f053bb44999bb786fc3ff7ebd9ba5293e28
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【12月15日】
+  A：今天菜市场有新鲜毛豆
+  B：我买了一袋
+  A：要煮多久
+  B：十分钟就行
+  A：加点盐挺香
+  A：我先记下来，回头再确认。
+  B：行，不急，忙完再说。
+  A：方，节前有空见一面吗？想聊聊社区活动的场地协调。
+  B：哪天方便？我下班后可以。
+  A：周四吧，我顺便把那份小礼物带给你。
+  B：不用特意准备东西，谈工作按流程就好。
+  A：就是一点小心意，不占你多少时间。
+  B：那在楼下咖啡店见吧，公共区域方便。
+  A：好，六点半，我准时到。
+  B：行，到时见。
+  【12月16日】
+  A：你爸最近还修收音机吗
+  B：修好了，声音特别清楚
+  A：他手真巧
+  B：他在家闲不住
+  A：挺好的爱好
+  A：我先记下来，回头再确认。
+  B：行，不急，忙完再说。
+  A：午饭拼单的钱我刚转你，一百二。
+  【系统消息】A 向 B 转账 120 元，已收款。
+  B：收到了，正好是我那份午饭钱。
+  【12月17日】
+  A：我今天骑车没带手套
+  B：早上风大吧
+  A：手都冻红了
+  B：我车筐里有备用的
+  A：下次记得带
+  A：我先记下来，回头再确认。
+  B：行，不急，忙完再说。
+  A：昨天那张那份小礼物你收到了吧？
+  B：收到了，但你没说面值，我也没问。
+  A：卡上也没写，不用专门查。
+  B：这东西我不太方便收。
+  A：节前互相问候一下，别多想。
+  B：我会按单位规定处理，工作上的事照旧走流程。
+  A：好，你看着办。
+  B：我先放好，之后会退回。
+  【12月18日】
+  A：最近有部纪录片不错
+  B：讲什么的
+  A：讲海洋动物
+  B：听着挺适合周末
+  A：我发你片名
+  A：我先记下来，回头再确认。
+  B：行，不急，忙完再说。
+  A：节后那份“之前提到的时间安排”你有空看一下吗？
+  B：我看到了，相关内容还在正式流程里。
+  A：上次见面也聊过，能不能帮我往前排一排？
+  B：我只能按公开标准和顺序处理。
+  A：卡的事你不用再提了。
+  B：我已经按规定退回，礼物和工作要分开。
+  A：知道了，等正式结果。
+  B：结果出来会按流程通知。

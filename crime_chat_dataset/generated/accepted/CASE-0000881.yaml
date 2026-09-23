@@ -1,0 +1,125 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000881
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-020b2c7defad5b2e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 试图把匿名社交账号与现实身份关联；B 拒绝分析或传播个人线索，要求停止曝光并使用平台举报机制。
+  critical_evidence:
+  - A 表示要找出匿名账号背后身份
+  - A 提及照片原始时间或转发记录作为关联依据
+  - B 拒绝比对、追踪或公开身份信息，并引导通过平台机制处理
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 5
+  turn_count: 48
+  approximate_tokens_estimate: 936
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0108
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-061
+
+dedup:
+  content_hash: sha256:591612e95d0edb201f2dd45dac147532914b674018941b6005a59e98b991930e
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【9月17日】
+  A：想做个社区舆情小结，顺便把几个匿名账号的主人找出来。
+  B：舆情可以看公开议题，不需要确认发言者是谁。
+  A：阳台那盆迷迭香长新叶了。
+  B：最近太阳好，长得快。
+  A：我是不是该换大盆？
+  B：根挤出来再换也行。
+  A：底下的托盘有点小。
+  B：花店有配套的，周末去看看。
+  A：你要不要一起？
+  B：好啊，我也想买点土。
+  A：那周六上午？
+  B：行，出门前发消息。
+  【9月18日】
+  A：相册原图时间和转发记录可能能帮上忙。
+  B：不要用它们做身份关联，我也不会协助。
+  B：你上次推荐的纪录片我看完了。
+  A：讲海岛那部？
+  B：对，镜头拍得很舒服。
+  A：配乐也不错。
+  B：我后来又找了导演的访谈。
+  A：我还没看，链接收藏了吗？
+  B：收藏了，晚点发你。
+  A：谢啦，今晚正好有空。
+  B：看完我们再聊。
+  A：好。
+  【9月19日】
+  A：那能不能只告诉我是不是同一个人？
+  B：也不行。我们可以统计话题趋势，不涉及个人。
+  A：今天早高峰路上堵得厉害。
+  B：我看导航也一片红。
+  A：还好我提前一站下车走过来。
+  B：最近路口在修人行道。
+  A：难怪车都排到桥上了。
+  B：明早可以换条路试试。
+  A：我看看公交线路。
+  B：有一路车直达园区。
+  A：我存一下。
+  B：希望明天顺一点。
+  【9月20日】
+  A：行，我把报告改成总体分类。
+  【9月21日】
+  B：这样更合适。
+  A：楼下那家汤面店最近换菜单了。
+  B：嗯，多了番茄牛腩面。
+  A：你试过没？
+  B：昨天中午吃了，汤挺清爽。
+  A：听起来不错，我下次点小碗。
+  B：配一份青菜刚好。
+  A：好，午休去看看。
+  B：避开十二点会快些。
+  A：我十点多先开完会。
+  B：那时间正合适。
+  【系统消息】A 向 B 转账 42 元，已收款。

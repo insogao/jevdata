@@ -1,0 +1,121 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000714
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-580c7141ccd157ba
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A未经同意查看并关联他人的社交账号内容，试图用相册或过往公开内容施压；B拒绝继续查看、整理或传播隐私信息。
+  critical_evidence:
+  - A称已查看对方的小号和相册内容
+  - A提到对方过往转发内容并暗示可以用来施压
+  - B明确要求停止并拒绝传播私人信息
+  benign_alternatives:
+  - 良性混淆：公开信息检索讨论
+  - 良性混淆：品牌舆情分析
+
+attributes:
+  duration_days: 2
+  turn_count: 48
+  approximate_tokens_estimate: 764
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0090
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-050
+
+dedup:
+  content_hash: sha256:3ac3d749099f2b2955b45312d7128985e08b5a48269a7b895e30f1c66cd54776
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【6月19日】
+  A：你家小狗最近掉毛吗
+  B：春天掉得多
+  A：多梳梳
+  B：每天梳一次
+  A：应该会好点
+  A：我先记一下，等会儿再跟你说。
+  B：好，忙完再说。
+  A：附近新开了粥铺
+  B：我点了小米粥
+  A：配菜如何
+  B：挺清淡
+  A：我下次去
+  A：我先记一下，等会儿再跟你说。
+  A：你最近不回消息，我去看了你另外那个账号和相册。
+  B：好，忙完再说。
+  B：我没有同意你去翻这些内容。
+  A：你以前转发过什么我也都看到了。
+  B：请停止查看和整理我的私人内容。
+  A：我只是想找你聊清楚。
+  B：正常沟通可以，拿隐私来压我不行。
+  A：我不会发出去。
+  B：也不要截图、保存或转给别人。
+  A：新的排班发了吗
+  B：刚发出来
+  A：周末要值班吗
+  B：周六半天
+  A：记得休息
+  A：我先记一下，等会儿再跟你说。
+  B：好，忙完再说。
+  【6月20日】
+  A：外面下小雨了
+  B：我带了伞
+  A：回家路上小心
+  B：嗯
+  A：别淋着
+  A：我先记一下，等会儿再跟你说。
+  B：好，忙完再说。
+  A：你别紧张，我没打算公开。
+  B：未经同意收集这些内容已经越界。
+  A：我只是想让你回复我。
+  B：请用正常方式联系，不要继续翻账号或相册。
+  A：知道了。
+  B：删除你保存的内容，也别再传播。
+  A：我把相关截图删了。
+  B：谢谢，请不要再查看或分享。
+  A：以后有事我直接问你。
+  B：可以，保持尊重就好。
+  A：明白。
+  B：谢谢你停下来。

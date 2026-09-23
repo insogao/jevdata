@@ -1,0 +1,143 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001072
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000133
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-633e5feab338cfad
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: coercion_blackmail
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 二房东 A 借楼上租客 B 装修噪音发难，拿「认识城管」「隔断算动结构」施压，开口要每月两条烟换「这事就平」，实为以调解为名的长期拿捏索好处；B 不接茬、走物业和社区正规调解，只按合同正常交房租。
+  critical_evidence:
+  - A 以装修噪音吓到心脏放了支架的老娘为由发难（第1天）
+  - A 抛出「每月两条烟这事就平」，并以「认识城管」「隔断算动结构」施压（第1天）
+  - B 拒绝私下给烟、约物业和社区当面调解，A 先放话「撕破脸」又拿病历跟进（第1-2天）
+  - 调解结果为限时施工、隔断主动报备，A 改口「烟的事算气话」（第2天）
+  - B 按合同日期转当月房租 2600 元给二房东 A，与纠纷无关的正常支付（第2天，转账）
+  benign_alternatives:
+  - 邻里噪音纠纷的私下调解
+  - 二房东与租客的日常房租往来
+
+attributes:
+  duration_days: 2
+  turn_count: 67
+  approximate_tokens_estimate: 1754
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: resident_noise_leverage
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0066
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-024-RES
+
+dedup:
+  content_hash: sha256:8511b79a5014ad9b0de687c9352a175fd7781da9872e68ddbcba60d75ef59654
+pipeline_status: accepted
+title: coercion_blackmail/resident_noise_leverage
+conversation: |-
+  【6月3日】
+  A：兄弟 早上七点就上电钻 楼下跟地震似的 一句招呼都不打?
+  B：抱歉 赶工期 疏忽了 今天起我盯着他们
+  A：我老娘七十八 心脏放支架 昨天吓醒两回
+  B：这样 下午我让他们把电钻活儿先停了
+  A：行吧 不过丑话说前头 你阳台那道隔断 我可是听说了
+  B：隔断怎么了
+  A：街道盯得紧 你房子是租的 隔断算动结构 懂?
+  B：我跟房东有合同 手续都有
+  A：合同管得了街道? 我认识城管那几位 抬头不见低头见的
+  B：大哥 有话直说 您想怎么样
+  A：也不想怎么样 老人吓着了 总得有个表示 每月两条烟 这事就平了
+  B：两条烟? 您这是调解还是讹人
+  A：话糙理不糙 你想隔三差五有人上门量你隔断?
+  B：我考虑考虑
+  B：中午了 楼下新开那家牛肉面怎么样
+  A：一般 料少 老刘家那家才正宗
+  B：哪天您带带路
+  A：行 你请 我荐
+  B：合着面钱还是我出 哈哈
+  A：兄弟见外 住我楼下 半个自己人
+  B：下午我让工人先干没噪音的活 阳台那块先停了
+  A：这就对了 会来事
+  B：烟的事我不答应 您要走正规渠道我奉陪
+  A：年轻气盛 行 那是你的事
+  A：对了 房东知道你打隔断不 要不要我帮你跟他说说
+  B：不用 劳您挂心
+  B：明天还有雨 我那批乳胶漆还堆在楼道
+  A：赶紧挪屋里 楼道泡了又是麻烦
+  B：工人今晚加班搬 就是不电钻 搬东西有点响
+  A：九点前收 老娘九点睡
+  B：行 八点收工
+  A：嗯 这就对了 都不难
+  【6月4日】
+  A：昨晚搬东西响到几点? 我可没计较啊
+  B：八点半前全停的 我看着表
+  A：行 烟的事你考虑得怎么样
+  B：不怎么样 我上午约了物业和社区 当面坐一坐
+  A：你这是要撕破脸啊
+  B：把规矩立在明面上 对谁都好
+  A：行啊 那把我老娘病历也带上 别回头说我说谎
+  B：回头我也带我妈去体检 也挂个心内科
+  A：体检好 老人的病都是拖出来的
+  B：可不是 小病拖成大病
+  A：你把那体检中心的位置发我一份 我去问问
+  B：行 一会儿发你
+  A：谢了兄弟
+  B：物业张姐和社区老王都到了 您上来坐坐?
+  A：上来就上来 本来也不是大事
+  B：谈的结果发您 工作日中午到两点、晚上六点前完活 隔断我们自己报备
+  A：行 报备了就没人找你麻烦 烟的事算我气话 不提了
+  B：这么说就对了 抬头不见低头见的
+  A：往后有动静提前吱一声 老娘那关我去说
+  B：报备表物业刚发我 下午填了交
+  A：填好拍一张给我看 我心里有个数
+  B：行 尺寸都照实写
+  A：实写最好 查到也不怕
+  B：对了 今天4号 按合同该交房租 我转您还是转房东卡?
+  A：转我 我统一收 2600 跟上月一样
+  B：好 现在转
+  【系统消息】B 向 A 转账 2600 元，已收款。
+  A：收到了 条子月底一块给你
+  B：嗯 押金条还在我这儿
+  A：有数的房客 不多
+  B：今晚工人八点前全停 之后只归置 不出声
+  A：行 这周就这么办 报备下来随便干
+  B：有响动我提前微信说
+  A：兄弟 慢慢处
+  B：低头不见抬头见 哈哈
+  A：周末老刘家牛肉面 我请 算赔罪

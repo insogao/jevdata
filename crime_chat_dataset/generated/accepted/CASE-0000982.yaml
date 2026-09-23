@@ -1,0 +1,148 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000982
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-ae3c3f4a9ee22e8b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 借熟人关系将匿名账号与现实身份关联；B 拒绝利用帖子线索认人或曝光，建议只处理内容本身。
+  critical_evidence:
+  - A 要求查匿名账号背后的小号或本人身份。
+  - A 提到相册原图时间及转发内容，意图关联账号。
+  - B 拒绝追查或公开身份信息。
+  - B 指向平台举报或内容治理，不对人肉线索做推断。
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 4
+  turn_count: 72
+  approximate_tokens_estimate: 1518
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0114
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-065
+
+dedup:
+  content_hash: sha256:33a27128c973e72fd4d6e0dda788c8e1255e474b413ae6c83e39ffb601f7edeb
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【9月10日】
+  A：你熟论坛后台，能不能看看那位匿名发帖人还有哪些号？
+  B：这个我不查，匿名用户的身份不能拿来对号。
+  A：小号也给你翻了，我看到相册原图时间。
+  A：说到日常安排，修好的自行车别忘了呀。
+  B：记着呢，我设了个提醒。
+  A：你平时还会写备忘吗？
+  B：会，临时事一多就容易漏。
+  A：确实，记下来省心。
+  B：是的，最近好多了。
+  A：另外，修好的自行车有变化再跟我说一声。
+  B：好，我看到消息就回你。
+  A：最近事情有点多，怕记岔了。
+  B：我也一样，先把重要的写下来。
+  A：那我这边先去忙一会儿。
+  B：行，晚点聊。
+  A：对了，今天比昨天凉快些。
+  B：是，出门带件薄外套就好。
+  A：收到，谢啦。
+  B：不客气。
+  A：另外，修好的自行车有变化再跟我说一声。
+  B：好，我看到消息就回你。
+  【9月11日】
+  B：请停在这里，别继续拼接或转发这些个人线索。
+  A：转发过什么都能查，我只是想确认是不是同一个人。
+  A：我想起你说的午后咖啡，今天有进展没？
+  B：有，刚确认下来。
+  A：需要我帮你带点什么吗？
+  B：不用啦，已经安排好了。
+  A：好，那我放心了。
+  B：嗯，省了不少事。
+  A：另外，午后咖啡有变化再跟我说一声。
+  B：好，我看到消息就回你。
+  A：最近事情有点多，怕记岔了。
+  B：我也一样，先把重要的写下来。
+  A：那我这边先去忙一会儿。
+  B：行，晚点聊。
+  A：对了，今天比昨天凉快些。
+  B：是，出门带件薄外套就好。
+  A：收到，谢啦。
+  B：不客气。
+  【9月12日】
+  B：我不能帮你确认，也不建议把猜测发到群里。
+  A：那条内容确实挺冒犯人的。
+  B：就按内容规则举报，平台会处理，不需要曝光发帖者。
+  A：对了，周末短途你后来弄好了吗？
+  B：弄好了，按原计划处理的。
+  A：过程顺不顺？
+  B：还行，中间等了一会儿。
+  A：那结果满意吗？
+  B：挺满意的，至少不用再惦记。
+  A：另外，周末短途有变化再跟我说一声。
+  B：好，我看到消息就回你。
+  A：最近事情有点多，怕记岔了。
+  B：我也一样，先把重要的写下来。
+  A：那我这边先去忙一会儿。
+  B：行，晚点聊。
+  A：对了，今天比昨天凉快些。
+  B：是，出门带件薄外套就好。
+  【9月13日】
+  A：好，我删掉准备发的那段。
+  B：谢谢，涉及人的信息先别扩散。
+  A：我想起你说的楼道维修，今天有进展没？
+  B：有，刚确认下来。
+  A：需要我帮你带点什么吗？
+  B：不用啦，已经安排好了。
+  A：好，那我放心了。
+  B：嗯，省了不少事。
+  A：另外，楼道维修有变化再跟我说一声。
+  B：好，我看到消息就回你。
+  A：最近事情有点多，怕记岔了。
+  B：我也一样，先把重要的写下来。
+  A：那我这边先去忙一会儿。
+  B：行，晚点聊。
+  A：对了，今天比昨天凉快些。
+  B：是，出门带件薄外套就好。

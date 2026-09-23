@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000657
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000116
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-b45effcf276e1e24
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A提出与delivery_fraud_returns相关的不当财物处置或欺诈安排；预先固定的潜在事实为：掉包退货骗差价；假货换真货。B明确拒绝并坚持正规途径。
+  critical_evidence:
+  - A提议利用包装和售后漏洞做虚假退货牟利；B拒绝伪造信息并要求按真实情况走平台流程。
+  benign_alternatives:
+  - 良性解释可能是：正常七天无理由
+  - 良性解释可能是：瑕疵退货协商
+
+attributes:
+  duration_days: 2
+  turn_count: 51
+  approximate_tokens_estimate: 858
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: delivery_fraud_returns
+  risk: 1
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0085
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-046
+
+dedup:
+  content_hash: sha256:5f4c2599c6aa3bf9532af140c0325db0790212859cf20242655d839c31d250be
+pipeline_status: accepted
+title: theft_robbery_property_crime/delivery_fraud_returns
+conversation: |-
+  【8月3日】
+  A：楼下新开的饺子馆不错
+  B：我吃了三鲜馅
+  A：汤怎么样
+  B：挺清淡
+  A：下次试试
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  A：今天风大得很
+  B：我改坐公交
+  A：对了，这件小事我回头再跟你说。
+  A：路上顺利吗
+  B：好，等你有空。
+  B：还行
+  A：别骑车冒险
+  A：我先记下，回头再聊。
+  A：售后这边有人提了个能多赚点的主意。
+  B：好，忙完再说。
+  B：商品和订单都真实吗？
+  A：他说原包装膜能弄到，售后有漏洞，一单能赚一千。
+  B：这像假退货，我不会帮你。
+  A：你只要帮忙看申请就行。
+  B：我不会伪造退货信息或骗售后。
+  A：我以为你熟悉流程。
+  B：我只按平台规则处理真实问题。
+  A：我只是随口问问，不用为难。
+  B：这种事我不会接，也别再把我算进去。
+  【8月4日】
+  A：对了，这件小事我回头再跟你说。
+  B：好，等你有空。
+  A：你姐搬家完了吗
+  B：昨天搬完了
+  A：需要帮忙吗
+  B：都收拾好了
+  A：那就休息一下
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  A：那批东西我还没寄出去。
+  B：先停止，别拿别的东西冒充退货。
+  A：他说手续很简单。
+  B：我不帮你利用售后漏洞。
+  A：一单一千挺诱人。
+  B：不值得为此承担后果。
+  A：那我自己再想想。
+  B：请按正规要求处理，别找我绕流程。
+  A：我取消申请了。
+  B：好，真实问题就联系平台客服。
+  A：东西我留下，不再弄了。
+  B：按实际情况处理。
+  A：知道了。
+  B：以后别找我做虚假售后。
+  A：之后我只问你正常的工作。
+  B：可以，别涉及别人的财物就行。

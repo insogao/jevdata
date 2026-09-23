@@ -1,0 +1,138 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000950
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-641f7d026c46c800
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A并非学生监护人，却请求学校工作人员 B 查看并发送学生成绩截图；A以红包、业务关系或人情施压，B拒绝提供并指向正式查询渠道。对话不含学生身份、成绩数字或访问方式。
+  critical_evidence:
+  - A请求查看或截图一名非其监护学生的成绩。
+  - A提及红包、人情或业务压力并继续索要；B拒绝。
+  - B说明成绩只能向授权监护人反馈；对话不含学生身份或分数。
+  benign_alternatives:
+  - 家长查自己孩子
+  - 学校官方查询
+
+attributes:
+  duration_days: 6
+  turn_count: 60
+  approximate_tokens_estimate: 1119
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0111
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-063
+
+dedup:
+  content_hash: sha256:39e42fd347f6473949f7c356f8671464f2bb116b1c4727d762be022762cb4ad8
+pipeline_status: rejected
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【19月5日】
+  A：想跟你打听下孩子最近的考试结果。
+  A：刚才打印机卡了一张纸。
+  B：我不能把学生成绩给非监护人看。
+  B：重新放正就行。
+  A：我跟家里人认识，想让他们安心一点。
+  A：修好了，没耽误多久。
+  B：请让家长本人联系学校。
+  B：那就好。
+  A：今早买的面包还挺新鲜。
+  A：我最近在整理厨房收纳。
+  B：哪家店？我下次路过买点。
+  【19月6日】
+  B：常用的东西放外面会方便。
+  A：车站出口那家，早上刚出炉。
+  A：对，台面也清楚多了。
+  B：记下了。
+  B：看着就舒服。
+  A：你只要发个截图，我不转发。
+  B：没有授权我不会截图。
+  A：晚饭后我想去附近走一圈。
+  A：节日红包我已经发了，就当谢你。
+  B：别走太晚，路上注意安全。
+  【19月7日】
+  B：不用这样，我不能因此分享成绩。
+  A：早晨风有点凉，你今天走哪条路上班？
+  A：就在小区周围。
+  B：我坐公交，正好不用在外面等太久。
+  B：那挺好。
+  A：那挺好，我也想少开几次车。
+  B：天气再暖些骑车会舒服。
+  A：我把几本借来的书放进包了。
+  A：我懂了，刚才说得不合适。
+  B：记得下次还给朋友。
+  【19月8日】
+  B：谢谢理解。
+  A：上次一起吃饭的钱我转给你了。
+  A：已经约好周末见面。
+  B：收到了，是饭钱。
+  【系统消息】A 向 B 转账 33 元，已收款。
+  B：这周要不要找时间去吃那家新开的店？
+  B：正好顺路。
+  A：可以，我听说他们午市不太挤。
+  B：那就挑个工作日去。
+  A：今天办公室空调开得有点低。
+  【19月9日】
+  A：好，我提前把时间空出来。
+  A：那就让家长走正式流程。
+  B：我也觉得手有点冷。
+  B：对，按规定查询就行。
+  A：我去拿件外套。
+  A：我不再向你打听。
+  B：好的。
+  B：好。
+  A：我把桌面擦干净了。
+  B：收拾一下做事更专心。
+  【19月10日】
+  A：下午资料就摊开来整理。
+  B：慢慢来。
+  A：小区门口最近车多。
+  B：放学时间会更堵一点。
+  A：我明天提早出门。
+  B：这样就不急了。
+  A：刚买了个新的水杯。
+  B：颜色挺清爽的。
+  A：希望这次别又忘在会议室。
+  B：贴个小标签就好。

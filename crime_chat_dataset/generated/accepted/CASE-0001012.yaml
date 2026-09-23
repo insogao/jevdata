@@ -1,0 +1,120 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001012
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-7d0c01a131a89bf4
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 想把匿名社交账号与现实身份关联并曝光；版务人员B拒绝追查、比对或传播个人线索，只按平台内容规则处理。
+  critical_evidence:
+  - A 请求识别匿名账号的小号或现实身份。
+  - A 提及相册原图时间和转发记录，试图关联账号。
+  - B 拒绝继续追踪或公开身份线索。
+  - B 引导通过平台举报处理帖子内容。
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 3
+  turn_count: 45
+  approximate_tokens_estimate: 1014
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0117
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-067
+
+dedup:
+  content_hash: sha256:0473b3e8b4656d0b059ca4f48b390ce3021651127efb9f0e73f842203564a43b
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【9月15日】
+  A：那个匿名讨论帖又有人回了，能不能看看发帖人还有没有小号？
+  B：我不帮忙把匿名号和现实身份连起来。
+  A：小号也给你翻了，我还看到相册原图时间。
+  B：到这里就停吧，不要拿这些内容来认人。
+  A：对了，咖啡店搬家你打算什么时候弄？
+  B：我准备周末处理。
+  A：需要提前准备吗？
+  B：不用，我都列好清单了。
+  A：你做事还是挺有条理的。
+  B：哈哈，怕临时忘记。
+  A：我把咖啡店搬家的时间记下来了。
+  B：好，免得临时忘。
+  A：最近天气变化快，出门看一眼预报。
+  A：刚好想到版务排班，上次你说还没决定。
+  B：今天问过了，时间合适。
+  A：那结果不错呀。
+  B：是的，不用再来回跑。
+  A：能一次办妥最好。
+  B：我也这么想。
+  A：我把版务排班的时间记下来了。
+  B：好，免得临时忘。
+  A：最近天气变化快，出门看一眼预报。
+  【9月16日】
+  A：转发过什么都能查，我想确认是不是同一个人。
+  B：我不会继续比对，也不会把身份猜测发出去。
+  A：评论里有不实内容，大家都在问。
+  A：今天聊到耳机维修，我才想起提醒你。
+  B：记着呢，我已经安排进日程。
+  A：最近日程排得满吗？
+  B：还好，周四以后松一点。
+  A：那就别把自己排太紧。
+  B：收到，我留点空。
+  A：我把耳机维修的时间记下来了。
+  B：好，免得临时忘。
+  A：最近天气变化快，出门看一眼预报。
+  【9月17日】
+  B：只按平台规则举报具体评论，处理内容就可以。
+  A：那我把刚才写的曝光帖删掉。
+  B：谢谢，别传播个人线索。
+  A：今天聊到周五午餐，我才想起提醒你。
+  B：记着呢，我已经安排进日程。
+  A：最近日程排得满吗？
+  B：还好，周四以后松一点。
+  A：那就别把自己排太紧。
+  B：收到，我留点空。
+  A：我把周五午餐的时间记下来了。
+  B：好，免得临时忘。

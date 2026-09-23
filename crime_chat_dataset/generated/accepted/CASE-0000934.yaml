@@ -1,0 +1,114 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000934
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-2f68a04faf9733b6
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 以红包换取他人成绩档案截图；学校工作人员拒绝收取好处或私查，只说明正规监护人查询流程。
+  critical_evidence:
+  - 对方请工作人员查看另一名学生的成绩档案。
+  - 对方说红包已发，并提出截图就行。
+  - 工作人员明确拒绝收取红包、私自查询或传送截图。
+  - 工作人员说明应由有权限的监护人联系学校正式窗口。
+  benign_alternatives:
+  - 家长查自己孩子
+  - 学校官方查询
+
+attributes:
+  duration_days: 5
+  turn_count: 36
+  approximate_tokens_estimate: 714
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0110
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-062
+
+dedup:
+  content_hash: sha256:f3dc00cb6b80261f511a92a0966dea6e13eb19713004b0d92e692f6b3e45dd72
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【9月3日】
+  A：有个学生的成绩我想看看，麻烦你帮我点一下。
+  A：红包已发，截图就行，别耽误你。
+  A：换个轻松的，你上次借我的书我放前台了。
+  B：听着不错。
+  A：你什么时候有空？
+  B：周末应该可以。
+  A：那到时再确认。
+  B：好呀。
+  【9月4日】
+  B：我不能收红包，也不能私查或发他人的成绩截图。
+  B：请让有权限的监护人联系学校官方窗口查询。
+  A：上次你垫的午饭钱我还你了，和刚才说的事无关。
+  【系统消息】A 向 B 转账 39 元，已收款。
+  A：先说个别的，中午食堂的汤今天挺清淡。
+  B：哈哈，这事倒简单。
+  A：你最近忙吗？
+  B：还行，手头都收尾了。
+  A：那挺好，别熬太晚。
+  B：嗯，等会儿去弄。
+  【9月5日】
+  B：我会把这次越权请求按单位流程记录并报告。
+  A：对了，我报名了下周的急救培训。
+  B：我也觉得。
+  A：你一般怎么安排？
+  B：看当天吧，不赶时间。
+  A：好，那我记一下。
+  B：行，回头再聊。
+  【9月6日】
+  A：插一句，会议室投影线我已经还回去了。
+  B：真的？我还不知道。
+  A：你试过吗？
+  B：上周刚弄过，挺方便。
+  A：收到，我也试试。
+  B：嗯，别忘了就好。
+  【9月7日】
+  A：换个轻松的，你上次借我的书我放前台了。
+  B：听着不错。
+  A：你什么时候有空？
+  B：周末应该可以。
+  A：那到时再确认。
+  B：好呀。

@@ -1,0 +1,140 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001007
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-c0af0fb540872d96
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 亲友 A 试图把匿名社交账号与现实身份对应并整理其转发记录；B 拒绝追认个人账号关联，只同意讨论公开且经授权的品牌信息。
+  critical_evidence:
+  - A 要求追查匿名账号背后的身份
+  - A 提到小号和过往转发内容
+  - B 拒绝汇总或曝光私人账号信息
+  - B 只接受经同意的公开品牌内容讨论
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 4
+  turn_count: 64
+  approximate_tokens_estimate: 1089
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0116
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-067
+
+dedup:
+  content_hash: sha256:a6fbd841fbe7911c4f920085e70c4f8531ab8514631b2331f20226702b59c402
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【7月9日】
+  A：在吗，想跟你确认件事
+  B：在的，你说吧
+  A：好，我刚忙完手头的事
+  B：嗯，不着急
+  A：下午想喝点热的
+  B：楼下那家有桂花拿铁
+  A：甜不甜啊
+  B：可以选少糖
+  A：那我试试看
+  B：我帮你带一杯吗
+  A：我想聊下论坛那件事
+  B：你说
+  A：想把那个匿名账号跟现实中的人对应起来
+  B：我不协助识别个人身份或账号关联
+  A：小号也翻一翻，之前发过啥都想知道
+  B：我不会汇总或曝光私人账号的内容
+  【7月10日】
+  A：在吗，想跟你确认件事
+  B：在的，你说吧
+  A：好，我刚忙完手头的事
+  B：嗯，不着急
+  A：午饭吃什么好
+  B：园区新开的米线还行
+  A：我最近想吃清淡点
+  B：那可以点番茄汤底
+  A：好，中午去试试
+  B：我也去，正好散步
+  A：只是在熟人间说说，不会公开
+  B：私下整理也会越过对方的隐私边界
+  A：那如果是做品牌讨论呢
+  B：可以限定在品牌官方且获准公开的内容
+  A：私人账号那部分就不碰了
+  B：对，不要把匿名身份和个人信息拼在一起
+  【7月11日】
+  A：在吗，想跟你确认件事
+  B：在的，你说吧
+  A：好，我刚忙完手头的事
+  B：嗯，不着急
+  A：今天外面风挺大的
+  B：刚才还飘了点雨
+  A：我出门忘拿伞了
+  B：回去路上去便利店买把吧
+  A：嗯，天气预报说晚点停
+  B：希望别赶上下班那阵
+  A：我把之前那个想法放下了
+  B：好，范围明确就行
+  A：我们只看品牌公开回应和公告
+  B：可以，别涉及个人账号
+  A：收到
+  B：这样讨论也更聚焦
+  【7月12日】
+  A：在吗，想跟你确认件事
+  B：在的，你说吧
+  A：好，我刚忙完手头的事
+  B：嗯，不着急
+  A：手头那份材料快整理完了
+  B：我这边也差不多
+  A：格式我晚点再统一下
+  B：行，先别急着发
+  A：明早看一遍就好
+  B：可以，早点休息
+  A：我把之前那个想法放下了
+  B：好，范围明确就行
+  A：我们只看品牌公开回应和公告
+  B：可以，别涉及个人账号
+  A：收到
+  B：这样讨论也更聚焦

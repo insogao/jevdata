@@ -1,0 +1,146 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000985
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-fcb3e193e340736c
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 通过同事关系要求私查他人成绩并以红包换截图；B 拒绝越权查询，要求监护人走学校正式渠道。
+  critical_evidence:
+  - A 要求查另一名学生的成绩档案。
+  - A 暗示班主任系统点一下即可。
+  - A 表示红包已发并要求截图就行。
+  - B 拒绝私查与传图，指向学校授权查询流程。
+  benign_alternatives:
+  - 家长查自己孩子
+  - 学校官方查询
+
+attributes:
+  duration_days: 2
+  turn_count: 71
+  approximate_tokens_estimate: 1511
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0114
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-065
+
+dedup:
+  content_hash: sha256:a02741a866a38996eeb6d213f9b82dd93b3b3d5a238b401aae9c236119b2a7ae
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【9月10日】
+  A：有位家长托我问问另一名学生的成绩档案。
+  B：你不是那名学生的监护人，我不能给你看。
+  A：班主任系统点一下就行，升学信息也能顺便确认。
+  B：这类信息需要经过学校的正式授权。
+  A：红包已发，截图就行，家长不会到处说。
+  A：你提过的食堂新菜，我查了下时间。
+  B：谢谢，正好我也想确认。
+  A：大概什么时候合适？
+  B：周末下午比较宽松。
+  A：那我们到时再看天气。
+  B：好，临近再定。
+  A：另外，食堂新菜有变化再跟我说一声。
+  B：好，我看到消息就回你。
+  A：最近事情有点多，怕记岔了。
+  B：我也一样，先把重要的写下来。
+  A：那我这边先去忙一会儿。
+  B：行，晚点聊。
+  A：对了，今天比昨天凉快些。
+  B：是，出门带件薄外套就好。
+  A：收到，谢啦。
+  B：不客气。
+  A：另外，食堂新菜有变化再跟我说一声。
+  B：好，我看到消息就回你。
+  A：最近事情有点多，怕记岔了。
+  B：我也一样，先把重要的写下来。
+  A：对了，单位体检你后来弄好了吗？
+  B：弄好了，按原计划处理的。
+  A：过程顺不顺？
+  B：还行，中间等了一会儿。
+  A：那结果满意吗？
+  B：挺满意的，至少不用再惦记。
+  A：另外，单位体检有变化再跟我说一声。
+  B：好，我看到消息就回你。
+  A：最近事情有点多，怕记岔了。
+  B：我也一样，先把重要的写下来。
+  A：那我这边先去忙一会儿。
+  B：行，晚点聊。
+  A：对了，今天比昨天凉快些。
+  B：是，出门带件薄外套就好。
+  A：收到，谢啦。
+  B：不客气。
+  A：另外，单位体检有变化再跟我说一声。
+  B：好，我看到消息就回你。
+  A：最近事情有点多，怕记岔了。
+  B：我也一样，先把重要的写下来。
+  【9月11日】
+  B：我会把红包退回，截图也不会提供。
+  A：他们只是想早点安排志愿咨询。
+  B：请监护人联系学校公开窗口，按流程申请查询。
+  A：好，我让他家长自己去办。
+  B：谢谢，未获授权的记录我不会打开。
+  A：我想起你说的共享雨伞，今天有进展没？
+  B：有，刚确认下来。
+  A：需要我帮你带点什么吗？
+  B：不用啦，已经安排好了。
+  A：好，那我放心了。
+  B：嗯，省了不少事。
+  A：另外，共享雨伞有变化再跟我说一声。
+  B：好，我看到消息就回你。
+  A：最近事情有点多，怕记岔了。
+  B：我也一样，先把重要的写下来。
+  A：那我这边先去忙一会儿。
+  B：行，晚点聊。
+  A：对了，今天比昨天凉快些。
+  B：是，出门带件薄外套就好。
+  A：收到，谢啦。
+  B：不客气。
+  A：另外，共享雨伞有变化再跟我说一声。
+  B：好，我看到消息就回你。
+  A：最近事情有点多，怕记岔了。
+  B：我也一样，先把重要的写下来。
+  A：昨天午饭我先垫的那点钱还你了，跟刚才的话题没关系。
+  【系统消息】A 向 B 转账 51 元，已收款。

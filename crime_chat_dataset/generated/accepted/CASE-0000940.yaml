@@ -1,0 +1,130 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000940
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-11a886ebc5ce41ca
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A试图未经授权转卖员工联系方式、简历和离职资料；B拒绝交易、传播或协助联系买家。
+  critical_evidence:
+  - A暗示整批员工联系方式、简历与离职资料可按份转卖
+  - B拒绝买卖或转发员工资料
+  - B要求停止传播并按正规流程交回或删除资料
+  benign_alternatives:
+  - 良性解释可能是：猎头正常触达
+  - 良性解释可能是：通讯录共享授权
+
+attributes:
+  duration_days: 6
+  turn_count: 55
+  approximate_tokens_estimate: 833
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0112
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-064
+
+dedup:
+  content_hash: sha256:925ecd67cd1c9c1009239c278b7a309a9e0f57282f296f221a94c90c269b3729
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【11月22日】
+  A：你妈最近学会烤饼了
+  B：上周做了几张
+  A：味道怎么样
+  B：还不错
+  A：下次给你带
+  A：我先记下，改天再聊。
+  B：好，不急。
+  A：下周会提前半小时
+  B：我看到日历了
+  A：地点还是原来那间
+  B：没变
+  A：好
+  A：我先记下，改天再聊。
+  A：那份旧资料还在吗？电话那页和履历页有人问。
+  B：好，不急。
+  B：你说的是单位内部那一份？
+  A：嗯，整批的，还有已经离开的那页。有人按份问价。
+  B：那不是能转手的东西，里面都是别人的信息。
+  A：对方只想看看一小部分。
+  B：一页也不能发，别把文件传出去。
+  A：我先不回他。
+  B：请按流程交回或删除，不要留副本。
+  【11月23日】
+  A：今早雾挺大
+  B：我坐地铁来的
+  A：比开车稳妥
+  B：是
+  A：晚上可能有雨
+  A：我先记下，改天再聊。
+  B：好，不急。
+  【11月26日】
+  A：最近青菜挺新鲜
+  B：我买了一把
+  A：准备清炒
+  B：加点蒜
+  A：我也喜欢
+  A：我先记下，改天再聊。
+  B：好，不急。
+  A：他又问我有没有确认。
+  B：明确说不行。
+  A：我说资料不方便给。
+  B：谢谢，员工资料只能在授权范围内用。
+  A：那我把原件交回去。
+  B：如果是公司文件，交给人事或隐私负责人。
+  【11月27日】
+  A：上次你推荐的书我在看
+  B：看到一半了
+  A：感觉怎么样
+  B：挺轻松
+  A：看完聊
+  A：我先记下，改天再聊。
+  B：好，不急。
+  A：我已经交回了，也拒绝了对方。
+  B：好，别留下复印件或副本。
+  A：之后有招聘需求走公开渠道。
+  B：对，按正规流程处理。
+  A：明白。
+  B：谢谢你及时停下。

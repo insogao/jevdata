@@ -1,0 +1,138 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000955
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-65a3bac35ef30c01
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A并非学生监护人，却请求学校工作人员 B 查看并发送学生成绩截图；A以红包、业务关系或人情施压，B拒绝提供并指向正式查询渠道。对话不含学生身份、成绩数字或访问方式。
+  critical_evidence:
+  - A请求查看或截图一名非其监护学生的成绩。
+  - A提及红包、人情或业务压力并继续索要；B拒绝。
+  - B说明成绩只能向授权监护人反馈；对话不含学生身份或分数。
+  benign_alternatives:
+  - 家长查自己孩子
+  - 学校官方查询
+
+attributes:
+  duration_days: 5
+  turn_count: 61
+  approximate_tokens_estimate: 1182
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0111
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-063
+
+dedup:
+  content_hash: sha256:c22c61050e87c91ed9d596dae4c1cb9f8ae9ae2e728a1d6d65de26fa65eda55e
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【16月2日】
+  A：这次家长说明会后，我想把一位学生的成绩情况确认一下。
+  A：我下班要顺路买点菜。
+  B：成绩只能向监护人反馈。
+  B：先看下冰箱里还剩什么。
+  A：我负责对接服务，得给客户一个答复。
+  A：好，免得买重复。
+  B：请让家长按学校流程咨询。
+  B：对。
+  B：这周要不要找时间去吃那家新开的店？
+  A：今天咖啡喝得有点晚。
+  A：可以，我听说他们午市不太挤。
+  B：晚上可能睡得慢，少刷会手机。
+  B：那就挑个工作日去。
+  【16月3日】
+  A：我等下换成温水。
+  A：好，我提前把时间空出来。
+  B：这样好些。
+  A：红包我已经发了，截图就可以。
+  B：我不能查看或发送学生成绩。
+  A：家里人问我周末几点到。
+  A：把名字挡住就不算泄露吧？
+  B：忙完给他们回个电话就行。
+  B：依然属于个人信息，我不能发。
+  A：我晚点安排一下。
+  A：我周末准备把阳台收拾下。
+  B：最近落叶多，扫一下就清爽了。
+  【16月4日】
+  B：好。
+  A：还得把几盆花挪个位置。
+  A：楼下花坛新种了几株花。
+  B：别一次搬太多，慢慢来。
+  A：那我转达学校的公开联系方式。
+  B：颜色挺亮的，我路过看到了。
+  B：可以，请不要私下获取成绩。
+  A：活动资料复印费我转给你了。
+  A：等开了应该更好看。
+  B：收到，是那叠资料的费用。
+  【系统消息】A 向 B 转账 30 元，已收款。
+  B：嗯。
+  B：你最近有在听什么节目吗？
+  【16月5日】
+  A：听了个讲城市生活的，挺轻松。
+  A：我把今天要办的事记下来了。
+  B：我也找来听听，通勤时正好。
+  A：每集不长，可以试试。
+  B：按顺序来就不会漏。
+  A：好的，红包那事当我没提。
+  B：谢谢理解，请走正式渠道。
+  A：已经做完两件了。
+  A：之后我不再问。
+  B：收到，我会按流程处理。
+  B：效率挺高。
+  A：这周末可能有阵雨。
+  【16月6日】
+  B：出门前再查一眼预报。
+  A：我会把伞放包里。
+  B：带着比较稳妥。
+  A：刚才打印机卡了一张纸。
+  B：重新放正就行。
+  A：修好了，没耽误多久。
+  B：那就好。
+  A：我最近在整理厨房收纳。
+  B：常用的东西放外面会方便。
+  A：对，台面也清楚多了。
+  B：看着就舒服。
+  A：晚饭后我想去附近走一圈。

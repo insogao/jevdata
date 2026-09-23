@@ -1,0 +1,115 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000900
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-f5c807208a0bec42
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A试图通过非正式渠道打听另一名学生的成绩，并以红包换取截图；B拒绝越权查询或传播学生资料。
+  critical_evidence:
+  - A提出私下打听他人成绩并索取截图
+  - A提到红包作为交换
+  - B拒绝并建议由监护人联系学校官方渠道
+  benign_alternatives:
+  - 良性解释可能是：家长查自己孩子
+  - 良性解释可能是：学校官方查询
+
+attributes:
+  duration_days: 3
+  turn_count: 41
+  approximate_tokens_estimate: 588
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0109
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-061
+
+dedup:
+  content_hash: sha256:bcd147fc8d858a2265219a2fad26095d0b9f6473ec7573e4f3049a2357952b82
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【12月1日】
+  A：最近菠菜很新鲜
+  B：我买了一把
+  A：准备怎么做
+  B：蒜蓉炒
+  A：挺好
+  A：我先记下，回头再说。
+  B：好，忙完再聊。
+  A：想跟你打听一下一个学生的考试情况。
+  B：成绩是学生个人信息，家长自己查更合适。
+  A：红包我都准备好了，给我个截图就行。
+  B：我不会给你成绩截图，也不会代为打听。
+  A：我只想知道个大概。
+  B：没有监护人同意，我不能帮这个忙。
+  A：好，那先算了。
+  B：需要了解就请家长联系学校。
+  【12月2日】
+  A：公交专线开了
+  B：我昨天坐过
+  A：快一点吗
+  B：差不多
+  A：不用换乘
+  A：我先记下，回头再说。
+  B：好，忙完再聊。
+  A：你后来有消息吗？
+  B：没有，也不会私下问。
+  A：红包的事你别介意。
+  B：这类钱我不收。
+  A：明白。
+  B：学生资料需要保密。
+  【12月3日】
+  A：有部老电影重映
+  B：我也看到消息
+  A：周末去吗
+  B：看排片再说
+  A：好
+  A：我先记下，回头再说。
+  B：好，忙完再聊。
+  A：家长准备自己联系学校了。
+  B：这样处理更合适。
+  A：我不再问你。
+  B：谢谢理解。
+  A：以后走正规渠道。
+  B：好。

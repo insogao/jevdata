@@ -1,0 +1,133 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001021
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-9cb000791c83a3ba
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 向 B 索取未经本人同意的同事电话、简历或离职名单，并提到按份转给他人；B 拒绝提供或转发个人资料，只认可明确授权的正常招聘联系。
+  critical_evidence:
+  - A 索要整个部门电话、简历或离职名单等同事资料
+  - A 提到简历按份转给他人，但不说明获取或交易操作
+  - B 明确拒绝提供、转发或出售未经授权的个人资料
+  - B 区分本人同意的猎头触达与未经授权的资料分享
+  benign_alternatives:
+  - 本人同意的猎头正常触达
+  - 明确授权范围内的通讯录共享
+
+attributes:
+  duration_days: 5
+  turn_count: 56
+  approximate_tokens_estimate: 1185
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0118
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-067
+
+dedup:
+  content_hash: sha256:f90d857352ffe16879042c61cea3188c6001d1d37f98e79d110603f41d837c1c
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【5月7日】
+  A：想请你协助下一轮人才搜寻
+  B：我能帮忙转公开岗位信息
+  A：周末天气预报说有雨
+  B：那我把散步改到周六
+  A：记得带伞
+  B：放一把在包里
+  A：最好能拿到部门联系人和简历
+  B：有本人授权的候选人可以正常联系
+  A：你上次推荐的书我看到一半
+  B：后面节奏会快一点
+  A：适合睡前看
+  B：别熬太晚就行
+  【5月8日】
+  A：还有离职名单，简历我按份给合作方
+  B：未经同意的电话、简历和名单都不能提供
+  A：家里那盆绿植长新叶了
+  B：最近光照合适吧
+  A：我挪到窗边了
+  B：记得别浇太勤
+  A：之前有人说通讯录可以内部共享
+  B：只有当事人同意且目的明确才可以
+  A：那我不再问你要这些
+  B：谢谢，别复制或转发任何私人资料
+  A：我会改成公开招聘公告
+  【5月9日】
+  B：这条路合规，也尊重个人选择
+  A：你那边忙完了吗，我看到了
+  B：差不多了，准备收尾，我等下处理
+  A：我把日程记好了，我看到了
+  B：收到，谢啦，我等下处理
+  A：我刚从会议出来，我看到了
+  B：辛苦，先歇会儿，我等下处理
+  A：下午安排还挺满，我看到了
+  B：那就一件件来，我等下处理
+  A：刚才消息没加载出来，我看到了
+  B：现在能看到了，我等下处理
+  【5月10日】
+  A：嗯我晚点再确认，我看到了
+  B：好，不着急，我等下处理
+  A：这周事情有点多，我看到了
+  B：慢慢处理就行，我等下处理
+  A：我先去接杯水，我看到了
+  B：好，休息一下，我等下处理
+  A：你那边忙完了吗，我看到了
+  B：差不多了，准备收尾，我等下处理
+  A：我把日程记好了，我看到了
+  B：收到，谢啦，我等下处理
+  A：我刚从会议出来，我看到了
+  【5月11日】
+  B：辛苦，先歇会儿，我等下处理
+  A：下午安排还挺满，我看到了
+  B：那就一件件来，我等下处理
+  A：刚才消息没加载出来，我看到了
+  B：现在能看到了，我等下处理
+  A：嗯我晚点再确认，我看到了
+  B：好，不着急，我等下处理
+  A：这周事情有点多，我看到了
+  B：慢慢处理就行，我等下处理
+  A：我先去接杯水，我看到了
+  B：好，休息一下，我等下处理

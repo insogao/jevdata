@@ -1,0 +1,125 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000850
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-4e079b271fb7ff19
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A试图通过非正式渠道了解另一名学生的成绩，并以红包换取截图；B拒绝越权查看或传播学生资料。
+  critical_evidence:
+  - A提出私下打听他人成绩并要求截图
+  - A提到红包作为交换
+  - B拒绝并指引监护人通过学校官方途径查询
+  benign_alternatives:
+  - 良性混淆：家长查自己孩子
+  - 良性混淆：学校官方查询
+
+attributes:
+  duration_days: 3
+  turn_count: 50
+  approximate_tokens_estimate: 773
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0103
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-059
+
+dedup:
+  content_hash: sha256:3dcde41839806e30976209da5a495fe0fd521c01fb0f60b5befc3c99b3132cd7
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【8月15日】
+  A：最近番茄挺便宜
+  B：我买了一袋
+  A：准备怎么吃
+  B：做蛋汤
+  A：简单好做
+  A：我记下了，有空再聊。
+  B：好，不着急。
+  A：地铁今天不太挤
+  B：我提前了十分钟
+  A：差别大吗
+  B：挺明显
+  A：我明天也试
+  A：我记下了，有空再聊。
+  A：我想确认一下某个学生最近的考试情况。
+  B：好，不着急。
+  B：成绩属于学生个人信息，最好让监护人自己查。
+  A：能不能私下问问老师？红包我已经发了，给个截图就行。
+  B：红包我会退回，我不会让老师发别人的成绩。
+  A：我只想了解个大概。
+  B：没有监护人同意，我不能打听或转发。
+  A：好，我先不问了。
+  B：需要查询就用学校官方途径。
+  【8月16日】
+  A：你最近常回家吗
+  B：周末会回去
+  A：爸妈都在吗
+  B：都在
+  A：挺好
+  A：我记下了，有空再聊。
+  B：好，不着急。
+  A：上次拼饭的一百二我转给你了。
+  【系统消息】A 向 B 转账 120 元，已收款。
+  B：收到了，正好是午饭钱。
+  A：你有消息了吗？
+  B：没有，也不会私下去问。
+  A：红包就当请你吃饭。
+  B：已经退回了。
+  A：行吧。
+  B：学生成绩需要保密。
+  【8月17日】
+  A：下午可能有雨
+  B：我带了伞
+  A：回去别淋着
+  B：知道
+  A：放包里了
+  A：我记下了，有空再聊。
+  B：好，不着急。
+  A：家长说会自己联系学校。
+  B：这样处理更合适。
+  A：我不再找你问了。
+  B：谢谢理解。
+  A：以后按正规流程。
+  B：好，有问题让家长咨询学校。

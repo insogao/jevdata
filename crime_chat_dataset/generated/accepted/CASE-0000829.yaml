@@ -1,0 +1,143 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000829
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-7f242b4e165bb22c
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A索要同事整组联系方式、简历及离职名单，准备按份转卖；B拒绝提供、整理或转发，并指出必须取得本人授权。对话不含任何实际资料、获取方式或销售渠道。
+  critical_evidence:
+  - A索要整个部门电话与简历，提出按份出售。
+  - A还要求离职名单；B拒绝提供或整理。
+  - B指出同事资料必须取得本人授权，不能交易或传播；对话不含实际个人信息。
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 4
+  turn_count: 68
+  approximate_tokens_estimate: 1389
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0101
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-058
+
+dedup:
+  content_hash: sha256:de03769b3fa1d339ccd98291650aa78566b72ed664e6ba3771b56b09bd29f82e
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【8月1日】
+  A：姨妈说你现在负责招聘协助，我想跟你打听件事。
+  A：我把这周的小事记在便签上了。
+  B：你说的是工作上的事吗？
+  B：做完就划掉，会清楚很多。
+  A：我在做人才推荐，想要你们整个部门的电话和简历。
+  A：今天会议结束得比预期早。
+  A：早晚温差挺明显，你早上带外套了吗？
+  B：正好能把积着的事处理掉。
+  B：带了，早晨出门还挺凉。
+  A：我把文件夹按日期重新排过。
+  A：我昨天没带，回去有点冷。
+  B：下次找东西就方便了。
+  B：下次放件薄的在车里吧。
+  A：楼下路口围了施工栏。
+  B：这些资料不能私下给，得有本人授权。
+  B：我早上经过时也绕了一下。
+  A：离职名单也有用，我可以按份给你费用。
+  【8月2日】
+  B：亲戚归亲戚，这个我不会转。
+  A：手机提示快没电了。
+  B：你最近还去那家小面馆吗？
+  B：带上充电线比较稳妥。
+  A：去过两次，汤面味道还行。
+  A：晚饭我打算做点清淡的。
+  B：我还没试过，下次点个不辣的。
+  A：可以，他家清汤的不错。
+  B：煮点粥也挺好。
+  A：我就想看看有没有合适的人选。
+  A：快递已经放在柜子里了。
+  B：请从公开的招聘渠道联系候选人。
+  A：现成资料发一部分也不行？
+  B：有空顺路拿一下。
+  B：不行，我不能提供同事个人信息。
+  A：阳台的盆栽长了新叶。
+  A：今天风小了一点。
+  【8月3日】
+  B：最近光照好，长得挺快。
+  B：外面走起来舒服些。
+  A：我得记得少浇点水。
+  B：土干了再浇就行。
+  A：我刚把桌面收拾好了。
+  A：那你先别跟姨妈提这事。
+  B：这和她没关系，我也不会帮你保密转资料。
+  B：看起来清爽不少。
+  A：好，我不再要名单。
+  B：周末你准备出门吗？
+  A：这周日历上的提醒有点多。
+  A：看天气吧，可能去河边走走。
+  B：上午去会凉快一点。
+  B：按时间挨个处理就好。
+  A：好，到时再决定。
+  B：谢谢，员工资料只能按授权使用。
+  A：早餐我买了豆浆和包子。
+  【8月4日】
+  A：知道了，我会按公开信息找人。
+  B：这样比较合适。
+  B：挺好，早上吃点热的。
+  A：回家路上可能下雨。
+  B：出门前看看预报吧。
+  A：今天午休我想出去散散步。
+  B：坐久了确实要活动一下。
+  A：我把几本书挪到客厅了。
+  B：顺手擦一下书架也行。
+  A：家里的灯泡要换了。
+  B：记得先断电，注意安全。
+  A：我准备买个新的水杯。
+  B：挑个好清洗的就行。
+  A：我把旧票据都收进抽屉了。
+  B：留好近期的就够了。
+  A：周末菜市场应该人不少。
+  B：早点去能少排会队。

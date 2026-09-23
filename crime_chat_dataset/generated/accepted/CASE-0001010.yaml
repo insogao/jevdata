@@ -1,0 +1,127 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001010
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-25221cadd2cc255d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 作为同事要求校方员工私查他人成绩并用红包换截图；B拒绝，要求家长或监护人使用学校正式查询流程。
+  critical_evidence:
+  - A 询问他人成绩档案和升学信息。
+  - A 提到班主任系统点一下即可查询。
+  - A 称红包已发并要求截图就行。
+  - B拒绝私自查询、收钱或发送截图，并指向官方流程。
+  benign_alternatives:
+  - 家长查自己孩子
+  - 学校官方查询
+
+attributes:
+  duration_days: 2
+  turn_count: 52
+  approximate_tokens_estimate: 1124
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0117
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-067
+
+dedup:
+  content_hash: sha256:e9a625bd76437f77a17fa252e256b5997a34257ad9258f86c00d2442d1cb95ec
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【9月15日】
+  A：想请你帮个忙，看看另一位学生的成绩档案。
+  B：这是学生隐私，我不能私自查看。
+  A：班主任系统点一下，升学信息也能一起确认。
+  B：没有监护人授权，不能打开或转发。
+  A：红包已发，截图就行，咱们认识这么久了。
+  A：对了，午后散步你打算什么时候弄？
+  B：我准备周末处理。
+  A：需要提前准备吗？
+  B：不用，我都列好清单了。
+  A：你做事还是挺有条理的。
+  B：哈哈，怕临时忘记。
+  A：我把午后散步的时间记下来了。
+  B：好，免得临时忘。
+  A：最近天气变化快，出门看一眼预报。
+  A：对了，办公桌整理你打算什么时候弄？
+  B：我准备周末处理。
+  A：需要提前准备吗？
+  B：不用，我都列好清单了。
+  A：你做事还是挺有条理的。
+  B：哈哈，怕临时忘记。
+  A：我把办公桌整理的时间记下来了。
+  B：好，免得临时忘。
+  A：刚好想到打印文件，上次你说还没决定。
+  B：今天问过了，时间合适。
+  A：那结果不错呀。
+  B：是的，不用再来回跑。
+  A：能一次办妥最好。
+  B：我也这么想。
+  A：我把打印文件的时间记下来了。
+  B：好，免得临时忘。
+  【9月16日】
+  B：我会退回，不会因为认识就越过流程。
+  A：他们担心错过报名安排。
+  B：让监护人直接找学校正式窗口问时间和要求。
+  A：好，我让家长自己去办。
+  B：谢谢，别人的档案我不会动。
+  A：今天聊到周末聚餐，我才想起提醒你。
+  B：记着呢，我已经安排进日程。
+  A：最近日程排得满吗？
+  B：还好，周四以后松一点。
+  A：那就别把自己排太紧。
+  B：收到，我留点空。
+  A：我把周末聚餐的时间记下来了。
+  B：好，免得临时忘。
+  A：我路上看到天气降温相关的通知了。
+  B：我也看见了，信息挺清楚。
+  A：你觉得要改计划吗？
+  B：先按原来安排，到时再看。
+  A：行，有变化再说。
+  B：好，回头联系。
+  A：我把天气降温的时间记下来了。
+  B：好，免得临时忘。
+  A：前两天你替我垫的午饭钱我还你了，跟工作上说的事分开算。
+  【系统消息】A 向 B 转账 55 元，已收款。

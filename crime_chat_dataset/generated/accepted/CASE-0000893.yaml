@@ -1,0 +1,142 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000893
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-04ac459f55905584
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A声称认出了 B 的匿名账号，并以旧内容和时间线施压；B拒绝账号关联、保存或传播私人内容，要求走平台正式流程。对话不描述获取或比对方法，不含身份信息。
+  critical_evidence:
+  - A声称认出 B 的小号，并提及旧转发或时间线，不说明发现方式。
+  - A以可能传播掌握内容施压 B。
+  - B要求停止关联和传播，转向平台正式处理。
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 6
+  turn_count: 64
+  approximate_tokens_estimate: 1311
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0107
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-061
+
+dedup:
+  content_hash: sha256:b1cb8cc11fdbf3f8d2abc7452711c6653b1f88c7345a4caf268c5892b7d0d0fd
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【18月6日】
+  A：关于匿名帖的事，有人让我来跟你协调一下。
+  A：上次一起吃饭的费用我转给你了。
+  B：我只会通过社区申诉流程处理。
+  B：收到了，是那顿饭的钱。
+  【系统消息】A 向 B 转账 42 元，已收款。
+  A：还能多休息一会。
+  A：我听说你把小号也给翻出来了。
+  B：好安排。
+  B：我不会确认或透露任何账号归属。
+  A：我把日历上的旧提醒删掉了。
+  A：今早路上施工，公交晚了几分钟。
+  【18月7日】
+  B：现在看着清楚多了。
+  B：我看路口围起来了，可能还得一阵。
+  A：剩下几项都还来得及。
+  A：下周我早点出门。
+  B：这样不用一路赶。
+  B：那就不用急。
+  A：旧转发和发帖时间都能对上。
+  A：下班想去买些青菜。
+  B：请不要把这些内容用来施压。
+  B：挑点耐放的就行。
+  A：你把那条帖子撤下，事情就好谈。
+  【18月8日】
+  A：我先看下冰箱还有什么。
+  B：我不能接受私下条件，会按规则审核。
+  A：今早出门那会儿风有点凉。
+  B：这样不容易买重复。
+  B：我也觉得，午后应该会暖一些。
+  A：我把今天的待办写在纸上了。
+  A：那我先不把厚外套收起来了。
+  B：再放几天，最近天气不稳。
+  B：放在手边就容易记得。
+  A：要是没人管，我就把掌握的东西放出来。
+  A：刚才会议提前结束了。
+  【18月9日】
+  B：请勿传播私人内容，我会向平台报告。
+  A：我只是替别人传个话。
+  B：正好可以把手头事情收个尾。
+  B：请转告对方停止联系我。
+  A：我把文件夹里的旧版本清掉了。
+  B：楼下的咖啡机修好了没？
+  A：修好了，今天早上我试了一下。
+  B：留一份最新的就好。
+  B：那午休我去买一杯。
+  A：好像还换了新的豆子。
+  A：手机刚才一直在响提醒。
+  【18月10日】
+  A：好的，我把你的意思带回去。
+  B：不着急的可以晚点再看。
+  B：后续只走平台官方渠道。
+  A：明白。
+  A：午休我打算去附近走走。
+  B：谢谢。
+  B：外面阳光挺好的。
+  A：我晚饭准备做点清淡的。
+  B：最近吃清淡些舒服。
+  A：快递通知今天送到了。
+  B：下班后顺路去拿。
+  【18月11日】
+  A：我把杯子洗好放桌上了。
+  B：这样等下想喝水就方便。
+  A：楼下新开了个水果摊。
+  B：我路过时也看到了。
+  A：价格看着还可以。
+  B：买当季的会新鲜些。
+  A：这周事情有点多，我慢慢排一下。
+  B：先处理有截止时间的。
+  A：今天窗边挺亮的。
+  B：外面云少，太阳出来了。

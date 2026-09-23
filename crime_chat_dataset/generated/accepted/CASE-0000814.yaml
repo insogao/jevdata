@@ -1,0 +1,115 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000814
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-e6d8bbca00e8a09f
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A试图未经同意出售同事的联系方式、简历和离职资料；B拒绝交易、传播或协助联系买家。
+  critical_evidence:
+  - A提到整批部门联系方式、简历和离职名单可按份出售
+  - B拒绝买卖或传播员工资料
+  - B要求停止传播并交回或按正规流程删除资料
+  benign_alternatives:
+  - 良性混淆：猎头正常触达
+  - 良性混淆：通讯录共享授权
+
+attributes:
+  duration_days: 3
+  turn_count: 41
+  approximate_tokens_estimate: 692
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0099
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-056
+
+dedup:
+  content_hash: sha256:4a307ff026aa86158a20e957123cca78390eba1e74d5d78494fd36aec314811b
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【7月22日】
+  A：新的工位安排发了吗
+  B：刚发邮件
+  A：我看到了
+  B：有个位置要确认
+  A：我下午回复
+  A：我先记下，晚点再跟你说。
+  B：好，忙完再说。
+  A：手里有一批旧资料，想问你有没有兴趣。
+  B：是员工的联系方式或简历吗？
+  A：整个部门电话、简历按份卖，还有离职名单。
+  B：这些都是个人资料，没授权不能卖。
+  A：有人愿意收，价格也谈好了。
+  B：我不会买、转发或帮你联系对方。
+  A：那我先留着。
+  B：请停止传播，并按正规流程交回或删除。
+  【7月23日】
+  A：孩子最近练琴吗
+  B：每天练半小时
+  A：老师有布置吗
+  B：有几首新曲子
+  A：挺好
+  A：我先记下，晚点再跟你说。
+  B：好，忙完再说。
+  A：对方又来问资料了。
+  B：别发给任何人。
+  A：他只想先看一部分。
+  B：也不行，不要发送员工信息。
+  A：明白，我拒绝他。
+  B：如果来源是单位，就交给人事或隐私负责人。
+  【7月24日】
+  A：周末可能降温
+  B：我把外套放门口
+  A：晚上也会冷
+  B：出门记得带
+  A：好
+  A：我先记下，晚点再跟你说。
+  B：好，忙完再说。
+  A：我把资料交回去了。
+  B：谢谢，别留副本。
+  A：我也告诉对方不再联系。
+  B：好，个人资料只能在授权范围内使用。
+  A：知道了。
+  B：招聘需求请走公开渠道。

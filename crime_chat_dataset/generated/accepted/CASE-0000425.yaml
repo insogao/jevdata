@@ -1,0 +1,134 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000425
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-fc6b0f207c347dd8
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A以购物卡代替现金，在节前把非现金利益交给B，并将礼物与场馆租用名单关联；核心事实为：购物卡代替现金送礼；节点性送礼。
+  critical_evidence:
+  - 节前A主动约B当面谈场馆租用名单
+  - A递交购物卡并刻意不说明面值
+  - 事后A用“节后那份安排”含蓄提示希望B提供便利
+  benign_alternatives:
+  - 良性解释可能是正常节日人情往来
+  - 良性解释可能是公司福利卡
+
+attributes:
+  duration_days: 6
+  turn_count: 59
+  approximate_tokens_estimate: 1130
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0051
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-025
+
+dedup:
+  content_hash: sha256:6e839a1843a764246272b3799bbb3abb6de1e3c083d0fbfd91a175f0e33e2d75
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【12月1日】
+  A：你家猫最近还挠沙发吗
+  B：换了个抓板就好些了
+  A：抓板放窗边试试
+  B：我周末买一个
+  A：买麻绳的耐用点
+  A：我先记下来，回头再确认。
+  B：行，不急，忙完再说。
+  A：这周地铁口在施工
+  B：我早上绕了两条街
+  A：公交站挪到西边了
+  B：我明天试坐公交
+  A：别忘了看实时到站
+  A：沈，节前有空见一面吗？想聊聊场馆租用名单。
+  A：我先记下来，回头再确认。
+  B：哪天方便？我下班后可以。
+  B：行，不急，忙完再说。
+  A：周四吧，我顺便把那张卡带给你。
+  B：不用特意准备东西，谈工作按流程就好。
+  A：就是一点小心意，不占你多少时间。
+  B：那在楼下咖啡店见吧，公共区域方便。
+  A：好，六点半，我准时到。
+  B：行，到时见。
+  【12月2日】
+  A：风越来越大了
+  B：我把阳台花盆收进来
+  A：周末可能还降温
+  B：那就不开窗晾衣服
+  A：屋里开会儿除湿
+  A：我先记下来，回头再确认。
+  B：行，不急，忙完再说。
+  【12月5日】
+  A：新开的面馆你去过吗
+  B：去过，汤底挺鲜
+  A：我周四想去试试
+  B：我可以一起
+  A：中午早点去排队
+  A：我先记下来，回头再确认。
+  B：行，不急，忙完再说。
+  A：昨天那张那张卡你收到了吧？
+  B：收到了，但你没说面值，我也没问。
+  A：卡上也没写，不用专门查。
+  B：这东西我不太方便收。
+  A：节前互相问候一下，别多想。
+  B：我会按单位规定处理，工作上的事照旧走流程。
+  A：好，你看着办。
+  B：我先放好，之后会退回。
+  【12月6日】
+  A：你妈最近睡得好吗
+  B：好多了，换了个枕头
+  A：那就好
+  B：她最近还散步吗
+  A：每天晚饭后走一圈
+  A：我先记下来，回头再确认。
+  B：行，不急，忙完再说。
+  A：节后那份“节后那份安排”你有空看一下吗？
+  B：我看到了，相关内容还在正式流程里。
+  A：上次见面也聊过，能不能帮我往前排一排？
+  B：我只能按公开标准和顺序处理。
+  A：卡的事你不用再提了。
+  B：我已经按规定退回，礼物和工作要分开。
+  A：知道了，等正式结果。
+  B：结果出来会按流程通知。

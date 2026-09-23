@@ -1,0 +1,128 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000809
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-462c61bb0ebc11d4
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A试图通过非正式渠道了解另一名学生的成绩，并用红包换取截图；B拒绝越权查看或传播学生资料。
+  critical_evidence:
+  - A提出私下打听他人成绩并要求截图
+  - A提到红包作为交换
+  - B拒绝并建议由监护人通过学校官方渠道查询
+  benign_alternatives:
+  - 良性混淆：家长查自己孩子
+  - 良性混淆：学校官方查询
+
+attributes:
+  duration_days: 2
+  turn_count: 55
+  approximate_tokens_estimate: 793
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0099
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-056
+
+dedup:
+  content_hash: sha256:b82c409df6d96127a6559cd10fa17b0eae46d62bd8c349856ae769784e7323bb
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【6月22日】
+  A：你家狗最近掉毛吗
+  B：最近比较多
+  A：多梳梳就好
+  B：我每天梳一下
+  A：挺好
+  A：我先记下，晚点再跟你说。
+  A：今天吃了什么
+  B：好，忙完再说。
+  B：青菜和米饭
+  A：挺清淡
+  B：最近想少油
+  A：很好
+  A：我先记下，晚点再跟你说。
+  B：好，忙完再说。
+  A：你妹妹考试结束了吗
+  B：下周结束
+  A：让她好好休息
+  B：她准备去爬山
+  A：记得防晒
+  A：我先记下，晚点再跟你说。
+  A：我想问下那位学生最近考得怎么样。
+  B：好，忙完再说。
+  B：成绩是个人信息，家长自己查比较合适。
+  A：能不能私下问一下老师？红包我已经发了，给我张截图就行。
+  B：红包我会退回，也不会让老师发别人的成绩。
+  A：我只想了解个大概。
+  B：没有监护人同意，不能打听或转发。
+  A：那先算了。
+  B：需要的话走学校官方渠道。
+  A：这周公交有调整
+  B：我看到通知了
+  A：新站在哪边
+  B：路口西侧
+  A：我明早试
+  A：我先记下，晚点再跟你说。
+  B：好，忙完再说。
+  【6月23日】
+  A：周末有雨
+  B：我会带伞
+  A：别淋着
+  B：知道
+  A：早点回家
+  A：我先记下，晚点再跟你说。
+  B：好，忙完再说。
+  A：你帮我问到了吗？
+  B：没有，也不会私下问。
+  A：红包就当请你喝咖啡。
+  B：我已经退回了。
+  A：好吧。
+  B：学生资料要保密。
+  A：家长说自己会登录学校平台。
+  B：这样处理合适。
+  A：我不再问老师了。
+  B：谢谢理解。
+  A：以后按正规流程来。
+  B：好，有问题联系学校。

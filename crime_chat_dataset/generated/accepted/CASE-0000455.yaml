@@ -1,0 +1,133 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000455
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000116
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-d751ad8070e833f9
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A提出与delivery_fraud_returns相关的不当安排；预先确定的潜在事实为：掉包退货骗差价；假货换真货。B明确拒绝并引导回合法处理方式。
+  critical_evidence:
+  - 对话出现线索：原包装膜我有
+  - 对话出现线索：售后只看码
+  - 对话出现线索：一单赚一千
+  - B拒绝参与盗窃、欺诈或处置来历不明财物，并坚持合法渠道
+  benign_alternatives:
+  - 可能被误解为：正常七天无理由
+  - 可能被误解为：瑕疵退货协商
+
+attributes:
+  duration_days: 3
+  turn_count: 57
+  approximate_tokens_estimate: 914
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: delivery_fraud_returns
+  risk: 1
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0068
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-031
+
+dedup:
+  content_hash: sha256:402cedd058502f8c024439175a8ac77568919873508bb942d95f9be1d81e3e5c
+pipeline_status: accepted
+title: theft_robbery_property_crime/delivery_fraud_returns
+conversation: |-
+  【9月5日】
+  A：我买了些橙子
+  B：甜不甜
+  A：挺甜的，皮也薄
+  B：给你留几个
+  A：谢谢，明天拿
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  A：你姐最近忙搬家吗
+  B：这周末搬完
+  A：需要人帮忙吗
+  B：她找了搬家公司
+  A：那就轻松些
+  A：我这边退货有个办法，原包装膜我有。
+  A：我先记下，回头再聊。
+  B：商品本身没问题吗？
+  B：好，忙完再说。
+  A：售后只看码，做一单赚一千。
+  B：这是要把别的货冒充退回去吧？我不会做。
+  A：你帮我把单号看一眼就行。
+  B：我不会帮你骗售后或改退货信息。
+  A：那我再想想。
+  B：照实提交，不符合条件就别退。
+  【9月6日】
+  A：晚上可能有雨
+  B：我包里有伞
+  A：那就好
+  B：最近天气变化快
+  A：出门带着稳妥
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  A：今天地铁人不多
+  B：我错开了高峰
+  A：几点出门的
+  B：八点半
+  A：我也试试
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  A：上次拼饭的一百二我转你了。
+  【系统消息】A 向 B 转账 120 元，已收款。
+  B：收到了，饭钱正好。
+  A：亲戚之间帮点小忙也不行？
+  B：帮忙不等于参与假退货。
+  A：我已经把包装准备好了。
+  B：包装不能证明里面的商品真实，别寄出去。
+  A：一单赚一千确实挺诱人。
+  B：别为这点钱承担法律后果。
+  【9月7日】
+  A：你上次说的那本书买了吗
+  B：买了，刚看一章
+  A：好看吗
+  B：写得挺轻松
+  A：我也找来看看
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  A：我把那单取消了。
+  B：好，平台客服有正常处理方式。
+  A：我会把商品留下。
+  B：需要退的话就说明实际情况。
+  A：知道了。
+  B：之后别再找我弄假售后。

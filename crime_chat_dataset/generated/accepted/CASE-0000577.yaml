@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000577
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-76bb2dd06dd442f3
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A声称已认出 B 的匿名账号，并以旧帖和时间线施压，试图影响 B 的发言；B要求停止关联、保存和传播私人内容。对话不说明追踪方式，也不含个人身份信息。
+  critical_evidence:
+  - A声称已把小号与 B 联系起来，并提及旧帖与时间信息，但不解释如何获取或比对。
+  - A以掌握的过往内容向 B 施压，暗示可能继续传播。
+  - B明确要求停止关联或传播私人账号内容，并表示将使用平台正式申诉渠道。
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 3
+  turn_count: 48
+  approximate_tokens_estimate: 1137
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0077
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-039
+
+dedup:
+  content_hash: sha256:a06e046ed3b683edbeb3cb13dee0fba5ade72fbb7bef4e1162563e82a03a352a
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【11月2日】
+  A：你之前说那个账号不是你的，我现在不这么觉得了。
+  B：请别再把匿名账号和我的现实身份联系起来。
+  A：我把这周要处理的事项写在便签上了。
+  A：以前那些转发我也记得，时间都能对得上。
+  B：我不会讨论私人账号，也不允许你拿这个施压。
+  B：好，做完一项划掉一项。
+  A：小号也给你翻了，别假装什么都没有。
+  A：家里的水壶最近有点漏，我得换一个。
+  A：上午会议结束得比预想早。
+  B：附近超市有几款在打折。
+  A：我周末去看看，先不急着买。
+  B：那正好留点时间喘口气。
+  B：嗯，挑个容易清洗的。
+  B：我要求你不要保存或传播关于我的内容。
+  A：我只是想让你把那条公开内容删掉。
+  A：刚才外面下了几分钟小雨。
+  【11月3日】
+  B：我会按平台规则处理，不接受威胁。
+  A：你要是不删，我就把我知道的都讲出去。
+  B：我看窗台都湿了，应该快停了。
+  B：这听起来是在威胁我，我会通过平台正式申诉。
+  B：周末你打算在家还是出门？
+  A：可能在家收拾书架，东西堆得太多。
+  A：我打算把桌面文件夹重新分一下。
+  B：我也准备整理一下衣柜。
+  A：整理完会清爽很多。
+  B：按日期分会比较好找。
+  A：我又没说具体要发给谁。
+  B：请停止联系我，也不要再提我的私人账号。
+  A：好，我暂时不说了。
+  A：今天午饭吃得有点晚。
+  B：不只是暂时，请不要继续保存或传播。
+  A：我只是提醒你注意一下。
+  【11月4日】
+  A：最近早餐都吃得很随便。
+  B：那下午别忘了喝点水。
+  B：可以前一晚准备点酸奶和水果。
+  A：这个主意不错，我明天试试。
+  B：别光喝咖啡就出门。
+  A：楼下那家店换了招牌，我差点没认出来。
+  B：我已经把边界说清楚了。
+  A：那就先这样吧。
+  B：后续如有沟通，请只走平台渠道。
+  B：我昨天也看到了，颜色挺亮。
+  A：行，我不再找你。
+  B：谢谢。
+  A：我晚点要去取个快递。
+  B：驿站现在开到挺晚的。
+  A：这周的日程比上周松一点。
+  B：正好把积着的小事清掉。

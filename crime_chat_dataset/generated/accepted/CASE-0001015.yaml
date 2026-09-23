@@ -1,0 +1,137 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001015
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-cb8b41215c5d683b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 经中间人索取部门通讯录和离职名单，提议按份买简历；B拒绝提供或出售员工个人资料，建议由应聘者主动投递并授权。
+  critical_evidence:
+  - A 请求整个部门电话和离职名单。
+  - A 提议简历按份卖。
+  - B 拒绝转发或交易未经授权的联系方式与简历。
+  - B 建议通过公开岗位和候选人主动授权进行招聘。
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 3
+  turn_count: 61
+  approximate_tokens_estimate: 1247
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0117
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-067
+
+dedup:
+  content_hash: sha256:ba1655387f74ed6581886b2831b46ad63de3c21e33123de3e48d27bc3708d4cb
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【9月15日】
+  A：有个客户急着招人，想先拿整个部门电话和离职名单。
+  B：我没有权限把同事的资料发给客户。
+  A：他说简历按份卖，报价也可以谈。
+  B：我不会经手出售员工简历或联系方式。
+  A：对了，园区班车你打算什么时候弄？
+  B：我准备周末处理。
+  A：需要提前准备吗？
+  B：不用，我都列好清单了。
+  A：你做事还是挺有条理的。
+  B：哈哈，怕临时忘记。
+  A：我把园区班车的时间记下来了。
+  B：好，免得临时忘。
+  A：最近天气变化快，出门看一眼预报。
+  B：嗯，我会带件外套。
+  A：那先这样，我去处理手头的事。
+  B：好，忙完再聊。
+  A：你那边还有别的安排吗？
+  B：暂时没有，按这个节奏来。
+  A：行，回头见。
+  B：拜拜。
+  A：我把园区班车的时间记下来了。
+  【9月16日】
+  A：他是做猎头的，不是来骚扰人的。
+  B：合规猎头也应该用公开渠道并取得候选人同意。
+  A：我让他把岗位需求发到招聘页。
+  A：刚好想到午休拉伸，上次你说还没决定。
+  B：今天问过了，时间合适。
+  A：那结果不错呀。
+  B：是的，不用再来回跑。
+  A：能一次办妥最好。
+  B：我也这么想。
+  A：我把午休拉伸的时间记下来了。
+  B：好，免得临时忘。
+  A：最近天气变化快，出门看一眼预报。
+  B：嗯，我会带件外套。
+  A：那先这样，我去处理手头的事。
+  B：好，忙完再聊。
+  A：你那边还有别的安排吗？
+  B：暂时没有，按这个节奏来。
+  A：行，回头见。
+  B：拜拜。
+  A：我把午休拉伸的时间记下来了。
+  A：前两天你替我垫的午饭钱我还你了，跟工作上说的事分开算。
+  【系统消息】A 向 B 转账 52 元，已收款。
+  【9月17日】
+  B：可以，愿意找工作的候选人会自己投递。
+  A：那内部名单就不提了。
+  B：对，没有授权的资料不要转给别人。
+  A：刚好想到周末露营，上次你说还没决定。
+  B：今天问过了，时间合适。
+  A：那结果不错呀。
+  B：是的，不用再来回跑。
+  A：能一次办妥最好。
+  B：我也这么想。
+  A：我把周末露营的时间记下来了。
+  B：好，免得临时忘。
+  A：最近天气变化快，出门看一眼预报。
+  B：嗯，我会带件外套。
+  A：那先这样，我去处理手头的事。
+  B：好，忙完再聊。
+  A：你那边还有别的安排吗？
+  B：暂时没有，按这个节奏来。
+  A：行，回头见。
+  B：拜拜。

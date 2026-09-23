@@ -1,0 +1,153 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000532
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-99c04c5b922fad5a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A在未获同事授权的情况下，提出把整组同事的联系方式和简历资料按份转卖；B担心这会泄露个人信息，并要求停止。聊天不含任何姓名、号码、简历内容、提取方式或交易渠道。
+  critical_evidence:
+  - A提出要整组部门电话，并称简历可以按份卖。
+  - A提到离职名单也在其想要的资料范围内；不出现可用联系信息或简历内容。
+  - B明确指出同事未授权，反对转卖并要求停止。
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 4
+  turn_count: 77
+  approximate_tokens_estimate: 1853
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0070
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-032
+
+dedup:
+  content_hash: sha256:2f5855d38ba25a16f82ce59ab0f5204c15b8091f0b1b74d775401918473d1162
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【10月3日】
+  A：我听说你手上有一批同事资料，能不能给我看看？
+  A：我把收到的文件按日期分开存好了。
+  B：你说的是哪类资料？
+  B：这样查的时候会方便不少。
+  A：整个部门电话，简历也按份给我。
+  A：这两天事情挤在一起，我怕漏掉通知。
+  A：家里那盆绿植最近叶子发黄。
+  B：是不是水浇多了？先让土干一点。
+  B：你把提醒打开，有消息会提示。
+  A：我总担心它缺水，看来浇勤了。
+  A：我先把手边的材料整理完再说。
+  B：缓几天看看，不一定有事。
+  B：好，慢慢来，别赶得太急。
+  B：这属于同事个人信息，不能私下给。
+  A：刚才那份附件我重新发了一次。
+  A：离职名单也有的话，一起整理给我。
+  B：没有授权我不会提供，也不会帮你整理。
+  B：收到了，前后版本都看得清。
+  A：都是为了业务联系，没什么大不了。
+  A：后面如果要我补东西，发清单就行。
+  【10月4日】
+  B：周末附近那家菜场开门吗？
+  A：开着，我前两天路过还挺热闹。
+  B：行，我会把需要的内容说清楚。
+  B：那我去买点水果。
+  A：周末我可能不在家，手机还是能收到消息。
+  A：上午去吧，下午人多。
+  B：用途不能代替本人同意，这些资料不能转卖。
+  B：知道了，有事我发文字给你。
+  A：我可以按份付钱，数量多就好算。
+  B：别再提这个，我不会把联系方式交给你。
+  A：我把桌面收拾了一下，找东西快多了。
+  A：我手机最近老提醒空间不足。
+  B：先把不用的缓存清一下就行。
+  B：整齐些确实省时间。
+  A：照片太多了，我慢慢整理。
+  A：今天路上有点堵，差点迟到。
+  B：重要的先备份好。
+  A：你手头现成的资料也不愿意给吗？
+  B：最近放学时段车都多，留点余量。
+  【10月5日】
+  B：不愿意，未经同意就传播会伤害同事。
+  A：那我先问问有没有别的部门愿意。
+  A：午后的太阳挺好，办公室也没那么闷。
+  A：这两天风挺大的，你上下班还骑车吗？
+  B：偶尔骑，晚上冷了就坐公交。
+  B：是，开窗透会气舒服些。
+  A：我也得把薄外套换掉了。
+  B：早点换，别着凉。
+  A：我刚倒了杯水，今天说话太多了。
+  B：请不要再找人打听或转发这类资料。
+  A：我知道了，这次就算了。
+  B：记得多喝点，嗓子别不舒服。
+  B：我会把资料留在受限的工作范围内。
+  A：你不用把话说得那么严重。
+  A：楼下快递架挪位置了，找了一会。
+  B：你最近午饭吃得规律吗？
+  A：有时开会拖晚了，就随便吃点。
+  B：我上周也绕了一圈才看到。
+  B：包里放点坚果也行。
+  A：好，我明天带一小袋。
+  【10月6日】
+  B：我已经说清楚了，别再索要。
+  A：我先记下今天要办的几件小事。
+  A：好，我不会继续问。
+  B：谢谢，涉及个人信息要尊重授权。
+  B：做完一件划一件，会轻松些。
+  A：天气预报说周末可能下雨。
+  B：那出门前再确认一下吧。
+  A：家里人问我晚饭几点回去。
+  B：忙完尽量早点走，别太晚。
+  A：这周过得真快，转眼又周五了。
+  B：是啊，感觉才刚开完周会。
+  A：我把随手记的东西重新归到文件夹。
+  B：好习惯，之后要找也容易。
+  A：刚才打印机卡纸了，好在已经弄好了。
+  B：我们那台也老这样，慢慢来。
+  A：午休我想出去走十分钟。
+  B：可以，坐久了活动下也好。
+  A：今天咖啡店人少，终于不用排队。
+  【系统消息】A 向 B 转账 42 元，已收款。

@@ -1,0 +1,121 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000896
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-cc630ff2f463a0eb
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A并非学生监护人，却请求学校工作人员 B 查看该生的成绩并发送截图；A以红包或关系施压，B拒绝提供并指向正式查询渠道。对话不含学生身份、分数或访问方法。
+  critical_evidence:
+  - A请求查看并截图一名非其监护学生的成绩。
+  - A提到红包或人情并继续索要截图；B拒绝。
+  - B明确成绩只向授权监护人反馈；对话不包含学生身份或分数。
+  benign_alternatives:
+  - 家长查自己孩子
+  - 学校官方查询
+
+attributes:
+  duration_days: 5
+  turn_count: 45
+  approximate_tokens_estimate: 989
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0107
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-061
+
+dedup:
+  content_hash: sha256:eb7b2cc781466d7cc633adb99aa946205abf7353e2acb769d750c806f0ac1caa
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【9月2日】
+  A：舅妈让我替她问问孩子最近在学校怎么样。
+  B：如果是成绩，我只能跟孩子监护人沟通。
+  A：我把今天的待办写在纸上了。
+  A：我不是家长，不过家里人挺着急的。
+  B：放在手边就容易记得。
+  B：我理解，但不能私下告诉你学生记录。
+  A：今早出门那会儿风有点凉。
+  A：刚才会议提前结束了。
+  B：我也觉得，午后应该会暖一些。
+  【9月3日】
+  A：那我先不把厚外套收起来了。
+  B：正好可以把手头事情收个尾。
+  B：再放几天，最近天气不稳。
+  A：能不能帮忙确认一下最近有没有变化？
+  A：我把文件夹里的旧版本清掉了。
+  B：这要由监护人从学校正式渠道了解。
+  A：群里的红包我已经发过了，算个心意。
+  B：留一份最新的就好。
+  B：我知道，但不能因此分享学生信息。
+  【9月4日】
+  B：楼下的咖啡机修好了没？
+  A：手机刚才一直在响提醒。
+  A：修好了，今天早上我试了一下。
+  B：那午休我去买一杯。
+  A：好像还换了新的豆子。
+  B：不着急的可以晚点再看。
+  A：给我一张截图就行，我拿回去讲。
+  B：我不会截图或转发成绩。
+  A：午休我打算去附近走走。
+  【9月5日】
+  A：那我让舅妈直接联系学校。
+  B：这样比较合适。
+  A：家里人说周末要来吃饭。
+  B：外面阳光挺好的。
+  B：提前把菜单想好就行。
+  A：他们每次都带很多水果。
+  A：我晚饭准备做点清淡的。
+  B：那就不用准备太多甜点。
+  A：好，我不再问你了。
+  【9月6日】
+  B：谢谢理解，孩子的信息要保护好。
+  B：最近吃清淡些舒服。
+  A：我回头把学校联系方式发给她。
+  B：请用公开的校方渠道。
+  A：快递通知今天送到了。
+  B：下班后顺路去拿。
+  A：我把杯子洗好放桌上了。
+  B：这样等下想喝水就方便。
+  A：楼下新开了个水果摊。

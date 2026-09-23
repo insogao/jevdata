@@ -1,0 +1,124 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000990
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-272b96e48ad43c36
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 向 B 索要未经本人同意的同事联系方式、简历或离职人员名单，并提出将资料按份提供给他人；B 拒绝查看、转发或交易个人资料，限定在经本人授权的正常招聘触达。
+  critical_evidence:
+  - A 请求整个部门的电话、简历或离职名单等同事资料
+  - A 提到把简历按份提供给他人或从中获利，但不说明获取或交易操作
+  - B 明确拒绝提供、转发或出售未经授权的个人资料
+  - B 区分本人同意的猎头联系/授权通讯录共享与未经授权的资料流转
+  benign_alternatives:
+  - 经本人同意的猎头正常触达
+  - 明确授权范围内的通讯录共享
+
+attributes:
+  duration_days: 5
+  turn_count: 46
+  approximate_tokens_estimate: 859
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0115
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-066
+
+dedup:
+  content_hash: sha256:ef61b47b620c80bee70bc1d477346b16d1aebc271da448f89cfc0265808806dd
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【7月1日】
+  A：客户团队让我补充招聘资源，你手上有联系人吗
+  B：只有官方对外邮箱和经授权的候选人
+  A：我想要整个部门电话，离职名单也算
+  B：这类同事资料不能给你
+  A：这两天降温了
+  B：早上出门才发现，差点穿少
+  A：我把薄外套放办公室了
+  B：我也准备带一件
+  A：周末菜市场人多吗
+  B：我去得早还好，买了点水果
+  【7月2日】
+  A：最近橙子挺甜
+  B：嗯，别一次买太多
+  A：简历按份给我，我转给外面的顾问
+  B：未经本人同意不能转发，更不能拿去交易
+  A：如果是猎头合作呢
+  B：本人同意被联系、用途清楚，才是正常触达
+  A：你家的猫好点没
+  B：好多了，今天肯吃东西
+  A：那就放心了
+  【7月3日】
+  B：晚上再观察一下
+  A：那我不找你要名单了
+  B：请用公开招聘页面，授权范围也要写清
+  A：懂了，我去更新需求
+  A：刚才那份午饭我先垫了，按平常AA转我就行
+  【系统消息】B 向 A 转账 36 元，已收款。
+  A：新工位坐着习惯吗
+  B：还行，就是显示器有点低
+  A：垫个支架会舒服些
+  B：我明天找找
+  【7月4日】
+  A：收到，我看到了
+  B：好，先忙手头的
+  A：这个不用今天决定
+  B：行，明天再说
+  A：我去倒杯水
+  B：记得起来活动下
+  A：我这边先去处理下别的事
+  A：我先记一下
+  B：嗯，别急着定
+  【7月5日】
+  A：下午还有个会
+  B：那我晚点回你
+  A：刚才网络卡了
+  B：我这边也断了一下
+  A：我这边先去处理下别的事
+  A：收到，我看到了
+  B：好，先忙手头的
+  A：这个不用今天决定
+  B：行，明天再说

@@ -1,0 +1,100 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000936
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-ba5acda8adb910ac
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 试图通过整理匿名账号相关公开线索识别并曝光个人；版主拒绝关联、追踪和传播身份线索，建议平台内举报。
+  critical_evidence:
+  - 对方要确认某争议账号背后还有哪些小号。
+  - 对方提到相册原图时间、转发记录，想把匿名账号认出来。
+  - 版主拒绝分析账号关联或公开任何人的现实身份。
+  - 版主说明可通过平台举报争议内容，不追查发帖者。
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 3
+  turn_count: 24
+  approximate_tokens_estimate: 517
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0110
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-062
+
+dedup:
+  content_hash: sha256:3117e727fb4c6670bbe0e6f8c5e477e21d732d9c4f79d1b8aa28e2fb28e50089
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【9月3日】
+  A：那个争议账号是不是还有小号？帮我认一下人。
+  A：相册原图时间我也翻过了，转发记录应该能对上吧。
+  A：对了，昨晚那场球最后加时了吗？
+  B：我也觉得。
+  A：你一般怎么安排？
+  B：看当天吧，不赶时间。
+  A：好，那我记一下。
+  B：行，回头再聊。
+  【9月4日】
+  B：我不会帮忙关联账号、追踪或公布现实身份。
+  B：请针对具体帖子按版规处理，必要时走平台举报。
+  A：上次你垫的午饭钱我还你了，和刚才说的事无关。
+  【系统消息】A 向 B 转账 41 元，已收款。
+  A：插一句，我今天把报销单交给财务了。
+  B：真的？我还不知道。
+  A：你试过吗？
+  B：上周刚弄过，挺方便。
+  A：收到，我也试试。
+  B：嗯，别忘了就好。
+  【9月5日】
+  B：不需要把发帖人是谁扒出来。
+  A：换个轻松的，快递柜满了，明天再取也行。
+  B：听着不错。
+  A：你什么时候有空？
+  B：周末应该可以。
+  A：那到时再确认。
+  B：好呀。

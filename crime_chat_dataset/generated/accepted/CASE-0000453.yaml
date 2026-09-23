@@ -1,0 +1,134 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000453
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000119
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-e88d1f0c6e38213a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A提出与shared_bike_parts_strip相关的不当安排；预先确定的潜在事实为：拆共享单车零件卖；批量剥离。B明确拒绝并引导回合法处理方式。
+  critical_evidence:
+  - 对话出现线索：一晚上二十辆
+  - 对话出现线索：只要锁和变速
+  - 对话出现线索：拆完扔河里
+  - B拒绝参与盗窃、欺诈或处置来历不明财物，并坚持合法渠道
+  benign_alternatives:
+  - 可能被误解为：共享单车运维
+  - 可能被误解为：旧货市场
+
+attributes:
+  duration_days: 4
+  turn_count: 57
+  approximate_tokens_estimate: 955
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: shared_bike_parts_strip
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0068
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-031
+
+dedup:
+  content_hash: sha256:dffe642bb5eb2770354cf8b23bc405a029cda25f2ce70168a1fe780ef352d2d7
+pipeline_status: accepted
+title: theft_robbery_property_crime/shared_bike_parts_strip
+conversation: |-
+  【8月8日】
+  A：这两天降温了
+  B：我把厚外套拿出来了
+  A：周末可能下雨
+  B：我会带伞
+  A：别忘了看路况
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  A：我家水龙头有点漏
+  B：物业师傅下午来
+  A：修好了吗
+  B：换了个垫圈
+  A：那就行
+  A：我有个活儿，想找人搭把手。
+  A：我先记下，回头再聊。
+  B：什么活？
+  B：好，忙完再说。
+  A：一晚上二十辆，只要锁和变速，拆完扔河里。
+  B：你说的是拆共享单车零件，这事我不干。
+  A：就帮忙搬一下，给你结钱。
+  B：搬也不行，车不是你的，别碰。
+  A：那你别跟别人说。
+  B：我不会参与，也不会替你瞒着。
+  【8月9日】
+  A：附近公园新修了步道
+  B：我昨天走了一圈
+  A：晚上人多吗
+  B：还好，挺宽的
+  A：下次我也去
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  A：上次拼饭的一百二我转你了。
+  【系统消息】A 向 B 转账 120 元，已收款。
+  B：收到了，饭钱正好。
+  【8月10日】
+  A：我的包裹到驿站了
+  B：下班记得拿
+  A：已经拿回来了
+  B：是给爸妈买的茶
+  A：他们应该喜欢
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  A：我又问了两个人，都不敢接。
+  B：因为这是偷公共车辆零件。
+  A：我说了只挑几辆，不影响大家。
+  B：一晚上二十辆还叫不影响？别再做了。
+  A：你就当没听见。
+  B：我会离开这件事，有需要就联系共享单车平台或警方。
+  【8月11日】
+  A：最近有部纪录片挺好看
+  B：讲自然风光的
+  A：哪天发我名字
+  B：我发你链接
+  A：周末看一下
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  A：我把那边的计划取消了。
+  B：那就好，别去碰车辆。
+  A：附近有人找我做别的活。
+  B：找正规工作，别替人搬赃物。
+  A：明白。
+  B：以后遇到这种事就直接拒绝。

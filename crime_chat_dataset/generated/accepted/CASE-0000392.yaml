@@ -1,0 +1,120 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000392
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000005
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-e6ec67831ba717be
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 同事被邀请做所谓兼职，首单小额返款后被要求连续垫付；群内账号发布收益截图催单，求职者意识到风险后停止并要求退款。
+  critical_evidence:
+  - 首单小额款项迅速返还
+  - 随后要求连续垫付完成任务
+  - 群内账号集中晒收益截图催促
+  - 求职者拒绝追加并要求退款
+  benign_alternatives:
+  - 正规众包平台接单
+  - 朋友介绍兼职
+
+attributes:
+  duration_days: 2
+  turn_count: 45
+  approximate_tokens_estimate: 936
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: part_time_task
+  risk: 2
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0030
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-018
+
+dedup:
+  content_hash: sha256:64a5638ca958dacc3218f26cbfe3c942b0c964c75ec0447f4560005918e126bc
+pipeline_status: accepted
+title: fraud_scam/part_time_task
+conversation: |-
+  【7月6日】
+  A：我这有个线上兼职，做完小单就返
+  A：先垫一点完成首单，马上原路回来
+  A：看到没，接下来连几单金额会高点
+  A：群里大家都在晒收益，你看截图
+  A：不连着做前面的奖励就没了
+  A：你先把下一单垫上，结束一起结
+  A：你现在停会影响整组进度
+  A：群里都说已经到账了
+  A：别把事情弄复杂
+  A：我一会儿问问
+  A：你上回说的耳机买了吗
+  B：还没，挑半天都差不多
+  A：我买了个基础款，通勤够用
+  B：那发我看看型号吧
+  A：我刚看到消息，上午一直在开会
+  B：没事，我也忙到现在
+  【7月7日】
+  B：什么工作，要先看平台和规则
+  B：我做完了，刚才确实回得挺快
+  B：为什么要我先垫钱
+  B：这些账号我不认识，截图也看不出来源
+  B：正规的众包任务不用连续转钱吧
+  B：我不再付款了，请退回刚才那笔
+  【系统消息】A 向 B 转账 30 元，已收款。
+  B：那也不能要求我继续转账
+  B：我会通过支付平台申诉核实
+  B：请给我平台名称和正式客服入口
+  B：在确认之前我不会再操作
+  A：午饭吃了吗
+  B：刚吃了楼下的面，今天人好多
+  A：我带了饭，结果忘记拿筷子
+  B：哈哈去前台借一双呗
+  A：我刚看到消息，上午一直在开会
+  B：没事，我也忙到现在
+  A：你那边今天还顺利吗
+  B：还行，就是事情有点杂
+  A：那先忙你的，晚点再说
+  B：好，回头联系
+  A：对了，最近睡得怎么样
+  B：一般，昨晚又熬夜了
+  A：早点休息，别老盯屏幕
+  B：嗯，今晚尽量早点睡
+  A：我去处理点事，等会儿回
+  B：好，不急
+  A：我刚看到消息，上午一直在开会
+  B：没事，我也忙到现在
+  A：你那边今天还顺利吗

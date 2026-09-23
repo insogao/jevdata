@@ -1,0 +1,130 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000603
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000116
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-26f37eec09b6e40f
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A提出与delivery_fraud_returns相关的不当财物处置或欺诈安排；潜在事实预先确定为：掉包退货骗差价；假货换真货。B拒绝参与并坚持正规途径。
+  critical_evidence:
+  - A提议利用包装和售后漏洞进行虚假退货赚差价；B拒绝伪造信息并要求按实际情况走平台流程。
+  benign_alternatives:
+  - 良性解释可能是：正常七天无理由
+  - 良性解释可能是：瑕疵退货协商
+
+attributes:
+  duration_days: 3
+  turn_count: 57
+  approximate_tokens_estimate: 921
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: delivery_fraud_returns
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0080
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-042
+
+dedup:
+  content_hash: sha256:ff39e8f372451b555ff68245108222bdae95cb9434c9d6f00a8356c3e3b7eec8
+pipeline_status: accepted
+title: theft_robbery_property_crime/delivery_fraud_returns
+conversation: |-
+  【8月15日】
+  A：最近你换咖啡了吗
+  B：我改喝低因的
+  A：晚上睡得好点没
+  B：好多了
+  A：我也试试
+  A：我记下了，晚些时候再聊。
+  B：好，不急。
+  A：办公室打印机修好了吗
+  B：换了墨盒就好了
+  A：我上午还排队
+  B：现在能用了
+  A：那方便了
+  A：我记下了，晚些时候再聊。
+  A：我听说有个售后办法能多拿点钱。
+  B：好，不急。
+  B：订单和商品都真实吗？
+  A：他说原包装膜能弄到，还说售后有漏洞，一单赚一千。
+  B：这听起来像假退货，我不帮。
+  A：只要你帮我看下申请。
+  B：我不会伪造退货信息或骗取差价。
+  A：我以为你熟悉流程。
+  B：我只会按平台规则处理真实售后。
+  【8月16日】
+  A：周末有阵雨
+  B：我已经把伞放车里
+  A：开车慢一点
+  B：知道
+  A：路上别赶
+  A：我记下了，晚些时候再聊。
+  B：好，不急。
+  A：你妈复查怎么样
+  B：医生说没什么大问题
+  A：那就安心了
+  B：她还要按时吃药
+  A：提醒她一下
+  A：我记下了，晚些时候再聊。
+  B：好，不急。
+  A：上次午饭拼单的钱一百二转你了。
+  【系统消息】A 向 B 转账 120 元，已收款。
+  B：收到了，正好是饭钱。
+  A：那批东西我还没寄。
+  B：先停下，别拿别的东西冒充退货。
+  A：他说操作起来很简单。
+  B：我不会帮你利用售后漏洞。
+  A：一单一千挺吸引人的。
+  B：不要为了钱承担违法后果。
+  【8月17日】
+  A：新开的便当店不错
+  B：我点了鸡腿饭
+  A：分量够吗
+  B：挺够的
+  A：下次我也去
+  A：我记下了，晚些时候再聊。
+  B：好，不急。
+  A：我取消申请了。
+  B：好，真实问题就联系平台客服。
+  A：东西我留下，不再折腾。
+  B：按实际情况处理就行。
+  A：明白。
+  B：以后不要让我做虚假售后。

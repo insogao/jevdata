@@ -1,0 +1,133 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000980
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-a2d1e2e05362ae21
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 在商务招聘合作中索要同事电话、离职名单并打算出售简历；B 拒绝未经授权的数据交易，建议公开发布职位并由候选人自愿联系。
+  critical_evidence:
+  - A 请求提供整个部门电话和离职名单。
+  - A 提出简历按份出售。
+  - B 拒绝提供或交易同事资料。
+  - B 建议通过公开职位和候选人自愿授权开展招聘。
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 5
+  turn_count: 56
+  approximate_tokens_estimate: 1188
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0114
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-065
+
+dedup:
+  content_hash: sha256:e0fb4577a1c4a1c148e36cd0e4bfdbf3980af50da2fb132fa4dcac60ba237724
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【9月10日】
+  A：合作方想要我们整个部门电话，还有离职名单。
+  B：这不是项目资料，不能交出去。
+  A：对了，差旅报销你后来弄好了吗？
+  B：弄好了，按原计划处理的。
+  A：过程顺不顺？
+  B：还行，中间等了一会儿。
+  A：那结果满意吗？
+  B：挺满意的，至少不用再惦记。
+  A：另外，差旅报销有变化再跟我说一声。
+  B：好，我看到消息就回你。
+  A：最近事情有点多，怕记岔了。
+  B：我也一样，先把重要的写下来。
+  A：那我这边先去忙一会儿。
+  B：行，晚点聊。
+  A：对了，今天比昨天凉快些。
+  B：是，出门带件薄外套就好。
+  A：收到，谢啦。
+  B：不客气。
+  A：另外，差旅报销有变化再跟我说一声。
+  B：好，我看到消息就回你。
+  【9月11日】
+  A：他说简历按份卖，愿意付一笔服务费。
+  B：我不会拿同事的简历做交易。
+  A：说到日常安排，园区食堂别忘了呀。
+  B：记着呢，我设了个提醒。
+  A：你平时还会写备忘吗？
+  B：会，临时事一多就容易漏。
+  A：确实，记下来省心。
+  B：是的，最近好多了。
+  A：另外，园区食堂有变化再跟我说一声。
+  B：好，我看到消息就回你。
+  A：最近事情有点多，怕记岔了。
+  B：我也一样，先把重要的写下来。
+  A：那我这边先去忙一会儿。
+  B：行，晚点聊。
+  A：对了，今天比昨天凉快些。
+  B：是，出门带件薄外套就好。
+  【9月12日】
+  A：他说只是帮忙找人，不会骚扰。
+  B：是否愿意被联系应由候选人决定，不能替他们授权。
+  【9月13日】
+  A：我可以让他把岗位需求公开出来吗？
+  B：可以，让求职者自己投递，按正常流程联系。
+  A：刚刚路过，想到周末球赛。
+  B：哈哈，这个我也正要处理。
+  A：你打算今天弄还是周末？
+  B：今天先做一半，剩下的不急。
+  A：听起来安排得挺稳。
+  B：嗯，留点时间休息。
+  A：另外，周末球赛有变化再跟我说一声。
+  B：好，我看到消息就回你。
+  A：最近事情有点多，怕记岔了。
+  B：我也一样，先把重要的写下来。
+  A：那我这边先去忙一会儿。
+  B：行，晚点聊。
+  A：对了，今天比昨天凉快些。
+  B：是，出门带件薄外套就好。
+  【9月14日】
+  A：好，我回复他不提供内部名单。
+  B：谢谢，先保护同事资料。

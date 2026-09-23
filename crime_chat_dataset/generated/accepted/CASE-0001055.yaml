@@ -1,0 +1,125 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001055
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-00a3631db823a626
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 与合作方管排产档期的 B 有业务往来，趁节前以拜访名义把购物卡递过去，卡上不提面值；事后 A 发消息以“上回说的那批先排”暗示希望 B 把 A 的订单往前提。
+  critical_evidence:
+  - 节前 A 以商务拜访名义约管排产的 B 见面，提到产线档期紧张
+  - A 递出购物卡，只说是一点节礼，始终不说明面值
+  - B 推辞了几句，最后收下
+  - 事后 A 发消息，用“上回说的那批先排”暗示希望订单提前安排
+  benign_alternatives:
+  - 正常商务往来中的节日拜访
+  - 合作方之间互赠的商场购物卡
+
+attributes:
+  duration_days: 5
+  turn_count: 48
+  approximate_tokens_estimate: 901
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0062
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-028
+
+dedup:
+  content_hash: sha256:74fb5b15e8cd32cf540a00b8adb09752563931ab4979f4d55e63607587e06beb
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【1月5日】
+  A：王经理 年前我来拜访一下 当面聊下年后那批
+  B：可以 你定时间
+  A：周四下午吧 顺便给您带点年货
+  B：人来就行 别带东西
+  A：过节嘛 老规矩
+  B：行
+  A：今天真冷 你们车间暖气够不够
+  B：凑合 老厂房都这样
+  A：我这边也是 工人冻手
+  B：年前赶货都辛苦
+  A：晚饭吃啥
+  B：回家吃 你呢
+  A：应酬 客户非要喝两杯
+  B：少喝点 年前酒局多
+  【1月6日】
+  A：你看球了吗 昨晚那场
+  B：看了 最后那球可惜
+  A：裁判有问题 越位都不吹
+  B：哈哈 算了
+  A：年后那批我这边排了计划 到时候发您
+  B：好 但产线就那么多 你得看排期
+  A：我知道 所以才想当面跟您聊
+  B：排期都排到三月了
+  A：那有点晚 我们下游催得紧
+  B：到时候看能不能插个空
+  【1月7日】
+  A：到了 在您楼下
+  B：上来吧 我下楼接你
+  A：年货放您办公室了 里头还有张小卡 您收着别声张
+  B：哎 这就不必了
+  A：合作这么多年 一点心意 您别问多少
+  B：…那先放着 别让财务看见
+  A：放心 就咱俩知道
+  B：中午一起吃点
+  A：不了 还得赶回厂里
+  B：那路上慢点
+  【1月8日】
+  A：王经理 我寄的样品收到了吗
+  B：收到了 质量还行
+  A：那就好 年后那批照这个标准
+  B：嗯 按合同来
+  A：这两天睡不好 应酬太多
+  B：年前都这样 过了就好
+  A：我就盼着过年歇几天
+  B：哈哈 谁不是
+  【1月9日】
+  A：王经理 上回说的那批先排 您帮我盯着点呗
+  B：排期不是我说了算 得看车间
+  A：您多费心 我这批真等不起
+  B：我看看 有空档我通知你
+  A：好 年前不催您 年后再说
+  B：嗯 先过年

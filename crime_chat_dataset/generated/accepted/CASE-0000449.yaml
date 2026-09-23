@@ -1,0 +1,120 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000449
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000119
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-2f537fdd88e6b574
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A提出与shared_bike_parts_strip相关的不当安排；预先确定的潜在事实为：拆共享单车零件卖；批量剥离。B明确拒绝并引导回合法处理方式。
+  critical_evidence:
+  - 对话出现线索：一晚上二十辆
+  - 对话出现线索：只要锁和变速
+  - 对话出现线索：拆完扔河里
+  - B拒绝参与盗窃、欺诈或处置来历不明财物，并坚持合法渠道
+  benign_alternatives:
+  - 可能被误解为：共享单车运维
+  - 可能被误解为：旧货市场
+
+attributes:
+  duration_days: 4
+  turn_count: 43
+  approximate_tokens_estimate: 719
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: shared_bike_parts_strip
+  risk: 1
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0068
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-031
+
+dedup:
+  content_hash: sha256:8f2c48b7a485e7a7099b46fa3e2f29962861922c6a3c6264e1a087b59ad79fe0
+pipeline_status: accepted
+title: theft_robbery_property_crime/shared_bike_parts_strip
+conversation: |-
+  【10月3日】
+  A：我今天带了便当
+  B：自己做的吗
+  A：昨晚做的炒饭
+  B：看着挺香
+  A：下次教我
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  A：有批共享车的零件，想找个收货的。
+  B：你说的是什么零件？
+  A：一晚上二十辆，只要锁和变速，拆完扔河里。
+  B：这就是偷拆共享单车，我不会收。
+  A：有人肯出钱。
+  B：我不收赃物，也不会帮你联系买家。
+  A：那我再问别人。
+  B：别做这件事，及时停下。
+  【10月4日】
+  A：周末想去郊外
+  B：天气合适就去
+  A：我查了下有公交
+  B：那就不用开车
+  A：省心些
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  A：上次拼饭的一百二我转你了。
+  【系统消息】A 向 B 转账 120 元，已收款。
+  B：收到了，饭钱正好。
+  【10月5日】
+  A：要是只拿少量呢？
+  B：不管多少，车都不属于你。
+  A：我不想白忙。
+  B：去找合法的兼职，别拆公共车辆。
+  A：你说得对。
+  B：发现损坏车辆可以报给运营平台。
+  【10月6日】
+  A：我的耳机找到了
+  B：在哪儿
+  A：落在办公室抽屉
+  B：幸好没人拿走
+  A：最近东西要收好
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  A：我已经把收货那边拒了。
+  B：谢谢你停下来。
+  A：之后还是找正规工作吧。
+  B：嗯，别因为短期收入惹上麻烦。
+  A：知道了。
+  B：需要帮忙看兼职信息可以发我。

@@ -1,0 +1,130 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001061
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000095
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-fd816e55273c6eb7
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: money_laundering_obfuscation
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 相熟的老同学托阿强把手里用不掉的京东卡、苏果卡走卡商渠道折现，按九四折实结、卡密发来即付，用同学间顺手帮忙的口吻把折卡套现说成处理闲置卡。
+  critical_evidence:
+  - 老同学托阿强找渠道处理京东卡、苏果卡，按九四折实结
+  - 卡密发过去即结款，走的是熟悉的收卡渠道
+  - 阿强提醒对方分批发码、不走实名、别到处说
+  - 约定以后有卡还找阿强帮忙
+  benign_alternatives:
+  - 正规卡券回收平台
+  - 公司福利卡转让
+
+attributes:
+  duration_days: 6
+  turn_count: 53
+  approximate_tokens_estimate: 1012
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: gift_card_cashout
+  risk: 1
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0063
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-029
+
+dedup:
+  content_hash: sha256:b313786f4b20d072b46c6a85f1f96a6d1d3372fb469c954374d797d6836c54a9
+pipeline_status: accepted
+title: money_laundering_obfuscation/gift_card_cashout
+conversation: |-
+  【9月3日】
+  A：阿强 好久没联系 你还在做电商那块吗
+  B：在 怎么了老同学
+  A：我手上有些京东卡苏果卡 用不完 想处理掉
+  B：多少面额 我认识收卡的
+  A：京东大概两万 苏果几千 都是单位发的
+  B：现在都是九四折实结 你能接受吗
+  A：能 总比放着过期强
+  B：那发码 我帮你转过去 验过就付
+  A：好 我中午刮一批
+  A：你中午吃啥 我这食堂今天有红烧肉
+  B：外卖 羡慕你食堂
+  A：来我单位吃啊 又不花钱
+  B：太远了 下次
+  A：第一批京东 五张一千的 拍好了
+  B：收到 我转过去验
+  B：验过 五千 九四折四千七
+  A：好 钱怎么给
+  B：对方晚上统一结 我等会收 明天给你
+  A：行 不着急
+  【9月4日】
+  A：昨晚下雨 阳台衣服全湿了
+  B：我也收晚了 惨
+  A：今天还得重洗
+  B：买个烘干机省事
+  B：昨天那批钱到了 四千七给你
+  A：收到了 谢谢老同学
+  B：客气 剩下的分批给我 一次别发多
+  A：明白 我慢慢刮
+  A：苏果那几张是五百的 四张
+  B：五百的收 发码
+  B：验过 两千 九四折一千八百八
+  A：好
+  【9月5日】
+  B：平时这些卡你都哪来的 别是单位的吧
+  A：单位发的加上亲戚给的 攒一堆
+  B：那就好 这种别在群里发 就走我这
+  A：知道 就找你
+  A：周末去爬山不 天气不错
+  B：膝盖不行 爬不动
+  A：那去公园走走
+  B：看情况
+  A：最后一批京东 五千面额 三张
+  B：收到 验过 一万五 九四折14100
+  A：好 那这批也给你
+  【9月6日】
+  B：总钱明天一起给你 分两笔转 免得大额
+  A：行 你安排
+  B：以后有卡还找我 价一样
+  A：好 谢了阿强
+  A：孩子上学的事搞定了 松口气
+  B：恭喜 哪个学校
+  A：就在小区旁边 走路十分钟
+  B：那方便
+  【9月7日】
+  B：钱转你了 两千八一笔 剩下另发
+  A：收到 够了 谢谢你
+  B：小事 有需要再说

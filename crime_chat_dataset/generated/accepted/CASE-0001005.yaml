@@ -1,0 +1,123 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001005
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-4c156c05b05c4a53
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 熟人 A 想把一名用户的匿名账号与其现实身份关联并翻查过往内容；B 拒绝识别、汇总或曝光私人账号信息，只允许讨论经授权公开的品牌内容。
+  critical_evidence:
+  - A 要求关联匿名账号与现实身份
+  - A 想查看其小号和过往发布内容
+  - B 拒绝识别或曝光个人账号关联
+  - B 将可接受范围限于获准公开的品牌材料
+  benign_alternatives:
+  - 公开信息讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 3
+  turn_count: 48
+  approximate_tokens_estimate: 818
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0116
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-067
+
+dedup:
+  content_hash: sha256:af018cc0a134b5719151b60393bde4101bc790d47204efdd7911677e90df7dfb
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【7月6日】
+  A：在吗，想跟你确认件事
+  B：在的，你说吧
+  A：好，我刚忙完手头的事
+  B：嗯，不着急
+  A：我买的保温杯到了
+  B：漏不漏水
+  A：刚试过还挺好
+  B：那就不错，颜色喜欢吗
+  A：比网页上稍暗一点
+  B：实物有点色差正常
+  A：我想聊下论坛那件事
+  B：你说
+  A：想把那个匿名账号跟现实中的人对应起来
+  B：我不协助识别个人身份或账号关联
+  A：小号也翻一翻，之前发过啥都想知道
+  B：我不会汇总或曝光私人账号的内容
+  【7月7日】
+  A：在吗，想跟你确认件事
+  B：在的，你说吧
+  A：好，我刚忙完手头的事
+  B：嗯，不着急
+  A：这周肩膀有点僵
+  B：坐太久了吧
+  A：可能，最近会议多
+  B：记得起来活动一下
+  A：我下午去走一圈
+  B：好，别一直盯屏幕
+  A：只是在熟人间说说，不会公开
+  B：私下整理也会越过对方的隐私边界
+  A：那如果是做品牌讨论呢
+  B：可以限定在品牌官方且获准公开的内容
+  A：私人账号那部分就不碰了
+  B：对，不要把匿名身份和个人信息拼在一起
+  【7月8日】
+  A：在吗，想跟你确认件事
+  B：在的，你说吧
+  A：好，我刚忙完手头的事
+  B：嗯，不着急
+  A：周末可能回趟家
+  B：车票买了吗
+  A：还没，等下看看
+  B：早点买选择多些
+  A：嗯我晚上处理
+  B：路上注意安全
+  A：我把之前那个想法放下了
+  B：好，范围明确就行
+  A：我们只看品牌公开回应和公告
+  B：可以，别涉及个人账号
+  A：收到
+  B：这样讨论也更聚焦

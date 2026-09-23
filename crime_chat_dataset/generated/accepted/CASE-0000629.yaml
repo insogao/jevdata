@@ -1,0 +1,148 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000629
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-4e1a6b396ce46c3e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A声称已认出 B 的匿名账号，并用旧发言和时间线施压；B要求停止将账号与现实身份关联、停止讨论或传播私人内容。对话不描述获取、比对或检索方法，也不含可识别信息。
+  critical_evidence:
+  - A称匿名小号也被认出，并提到旧发言与时间线，但不描述如何发现。
+  - A以掌握过往内容向 B 施压，暗示会继续传播。
+  - B要求停止关联和传播私人账号内容，并要求后续仅通过平台正式渠道沟通。
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 5
+  turn_count: 72
+  approximate_tokens_estimate: 1519
+  relationship: 同事
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 同事
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0083
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-045
+
+dedup:
+  content_hash: sha256:2f19a92af2daa64d0ee68b74336394dfe92a0d914c1320548d5ccd18263397ea
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【10月2日】
+  A：你前几天说的那个小号，我觉得不是完全陌生。
+  A：我把今天要处理的小事列出来了。
+  B：不要再把我的账号和现实身份联系起来。
+  B：一项项来，别着急。
+  A：刚才打印的几页我重新装订好了。
+  A：旧发言的时间都能对上，我知道你在说什么。
+  B：这样放包里就不容易散。
+  B：我不想谈这些，请停止继续翻我的私人内容。
+  A：午休想出去走一走。
+  A：小号也给你翻了，别当我什么都不知道。
+  B：可以，坐久了活动一下。
+  A：最近早上有点凉，你出门会穿外套吗？
+  A：我把提醒设置成响铃了。
+  B：会，办公室空调也挺冷的。
+  A：我今天把薄外套带上了。
+  【10月3日】
+  B：好，重要消息就不容易错过。
+  B：带着总比冻着好。
+  A：外面刚停雨，路面还有点湿。
+  B：不要把任何内容转发给别人。
+  B：走路慢点，别滑了。
+  A：你先把那条公开内容删掉，我们就不提了。
+  A：我晚上准备煮点面。
+  B：我会走平台流程处理，不接受你施压。
+  A：我只是提醒你，之前发过什么大家都看得到。
+  B：放点青菜就挺好。
+  B：请不要再把这些当成威胁我的理由。
+  A：快递柜今天人很多。
+  B：附近那家早餐店还开着吗？
+  B：可能赶上大家下班了。
+  【10月4日】
+  A：开着，豆浆比之前换了个杯子。
+  B：我下回路过买一份。
+  A：我把桌上的书归到架子上了。
+  A：早点去，不然要排队。
+  B：整理完看着舒服多了。
+  A：你要是不处理，我可能会告诉别人。
+  B：这已经越界了，我会保留聊天并向平台申诉。
+  A：最近我试着早点睡。
+  A：好吧，我现在还没发出去。
+  B：请停止保存或传播关于我的内容。
+  B：睡够了白天精神会好些。
+  A：我暂时不说了。
+  A：我把水杯放在门口了。
+  A：家里那盏灯最近有点闪。
+  B：可能灯泡松了，先检查一下。
+  【10月5日】
+  B：这下出门应该不会忘。
+  A：我晚上回去看看。
+  B：别踩高凳子，找人帮忙。
+  A：今天的会比计划短，挺意外的。
+  B：请以后不要再联系我。
+  B：那你能早点吃饭了。
+  A：知道了。
+  B：需要沟通就通过平台的正式渠道。
+  A：我打算周末去菜市场看看。
+  A：行。
+  B：到此为止。
+  B：上午去人少一点。
+  A：我刚换了手机壳，手感轻不少。
+  B：颜色挺清爽的。
+  【10月6日】
+  A：楼下花坛新种了几盆花。
+  B：我路过时也看到了。
+  A：家里人问我什么时候回去。
+  B：忙完给他们回个电话吧。
+  A：今天天气预报说明天晴。
+  B：那洗的衣服可以晾外面。
+  A：我把工作台擦干净了。
+  B：桌面清爽，找东西也方便。
+  A：晚上想早点关电脑。
+  B：好，留点时间休息。
+  A：今天路口在修路，我多绕了一段。
+  B：最近那边施工，出门前看下路况。
+  A：我买了些水果放冰箱。
+  B：记得洗了再吃。

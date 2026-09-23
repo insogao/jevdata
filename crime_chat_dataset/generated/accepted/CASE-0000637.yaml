@@ -1,0 +1,135 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000637
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-ada5e1d74eeb15fb
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A声称已认出 B 的匿名账号，并用旧发言和时间线施压；B要求停止将账号与现实身份关联、停止讨论或传播私人内容。对话不描述获取、比对或检索方法，也不含可识别信息。
+  critical_evidence:
+  - A称匿名小号也被认出，并提到旧发言与时间线，但不描述如何发现。
+  - A以掌握过往内容向 B 施压，暗示会继续传播。
+  - B要求停止关联和传播私人账号内容，并要求后续仅通过平台正式渠道沟通。
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 6
+  turn_count: 58
+  approximate_tokens_estimate: 1246
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0083
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-045
+
+dedup:
+  content_hash: sha256:80d73da2bf2952fd10b18e9a257ef74e0fecd6ed5ae6e1ec10dace2f4945f0d2
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【7月4日】
+  A：你前几天说的那个小号，我觉得不是完全陌生。
+  A：我把今天要处理的小事列出来了。
+  B：不要再把我的账号和现实身份联系起来。
+  B：一项项来，别着急。
+  A：旧发言的时间都能对上，我知道你在说什么。
+  B：我不想谈这些，请停止继续翻我的私人内容。
+  A：刚才打印的几页我重新装订好了。
+  A：小号也给你翻了，别当我什么都不知道。
+  B：这样放包里就不容易散。
+  A：家里那盏灯最近有点闪。
+  【7月5日】
+  B：可能灯泡松了，先检查一下。
+  A：午休想出去走一走。
+  A：我晚上回去看看。
+  B：可以，坐久了活动一下。
+  B：别踩高凳子，找人帮忙。
+  B：不要把任何内容转发给别人。
+  A：我把提醒设置成响铃了。
+  A：你先把那条公开内容删掉，我们就不提了。
+  B：我会走平台流程处理，不接受你施压。
+  B：好，重要消息就不容易错过。
+  【7月6日】
+  A：我只是提醒你，之前发过什么大家都看得到。
+  A：外面刚停雨，路面还有点湿。
+  B：请不要再把这些当成威胁我的理由。
+  B：你周末一般怎么放松？
+  B：走路慢点，别滑了。
+  A：在家听听播客，偶尔做饭。
+  B：挺好的，能换换脑子。
+  A：我晚上准备煮点面。
+  A：是啊，最近想少看屏幕。
+  【7月7日】
+  A：你要是不处理，我可能会告诉别人。
+  B：放点青菜就挺好。
+  B：这已经越界了，我会保留聊天并向平台申诉。
+  A：好吧，我现在还没发出去。
+  A：快递柜今天人很多。
+  B：请停止保存或传播关于我的内容。
+  A：我暂时不说了。
+  B：可能赶上大家下班了。
+  A：今早公交比平时快，我还提前到了。
+  B：今天路上车少，难得。
+  【7月8日】
+  A：我顺便买了杯热豆浆。
+  A：我把桌上的书归到架子上了。
+  B：天气凉喝热的正好。
+  B：请以后不要再联系我。
+  B：整理完看着舒服多了。
+  A：知道了。
+  B：需要沟通就通过平台的正式渠道。
+  A：最近我试着早点睡。
+  A：行。
+  B：到此为止。
+  【7月9日】
+  B：睡够了白天精神会好些。
+  A：我把水杯放在门口了。
+  B：这下出门应该不会忘。
+  A：今天的会比计划短，挺意外的。
+  B：那你能早点吃饭了。
+  A：我打算周末去菜市场看看。
+  B：上午去人少一点。
+  A：我刚换了手机壳，手感轻不少。
+  B：颜色挺清爽的。

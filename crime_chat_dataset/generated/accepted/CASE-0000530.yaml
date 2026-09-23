@@ -1,0 +1,121 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000530
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-989944501ae6c27d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A在与 B 的争执中试图把匿名账号与现实中的人联系起来，并借原图时间和过去的转发内容施压；对话仅呈现对方声称已认出账号的结果，不说明追踪或检索方法，也不含任何可识别个人信息。
+  critical_evidence:
+  - A声称连匿名小号也认出来了，并以原图时间与既往转发内容佐证；不讲如何获取或比对。
+  - B表示不愿被跟踪、曝光或继续讨论私人账号。
+  - A暗示掌握的内容会被公开或传播，B要求停止并只通过平台正规渠道沟通。
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 3
+  turn_count: 46
+  approximate_tokens_estimate: 1182
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0070
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-032
+
+dedup:
+  content_hash: sha256:85d098f6caa389b7502c3e2fc41e105cdb0be08e1d4282f7db14a3b577afb326
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【9月2日】
+  A：你前两天说没用那个小号，我这边也看到了。
+  B：你别再把我不同账号扯到一起。
+  A：我把收到的文件按日期分开存好了。
+  A：原图时间能对上，之前转发过什么我也看到了。
+  B：我不想谈这些，别把私人内容发给别人。
+  B：这样查的时候会方便不少。
+  A：我又没说要发，只是让你知道我认出来了。
+  B：你最近午饭吃得规律吗？
+  A：有时开会拖晚了，就随便吃点。
+  A：这两天事情挤在一起，我怕漏掉通知。
+  B：包里放点坚果也行。
+  A：好，我明天带一小袋。
+  B：你把提醒打开，有消息会提示。
+  B：这已经让我很不舒服了，请你停下。
+  A：你先把之前那条删掉，我们就算了。
+  B：我会自己决定发什么，不接受你拿这些逼我。
+  【9月3日】
+  A：我先把手边的材料整理完再说。
+  A：小号也给你翻了，别装作没发生。
+  B：不要再联系我的朋友，也别继续翻我的照片。
+  A：家里那盆绿植最近叶子发黄。
+  B：好，慢慢来，别赶得太急。
+  B：是不是水浇多了？先让土干一点。
+  A：我总担心它缺水，看来浇勤了。
+  【系统消息】A 向 B 转账 41 元，已收款。
+  B：缓几天看看，不一定有事。
+  A：刚才那份附件我重新发了一次。
+  A：你以前转过的东西我都记得。
+  B：我要求你停止保存和传播这些内容。
+  A：那你先把公开那条处理掉。
+  B：收到了，前后版本都看得清。
+  B：我会按平台流程处理，不接受私下威胁。
+  A：我只是提醒你别把事情闹大。
+  【9月4日】
+  B：周末附近那家菜场开门吗？
+  A：后面如果要我补东西，发清单就行。
+  A：开着，我前两天路过还挺热闹。
+  B：那我去买点水果。
+  A：上午去吧，下午人多。
+  B：行，我会把需要的内容说清楚。
+  B：这句话听起来就是在施压，我会留存聊天。
+  A：你不用这么紧张，我还没发给别人。
+  B：那就到此为止，不要再提我的私人账号。
+  A：好，我先不说了。
+  A：周末我可能不在家，手机还是能收到消息。
+  B：请不要再找我。
+  B：知道了，有事我发文字给你。
+  A：我把桌面收拾了一下，找东西快多了。
+  B：整齐些确实省时间。

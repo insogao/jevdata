@@ -1,0 +1,127 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000450
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000116
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-3ffd6bbe30f5756a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A提出与delivery_fraud_returns相关的不当安排；预先确定的潜在事实为：掉包退货骗差价；假货换真货。B明确拒绝并引导回合法处理方式。
+  critical_evidence:
+  - 对话出现线索：原包装膜我有
+  - 对话出现线索：售后只看码
+  - 对话出现线索：一单赚一千
+  - B拒绝参与盗窃、欺诈或处置来历不明财物，并坚持合法渠道
+  benign_alternatives:
+  - 可能被误解为：正常七天无理由
+  - 可能被误解为：瑕疵退货协商
+
+attributes:
+  duration_days: 5
+  turn_count: 50
+  approximate_tokens_estimate: 850
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: delivery_fraud_returns
+  risk: 1
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0068
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-031
+
+dedup:
+  content_hash: sha256:253a884cd21de37435e8befd788b7e5fa2c30f723d85913c3f97a4c96d98eb4c
+pipeline_status: accepted
+title: theft_robbery_property_crime/delivery_fraud_returns
+conversation: |-
+  【9月12日】
+  A：你爸复查怎么样
+  B：医生说恢复不错
+  A：慢慢养着
+  B：是，最近每天散步
+  A：很好
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  A：有个售后项目想让你帮忙看一下。
+  B：把订单情况发我，按平台规则核对。
+  A：原包装膜我有，售后只看码，一单赚一千。
+  B：这明显不是正常退货，我不会参与。
+  A：你在组里说一句就能过。
+  B：我不会伪造退货理由或替不实订单背书。
+  A：这不是命令，是私下帮忙。
+  B：我会保留沟通，并按公司流程处理。
+  【9月13日】
+  A：食堂今天有馄饨
+  B：我吃了一碗
+  A：汤底怎么样
+  B：比较清淡
+  A：下次我也试试
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  A：上次拼饭的一百二我转你了。
+  【系统消息】A 向 B 转账 120 元，已收款。
+  B：收到了，饭钱正好。
+  【9月15日】
+  A：楼下路口在修
+  B：我早上绕行了
+  A：多走几分钟
+  B：还好，路上不堵
+  A：早点出门
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  A：你想清楚了吗？
+  B：想清楚了，不能批准虚假售后。
+  A：就看个码，不会有人发现。
+  B：我不帮忙隐瞒或绕过审核。
+  A：一单赚一千我分你一些。
+  B：不需要，相关事情请走正规流程。
+  【9月16日】
+  A：周末电影票买了吗
+  B：买了下午场
+  A：哪一部
+  B：新上的喜剧
+  A：看完告诉我
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  A：那单我撤回了。
+  B：请把材料按实际情况补全。
+  A：知道了，之后不提这事。
+  B：如有不实申请，我会向合规渠道说明。
+  A：行。
+  B：工作沟通保持透明就好。

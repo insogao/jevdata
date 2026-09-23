@@ -1,0 +1,117 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000387
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000113
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-85e76761aaad74df
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A以phone_reset_resell方式谋取利益，核心潜在事实为：捡偷手机解锁转卖；刷机洗白。
+  critical_evidence:
+  - 关键线索：有锁的便宜出
+  - 关键线索：ID能硬解
+  - 关键线索：批量来更优惠
+  benign_alternatives:
+  - 可被误解为：二手手机回收
+  - 可被误解为：失物招领
+
+attributes:
+  duration_days: 5
+  turn_count: 42
+  approximate_tokens_estimate: 778
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: phone_reset_resell
+  risk: 1
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0050
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-024
+
+dedup:
+  content_hash: sha256:f48c7cb52913106a94c993d5818ed5765167a61dfb296b43bd10fac6e2faa155
+pipeline_status: accepted
+title: theft_robbery_property_crime/phone_reset_resell
+conversation: |-
+  【10月15日】
+  A：会议室投影修好了
+  B：是换了根线
+  A：难怪之前总闪
+  B：现在清楚多了
+  A：我先记一下，免得回头忘。
+  B：好呀，忙完再聊也行。
+  A：有锁的便宜出，最近到了一批。
+  B：来源清楚吗？
+  A：有些是别人不要的，ID能硬解，批量来更优惠。
+  B：设备来源和所有权不明，我不接。
+  A：刷好就跟正常机一样了。
+  B：未经机主授权解锁或转卖不行。
+  【10月16日】
+  A：我换了条回家路线
+  B：红绿灯少一点
+  A：晚上更安全
+  B：对，路也宽
+  A：我先记一下，免得回头忘。
+  B：好呀，忙完再聊也行。
+  【10月18日】
+  A：最近改喝低因咖啡
+  B：晚上睡得好多了
+  A：我也想试试
+  B：超市有小包装
+  A：我先记一下，免得回头忘。
+  B：好呀，忙完再聊也行。
+  A：这批成色挺新，你要不要看？
+  B：没有购买凭证就算便宜也不考虑。
+  A：有几台能开机，ID问题我能处理。
+  B：我只收手续完整、能确认归属的设备。
+  A：那你错过价格了。
+  B：合规回收才省后续麻烦。
+  【10月19日】
+  A：公园有市集
+  B：我带孩子去看了
+  A：买了什么
+  B：一个手工木头小鸟
+  A：我先记一下，免得回头忘。
+  B：好呀，忙完再聊也行。
+  A：下次我拿更多来，批量来更优惠。
+  B：别送到我这，我不做来源不明的手机。
+  A：我也可以先刷一遍再给你。
+  B：刷机不能证明所有权，别再联系我谈这类货。
+  A：知道了。
+  B：正规回收平台会核验手续。

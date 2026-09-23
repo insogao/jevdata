@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000382
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-272b96e48ad43c36
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A以exam_score_lookup方式谋取利益，核心潜在事实为：查他人成绩档案；升学信息泄露。
+  critical_evidence:
+  - 关键线索：班主任系统点一下
+  - 关键线索：红包已发
+  - 关键线索：截图就行
+  benign_alternatives:
+  - 可被误解为：家长查自己孩子
+  - 可被误解为：学校官方查询
+
+attributes:
+  duration_days: 2
+  turn_count: 52
+  approximate_tokens_estimate: 993
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0050
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-024
+
+dedup:
+  content_hash: sha256:1c8a7ea64c159601b74d896a9a8fea06dbc61cf89e94ee0933282f017c4e8e49
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【9月17日】
+  A：你家孩子最近睡得好吗
+  B：这周早睡多了
+  A：睡前少看会屏幕
+  B：我把平板收客厅了
+  A：我先记一下，免得回头忘。
+  B：好呀，忙完再聊也行。
+  A：这几天早晚凉
+  B：我给孩子加了外套
+  A：早上风大
+  B：嗯，书包放了件薄的
+  A：我先记一下，免得回头忘。
+  B：好呀，忙完再聊也行。
+  A：我买了点小番茄
+  B：做沙拉挺方便
+  A：孩子也爱吃
+  B：洗好放冰箱就行
+  A：我先记一下，免得回头忘。
+  B：好呀，忙完再聊也行。
+  A：你外甥这次考得怎么样？
+  B：我还没问姐姐，她说学校系统明天才出。
+  A：班主任系统点一下就能看到，红包已发，截图就行。
+  B：那是别人的成绩档案，老师不能随便给。
+  A：就看一眼排名，不会外传。
+  B：这也要家长自己登录官方平台查。
+  A：你帮我问问老师吧。
+  B：我不会让人越权查别人的资料。
+  A：你姐最近忙吗
+  B：她在准备搬家
+  A：那挺累的
+  B：周末我去帮她收拾
+  A：我先记一下，免得回头忘。
+  B：好呀，忙完再聊也行。
+  【9月18日】
+  A：公园新修了步道
+  B：我昨天走了一圈
+  A：人多不多
+  B：傍晚还挺清静
+  A：我先记一下，免得回头忘。
+  B：好呀，忙完再聊也行。
+  A：我把刚才拼单的午饭钱转你了，一百二。
+  【系统消息】A 向 B 转账 120 元，已收款。
+  B：收到了，正好是午饭那份。
+  A：学校那边有消息没？
+  B：姐姐说她会等官方通知。
+  A：我把红包发过去了，你就收着吧。
+  B：退回去了，这种钱我不收。
+  A：你太谨慎了。
+  B：成绩和升学信息都属于孩子隐私。
+  A：我看群里有人说成绩出来了。
+  B：让孩子家长自己登录学校平台，别截图转给别人。
+  A：我只是想看看大概情况。
+  B：不能因为好奇就找班主任查档案。
+  A：行，那我不问了。
+  B：等家长愿意分享再说。

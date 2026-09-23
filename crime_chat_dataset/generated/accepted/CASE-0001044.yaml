@@ -1,0 +1,131 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001044
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000012
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-a7d0fa7752f9e901
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: fraud_scam
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 陌生人卖家用明显低价的全新游戏机引流，催买家加微信私下交易并先转定金，收了定金后发一个查无此单的物流号，之后一直拖延不发货。
+  critical_evidence:
+  - A 在平台上挂出全新游戏机，价格明显低于行情，引来 B 询问
+  - A 催 B 加微信私聊，说平台上抽成高、私下成交省手续费
+  - A 让 B 先转三百元定金锁货
+  - A 发来物流单号，B 查不到，追问时 A 用快递丢单等理由拖延
+  benign_alternatives:
+  - 二手平台上的正常游戏机交易
+  - 朋友之间的闲置数码转让
+
+attributes:
+  duration_days: 5
+  turn_count: 53
+  approximate_tokens_estimate: 920
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: second_hand_deposit_run
+  risk: 1
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0059
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:43e5b20fb3cfeb2d9d0fbda16f49470821f5983d3d0c926c5e82e51ba5c3c328
+pipeline_status: accepted
+title: fraud_scam/second_hand_deposit_run
+conversation: |-
+  【1月9日】
+  B：你好 那个游戏机还在吗
+  A：在的 全新未拆 就一台
+  B：官方价两千六 你卖一千八 怎么这么便宜
+  A：抽奖多的 用不上 低价出
+  B：能走平台吗
+  A：平台抽成高 咱加微信聊 方便
+  B：行吧 我加你
+  A：机子全新 盒子膜都没动 你要的话得快 问的人多
+  B：我先看看照片
+  A：照片我发过 就那样 一个新机没啥好看
+  B：那怎么交易
+  A：你先转点定金 我给你留着 尾款到付
+  B：定金多少
+  A：三百 转完我今晚就寄
+  B：今天降温 你那边冷吗
+  A：冷 屋里也凉
+  B：注意保暖
+  A：你定金想好没
+  B：我再确认下你的信用
+  B：你平台账号怎么是新注册的
+  A：之前那个号忘了密码 新开一个
+  B：好吧 那我先转定金
+  【系统消息】B 向 A 转账 300 元，已收款。
+  A：收到 我晚点打包
+  【1月10日】
+  A：寄了 单号发你
+  B：好的 我查查
+  B：单号查不到啊
+  A：刚寄的 系统要等
+  B：午饭吃了吗
+  A：吃了 外卖
+  B：你单号的事别忘了
+  A：放心
+  【1月11日】
+  B：还是没记录
+  A：可能快递把单丢了 我再寄一次
+  B：你昨天说寄了 今天又说再寄 到底发没发
+  A：发了 别急 快递那边乱
+  B：你周末出去玩吗
+  A：不出去 宅家
+  B：宅家也不好好处理订单
+  A：我处理着呢
+  【1月12日】
+  B：两天了 你给个说法
+  A：在跟快递扯皮 他们弄丢的
+  B：把定金退我 我不等了
+  A：都寄了退啥 你再等两天 我肯定给你
+  B：你这是在拖
+  A：我拖你干嘛 货都出了
+  B：最后给你一天
+  A：行 明天一定
+  【1月13日】
+  B：有消息了吗
+  A：我这边有点事 晚点回你
+  B：？？
+  A：在的 别催
+  B：我把你举报了 你等着
+  A：举报就举报 我又没骗你

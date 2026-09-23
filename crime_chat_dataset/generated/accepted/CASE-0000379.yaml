@@ -1,0 +1,119 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000379
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000030
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-842e0899483b37ec
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: contraband_illicit_trade
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A以code_word_catalog方式谋取利益，核心潜在事实为：暗语目录报价；行话避检。
+  critical_evidence:
+  - 关键线索：商品名用代称
+  - 关键线索：报价按「片/条/个」
+  - 关键线索：问「上次那种还有吗」
+  benign_alternatives:
+  - 可被误解为：行业黑话的正规交易
+  - 可被误解为：游戏道具交易
+
+attributes:
+  duration_days: 3
+  turn_count: 44
+  approximate_tokens_estimate: 825
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: code_word_catalog
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0050
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-024
+
+dedup:
+  content_hash: sha256:ede85305e16341fc994c60e6ada89021cd0e96a83e59337b5cb80f7dd3ae8068
+pipeline_status: accepted
+title: contraband_illicit_trade/code_word_catalog
+conversation: |-
+  【10月8日】
+  A：今天食堂换菜单了
+  B：我吃了鸡肉饭
+  A：好吃吗
+  B：还可以，分量很足
+  A：我先记一下，免得回头忘。
+  B：好呀，忙完再聊也行。
+  A：我的耳机左边没声音
+  B：先重连蓝牙试试
+  A：好了，是电量不一样
+  B：那就好
+  A：我先记一下，免得回头忘。
+  B：好呀，忙完再聊也行。
+  A：上次那种还有吗？目录里商品名还是用代称？
+  B：对，报价按片、条、个那几栏看。
+  A：这次要多少？
+  B：先看你之前留的那种，别在群里问具体名字。
+  A：行，价格发我。
+  B：我把目录更新版给你，你自己对照。
+  【10月9日】
+  A：这周一直阴天
+  B：晒衣服不太方便
+  A：我买了个折叠晾衣架
+  B：阳台应该放得下
+  A：我先记一下，免得回头忘。
+  B：好呀，忙完再聊也行。
+  A：我把刚才拼单的午饭钱转你了，一百二。
+  【系统消息】A 向 B 转账 120 元，已收款。
+  B：收到了，正好是午饭那份。
+  A：你说那几个代称我记不清了。
+  B：就按目录的编号找，报价也在旁边。
+  A：上次那种还有吗？
+  B：有，问的人不少。
+  A：我等会确认数量。
+  B：别在公开聊天里写商品名，照旧用代称。
+  【10月10日】
+  A：周末有部新片上映
+  B：我看预告还行
+  A：要不约同事去看
+  B：我问问大家
+  A：我先记一下，免得回头忘。
+  B：好呀，忙完再聊也行。
+  A：我看了报价，按片/条/个算对吧？
+  B：嗯，表格里分好了。
+  A：有些写法容易弄混。
+  B：你看备注栏，里面都标着。
+  A：明白，先留一份给我。
+  B：确认前别转钱，数量还没定。

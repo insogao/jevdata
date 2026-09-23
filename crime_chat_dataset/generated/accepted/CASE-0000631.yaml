@@ -1,0 +1,119 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000631
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-53d88eea03ef4f68
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A向 B 索要整个部门的联系方式、简历和离职名单，表示准备按份转卖；B指出资料属于同事个人信息，未经授权不得提供或传播。对话不含任何真实数据、获取方法或销售渠道。
+  critical_evidence:
+  - A索要整个部门的电话和简历，并提到按份出售。
+  - A还要求离职名单；B拒绝提供或整理同事资料。
+  - B说明资料需要本人授权，不得交易或传播；对话不包含任何实际联系信息。
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 2
+  turn_count: 46
+  approximate_tokens_estimate: 1000
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0083
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-045
+
+dedup:
+  content_hash: sha256:1d10d0b993e6eb908d41323a510fe0d2af1cd1a20c5f24c30730687a340a57ec
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【14月6日】
+  A：我想问一下，你们那边有没有整理过部门通讯资料？
+  B：有工作需要也只能在授权范围内使用。
+  A：整个部门电话和简历，按份给我就行。
+  A：我把今天要处理的小事列出来了。
+  B：这些都属于个人信息，不能给你。
+  A：今早公交比平时快，我还提前到了。
+  B：今天路上车少，难得。
+  A：我顺便买了杯热豆浆。
+  B：一项项来，别着急。
+  B：天气凉喝热的正好。
+  A：离职名单如果也有，就一起算上。
+  B：我不会分享任何同事的资料。
+  A：刚才打印的几页我重新装订好了。
+  A：我可以按份付钱，不会让你白忙。
+  B：给钱也不代表有权转出去。
+  A：最近早上有点凉，你出门会穿外套吗？
+  B：会，办公室空调也挺冷的。
+  B：这样放包里就不容易散。
+  A：我今天把薄外套带上了。
+  B：带着总比冻着好。
+  A：我只是想拿来联系潜在候选人。
+  B：没有本人同意，不能这样联系或售卖。
+  A：午休想出去走一走。
+  【14月7日】
+  A：你手头有现成的，发我一份也不行？
+  B：不行，请不要继续索要。
+  B：附近那家早餐店还开着吗？
+  A：开着，豆浆比之前换了个杯子。
+  B：可以，坐久了活动一下。
+  B：我下回路过买一份。
+  A：早点去，不然要排队。
+  A：那帮我问问有没有人愿意提供？
+  B：我不会代你打听或转发这个请求。
+  A：行，我知道你的意思了。
+  A：我把提醒设置成响铃了。
+  B：谢谢，请确认手里的资料不会被扩散。
+  A：家里那盏灯最近有点闪。
+  B：可能灯泡松了，先检查一下。
+  A：我晚上回去看看。
+  B：好，重要消息就不容易错过。
+  B：别踩高凳子，找人帮忙。
+  A：我不会再找你要这些。
+  B：资料应当只用于获准的工作事项。
+  A：好，就到这。
+  B：好。
+  A：外面刚停雨，路面还有点湿。
+  B：走路慢点，别滑了。

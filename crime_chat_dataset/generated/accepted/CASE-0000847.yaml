@@ -1,0 +1,114 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000847
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-68db5614bd3e739f
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 试图获取或转卖未经授权的同事联系方式、简历或离职名单；B 拒绝提供并引导使用候选人自愿授权的招聘流程。
+  critical_evidence:
+  - A 索要整个部门的联系方式或离职名单
+  - A 提出按份出售或转交简历
+  - B 拒绝泄露和交易员工资料，提出公开职位或授权报名作为替代
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 5
+  turn_count: 38
+  approximate_tokens_estimate: 710
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0102
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-058
+
+dedup:
+  content_hash: sha256:233814136f47ba1e39a4012ac48776f15769217f28afc2f03c490d80b0cb27c8
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【9月22日】
+  A：我们在找候选人，是否能拿到一个部门的联系方式？
+  B：我没有授权，不能提供员工资料。
+  A：招聘页的岗位描述谁来定稿？
+  B：我先整理职责，再请业务负责人确认。
+  A：薪资范围要不要公开？
+  B：可以和HR确认后写区间。
+  A：我不确定福利怎么表述。
+  B：写清楚假期和培训政策就行。
+  A：今晚我改完发你。
+  B：我明早看。
+  A：谢谢。
+  B：没问题。
+  【9月23日】
+  A：简历也能按份报价，离职名单一起给我吧。
+  B：我不会出售或转发个人资料。
+  【9月24日】
+  A：如果把名字去掉，客户就看不出来了。
+  B：联系方式和经历组合仍可能识别到人。请用公开岗位邀请自愿申请。
+  A：中午想吃点清淡的。
+  B：园区旁边新开了粥铺。
+  A：走路远吗？
+  B：五分钟就到。
+  A：那我下楼看看。
+  B：可以点小份试试。
+  A：味道挺好的。
+  B：下回我也去。
+  A：我把地址记下了。
+  B：周围还有家卖豆花的。
+  【9月25日】
+  A：好，那不碰这份名单了。
+  【9月26日】
+  B：谢谢，之后只处理明确授权的简历。
+  B：周末那场电影你看了吗？
+  A：看了，节奏比预告片慢一点。
+  B：结尾怎么样？
+  A：留了点想象空间。
+  B：那我也找时间看。
+  A：别看剧透就好。
+  B：我会注意。
+  A：片尾曲挺好听。
+  B：我去找找歌名。
+  A：回头发你。

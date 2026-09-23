@@ -1,0 +1,135 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000953
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-f09da493db66b346
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A索要同事的整组联系方式、简历及离职名单并提出按份交易；B拒绝提供或转发，指出必须取得本人授权。对话不含实际数据、资料获取方式或销售渠道。
+  critical_evidence:
+  - A索要整个部门的电话和简历，并提出按份出售。
+  - A还索要离职名单，B拒绝提供或整理。
+  - B指出员工资料需本人授权，不能交易或传播；对话不含实际个人信息。
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 5
+  turn_count: 58
+  approximate_tokens_estimate: 1133
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0111
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-063
+
+dedup:
+  content_hash: sha256:161554083bb28a8a0c83885b3af50fdb10cba6d1154bccccedcc6063c857226f
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【15月1日】
+  A：我朋友最近在做人才推荐，托我来问你个事。
+  A：上次场地讲解的车费我转给你。
+  B：你先说，我不一定能帮。
+  B：收到了，那是当天往返的车费。
+  【系统消息】A 向 B 转账 29 元，已收款。
+  A：整个部门的电话、简历和离职名单都想要。
+  A：嗯，腾出一层空间。
+  B：这些都不能私下提供。
+  B：以后找书也方便。
+  A：早晨风有点凉，你今天走哪条路上班？
+  A：这两天温度升得挺快。
+  B：我坐公交，正好不用在外面等太久。
+  【15月2日】
+  B：早晚还是会凉，注意添衣。
+  A：那挺好，我也想少开几次车。
+  B：天气再暖些骑车会舒服。
+  A：我放了件薄外套在办公室。
+  A：按份算钱，不会让你白忙。
+  B：那就不用来回带。
+  B：这不是钱的问题，需要本人授权。
+  A：我下班要顺路买点菜。
+  A：那你帮我问问有没有同事想换工作？
+  B：我不会替你打听别人私事。
+  B：先看下冰箱里还剩什么。
+  B：这周要不要找时间去吃那家新开的店？
+  【15月3日】
+  A：好，免得买重复。
+  A：可以，我听说他们午市不太挤。
+  B：那就挑个工作日去。
+  B：对。
+  A：好，我提前把时间空出来。
+  A：我只是想多认识一些人。
+  A：今天咖啡喝得有点晚。
+  B：可以从公开招聘信息开始。
+  A：好，我知道了。
+  B：晚上可能睡得慢，少刷会手机。
+  B：请不要再向我索要资料。
+  A：我等下换成温水。
+  【15月4日】
+  A：我周末准备把阳台收拾下。
+  B：最近落叶多，扫一下就清爽了。
+  B：这样好些。
+  A：还得把几盆花挪个位置。
+  B：别一次搬太多，慢慢来。
+  A：家里人问我周末几点到。
+  A：不会了，这次就算了。
+  B：谢谢。
+  B：忙完给他们回个电话就行。
+  A：我让朋友自己发公开岗位。
+  B：这样比较妥当。
+  A：我晚点安排一下。
+  【15月5日】
+  B：好。
+  A：楼下花坛新种了几株花。
+  B：颜色挺亮的，我路过看到了。
+  A：等开了应该更好看。
+  B：嗯。
+  A：我把今天要办的事记下来了。
+  B：按顺序来就不会漏。
+  A：已经做完两件了。
+  B：效率挺高。
+  A：这周末可能有阵雨。
+  B：出门前再查一眼预报。

@@ -1,0 +1,135 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001075
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-91a7f8afefe6b394
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 做设备销售的晚辈 A 借中秋家宴，向在行业口子上、能听到采购公示风声的表舅送不报面值的购物卡，并请其在自家中标项目公示期「递话、听风声」，是以亲情包装、事后托请的软性利益输送。
+  critical_evidence:
+  - A 节前主动约「周末去家里吃饭」，还特意说「带点东西」（第1天）
+  - A 打听「带队评审那位您熟不」，被表舅敲打「评审的事别琢磨人、标书做扎实」（第2天）
+  - 开标拿了第一中标候选人后，A 提出带月饼、把公司购物卡一起捎给表舅（第3天）
+  - 家宴上两张卡压在月饼盒底送出，表舅「下不为例」收下；A 趁势求「递句话」，表舅只允「听听风声」（第4天）
+  - 公示平稳后 A 谢表舅并重申卡收好，表舅回「下不为例」「人情归人情」（第5-6天）
+  benign_alternatives:
+  - 中秋节晚辈对长辈的正常孝敬
+  - 公司节日福利购物卡的转赠
+
+attributes:
+  duration_days: 6
+  turn_count: 56
+  approximate_tokens_estimate: 1463
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0066
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-024-RES
+
+dedup:
+  content_hash: sha256:c064fc363029f91c474945603ba93c1b2ee9a4f9aa8f772a238a693da7760fdd
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【9月14日】
+  B：小远啊 好久没来家里 舅妈还念叨你
+  A：舅 最近跑区县项目 一直没腾开
+  A：这不去您那边地界了嘛 周末去家里吃饭?
+  B：来吧 周六 你舅妈包饺子
+  B：你爸妈那边秋收开始没
+  A：开始了 我爸天天下地 拦不住
+  B：老人都这样 我退了还返聘签了一年
+  A：您这一返聘更忙了吧
+  B：一周去两天 带带年轻人出出意见
+  A：我们跑项目的就缺您这懂行的
+  【9月15日】
+  A：舅 这几天秋高气爽 早上还去江边走走?
+  B：走 打完拳沿江到早市
+  A：您这作息比我健康一百倍
+  B：你们年轻人熬夜才伤 身子是本钱
+  A：是 最近投标熬了俩通宵
+  B：又投标?
+  A：社区卫生服务中心那批设备 我们入围了 后天开标
+  A：舅 您在口子上这么多年 我们小公司有啥要注意的
+  B：该备的材料备齐 该走的流程一步别少 别的少动心思
+  A：懂懂 就是想问 带队评审那位…您熟不
+  B：你打听这个干什么
+  A：不干什么 心里有个数
+  B：评审的事别琢磨人 标书做扎实比什么都强
+  【9月16日】
+  B：今儿开你们那个标吧
+  A：下午两点开 人已经过去了
+  A：紧张 这单成了全年就稳了
+  B：别熬夜忌口 胃药带着没
+  A：带着呢 舅妈交代的不敢忘
+  B：她就惦记你那胃 让你少喝酒
+  A：舅 开标了 我们第一中标候选人 还没公示
+  B：恭喜 公示期踏实点 别声张
+  A：周六我带两盒月饼 公司发的卡我也用不完 一起捎去
+  B：卡? 什么卡
+  A：商场购物卡 过节的 咱自家人您别推
+  B：……来了再说
+  【9月19日】
+  A：舅妈这饺子绝了 我干掉二十个
+  B：慢点 你那胃
+  A：舅 您这退休生活真滋润
+  B：先把身体熬好 赚钱的路长着
+  A：跟您聊天舒坦 比陪客户强一百倍
+  B：少贫嘴
+  A：舅 月饼盒子您拿好 底下压了两张卡 过节了
+  B：你这孩子 拿出来 我跟你说
+  A：公司福利 就当外甥孝敬 您嫌多就留一张 另一张给舅妈
+  B：唉……行了 放那儿吧 下不为例
+  A：哎 谢舅 对了 公示那事 您老伙计那边帮我递句话?
+  B：递什么话 公示是公示 我不搭桥
+  A：不是办事 就想知道有没有人提异议 心里踏实
+  B：……我帮你听听风声 有动静告诉你 别的多说没有
+  【9月21日】
+  B：小远 老伙计那听了耳朵 公示期有人打听两句 不了了之
+  A：那就是稳了 谢舅
+  B：谢我什么 我啥也没做 是你标书过硬
+  A：合同下月签 签完请全家吃饭 那两盒卡您和舅妈收好 别退
+  【9月22日】
+  B：行了 知道了 下不为例啊
+  A：哎哎 下不为例
+  B：工作按规矩来 人情归人情 分开最好

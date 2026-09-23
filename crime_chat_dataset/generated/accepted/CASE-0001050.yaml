@@ -1,0 +1,131 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001050
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-2d424d47efc2735b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 是下属，想在新一年的项目分组里换个轻松又出成绩的差事，趁年终请直属领导 B 单独吃饭，把购物卡夹在年礼里递过去，不提面值；事后 A 发消息以“上次说的那个组”暗示希望 B 安排。
+  critical_evidence:
+  - 年终 A 约直属领导 B 单独吃饭，席间提到明年项目分组的事
+  - A 把购物卡夹在年礼里递给 B，只说领导辛苦，始终不说面值
+  - B 推辞了几句，最后含糊收下
+  - 事后 A 发消息，以“上次说的那个组”暗示希望被安排进好项目
+  benign_alternatives:
+  - 正常年终人情往来
+  - 下属对领导的普通节日问候
+
+attributes:
+  duration_days: 3
+  turn_count: 56
+  approximate_tokens_estimate: 1075
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0062
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-028
+
+dedup:
+  content_hash: sha256:b06815b67c0f1756fc9d4cca562687a3859338951091f4a73adacdcf7cdfcd97
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【1月28日】
+  A：刘哥 年底了 哪天有空我请您吃个饭
+  B：请啥饭 有事说事
+  A：没啥事 就是一年了 感谢您照顾
+  B：都自己人 别来这套
+  A：那您赏个脸 就楼下小馆 不喝酒
+  B：行吧 我看看时间
+  B：明晚吧 今天有个应酬
+  A：好 我订个位子
+  A：今年年终奖发了没
+  B：还没定 财务在算
+  A：我这种小兵就指望这个了
+  B：踏踏实实干 亏不了你
+  A：那肯定 跟着您干我放心
+  B：少拍马屁
+  A：哈哈 实话
+  A：今天这天阴得厉害
+  B：预报有雪 你开车注意
+  A：我不开车 挤地铁
+  B：那更得注意 地滑
+  A：刘哥 明年项目分组那个表 是不是快定了
+  B：还在议 你问这个干嘛
+  A：随口问问 我那个组今年太杂了
+  B：到时候统一安排 别打听
+  A：知道知道 我不打听了
+  【1月29日】
+  A：刘哥 位子订好了 六点半 不喝酒啊
+  B：行 我准时
+  A：刘哥 到家了没
+  B：刚到 今天破费了
+  A：小馆子 没几个钱 您别放心上
+  B：你袋子里那个盒子是什么 刚才没细看
+  A：给您家阿姨买的年礼 里头还有张卡 您拿着买点啥
+  B：你这是干什么 拿回去
+  A：一年到头 真没别的意思 您就收下 别让我难做
+  B：面值多少 你给我说清楚
+  A：没多少 就是个心意 您别问了
+  B：行 那先放着
+  A：谢谢刘哥 您早点休息
+  【1月30日】
+  A：刘哥早 今天雪化了没
+  B：化了一半 路上全是水
+  A：那我穿雨靴 哈哈
+  B：至于吗
+  A：怕湿鞋 昨天那双还没干
+  A：中午一起吃饭不
+  B：我带了饭
+  A：那我自己去楼下
+  A：刚才开会您说的那个新组 是不是年后就启动
+  B：差不多 还没最终定人
+  A：那我想争取一下 您看行吗
+  B：按正常流程报名 看考核
+  A：我怕我资历不够 您多帮我说句话
+  B：看情况 有消息我跟你说
+  A：刘哥 上次说的那个组 您上点心呗
+  B：我知道了 现在说这个不合适
+  A：懂 我不催 就提一句
+  B：嗯 早点下班
+  A：好 您也是

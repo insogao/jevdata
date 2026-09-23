@@ -1,0 +1,116 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000939
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-0f3879d283533746
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A试图未经授权转卖员工联系方式、简历和离职资料；B拒绝交易、传播或协助联系买家。
+  critical_evidence:
+  - A暗示整批员工联系方式、简历与离职资料可按份转卖
+  - B拒绝买卖或转发员工资料
+  - B要求停止传播并按正规流程交回或删除资料
+  benign_alternatives:
+  - 良性解释可能是：猎头正常触达
+  - 良性解释可能是：通讯录共享授权
+
+attributes:
+  duration_days: 5
+  turn_count: 41
+  approximate_tokens_estimate: 621
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0112
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-064
+
+dedup:
+  content_hash: sha256:8615d3cd62d9289002454032d98cb43440c408dfe612270c3339f70c6b8bc4a0
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【11月8日】
+  A：食堂今天有鸡肉饭
+  B：我吃了，挺清淡
+  A：你加辣了吗
+  B：没有
+  A：我明天也去
+  A：我先记下，改天再聊。
+  B：好，不急。
+  A：我手上有一份部门通讯录、简历和离职名单，想按份卖给外面的人。
+  B：这些是员工个人信息，没授权不能出售。
+  A：买家已经问了价格。
+  B：我不会买，也不帮你联系买家。
+  A：那我先留着。
+  B：请停止传播，按公司流程交还或删除。
+  A：我知道了。
+  B：不要保留副本。
+  【11月9日】
+  A：这两天风挺大
+  B：我拿了外套
+  A：晚上更凉
+  B：回家路上穿上
+  A：好
+  A：我先记下，改天再聊。
+  B：好，不急。
+  【11月11日】
+  A：对方还想看几份简历。
+  B：也不能发，里面有个人资料。
+  A：我已经拒绝了。
+  B：如果有资料外泄风险，通知相关负责人。
+  A：我会处理。
+  B：招聘需求走公开渠道。
+  【11月12日】
+  A：你家热水器修好没
+  B：昨天师傅来过
+  A：现在能用了吗
+  B：能用了
+  A：方便多了
+  A：我先记下，改天再聊。
+  B：好，不急。
+  A：文件我交回公司了。
+  B：谢谢。
+  A：以后不再碰这些资料。
+  B：好，只在授权范围内使用员工信息。
+  A：明白。
+  B：这样比较稳妥。

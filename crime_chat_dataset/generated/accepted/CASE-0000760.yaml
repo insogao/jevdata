@@ -1,0 +1,118 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000760
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-5d3a25f309ec7aae
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A试图未经同意出售同事的联系方式、简历和离职相关资料；B拒绝使用或传播他人工作档案。
+  critical_evidence:
+  - A以“整个部门电话、简历和离职名单”等说法提出转卖个人资料
+  - B拒绝交易并要求停止传播、删除或交还相关资料
+  benign_alternatives:
+  - 良性解释可能是：猎头正常触达
+  - 良性解释可能是：通讯录共享授权
+
+attributes:
+  duration_days: 5
+  turn_count: 43
+  approximate_tokens_estimate: 813
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0094
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-053
+
+dedup:
+  content_hash: sha256:b983712b0e030bfc7edec119c23a48bf9c17f50216cd567ad655a48c35d9a95a
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【4月1日】
+  A：今天公交改线了
+  B：我早上多走了十分钟
+  A：地铁也能到
+  B：明天我试试
+  A：记得看站牌
+  A：我先记下，之后再跟你说。
+  B：好，忙完再说。
+  A：手里有些旧的人事资料，想问你有没有兴趣。
+  B：这些资料里有同事的联系方式和简历吗？
+  A：有一整批部门联系方式，还有简历和离职名单。
+  B：这涉及个人信息，没有本人同意不能卖。
+  A：有人愿意按份收。
+  B：我不会买、转发或帮你联系买家。
+  A：那我先放着。
+  B：请停止传播，并按公司流程删除或交还。
+  【4月2日】
+  A：食堂今天有蒸鱼
+  B：我吃了，味道不错
+  A：刺多不多
+  B：还好
+  A：下次我也点
+  A：我先记下，之后再跟你说。
+  B：好，忙完再说。
+  A：上次午饭拼单的一百二我转你了。
+  【系统消息】A 向 B 转账 120 元，已收款。
+  B：收到，正好是午饭钱。
+  【4月4日】
+  A：中间人还在问那批资料。
+  B：我已经说过不参与。
+  A：他想先看一小部分。
+  B：不要发送任何员工信息或简历。
+  A：我不发了。
+  B：如果资料来自单位，应交给隐私或人事负责人处理。
+  【4月5日】
+  A：你爸复查怎么样
+  B：医生说挺稳定
+  A：那就放心了
+  B：他最近散步多了
+  A：很好
+  A：我先记下，之后再跟你说。
+  B：好，忙完再说。
+  A：我把那份文件交回公司了。
+  B：谢谢，后续请勿保留副本。
+  A：我也告诉对方不再联系。
+  B：好，员工信息只能在授权范围内使用。
+  A：明白。
+  B：有正当招聘需求可以走公开渠道。

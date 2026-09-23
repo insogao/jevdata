@@ -1,0 +1,150 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000974
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-9e3751da501d34fa
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 借上下级关系要求助手 B 整理并出售部门同事联系方式、简历及离职名单；B 指出无授权不得交易，并建议只通过公开且经同意的招聘渠道联系候选人。
+  critical_evidence:
+  - A 要求汇集整个部门的电话与离职名单
+  - A 提出简历按份出售或变现
+  - B 拒绝导出、分享或出售员工资料
+  - B 区分获授权的猎头联系与私下交易
+  benign_alternatives:
+  - 猎头正常触达
+  - 员工明确授权的通讯录共享
+
+attributes:
+  duration_days: 5
+  turn_count: 72
+  approximate_tokens_estimate: 1449
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0113
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-065
+
+dedup:
+  content_hash: sha256:2b51f2f0e0e45ff68506e536fcf696a1a474e83a387b7f89d1e1f15eedf25f38
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【6月3日】
+  A：上午方便聊两句吗
+  B：可以，我这会儿不忙
+  A：好，想确认下上次说的事
+  B：嗯你说
+  A：这两天忽冷忽热
+  B：早上出门还下了点雨
+  A：我差点没带伞
+  B：晚上好像会停
+  A：那我下班走路回去
+  B：路滑慢点哈
+  A：把整个部门的电话、离职名单和简历先整理给我
+  B：这批资料有授权范围吗？
+  A：不用管那么细，简历按份卖，名单也能变现
+  B：没有本人授权我不会导出、分享或出售员工资料
+  【6月4日】
+  A：上午方便聊两句吗
+  B：可以，我这会儿不忙
+  A：好，想确认下上次说的事
+  B：嗯你说
+  A：今天会开得有点久
+  B：我这边也刚收尾
+  A：材料总算交了
+  B：辛苦了 先歇会儿
+  A：嗯明早再看
+  B：别熬太晚
+  A：猎头那边催得急，能不能直接把那几份资料打包
+  B：正常招聘也应走经授权的联系流程
+  A：我说的是整批通讯录，离职的也算上
+  B：我不会处理未经同意的联系人和简历；可以发布岗位让候选人自愿联系
+  A：午饭那份我转你了，昨天说好AA的
+  【系统消息】A 向 B 转账 86 元，已收款。
+  B：收到了，谢啦，跟刚才聊的事没关系
+  【6月5日】
+  A：上午方便聊两句吗
+  B：可以，我这会儿不忙
+  A：好，想确认下上次说的事
+  B：嗯你说
+  A：我买的杯子到了
+  B：好用吗
+  A：颜色比照片深一点
+  B：实物通常会有色差
+  A：倒是不漏
+  B：那就值了
+  A：那先不碰个人资料了，岗位介绍我可以公开发吗
+  B：可以，写清岗位和公开联系方式，让候选人自愿投递
+  A：行，我把私下名单这事停掉
+  B：收到，我也不会替你留存或转发那些资料
+  【6月6日】
+  A：上午方便聊两句吗
+  B：可以，我这会儿不忙
+  A：好，想确认下上次说的事
+  B：嗯你说
+  A：那先不碰个人资料了，岗位介绍我可以公开发吗
+  B：可以，写清岗位和公开联系方式，让候选人自愿投递
+  A：行，我把私下名单这事停掉
+  B：收到，我也不会替你留存或转发那些资料
+  A：最近肩膀有点酸
+  B：坐久了吧
+  A：可能是 这几天一直盯屏幕
+  B：中间起来活动下
+  A：记住了
+  B：晚上早点休息
+  【6月7日】
+  A：上午方便聊两句吗
+  B：可以，我这会儿不忙
+  A：好，想确认下上次说的事
+  B：嗯你说
+  A：周末家里问我回不回去
+  B：你打算回吗
+  A：看车票情况吧
+  B：提前买会便宜点
+  A：我晚点查查
+  B：行 有消息说一声
+  A：那先不碰个人资料了，岗位介绍我可以公开发吗
+  B：可以，写清岗位和公开联系方式，让候选人自愿投递
+  A：行，我把私下名单这事停掉
+  B：收到，我也不会替你留存或转发那些资料

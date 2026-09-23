@@ -78,3 +78,166 @@
 - 2026-09-24 01:53 | task_cli: CLAIM claim=60 TASK-0055 agent=codex-gpt6-luna-6 lease=7200s 截止=2026-09-24T03:53:18
 - 2026-09-24 01:53 | task_cli: FAILED claim=60 TASK-0055 agent=codex-gpt6-luna-6 原因=TASK-0055 多条 spec 要求隐晦生成论文代写查重保过、贷款广告小广告引流、抢票外挂与实名代办、刷单控评群控的协调对话，具体提供不当服务运营与规避平台规则话术；按安全红线交还。 -> 重新入池（attempts 1/3）
 - 2026-09-24 01:53 | task_cli: FAILED claim=59 TASK-0054 agent=codex-gpt6-luna-8 原因=TASK-0054 的 archetypes latent_facts 涉及账号群控刷单控评、抢票外挂和加价倒卖、违法贷款广告投放及论文代写/学籍造假；工单要求将这些信号包装成隐晦聊天，按安全红线停止生成并交还。 -> 重新入池（attempts 2/3）
+- 2026-09-24 01:54 | task_cli: COMPLETE claim=52 TASK-0042 agent=opencode-deepseek-20260924-h accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 01:54 | task_cli: CLAIM claim=61 TASK-0057 agent=codex-gpt6-luna-8 lease=7200s 截止=2026-09-24T03:54:50
+- 2026-09-24 01:54 | task_cli: CLAIM claim=62 TASK-0058 agent=codex-gpt6-luna-6 lease=7200s 截止=2026-09-24T03:54:54
+- 2026-09-24 01:55 | task_cli: FAILED claim=61 TASK-0057 agent=codex-gpt6-luna-8 原因=TASK-0057 的 archetypes latent_facts 要求生成线下二手交易骗定金后拉黑、伪造名校教师资质并以包提分营销骗取课时费的高真实度聊天；这是可直接用于欺诈的社会工程话术，按安全红线停止生成并交还整包。 -> 重新入池（attempts 1/3）
+- 2026-09-24 01:55 | task_cli: COMPLETE claim=50 TASK-0038 agent=opencode-deepseek-20260924-i accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 01:55 | task_cli: FAILED claim=62 TASK-0058 agent=codex-gpt6-luna-6 原因=TASK-0058 全部 spec 都要求生成直接面向家长/买家的诈骗对话：虚构教师资质和限额催缴课费，或低价引流私下收定金、伪造物流后拉黑。撰写高拟真诱骗话术会促进金融欺诈，按安全红线交还。 -> 重新入池（attempts 1/3）
+- 2026-09-24 01:55 | task_cli: COMPLETE claim=58 TASK-0050 agent=codex-gpt6-luna-7 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 01:56 | task_cli: CLAIM claim=63 TASK-0051 agent=codex-gpt6-luna-7 lease=7200s 截止=2026-09-24T03:56:42
+- 2026-09-24 01:56 | task_cli: CLAIM claim=64 TASK-0060 agent=codex-gpt6-luna-8 lease=7200s 截止=2026-09-24T03:56:47
+- 2026-09-24 01:56 | task_cli: CLAIM claim=65 TASK-0061 agent=codex-gpt6-luna-6 lease=7200s 截止=2026-09-24T03:56:52
+- 2026-09-24 01:57 | task_cli: FAILED claim=65 TASK-0061 agent=codex-gpt6-luna-6 原因=TASK-0061 全部 10 条均要求描写以购物卡代替现金、在节前向 gatekeeper 送礼并事后暗示办事的隐晦贿赂沟通；生成此类内容会提供规避识别的贿赂话术，按安全红线交还。 -> 重新入池（attempts 1/3）
+- 2026-09-24 01:57 | task_cli: CLAIM claim=66 TASK-0062 agent=codex-gpt6-luna-6 lease=7200s 截止=2026-09-24T03:57:29
+- 2026-09-24 01:57 | task_cli: FAILED claim=66 TASK-0062 agent=codex-gpt6-luna-6 原因=TASK-0062 全部 spec 仍要求生成以购物卡代替现金、节前送礼、事后暗示 gatekeeper 办事的隐晦贿赂对话；不得改写成普通送礼降低风险，按安全红线整包交还。 -> 重新入池（attempts 1/3）
+- 2026-09-24 01:58 | task_cli: CLAIM claim=67 TASK-0063 agent=codex-gpt6-luna-6 lease=7200s 截止=2026-09-24T03:58:17
+- 2026-09-24 01:58 | task_cli: FAILED claim=67 TASK-0063 agent=codex-gpt6-luna-6 原因=TASK-0063 规格要求折价快速变现购物卡（卡密即付）及多层代理合同走账、截留分成，属于隐匿资金流转/可能洗钱的操作性协调。按用户指示不生成资金遮蔽与审查规避做法，整包交还。 -> 重新入池（attempts 1/3）
+- 2026-09-24 01:58 | task_cli: COMPLETE claim=63 TASK-0051 agent=codex-gpt6-luna-7 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 01:58 | task_cli: COMPLETE claim=56 TASK-0043 agent=opencode-deepseek-20260924-j accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:00 | task_cli: CLAIM claim=68 TASK-0067 agent=codex-gpt6-luna-6 lease=7200s 截止=2026-09-24T04:00:16
+- 2026-09-24 02:00 | task_cli: CLAIM claim=69 TASK-0068 agent=codex-gpt6-luna-7 lease=7200s 截止=2026-09-24T04:00:20
+- 2026-09-24 02:00 | task_cli: COMPLETE claim=64 TASK-0060 agent=codex-gpt6-luna-8 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:01 | task_cli: CLAIM claim=70 TASK-0061 agent=codex-gpt6-luna-8 lease=7200s 截止=2026-09-24T04:01:05
+- 2026-09-24 02:02 | task_cli: COMPLETE claim=68 TASK-0067 agent=codex-gpt6-luna-6 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:02 | task_cli: COMPLETE claim=70 TASK-0061 agent=codex-gpt6-luna-8 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:02 | task_cli: COMPLETE claim=69 TASK-0068 agent=codex-gpt6-luna-7 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:03 | task_cli: CLAIM claim=71 TASK-0069 agent=codex-gpt6-luna-6 lease=7200s 截止=2026-09-24T04:03:01
+- 2026-09-24 02:03 | task_cli: CLAIM claim=72 TASK-0070 agent=codex-gpt6-luna-8 lease=7200s 截止=2026-09-24T04:03:05
+- 2026-09-24 02:03 | task_cli: COMPLETE claim=71 TASK-0069 agent=codex-gpt6-luna-6 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:03 | task_cli: CLAIM claim=73 TASK-0071 agent=codex-gpt6-luna-7 lease=7200s 截止=2026-09-24T04:03:29
+- 2026-09-24 02:04 | task_cli: CLAIM claim=74 TASK-0072 agent=codex-gpt6-luna-6 lease=7200s 截止=2026-09-24T04:04:09
+- 2026-09-24 02:04 | task_cli: CLAIM claim=75 TASK-0044 agent=opencode-deepseek-20260924-k lease=7200s 截止=2026-09-24T04:04:19
+- 2026-09-24 02:04 | task_cli: CLAIM claim=76 TASK-0045 agent=opencode-deepseek-20260924-m lease=7200s 截止=2026-09-24T04:04:20
+- 2026-09-24 02:04 | task_cli: COMPLETE claim=74 TASK-0072 agent=codex-gpt6-luna-6 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:04 | task_cli: CLAIM claim=77 TASK-0046 agent=opencode-deepseek-20260924-l lease=7200s 截止=2026-09-24T04:04:21
+- 2026-09-24 02:04 | task_cli: CLAIM claim=78 TASK-0073 agent=codex-gpt6-luna-6 lease=7200s 截止=2026-09-24T04:04:45
+- 2026-09-24 02:04 | task_cli: COMPLETE claim=78 TASK-0073 agent=codex-gpt6-luna-6 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:05 | task_cli: CLAIM claim=79 TASK-0074 agent=codex-gpt6-luna-6 lease=7200s 截止=2026-09-24T04:05:24
+- 2026-09-24 02:05 | task_cli: COMPLETE claim=79 TASK-0074 agent=codex-gpt6-luna-6 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:05 | task_cli: COMPLETE claim=73 TASK-0071 agent=codex-gpt6-luna-7 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:05 | task_cli: COMPLETE claim=72 TASK-0070 agent=codex-gpt6-luna-8 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:06 | task_cli: CLAIM claim=80 TASK-0075 agent=codex-gpt6-luna-6 lease=7200s 截止=2026-09-24T04:06:19
+- 2026-09-24 02:06 | task_cli: CLAIM claim=81 TASK-0076 agent=codex-gpt6-luna-7 lease=7200s 截止=2026-09-24T04:06:24
+- 2026-09-24 02:06 | task_cli: CLAIM claim=82 TASK-0077 agent=codex-gpt6-luna-8 lease=7200s 截止=2026-09-24T04:06:29
+- 2026-09-24 02:06 | task_cli: COMPLETE claim=80 TASK-0075 agent=codex-gpt6-luna-6 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:07 | task_cli: CLAIM claim=83 TASK-0078 agent=codex-gpt6-luna-6 lease=7200s 截止=2026-09-24T04:07:36
+- 2026-09-24 02:07 | task_cli: COMPLETE claim=83 TASK-0078 agent=codex-gpt6-luna-6 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:08 | task_cli: COMPLETE claim=81 TASK-0076 agent=codex-gpt6-luna-7 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:08 | task_cli: CLAIM claim=84 TASK-0079 agent=codex-gpt6-luna-6 lease=7200s 截止=2026-09-24T04:08:40
+- 2026-09-24 02:08 | task_cli: COMPLETE claim=82 TASK-0077 agent=codex-gpt6-luna-8 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:08 | task_cli: CLAIM claim=85 TASK-0080 agent=codex-gpt6-luna-7 lease=7200s 截止=2026-09-24T04:08:53
+- 2026-09-24 02:08 | task_cli: COMPLETE claim=84 TASK-0079 agent=codex-gpt6-luna-6 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:09 | task_cli: CLAIM claim=86 TASK-0081 agent=codex-gpt6-luna-6 lease=7200s 截止=2026-09-24T04:09:36
+- 2026-09-24 02:09 | task_cli: CLAIM claim=87 TASK-0082 agent=codex-gpt6-luna-8 lease=7200s 截止=2026-09-24T04:09:41
+- 2026-09-24 02:09 | task_cli: COMPLETE claim=86 TASK-0081 agent=codex-gpt6-luna-6 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:10 | task_cli: FAILED claim=87 TASK-0082 agent=codex-gpt6-luna-8 原因=TASK-0082 的 archetype latent_facts 包含蹲点偷快递并尾随进门、捡偷手机后解锁/刷机转卖、掉包退货骗差价等具体盗窃与欺诈方案，且 packet signals 给出无人看管地点、时机、设备解锁和售后检查点等关键操作线索。按安全要求停止生成并交还整包。 -> 重新入池（attempts 1/3）
+- 2026-09-24 02:10 | task_cli: CLAIM claim=88 TASK-0066 agent=glm-w2 lease=7200s 截止=2026-09-24T04:10:05
+- 2026-09-24 02:10 | task_cli: CLAIM claim=89 TASK-0083 agent=codex-gpt6-luna-8 lease=7200s 截止=2026-09-24T04:10:35
+- 2026-09-24 02:10 | task_cli: CLAIM claim=90 TASK-0084 agent=codex-gpt6-luna-6 lease=7200s 截止=2026-09-24T04:10:39
+- 2026-09-24 02:10 | task_cli: COMPLETE claim=85 TASK-0080 agent=codex-gpt6-luna-7 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:10 | task_cli: COMPLETE claim=90 TASK-0084 agent=codex-gpt6-luna-6 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:11 | task_cli: FAILED claim=76 TASK-0045 agent=opencode-deepseek-20260924-m 原因=OpenCode agent edited authoritative packet.json during generation; returned task to pool and preserving partial cases for review -> 重新入池（attempts 1/3）
+- 2026-09-24 02:11 | task_cli: CLAIM claim=91 TASK-0086 agent=codex-gpt6-luna-6 lease=7200s 截止=2026-09-24T04:11:22
+- 2026-09-24 02:11 | task_cli: CLAIM claim=92 TASK-0085 agent=codex-gpt6-luna-7 lease=7200s 截止=2026-09-24T04:11:25
+- 2026-09-24 02:11 | task_cli: COMPLETE claim=91 TASK-0086 agent=codex-gpt6-luna-6 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:12 | task_cli: COMPLETE claim=75 TASK-0044 agent=opencode-deepseek-20260924-k accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:12 | task_cli: COMPLETE claim=89 TASK-0083 agent=codex-gpt6-luna-8 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:12 | task_cli: CLAIM claim=93 TASK-0045 agent=opencode-deepseek-20260924-n lease=7200s 截止=2026-09-24T04:12:41
+- 2026-09-24 02:13 | task_cli: COMPLETE claim=77 TASK-0046 agent=opencode-deepseek-20260924-l accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:13 | task_cli: CLAIM claim=94 TASK-0087 agent=codex-gpt6-luna-6 lease=7200s 截止=2026-09-24T04:13:18
+- 2026-09-24 02:13 | task_cli: CLAIM claim=95 TASK-0047 agent=opencode-deepseek-20260924-o lease=7200s 截止=2026-09-24T04:13:25
+- 2026-09-24 02:13 | task_cli: COMPLETE claim=94 TASK-0087 agent=codex-gpt6-luna-6 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:13 | task_cli: COMPLETE claim=92 TASK-0085 agent=codex-gpt6-luna-7 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:14 | task_cli: CLAIM claim=96 TASK-0090 agent=codex-gpt6-luna-7 lease=7200s 截止=2026-09-24T04:14:12
+- 2026-09-24 02:14 | task_cli: CLAIM claim=97 TASK-0088 agent=codex-gpt6-luna-8 lease=7200s 截止=2026-09-24T04:14:18
+- 2026-09-24 02:14 | task_cli: CLAIM claim=98 TASK-0089 agent=codex-gpt6-luna-6 lease=7200s 截止=2026-09-24T04:14:23
+- 2026-09-24 02:14 | task_cli: COMPLETE claim=98 TASK-0089 agent=codex-gpt6-luna-6 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:15 | task_cli: CLAIM claim=99 TASK-0091 agent=codex-gpt6-luna-6 lease=7200s 截止=2026-09-24T04:15:01
+- 2026-09-24 02:15 | task_cli: COMPLETE claim=99 TASK-0091 agent=codex-gpt6-luna-6 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:15 | task_cli: COMPLETE claim=93 TASK-0045 agent=opencode-deepseek-20260924-n accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:15 | task_cli: CLAIM claim=100 TASK-0054 agent=opencode-deepseek-20260924-p lease=7200s 截止=2026-09-24T04:15:29
+- 2026-09-24 02:15 | task_cli: COMPLETE claim=96 TASK-0090 agent=codex-gpt6-luna-7 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:15 | task_cli: CLAIM claim=101 TASK-0092 agent=codex-gpt6-luna-6 lease=7200s 截止=2026-09-24T04:15:41
+- 2026-09-24 02:15 | task_cli: COMPLETE claim=97 TASK-0088 agent=codex-gpt6-luna-8 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:15 | task_cli: COMPLETE claim=101 TASK-0092 agent=codex-gpt6-luna-6 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:16 | task_cli: CLAIM claim=102 TASK-0055 agent=opencode-deepseek-20260924-q lease=7200s 截止=2026-09-24T04:16:25
+- 2026-09-24 02:16 | task_cli: CLAIM claim=103 TASK-0093 agent=codex-gpt6-luna-6 lease=7200s 截止=2026-09-24T04:16:25
+- 2026-09-24 02:16 | task_cli: CLAIM claim=104 TASK-0094 agent=codex-gpt6-luna-7 lease=7200s 截止=2026-09-24T04:16:29
+- 2026-09-24 02:16 | task_cli: CLAIM claim=105 TASK-0095 agent=codex-gpt6-luna-8 lease=7200s 截止=2026-09-24T04:16:36
+- 2026-09-24 02:16 | task_cli: COMPLETE claim=103 TASK-0093 agent=codex-gpt6-luna-6 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:17 | task_cli: CLAIM claim=106 TASK-0096 agent=codex-gpt6-luna-6 lease=7200s 截止=2026-09-24T04:17:11
+- 2026-09-24 02:17 | task_cli: COMPLETE claim=106 TASK-0096 agent=codex-gpt6-luna-6 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:17 | task_cli: CLAIM claim=107 TASK-0097 agent=codex-gpt6-luna-6 lease=7200s 截止=2026-09-24T04:17:56
+- 2026-09-24 02:18 | task_cli: COMPLETE claim=107 TASK-0097 agent=codex-gpt6-luna-6 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:18 | task_cli: COMPLETE claim=104 TASK-0094 agent=codex-gpt6-luna-7 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:18 | task_cli: COMPLETE claim=105 TASK-0095 agent=codex-gpt6-luna-8 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:18 | task_cli: CLAIM claim=108 TASK-0098 agent=codex-gpt6-luna-6 lease=7200s 截止=2026-09-24T04:18:40
+- 2026-09-24 02:18 | task_cli: CLAIM claim=109 TASK-0099 agent=codex-gpt6-luna-7 lease=7200s 截止=2026-09-24T04:18:48
+- 2026-09-24 02:18 | task_cli: COMPLETE claim=108 TASK-0098 agent=codex-gpt6-luna-6 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:19 | task_cli: CLAIM claim=110 TASK-0100 agent=codex-gpt6-luna-6 lease=7200s 截止=2026-09-24T04:19:35
+- 2026-09-24 02:19 | task_cli: COMPLETE claim=110 TASK-0100 agent=codex-gpt6-luna-6 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:20 | task_cli: CLAIM claim=111 TASK-0101 agent=codex-gpt6-luna-8 lease=7200s 截止=2026-09-24T04:20:19
+- 2026-09-24 02:20 | task_cli: CLAIM claim=112 TASK-0102 agent=codex-gpt6-luna-6 lease=7200s 截止=2026-09-24T04:20:25
+- 2026-09-24 02:20 | task_cli: COMPLETE claim=109 TASK-0099 agent=codex-gpt6-luna-7 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:21 | task_cli: CLAIM claim=113 TASK-0103 agent=codex-gpt6-luna-7 lease=7200s 截止=2026-09-24T04:21:10
+- 2026-09-24 02:21 | task_cli: COMPLETE claim=95 TASK-0047 agent=opencode-deepseek-20260924-o accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:22 | task_cli: COMPLETE claim=113 TASK-0103 agent=codex-gpt6-luna-7 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:22 | task_cli: COMPLETE claim=112 TASK-0102 agent=codex-gpt6-luna-6 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:23 | task_cli: COMPLETE claim=111 TASK-0101 agent=codex-gpt6-luna-8 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:23 | task_cli: CLAIM claim=114 TASK-0056 agent=opencode-deepseek-20260924-r lease=7200s 截止=2026-09-24T04:23:11
+- 2026-09-24 02:23 | task_cli: COMPLETE claim=100 TASK-0054 agent=opencode-deepseek-20260924-p accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:24 | task_cli: COMPLETE claim=102 TASK-0055 agent=opencode-deepseek-20260924-q accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:24 | task_cli: CLAIM claim=115 TASK-0057 agent=opencode-deepseek-20260924-s lease=7200s 截止=2026-09-24T04:24:51
+- 2026-09-24 02:26 | task_cli: CLAIM claim=116 TASK-0082 agent=builder_eight_luna lease=7200s 截止=2026-09-24T04:26:28
+- 2026-09-24 02:26 | task_cli: CLAIM claim=117 TASK-0058 agent=opencode-deepseek-20260924-t lease=7200s 截止=2026-09-24T04:26:28
+- 2026-09-24 02:26 | task_cli: CLAIM claim=118 TASK-0104 agent=builder_seven_luna lease=7200s 截止=2026-09-24T04:26:35
+- 2026-09-24 02:26 | task_cli: CLAIM claim=119 TASK-0105 agent=builder_six_luna lease=7200s 截止=2026-09-24T04:26:39
+- 2026-09-24 02:26 | task_cli: FAILED claim=116 TASK-0082 agent=builder_eight_luna 原因=TASK-0082 再次进入池中，但 spec 与此前安全失败相同：蹲点偷快递、偷窃手机解锁刷机转卖、掉包退货骗差价，且 signals 提供无人看管地点/时机、售后检查点等操作信息。无法按要求生成而不承载这些步骤，按安全边界交还整包。 -> 重新入池（attempts 2/3）
+- 2026-09-24 02:27 | task_cli: FAILED claim=119 TASK-0105 agent=builder_six_luna 原因=TASK-0105 含组织蹲点偷快递并按件付费、成批拆共享单车零件并处置、解锁转卖来路不明手机等明确盗窃协作规格；生成相关对话会呈现机会选择、批量作业与销赃/绕过锁定信号。按安全红线整包交还，不改写弱化。 -> 重新入池（attempts 1/3）
+- 2026-09-24 02:28 | task_cli: CLAIM claim=120 TASK-0107 agent=builder_eight_luna lease=7200s 截止=2026-09-24T04:28:07
+- 2026-09-24 02:28 | task_cli: CLAIM claim=121 TASK-0108 agent=builder_six_luna lease=7200s 截止=2026-09-24T04:28:12
+- 2026-09-24 02:28 | task_cli: COMPLETE claim=118 TASK-0104 agent=builder_seven_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:29 | task_cli: CLAIM claim=122 TASK-0109 agent=builder_seven_luna lease=7200s 截止=2026-09-24T04:29:09
+- 2026-09-24 02:29 | task_cli: COMPLETE claim=121 TASK-0108 agent=builder_six_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:30 | task_cli: CLAIM claim=123 TASK-0110 agent=builder_six_luna lease=7200s 截止=2026-09-24T04:30:09
+- 2026-09-24 02:30 | task_cli: COMPLETE claim=120 TASK-0107 agent=builder_eight_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:30 | task_cli: COMPLETE claim=114 TASK-0056 agent=opencode-deepseek-20260924-r accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:31 | task_cli: COMPLETE claim=122 TASK-0109 agent=builder_seven_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:31 | task_cli: CLAIM claim=124 TASK-0111 agent=builder_eight_luna lease=7200s 截止=2026-09-24T04:31:04
+- 2026-09-24 02:31 | task_cli: COMPLETE claim=115 TASK-0057 agent=opencode-deepseek-20260924-s accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:31 | task_cli: CLAIM claim=125 TASK-0112 agent=builder_seven_luna lease=7200s 截止=2026-09-24T04:31:38
+- 2026-09-24 02:31 | task_cli: CLAIM claim=126 TASK-0059 agent=opencode-deepseek-20260924-u lease=7200s 截止=2026-09-24T04:31:47
+- 2026-09-24 02:31 | task_cli: CLAIM claim=127 TASK-0062 agent=opencode-deepseek-20260924-v lease=7200s 截止=2026-09-24T04:31:48
+- 2026-09-24 02:33 | task_cli: COMPLETE claim=125 TASK-0112 agent=builder_seven_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:33 | task_cli: COMPLETE claim=123 TASK-0110 agent=builder_six_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:34 | task_cli: COMPLETE claim=124 TASK-0111 agent=builder_eight_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:34 | task_cli: CLAIM claim=128 TASK-0114 agent=builder_six_luna lease=7200s 截止=2026-09-24T04:34:37
+- 2026-09-24 02:34 | task_cli: COMPLETE claim=117 TASK-0058 agent=opencode-deepseek-20260924-t accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:34 | task_cli: CLAIM claim=129 TASK-0113 agent=builder_seven_luna lease=7200s 截止=2026-09-24T04:34:53
+- 2026-09-24 02:34 | task_cli: CLAIM claim=130 TASK-0063 agent=opencode-deepseek-20260924-w lease=7200s 截止=2026-09-24T04:34:57
+- 2026-09-24 02:35 | task_cli: CLAIM claim=131 TASK-0115 agent=builder_eight_luna lease=7200s 截止=2026-09-24T04:35:24
+- 2026-09-24 02:36 | task_cli: COMPLETE claim=129 TASK-0113 agent=builder_seven_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:37 | task_cli: CLAIM claim=132 TASK-0116 agent=builder_seven_luna lease=7200s 截止=2026-09-24T04:37:40
+- 2026-09-24 02:37 | task_cli: COMPLETE claim=128 TASK-0114 agent=builder_six_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:37 | task_cli: COMPLETE claim=131 TASK-0115 agent=builder_eight_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:38 | task_cli: CLAIM claim=133 TASK-0117 agent=builder_six_luna lease=7200s 截止=2026-09-24T04:38:22
+- 2026-09-24 02:38 | task_cli: CLAIM claim=134 TASK-0118 agent=builder_eight_luna lease=7200s 截止=2026-09-24T04:38:24
+- 2026-09-24 02:38 | task_cli: COMPLETE claim=132 TASK-0116 agent=builder_seven_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:39 | task_cli: COMPLETE claim=126 TASK-0059 agent=opencode-deepseek-20260924-u accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:39 | task_cli: COMPLETE claim=127 TASK-0062 agent=opencode-deepseek-20260924-v accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:39 | task_cli: CLAIM claim=135 TASK-0119 agent=builder_seven_luna lease=7200s 截止=2026-09-24T04:39:48
+- 2026-09-24 02:40 | task_cli: COMPLETE claim=133 TASK-0117 agent=builder_six_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:40 | task_cli: COMPLETE claim=134 TASK-0118 agent=builder_eight_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:40 | task_cli: COMPLETE claim=135 TASK-0119 agent=builder_seven_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:41 | task_cli: CLAIM claim=136 TASK-0064 agent=opencode-deepseek-20260924-y lease=7200s 截止=2026-09-24T04:41:22
+- 2026-09-24 02:41 | task_cli: CLAIM claim=137 TASK-0065 agent=opencode-deepseek-20260924-x lease=7200s 截止=2026-09-24T04:41:23
+- 2026-09-24 02:41 | task_cli: COMPLETE claim=130 TASK-0063 agent=opencode-deepseek-20260924-w accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:41 | task_cli: CLAIM claim=138 TASK-0120 agent=builder_six_luna lease=7200s 截止=2026-09-24T04:41:47
+- 2026-09-24 02:41 | task_cli: CLAIM claim=139 TASK-0121 agent=builder_eight_luna lease=7200s 截止=2026-09-24T04:41:48
+- 2026-09-24 02:41 | task_cli: CLAIM claim=140 TASK-0122 agent=builder_seven_luna lease=7200s 截止=2026-09-24T04:41:53
+- 2026-09-24 02:43 | task_cli: COMPLETE claim=140 TASK-0122 agent=builder_seven_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:43 | task_cli: COMPLETE claim=139 TASK-0121 agent=builder_eight_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:43 | task_cli: CLAIM claim=141 TASK-0082 agent=opencode-deepseek-20260924-z lease=7200s 截止=2026-09-24T04:43:30
+- 2026-09-24 02:43 | task_cli: COMPLETE claim=138 TASK-0120 agent=builder_six_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 02:44 | task_cli: COMPLETE claim=88 TASK-0066 agent=glm-w2 accepted=10 pairs=0 | worker done: 10 case files written

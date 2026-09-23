@@ -1,0 +1,124 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000632
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-040b45b349d4cf1a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A并非该学生监护人，却反复请求学校工作人员 B 查看其成绩并提供截图；A提到群里的红包已经发出，B拒绝泄露信息。对话不含身份、成绩数字或系统访问方式。
+  critical_evidence:
+  - A请求班主任查看并截图一名非其监护学生的成绩。
+  - A提到红包已发，继续索要截图；B明确拒绝透露成绩。
+  - 对话不含学生身份、学校信息、分数或获取记录的方法。
+  benign_alternatives:
+  - 家长查自己孩子
+  - 学校官方查询
+
+attributes:
+  duration_days: 5
+  turn_count: 47
+  approximate_tokens_estimate: 1064
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0083
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-045
+
+dedup:
+  content_hash: sha256:15345e563c3c0c493b57721a5c670e940925fcfa512abe4a44c587f1131d1cbf
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【12月4日】
+  A：我想问下之前说的那位学生，最近情况出来了吗？
+  B：我不能把学生记录告诉无关的人。
+  A：我把今天要处理的小事列出来了。
+  A：班主任那边能不能帮我看一下？我就想知道大概。
+  B：要由监护人按学校渠道查询。
+  B：一项项来，别着急。
+  A：群里的红包已经发了，你看见了吧？
+  A：家里那盏灯最近有点闪。
+  A：刚才打印的几页我重新装订好了。
+  B：可能灯泡松了，先检查一下。
+  【12月5日】
+  A：我晚上回去看看。
+  B：别踩高凳子，找人帮忙。
+  B：这样放包里就不容易散。
+  B：看见了，但这跟学生的成绩是两回事。
+  A：给我一张截图就行，不用写名字。
+  A：午休想出去走一走。
+  B：遮掉姓名也不能随意分享。
+  A：我只是想帮忙了解一下，不会传出去。
+  B：未经授权我不会查看或转发。
+  B：可以，坐久了活动一下。
+  【12月6日】
+  B：你周末一般怎么放松？
+  A：在家听听播客，偶尔做饭。
+  B：挺好的，能换换脑子。
+  【系统消息】A 向 B 转账 35 元，已收款。
+  A：我把提醒设置成响铃了。
+  A：是啊，最近想少看屏幕。
+  A：你就不能通融一次吗？
+  B：不行，这涉及学生隐私。
+  B：好，重要消息就不容易错过。
+  【12月7日】
+  A：好，那我让家里人自己问。
+  B：这样合适，请不要再向我索要截图。
+  A：外面刚停雨，路面还有点湿。
+  A：知道了，我不再追问。
+  A：今早公交比平时快，我还提前到了。
+  B：今天路上车少，难得。
+  A：我顺便买了杯热豆浆。
+  B：走路慢点，别滑了。
+  B：天气凉喝热的正好。
+  B：谢谢理解。
+  【12月8日】
+  A：红包是发在群里的，大家都有。
+  A：我晚上准备煮点面。
+  B：收到，但成绩还是只能通过正式渠道了解。
+  A：明白，我会让监护人去联系学校。
+  B：好，之后也请不要私下传成绩信息。
+  B：放点青菜就挺好。
+  A：快递柜今天人很多。
+  B：可能赶上大家下班了。
+  A：我把桌上的书归到架子上了。

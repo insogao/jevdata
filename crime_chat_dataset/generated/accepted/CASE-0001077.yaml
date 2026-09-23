@@ -1,0 +1,149 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001077
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000066
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-077925bf176345fe
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 有家庭的部门总监 A 借同事 B 母亲重病之困，以「困难补助」「报销房租」为名建立每月固定转账的长期供养关系，反复要求保密、不许拒绝、不许还钱，言语间暗示要 B「记着人」，是包装成同事帮扶的控制型供养安排，全程未点破性质，靠转账节律与保密要求暗示。
+  critical_evidence:
+  - A 定下「每月10号固定转钱」，拦着不让写借条，包装成「公司困难补助」（第1天）
+  - A 让 B 搬进他名下离医院近的两居，房租「走部门差旅补贴报销」，叮嘱公司里一个字别提、嫂子那边他自己会安排（第2天）
+  - 10号 A 转 3200 元，B 问「这份钱要我拿什么还」，A 只说「安心上班就行」（第3天，转账）
+  - 有同事议论两人天天一起吃饭，B 惶恐，A 以「带教下属」打发并再次揽下保密（第4天）
+  - B 说等母亲出院「这些我都记着会还您」，A 回「记着就行 人也要记着」，并坚持「下个月10号我还转」（第6天）
+  benign_alternatives:
+  - 同事之间的正常借款互助
+  - 公司对困难员工的内部资助
+
+attributes:
+  duration_days: 6
+  turn_count: 69
+  approximate_tokens_estimate: 1840
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: long_term_support_exchange
+  risk: 1
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0066
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-024-RES
+
+dedup:
+  content_hash: sha256:ca631d2c93a38dee6e082e66ccc4fa939b61579e005712f2c78cef38b88bacd0
+pipeline_status: accepted
+title: sexual_transaction_exploitation/long_term_support_exchange
+conversation: |-
+  【7月8日】
+  A：阿姨这周还做化疗? 你脸色比上周还差
+  B：周四第三次 周五我调了班去陪护
+  A：钱的事说好了 每月10号我固定转你 别跟我客气
+  B：不行总监 这已经是借钱了 借条我必须写
+  A：写什么借条 就当公司困难补助 我签的字
+  B：补助哪有按月发的 您别这样 我心里不踏实
+  A：踏实不踏实的 先把阿姨治好 别的以后再说
+  B：季度汇报我改到第三版了 您再过一眼
+  A：第三版好多了 数据页别堆字
+  B：嗯 我把那两张图拆成两页
+  A：讲的时候先说结论 再铺过程
+  B：学到了 上次就吃了这亏
+  A：你上手很快 别慌
+  【7月9日】
+  A：你现在住那地儿离医院远 天天两头跑
+  B：地铁四十分钟 还行
+  A：我那两居空着 就在院对面 你搬过去省一半时间
+  B：这不合适 您家里…
+  A：空着也是空着 房租走我部门差旅补贴 名目我来弄 你别管
+  B：报销挂我头上 传出去我跳进黄河也洗不清
+  A：谁传 公司里一个字都别提 嫂子那边我自己会安排
+  B：……我再想想
+  B：中午陪我去楼下吃轻食吧 昨晚病房没睡好
+  A：行 那家沙拉?
+  B：嗯 鸡胸那款
+  A：你太瘦了 加份汤
+  B：病房天天被投喂 倒是您少喝点应酬的汤
+  A：哈哈 你还管起我了
+  【7月10日】
+  A：10号了 转你3200 先把房租数平了 报销款下来我再补两千
+  B：这么多…我一笔一笔都记着账呢
+  A：记什么账 以后每月这天都有 别有负担
+  B：总监 我就想问 这份钱 要我拿什么还
+  A：想什么呢 你安心上班就行
+  B：那我不问了
+  【系统消息】A 向 B 转账 3200 元，已收款。
+  B：收到了 谢谢 阿姨这周的费用够了
+  A：这轮化疗反应大不大
+  B：吐得厉害 医生开了止吐的 好些了
+  A：晚上别在医院守通宵 白天你还上班
+  B：周五周六我守 其余请了护工
+  A：护工钱也走我卡 别动你自己工资
+  B：这个我自己来 您别什么都包
+  【7月11日】
+  B：小林昨天问我 咱们怎么天天一起吃午饭
+  A：你怎么答的
+  B：我说对项目 您说这话传出去像什么
+  A：带教下属 天经地义 公司你不用管 家里我自己会安排
+  B：您别让我背上这些 我是真心把您当领导敬着
+  A：我知道 你别多想 也别替我想
+  B：周末想买盏护眼的台灯 我那盏总闪
+  A：别买 我书房有盏新的 拆封没用过 你拿去
+  B：那不行
+  A：网购点错拍了俩 退货运费比灯贵
+  B：那我折价买 行吗 心里舒服点
+  A：按你说的办 你高兴就好
+  【7月12日】
+  A：今晚别加班了 材料明天再顺
+  B：我想再加两页 您看的那版图表有点乱
+  A：身体要紧 阿姨还等着你工资呢 哈哈
+  B：借您吉言 这周结束我去复查
+  A：周五讲完我送你回去 顺路
+  B：不用顺我 真的不用
+  A：顺路就是顺路 别多想
+  【7月13日】
+  B：阿姨这轮指标稳了 医生说反应小多了
+  A：好消息 这个月你就安心上班 病房有护工
+  B：总监 有件事我想清楚些 等阿姨出院 这些我都记着 会还您
+  A：记着就行 人也要记着
+  B：……您这话我听不太懂
+  A：不懂就当我没说 下个月10号我还转
+  B：能不能别每月了 让我心里安生点
+  A：等你妈出院再说 我这人说话算话
+  B：好吧 这个月先这样
+  A：汇报周五讲 材料再顺一遍

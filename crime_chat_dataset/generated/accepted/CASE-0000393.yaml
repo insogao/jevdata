@@ -1,0 +1,124 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000393
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000101
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-46cd788074873aa9
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 熟人以当天往返的跑腿名义请对方携带身份证代取一笔来源不明的现金，并承诺按比例付酬；对方追问款项性质后拒绝。
+  critical_evidence:
+  - 对方被要求带身份证当天往返
+  - 报酬按取出金额的千分之五计算
+  - 款项来源和用途未说明
+  - 对方拒绝参与并要求走正规平台
+  benign_alternatives:
+  - 帮忙取快递
+  - 兼职跑腿平台
+
+attributes:
+  duration_days: 2
+  turn_count: 49
+  approximate_tokens_estimate: 1005
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: help_move_fund_fee
+  risk: 3
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0030
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-018
+
+dedup:
+  content_hash: sha256:6920a5bd266f5ade97c9740f3f9f523e3becaa6756ecc30a12c73bd3229f6318
+pipeline_status: accepted
+title: money_laundering_obfuscation/help_move_fund_fee
+conversation: |-
+  【8月7日】
+  A：明天能不能帮我跑一趟，来回当天就够
+  A：带好身份证，到时候有人交接
+  A：先把东西拿到手，回来给你千分之五
+  A：别问那么细，就熟人临时周转
+  A：你下午过去，晚上回来，不耽误事
+  A：我给你报销车费，再加跑腿钱
+  A：没有平台，咱俩认识这么久了
+  A：那就算我欠你个人情
+  A：你别跟别人说我问过你
+  A：午饭吃了吗
+  B：刚吃了楼下的面，今天人好多
+  A：我带了饭，结果忘记拿筷子
+  B：哈哈去前台借一双呗
+  A：我刚看到消息，上午一直在开会
+  B：没事，我也忙到现在
+  【8月8日】
+  B：取什么东西
+  B：身份证为什么要带，具体是什么
+  B：你说的是按金额算？那更得先讲清楚
+  B：谁的钱，为什么让我拿
+  B：我不接来源不明的现金
+  B：这不是普通取快递，平台订单呢
+  B：认识才更应该把事情说明白
+  B：不行，我不会带证件去替人取钱
+  B：我会把聊天留着，也建议你走正规渠道
+  【系统消息】A 向 B 转账 500 元，已收款。
+  A：这两天一直下雨
+  B：我早上没带伞，鞋都湿了
+  A：我车里有把折叠伞，下次拿给你
+  B：好啊，天气预报说周末转晴
+  A：我刚看到消息，上午一直在开会
+  B：没事，我也忙到现在
+  A：你那边今天还顺利吗
+  B：还行，就是事情有点杂
+  A：那先忙你的，晚点再说
+  B：好，回头联系
+  A：对了，最近睡得怎么样
+  B：一般，昨晚又熬夜了
+  A：早点休息，别老盯屏幕
+  B：嗯，今晚尽量早点睡
+  A：我去处理点事，等会儿回
+  B：好，不急
+  A：我刚看到消息，上午一直在开会
+  B：没事，我也忙到现在
+  A：你那边今天还顺利吗
+  B：还行，就是事情有点杂
+  A：那先忙你的，晚点再说
+  B：好，回头联系
+  A：对了，最近睡得怎么样
+  B：一般，昨晚又熬夜了
+  A：早点休息，别老盯屏幕

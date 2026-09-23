@@ -1,0 +1,142 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001018
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-2a8c68317ce6236e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 借熟人关系索取部门通讯录、离职名单，并提议按份出售简历；B 拒绝交付或交易未经授权的员工资料，建议使用公开招聘并由候选人主动授权。
+  critical_evidence:
+  - A 索要整个部门电话和离职名单。
+  - A 提议简历按份卖。
+  - B 拒绝提供或转售未经授权的员工资料。
+  - B 建议公开招聘并由候选人自愿投递、授权联系。
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 5
+  turn_count: 64
+  approximate_tokens_estimate: 1387
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0117
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-067
+
+dedup:
+  content_hash: sha256:d0da0175e8d9b0a2351b89ccd6f40d5fa64d6de8a3ccba8c13b78480fe9085ef
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【9月15日】
+  A：我朋友那边在拓团队，想要整个部门电话和离职名单。
+  B：内部通讯录和离职资料不能给外面的人。
+  A：我路上看到周末骑行相关的通知了。
+  B：我也看见了，信息挺清楚。
+  A：你觉得要改计划吗？
+  B：先按原来安排，到时再看。
+  A：行，有变化再说。
+  B：好，回头联系。
+  A：我把周末骑行的时间记下来了。
+  B：好，免得临时忘。
+  A：最近天气变化快，出门看一眼预报。
+  B：嗯，我会带件外套。
+  A：那先这样，我去处理手头的事。
+  B：好，忙完再聊。
+  A：你那边还有别的安排吗？
+  B：暂时没有，按这个节奏来。
+  【9月16日】
+  A：简历按份卖也行，他愿意付整理费。
+  B：我不会整理或出售同事的简历。
+  A：我路上看到新办公椅相关的通知了。
+  B：我也看见了，信息挺清楚。
+  A：你觉得要改计划吗？
+  B：先按原来安排，到时再看。
+  A：行，有变化再说。
+  B：好，回头联系。
+  A：我把新办公椅的时间记下来了。
+  B：好，免得临时忘。
+  A：最近天气变化快，出门看一眼预报。
+  B：嗯，我会带件外套。
+  A：那先这样，我去处理手头的事。
+  B：好，忙完再聊。
+  A：你那边还有别的安排吗？
+  A：前两天你替我垫的午饭钱我还你了，跟工作上说的事分开算。
+  【系统消息】A 向 B 转账 48 元，已收款。
+  【9月17日】
+  A：他说是猎头业务，平时也会找候选人。
+  B：正常招聘也要通过公开渠道，联系前要有本人授权。
+  A：顺便问下，家里煮粥后来有着落了吗？
+  B：有了，刚刚确定下来。
+  A：你选了哪个方案？
+  B：就选简单那个，省心。
+  A：那挺好，少操点心。
+  B：嗯，最近事情有点多。
+  A：我把家里煮粥的时间记下来了。
+  B：好，免得临时忘。
+  A：最近天气变化快，出门看一眼预报。
+  B：嗯，我会带件外套。
+  A：那先这样，我去处理手头的事。
+  B：好，忙完再聊。
+  A：你那边还有别的安排吗？
+  【9月18日】
+  A：那让他们把职位发出来，等人自己投？
+  B：对，候选人主动投递后再按招聘流程沟通。
+  A：对了，项目验收你打算什么时候弄？
+  B：我准备周末处理。
+  A：需要提前准备吗？
+  B：不用，我都列好清单了。
+  A：你做事还是挺有条理的。
+  B：哈哈，怕临时忘记。
+  A：我把项目验收的时间记下来了。
+  B：好，免得临时忘。
+  A：最近天气变化快，出门看一眼预报。
+  B：嗯，我会带件外套。
+  A：那先这样，我去处理手头的事。
+  B：好，忙完再聊。
+  A：你那边还有别的安排吗？
+  【9月19日】
+  A：行，我不转那份名单了。
+  B：谢谢，别把个人资料拿来交易。

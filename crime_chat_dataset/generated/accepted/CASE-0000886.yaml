@@ -1,0 +1,135 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000886
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-c8999c70578fecc3
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 试图获取或转卖未授权的同事联系方式、简历或离职名单；B 拒绝泄露并改荐公开且自愿授权的招聘渠道。
+  critical_evidence:
+  - A 索要整个部门联系方式或离职名单
+  - A 提议按份转交或出售简历
+  - B 拒绝分享员工资料，并建议使用公开招聘或本人授权的人才库
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 5
+  turn_count: 58
+  approximate_tokens_estimate: 1088
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0108
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-061
+
+dedup:
+  content_hash: sha256:2ae88410347c4417af10943c45c127d01274347dc89212c7dce252b20b747611
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【9月11日】
+  A：朋友公司急着招人，能不能把你们部门通讯录给他？
+  B：不行，员工联系方式只用于工作，不能外发。
+  A：今天早高峰路上堵得厉害。
+  B：我看导航也一片红。
+  A：还好我提前一站下车走过来。
+  B：最近路口在修人行道。
+  A：难怪车都排到桥上了。
+  B：明早可以换条路试试。
+  A：我看看公交线路。
+  B：有一路车直达园区。
+  A：我存一下。
+  B：希望明天顺一点。
+  【9月12日】
+  A：那离职名单和简历按份发也不可以？
+  B：不可以，求职资料更不能未经同意转交。
+  A：楼下那家汤面店最近换菜单了。
+  B：嗯，多了番茄牛腩面。
+  A：你试过没？
+  B：昨天中午吃了，汤挺清爽。
+  A：听起来不错，我下次点小碗。
+  B：配一份青菜刚好。
+  A：好，午休去看看。
+  B：避开十二点会快些。
+  A：我十点多先开完会。
+  B：那时间正合适。
+  【9月13日】
+  A：他说只是猎头正常触达。
+  B：正规猎头也应联系自愿公开或授权的候选人。
+  B：周末的旧书集市你要去吗？
+  A：想去，最近在找旅行随笔。
+  B：摊位在文化中心门口。
+  A：停车方便不？
+  B：附近有地铁，坐过去更省心。
+  A：那我就坐地铁。
+  B：结束后还能去旁边喝咖啡。
+  A：可以，正好歇会儿。
+  B：我也想逛一下。
+  A：到时候碰头。
+  【9月14日】
+  A：好，我不再传这类文件。
+  A：阳台那盆迷迭香长新叶了。
+  B：最近太阳好，长得快。
+  A：我是不是该换大盆？
+  B：根挤出来再换也行。
+  A：底下的托盘有点小。
+  B：花店有配套的，周末去看看。
+  A：你要不要一起？
+  B：好啊，我也想买点土。
+  A：那周六上午？
+  B：行，出门前发消息。
+  【9月15日】
+  B：可以，我把公开招聘页发给你。
+  B：你上次推荐的纪录片我看完了。
+  A：讲海岛那部？
+  B：对，镜头拍得很舒服。
+  A：配乐也不错。
+  B：我后来又找了导演的访谈。
+  A：我还没看，链接收藏了吗？
+  B：收藏了，晚点发你。
+  A：谢啦，今晚正好有空。
+  B：看完我们再聊。
+  A：好。
+  【系统消息】A 向 B 转账 42 元，已收款。

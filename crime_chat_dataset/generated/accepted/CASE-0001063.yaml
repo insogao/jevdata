@@ -1,0 +1,131 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001063
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000100
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-67152ef77c924360
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: money_laundering_obfuscation
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 商务对接中外地合作方提出让老郑公司作为中间收款方，合同款项先打到老郑账上、扣完居间费再转给指定账户，居间协议提前备好、税点老郑承担，用正规合作名目把真实资金去向藏一层。
+  critical_evidence:
+  - 合作方提出合同款先打老郑公司账户，扣居间费后再转给指定账户
+  - 居间协议提前备好，分成按约定档位写，盖章寄送
+  - 税点老郑承担，发票按服务费开
+  - 合作方强调款项全走老郑这边，不要与原始出资方直接往来
+  benign_alternatives:
+  - 多层合法分销渠道
+  - 代理记账与居间服务
+
+attributes:
+  duration_days: 4
+  turn_count: 54
+  approximate_tokens_estimate: 1099
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: commission_layering
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0063
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-029
+
+dedup:
+  content_hash: sha256:6257be60be198cd13b01963d5abda32e373a899a899e1b2b8cd9115048927dfe
+pipeline_status: accepted
+title: money_laundering_obfuscation/commission_layering
+conversation: |-
+  【9月4日】
+  A：郑总 上次饭桌上说的合作 你考虑得怎么样
+  B：合作可以 具体怎么个走法
+  A：合同款先打你账 你扣完居间费再转我们指定账户
+  B：这中间挂什么名目
+  A：挂居间 协议我们提前备好 盖章寄你
+  B：分成呢
+  A：按你惯例 一点五到两个点 走量另谈
+  B：税点谁出
+  A：税点你承担 发票开服务费 你好抵扣
+  B：金额多大
+  A：先跑一笔三十万 后面按季度来
+  B：可以 我看协议再定
+  【9月5日】
+  A：协议拟好了 发你邮箱
+  B：收到 我让法务看
+  A：重点看收款账户那段 转出走采购返佣
+  B：好 返佣名目能说清就行
+  A：对 账面看着就是正常居间合作
+  A：中午吃了没 我这边开会拖到现在
+  B：吃了 家里带的
+  A：真羡慕 我天天外卖
+  B：外卖少油少辣就行
+  B：法务看完 协议可以 我明天盖章寄回
+  A：好 那第一笔周一打
+  B：行 到了我按协议扣完当天转
+  A：转出账户我发你 别用合同上那个
+  B：哦?两个户
+  A：合同户是做样子的 实转走我给的这个
+  B：行 你发我
+  【9月6日】
+  A：下周有个行业展 你去不去
+  B：去看看 找找客户
+  A：到时候一起 我请你喝茶
+  B：行
+  B：章盖好了 扫描件先发你 原件顺丰
+  A：收到 那第一笔我让财务周一一早打
+  B：好 到了我这边也快
+  A：你那边额度够吗 三十万
+  B：够 最近账上闲钱多
+  A：那太好了 后面季度款也走你
+  B：可以 居间协议我按季度续
+  【9月7日】
+  A：第一笔打了 你查收
+  B：到了 三十万 我扣一点五 转你29万5千5
+  A：好 转我把账户
+  【系统消息】B 向 A 转账 295500 元，已收款。
+  A：收到 快
+  B：发票过两天开你 服务费名目
+  A：好 记住别和原方直接往来 全走你
+  B：明白 中间隔一层
+  A：天气转凉了 注意别感冒
+  B：你也是 多喝热水
+  A：下午还得见个客户
+  B：忙点好
+  A：客户谈成了 二期下月启动
+  B：恭喜 那笔也走我
+  A：必须的 你这通道稳 分成照旧
+  B：好 我这边配合

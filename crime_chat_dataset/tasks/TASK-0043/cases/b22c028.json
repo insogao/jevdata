@@ -1,0 +1,459 @@
+{
+ "key": "b22c028",
+ "archetype_id": "ARC-000012",
+ "subtype": "second_hand_deposit_run",
+ "latent_intent": "同事 A 把闲置相机低价转给 B，为省平台手续费劝 B 绕开平台私下走微信转账，先发的一个物流单号 B 查不到以为有诈，闹了几天最终相机正常寄到，B 把货款转给 A，是真实的二手转让只是流程不正规。",
+ "critical_facts": [
+  "A 在二手平台挂了台闲置相机，价格明显低于市场价，同事 B 想买",
+  "A 劝 B 别在平台下单，绕开平台私下走微信转账以省手续费",
+  "A 先发的一个物流单号 B 查不到，B 起了疑心怀疑有诈",
+  "相机最终正常寄到，B 把货款转给 A"
+ ],
+ "benign_alternatives": [
+  "真实二手交易",
+  "朋友间转让"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "8月12日 09:20",
+   "speaker": "A",
+   "text": "小李 上班没 跟你说个事"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 09:23",
+   "speaker": "B",
+   "text": "刚打卡 咋了鑫哥"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 09:25",
+   "speaker": "A",
+   "text": "我那台闲置相机想出了 你不是一直想要 便宜给你"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 09:27",
+   "speaker": "B",
+   "text": "真的假的 多少钱"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 09:29",
+   "speaker": "A",
+   "text": "平台上都挂三千多 我给你一千八 就图个出手快"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 09:31",
+   "speaker": "B",
+   "text": "这价也太低了 是不是有啥毛病"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 09:33",
+   "speaker": "A",
+   "text": "没毛病 就是吃灰久了想卖 你别多想"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 09:35",
+   "speaker": "B",
+   "text": "那我在平台上拍下来吧 走平台有保障"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 09:37",
+   "speaker": "A",
+   "text": "别走平台 平台抽手续费还压钱 咱直接微信转我就行"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 09:39",
+   "speaker": "B",
+   "text": "私下转我不太放心啊哥"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 09:41",
+   "speaker": "A",
+   "text": "咱一个办公室的 你还怕我跑了？省那一两百手续费不香吗"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 09:43",
+   "speaker": "B",
+   "text": "那行吧 东西先给我看看"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 09:45",
+   "speaker": "A",
+   "text": "相机在老家 我这周末回去拿 下周寄你"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 09:47",
+   "speaker": "B",
+   "text": "那我要先付钱吗"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 09:49",
+   "speaker": "A",
+   "text": "你先付个定金 五百 剩下的收到再说"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 09:51",
+   "speaker": "B",
+   "text": "定金就走微信？"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 09:53",
+   "speaker": "A",
+   "text": "对 转我就行 咱俩还见外"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 12:00",
+   "speaker": "B",
+   "text": "鑫哥 中午食堂见不"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 12:03",
+   "speaker": "A",
+   "text": "我今天带饭了 你自己去"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 12:05",
+   "speaker": "B",
+   "text": "行 那我打份红烧肉"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 12:07",
+   "speaker": "A",
+   "text": "给我带个酸奶 下午给你钱"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 12:09",
+   "speaker": "B",
+   "text": "好"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 14:30",
+   "speaker": "B",
+   "text": "定金我先转你五百 你可得给我留着"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 14:33",
+   "speaker": "A",
+   "text": "放心 说给你就给你"
+  },
+  {
+   "type": "transfer",
+   "time": "8月12日 14:35",
+   "from": "B",
+   "to": "A",
+   "amount": 500,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 14:37",
+   "speaker": "A",
+   "text": "收到 周末回去就给你弄"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 16:00",
+   "speaker": "A",
+   "text": "下午这空调开太冷了"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 16:03",
+   "speaker": "B",
+   "text": "是 我穿长袖都凉"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 16:05",
+   "speaker": "A",
+   "text": "回头跟行政说说 别把大伙冻感冒"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 16:07",
+   "speaker": "B",
+   "text": "你可敢说 我可不管"
+  },
+  {
+   "type": "message",
+   "time": "8月13日 10:20",
+   "speaker": "B",
+   "text": "鑫哥 相机拿回来没"
+  },
+  {
+   "type": "message",
+   "time": "8月13日 10:23",
+   "speaker": "A",
+   "text": "周末还没到呢 急啥"
+  },
+  {
+   "type": "message",
+   "time": "8月13日 10:25",
+   "speaker": "B",
+   "text": "我这不惦记吗"
+  },
+  {
+   "type": "message",
+   "time": "8月13日 10:27",
+   "speaker": "A",
+   "text": "惦记啥 跑不了"
+  },
+  {
+   "type": "message",
+   "time": "8月13日 12:00",
+   "speaker": "A",
+   "text": "昨晚部门那方案又被推翻了吧"
+  },
+  {
+   "type": "message",
+   "time": "8月13日 12:03",
+   "speaker": "B",
+   "text": "可不是 改到十一点才走"
+  },
+  {
+   "type": "message",
+   "time": "8月13日 12:05",
+   "speaker": "A",
+   "text": "加班费给不给啊"
+  },
+  {
+   "type": "message",
+   "time": "8月13日 12:07",
+   "speaker": "B",
+   "text": "说下月补 谁知道"
+  },
+  {
+   "type": "message",
+   "time": "8月13日 12:09",
+   "speaker": "A",
+   "text": "这帮人就会画饼"
+  },
+  {
+   "type": "message",
+   "time": "8月14日 09:40",
+   "speaker": "A",
+   "text": "相机寄出去了 单号发你"
+  },
+  {
+   "type": "message",
+   "time": "8月14日 09:41",
+   "speaker": "A",
+   "text": "SF开头那串 你自己查下"
+  },
+  {
+   "type": "message",
+   "time": "8月14日 09:43",
+   "speaker": "B",
+   "text": "我查了 咋查不到这个单号"
+  },
+  {
+   "type": "message",
+   "time": "8月14日 09:45",
+   "speaker": "A",
+   "text": "刚揽收吧 晚点就出来了"
+  },
+  {
+   "type": "message",
+   "time": "8月14日 09:47",
+   "speaker": "B",
+   "text": "鑫哥 你可别给我整虚的 我刚付了定金"
+  },
+  {
+   "type": "message",
+   "time": "8月14日 09:49",
+   "speaker": "A",
+   "text": "我整虚的干啥 咱天天一个办公室坐着"
+  },
+  {
+   "type": "message",
+   "time": "8月14日 09:51",
+   "speaker": "B",
+   "text": "那你下午截图给我看物流"
+  },
+  {
+   "type": "message",
+   "time": "8月14日 09:53",
+   "speaker": "A",
+   "text": "行 别这么疑神疑鬼的"
+  },
+  {
+   "type": "message",
+   "time": "8月14日 11:00",
+   "speaker": "B",
+   "text": "单号呢"
+  },
+  {
+   "type": "message",
+   "time": "8月14日 11:03",
+   "speaker": "A",
+   "text": "在查 快递员说系统慢"
+  },
+  {
+   "type": "message",
+   "time": "8月14日 11:05",
+   "speaker": "B",
+   "text": "你这单号不会是编的吧"
+  },
+  {
+   "type": "message",
+   "time": "8月14日 11:07",
+   "speaker": "A",
+   "text": "编那玩意儿干啥 明天你再查 肯定有"
+  },
+  {
+   "type": "message",
+   "time": "8月14日 15:00",
+   "speaker": "A",
+   "text": "刚显示揽收了 已发出 你放心了吧"
+  },
+  {
+   "type": "message",
+   "time": "8月14日 15:03",
+   "speaker": "B",
+   "text": "看到了 刚才那单号是我漏了一位"
+  },
+  {
+   "type": "message",
+   "time": "8月14日 15:05",
+   "speaker": "A",
+   "text": "哈哈 我说吧 你别老把人往坏处想"
+  },
+  {
+   "type": "message",
+   "time": "8月14日 15:07",
+   "speaker": "B",
+   "text": "对不住哥 我小心眼了"
+  },
+  {
+   "type": "message",
+   "time": "8月15日 09:00",
+   "speaker": "A",
+   "text": "物流到咱这儿了 下午应该派送"
+  },
+  {
+   "type": "message",
+   "time": "8月15日 09:03",
+   "speaker": "B",
+   "text": "那我留意着"
+  },
+  {
+   "type": "message",
+   "time": "8月15日 12:00",
+   "speaker": "A",
+   "text": "收到没"
+  },
+  {
+   "type": "message",
+   "time": "8月15日 12:03",
+   "speaker": "B",
+   "text": "到了 刚拆 成色真好"
+  },
+  {
+   "type": "message",
+   "time": "8月15日 12:05",
+   "speaker": "A",
+   "text": "那当然 我用得爱惜"
+  },
+  {
+   "type": "message",
+   "time": "8月15日 12:07",
+   "speaker": "B",
+   "text": "尾款我转你 一千三对吧"
+  },
+  {
+   "type": "message",
+   "time": "8月15日 12:09",
+   "speaker": "A",
+   "text": "对 一千八减五百"
+  },
+  {
+   "type": "transfer",
+   "time": "8月15日 12:11",
+   "from": "B",
+   "to": "A",
+   "amount": 1300,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "8月15日 12:13",
+   "speaker": "A",
+   "text": "收到 相机归你了"
+  },
+  {
+   "type": "message",
+   "time": "8月15日 12:15",
+   "speaker": "B",
+   "text": "谢哥 改天请你吃饭"
+  },
+  {
+   "type": "message",
+   "time": "8月15日 12:17",
+   "speaker": "A",
+   "text": "客气 你用的顺手就行"
+  },
+  {
+   "type": "message",
+   "time": "8月15日 14:00",
+   "speaker": "A",
+   "text": "对了 镜头盖还在 明天带给你"
+  },
+  {
+   "type": "message",
+   "time": "8月15日 14:03",
+   "speaker": "B",
+   "text": "差点忘了这个 谢谢鑫哥"
+  },
+  {
+   "type": "message",
+   "time": "8月15日 14:05",
+   "speaker": "A",
+   "text": "上周那球你看了没 咱公司队赢了"
+  },
+  {
+   "type": "message",
+   "time": "8月15日 14:07",
+   "speaker": "B",
+   "text": "看了 老张那脚可以"
+  },
+  {
+   "type": "message",
+   "time": "8月15日 14:09",
+   "speaker": "A",
+   "text": "下回叫他出来一起吃个饭"
+  },
+  {
+   "type": "message",
+   "time": "8月15日 14:11",
+   "speaker": "B",
+   "text": "行啊 带上我"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000484",
+  "status": "accepted",
+  "errors": []
+ }
+}

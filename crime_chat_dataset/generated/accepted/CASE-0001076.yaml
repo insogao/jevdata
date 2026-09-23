@@ -1,0 +1,131 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001076
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000030
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-e20e88cb05adbabc
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: contraband_illicit_trade
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 表哥 A 以柜台生意为幌子向表弟 B 长期供来路存疑的免税烟和仿牌小样，全程用代称与按条/粒/片的行话报价，还叮嘱别去店面散卖、卖太快招人，是一条熟人之间的灰市货源线。
+  critical_evidence:
+  - B 开口就问「上回那种细支的还有没」，熟门熟路的老买家姿态（第1天）
+  - A 按条报价「细支四百八、十条起」，散拿加价、熟人让价（第1天）
+  - 另有两样按个、按片拿的货：芒果味烟弹六十一粒、大牌小样面膜五十片一包（第1天）
+  - A 点明货是「外仓直接下来的原封带中文标」，叮嘱别去店面散卖、卖太快招人（第2天）
+  - 对账抹零到四千一，约周五饭桌交货当场点、不收定金（第2天）
+  benign_alternatives:
+  - 海外免税商品的正规代购转售
+  - 游戏点卡等虚拟商品的行话交易
+
+attributes:
+  duration_days: 2
+  turn_count: 56
+  approximate_tokens_estimate: 1310
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: code_word_catalog
+  risk: 1
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0066
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-024-RES
+
+dedup:
+  content_hash: sha256:cea22b2998aed945586d4f3c0f0c6ef6a8f582783742d08c928b31ce804eecd3
+pipeline_status: accepted
+title: contraband_illicit_trade/code_word_catalog
+conversation: |-
+  【4月11日】
+  B：哥 上回那种细支的还有没
+  A：有 上周刚到的 还剩十几条
+  B：多少一条
+  A：细支的四百八 十条起这个价
+  B：办公室团 四条也拿得到这个价不
+  A：散拿五百 熟人你 四条也四百八
+  B：行 那就四条
+  A：中午吃没 楼下新开那家酸菜鱼 队排到门口
+  B：吃过了 食堂今天咖喱 难吃得一言难尽
+  A：周五晚上去吃 我请 算接风
+  B：接什么风 我又没升职
+  A：接你升职前之风 哈哈
+  B：行 那说定了
+  B：对了 芒果味那种弹 还有吗 我同事点名要
+  A：有 按个拿 六十一粒 五粒往上五十五
+  B：那来六粒
+  A：记上了 还有大牌小样面膜 按片拿 五十片一包
+  B：嫂子不是不让你碰这些 上回还念叨
+  A：她管家里账 不管我柜台 哈哈
+  B：你俩这分工也是绝了
+  B：这两天降温邪乎 早上骑车手都僵
+  A：是啊 预报说后天还有雨 你骑那小电驴更冷
+  B：所以想换带棚的 还没舍得
+  A：风里来雨里去的 是该换
+  B：先观望 看双十一
+  A：行 那周五火锅给你驱寒
+  【4月12日】
+  B：哥 老板又让补四条 你这货怎么这么抢手
+  A：外仓直接下来的 原封 带中文标
+  B：免税那种?
+  A：嗯 条码能扫 不过你别拿去店面散 卖太快招人
+  B：懂 就办公室内部分
+  B：我昨儿看中一辆通勤电驴 三千二 贵不
+  A：还行 关键看电池是不是新的
+  B：老板说电池能撑一年半
+  A：让他把保修写票上 别听口头
+  B：行 周末再去砍一刀
+  A：砍下来请我喝豆浆
+  B：小侄子期中考完了吧
+  A：完了 数学又没上九十 他妈血压都上来了
+  B：男孩子开窍晚 我当年数学也稀烂
+  A：你还好意思说 你俩一个水平
+  B：哈哈 周五让他也来 吃完我给他补两道题
+  A：行 他见你指定高兴 作业都不写
+  B：哥 对下账 八条加六粒弹 多少
+  A：八条三千八百四 弹三百三 四千一百七 抹零四千一
+  B：你这抹得跟白送似的
+  A：熟人价 你再拉个部门来 我还能让
+  A：你那胃好利索没 上回见你冰美式不离手
+  B：好多了 医生就说少冰 其他随便
+  A：那你中午还喝冰美式
+  B：咖啡不算冰 那是命
+  A：行行行 命要紧
+  A：货周五给你带饭桌上去 原封的当场点
+  B：成 又吃又拿 美滋滋
+  A：先给你留着 不收定金 下回凑十条给你九折
+  B：得嘞 周五见

@@ -1,0 +1,143 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000956
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-5c7229e82c3e3889
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A并非学生监护人，却请求学校工作人员 B 查看并发送学生成绩截图；A以红包、业务关系或人情施压，B拒绝提供并指向正式查询渠道。对话不含学生身份、成绩数字或访问方式。
+  critical_evidence:
+  - A请求查看或截图一名非其监护学生的成绩。
+  - A提及红包、人情或业务压力并继续索要；B拒绝。
+  - B说明成绩只能向授权监护人反馈；对话不含学生身份或分数。
+  benign_alternatives:
+  - 家长查自己孩子
+  - 学校官方查询
+
+attributes:
+  duration_days: 6
+  turn_count: 65
+  approximate_tokens_estimate: 1272
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0111
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-063
+
+dedup:
+  content_hash: sha256:336de346ebf79e3350767dae743ee5eb4e11bcfe42446e4f4e320803d23505db
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【14月5日】
+  A：我这边要给客户回个情况，想核对一位学生的学习表现。
+  A：公交今天来得很及时。
+  B：我只能向监护人反馈学生信息。
+  B：我早上也没等多久。
+  A：出门时间刚刚好。
+  A：咱们是商务合作，先给个大概就行。
+  B：挺顺的。
+  B：合作关系也不能越过隐私要求。
+  A：晚上准备做个简单的炒菜。
+  A：今早买的面包还挺新鲜。
+  B：放点豆腐也不错。
+  【14月6日】
+  B：哪家店？我下次路过买点。
+  A：家里正好还有一盒。
+  A：车站出口那家，早上刚出炉。
+  B：那就不用额外买。
+  B：记下了。
+  A：家长急着做选择，你帮忙看看吧。
+  A：我把书架上的杂志分了一下。
+  B：请让监护人本人联系学校。
+  B：看完的可以先收起来。
+  A：红包已经转到群里了，截图发我就行。
+  A：嗯，腾出一层空间。
+  【14月7日】
+  B：我不会提供任何学生成绩截图。
+  B：以后找书也方便。
+  A：早晨风有点凉，你今天走哪条路上班？
+  B：我坐公交，正好不用在外面等太久。
+  A：这两天温度升得挺快。
+  A：那挺好，我也想少开几次车。
+  B：早晚还是会凉，注意添衣。
+  B：天气再暖些骑车会舒服。
+  A：名字遮掉，不会泄露到外面。
+  A：我放了件薄外套在办公室。
+  B：遮住姓名也可能泄露个人情况。
+  【14月8日】
+  B：那就不用来回带。
+  A：那我把查询方式转给家长。
+  B：请转学校公开的咨询渠道。
+  A：我下班要顺路买点菜。
+  B：这周要不要找时间去吃那家新开的店？
+  B：先看下冰箱里还剩什么。
+  A：可以，我听说他们午市不太挤。
+  B：那就挑个工作日去。
+  A：好，免得买重复。
+  A：好，我提前把时间空出来。
+  A：收到，我不再私下问。
+  【14月9日】
+  B：对。
+  B：谢谢配合。
+  A：培训会的茶水费我转你了。
+  A：今天咖啡喝得有点晚。
+  B：收到了，茶水钱对上了。
+  【系统消息】A 向 B 转账 28 元，已收款。
+  B：晚上可能睡得慢，少刷会手机。
+  A：我等下换成温水。
+  B：这样好些。
+  A：家里人问我周末几点到。
+  B：忙完给他们回个电话就行。
+  【14月10日】
+  A：我晚点安排一下。
+  B：好。
+  A：楼下花坛新种了几株花。
+  B：颜色挺亮的，我路过看到了。
+  A：等开了应该更好看。
+  B：嗯。
+  A：我把今天要办的事记下来了。
+  B：按顺序来就不会漏。
+  A：已经做完两件了。
+  B：效率挺高。
+  A：这周末可能有阵雨。

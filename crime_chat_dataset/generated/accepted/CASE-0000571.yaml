@@ -1,0 +1,141 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000571
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-93406064af83f95f
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A试图向 B 索取整组同事的联系方式、简历和离职名单，准备按份转卖；B指出这些资料属于个人信息，未获授权不得提供或传播。对话不含任何真实数据、获取方式或销售渠道。
+  critical_evidence:
+  - A提出要整个部门电话和简历，并表示可以按份出售。
+  - A还索要离职名单；B拒绝提供任何员工资料。
+  - B指出资料未经本人授权，不得整理、交易或传播；对话没有出现具体联系信息或简历内容。
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 3
+  turn_count: 67
+  approximate_tokens_estimate: 1533
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0077
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-039
+
+dedup:
+  content_hash: sha256:fccaa8c22768faaa1afaf508be72464b8449db87066c286cf561fa84c3e187fc
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【7月4日】
+  A：我听说你那边有一批部门资料，最近能不能给我看下？
+  A：我把这周要处理的事项写在便签上了。
+  B：你具体说什么？
+  A：整个部门电话和简历，按份给我就行。
+  B：好，做完一项划掉一项。
+  B：周末你打算在家还是出门？
+  A：上午会议结束得比预想早。
+  A：可能在家收拾书架，东西堆得太多。
+  B：我也准备整理一下衣柜。
+  B：那正好留点时间喘口气。
+  A：整理完会清爽很多。
+  B：这些是员工个人信息，没有授权不能提供。
+  A：刚才外面下了几分钟小雨。
+  A：离职名单也一起吧，我好估算下数量。
+  B：更不能给，离职信息也需要保护。
+  B：我看窗台都湿了，应该快停了。
+  A：我可以付钱，资料完整就好。
+  A：最近早餐都吃得很随便。
+  A：我打算把桌面文件夹重新分一下。
+  B：可以前一晚准备点酸奶和水果。
+  B：按日期分会比较好找。
+  A：这个主意不错，我明天试试。
+  B：别光喝咖啡就出门。
+  【7月5日】
+  A：今天午饭吃得有点晚。
+  B：不管有没有报酬，我都不会转出去。
+  A：你手里现成的应该不用再整理吧？
+  B：我不会搜索、整理或分享这类资料。
+  B：那下午别忘了喝点水。
+  A：这周天气忽冷忽热，你早上出门带外套了吗？
+  B：带了，早晚风挺凉的。
+  A：楼下那家店换了招牌，我差点没认出来。
+  A：我昨天没带，下午就后悔了。
+  B：放一件在办公室吧，省得忘。
+  B：我昨天也看到了，颜色挺亮。
+  A：只是做个业务联系，没什么。
+  B：未经同意联系他们也不合适。
+  A：我晚点要去取个快递。
+  A：那你至少帮我问问有没有人愿意卖？
+  B：你中午有出去走走吗？
+  B：驿站现在开到挺晚的。
+  A：绕楼下转了一圈，太阳还挺舒服。
+  B：我今天一直坐着，等下也起来活动。
+  A：走几分钟也好，眼睛能歇一会。
+  A：这周的日程比上周松一点。
+  B：请不要让我替你打听或转发请求。
+  【7月6日】
+  A：你说得也太绝对了。
+  B：正好把积着的小事清掉。
+  B：涉及同事信息，我必须按授权范围处理。
+  A：好吧，这次我不问了。
+  A：家里的水壶最近有点漏，我得换一个。
+  A：我今天试了新开的面包店。
+  B：附近超市有几款在打折。
+  A：我周末去看看，先不急着买。
+  B：嗯，挑个容易清洗的。
+  B：好吃吗？
+  B：请确认你手里的资料不会继续传播。
+  A：我不会再提这件事。
+  A：还不错，下次可以买给家里人。
+  B：谢谢，资料只用于获准的工作事项。
+  B：嗯，少买点，别放久了。
+  A：手机电量掉得比平时快。
+  B：你是不是一直开着导航？
+  A：可能，回头我检查一下设置。
+  B：先带充电线，出门安心点。
+  A：晚上准备早点睡，最近有点困。
+  B：早点休息，明早会舒服些。
+  A：我把旧杂志整理出来准备回收。

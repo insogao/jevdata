@@ -1,0 +1,124 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000945
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-0ba3f2e8ad2d68aa
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A试图未经授权转卖员工联系方式、简历和离职资料；B拒绝交易、传播或协助联系买家。
+  critical_evidence:
+  - A暗示整批员工联系方式、简历与离职资料可按份转卖
+  - B拒绝买卖或转发员工资料
+  - B要求停止传播并按正规流程交回或删除资料
+  benign_alternatives:
+  - 良性解释可能是：猎头正常触达
+  - 良性解释可能是：通讯录共享授权
+
+attributes:
+  duration_days: 2
+  turn_count: 50
+  approximate_tokens_estimate: 736
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0112
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-064
+
+dedup:
+  content_hash: sha256:dbba9f25eda8cead34f079390dc99f8742fa194c20cb3691f13f6616230958f2
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【11月20日】
+  A：楼下新开了豆浆店
+  B：我喝了黑豆的
+  A：甜不甜
+  B：无糖
+  A：我也喜欢
+  A：我先记下，改天再聊。
+  B：好，不急。
+  A：你弟最近搬家吗
+  B：月底搬
+  A：东西多不多
+  B：不太多
+  A：有空帮忙
+  A：我先记下，改天再聊。
+  A：我手上有一份部门通讯录、简历和离职名单，想按份卖给外面的人。
+  B：好，不急。
+  B：这些是员工个人信息，没授权不能出售。
+  A：买家已经问了价格。
+  B：我不会买，也不帮你联系买家。
+  A：那我先留着。
+  B：请停止传播，按公司流程交还或删除。
+  A：我知道了。
+  B：不要保留副本。
+  A：今天阳光挺好
+  B：我中午出去走了
+  A：园区人多吗
+  B：不多
+  A：我下次也去
+  A：我先记下，改天再聊。
+  B：好，不急。
+  【11月21日】
+  A：公交比上周顺了
+  B：我坐了两天
+  A：挺快吗
+  B：差不多
+  A：还不错
+  A：我先记下，改天再聊。
+  B：好，不急。
+  A：上次一起点饭的一百二我转你了。
+  【系统消息】A 向 B 转账 120 元，已收款。
+  B：收到了，正好是饭钱。
+  A：对方还想看几份简历。
+  B：也不能发，里面有个人资料。
+  A：我已经拒绝了。
+  B：如果有资料外泄风险，通知相关负责人。
+  A：我会处理。
+  B：招聘需求走公开渠道。
+  A：文件我交回公司了。
+  B：谢谢。
+  A：以后不再碰这些资料。
+  B：好，只在授权范围内使用员工信息。
+  A：明白。
+  B：这样比较稳妥。

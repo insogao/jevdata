@@ -1,0 +1,131 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000989
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-540f7c9228d06bf8
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 向 B 索要未经本人同意的同事联系方式、简历或离职人员名单，并提出将资料按份提供给他人；B 拒绝查看、转发或交易个人资料，限定在经本人授权的正常招聘触达。
+  critical_evidence:
+  - A 请求整个部门的电话、简历或离职名单等同事资料
+  - A 提到把简历按份提供给他人或从中获利，但不说明获取或交易操作
+  - B 明确拒绝提供、转发或出售未经授权的个人资料
+  - B 区分本人同意的猎头联系/授权通讯录共享与未经授权的资料流转
+  benign_alternatives:
+  - 经本人同意的猎头正常触达
+  - 明确授权范围内的通讯录共享
+
+attributes:
+  duration_days: 5
+  turn_count: 53
+  approximate_tokens_estimate: 988
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0115
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-066
+
+dedup:
+  content_hash: sha256:a4a9a04dec72c936b2d7ea74a0feb99adb940d6f0b69c504716d4e82568a9339
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【10月4日】
+  A：招聘季到了，想请你帮忙弄一份部门联系人
+  B：你是要公开招聘渠道那份吗
+  A：不是，想要整个部门电话，再带几份简历
+  B：未经本人同意的资料我不能给
+  A：周末菜市场人多吗
+  B：我去得早还好，买了点水果
+  A：最近橙子挺甜
+  B：嗯，别一次买太多
+  A：你家的猫好点没
+  B：好多了，今天肯吃东西
+  A：那就放心了
+  【10月5日】
+  B：晚上再观察一下
+  A：离职名单也有用，简历可以按份卖给合作方
+  B：我不会转发或出售同事资料
+  A：只是先问问，别那么严肃
+  B：正常猎头可以联系主动授权的人，不能拿私人名单
+  A：新工位坐着习惯吗
+  B：还行，就是显示器有点低
+  A：垫个支架会舒服些
+  B：我明天找找
+  A：那通讯录共享呢
+  B：只限明确同意的人和用途，超出范围不行
+  【10月6日】
+  A：好，那我改走公开招聘信息
+  B：这样可以，我也会按公司数据规则处理
+  A：假期车票定了吗
+  B：还没，先看下哪天方便
+  A：刚才那份午饭我先垫了，按平常AA转我就行
+  【系统消息】B 向 A 转账 88 元，已收款。
+  B：是，今晚和家里商量
+  A：楼下咖啡店换豆子了
+  B：难怪今天味道不一样
+  A：你觉得之前那款好吗
+  B：我还是喜欢浅烘的
+  【10月7日】
+  B：行，明天再说
+  A：我去倒杯水
+  B：记得起来活动下
+  A：我先记一下
+  B：嗯，别急着定
+  A：下午还有个会
+  A：我这边先去处理下别的事
+  B：那我晚点回你
+  A：刚才网络卡了
+  B：我这边也断了一下
+  A：收到，我看到了
+  【10月8日】
+  B：好，先忙手头的
+  A：这个不用今天决定
+  A：我这边先去处理下别的事
+  B：行，明天再说
+  A：我去倒杯水
+  B：记得起来活动下
+  A：我先记一下
+  B：嗯，别急着定
+  A：下午还有个会
+  A：我这边先去处理下别的事

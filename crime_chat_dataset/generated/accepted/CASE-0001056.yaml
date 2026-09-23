@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001056
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-7c145faf4acba3de
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 与管排班的同事 B 熟识，节前私下递上一张购物卡，两人只用“过年那几天”“你懂的”带过用途与面值；节后 A 用“那个班表”暗示希望 B 把春节值班帮 A 排开。
+  critical_evidence:
+  - 节前 A 特意约管排班的同事 B 到外面单独碰面，避开工位
+  - A 递出购物卡，双方都不点明用途与面值，只用“过年那几天”“你懂的”省略
+  - B 没有明确拒绝，含糊收下
+  - 事后 A 发消息，用“那个班表”暗示希望春节值班被排开
+  benign_alternatives:
+  - 同事之间正常的节日人情往来
+  - 单位发放的福利购物卡转赠
+
+attributes:
+  duration_days: 4
+  turn_count: 46
+  approximate_tokens_estimate: 672
+  relationship: 同事
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 同事
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0062
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-028
+
+dedup:
+  content_hash: sha256:e70325cfbbb24f86170aab28b85059d46c9d199c334495801a78a8f831208e44
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【1月20日】
+  A：下班后一起吃个饭?
+  B：行 还是老地方
+  A：嗯 别叫别人
+  B：神神秘秘的
+  A：今天食堂那菜你没吃吧
+  B：吃了 难吃
+  A：我一闻那味就跑了
+  B：哈哈 矫情
+  A：到了 二楼靠里
+  B：马上
+  A：过年那个东西给你 你懂的
+  B：又整这套
+  A：都这样 别问多少 拿着就行
+  B：…你这样我不好做人
+  A：有啥不好做的 又不是让你干啥
+  B：行 先收着
+  A：这才对 吃饭吃饭
+  【1月21日】
+  A：早 昨晚喝多了没
+  B：没喝多少
+  A：今天降温 你穿那么薄
+  B：办公室不冷
+  A：中午还去食堂?
+  B：去 凑合
+  A：我给你带了个饼
+  B：不用 你自己吃
+  A：春节排班表出来没
+  B：初稿了 还没定
+  A：我过年得回老家 你懂的
+  B：谁不想回 排班得公平
+  A：我知道 就是提一句
+  B：到时候看
+  【1月22日】
+  A：你家年夜饭在哪儿吃
+  B：今年在我妈那
+  A：那你要是不值班就能过去
+  B：看排班吧
+  A：孩子寒假作业写了没
+  B：催着呢 天天摸鱼
+  A：都这样 我家那个也是
+  B：过年更管不住
+  【1月23日】
+  A：那个班表 你帮我留意下呗
+  B：尽力 但得有人顶
+  A：你就帮我排开那几天 回头请你
+  B：别请来请去的 我看看
+  A：好 有你这话就行
+  B：先别声张
+  A：懂 我不说

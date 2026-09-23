@@ -1,0 +1,121 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000705
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-e022d4eb6076cd51
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A声称认出了 B 的匿名账号，并用旧内容和时间线施压；B要求停止将账号与现实身份关联、停止讨论或传播私人内容。对话不说明获取或比对方法，不含可识别个人信息。
+  critical_evidence:
+  - A声称已认出 B 的匿名账号，并提及旧内容及时间线，不提供发现方式。
+  - A暗示会把掌握的内容传播出去，以此向 B 施压。
+  - B要求停止关联与传播，并只通过平台正式渠道沟通。
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 3
+  turn_count: 47
+  approximate_tokens_estimate: 994
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0088
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-049
+
+dedup:
+  content_hash: sha256:bf3dc26456cd2b7df63f4df0db97a3347d841a27c32e34ae6d0ac9ccb6f2674e
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【8月3日】
+  A：你之前说那个小号和你没关系，我不太相信。
+  B：不要把匿名账号和我本人联系起来。
+  A：以前的发言和时间都能对上。
+  A：我把手边的事情列了张清单。
+  B：我不想聊私人账号，请你停下。
+  A：家里那盆花好像有新叶了。
+  B：最近光照好，应该长得快。
+  B：一项项处理就好。
+  A：我还是按原来的频率浇水。
+  B：别浇太勤就行。
+  A：小号也给你翻了，我看到了那些旧内容。
+  B：不要把我的私人内容转给其他人。
+  A：上午临时多了个会。
+  A：你先把那条公开发言删掉，事情就过去了。
+  B：我会自己处理，不接受你施压。
+  B：你周末要不要出去走走？
+  【8月4日】
+  B：那下午把空出来的事补上。
+  A：想去公园转一圈，最近坐得太久。
+  B：上午去会凉快些。
+  A：好，到时看天气再定。
+  A：要是你不动，我就把我知道的告诉别人。
+  A：我重新整理了文件夹，旧资料都归档了。
+  B：这已经是在威胁我，我会向平台正式申诉。
+  A：我只是提醒你，别弄得大家都难看。
+  B：请停止联系我，也不要再提我的私人账号。
+  B：这样桌面看起来清爽多了。
+  A：我今天中午自己带了饭。
+  B：省得排队，挺方便。
+  A：吃完还能歇一会。
+  B：是啊，午休别都用来赶路。
+  A：今天楼下路口有点堵。
+  A：我还没把内容发出去。
+  【8月5日】
+  B：那就不要保存或传播。
+  A：行，我暂时不说了。
+  B：请以后只通过平台渠道沟通。
+  A：这几天早晚温差大，你出门带外套没？
+  B：我也绕了一小段路。
+  B：带了，傍晚风挺凉的。
+  A：我昨天忘了，回去的时候有点冷。
+  B：天气变化快，放一件在包里吧。
+  A：我知道了。
+  A：手机快没电了，我先插会儿。
+  B：到这里为止。
+  A：好。
+  B：谢谢。
+  B：记得带上充电线。
+  A：下班我得去拿个快递。

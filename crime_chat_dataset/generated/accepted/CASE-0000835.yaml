@@ -1,0 +1,118 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000835
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-1d26a4567ba03ceb
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A索要同事整组联系方式、简历及离职名单，准备按份转卖；B拒绝提供、整理或转发，并指出必须取得本人授权。对话不含任何实际资料、获取方式或销售渠道。
+  critical_evidence:
+  - A索要整个部门电话与简历，提出按份出售。
+  - A还要求离职名单；B拒绝提供或整理。
+  - B指出同事资料必须取得本人授权，不能交易或传播；对话不含实际个人信息。
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 4
+  turn_count: 42
+  approximate_tokens_estimate: 907
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0101
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-058
+
+dedup:
+  content_hash: sha256:56e6d98978e4e24a534affb8eebee1d332028c6b44baa5b556cee3d8a2391119
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【15月2日】
+  A：我受人委托找一批候选人，听说你能接触员工资料。
+  B：我只能处理授权范围内的工作信息。
+  A：要整个部门电话和简历，离职名单也算。
+  A：上次一起吃饭的钱我转给你了。
+  A：阳台的盆栽长了新叶。
+  B：最近光照好，长得挺快。
+  A：我得记得少浇点水。
+  B：收到了，是那顿饭的费用。
+  【系统消息】A 向 B 转账 36 元，已收款。
+  B：土干了再浇就行。
+  B：这些都不能私下转给你。
+  【15月3日】
+  A：按份结算，省得你白忙。
+  A：这几天喝水少了，得提醒自己。
+  B：有报酬也不能代替当事人同意。
+  B：周末你准备出门吗？
+  A：看天气吧，可能去河边走走。
+  B：上午去会凉快一点。
+  B：水杯放手边就容易记住。
+  A：好，到时再决定。
+  A：我不需要你讲怎么找，手边有的给我就行。
+  B：我不会提供、整理或转发同事资料。
+  A：我刚把鞋柜简单整理了一下。
+  【15月4日】
+  A：那帮我问问有没有人肯卖？
+  B：我不会代你打听或转发这个请求。
+  A：今天咖啡店人少，排队很快。
+  B：可能大家都还没到午休时间。
+  B：换季时收拾正合适。
+  A：我顺便买了个面包。
+  B：当下午茶刚好。
+  A：懂了，我换个公开渠道找。
+  B：请只通过本人同意的方式联系。
+  A：今天公交来得很快。
+  A：好，这事到此为止。
+  【15月5日】
+  A：早晚温差挺明显，你早上带外套了吗？
+  B：带了，早晨出门还挺凉。
+  A：我昨天没带，回去有点冷。
+  B：我早上也没等太久。
+  B：下次放件薄的在车里吧。
+  B：谢谢。
+  A：我不会再找你要名单。
+  B：请确保资料不会扩散。
+  A：晚点想去买点蔬菜。
+  B：记得看看冰箱还缺什么。

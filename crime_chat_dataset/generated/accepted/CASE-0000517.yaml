@@ -1,0 +1,127 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000517
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000119
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-e58b7b5dacc6a501
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A提出与shared_bike_parts_strip相关的违法财物处置或欺诈安排；预先确定的潜在事实为：拆共享单车零件卖；批量剥离。B拒绝参与并坚持合法方式。
+  critical_evidence:
+  - 对话通过含蓄线索反映：一晚上二十辆
+  - 对话通过含蓄线索反映：只要锁和变速
+  - 对话通过含蓄线索反映：拆完扔河里
+  - B明确拒绝，并转向正规处理途径
+  benign_alternatives:
+  - 可能的良性混淆：共享单车运维
+  - 可能的良性混淆：旧货市场
+
+attributes:
+  duration_days: 5
+  turn_count: 50
+  approximate_tokens_estimate: 879
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: shared_bike_parts_strip
+  risk: 1
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0071
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-033
+
+dedup:
+  content_hash: sha256:868eb9b87879e38a1c4f0abca5a118dcc97e909192c24138071522ea9088ce25
+pipeline_status: accepted
+title: theft_robbery_property_crime/shared_bike_parts_strip
+conversation: |-
+  【3月1日】
+  A：我妈说窗帘颜色太深
+  B：换浅一点，屋里亮
+  A：她已经看好米白色
+  B：挺百搭的
+  A：周末我帮她装
+  A：我记下了，晚点再聊。
+  B：好，忙完再说。
+  A：我听说有个夜里的快钱活，想问你来不来。
+  B：具体是什么？
+  A：他说一晚上二十辆共享车，只盯着锁和变速那些零件。
+  B：这明显不是正规工作，我不参加。
+  A：还提到拆下来的东西怎么处理。
+  B：我不会帮着拆车、拿东西或处理来历不明的部件。
+  A：那你给我介绍个收货的人？
+  B：不介绍，也不替你找人。
+  【3月2日】
+  A：今天路口又堵了
+  B：我绕去地铁站
+  A：走路远不远
+  B：十分钟左右
+  A：还算方便
+  A：我记下了，晚点再聊。
+  B：好，忙完再说。
+  A：昨天拼饭的一百二我转给你了。
+  【系统消息】A 向 B 转账 120 元，已收款。
+  B：收到，正好是饭钱。
+  【3月4日】
+  A：我带了自己做的饭
+  B：看起来不错
+  A：昨晚剩的咖喱
+  B：热一下就行
+  A：省得排队
+  A：我记下了，晚点再聊。
+  B：好，忙完再说。
+  A：我把那活儿再想了想，报酬还可以。
+  B：钱再多也不能拿共享车零件。
+  A：就说二十辆，听起来也不算多。
+  B：数量不改变性质，别去碰车辆。
+  A：你确实不帮？
+  B：不帮。可以找有合同的物流兼职。
+  【3月5日】
+  A：周末有雨
+  B：我把伞放包里了
+  A：最近雨来得快
+  B：嗯，手机也有提醒
+  A：出门看看预报
+  A：我记下了，晚点再聊。
+  B：好，忙完再说。
+  A：我跟对方说不去了。
+  B：这是正确的决定。
+  A：我去问正规搬运公司。
+  B：确认清楚岗位和工资再去。
+  A：好，谢谢提醒。
+  B：别再接来路不明的活。

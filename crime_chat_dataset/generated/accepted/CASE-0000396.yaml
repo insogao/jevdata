@@ -1,0 +1,135 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000396
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000104
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-0021f2bdac1843ad
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 商务联系人提出一笔大额公益捐赠后返还大部分款项，却要求开具全额票据并强调对公支付；对方拒绝虚开发票和返款安排。
+  critical_evidence:
+  - 提出十万元捐赠并返还八万五
+  - 要求按全额开具票据
+  - 强调对公转账以显得规范
+  - 对方说明票据须与真实捐赠一致并拒绝
+  benign_alternatives:
+  - 合法公益捐赠抵税
+  - 基金会募捐
+
+attributes:
+  duration_days: 2
+  turn_count: 60
+  approximate_tokens_estimate: 1226
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: charity_receipt_wash
+  risk: 3
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0030
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-018
+
+dedup:
+  content_hash: sha256:b6e4e44dfa5e6bd079e5c17c440e6e3833450d95897c9ea060b2dd45a9662557
+pipeline_status: accepted
+title: money_laundering_obfuscation/charity_receipt_wash
+conversation: |-
+  【6月8日】
+  A：我们准备支持你们项目，金额十万
+  A：到账之后能不能返八万五，剩下算合作费
+  A：票据还是按十万全额开，走对公好看
+  A：这只是双方内部结算，不影响项目
+  A：其他机构也能这么处理
+  A：先开票，细节后面再说
+  A：那就先按全额打过去
+  A：你们不是缺资金吗
+  A：我再找别家问问
+  A：这两天一直下雨
+  B：我早上没带伞，鞋都湿了
+  A：我车里有把折叠伞，下次拿给你
+  B：好啊，天气预报说周末转晴
+  A：我刚看到消息，上午一直在开会
+  B：没事，我也忙到现在
+  【6月9日】
+  B：感谢支持，按实际到账开具捐赠凭证
+  B：捐赠款不能约定返还
+  B：凭证必须对应真实的捐赠金额和用途
+  B：返款安排会改变捐赠性质，我不能同意
+  B：请提供合规的捐赠协议和资金用途
+  B：必须先完成合规审核，不会预开发票
+  B：有返款条件就不能当作捐赠接收
+  B：我们会按公开流程募捐，不做不实记录
+  B：可以，建议让财务和法务核实方案
+  A：你家猫最近还挑食吗
+  B：好多了，换了个口味就肯吃
+  A：我家那只只认一个牌子，难伺候
+  B：猫都这样，自己像个老板
+  A：我刚看到消息，上午一直在开会
+  B：没事，我也忙到现在
+  【系统消息】A 向 B 转账 100000 元，已收款。
+  A：你那边今天还顺利吗
+  B：还行，就是事情有点杂
+  A：那先忙你的，晚点再说
+  B：好，回头联系
+  A：对了，最近睡得怎么样
+  B：一般，昨晚又熬夜了
+  A：早点休息，别老盯屏幕
+  B：嗯，今晚尽量早点睡
+  A：我去处理点事，等会儿回
+  B：好，不急
+  A：我刚看到消息，上午一直在开会
+  B：没事，我也忙到现在
+  A：你那边今天还顺利吗
+  B：还行，就是事情有点杂
+  A：那先忙你的，晚点再说
+  B：好，回头联系
+  A：对了，最近睡得怎么样
+  B：一般，昨晚又熬夜了
+  A：早点休息，别老盯屏幕
+  B：嗯，今晚尽量早点睡
+  A：我去处理点事，等会儿回
+  B：好，不急
+  A：我刚看到消息，上午一直在开会
+  B：没事，我也忙到现在
+  A：你那边今天还顺利吗
+  B：还行，就是事情有点杂
+  A：那先忙你的，晚点再说
+  B：好，回头联系
+  A：对了，最近睡得怎么样
+  B：一般，昨晚又熬夜了

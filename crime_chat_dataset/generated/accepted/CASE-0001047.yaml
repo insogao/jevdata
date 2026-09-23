@@ -1,0 +1,124 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001047
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000015
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-186f194be8962e3c
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: fraud_scam
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 同事借着办公室熟络关系，向同样有中考孩子的同事推销自己代理的名师视频课，用十节包提分和最后几个名额施压，对方几次婉拒始终没有付款。
+  critical_evidence:
+  - A 在办公室闲聊里向同事 B 提起清华退学名师的高一数学课
+  - A 反复承诺十节课包提分，说自家亲戚孩子就是例子
+  - A 称本期只剩最后几个名额，让 B 用内部价尽快定
+  - B 多次婉拒没有转账，A 仍在工位旁追问
+  benign_alternatives:
+  - 同事之间分享的正规网课资源
+  - 教育机构正常的公开课与试听
+
+attributes:
+  duration_days: 6
+  turn_count: 47
+  approximate_tokens_estimate: 902
+  relationship: 同事
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: video_coaching_parent_scam
+  risk: 1
+  relationship: 同事
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0059
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:e371c7abadbc21fdd894849902e029be0e1aa8555c6befc9b60d2bc59c0ced32
+pipeline_status: accepted
+title: fraud_scam/video_coaching_parent_scam
+conversation: |-
+  【6月2日】
+  A：中午一起吃饭不 食堂今天有排骨
+  B：我带了饭 你吃你的
+  A：天天带饭 你太会过了
+  B：孩子要中考了 能省就省
+  A：说到孩子 我手上有个课 清华退学出来创业的老师 专做数学
+  B：你又开始推销了
+  A：我业余代理 赚点外快 但课是真好
+  B：我孩子数学还行
+  A：还行也得冲一冲 十节课包提分
+  B：包提分这种话你也信
+  A：我亲戚孩子上了 从九十提到一百二十五
+  B：那也得看孩子自己
+  B：今天加班到几点
+  A：估计八点 项目收尾
+  B：那我不等你了 先走
+  A：行 路上慢点
+  【6月3日】
+  A：早 那个课名额只剩最后三个了
+  B：我没说要报啊
+  A：先给你占一个 内部价 对外三千六 给你三千
+  B：不用了 我真不缺课
+  A：你孩子马上中考 错过就没了
+  B：我孩子自己有规划
+  B：你昨天那个报表发我一下
+  A：发了 你查收
+  B：收到
+  A：对了 名额的事今晚前给我个信
+  B：我说了不报 你别老提
+  A：我这不是为你孩子好嘛
+  B：你的好意我心领了
+  【6月4日】
+  A：就剩最后两个了 你再想想
+  B：不想了 我不报
+  A：你这人真是 便宜都不捡
+  B：便宜的我不放心
+  B：周末团建你去不
+  A：去 带孩子一起
+  B：那到时候见
+  【6月5日】
+  A：我帮你问了 老师说可以先上一节试试
+  B：不用麻烦你了
+  A：试听不要钱 你就当帮我个忙
+  B：帮你冲业绩就算了
+  【6月6日】
+  A：名额今天最后一天 你转我我就登记
+  B：我不转 你别等了
+  A：行 那给别人了
+  B：团建记得带餐具
+  A：知道了
+  B：上课的事我真不报 别影响咱同事关系
+  A：行吧 当我没说

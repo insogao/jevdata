@@ -1,0 +1,114 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000388
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000041
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-d1fbf3aae2ad125d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: contraband_illicit_trade
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A以medicine_crossborder_resale方式谋取利益，核心潜在事实为：绕开审批进口药品转卖；朋友圈囤药。
+  critical_evidence:
+  - 关键线索：原研版比医院便宜
+  - 关键线索：整盒拿更划算
+  - 关键线索：冷链我包
+  benign_alternatives:
+  - 可被误解为：正规海外代购药品咨询
+  - 可被误解为：药店促销
+
+attributes:
+  duration_days: 4
+  turn_count: 38
+  approximate_tokens_estimate: 820
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: medicine_crossborder_resale
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0050
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-024
+
+dedup:
+  content_hash: sha256:b8c2a6c399986c27b2b1a2c4b1d512f5311f7c71ed944a8e99507a971d6556d5
+pipeline_status: accepted
+title: contraband_illicit_trade/medicine_crossborder_resale
+conversation: |-
+  【10月29日】
+  A：公司附近修路了
+  B：我今天绕了个大圈
+  A：明天早点出门
+  B：已经设了闹钟
+  A：我先记一下，免得回头忘。
+  B：好呀，忙完再聊也行。
+  A：原研版比医院便宜，整盒拿更划算。
+  B：这是有正规进口和销售许可的吗？
+  A：手续还在补，冷链我包。
+  B：手续没齐我不能替客户下单。
+  A：我之前做过几次，没出过问题。
+  B：药品要由正规机构供应，患者应问医生或药师。
+  【10月30日】
+  A：你吃过那家粥铺吗
+  B：吃过，南瓜粥不错
+  A：那我下次点那个
+  B：小菜也挺清爽
+  A：我先记一下，免得回头忘。
+  B：好呀，忙完再聊也行。
+  A：我把刚才拼单的午饭钱转你了，一百二。
+  【系统消息】A 向 B 转账 120 元，已收款。
+  B：收到了，正好是午饭那份。
+  【10月31日】
+  A：客户今天又问了，能不能先留一整盒？
+  B：不能，来源和审批没确认前不留货。
+  A：你们公司不是做咨询的吗？
+  B：咨询不代表可以私下销售未经审批的药品。
+  A：我自己处理运输。
+  B：冷链也不能代替合法审批和质量核验。
+  【11月1日】
+  A：你姐复查结果如何
+  B：医生说按时休息就好
+  A：那就安心了
+  B：嗯，她也没那么紧张
+  A：我先记一下，免得回头忘。
+  B：好呀，忙完再聊也行。
+  A：那我把价格表发你，你看看。
+  B：不用发，我不会转发或帮你宣传。
+  A：原研版确实比医院便宜。
+  B：便宜不能证明安全，患者请走正规渠道。
+  A：好，我知道了。
+  B：请把客户信息也妥善处理。

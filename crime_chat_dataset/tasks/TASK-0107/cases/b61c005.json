@@ -1,0 +1,327 @@
+{
+ "key": "b61c005",
+ "archetype_id": "ARC-000087",
+ "subtype": "exam_score_lookup",
+ "latent_intent": "A并非学生监护人，却请求学校工作人员 B 查看该生的成绩并发送截图；A以红包或关系施压，B拒绝提供并指向正式查询渠道。对话不含学生身份、分数或访问方法。",
+ "critical_facts": [
+  "A请求查看并截图一名非其监护学生的成绩。",
+  "A提到红包或人情并继续索要截图；B拒绝。",
+  "B明确成绩只向授权监护人反馈；对话不包含学生身份或分数。"
+ ],
+ "benign_alternatives": [
+  "家长查自己孩子",
+  "学校官方查询"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "16月4日 08:00",
+   "speaker": "A",
+   "text": "最近有家长来问孩子的学习情况，我想先帮着确认。"
+  },
+  {
+   "type": "message",
+   "time": "16月4日 09:40",
+   "speaker": "A",
+   "text": "上次一起吃饭的费用我转给你了。"
+  },
+  {
+   "type": "message",
+   "time": "16月4日 11:20",
+   "speaker": "B",
+   "text": "要由学生监护人本人查询。"
+  },
+  {
+   "type": "message",
+   "time": "16月4日 13:00",
+   "speaker": "A",
+   "text": "我只是代为跑腿，截图给家里看就行。"
+  },
+  {
+   "type": "message",
+   "time": "16月4日 14:40",
+   "speaker": "B",
+   "text": "收到了，是那顿饭的钱。"
+  },
+  {
+   "type": "transfer",
+   "time": "16月4日 16:20",
+   "from": "A",
+   "to": "B",
+   "amount": 40,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "16月4日 18:00",
+   "speaker": "B",
+   "text": "我不能把成绩发给未授权的人。"
+  },
+  {
+   "type": "message",
+   "time": "16月4日 19:40",
+   "speaker": "A",
+   "text": "我先从截图开始。"
+  },
+  {
+   "type": "message",
+   "time": "16月4日 21:20",
+   "speaker": "A",
+   "text": "家里人说周末要来吃饭。"
+  },
+  {
+   "type": "message",
+   "time": "16月5日 08:00",
+   "speaker": "B",
+   "text": "提前把菜单想好就行。"
+  },
+  {
+   "type": "message",
+   "time": "16月5日 09:52",
+   "speaker": "B",
+   "text": "这样会快很多。"
+  },
+  {
+   "type": "message",
+   "time": "16月5日 11:45",
+   "speaker": "A",
+   "text": "他们每次都带很多水果。"
+  },
+  {
+   "type": "message",
+   "time": "16月5日 13:37",
+   "speaker": "A",
+   "text": "今天下午有点困。"
+  },
+  {
+   "type": "message",
+   "time": "16月5日 15:30",
+   "speaker": "B",
+   "text": "那就不用准备太多甜点。"
+  },
+  {
+   "type": "message",
+   "time": "16月5日 17:22",
+   "speaker": "A",
+   "text": "班主任系统里应该有最新记录。"
+  },
+  {
+   "type": "message",
+   "time": "16月5日 19:15",
+   "speaker": "B",
+   "text": "起来活动一下会清醒些。"
+  },
+  {
+   "type": "message",
+   "time": "16月5日 21:07",
+   "speaker": "B",
+   "text": "我不会私下打开或分享。"
+  },
+  {
+   "type": "message",
+   "time": "16月6日 08:00",
+   "speaker": "A",
+   "text": "红包那份我已经准备好了。"
+  },
+  {
+   "type": "message",
+   "time": "16月6日 09:52",
+   "speaker": "A",
+   "text": "我去接了杯水。"
+  },
+  {
+   "type": "message",
+   "time": "16月6日 11:45",
+   "speaker": "B",
+   "text": "不用准备，我不会接受这个请求。"
+  },
+  {
+   "type": "message",
+   "time": "16月6日 13:37",
+   "speaker": "B",
+   "text": "你最近有没有开始看那本书？"
+  },
+  {
+   "type": "message",
+   "time": "16月6日 15:30",
+   "speaker": "B",
+   "text": "正好走两步。"
+  },
+  {
+   "type": "message",
+   "time": "16月6日 17:22",
+   "speaker": "A",
+   "text": "看了几章，节奏还挺慢的。"
+  },
+  {
+   "type": "message",
+   "time": "16月6日 19:15",
+   "speaker": "B",
+   "text": "慢慢看也挺好，睡前不费脑子。"
+  },
+  {
+   "type": "message",
+   "time": "16月6日 21:07",
+   "speaker": "A",
+   "text": "我把桌面整理了一遍。"
+  },
+  {
+   "type": "message",
+   "time": "16月7日 08:00",
+   "speaker": "A",
+   "text": "我准备每天看十分钟。"
+  },
+  {
+   "type": "message",
+   "time": "16月7日 09:40",
+   "speaker": "A",
+   "text": "姓名遮住也没问题吧？"
+  },
+  {
+   "type": "message",
+   "time": "16月7日 11:20",
+   "speaker": "B",
+   "text": "看起来干净多了。"
+  },
+  {
+   "type": "message",
+   "time": "16月7日 13:00",
+   "speaker": "B",
+   "text": "不行，依旧能泄露学生信息。"
+  },
+  {
+   "type": "message",
+   "time": "16月7日 14:40",
+   "speaker": "A",
+   "text": "那我让家长按学校流程来。"
+  },
+  {
+   "type": "message",
+   "time": "16月7日 16:20",
+   "speaker": "A",
+   "text": "找笔也容易了。"
+  },
+  {
+   "type": "message",
+   "time": "16月7日 18:00",
+   "speaker": "B",
+   "text": "这样才合适。"
+  },
+  {
+   "type": "message",
+   "time": "16月7日 19:40",
+   "speaker": "A",
+   "text": "今早路上施工，公交晚了几分钟。"
+  },
+  {
+   "type": "message",
+   "time": "16月7日 21:20",
+   "speaker": "B",
+   "text": "收纳挺有用的。"
+  },
+  {
+   "type": "message",
+   "time": "16月8日 08:00",
+   "speaker": "B",
+   "text": "我看路口围起来了，可能还得一阵。"
+  },
+  {
+   "type": "message",
+   "time": "16月8日 09:52",
+   "speaker": "A",
+   "text": "下周我早点出门。"
+  },
+  {
+   "type": "message",
+   "time": "16月8日 11:45",
+   "speaker": "B",
+   "text": "这样不用一路赶。"
+  },
+  {
+   "type": "message",
+   "time": "16月8日 13:37",
+   "speaker": "A",
+   "text": "周末市集可能人挺多。"
+  },
+  {
+   "type": "message",
+   "time": "16月8日 15:30",
+   "speaker": "A",
+   "text": "抱歉，我刚才说得不妥。"
+  },
+  {
+   "type": "message",
+   "time": "16月8日 17:22",
+   "speaker": "B",
+   "text": "没关系，请尊重隐私边界。"
+  },
+  {
+   "type": "message",
+   "time": "16月8日 19:15",
+   "speaker": "B",
+   "text": "上午去应该好些。"
+  },
+  {
+   "type": "message",
+   "time": "16月8日 21:07",
+   "speaker": "A",
+   "text": "我会把公开联系方式转给家长。"
+  },
+  {
+   "type": "message",
+   "time": "16月9日 08:00",
+   "speaker": "B",
+   "text": "谢谢。"
+  },
+  {
+   "type": "message",
+   "time": "16月9日 09:52",
+   "speaker": "A",
+   "text": "我就随便逛逛。"
+  },
+  {
+   "type": "message",
+   "time": "16月9日 11:45",
+   "speaker": "B",
+   "text": "当散步也不错。"
+  },
+  {
+   "type": "message",
+   "time": "16月9日 13:37",
+   "speaker": "A",
+   "text": "今天午饭我自己带了。"
+  },
+  {
+   "type": "message",
+   "time": "16月9日 15:30",
+   "speaker": "B",
+   "text": "不用排队挺省时间。"
+  },
+  {
+   "type": "message",
+   "time": "16月9日 17:22",
+   "speaker": "A",
+   "text": "还能多休息一会。"
+  },
+  {
+   "type": "message",
+   "time": "16月9日 19:15",
+   "speaker": "B",
+   "text": "好安排。"
+  },
+  {
+   "type": "message",
+   "time": "16月9日 21:07",
+   "speaker": "A",
+   "text": "我把日历上的旧提醒删掉了。"
+  }
+ ],
+ "source_seed_ids": [
+  "SEED-SRC-PSD-001-19ac152ab7795101"
+ ],
+ "_registered": {
+  "case_id": "CASE-0000890",
+  "status": "accepted",
+  "errors": []
+ }
+}

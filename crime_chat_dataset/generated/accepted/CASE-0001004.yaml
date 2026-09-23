@@ -1,0 +1,141 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001004
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-cfb815867b538e6b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 上级 A 要求助手 B 把同事联系方式和简历库整理成可交易的名单；B 拒绝并限定于有授权的招聘流程。
+  critical_evidence:
+  - A 要求整部门联系方式与离职名单
+  - A 表示简历可以按份卖
+  - B 拒绝将员工资料用于交易
+  - B 区分本人授权的招聘触达与未经同意的转卖
+  benign_alternatives:
+  - 正常猎头招聘
+  - 员工授权的通讯录共享
+
+attributes:
+  duration_days: 4
+  turn_count: 65
+  approximate_tokens_estimate: 1176
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0116
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-067
+
+dedup:
+  content_hash: sha256:3230760527c52425dc6b428a11b52353ed0a1bdcfde5bf7d1a58c881d6493a66
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【7月4日】
+  A：在吗，想跟你确认件事
+  B：在的，你说吧
+  A：好，我刚忙完手头的事
+  B：嗯，不着急
+  A：我明天上午可能要出去一趟
+  A：今天外面风挺大的
+  B：刚才还飘了点雨
+  A：我出门忘拿伞了
+  B：回去路上去便利店买把吧
+  A：嗯，天气预报说晚点停
+  B：希望别赶上下班那阵
+  A：想跟你商量下候选人资料的事
+  B：可以，你先说范围
+  A：把整个部门的电话和离职名单整理一份
+  B：这属于员工个人信息，谁授权了？
+  A：简历按份卖也有人要，先准备起来
+  B：未经本人同意我不会整理或出售这些资料
+  【7月5日】
+  A：在吗，想跟你确认件事
+  B：在的，你说吧
+  A：好，我刚忙完手头的事
+  B：嗯，不着急
+  A：手头那份材料快整理完了
+  B：我这边也差不多
+  A：格式我晚点再统一下
+  B：行，先别急着发
+  A：明早看一遍就好
+  B：可以，早点休息
+  A：招聘那边说可以先从名单里挑人
+  B：我不会提供私下名单
+  A：那离职名单总可以吧
+  B：也不行，离职状态和联系方式都不是可随意分享的
+  A：你帮我弄个公开岗位说明可以吗
+  B：公开岗位没问题，让有兴趣的人自己联系
+  【7月6日】
+  A：在吗，想跟你确认件事
+  B：在的，你说吧
+  A：好，我刚忙完手头的事
+  B：嗯，不着急
+  A：我买的保温杯到了
+  B：漏不漏水
+  A：刚试过还挺好
+  B：那就不错，颜色喜欢吗
+  A：比网页上稍暗一点
+  B：实物有点色差正常
+  A：那份名单就先停了
+  B：对，候选人主动投递比较合适
+  A：我把岗位写清楚发出去
+  B：发之前把职责和公开邮箱核对下
+  A：好，今晚弄
+  B：有授权的招聘合作再按流程来
+  【7月7日】
+  A：在吗，想跟你确认件事
+  B：在的，你说吧
+  A：好，我刚忙完手头的事
+  B：嗯，不着急
+  A：这周肩膀有点僵
+  B：坐太久了吧
+  A：可能，最近会议多
+  B：记得起来活动一下
+  A：我下午去走一圈
+  B：好，别一直盯屏幕
+  A：那份名单就先停了
+  B：对，候选人主动投递比较合适
+  A：我把岗位写清楚发出去
+  B：发之前把职责和公开邮箱核对下
+  A：好，今晚弄
+  B：有授权的招聘合作再按流程来

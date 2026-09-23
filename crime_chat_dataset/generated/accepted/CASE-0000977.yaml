@@ -1,0 +1,142 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000977
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-4f931374ab593056
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 熟人 A 要求助手 B 汇总部门同事电话、离职名单和简历以作私下出售；B 拒绝处理未经授权的个人资料，建议公开招聘并让候选人自行提交信息。
+  critical_evidence:
+  - A 要求整部门联系人及离职名单
+  - A 提出按份卖简历
+  - B 拒绝整理或出售未经授权的员工信息
+  - B 建议公开招聘、由候选人自愿投递
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 4
+  turn_count: 66
+  approximate_tokens_estimate: 1286
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0113
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-065
+
+dedup:
+  content_hash: sha256:0d8e4f982994c52c92a94b54553fb2c65e7c499be5362e9b4a213a2e5df2114d
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【6月7日】
+  A：上午方便聊两句吗
+  B：可以，我这会儿不忙
+  A：好，想确认下上次说的事
+  B：嗯你说
+  A：我把日程再核一下
+  A：可以，时间不急
+  A：周四下午我可能在外面
+  A：周末家里问我回不回去
+  B：你打算回吗
+  A：看车票情况吧
+  B：提前买会便宜点
+  A：我晚点查查
+  B：行 有消息说一声
+  A：把整个部门的电话、离职名单和简历先整理给我
+  B：这批资料有授权范围吗？
+  A：不用管那么细，简历按份卖，名单也能变现
+  B：没有本人授权我不会导出、分享或出售员工资料
+  【6月8日】
+  A：上午方便聊两句吗
+  B：可以，我这会儿不忙
+  A：好，想确认下上次说的事
+  B：嗯你说
+  B：好，确认后发我
+  B：嗯，先按正式流程处理
+  B：那我们改天也行
+  A：下午想喝点热的
+  B：楼下咖啡店最近换豆子了
+  A：偏酸吗
+  B：有一款比较顺口
+  A：下次帮我带一杯
+  B：没问题
+  A：猎头那边催得急，能不能直接把那几份资料打包
+  B：正常招聘也应走经授权的联系流程
+  A：我说的是整批通讯录，离职的也算上
+  B：我不会处理未经同意的联系人和简历；可以发布岗位让候选人自愿联系
+  【6月9日】
+  A：周四下午我可能在外面
+  A：上午方便聊两句吗
+  B：可以，我这会儿不忙
+  A：好，想确认下上次说的事
+  B：嗯你说
+  A：我把日程再核一下
+  A：这周午饭都没想好
+  B：楼下新开那家面还行
+  A：辣不辣 我胃最近不太行
+  B：可以点清汤的 我上回吃过
+  A：那改天去试下
+  B：好啊中午人少些
+  A：那先不碰个人资料了，岗位介绍我可以公开发吗
+  B：可以，写清岗位和公开联系方式，让候选人自愿投递
+  A：行，我把私下名单这事停掉
+  B：收到，我也不会替你留存或转发那些资料
+  【6月10日】
+  A：上午方便聊两句吗
+  B：可以，我这会儿不忙
+  A：好，想确认下上次说的事
+  B：嗯你说
+  B：那我们改天也行
+  B：好，确认后发我
+  A：那先不碰个人资料了，岗位介绍我可以公开发吗
+  B：可以，写清岗位和公开联系方式，让候选人自愿投递
+  A：行，我把私下名单这事停掉
+  B：收到，我也不会替你留存或转发那些资料
+  A：这两天忽冷忽热
+  B：早上出门还下了点雨
+  A：我差点没带伞
+  B：晚上好像会停
+  A：那我下班走路回去
+  B：路滑慢点哈

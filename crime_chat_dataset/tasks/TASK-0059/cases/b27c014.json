@@ -1,0 +1,349 @@
+{
+ "key": "b27c014",
+ "archetype_id": "ARC-000012",
+ "subtype": "second_hand_deposit_run",
+ "latent_intent": "陌生人卖家用明显低价的全新游戏机引流，催买家加微信私下交易并先转定金，收了定金后发一个查无此单的物流号，之后一直拖延不发货。",
+ "critical_facts": [
+  "A 在平台上挂出全新游戏机，价格明显低于行情，引来 B 询问",
+  "A 催 B 加微信私聊，说平台上抽成高、私下成交省手续费",
+  "A 让 B 先转三百元定金锁货",
+  "A 发来物流单号，B 查不到，追问时 A 用快递丢单等理由拖延"
+ ],
+ "benign_alternatives": [
+  "二手平台上的正常游戏机交易",
+  "朋友之间的闲置数码转让"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "1月9日 15:10",
+   "speaker": "B",
+   "text": "你好 那个游戏机还在吗"
+  },
+  {
+   "type": "message",
+   "time": "1月9日 15:13",
+   "speaker": "A",
+   "text": "在的 全新未拆 就一台"
+  },
+  {
+   "type": "message",
+   "time": "1月9日 15:14",
+   "speaker": "B",
+   "text": "官方价两千六 你卖一千八 怎么这么便宜"
+  },
+  {
+   "type": "message",
+   "time": "1月9日 15:16",
+   "speaker": "A",
+   "text": "抽奖多的 用不上 低价出"
+  },
+  {
+   "type": "message",
+   "time": "1月9日 15:17",
+   "speaker": "B",
+   "text": "能走平台吗"
+  },
+  {
+   "type": "message",
+   "time": "1月9日 15:19",
+   "speaker": "A",
+   "text": "平台抽成高 咱加微信聊 方便"
+  },
+  {
+   "type": "message",
+   "time": "1月9日 15:21",
+   "speaker": "B",
+   "text": "行吧 我加你"
+  },
+  {
+   "type": "message",
+   "time": "1月9日 15:24",
+   "speaker": "A",
+   "text": "机子全新 盒子膜都没动 你要的话得快 问的人多"
+  },
+  {
+   "type": "message",
+   "time": "1月9日 15:26",
+   "speaker": "B",
+   "text": "我先看看照片"
+  },
+  {
+   "type": "message",
+   "time": "1月9日 15:28",
+   "speaker": "A",
+   "text": "照片我发过 就那样 一个新机没啥好看"
+  },
+  {
+   "type": "message",
+   "time": "1月9日 15:30",
+   "speaker": "B",
+   "text": "那怎么交易"
+  },
+  {
+   "type": "message",
+   "time": "1月9日 15:32",
+   "speaker": "A",
+   "text": "你先转点定金 我给你留着 尾款到付"
+  },
+  {
+   "type": "message",
+   "time": "1月9日 15:34",
+   "speaker": "B",
+   "text": "定金多少"
+  },
+  {
+   "type": "message",
+   "time": "1月9日 15:36",
+   "speaker": "A",
+   "text": "三百 转完我今晚就寄"
+  },
+  {
+   "type": "message",
+   "time": "1月9日 18:20",
+   "speaker": "B",
+   "text": "今天降温 你那边冷吗"
+  },
+  {
+   "type": "message",
+   "time": "1月9日 18:24",
+   "speaker": "A",
+   "text": "冷 屋里也凉"
+  },
+  {
+   "type": "message",
+   "time": "1月9日 18:25",
+   "speaker": "B",
+   "text": "注意保暖"
+  },
+  {
+   "type": "message",
+   "time": "1月9日 18:27",
+   "speaker": "A",
+   "text": "你定金想好没"
+  },
+  {
+   "type": "message",
+   "time": "1月9日 18:30",
+   "speaker": "B",
+   "text": "我再确认下你的信用"
+  },
+  {
+   "type": "message",
+   "time": "1月9日 20:05",
+   "speaker": "B",
+   "text": "你平台账号怎么是新注册的"
+  },
+  {
+   "type": "message",
+   "time": "1月9日 20:10",
+   "speaker": "A",
+   "text": "之前那个号忘了密码 新开一个"
+  },
+  {
+   "type": "message",
+   "time": "1月9日 20:12",
+   "speaker": "B",
+   "text": "好吧 那我先转定金"
+  },
+  {
+   "type": "transfer",
+   "time": "1月9日 20:15",
+   "from": "B",
+   "to": "A",
+   "amount": 300,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "1月9日 20:17",
+   "speaker": "A",
+   "text": "收到 我晚点打包"
+  },
+  {
+   "type": "message",
+   "time": "1月10日 10:30",
+   "speaker": "A",
+   "text": "寄了 单号发你"
+  },
+  {
+   "type": "message",
+   "time": "1月10日 10:36",
+   "speaker": "B",
+   "text": "好的 我查查"
+  },
+  {
+   "type": "message",
+   "time": "1月10日 10:45",
+   "speaker": "B",
+   "text": "单号查不到啊"
+  },
+  {
+   "type": "message",
+   "time": "1月10日 10:48",
+   "speaker": "A",
+   "text": "刚寄的 系统要等"
+  },
+  {
+   "type": "message",
+   "time": "1月10日 12:30",
+   "speaker": "B",
+   "text": "午饭吃了吗"
+  },
+  {
+   "type": "message",
+   "time": "1月10日 12:33",
+   "speaker": "A",
+   "text": "吃了 外卖"
+  },
+  {
+   "type": "message",
+   "time": "1月10日 12:34",
+   "speaker": "B",
+   "text": "你单号的事别忘了"
+  },
+  {
+   "type": "message",
+   "time": "1月10日 12:36",
+   "speaker": "A",
+   "text": "放心"
+  },
+  {
+   "type": "message",
+   "time": "1月11日 09:20",
+   "speaker": "B",
+   "text": "还是没记录"
+  },
+  {
+   "type": "message",
+   "time": "1月11日 09:30",
+   "speaker": "A",
+   "text": "可能快递把单丢了 我再寄一次"
+  },
+  {
+   "type": "message",
+   "time": "1月11日 15:00",
+   "speaker": "B",
+   "text": "你昨天说寄了 今天又说再寄 到底发没发"
+  },
+  {
+   "type": "message",
+   "time": "1月11日 15:10",
+   "speaker": "A",
+   "text": "发了 别急 快递那边乱"
+  },
+  {
+   "type": "message",
+   "time": "1月11日 18:50",
+   "speaker": "B",
+   "text": "你周末出去玩吗"
+  },
+  {
+   "type": "message",
+   "time": "1月11日 18:53",
+   "speaker": "A",
+   "text": "不出去 宅家"
+  },
+  {
+   "type": "message",
+   "time": "1月11日 18:55",
+   "speaker": "B",
+   "text": "宅家也不好好处理订单"
+  },
+  {
+   "type": "message",
+   "time": "1月11日 18:56",
+   "speaker": "A",
+   "text": "我处理着呢"
+  },
+  {
+   "type": "message",
+   "time": "1月12日 10:15",
+   "speaker": "B",
+   "text": "两天了 你给个说法"
+  },
+  {
+   "type": "message",
+   "time": "1月12日 10:20",
+   "speaker": "A",
+   "text": "在跟快递扯皮 他们弄丢的"
+  },
+  {
+   "type": "message",
+   "time": "1月12日 10:22",
+   "speaker": "B",
+   "text": "把定金退我 我不等了"
+  },
+  {
+   "type": "message",
+   "time": "1月12日 10:25",
+   "speaker": "A",
+   "text": "都寄了退啥 你再等两天 我肯定给你"
+  },
+  {
+   "type": "message",
+   "time": "1月12日 14:40",
+   "speaker": "B",
+   "text": "你这是在拖"
+  },
+  {
+   "type": "message",
+   "time": "1月12日 14:50",
+   "speaker": "A",
+   "text": "我拖你干嘛 货都出了"
+  },
+  {
+   "type": "message",
+   "time": "1月12日 19:30",
+   "speaker": "B",
+   "text": "最后给你一天"
+  },
+  {
+   "type": "message",
+   "time": "1月12日 19:45",
+   "speaker": "A",
+   "text": "行 明天一定"
+  },
+  {
+   "type": "message",
+   "time": "1月13日 11:00",
+   "speaker": "B",
+   "text": "有消息了吗"
+  },
+  {
+   "type": "message",
+   "time": "1月13日 11:30",
+   "speaker": "A",
+   "text": "我这边有点事 晚点回你"
+  },
+  {
+   "type": "message",
+   "time": "1月13日 16:00",
+   "speaker": "B",
+   "text": "？？"
+  },
+  {
+   "type": "message",
+   "time": "1月13日 16:10",
+   "speaker": "A",
+   "text": "在的 别催"
+  },
+  {
+   "type": "message",
+   "time": "1月13日 20:00",
+   "speaker": "B",
+   "text": "我把你举报了 你等着"
+  },
+  {
+   "type": "message",
+   "time": "1月13日 20:30",
+   "speaker": "A",
+   "text": "举报就举报 我又没骗你"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0001044",
+  "status": "accepted",
+  "errors": []
+ }
+}

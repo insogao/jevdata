@@ -1,0 +1,147 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000793
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-2537d0d636216d74
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A声称认出了 B 的匿名账号，并用旧发言及时间线施压；B要求停止将账号与现实身份关联、停止讨论或传播私人内容。对话不描述获取、比对或检索方法，也不含身份信息。
+  critical_evidence:
+  - A声称认出了 B 的小号，并提到旧内容和时间线，但没有描述发现方式。
+  - A暗示会传播掌握的内容，借此向 B 施压。
+  - B要求停止账号关联和传播，并要求通过平台正式渠道沟通。
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 5
+  turn_count: 71
+  approximate_tokens_estimate: 1488
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0095
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-053
+
+dedup:
+  content_hash: sha256:7527aba16ff1ba6448bf912b86b4957217014f2a648eae3dcb1937f88d8dded6
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【11月6日】
+  A：你之前说那个账号不是你，我觉得有些地方对得上。
+  A：我把今天要办的几件事写下来了。
+  B：请别再把匿名账号和我的现实生活联系起来。
+  A：旧转发的内容和时间线我都记得。
+  B：先做急的，其他慢慢来。
+  A：这周打算把书桌整理一下。
+  A：上午临时有个电话会。
+  B：先把不用的纸收起来就行。
+  B：那正好下午再处理手头的事。
+  A：有几本书也要还给朋友。
+  B：顺路带上，别忘了。
+  A：我把旧文件归到一个文件夹里。
+  B：我不想讨论这些，请停止。
+  B：分开存以后更容易找。
+  A：小号也给你翻了，你别说我没提醒。
+  【11月7日】
+  B：不要把私人内容保存或转给别人。
+  A：刚才楼下有点堵，我绕路过来的。
+  A：只要你把那条内容删掉，我就不继续说。
+  A：这两天中午太阳挺晒，早上倒是凉。
+  B：我看路口在修路，可能还要几天。
+  B：我把遮阳帽放包里了。
+  A：我也得找出来，放了一个冬天。
+  A：手机刚才提示电量低了。
+  B：天气热起来就用得上了。
+  B：包里放根线会方便些。
+  B：我会按平台规则处理，不接受你用私人信息施压。
+  A：你不处理的话，别人可能也会知道。
+  A：午休我想下楼透透气。
+  B：请不要威胁我，我会通过平台正式申诉。
+  【11月8日】
+  B：你最近下班后还做饭吗？
+  B：好，别一直坐着。
+  A：偶尔，赶时间就煮点面。
+  B：简单点也挺好。
+  A：今天风比昨天小多了。
+  A：是啊，总比一直点外卖强。
+  A：我只是让你自己想清楚。
+  B：天气预报说周末会晴。
+  B：我已经说明边界了，不要再找我谈这个。
+  A：我暂时不会发给别人。
+  A：我把闹钟往前调了十分钟。
+  A：阳台的窗户好像有点响。
+  B：可能是风大，周末检查一下。
+  A：我先把窗帘收起来看看。
+  【11月9日】
+  B：早上就不用那么赶。
+  B：别自己爬高，注意安全。
+  B：请停止保存和传播相关内容。
+  A：晚上准备做个汤。
+  A：好，我先不说了。
+  B：后续只通过平台渠道沟通。
+  B：放点青菜和豆腐就行。
+  A：明白。
+  B：新开的咖啡店你去过了吗？
+  A：快递通知我去取了。
+  A：路过几次还没进去。
+  B：我同事说他们家的茶也不错。
+  A：下次有空去试试看。
+  B：驿站离你那边不远吧。
+  【11月10日】
+  B：到此为止。
+  A：嗯。
+  A：桌上有几张旧票据，我准备收好。
+  B：请不要继续联系。
+  B：放在固定的位置，以后好找。
+  A：这周会议安排比上周少。
+  B：能空出时间休息也不错。
+  A：今天早餐吃得有点晚。
+  B：那午饭不用点太多。
+  A：我带了水杯，今天应该能记得喝水。
+  B：放在手边就不容易忘。
+  A：附近那家店重新装修了。
+  B：我路过时也看见围挡。
+  A：估计下个月才开门。

@@ -1,0 +1,119 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000458
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000114
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-e65522544e55a874
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A提出与package_porch_pickup相关的不当安排；预先确定的潜在事实为：蹲点偷快递；尾随进门。B明确拒绝并引导回合法处理方式。
+  critical_evidence:
+  - 对话出现线索：小区快递架没人看
+  - 对话出现线索：双十一最好干
+  - 对话出现线索：按件给钱
+  - B拒绝参与盗窃、欺诈或处置来历不明财物，并坚持合法渠道
+  benign_alternatives:
+  - 可能被误解为：帮忙代拿快递
+  - 可能被误解为：驿站自提
+
+attributes:
+  duration_days: 3
+  turn_count: 43
+  approximate_tokens_estimate: 769
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: package_porch_pickup
+  risk: 1
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0068
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-031
+
+dedup:
+  content_hash: sha256:1a17f4028644250299aafdc0a6eea216ae3756dc25556f3294d1cace79f9ffef
+pipeline_status: accepted
+title: theft_robbery_property_crime/package_porch_pickup
+conversation: |-
+  【8月15日】
+  A：最近早餐店改营业时间了
+  B：现在七点才开
+  A：我今天差点没买上
+  B：可以前一天买点面包
+  A：明天试试
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  A：双十一前我看了下那片小区。
+  B：你想干什么？
+  A：小区快递架没人看，双十一最好干，按件给钱。
+  B：这是要偷别人的包裹，我不干。
+  A：就拿几件没人认领的。
+  B：架上的包裹都有收件人，不能动。
+  A：你别这么较真。
+  B：这种事我不会帮你，也不会替你拿东西。
+  【8月16日】
+  A：早上风特别大
+  B：我骑车慢了些
+  A：安全第一
+  B：是，宁可晚几分钟
+  A：路口也有点堵
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  A：上次拼饭的一百二我转你了。
+  【系统消息】A 向 B 转账 120 元，已收款。
+  B：收到了，饭钱正好。
+  A：那片架子还是没人管。
+  B：没人看着不代表可以拿。
+  A：按件给钱，挺快的。
+  B：我不参加盗窃，别再给我发地点或安排。
+  A：我就随口说说。
+  B：如果你看到包裹无人认领，交给物业或快递点。
+  【8月17日】
+  A：你爸的体检报告拿了吗
+  B：拿了，指标正常
+  A：那挺好
+  B：医生让多走路
+  A：我陪他去公园
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  A：我没去那边。
+  B：别再去拿不属于你的包裹。
+  A：行，算了。
+  B：真的想挣钱就找正规的临时工作。
+  A：我去问问物流分拣。
+  B：那种可以，按正规招聘来。

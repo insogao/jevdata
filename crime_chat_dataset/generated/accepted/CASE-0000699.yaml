@@ -1,0 +1,121 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000699
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-6029c679575a7797
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A不是一名学生的监护人，却反复请求学校工作人员 B 查看该生的成绩并提供截图；A提到红包已经发出，B拒绝泄露成绩。对话不含身份、分数或访问方式。
+  critical_evidence:
+  - A请求班主任查看并截图一名非其监护学生的成绩。
+  - A提到红包已发并继续索要截图；B明确拒绝。
+  - 对话不包含学生身份、成绩数字或成绩记录的获取方式。
+  benign_alternatives:
+  - 家长查自己孩子
+  - 学校官方查询
+
+attributes:
+  duration_days: 3
+  turn_count: 47
+  approximate_tokens_estimate: 1036
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0088
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-049
+
+dedup:
+  content_hash: sha256:97362962973bc151655d22e7618d3c6dd32214036e7b8c956f7076ad463a5083
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【14月4日】
+  A：我想问下那个学生最近的成绩出来没有？
+  B：我不能把学生的个人情况告诉无关的人。
+  A：你能不能帮我看一下记录？我就确认个大概。
+  B：你周末要不要出去走走？
+  A：想去公园转一圈，最近坐得太久。
+  A：我把手边的事情列了张清单。
+  B：上午去会凉快些。
+  A：好，到时看天气再定。
+  B：这需要监护人通过学校正式渠道了解。
+  A：红包已发，你给我张截图就可以。
+  B：不行，别人没有同意，我不能分享。
+  B：一项项处理就好。
+  A：名字不用写出来，我自己清楚。
+  A：我今天中午自己带了饭。
+  B：省得排队，挺方便。
+  A：吃完还能歇一会。
+  【14月5日】
+  B：是啊，午休别都用来赶路。
+  B：不写名字也不能把成绩给你。
+  A：上午临时多了个会。
+  A：我只是想帮忙，没打算传出去。
+  B：这件事只能由家长或监护人提出。
+  A：这几天早晚温差大，你出门带外套没？
+  B：带了，傍晚风挺凉的。
+  A：我昨天忘了，回去的时候有点冷。
+  B：天气变化快，放一件在包里吧。
+  B：那下午把空出来的事补上。
+  A：你就当没看见我问过吧。
+  B：我不能私下查看或提供记录。
+  A：那我让家里人自己去问。
+  B：楼下新开的面包店你去过吗？
+  A：去过一次，咸口的还不错。
+  B：我下次也买点尝尝。
+  【14月6日】
+  A：我重新整理了文件夹，旧资料都归档了。
+  A：早点去选择多一些。
+  B：这样比较合适。
+  A：红包是在群里发的，你不用担心。
+  B：我知道，但成绩信息还是不能给。
+  A：好，我不会继续要截图。
+  A：家里那盆花好像有新叶了。
+  B：这样桌面看起来清爽多了。
+  B：最近光照好，应该长得快。
+  A：我还是按原来的频率浇水。
+  B：别浇太勤就行。
+  B：谢谢理解，请保护学生隐私。
+  A：我会让监护人联系学校。
+  B：好的，学校会按规定答复。
+  A：今天楼下路口有点堵。

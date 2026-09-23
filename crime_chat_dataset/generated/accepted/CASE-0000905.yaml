@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000905
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-7c482cd646c51e09
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A未经同意查看并整理他人的匿名账号、相册或过往分享内容，试图以此要求对方回应；B拒绝并要求停止查看、保存和传播。
+  critical_evidence:
+  - A称看过对方未主动提供的账号、相册或过往分享
+  - A试图用这些内容要求回应或配合
+  - B要求停止查看、保存和传播私人内容
+  benign_alternatives:
+  - 良性解释可能是：公开信息检索讨论
+  - 良性解释可能是：品牌舆情分析
+
+attributes:
+  duration_days: 6
+  turn_count: 50
+  approximate_tokens_estimate: 807
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0109
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-061
+
+dedup:
+  content_hash: sha256:1fea69a8da50a0c03480949e427340721cd091a9426bbeac1024afc3d357cc2d
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【11月7日】
+  A：这几天忽冷忽热
+  B：我把外套放包里
+  A：早上还挺暖
+  B：晚上会降温
+  A：记得拿回来
+  A：我先记下，回头再说。
+  B：好，忙完再聊。
+  A：我注意到你另一个账号上发过一些内容。
+  B：我没有同意你去翻这些。
+  A：相册和以前分享的东西，我也看过一些。
+  B：请不要继续整理我的私人信息。
+  A：我只是想把事情说清楚。
+  B：可以直接沟通，不要拿隐私让我回应。
+  A：我不会公开。
+  B：也不要保存或转发给别人。
+  【11月8日】
+  A：商场新开了书店
+  B：我周末去逛了
+  A：有儿童区吗
+  B：挺大的
+  A：下次带家里人去
+  A：我先记下，回头再说。
+  B：好，忙完再聊。
+  A：上次拼饭的一百二我转你了。
+  【系统消息】A 向 B 转账 120 元，已收款。
+  B：收到了，午饭钱正好。
+  【11月11日】
+  A：食堂换了窗口
+  B：我吃了鸡肉饭
+  A：分量够不够
+  B：挺够的
+  A：我明天点鱼
+  A：我先记下，回头再说。
+  B：好，忙完再聊。
+  A：我没打算伤害你。
+  B：未经同意查看这些内容就已经越界。
+  A：我只是想知道你怎么想。
+  B：请停止查看我的账号和相册。
+  A：好，我停下。
+  B：把已经保存的内容删掉。
+  【11月12日】
+  A：你妹妹找到实习了吗
+  B：在等回复
+  A：希望顺利
+  B：她投了几家
+  A：有消息告诉我
+  A：我先记下，回头再说。
+  B：好，忙完再聊。
+  A：我把整理的内容删了。
+  B：谢谢，请别再查看或分享。
+  A：以后有事我直接问你。
+  B：保持尊重就好。
+  A：明白。
+  B：谢谢你听进去。

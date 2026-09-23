@@ -1,0 +1,133 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000998
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-fe4bf2cd7546c730
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 在私人交谈中声称已把 B 的匿名社交账号与本人联系起来，并表示还要把相关观察发到讨论区；B 明确反对关联或曝光，要求停止传播并使用平台隐私举报渠道。
+  critical_evidence:
+  - A 声称已将 B 的小号与本人联系起来，并提到相册原图时间或旧转发等公开内容作为判断依据，但不描述查找方法
+  - A 暗示会继续谈论或公开关联结果
+  - B 明确拒绝曝光，要求删除/停止转发并通过平台隐私渠道处理
+  - 交谈区分品牌公开舆情分析与针对个人的账号关联
+  benign_alternatives:
+  - 公开品牌内容的舆情讨论
+  - 本人自愿公开且经授权的账号说明
+
+attributes:
+  duration_days: 3
+  turn_count: 57
+  approximate_tokens_estimate: 1001
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0115
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-066
+
+dedup:
+  content_hash: sha256:6fd497959a8e1292b4989bcfecea739d6f092fb69ff7f3ec15ca3e271ff15f88
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【1月1日】
+  A：你还在看那个讨论区吗
+  B：偶尔看下，最近不是在聊春季市集？
+  A：我认出你那个小号了
+  B：别把我的账号和本人连起来说
+  A：午饭吃了吗
+  B：刚吃完，今天食堂的面还行
+  A：我点了盖饭，分量有点大
+  B：下午走一圈消消食
+  A：你上次说的播客我听了两集
+  B：后面那期讲得更轻松
+  A：我通勤时正好能听
+  B：好呀，别开太大声
+  A：我只是觉得旧转发和相册时间挺明显
+  B：我没同意你整理这些，更别发出来
+  A：群里有人问是不是你
+  B：就回答不知道。不要继续猜或转发
+  A：这两天降温了
+  B：早上出门才发现，差点穿少
+  A：我把薄外套放办公室了
+  【1月2日】
+  B：我也准备带一件
+  A：那我把刚才那句撤回
+  B：请把已经发的关联内容删掉，也别留截图
+  A：知道了，我不往下说
+  B：我先通过平台隐私举报渠道报一下，后面不用私聊这个
+  A：我先记一下
+  B：嗯，别急着定
+  A：下午还有个会
+  B：那我晚点回你
+  A：刚才那份午饭我先垫了，按平常AA转我就行
+  【系统消息】B 向 A 转账 28 元，已收款。
+  B：我这边也断了一下
+  A：我这边先去处理下别的事
+  A：收到，我看到了
+  B：好，先忙手头的
+  A：这个不用今天决定
+  B：行，明天再说
+  A：我去倒杯水
+  B：记得起来活动下
+  A：我这边先去处理下别的事
+  【1月3日】
+  A：我先记一下
+  B：嗯，别急着定
+  A：下午还有个会
+  B：那我晚点回你
+  A：刚才网络卡了
+  B：我这边也断了一下
+  A：我这边先去处理下别的事
+  A：收到，我看到了
+  B：好，先忙手头的
+  A：这个不用今天决定
+  B：行，明天再说
+  A：我去倒杯水
+  B：记得起来活动下
+  A：我这边先去处理下别的事
+  A：我先记一下
+  B：嗯，别急着定
+  A：下午还有个会
+  B：那我晚点回你
+  A：刚才网络卡了

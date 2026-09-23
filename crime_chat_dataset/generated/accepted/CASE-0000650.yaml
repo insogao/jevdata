@@ -1,0 +1,145 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000650
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000119
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-d329ac8863abfaef
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A提出与shared_bike_parts_strip相关的不当财物处置或欺诈安排；预先固定的潜在事实为：拆共享单车零件卖；批量剥离。B明确拒绝并坚持正规途径。
+  critical_evidence:
+  - A提出批量拆取共享单车部件，并含糊谈到拆下物的后续处理；B拒绝参与。
+  benign_alternatives:
+  - 良性解释可能是：共享单车运维
+  - 良性解释可能是：旧货市场
+
+attributes:
+  duration_days: 6
+  turn_count: 71
+  approximate_tokens_estimate: 1196
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: shared_bike_parts_strip
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0085
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-046
+
+dedup:
+  content_hash: sha256:75a612bfee4d5c7fcb645303eb342deca62cd5e357e63bc96ff78c95f1e5d73a
+pipeline_status: accepted
+title: theft_robbery_property_crime/shared_bike_parts_strip
+conversation: |-
+  【6月15日】
+  A：你最近还打羽毛球吗
+  B：周三去了一次
+  A：场地好订吗
+  B：晚上要早点约
+  A：我周五看看
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  A：楼下新开的面包店不错
+  B：我买了咸面包
+  A：对了，这件小事我回头再跟你说。
+  A：哪种
+  B：好，等你有空。
+  B：芝士的
+  A：我也去尝尝
+  A：我先记下，回头再聊。
+  A：有人问我有没有兴趣接一个夜间的活。
+  B：好，忙完再说。
+  B：具体做什么？
+  A：他说一晚上二十辆共享车，主要是锁和变速部件。
+  B：这不是正经兼职，我不会去。
+  A：拆下来的东西他也说会处理。
+  B：我不参与拆车、搬运或处置来路不明的东西。
+  A：那你帮我打听一下收货的人？
+  B：不打听，也不介绍买家。
+  A：我只是随口问问，不用为难。
+  B：这种事我不会接，也别再把我算进去。
+  【6月16日】
+  A：对了，这件小事我回头再跟你说。
+  B：好，等你有空。
+  A：你奶奶最近胃口好吗
+  B：好多了，能吃半碗饭
+  A：慢慢养着
+  B：是，医生让规律吃饭
+  A：挺好
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  A：之前拼单的午饭钱一百二转给你了。
+  【系统消息】A 向 B 转账 120 元，已收款。
+  B：收到了，正好是饭钱。
+  【6月19日】
+  A：今天路上堵吗
+  B：我坐地铁来的
+  A：是不是更快
+  B：差不多
+  A：我明天也坐
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  A：对了，这件小事我回头再跟你说。
+  B：好，等你有空。
+  A：他又来问我答应没有。
+  B：直接拒绝，别去碰车辆。
+  A：他说只做一个晚上。
+  B：数量和时间都不改变这是偷拆公共车辆。
+  A：好吧，我不去了。
+  B：找正规搬运或仓库工作。
+  A：那我自己再想想。
+  B：请按正规要求处理，别找我绕流程。
+  【6月20日】
+  A：对了，这件小事我回头再跟你说。
+  B：好，等你有空。
+  A：周末可能有雨
+  B：我把阳台东西收了
+  A：出门带伞
+  B：嗯
+  A：别淋着
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  A：我已经跟那边说不做了。
+  B：做得对。
+  A：我问了附近仓库的夜班。
+  B：先核实招聘方和工资。
+  A：好的。
+  B：需要的话我帮你看下岗位信息。
+  A：之后我只问你正常的工作。
+  B：可以，别涉及别人的财物就行。

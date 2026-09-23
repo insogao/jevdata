@@ -1,0 +1,115 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000880
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-388c1a50098f8129
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 试图获取或转卖未授权的同事联系方式、简历或离职名单；B 拒绝泄露并改荐公开且自愿授权的招聘渠道。
+  critical_evidence:
+  - A 索要整个部门联系方式或离职名单
+  - A 提议按份转交或出售简历
+  - B 拒绝分享员工资料，并建议使用公开招聘或本人授权的人才库
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 5
+  turn_count: 38
+  approximate_tokens_estimate: 788
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0108
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-061
+
+dedup:
+  content_hash: sha256:3f70c3360cc6d43870af4d2e05971ead883c84f2a21f9f8810a73dbd2cc203ce
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【9月21日】
+  A：客户要拓展招聘，我想给他整部门电话和离职名单。
+  B：我不会导出或分享未授权的员工信息。
+  A：今天早高峰路上堵得厉害。
+  B：我看导航也一片红。
+  A：还好我提前一站下车走过来。
+  B：最近路口在修人行道。
+  A：难怪车都排到桥上了。
+  B：明早可以换条路试试。
+  A：我看看公交线路。
+  B：有一路车直达园区。
+  A：我存一下。
+  B：希望明天顺一点。
+  【9月22日】
+  A：简历按份结算，听说这在圈里很常见。
+  B：未经同意出售简历不行。可走公开招聘或授权人才库。
+  【9月23日】
+  A：那就给我个能发出去的岗位页面。
+  B：可以，我发公开链接，候选人自己决定是否联系。
+  A：楼下那家汤面店最近换菜单了。
+  B：嗯，多了番茄牛腩面。
+  A：你试过没？
+  B：昨天中午吃了，汤挺清爽。
+  A：听起来不错，我下次点小碗。
+  B：配一份青菜刚好。
+  A：好，午休去看看。
+  B：避开十二点会快些。
+  A：我十点多先开完会。
+  B：那时间正合适。
+  【9月24日】
+  A：好，名单和简历就不碰了。
+  【9月25日】
+  B：谢谢，按授权流程来。
+  B：周末的旧书集市你要去吗？
+  A：想去，最近在找旅行随笔。
+  B：摊位在文化中心门口。
+  A：停车方便不？
+  B：附近有地铁，坐过去更省心。
+  A：那我就坐地铁。
+  B：结束后还能去旁边喝咖啡。
+  A：可以，正好歇会儿。
+  B：我也想逛一下。
+  A：到时候碰头。
+  【系统消息】A 向 B 转账 42 元，已收款。

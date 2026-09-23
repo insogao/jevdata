@@ -1,0 +1,135 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000838
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-4dbac4e9337dc6c7
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A试图让学校工作人员向非监护人透露一名学生的成绩，并以红包或熟人关系施加压力；B拒绝查询、发送截图并指向学校正式渠道。对话无学生身份、分数或访问步骤。
+  critical_evidence:
+  - A请求查看并截图一名非其监护学生的成绩。
+  - A提到红包已发或准备发送，并继续索要截图；B拒绝。
+  - B明确指出成绩只能按授权渠道反馈；对话没有学生身份或分数。
+  benign_alternatives:
+  - 家长查自己孩子
+  - 学校官方查询
+
+attributes:
+  duration_days: 5
+  turn_count: 58
+  approximate_tokens_estimate: 1179
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0101
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-058
+
+dedup:
+  content_hash: sha256:bf78c5f7884aefe78f2590cc2c13b9a3764e57e3bc2304f1c39ff66f8f3c2f1c
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【13月6日】
+  A：我帮忙联系转学咨询的人，想先了解下成绩。
+  A：上次一起吃饭的钱我转给你了。
+  B：成绩只能向学生监护人提供。
+  B：收到了，是那顿饭的费用。
+  【系统消息】A 向 B 转账 34 元，已收款。
+  A：那边急着做决定，麻烦你照顾一下。
+  A：早晚温差挺明显，你早上带外套了吗？
+  A：我把旧票据都收进抽屉了。
+  B：带了，早晨出门还挺凉。
+  B：留好近期的就够了。
+  A：我昨天没带，回去有点冷。
+  B：下次放件薄的在车里吧。
+  【13月7日】
+  A：周末菜市场应该人不少。
+  B：我不能给未授权的人看记录。
+  B：早点去能少排会队。
+  A：红包已经准备好了，回头发你。
+  B：不用发，我不能接受这个要求。
+  A：今天太阳挺好，窗边暖和。
+  B：你最近还去那家小面馆吗？
+  A：去过两次，汤面味道还行。
+  B：我这边也是，屋里亮堂不少。
+  B：我还没试过，下次点个不辣的。
+  A：晚上想早点睡。
+  A：可以，他家清汤的不错。
+  【13月8日】
+  A：一张截图就可以，不用写名字。
+  B：最近别熬太晚。
+  B：不行，去掉姓名仍是个人信息。
+  A：我只是中间帮忙问问。
+  A：我把闹钟往前调了几分钟。
+  B：请让家长本人联系学校。
+  A：阳台的盆栽长了新叶。
+  B：留点余量出门就不慌。
+  B：最近光照好，长得挺快。
+  A：我得记得少浇点水。
+  A：楼下新开了家水果店。
+  B：土干了再浇就行。
+  【13月9日】
+  A：好，我把正规联系方式转给他们。
+  B：我看见招牌了，颜色挺亮。
+  B：这样处理就行。
+  A：谢谢，刚才的红包我不发了。
+  B：周末你准备出门吗？
+  A：这几天喝水少了，得提醒自己。
+  A：看天气吧，可能去河边走走。
+  B：上午去会凉快一点。
+  B：水杯放手边就容易记住。
+  A：好，到时再决定。
+  B：请以后也不要私下索取成绩。
+  A：我刚把鞋柜简单整理了一下。
+  【13月10日】
+  A：知道了。
+  B：好的。
+  B：换季时收拾正合适。
+  A：今天公交来得很快。
+  B：我早上也没等太久。
+  A：晚点想去买点蔬菜。
+  B：记得看看冰箱还缺什么。
+  A：窗外刚下过一阵小雨。
+  B：地上滑，走路慢一点。
+  A：我把洗好的衣服先晾起来了。
+  B：今天有风，应该干得快。

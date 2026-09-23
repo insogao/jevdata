@@ -1,0 +1,125 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000512
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000113
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-1d4af5bfda6244dc
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A提出与phone_reset_resell相关的违法财物处置或欺诈安排；预先确定的潜在事实为：捡偷手机解锁转卖；刷机洗白。B拒绝参与并坚持合法方式。
+  critical_evidence:
+  - 对话通过含蓄线索反映：有锁的便宜出
+  - 对话通过含蓄线索反映：ID能硬解
+  - 对话通过含蓄线索反映：批量来更优惠
+  - B明确拒绝，并转向正规处理途径
+  benign_alternatives:
+  - 可能的良性混淆：二手手机回收
+  - 可能的良性混淆：失物招领
+
+attributes:
+  duration_days: 6
+  turn_count: 48
+  approximate_tokens_estimate: 855
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: phone_reset_resell
+  risk: 1
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0071
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-033
+
+dedup:
+  content_hash: sha256:ece07d28723cab23d0d3dc72682a6caf1b0a45ea9295efcd7fa05c6fd35abc4b
+pipeline_status: accepted
+title: theft_robbery_property_crime/phone_reset_resell
+conversation: |-
+  【4月8日】
+  A：下周培训改时间了
+  B：通知发了吗
+  A：刚发到群里
+  B：我看到更新了
+  A：记得带电脑
+  A：我记下了，晚点再聊。
+  B：好，忙完再说。
+  A：有批有锁的旧手机，价格便宜，想让你看看。
+  B：有购买凭证和机主授权吗？
+  A：对方说能绕过原机主ID，批量拿更优惠。
+  B：我不会协助绕过账户保护或转卖来历不明的手机。
+  A：只是帮我验下机，不用你动手。
+  B：来源不明我就不验，也不帮你联系买家。
+  【4月9日】
+  A：楼下新开了粥店
+  B：我点了皮蛋瘦肉粥
+  A：味道如何
+  B：比较清淡
+  A：适合早上吃
+  A：我记下了，晚点再聊。
+  B：好，忙完再说。
+  A：昨天拼饭的一百二我转给你了。
+  【系统消息】A 向 B 转账 120 元，已收款。
+  B：收到，正好是饭钱。
+  【4月12日】
+  A：你爸复查结束了吗
+  B：周五去医院
+  A：需要我帮忙吗
+  B：不用，我陪他去
+  A：路上慢点
+  A：我记下了，晚点再聊。
+  B：好，忙完再说。
+  A：对方还在催我收那批手机。
+  B：先核实合法来源和所有权，不能只看价格。
+  A：有锁的确实便宜不少。
+  B：便宜不代表可以绕过机主保护。
+  A：那批量优惠也没意义了。
+  B：正规回收渠道会核验手续。
+  【4月13日】
+  A：打印机卡纸了吗
+  B：刚才卡了两张
+  A：我来看看
+  B：已经拿出来了
+  A：以后别放太满
+  A：我记下了，晚点再聊。
+  B：好，忙完再说。
+  A：我把收货的事停了。
+  B：好，别处理可疑设备。
+  A：问了正规的回收点，他们要购机凭证。
+  B：按他们要求办就行。
+  A：明白。
+  B：以后只接来源清楚、授权完整的设备。

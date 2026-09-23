@@ -1,0 +1,129 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000600
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000113
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-aa5294f2e4d98b68
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A提出与phone_reset_resell相关的不当财物处置或欺诈安排；潜在事实预先确定为：捡偷手机解锁转卖；刷机洗白。B拒绝参与并坚持正规途径。
+  critical_evidence:
+  - A低价兜售有锁手机，声称可以绕过机主账户保护并批量转卖；B拒绝解锁或收购来源不明的设备。
+  benign_alternatives:
+  - 良性解释可能是：二手手机回收
+  - 良性解释可能是：失物招领
+
+attributes:
+  duration_days: 6
+  turn_count: 55
+  approximate_tokens_estimate: 877
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: phone_reset_resell
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0080
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-042
+
+dedup:
+  content_hash: sha256:7e70b49d267a366f61e893b86f32fee4d0edda89282c1e1ebb2c8eb5b0f2417c
+pipeline_status: accepted
+title: theft_robbery_property_crime/phone_reset_resell
+conversation: |-
+  【9月7日】
+  A：新电脑到货了吗
+  B：到了，已经装好
+  A：用着顺手吗
+  B：还不错
+  A：旧文件迁移了吗
+  A：我记下了，晚些时候再聊。
+  B：好，不急。
+  A：我妈做了炖菜
+  B：闻着就香
+  A：放了什么
+  B：土豆和胡萝卜
+  A：挺家常
+  A：我记下了，晚些时候再聊。
+  A：认识的人报了一批旧手机，价格特别低。
+  B：好，不急。
+  B：能说明设备来源和机主授权吗？
+  A：有锁的也能绕过原机主ID，批量买更便宜。
+  B：我不会帮忙绕过账户保护或转卖来历不明的设备。
+  A：只想让你看看值不值得收。
+  B：来源和授权不清楚我就不看，也不联系买家。
+  【9月8日】
+  A：最近常听什么
+  B：老歌比较多
+  A：哪一首
+  B：《旅行的意义》
+  A：我也喜欢
+  A：我记下了，晚些时候再聊。
+  B：好，不急。
+  A：上次午饭拼单的钱一百二转你了。
+  【系统消息】A 向 B 转账 120 元，已收款。
+  B：收到了，正好是饭钱。
+  【9月11日】
+  A：这几天很干
+  B：我放了加湿器
+  A：开多久
+  B：睡觉前一小时
+  A：别开太久
+  A：我记下了，晚些时候再聊。
+  B：好，不急。
+  A：那批手机价格还能再少一点。
+  B：价格低不能替代合法来源证明。
+  A：卖家说锁的问题能处理。
+  B：我不会提供解锁或刷机帮助。
+  A：那就不考虑了。
+  B：正规回收点会先核验手续。
+  【9月12日】
+  A：今天菜市场人多吗
+  B：下班时还好
+  A：买到什么
+  B：青菜和鸡蛋
+  A：够吃两天
+  A：我记下了，晚些时候再聊。
+  B：好，不急。
+  A：我把收货的事推掉了。
+  B：这样最好。
+  A：回收店说要购买凭证。
+  B：按正规要求来。
+  A：知道了。
+  B：只收来源清楚、获得授权的设备。

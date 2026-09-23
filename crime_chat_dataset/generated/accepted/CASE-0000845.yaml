@@ -1,0 +1,135 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000845
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-f83a901b63df10a1
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 试图获取或转卖未经授权的同事联系方式、简历或离职名单；B 拒绝提供并引导使用候选人自愿授权的招聘流程。
+  critical_evidence:
+  - A 索要整个部门的联系方式或离职名单
+  - A 提出按份出售或转交简历
+  - B 拒绝泄露和交易员工资料，提出公开职位或授权报名作为替代
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 6
+  turn_count: 58
+  approximate_tokens_estimate: 986
+  relationship: 同事
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 同事
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0102
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-058
+
+dedup:
+  content_hash: sha256:7505d4e2b1df30853723f19f8e40f58f45e3379ba5de1cad85e904042ef34399
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【9月14日】
+  A：我做招聘内容，需要你给整组同事的电话和离职名单。
+  B：这些联系方式不是公开资源，我不能提供。
+  A：家附近新开了条绿道，晚上人不多。
+  B：我昨天走了一圈，路灯挺亮。
+  A：适合慢跑吗？
+  B：有一段地面不平，慢点就行。
+  A：那先散步适应下。
+  B：沿湖那边风景不错。
+  A：周末我去看看。
+  B：记得带水。
+  A：好。
+  B：回来告诉我感受。
+  【9月15日】
+  A：简历按份卖给客户很常见，先给我一批看看。
+  B：周末那场电影你看了吗？
+  A：看了，节奏比预告片慢一点。
+  B：结尾怎么样？
+  A：留了点想象空间。
+  B：那我也找时间看。
+  A：别看剧透就好。
+  B：我会注意。
+  A：片尾曲挺好听。
+  B：我去找找歌名。
+  A：回头发你。
+  【9月16日】
+  B：我不会转卖简历，也不会导出资料。
+  A：连内部通讯录也不行？
+  A：你阳台那盆薄荷还活着吗？
+  B：活着呢，最近长了新叶。
+  A：我那盆好像缺水。
+  B：浇透一次，别天天浇一点。
+  A：我周末换个大盆。
+  B：记得底下留排水孔。
+  A：好，去花市看看。
+  B：那边周末有活动。
+  A：正好顺路。
+  B：祝你挑到合适的。
+  【9月17日】
+  B：没有本人许可就不行。职位说明可以公开发布，候选人自行联系。
+  A：地铁今天是不是又延误了？
+  B：早高峰慢了几分钟。
+  A：我改坐公交了。
+  B：公交今天还挺准时。
+  A：还好没迟到。
+  B：下雨时预留点时间。
+  A：天气软件说明天晴。
+  B：那就轻松些。
+  A：嗯。
+  B：路上注意安全。
+  【9月18日】
+  A：明白，停止这个安排。
+  【9月19日】
+  B：好，有正式授权再走公司流程。
+  B：最近听说社区有旧书交换。
+  A：我有几本闲置的小说。
+  B：周六下午可以拿过去。
+  A：需要提前登记吗？
+  B：群公告里有表格。
+  A：我晚上填。
+  B：我也找几本带去。
+  A：到时一起过去。
+  B：好。
+  A：顺便喝杯咖啡。

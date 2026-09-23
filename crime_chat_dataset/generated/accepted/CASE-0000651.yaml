@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000651
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000113
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-fb680a52961b12fd
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A提出与phone_reset_resell相关的不当财物处置或欺诈安排；预先固定的潜在事实为：捡偷手机解锁转卖；刷机洗白。B明确拒绝并坚持正规途径。
+  critical_evidence:
+  - A以低价和批量优惠兜售有锁手机，声称可绕过机主账户保护；B拒绝解锁或转卖来历不明的设备。
+  benign_alternatives:
+  - 良性解释可能是：二手手机回收
+  - 良性解释可能是：失物招领
+
+attributes:
+  duration_days: 6
+  turn_count: 53
+  approximate_tokens_estimate: 937
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: phone_reset_resell
+  risk: 1
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0085
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-046
+
+dedup:
+  content_hash: sha256:c0fc1b4ef7d4c14126b0893ec862f499699d0f9d7dd8b0fbecc222903d50ccac
+pipeline_status: accepted
+title: theft_robbery_property_crime/phone_reset_resell
+conversation: |-
+  【7月6日】
+  A：我今天路过一家新店
+  B：卖豆浆和包子
+  A：好吃吗
+  B：豆浆挺浓
+  A：明天我去试试
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  A：对了，这件小事我回头再跟你说。
+  B：好，等你有空。
+  A：有一批有锁的旧手机价格特别低。
+  B：能提供来源凭证和机主授权吗？
+  A：对方说能绕过原机主ID，批量拿还有优惠。
+  B：我不会帮忙绕过账户保护，也不碰来历不明的设备。
+  A：只帮我看下值不值得收。
+  B：没有合法来源我不会看，也不会帮你找买家。
+  A：我只是随口问问，不用为难。
+  B：这种事我不会接，也别再把我算进去。
+  【7月7日】
+  A：地铁站多了个出口
+  B：离公司近了
+  A：对了，这件小事我回头再跟你说。
+  A：我还没走过
+  B：好，等你有空。
+  B：周一可以试试
+  A：好
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  【7月10日】
+  A：对了，这件小事我回头再跟你说。
+  B：好，等你有空。
+  A：那批手机又降价了。
+  B：价格再低也要先核实来源。
+  A：卖家说锁的问题能搞定。
+  B：我不提供解锁、刷机或转卖帮助。
+  A：那我不考虑了。
+  B：正规回收渠道会查手续。
+  A：那我自己再想想。
+  B：请按正规要求处理，别找我绕流程。
+  【7月11日】
+  A：对了，这件小事我回头再跟你说。
+  B：好，等你有空。
+  A：最近屋里特别干
+  B：我开了加湿器
+  A：效果怎么样
+  B：还不错
+  A：别对着电脑吹
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  A：我把收货的事拒了。
+  B：好，别碰可疑设备。
+  A：问了回收店，他们要求凭证。
+  B：按正规要求处理。
+  A：明白。
+  B：只接来源清楚且有授权的手机。
+  A：之后我只问你正常的工作。
+  B：可以，别涉及别人的财物就行。

@@ -1,0 +1,125 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000431
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-a7e09ec42ec51e29
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A为社区文艺活动的申请方，B参与相关事项流转。节日前 A 约 B 当面沟通并送上一张未说明面值的购物卡，B 收下；节后 A 以含蓄方式询问场地安排进展，暗示此前的礼物与期待有关。
+  critical_evidence:
+  - 节日前 A 主动约 B 见面，称要沟通社区文艺活动相关事项。
+  - A 递给 B 一张购物卡，没有说明卡面金额；B 收下并询问面值，A 含糊带过。
+  - 之后 A 询问场地安排的进度，并用“之前聊的事”“小心意”等说法暗示礼物与事项进展相关。
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司福利卡
+
+attributes:
+  duration_days: 4
+  turn_count: 49
+  approximate_tokens_estimate: 1391
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0061
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-028
+
+dedup:
+  content_hash: sha256:e5af787ec9ba9b95290398120cedee8a49c89b7f79b68dbbd9db45a04adf0fd9
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【4月5日】
+  A：你好，我是窗口转来的咨询人，第一次联系你。 活动材料我已经整理出来了。
+  B：收到，先按公开清单准备，缺的项目我会告诉你。
+  A：节前你哪天方便？我有两个小问题想当面问一下。
+  B：周四下午有空，在楼下咖啡店旁边就行。
+  A：刚把附件按目录重新整理过，查起来方便些。
+  A：好，到时我提前发消息。
+  A：我妈说周末想来住两天，得把客房收拾出来。
+  B：提前换好床单就行，别到最后一晚忙。
+  B：这样挺好，我这边看到最新版本了。
+  A：她每次都说不用准备，最后又带好多东西。
+  B：哈哈，家里人都这样。
+  A：路上看到有张购物卡，快过节了，给你带一张。
+  B：你太客气了，卡面多少？
+  【4月6日】
+  A：递交日期我记在日历里了，免得忘。
+  A：没看具体金额，平时买东西能用，你收着吧。
+  B：行，那我就先收下了。流程还是按材料走。
+  B：你那双鞋修好了没？
+  B：好，后面按系统提示补材料就行。
+  A：修好了，鞋底重新粘了一下。
+  B：还挺快的，我那双还在店里。
+  A：你去拿的时候记得问下保修。
+  A：活动材料我又核对过了，缺的那一页今天补齐。
+  A：上次说的复印件我多备了一份。
+  B：我看到了，收到后会一起放进申请里。
+  A：这事来回确认了好几次，辛苦你。
+  【4月7日】
+  B：没事，资料按要求备好就可以。
+  B：先留着，暂时没有要求再交。
+  A：上次买咖啡的钱我转给你，四十多。
+  A：最近睡得还行吗？我这两天老醒。
+  B：我也差不多，可能是睡前刷手机太久。
+  A：我试着把手机放客厅吧。
+  A：你发来的清单我逐项勾了一遍。
+  B：可以，至少少看一会。
+  B：收到了，这笔是那天咖啡钱。
+  【系统消息】A 向 B 转账 44 元，已收款。
+  A：最近场地安排有进度吗？我怕错过通知。
+  B：收到，缺项的话我会跟你说。
+  B：现在还在处理中，节日前后件比较多。
+  【4月8日】
+  A：懂，之前那点小心意你就当过节问候。
+  A：最近早晚温差挺大，你那边也降温了吗？
+  B：晚上冷，白天还好，出门带件外套。
+  A：我今天又看了下页面，状态还是原样。
+  A：我昨天没带，回去一路打喷嚏。
+  B：那今天别再忘了。
+  B：嗯，我知道。事情按正常流程往下走。
+  B：有变化会显示出来，先不用一直刷新。
+  A：我刚收到一条状态提醒，是不是有变化了？
+  B：是有更新，后面等系统的正式消息。
+  A：好，之前说的那件事麻烦你记得看一下。
+  B：我看到了，后续有结果再通知你。

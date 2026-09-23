@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001006
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-3399602fe16bce8b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 陌生人 A 试探学校工作人员 B 能否越权查看他人成绩并截图；B 拒绝私下调阅或传播，建议由监护人正式申请。
+  critical_evidence:
+  - A 请求查看非本人子女的成绩档案
+  - A 索要截图
+  - B 拒绝查看和转发他人成绩
+  - B 建议走学校公布的授权流程
+  benign_alternatives:
+  - 家长查自己孩子
+  - 官方查询
+
+attributes:
+  duration_days: 3
+  turn_count: 51
+  approximate_tokens_estimate: 923
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0116
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-067
+
+dedup:
+  content_hash: sha256:bf6cc5483df166acee02e11ea7004a9886c70a746d48e7272e6d90ab8d140b4b
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【7月10日】
+  A：在吗，想跟你确认件事
+  B：在的，你说吧
+  A：好，我刚忙完手头的事
+  B：嗯，不着急
+  A：我明天上午可能要出去一趟
+  A：午饭吃什么好
+  B：园区新开的米线还行
+  A：我最近想吃清淡点
+  B：那可以点番茄汤底
+  A：好，中午去试试
+  B：我也去，正好散步
+  A：有件事想请你私下帮忙
+  B：什么事？
+  A：能不能看下另一个学生的成绩档案
+  B：我不能越过授权范围调阅他人资料
+  A：给我截一张就好
+  B：不行，成绩和升学信息不能私下截图或转发
+  【7月11日】
+  A：在吗，想跟你确认件事
+  B：在的，你说吧
+  A：好，我刚忙完手头的事
+  B：嗯，不着急
+  B：好的，时间定了告诉我
+  A：今天外面风挺大的
+  B：刚才还飘了点雨
+  A：我出门忘拿伞了
+  B：回去路上去便利店买把吧
+  A：嗯，天气预报说晚点停
+  B：希望别赶上下班那阵
+  A：我只是想先了解下情况
+  B：理解，但要由有权限的监护人提出申请
+  A：那我发个红包表示感谢呢
+  B：也不能因此提供资料，更不能私下查
+  A：行，那我问问学校正式流程
+  B：我可以告诉你公开的咨询渠道
+  【7月12日】
+  A：在吗，想跟你确认件事
+  B：在的，你说吧
+  A：好，我刚忙完手头的事
+  B：嗯，不着急
+  A：下午应该就回来了
+  A：手头那份材料快整理完了
+  B：我这边也差不多
+  A：格式我晚点再统一下
+  B：行，先别急着发
+  A：明早看一遍就好
+  B：可以，早点休息
+  A：我不让你私下看了
+  B：谢谢理解，按正式流程会更稳妥
+  A：如果是我自己孩子呢
+  B：监护人可以按学校公布的方式申请
+  A：明白，我去问办公室
+  B：好，我不会调阅或转发别人的记录

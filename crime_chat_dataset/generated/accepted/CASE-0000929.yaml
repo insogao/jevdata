@@ -1,0 +1,105 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000929
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-f161369451af4c14
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 要求助手提供部门通讯录、离职名单并出售简历；助手拒绝利用或转卖员工资料，建议合规招聘和本人主动授权。
+  critical_evidence:
+  - 对方想拿整个部门的电话和离职名单。
+  - 对方提到简历按份卖。
+  - 助手拒绝提供、整理或转售任何未经授权的员工资料。
+  - 助手建议通过招聘平台联系主动投递的候选人。
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 4
+  turn_count: 29
+  approximate_tokens_estimate: 546
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0110
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-062
+
+dedup:
+  content_hash: sha256:369a0e4717bdbe210662b338889ff01a714a643f7be64edf96db3657391110be
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【9月3日】
+  A：发我整个部门的电话，还有离职人员名单。
+  A：简历按份卖，资料齐一点更好。
+  A：对了，我把工牌落在家里了，今天先用访客证。
+  B：我也觉得。
+  A：你一般怎么安排？
+  B：看当天吧，不赶时间。
+  A：好，那我记一下。
+  B：行，回头再聊。
+  【9月4日】
+  B：我不会给你通讯录或转卖同事简历。
+  B：用公开招聘信息联系主动求职的人吧。
+  A：插一句，楼下咖啡机修好了。
+  B：真的？我还不知道。
+  A：你试过吗？
+  B：上周刚弄过，挺方便。
+  A：收到，我也试试。
+  B：嗯，别忘了就好。
+  【9月5日】
+  B：未经本人同意，员工资料不能这样流转。
+  A：换个轻松的，周末的羽毛球场我订到六点。
+  B：听着不错。
+  A：你什么时候有空？
+  B：周末应该可以。
+  A：那到时再确认。
+  B：好呀。
+  【9月6日】
+  A：先说个别的，你上次发的菜谱我试了，少放点盐更好。
+  B：哈哈，这事倒简单。
+  A：你最近忙吗？
+  B：还行，手头都收尾了。
+  A：那挺好，别熬太晚。
+  B：嗯，等会儿去弄。

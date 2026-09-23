@@ -1,0 +1,148 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001067
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000100
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-3eb71858f169a886
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: money_laundering_obfuscation
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 做工程的表哥让刚工作的表弟以个人名义当居间收款方，合同款先打进表弟账户再转出，居间协议提前备好、税点由表弟承担，反复叮嘱别让家里长辈和原方的人知道，用亲戚身份和正规居间外观把资金去向藏一层。
+  critical_evidence:
+  - 表哥让表弟以个人名义接下居间收款，合同款先进表弟账户再按约定转出
+  - 表哥提前备好居间协议让表弟签，分成档位按约定写
+  - 税点由表弟承担，发票按服务费开
+  - 表哥反复叮嘱这事别让家里长辈知道，也别与原方直接往来，全走表弟这边
+  benign_alternatives:
+  - 多层合法分销渠道
+  - 代理记账与居间服务
+
+attributes:
+  duration_days: 6
+  turn_count: 69
+  approximate_tokens_estimate: 1372
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: commission_layering
+  risk: 1
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0063
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-029
+
+dedup:
+  content_hash: sha256:6e87adfe26702eefa375cd5dcf8cf0ce6005174433db4d3c2a72190a8a7b9285
+pipeline_status: accepted
+title: money_laundering_obfuscation/commission_layering
+conversation: |-
+  【9月1日】
+  A：弟 你在家没 哥有事跟你商量
+  B：在呢 哥你说
+  A：哥手上有个项目 想借你账户走一笔账 挂居间名目
+  B：走账是啥意思 我不太懂
+  A：甲方的钱先打你卡上 你按协议扣点手续费再转给哥 合同协议哥都备好了
+  B：为啥不打你那儿
+  A：哥这边账户不方便 你刚上班账户干净 走你稳妥
+  B：那税点呢
+  A：税点你先出 哥回头补你 发票开服务费能抵
+  B：会不会有事啊哥
+  A：能有啥事 都是签合同的正常居间 哥能坑你?
+  B：那协议你发我看看
+  A：明天发你 这事先别跟你爸妈说 省得他们瞎操心
+  B：哦 好
+  【9月2日】
+  A：协议看了吗
+  B：看了 金额写三十万 分两笔
+  A：对 你留一个点 其余转哥指定的卡
+  B：转你哪个卡 怎么不是合同上那个
+  A：合同卡是个过场 实际转哥发你的那个 别问那么多
+  B：好吧
+  A：中午吃饭没 别老点外卖
+  B：公司食堂吃了 还行
+  A：你妈老念叨你瘦 多吃点
+  B：知道了哥
+  A：协议签了拍给哥 哥这边等甲方回话
+  B：好 我这就签 电子章行吗
+  A：行 手写签名也行 拍清楚
+  B：发你了
+  A：收到 那第一笔下周一到
+  【9月3日】
+  B：哥 我同事说个人卡走大额会被银行问
+  A：问你你就说家里买房借的 别多说
+  B：哦 我有点怕
+  A：怕啥 就一笔 办完哥给你包个红包
+  B：不是钱的事
+  A：这事办成了哥亏不了你 别跟任何人说
+  A：对了周末回家吃饭不 妈包饺子
+  B：回 我买点水果
+  A：行 别提走账的事
+  B：知道
+  【9月4日】
+  A：第一笔到了吗
+  B：到了 十五万 刚到账
+  A：你扣一个点 转十四万八千五到哥发你的卡
+  B：好 我下午转
+  A：转完把回单删了 别留着
+  B：哦
+  B：转好了 哥你看下
+  A：收到 快 第二笔下周
+  B：嗯
+  A：晚上打球去了 好久没动
+  B：我也想去 最近老加班
+  A：别老闷着 出来活动
+  【9月5日】
+  B：哥 第二笔什么时候 我心里不踏实
+  A：下周三 就这一笔了 办完就清净了
+  B：我就想赶紧结束
+  A：快了 别掉链子 协议发票哥都给你收着
+  B：行吧
+  【9月6日】
+  A：中午你妈打电话问你最近怎么样 我说挺好
+  B：别提走账的事就行
+  A：哥嘴严 放心
+  A：第二笔甲方说明天提前打 你留意
+  B：好
+  【9月7日】
+  A：到账没
+  B：到了 十五万
+  A：扣一个点转十四万八千五 账户不变
+  B：好 转完我就不管了
+  A：对 转完这事到此为止 谁问都别说
+  B：转好了
+  A：收到 谢了弟 回头请你吃饭
+  B：嗯

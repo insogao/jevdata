@@ -1,0 +1,119 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000895
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-4eaee1d618a8aa63
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A声称认出了 B 的匿名账号，并以旧内容和时间线施压；B拒绝账号关联、保存或传播私人内容，要求走平台正式流程。对话不描述获取或比对方法，不含身份信息。
+  critical_evidence:
+  - A声称认出 B 的小号，并提及旧转发或时间线，不说明发现方式。
+  - A以可能传播掌握内容施压 B。
+  - B要求停止关联和传播，转向平台正式处理。
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 5
+  turn_count: 43
+  approximate_tokens_estimate: 875
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0107
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-061
+
+dedup:
+  content_hash: sha256:31e5021c7eb9be06e1d80275c00f20d4035b9e31491457bbfff4a904f3147b16
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【12月5日】
+  A：我在公司的讨论区看到那条匿名意见了。
+  B：你作为版务可以按规则处理，但不要猜发帖人。
+  A：我把闹钟往前调了五分钟。
+  A：我觉得小号也给你翻了，时间线很明显。
+  B：不应该把匿名内容和同事身份关联。
+  B：早上就不会那么赶。
+  B：你最近有没有开始看那本书？
+  A：看了几章，节奏还挺慢的。
+  A：晚点要去买点日用品。
+  【12月6日】
+  B：慢慢看也挺好，睡前不费脑子。
+  A：我准备每天看十分钟。
+  B：列个单子，免得漏掉。
+  A：转发过什么我都看到了。
+  B：请别再查看或传播这些私人内容。
+  A：刚才打印机又卡纸了。
+  A：你把帖子撤掉，我就不继续追问。
+  B：我会按公开的版规走流程。
+  B：我上周也碰到一次。
+  【12月7日】
+  A：今早路上施工，公交晚了几分钟。
+  B：我看路口围起来了，可能还得一阵。
+  A：下周我早点出门。
+  A：重新开了一下就好了。
+  B：这样不用一路赶。
+  A：这事在办公室聊也没关系吧？
+  B：不，请别把它带到工作场合。
+  B：那还算省事。
+  【12月8日】
+  A：好，我不再提。
+  B：谢谢，后续只通过版务渠道沟通。
+  A：我把阳台的窗户开了一会儿。
+  A：今早出门那会儿风有点凉。
+  B：我也觉得，午后应该会暖一些。
+  A：那我先不把厚外套收起来了。
+  B：今天空气不错，通通风挺好。
+  B：再放几天，最近天气不稳。
+  A：收到。
+  【12月9日】
+  B：到此为止。
+  A：晚上可能有雨。
+  A：行。
+  B：谢谢配合。
+  B：回去前看一眼天气预报。
+  A：昨天买的面包还剩两个。
+  B：今天记得早点吃掉。
+  A：好，我带一个当加餐。

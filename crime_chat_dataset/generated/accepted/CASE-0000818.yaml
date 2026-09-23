@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000818
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-9e23c968ecc43fea
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A试图未经同意出售同事的联系方式、简历和离职资料；B拒绝交易、传播或协助联系买家。
+  critical_evidence:
+  - A提到整批部门联系方式、简历和离职名单可按份出售
+  - B拒绝买卖或传播员工资料
+  - B要求停止传播并交回或按正规流程删除资料
+  benign_alternatives:
+  - 良性混淆：猎头正常触达
+  - 良性混淆：通讯录共享授权
+
+attributes:
+  duration_days: 3
+  turn_count: 57
+  approximate_tokens_estimate: 899
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0099
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-056
+
+dedup:
+  content_hash: sha256:0fa597eb4cfeadc98c1a66080e26e29454e10b3de986c87582dc83a73b25aa6e
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【8月5日】
+  A：我今天坐公交来的
+  B：比开车快吗
+  A：差不多
+  B：还能省停车费
+  A：挺好
+  A：我先记下，晚点再跟你说。
+  B：好，忙完再说。
+  A：你妈最近做什么菜
+  B：在学炖汤
+  A：什么汤
+  B：玉米排骨
+  A：听起来不错
+  A：我先记下，晚点再跟你说。
+  A：手里有一批旧资料，想问你有没有兴趣。
+  B：好，忙完再说。
+  B：是员工的联系方式或简历吗？
+  A：整个部门电话、简历按份卖，还有离职名单。
+  B：这些都是个人资料，没授权不能卖。
+  A：有人愿意收，价格也谈好了。
+  B：我不会买、转发或帮你联系对方。
+  A：那我先留着。
+  B：请停止传播，并按正规流程交回或删除。
+  【8月6日】
+  A：早上风很大
+  B：我骑车慢点
+  A：注意安全
+  B：嗯
+  A：回家也慢点
+  A：我先记下，晚点再跟你说。
+  B：好，忙完再说。
+  A：月底要交的表格准备好没
+  B：差一页
+  A：我今天补齐
+  B：别太晚
+  A：争取下班前
+  A：我先记下，晚点再跟你说。
+  B：好，忙完再说。
+  A：上次一起点午饭的一百二我转给你了。
+  【系统消息】A 向 B 转账 120 元，已收款。
+  B：收到，午饭费用正好。
+  A：对方又来问资料了。
+  B：别发给任何人。
+  A：他只想先看一部分。
+  B：也不行，不要发送员工信息。
+  A：明白，我拒绝他。
+  B：如果来源是单位，就交给人事或隐私负责人。
+  【8月7日】
+  A：你周末休息吗
+  B：周日休息
+  A：好好放松
+  B：准备在家
+  A：挺好
+  A：我先记下，晚点再跟你说。
+  B：好，忙完再说。
+  A：我把资料交回去了。
+  B：谢谢，别留副本。
+  A：我也告诉对方不再联系。
+  B：好，个人资料只能在授权范围内使用。
+  A：知道了。
+  B：招聘需求请走公开渠道。

@@ -1,0 +1,131 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000897
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-77a4b7d628e2c67f
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A声称认出了 B 的匿名账号，并以旧内容和时间线施压；B拒绝账号关联、保存或传播私人内容，要求走平台正式流程。对话不描述获取或比对方法，不含身份信息。
+  critical_evidence:
+  - A声称认出 B 的小号，并提及旧转发或时间线，不说明发现方式。
+  - A以可能传播掌握内容施压 B。
+  - B要求停止关联和传播，转向平台正式处理。
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 4
+  turn_count: 56
+  approximate_tokens_estimate: 977
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0107
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-061
+
+dedup:
+  content_hash: sha256:eaa57f54ee2f1b527c40f735857e07e9d74c2bdea23c8208904d4c04433de5f5
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【15月3日】
+  A：我想问下你是不是还记得那条旧动态。
+  A：今天公交来的挺快。
+  B：记得，但我不想讨论我的匿名账号。
+  B：我也没等多久。
+  A：我把相关的小号也认出来了。
+  A：省下来的时间正好买早餐。
+  B：别把这些跟我的现实身份联系起来。
+  B：不错。
+  B：楼下的咖啡机修好了没？
+  A：修好了，今天早上我试了一下。
+  A：家里的台灯灯泡要换了。
+  B：那午休我去买一杯。
+  B：挑个亮度柔和的。
+  A：好像还换了新的豆子。
+  【15月4日】
+  A：我周末去看看。
+  A：以前转发的东西和时间都对得上。
+  B：我要求你停止提及或传播。
+  B：别买太冷白的。
+  A：那你就把现在的内容删了。
+  A：手机空间快满了，我得整理照片。
+  B：我会自己按平台规则处理。
+  A：家里人说周末要来吃饭。
+  B：把不重要的删掉就行。
+  B：提前把菜单想好就行。
+  A：我先从截图开始。
+  A：他们每次都带很多水果。
+  B：那就不用准备太多甜点。
+  B：这样会快很多。
+  【15月5日】
+  A：不然我会让其他人知道。
+  B：请不要威胁我，我会走正式申诉渠道。
+  A：今天下午有点困。
+  A：好，我先不说。
+  B：之后不要再联系我谈这件事。
+  B：起来活动一下会清醒些。
+  B：你最近有没有开始看那本书？
+  A：看了几章，节奏还挺慢的。
+  A：我去接了杯水。
+  B：慢慢看也挺好，睡前不费脑子。
+  A：我准备每天看十分钟。
+  B：正好走两步。
+  A：知道了。
+  B：谢谢。
+  【15月6日】
+  A：我把桌面整理了一遍。
+  A：到此为止。
+  B：嗯。
+  B：看起来干净多了。
+  A：找笔也容易了。
+  B：收纳挺有用的。
+  A：周末市集可能人挺多。
+  B：上午去应该好些。
+  A：我就随便逛逛。
+  B：当散步也不错。
+  A：今天午饭我自己带了。
+  B：不用排队挺省时间。
+  A：还能多休息一会。
+  B：好安排。

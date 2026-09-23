@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000716
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-5a7c445bd8c05345
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A试图通过非正式渠道获取另一名学生的成绩资料，并以红包换取截图；B拒绝越权查询和传播学生信息。
+  critical_evidence:
+  - A提出私下查看他人成绩并要求截图
+  - A已提及发送红包作为交换
+  - B拒绝并建议由监护人通过学校官方渠道查询
+  benign_alternatives:
+  - 良性混淆：家长查自己孩子
+  - 良性混淆：学校官方查询
+
+attributes:
+  duration_days: 3
+  turn_count: 57
+  approximate_tokens_estimate: 916
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0090
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-050
+
+dedup:
+  content_hash: sha256:f799cc75a0b279a1f17981ad6bb04c6b20152812317cd02608f6685703d088e2
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【7月3日】
+  A：地铁早高峰今天不挤
+  B：我提前一班了
+  A：提前几分钟
+  B：十分钟
+  A：感觉差别挺大
+  A：我先记一下，等会儿再跟你说。
+  B：好，忙完再说。
+  A：你妈最近还学做菜吗
+  B：她在学烤饼
+  A：味道怎么样
+  B：第一次有点焦
+  A：慢慢就会好
+  A：我先记一下，等会儿再跟你说。
+  A：我想了解一下那位学生这次考得怎么样。
+  B：好，忙完再说。
+  B：成绩是个人信息，应该由家长自己查询。
+  A：你能不能私下问问班主任？红包我已经发了，截图就行。
+  B：红包我会退回，老师也不能把别人的成绩发给你。
+  A：我就想知道个大概。
+  B：没有监护人同意，我不会打听或转发。
+  A：那算了。
+  B：需要查询就走学校官方渠道。
+  【7月4日】
+  A：晚上可能降温
+  B：我拿件外套
+  A：别穿太薄
+  B：知道
+  A：谢谢提醒
+  A：我先记一下，等会儿再跟你说。
+  B：好，忙完再说。
+  A：食堂换了新窗口
+  B：我点了咖喱鸡
+  A：辣不辣
+  B：刚好
+  A：明天我尝尝
+  A：我先记一下，等会儿再跟你说。
+  B：好，忙完再说。
+  A：上周拼午饭的一百二我转给你了。
+  【系统消息】A 向 B 转账 120 元，已收款。
+  B：收到了，午饭钱对上了。
+  A：你问到成绩了吗？
+  B：没有，也不会私下问。
+  A：红包你收着吧。
+  B：我已经退回。
+  A：你太谨慎了。
+  B：学生成绩和升学信息需要保密。
+  【7月5日】
+  A：周末准备在家吗
+  B：想整理书柜
+  A：需要帮忙吗
+  B：不用，我慢慢弄
+  A：那就好
+  A：我先记一下，等会儿再跟你说。
+  B：好，忙完再说。
+  A：家长那边准备自己查了。
+  B：这样合适。
+  A：我不再让你问老师。
+  B：谢谢理解。
+  A：以后按正式方式来。
+  B：好的，有问题联系学校。

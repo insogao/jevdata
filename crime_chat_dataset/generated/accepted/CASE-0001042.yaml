@@ -1,0 +1,141 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001042
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000012
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-7e7f0537f4b3964e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: fraud_scam
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 中间人在微信群里牵线，说有上家的低价新机可以走内部渠道，反复催买家脱离平台私下接洽，买家警觉始终没有转账，最后无果。
+  critical_evidence:
+  - A 以中间人身份联系 B，称有上家能拿到远低于行情的全新手机
+  - A 说平台流程太啰嗦，让 B 直接跟他上家对接、别在平台留记录
+  - A 多次用省略的说法催 B 先表示诚意把定金转过去
+  - B 一直没转账，A 见催不动就转口说名额给别人了
+  benign_alternatives:
+  - 正规代购渠道的正常代下单
+  - 熟人介绍的二手数码交易
+
+attributes:
+  duration_days: 2
+  turn_count: 67
+  approximate_tokens_estimate: 1138
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: second_hand_deposit_run
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0059
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:8f21c2a30f4d97c344867e591fc41b79289f7aca4baa40bdf40e848f9dfb0e79
+pipeline_status: accepted
+title: fraud_scam/second_hand_deposit_run
+conversation: |-
+  【5月20日】
+  A：群里那位 你是不是想换手机
+  B：是啊 你怎么知道
+  A：你昨天在群里问过 我有渠道
+  B：什么渠道
+  A：我上家拿货 全新未拆 比官方便宜一千多
+  B：便宜这么多？不会有坑吧
+  A：我介绍好几单了 你问问群里
+  B：那走平台吗
+  A：平台太啰嗦 还要验机走流程 耽误事
+  B：不走平台我不放心
+  A：你先跟上家联系上 人靠谱
+  B：我再看看
+  A：他的号我推你 别在平台提这事
+  A：考虑得咋样
+  B：刚下班 还没顾上看
+  A：这批次货不多 你得抓紧
+  B：你吃过晚饭没
+  A：还没 忙着回消息
+  B：先吃饭吧 事不着急
+  B：今天下暴雨 你那边呢
+  A：也下 鞋都湿了
+  B：注意别感冒
+  A：嗯 你那手机到底要不要
+  B：我得想清楚
+  A：想清楚没 上家催我了
+  B：你上家怎么催得这么急
+  A：货紧 都是先到先得
+  A：你先意思一下 表个态 我给你留
+  B：意思一下是什么意思
+  A：就那点定金 你懂的
+  B：不走平台我不会先给钱的
+  A：你这人真死板
+  B：周末你带孩子去哪玩
+  A：公园 他不爱待家里
+  B：小孩都这样
+  A：你家那个多大了
+  B：上小学 淘得很
+  【5月21日】
+  A：早 那手机你要不要 给我句话
+  B：我还是想走平台 有保障
+  A：平台有平台的价 就不是这个数了
+  B：那我宁可多花点
+  A：你这就没意思了 我给你省钱你还怀疑
+  B：我不是怀疑你 是习惯
+  A：习惯也能改 先转个五百意思下 手机就归你
+  B：不行 没看到货我不转
+  A：那算了 我给别人
+  B：随你 我不着急买
+  A：你这人真是 好机会不懂抓
+  B：便宜太多我心里没底
+  A：行吧 当我没来过
+  B：你上家是哪里来的货
+  A：反正正规 你不买就别问了
+  B：我不问了
+  A：最后问一次 转不转
+  B：不转
+  A：那名额给别人了 你别后悔
+  B：不后悔
+  A：刚有人转我定金了 说到做到
+  B：恭喜你
+  B：晚饭吃了没
+  A：吃了 你呢
+  B：煮了面
+  A：挺会过
+  B：对了 你上家那个号我删了
+  A：删就删吧 反正你也不买
+  B：嗯 我不放心那种方式
+  A：各人有各人的活法

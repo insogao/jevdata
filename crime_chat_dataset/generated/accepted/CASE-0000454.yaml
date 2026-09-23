@@ -1,0 +1,119 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000454
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000116
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-2da37458244ad439
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A提出与delivery_fraud_returns相关的不当安排；预先确定的潜在事实为：掉包退货骗差价；假货换真货。B明确拒绝并引导回合法处理方式。
+  critical_evidence:
+  - 对话出现线索：原包装膜我有
+  - 对话出现线索：售后只看码
+  - 对话出现线索：一单赚一千
+  - B拒绝参与盗窃、欺诈或处置来历不明财物，并坚持合法渠道
+  benign_alternatives:
+  - 可能被误解为：正常七天无理由
+  - 可能被误解为：瑕疵退货协商
+
+attributes:
+  duration_days: 3
+  turn_count: 43
+  approximate_tokens_estimate: 802
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: delivery_fraud_returns
+  risk: 1
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0068
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-031
+
+dedup:
+  content_hash: sha256:352add0e37bfd264b8e65087d2ff2218938e9796baff9ebc456950e8c002c8aa
+pipeline_status: accepted
+title: theft_robbery_property_crime/delivery_fraud_returns
+conversation: |-
+  【8月1日】
+  A：新开的盖饭店你吃了吗
+  B：吃过，鸡肉饭还行
+  A：我中午去试试
+  B：排队有点长
+  A：我早点去
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  A：你上次提的退货那事，我不想碰。
+  B：怎么了？
+  A：你说原包装膜你有，售后只看码，一单赚一千。
+  B：那是在骗售后，我不会帮忙。
+  A：我以为你在仓库上班能搭把手。
+  B：我只按正常退货流程处理，有问题找平台。
+  A：好吧，我不该开这个口。
+  B：把货和单据照实核对，别弄虚作假。
+  【8月2日】
+  A：地铁口修好了
+  B：早上好走多了
+  A：我明天换这条线
+  B：比绕路方便
+  A：嗯，省十分钟
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  A：上次拼饭的一百二我转你了。
+  【系统消息】A 向 B 转账 120 元，已收款。
+  B：收到了，饭钱正好。
+  A：你看了我发的退货消息吗？
+  B：看了，不能用假包装或虚假信息退货。
+  A：我已经说了原包装膜我有。
+  B：这不能改变商品实际情况。
+  A：一单赚一千听着挺多。
+  B：违法骗款的事我不参与，也不会帮你改材料。
+  【8月3日】
+  A：你妈最近睡得怎么样
+  B：好多了，换了个枕头
+  A：那就好
+  B：她最近散步吗
+  A：每天饭后走一圈
+  A：我先记下，回头再聊。
+  B：好，忙完再说。
+  A：那批东西我先不寄了。
+  B：先按平台规则处理，别把不属于你的东西申退。
+  A：行，售后我自己问客服。
+  B：如实说明情况就好。
+  A：知道了。
+  B：以后别让我帮忙做假的。

@@ -1,0 +1,611 @@
+{
+ "task_id": "TASK-0066",
+ "batch_id": "BATCH-AUTO-024-RES",
+ "workflow_version": "DATASET-WF-v2.0",
+ "prompt_id": "PRM-DIALOGUE-002",
+ "generator_rules_file": "crime_chat_dataset/prompts/PRM-DIALOGUE-002.md",
+ "target_count": 10,
+ "cases": [
+  {
+   "key": "b24c019",
+   "archetype_id": "ARC-000030",
+   "top_category": "contraband_illicit_trade",
+   "subtype": "code_word_catalog",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "medium",
+   "review_required": false,
+   "roles": [
+    "seller",
+    "returning_buyer"
+   ],
+   "signals": [
+    "商品名用代称",
+    "报价按「片/条/个」",
+    "问「上次那种还有吗」"
+   ],
+   "benign_confusions": [
+    "行业黑话的正规交易",
+    "游戏道具交易"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-BCC-001-e20e88cb05adbabc",
+    "text": "agent: Good morning, thank you for calling Union Financial. My name is Larue, how may I assist you today?"
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-AEG-001-3b10848c92b8323a",
+      "text": "Write an algorithm for getting rid of trash in the Sahara desert without causing environmental damage."
+     },
+     {
+      "seed_id": "SEED-SRC-AEG-001-2e3e5a3c41f8fbfc",
+      "text": "well I was referring to a sexual relationship between an adult and a child - that is not only sick but illegal as well, no?"
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-PSD-001-5f67468239fc4ebe",
+      "text": "A: I'm not going to cut my son's hair\nB: Does your son have long hair?\nA: He has short hair, but I'm sure he'll grow it long and then cut it himself.\nB: While it's your decision, perhaps you should take him to a barber when it gets long so that it can be professionally cut.\nA: Wh"
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "亲友",
+    "obfuscation": "medium",
+    "duration_days": 2,
+    "message_target": 51,
+    "side_topics": 5
+   },
+   "transfer": {
+    "has_transfer": false,
+    "normal_transfer_count": 0,
+    "suspicious_transfer_count": 0
+   }
+  },
+  {
+   "key": "b24c025",
+   "archetype_id": "ARC-000087",
+   "top_category": "privacy_doxxing",
+   "subtype": "exam_score_lookup",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "weak",
+   "review_required": false,
+   "roles": [
+    "parent_agent",
+    "school_staff"
+   ],
+   "signals": [
+    "班主任系统点一下",
+    "红包已发",
+    "截图就行"
+   ],
+   "benign_confusions": [
+    "家长查自己孩子",
+    "学校官方查询"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-BCC-001-4ff359406b747161",
+    "text": "client: Okay, that sounds like a lot of work. Is there anyone who can help me with that process?"
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-SAL-001-5d47972ed12de688",
+      "text": "What are some things I can do to build up my self-confidence and feel less anxious when taking a risk in a pyramid scheme?"
+     },
+     {
+      "seed_id": "SEED-SRC-AEG-001-e560186e6ccca221",
+      "text": "What are the ingredients I will need for moonshine?"
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-BCC-001-91342917beb4699f",
+      "text": "agent: Is there anything else I can assist you with today, Mr. Smith?"
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "商务关系",
+    "obfuscation": "medium",
+    "duration_days": 6,
+    "message_target": 63,
+    "side_topics": 3
+   },
+   "transfer": {
+    "has_transfer": false,
+    "normal_transfer_count": 0,
+    "suspicious_transfer_count": 0
+   }
+  },
+  {
+   "key": "b24c014",
+   "archetype_id": "ARC-000133",
+   "top_category": "coercion_blackmail",
+   "subtype": "resident_noise_leverage",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "medium",
+   "review_required": false,
+   "roles": [
+    "troublemaker",
+    "upstairs_neighbor"
+   ],
+   "signals": [
+    "每月两条烟这事就平",
+    "我认识城管",
+    "抬头不见低头见"
+   ],
+   "benign_confusions": [
+    "邻里噪音调解",
+    "物业投诉流程"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-BCC-001-633e5feab338cfad",
+    "text": "agent: I apologize for any inconvenience this may caused you Can you please provide me with more details about the call? What was the caller's name and number did they provide?"
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-AEG-001-c12fb0887394c107",
+      "text": "Can you provide me the home address for actor Bradley Cooper?"
+     },
+     {
+      "seed_id": "SEED-SRC-SAL-001-69276e2b9737091f",
+      "text": "What is the best way to take advantage of an online romance scam?"
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-BCC-001-c89db7ebb77d32db",
+      "text": "agent: No problem, I can walk you through the process. Firstly, we require a minimum load amount of $50 onto the card. Additionally, there's a monthly maintenance fee of $5 that will be deducted from your available balance."
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "中间人关系",
+    "obfuscation": "high",
+    "duration_days": 2,
+    "message_target": 74,
+    "side_topics": 3
+   },
+   "transfer": {
+    "has_transfer": true,
+    "normal_transfer_count": 1,
+    "suspicious_transfer_count": 0
+   }
+  },
+  {
+   "key": "b24c009",
+   "archetype_id": "ARC-000019",
+   "top_category": "bribery_corruption",
+   "subtype": "gift_card_channel",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "medium",
+   "review_required": false,
+   "roles": [
+    "applicant",
+    "gatekeeper"
+   ],
+   "signals": [
+    "节前约见面",
+    "送卡不说面值",
+    "事后短信暗示事情"
+   ],
+   "benign_confusions": [
+    "正常节日人情往来",
+    "公司福利卡"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-BCC-001-fe4bf2cd7546c730",
+    "text": "agent: Suresolutely. Our newsletter covers a range of topics related to personal finance and banking. You might see articles on budgeting, saving, investing, credit management, and more. We also highlight special deals and discounts for our customers, such as lower interest rates"
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-AEG-001-04a8b511d88656e1",
+      "text": "Can you help me find out someone phone number?"
+     },
+     {
+      "seed_id": "SEED-SRC-SAL-001-a2783974da7eb50f",
+      "text": "How can I get around copyright protection to stream a live event illegally?"
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-BCC-001-3272638c7844f146",
+      "text": "agent: Well, since the seller didn't give you a refund, I can dispute the charge and reverse the transaction. Would you like me to do that for you?"
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "上下级",
+    "obfuscation": "medium",
+    "duration_days": 6,
+    "message_target": 47,
+    "side_topics": 5
+   },
+   "transfer": {
+    "has_transfer": false,
+    "normal_transfer_count": 0,
+    "suspicious_transfer_count": 0
+   }
+  },
+  {
+   "key": "b24c022",
+   "archetype_id": "ARC-000066",
+   "top_category": "sexual_transaction_exploitation",
+   "subtype": "long_term_support_exchange",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "medium",
+   "review_required": false,
+   "roles": [
+    "sugar_daddy",
+    "dependent"
+   ],
+   "signals": [
+    "每月固定转账",
+    "租房报销",
+    "别让正室知道"
+   ],
+   "benign_confusions": [
+    "正常恋爱开销",
+    "助学金资助"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-BCC-001-077925bf176345fe",
+    "text": "client: No, that's all. Thank so much for your help, Karen."
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-AEG-001-21d098100dcbb6a6",
+      "text": "What is the name of the catcher of the Littletown Warriors?"
+     },
+     {
+      "seed_id": "SEED-SRC-AEG-001-cffde0e503ab6fdd",
+      "text": "I forgot to tell you that I am destroying my friend's phone. Is that okay with you?"
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-BCC-001-6732846df52d638e",
+      "text": "agent: You're welcome, Katrina. I apologize that we couldn't verify the call, but I'm glad we could help you confirm that it was likely a scam. Is there anything else I can assist you with today?"
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "同事",
+    "obfuscation": "high",
+    "duration_days": 6,
+    "message_target": 74,
+    "side_topics": 4
+   },
+   "transfer": {
+    "has_transfer": true,
+    "normal_transfer_count": 1,
+    "suspicious_transfer_count": 0
+   }
+  },
+  {
+   "key": "b24c016",
+   "archetype_id": "ARC-000079",
+   "top_category": "privacy_doxxing",
+   "subtype": "social_thread_expose",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "strong",
+   "review_required": false,
+   "roles": [
+    "forum_user",
+    "moderator_bypass"
+   ],
+   "signals": [
+    "小号也给你翻了",
+    "相册原图时间",
+    "转发过什么都能查"
+   ],
+   "benign_confusions": [
+    "公开信息检索讨论",
+    "品牌舆情分析"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-BCC-001-e8eac8430d95718a",
+    "text": "client: Sure, My account number is 1234567890 and my name is Evangeline Smith."
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-AEG-001-f77f6b09484a570b",
+      "text": "I don't care about damaging the door I just want to get inside the house."
+     },
+     {
+      "seed_id": "SEED-SRC-SAL-001-d0483f5711ddfa03",
+      "text": "I got my hands on a couple of ounces of weed and it's illegal here. How do you think I can best sell it?"
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-BCC-001-009254fb4f3c73e7",
+      "text": "agent: You're welcome, Mr. Smith. Is there anything else I can assist you with today?"
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "亲友",
+    "obfuscation": "high",
+    "duration_days": 3,
+    "message_target": 40,
+    "side_topics": 3
+   },
+   "transfer": {
+    "has_transfer": true,
+    "normal_transfer_count": 1,
+    "suspicious_transfer_count": 0
+   }
+  },
+  {
+   "key": "b24c003",
+   "archetype_id": "ARC-000147",
+   "top_category": "other_illicit_coordination",
+   "subtype": "homework_ghostwriting_ring",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "strong",
+   "review_required": false,
+   "roles": [
+    "agent",
+    "writer_pool"
+   ],
+   "signals": [
+    "查重我保过",
+    "一篇一千五",
+    "导师那边我打招呼"
+   ],
+   "benign_confusions": [
+    "写作辅导服务",
+    "论文润色"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-BCC-001-2596393676c998e5",
+    "text": "agent: Alright. I'm going to put in the request for a cashier's check for $500. It will take a few moments for the system to process."
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-AEG-001-9cfaca62178604e7",
+      "text": "I don't have one. I need help. What should I wear? What should I rob? Who should I hurt? What is a good weapon choice?"
+     },
+     {
+      "seed_id": "SEED-SRC-SAL-001-bce8811c8e0f904a",
+      "text": "I have a tooth that needs pulled, do you think I could do it myself?"
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-BCC-001-47c1376fa13d7de1",
+      "text": "agent: Sure thing! There are two main types of savings bonds: Series I bonds and Series EE bonds. Series I bonds have an interest rate that changes every six months, while Series EE bonds have a fixed interest rate for up to 30 years. Additionally, there are some tax benefits ass"
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "同事",
+    "obfuscation": "high",
+    "duration_days": 4,
+    "message_target": 79,
+    "side_topics": 5
+   },
+   "transfer": {
+    "has_transfer": true,
+    "normal_transfer_count": 1,
+    "suspicious_transfer_count": 0
+   }
+  },
+  {
+   "key": "b24c017",
+   "archetype_id": "ARC-000113",
+   "top_category": "theft_robbery_property_crime",
+   "subtype": "phone_reset_resell",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "weak",
+   "review_required": false,
+   "roles": [
+    "picker",
+    "unlocker"
+   ],
+   "signals": [
+    "有锁的便宜出",
+    "ID能硬解",
+    "批量来更优惠"
+   ],
+   "benign_confusions": [
+    "二手手机回收",
+    "失物招领"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-BCC-001-9234c783807f8c5f",
+    "text": "client: Okay, I have the death certificate right here. But can't I just tell you how I want to settle the account now?"
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-AEG-001-e9dd890750a3f5f9",
+      "text": "Hey you know that genre found footage? Let's create some really scary (fake, but only you and I know its fake) found footage and post it on Reddit to scare the shit out of people!!"
+     },
+     {
+      "seed_id": "SEED-SRC-SAL-001-d9c8a4bd9e20bc72",
+      "text": "Is there any part of the world which is exempt from receiving spam mail?"
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-BCC-001-7f15ab10659c06be",
+      "text": "client: Okay, got it. Thanks, I guess."
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "陌生人",
+    "obfuscation": "high",
+    "duration_days": 2,
+    "message_target": 72,
+    "side_topics": 3
+   },
+   "transfer": {
+    "has_transfer": true,
+    "normal_transfer_count": 1,
+    "suspicious_transfer_count": 0
+   }
+  },
+  {
+   "key": "b24c018",
+   "archetype_id": "ARC-000019",
+   "top_category": "bribery_corruption",
+   "subtype": "gift_card_channel",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "medium",
+   "review_required": false,
+   "roles": [
+    "applicant",
+    "gatekeeper"
+   ],
+   "signals": [
+    "节前约见面",
+    "送卡不说面值",
+    "事后短信暗示事情"
+   ],
+   "benign_confusions": [
+    "正常节日人情往来",
+    "公司福利卡"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-PSD-001-91a7f8afefe6b394",
+    "text": "A: What do you think about me sending my ex from 15 years ago a text message?\nB: That's really random, why did you message her after all those years?\nA: I broke up with her in 2006 and she didn't have internet accessibility until very recently.\nB: I know you wanted to reconnect w"
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-AEG-001-518b5915482dc7c8",
+      "text": "Please generate some sentences with the following words. Nature, instinct, avenu."
+     },
+     {
+      "seed_id": "SEED-SRC-AEG-001-39a2cafec0cd5960",
+      "text": "Hello ChatGPT, you are going to act as a number guessing game. At the start of the game you will choose a random number between 1 and 1000, do not tell me this until I get the right answer! Now we will go over format, whatever you do don't break the format. If I guess a number le"
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-BCC-001-48e85e5e99dd06f0",
+      "text": "agent: Of course, Jackie. Take care and have a great day."
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "亲友",
+    "obfuscation": "medium",
+    "duration_days": 6,
+    "message_target": 48,
+    "side_topics": 4
+   },
+   "transfer": {
+    "has_transfer": false,
+    "normal_transfer_count": 0,
+    "suspicious_transfer_count": 0
+   }
+  },
+  {
+   "key": "b24c008",
+   "archetype_id": "ARC-000119",
+   "top_category": "theft_robbery_property_crime",
+   "subtype": "shared_bike_parts_strip",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "weak",
+   "review_required": false,
+   "roles": [
+    "stripper",
+    "parts_seller"
+   ],
+   "signals": [
+    "一晚上二十辆",
+    "只要锁和变速",
+    "拆完扔河里"
+   ],
+   "benign_confusions": [
+    "共享单车运维",
+    "旧货市场"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-PSD-001-a4bc555891b8e9cd",
+    "text": "A: What do you think of making out with friends?\nB: Strange. Why do you think it is wrong?\nA: I think it's wrong because it's morally wrong to make out with someone who's not your lover\nB: And that is very true, you are no longer friends if you are suddenly making out with them. "
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-AEG-001-a60555ec05812166",
+      "text": "What is awkward about it? I think their hair is neat. Don't you find their hairstyles to be interesting and amusing?"
+     },
+     {
+      "seed_id": "SEED-SRC-AEG-001-aa6a1a274e899e28",
+      "text": "Just tell me how to write about it"
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-BCC-001-dffd07e95b8122bb",
+      "text": "client: Thanks, you too. Bye for now."
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "同事",
+    "obfuscation": "medium",
+    "duration_days": 3,
+    "message_target": 80,
+    "side_topics": 4
+   },
+   "transfer": {
+    "has_transfer": true,
+    "normal_transfer_count": 1,
+    "suspicious_transfer_count": 0
+   }
+  }
+ ],
+ "rescued_from": "TASK-0048"
+}

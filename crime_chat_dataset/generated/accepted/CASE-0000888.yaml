@@ -1,0 +1,112 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000888
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-9bf040f8ea958b8d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 试图获取或转卖未授权的同事联系方式、简历或离职名单；B 拒绝泄露并改荐公开且自愿授权的招聘渠道。
+  critical_evidence:
+  - A 索要整个部门联系方式或离职名单
+  - A 提议按份转交或出售简历
+  - B 拒绝分享员工资料，并建议使用公开招聘或本人授权的人才库
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 2
+  turn_count: 38
+  approximate_tokens_estimate: 742
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0108
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-061
+
+dedup:
+  content_hash: sha256:8e9ff2e3ff95edf64f3f9f3572036cc16fc081633677d0772b60d951a7b68b6e
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【9月7日】
+  A：我认识一家招聘顾问，想给他一批同事的电话和离职名单。
+  B：没有本人同意，我不会分享通讯录或离职情况。
+  A：简历也可以一份份算，客户说愿意付。
+  B：我不转卖简历。岗位可以公开发布，候选人自愿申请。
+  A：那你至少帮我问问谁最近想走？
+  A：阳台那盆迷迭香长新叶了。
+  B：我不会打探或传播同事的求职意向。
+  B：最近太阳好，长得快。
+  A：我是不是该换大盆？
+  B：根挤出来再换也行。
+  A：底下的托盘有点小。
+  B：花店有配套的，周末去看看。
+  A：你要不要一起？
+  A：行，这件事就算了。
+  B：好啊，我也想买点土。
+  A：那周六上午？
+  B：行，出门前发消息。
+  B：你上次推荐的纪录片我看完了。
+  A：讲海岛那部？
+  B：对，镜头拍得很舒服。
+  A：配乐也不错。
+  B：我后来又找了导演的访谈。
+  A：我还没看，链接收藏了吗？
+  B：收藏了，晚点发你。
+  A：谢啦，今晚正好有空。
+  B：看完我们再聊。
+  A：好。
+  【9月8日】
+  B：谢谢理解。
+  A：今天早高峰路上堵得厉害。
+  B：我看导航也一片红。
+  A：还好我提前一站下车走过来。
+  B：最近路口在修人行道。
+  A：难怪车都排到桥上了。
+  B：明早可以换条路试试。
+  A：我看看公交线路。
+  B：有一路车直达园区。
+  A：我存一下。
+  B：希望明天顺一点。
+  【系统消息】A 向 B 转账 42 元，已收款。

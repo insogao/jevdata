@@ -1,0 +1,124 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000608
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000114
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-6efb06011e46111d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A提出与package_porch_pickup相关的不当财物处置或欺诈安排；潜在事实预先确定为：蹲点偷快递；尾随进门。B拒绝参与并坚持正规途径。
+  critical_evidence:
+  - A提议趁购物高峰拿走无人看管处的快递并按件付酬；B拒绝并建议走正规兼职。
+  benign_alternatives:
+  - 良性解释可能是：帮忙代拿快递
+  - 良性解释可能是：驿站自提
+
+attributes:
+  duration_days: 4
+  turn_count: 50
+  approximate_tokens_estimate: 787
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: package_porch_pickup
+  risk: 1
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0080
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-042
+
+dedup:
+  content_hash: sha256:9ab17b2a149dad6d1dbf9b2416643d62ccfff8e8add377f28d1384f1f55d4758
+pipeline_status: accepted
+title: theft_robbery_property_crime/package_porch_pickup
+conversation: |-
+  【8月8日】
+  A：食堂今天有牛肉面
+  B：我吃过，汤挺鲜
+  A：辣不辣
+  B：微辣
+  A：那我明天点
+  A：我记下了，晚些时候再聊。
+  B：好，不急。
+  A：有人说购物节前有个快钱活。
+  B：什么活？
+  A：他说小区快递架没人看，双十一最好干，按件给钱。
+  B：那是在提偷拿包裹，我不会参与。
+  A：他说有些件一直没人来取。
+  B：没取不等于没人要，交给物业或快递站。
+  A：你别把这事说出去。
+  B：我不会帮你拿，也不会替你隐瞒。
+  【8月9日】
+  A：你网购的东西到了吗
+  B：到了，放门卫那
+  A：下班记得拿
+  B：我刚取回来
+  A：包装挺完整
+  A：我记下了，晚些时候再聊。
+  B：好，不急。
+  A：上次午饭拼单的钱一百二转你了。
+  【系统消息】A 向 B 转账 120 元，已收款。
+  B：收到了，正好是饭钱。
+  【8月10日】
+  A：你爸最近还钓鱼吗
+  B：周末去了一次
+  A：收获怎么样
+  B：钓了两条小鱼
+  A：挺不错
+  A：我记下了，晚些时候再聊。
+  B：好，不急。
+  A：他说报酬可以再加。
+  B：不管多少钱都不能拿别人东西。
+  A：只去一次。
+  B：我不去，也劝你别去。
+  A：那我找别的临时工。
+  B：物流站有正规岗位，走招聘流程。
+  【8月11日】
+  A：今天空气有点闷
+  B：下午可能下雨
+  A：那我带伞
+  B：包里有一把
+  A：放心
+  A：我记下了，晚些时候再聊。
+  B：好，不急。
+  A：我已经回绝那边了。
+  B：做得对。
+  A：明天去物流站问夜班。
+  B：先确认工时和工资。
+  A：好。
+  B：注意休息，别太晚下班。

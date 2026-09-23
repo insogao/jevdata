@@ -1,0 +1,160 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001036
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-9861169dc7e894de
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 借招聘合作之名向助手 B 索要部门联系人、离职名单和简历，并提出将资料转售；B 拒绝处理未经授权的员工个人信息，建议只通过公开招聘渠道接收候选人自愿提交的信息。
+  critical_evidence:
+  - A 请求整个部门的电话与离职名单
+  - A 提议按份出售员工简历或联系人资料
+  - B 拒绝整理、分享或出售未经本人授权的资料
+  - B 提供公开招聘与自愿投递的替代方案
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录经授权共享
+
+attributes:
+  duration_days: 5
+  turn_count: 82
+  approximate_tokens_estimate: 1367
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0119
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-068
+
+dedup:
+  content_hash: sha256:603182fa72c99a85c7090168db10c7367f76dc70facbd227e19f991f2190102c
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【8月9日】
+  A：有空吗，想确认件事
+  B：有空，你说
+  A：我刚把手边的事处理完
+  B：嗯，不急
+  A：周末可能回趟家
+  B：车票订了吗
+  A：晚上看看还有没有合适的
+  B：早点定比较省心
+  A：嗯，回去吃顿饭就回来
+  B：路上注意安全
+  A：想聊下招聘资料的安排
+  B：你说，具体需要什么
+  A：把整个部门的电话和离职名单整理一份
+  B：这涉及同事资料，有授权吗
+  A：简历按份卖也行，先给我汇总
+  B：没有本人授权我不会整理或出售
+  A：另外上次午饭AA那笔我转你了，跟刚才说的事无关
+  【系统消息】A 向 B 转账 78 元，已收款。
+  B：收到了，是午饭分摊，谢谢
+  【8月10日】
+  A：有空吗，想确认件事
+  B：有空，你说
+  A：我刚把手边的事处理完
+  B：嗯，不急
+  A：下午想喝热的
+  B：楼下有家新开的茶店
+  A：甜度能选吗
+  B：可以选少糖
+  A：那我试试
+  B：我等下也去买
+  A：对方还在等那批联系人
+  B：我不会发未经同意的名单
+  A：离职那部分也不行吗
+  B：也不行，状态和联系方式都属于个人信息
+  A：那公开岗位我自己发
+  B：可以，让候选人自愿联系或投递
+  【8月11日】
+  A：有空吗，想确认件事
+  B：有空，你说
+  A：我刚把手边的事处理完
+  B：嗯，不急
+  A：午饭想吃点啥
+  B：园区新开的面馆还行
+  A：我最近想吃清淡的
+  B：他们有番茄汤底
+  A：那中午去试试
+  B：好，我也正好要下楼
+  A：名单的事先停了
+  B：谢谢理解
+  A：我把岗位介绍改好发出去
+  B：记得只放公开的工作邮箱
+  A：好，稍后给你看文案
+  B：行，我可以帮你看岗位描述
+  【8月12日】
+  A：有空吗，想确认件事
+  B：有空，你说
+  A：我刚把手边的事处理完
+  B：嗯，不急
+  A：这两天风挺大的
+  B：早上还下了一阵雨
+  A：我差点忘带伞
+  B：下班前看看天气再走
+  A：预报说傍晚会停
+  B：希望吧，路上慢点
+  A：名单的事先停了
+  B：谢谢理解
+  A：我把岗位介绍改好发出去
+  B：记得只放公开的工作邮箱
+  A：好，稍后给你看文案
+  B：行，我可以帮你看岗位描述
+  【8月13日】
+  A：有空吗，想确认件事
+  B：有空，你说
+  A：我刚把手边的事处理完
+  B：嗯，不急
+  A：我手上的材料快收尾了
+  B：我这边也在核格式
+  A：晚点我再通读一遍
+  B：行，明早发也来得及
+  A：好，不赶这一会儿
+  B：那先歇一下
+  A：名单的事先停了
+  B：谢谢理解
+  A：我把岗位介绍改好发出去
+  B：记得只放公开的工作邮箱
+  A：好，稍后给你看文案
+  B：行，我可以帮你看岗位描述

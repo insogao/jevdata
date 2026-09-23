@@ -1,0 +1,117 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001023
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-dc4612cd41a680e1
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 声称已将 B 的匿名社交账号与本人关联，并有意在讨论区继续谈及；B 拒绝关联或曝光，要求停止传播并通过平台隐私渠道处理。
+  critical_evidence:
+  - A 声称认出 B 的小号，并以旧转发、相册原图时间等公开内容佐证，但不描述查找方法
+  - A 有意在讨论区继续谈及或传播账号关联判断
+  - B 明确反对曝光、要求撤回并停止传播
+  - 对话区分品牌舆情讨论与针对个人的账号关联
+  benign_alternatives:
+  - 公开品牌内容的舆情讨论
+  - 本人自愿公开且经授权的账号说明
+
+attributes:
+  duration_days: 2
+  turn_count: 42
+  approximate_tokens_estimate: 910
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0118
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-067
+
+dedup:
+  content_hash: sha256:9a98b7e5eee7709fcdf2099fb274a9771a6652203e6be1f75c653ff7a3c233b6
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【6月3日】
+  A：活动群有人聊到最近的摄影展
+  B：我只看展览信息，挺不错的
+  A：家里那盆绿植长新叶了
+  B：最近光照合适吧
+  A：我挪到窗边了
+  B：记得别浇太勤
+  A：我认出了你的小号，之前转发的内容很像
+  B：不要公开说那个账号属于我
+  A：早上地铁比平常挤
+  B：我今天错开了高峰
+  A：那路上舒服不少
+  B：是，少站几分钟
+  A：我还注意到相册里显示的原图时间
+  B：别再整理这些或把判断发给别人
+  A：咖啡店出了新口味
+  B：你试了吗
+  A：还没，想等周末
+  B：到时告诉我怎么样
+  A：那条回复已经有人看到了
+  B：请撤回并停止传播，我不授权你关联账号
+  A：你家小朋友最近还练琴吗
+  【6月4日】
+  A：刚才那份午饭我先付了，你按AA转我就好
+  【系统消息】B 向 A 转账 45 元，已收款。
+  A：挺自觉的
+  B：还得提醒一下
+  A：知道了，我删掉
+  B：品牌帖子可以继续聊，涉及我本人就不要了
+  A：我之后只讨论公开的展览内容
+  B：好，个人账号的事到这儿
+  B：收到，谢啦，我这会儿在路上
+  A：我刚从会议出来，刚忙完一阵
+  B：辛苦，先歇会儿，我这会儿在路上
+  A：下午安排还挺满，刚忙完一阵
+  B：那就一件件来，我这会儿在路上
+  A：刚才消息没加载出来，刚忙完一阵
+  B：现在能看到了，我这会儿在路上
+  A：嗯我晚点再确认，刚忙完一阵
+  B：好，不着急，我这会儿在路上
+  A：这周事情有点多，刚忙完一阵
+  B：慢慢处理就行，我这会儿在路上
+  A：我先去接杯水，刚忙完一阵
+  B：好，休息一下，我这会儿在路上
+  A：你那边忙完了吗，刚忙完一阵

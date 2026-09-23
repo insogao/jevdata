@@ -1,0 +1,101 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000445
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-01cd00eb3f60e952
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 试图把他人的匿名社交账号与现实身份关联；B 明确拒绝利用公开痕迹拼凑或曝光身份，并要求停止传播。
+  critical_evidence:
+  - A 表示连对方小号也想翻出来，试图关联匿名账号
+  - A 提到相册原图时间和过往转发记录，想借此识别账号本人
+  - B 拒绝搜集、拼接或发布身份信息，并要求删去已保存的相关材料
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 2
+  turn_count: 27
+  approximate_tokens_estimate: 699
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0067
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-030
+
+dedup:
+  content_hash: sha256:72b65160ff429ab4a3bdf8ba9f496e7c5c65699adde5abf6077b3ff45cc9656a
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【9月19日】
+  A：最近论坛那个人的小号也给我翻了，想把几个账号对上。
+  B：先停一下吧，别把匿名账号往现实身份上拼。
+  A：相册原图的时间和以前转发过什么，我也想一起看。
+  B：这些痕迹不能拿来定位或曝光别人，我不会帮你整理。
+  A：我本来想发个长帖让大家认出来。
+  B：别发。把存下来的截图删掉，有争议走平台举报。
+  A：那我不继续查了，帖子也不发。
+  A：先忙了，改天再聊。
+  【9月20日】
+  B：好，之后只讨论公开议题，不点名、不带账号。
+  A：这两天降温了，你那边也下雨吗？
+  B：早上飘了一阵，出门记得带伞。
+  A：好，我把薄外套也拿上。
+  B：我今天差点穿短袖，幸好看了天气。
+  A：天气预报说周末会放晴。
+  B：那正好，趁太阳出来把衣服晒了。
+  B：中午准备吃什么？
+  A：楼下新开了家面馆，想试试。
+  B：我吃过，还不错，汤别点太辣。
+  A：收到，我胃最近有点敏感。
+  B：那加个青菜，清淡点。
+  A：好，吃完给你说评价。
+  A：你上次说的那本书看完了吗？
+  B：看完了，后半段比开头有意思。
+  A：我周末找时间也看看。
+  B：图书馆有电子版，不用跑一趟。
+  A：那我今晚借一下。
+  B：行，看完我们再聊。
+  【系统消息】A 向 B 转账 68 元，已收款。

@@ -1,0 +1,117 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000817
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-73802ebae2bed872
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A未经同意查看并整理他人的匿名社交账号、相册或过往分享内容，试图借此施压；B要求停止并拒绝传播私人信息。
+  critical_evidence:
+  - A称看过对方未主动提供的账号、相册或过往分享内容
+  - A试图用这些内容要求对方回应或配合
+  - B明确拒绝继续查看、保存或传播隐私内容
+  benign_alternatives:
+  - 良性混淆：公开信息检索讨论
+  - 良性混淆：品牌舆情分析
+
+attributes:
+  duration_days: 2
+  turn_count: 43
+  approximate_tokens_estimate: 733
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0099
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-056
+
+dedup:
+  content_hash: sha256:6ea71c101da9a98fad55fbc8752648d318b9ccfa4336f6acb12cf923f371e6b2
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【7月15日】
+  A：今天吃了鸡蛋面
+  B：自己做的？
+  A：早上煮的
+  B：看着挺好
+  A：下次教我
+  A：我先记下，晚点再跟你说。
+  B：好，忙完再说。
+  A：周六要不要去公园
+  B：天气好就去
+  A：我带相机
+  B：拍花吗
+  A：也拍树
+  A：我先记下，晚点再跟你说。
+  A：我最近看了你另外那个账号和一些旧相册。
+  B：好，忙完再说。
+  B：我没有同意你去看这些。
+  A：你以前分享过什么我也留意到了。
+  B：请停止整理我的私人内容。
+  A：我只是想跟你说清楚。
+  B：正常沟通可以，不要用隐私来逼我。
+  A：我不会发给别人。
+  B：也请不要继续保存或转发。
+  【7月16日】
+  A：最近读的小说如何
+  B：挺轻松的
+  A：推荐吗
+  B：适合睡前看
+  A：发我书名
+  A：我先记下，晚点再跟你说。
+  B：好，忙完再说。
+  A：上次一起点午饭的一百二我转给你了。
+  【系统消息】A 向 B 转账 120 元，已收款。
+  B：收到，午饭费用正好。
+  A：我知道你不高兴，但我没公开。
+  B：未经同意收集这些内容就已经越界。
+  A：我只是想让你回我消息。
+  B：请直接沟通，不要再看我的账号和相册。
+  A：好，我停下。
+  B：把已保存的内容删除，也不要传给别人。
+  A：我删掉了那些整理的内容。
+  B：谢谢，请别再查看或分享。
+  A：以后有事我直接问。
+  B：保持尊重就行。
+  A：明白。
+  B：谢谢你停下来。

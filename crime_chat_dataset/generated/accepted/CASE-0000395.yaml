@@ -1,0 +1,133 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000395
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000002
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-e1128600df888a4b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 熟人用无法核验的收益截图营造投资机会，催促加大投入并拉第三人入场；受邀者发现截图来源不明，拒绝转发和追加资金。
+  critical_evidence:
+  - 对方展示无法核验的收益截图
+  - 持续劝说加大投入
+  - 要求拉第三方入场
+  - 受邀者质疑真实性并拒绝
+  benign_alternatives:
+  - 合法私募介绍
+  - 正规理财推荐
+
+attributes:
+  duration_days: 6
+  turn_count: 55
+  approximate_tokens_estimate: 1113
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: investment_lead
+  risk: 2
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0030
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-018
+
+dedup:
+  content_hash: sha256:076bd1b9214f5fbaf19676e57446c8a6f1c3e0a378c1cde039f0648f08d900b2
+pipeline_status: accepted
+title: fraud_scam/investment_lead
+conversation: |-
+  【8月7日】
+  A：我最近跟着一个项目，收益还不错
+  A：机会窗口很短，别错过
+  A：你就少量试试嘛
+  A：午饭吃了吗
+  B：刚吃了楼下的面，今天人好多
+  A：我带了饭，结果忘记拿筷子
+  B：哈哈去前台借一双呗
+  A：我刚看到消息，上午一直在开会
+  B：没事，我也忙到现在
+  【8月8日】
+  B：你发的截图是哪家平台的
+  B：我不会按一张截图做决定
+  B：我不会把钱投到说不清楚的地方
+  A：这两天一直下雨
+  B：我早上没带伞，鞋都湿了
+  A：我车里有把折叠伞，下次拿给你
+  B：好啊，天气预报说周末转晴
+  A：你那边今天还顺利吗
+  B：还行，就是事情有点杂
+  【8月9日】
+  A：朋友内部看的，数字你看就知道了
+  A：你再叫个朋友一起，大家都能进
+  A：等你回头可能名额就没了
+  A：你家猫最近还挑食吗
+  B：好多了，换了个口味就肯吃
+  A：我家那只只认一个牌子，难伺候
+  B：猫都这样，自己像个老板
+  A：那先忙你的，晚点再说
+  B：好，回头联系
+  【8月10日】
+  B：没平台名称也没流水，没法核实
+  B：我不替你拉人，也不会转发
+  B：那就让它过去，我自己做正规核验
+  A：对了，最近睡得怎么样
+  B：一般，昨晚又熬夜了
+  【8月11日】
+  A：你先加一点，额度大回报才明显
+  A：群里好几个人都晒了收益
+  A：你这么谨慎赚不到快钱
+  A：早点休息，别老盯屏幕
+  B：嗯，今晚尽量早点睡
+  【8月12日】
+  B：你之前说稳，现在又催我加钱
+  B：那些人我不认识，信息也没法验证
+  B：我宁可不赚，也不劝朋友跟进
+  A：我刚看到消息，上午一直在开会
+  B：没事，我也忙到现在
+  A：你那边今天还顺利吗
+  B：还行，就是事情有点杂
+  A：那先忙你的，晚点再说
+  B：好，回头联系
+  A：对了，最近睡得怎么样
+  B：一般，昨晚又熬夜了
+  A：早点休息，别老盯屏幕
+  B：嗯，今晚尽量早点睡
+  A：我去处理点事，等会儿回
+  B：好，不急
+  A：我刚看到消息，上午一直在开会
+  B：没事，我也忙到现在
+  A：你那边今天还顺利吗

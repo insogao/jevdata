@@ -1,0 +1,155 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001070
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000119
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-a4bc555891b8e9cd
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 共享单车运维站管报废车拆卸的 A，与在旧货市场收件的同事 B 私下交易：把报废单上成色完好的车锁、变速套件绕过吨位过磅按件卖给 B 倒卖，用报废账目打掩护，实为监守自盗式的公司资产私吞。
+  critical_evidence:
+  - B 点单「锁和变速我全要，别的别往我那拿」（第1天）
+  - A 称本月报废单二十来辆、锁具大多完好，「按废铁过磅出去可惜了」（第1天）
+  - B 按件报价锁三十一个、变速整套八十；A 说台账他兜着、报废走吨位「没人数零件」（第1天）
+  - 两人约周四晚班后用面包车拉货，A 拆好六个锁、两套变速封箱装车（第2-3天）
+  - B 转 109 元还 A 垫的上回夜宵钱，与配件交易无关（第3天，转账）
+  benign_alternatives:
+  - 报废车辆配件的正常回收处理
+  - 旧货市场同行的正常收货
+
+attributes:
+  duration_days: 3
+  turn_count: 78
+  approximate_tokens_estimate: 1657
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: shared_bike_parts_strip
+  risk: 1
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0066
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-024-RES
+
+dedup:
+  content_hash: sha256:c9df06aba959fd246c5527f42e88e5810d9f4ba11b47cc3990052e64c16e9b95
+pipeline_status: accepted
+title: theft_robbery_property_crime/shared_bike_parts_strip
+conversation: |-
+  【10月13日】
+  B：站里这个月报废车单出来没
+  A：出了 二十来辆 全是骑满三年的
+  B：锁还都在?
+  A：在 咱站的车锁损耗小 大多好好的
+  B：变速呢
+  A：变速一半能留 那批套件去年才换的
+  B：老规矩 锁和变速我全要 别的别往我那拿
+  A：就知道你只要这俩 这俩才值钱 哈哈
+  B：胎座那些 旧货市场论堆都没人要
+  A：所以只能按废铁过磅出去 可惜了
+  B：别可惜 你留出来 我按件收
+  A：怎么个收法
+  B：锁三十一个 变速整套八十 成色差的再议
+  A：比称废铁强十倍 行 记下了
+  B：中午站里订餐没 给我加一份
+  A：订了 今天有红烧肉 一人一份 站长定的
+  B：什么破规矩
+  A：怕咱们光吃肉不干活 哈哈
+  B：那我晚上补回来
+  A：拉完货请你 烤串走起
+  A：丑话在前 台账那边我兜着 站里你别提这事
+  B：放心 这么多年什么时候露过
+  A：报废反正走吨位 没人数零件 你懂就行
+  B：懂 大锅饭 哈哈
+  A：这月二十来辆 你吃得下不
+  B：吃得下 锁走得快 变速慢点但价好
+  A：那就都给你 到时候你车拉
+  B：行 周四晚班后我过来
+  A：周三预报有雨 你拉货别赶那天
+  B：看了 小雨 不大
+  A：小雨也烦 纸箱受潮
+  B：那我改周四 放晴
+  A：周四好 晚班八点收摊
+  B：成 周四见
+  A：路上慢点
+  【10月14日】
+  B：你那腰好点没 前天看你贴膏药
+  A：老毛病 拆车弯腰弯的 医生让少干重活
+  B：你这一干十年 是该缓缓
+  A：缓缓? 房贷不答应 哈哈
+  B：谁说不是 我摆摊也一坐一天
+  A：改天一起去按一按 站后街那家便宜
+  B：行 你定时间
+  A：今天拆了六辆 锁卸下四个 都齐整
+  B：利索 这周就能齐活
+  A：报废单上的车先紧着拆 反正排着队
+  B：成色都行?
+  A：锁都行 变速有两套膜都没撕 你发财了
+  B：都是兄弟赏饭
+  A：少来 钱到位比啥都强
+  B：嫂子这周夜班?
+  A：嗯 医院三班倒 娃我接
+  B：接完送书法班?
+  A：送 周三周四都去 回来饭都凉了
+  B：辛苦 周四你先安顿家里 再过来装车 我等你
+  A：行 九点到 不误事
+  【10月15日】
+  B：上回收那批锁 卖完了 下回有货直接给我留
+  A：行 下批报废单周五出 先给你攒着
+  B：价还按三十一个?
+  A：量大了给你二十八 你跑量也不容易
+  B：够意思
+  A：周四晚上那些你清点好 别混 胎座一概不要
+  B：记着呢 就锁和变速
+  B：晚上羊汤还是烤串
+  A：羊汤 这天凉了 烤串烟大
+  B：站后街那家?
+  A：就那家 他家饼泡汤一绝
+  B：那你八点半收摊 我把车直接开过去
+  A：先回站里装货 再去吃 一趟活儿
+  B：也对
+  A：装好了 六个锁 两套变速 纸箱封好 都在你车上
+  B：点过了 齐 这周的钱我周末转你
+  A：行 不急
+  B：对了 上回夜宵钱还欠着 你垫的两百一八 我转你一百零九
+  【系统消息】B 向 A 转账 109 元，已收款。
+  A：收到了
+  B：下月报废单出来吱声
+  A：一定 先给你留
+  B：回见 膏药别忘了贴
+  A：贴着呢 慢走

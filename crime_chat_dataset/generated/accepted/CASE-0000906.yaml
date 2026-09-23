@@ -1,0 +1,117 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000906
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-0a5fdc519d6d24db
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A试图通过非正式渠道打听另一名学生的成绩，并以红包换取截图；B拒绝越权查询或传播学生资料。
+  critical_evidence:
+  - A提出私下打听他人成绩并索取截图
+  - A提到红包作为交换
+  - B拒绝并建议由监护人联系学校官方渠道
+  benign_alternatives:
+  - 良性解释可能是：家长查自己孩子
+  - 良性解释可能是：学校官方查询
+
+attributes:
+  duration_days: 2
+  turn_count: 43
+  approximate_tokens_estimate: 646
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0109
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-061
+
+dedup:
+  content_hash: sha256:a7239e3c145a5c24686e33a63e98a44c16e5a8940587fa9b2d2c88818885ce62
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【11月29日】
+  A：今天喝了豆浆
+  B：加了燕麦
+  A：口感如何
+  B：挺顺口
+  A：我也想试
+  A：我先记下，回头再说。
+  B：好，忙完再聊。
+  A：你姐周末来吗
+  B：周六下午到
+  A：去接她吗
+  B：她坐地铁
+  A：那就好
+  A：我先记下，回头再说。
+  A：想跟你打听一下一个学生的考试情况。
+  B：好，忙完再聊。
+  B：成绩是学生个人信息，家长自己查更合适。
+  A：红包我都准备好了，给我个截图就行。
+  B：我不会给你成绩截图，也不会代为打听。
+  A：我只想知道个大概。
+  B：没有监护人同意，我不能帮这个忙。
+  A：好，那先算了。
+  B：需要了解就请家长联系学校。
+  【11月30日】
+  A：窗台的花开了
+  B：开了两朵
+  A：是什么颜色
+  B：淡黄色
+  A：拍张照看看
+  A：我先记下，回头再说。
+  B：好，忙完再聊。
+  A：上次拼饭的一百二我转你了。
+  【系统消息】A 向 B 转账 120 元，已收款。
+  B：收到了，午饭钱正好。
+  A：你后来有消息吗？
+  B：没有，也不会私下问。
+  A：红包的事你别介意。
+  B：这类钱我不收。
+  A：明白。
+  B：学生资料需要保密。
+  A：家长准备自己联系学校了。
+  B：这样处理更合适。
+  A：我不再问你。
+  B：谢谢理解。
+  A：以后走正规渠道。
+  B：好。

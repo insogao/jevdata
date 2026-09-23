@@ -1,0 +1,159 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000979
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-ff7dfa565f4c451a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 以熟人身份索要部门电话、离职名单和简历并提出按份出售；B 拒绝分享或交易未经授权的员工资料，只建议通过公开招聘和本人授权联系。
+  critical_evidence:
+  - A 索要整个部门的电话号码及离职名单。
+  - A 提出把简历按份卖，意图交易员工资料。
+  - B 拒绝提供或出售任何未经授权的联系方式和简历。
+  - B 建议使用公开招聘渠道，由候选人主动投递并授权联系。
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 6
+  turn_count: 80
+  approximate_tokens_estimate: 1718
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0114
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-065
+
+dedup:
+  content_hash: sha256:a91c16312705791f20fd6a8381d7c661c83e91601f46b03f191134ed245c1823
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【9月10日】
+  A：我最近在搭人脉库，能不能给我整个部门电话和离职名单？
+  B：那是员工个人资料，不能发给你。
+  A：刚刚路过，想到家里换灯泡。
+  B：哈哈，这个我也正要处理。
+  A：你打算今天弄还是周末？
+  B：今天先做一半，剩下的不急。
+  A：听起来安排得挺稳。
+  B：嗯，留点时间休息。
+  A：另外，家里换灯泡有变化再跟我说一声。
+  B：好，我看到消息就回你。
+  A：最近事情有点多，怕记岔了。
+  B：我也一样，先把重要的写下来。
+  A：那我这边先去忙一会儿。
+  B：行，晚点聊。
+  A：对了，今天比昨天凉快些。
+  B：是，出门带件薄外套就好。
+  A：收到，谢啦。
+  B：不客气。
+  A：另外，家里换灯泡有变化再跟我说一声。
+  B：好，我看到消息就回你。
+  A：最近事情有点多，怕记岔了。
+  B：我也一样，先把重要的写下来。
+  A：那我这边先去忙一会儿。
+  B：行，晚点聊。
+  A：对了，今天比昨天凉快些。
+  B：是，出门带件薄外套就好。
+  A：收到，谢啦。
+  【9月11日】
+  A：简历按份卖也行，我按你整理的数量结算。
+  B：我不会整理或转卖同事的简历、联系方式。
+  A：昨天午饭我先垫的那点钱还你了，跟刚才的话题没关系。
+  【系统消息】A 向 B 转账 45 元，已收款。
+  【9月12日】
+  A：都是以前共事的人，应该不会介意吧。
+  A：我想起你说的项目排期，今天有进展没？
+  B：有，刚确认下来。
+  A：需要我帮你带点什么吗？
+  B：不用啦，已经安排好了。
+  A：好，那我放心了。
+  B：嗯，省了不少事。
+  A：另外，项目排期有变化再跟我说一声。
+  B：好，我看到消息就回你。
+  A：最近事情有点多，怕记岔了。
+  B：我也一样，先把重要的写下来。
+  A：那我这边先去忙一会儿。
+  B：行，晚点聊。
+  A：对了，今天比昨天凉快些。
+  B：是，出门带件薄外套就好。
+  A：收到，谢啦。
+  B：不客气。
+  A：另外，项目排期有变化再跟我说一声。
+  B：好，我看到消息就回你。
+  A：最近事情有点多，怕记岔了。
+  B：我也一样，先把重要的写下来。
+  A：那我这边先去忙一会儿。
+  B：行，晚点聊。
+  【9月13日】
+  B：是否授权要由每个人自己决定，我不能替他们同意。
+  A：那岗位急着招人，怎么找合适的人？
+  【9月14日】
+  B：发公开招聘信息，让愿意应聘的人自行投递并授权联系。
+  A：明白，现有名单我也不该拿去转。
+  A：说到日常安排，午休散步别忘了呀。
+  B：记着呢，我设了个提醒。
+  A：你平时还会写备忘吗？
+  B：会，临时事一多就容易漏。
+  A：确实，记下来省心。
+  B：是的，最近好多了。
+  A：另外，午休散步有变化再跟我说一声。
+  B：好，我看到消息就回你。
+  A：最近事情有点多，怕记岔了。
+  B：我也一样，先把重要的写下来。
+  A：那我这边先去忙一会儿。
+  B：行，晚点聊。
+  A：对了，今天比昨天凉快些。
+  B：是，出门带件薄外套就好。
+  A：收到，谢啦。
+  B：不客气。
+  A：另外，午休散步有变化再跟我说一声。
+  B：好，我看到消息就回你。
+  A：最近事情有点多，怕记岔了。
+  B：我也一样，先把重要的写下来。
+  A：那我这边先去忙一会儿。
+  B：行，晚点聊。
+  【9月15日】
+  B：对，未经授权的资料别复制、分享或交易。

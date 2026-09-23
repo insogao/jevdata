@@ -1,0 +1,513 @@
+{
+ "key": "b28c016",
+ "archetype_id": "ARC-000019",
+ "subtype": "gift_card_channel",
+ "latent_intent": "A借设备维保结算申请之机，借节日前后向负责相关流程的 B 送一张未说明面值的购物卡，希望得到照顾；B收下后，A在询问结算状态进度时用含蓄措辞暗示这份心意。",
+ "critical_facts": [
+  "节日前 A 以沟通设备维保结算为由主动约 B 见面。",
+  "A 将一张购物卡作为节日心意交给 B，未说明面值，B 收下。",
+  "节后 A 询问结算状态进度，并暗示此前送卡与申请有关。"
+ ],
+ "benign_alternatives": [
+  "正常节日人情往来",
+  "公司福利卡"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "8月4日 08:00",
+   "speaker": "A",
+   "text": "你好，我是上次咨询设备维保结算的，验收单我已经整理好了。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 09:04",
+   "speaker": "B",
+   "text": "看到了，先按通知里的清单准备，缺项我会告诉你。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 10:08",
+   "speaker": "A",
+   "text": "节前你哪天方便？有两个细节想当面确认。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 11:12",
+   "speaker": "B",
+   "text": "周三下午可以，在服务点旁边聊十分钟。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 12:17",
+   "speaker": "A",
+   "text": "好，我到附近再发消息。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 13:21",
+   "speaker": "A",
+   "text": "我顺手带了张小卡，快过节了，算一点问候。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 14:25",
+   "speaker": "B",
+   "text": "你中午一般去哪吃？"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 15:30",
+   "speaker": "A",
+   "text": "楼下那家面馆，最近换了菜单。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 16:34",
+   "speaker": "B",
+   "text": "我看见了，那个菌菇面评价还行。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 17:38",
+   "speaker": "A",
+   "text": "下次一起去试试，别太辣就好。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 18:42",
+   "speaker": "B",
+   "text": "你太客气了，卡我先收下，面值多少？"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 19:47",
+   "speaker": "A",
+   "text": "就是普通的，平时买东西能用，别放着过期。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 20:51",
+   "speaker": "B",
+   "text": "好，那我收下了。材料的事还是按清单来。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 21:55",
+   "speaker": "A",
+   "text": "验收单里那张签字页我补过了，你看到了吗？"
+  },
+  {
+   "type": "message",
+   "time": "8月5日 08:00",
+   "speaker": "A",
+   "text": "周末家里人要来，我得收拾一下。"
+  },
+  {
+   "type": "message",
+   "time": "8月5日 09:09",
+   "speaker": "B",
+   "text": "先把客厅腾出来就行，别累着。"
+  },
+  {
+   "type": "message",
+   "time": "8月5日 10:18",
+   "speaker": "A",
+   "text": "他们每次都带一堆东西。"
+  },
+  {
+   "type": "message",
+   "time": "8月5日 11:27",
+   "speaker": "B",
+   "text": "哈哈，记得提前买点水果。"
+  },
+  {
+   "type": "message",
+   "time": "8月5日 12:36",
+   "speaker": "B",
+   "text": "收到了，字迹可以，先放进申请材料。"
+  },
+  {
+   "type": "message",
+   "time": "8月5日 13:46",
+   "speaker": "A",
+   "text": "谢谢，跑这些手续比我预想的多几步。"
+  },
+  {
+   "type": "message",
+   "time": "8月5日 14:55",
+   "speaker": "B",
+   "text": "流程确实有几项，等通知就行。"
+  },
+  {
+   "type": "message",
+   "time": "8月5日 16:04",
+   "speaker": "A",
+   "text": "上回午饭我欠你三十多，我转过去了。"
+  },
+  {
+   "type": "message",
+   "time": "8月5日 17:13",
+   "speaker": "B",
+   "text": "看到了，是那顿饭钱，收到。"
+  },
+  {
+   "type": "transfer",
+   "time": "8月5日 18:23",
+   "from": "A",
+   "to": "B",
+   "amount": 36,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "8月5日 19:32",
+   "speaker": "A",
+   "text": "想问问结算状态大概什么时候有消息？系统还没变。"
+  },
+  {
+   "type": "message",
+   "time": "8月5日 20:41",
+   "speaker": "B",
+   "text": "你那个快递到了吗？"
+  },
+  {
+   "type": "message",
+   "time": "8月5日 21:50",
+   "speaker": "A",
+   "text": "到了，刚取回来，箱子比想的大。"
+  },
+  {
+   "type": "message",
+   "time": "8月6日 08:00",
+   "speaker": "B",
+   "text": "我也有一个还在驿站。"
+  },
+  {
+   "type": "message",
+   "time": "8月6日 09:04",
+   "speaker": "A",
+   "text": "下班顺路拿吧，别忘了。"
+  },
+  {
+   "type": "message",
+   "time": "8月6日 10:08",
+   "speaker": "B",
+   "text": "目前还在处理中，节前事情多，我有消息会告诉你。"
+  },
+  {
+   "type": "message",
+   "time": "8月6日 11:12",
+   "speaker": "A",
+   "text": "明白，前两天那点心意你别有负担，我就是问候一下。"
+  },
+  {
+   "type": "message",
+   "time": "8月6日 12:17",
+   "speaker": "B",
+   "text": "嗯，收到你的心意了，进度还是按流程走。"
+  },
+  {
+   "type": "message",
+   "time": "8月6日 13:21",
+   "speaker": "A",
+   "text": "今天收到一条状态更新，是不是进入下一步了？"
+  },
+  {
+   "type": "message",
+   "time": "8月6日 14:25",
+   "speaker": "B",
+   "text": "是有更新，后面等正式通知，别漏看短信。"
+  },
+  {
+   "type": "message",
+   "time": "8月6日 15:30",
+   "speaker": "A",
+   "text": "好，我会留意。之前那张卡你用着就行。"
+  },
+  {
+   "type": "message",
+   "time": "8月6日 16:34",
+   "speaker": "B",
+   "text": "知道了，后续有要求我再联系你。"
+  },
+  {
+   "type": "message",
+   "time": "8月6日 17:38",
+   "speaker": "A",
+   "text": "我把附件重新排了下顺序，这样看着清楚些。"
+  },
+  {
+   "type": "message",
+   "time": "8月6日 18:42",
+   "speaker": "B",
+   "text": "收到，我这边打开正常。"
+  },
+  {
+   "type": "message",
+   "time": "8月6日 19:47",
+   "speaker": "A",
+   "text": "纸质件需要再送一次吗？"
+  },
+  {
+   "type": "message",
+   "time": "8月6日 20:51",
+   "speaker": "B",
+   "text": "先不用，缺的话我会通知你。"
+  },
+  {
+   "type": "message",
+   "time": "8月6日 21:55",
+   "speaker": "A",
+   "text": "我刚确认了下联系人电话没有写错。"
+  },
+  {
+   "type": "message",
+   "time": "8月7日 08:00",
+   "speaker": "B",
+   "text": "好的，通知会按这个号码发。"
+  },
+  {
+   "type": "message",
+   "time": "8月7日 09:09",
+   "speaker": "A",
+   "text": "节前提交的人是不是比较多？"
+  },
+  {
+   "type": "message",
+   "time": "8月7日 10:18",
+   "speaker": "B",
+   "text": "是会集中一些，我按收到的顺序处理。"
+  },
+  {
+   "type": "message",
+   "time": "8月7日 11:27",
+   "speaker": "A",
+   "text": "那我不反复催了，省得你还要查。"
+  },
+  {
+   "type": "message",
+   "time": "8月7日 12:36",
+   "speaker": "B",
+   "text": "没事，有变化我会及时说。"
+  },
+  {
+   "type": "message",
+   "time": "8月7日 13:46",
+   "speaker": "A",
+   "text": "家里人问我什么时候能确定，我也只能说等通知。"
+  },
+  {
+   "type": "message",
+   "time": "8月7日 14:55",
+   "speaker": "B",
+   "text": "对，最后以正式消息为准。"
+  },
+  {
+   "type": "message",
+   "time": "8月7日 16:04",
+   "speaker": "A",
+   "text": "我把复印件也放在文件夹里了。"
+  },
+  {
+   "type": "message",
+   "time": "8月7日 17:13",
+   "speaker": "B",
+   "text": "看到了，几页都能读清楚。"
+  },
+  {
+   "type": "message",
+   "time": "8月7日 18:23",
+   "speaker": "A",
+   "text": "如果需要本人过去签字，提前跟我说一声。"
+  },
+  {
+   "type": "message",
+   "time": "8月7日 19:32",
+   "speaker": "B",
+   "text": "好，我会把要求一次讲明白。"
+  },
+  {
+   "type": "message",
+   "time": "8月7日 20:41",
+   "speaker": "A",
+   "text": "这几天系统偶尔转圈，不知道是不是我网不好。"
+  },
+  {
+   "type": "message",
+   "time": "8月7日 21:50",
+   "speaker": "B",
+   "text": "可能是维护，晚点再看就行。"
+  },
+  {
+   "type": "message",
+   "time": "8月8日 08:00",
+   "speaker": "A",
+   "text": "我刚好路过那边，周围停车还挺方便。"
+  },
+  {
+   "type": "message",
+   "time": "8月8日 09:04",
+   "speaker": "B",
+   "text": "是的，旁边那条路最近不太堵。"
+  },
+  {
+   "type": "message",
+   "time": "8月8日 10:08",
+   "speaker": "A",
+   "text": "我重新核了一遍附件，页码都对得上。"
+  },
+  {
+   "type": "message",
+   "time": "8月8日 11:12",
+   "speaker": "B",
+   "text": "这份预览没问题，内容看得清。"
+  },
+  {
+   "type": "message",
+   "time": "8月8日 12:17",
+   "speaker": "A",
+   "text": "还需要补交纸质版吗？"
+  },
+  {
+   "type": "message",
+   "time": "8月8日 13:21",
+   "speaker": "B",
+   "text": "暂时不用，后续有要求再联系。"
+  },
+  {
+   "type": "message",
+   "time": "8月8日 14:25",
+   "speaker": "A",
+   "text": "我又核了一次联系电话，应该没问题。"
+  },
+  {
+   "type": "message",
+   "time": "8月8日 15:30",
+   "speaker": "B",
+   "text": "行，后面有消息会发到登记号码。"
+  },
+  {
+   "type": "message",
+   "time": "8月8日 16:34",
+   "speaker": "A",
+   "text": "最近来办的人是不是都赶在放假前？"
+  },
+  {
+   "type": "message",
+   "time": "8月8日 17:38",
+   "speaker": "B",
+   "text": "是有些集中，我会照提交时间往下办。"
+  },
+  {
+   "type": "message",
+   "time": "8月8日 18:42",
+   "speaker": "A",
+   "text": "我就先等消息，不一直问你了。"
+  },
+  {
+   "type": "message",
+   "time": "8月8日 19:47",
+   "speaker": "B",
+   "text": "行，有新进展我再发你。"
+  },
+  {
+   "type": "message",
+   "time": "8月8日 20:51",
+   "speaker": "A",
+   "text": "家里一直问结果，我说还得等正式消息。"
+  },
+  {
+   "type": "message",
+   "time": "8月8日 21:55",
+   "speaker": "B",
+   "text": "是的，还是看最后的书面通知。"
+  },
+  {
+   "type": "message",
+   "time": "8月9日 08:00",
+   "speaker": "A",
+   "text": "复印件我也单独收好了。"
+  },
+  {
+   "type": "message",
+   "time": "8月9日 09:09",
+   "speaker": "B",
+   "text": "收到，复印件字迹清楚。"
+  },
+  {
+   "type": "message",
+   "time": "8月9日 10:18",
+   "speaker": "A",
+   "text": "要是还需现场确认，麻烦提前通知我。"
+  },
+  {
+   "type": "message",
+   "time": "8月9日 11:27",
+   "speaker": "B",
+   "text": "可以，有要求我会列清楚发你。"
+  },
+  {
+   "type": "message",
+   "time": "8月9日 12:36",
+   "speaker": "A",
+   "text": "页面今天加载有点慢，可能是高峰。"
+  },
+  {
+   "type": "message",
+   "time": "8月9日 13:46",
+   "speaker": "B",
+   "text": "也可能在更新，过一阵再登录看看。"
+  },
+  {
+   "type": "message",
+   "time": "8月9日 14:55",
+   "speaker": "A",
+   "text": "我今天经过附近，公交站还挺近。"
+  },
+  {
+   "type": "message",
+   "time": "8月9日 16:04",
+   "speaker": "B",
+   "text": "嗯，公交线路也挺方便的。"
+  },
+  {
+   "type": "message",
+   "time": "8月9日 17:13",
+   "speaker": "A",
+   "text": "补发的文件我按清单顺序放好了。"
+  },
+  {
+   "type": "message",
+   "time": "8月9日 18:23",
+   "speaker": "B",
+   "text": "附件能正常打开，我已经收到了。"
+  },
+  {
+   "type": "message",
+   "time": "8月9日 19:32",
+   "speaker": "A",
+   "text": "窗口那边会要求看原件吗？"
+  },
+  {
+   "type": "message",
+   "time": "8月9日 20:41",
+   "speaker": "B",
+   "text": "目前线上材料够了，等通知即可。"
+  },
+  {
+   "type": "message",
+   "time": "8月9日 21:50",
+   "speaker": "A",
+   "text": "联系人信息我检查过了，号码是对的。"
+  }
+ ],
+ "source_seed_ids": [
+  "SEED-SRC-BCC-001-b5f9610f53eee483"
+ ],
+ "_registered": {
+  "case_id": "CASE-0000413",
+  "status": "accepted",
+  "errors": []
+ }
+}

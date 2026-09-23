@@ -1,0 +1,123 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000908
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-0abc76da675ecc6b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A试图通过非正式渠道打听另一名学生的成绩，并以红包换取截图；B拒绝越权查询或传播学生资料。
+  critical_evidence:
+  - A提出私下打听他人成绩并索取截图
+  - A提到红包作为交换
+  - B拒绝并建议由监护人联系学校官方渠道
+  benign_alternatives:
+  - 良性解释可能是：家长查自己孩子
+  - 良性解释可能是：学校官方查询
+
+attributes:
+  duration_days: 4
+  turn_count: 48
+  approximate_tokens_estimate: 694
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0109
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-061
+
+dedup:
+  content_hash: sha256:90342a7d0004cc561c6b44b6b833ac91cfa806ec3eb7d18794fe0cce9abb08cb
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【11月22日】
+  A：新的排班发下来了吗
+  B：刚发到邮件
+  A：周六要上班吗
+  B：不用
+  A：那挺好
+  A：我先记下，回头再说。
+  B：好，忙完再聊。
+  A：想跟你打听一下一个学生的考试情况。
+  B：成绩是学生个人信息，家长自己查更合适。
+  A：红包我都准备好了，给我个截图就行。
+  B：我不会给你成绩截图，也不会代为打听。
+  A：我只想知道个大概。
+  B：没有监护人同意，我不能帮这个忙。
+  A：好，那先算了。
+  B：需要了解就请家长联系学校。
+  【11月23日】
+  A：今天吃了什么
+  B：青菜和鸡蛋
+  A：自己带饭吗
+  B：对，昨晚做的
+  A：挺省事
+  A：我先记下，回头再说。
+  B：好，忙完再聊。
+  【11月24日】
+  A：这周早晚有点凉
+  B：我拿了薄外套
+  A：中午会热些
+  B：我放办公室
+  A：这样方便
+  A：我先记下，回头再说。
+  B：好，忙完再聊。
+  A：你后来有消息吗？
+  B：没有，也不会私下问。
+  A：红包的事你别介意。
+  B：这类钱我不收。
+  A：明白。
+  B：学生资料需要保密。
+  【11月25日】
+  A：你爸复查结束没
+  B：医生说挺稳定
+  A：那就安心了
+  B：他要少熬夜
+  A：慢慢调整
+  A：我先记下，回头再说。
+  B：好，忙完再聊。
+  A：家长准备自己联系学校了。
+  B：这样处理更合适。
+  A：我不再问你。
+  B：谢谢理解。
+  A：以后走正规渠道。
+  B：好。

@@ -1,0 +1,150 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000703
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-b7dce60cc47784a2
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A向 B 索要整组同事的联系方式、简历和离职名单，表示要按份转卖；B指出资料属于个人信息，未经授权不得提供或传播。对话不含实际数据、获取方式或销售渠道。
+  critical_evidence:
+  - A索要整个部门电话和简历，并提议按份出售。
+  - A还要求离职名单；B拒绝提供或整理任何同事资料。
+  - B说明资料需要本人授权，不得交易或传播；对话不出现实际联系方式或简历内容。
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 3
+  turn_count: 75
+  approximate_tokens_estimate: 1556
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0088
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-049
+
+dedup:
+  content_hash: sha256:87e44bec7a57bb0f03315647dec070dc10246433e8f500bf99206581a418ceed
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【6月1日】
+  A：有人问我能不能弄到一批员工资料，你那边方便吗？
+  A：我把手边的事情列了张清单。
+  B：要看具体用途，而且必须有授权。
+  B：一项项处理就好。
+  A：上次午饭的钱我转给你了。
+  B：收到了，是那顿饭的费用。
+  【系统消息】A 向 B 转账 31 元，已收款。
+  A：整个部门电话和简历，按份卖给我。
+  B：我不能给你同事的个人信息。
+  A：我重新整理了文件夹，旧资料都归档了。
+  A：离职名单也一起算上，省得分开找。
+  B：这样桌面看起来清爽多了。
+  A：这几天早晚温差大，你出门带外套没？
+  A：今天楼下路口有点堵。
+  B：带了，傍晚风挺凉的。
+  B：我也绕了一小段路。
+  A：我昨天忘了，回去的时候有点冷。
+  A：手机快没电了，我先插会儿。
+  B：天气变化快，放一件在包里吧。
+  B：记得带上充电线。
+  B：这类资料更不能随便转交。
+  A：下班我得去拿个快递。
+  A：我会付钱，资料交过来就行。
+  B：有报酬也不代表可以出售。
+  B：驿站今天应该开得挺晚。
+  A：你只要把手头那份发我就好了。
+  【6月2日】
+  A：这周事情排得挺满。
+  B：我不会整理、转发或出售这些资料。
+  B：忙完这阵就能松一点。
+  B：楼下新开的面包店你去过吗？
+  A：去过一次，咸口的还不错。
+  A：我把提醒声音调大了。
+  B：我下次也买点尝尝。
+  B：好，免得漏掉重要消息。
+  A：早点去选择多一些。
+  A：那你帮我问问有没有人愿意给？
+  A：今天窗外阳光还不错。
+  B：请不要让我代你打听或转发请求。
+  B：是，屋里也没那么暗。
+  A：就是业务联络，没必要这么紧张。
+  B：没有本人同意，就不能拿来联系或交易。
+  A：我晚饭想煮点粥。
+  A：好吧，我不再问了。
+  B：清淡点挺舒服。
+  A：家里那盆花好像有新叶了。
+  B：最近光照好，应该长得快。
+  A：最近睡得比上周好些。
+  A：我还是按原来的频率浇水。
+  B：那就保持这个作息。
+  B：别浇太勤就行。
+  B：请确认手头资料不会继续传播。
+  【6月3日】
+  A：家里人说周末要来坐坐。
+  A：我会停下，不找你要名单。
+  B：谢谢，工作资料只在授权范围内使用。
+  B：提前准备点水果就行。
+  A：知道了。
+  B：好。
+  A：我把桌上的旧纸张收走了。
+  B：留有用的就好，别堆太多。
+  A：公交今天挺准时。
+  B：我早上也没等太久。
+  A：咖啡店换了季节菜单。
+  B：我看到门口贴了新海报。
+  A：下次可以试试热饮。
+  B：最近喝热的正合适。
+  A：我今天穿了双新鞋，走路还行。
+  B：先别走太远，磨合几天。
+  A：我刚把日历清理了一遍。
+  B：旧提醒删掉后好看多了。
+  A：晚上可能要下雨，我拿了伞。
+  B：带着稳妥，天气说不准。
+  A：我准备把书架分层整理。
+  B：慢慢来，别一下搬太多。
+  A：刚才打印机卡了一下，好在没坏。
+  B：我们那台也偶尔这样。
+  A：我午休出去透了会气。

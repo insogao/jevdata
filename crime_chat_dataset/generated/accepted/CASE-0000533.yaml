@@ -1,0 +1,131 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000533
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-18a926def4139d35
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A为打听一名并未授权查询的学生成绩，私下向学校工作人员 B 施加压力，并以小额心意换取截图；B 暗示可以从工作系统查看。对话不包含学生姓名、分数或登录方式。
+  critical_evidence:
+  - A并非该学生监护人，却请求班主任查看系统中的成绩并发截图。
+  - A提到红包已发，B确认会发一张截图；不出现姓名、学校名或成绩数字。
+  - 对话表明查询未获本人或监护人授权，聊天不提供任何系统访问步骤。
+  benign_alternatives:
+  - 家长查自己孩子
+  - 学校官方查询
+
+attributes:
+  duration_days: 4
+  turn_count: 55
+  approximate_tokens_estimate: 1350
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0070
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-032
+
+dedup:
+  content_hash: sha256:cb83077ee5e6f48e9b82bbca335476ff5f64f98b07c2370e0e4952c23c12ba57
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【5月4日】
+  A：你好，之前提过的那位同学，最近成绩出来了吗？
+  B：你不是监护人吧，这个我不方便随便说。
+  A：我把收到的文件按日期分开存好了。
+  A：我就想确认一下情况，不会往外传。
+  A：家里那盆绿植最近叶子发黄。
+  B：是不是水浇多了？先让土干一点。
+  B：这样查的时候会方便不少。
+  A：我总担心它缺水，看来浇勤了。
+  B：缓几天看看，不一定有事。
+  B：成绩属于个人信息，得按学校要求处理。
+  A：这两天事情挤在一起，我怕漏掉通知。
+  A：班主任系统点一下应该就能看到吧？
+  B：我不应该给无关的人看，还是走正式渠道。
+  A：红包我已经发了，就当请你喝杯咖啡。
+  【5月5日】
+  【系统消息】A 向 B 转账 37 元，已收款。
+  B：你把提醒打开，有消息会提示。
+  B：周末附近那家菜场开门吗？
+  A：开着，我前两天路过还挺热闹。
+  B：那我去买点水果。
+  A：我先把手边的材料整理完再说。
+  A：上午去吧，下午人多。
+  B：你先别转这个，我不该收。
+  A：那截图就行，名字我自己认得。
+  B：好，慢慢来，别赶得太急。
+  B：我不会把别人的记录发给你。
+  A：我手机最近老提醒空间不足。
+  B：先把不用的缓存清一下就行。
+  A：刚才那份附件我重新发了一次。
+  【5月6日】
+  A：照片太多了，我慢慢整理。
+  B：重要的先备份好。
+  A：我只是想知道他最近有没有进步。
+  B：这件事要由家长通过学校查询。
+  B：收到了，前后版本都看得清。
+  A：我明白，你还是帮我看一下吧。
+  A：这两天风挺大的，你上下班还骑车吗？
+  B：偶尔骑，晚上冷了就坐公交。
+  A：后面如果要我补东西，发清单就行。
+  A：我也得把薄外套换掉了。
+  B：早点换，别着凉。
+  B：我需要按规定拒绝，不能提供截图。
+  A：那你至少说下大概情况？
+  B：行，我会把需要的内容说清楚。
+  【5月7日】
+  B：不行，具体情况只能由监护人了解。
+  A：好吧，我再想别的办法联系家里。
+  B：你最近午饭吃得规律吗？
+  A：周末我可能不在家，手机还是能收到消息。
+  A：有时开会拖晚了，就随便吃点。
+  B：包里放点坚果也行。
+  A：好，我明天带一小袋。
+  B：这样比较合适，别再问我个人信息。
+  B：知道了，有事我发文字给你。
+  A：我不会把这段聊天发出去。
+  B：谢谢理解，我也不会继续查。
+  A：我把桌面收拾了一下，找东西快多了。
+  B：整齐些确实省时间。
+  A：今天路上有点堵，差点迟到。

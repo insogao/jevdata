@@ -1,0 +1,144 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000949
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-edc07566995ec56f
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A并非学生监护人，却请求学校工作人员 B 查看并发送学生成绩截图；A以红包、业务关系或人情施压，B拒绝提供并指向正式查询渠道。对话不含学生身份、成绩数字或访问方式。
+  critical_evidence:
+  - A请求查看或截图一名非其监护学生的成绩。
+  - A提及红包、人情或业务压力并继续索要；B拒绝。
+  - B说明成绩只能向授权监护人反馈；对话不含学生身份或分数。
+  benign_alternatives:
+  - 家长查自己孩子
+  - 学校官方查询
+
+attributes:
+  duration_days: 3
+  turn_count: 69
+  approximate_tokens_estimate: 1327
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0111
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-063
+
+dedup:
+  content_hash: sha256:6d31eb8c8d8d3891296ab06afa9f3f559a0dc0370f9592e7448e04055c1dfcd2
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【18月4日】
+  A：有个家长托我问问学生的成绩，想尽快知道结果。
+  A：我把今天要办的事记下来了。
+  B：我不能把成绩告诉非监护人。
+  B：按顺序来就不会漏。
+  A：我代表学校项目组对接，能不能先看一眼？
+  A：已经做完两件了。
+  B：你最近有在听什么节目吗？
+  A：听了个讲城市生活的，挺轻松。
+  B：效率挺高。
+  B：我也找来听听，通勤时正好。
+  A：这周末可能有阵雨。
+  A：每集不长，可以试试。
+  B：出门前再查一眼预报。
+  B：仍要由监护人通过正式渠道查询。
+  A：班主任系统里有记录，截张图就行。
+  A：我会把伞放包里。
+  A：今早买的面包还挺新鲜。
+  B：带着比较稳妥。
+  B：哪家店？我下次路过买点。
+  A：车站出口那家，早上刚出炉。
+  A：刚才打印机卡了一张纸。
+  B：记下了。
+  B：重新放正就行。
+  B：我不会私下打开或发送学生记录。
+  【18月5日】
+  A：红包我已经发到工作群了。
+  A：修好了，没耽误多久。
+  B：群里的红包和学生信息无关，我不能提供。
+  A：早晨风有点凉，你今天走哪条路上班？
+  B：那就好。
+  B：我坐公交，正好不用在外面等太久。
+  A：我最近在整理厨房收纳。
+  A：那挺好，我也想少开几次车。
+  B：天气再暖些骑车会舒服。
+  B：常用的东西放外面会方便。
+  A：那我让家长自己来问。
+  B：这样是正确的。
+  A：对，台面也清楚多了。
+  A：上次会议材料的复印费转给你了。
+  B：这周要不要找时间去吃那家新开的店？
+  B：看着就舒服。
+  A：可以，我听说他们午市不太挤。
+  B：那就挑个工作日去。
+  A：晚饭后我想去附近走一圈。
+  A：好，我提前把时间空出来。
+  B：收到了，是复印材料的钱。
+  【系统消息】A 向 B 转账 32 元，已收款。
+  B：别走太晚，路上注意安全。
+  【18月6日】
+  A：好，我不再问成绩。
+  A：我周末准备把阳台收拾下。
+  A：就在小区周围。
+  B：最近落叶多，扫一下就清爽了。
+  A：还得把几盆花挪个位置。
+  B：那挺好。
+  B：别一次搬太多，慢慢来。
+  B：谢谢，请保护学生隐私。
+  A：会按公开流程处理。
+  A：我把几本借来的书放进包了。
+  B：好的。
+  B：记得下次还给朋友。
+  A：已经约好周末见面。
+  B：正好顺路。
+  A：今天办公室空调开得有点低。
+  B：我也觉得手有点冷。
+  A：我去拿件外套。
+  B：好。
+  A：我把桌面擦干净了。
+  B：收拾一下做事更专心。
+  A：下午资料就摊开来整理。
+  B：慢慢来。
+  A：小区门口最近车多。

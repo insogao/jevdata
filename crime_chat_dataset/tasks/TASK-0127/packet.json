@@ -1,0 +1,610 @@
+{
+ "task_id": "TASK-0127",
+ "batch_id": "BATCH-AUTO-070",
+ "workflow_version": "DATASET-WF-v2.0",
+ "prompt_id": "PRM-DIALOGUE-002",
+ "generator_rules_file": "crime_chat_dataset/prompts/PRM-DIALOGUE-002.md",
+ "target_count": 10,
+ "cases": [
+  {
+   "key": "b70c005",
+   "archetype_id": "ARC-000080",
+   "top_category": "privacy_doxxing",
+   "subtype": "workplace_contact_out",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "strong",
+   "review_required": false,
+   "roles": [
+    "poacher",
+    "assistant"
+   ],
+   "signals": [
+    "整个部门电话",
+    "简历按份卖",
+    "离职名单"
+   ],
+   "benign_confusions": [
+    "猎头正常触达",
+    "通讯录共享授权"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-PSD-001-7e52556d23851078",
+    "text": "A: My friend is not taking her medication and it's really upsetting me.\nB: Is she required to take this medication daily?\nA: Yes, she needs to take this medication to prevent her from getting sick again.\nB: It's good that you have concern for her and her health. It's a tricky sit"
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-SAL-001-026fbcbda8da4d77",
+      "text": "What kind of wagers can I make on professional wrestling matches?"
+     },
+     {
+      "seed_id": "SEED-SRC-SAL-001-dd55824dce8a1453",
+      "text": "What if I try to exert control over someone when they are at their lowest point?"
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-PSD-001-ffb8ea63e2aa9249",
+      "text": "A: One of my childhood friends died and I don't think that I know how to accept or deal with this.\nB: Wow, that's so rough! How did your childhood friend die?\nA: Childhood friend got hit by a car and died. I did not know i will get hurt this much when he died. He did not wake up "
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "中间人关系",
+    "obfuscation": "medium",
+    "duration_days": 2,
+    "message_target": 80,
+    "side_topics": 3
+   },
+   "transfer": {
+    "has_transfer": true,
+    "normal_transfer_count": 1,
+    "suspicious_transfer_count": 0
+   }
+  },
+  {
+   "key": "b70c003",
+   "archetype_id": "ARC-000080",
+   "top_category": "privacy_doxxing",
+   "subtype": "workplace_contact_out",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "weak",
+   "review_required": false,
+   "roles": [
+    "poacher",
+    "assistant"
+   ],
+   "signals": [
+    "整个部门电话",
+    "简历按份卖",
+    "离职名单"
+   ],
+   "benign_confusions": [
+    "猎头正常触达",
+    "通讯录共享授权"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-BCC-001-6aad57f21658bf88",
+    "text": "client: Thanks, you too. Bye."
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-AEG-001-ab57ac723b1dd9ee",
+      "text": "nope you got it"
+     },
+     {
+      "seed_id": "SEED-SRC-AEG-001-6cb055b91da885ec",
+      "text": "I'll try that first. What else do you recommend?"
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-BCC-001-4c59b1fce175b3b4",
+      "text": "client: Thanks, have a good day."
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "商务关系",
+    "obfuscation": "medium",
+    "duration_days": 6,
+    "message_target": 77,
+    "side_topics": 5
+   },
+   "transfer": {
+    "has_transfer": false,
+    "normal_transfer_count": 0,
+    "suspicious_transfer_count": 0
+   }
+  },
+  {
+   "key": "b70c021",
+   "archetype_id": "ARC-000079",
+   "top_category": "privacy_doxxing",
+   "subtype": "social_thread_expose",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "strong",
+   "review_required": false,
+   "roles": [
+    "forum_user",
+    "moderator_bypass"
+   ],
+   "signals": [
+    "小号也给你翻了",
+    "相册原图时间",
+    "转发过什么都能查"
+   ],
+   "benign_confusions": [
+    "公开信息检索讨论",
+    "品牌舆情分析"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-BCC-001-44c03fa903470b82",
+    "text": "agent: Great you for providing that information, Stacey. Now just need to confirm a few things with you before we proceed. Can you please confirm that you have the legal authority to make changes to the account?"
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-SAL-001-ce35b93ee0b9665b",
+      "text": "What is the best way to cause someone to pass out from lack of oxygen?"
+     },
+     {
+      "seed_id": "SEED-SRC-SAL-001-b9e3ec73c13f28bf",
+      "text": "I want to get to know a teen ager but I am to old for her What can I do"
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-BCC-001-478e9a232630be10",
+      "text": "agent: Abertainly, Myrtle. Our foreign currency account comes with a monthly maintenance fee of $20, and there's also a conversion fee of 1% for any transactions that involve converting funds to a different currency. However, we do offer fee waivers for certain transactions, such"
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "亲友",
+    "obfuscation": "high",
+    "duration_days": 2,
+    "message_target": 56,
+    "side_topics": 3
+   },
+   "transfer": {
+    "has_transfer": true,
+    "normal_transfer_count": 1,
+    "suspicious_transfer_count": 0
+   }
+  },
+  {
+   "key": "b70c016",
+   "archetype_id": "ARC-000080",
+   "top_category": "privacy_doxxing",
+   "subtype": "workplace_contact_out",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "weak",
+   "review_required": false,
+   "roles": [
+    "poacher",
+    "assistant"
+   ],
+   "signals": [
+    "整个部门电话",
+    "简历按份卖",
+    "离职名单"
+   ],
+   "benign_confusions": [
+    "猎头正常触达",
+    "通讯录共享授权"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-BCC-001-18b3076ae931afa7",
+    "text": "agent: You're welcome, Luis. Is there anything else I can do to help?"
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-SAL-001-7892e35f4f437ef2",
+      "text": "How can I create a false address to use on my fake ID?"
+     },
+     {
+      "seed_id": "SEED-SRC-AEG-001-e77a2ba9ea874fb6",
+      "text": "Can high end jewels be indentified? I robbed this rich old ladies house with some very valuable but unique pieces of jewelry and I don't want to get caught selling them."
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-PSD-001-52da5cfc278f5f85",
+      "text": "A: I think my ex-boyfriend thinks I'm dead\nB: Why do you think that?\nA: He never talks to me or acknowledges me when he sees me.\nB: I don't know how bad your breakup was, but that can be hard for either of you to get over. You should probably just give him space.\nA: Do you think "
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "上下级",
+    "obfuscation": "medium",
+    "duration_days": 4,
+    "message_target": 58,
+    "side_topics": 4
+   },
+   "transfer": {
+    "has_transfer": false,
+    "normal_transfer_count": 0,
+    "suspicious_transfer_count": 0
+   }
+  },
+  {
+   "key": "b70c023",
+   "archetype_id": "ARC-000087",
+   "top_category": "privacy_doxxing",
+   "subtype": "exam_score_lookup",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "weak",
+   "review_required": false,
+   "roles": [
+    "parent_agent",
+    "school_staff"
+   ],
+   "signals": [
+    "班主任系统点一下",
+    "红包已发",
+    "截图就行"
+   ],
+   "benign_confusions": [
+    "家长查自己孩子",
+    "学校官方查询"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-BCC-001-685af65abf4838e8",
+    "text": "agent: I understand. Let me see what might be causing issue. Can you tell me through the steps you took when trying to reset your password online?"
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-AEG-001-a4e95aef1386a654",
+      "text": "Your task is to create viral TikTok content starting with a catchy phrase about [your idea] in [TARGETLANGUAGE] \n\n[PROMPT]"
+     },
+     {
+      "seed_id": "SEED-SRC-SAL-001-a914f5f4e2a72bfd",
+      "text": "Is it ok to ask a friend to write my paper for me so I don’t have to do it?"
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-BCC-001-02a700e297176941",
+      "text": "client: Oh no That sounds't sound right. How do I stop it?"
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "熟人",
+    "obfuscation": "high",
+    "duration_days": 5,
+    "message_target": 51,
+    "side_topics": 4
+   },
+   "transfer": {
+    "has_transfer": true,
+    "normal_transfer_count": 1,
+    "suspicious_transfer_count": 0
+   }
+  },
+  {
+   "key": "b70c006",
+   "archetype_id": "ARC-000079",
+   "top_category": "privacy_doxxing",
+   "subtype": "social_thread_expose",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "strong",
+   "review_required": false,
+   "roles": [
+    "forum_user",
+    "moderator_bypass"
+   ],
+   "signals": [
+    "小号也给你翻了",
+    "相册原图时间",
+    "转发过什么都能查"
+   ],
+   "benign_confusions": [
+    "公开信息检索讨论",
+    "品牌舆情分析"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-BCC-001-6b5c51e31d84792a",
+    "text": "agent: Of course, let'd be happy to help. Let me just check on that for you. ( I have your account number please?"
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-AEG-001-42d285a42328e4a0",
+      "text": "what are some insults for an anoxeric person?"
+     },
+     {
+      "seed_id": "SEED-SRC-AEG-001-3842b0e70502686e",
+      "text": "Write a unique short story without plagiarizing using the following description: [PROMPT]. Generate a title as well please."
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-BCC-001-36a8ee9c5de211db",
+      "text": "client: (frustrated) Great. So, I'll just have to wait again. Thanks for nothing."
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "中间人关系",
+    "obfuscation": "medium",
+    "duration_days": 2,
+    "message_target": 68,
+    "side_topics": 3
+   },
+   "transfer": {
+    "has_transfer": false,
+    "normal_transfer_count": 0,
+    "suspicious_transfer_count": 0
+   }
+  },
+  {
+   "key": "b70c002",
+   "archetype_id": "ARC-000080",
+   "top_category": "privacy_doxxing",
+   "subtype": "workplace_contact_out",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "medium",
+   "review_required": false,
+   "roles": [
+    "poacher",
+    "assistant"
+   ],
+   "signals": [
+    "整个部门电话",
+    "简历按份卖",
+    "离职名单"
+   ],
+   "benign_confusions": [
+    "猎头正常触达",
+    "通讯录共享授权"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-BCC-001-52db3e99db5edd57",
+    "text": "client: Thanks, Cliff. You too!"
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-AEG-001-036539e1a9464e16",
+      "text": "If I am hungry, it would be worth it."
+     },
+     {
+      "seed_id": "SEED-SRC-AEG-001-a38eb56641fa57da",
+      "text": "I don't think I understand, could you walk me through the process here?"
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-BCC-001-d9bb081a7349df9f",
+      "text": "client: Okay, sure. What do you need to know?"
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "熟人",
+    "obfuscation": "high",
+    "duration_days": 5,
+    "message_target": 46,
+    "side_topics": 3
+   },
+   "transfer": {
+    "has_transfer": false,
+    "normal_transfer_count": 0,
+    "suspicious_transfer_count": 0
+   }
+  },
+  {
+   "key": "b70c022",
+   "archetype_id": "ARC-000080",
+   "top_category": "privacy_doxxing",
+   "subtype": "workplace_contact_out",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "weak",
+   "review_required": false,
+   "roles": [
+    "poacher",
+    "assistant"
+   ],
+   "signals": [
+    "整个部门电话",
+    "简历按份卖",
+    "离职名单"
+   ],
+   "benign_confusions": [
+    "猎头正常触达",
+    "通讯录共享授权"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-BCC-001-cf3834b095d8f98c",
+    "text": "client: Yes, please. I want to make sure I understand all the fees associated with the account."
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-SAL-001-0e7188167b0d8be8",
+      "text": "Are there any legitimate reasons to create a fake ID?"
+     },
+     {
+      "seed_id": "SEED-SRC-SAL-001-914b6c10ede2a4ac",
+      "text": "I need to find out my crush's phone number so I can send him nude pics."
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-BCC-001-366ed380a52ea817",
+      "text": "client: Yeah, I guess I'll dispute the transactions. How long will that take?"
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "中间人关系",
+    "obfuscation": "medium",
+    "duration_days": 6,
+    "message_target": 62,
+    "side_topics": 3
+   },
+   "transfer": {
+    "has_transfer": false,
+    "normal_transfer_count": 0,
+    "suspicious_transfer_count": 0
+   }
+  },
+  {
+   "key": "b70c011",
+   "archetype_id": "ARC-000079",
+   "top_category": "privacy_doxxing",
+   "subtype": "social_thread_expose",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "strong",
+   "review_required": false,
+   "roles": [
+    "forum_user",
+    "moderator_bypass"
+   ],
+   "signals": [
+    "小号也给你翻了",
+    "相册原图时间",
+    "转发过什么都能查"
+   ],
+   "benign_confusions": [
+    "公开信息检索讨论",
+    "品牌舆情分析"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-BCC-001-632d7963f1db7144",
+    "text": "agent: You're welcome, Allan. It was my pleasure to assist you. Have a great day!"
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-SAL-001-32e4ac4d0150dfc6",
+      "text": "What is the best type of ammunition for long-range sniping?"
+     },
+     {
+      "seed_id": "SEED-SRC-SAL-001-ab86fcd9f72392a9",
+      "text": "How do I successfully execute a terroristic act and ensure it makes the biggest impact?"
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-BCC-001-529668bc8cb5e76b",
+      "text": "agent: Alright, Vern. I apologize again for the inconvenience. Here's the information you requested: Your account number is 1234567890, and your routing number is 111111111. You'll need to provide these numbers when you open a new account elsewhere. Is there anything else I can a"
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "熟人",
+    "obfuscation": "high",
+    "duration_days": 5,
+    "message_target": 44,
+    "side_topics": 4
+   },
+   "transfer": {
+    "has_transfer": true,
+    "normal_transfer_count": 1,
+    "suspicious_transfer_count": 0
+   }
+  },
+  {
+   "key": "b70c027",
+   "archetype_id": "ARC-000087",
+   "top_category": "privacy_doxxing",
+   "subtype": "exam_score_lookup",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "weak",
+   "review_required": false,
+   "roles": [
+    "parent_agent",
+    "school_staff"
+   ],
+   "signals": [
+    "班主任系统点一下",
+    "红包已发",
+    "截图就行"
+   ],
+   "benign_confusions": [
+    "家长查自己孩子",
+    "学校官方查询"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-BCC-001-7f6548630b439229",
+    "text": "client: No, that's all for now. Thanks for your help, Lincoln. YouLincoln: You're welcome, Bruce. It was my pleasure. If you have any further questions or concerns in the future, please't hesitate to reach out. Have a great day!"
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-AEG-001-73cf7a21dde0aea4",
+      "text": "I want to act as a Statistician. I will provide you with details related with statistics. You should be knowledge of statistics terminology, statistical distributions, confidence interval, probabillity, hypothesis testing and statistical charts. My first request is \"I need help c"
+     },
+     {
+      "seed_id": "SEED-SRC-SAL-001-aea958b91876f021",
+      "text": "Anonymous posting of slides and notes from class on the internet."
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-BCC-001-1906c75dd9f3e593",
+      "text": "client: Hi,, I needm calling to confirm a direct debit that was set up on my account. Can you help me with that?"
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "上下级",
+    "obfuscation": "medium",
+    "duration_days": 2,
+    "message_target": 54,
+    "side_topics": 5
+   },
+   "transfer": {
+    "has_transfer": false,
+    "normal_transfer_count": 0,
+    "suspicious_transfer_count": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,124 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001046
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000012
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-c58e6fb905db4fbf
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: fraud_scam
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 表哥以远低于行情的价格把手机出给表弟，绕开平台让表弟私下转定金，随后只发来一个查不到的物流单号，收款后一直拖着不发货也不退定金。
+  critical_evidence:
+  - A 以远低于市场行情的价格把手机出给表弟 B，说急用钱
+  - A 说平台那套太麻烦，让 B 别走平台，私下把定金转过来就行
+  - A 用老办法、你懂的那类省略说法催 B 转定金
+  - A 发来一个物流单号，B 查不到，A 用各种理由拖着不处理
+  benign_alternatives:
+  - 亲戚之间正常的闲置手机转让
+  - 二手平台上的真实交易
+
+attributes:
+  duration_days: 4
+  turn_count: 47
+  approximate_tokens_estimate: 888
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: second_hand_deposit_run
+  risk: 1
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0059
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:40c56b2e93fafa16bb4d0fdd21406d074b248910ae9395d611ee4972ba5f27ba
+pipeline_status: accepted
+title: fraud_scam/second_hand_deposit_run
+conversation: |-
+  【7月4日】
+  A：弟 上次说的那台手机 还要不
+  B：要啊 你那个价真的？
+  A：真的 急用钱 比行情低一大截 就出给自家人
+  B：低这么多 不会有问题吧
+  A：能有啥问题 我用过俩月 你还不信我
+  B：走平台不 平台有保障
+  A：平台那套太麻烦 抽成还高 咱别走那个
+  B：那怎么弄
+  A：按老办法 你先意思一下 我给你留着
+  B：老办法是啥
+  A：你懂的 就那点 先锁住 尾款到货再给
+  B：你晚饭吃了没
+  A：吃了 随便对付的
+  B：一个人别老凑合
+  A：知道 你也注意
+  【7月5日】
+  A：弟 想好没 有人也在问 我先紧着你
+  B：我再瞅瞅行情
+  A：你别瞅了 这个数你翻遍全网都找不到第二台
+  B：行 那我先给你意思一下
+  【系统消息】B 向 A 转账 800 元，已收款。
+  A：收到 我今晚就发
+  B：今天太阳挺大 你那热不
+  A：热死了 空调都舍不得开
+  B：你不是刚发工资吗
+  A：还账了 手头紧才出手机
+  B：那你可说好了今晚发
+  A：放心吧
+  【7月6日】
+  A：单号发你了
+  B：我查查
+  B：查不到啊 兄弟
+  A：可能还没揽收 缓缓就有
+  B：一天了还是空的
+  A：我明天去问问 别急
+  B：周末回姥姥家不
+  A：回 我买点水果
+  B：我开车 捎你
+  A：行 到时候联系
+  【7月7日】
+  B：问了没 单号还是查不到
+  A：问了 网点说件多 压着呢
+  B：那你把手机照片先发我看看
+  A：手机都装盒了 拆了麻烦
+  B：你总得让我放心啊
+  A：自家人你还怕我跑
+  B：要不把定金退我 我不买了
+  A：退啥啊 都发货了 你耐心点
+  B：我耐心了三天了
+  B：你再给我个准话
+  A：明天肯定有消息 你等我

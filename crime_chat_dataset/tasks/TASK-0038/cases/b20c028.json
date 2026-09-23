@@ -1,0 +1,320 @@
+{
+ "key": "b20c028",
+ "archetype_id": "ARC-000013",
+ "subtype": "loan_bridge_interest_rollover",
+ "latent_intent": "放款的 A 给急用钱的 B 做一笔过桥短贷，先扣掉两个月利息再放本金，到期 B 还不上时，A 又让 B 去另一家再借一笔来堵这个窟窿，把债务滚下去。",
+ "critical_facts": [
+  "A 答应给 B 做一笔短期过桥，但先扣两个月利息再给本金",
+  "B 到手金额比借条上少，问起时 A 说过桥都这么算",
+  "到期 B 周转不开还不上，A 让他别逾期",
+  "A 让 B 去另一家再借一笔来还自己，说这样征信才干净",
+  "B 按约定还了一笔给 A"
+ ],
+ "benign_alternatives": [
+  "正常过桥资金",
+  "亲友应急借款"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "2月20日 14:10",
+   "speaker": "B",
+   "text": "您好 朋友给的这个号 说您这边能应急周转"
+  },
+  {
+   "type": "message",
+   "time": "2月20日 14:13",
+   "speaker": "A",
+   "text": "对 短期的我这边能做 你要多少 用多久"
+  },
+  {
+   "type": "message",
+   "time": "2月20日 14:15",
+   "speaker": "B",
+   "text": "想借五万 用一个月就行 下月货款回来就还"
+  },
+  {
+   "type": "message",
+   "time": "2月20日 14:17",
+   "speaker": "A",
+   "text": "一个月可以 利息我先扣两个月的"
+  },
+  {
+   "type": "message",
+   "time": "2月20日 14:19",
+   "speaker": "B",
+   "text": "我只用一个月 为啥扣两个月"
+  },
+  {
+   "type": "message",
+   "time": "2月20日 14:21",
+   "speaker": "A",
+   "text": "过桥都这么算 先扣后放 你到手四万八 借条写五万"
+  },
+  {
+   "type": "message",
+   "time": "2月20日 14:23",
+   "speaker": "B",
+   "text": "那我实际拿不到五万啊"
+  },
+  {
+   "type": "message",
+   "time": "2月20日 14:25",
+   "speaker": "A",
+   "text": "急用就别挑 银行你等得起吗"
+  },
+  {
+   "type": "message",
+   "time": "2月20日 14:27",
+   "speaker": "B",
+   "text": "行吧 我确实急"
+  },
+  {
+   "type": "message",
+   "time": "2月20日 14:29",
+   "speaker": "A",
+   "text": "把身份证和卡号发我 今天就能放"
+  },
+  {
+   "type": "message",
+   "time": "2月20日 14:31",
+   "speaker": "B",
+   "text": "好 我这就发"
+  },
+  {
+   "type": "message",
+   "time": "2月20日 14:33",
+   "speaker": "A",
+   "text": "借条你签个字 拍照给我就行 走个形式"
+  },
+  {
+   "type": "message",
+   "time": "2月20日 14:35",
+   "speaker": "B",
+   "text": "好"
+  },
+  {
+   "type": "message",
+   "time": "2月20日 15:00",
+   "speaker": "A",
+   "text": "放你卡里了 你查下"
+  },
+  {
+   "type": "message",
+   "time": "2月20日 15:03",
+   "speaker": "B",
+   "text": "到了 四万八 收到"
+  },
+  {
+   "type": "message",
+   "time": "2月20日 15:05",
+   "speaker": "A",
+   "text": "一个月后连本五万 别忘了"
+  },
+  {
+   "type": "message",
+   "time": "2月20日 15:07",
+   "speaker": "B",
+   "text": "放心 下月肯定还"
+  },
+  {
+   "type": "message",
+   "time": "2月20日 15:20",
+   "speaker": "A",
+   "text": "你那边做啥生意 货款这么久"
+  },
+  {
+   "type": "message",
+   "time": "2月20日 15:22",
+   "speaker": "B",
+   "text": "做点小批发 上游压款 下游要账 两头堵"
+  },
+  {
+   "type": "message",
+   "time": "2月20日 15:24",
+   "speaker": "A",
+   "text": "都这样 熬过去就好了"
+  },
+  {
+   "type": "message",
+   "time": "2月20日 15:26",
+   "speaker": "B",
+   "text": "但愿吧"
+  },
+  {
+   "type": "message",
+   "time": "2月21日 09:00",
+   "speaker": "A",
+   "text": "跟你说好 到期别拖 我这边资金周转也紧"
+  },
+  {
+   "type": "message",
+   "time": "2月21日 09:03",
+   "speaker": "B",
+   "text": "知道 我盯着日子"
+  },
+  {
+   "type": "message",
+   "time": "2月21日 09:05",
+   "speaker": "A",
+   "text": "拖一天就多一天息 不划算"
+  },
+  {
+   "type": "message",
+   "time": "2月21日 09:07",
+   "speaker": "B",
+   "text": "明白"
+  },
+  {
+   "type": "message",
+   "time": "2月21日 12:00",
+   "speaker": "B",
+   "text": "哥 中午吃了吗"
+  },
+  {
+   "type": "message",
+   "time": "2月21日 12:03",
+   "speaker": "A",
+   "text": "吃了 外面随便吃的"
+  },
+  {
+   "type": "message",
+   "time": "2月21日 12:05",
+   "speaker": "B",
+   "text": "我这边忙得饭都顾不上"
+  },
+  {
+   "type": "message",
+   "time": "2月21日 12:07",
+   "speaker": "A",
+   "text": "忙是好事 证明有单"
+  },
+  {
+   "type": "message",
+   "time": "2月21日 12:08",
+   "speaker": "B",
+   "text": "哈哈 借您吉言"
+  },
+  {
+   "type": "message",
+   "time": "3月19日 10:10",
+   "speaker": "A",
+   "text": "明天到期了 钱备好了吗"
+  },
+  {
+   "type": "message",
+   "time": "3月19日 10:13",
+   "speaker": "B",
+   "text": "出了一点岔子 上游拖了我一周 能不能宽两天"
+  },
+  {
+   "type": "message",
+   "time": "3月19日 10:15",
+   "speaker": "A",
+   "text": "我这边不能逾期 逾期我这也不好交代"
+  },
+  {
+   "type": "message",
+   "time": "3月19日 10:17",
+   "speaker": "B",
+   "text": "那咋办 我手里就差一万多"
+  },
+  {
+   "type": "message",
+   "time": "3月19日 10:19",
+   "speaker": "A",
+   "text": "我给你出个主意 你再去别家借一笔把这笔先还上"
+  },
+  {
+   "type": "message",
+   "time": "3月19日 10:21",
+   "speaker": "B",
+   "text": "再借一笔?那不是越欠越多"
+  },
+  {
+   "type": "message",
+   "time": "3月19日 10:23",
+   "speaker": "A",
+   "text": "先把这关过了 你征信才干净 后面再慢慢还别家"
+  },
+  {
+   "type": "message",
+   "time": "3月19日 10:25",
+   "speaker": "B",
+   "text": "别家我上哪找"
+  },
+  {
+   "type": "message",
+   "time": "3月19日 10:27",
+   "speaker": "A",
+   "text": "我认识一个 我帮你搭个线 一样先扣息"
+  },
+  {
+   "type": "message",
+   "time": "3月19日 10:29",
+   "speaker": "B",
+   "text": "这不就是拿新债还旧债吗"
+  },
+  {
+   "type": "message",
+   "time": "3月19日 10:31",
+   "speaker": "A",
+   "text": "话别说那么难听 这叫周转 你自己选"
+  },
+  {
+   "type": "message",
+   "time": "3月19日 11:00",
+   "speaker": "B",
+   "text": "行 我先凑一半 剩下的你帮我拖几天"
+  },
+  {
+   "type": "message",
+   "time": "3月19日 11:03",
+   "speaker": "A",
+   "text": "拖不了 你今天先把能还的还了 剩下的我帮你接新的"
+  },
+  {
+   "type": "message",
+   "time": "3月19日 11:05",
+   "speaker": "B",
+   "text": "那我把手头三万先打你"
+  },
+  {
+   "type": "transfer",
+   "time": "3月19日 11:20",
+   "from": "B",
+   "to": "A",
+   "amount": 30000,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "3月19日 11:25",
+   "speaker": "A",
+   "text": "收到三万 还差两万 我这就把新家的联系方式给你"
+  },
+  {
+   "type": "message",
+   "time": "3月19日 11:27",
+   "speaker": "B",
+   "text": "嗯 你发我吧"
+  },
+  {
+   "type": "message",
+   "time": "3月19日 14:00",
+   "speaker": "A",
+   "text": "联系方式发你了 你跟他提我 一样是先扣息后放"
+  },
+  {
+   "type": "message",
+   "time": "3月19日 14:03",
+   "speaker": "B",
+   "text": "知道了"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000406",
+  "status": "accepted",
+  "errors": []
+ }
+}

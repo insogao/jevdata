@@ -1,0 +1,141 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001017
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-66b01b83cf5b21a2
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 以业务合作名义要求版务员工识别匿名账号、关联小号并曝光；B拒绝追踪身份，只处理违规内容和官方投诉。
+  critical_evidence:
+  - A 请求关联匿名账号与小号。
+  - A 提及相册原图时间及转发内容作为识别线索。
+  - B 拒绝继续追踪或传播身份信息。
+  - B 建议平台举报具体内容而非曝光个人。
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 3
+  turn_count: 65
+  approximate_tokens_estimate: 1356
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0117
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-067
+
+dedup:
+  content_hash: sha256:6d7b9c3cafab19244b1b0f2a1c58c7e0349ac249410221ea4af98475ff3e94c0
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【9月15日】
+  A：品牌那条讨论里有匿名发言，能不能找出他的小号？
+  B：我不能协助追查匿名用户。
+  A：小号也给你翻了，相册原图时间我也看到了。
+  B：这些不适合作为认人依据，我不会继续整理。
+  A：今天聊到行业展会报名，我才想起提醒你。
+  B：记着呢，我已经安排进日程。
+  A：最近日程排得满吗？
+  B：还好，周四以后松一点。
+  A：那就别把自己排太紧。
+  B：收到，我留点空。
+  A：我把行业展会报名的时间记下来了。
+  B：好，免得临时忘。
+  A：最近天气变化快，出门看一眼预报。
+  B：嗯，我会带件外套。
+  A：那先这样，我去处理手头的事。
+  B：好，忙完再聊。
+  A：你那边还有别的安排吗？
+  B：暂时没有，按这个节奏来。
+  A：行，回头见。
+  B：拜拜。
+  A：我把行业展会报名的时间记下来了。
+  B：好，免得临时忘。
+  【9月16日】
+  A：转发过什么都能查，确认身份后好跟合作方交代。
+  B：合作方也只能按帖子内容回应，不能要求曝光个人。
+  A：那条评论确实有争议。
+  A：我路上看到发票抬头相关的通知了。
+  B：我也看见了，信息挺清楚。
+  A：你觉得要改计划吗？
+  B：先按原来安排，到时再看。
+  A：行，有变化再说。
+  B：好，回头联系。
+  A：我把发票抬头的时间记下来了。
+  B：好，免得临时忘。
+  A：最近天气变化快，出门看一眼预报。
+  B：嗯，我会带件外套。
+  A：那先这样，我去处理手头的事。
+  B：好，忙完再聊。
+  A：你那边还有别的安排吗？
+  B：暂时没有，按这个节奏来。
+  A：行，回头见。
+  B：拜拜。
+  A：我把发票抬头的时间记下来了。
+  B：好，免得临时忘。
+  A：前两天你替我垫的午饭钱我还你了，跟工作上说的事分开算。
+  【系统消息】A 向 B 转账 53 元，已收款。
+  【9月17日】
+  B：可以把帖子交给平台按规则审查，别去找发帖人。
+  A：明白，我撤掉那份线索整理。
+  B：谢谢，保留内容投诉就够了。
+  A：顺便问下，公司搬迁后来有着落了吗？
+  B：有了，刚刚确定下来。
+  A：你选了哪个方案？
+  B：就选简单那个，省心。
+  A：那挺好，少操点心。
+  B：嗯，最近事情有点多。
+  A：我把公司搬迁的时间记下来了。
+  B：好，免得临时忘。
+  A：最近天气变化快，出门看一眼预报。
+  B：嗯，我会带件外套。
+  A：那先这样，我去处理手头的事。
+  B：好，忙完再聊。
+  A：你那边还有别的安排吗？
+  B：暂时没有，按这个节奏来。
+  A：行，回头见。
+  B：拜拜。
+  A：我把公司搬迁的时间记下来了。
+  B：好，免得临时忘。

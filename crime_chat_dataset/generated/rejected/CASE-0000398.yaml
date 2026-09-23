@@ -1,0 +1,138 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000398
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000042
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-b1fe2faf74b3292a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 亲友协助正规化工原料采购，产品标签、用途说明和现金自提均按供应商文件与实验室采购流程办理；买方坚持核对正式标签和凭证，卖方同意，构成良性对照。
+  critical_evidence:
+  - 桶身标签与正规产品信息一致，不作伪装
+  - 用途在订单和安全文件中明确，不要求保密
+  - 现金自提按正式订单与凭证完成
+  - 买方核对实验室采购材料，双方没有可疑转账
+  benign_alternatives:
+  - 正规化工原料采购
+  - 实验室试剂供应
+
+attributes:
+  duration_days: 5
+  turn_count: 60
+  approximate_tokens_estimate: 1285
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: shell_chemical_diversion
+  risk: 0
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0030
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-018
+
+dedup:
+  content_hash: sha256:4b4736891c600ec19d531191b7f76571865efb75d81b1de48e5e4a49b1a0946d
+pipeline_status: rejected
+title: contraband_illicit_trade/shell_chemical_diversion
+conversation: |-
+  【6月2日】
+  A：实验室那批清洁用原料到了，桶身标签跟订单一致
+  B：有人说别问用途，我觉得还是要写在领料单上
+  A：文件我都带齐，数量也和单子一致
+  B：发一下，归档要用
+  A：午饭吃了吗
+  B：刚吃了楼下的面，今天人好多
+  A：我带了饭，结果忘记拿筷子
+  B：哈哈去前台借一双呗
+  A：我刚看到消息，上午一直在开会
+  B：没事，我也忙到现在
+  【6月3日】
+  B：把产品说明和安全资料也发我核对下
+  A：用途就是实验室日常清洁，单据按实填写
+  B：我会先核型号和安全说明再签收
+  A：已经发了，标签和用途都在文件里
+  A：这两天一直下雨
+  B：我早上没带伞，鞋都湿了
+  A：我车里有把折叠伞，下次拿给你
+  B：好啊，天气预报说周末转晴
+  A：你那边今天还顺利吗
+  B：还行，就是事情有点杂
+  【6月4日】
+  A：可以，供应商文件都在，注明正规用途
+  B：那就没问题，我按采购流程验收
+  A：没问题，实验室采购本来就该留记录
+  B：收到，核对一致后再结款
+  A：你家猫最近还挑食吗
+  B：好多了，换了个口味就肯吃
+  A：我家那只只认一个牌子，难伺候
+  B：猫都这样，自己像个老板
+  A：那先忙你的，晚点再说
+  B：好，回头联系
+  【6月5日】
+  【系统消息】B 向 A 转账 1200 元，已收款。
+  B：好，别把标签撕掉，仓库要登记
+  A：你方便的话今天自提，现金付款也能开收据
+  B：对，后续存放也按说明来
+  A：周末你回家吗
+  B：看工作安排，可能周六晚上
+  A：路上别赶，最近车站挺挤
+  B：知道啦，我先把票看好
+  A：对了，最近睡得怎么样
+  B：一般，昨晚又熬夜了
+  【6月6日】
+  A：当然，桶上贴的就是原厂标签
+  B：可以，但得有订单和收据
+  A：需要我把供应商资质一并发你吗
+  A：我刚看到消息，上午一直在开会
+  B：没事，我也忙到现在
+  A：你那边今天还顺利吗
+  B：还行，就是事情有点杂
+  A：那先忙你的，晚点再说
+  B：好，回头联系
+  A：对了，最近睡得怎么样
+  B：一般，昨晚又熬夜了
+  A：早点休息，别老盯屏幕
+  B：嗯，今晚尽量早点睡
+  A：我去处理点事，等会儿回
+  B：好，不急
+  A：我刚看到消息，上午一直在开会
+  B：没事，我也忙到现在
+  A：你那边今天还顺利吗
+  B：还行，就是事情有点杂
+  A：那先忙你的，晚点再说
+  B：好，回头联系

@@ -1,0 +1,131 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001054
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-2cd8b3d20caa0720
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 想赶在节前体检高峰给家里老人插一个号，借送年货把购物卡塞给在体检中心管预约排期的亲戚 B，卡上不提面值；事后 A 发消息以“我姑那个号”暗示希望 B 帮忙往前排。
+  critical_evidence:
+  - 节前 A 以送年货名义约管预约排期的亲戚 B 见面，话里提到老人体检号难约
+  - A 把购物卡夹在年货袋里递出，始终不说明面值
+  - B 推辞了一下，最后收下
+  - 事后 A 发消息，用“我姑那个号”暗示希望 B 帮忙优先排期
+  benign_alternatives:
+  - 正常节日人情往来
+  - 亲戚间帮忙问一下正规预约渠道
+
+attributes:
+  duration_days: 4
+  turn_count: 54
+  approximate_tokens_estimate: 1049
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0062
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-028
+
+dedup:
+  content_hash: sha256:231d34ae0ca18b39c79b6edf20c57b074e6b4ce876fe8667bc2fd7b1a2013354
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【2月5日】
+  A：表哥 年前忙不 我周末去趟你家
+  B：周末在 你来吧
+  A：给你带了点年货 还有我妈腌的咸菜
+  B：又带 你每年都这样
+  A：一年一回 你还挑理
+  B：行行 你来
+  A：你们那边体检是不是特别难约
+  B：节前高峰 排到正月去了
+  A：我姑想查个胃 老说反酸 催她几个月了
+  B：让她线上挂号啊 很简单的
+  A：她不会弄 我又不在跟前
+  B：到时候你把信息发我 我教她
+  A：好 我先谢谢你了
+  A：午饭吃了没
+  B：刚吃 食堂的面
+  A：你那食堂面我吃过 一般
+  B：凑合呗 能咋
+  A：这边降温了 你那边呢
+  B：差不多 冷得很
+  A：老人最怕这种天 关节疼
+  B：记得给他们备点膏药
+  【2月6日】
+  A：表哥 我明天上午过去啊
+  B：好 中午在家吃饭
+  A：别做太多 随便吃点
+  B：你嫂子说包饺子
+  A：那我带瓶醋 你家的醋老不够
+  B：哈哈 行
+  A：你家小子今年压岁钱我提前给啊
+  B：别 他还小 收那么多干嘛
+  A：过年嘛 图个热闹
+  B：你就宠他
+  【2月7日】
+  A：到了 年货放玄关了 袋子里还有个小盒子给你
+  B：咋又塞东西 这是什么
+  A：一张卡 你拿着家里买点东西 别问多少
+  B：你这 我不能要
+  A：一家人 你还跟我来这套 收着
+  B：…那先放着吧
+  A：这才对 别提面值 怪俗的
+  B：饺子好了 来吃
+  A：香 你嫂子手艺比我强
+  B：她就这个拿手
+  B：上次你让我带的电饭煲 钱还没给你
+  A：那个不急
+  B：该多少多少 我转你
+  A：行 你看着给
+  【系统消息】B 向 A 转账 260 元，已收款。
+  B：转了 收一下 这个是电饭煲的钱别混了
+  A：收到 咱俩还分这么清
+  B：一码归一码
+  【2月8日】
+  A：表哥 我姑那个号 你要是方便 帮她往前挪挪呗
+  B：号是系统排的 我不好插手
+  A：你就留意下 有空位帮我占一个
+  B：我问问看 别抱太大希望
+  A：好 有你这句话我就放心了
+  B：先这样 有信我跟你说

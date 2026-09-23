@@ -1,0 +1,119 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000942
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-1e0abc806cfde27d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A试图通过非正式渠道打听另一名学生的成绩，并以红包换取截图；B拒绝越权查询和传播学生资料。
+  critical_evidence:
+  - A提出私下打听他人成绩并索取截图
+  - A提及红包作为交换
+  - B拒绝并建议监护人通过学校官方渠道查询
+  benign_alternatives:
+  - 良性解释可能是：家长查自己孩子
+  - 良性解释可能是：学校官方查询
+
+attributes:
+  duration_days: 5
+  turn_count: 43
+  approximate_tokens_estimate: 666
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0112
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-064
+
+dedup:
+  content_hash: sha256:2e990519b188cc6dbac33346ce8b0dc1f8550d64df94ef90ef68c9dc7907a064
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【11月15日】
+  A：公交站挪到路口东边了
+  B：我看了通知
+  A：走路远不远
+  B：多两分钟
+  A：还能接受
+  A：我先记下，改天再聊。
+  B：好，不急。
+  A：想跟你问个事，能不能帮我看看一个学生的考试情况？
+  B：成绩属于学生个人信息，应该由家长自己查询。
+  A：红包的事我刚发你消息了，给我张截图就行。
+  B：我不会提供截图，也不会私下打听。
+  A：我就想知道个大概。
+  B：没有监护人同意，我不能帮。
+  A：好吧。
+  B：需要了解就请家长联系学校。
+  【11月16日】
+  A：新开的粥店不错
+  B：我点了南瓜粥
+  A：甜吗
+  B：不太甜
+  A：下次我试
+  A：我先记下，改天再聊。
+  B：好，不急。
+  A：上次一起点饭的一百二我转你了。
+  【系统消息】A 向 B 转账 120 元，已收款。
+  B：收到了，正好是饭钱。
+  【11月18日】
+  A：你后来有消息吗？
+  B：没有，我也不会去问。
+  A：红包你别介意。
+  B：这类钱我不收。
+  A：知道了。
+  B：学生成绩要保密。
+  【11月19日】
+  A：你妹妹考完了吗
+  B：下周结束
+  A：考完让她休息
+  B：她想去看电影
+  A：挺好
+  A：我先记下，改天再聊。
+  B：好，不急。
+  A：家长说自己联系学校了。
+  B：这样处理合适。
+  A：我不再问你。
+  B：谢谢理解。
+  A：以后走正规渠道。
+  B：好。

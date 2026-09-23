@@ -1,0 +1,124 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000997
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-b6e3895164b75d1d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 在私人交谈中声称已把 B 的匿名社交账号与本人联系起来，并表示还要把相关观察发到讨论区；B 明确反对关联或曝光，要求停止传播并使用平台隐私举报渠道。
+  critical_evidence:
+  - A 声称已将 B 的小号与本人联系起来，并提到相册原图时间或旧转发等公开内容作为判断依据，但不描述查找方法
+  - A 暗示会继续谈论或公开关联结果
+  - B 明确拒绝曝光，要求删除/停止转发并通过平台隐私渠道处理
+  - 交谈区分品牌公开舆情分析与针对个人的账号关联
+  benign_alternatives:
+  - 公开品牌内容的舆情讨论
+  - 本人自愿公开且经授权的账号说明
+
+attributes:
+  duration_days: 2
+  turn_count: 49
+  approximate_tokens_estimate: 885
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0115
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-066
+
+dedup:
+  content_hash: sha256:dab94a2e4771a534d3e9d836fbf2094cbe33959c87a3a1ce182e7cbc1c6f5041
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【5月5日】
+  A：这周部门在做社媒复盘，你看到那串讨论没
+  B：看到了，讨论品牌帖子就好
+  A：我觉得你的匿名号也被我对上了
+  B：这跟品牌分析无关，别把个人账号挂出来
+  A：你家的猫好点没
+  B：好多了，今天肯吃东西
+  A：那就放心了
+  B：晚上再观察一下
+  A：新工位坐着习惯吗
+  B：还行，就是显示器有点低
+  A：垫个支架会舒服些
+  B：我明天找找
+  A：我看过你以前公开的转发和相册时间
+  B：不要继续拼这些线索，也不要传播结论
+  A：有人说想看完整截图
+  B：不给。请停止整理和转发
+  A：假期车票定了吗
+  B：还没，先看下哪天方便
+  A：别太晚订就好
+  B：是，今晚和家里商量
+  A：行，我删掉那条
+  B：平台也有隐私举报入口，我会提交
+  A：好，我不再提你的账号
+  B：谢谢，工作讨论只留品牌内容
+  A：刚才那份午饭我先垫了，按平常AA转我就行
+  【系统消息】B 向 A 转账 88 元，已收款。
+  【5月6日】
+  B：难怪今天味道不一样
+  A：你觉得之前那款好吗
+  B：我还是喜欢浅烘的
+  A：午饭吃了吗
+  B：刚吃完，今天食堂的面还行
+  A：我点了盖饭，分量有点大
+  B：下午走一圈消消食
+  A：刚才网络卡了
+  B：我这边也断了一下
+  A：收到，我看到了
+  B：好，先忙手头的
+  A：这个不用今天决定
+  B：行，明天再说
+  A：我这边先去处理下别的事
+  A：我去倒杯水
+  B：记得起来活动下
+  A：我先记一下
+  B：嗯，别急着定
+  A：下午还有个会
+  B：那我晚点回你
+  A：我这边先去处理下别的事
+  A：刚才网络卡了
+  B：我这边也断了一下
+  A：收到，我看到了

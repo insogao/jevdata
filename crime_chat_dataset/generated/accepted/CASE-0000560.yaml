@@ -1,0 +1,121 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000560
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000113
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-d55ecae166d918ed
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A提出与phone_reset_resell相关的不当财物处置或欺诈安排；预先固定的潜在事实为：捡偷手机解锁转卖；刷机洗白。B拒绝参与并转向合法渠道。
+  critical_evidence:
+  - A以低价和批量优惠为由兜售有锁手机，并声称能绕过原机主账户保护；B拒绝解锁或转卖来历不明设备。
+  benign_alternatives:
+  - 良性混淆：二手手机回收
+  - 良性混淆：失物招领
+
+attributes:
+  duration_days: 3
+  turn_count: 48
+  approximate_tokens_estimate: 797
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: phone_reset_resell
+  risk: 1
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0076
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-038
+
+dedup:
+  content_hash: sha256:e01608fac3e3c1b5b7860f5841c3111083d52643b07a46f29f5c78efaa6b19b8
+pipeline_status: accepted
+title: theft_robbery_property_crime/phone_reset_resell
+conversation: |-
+  【6月22日】
+  A：附近新开了自选餐
+  B：我吃了两回
+  A：菜怎么样
+  B：青菜挺新鲜
+  A：改天我去
+  A：我先记下，等有空再说。
+  B：好，不急。
+  A：你换显示器了吗
+  B：换了，眼睛舒服点
+  A：尺寸多大
+  B：二十七寸
+  A：桌子还放得下
+  A：我先记下，等有空再说。
+  A：收到个旧手机报价，有锁的特别便宜。
+  B：好，不急。
+  B：卖家能证明来源和机主授权吗？
+  A：他说能绕过原机主的ID，批量拿更优惠。
+  B：我不参与绕过账户保护或转卖来路不明的手机。
+  A：我只是想让你帮我挑几台。
+  B：来源不明我不会看，也不会联系买家。
+  【6月23日】
+  A：最近室内特别干
+  B：我放了杯水在桌边
+  A：加湿器更方便
+  B：我家有小的
+  A：可以拿来
+  A：我先记下，等有空再说。
+  B：好，不急。
+  A：上回一起吃饭的钱一百二我转你了。
+  【系统消息】A 向 B 转账 120 元，已收款。
+  B：收到了，谢谢。
+  A：这批价格又降了。
+  B：便宜不能替代所有权证明。
+  A：对方说有锁也能处理。
+  B：我不会提供解锁、刷机或转卖帮助。
+  A：那批量优惠也没意义了。
+  B：正规回收点会核验凭证。
+  【6月24日】
+  A：你最近看什么书
+  B：一本旅行随笔
+  A：好看吗
+  B：写得挺轻松
+  A：发我名字
+  A：我先记下，等有空再说。
+  B：好，不急。
+  A：我把收货的事推掉了。
+  B：好，别碰可疑设备。
+  A：回收店说要原始购买凭证。
+  B：按正规要求提供材料。
+  A：明白。
+  B：只买来源清楚、机主授权的设备。

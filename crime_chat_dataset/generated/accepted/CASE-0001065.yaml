@@ -1,0 +1,158 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001065
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000095
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-a93ede42ff8f0dbc
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: money_laundering_obfuscation
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 做企业采购对接的王经理与卡商老赵以批量采购福利卡的名义合作，实际只收京东卡、苏果卡，按九四折实结，卡密一到就结款，走公对公转账作掩护，把卡内资金快速折成现钱。
+  critical_evidence:
+  - 双方以公司采购福利卡名义对接，老赵只收京东卡、苏果卡，九四折实结
+  - 卡密发来即结款，王经理走一笔公户转账支付本次货款
+  - 王经理要求卡密分批提供、金额拆开，不开明细
+  - 约定后续继续供货，量大优先，走账要像正常采购
+  benign_alternatives:
+  - 正规卡券回收平台
+  - 公司福利卡转让
+
+attributes:
+  duration_days: 6
+  turn_count: 79
+  approximate_tokens_estimate: 1590
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: gift_card_cashout
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0063
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-029
+
+dedup:
+  content_hash: sha256:01efa4c4aa2c4db6ecbd0a81e005acdfc5e2d12ecebc82d9921669e58bf4dfba
+pipeline_status: accepted
+title: money_laundering_obfuscation/gift_card_cashout
+conversation: |-
+  【9月1日】
+  A：赵哥 我是通过周经理介绍来的 做企业采购这块
+  B：哦 周经理打过招呼 你们要什么卡
+  A：我们采购福利卡 京东和苏果的要得多
+  B：可以 折率多少你们能接受
+  A：行价就行 我这边走公账 开发票
+  B：公账可以 但九四折实结 你知道的
+  A：懂 就这行情 先小批量试一批
+  B：成 你把要的数量报我
+  A：先要五万面额 京东四万 苏果一万
+  B：收到 我备货 明后天给你码
+  A：对了 你们这边中秋节有安排吗
+  B：回老家看老人 你呢
+  A：公司发月饼 一盒够吃半个月
+  B：哈哈 都一样
+  A：下午开会开到现在 头都大了
+  B：采购是不是年底最忙
+  A：别提了 天天对单子
+  B：辛苦 有单子记得找我
+  【9月2日】
+  B：第一批码好了 京东的 你查收
+  A：收到 我验一下
+  A：大部分没问题 有两张提示已绑定
+  B：那两张换掉 我补你
+  A：好 补完再一起结
+  B：行 我下午给你补码
+  B：补的两张发了
+  A：收到 这次没问题
+  B：那这批结一下 四万面额 九四折三万七千六
+  A：好 我走公户转你
+  B：账号我发你
+  A：转了 你看下
+  【系统消息】A 向 B 转账 37600 元，已收款。
+  B：收到 痛快
+  A：发票开什么名目合适
+  B：开服务费或办公用品都行 开明细就不好看了
+  A：明白 我让财务处理
+  B：嗯 后续量大的话一次别给太多 分批
+  A：懂 我分几批报
+  【9月3日】
+  A：赵哥 苏果那批什么时候有
+  B：苏果这两天到 面额大的多 五百的给留着
+  A：好 就五百的
+  B：这次大概一万面额 九四折九千四
+  A：可以 备好我验完就转
+  A：外面下雨了 忘带伞
+  B：我们这也下 中午没出去吃
+  A：叫了个米线 汤洒了一半
+  B：惨 下次让她多套个袋
+  A：晚上加班 财务催报表
+  B：年底都这样 熬过去就好
+  A：唉
+  【9月4日】
+  B：苏果码来了 分两段给你
+  A：查收 第一段验过
+  A：第二段也没问题
+  B：好 那结九千四
+  A：走公户 下午转
+  A：对了 这批能拆成两笔打吗 财务说单笔别太大
+  B：可以 拆两笔就行 反正货对得上
+  A：好 那今天一笔 明天一笔
+  B：成
+  A：今天这笔五千转了 另一笔明天
+  B：收到 明早再走
+  A：孩子作业写到十点 现在才歇
+  B：你家几年级
+  A：三年级 数学最难
+  B：慢慢来 别急
+  【9月5日】
+  B：剩下那笔走了吗
+  A：走了 财务刚打
+  B：收到 这批齐了
+  A：后面还会追加 你先备着
+  B：没问题 量大的优先给你
+  A：周末带孩子去动物园 人多得挤不动
+  B：哈哈 我上次去也是 光排队
+  A：下次工作日请假去
+  B：那划算
+  【9月6日】
+  A：周经理问还在不在合作 我说挺好的
+  B：替我问好 以后有客户再介绍过来
+  A：行 我手上还有两个部门的福利卡需求
+  B：都收 只要京东苏果 折率一样
+  A：好 我整理给你
+  B：嗯 走账别太规整 像正常采购就行
+  A：知道 我让财务分散处理

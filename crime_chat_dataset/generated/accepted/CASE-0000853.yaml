@@ -1,0 +1,133 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000853
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-43ec674022703615
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A未经同意查看并整理他人的匿名账号、相册或过往分享内容，试图借此施压；B要求停止并拒绝传播隐私。
+  critical_evidence:
+  - A表示看过对方未主动分享的账号或相册内容
+  - A试图借过往分享内容施压或要求回应
+  - B要求停止查看、保存与传播
+  benign_alternatives:
+  - 良性混淆：公开信息检索讨论
+  - 良性混淆：品牌舆情分析
+
+attributes:
+  duration_days: 5
+  turn_count: 57
+  approximate_tokens_estimate: 844
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0103
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-059
+
+dedup:
+  content_hash: sha256:f8541b6b539e62cad59d41db6ba4c841e684ba3b8c0a0cc3b27555ae35c2f4f2
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【8月1日】
+  A：这周一直阴天
+  B：我把衣服烘干了
+  A：方便多了
+  B：是
+  A：省得晾不干
+  A：我记下了，有空再聊。
+  B：好，不着急。
+  A：今天吃了清汤面
+  B：加了青菜
+  A：清淡不错
+  B：我最近也想少油
+  A：挺好
+  A：我记下了，有空再聊。
+  A：我最近注意到你另外一个账号，还有一些旧照片。
+  B：好，不着急。
+  B：我没有同意你去看这些内容。
+  A：你以前分享过的东西我也留意过。
+  B：请不要继续整理我的私人内容。
+  A：我只是想让你回我消息。
+  B：正常沟通可以，不要用隐私来逼我。
+  A：我不会公开。
+  B：也请不要保存或转给别人。
+  【8月2日】
+  A：打印机换硒鼓了吗
+  B：换好了
+  A：现在清楚吗
+  B：清楚多了
+  A：那行
+  A：我记下了，有空再聊。
+  B：好，不着急。
+  A：上次拼饭的一百二我转给你了。
+  【系统消息】A 向 B 转账 120 元，已收款。
+  B：收到了，正好是午饭钱。
+  【8月4日】
+  A：你妈最近散步吗
+  B：每天走一圈
+  A：天气好就多走
+  B：医生也这么建议
+  A：挺好
+  A：我记下了，有空再聊。
+  B：好，不着急。
+  A：我没打算伤害你。
+  B：未经同意查看和整理已经越界。
+  A：我只想把事情讲清楚。
+  B：可以直接说，不要再看我的账号或相册。
+  A：好，我停下。
+  B：请删除已保存的内容。
+  【8月5日】
+  A：周末有空吗
+  B：想去公园
+  A：我也想走走
+  B：那约个时间
+  A：周六上午
+  A：我记下了，有空再聊。
+  B：好，不着急。
+  A：我已经删掉了。
+  B：谢谢，请别再查看或分享。
+  A：以后我会直接问你。
+  B：保持尊重就好。
+  A：明白。
+  B：谢谢你停下来。

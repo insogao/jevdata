@@ -1,0 +1,120 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000987
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-7cbef33ad0ad892f
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 试图把匿名社交账号和现实身份关联并曝光；B 作为版务人员拒绝分析或传播身份线索，建议仅按平台规则处理帖子。
+  critical_evidence:
+  - A 请求确认匿名账号关联的小号。
+  - A 声称已翻过相册原图时间及转发记录，想据此识别发帖人。
+  - B 拒绝继续关联、追踪或公开现实身份。
+  - B 建议针对帖子本身使用平台举报与版规流程。
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 3
+  turn_count: 44
+  approximate_tokens_estimate: 1034
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0114
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-065
+
+dedup:
+  content_hash: sha256:17d0a78841cd4cdbb54c57a0f54c3445772259f999b6ba3d0b44660f228cf152
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【9月10日】
+  A：那条讨论下面的匿名号，你帮我确认还有没有别的小号？
+  B：不行，我不帮忙把匿名账号往现实身份上连。
+  A：小号也给你翻了，我还看了相册原图时间。
+  B：这些线索也不能拿来认人或扩散。
+  A：我想起你说的新开的书店，今天有进展没？
+  B：有，刚确认下来。
+  A：需要我帮你带点什么吗？
+  B：不用啦，已经安排好了。
+  A：好，那我放心了。
+  B：嗯，省了不少事。
+  A：另外，新开的书店有变化再跟我说一声。
+  B：好，我看到消息就回你。
+  A：最近事情有点多，怕记岔了。
+  A：你提过的值班交接，我查了下时间。
+  B：谢谢，正好我也想确认。
+  A：大概什么时候合适？
+  B：周末下午比较宽松。
+  A：那我们到时再看天气。
+  B：好，临近再定。
+  【9月11日】
+  A：转发过什么都能查吧？我想把本人弄清楚。
+  B：我不会继续查，也不会整理或发布身份猜测。
+  A：帖子里有人骂了品牌，得知道是谁才好处理。
+  A：对了，周末天气你后来弄好了吗？
+  B：弄好了，按原计划处理的。
+  A：过程顺不顺？
+  B：还行，中间等了一会儿。
+  A：那结果满意吗？
+  B：挺满意的，至少不用再惦记。
+  A：我想起你说的午餐选择，今天有进展没？
+  B：有，刚确认下来。
+  A：需要我帮你带点什么吗？
+  B：不用啦，已经安排好了。
+  A：好，那我放心了。
+  B：嗯，省了不少事。
+  A：昨天午饭我先垫的那点钱还你了，跟刚才的话题没关系。
+  【系统消息】A 向 B 转账 44 元，已收款。
+  【9月12日】
+  B：版务只处理内容本身，按平台举报和版规来。
+  A：那你帮我把举报入口找一下。
+  B：可以，我发平台帮助页，不会提供用户身份信息。
+  A：说到日常安排，快递取件别忘了呀。
+  B：记着呢，我设了个提醒。
+  A：你平时还会写备忘吗？
+  B：会，临时事一多就容易漏。
+  A：确实，记下来省心。
+  B：是的，最近好多了。

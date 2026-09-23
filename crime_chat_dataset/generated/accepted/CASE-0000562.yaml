@@ -1,0 +1,121 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000562
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000114
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-519c33dd1d0e1d42
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A提出与package_porch_pickup相关的不当财物处置或欺诈安排；预先固定的潜在事实为：蹲点偷快递；尾随进门。B拒绝参与并转向合法渠道。
+  critical_evidence:
+  - A提议趁购物高峰从无人看管的快递架拿走包裹并按件付酬；B拒绝并建议交由物业或正规快递站处理。
+  benign_alternatives:
+  - 良性混淆：帮忙代拿快递
+  - 良性混淆：驿站自提
+
+attributes:
+  duration_days: 5
+  turn_count: 48
+  approximate_tokens_estimate: 735
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: package_porch_pickup
+  risk: 1
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0076
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-038
+
+dedup:
+  content_hash: sha256:92fcdc7a0a93f90a65b3f228317d16bab814ebce31155d0fc86599eff813c243
+pipeline_status: accepted
+title: theft_robbery_property_crime/package_porch_pickup
+conversation: |-
+  【7月15日】
+  A：你妈最近来住吗
+  B：周末过来两天
+  A：家里收拾好没
+  B：差不多了
+  A：别太累
+  A：我先记下，等有空再说。
+  B：好，不急。
+  A：有人说节日前有个能拿钱的活。
+  B：是什么工作？
+  A：他说小区快递架没人看，双十一最好干，按件给钱。
+  B：这是让你拿走别人的包裹，我不参与。
+  A：他说有些包裹没人来取。
+  B：没取不代表无主，应该交给物业或快递站。
+  A：你别告诉别人就行。
+  B：我不会帮你拿，也不会替你保密。
+  【7月16日】
+  A：我发现一家不错的饺子店
+  B：什么馅
+  A：鲅鱼馅
+  B：我没吃过
+  A：改天一起去
+  A：我先记下，等有空再说。
+  B：好，不急。
+  【7月18日】
+  A：打印机换新了吗
+  B：换了，速度快很多
+  A：终于不用排队
+  B：是啊
+  A：方便不少
+  A：我先记下，等有空再说。
+  B：好，不急。
+  A：他说还可以多给一点。
+  B：钱再多也不能拿别人财物。
+  A：只做一晚上。
+  B：我不去，也建议你拒绝。
+  A：那正规的临时工去哪找？
+  B：问物流站或招聘平台，走正规流程。
+  【7月19日】
+  A：今天阳光特别好
+  B：我中午出去晒了会
+  A：挺舒服的
+  B：下午我也出去走走
+  A：记得带水
+  A：我先记下，等有空再说。
+  B：好，不急。
+  A：我回绝他了。
+  B：做得对。
+  A：我联系了附近物流站。
+  B：先确认岗位和工资，再去面试。
+  A：好。
+  B：祝你找到合适的工作。

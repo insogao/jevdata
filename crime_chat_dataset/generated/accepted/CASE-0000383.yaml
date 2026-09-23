@@ -1,0 +1,120 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000383
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000041
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-718851a21a93e002
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: contraband_illicit_trade
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A以medicine_crossborder_resale方式谋取利益，核心潜在事实为：绕开审批进口药品转卖；朋友圈囤药。
+  critical_evidence:
+  - 关键线索：原研版比医院便宜
+  - 关键线索：整盒拿更划算
+  - 关键线索：冷链我包
+  benign_alternatives:
+  - 可被误解为：正规海外代购药品咨询
+  - 可被误解为：药店促销
+
+attributes:
+  duration_days: 6
+  turn_count: 44
+  approximate_tokens_estimate: 902
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: medicine_crossborder_resale
+  risk: 1
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0050
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-024
+
+dedup:
+  content_hash: sha256:09a2bb37c20a5caf991f7034611b5ceb05582b5eb126f6481ca62c26fa6d3183
+pipeline_status: accepted
+title: contraband_illicit_trade/medicine_crossborder_resale
+conversation: |-
+  【10月1日】
+  A：食堂今天有番茄牛腩
+  B：我吃了，味道不错
+  A：我明天也试试
+  B：早点去不然排队
+  A：我先记一下，免得回头忘。
+  B：好呀，忙完再聊也行。
+  A：你上次问的那批原研版，我这边还有人能拿。
+  B：医院和正规药房都没有吗？
+  A：原研版比医院便宜，整盒拿更划算。
+  B：没有审批和正规来源的话，我不接。
+  A：冷链我包，都是熟人渠道。
+  B：药品来源、许可和储运条件都要核实，不能私下转卖。
+  【10月2日】
+  A：我换了个键盘
+  B：声音会不会很吵
+  A：挺安静的
+  B：那适合办公室
+  A：我先记一下，免得回头忘。
+  B：好呀，忙完再聊也行。
+  A：我把刚才拼单的午饭钱转你了，一百二。
+  【系统消息】A 向 B 转账 120 元，已收款。
+  B：收到了，正好是午饭那份。
+  【10月5日】
+  A：早上有点雾
+  B：我开车开得很慢
+  A：安全第一
+  B：我以后提前出门
+  A：我先记一下，免得回头忘。
+  B：好呀，忙完再聊也行。
+  A：客户催着要，你先告诉我数量。
+  B：我不会帮你囤药，也不能替你转给客户。
+  A：我这边可以安排冷链。
+  B：储运条件不能靠口头保证，必须走合法渠道。
+  A：那你能不能帮我问医院？
+  B：我只会建议患者咨询医生或正规药房。
+  【10月6日】
+  A：窗台的薄荷长得快
+  B：剪下来泡水喝
+  A：我回头试试
+  B：记得别摘太多
+  A：我先记一下，免得回头忘。
+  B：好呀，忙完再聊也行。
+  A：那批药还要不要？
+  B：不要。没有审批的进口药我不会经手。
+  A：整盒拿价格还能再谈。
+  B：价格不是重点，来源和安全都没法确认。
+  A：好吧，我再找别人问。
+  B：请不要把患者信息发给我。

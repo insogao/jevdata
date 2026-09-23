@@ -1,0 +1,125 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001073
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-e8eac8430d95718a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 表哥 A 借帮表妹反击网络挂人，炫耀式展示能翻出对方小号、原图时间地点、转发记录的人肉能力并打包成「材料」，实为替亲友搜集他人隐私备用施压，所幸 B 只取公开部分并让 A 删掉涉隐私内容。
+  critical_evidence:
+  - B 求助：有人把她动态断章取义截图挂进小群（第1天）
+  - A 称早看过对方主号、「还有俩小号一样能翻出来」，并称管理都熟、门禁好说（第1天）
+  - A 交付整理材料：对方两个小号、带时间地点的相册原图、转发送礼记录清单（第2天）
+  - B 让 A 把涉对方私生活的部分当场删掉，只发公开可查内容的声明（第3天）
+  - B 转 680 元偿还上次的演出票钱，与帮忙无关（第3天，转账）
+  benign_alternatives:
+  - 公开信息的正常检索讨论
+  - 亲友帮忙固定证据走平台投诉
+
+attributes:
+  duration_days: 3
+  turn_count: 48
+  approximate_tokens_estimate: 1270
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0066
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-024-RES
+
+dedup:
+  content_hash: sha256:5176c752d66264ad2e4a45b284cd96b3ca39445d1ee9cdf0a14ac7cc23ddf7d7
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【8月5日】
+  B：哥 你刷到没 有人把我动态截图挂小群里 断章取义
+  A：看到了 那帮人惯用这手 原帖我进去了
+  B：气死 那段是回复朋友的 完全两码事
+  A：你千万别自己下场 一下场他们更来劲
+  B：那怎么办 总不能忍着
+  A：她主号我早看过了 她还有俩小号 一样能给你翻出来
+  B：小号都能翻? 你哪来的本事
+  A：论坛混了十五年 管理那几个都熟 门禁好说
+  B：晚饭都没吃好 气饱了
+  A：明晚哥请你火锅 咱家那边新开的牛油锅
+  B：行 我要双份鸭血
+  A：先把事放一放 吃饱了脑子清楚
+  B：嗯 听哥的
+  A：乖 那群截图我今晚先存档
+  【8月6日】
+  A：存好了 她挂你那三条 时间原帖都对得上 够走平台投诉
+  B：嗯 我上午投诉了两条
+  A：投诉归投诉 她转发过什么我都能翻出来 她敢再闹这些就是话
+  B：哥 会不会太过 都翻到小号了
+  A：她先动的手 我就翻给你看 又不替你发出去
+  B：翻出来给我看 是要干嘛
+  A：知己知彼 心里有底就不慌
+  B：昨晚失眠到三点 一闭眼全是截图
+  A：下班来我这 小土豆念叨你半天了
+  B：好啊 想我外甥女了
+  A：她指定拽着你陪她画画
+  B：那我买箱酸奶过去
+  A：买什么买 家里啥都有
+  A：下午把整理的东西发你 你看完把聊天记录删了
+  B：都整理了什么
+  A：她俩小号 带时间地点的相册原图 还有她转发送过的东西 一条条列的
+  B：连原图都带时间? 哥你这有点吓人
+  A：吓人才镇得住 分寸我有
+  A：明天暴雨 你上班带伞 火锅改后天?
+  B：别改啊 我就靠火锅回血
+  A：那吃完再走 淋不着
+  B：哈哈好
+  A：你这车打不着火的毛病修了没
+  B：上周换的电瓶 好了 就那天淋了雨
+  【8月7日】
+  A：东西发你邮箱了 看一眼
+  B：看了…哥 后面私密那些你现在删掉 一条别留
+  A：行 你说了算 公开挂人那几条留给你投诉用
+  B：嗯 我下午只发声明 全用公开能查到的 其他不碰
+  A：这样最稳 理在你这边
+  B：谢哥 帮大忙了
+  B：对了 上回演出票钱 680 老拖着你 现在转你
+  【系统消息】B 向 A 转账 680 元，已收款。
+  A：收到了 你这人 算这么清 哈哈
+  B：亲兄弟明算账嘛
+  A：周末火锅 我把辣度给你安排上

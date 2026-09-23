@@ -1,0 +1,112 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000932
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-ea572a5db596171d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 试图将匿名社交账号关联到现实身份并曝光；版主拒绝比对或扩散个人线索，建议使用平台举报和版规流程。
+  critical_evidence:
+  - 对方要求确认匿名发帖者还有哪些小号。
+  - 对方提到已翻过相册原图时间和转发内容，想据此认人。
+  - 版主拒绝继续关联账号、推断现实身份或公开线索。
+  - 版主建议保留原帖并通过平台举报处理。
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 5
+  turn_count: 35
+  approximate_tokens_estimate: 661
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0110
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-062
+
+dedup:
+  content_hash: sha256:5b0d9b56dd7dc75ea86868368d9144e80d48370a8ecb7146220405ed05340477
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【9月3日】
+  A：能不能帮忙看看这个匿名账号还有没有别的小号？
+  A：小号也给你翻了吧，我连相册原图时间都看了。
+  A：插一句，今天的电影票我买好了。
+  B：真的？我还不知道。
+  A：你试过吗？
+  B：上周刚弄过，挺方便。
+  A：收到，我也试试。
+  B：嗯，别忘了就好。
+  【9月4日】
+  A：转发过什么都能查，想把本人认出来。
+  B：我不会比对账号或推断、公开发帖人的身份。
+  A：换个轻松的，地铁口施工，回家得绕一下。
+  B：听着不错。
+  A：你什么时候有空？
+  B：周末应该可以。
+  A：那到时再确认。
+  B：好呀。
+  【9月5日】
+  B：如果内容违规，保留帖子并走平台举报，不要追查个人。
+  A：先说个别的，猫粮快到了，记得取快递。
+  B：哈哈，这事倒简单。
+  A：你最近忙吗？
+  B：还行，手头都收尾了。
+  A：那挺好，别熬太晚。
+  B：嗯，等会儿去弄。
+  【9月6日】
+  A：对了，周末天气不错，想去河边走走。
+  B：我也觉得。
+  A：你一般怎么安排？
+  B：看当天吧，不赶时间。
+  A：好，那我记一下。
+  B：行，回头再聊。
+  【9月7日】
+  A：插一句，今天的电影票我买好了。
+  B：真的？我还不知道。
+  A：你试过吗？
+  B：上周刚弄过，挺方便。
+  A：收到，我也试试。
+  B：嗯，别忘了就好。

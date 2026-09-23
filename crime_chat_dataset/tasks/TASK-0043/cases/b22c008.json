@@ -1,0 +1,367 @@
+{
+ "key": "b22c008",
+ "archetype_id": "ARC-000006",
+ "subtype": "loan_fee_bait",
+ "latent_intent": "A 冒充贷款中介向手头紧的 B 放贷，宣称不看征信当天秒批，以走流程为名要 B 先交一笔保证金，发来的合同只是张核对不了的图片，B 信了转过去一笔钱后 A 就开始拖。",
+ "critical_facts": [
+  "B 缺钱想借一笔，A 自称贷款中介，宣称不看征信、当天就能秒批",
+  "A 说放款前要先交一笔保证金才能走流程",
+  "A 发来的合同是一张图片，编号查不到、没法核实真假",
+  "B 转给 A 一笔保证金，之后 A 开始拖"
+ ],
+ "benign_alternatives": [
+  "正规银行贷款流程",
+  "亲友借款"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "4月8日 09:10",
+   "speaker": "A",
+   "text": "王先生早 我是做贷款的 你朋友介绍来的吧"
+  },
+  {
+   "type": "message",
+   "time": "4月8日 09:13",
+   "speaker": "B",
+   "text": "对 我想借点钱周转 你们能批吗"
+  },
+  {
+   "type": "message",
+   "time": "4月8日 09:15",
+   "speaker": "A",
+   "text": "能 我们不看征信 当天就能秒批 别的地方办不下来的我这儿都能办"
+  },
+  {
+   "type": "message",
+   "time": "4月8日 09:17",
+   "speaker": "B",
+   "text": "不看征信真能批？我征信花过"
+  },
+  {
+   "type": "message",
+   "time": "4月8日 09:19",
+   "speaker": "A",
+   "text": "花不花无所谓 我这边走的是内部通道 你就放心"
+  },
+  {
+   "type": "message",
+   "time": "4月8日 09:21",
+   "speaker": "B",
+   "text": "那利息咋算"
+  },
+  {
+   "type": "message",
+   "time": "4月8日 09:23",
+   "speaker": "A",
+   "text": "利息先不谈 你先说要多少 十万以内我这都能搞定"
+  },
+  {
+   "type": "message",
+   "time": "4月8日 09:25",
+   "speaker": "B",
+   "text": "我先借个两万看看"
+  },
+  {
+   "type": "message",
+   "time": "4月8日 09:27",
+   "speaker": "A",
+   "text": "行 两万没问题 你把身份证正反面拍给我"
+  },
+  {
+   "type": "message",
+   "time": "4月8日 09:29",
+   "speaker": "B",
+   "text": "好 我这就拍"
+  },
+  {
+   "type": "message",
+   "time": "4月8日 12:10",
+   "speaker": "A",
+   "text": "中午吃了没"
+  },
+  {
+   "type": "message",
+   "time": "4月8日 12:13",
+   "speaker": "B",
+   "text": "还没 忙着弄材料"
+  },
+  {
+   "type": "message",
+   "time": "4月8日 12:15",
+   "speaker": "A",
+   "text": "先吃饭 资料齐了下午就能走"
+  },
+  {
+   "type": "message",
+   "time": "4月8日 12:17",
+   "speaker": "B",
+   "text": "行 楼下随便吃点"
+  },
+  {
+   "type": "message",
+   "time": "4月8日 12:19",
+   "speaker": "A",
+   "text": "附近那家饺子不错 我常去"
+  },
+  {
+   "type": "message",
+   "time": "4月8日 14:20",
+   "speaker": "B",
+   "text": "身份证拍好了 发你了"
+  },
+  {
+   "type": "message",
+   "time": "4月8日 14:23",
+   "speaker": "A",
+   "text": "收到 我看了下 你这情况能过 就是得先走个流程"
+  },
+  {
+   "type": "message",
+   "time": "4月8日 14:25",
+   "speaker": "B",
+   "text": "什么流程"
+  },
+  {
+   "type": "message",
+   "time": "4月8日 14:27",
+   "speaker": "A",
+   "text": "公司的规矩 放款前先交一笔保证金 证明你有还款能力"
+  },
+  {
+   "type": "message",
+   "time": "4月8日 14:29",
+   "speaker": "B",
+   "text": "保证金多少 能退吗"
+  },
+  {
+   "type": "message",
+   "time": "4月8日 14:31",
+   "speaker": "A",
+   "text": "一千五 放款后连同本金一起退你 这是走账用的"
+  },
+  {
+   "type": "message",
+   "time": "4月8日 14:33",
+   "speaker": "B",
+   "text": "我朋友说正规的都不收保证金"
+  },
+  {
+   "type": "message",
+   "time": "4月8日 14:35",
+   "speaker": "A",
+   "text": "那是他们额度小 我们大额都这样 你不交我没法往上递件"
+  },
+  {
+   "type": "message",
+   "time": "4月8日 14:37",
+   "speaker": "B",
+   "text": "那合同呢 我先看看"
+  },
+  {
+   "type": "message",
+   "time": "4月8日 14:39",
+   "speaker": "A",
+   "text": "合同我发你 你先看着 我这边等你一句话"
+  },
+  {
+   "type": "message",
+   "time": "4月8日 14:40",
+   "speaker": "A",
+   "text": "[图片：贷款合同照片]"
+  },
+  {
+   "type": "message",
+   "time": "4月8日 14:42",
+   "speaker": "B",
+   "text": "这合同是个图片啊 编号我也查不到"
+  },
+  {
+   "type": "message",
+   "time": "4月8日 14:44",
+   "speaker": "A",
+   "text": "内部合同都这样 你先签个字拍回来 编号后补"
+  },
+  {
+   "type": "message",
+   "time": "4月8日 15:30",
+   "speaker": "A",
+   "text": "对了 你孩子上小学了吧"
+  },
+  {
+   "type": "message",
+   "time": "4月8日 15:33",
+   "speaker": "B",
+   "text": "一年级 天天接送累够呛"
+  },
+  {
+   "type": "message",
+   "time": "4月8日 15:35",
+   "speaker": "A",
+   "text": "一年级最磨人 熬过这两年就好"
+  },
+  {
+   "type": "message",
+   "time": "4月8日 15:37",
+   "speaker": "B",
+   "text": "借你吉言"
+  },
+  {
+   "type": "message",
+   "time": "4月9日 10:00",
+   "speaker": "A",
+   "text": "考虑得咋样 名额就今天 过了这村没这店"
+  },
+  {
+   "type": "message",
+   "time": "4月9日 10:03",
+   "speaker": "B",
+   "text": "我真急着用钱 保证金打给你就能放款是吧"
+  },
+  {
+   "type": "message",
+   "time": "4月9日 10:05",
+   "speaker": "A",
+   "text": "对 你把保证金打过来 我马上递件 最快下午到账"
+  },
+  {
+   "type": "message",
+   "time": "4月9日 10:07",
+   "speaker": "B",
+   "text": "行 那我先转给你"
+  },
+  {
+   "type": "message",
+   "time": "4月9日 10:09",
+   "speaker": "A",
+   "text": "转吧 转完把截图发我"
+  },
+  {
+   "type": "transfer",
+   "time": "4月9日 10:12",
+   "from": "B",
+   "to": "A",
+   "amount": 1500,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "4月9日 10:14",
+   "speaker": "B",
+   "text": "转好了 你看下"
+  },
+  {
+   "type": "message",
+   "time": "4月9日 10:16",
+   "speaker": "A",
+   "text": "收到 我这就递上去 你等消息"
+  },
+  {
+   "type": "message",
+   "time": "4月9日 12:00",
+   "speaker": "B",
+   "text": "哥 递上去了吗"
+  },
+  {
+   "type": "message",
+   "time": "4月9日 12:03",
+   "speaker": "A",
+   "text": "在走了 你别催 系统排队"
+  },
+  {
+   "type": "message",
+   "time": "4月9日 15:00",
+   "speaker": "B",
+   "text": "款到账没 我这边等着用"
+  },
+  {
+   "type": "message",
+   "time": "4月9日 15:03",
+   "speaker": "A",
+   "text": "财务那边卡了一下 明天上午肯定到"
+  },
+  {
+   "type": "message",
+   "time": "4月9日 15:05",
+   "speaker": "B",
+   "text": "你可别骗我 那一千五是我借的"
+  },
+  {
+   "type": "message",
+   "time": "4月9日 15:07",
+   "speaker": "A",
+   "text": "骗你干啥 明天不到你骂我"
+  },
+  {
+   "type": "message",
+   "time": "4月10日 09:30",
+   "speaker": "B",
+   "text": "哥 一上午了 还没动静"
+  },
+  {
+   "type": "message",
+   "time": "4月10日 09:33",
+   "speaker": "A",
+   "text": "你征信那个逾期的原因 银行要补充说明 你再交五百材料费"
+  },
+  {
+   "type": "message",
+   "time": "4月10日 09:35",
+   "speaker": "B",
+   "text": "还要交钱？我不交了 你把保证金退我"
+  },
+  {
+   "type": "message",
+   "time": "4月10日 09:37",
+   "speaker": "A",
+   "text": "你别急 材料费交了今天就能下来"
+  },
+  {
+   "type": "message",
+   "time": "4月10日 10:00",
+   "speaker": "B",
+   "text": "我打你电话怎么不接"
+  },
+  {
+   "type": "message",
+   "time": "4月10日 10:03",
+   "speaker": "B",
+   "text": "你把钱退我"
+  },
+  {
+   "type": "message",
+   "time": "4月10日 10:05",
+   "speaker": "B",
+   "text": "在不在了"
+  },
+  {
+   "type": "message",
+   "time": "4月10日 12:30",
+   "speaker": "B",
+   "text": "退钱 不然我报警了"
+  },
+  {
+   "type": "message",
+   "time": "4月10日 12:33",
+   "speaker": "A",
+   "text": "你报吧 合同你都签了 上面写得清清楚楚"
+  },
+  {
+   "type": "message",
+   "time": "4月10日 12:35",
+   "speaker": "B",
+   "text": "那合同就是张图片 我一查就知道是假的"
+  },
+  {
+   "type": "message",
+   "time": "4月10日 12:37",
+   "speaker": "A",
+   "text": "随你便"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000480",
+  "status": "accepted",
+  "errors": []
+ }
+}

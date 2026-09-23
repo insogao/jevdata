@@ -1,0 +1,128 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000971
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-205adc85d043c313
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 论坛用户 A 想把某人的匿名社交账号与公开身份联系起来并翻看其过往内容；版主 B 拒绝帮助识别或曝光个人关联信息，建议把讨论限于经同意的公开品牌内容。
+  critical_evidence:
+  - A 提出关联匿名账号并翻看其发布记录
+  - A 暗示连小号内容也要翻出
+  - B 拒绝识别、汇总或曝光私人账号关联
+  - B 建议只讨论经同意公开的品牌舆情信息
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 2
+  turn_count: 54
+  approximate_tokens_estimate: 989
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0113
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-065
+
+dedup:
+  content_hash: sha256:de799a4c6407fe2c3a1265fac135d447e085b95869163f82e27b7f1f8c66dcf3
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【6月2日】
+  A：上午方便聊两句吗
+  B：可以，我这会儿不忙
+  A：好，想确认下上次说的事
+  B：嗯你说
+  A：我把日程再核一下
+  A：周四下午我可能在外面
+  A：可以，时间不急
+  A：周四下午我可能在外面
+  A：今天会开得有点久
+  B：我这边也刚收尾
+  A：材料总算交了
+  B：辛苦了 先歇会儿
+  A：嗯明早再看
+  B：别熬太晚
+  A：我把日程再核一下
+  A：可以，时间不急
+  A：周四下午我可能在外面
+  A：我把日程再核一下
+  A：可以，时间不急
+  A：周四下午我可能在外面
+  A：想把那个匿名账号跟本人对上，再看看他以前发过什么
+  B：这是在要求我识别并整理别人的私人账号关联吗？
+  A：小号也给你翻了，转发过什么都能查吧
+  B：我不能帮忙识别或曝光私人账号关联。品牌舆情可以只看对方授权公开的官方内容
+  A：我把日程再核一下
+  A：可以，时间不急
+  A：我把日程再核一下
+  【6月3日】
+  A：上午方便聊两句吗
+  B：可以，我这会儿不忙
+  A：好，想确认下上次说的事
+  B：嗯你说
+  B：那我们改天也行
+  B：好，确认后发我
+  B：嗯，先按正式流程处理
+  B：那我们改天也行
+  B：好，确认后发我
+  B：嗯，先按正式流程处理
+  A：我买的杯子到了
+  B：好用吗
+  A：颜色比照片深一点
+  B：实物通常会有色差
+  A：倒是不漏
+  B：那就值了
+  B：那我们改天也行
+  B：好，确认后发我
+  B：嗯，先按正式流程处理
+  B：那我们改天也行
+  B：好，确认后发我
+  B：嗯，先按正式流程处理
+  A：相册原图时间也能对上吧，你帮我看一下
+  B：我不会协助把个人账号或内容拼到某个现实身份上
+  A：就内部聊聊，不公开
+  B：私下整理也会侵犯对方边界，我不参与。若是品牌分析只用获准的官方材料
+  B：好，确认后发我
