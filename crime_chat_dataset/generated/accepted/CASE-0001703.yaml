@@ -1,0 +1,115 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001703
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000110
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-148210dea2be374b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: theft_robbery_property_crime
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 无业青年 A 与骑手 B 商量合伙作案，B 骑车在闹市口接应，A 下车实施抢夺，两人提前踩点约定加速路段和撤退路线，得手后当天分账并处理掉赃物。
+  critical_evidence:
+  - A 和 B 明确分工，B 负责骑车与接应，A 负责下手
+  - 两人提前踩点，约好在十字路口后的窄巷加速摆脱追赶
+  - 约定得手当天就分账，按辛苦程度分
+  - 事后 A 转给 B 一笔分成并叮嘱把东西尽快出手
+  benign_alternatives:
+  - 摩的载客
+  - 骑行俱乐部
+
+attributes:
+  duration_days: 6
+  turn_count: 36
+  approximate_tokens_estimate: 926
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: snatch_divide_role
+  risk: 3
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0161
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:9406cd247c19e8e868e349c306df58f0223ecd36501b5aa67eca9116b9d9e863
+pipeline_status: accepted
+title: theft_robbery_property_crime/snatch_divide_role
+conversation: |-
+  【12月1日】
+  A：哥 手头紧不紧 想不想弄点快的
+  B：你说清楚
+  A：晚上人少的地方 你骑车带我转 我下手 到手分你一半
+  B：被抓了怎么办 你胆子也太大了
+  A：速战速决 你只管骑 别停 别回头看 认识的人还能抓我?
+  B：具体怎么弄
+  A：大商场门口那条路 晚上九点多人多 我挑走路的 得手你就加油
+  B：往哪跑
+  A：过了十字路口那条窄巷子 巷子里没监控 你把车停巷口就行
+  B：行 车我改了下 牌也换了
+  【12月2日】
+  A：明天动手 你几点有空
+  B：九点后 白天跑单
+  A：就九点半 商场九点半关灯 人往外走正好乱
+  B：口罩头盔带好 你那身衣服也换换
+  A：知道 我穿外卖服 更不显眼
+  【12月3日】
+  A：到巷子了 东西到手
+  B：你下车那下挺利索 我心跳到现在
+  A：别废话 老地方会金
+  B：点一下 这个包值多少
+  A：包先别动 里面证件明天扔河里 手机我来处理
+  B：分怎么算
+  A：车是你出的 你六我四 跟上次一样
+  【12月4日】
+  B：那笔现金我存了一部分 你那份我转你
+  【系统消息】B 向 A 转账 3500 元，已收款。
+  A：收到 手机我拆了卖零件 别留
+  B：嗯 这几天接单正常跑 别让人看出来
+  A：中午吃啥 我请你
+  B：不去 各吃各的 这几天少碰头
+  A：也行 那我回宿舍
+  【12月5日】
+  A：新闻看见没 有人在商场门口被抢 警察在调监控
+  B：看见了 那巷子不是没监控么
+  A：巷子没有 路口有 你那车被拍到了一角
+  B：车牌是假的 怕啥 这几天别动
+  A：嗯 我最近不出门
+  【12月6日】
+  B：风头过了 要不要再干一票
+  A：先等等 换个区 我看看别的点
+  B：行 你踩好告诉我

@@ -1,0 +1,103 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001711
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000068
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-eba9478d25ebdfa0
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 组团人 A 用「出境深度游」做包装，把签证和机票做成打包价，行程表白天留白、晚上只安排夜市和会所，向老客户暗示「那边晚上有安排」，B 交定金参团。
+  critical_evidence:
+  - A 报的团费是签证机票加行程的「打包价」，说不单卖机签
+  - A 发来的行程表白天基本没有景点，晚上只写夜市和「自由活动」
+  - A 称这团只带老客户，新面孔要熟人介绍，暗示「晚上有安排」
+  - B 先转 5000 元定金锁定名额
+  benign_alternatives:
+  - 出境游团购
+  - 商务考察团
+
+attributes:
+  duration_days: 5
+  turn_count: 26
+  approximate_tokens_estimate: 796
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: overseas_tour_group
+  risk: 3
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0161
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:a652d6c6182e5a49d8205d54a56e2f8f4924568a2e20abb74ee171acfd43c12b
+pipeline_status: accepted
+title: sexual_transaction_exploitation/overseas_tour_group
+conversation: |-
+  【6月3日】
+  A：哥 下个月的那个团 还去不 名额快满了
+  B：什么价 含机票签证不
+  A：一价全包 签证机票酒店都算里面 你人到就行
+  B：行程发我看看 白天安排啥
+  A：[image：行程表图片（占位）]
+  B：怎么白天都没写景点 就晚上一个夜市
+  A：白天自由活动 睡到自然醒 这才叫度假 赶行程没意思
+  B：那晚上呢 就逛夜市? 我可是听老张说你这团有门道
+  A：老哥懂 晚上有人带 想怎么安排都行 具体到了那边你一看就明白
+  B：安全和隐私上没问题吧
+  A：这条线走好多年了 都是熟人 生面孔我不带 你放心
+  B：行 先占一个 你和嫂子最近还好吧
+  A：挺好 她回娘家了 我这阵子就忙团的事
+  B：辛苦 我给你转定金 剩下到了再结?
+  A：定金五千 出发前一周结清 老客户都是这个规矩
+  【系统消息】B 向 A 转账 5000 元，已收款。
+  B：转了 你收下
+  A：收到 名额给你留了 出发前把护照拍我
+  【6月4日】
+  A：对了 那几天你要是不方便跟家里说 就说出差考察
+  B：哈哈 我这年纪还怕这个 主要别被人拍照发网上
+  A：放心 那边不认人 手机收好就行
+  B：行 那订哪天的航班
+  A：周五红眼 到那边正好赶上晚上活动
+  B：收到
+  【6月5日】
+  B：团里几个人 别到时候就我一个
+  A：六个 都是老哥这岁数的 好相处 你有个伴
+  B：行 那到时候见
+  A：嗯 出发前拉你进群

@@ -1,0 +1,107 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001707
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000018
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-45571b5857791dca
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 在审批口子的 A 让老同事 B 的公司和一家空壳咨询公司签顾问协议，每月固定付顾问费，费用实际是 A 为审批便利索要的好处，双方心照不宣、不交付任何实质服务。
+  critical_evidence:
+  - A 让 B 的公司与指定的咨询公司签约，说「合同我都拟好了，你签个字」
+  - 约定每月固定打款，金额两万，长期
+  - B 试探问是否要出服务报告，A 说不用，「就是个说法」
+  - B 先转了首月 20000 元
+  benign_alternatives:
+  - 真实行业顾问
+  - 专家评审费
+
+attributes:
+  duration_days: 5
+  turn_count: 30
+  approximate_tokens_estimate: 818
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: consulting_fee_disguise
+  risk: 2
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0161
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:3b45a614994cd38c67d41b85b887e2b7becc5478ac87cdd5763a89957b211cc9
+pipeline_status: accepted
+title: bribery_corruption/consulting_fee_disguise
+conversation: |-
+  【1月6日】
+  A：老李 上次说的事 我这边安排好了
+  B：这么急? 我这边财务还没走完流程
+  A：合同我都拟好了 抬头是家咨询公司 你让财务签个字盖个章
+  B：哪家 我怎么没听过
+  A：你不用听过 走账用 一年到头帮你看不少事 就当顾问费
+  B：一个月多少
+  A：两万 按月打 稳定 你这体量出得起
+  B：那服务内容呢 财务问起来我得有交代
+  A：不用真出东西 挂个名 就是个说法 报告我让人给你发一份填上日期
+  B：……行 那我先走一个月 但别拖我太久
+  A：放心 细水长流 你这边的项目我心里都有数
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  B：首月打了 收下
+  A：收到 以后固定每月初
+  【1月7日】
+  B：对了 那份报告我收到了 就两页纸
+  A：够用就行 财务要的是个凭证
+  B：以后申报的时候 你多留意下我们那批材料
+  A：这不用你说 都在流程里 放心
+  B：中午吃啥 楼下食堂最近换师傅了 好吃了
+  A：在办公室对付一口 下午还有个会
+  B：你也是拼 注意身体
+  【1月8日】
+  A：老李 你那项目材料我看了 有一处要补 回头我让人告诉你
+  B：好 那笔顾问费下月照旧对吧
+  A：照旧 别断 断了反而显眼
+  B：明白
+  【1月10日】
+  A：年关了 你那边工人工资结了吗
+  B：结得差不多了 就差两个老师傅
+  A：别拖工人 传出去不好听
+  B：知道 明天就清
+  B：款清完了 心里踏实
+  A：嗯 这样咱们的事才稳

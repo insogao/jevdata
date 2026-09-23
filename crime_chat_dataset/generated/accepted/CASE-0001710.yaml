@@ -1,0 +1,106 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001710
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000024
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-b17ff80e83d8d17a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: bribery_corruption
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 候选人 A 与分管考核的旧相识 B 私下勾连，B 在晋升评审前把内定消息透给 A，A 承诺事成后重谢，名单落地后 A 以「还借款」名义向 B 大额转账，包装成一笔人情往来。
+  critical_evidence:
+  - A 在考核结果公布前单独约 B 见面，刻意避开单位和同事
+  - B 提前向 A 透露这次晋升名单「基本就是你了」，属于内部未公开信息
+  - A 明确表示「这事成了亏待不了你」，把谢意和结果绑定
+  - 结果公布后 A 向 B 转账 80000 元，备注写成「还款」来掩盖真实用途
+  benign_alternatives:
+  - 正常人情答谢
+  - 培训学费资助
+
+attributes:
+  duration_days: 3
+  turn_count: 29
+  approximate_tokens_estimate: 862
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: promotion_payment
+  risk: 3
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0161
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:7896190489ea9c3b5d21250f2fe87e1c0f1a28efd6aa5efc26843dae17954060
+pipeline_status: accepted
+title: bribery_corruption/promotion_payment
+conversation: |-
+  【3月2日】
+  A：老哥 早啊 这周忙不 想找个空当面请教点事
+  B：这周会多 白天都在楼上 你懂的 不方便
+  A：那就晚上吧 你定地方 我过去 就咱俩
+  B：行 周四晚 老地方那个茶楼 后门进去 别从大堂走
+  A：收到 我低调点
+  【3月3日】
+  B：昨天说的那个事 你心里有数就行 评的名单基本就是你了
+  A：真的吗 那我这心总算放下了 这两年没白熬
+  B：先别声张 流程还没走完 你该干嘛干嘛 别让人觉得咱俩走得近
+  A：明白 这事成了 我肯定亏待不了老哥你
+  B：说什么呢 吃个饭的事
+  A：对了 你家小子今年上初中了吧 择校的事弄好没
+  B：弄好了 就家门口那个 懒得折腾 孩子自己也不争气
+  A：男孩子开窍晚 我家那个也天天游戏 愁人
+  B：哈哈 都一样 别急
+  【3月4日】
+  A：老哥 昨晚茶楼的单我结了 你别跟我抢
+  B：你这人 说好我请的
+  A：以后有的是机会 你这几天开会注意身体
+  A：老婆说周末去趟郊区摘草莓 你去不去 带上嫂子孩子
+  B：这周不行 有检查 下次吧
+  A：行 那改天 天气暖和了
+  【3月5日】
+  B：公示贴出来了 你自己去看
+  A：看到了 第一个名字就是我 老哥 我请你吃大餐
+  B：低调 公示期还没过 别整这些
+  A：那我先给你转点 你上次不是周转不开吗 就当还你
+  B：你看着办 别留话柄
+  【系统消息】A 向 B 转账 80000 元，已收款。
+  A：转了 备注写的还款 你收一下
+  B：嗯 收到了
+  A：以后工作上还得老哥多指点
+  B：行了 忙去了

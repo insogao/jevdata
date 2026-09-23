@@ -1,0 +1,110 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001713
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000110
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-71a4859cd83ba350
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: theft_robbery_property_crime
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 骑手 A 和同伙 B 分工飞车抢夺：A 负责骑车接应，B 负责在路边下手，事先踩好路线约定在桥下加速脱身，得手后当晚回来分钱。
+  critical_evidence:
+  - 两人约定分工，A 骑车 B 下手，配合要快
+  - 选定在城东那座天桥下面的那段路动手，说那里人少好跑
+  - 约定得手后当晚「会金」按老规矩分
+  - B 事后给 A 转了 4000 元分成
+  benign_alternatives:
+  - 摩的载客
+  - 骑行俱乐部
+
+attributes:
+  duration_days: 6
+  turn_count: 32
+  approximate_tokens_estimate: 770
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: snatch_divide_role
+  risk: 3
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0161
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:57d5d0a5e243ceca44aef850e30d7e61c0f626de5b411165951bc6e705a81279
+pipeline_status: accepted
+title: theft_robbery_property_crime/snatch_divide_role
+conversation: |-
+  【11月2日】
+  A：哥 最近那事你考虑得咋样
+  B：想好了 干 就按之前说的分工
+  A：你骑车我下手 别慌 前面你放慢我跳下来就行
+  B：地点定了吗 别找人多的地方
+  A：城东天桥下面那段 晚十点以后人少 我提前去看过
+  B：天桥下我加速 你抓好扶手 别摔了
+  A：嗯 得手直接上桥往北拐 那边岔路多
+  B：头盔口罩都备好 别露脸
+  A：早准备好了 车牌我到时候挡一下
+  【11月3日】
+  B：明天几点动手 我这边晚上没事
+  A：十点半 天桥那灯暗 稳
+  B：行 我加满油
+  A：对了 分怎么算
+  B：还是老规矩 我六你四 车是我的 风险大
+  A：行 当晚会金 别拖到第二天
+  B：嗯 现金到手当场分
+  【11月4日】
+  A：收工 老地方等你
+  B：到了 你那边顺吗
+  A：顺 一个背单肩的 一下就下来了
+  B：分我六千八 剩下是你的 数下
+  A：对 那个包和手机你处理掉 别留手里
+  B：知道 明天我就出手
+  【11月5日】
+  B：那笔整数我转你了 剩下的现金我留着
+  【系统消息】B 向 A 转账 4000 元，已收款。
+  A：收到 这几天先别动 风头过了再说
+  B：嗯 我歇两天
+  A：晚上出来喝酒不 我请你
+  B：不去 这两天少露头
+  A：也是 那我先回了
+  【11月7日】
+  B：那包出掉了 钱不多 凑合
+  A：行 下次找个更好的点 我再看两个地方
+  B：别急 一个月一两次够了 太勤容易出事
+  A：听你的 稳点

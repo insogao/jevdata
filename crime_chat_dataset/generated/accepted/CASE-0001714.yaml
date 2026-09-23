@@ -1,0 +1,102 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001714
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000081
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-f4be27e4714c834d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: privacy_doxxing
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A 想知道某熟人的病情，求在医院工作的 B 帮忙在系统里查一下化验单；B 明知违规仍答应「点一下」，A 事后发红包答谢。
+  critical_evidence:
+  - A 请 B 帮忙查一个非亲属的化验单，说是「帮我看下他到底什么病」
+  - B 犹豫说系统操作有留痕、怕查
+  - A 说就看一眼、不打印不外传，出问题他担着
+  - A 给 B 发 200 元红包答谢
+  benign_alternatives:
+  - 陪诊代取报告授权
+  - 保险核保流程
+
+attributes:
+  duration_days: 3
+  turn_count: 26
+  approximate_tokens_estimate: 807
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: medical_record_browse
+  risk: 2
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0161
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:f6a31730be967a17eeec88cd41276d349b82a0e4e043c5ec2700e62bd638f56f
+pipeline_status: accepted
+title: privacy_doxxing/medical_record_browse
+conversation: |-
+  【5月14日】
+  A：在上班吗 有事求你
+  B：刚交完班 你说
+  A：老陈家那口子不是住院了么 我想看看她到底什么病 你那边能查不
+  B：这个不行吧 系统查别人记录都留痕的 上次科里还专门讲过
+  A：就看一眼 我不打印不外传 谁能知道
+  B：你别害我 出了事我饭碗就没了
+  A：我怎么会害你 真是急事 老陈欠我钱 我得知道他还有没有底
+  B：那你也别走我这条路 正规途径是本人或家属授权才能调
+  A：授权我不就暴露了 就麻烦你系统里点一下 我保证就我看
+  B：……行吧 你把名字生日发我 中午人少我看看
+  A：陈秀兰 生日我发你 谢了兄弟
+  B：看是看到了 肝上有点问题 具体还在等进一步结果 你别对外说
+  A：明白 够用了 我给你发个红包
+  【系统消息】A 向 B 转账 200 元，已收款。
+  B：你这就见外了 下不为例啊
+  A：知道 以后绝不再麻烦你
+  【5月15日】
+  A：早 你那系统真会留痕吗 我这两天有点慌
+  B：废话 所以才叫你别说出去
+  A：放心 天知地知
+  B：中午吃什么 食堂的菜难吃死了
+  A：点外卖呗 我请你 就当赔罪
+  B：得了 你那红包还没消化 别了
+  A：哈哈 那改天请你吃饭
+  【5月16日】
+  A：老陈今天还问我最近有没有人去打听他老婆 我心虚死了
+  B：你不是说不是你说的吗 稳住 别自己露馅
+  A：知道了 以后这种忙不找你了
+  B：本来就不该找 睡吧

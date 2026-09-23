@@ -1,0 +1,99 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001700
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000018
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-5dfb2da68f232387
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 公职人员的亲属 A 出面，让企业主 B 与一个空壳「咨询公司」签一份条款空白的顾问合同，按月固定打「咨询费」，实际不交付任何咨询成果，本质是利益输送的外壳。
+  critical_evidence:
+  - A 让 B 签一份咨询服务合同，合同内容先空着，说回头补
+  - 约定每月固定打一笔咨询费，走对公转账
+  - B 问是否需要交付咨询报告，A 说「不用，走个形式就行」
+  - B 按约定先转第一个月 12000 元咨询费
+  benign_alternatives:
+  - 真实行业顾问
+  - 专家评审费
+
+attributes:
+  duration_days: 2
+  turn_count: 24
+  approximate_tokens_estimate: 738
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: consulting_fee_disguise
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0161
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:7b9caac35dfa9aed07c4d3645acb269d988caf6d702f28ceff603b0b3074a03c
+pipeline_status: accepted
+title: bribery_corruption/consulting_fee_disguise
+conversation: |-
+  【10月9日】
+  A：王总 上次饭桌上说的合作 我这边准备好了
+  B：哦对 你说合同是吧 发我看看条款
+  A：条款我先没填 就先盖个章签个字 具体回头我哥那边再定
+  B：合同空着签不太合适吧 出了事算谁的
+  A：王总您还不放心我们? 我哥是什么人您清楚 走个形式给外面看
+  B：那费用怎么算
+  A：一个月一万二 按月打 长期稳定 比请个真顾问便宜
+  B：那我这边要出什么咨询成果吗 备案的时候好交代
+  A：不用 走个形式就行 真要报告我随便给你套一份模板
+  B：行 那我先打一个月 以后生意上多关照
+  【系统消息】B 向 A 转账 12000 元，已收款。
+  A：收到 合同我明天让人送过去 你盖个章就行
+  B：好
+  【10月10日】
+  B：合同收到了 抬头是家咨询公司? 我以为直接跟你签
+  A：这样好看 有主体有发票 你入账也方便
+  B：发票有吧 财务那边要
+  A：有 服务费发票 每个月都开给你
+  B：行 那我让财务归档
+  A：王总午饭吃了吗 我这边刚忙完
+  B：吃了 你哥最近还好吧 好久没见了
+  A：挺好 他忙 不方便出面 这些事我替他张罗
+  B：理解 那以后有事就找你了
+  A：对了 下个月那笔记得按时 别拖 拖了不好看
+  B：放心 每月九号我让财务固定打
+  A：嗯 稳定最重要

@@ -1,0 +1,105 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001716
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000059
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-98e182c139ff04cc
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 经朋友介绍联系上 B，开口就问「资源还在吗」，本意是打听招待场所；B 是正规商务地陪和陪同翻译公司对接人，明确澄清只做行程陪同与翻译，A 于是按需求预订地陪并支付正规服务费。
+  critical_evidence:
+  - A 问「上次说的资源还在吗」，B 澄清自己是做正规商务陪同和翻译的
+  - A 说下周去当地出差，需要一位会英语的陪同，报了自己的身高年龄方便对接形象
+  - B 说明服务按天计费、酒店和差旅由客户自付，全程正规行程陪同
+  - A 支付 3000 元一天的正规陪同服务费
+  benign_alternatives:
+  - 正规商务伴游澄清
+  - 朋友聚会邀约
+
+attributes:
+  duration_days: 4
+  turn_count: 28
+  approximate_tokens_estimate: 1048
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: escort_arrangement
+  risk: 0
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0161
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:1e506970d18787fab45c52df1bd9fcc1408f8d0e21bbda8dae9f80bc8ef4d67a
+pipeline_status: accepted
+title: sexual_transaction_exploitation/escort_arrangement
+conversation: |-
+  【6月20日】
+  A：你好 是老周给的联系方式 上次说的那资源还在吗
+  B：您好 我们这边是商务陪同和翻译服务 您说的是哪个资源?
+  A：就是陪同那种 我下周去你们那出差 想找个人带我跑一圈
+  B：明白了 那就是地陪陪同 我们做正规商务行程陪同 翻译 接送 都可以
+  A：哦 正规的啊 那也行 我英语一般 见客户需要个翻译
+  B：没问题 您需要男陪同还是女陪同 什么语种
+  A：英语就行 女陪同吧 形象好点 见客户体面 我一米七八 对方老板比较高
+  B：好的 我给您匹配一位身高相当、英语流利的 按天计费 一天三千 含八小时
+  A：住宿和吃饭怎么算
+  B：酒店您自己订 陪同的住宿差旅另计 白天行程陪同 晚上不安排工作
+  A：行 规矩清楚就好 我订三天
+  B：好的 先付一天定金 剩下的每天结算 或者一次付清都行
+  A：一次付吧 省事
+  【系统消息】A 向 B 转账 3000 元，已收款。
+  A：一天的钱先转了 到那边看情况再加
+  B：收到 我这边安排档期 确认后发您陪同的简介
+  【6月21日】
+  B：您好 这是几位合适的陪同简介 您看哪位的语种和时间合适
+  B：[image：陪同人员简介表（占位）]
+  A：第二位吧 英语专八的 就她了
+  B：好的 我把行程范围和她对一下 您把大致日程发我
+  A：周一到周三 白天见客户 晚上我自己安排
+  B：收到 白天八小时 晚上不派工 如有加班提前说 按小时另计
+  A：你们这规矩还挺正规 之前我还以为是那种陪玩
+  B：我们只做商务陪同和翻译 不涉及其他 请您理解
+  A：理解理解 这样反而省心 那就这么说定
+  【6月22日】
+  B：您航班信息发我一下 我让陪同到点去接
+  A：周日晚到 发你了
+  B：好的 已安排 祝您出差顺利
+  A：谢谢 到了请你喝咖啡
+  B：不客气 分内的事

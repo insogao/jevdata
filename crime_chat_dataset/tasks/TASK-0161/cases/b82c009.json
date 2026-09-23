@@ -1,0 +1,229 @@
+{
+ "key": "b82c009",
+ "archetype_id": "ARC-000112",
+ "subtype": "warehouse_insider_out",
+ "latent_intent": "仓库夜班保安 A 做内应，把周三夜班的值守安排告诉收赃买家 B，约定届时卷帘门留一条缝，B 的人来整车拉货，一车给 A 一万，A 还提醒处理监控。",
+ "critical_facts": [
+  "A 说周三夜班由他值，那晚可以动手",
+  "A 约定把卷帘门留一条缝，监控那块「我处理一下」",
+  "A 报价一车一万，先付定金",
+  "B 先转 5000 元定金给 A"
+ ],
+ "benign_alternatives": [
+  "夜班值守调货",
+  "正常大宗出货"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "8月10日 20:00",
+   "speaker": "B",
+   "text": "东西看好没有 你那仓库我盯了几天"
+  },
+  {
+   "type": "message",
+   "time": "8月10日 20:14",
+   "speaker": "A",
+   "text": "看好了 东边第三个库 货值几十万 出货口在后院"
+  },
+  {
+   "type": "message",
+   "time": "8月10日 20:17",
+   "speaker": "B",
+   "text": "什么时候能动手"
+  },
+  {
+   "type": "message",
+   "time": "8月10日 20:20",
+   "speaker": "A",
+   "text": "周三夜班我值 十二点后没人 那晚最合适"
+  },
+  {
+   "type": "message",
+   "time": "8月10日 20:23",
+   "speaker": "B",
+   "text": "门口有监控吧 车进去就被拍"
+  },
+  {
+   "type": "message",
+   "time": "8月10日 20:26",
+   "speaker": "A",
+   "text": "卷帘门我给你留一条缝 你车贴边停 监控那块我处理一下 就说夜班睡着了"
+  },
+  {
+   "type": "message",
+   "time": "8月10日 20:29",
+   "speaker": "B",
+   "text": "你胆子可以 要多少"
+  },
+  {
+   "type": "message",
+   "time": "8月10日 20:32",
+   "speaker": "A",
+   "text": "一车一万 现金 另加我不当班那天的损失你补我"
+  },
+  {
+   "type": "message",
+   "time": "8月10日 20:35",
+   "speaker": "B",
+   "text": "一万太贵 八千"
+  },
+  {
+   "type": "message",
+   "time": "8月10日 20:38",
+   "speaker": "A",
+   "text": "我这命都押上了 一万不能少 定金五千"
+  },
+  {
+   "type": "message",
+   "time": "8月10日 20:41",
+   "speaker": "B",
+   "text": "行 先定 你安排人点货"
+  },
+  {
+   "type": "transfer",
+   "time": "8月10日 20:50",
+   "from": "B",
+   "to": "A",
+   "amount": 5000,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "8月10日 20:52",
+   "speaker": "A",
+   "text": "收到 周三见 你带几个人 两辆依维柯够"
+  },
+  {
+   "type": "message",
+   "time": "8月11日 11:00",
+   "speaker": "A",
+   "text": "我调班的事办好了 那晚就我一个人值守"
+  },
+  {
+   "type": "message",
+   "time": "8月11日 11:05",
+   "speaker": "B",
+   "text": "漂亮 车牌我换下 你那边零点以后别开灯"
+  },
+  {
+   "type": "message",
+   "time": "8月11日 11:08",
+   "speaker": "A",
+   "text": "知道 手电都不用 你们摸黑搬 快进快出"
+  },
+  {
+   "type": "message",
+   "time": "8月11日 12:10",
+   "speaker": "B",
+   "text": "中午吃啥"
+  },
+  {
+   "type": "message",
+   "time": "8月11日 12:14",
+   "speaker": "A",
+   "text": "食堂 下午补觉 这两天累"
+  },
+  {
+   "type": "message",
+   "time": "8月11日 12:17",
+   "speaker": "B",
+   "text": "辛苦 等这单成了给你加钱"
+  },
+  {
+   "type": "message",
+   "time": "8月11日 18:30",
+   "speaker": "A",
+   "text": "东边那个库的锁是老式的 你们提前带撬棍"
+  },
+  {
+   "type": "message",
+   "time": "8月11日 18:34",
+   "speaker": "B",
+   "text": "带 你到时候装作不知道就行"
+  },
+  {
+   "type": "message",
+   "time": "8月11日 18:37",
+   "speaker": "A",
+   "text": "嗯 完事记得把痕迹清干净 别留脚印"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 23:50",
+   "speaker": "B",
+   "text": "到门口了 门缝看见了"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 23:55",
+   "speaker": "A",
+   "text": "进 我在值班室 别叫我"
+  },
+  {
+   "type": "message",
+   "time": "8月13日 01:20",
+   "speaker": "B",
+   "text": "第一车满 走"
+  },
+  {
+   "type": "message",
+   "time": "8月13日 02:40",
+   "speaker": "B",
+   "text": "第二车也满 收工"
+  },
+  {
+   "type": "message",
+   "time": "8月13日 02:45",
+   "speaker": "A",
+   "text": "好 我这就把门合上 你尾款明天来结"
+  },
+  {
+   "type": "message",
+   "time": "8月13日 10:00",
+   "speaker": "B",
+   "text": "尾款现金给你放老地方了 你自己去拿"
+  },
+  {
+   "type": "message",
+   "time": "8月13日 10:04",
+   "speaker": "A",
+   "text": "拿到了 数对了"
+  },
+  {
+   "type": "message",
+   "time": "8月13日 12:00",
+   "speaker": "B",
+   "text": "这两天仓库那边没动静吧"
+  },
+  {
+   "type": "message",
+   "time": "8月13日 12:04",
+   "speaker": "A",
+   "text": "报了失窃 上面在查 我就说打盹了 查不出什么"
+  },
+  {
+   "type": "message",
+   "time": "8月13日 12:07",
+   "speaker": "B",
+   "text": "稳 以后还有货联系我"
+  },
+  {
+   "type": "message",
+   "time": "8月13日 12:10",
+   "speaker": "A",
+   "text": "这段时间先别联系 风头过了再说"
+  },
+  {
+   "type": "message",
+   "time": "8月13日 12:13",
+   "speaker": "B",
+   "text": "懂 删了聊天记录"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0001701",
+  "status": "accepted",
+  "errors": []
+ }
+}

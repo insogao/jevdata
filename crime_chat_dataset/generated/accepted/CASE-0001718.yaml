@@ -1,0 +1,106 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001718
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000014
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-461a3a088467e3d6
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 人才引进服务中心的顾问 A 向家长 B 说明事业单位公开补录的正规流程：因有人放弃，某个岗位名额只剩一个，须先网上报名并签诚信意向，再参加统一笔试，全程公开、不收费。
+  critical_evidence:
+  - A 说这个岗位确实只剩一个名额，原因是前面有人放弃了补录
+  - A 强调流程正规：先网上报名、签诚信意向，再参加统一组织的笔试
+  - A 说明笔试是公开招聘的正规环节，按成绩录取，没人能打招呼
+  - 全程不收取任何费用，双方没有转账
+  benign_alternatives:
+  - 正规人才引进
+  - 事业单位公开招聘
+
+attributes:
+  duration_days: 3
+  turn_count: 31
+  approximate_tokens_estimate: 1028
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: inner_job_purchase
+  risk: 0
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0161
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:1ce791a1ad6bd08d4075e1528fe6495f86038358e930736caf11faa174009b1d
+pipeline_status: accepted
+title: fraud_scam/inner_job_purchase
+conversation: |-
+  【7月5日】
+  A：您好 是张女士吧 我这边是人才引进服务中心的小陈
+  B：你好 我儿子那个岗位有消息了吗
+  A：有个好消息 之前招的那个岗位 前面有人放弃了 现在补录 名额就剩一个
+  B：真的啊 那要花多少钱 我们好准备
+  A：不收费的 我们是政府服务中心 全程公开 谁也不能收钱
+  B：不用打点? 我同事说这种事要找关系
+  A：那是老黄历了 现在都是公开招考 先网上报名 签个诚信意向书
+  B：报名之后就能进?
+  A：还得参加统一笔试 笔试是正规环节 成绩达标才进面试 谁打招呼都没用
+  B：那笔试难吗 我儿子怕考不过
+  A：有公开的考纲和往年真题 好好准备就行 我也是按流程帮你们对接
+  B：中午好 我把儿子简历发你邮箱了 你看看还缺什么
+  A：收到 简历不错 我帮他核对下报名条件
+  B：辛苦你了 改天请你吃饭
+  A：吃饭不用 这是我的工作 有进展我通知你
+  【7月6日】
+  A：张女士 报名入口今天开了 我把链接发你
+  B：好 我这就让他报 需要注意什么
+  A：如实填 学历证明和实习材料传清晰 别漏了 截止到周五
+  B：好的 那这个意向书是啥
+  A：诚信承诺 意思是报名信息真实 考上了按时到岗 不是先交钱的合同
+  B：明白了 我还以为是那种先交后签的
+  A：不是 凡是先收费的都是骗子 你遇到直接报警
+  B：报好了 系统给了个报名号
+  A：好 保存好 笔试前会短信通知
+  【7月7日】
+  A：笔试时间定在下周六上午 记得带身份证和准考证
+  B：好 我让他这几天好好看书
+  A：对 靠实力最稳 别信外面那些保过的 都是骗钱的
+  B：听你的 我们老老实实考
+  A：嗯 有不懂的随时问我 我都在
+  B：谢谢你小陈 遇上你真是运气
+  A：不客气 应该的

@@ -1,0 +1,205 @@
+{
+ "key": "b82c062",
+ "archetype_id": "ARC-000059",
+ "subtype": "escort_arrangement",
+ "latent_intent": "A 经朋友介绍联系上 B，开口就问「资源还在吗」，本意是打听招待场所；B 是正规商务地陪和陪同翻译公司对接人，明确澄清只做行程陪同与翻译，A 于是按需求预订地陪并支付正规服务费。",
+ "critical_facts": [
+  "A 问「上次说的资源还在吗」，B 澄清自己是做正规商务陪同和翻译的",
+  "A 说下周去当地出差，需要一位会英语的陪同，报了自己的身高年龄方便对接形象",
+  "B 说明服务按天计费、酒店和差旅由客户自付，全程正规行程陪同",
+  "A 支付 3000 元一天的正规陪同服务费"
+ ],
+ "benign_alternatives": [
+  "正规商务伴游澄清",
+  "朋友聚会邀约"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "6月20日 14:00",
+   "speaker": "A",
+   "text": "你好 是老周给的联系方式 上次说的那资源还在吗"
+  },
+  {
+   "type": "message",
+   "time": "6月20日 14:20",
+   "speaker": "B",
+   "text": "您好 我们这边是商务陪同和翻译服务 您说的是哪个资源?"
+  },
+  {
+   "type": "message",
+   "time": "6月20日 14:23",
+   "speaker": "A",
+   "text": "就是陪同那种 我下周去你们那出差 想找个人带我跑一圈"
+  },
+  {
+   "type": "message",
+   "time": "6月20日 14:26",
+   "speaker": "B",
+   "text": "明白了 那就是地陪陪同 我们做正规商务行程陪同 翻译 接送 都可以"
+  },
+  {
+   "type": "message",
+   "time": "6月20日 14:29",
+   "speaker": "A",
+   "text": "哦 正规的啊 那也行 我英语一般 见客户需要个翻译"
+  },
+  {
+   "type": "message",
+   "time": "6月20日 14:32",
+   "speaker": "B",
+   "text": "没问题 您需要男陪同还是女陪同 什么语种"
+  },
+  {
+   "type": "message",
+   "time": "6月20日 14:35",
+   "speaker": "A",
+   "text": "英语就行 女陪同吧 形象好点 见客户体面 我一米七八 对方老板比较高"
+  },
+  {
+   "type": "message",
+   "time": "6月20日 14:38",
+   "speaker": "B",
+   "text": "好的 我给您匹配一位身高相当、英语流利的 按天计费 一天三千 含八小时"
+  },
+  {
+   "type": "message",
+   "time": "6月20日 14:41",
+   "speaker": "A",
+   "text": "住宿和吃饭怎么算"
+  },
+  {
+   "type": "message",
+   "time": "6月20日 14:44",
+   "speaker": "B",
+   "text": "酒店您自己订 陪同的住宿差旅另计 白天行程陪同 晚上不安排工作"
+  },
+  {
+   "type": "message",
+   "time": "6月20日 14:47",
+   "speaker": "A",
+   "text": "行 规矩清楚就好 我订三天"
+  },
+  {
+   "type": "message",
+   "time": "6月20日 14:50",
+   "speaker": "B",
+   "text": "好的 先付一天定金 剩下的每天结算 或者一次付清都行"
+  },
+  {
+   "type": "message",
+   "time": "6月20日 14:53",
+   "speaker": "A",
+   "text": "一次付吧 省事"
+  },
+  {
+   "type": "transfer",
+   "time": "6月20日 15:00",
+   "from": "A",
+   "to": "B",
+   "amount": 3000,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "6月20日 15:02",
+   "speaker": "A",
+   "text": "一天的钱先转了 到那边看情况再加"
+  },
+  {
+   "type": "message",
+   "time": "6月20日 15:05",
+   "speaker": "B",
+   "text": "收到 我这边安排档期 确认后发您陪同的简介"
+  },
+  {
+   "type": "message",
+   "time": "6月21日 10:30",
+   "speaker": "B",
+   "text": "您好 这是几位合适的陪同简介 您看哪位的语种和时间合适"
+  },
+  {
+   "type": "image",
+   "time": "6月21日 10:32",
+   "speaker": "B",
+   "note": "陪同人员简介表（占位）"
+  },
+  {
+   "type": "message",
+   "time": "6月21日 10:40",
+   "speaker": "A",
+   "text": "第二位吧 英语专八的 就她了"
+  },
+  {
+   "type": "message",
+   "time": "6月21日 10:44",
+   "speaker": "B",
+   "text": "好的 我把行程范围和她对一下 您把大致日程发我"
+  },
+  {
+   "type": "message",
+   "time": "6月21日 10:48",
+   "speaker": "A",
+   "text": "周一到周三 白天见客户 晚上我自己安排"
+  },
+  {
+   "type": "message",
+   "time": "6月21日 10:51",
+   "speaker": "B",
+   "text": "收到 白天八小时 晚上不派工 如有加班提前说 按小时另计"
+  },
+  {
+   "type": "message",
+   "time": "6月21日 12:20",
+   "speaker": "A",
+   "text": "你们这规矩还挺正规 之前我还以为是那种陪玩"
+  },
+  {
+   "type": "message",
+   "time": "6月21日 12:24",
+   "speaker": "B",
+   "text": "我们只做商务陪同和翻译 不涉及其他 请您理解"
+  },
+  {
+   "type": "message",
+   "time": "6月21日 12:27",
+   "speaker": "A",
+   "text": "理解理解 这样反而省心 那就这么说定"
+  },
+  {
+   "type": "message",
+   "time": "6月22日 09:00",
+   "speaker": "B",
+   "text": "您航班信息发我一下 我让陪同到点去接"
+  },
+  {
+   "type": "message",
+   "time": "6月22日 09:06",
+   "speaker": "A",
+   "text": "周日晚到 发你了"
+  },
+  {
+   "type": "message",
+   "time": "6月22日 09:09",
+   "speaker": "B",
+   "text": "好的 已安排 祝您出差顺利"
+  },
+  {
+   "type": "message",
+   "time": "6月22日 09:12",
+   "speaker": "A",
+   "text": "谢谢 到了请你喝咖啡"
+  },
+  {
+   "type": "message",
+   "time": "6月22日 09:15",
+   "speaker": "B",
+   "text": "不客气 分内的事"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0001716",
+  "status": "accepted",
+  "errors": []
+ }
+}

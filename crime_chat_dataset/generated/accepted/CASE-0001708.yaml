@@ -1,0 +1,105 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001708
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000058
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-37b204bf16897ea1
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: violence_extortion
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 客户 A 出钱雇 B 组织水军去冲某个带货直播间，约定一单五十块、冲十分钟，由 A 提供针对主播的辱骂话术，被平台封号就换号继续，B 先收定金。
+  critical_evidence:
+  - A 下单说「冲十分钟五十块」，目标是一个直播间的带货主播
+  - A 说「话术我发你」，让 B 照抄刷屏
+  - A 交代被封号就「换号继续」，多备几个小号
+  - B 先收 500 元定金，约定冲完结算
+  benign_alternatives:
+  - 差评维权
+  - 营销互喷讨论
+
+attributes:
+  duration_days: 3
+  turn_count: 29
+  approximate_tokens_estimate: 695
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: livestream_hate_raid_for_hire
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0161
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:8133de40f4acb654d165194d3e4847458f846a1ca1f91e353a3372ed1f31f35c
+pipeline_status: accepted
+title: violence_extortion/livestream_hate_raid_for_hire
+conversation: |-
+  【3月20日】
+  A：老版在吗 接活不
+  B：在 什么活
+  A：冲个直播间 一单五十 冲十分钟 带节奏
+  B：哪家 什么程度
+  A：卖护肤那家 把她场子搞黄就行 别太过 就刷屏骂 恶心她
+  B：话术谁出
+  A：话术我发你 你让手底人照抄 别自己编
+  B：被封号怎么办
+  A：换号继续 你多备几个小号 五十冲十分钟 封了也不心疼
+  B：行 先付定金 五百
+  A：转你 今晚就冲 她八点开播
+  【系统消息】A 向 B 转账 500 元，已收款。
+  B：收到 我喊人 十分钟后进场
+  B：开始了 弹幕满屏了
+  A：看见了她脸色都变了 继续 再加五分钟
+  B：号封了一批 我换小号上
+  A：收 效果不错 尾款明天结
+  B：好 下次提前说 我好备号
+  【3月21日】
+  A：昨晚那波 她今天发了个道歉视频 笑死
+  B：这种娇气的扛不住 你要不要再来一轮
+  A：先缓缓 连着搞太明显 过两天换个由头
+  B：行 你说了算 尾款转我
+  A：中午吃了没
+  B：吃了 你这生意挺多 是跟同行有仇?
+  A：私怨 你别多问 钱到位就行
+  B：懂 不问
+  【3月22日】
+  A：下一场我换个号进 你去她对手那家直播 刷点好话
+  B：要捧一家踩一家 这活我可以
+  A：对 把她客源往那边引 一单还是一样价
+  B：成 明天开工

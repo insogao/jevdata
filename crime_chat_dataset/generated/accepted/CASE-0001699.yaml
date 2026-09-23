@@ -1,0 +1,105 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001699
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000059
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-98e182c139ff04cc
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 经人介绍找到牵线人 B，询问「资源还在不在」，B 发来资料让 A 报名偏好，按次报价、酒店自付，A 选定后先转定金，实为有偿陪侍安排。
+  critical_evidence:
+  - A 问「上次那几个资源还在吗」，B 说有新到的让 A 挑
+  - B 让 A 报身高年龄和偏好，按次报价，酒店由客户自付
+  - A 选定一个，B 要求先付定金再约时间
+  - A 向 B 转账 1500 元定金
+  benign_alternatives:
+  - 正规商务伴游澄清
+  - 朋友聚会邀约
+
+attributes:
+  duration_days: 4
+  turn_count: 29
+  approximate_tokens_estimate: 731
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: escort_arrangement
+  risk: 3
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0161
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:b1971943f5b270df1fc3fbe5f83cc5ac5ea5d207e1377203c4eef520a4078ba1
+pipeline_status: accepted
+title: sexual_transaction_exploitation/escort_arrangement
+conversation: |-
+  【6月20日】
+  A：老周给的号 上次介绍的那几个资源还在吗
+  B：在 这两天又到了新人 你要什么样的
+  A：高一点 形象好 会聊天就行
+  B：你报下身高年龄偏好 我好配 太挑的加价
+  A：我一米七八 三十来岁 喜欢文静的
+  B：有 一米六八 学生样的 你这个口味
+  A：怎么算
+  B：一次一千五 三小时 酒店你自己开 我不掺和房间的事
+  A：能不能过夜
+  B：过夜另外算 四千 不过她一般不做 要问
+  A：先要这个 时间怎么定
+  B：先付定金一千五 我给她说 你定酒店发我地址
+  A：行 我订市中心的
+  【系统消息】A 向 B 转账 1500 元，已收款。
+  A：转了 明天晚上有空
+  B：收到 我问问她档期 晚点回你
+  B：明晚可以 七点你到酒店门口等她
+  A：好 她本人和照片一样吗 别照骗
+  B：一样 不满意当场换 但要提前说
+  A：行 你办事我放心
+  B：对了 你们的事我不管 出了房间的门概不负责 自己注意
+  A：懂 我分寸有的
+  【6月21日】
+  A：中午吃了没 我这开会刚结束
+  B：刚吃 晚上别忘了七点
+  A：忘不了 我还提前去理个发
+  B：哈哈 你倒讲究
+  【6月22日】
+  A：昨晚可以 下次还找她
+  B：行 老客户我给你留 别人的单我推了
+  A：那就这么定 下次我提前跟你说
+  B：好 你注意点 别让家里知道

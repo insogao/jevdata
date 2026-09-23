@@ -1,0 +1,107 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001702
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000033
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-a5b10e3fe0448789
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: contraband_illicit_trade
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 自称厂里渠道的 A 向做微商的 B 分销一批仿大牌箱包，话术上一再强调「和专柜一样、防伪都能过」，并按代理层级给出递增拿货价，B 先付定金试单。
+  critical_evidence:
+  - A 反复强调这批货「一比一复刻，跟专柜一模一样，扫码都过」
+  - A 说拿货价按代理层级走，量越大单价越低，让 B 往上刷级别
+  - A 承诺包装盒、防尘袋、小票都配齐，可以当正品卖
+  - B 决定先拿一小批试水，向 A 转了 3000 元定金
+  benign_alternatives:
+  - 工厂尾单正品
+  - 平替国货推荐
+
+attributes:
+  duration_days: 5
+  turn_count: 29
+  approximate_tokens_estimate: 904
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: replica_counterfeit
+  risk: 2
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0161
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:6633a3f819837c2aca794003c1d7027814a184cfc07120bf551f5b0ec6975c0b
+pipeline_status: accepted
+title: contraband_illicit_trade/replica_counterfeit
+conversation: |-
+  【4月7日】
+  A：老板 在吗 上次你问的那批包有信了
+  B：在的 什么成色 我这朋友圈问的人挺多
+  A：一比一复刻 跟专柜放一起看不出来 皮料五金全对得上
+  B：现在客户精得很 扫防伪怎么办
+  A：放心 码都能过 我们这批是同一套模具出来的 吊牌序列都能对上
+  B：包装呢 我卖的时候得说得过去
+  A：盒 防尘袋 说明书 小票 全套 你收到就是专柜那套样子
+  B：价格怎么算
+  A：按级别 拿十只一个价 二十只又一个价 你卖得多 我给你往上升级
+  B：零售一只大概能挣多少
+  A：看你怎么标 按正品的路子走 一只挣大几百没问题
+  【4月8日】
+  B：吃饭没 我这边刚下班
+  A：刚吃完 今天厂里又来一批新配色 你要不要看看图
+  B：发来看看
+  A：[image：多张箱包实拍图（占位）]
+  B：看着是挺正的 你那边这几天有同事也拿货吗
+  A：多 都是老客户 这行讲熟 你先试一批 好卖再谈量
+  B：行 我明天先跟你定五只 试下水
+  A：五只也行 定金三千 我这边给你排单
+  【系统消息】B 向 A 转账 3000 元，已收款。
+  B：转了 你查下
+  A：收到 两天后发 顺丰到付
+  【4月9日】
+  A：对了 你朋友圈别直接挂正品logo 用我们的图 稳妥点
+  B：懂了 我一般写「渠道货」
+  A：对 老手都这么写
+  B：这几天降温 你那边发货别冻着手哈哈
+  A：仓库有暖气 不冷 你那边快递到了验了再签
+  B：好嘞 卖得好我下周再补
+  【4月11日】
+  B：货到了 品相可以 我先拍几条朋友圈
+  A：行 有回头客就趁热补 量上来了价格我再给你让
+  B：成 这波先做人气

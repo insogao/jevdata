@@ -1,0 +1,105 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001705
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000144
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-10e3b7e84085c01d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: other_illicit_coordination
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 择校中介 A 向家长 B 兜售学区户口挂靠名额，说只要把户口挂进来两年就能入学，报价二十万，并称校长那边已经打通，B 交定金。
+  critical_evidence:
+  - A 说把孩子户口挂到学区内的房子上，挂满两年就能按学区入学
+  - A 报价「费用二十个」，即二十万元
+  - A 称「校长那边我通了」，让 B 放心
+  - B 先转 20000 元定金锁定名额
+  benign_alternatives:
+  - 学区房正常购买
+  - 积分入学政策
+
+attributes:
+  duration_days: 5
+  turn_count: 28
+  approximate_tokens_estimate: 830
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: school_zone_hukou_trade
+  risk: 2
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0161
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:1a89990564a1ae67c7fd39decae932b7088b40509579b6defbcf8596ba9d6e09
+pipeline_status: accepted
+title: other_illicit_coordination/school_zone_hukou_trade
+conversation: |-
+  【4月15日】
+  A：姐 你上次问的入学的事 我这边有准信了
+  B：真的? 我家那口子为这事头发都白了
+  A：挂户两年就行 找套学区内的房子把户口迁进去 满两年按片区入学
+  B：这么简单? 学校查不查实际居住
+  A：查是查 但我给你挂的那套有人住 家访应付得过去 校长那边我通了
+  B：费用呢
+  A：费用二十个 包挂户和后面的手续 一条龙
+  B：二十万不少 我跟我老公商量下
+  A：名额就这几年有效 政策一年一变 你早点定 别到时候后悔
+  B：定金要多少
+  A：两万定名额 剩下的办迁户时再给
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  B：转了两万 你可别忽悠我
+  A：姐你还不信我 我手里办成的孩子都上初中了
+  【4月16日】
+  A：你把孩子的出生证明和户口本首页拍我 我先报备
+  B：好 我找找 这事跟我婆婆说吗
+  A：先别声张 这种事知道的人越少越好 万一被举报反而麻烦
+  B：明白 就我们俩知道
+  B：资料发你了 你看看还缺啥
+  A：齐了 这两周我排一下 到点通知你去迁户
+  B：好 麻烦你了 改天请你吃饭
+  【4月17日】
+  A：姐 那套房的房东要涨点 挂户要多给一万 你看
+  B：怎么又涨 说好的二十个
+  A：行情涨了 我尽量给你压 你先心里有个数
+  B：行吧 别到时候又变
+  A：不会 我做人讲信用
+  【4月18日】
+  B：我家孩子最近拼音跟不上 愁
+  A：大班都这样 上小学跟一跟就好了 别急
+  B：借你吉言
