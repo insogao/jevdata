@@ -1,0 +1,150 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001488
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-2c25780d8a679aa5
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 亲友 A 听说熟人匿名发帖，向 B 暗示能从公开社交内容把账号串起来；B 起初以为只是品牌讨论，随后明确不希望对方收集私人账号关联并要求停止转发。
+  critical_evidence:
+  - A 说对方连小号也给翻了，怀疑账号关联到同一人
+  - A 提及相册原图时间和转发历史会暴露线索
+  - B 表示这些信息不应被用来定位熟人，要求停止整理和传播
+  - 两人转而谈共同朋友及生活安排，B 保留自己的账号隐私
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 4
+  turn_count: 74
+  approximate_tokens_estimate: 1408
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0156
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-080
+
+dedup:
+  content_hash: sha256:3a815156c3385b9d5ca5fb4e5d94aecbb6119c451b3e8c290f1d921c7eb9b90d
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【9月19日】
+  A：群里有人问那条吐槽是谁发的
+  B：不是只在公开页面看的吗，怎么还猜人
+  A：他说小号也给你翻了，觉得是同一个人
+  B：别乱对号入座，发帖的人没留名字
+  A：你家那盆薄荷长得怎么样
+  B：快把窗台占满了，剪了好几枝
+  A：我也想养一盆
+  B：特别好活，记得别暴晒
+  A：那我下班去买
+  B：买小盆就行，之后再分株
+  A：他还说相册原图时间能对上，转发过什么都能查
+  B：我听着不舒服，这些东西别拿来拼熟人身份
+  A：我只是帮忙看了几眼，没有发给别人
+  B：那就停一下，别继续整理了
+  B：昨晚那部电影你看了吗
+  A：看完了，结尾有点突然
+  B：我觉得留白还挺好
+  A：配乐不错，听说是现场录的
+  B：原声我收藏了
+  【9月20日】
+  A：发我下链接
+  A：好，我把那份笔记删掉，也不转群里
+  B：谢谢，公开内容可以聊，私人账号就到这儿
+  A：我跟群里说别猜了，容易误会
+  B：嗯，真有事当面问本人比较好
+  A：你爸复查结果出来了吗
+  B：出来了，指标比上回稳
+  A：那就好，最近别让他太累
+  B：医生说散步可以，别爬坡
+  A：周末我去看看叔叔
+  B：不用带东西，人来就行
+  A：周末大家还去不去露营
+  B：我可以，得看天气
+  A：预报说周六多云，没雨
+  B：那我带折叠椅，你带炉子
+  B：我把阳台桌子挪了个位置
+  A：现在晒得到太阳吗
+  B：上午有一会儿，下午就阴了
+  【9月21日】
+  A：正好适合看书
+  B：是啊，坐着挺舒服
+  A：下次去你家蹭杯茶
+  A：今天会议提前了半小时
+  B：那我把路上时间算进去
+  A：议程我已经更新
+  B：我看到了，第三项顺序换了
+  A：对，先讲预算再讲排期
+  B：这样清楚些
+  B：窗边那盏灯闪了一下
+  A：我检查了插头，可能接触不太好
+  B：先别一直开着
+  A：我换了个插座，现在正常
+  B：那就观察两天
+  A：好，不行再报修
+  A：你中午有空去取快递吗
+  B：有，柜子就在楼下
+  A：我把取件码发你了
+  B：收到，顺便给你放桌上
+  【9月22日】
+  A：谢啦，别着急
+  B：我正好要下楼
+  B：这周睡得还好吗
+  A：好多了，没再熬夜改表
+  B：那就好，眼睛也休息一下
+  A：下午出去走了十分钟
+  B：挺好，别一直坐着
+  A：嗯，晚上早点收工
+  A：你上次买的那款笔好写吗
+  B：挺顺的，墨也干得快
+  A：我去买一支试试
+  B：文具店在地铁口旁边
+  A：记下了，明天顺路
+  B：有活动，第二支半价
+  A：今天会议提前了半小时
+  B：那我把路上时间算进去
+  A：议程我已经更新
+  B：我看到了，第三项顺序换了

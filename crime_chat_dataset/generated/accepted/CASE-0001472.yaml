@@ -1,0 +1,140 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001472
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-f09ff355c7f2c6c9
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 借舆情整理或论坛讨论之名，要求 B 将匿名社交账号与现实个人关联，并索要相册时间或转发线索；B 拒绝输出可能识别个人的资料，只保留公开内容的主题汇总。
+  critical_evidence:
+  - A 提出把匿名账号与现实个人关联，并提及公开相册时间或转发记录。
+  - A 想取得关联线索用于给客户/群聊/帖子呈现。
+  - B 说明公开线索不足以确认身份，拒绝提供可识别个人的细节。
+  - 对话改为仅分析公开话题或趋势；如有费用，仅为普通项目咨询，不构成身份资料交付。
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 4
+  turn_count: 63
+  approximate_tokens_estimate: 1365
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0154
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-079
+
+dedup:
+  content_hash: sha256:f5c1e116ca8aa8b30f439cefe4681e75da9ed798a47fc887805e646e05424287
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【9月17日】
+  A：客户想整理一轮公开讨论，最近有个账号总在相关话题下面出现。
+  B：可以看帖子内容，但别把匿名账号往现实身份上猜。
+  A：小号也给你翻了？相册原图时间和转发过什么都能查吧。
+  A：家里那盏灯修好了吗？
+  B：换了灯泡，亮多了。
+  A：原来是灯泡坏了，不是线路。
+  B：嗯，师傅上门看了一下就解决。
+  A：费用贵不贵？
+  B：不贵，十几块材料费。
+  A：那就好，旧灯泡别乱扔。
+  B：我拿去回收箱了。
+  B：好，品牌舆情分析只保留公开内容就行。
+  A：那麻烦你把那条容易指向个人的描述删掉。
+  B：已经改成不带身份判断的摘要。
+  【系统消息】A 向 B 转账 120 元，已收款。
+  B：我妈寄来的水果到了。
+  【9月18日】
+  A：这次是什么？
+  B：梨和橘子，箱子挺沉的。
+  A：放阴凉处，梨别堆太紧。
+  B：已经分给邻居几颗。
+  A：你自己留点，别全送人。
+  B：放心，够吃一周。
+  A：好，记得别放坏了。
+  A：昨晚那个播客你听了吗？
+  B：听了一半，讲得还挺有意思。
+  A：后面嘉宾举的例子比较实用。
+  B：我今天路上接着听。
+  A：发我标题，我也找来听听。
+  B：已经转你了。
+  A：收到，今晚收拾屋子时放着。
+  B：这个安排挺合适。
+  A：你今天通勤还顺利吗？
+  【9月19日】
+  B：地铁晚了两站，差点迟到。
+  A：最近早高峰确实挤。
+  B：我明天早点十分钟出门。
+  A：那边施工是不是还没结束？
+  B：听说下周才撤围挡。
+  A：路上注意看车。
+  B：知道啦，到公司了。
+  A：我把报告改成只写讨论量变化。
+  B：很好，避免指向某个具体用户。
+  A：公开帖的主题和日期够做总结了。
+  B：对，不需要推测账号背后是谁。
+  A：客户回复说这个版本能用。
+  B：那就按公开信息范围交付。
+  A：不会再附那张对照截图。
+  B：收到，辛苦了。
+  A：我把报告改成只写讨论量变化。
+  【9月20日】
+  B：很好，避免指向某个具体用户。
+  A：公开帖的主题和日期够做总结了。
+  B：对，不需要推测账号背后是谁。
+  A：客户回复说这个版本能用。
+  B：那就按公开信息范围交付。
+  A：不会再附那张对照截图。
+  B：收到，辛苦了。
+  A：我把报告改成只写讨论量变化。
+  B：很好，避免指向某个具体用户。
+  A：公开帖的主题和日期够做总结了。
+  B：对，不需要推测账号背后是谁。
+  A：客户回复说这个版本能用。
+  B：那就按公开信息范围交付。
+  A：不会再附那张对照截图。
+  B：收到，辛苦了。
+  A：我把报告改成只写讨论量变化。

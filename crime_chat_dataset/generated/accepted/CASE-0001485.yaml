@@ -1,0 +1,157 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001485
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-aff4ba27db12904a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 陌生论坛用户 A 借商务合作之名向 B 打听匿名账号关联结果，称已从公开发帖、相册原图时间和转发记录拼出线索；B 对传播身份猜测有所保留，虽收取共同活动费用仍限定工作范围。
+  critical_evidence:
+  - A 声称小号也给翻了，并暗示多个账号关联到一个人
+  - A 以相册原图时间和转发记录作为关联依据，称已整理出一份结果
+  - A 希望 B 把结果带入商务舆情汇报，B 要求只用公开品牌内容、不指认个人
+  - 转账是活动场地押金分摊，明确与账号信息无关
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 4
+  turn_count: 80
+  approximate_tokens_estimate: 1576
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0156
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-080
+
+dedup:
+  content_hash: sha256:f92d192f7009157baa29c86dfc1a22ce82be6fe32f26efd146b3f65fa7c28943
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【9月20日】
+  A：客户想看论坛那条争议的后续，你手里有公开页面记录吗
+  B：公开帖子和评论有，用户背后的信息没有
+  A：有人说小号也给你翻了，好像能串起来
+  B：我不会确认匿名账号是谁，报告里也不写推测
+  A：你们活动桌牌定稿了吗
+  B：字体改小了一号，远看清楚些
+  A：我觉得上版也可以
+  B：印刷店说这版不容易糊
+  A：那就按新的来
+  B：我中午把PDF发过去
+  A：他说相册原图时间、转发过什么都能查，已经有一版了
+  B：这类线索不能当身份结论，更别拿去找当事人
+  A：商务那边希望做完整一点
+  B：完整可以指品牌讨论脉络，私人身份不属于项目内容
+  B：你提的会议室周四能用
+  A：太好了，人数大概二十
+  B：椅子不够的话我再借几把
+  A：投影有HDMI吗
+  B：有，遥控器在抽屉里
+  A：我到时早点布置
+  【9月21日】
+  A：我可以把那段从汇报稿里拿掉
+  B：谢谢，保留公开帖子的数量和话题变化就够
+  A：场地押金我先垫了，一共四百二
+  B：我转一半给你，跟项目账分开记
+  【系统消息】B 向 A 转账 210 元，已收款。
+  A：附近那家咖啡店装修好了没
+  B：好了，门口多了几张户外桌
+  A：天气好可以坐外面
+  B：中午可能晒，下午好些
+  A：那散会后去一会儿
+  B：好，我请你尝新品
+  A：收到，备注会场押金
+  B：那份摘要我晚点发你看
+  A：好，我只核对公开内容
+  B：对，账号归属不做判断
+  B：快递把展板样品送到了
+  A：边角怎么样，别又磕坏
+  B：这次包得挺厚，完好
+  A：我晚点过去拿
+  B：前台留了你的名字
+  A：收到，麻烦你了
+  【9月22日】
+  A：这周末市中心有交通管制吗
+  B：周六有跑步活动，几条路封到中午
+  A：我改坐地铁过去
+  B：地铁口出来走五分钟
+  A：好的，谢谢提醒
+  B：不客气
+  A：今天会议提前了半小时
+  B：那我把路上时间算进去
+  A：议程我已经更新
+  B：我看到了，第三项顺序换了
+  A：对，先讲预算再讲排期
+  B：这样清楚些
+  B：窗边那盏灯闪了一下
+  A：我检查了插头，可能接触不太好
+  B：先别一直开着
+  A：我换了个插座，现在正常
+  B：那就观察两天
+  A：好，不行再报修
+  A：你中午有空去取快递吗
+  B：有，柜子就在楼下
+  【9月23日】
+  A：我把取件码发你了
+  B：收到，顺便给你放桌上
+  A：谢啦，别着急
+  B：我正好要下楼
+  B：这周睡得还好吗
+  A：好多了，没再熬夜改表
+  B：那就好，眼睛也休息一下
+  A：下午出去走了十分钟
+  B：挺好，别一直坐着
+  A：嗯，晚上早点收工
+  A：你上次买的那款笔好写吗
+  B：挺顺的，墨也干得快
+  A：我去买一支试试
+  B：文具店在地铁口旁边
+  A：记下了，明天顺路
+  B：有活动，第二支半价
+  A：今天会议提前了半小时
+  B：那我把路上时间算进去
+  A：议程我已经更新
+  B：我看到了，第三项顺序换了

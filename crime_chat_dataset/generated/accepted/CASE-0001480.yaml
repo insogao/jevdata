@@ -1,0 +1,134 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001480
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-7287c90195fc91a8
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 论坛用户 A 以舆情整理为由，向商业关系中的 B 暗示已把某个匿名账号与公开内容关联起来，并要求 B 帮忙转发结论；B 将讨论限定在品牌公开信息，提醒不要把个人账号身份拿去施压。
+  critical_evidence:
+  - A 声称“小号也给你翻了”，说账号之间存在关联
+  - A 提到相册原图时间、转发过什么都能查，暗示能拼出匿名用户轨迹
+  - A 希望 B 把整理结果转给发帖者或客户，B 拒绝传播个人身份线索
+  - 一笔转账用于此前共同购买论坛活动物料，与查找账号无关
+  benign_alternatives:
+  - 公开品牌舆情分析
+  - 对公开页面做合规内容归档
+
+attributes:
+  duration_days: 2
+  turn_count: 59
+  approximate_tokens_estimate: 1293
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0156
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-080
+
+dedup:
+  content_hash: sha256:25a6d8df6feadc18803da21accf840ce7144ae42339b702b537948cbdbbb58d9
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【9月18日】
+  A：上回那条讨论还在发酵，客户问有没有新情况
+  B：我只整理品牌公开页面，个人账号我没碰
+  A：有人说小号也给你翻了，几个账号像是同一个人
+  B：这个结论是怎么来的？别把猜测当报告写
+  A：展厅那块屏幕能投手机吗
+  B：能，前台有转接头
+  A：我拿自己的电脑过去就行？
+  B：可以，记得带充电器
+  A：好，PPT还有两页没改
+  B：别熬太晚，明早再看一遍
+  A：他说相册原图时间能对上，转发过什么都能查
+  B：这些最多算线索，不能拿来确认现实身份
+  A：他想把整理好的东西发给那位发帖人
+  B：我不建议转个人关联结果，讨论公开内容就够了
+  B：午饭那家米线换老板了
+  A：难怪汤底味道不一样
+  B：不过小菜比以前多
+  A：我点的酸豆角还不错
+  B：下次少放辣吧，你上次胃不舒服
+  A：收到，今天还好
+  A：我知道你做品牌分析有边界
+  B：对，页面上的发言可以归类，不要去追账号背后是谁
+  A：那我把报告里那两段删掉
+  B：留公开帖子的趋势和时间就行，结论也写得保守些
+  A：周末想去看摄影展吗
+  B：想啊，预约票好像不用钱
+  A：我查了下午两点有场
+  B：那我吃完午饭过去
+  A：展馆旁边新开了家面包店
+  B：逛完去买点带回家
+  【9月19日】
+  A：物料账我算好了，上次展架和贴纸一共两百四
+  B：好，我先把我那份转你
+  【系统消息】B 向 A 转账 120 元，已收款。
+  A：收到了，周五活动场地也确认了
+  B：我把公开内容的摘要今天发你，个人那部分不附
+  B：你寄的样品到了
+  A：包装没压坏吧
+  B：没有，颜色跟屏幕上差不多
+  A：太好了，拍张图给我看看
+  B：等会儿自然光好一点再拍
+  A：不急，明天也行
+  A：会场网络今天稳定吗
+  B：刚测过，上传文件挺快
+  A：那我把海报高清版带上
+  B：印刷的那份也放U盘里吧
+  A：都备好了
+  B：好，现场就不慌了
+  A：今天会议提前了半小时
+  B：那我把路上时间算进去
+  A：议程我已经更新
+  B：我看到了，第三项顺序换了
+  A：对，先讲预算再讲排期
+  B：这样清楚些
+  B：窗边那盏灯闪了一下
+  A：我检查了插头，可能接触不太好
+  B：先别一直开着
+  A：我换了个插座，现在正常
+  B：那就观察两天
+  A：好，不行再报修
+  A：你中午有空去取快递吗

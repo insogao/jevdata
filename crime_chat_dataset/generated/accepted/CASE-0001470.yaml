@@ -1,0 +1,144 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001470
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-9c0157a4a794c907
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 借招聘/猎头咨询的名义，试图从 B 处取得未获授权的同事联系方式、离职名单或简历，并提出按份付费；B 仅提供概况或改走公开招聘渠道，没有交付完整名单。
+  critical_evidence:
+  - A 提出要整个部门电话、离职名单或按份购买简历。
+  - B 指出通讯录和简历涉及同事个人信息，未经授权不能共享。
+  - A 以猎头/招聘咨询名义提出小额费用；B 只给概况或拒绝交付名单。
+  - 对话以公开招聘或公司授权流程作为后续渠道。
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 3
+  turn_count: 69
+  approximate_tokens_estimate: 1431
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0154
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-079
+
+dedup:
+  content_hash: sha256:4d0b455f22584a753b3dd012b0719a356fe8dc0d06d7d5f22acf791297686641
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【9月24日】
+  A：我在做招聘顾问，有个中间人说你能接触到不少求职者。
+  B：我在公司做运营，内部通讯录不对外。
+  A：离职名单和简历库能不能整理一些？我按份付费。
+  A：昨晚那个播客你听了吗？
+  B：听了一半，讲得还挺有意思。
+  A：后面嘉宾举的例子比较实用。
+  B：我今天路上接着听。
+  A：发我标题，我也找来听听。
+  B：已经转你了。
+  A：收到，今晚收拾屋子时放着。
+  B：这个安排挺合适。
+  B：收到。以后有岗位信息可以发公司招聘邮箱。
+  A：好，我不再问离职名单。
+  B：谢谢，授权前别碰内部资料。
+  A：你今天通勤还顺利吗？
+  B：地铁晚了两站，差点迟到。
+  A：最近早高峰确实挤。
+  B：我明天早点十分钟出门。
+  A：那边施工是不是还没结束？
+  B：听说下周才撤围挡。
+  A：路上注意看车。
+  B：知道啦，到公司了。
+  B：楼下便利店换了咖啡机。
+  【9月25日】
+  A：味道怎么样？
+  B：比以前顺口，冰美式也没那么酸。
+  A：下次帮我带一杯吧。
+  B：行，你还是少冰？
+  A：对，别加糖。
+  B：记下了，明早给你。
+  A：谢啦，我转你钱。
+  A：你们办公室的打印机还卡纸吗？
+  B：昨天换了纸盒，好多了。
+  A：我那边也得报修，老是双面错位。
+  B：驱动更新一下可能会好。
+  A：我让 IT 看看。
+  B：别自己拆，之前有人把卡扣弄断了。
+  A：那我开个工单。
+  B：嗯，走公司流程最省事。
+  A：这两天午饭你都在哪儿吃？
+  B：公司食堂，最近多了个素菜窗口。
+  A：味道怎么样？
+  B：还不错，价格也比外卖便宜。
+  A：我明天也去看看。
+  B：十一点半去不用排太久。
+  A：记下了，明天早点下楼。
+  B：到时我给你留个位子。
+  【9月26日】
+  A：我把岗位描述整理成公开版本了。
+  B：发我看看，别放内部组织架构。
+  A：只写职责、地点和要求。
+  B：这样可以，我转到招聘邮箱。
+  A：候选人自己投递比较好。
+  B：对，有意向的人会主动联系。
+  A：我这边不需要你给任何名单。
+  A：我把岗位描述整理成公开版本了。
+  B：发我看看，别放内部组织架构。
+  A：只写职责、地点和要求。
+  B：这样可以，我转到招聘邮箱。
+  B：对，有意向的人会主动联系。
+  A：我这边不需要你给任何名单。
+  A：我把岗位描述整理成公开版本了。
+  B：发我看看，别放内部组织架构。
+  A：只写职责、地点和要求。
+  B：这样可以，我转到招聘邮箱。
+  B：对，有意向的人会主动联系。
+  A：我这边不需要你给任何名单。
+  A：我把岗位描述整理成公开版本了。
+  B：发我看看，别放内部组织架构。
+  A：只写职责、地点和要求。
+  B：这样可以，我转到招聘邮箱。

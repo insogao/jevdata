@@ -1,0 +1,153 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001478
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-5e4a8144a385e24e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 想借 B 的校务关系查看非本人家庭的学生成绩，B 拒绝进入档案并指向学校官方入口；没有个人成绩或截图披露，也没有转账。
+  critical_evidence:
+  - A 请求查看与自己家庭无关的学生个人成绩，并希望 B 在校务系统核对。
+  - B 明确拒绝打开档案或提供截图，要求本人/监护人使用官方查询入口。
+  - A 接受拒绝，没有收到个人成绩或截图。
+  benign_alternatives:
+  - 家长查自己孩子
+  - 学校官方查询
+
+attributes:
+  duration_days: 2
+  turn_count: 80
+  approximate_tokens_estimate: 1684
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0154
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-079
+
+dedup:
+  content_hash: sha256:d5bfa90b7f9c9c78a3d5ca8d8a205c2e630be7ef60a0c1864d0881029576be56
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【9月23日】
+  A：老同学，想麻烦你打听个升学的事。
+  B：如果是你家孩子，我可以把学校查询说明发你。
+  A：不是我家，是中间人牵来的家长，说想提前看看成绩档位。
+  B：我妈寄来的水果到了。
+  A：这次是什么？
+  B：梨和橘子，箱子挺沉的。
+  A：放阴凉处，梨别堆太紧。
+  B：已经分给邻居几颗。
+  A：你自己留点，别全送人。
+  B：放心，够吃一周。
+  A：好，记得别放坏了。
+  B：不用了，我不会查，也不会发截图。
+  A：那我转通知给家长自己操作。
+  B：对，系统入口今天已经开放。
+  A：昨晚那个播客你听了吗？
+  B：听了一半，讲得还挺有意思。
+  A：后面嘉宾举的例子比较实用。
+  B：我今天路上接着听。
+  A：发我标题，我也找来听听。
+  B：已经转你了。
+  A：收到，今晚收拾屋子时放着。
+  B：这个安排挺合适。
+  A：周末你打算去哪里走走？
+  B：想去河边骑车，最近天气还行。
+  A：那边修路结束了吗？
+  B：主路通了，小路还围着。
+  A：我也想去，带个水壶吧。
+  B：可以，路边有补水点。
+  A：那我周六上午出发。
+  B：早点去，人少些。
+  A：你家那盆薄荷长得怎么样？
+  B：新叶出来了，就是最近长得慢。
+  A：阳台日照是不是不够？
+  B：下午能晒到一会儿，我再挪近窗边。
+  A：浇水别太勤，土干了再浇。
+  B：我用手摸过，确实还湿。
+  A：那就先别加水。
+  B：好，周末再观察。
+  A：我把学校公开查询的说明转过去了。
+  B：提醒家长用自己的账号登录。
+  【9月24日】
+  A：她说晚点回家就查。
+  B：页面上有成绩发布时间。
+  A：我不再问个人分数了。
+  B：谢谢理解，别把别人的记录转来转去。
+  A：这次确实是我想得简单。
+  A：我把学校公开查询的说明转过去了。
+  B：提醒家长用自己的账号登录。
+  A：她说晚点回家就查。
+  B：页面上有成绩发布时间。
+  A：我不再问个人分数了。
+  B：谢谢理解，别把别人的记录转来转去。
+  A：这次确实是我想得简单。
+  A：我把学校公开查询的说明转过去了。
+  B：提醒家长用自己的账号登录。
+  A：她说晚点回家就查。
+  B：页面上有成绩发布时间。
+  A：我不再问个人分数了。
+  B：谢谢理解，别把别人的记录转来转去。
+  A：这次确实是我想得简单。
+  A：我把学校公开查询的说明转过去了。
+  B：提醒家长用自己的账号登录。
+  A：她说晚点回家就查。
+  B：页面上有成绩发布时间。
+  A：我不再问个人分数了。
+  B：谢谢理解，别把别人的记录转来转去。
+  A：这次确实是我想得简单。
+  A：我把学校公开查询的说明转过去了。
+  B：提醒家长用自己的账号登录。
+  A：她说晚点回家就查。
+  B：页面上有成绩发布时间。
+  A：我不再问个人分数了。
+  B：谢谢理解，别把别人的记录转来转去。
+  A：这次确实是我想得简单。
+  A：我把学校公开查询的说明转过去了。
+  B：提醒家长用自己的账号登录。
+  A：她说晚点回家就查。
+  B：页面上有成绩发布时间。
+  A：我不再问个人分数了。
+  B：谢谢理解，别把别人的记录转来转去。
+  A：这次确实是我想得简单。

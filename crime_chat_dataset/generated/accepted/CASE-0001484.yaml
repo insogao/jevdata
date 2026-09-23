@@ -1,0 +1,149 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001484
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-c94adb37718e5c07
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 招生代理 A 通过熟识的学校工作人员 B 探问非本人学员的成绩截图，希望赶在公开公布前联系潜在学员；B 对名单范围有所迟疑，只愿协助当事人本人查询。
+  critical_evidence:
+  - A 问 B 能否在教务系统看到咨询者或其他学员成绩，B 说系统点一下就有
+  - A 要求“截图就行”，B 提醒成绩应由本人查询或经正式授权
+  - A 在谈话中提及红包已发，B 没有承诺持续提供名单
+  - 一笔小额转账明确是此前代买资料的AA结算，与查分请求无关
+  benign_alternatives:
+  - 家长查询自己孩子的成绩
+  - 学校官方授权的成绩查询服务
+
+attributes:
+  duration_days: 2
+  turn_count: 74
+  approximate_tokens_estimate: 1511
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0156
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-080
+
+dedup:
+  content_hash: sha256:fc6234f1db69c3a526996848b7cbf4c2311b67dafb21333a01059d0ab8a84d89
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【9月19日】
+  A：最近报名咨询的人总问什么时候出分
+  B：正式通知还没发，学生可以等教务处公告
+  A：你们班主任系统点一下是不是先能看到
+  B：教务端能看自己的学生，别人的信息不该随便翻
+  A：今天早上食堂的豆浆还挺浓
+  B：我买了无糖的，配包子正好
+  A：你们学校最近换供应商了？
+  B：好像是，窗口牌子换了
+  A：明天我也去尝下
+  B：早点去，九点后包子就少了
+  A：我这边有两个人想确认下情况，截图就行
+  B：最好让他们本人按学校流程查，名单我不方便代着弄
+  A：我懂，主要是怕他们一直打电话催
+  B：公告出来我转给你，你提醒他们自己登录
+  B：你上回推荐的护嗓糖在哪买
+  A：药店就有，薄荷味那种
+  B：我搜到了，准备买一盒
+  A：少含几颗，嗓子干还是多喝水
+  B：知道啦，最近开会太多
+  A：那中间起来活动下
+  A：上次你帮忙买那本资料，红包已发，别又忘了
+  【系统消息】A 向 B 转账 46 元，已收款。
+  B：看到了，资料钱我记着呢
+  A：那本习题挺实用，学生说讲得清楚
+  B：下次我把出版社信息发你，先别替别人查分
+  A：下周学校运动会你们放半天吗
+  B：周五下午，上午还得值班
+  A：我给你留两张看台票
+  B：不用啦，学生家长会来不少
+  A：那我自己去看看接力
+  B：好，别忘了带帽子
+  A：我刚把官方查询说明转给那两位了
+  B：这样最合适，结果直接由本人看
+  A：他们说等通知，暂时不问了
+  B：有需要让他们联系学校窗口
+  B：打印机又卡纸了
+  A：是不是纸放太满
+  B：抽出来一看边角都卷了
+  【9月20日】
+  A：先换一叠干燥的试试
+  B：现在能打了，多谢
+  A：不客气，机器老了
+  A：你养的那只龟冬天要加温吗
+  B：要的，我刚换了加热灯
+  A：记得别离水太近
+  B：说明书说有安全距离
+  A：那我放心了
+  B：慢慢养，挺省心的
+  A：今天会议提前了半小时
+  B：那我把路上时间算进去
+  A：议程我已经更新
+  B：我看到了，第三项顺序换了
+  A：对，先讲预算再讲排期
+  B：这样清楚些
+  B：窗边那盏灯闪了一下
+  A：我检查了插头，可能接触不太好
+  B：先别一直开着
+  A：我换了个插座，现在正常
+  B：那就观察两天
+  A：好，不行再报修
+  A：你中午有空去取快递吗
+  B：有，柜子就在楼下
+  A：我把取件码发你了
+  B：收到，顺便给你放桌上
+  A：谢啦，别着急
+  B：我正好要下楼
+  B：这周睡得还好吗
+  A：好多了，没再熬夜改表
+  B：那就好，眼睛也休息一下
+  A：下午出去走了十分钟
+  B：挺好，别一直坐着
+  A：嗯，晚上早点收工
+  A：你上次买的那款笔好写吗
+  B：挺顺的，墨也干得快
+  A：我去买一支试试
+  B：文具店在地铁口旁边

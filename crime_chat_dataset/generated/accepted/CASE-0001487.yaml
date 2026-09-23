@@ -1,0 +1,124 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001487
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-8f267d9c6f37f8eb
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 同事 A 旁敲侧击询问整部门联络表、离职名单和简历介绍费用；B 认为可介绍本人自愿求职者，但没有授权转出内部资料。
+  critical_evidence:
+  - A 将整部门电话、离职名单和简历按份算放在同一话题中
+  - B 提醒通讯录不是求职名单，不可直接外传
+  - A 表示外部中介会为每份简历付介绍费，B 仍只愿传公开岗位
+  - 一笔小额转账与之前共同点的下午茶有关
+  benign_alternatives:
+  - 正规猎头与主动求职者联系
+  - 本人授权的内推服务
+
+attributes:
+  duration_days: 2
+  turn_count: 49
+  approximate_tokens_estimate: 983
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0156
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-080
+
+dedup:
+  content_hash: sha256:72bbe498451b14c88a6d86454fb4dfaa479ca30f3d82b85ea52aa6896dd34bd5
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【9月5日】
+  A：你认识的人事同事最近忙不忙
+  B：挺忙的，季度盘点刚结束
+  A：我有个熟人想找运营，能看看整个部门电话吗
+  B：内部电话表不能直接给，很多人并没在找工作
+  B：早上电梯排了好长队
+  A：我走楼梯上来的，差点迟到
+  B：下次避开九点整
+  A：我试试提前十分钟
+  B：门口施工也影响通行
+  A：难怪今天人挤人
+  A：他还提到离职名单，说简历可以按份算
+  B：那更要问本人同不同意，不能把旧资料当现成名单
+  A：我就是先探探口风
+  B：公开岗位我可以转，感兴趣的人自己来联系
+  A：午餐想吃砂锅吗
+  B：可以，别点太辣的
+  A：上回你辣得直喝水
+  B：那次我高估自己了
+  A：我点清汤
+  B：再加份青菜就行
+  A：好，我跟他说别要整张表
+  B：有两个人在招聘平台公开了简历，我可以把岗位发他们
+  A：那就让他们自己决定要不要聊
+  B：对，联系方式也让本人给
+  B：快递柜提示有包裹
+  【9月6日】
+  A：我等会儿下去取
+  B：拿的时候看下是不是你的名字
+  A：应该是新键盘
+  B：到货挺快
+  A：晚上装上试试
+  A：下午茶的钱我转你了，昨天你先付的
+  【系统消息】A 向 B 转账 32 元，已收款。
+  B：收到了，谢谢，正好买了你要的无糖茶
+  A：下回我请，别又抢着付
+  B：看谁先到店吧
+  A：周末天气不错，想骑车吗
+  B：周六上午可以，下午我要陪家里人
+  A：那就沿河骑一小圈
+  B：好，带水别忘了
+  A：我准备个小背包
+  B：九点地铁口见
+  B：你推荐的播客我听了两期
+  A：聊城市规划那个？
+  B：对，讲老街改造挺有意思
+  A：后面那期有采访设计师
+  B：我今晚接着听
+  A：有空聊聊
+  A：今天会议提前了半小时
+  B：那我把路上时间算进去
+  A：议程我已经更新

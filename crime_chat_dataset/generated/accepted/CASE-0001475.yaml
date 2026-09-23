@@ -1,0 +1,129 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001475
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000080
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-69bcf814ce6f2b37
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 借招聘/猎头咨询的名义，试图从 B 处取得未获授权的同事联系方式、离职名单或简历，并提出按份付费；B 仅提供概况或改走公开招聘渠道，没有交付完整名单。
+  critical_evidence:
+  - A 提出要整个部门电话、离职名单或按份购买简历。
+  - B 指出通讯录和简历涉及同事个人信息，未经授权不能共享。
+  - A 以猎头/招聘咨询名义提出小额费用；B 只给概况或拒绝交付名单。
+  - 对话以公开招聘或公司授权流程作为后续渠道。
+  benign_alternatives:
+  - 猎头正常触达
+  - 通讯录共享授权
+
+attributes:
+  duration_days: 5
+  turn_count: 51
+  approximate_tokens_estimate: 1080
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: workplace_contact_out
+  risk: 1
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0154
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-079
+
+dedup:
+  content_hash: sha256:a209a2da3aae42b214a09bfa9a34040a2902e5010d2860defdeeb318572b4b49
+pipeline_status: accepted
+title: privacy_doxxing/workplace_contact_out
+conversation: |-
+  【9月21日】
+  A：招聘名单这周要交，我还缺几个能联系到的人。
+  B：我这边只能发公开岗位，员工名单不能给外面。
+  A：你们部门有离职名单吧？整个部门电话和简历按份卖给我。
+  B：楼下便利店换了咖啡机。
+  A：味道怎么样？
+  B：比以前顺口，冰美式也没那么酸。
+  A：下次帮我带一杯吧。
+  B：行，你还是少冰？
+  A：对，别加糖。
+  B：记下了，明早给你。
+  A：谢啦，我转你钱。
+  【9月22日】
+  B：收到了，招聘需求请从公司渠道发。
+  A：我会把岗位介绍发过来。
+  B：我转到公开招聘邮箱给你。
+  【系统消息】A 向 B 转账 150 元，已收款。
+  A：家里那盏灯修好了吗？
+  B：换了灯泡，亮多了。
+  A：原来是灯泡坏了，不是线路。
+  B：嗯，师傅上门看了一下就解决。
+  A：费用贵不贵？
+  B：不贵，十几块材料费。
+  【9月23日】
+  A：那就好，旧灯泡别乱扔。
+  B：我拿去回收箱了。
+  B：我妈寄来的水果到了。
+  A：这次是什么？
+  B：梨和橘子，箱子挺沉的。
+  A：放阴凉处，梨别堆太紧。
+  B：已经分给邻居几颗。
+  A：你自己留点，别全送人。
+  B：放心，够吃一周。
+  A：好，记得别放坏了。
+  A：我把岗位描述整理成公开版本了。
+  【9月24日】
+  B：发我看看，别放内部组织架构。
+  A：只写职责、地点和要求。
+  B：这样可以，我转到招聘邮箱。
+  A：候选人自己投递比较好。
+  B：对，有意向的人会主动联系。
+  A：我这边不需要你给任何名单。
+  B：那就按这个流程继续。
+  A：我把岗位描述整理成公开版本了。
+  B：发我看看，别放内部组织架构。
+  A：只写职责、地点和要求。
+  【9月25日】
+  B：这样可以，我转到招聘邮箱。
+  A：候选人自己投递比较好。
+  B：对，有意向的人会主动联系。
+  A：我这边不需要你给任何名单。
+  B：那就按这个流程继续。
+  A：我把岗位描述整理成公开版本了。
+  B：发我看看，别放内部组织架构。
+  A：只写职责、地点和要求。
+  B：这样可以，我转到招聘邮箱。
+  A：候选人自己投递比较好。
