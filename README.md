@@ -1,5 +1,7 @@
 # Qwen3.5-9B System-One / Jev-like 审核模型实验（第一轮：本地量化推理验证）
 
+> **AI Agent / 协作者请从 [AGENTS.md](AGENTS.md) 进入**：任务领取、超时规则、工作流、验收红线都在那里，本 README 只描述第一轮实验本身。
+
 目标：验证 **Qwen3.5-9B 在不生成思考/答案、只读取候选 token logits（Nimble-style System-One）
 时，复杂审核能力相对普通生成式到底损失多少**，以及 8GB 本机能否运行。
 LoRA 训练与 SGLang serving 推迟到云 GPU 阶段。

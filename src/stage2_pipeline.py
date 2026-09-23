@@ -111,11 +111,13 @@ def register_case(conn, case):
     yaml_path = out_dir / f"{cid}.yaml"
     yaml_path.write_text(render_yaml(case, status), encoding="utf-8")
     conn.execute(
-        "INSERT OR REPLACE INTO cases VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",
+        "INSERT INTO cases VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",
         (cid, case["identity"]["family_id"], case["identity"]["lineage_id"],
          case["identity"]["archetype_id"], case["labels"]["risk"], case["labels"]["category"],
          int(case["attributes"]["has_transfer"]), status, case["dedup"]["content_hash"],
-         case.get("split", "unassigned"), str(yaml_path), time.strftime("%Y-%m-%dT%H:%M:%S")))
+         case.get("split", "unassigned"),
+         yaml_path.relative_to(ROOT.parent).as_posix(),  # 相对路径，跨机器可用
+         time.strftime("%Y-%m-%dT%H:%M:%S")))
     conn.commit()
     return cid, status, errs
 

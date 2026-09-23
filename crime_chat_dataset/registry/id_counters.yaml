@@ -1,12 +1,10 @@
-# ID 计数器（orchestrator 唯一写入口；snapshot 副本禁止直接写）
+# ID 计数器快照 —— 由 `python src/task_cli.py sync-counters` 生成。
+# 唯一事实源是 SQLite counters 表（dataset_registry.sqlite）；此文件仅供人读。
 schema: ID-COUNTERS-v1
+synced_at: 2026-09-23T23:42:45
 counters:
-  ARC: 0      # archetype
-  FAM: 0      # family
-  LIN: 0      # lineage
-  CASE: 0     # case
-  PAIR: 0     # contrastive pair
-  SEED: 0     # normalized seed
-  TASK: 0
-  RUN: 0
-  SCL: 0      # semantic cluster
+  ARC: 0
+  CASE: 218
+  FAM: 0
+  LIN: 0
+  PAIR: 36
