@@ -26,9 +26,41 @@ OBF = {0: ["low", "medium"], 1: ["medium", "high"], 2: ["medium", "high"], 3: ["
 FLIP = {3: 0, 2: 0, 1: 0}
 
 
+def _load_seed_refs():
+    """Sample short style/structure references from normalized sources."""
+    import glob as _g
+    refs = {"harmful": [], "normal": []}
+    for f in _g.glob(str(ROOT / "sources" / "normalized" / "SRC-SAL-001" / "seed.jsonl"))[:1]:
+        for i, line in enumerate(open(f, encoding="utf-8")):
+            if i >= 400: break
+            d = json.loads(line)
+            q = d["native"].get("question", "")
+            if q: refs["harmful"].append(q[:200])
+    for f in _g.glob(str(ROOT / "sources" / "normalized" / "SRC-AEG-001" / "seed.jsonl"))[:1]:
+        for i, line in enumerate(open(f, encoding="utf-8")):
+            if i >= 300: break
+            d = json.loads(line)
+            q = d["native"].get("prompt", "")
+            if q: refs["harmful"].append(q[:200])
+    for f in _g.glob(str(ROOT / "sources" / "normalized" / "SRC-BCC-001" / "seed.jsonl"))[:1]:
+        for i, line in enumerate(open(f, encoding="utf-8")):
+            if i >= 200: break
+            d = json.loads(line)
+            txt = json.dumps(d["native"], ensure_ascii=False)[:250]
+            refs["normal"].append(txt)
+    for f in _g.glob(str(ROOT / "sources" / "normalized" / "SRC-PSD-001" / "seed.jsonl"))[:1]:
+        for i, line in enumerate(open(f, encoding="utf-8")):
+            if i >= 200: break
+            d = json.loads(line)
+            txt = json.dumps(d["native"], ensure_ascii=False)[:250]
+            refs["normal"].append(txt)
+    return refs
+
+
 def build_packets(n_agents=3, per_agent=10, seed=23, batch_no=2):
     batch = f"BATCH-AUTO-{batch_no:03d}"
     rng = random.Random(seed)
+    seed_refs = _load_seed_refs()
     # globally unique keys: b<batch>c<seq>
     key_seq = [0]
     def new_key():
@@ -59,6 +91,8 @@ def build_packets(n_agents=3, per_agent=10, seed=23, batch_no=2):
             "review_required": risk >= 2,
             "roles": arc["roles"], "signals": arc["observable_signals"],
             "benign_confusions": arc["benign_confusions"],
+            "seed_reference": (rng.choice(seed_refs["harmful"]) if risk >= 2
+                               else rng.choice(seed_refs["normal"])),
             "sibling_of": None, "variant": "v01", "flip_hint": None,
             "axes": {
                 "relationship": rng.choice(REL),

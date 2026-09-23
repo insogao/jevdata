@@ -100,8 +100,12 @@ def register_case(conn, case):
     cid = f"CASE-{next_id(conn, 'CASE'):07d}"
     case["identity"]["case_id"] = cid
     errs = program_checks(case)
-    status = "accepted" if not errs else "rejected"
     case["dedup"]["content_hash"] = content_hash(case)
+    dup = conn.execute("SELECT case_id FROM cases WHERE content_hash=? AND status='accepted'",
+                       (case["dedup"]["content_hash"],)).fetchone()
+    if dup:
+        errs.append(f"duplicate content of {dup[0]}")
+    status = "accepted" if not errs else "rejected"
     out_dir = ROOT / "generated" / status
     out_dir.mkdir(parents=True, exist_ok=True)
     yaml_path = out_dir / f"{cid}.yaml"
