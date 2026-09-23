@@ -1,0 +1,133 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002712
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000020
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-5ec801573b591145
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A想利用与招聘负责人的商务关系，以私下利益换取儿子的就业安排；常规面试被弱化，家属收款及档案特别处理与录用相连。
+  critical_evidence:
+  - B表示儿子的面试只是形式，录用结果已经提前有了说法。
+  - 入职前A家属收到与录用安排相关的一笔款项。
+  - B提到候选人的档案会受到特别关照，双方没有把安排称作公开招聘手续。
+  benign_alternatives:
+  - 正常内推
+  - 亲属回避制度内调岗
+
+attributes:
+  duration_days: 2
+  turn_count: 59
+  approximate_tokens_estimate: 1121
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: relative_employment_exchange
+  risk: 2
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0290
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-126
+
+dedup:
+  content_hash: sha256:c05f6efc83ff766a404d8c0e28eae205686723dd0763ca292f8cc9436c533f12
+pipeline_status: rejected
+title: bribery_corruption/relative_employment_exchange
+conversation: |-
+  【9月24日】
+  A：赵经理您好，之前聊过的岗位想问下还有没有进展。
+  B：你好，我记得，最近在走流程。
+  A：明晚方便吗？我想当面把事情聊清楚。
+  B：可以，找个不忙的时候。
+  A：好，那我来定地方。
+  B：行，到了发消息。
+  A：你上次说的那个保温杯买了吗
+  B：买了 挺轻的 不漏水
+  A：我还在挑颜色呢
+  B：深色耐脏一点
+  A：那我去店里看看实物
+  B：行 线上图有时不准
+  A：我准备周末带家里人一起去
+  B：一起挑比较方便
+  A：小孩喜欢亮色的
+  B：那就让他自己选
+  A：哈哈估计会挑半天
+  B：挺好 买喜欢的就行
+  A：我准备周末带家里人一起去
+  B：一起挑比较方便
+  A：你家小狗最近还挑食吗
+  B：这周好点了 换了个碗
+  A：哈哈它还挺会挑
+  B：猫也一样 不喜欢就不碰
+  A：看来得慢慢试
+  B：嗯 先不折腾它了
+  A：它现在一听开罐声就跑来
+  B：哈哈这个反应很快
+  A：我给它买了个新玩具
+  B：别一次买太多
+  A：对 先看看它玩不玩
+  B：有意思就够了
+  A：它现在一听开罐声就跑来
+  B：哈哈这个反应很快
+  【9月25日】
+  A：你那边月底也要补台账吗
+  B：要啊 这周在核一遍
+  A：我们刚换了新版表格
+  B：我也收到了 看着清楚些
+  A：就是填起来多两栏
+  B：熟悉了就快了
+  A：我把旧表也留了一份
+  B：留着对照确实方便
+  A：同事说下周要培训
+  B：那你到时问清楚版本
+  A：行 我先把手头这版弄完
+  B：忙完早点休息
+  A：我把旧表也留了一份
+  A：我儿子那场面试应该只是形式，结果已经谈妥了吧。
+  B：大致就是之前说的方向，档案我会特别关照。
+  A：家里收到那笔款后，我就放心多了。
+  B：嗯，这件事先按咱们说过的办。
+  A：好，我等书面通知下来。
+  B：有消息再告诉你。
+  A：正式通知已经到了，时间跟你说的一样。
+  【系统消息】A 向 B 转账 1401 元，已收款。
+  B：那就按通知准备。
+  A：入职手续办完了，之前答应的事谢谢。
+  B：客气，祝他工作顺利。
+  A：我们会记得这份帮忙。
+  B：嗯。

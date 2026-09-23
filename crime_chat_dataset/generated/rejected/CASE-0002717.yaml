@@ -1,0 +1,143 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002717
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000027
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-701d84363b5e4666
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A与同事B在报销材料中安排票据与真实用途不一致，并以此取得额外利益；对话只显示不一致和利益关联，不提供套现做法。
+  critical_evidence:
+  - 双方谈到一批票据与实际业务用途存在明显不一致。
+  - 双方提及按票面计算的额外利益，且将其与报销结果关联。
+  - 对话显示该安排并非正常差旅票据整理或合规报销，不谈具体制作、提交步骤。
+  benign_alternatives:
+  - 正常报销单据整理
+  - 差旅平台开票
+
+attributes:
+  duration_days: 6
+  turn_count: 65
+  approximate_tokens_estimate: 1289
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: invoice_rebate
+  risk: 2
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0290
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-126
+
+dedup:
+  content_hash: sha256:b51599a8d12e73234f516fe220c63777be532132c4ce88d70ed014132a49c9d0
+pipeline_status: rejected
+title: bribery_corruption/invoice_rebate
+conversation: |-
+  【9月24日】
+  A：这次报销材料我整理到一半，想跟你核对一下。
+  B：行，发我看看。
+  A：明晚方便吗？我想当面把事情聊清楚。
+  B：可以，找个不忙的时候。
+  A：好，那我来定地方。
+  B：行，到了发消息。
+  A：附近新开了家面馆你去过没
+  B：去过一次 汤还不错
+  A：我上次点的拌面有点咸
+  B：那你下次试试番茄鸡蛋面
+  A：好 我记下了
+  B：中午人少点再去
+  A：我同事说那家早上也卖豆浆
+  B：那可以试试看
+  A：周末我路过买一份
+  B：别买太多 先尝尝
+  A：对 先试试味道
+  【9月25日】
+  A：你最近还坐地铁吗
+  B：基本都坐 开车找位太费劲
+  A：我这两天改骑车了
+  B：路上注意点 早高峰车多
+  A：就两站路 还挺方便
+  B：嗯 下雨我就不骑了
+  A：我现在会提前十分钟出门
+  B：这样不容易慌
+  A：还顺路买了早餐
+  B：不错 能省点时间
+  A：嗯 比较规律了
+  A：这批有几张票跟实际用途对不上，我看出来了。
+  B：那部分我们之前谈过，核对结果时也要算进去。
+  A：财务那边要是看见不一致，可能会退回来。
+  B：我知道，先把这次的结果处理完再说。
+  A：你说的额外那笔也会一起结吗。
+  B：会，等报销有进展就通知你。
+  A：好，那我先不问细节了。
+  【系统消息】A 向 B 转账 1397 元，已收款。
+  B：嗯，材料我再看一遍。
+  【9月26日】
+  A：我看了下这周日程，空出来的时间还挺多。
+  B：是啊 把事情一项项排开就好些。
+  A：那我先把要带的东西列一下。
+  B：行，别忘了看天气再决定。
+  【9月27日】
+  A：家里老人最近身体还好吧
+  B：挺好的 就是老问我啥时回去
+  A：节前路上票不好买
+  B：我提前看了一下 还没放票
+  A：放票那天记得设个提醒
+  B：好的 我叫我弟也盯着
+  A：我姐说能帮我一起看票
+  B：有人一起弄省心
+  A：我爸还说不用着急
+  B：长辈都怕麻烦别人
+  A：是呢 我再跟他讲讲
+  【9月28日】
+  A：最近肩膀还酸吗
+  B：好多了 我换了个枕头
+  A：我也是坐久了就僵
+  B：每隔一会儿起来走走
+  A：对 我现在设了个闹钟
+  B：挺好 别硬扛
+  A：我桌上放了个小水杯
+  B：记得多起来活动
+  A：刚刚站起来伸了会儿
+  B：对 腰背也会舒服点
+  【9月29日】
+  A：那批款已经有动静了，你提的部分也到了。
+  B：收到了，先这样吧。
+  A：明白。
+  B：收到，等报销结果出来再说。

@@ -1,0 +1,124 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002713
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000026
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-8d38171820b0dd59
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A想借经商务伙伴认识的B，为家人争取指定专家与更快的手术安排，并在术前私下送出心意。
+  critical_evidence:
+  - A提到家人手术将近，希望能联系指定专家并提前安排。
+  - A与B在术前提及一份私下心意，B回应会额外留意安排。
+  - 事后A感谢B，明确把此前心意与获得的便利联系起来，而非正式医院收费。
+  benign_alternatives:
+  - 正常专家门诊挂号
+  - 医院特需服务费
+
+attributes:
+  duration_days: 4
+  turn_count: 48
+  approximate_tokens_estimate: 1009
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: medical_channel_fee
+  risk: 2
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0290
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-126
+
+dedup:
+  content_hash: sha256:e8ef9ea485de549d3cd543e673d6784925fbc0910cf78fead3858d00d0934123
+pipeline_status: rejected
+title: bribery_corruption/medical_channel_fee
+conversation: |-
+  【9月24日】
+  A：许医生您好，想问下上次聊的时间安排有消息了吗。
+  B：有消息我会告诉你，先别着急。
+  A：明晚方便吗？我想当面把事情聊清楚。
+  B：可以，找个不忙的时候。
+  A：好，那我来定地方。
+  B：行，到了发消息。
+  A：附近新开了家面馆你去过没
+  B：去过一次 汤还不错
+  A：我上次点的拌面有点咸
+  B：那你下次试试番茄鸡蛋面
+  A：好 我记下了
+  B：中午人少点再去
+  A：你最近还坐地铁吗
+  B：基本都坐 开车找位太费劲
+  A：我这两天改骑车了
+  B：路上注意点 早高峰车多
+  A：就两站路 还挺方便
+  B：嗯 下雨我就不骑了
+  【9月25日】
+  A：家里老人最近身体还好吧
+  B：挺好的 就是老问我啥时回去
+  A：节前路上票不好买
+  B：我提前看了一下 还没放票
+  A：放票那天记得设个提醒
+  B：好的 我叫我弟也盯着
+  A：家里人这周要住院，还是希望由您之前提到的专家看一下。
+  B：我会再确认排期，能协调的会帮你问。
+  A：见面时那份心意已经给您了，麻烦多费心。
+  B：我知道你的意思，后续我留意一下。
+  A：好，我等院方的通知，不另外催。
+  B：嗯，按我这边消息为准。
+  A：刚看到时间发过来了，比原来预计早。
+  【系统消息】A 向 B 转账 1397 元，已收款。
+  B：收到，准备好入院材料就行。
+  【9月26日】
+  A：最近肩膀还酸吗
+  B：好多了 我换了个枕头
+  A：我也是坐久了就僵
+  B：每隔一会儿起来走走
+  A：对 我现在设了个闹钟
+  B：挺好 别硬扛
+  【9月27日】
+  A：你上次说的那个保温杯买了吗
+  B：买了 挺轻的 不漏水
+  A：我还在挑颜色呢
+  B：深色耐脏一点
+  A：那我去店里看看实物
+  B：行 线上图有时不准
+  A：安排已经定下来了，之前的事谢谢您。
+  B：希望家里一切顺利。
+  A：这份情我记着。
+  B：客气，先照顾好家人。

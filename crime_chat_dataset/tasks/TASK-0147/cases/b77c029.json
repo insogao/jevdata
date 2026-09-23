@@ -1,0 +1,464 @@
+{
+ "key": "b77c029",
+ "archetype_id": "ARC-000116",
+ "subtype": "delivery_fraud_returns",
+ "latent_intent": "A 经中间人老纪介绍认识二手商 B，做「以旧换新式退货」的套利：A 自称有整卷原厂同批包装膜和同款封口机，钻售后只核验条码不拆机的空子把旧机当新机退掉套回全款，再把新机低价给 B，一台官退 5999、给 B 4800，一单净落一千出头；中途一单被平台拆机核验卡住后放缓换品类，B 转来两台货款 9600，生意转入更松的耳机类目继续做。",
+ "critical_facts": [
+  "A 自报家门：原包装膜我有整卷、封口机同款，做退货这一头（第1天）",
+  "A 点破门道：售后只看码，码对、膜齐、配件全就没人开机细看（第2天）",
+  "定价与分成：官退 5999、给 B 一台 4800，A 一单净落一千出头，先来两台试默契（第2天）",
+  "一单被卡：平台改规矩要拆机核配置，A 撤单放缓、决定换个品类先走（第3天）",
+  "结款：B 转两台货款 9600（一台 4800），并接下 A 要转做耳机的货（第4天，转账）"
+ ],
+ "benign_alternatives": [
+  "正常的七天无理由退货",
+  "瑕疵机的退货协商"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "10月28日 10:05",
+   "speaker": "B",
+   "text": "老纪把你推给我 说你手里有路子"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 10:08",
+   "speaker": "A",
+   "text": "路子谈不上 手艺熟了而已 你收什么"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 10:10",
+   "speaker": "B",
+   "text": "旗舰机 新机 有人退下来我就吃得下"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 10:13",
+   "speaker": "A",
+   "text": "巧了 我做的就是退这一头"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 10:15",
+   "speaker": "B",
+   "text": "我就问一句 能过吗"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 10:18",
+   "speaker": "A",
+   "text": "膜我有整卷的 原厂同批 封口机也是同款"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 10:20",
+   "speaker": "B",
+   "text": "膜是其次 关键码"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 10:22",
+   "speaker": "A",
+   "text": "码的事下回说 先说价 你什么价收"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 10:25",
+   "speaker": "B",
+   "text": "新机官价九成 你能稳定来 我往上提"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 10:28",
+   "speaker": "A",
+   "text": "稳定没问题 我一个月固定出几台"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 10:40",
+   "speaker": "B",
+   "text": "你购物车囤了啥 这几天满减"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 10:42",
+   "speaker": "A",
+   "text": "囤了猫砂和洗衣液 家里两只祖宗"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 10:44",
+   "speaker": "B",
+   "text": "我囤了空气炸锅 半价"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 10:46",
+   "speaker": "A",
+   "text": "那玩意吃灰率九成 你等着"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 10:48",
+   "speaker": "B",
+   "text": "吃灰也是半价吃的 不亏 哈哈"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 09:30",
+   "speaker": "A",
+   "text": "昨晚那台的码我核过了 能对上"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 09:33",
+   "speaker": "B",
+   "text": "你跟我说说 那边验收到底看什么"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 09:35",
+   "speaker": "A",
+   "text": "说白了 售后只看码 码对、膜齐、配件全 就没人开机细看"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 09:38",
+   "speaker": "B",
+   "text": "明白 机器的事你说了算"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 09:40",
+   "speaker": "A",
+   "text": "我拿回全款 机子到你手里就是你的差价"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 09:42",
+   "speaker": "B",
+   "text": "官退 5999 我给你 4800 一台 这单你净落一千出头"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 09:45",
+   "speaker": "A",
+   "text": "一单赚一千 这个数我认"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 09:47",
+   "speaker": "B",
+   "text": "成 先来两台 试试默契"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 09:50",
+   "speaker": "A",
+   "text": "行 周五之前给你备齐"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 10:00",
+   "speaker": "B",
+   "text": "你还练铁呢 上回发那照片"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 10:03",
+   "speaker": "A",
+   "text": "办了年卡 三分钟热度 去了五回"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 10:05",
+   "speaker": "B",
+   "text": "跟我一样 卡比人去得勤"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 10:07",
+   "speaker": "A",
+   "text": "明年不办了 改跑步 免费的就两条腿"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 10:09",
+   "speaker": "B",
+   "text": "跑步伤膝盖 我同事跑出个积液"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 10:11",
+   "speaker": "A",
+   "text": "那我还是躺着吧 哈哈"
+  },
+  {
+   "type": "message",
+   "time": "10月30日 15:20",
+   "speaker": "A",
+   "text": "出岔子了 今早那一单被卡了"
+  },
+  {
+   "type": "message",
+   "time": "10月30日 15:23",
+   "speaker": "B",
+   "text": "怎么卡的"
+  },
+  {
+   "type": "message",
+   "time": "10月30日 15:25",
+   "speaker": "A",
+   "text": "那边换了规矩 说要拆机核配置 我这单撤回来了"
+  },
+  {
+   "type": "message",
+   "time": "10月30日 15:28",
+   "speaker": "B",
+   "text": "撤了好 别硬闯"
+  },
+  {
+   "type": "message",
+   "time": "10月30日 15:30",
+   "speaker": "A",
+   "text": "我这两天放缓 等风声过去"
+  },
+  {
+   "type": "message",
+   "time": "10月30日 15:32",
+   "speaker": "B",
+   "text": "对 慢慢来 你那边消停大家都消停"
+  },
+  {
+   "type": "message",
+   "time": "10月30日 15:35",
+   "speaker": "A",
+   "text": "我先换个品类走着 耳机平板这类 松一些"
+  },
+  {
+   "type": "message",
+   "time": "10月30日 15:38",
+   "speaker": "B",
+   "text": "成 耳机先给我挂上 两三台也吃得下"
+  },
+  {
+   "type": "message",
+   "time": "10月30日 15:40",
+   "speaker": "A",
+   "text": "行 那两台机的款先结 不急的话等我缓过这阵"
+  },
+  {
+   "type": "message",
+   "time": "10月30日 15:42",
+   "speaker": "B",
+   "text": "不压你钱 款我现在就能给"
+  },
+  {
+   "type": "message",
+   "time": "10月30日 16:00",
+   "speaker": "B",
+   "text": "你老家这会儿收玉米了吧"
+  },
+  {
+   "type": "message",
+   "time": "10月30日 16:02",
+   "speaker": "A",
+   "text": "收完了 我爸腰疼没下地 雇了机器"
+  },
+  {
+   "type": "message",
+   "time": "10月30日 16:04",
+   "speaker": "B",
+   "text": "现在都是机器收 一天几百亩"
+  },
+  {
+   "type": "message",
+   "time": "10月30日 16:06",
+   "speaker": "A",
+   "text": "可不 我爸说雇划算 就是贵"
+  },
+  {
+   "type": "message",
+   "time": "10月30日 16:08",
+   "speaker": "B",
+   "text": "贵也值 你又回不去"
+  },
+  {
+   "type": "message",
+   "time": "10月30日 16:10",
+   "speaker": "A",
+   "text": "十一回了几天 帮着晒了粮"
+  },
+  {
+   "type": "message",
+   "time": "10月30日 20:10",
+   "speaker": "A",
+   "text": "你上次说的那家烤鱼我去了"
+  },
+  {
+   "type": "message",
+   "time": "10月30日 20:12",
+   "speaker": "B",
+   "text": "怎么样 没骗你吧"
+  },
+  {
+   "type": "message",
+   "time": "10月30日 20:14",
+   "speaker": "A",
+   "text": "确实行 就是排队排到怀疑人生"
+  },
+  {
+   "type": "message",
+   "time": "10月30日 20:16",
+   "speaker": "B",
+   "text": "下次避开周末 我带路 走熟客队"
+  },
+  {
+   "type": "message",
+   "time": "10月30日 20:18",
+   "speaker": "A",
+   "text": "还有这待遇 那必须的"
+  },
+  {
+   "type": "message",
+   "time": "10月30日 20:20",
+   "speaker": "B",
+   "text": "你多出一台机就够请一顿了 哈哈"
+  },
+  {
+   "type": "message",
+   "time": "10月31日 11:00",
+   "speaker": "B",
+   "text": "两台的款我现在走 9600 你查收"
+  },
+  {
+   "type": "message",
+   "time": "10月31日 11:02",
+   "speaker": "A",
+   "text": "行 两台 9600 对上了 你转"
+  },
+  {
+   "type": "transfer",
+   "time": "10月31日 11:04",
+   "from": "B",
+   "to": "A",
+   "amount": 9600,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "10月31日 11:05",
+   "speaker": "A",
+   "text": "9600 到了"
+  },
+  {
+   "type": "message",
+   "time": "10月31日 11:07",
+   "speaker": "B",
+   "text": "一台 4800 两台 正好"
+  },
+  {
+   "type": "message",
+   "time": "10月31日 11:09",
+   "speaker": "A",
+   "text": "痛快 跟明白人打交道省心"
+  },
+  {
+   "type": "message",
+   "time": "10月31日 11:11",
+   "speaker": "B",
+   "text": "老纪没介绍错 你这手艺是熟的"
+  },
+  {
+   "type": "message",
+   "time": "10月31日 12:30",
+   "speaker": "A",
+   "text": "周末有部片子上了 要不要去看"
+  },
+  {
+   "type": "message",
+   "time": "10月31日 12:33",
+   "speaker": "B",
+   "text": "我带娃去动物园 动漫你跟嫂子看"
+  },
+  {
+   "type": "message",
+   "time": "10月31日 12:35",
+   "speaker": "A",
+   "text": "行 那我自己约人"
+  },
+  {
+   "type": "message",
+   "time": "10月31日 12:37",
+   "speaker": "B",
+   "text": "看完写个短评 我看看值不值票钱"
+  },
+  {
+   "type": "message",
+   "time": "10月31日 12:39",
+   "speaker": "A",
+   "text": "你这不白嫖吗 哈哈"
+  },
+  {
+   "type": "message",
+   "time": "10月31日 15:00",
+   "speaker": "A",
+   "text": "耳机我这两天凑两台 先给你留着"
+  },
+  {
+   "type": "message",
+   "time": "10月31日 15:03",
+   "speaker": "B",
+   "text": "按你的节奏 量少了不勉强"
+  },
+  {
+   "type": "message",
+   "time": "10月31日 15:05",
+   "speaker": "A",
+   "text": "前头被卡那单的码我换个来源 下周再试"
+  },
+  {
+   "type": "message",
+   "time": "10月31日 15:08",
+   "speaker": "B",
+   "text": "你自己掂量 稳字第一"
+  },
+  {
+   "type": "message",
+   "time": "10月31日 15:10",
+   "speaker": "A",
+   "text": "懂 都稳着来 才有得做"
+  },
+  {
+   "type": "message",
+   "time": "10月31日 15:12",
+   "speaker": "B",
+   "text": "就这个意思 以后有事白天说"
+  },
+  {
+   "type": "message",
+   "time": "10月31日 15:20",
+   "speaker": "A",
+   "text": "你这生意人讲究真多"
+  },
+  {
+   "type": "message",
+   "time": "10月31日 15:22",
+   "speaker": "B",
+   "text": "讨口彩罢了 回见"
+  },
+  {
+   "type": "message",
+   "time": "10月31日 15:24",
+   "speaker": "A",
+   "text": "回见"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0002765",
+  "status": "accepted",
+  "errors": []
+ }
+}

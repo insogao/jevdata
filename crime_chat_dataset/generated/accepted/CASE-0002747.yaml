@@ -1,0 +1,123 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002747
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-169a6fc4340dc35b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 节前，申请人以购物卡表达含糊的人情谢意，并借关系询问普通事项的进度；收卡方说明事项仍按公开流程办理。礼物可解释为节日往来，但事后含糊询问使语境带有轻微疑点。
+  critical_evidence:
+  - 双方在节日前后约定线下见面
+  - 申请人递出一张未说明面值的购物卡作为节日心意
+  - 之后申请人含糊询问事项进度，收卡方表示按公开流程处理
+  benign_alternatives:
+  - 正常节日人情往来
+  - 常见公司福利卡
+  - 事项按公开清单办理并等待统一通知
+
+attributes:
+  duration_days: 5
+  turn_count: 45
+  approximate_tokens_estimate: 1067
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0298
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-128
+
+dedup:
+  content_hash: sha256:19cd02feb6f11d718ed2758542764f1c9999294b081bd8e737c1a60ac15d1b87
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【11月2日】
+  A：【11月2日】最近那项申请到哪一步了 这周能不能帮我留意下进度
+  B：还在正常队列里 我可以帮你问问窗口现在排到哪了
+  A：这两天降温了 你那边早上还下雨吗
+  B：早上飘了一阵 中午就停了
+  A：我差点穿薄外套出门
+  B：还是带件外套吧 晚上风挺大
+  A：嗯 刚把围巾找出来
+  B：我也翻出来了 去年买的还挺暖
+  A：好 麻烦你了 我知道还是得按流程来
+  【11月3日】
+  A：【11月3日】快到节前了 想当面打个招呼 你哪天方便
+  B：午饭你吃啥了
+  A：楼下新开了家面馆 还行
+  B：我中午吃的饭团 有点少
+  A：下午饿了就去买点水果
+  B：好 我桌上还有橘子
+  A：那不错 别光喝咖啡
+  B：下班后可以碰一下 别耽误太久
+  A：行 我带张购物卡给你当节日心意 面值我没看
+  【11月4日】
+  A：【11月4日】周末家里问你回不回去
+  B：可能周六回一趟 看下车票
+  A：我妈说想包点饺子
+  B：那我回去帮忙擀皮
+  A：她肯定高兴
+  B：顺便把上次落下的围巾拿走
+  B：你太客气了 这个我不太好收
+  A：就一点心意 申请还是照常走
+  B：你最近还去跑步吗
+  【11月5日】
+  A：【11月5日】这周忙得断了两天
+  B：我也是 下班就想躺着
+  A：周末补一圈吧 公园那条路不挤
+  B：行 早上别太早叫我
+  A：九点行不行
+  A：前两天那事有消息了吗 我就是问问
+  B：还在处理中 有结果按通知来
+  A：家里那盆绿萝我换了个位置
+  B：放窗边了吗
+  【11月6日】
+  A：【11月6日】嗯 叶子看着精神点了
+  B：记得别浇太多水
+  A：我上次就是手重了
+  B：干一点也比泡着强 哈哈
+  A：明白 我不催 你按正常流程来
+  B：我只按公开清单核对 不会给你插队
+  A：我把桌面收拾了一下 终于能放下水杯了
+  B：哈哈我桌上也堆满了文件
+  A：上周一起吃饭的AA我把96元转你了 免得忘记
+  【系统消息】A 向 B 转账 96 元，已收款。

@@ -1,0 +1,160 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002701
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-90bc735250b51b61
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 中间人节前替申请人向审批把关人送购物卡且隐去面值，随后申请人以礼卡安排为背景催促对方关照其申请，形成礼品换便利的暗示。
+  critical_evidence:
+  - 中间人在节前安排申请人与把关人见面
+  - 中间人提到购物卡但不说明面值
+  - 之后申请人以送卡为背景暗示希望把关人优先处理事项
+  - 相关款项事件与礼卡安排同时出现，双方没有将其解释为普通业务付款
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司福利卡
+
+attributes:
+  duration_days: 6
+  turn_count: 80
+  approximate_tokens_estimate: 2068
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0281
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-123
+
+dedup:
+  content_hash: sha256:ab2fe237e71d113fe018d73c8561c1c029be70f618726706b56aa114ed0a2e7c
+pipeline_status: rejected
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【6月1日】
+  A：节前那次见面我替他把卡带过去了。
+  A：这周雨挺大，路上堵得厉害。
+  B：我早上多坐了两站地铁，反而快些。
+  A：明天我也早点出门试试。
+  B：带把伞，预报说还要下。
+  B：是什么卡？面值多少？
+  B：中午吃的什么？
+  A：楼下新开了家面馆，味道还行。
+  B：我也想去，别点太辣。
+  A：放心，我最近胃不太舒服。
+  A：购物卡，具体多少就不说了，反正是一点心意。
+  A：家里那盆绿植最近叶子有点蔫。
+  B：是不是放在空调风口了？
+  A：我挪到窗边看看。
+  【6月2日】
+  A：他还问能不能提前一点出结果。
+  B：我会按公开顺序办，礼卡我会退回。
+  A：我刚开完会，今天安排有点满。
+  B：辛苦了，记得喝水。
+  A：嗯，桌上还放着半杯咖啡。
+  B：冷了就别喝了，换点温水。
+  A：明早我先把日程看一下。
+  B：先少浇点水，周末再观察。
+  B：申请人后面是不是又问起审批的事？
+  A：他说既然卡已经送到，希望你那边多照顾一下。
+  B：这两件事连在一起，我不能当普通节礼处理。
+  A：那笔相关款也已经到了，你确认下。
+  B：我看到了，但别再把卡和申请放一起谈。
+  【6月3日】
+  B：好，有变化再互相说一声。
+  B：你那边今天忙到几点？
+  A：差不多六点，晚点再回家。
+  A：刚才网络断了一下，消息才发出去。
+  B：没事，我也刚看到。
+  B：快递送到了吗？
+  A：到了，放在门口柜子里。
+  A：这两天温差挺明显的。
+  B：是啊，晚上记得加件外套。
+  B：我先去处理下手头的事。
+  A：好，忙完再聊。
+  A：刚把桌面收拾了下，文件总算没那么乱。
+  B：今天窗外风挺大，阳台门我关上了。
+  【6月4日】
+  A：晚饭打算做点清淡的，最近不想吃太油。
+  【系统消息】A 向 B 转账 2384 元，已收款。
+  B：我把明天要带的东西放在玄关了。
+  A：刚泡了杯茶，先缓一会儿再继续。
+  B：附近那家水果店换了招牌，你看见没？
+  B：这周睡得有点晚，今晚争取早点休息。
+  A：我把快递纸箱拆好了，准备拿去回收。
+  A：天气预报说周末会降温，衣服得带厚一点。
+  B：刚才整理照片，翻到去年那次出游了。
+  B：家里的灯泡好像快坏了，闪了两下。
+  A：我把购物清单存在手机备忘录里了。
+  A：路边那排树开始长新叶了，看着挺舒服。
+  B：午后有点困，我起来走了几分钟。
+  B：刚洗完杯子，台面也顺手擦干净了。
+  【6月5日】
+  B：周末如果不下雨，我想去公园转一圈。
+  A：最近常听的那首歌还挺适合通勤。
+  A：我把充电线放回包里了，免得明早找不到。
+  B：今天楼下有点吵，应该是在修路。
+  B：晚点我准备把衣柜换季整理一下。
+  A：刚收到天气提醒，明早可能有雾。
+  A：冰箱里还有些菜，今晚不用特意买了。
+  A：我把门口的鞋摆整齐了，省得绊着。
+  B：这两天喝水少，桌边放个水杯提醒自己。
+  A：刚看完一本短书，准备找下一本。
+  B：周末要是有空，把阳台也收拾一下。
+  A：我把手机系统更新了，暂时用着还行。
+  B：今天太阳出来一会儿，屋里亮堂不少。
+  【6月6日】
+  A：刚把垃圾带下去了，楼道也干净了。
+  B：晚上散步时顺便去便利店买点牛奶。
+  B：这个月日历排得挺满，得提前看一下。
+  A：我把耳机充上电了，明天路上听播客。
+  A：刚才煮的粥多了点，留一份明早吃。
+  B：桌上的纸质材料我先按日期理好了。
+  A：今天坐电梯遇到邻居，聊了两句天气。
+  B：刚擦完窗台，灰比想象中多。
+  A：周末想试试附近新开的咖啡店。
+  B：我把常用的钥匙挂回门边了。
+  B：下班路上买了点面包，明天当早餐。
+  A：今天走路步数比平时多，腿有点酸。
+  A：刚把桌面收拾了下，文件总算没那么乱。
+  【6月7日】
+  B：今天窗外风挺大，阳台门我关上了。

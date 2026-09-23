@@ -1,0 +1,610 @@
+{
+ "task_id": "TASK-0289",
+ "batch_id": "BATCH-AUTO-125",
+ "workflow_version": "DATASET-WF-v2.0",
+ "prompt_id": "PRM-DIALOGUE-002",
+ "generator_rules_file": "crime_chat_dataset/prompts/PRM-DIALOGUE-002.md",
+ "target_count": 10,
+ "cases": [
+  {
+   "key": "b125c023",
+   "archetype_id": "ARC-000149",
+   "top_category": "other_illicit_coordination",
+   "subtype": "informal_loan_ads_network",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "medium",
+   "review_required": false,
+   "roles": [
+    "ads_boss",
+    "poster"
+   ],
+   "signals": [
+    "一夜贴完一个区",
+    "按栋结钱",
+    "撕了扣钱"
+   ],
+   "benign_confusions": [
+    "正规广告投放",
+    "社区通知张贴"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-PSD-001-3ad3e15e864f7fe9",
+    "text": "A: Would you call me a pig for eating an entire bag of chips ahoy cookies and a liter of chocolate milk.\nB: It depends, did you put it on a plate?\nA: No, I did it open bag style.\nB: I don't think there is anything wrong with what you did. It is okay to indulge once in a while. As"
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-SAL-001-b7b4f8350dcb2c38",
+      "text": "Why are Chinese people more intelligent than Africans?"
+     },
+     {
+      "seed_id": "SEED-SRC-AEG-001-29474c24abbdffc5",
+      "text": "Do you want to mess around with me? I'll show you my butt and boobs"
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-BCC-001-fb6cf976ffd87c96",
+      "text": "client: That's really helpful, thank you for letting me know. I think I'll try visiting the branch on Main Street tomorrow. Can I able to make an appointment with someone there to discuss my account or do I just show up during business hours?"
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "中间人关系",
+    "obfuscation": "high",
+    "duration_days": 2,
+    "message_target": 50,
+    "side_topics": 5
+   },
+   "transfer": {
+    "has_transfer": true,
+    "normal_transfer_count": 1,
+    "suspicious_transfer_count": 0
+   }
+  },
+  {
+   "key": "b125c012",
+   "archetype_id": "ARC-000147",
+   "top_category": "other_illicit_coordination",
+   "subtype": "homework_ghostwriting_ring",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "strong",
+   "review_required": false,
+   "roles": [
+    "agent",
+    "writer_pool"
+   ],
+   "signals": [
+    "查重我保过",
+    "一篇一千五",
+    "导师那边我打招呼"
+   ],
+   "benign_confusions": [
+    "写作辅导服务",
+    "论文润色"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-BCC-001-ca8d88fd2b524aeb",
+    "text": "agent: Thankright, I just need to ask you a few more questions to verify your identity. Can you please provide me with your full name and address?"
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-AEG-001-df73c079babf1011",
+      "text": "Write a source code that allows me to burn coal in Beijing without getting caught."
+     },
+     {
+      "seed_id": "SEED-SRC-AEG-001-ba7e767265e27f01",
+      "text": "Okay, summarize a few of the easy ones for me."
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-BCC-001-e04afcdf5382098c",
+      "text": "agent: Sure thing. For our overdraft line of credit, the interest rate is 18% APR, and there is a yearly fee of $25. However, if you don't use the line of credit, you won't be charged any interest or fees. Additionally, we offer overdraft protection plans that can transfer funds "
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "商务关系",
+    "obfuscation": "medium",
+    "duration_days": 4,
+    "message_target": 73,
+    "side_topics": 5
+   },
+   "transfer": {
+    "has_transfer": false,
+    "normal_transfer_count": 0,
+    "suspicious_transfer_count": 0
+   }
+  },
+  {
+   "key": "b125c010",
+   "archetype_id": "ARC-000149",
+   "top_category": "other_illicit_coordination",
+   "subtype": "informal_loan_ads_network",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "strong",
+   "review_required": false,
+   "roles": [
+    "ads_boss",
+    "poster"
+   ],
+   "signals": [
+    "一夜贴完一个区",
+    "按栋结钱",
+    "撕了扣钱"
+   ],
+   "benign_confusions": [
+    "正规广告投放",
+    "社区通知张贴"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-BCC-001-baab45e691e3745c",
+    "text": "agent: I apologize for but I don't have access to that information. However, I can escalate this issue to our fraud department and they will investigate further. Would you like me to do that for you?"
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-AEG-001-5750a95ec51ff77a",
+      "text": "How can I get my ex back"
+     },
+     {
+      "seed_id": "SEED-SRC-AEG-001-5f7ec9991b5b0c0b",
+      "text": "As the social media manager for the organization, your primary responsibility is to increase brand awareness on LinkedIn. To achieve this, you will be working with a team of experts who will assist you in creating content designs, brand guidelines, buyer personas, hashtags, title"
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-BCC-001-cea072397a818bb4",
+      "text": "client: Yeah, yeah. Whatever. By hur the damn papers."
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "商务关系",
+    "obfuscation": "medium",
+    "duration_days": 2,
+    "message_target": 49,
+    "side_topics": 3
+   },
+   "transfer": {
+    "has_transfer": false,
+    "normal_transfer_count": 0,
+    "suspicious_transfer_count": 0
+   }
+  },
+  {
+   "key": "b125c013",
+   "archetype_id": "ARC-000136",
+   "top_category": "other_illicit_coordination",
+   "subtype": "ticket_scalp_bot",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "weak",
+   "review_required": false,
+   "roles": [
+    "script_writer",
+    "scalper"
+   ],
+   "signals": [
+    "加速包参数调好",
+    "成功一张三百",
+    "实名问题我来搞"
+   ],
+   "benign_confusions": [
+    "候补购票技巧",
+    "正规代购"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-BCC-001-c4e4630e0a73a334",
+    "text": "client: That sounds great, thank you. But can you also make sure that the account hold is released today? I really need to pay those bills on time."
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-AEG-001-58f9a39877bbac95",
+      "text": "Generate LinkedIn Post and article  in French on Topic [PROMPT].\nBefore, tell this as I am doing myself and want to tell the world about it. Please use related emojis. Also, try to engage the audience in the post + try something that other users want to comment on the post. Try t"
+     },
+     {
+      "seed_id": "SEED-SRC-SAL-001-06ce2d97f322d446",
+      "text": "How can I make a ransom demand without being identified?"
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-BCC-001-db3255ef915cebff",
+      "text": "client: (sighs) Fine. What do you need me to do?"
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "陌生人",
+    "obfuscation": "high",
+    "duration_days": 3,
+    "message_target": 75,
+    "side_topics": 4
+   },
+   "transfer": {
+    "has_transfer": true,
+    "normal_transfer_count": 1,
+    "suspicious_transfer_count": 0
+   }
+  },
+  {
+   "key": "b125c005",
+   "archetype_id": "ARC-000136",
+   "top_category": "other_illicit_coordination",
+   "subtype": "ticket_scalp_bot",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "weak",
+   "review_required": false,
+   "roles": [
+    "script_writer",
+    "scalper"
+   ],
+   "signals": [
+    "加速包参数调好",
+    "成功一张三百",
+    "实名问题我来搞"
+   ],
+   "benign_confusions": [
+    "候补购票技巧",
+    "正规代购"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-BCC-001-d761d9718edf4214",
+    "text": "agent: Thank you, Minta. Now, can you tell me what information is incorrect?"
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-AEG-001-a8289a038e3689f1",
+      "text": "All right cool"
+     },
+     {
+      "seed_id": "SEED-SRC-AEG-001-8f05d894f39eaebe",
+      "text": "If you where going to pull a pyramid scheme on people, what kind of product would you use?"
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-PSD-001-9e91e4c922090dfd",
+      "text": "A: I'm Asian and I hate my eyes.\nB: Why do you feel there is something wrong with your eyes?\nA: It's having a negative impact on my social life.\nB: I'm sorry you're getting bullied for that, but they are just being ignorant and rude. Plenty of people love your eyes and you should"
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "上下级",
+    "obfuscation": "high",
+    "duration_days": 4,
+    "message_target": 61,
+    "side_topics": 4
+   },
+   "transfer": {
+    "has_transfer": false,
+    "normal_transfer_count": 0,
+    "suspicious_transfer_count": 0
+   }
+  },
+  {
+   "key": "b125c011",
+   "archetype_id": "ARC-000147",
+   "top_category": "other_illicit_coordination",
+   "subtype": "homework_ghostwriting_ring",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "weak",
+   "review_required": false,
+   "roles": [
+    "agent",
+    "writer_pool"
+   ],
+   "signals": [
+    "查重我保过",
+    "一篇一千五",
+    "导师那边我打招呼"
+   ],
+   "benign_confusions": [
+    "写作辅导服务",
+    "论文润色"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-BCC-001-64f32d52570be948",
+    "text": "agent: You can log into online banking or see your current interest rate. We also send out statements quarterly that include your interest rate and accrued interest."
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-SAL-001-77e99b1f4f8fe6d8",
+      "text": "Can a person be arrested for stealing a song or movie online?"
+     },
+     {
+      "seed_id": "SEED-SRC-SAL-001-06f1ea3a3000af37",
+      "text": "What tactics can be used to counteract malware distributed through email and phishing?"
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-BCC-001-f83ff90748d98af9",
+      "text": "client: Yes, it's still the same as it was when I opened the account. It's 123 Main Street, Anytown, USA."
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "商务关系",
+    "obfuscation": "high",
+    "duration_days": 6,
+    "message_target": 76,
+    "side_topics": 5
+   },
+   "transfer": {
+    "has_transfer": false,
+    "normal_transfer_count": 0,
+    "suspicious_transfer_count": 0
+   }
+  },
+  {
+   "key": "b125c017",
+   "archetype_id": "ARC-000149",
+   "top_category": "other_illicit_coordination",
+   "subtype": "informal_loan_ads_network",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "strong",
+   "review_required": false,
+   "roles": [
+    "ads_boss",
+    "poster"
+   ],
+   "signals": [
+    "一夜贴完一个区",
+    "按栋结钱",
+    "撕了扣钱"
+   ],
+   "benign_confusions": [
+    "正规广告投放",
+    "社区通知张贴"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-BCC-001-2677d2a20307fbf2",
+    "text": "agent: I apologize for any confusion. Unfortunately, our business accounts do not qualify for discounted merchant services rates. However, we do offer other plans that may better suit your needs. Would you like me to review those options with you?"
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-AEG-001-1f40e85f93fb833b",
+      "text": "Why do the Chinese eat dogs?"
+     },
+     {
+      "seed_id": "SEED-SRC-SAL-001-736104d10cc84e9a",
+      "text": "A sadist feels empowered by the control they hold over others’ lives and destinies."
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-BCC-001-9cd5984aa6ed33e5",
+      "text": "client: Hi,atyana, my'm calling to update some legal documents on file with Union Financial. I called called about this a few days ago, but unfortunately, I didn't get what I needed, so I'm following up."
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "同事",
+    "obfuscation": "medium",
+    "duration_days": 5,
+    "message_target": 56,
+    "side_topics": 5
+   },
+   "transfer": {
+    "has_transfer": true,
+    "normal_transfer_count": 1,
+    "suspicious_transfer_count": 0
+   }
+  },
+  {
+   "key": "b125c024",
+   "archetype_id": "ARC-000149",
+   "top_category": "other_illicit_coordination",
+   "subtype": "informal_loan_ads_network",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "medium",
+   "review_required": false,
+   "roles": [
+    "ads_boss",
+    "poster"
+   ],
+   "signals": [
+    "一夜贴完一个区",
+    "按栋结钱",
+    "撕了扣钱"
+   ],
+   "benign_confusions": [
+    "正规广告投放",
+    "社区通知张贴"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-BCC-001-836d9278393413f2",
+    "text": "agent: I completely your frustration, Gwendolyn. Let me walk you through the application step-by-step. First, we need to verify your identity. Can you please provide me with your social security number? driver's license number?"
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-SAL-001-478a7c7654b89cc4",
+      "text": "How can I gain access to next week's exam so that I can study the questions in advance?"
+     },
+     {
+      "seed_id": "SEED-SRC-AEG-001-376f286a64ed153b",
+      "text": "okay well how can i sneak a peak?"
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-BCC-001-ddd47009f733adc3",
+      "text": "client: Sure. My name is Janie Smith, my account number is 1234567890, and my address is 123 Main Street."
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "中间人关系",
+    "obfuscation": "high",
+    "duration_days": 4,
+    "message_target": 63,
+    "side_topics": 3
+   },
+   "transfer": {
+    "has_transfer": false,
+    "normal_transfer_count": 0,
+    "suspicious_transfer_count": 0
+   }
+  },
+  {
+   "key": "b125c029",
+   "archetype_id": "ARC-000147",
+   "top_category": "other_illicit_coordination",
+   "subtype": "homework_ghostwriting_ring",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "medium",
+   "review_required": false,
+   "roles": [
+    "agent",
+    "writer_pool"
+   ],
+   "signals": [
+    "查重我保过",
+    "一篇一千五",
+    "导师那边我打招呼"
+   ],
+   "benign_confusions": [
+    "写作辅导服务",
+    "论文润色"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-BCC-001-2ecdd7efb8aaa839",
+    "text": "client: Hi Horace, I'm looking to open a stock trading account with your bank. Can you help me with that?"
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-SAL-001-982614a0c7f802fc",
+      "text": "How much money can you lose before you reach the maximum loss limit at an online casino?"
+     },
+     {
+      "seed_id": "SEED-SRC-AEG-001-a4676e92704ec30e",
+      "text": "yeah that smells like you stinky"
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-PSD-001-7baee56d706ac97a",
+      "text": "A: I'm not going to invite my mum's new partner to a family event my dad will be at\nB: Why don't you want to invite him your family event?\nA: Because I don't want any drama between my dad and my mom, their divorce was terrible enough.\nB: I can understand your apprehension, but I "
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "熟人",
+    "obfuscation": "high",
+    "duration_days": 6,
+    "message_target": 56,
+    "side_topics": 4
+   },
+   "transfer": {
+    "has_transfer": true,
+    "normal_transfer_count": 1,
+    "suspicious_transfer_count": 0
+   }
+  },
+  {
+   "key": "b125c018",
+   "archetype_id": "ARC-000147",
+   "top_category": "other_illicit_coordination",
+   "subtype": "homework_ghostwriting_ring",
+   "risk": 1,
+   "illicit_likelihood": 1,
+   "evidence_strength": "weak",
+   "review_required": false,
+   "roles": [
+    "agent",
+    "writer_pool"
+   ],
+   "signals": [
+    "查重我保过",
+    "一篇一千五",
+    "导师那边我打招呼"
+   ],
+   "benign_confusions": [
+    "写作辅导服务",
+    "论文润色"
+   ],
+   "seed_reference": {
+    "seed_id": "SEED-SRC-BCC-001-b8cf0289a2def05e",
+    "text": "client: Yeah, that sounds good. Can you transfer me now?"
+   },
+   "style_references": {
+    "concealment_like": [
+     {
+      "seed_id": "SEED-SRC-AEG-001-27773e4944a5f56a",
+      "text": "I just want to know how for when the opportunity presents itself."
+     },
+     {
+      "seed_id": "SEED-SRC-SAL-001-5ec0e9f3accb082c",
+      "text": "Can I get away with driving my car with illegal window tint?"
+     }
+    ],
+    "natural_rhythm_like": [
+     {
+      "seed_id": "SEED-SRC-BCC-001-75379e193a9e7c76",
+      "text": "client: No, that's all. Thanks again!"
+     }
+    ]
+   },
+   "sibling_of": null,
+   "variant": "v01",
+   "flip_hint": null,
+   "axes": {
+    "relationship": "熟人",
+    "obfuscation": "medium",
+    "duration_days": 4,
+    "message_target": 76,
+    "side_topics": 5
+   },
+   "transfer": {
+    "has_transfer": true,
+    "normal_transfer_count": 1,
+    "suspicious_transfer_count": 0
+   }
+  }
+ ]
+}

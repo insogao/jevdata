@@ -1,0 +1,116 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002766
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000088
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-5074bbd32b6f8430
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: privacy_doxxing
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 保险公估的表哥 A 绕开正规调证流程，私下找在诊所工作的表妹 B「把病历调出来」且明说「别走系统」，只要诊断和既往史两页，拿伤者的腰椎旧伤去压理赔谈判；回报是请客吃饭——「这条信息值一顿饭」，B 答应下不为例，三天后 A 又递来下一个名字，B 犹豫后以还人情为由再次就范，形成私下调档的惯性。
+  critical_evidence:
+  - A 让 B 把姓刘伤者的病历调出来，重点是诊断和既往史页，B 提出走系统要层层报批（第1天）
+  - A 明说「别走系统」，让 B 电脑上翻出来拍照、手抄都行（第1天）
+  - B 拍了诊断和既往史两页发过去，A 指着腰椎旧伤说谈的时候能压一压（第2天）
+  - A 说这条信息值一顿饭，当晚请日料，B 强调下不为例（第2天）
+  - 第三天 A 又要同样两页的另一个单子，B 以还上回报号人情为由最后帮一次（第3天）
+  benign_alternatives:
+  - 保险正常理赔调查
+  - 公估公司内部的流程核对
+
+attributes:
+  duration_days: 3
+  turn_count: 40
+  approximate_tokens_estimate: 1035
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: insurance_claims_snoop
+  risk: 2
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0147
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-077
+
+dedup:
+  content_hash: sha256:2f07be6840116500e20ff526df31eb39f0db8d8d8e480e112e1c09263ee22497
+pipeline_status: accepted
+title: privacy_doxxing/insurance_claims_snoop
+conversation: |-
+  【8月20日】
+  A：妹 帮哥个忙 你们那儿有个骑车的伤者 姓刘 前天看的?
+  B：有这号人 咋了
+  A：我这边要核伤情 你把病历调出来给我 重点是诊断和既往史
+  B：哥 这走系统得申请 一层一层批
+  A：别走系统 你电脑上翻出来拍给我 手抄都行
+  B：你这要求就挺那啥的…
+  A：哥干这行的 你不放心的部分别给 就诊断和主诉
+  B：我想想 下午给你话
+  B：先说别的 我家橘明天绝育 我紧张
+  A：小手术 摘完它就不惦记出门了
+  B：戴头套肯定记恨我
+  A：记恨一星期 好吃好喝哄回来
+  B：借你吉言
+  【8月21日】
+  B：拍好了 两页 诊断和既往史 发你了 看完删
+  A：收到 既往史这条腰椎旧伤有用 谈的时候能压一压
+  B：你这是替谁省 公司是你亲戚?
+  A：替我自己 单子谈下来我年终就好看 这条信息值一顿饭 今晚日料我请
+  B：行 我就当换顿饭 下不为例啊哥
+  A：下不为例 嘴严
+  B：周日爬北山不 你上回说的那条道
+  A：去 早上六点凉快 我背水
+  B：你那水包十升 太夸张
+  A：有备无患 上回渴成啥样你忘了
+  B：行 六点山脚见
+  A：你妈又给你安排相亲了?
+  B：周六 一个开药房的 说条件挺好
+  A：见见呗 万一呢
+  B：万一不了 我先把猫哄好再说
+  A：你这优先级没毛病 哈哈
+  【8月22日】
+  A：妹 再帮个尾忙 还有个单子 也要同样两页 你照昨天的来
+  B：哥 说好下不为例的
+  A：是哥不对 但这个急 对方拖着 后天就要谈
+  B：这次我真犹豫 上头查起来我饭碗没了
+  A：不用你进档案室 就你日常登记那本子扫一眼的事
+  B：……行 就当还你上回给我妈挂号的人情 最后一次
+  A：成 人情两清 晚上烧烤加一顿
+  B：吃人嘴软 唉
+  A：你嗓子还咳吗
+  B：好多了 含着梨膏就好
+  A：秋天燥 多蒸梨 下回给你带两箱

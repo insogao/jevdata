@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002769
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000133
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-03fb17f908a12a3f
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: coercion_blackmail
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 同事兼楼下邻居 A 借楼上装修打孔致吊顶裂缝的由头拍照留证，抬出物业熟人和街道表舅、暗示往业主群发照片，向 B 索要每月两条烟的「买平安钱」，B 被迫先转 600 元，A 还叮嘱别在单位声张并定下「每月一号转钱」——熟人间长期软性拿捏。
+  critical_evidence:
+  - 9月8日 A 称楼上打孔致吊顶裂缝并发照片（image 事件），「照片我都留着呢」
+  - 9月9日 A 抬出物业熟人、街道表舅，暗示照片往业主群一发会影响 B 家房子租卖（台词）
+  - 9月11日 A 开价「每月两条烟这事就平」，以「照片也就不用往外发了」作交换（台词）
+  - 9月12日 B 转 600 元「自己买两条应这个月」，A 称下月一号前再给（转账+台词）
+  - 9月12-13日 A 叮嘱「别在单位嚼舌头」，定下「每月一号 转我就行 人不用见」（台词）
+  benign_alternatives:
+  - 邻里噪音调解
+  - 物业投诉流程
+
+attributes:
+  duration_days: 6
+  turn_count: 51
+  approximate_tokens_estimate: 1634
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: resident_noise_leverage
+  risk: 2
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0148
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-077
+
+dedup:
+  content_hash: sha256:c7b11bd08d435d48be0e6fd871d49bdb0088c29b061a1c4393c02b097c28fcfb
+pipeline_status: accepted
+title: coercion_blackmail/resident_noise_leverage
+conversation: |-
+  【9月8日】
+  A：志强 昨晚你家装修打孔到十一点多? 我家客厅吊顶裂了条缝
+  B：啊? 师傅说就打几个膨胀螺丝的孔 我今儿问问他
+  A：裂缝我拍了照片 你看看 这在客厅正中间 难看死了
+  A：[image：一张天花板裂缝的照片]
+  B：这……真是昨晚打的孔? 我看不至于震裂吊顶吧
+  A：楼上楼下 十年了头一回裂 你自己品
+  B：行 我让师傅上门给你看看 该补补
+  A：补是一方面 照片我都留着呢
+  B：下午三点临时会议 别迟到 新系统上线的事
+  A：又是新系统 上线完我们组连着加了一周
+  B：你们运维苦 我们产品也没好到哪去
+  A：晚上请你喝奶茶 顶一顶
+  【9月9日】
+  A：对了志强 昨晚那事 物业老周我熟 业主群里发几张照片 你们那房子以后租卖都受影响
+  B：至于闹这么大吗 我又不是故意的
+  A：我表舅在街道做事 跟市容那几位常一块钓鱼 你说巧不巧
+  B：……你这是话里有话啊
+  A：没有没有 就是聊天 咱俩同事 楼上楼下 我能把你怎么样
+  B：那我更不放心了
+  B：食堂今天有红烧狮子头 你去晚了没
+  A：去了 汤都舀完了 就剩青菜
+  B：哈哈 明天有排骨 我给你留一份
+  A：行 那说定了
+  【9月10日】
+  B：师傅昨晚去你家看了吗 补墙的钱我出
+  A：去了 说要整面重做 好几千呢
+  B：几千? 打几个孔而已 是不是原有老化的原因
+  A：志强 钱是小事 事要办得漂亮 咱俩楼上楼下 抬头不见低头见 公司里还一个茶水间 传出去对谁都不好
+  B：你到底想怎么着
+  A：没想怎么着 你是个明白人
+  B：明天地铁三号线好像又检修
+  A：是啊 我得倒两趟 你开车?
+  B：开 明早捎你一段 老地方等你
+  【9月11日】
+  A：志强 我想了想 墙的事一笔勾销 这样 每月两条烟这事就平 我也不多要
+  B：两条烟? 老陈 咱同事十几年 你管我要月供?
+  A：什么月供 难听 就当邻里互助 街坊情分
+  B：你这算盘打得我在五楼都听见了
+  A：明白人办明白事 你家装修的事 我照片也就不用往外发了
+  B：……容我想想
+  B：周五家长会你们班改线上了没
+  A：改线上 少跑一趟
+  B：线上好 我还能边开会边听一半
+  【9月12日】
+  B：服了 先转600 你自己买两条应这个月 往后的事往后说
+  【系统消息】B 向 A 转账 600 元，已收款。
+  A：600收到 这个月就算翻篇 下个月一号前给我就行
+  B：行行行 就这一次
+  A：嗯 墙的事我也不提了 两清
+  A：对了 下周部门聚餐 你去不
+  B：去啊 咋
+  A：没事 提一句 咱俩的事别在单位嚼舌头 对你我都好
+  B：我知道 我没那么傻
+  【9月13日】
+  B：老陈 下月真就「老规矩」? 你不觉得咱这关系变味了吗
+  A：志强 你想多了 就两条烟的事 我帮你把楼上的动静也兜着 你家孩子学琴多吵你自己知道
+  B：……行 我算明白了
+  A：明白就好 每月一号 转我就行 人不用见

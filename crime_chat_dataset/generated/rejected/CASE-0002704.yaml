@@ -1,0 +1,119 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002704
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000018
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-af8d21348a94cfb9
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 企业经营者与公职人员亲属用空白咨询合同包装利益输送，按月固定打款却没有实际咨询成果，双方知道款项与名义服务不符。
+  critical_evidence:
+  - 双方签署的咨询合同仍留有空白内容
+  - 企业按月固定向公职人员亲属付款
+  - 对话承认没有实际咨询成果或服务记录
+  benign_alternatives:
+  - 真实行业顾问
+  - 专家评审费
+
+attributes:
+  duration_days: 3
+  turn_count: 43
+  approximate_tokens_estimate: 966
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: consulting_fee_disguise
+  risk: 2
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0281
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-123
+
+dedup:
+  content_hash: sha256:bbfbac8792e92bf443048dbf30ebe9c727a13eeef6bc7f10f3b83de405876f29
+pipeline_status: rejected
+title: bribery_corruption/consulting_fee_disguise
+conversation: |-
+  【6月1日】
+  A：那份咨询合同还有几栏空着，先签也行吗？
+  A：这周雨挺大，路上堵得厉害。
+  B：我早上多坐了两站地铁，反而快些。
+  A：明天我也早点出门试试。
+  B：带把伞，预报说还要下。
+  B：先签下来，具体内容回头再补。
+  B：中午吃的什么？
+  A：楼下新开了家面馆，味道还行。
+  B：我也想去，别点太辣。
+  A：放心，我最近胃不太舒服。
+  A：这个月固定那笔已经打过去了。
+  A：家里那盆绿植最近叶子有点蔫。
+  B：是不是放在空调风口了？
+  A：我挪到窗边看看。
+  【6月2日】
+  A：对，最近也没有报告、会议或者交付材料。
+  B：合同上先留着，别把空白部分写错。
+  【系统消息】B 向 A 转账 2384 元，已收款。
+  A：下个月还是按同样的数走吗？
+  B：先照旧，之后再说服务内容。
+  A：我刚开完会，今天安排有点满。
+  B：辛苦了，记得喝水。
+  A：嗯，桌上还放着半杯咖啡。
+  B：冷了就别喝了，换点温水。
+  B：先少浇点水，周末再观察。
+  B：看到了，不过这段时间确实没给你做什么咨询。
+  B：手机电池最近掉得很快。
+  A：后台应用关掉几个试试。
+  B：好，我晚上清理一下。
+  A：还不行就去店里测测。
+  【6月3日】
+  A：刚把桌面收拾了下，文件总算没那么乱。
+  B：今天窗外风挺大，阳台门我关上了。
+  A：明早我先把日程看一下。
+  B：好，有变化再互相说一声。
+  B：你那边今天忙到几点？
+  A：差不多六点，晚点再回家。
+  A：刚才网络断了一下，消息才发出去。
+  B：没事，我也刚看到。
+  B：快递送到了吗？
+  A：到了，放在门口柜子里。
+  A：这两天温差挺明显的。
+  B：是啊，晚上记得加件外套。
+  B：我先去处理下手头的事。
+  A：好，忙完再聊。
+  【6月4日】
+  A：晚饭打算做点清淡的，最近不想吃太油。

@@ -1,0 +1,127 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002718
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000028
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-e936b412d8d20107
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A与同事B按正式合同和验收记录处理项目尾款，问题台账与付款节点均按公开流程执行，不涉及私人利益。
+  critical_evidence:
+  - A询问合同验收进度及尾款时间。
+  - B说明有一项已记录的问题需补齐材料后按流程签字，验收标准对双方公开。
+  - A同意按合同处理，尾款通过单位正常结算渠道支付并有正式凭据。
+  benign_alternatives:
+  - 正常合同尾款催收
+  - 履约保证金扣除
+
+attributes:
+  duration_days: 6
+  turn_count: 49
+  approximate_tokens_estimate: 1064
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: contract_signature_fee
+  risk: 0
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0290
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-126
+
+dedup:
+  content_hash: sha256:153dbe8d91dd79c3efe6de8128debe2373b62f1a72b91cc17ba4aa8d0e474ffb
+pipeline_status: rejected
+title: bribery_corruption/contract_signature_fee
+conversation: |-
+  【9月24日】
+  A：上次说的验收记录我补齐了，想确认一下下一步。
+  B：我看到了，咱们按流程走。
+  A：明晚方便吗？我想当面把事情聊清楚。
+  B：可以，找个不忙的时候。
+  A：好，那我来定地方。
+  B：行，到了发消息。
+  A：你家小狗最近还挑食吗
+  B：这周好点了 换了个碗
+  A：哈哈它还挺会挑
+  B：猫也一样 不喜欢就不碰
+  A：看来得慢慢试
+  B：嗯 先不折腾它了
+  A：它现在一听开罐声就跑来
+  B：哈哈这个反应很快
+  A：我给它买了个新玩具
+  【9月25日】
+  A：验收表上的补充项我已经按合同要求完善。
+  B：看到了，问题台账也更新了，标准对大家都是一样的。
+  A：那签字和尾款就按约定节点办理吧。
+  B：对，验收通过后财务会按合同结算。
+  A：相关材料和正式票据都放在项目目录里了。
+  B：收到，我按流程签，不需要另准备什么。
+  A：那我等正式结算通知。
+  B：好，有进度会在工作群同步。
+  【9月26日】
+  A：你那边月底也要补台账吗
+  B：要啊 这周在核一遍
+  A：我们刚换了新版表格
+  B：我也收到了 看着清楚些
+  A：就是填起来多两栏
+  B：熟悉了就快了
+  A：我把旧表也留了一份
+  B：留着对照确实方便
+  A：同事说下周要培训
+  【9月27日】
+  A：我看了下这周日程，空出来的时间还挺多。
+  B：是啊 把事情一项项排开就好些。
+  A：那我先把要带的东西列一下。
+  B：行，别忘了看天气再决定。
+  【9月28日】
+  A：这几天早晚温差挺大的
+  B：是啊 中午又有点热
+  A：我出门会带件薄外套
+  B：带着好 晚上用得上
+  A：预报说周末会降温
+  B：那我把厚衣服拿出来
+  A：我把外套放包里了
+  B：这个办法稳妥
+  A：刚看窗外又起风了
+  【9月29日】
+  【系统消息】B 向 A 转账 5800 元，已收款。
+  A：尾款已经按合同到账，凭据也收到了。
+  B：好，归档时把验收记录一起放好。
+  A：已经整理好了，谢谢。
+  B：不客气，项目顺利收尾。

@@ -575,3 +575,52 @@
 - 2026-09-24 04:41 | task_cli: CLAIM claim=307 TASK-0277 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T06:41:34
 - 2026-09-24 04:41 | task_cli: COMPLETE claim=307 TASK-0277 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
 - 2026-09-24 04:42 | task_cli: COMPLETE claim=305 TASK-0280 agent=builder_twenty_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:43 | task_cli: CLAIM claim=308 TASK-0147 agent=glm-w1 lease=7200s 截止=2026-09-24T06:43:07
+- 2026-09-24 04:43 | task_cli: CLAIM claim=309 TASK-0148 agent=glm-w2 lease=7200s 截止=2026-09-24T06:43:07
+- 2026-09-24 04:43 | task_cli: COMPLETE claim=306 TASK-0276 agent=builder_twentytwo_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:43 | task_cli: CLAIM claim=310 TASK-0281 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T06:43:55
+- 2026-09-24 04:44 | task_cli: CLAIM claim=311 TASK-0282 agent=builder_twenty_luna lease=7200s 截止=2026-09-24T06:44:00
+- 2026-09-24 04:44 | task_cli: CLAIM claim=312 TASK-0283 agent=builder_twentytwo_luna lease=7200s 截止=2026-09-24T06:44:05
+- 2026-09-24 04:44 | task_cli: FAILED claim=312 TASK-0283 agent=builder_twentytwo_luna 原因=整包安全审查后交还，未生成案例。多条 risk2 spec 的 latent_facts/signals 实质要求具体贿赂/舞弊实施手段：ARC-000027 大量替票、按票面点数虚开发票并报销套现；ARC-000025 内部锁定入学名额且将现金改开其他名目收据；ARC-000023 抬高采购价分成并放水验货；ARC-000026 术前私下红包换取床位/手术安排、指定专家加急；ARC-000020 绕过招聘流程并经家属收款/特殊处理档案；ARC-000022 检查前通风报信并收长期月费。保留原始 latent intent 会要求生成可复用的违规做法，按要求 fail 整包，不洗稿。另两条 risk0 spec (b123c032,b123c034) 也将这些涉贿 archetype signals 与正常转账/良性标签混置，需要上游理顺 risk0 benign-only case spec。 -> 重新入池（attempts 1/3）
+- 2026-09-24 04:44 | task_cli: FAILED claim=311 TASK-0282 agent=builder_twenty_luna 原因=TASK-0282 多条risk2 spec要求具体呈现操作性利益输送与掩盖结构：ARC-000017结果后经中间人转付且避开正式渠道；ARC-000026术前递礼换取指定专家加急并事后付费；ARC-000025以其他名目收据掩盖入学付款/内部锁名额；ARC-000018以空白咨询合同和固定月款包装无服务利益输送；ARC-000023抬高采购价分成并放松验收。属于实质操作性犯罪实施细节，依边界整包交还，未洗稿。没有仅因risk/allowed-risk不匹配而fail。 -> 重新入池（attempts 1/3）
+- 2026-09-24 04:46 | task_cli: CLAIM claim=313 TASK-0284 agent=builder_twenty_luna lease=7200s 截止=2026-09-24T06:46:27
+- 2026-09-24 04:46 | task_cli: CLAIM claim=314 TASK-0285 agent=builder_twentytwo_luna lease=7200s 截止=2026-09-24T06:46:31
+- 2026-09-24 04:46 | task_cli: FAILED claim=313 TASK-0284 agent=builder_twenty_luna 原因=TASK-0284 的risk2规格要求具体违法实施/掩盖结构：ARC-000027虚开发票按点数套现；ARC-000020以利益交换绕过招聘流程；ARC-000023采购抬价分成、模糊发票并放松验货；ARC-000028验收/尾款被卡时索取签字费；ARC-000018空白咨询合同+固定打款掩盖无服务；ARC-000026术前私下红包换指定专家加急。属于可复用的违法实施细节，依边界整包交还，未洗稿。不是因risk0/archetype allowed-risk不匹配而fail。 -> 重新入池（attempts 1/3）
+- 2026-09-24 04:46 | task_cli: FAILED claim=314 TASK-0285 agent=builder_twentytwo_luna 原因=整包安全审查后交还，未生成案例。多个 risk2 spec 的 latent facts/signals 要求描述可复用的贿赂/舞弊机制：ARC-000026 私下红包换床位/手术安排并指定专家加急；ARC-000022 检查前通风报信并收长期月费；ARC-000017 将审批结果与付款挂钩并经中间人避开正式渠道；ARC-000018 用空白咨询合同包装利益输送、按月打款且无服务；ARC-000027 大量替票、虚开发票并报销套现；ARC-000023 抬高采购价分成并放水验货；ARC-000025 变相收取择校费/交易入学名额且改变收据名目。保留原 latent intent 会需要生成这些操作性做法，按要求整包退回，不洗稿。risk0 spec 可单独按 benign alternatives 建良性语境，但不能抵消上述包内阻挡项。 -> 重新入池（attempts 1/3）
+- 2026-09-24 04:47 | task_cli: CLAIM claim=315 TASK-0287 agent=builder_twenty_luna lease=7200s 截止=2026-09-24T06:47:44
+- 2026-09-24 04:47 | task_cli: CLAIM claim=316 TASK-0288 agent=builder_twentytwo_luna lease=7200s 截止=2026-09-24T06:47:48
+- 2026-09-24 04:48 | task_cli: COMPLETE claim=310 TASK-0281 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:48 | task_cli: FAILED claim=315 TASK-0287 agent=builder_twenty_luna 原因=TASK-0287 的规格触发派单安全边界：ARC-000146要求批量账号刷评/群控；ARC-000136要求抢票外挂加速参数和实名问题处理；ARC-000147要求代写保查重及导师关系介入；ARC-000149要求按片区和楼栋组织违规贷款广告张贴与计酬。这些均是可复用的刷评/外挂/作弊/误导操作细节，整包交还，未洗稿。 -> 重新入池（attempts 1/3）
+- 2026-09-24 04:48 | task_cli: FAILED claim=316 TASK-0288 agent=builder_twentytwo_luna 原因=整包安全审查后交还，未生成案例。工单明确要求描述可复用的违规实施：ARC-000147 产业化代写并保证查重、联系导师（b125c022,b125c004）；ARC-000149 组织夜间按片区/楼栋张贴贷款中介引流广告并以撕除扣款（b125c001,b125c025,b125c014,b125c030）；ARC-000146 百账号刷单控评、分发文案（b125c019,b125c026,b125c008）；ARC-000136 抢票外挂参数及处理实名问题（b125c006）。这些触及工单点名的代写作弊、贷款误导、刷评和外挂操作细节，按要求整包退回，不洗稿成良性案例。 -> 重新入池（attempts 1/3）
+- 2026-09-24 04:49 | task_cli: CLAIM claim=317 TASK-0286 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T06:49:27
+- 2026-09-24 04:49 | task_cli: CLAIM claim=318 TASK-0289 agent=builder_twenty_luna lease=7200s 截止=2026-09-24T06:49:34
+- 2026-09-24 04:49 | task_cli: CLAIM claim=319 TASK-0290 agent=builder_twentytwo_luna lease=7200s 截止=2026-09-24T06:49:44
+- 2026-09-24 04:49 | task_cli: FAILED claim=318 TASK-0289 agent=builder_twenty_luna 原因=TASK-0289 含明确触发项：ARC-000136要求抢票外挂加速参数及实名问题处理；ARC-000147要求代写保查重并介入导师关系；ARC-000149要求组织违规贷款广告按区域/楼栋张贴计酬。这些是可复用外挂、作弊和贷款误导方法，整包交还，未洗稿。 -> 重新入池（attempts 1/3）
+- 2026-09-24 04:50 | task_cli: CLAIM claim=320 TASK-0291 agent=builder_twenty_luna lease=7200s 截止=2026-09-24T06:50:26
+- 2026-09-24 04:50 | task_cli: FAILED claim=317 TASK-0286 agent=builder_seventeen_luna 原因=TASK-0286 含需具体呈现犯罪隐匿/执行手法的规格：b124c006 要求描写付款避开正式渠道并叮嘱不要在群里提；b124c030 要求大量替票、按票面点数结算及报销套现线索。按安全边界整包原样交还，未改写或生成案例。 -> 重新入池（attempts 1/3）
+- 2026-09-24 04:51 | task_cli: FAILED claim=320 TASK-0291 agent=builder_twenty_luna 原因=整包含需呈现可复用的贿赂与掩饰实施细节，按安全边界交还：ARC-000025要求用其他名目收据掩饰择校款并锁定名额；ARC-000023要求模糊发票、抬价分成及验货放水；ARC-000018要求空白咨询合同包装固定利益输送；ARC-000022涉及检查前通风报信及长期月费；ARC-000027涉及替票按票面点数结算套现；ARC-000028涉及以验收/尾款索取签字费。为避免生成可复用行贿、虚开发票、规避核查操作细节，整包原样退回，未改写案例。 -> 重新入池（attempts 1/3）
+- 2026-09-24 04:51 | task_cli: CLAIM claim=321 TASK-0292 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T06:51:11
+- 2026-09-24 04:51 | task_cli: FAILED claim=321 TASK-0292 agent=builder_seventeen_luna 原因=TASK-0292 的 b126c002（ARC-000017）要求描写审批结果后的利益转付、刻意避开正式渠道，并叮嘱不要在群里提，属于具体腐败付款隐匿方式。按安全边界整包原样交还，未生成或改写任何案例。 -> 重新入池（attempts 1/3）
+- 2026-09-24 04:51 | task_cli: CLAIM claim=322 TASK-0293 agent=builder_twenty_luna lease=7200s 截止=2026-09-24T06:51:26
+- 2026-09-24 04:51 | task_cli: FAILED claim=322 TASK-0293 agent=builder_twenty_luna 原因=整包含多条要求呈现具体行贿及规避手段的 risk2 规格，故原样交还：ARC-000017 明确要求经中间人转付并避开正式渠道；ARC-000022 要求检查前通风报信、长期月费；ARC-000020 要求以利益交换绕过招聘；ARC-000018 用空白咨询合同包装无服务的固定付款；ARC-000023 要求抬价分成和验货放水；ARC-000025 指标名额交易及其他名目收据；ARC-000027 虚开发票按点数结算；ARC-000028 验收卡要索取签字费。这些超出安全抽象描述并会形成可复用违法实施或规避细节；未生成案例。 -> 重新入池（attempts 1/3）
+- 2026-09-24 04:51 | task_cli: CLAIM claim=323 TASK-0294 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T06:51:46
+- 2026-09-24 04:51 | task_cli: CLAIM claim=324 TASK-0295 agent=builder_twenty_luna lease=7200s 截止=2026-09-24T06:51:56
+- 2026-09-24 04:52 | task_cli: FAILED claim=323 TASK-0294 agent=builder_seventeen_luna 原因=TASK-0294 包含需具体呈现违法实施/掩盖模式的规格：b127c015、b127c024（ARC-000027）要求替票、按票面点数结算并报销套现；b127c025（ARC-000025）要求捐助外现金、内部锁名额并将收据开成其他名目。按安全边界整包原样交还，未生成或改写案例。 -> 重新入池（attempts 1/3）
+- 2026-09-24 04:52 | task_cli: FAILED claim=324 TASK-0295 agent=builder_twenty_luna 原因=整包含需要呈现具体行贿、利益输送或掩饰手段的 risk2 规格，原样交还：ARC-000023要求抬价分成、模糊发票及验货放水；ARC-000017要求结果后经中间人付款并刻意避开正式渠道；ARC-000025要求交易入学名额及以其他名目开收据；ARC-000028以验收/尾款索取签字费；ARC-000018以空白咨询合同包装无服务的固定付款。ARC-000027虽有一个risk0良性变体，但不能抵消其他spec的安全阻挡。本包未生成案例。 -> 重新入池（attempts 1/3）
+- 2026-09-24 04:52 | task_cli: CLAIM claim=325 TASK-0296 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T06:52:37
+- 2026-09-24 04:52 | task_cli: CLAIM claim=326 TASK-0297 agent=builder_twenty_luna lease=7200s 截止=2026-09-24T06:52:41
+- 2026-09-24 04:55 | task_cli: COMPLETE claim=319 TASK-0290 agent=builder_twentytwo_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:55 | task_cli: COMPLETE claim=326 TASK-0297 agent=builder_twenty_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:56 | task_cli: CLAIM claim=327 TASK-0298 agent=builder_twenty_luna lease=7200s 截止=2026-09-24T06:56:38
+- 2026-09-24 04:56 | task_cli: CLAIM claim=328 TASK-0299 agent=builder_twentytwo_luna lease=7200s 截止=2026-09-24T06:56:51
+- 2026-09-24 04:58 | task_cli: COMPLETE claim=325 TASK-0296 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:58 | task_cli: COMPLETE claim=327 TASK-0298 agent=builder_twenty_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:58 | task_cli: CLAIM claim=329 TASK-0300 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T06:58:43
+- 2026-09-24 04:58 | task_cli: CLAIM claim=330 TASK-0301 agent=builder_twenty_luna lease=7200s 截止=2026-09-24T06:58:48
+- 2026-09-24 04:58 | task_cli: COMPLETE claim=328 TASK-0299 agent=builder_twentytwo_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 04:59 | task_cli: CLAIM claim=331 TASK-0302 agent=builder_twentytwo_luna lease=7200s 截止=2026-09-24T06:59:46
+- 2026-09-24 05:00 | task_cli: COMPLETE claim=330 TASK-0301 agent=builder_twenty_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 05:01 | task_cli: COMPLETE claim=331 TASK-0302 agent=builder_twentytwo_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 05:03 | task_cli: COMPLETE claim=329 TASK-0300 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 05:05 | task_cli: COMPLETE claim=308 TASK-0147 agent=glm-w1 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 05:14 | task_cli: COMPLETE claim=309 TASK-0148 agent=glm-w2 accepted=10 pairs=0 | worker done: 10 case files written

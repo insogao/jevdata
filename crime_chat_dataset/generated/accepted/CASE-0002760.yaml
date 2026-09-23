@@ -1,0 +1,118 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002760
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000089
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-7732abf817782a51
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: privacy_doxxing
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 酒店夜班前台 A 受上线 B 指使，只在夜班把刚入住客人的登记信息即时翻出来给对方（「刚住下就出单」），按次计价、按周结款，B 转来 1200 元结算一周六次的「单子」，实为长期出售住客入住信息的黑产上下游，对话全程只称「单子」「人」，靠转账与语境才能推断。
+  critical_evidence:
+  - B 只在 A 夜班时来消息，深夜点名「今晚有两位要留意」，要求人刚住下就出单（第1天）
+  - A 十分钟内把「刚进来那位 806」的单子递出去，B 验收「干净利落」（第1天）
+  - B 明说白班人杂办不了、只有 A 夜班能办（第2天凌晨）
+  - 按次结算：一周六次、一条一次老价，B 转 1200 元，A 确认到账（第2天夜里，转账）
+  - B 预约周五的团队入住，届时指名要其中几位的单子，老规矩刚住下就出（第3天）
+  benign_alternatives:
+  - 前台正常的入住登记交接
+  - 警方依法查询的配合流程
+
+attributes:
+  duration_days: 3
+  turn_count: 41
+  approximate_tokens_estimate: 873
+  relationship: 上下级
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: hotel_register_leak
+  risk: 3
+  relationship: 上下级
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0147
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-077
+
+dedup:
+  content_hash: sha256:40496ff7f25b344dbdbf779863b5ac30eaf1cee2b562a6bc5610c5498675d3e9
+pipeline_status: accepted
+title: privacy_doxxing/hotel_register_leak
+conversation: |-
+  【11月20日】
+  B：在班上?
+  A：在 夜班刚接手
+  B：今晚有两位要留意 一位刚办进去 一位半小时前
+  A：刚进来那位 806 我记下了
+  B：出单要快 人刚住下就要给那边
+  A：明白 十分钟内给你
+  B：嗯 发老规矩那个本子上
+  A：这单出去了 你看下
+  B：收到 干净利落
+  B：吃了没
+  A：泡面 前台就这待遇
+  B：让楼下便利店给你带份关东煮 我请
+  A：那不好意思了 嘿嘿
+  B：谢什么 夜班辛苦
+  【11月21日】
+  B：昨儿那两位的事稳住了 后面还有
+  A：你安排 我听着
+  B：这周五有批团队进来 五六位 我只要其中两位的
+  A：团队单前台不细看 我留心就行
+  B：对 就你夜班能办 白班的人杂
+  A：懂 夜里清净 出单快
+  B：你嗓子怎么哑了
+  A：昨晚着凉 一天喷了半瓶喷雾
+  B：下了夜班去拿点药 别硬扛
+  A：睡一觉就好 你别管我
+  B：你喂的那只狸花还在后巷吗
+  A：在 胖了两圈 天冷我给垫了纸箱
+  B：行 那猫有福气 碰上你
+  A：它现在见我下楼就跟着 要吃的
+  A：今晚的单子给你留了一份 在老地方
+  B：这周拢共六次 一条一次还是老价 1200
+  A：行 你转吧
+  【系统消息】B 向 A 转账 1200 元，已收款。
+  A：1200 到了
+  B：按次结 谁也不欠谁
+  B：你追那部刑侦的更新没
+  A：更了 就爱看夜班戏 有共鸣
+  B：你可别看进去 教坏你 哈哈
+  A：看别人上夜班 自己还得接着上
+  【11月22日】
+  B：周五团队的事别忘了 名单到时候发你
+  A：记着呢 留哪几位你说
+  B：到时候指给你 老规矩 刚住下就出单
+  A：放心 夜班的事 夜里见

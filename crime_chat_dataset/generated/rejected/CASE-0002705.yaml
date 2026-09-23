@@ -1,0 +1,144 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002705
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000023
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-b71708e2f3981c80
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 供应商与采购方围绕一笔不寻常的采购安排形成利益交换：报价高于可比方案，品名被说得含混，验收方表示会放行，随后出现一笔与该安排相关的款项。
+  critical_evidence:
+  - 采购方提到本次只有一家供应商参与议价，且报价明显高于同类采购的既有区间
+  - 双方把发票品名说得很笼统，采购方也知道实际交付与所写名目对不上
+  - 验收一方暗示货物尚未逐项核对也会通过
+  - 相关款项在对话期间到账，且双方将其与这次采购安排联系起来
+  benign_alternatives:
+  - 正常议价采购
+  - 集中采购折扣
+
+attributes:
+  duration_days: 4
+  turn_count: 66
+  approximate_tokens_estimate: 1706
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: procurement_price_padding
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0281
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-123
+
+dedup:
+  content_hash: sha256:359779cd6582a379c9cc5d4942250d914827e1e7867a2d6d41f41fcc0aa09141
+pipeline_status: rejected
+title: bribery_corruption/procurement_price_padding
+conversation: |-
+  【6月1日】
+  A：这批还是你们一家报吗？我看了下，比上次同类高不少。
+  A：这周雨挺大，路上堵得厉害。
+  B：我早上多坐了两站地铁，反而快些。
+  A：明天我也早点出门试试。
+  B：带把伞，预报说还要下。
+  B：目前就我们这家给了完整报价，确实高一点。
+  B：中午吃的什么？
+  A：楼下新开了家面馆，味道还行。
+  B：我也想去，别点太辣。
+  A：放心，我最近胃不太舒服。
+  A：单子上的品名写得宽泛些，和交付清单别差太远就行。
+  A：家里那盆绿植最近叶子有点蔫。
+  B：是不是放在空调风口了？
+  A：我挪到窗边看看。
+  B：先少浇点水，周末再观察。
+  B：嗯，具体型号我就不逐个列了。
+  A：验收那边说现场看一眼就签，不会卡细项。
+  【6月2日】
+  A：先把这次结完，后面别再报这么高。
+  B：我知道了，验收记录我也会留好。
+  A：我刚开完会，今天安排有点满。
+  B：辛苦了，记得喝水。
+  A：嗯，桌上还放着半杯咖啡。
+  B：冷了就别喝了，换点温水。
+  A：明早我先把日程看一下。
+  B：好，有变化再互相说一声。
+  B：你那边今天忙到几点？
+  A：差不多六点，晚点再回家。
+  A：刚才网络断了一下，消息才发出去。
+  B：没事，我也刚看到。
+  B：快递送到了吗？
+  B：那我按你说的把单据交过去。
+  A：差额的事按之前说的处理，今天会有一笔款到。
+  B：看到了。这个和采购单放一起说不太合适吧。
+  【6月3日】
+  A：刚把桌面收拾了下，文件总算没那么乱。
+  B：今天窗外风挺大，阳台门我关上了。
+  A：晚饭打算做点清淡的，最近不想吃太油。
+  B：我把明天要带的东西放在玄关了。
+  B：刚泡了杯茶，先缓一会儿再继续。
+  A：附近那家水果店换了招牌，你看见没？
+  A：这周睡得有点晚，今晚争取早点休息。
+  B：我把快递纸箱拆好了，准备拿去回收。
+  B：天气预报说周末会降温，衣服得带厚一点。
+  A：到了，放在门口柜子里。
+  【系统消息】B 向 A 转账 2384 元，已收款。
+  A：这两天温差挺明显的。
+  B：是啊，晚上记得加件外套。
+  B：我先去处理下手头的事。
+  A：好，忙完再聊。
+  A：刚才整理照片，翻到去年那次出游了。
+  B：家里的灯泡好像快坏了，闪了两下。
+  【6月4日】
+  B：我把购物清单存在手机备忘录里了。
+  A：路边那排树开始长新叶了，看着挺舒服。
+  A：午后有点困，我起来走了几分钟。
+  B：刚洗完杯子，台面也顺手擦干净了。
+  B：周末如果不下雨，我想去公园转一圈。
+  A：最近常听的那首歌还挺适合通勤。
+  A：我把充电线放回包里了，免得明早找不到。
+  B：今天楼下有点吵，应该是在修路。
+  B：晚点我准备把衣柜换季整理一下。
+  A：刚收到天气提醒，明早可能有雾。
+  A：冰箱里还有些菜，今晚不用特意买了。
+  B：我把门口的鞋摆整齐了，省得绊着。
+  A：这两天喝水少，桌边放个水杯提醒自己。
+  B：刚看完一本短书，准备找下一本。
+  A：周末要是有空，把阳台也收拾一下。
+  B：我把手机系统更新了，暂时用着还行。
+  【6月5日】
+  A：今天太阳出来一会儿，屋里亮堂不少。

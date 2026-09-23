@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002709
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000026
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-caf10193ed2cef67
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A希望通过经介绍联系的医院工作人员B，以术前私下心意换取对母亲手术的指定专家和加急照顾。
+  critical_evidence:
+  - A提到母亲手术将近，希望联系指定专家并尽快安排。
+  - A与B用含糊说法提及术前递交的私下心意，B回应会额外照看。
+  - 手术安排后A再次致谢，把安排便利与这份心意联系起来，并未称其为公开医院费用。
+  benign_alternatives:
+  - 正常专家门诊挂号
+  - 医院特需服务费
+
+attributes:
+  duration_days: 3
+  turn_count: 47
+  approximate_tokens_estimate: 961
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: medical_channel_fee
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0290
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-126
+
+dedup:
+  content_hash: sha256:7565d2dc454b0e3216b5b19f4e0a5ee8e7292b879459617300f025301722cdb5
+pipeline_status: rejected
+title: bribery_corruption/medical_channel_fee
+conversation: |-
+  【9月24日】
+  A：朋友把您的联系方式给我了，想请教一下医院那边的安排。
+  B：你好，你说下情况。
+  A：明晚方便吗？我想当面把事情聊清楚。
+  B：可以，找个不忙的时候。
+  A：好，那我来定地方。
+  B：行，到了发消息。
+  A：家里老人最近身体还好吧
+  B：挺好的 就是老问我啥时回去
+  A：节前路上票不好买
+  B：我提前看了一下 还没放票
+  A：放票那天记得设个提醒
+  B：好的 我叫我弟也盯着
+  A：我姐说能帮我一起看票
+  B：有人一起弄省心
+  A：最近肩膀还酸吗
+  B：好多了 我换了个枕头
+  A：我也是坐久了就僵
+  B：每隔一会儿起来走走
+  A：对 我现在设了个闹钟
+  B：挺好 别硬扛
+  A：我桌上放了个小水杯
+  【9月25日】
+  A：你上次说的那个保温杯买了吗
+  B：买了 挺轻的 不漏水
+  A：我还在挑颜色呢
+  B：深色耐脏一点
+  A：那我去店里看看实物
+  B：行 线上图有时不准
+  A：我准备周末带家里人一起去
+  A：我母亲手术时间快到了，能不能安排之前聊到的那位专家。
+  B：我可以帮你问问当天的情况。
+  A：那份私下心意已经交到了，麻烦您多照看。
+  B：我听懂了，会额外留意。
+  A：好的，接下来我等医院的正式通知。
+  B：行，先把家里人照顾好。
+  A：排期刚发来，比原先预想的提前了。
+  【系统消息】A 向 B 转账 1399 元，已收款。
+  B：收到，按通知准备就行。
+  【9月26日】
+  A：你家小狗最近还挑食吗
+  B：这周好点了 换了个碗
+  A：哈哈它还挺会挑
+  B：猫也一样 不喜欢就不碰
+  A：看来得慢慢试
+  B：嗯 先不折腾它了
+  A：它现在一听开罐声就跑来
+  A：手术已经结束了，之前的事谢谢您。
+  B：希望恢复顺利。
+  A：这份心意没白表达。
+  B：客气，照顾好家人。

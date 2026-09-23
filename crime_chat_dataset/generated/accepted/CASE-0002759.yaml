@@ -1,0 +1,138 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002759
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000040
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-507103d1ce80f686
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: contraband_illicit_trade
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 烟酒批发商 B 找口岸上的关系人 A 进来路不正的便宜烟：开口就问「这条多少」，A 报价一百四一条起（无票无税、过一道手的货），约在城东物流园三号库看货验码，B 转 3000 定金锁一件 5500 的货、提货时现金补齐尾款，实为无证走私卷烟的批发生意，并约定月中长期走量。
+  critical_evidence:
+  - B 开口问「这条多少」，A 报价零拿一百四、一件起一百一，明说货「过一道手 没票没税」才便宜（第1天）
+  - 验货安排在城东物流园三号库，报 A 的姓进门，B 看过确认「码是那边的码 条装也齐」（第2-3天）
+  - B 转定金 3000 锁一件 5500 的货，A 确认到账（第3天，转账）
+  - 尾款现金结算，提货当天一手钱一手货，装编织袋外头看不出，量大以后都现金结（第4天）
+  - 交货后铺两个店试走，约定月中再来一批、量留足、老价不变（第5天）
+  benign_alternatives:
+  - 免税店代购的正常讨论
+  - 正规渠道的卷烟批发
+
+attributes:
+  duration_days: 5
+  turn_count: 59
+  approximate_tokens_estimate: 1264
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: tobacco_smuggle
+  risk: 2
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0147
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-077
+
+dedup:
+  content_hash: sha256:e38dda313720579663fc7114b1b920a4bb2e32f70cb28951100174daf7b43126
+pipeline_status: accepted
+title: contraband_illicit_trade/tobacco_smuggle
+conversation: |-
+  【9月4日】
+  B：兄弟 上回酒桌上提的事 我琢磨了几天
+  A：想明白了?
+  B：我就问一句 这条多少
+  A：看量 零拿一百四 一件起一百一
+  B：店里零号卖二百出头 你这价有优势
+  A：那边的货 过一道手 没票没税 所以便宜
+  B：烟丝不会是掺的吧
+  A：口粮级的老渠道 抽过的没有回头骂的
+  B：行 我先按一件起试水
+  A：一件五十条 我给你备
+  B：这两个月生意淡 比不上端午
+  A：节前都这样 中秋一过就缓过来
+  B：我库房压的酒还一堆 头疼
+  A：酒好办 婚宴季一到就走
+  B：借你吉言
+  【9月5日】
+  A：货到了一部分 你要不要先看看
+  B：看必须看 仓库在哪
+  A：城东物流园后头 三号库 你报我姓就进
+  B：明天上午我去 带现金吗
+  A：先看货 谈妥了再说钱
+  B：稳妥 我就喜欢跟稳妥的人来往
+  A：咱们这行 稳妥才能长久
+  A：你家闺女开学了吧 二年级?
+  B：对 昨天送去 哭了半场
+  A：我家那小子倒盼开学 说在家无聊
+  B：男孩心大 好养
+  A：可不 操心的都是我们
+  【9月6日】
+  B：仓库看过了 码是那边的码 条装也齐
+  A：怎么样 没让你白跑吧
+  B：行 一件先要 第二件看走得动不走
+  A：一件 5500 老价
+  B：价我不还了 定金 3000 我先转你 锁住这批
+  A：成 转
+  【系统消息】B 向 A 转账 3000 元，已收款。
+  A：3000 见了
+  B：剩 2500 提货的时候给
+  A：提货当天补齐 一手钱一手货
+  B：以后量大 都现金结 习惯不
+  A：习惯了 干净
+  A：周末出钓不 我新淘了根竿
+  B：出 上回那口塘我又踩好点了
+  A：你这鱼获都够开摊了
+  B：冰箱塞不下 老婆有意见
+  A：那带两条给我 我给你留量 哈哈
+  【9月7日】
+  B：明天提货 上午十点 三号库?
+  A：对 十点 库里那天正好没人
+  B：剩款现金我备好了 整的
+  A：我给你装两层编织袋 外头看不出来
+  B：想得周到 明儿见
+  A：见
+  B：这两天降温 你们那儿冷不
+  A：早晚凉 中午还热 乱穿衣
+  B：我妈开始炖汤了 天一凉就进补
+  A：好事 我晚上炖了个羊肉
+  B：行 明天十点 三号库 别迟到
+  A：迟到的是小狗 哈哈
+  【9月8日】
+  B：提回来了 条码齐整 先铺两个店走
+  A：走得动月中再来一批 量给你留足
+  B：行 月中联系 这条的价格就按今儿
+  A：老价不变 你稳我稳

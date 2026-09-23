@@ -1,0 +1,502 @@
+{
+ "key": "b128c029",
+ "archetype_id": "ARC-000019",
+ "subtype": "gift_card_channel",
+ "latent_intent": "亲友A在节日前约见熟悉审批流程的B，提出一张不说明面值的卡，随后问起一件申请能否多留意。亲友间礼节和工作请求交织，尚无明确交换或特殊处理承诺。",
+ "critical_facts": [
+  "A选择在节日前约见熟悉审批流程的亲友B",
+  "A提到购物卡但没有说明面值",
+  "事后A将话题转到申请事项并请B留意",
+  "B表示仍按统一流程处理，未承诺优待"
+ ],
+ "benign_alternatives": [
+  "正常节日人情往来",
+  "公司福利卡"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "8月1日 09:00",
+   "speaker": "A",
+   "text": "这两天风挺大。"
+  },
+  {
+   "type": "message",
+   "time": "8月1日 09:12",
+   "speaker": "B",
+   "text": "我早上出门差点把伞吹翻。"
+  },
+  {
+   "type": "message",
+   "time": "8月1日 09:24",
+   "speaker": "A",
+   "text": "明天我换把结实点的。"
+  },
+  {
+   "type": "message",
+   "time": "8月1日 09:36",
+   "speaker": "B",
+   "text": "看预报周末会好些。"
+  },
+  {
+   "type": "message",
+   "time": "8月1日 09:48",
+   "speaker": "A",
+   "text": "节前回去吃饭时我给你带张卡吧。"
+  },
+  {
+   "type": "message",
+   "time": "8月1日 10:00",
+   "speaker": "B",
+   "text": "上次午饭我先垫了36元，你把AA转我就行。"
+  },
+  {
+   "type": "message",
+   "time": "8月1日 10:12",
+   "speaker": "A",
+   "text": "好，刚转你36元，午饭AA对上了。"
+  },
+  {
+   "type": "transfer",
+   "time": "8月1日 10:14",
+   "from": "A",
+   "to": "B",
+   "amount": 36,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "8月1日 10:24",
+   "speaker": "B",
+   "text": "收到了，36元对上了，谢谢。"
+  },
+  {
+   "type": "message",
+   "time": "8月1日 10:36",
+   "speaker": "A",
+   "text": "冰箱里有菜的话简单炒一下。"
+  },
+  {
+   "type": "message",
+   "time": "8月1日 10:48",
+   "speaker": "A",
+   "text": "今天路上比平时堵。"
+  },
+  {
+   "type": "message",
+   "time": "8月2日 09:00",
+   "speaker": "B",
+   "text": "是不是前面在修路？"
+  },
+  {
+   "type": "message",
+   "time": "8月2日 09:12",
+   "speaker": "A",
+   "text": "对，公交临时绕了一站。"
+  },
+  {
+   "type": "message",
+   "time": "8月2日 09:24",
+   "speaker": "B",
+   "text": "明天可以多留十分钟。"
+  },
+  {
+   "type": "message",
+   "time": "8月2日 09:36",
+   "speaker": "B",
+   "text": "家里的灯修好了吗？"
+  },
+  {
+   "type": "message",
+   "time": "8月2日 09:48",
+   "speaker": "B",
+   "text": "家里人聚一聚就好，不用带东西。"
+  },
+  {
+   "type": "message",
+   "time": "8月2日 10:00",
+   "speaker": "A",
+   "text": "换了个灯泡，现在正常了。"
+  },
+  {
+   "type": "message",
+   "time": "8月2日 10:12",
+   "speaker": "B",
+   "text": "还好只是接触不稳。"
+  },
+  {
+   "type": "message",
+   "time": "8月2日 10:24",
+   "speaker": "A",
+   "text": "我顺手把其他几个也检查了。"
+  },
+  {
+   "type": "message",
+   "time": "8月2日 10:36",
+   "speaker": "B",
+   "text": "今天中午突然下雨了。"
+  },
+  {
+   "type": "message",
+   "time": "8月2日 10:48",
+   "speaker": "A",
+   "text": "我刚好在楼下，躲了一会儿。"
+  },
+  {
+   "type": "message",
+   "time": "8月2日 11:00",
+   "speaker": "B",
+   "text": "路面现在应该干得差不多了。"
+  },
+  {
+   "type": "message",
+   "time": "8月2日 11:12",
+   "speaker": "A",
+   "text": "嗯，晚点出门不用绕路。"
+  },
+  {
+   "type": "message",
+   "time": "8月2日 11:24",
+   "speaker": "A",
+   "text": "楼下新开了家小店。"
+  },
+  {
+   "type": "message",
+   "time": "8月2日 11:36",
+   "speaker": "A",
+   "text": "购物卡，面值没看，算个小心意。"
+  },
+  {
+   "type": "message",
+   "time": "8月2日 11:48",
+   "speaker": "B",
+   "text": "卖什么的？"
+  },
+  {
+   "type": "message",
+   "time": "8月2日 12:00",
+   "speaker": "A",
+   "text": "家常菜，分量看着还行。"
+  },
+  {
+   "type": "message",
+   "time": "8月2日 12:12",
+   "speaker": "B",
+   "text": "下次路过我也去试试。"
+  },
+  {
+   "type": "message",
+   "time": "8月2日 12:24",
+   "speaker": "B",
+   "text": "你现在还是坐地铁吗？"
+  },
+  {
+   "type": "message",
+   "time": "8月2日 12:36",
+   "speaker": "A",
+   "text": "是，最近换乘那段人少些。"
+  },
+  {
+   "type": "message",
+   "time": "8月3日 09:00",
+   "speaker": "B",
+   "text": "我也考虑改成地铁。"
+  },
+  {
+   "type": "message",
+   "time": "8月3日 09:12",
+   "speaker": "A",
+   "text": "早高峰可能还是得早点出门。"
+  },
+  {
+   "type": "message",
+   "time": "8月3日 09:24",
+   "speaker": "A",
+   "text": "阳台那盆花长了新叶。"
+  },
+  {
+   "type": "message",
+   "time": "8月3日 09:36",
+   "speaker": "B",
+   "text": "最近温度合适，应该长得快。"
+  },
+  {
+   "type": "message",
+   "time": "8月3日 09:48",
+   "speaker": "B",
+   "text": "我不想让家里的事和工作搅在一起。"
+  },
+  {
+   "type": "message",
+   "time": "8月3日 10:00",
+   "speaker": "A",
+   "text": "我把它从空调旁边挪开了。"
+  },
+  {
+   "type": "message",
+   "time": "8月3日 10:12",
+   "speaker": "B",
+   "text": "少浇点水，先观察几天。"
+  },
+  {
+   "type": "message",
+   "time": "8月3日 10:24",
+   "speaker": "A",
+   "text": "最近早晚温差有点大。"
+  },
+  {
+   "type": "message",
+   "time": "8月3日 10:36",
+   "speaker": "B",
+   "text": "我包里放了件薄外套。"
+  },
+  {
+   "type": "message",
+   "time": "8月3日 10:48",
+   "speaker": "A",
+   "text": "这个办法不错，我也准备一件。"
+  },
+  {
+   "type": "message",
+   "time": "8月3日 11:00",
+   "speaker": "B",
+   "text": "办公室空调有时挺冷。"
+  },
+  {
+   "type": "message",
+   "time": "8月3日 11:12",
+   "speaker": "B",
+   "text": "最近你还喝冰咖啡吗？"
+  },
+  {
+   "type": "message",
+   "time": "8月3日 11:24",
+   "speaker": "A",
+   "text": "少喝了，晚上容易睡不着。"
+  },
+  {
+   "type": "message",
+   "time": "8月3日 11:36",
+   "speaker": "B",
+   "text": "换成茶可能好一点。"
+  },
+  {
+   "type": "message",
+   "time": "8月3日 11:48",
+   "speaker": "A",
+   "text": "那件申请你有空时帮我看下状态就行。"
+  },
+  {
+   "type": "message",
+   "time": "8月3日 12:00",
+   "speaker": "A",
+   "text": "嗯，下午以后我喝温水。"
+  },
+  {
+   "type": "message",
+   "time": "8月3日 12:12",
+   "speaker": "A",
+   "text": "共享单车还在原来那排吗？"
+  },
+  {
+   "type": "message",
+   "time": "8月3日 12:24",
+   "speaker": "B",
+   "text": "昨天看还在，停车点没变。"
+  },
+  {
+   "type": "message",
+   "time": "8月3日 12:36",
+   "speaker": "A",
+   "text": "好，我明早骑过去。"
+  },
+  {
+   "type": "message",
+   "time": "8月3日 12:48",
+   "speaker": "B",
+   "text": "记得看下轮胎气够不够。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 09:00",
+   "speaker": "B",
+   "text": "快递送到家了吗？"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 09:12",
+   "speaker": "A",
+   "text": "下午收到了，已经放进柜子。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 09:24",
+   "speaker": "B",
+   "text": "包装大吗？"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 09:36",
+   "speaker": "A",
+   "text": "不大，拆完纸盒就能回收。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 09:48",
+   "speaker": "B",
+   "text": "我会照流程看，不能因为关系改变顺序。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 10:00",
+   "speaker": "B",
+   "text": "天气预报说明天晴。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 10:12",
+   "speaker": "A",
+   "text": "那我把床单拿去晒晒。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 10:24",
+   "speaker": "B",
+   "text": "太阳出来屋里也亮堂。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 10:36",
+   "speaker": "A",
+   "text": "是啊，最近总算不像前几天那么闷。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 10:48",
+   "speaker": "A",
+   "text": "我周末试着煮了粥。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 11:00",
+   "speaker": "B",
+   "text": "咸的还是甜的？"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 11:12",
+   "speaker": "A",
+   "text": "咸的，加了点青菜。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 11:24",
+   "speaker": "B",
+   "text": "听起来不错，下回我也做一锅。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 11:36",
+   "speaker": "A",
+   "text": "好，我只是问问，不是催你。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 11:48",
+   "speaker": "B",
+   "text": "今天下班你走哪条路？"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 12:00",
+   "speaker": "A",
+   "text": "走河边那条，人少一点。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 12:12",
+   "speaker": "B",
+   "text": "天黑早了，路灯亮吗？"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 12:24",
+   "speaker": "A",
+   "text": "亮的，最近新换过。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 12:36",
+   "speaker": "A",
+   "text": "我把书桌整理了一下。"
+  },
+  {
+   "type": "message",
+   "time": "8月5日 09:00",
+   "speaker": "B",
+   "text": "找东西是不是方便多了？"
+  },
+  {
+   "type": "message",
+   "time": "8月5日 09:12",
+   "speaker": "A",
+   "text": "好多了，之前文件堆成一摞。"
+  },
+  {
+   "type": "message",
+   "time": "8月5日 09:24",
+   "speaker": "B",
+   "text": "能每天收一点就不会乱。"
+  },
+  {
+   "type": "message",
+   "time": "8月5日 09:36",
+   "speaker": "A",
+   "text": "今天风小了，走路舒服多了。"
+  },
+  {
+   "type": "message",
+   "time": "8月5日 09:48",
+   "speaker": "B",
+   "text": "系统有消息我会跟你说。"
+  },
+  {
+   "type": "message",
+   "time": "8月5日 10:00",
+   "speaker": "B",
+   "text": "我午休出去转了十分钟。"
+  },
+  {
+   "type": "message",
+   "time": "8月5日 10:12",
+   "speaker": "A",
+   "text": "附近新修的步道平整吗？"
+  },
+  {
+   "type": "message",
+   "time": "8月5日 10:24",
+   "speaker": "B",
+   "text": "挺平整的，晚上人也不多。"
+  },
+  {
+   "type": "message",
+   "time": "8月5日 10:36",
+   "speaker": "B",
+   "text": "今天食堂有新菜。"
+  },
+  {
+   "type": "message",
+   "time": "8月5日 10:48",
+   "speaker": "A",
+   "text": "味道怎么样？"
+  }
+ ],
+ "source_seed_ids": [
+  "SEED-SRC-AEG-001-5b54c6b26abde092"
+ ],
+ "_registered": {
+  "case_id": "CASE-0002738",
+  "status": "accepted",
+  "errors": []
+ }
+}

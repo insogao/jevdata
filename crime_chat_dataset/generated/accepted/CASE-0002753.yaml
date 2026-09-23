@@ -1,0 +1,124 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002753
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-a7aedd570465c0b0
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A想借节前送购物卡维系与表哥的关系，希望家里人看到资料时留点心；这份礼物也可以被解释成普通节日问候。
+  critical_evidence:
+  - 节前A主动约表哥见面，表哥在街区服务点帮忙收小店续办材料。
+  - A见面时送出一张购物卡但不提卡面金额；表哥收下这份节日心意。
+  - 见面后A发消息提到自己的我家店的续办表，暗示希望后续留意；表哥只表示按通常流程处理。
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司福利卡
+
+attributes:
+  duration_days: 2
+  turn_count: 50
+  approximate_tokens_estimate: 1123
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0299
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-129
+
+dedup:
+  content_hash: sha256:bd674e5d41b8398f9b86f2ad49406968c5751daba51642574b1f3d7814920a10
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【9月24日】
+  A：表哥，节前哪天有空，一起吃顿饭吧。
+  B：可以呀，正好最近都没见着。
+  A：明晚方便吗？我来定地方，离单位不远。
+  B：明晚可以，别订太正式的地方。
+  A：好，就附近那家家常菜馆。顺便带一点节日小心意。
+  B：吃饭可以，东西真不用特意准备。
+  A：这几天早晚温差挺大的
+  B：是啊 中午又有点热
+  A：我出门会带件薄外套
+  B：带着好 晚上用得上
+  A：预报说周末会降温
+  B：那我把厚衣服拿出来
+  A：附近新开了家面馆你去过没
+  B：去过一次 汤还不错
+  A：我上次点的拌面有点咸
+  B：那你下次试试番茄鸡蛋面
+  A：好 我记下了
+  B：中午人少点再去
+  A：你最近还坐地铁吗
+  B：基本都坐 开车找位太费劲
+  A：我这两天改骑车了
+  B：路上注意点 早高峰车多
+  A：就两站路 还挺方便
+  B：嗯 下雨我就不骑了
+  【9月25日】
+  A：家里老人最近身体还好吧
+  B：挺好的 就是老问我啥时回去
+  A：节前路上票不好买
+  B：我提前看了一下 还没放票
+  A：放票那天记得设个提醒
+  B：好的 我叫我弟也盯着
+  A：最近肩膀还酸吗
+  B：好多了 我换了个枕头
+  A：我也是坐久了就僵
+  B：每隔一会儿起来走走
+  A：对 我现在设了个闹钟
+  B：挺好 别硬扛
+  A：我到门口了，你慢慢来。
+  B：刚出来，马上到。
+  A：这个给你，一张购物卡，过节图个方便。卡面我也没留意。
+  B：你太客气了，心意我收下，下次别这么见外。
+  A：见面时顺带提过的我家店的续办表，我这边先等着，有空再说哈。
+  B：材料都按顺序处理，有消息会照常通知。
+  B：今天饭钱我分一半给你吧，转你117元。
+  【系统消息】B 向 A 转账 117 元，已收款。
+  A：好，收到你转的117元了，这样刚好。
+  A：明白，我就是问问，节前事情多辛苦啦。
+  A：见面时顺带提到的我家店的续办表，后面有消息麻烦跟我说下。
+  B：不客气，缺什么会统一联系，不用专门跑一趟。
+  B：会照常通知，不用专门跑一趟。
+  A：好，节前辛苦啦。
+  B：不客气。

@@ -1,0 +1,123 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002721
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-fc8e2a6169a5b497
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 节前，申请人以购物卡表达含糊的人情谢意，并借熟识关系询问一项普通申请进度；收卡一方说明事项按公开流程办理。礼物与节日往来可作日常解释，但事后含糊询问带来轻度可疑感。
+  critical_evidence:
+  - 双方在节日前后约定线下见面
+  - 申请人递出一张未说明面值的购物卡作为节日心意
+  - 送卡后申请人含糊询问事项进度，收卡方表示仍按公开流程处理
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司或商户常见的福利卡
+  - 事项按公开清单办理并等待统一通知
+
+attributes:
+  duration_days: 4
+  turn_count: 46
+  approximate_tokens_estimate: 1022
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0297
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-128
+
+dedup:
+  content_hash: sha256:80af69e9d946e19e3fdbf3a4c41d612b52fc8ba5039ccc2ec3c8968a0df4724e
+pipeline_status: rejected
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【12月7日】
+  B：【12月7日】节前你说想碰面 是有什么材料要交吗
+  A：材料都齐了 就想当面说声谢谢
+  B：午饭你吃啥了
+  A：楼下新开了家面馆 还行
+  B：我中午吃的饭团 有点少
+  A：下午饿了就去买点水果
+  B：好 我桌上还有橘子
+  A：那不错 别光喝咖啡
+  B：下班后在大厅边上坐会吧
+  A：好 我带张卡过来，面值就不说了 当节日小心意
+  A：周末家里问你回不回去
+  B：可能周六回一趟 看下车票
+  【12月8日】
+  A：【12月8日】我妈说想包点饺子
+  B：那我回去帮忙擀皮
+  A：她肯定高兴
+  B：顺便把上次落下的围巾拿走
+  B：这样我不方便收 先放桌上吧
+  A：没别的意思 你别有压力
+  B：你最近还去跑步吗
+  A：这周忙得断了两天
+  B：我也是 下班就想躺着
+  A：周末补一圈吧 公园那条路不挤
+  B：行 早上别太早叫我
+  【12月9日】
+  A：【12月9日】九点行不行
+  B：我会按正常顺序处理 结果看系统通知
+  A：上次那件事有进度没
+  B：目前还是待办 不能给你单独加快
+  A：知道了 我按通知补材料
+  B：补件要求我发你了 按清单来就行
+  A：收到 谢谢
+  A：我把桌面收拾了一下 终于能放下水杯了
+  B：哈哈我桌上也堆满了文件
+  A：下午会议改到三点了
+  B：看到通知了 我把时间空出来
+  【12月10日】
+  A：【12月10日】你那个充电线是不是还在我这
+  B：对 有空的时候顺手带给我就行
+  A：今天路上车有点多
+  B：我也堵了一会 还好没迟到
+  A：晚上准备自己做饭
+  B：做个简单的就行 别弄太晚
+  A：我把资料重新排了下顺序
+  B：这样找起来方便多了
+  A：周末的天气预报看了吗
+  B：看了 好像有太阳 可以出去走走
+  A：我买的水果今天到了
+  A：对了 上周一起吃饭的AA我现在转你了 免得忘了
+  【系统消息】A 向 B 转账 123 元，已收款。

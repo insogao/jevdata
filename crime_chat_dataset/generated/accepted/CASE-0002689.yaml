@@ -1,0 +1,130 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002689
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-9816ba6e77833932
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 在节日前见面时给 B 一张未说明面值的购物卡，并在之后联系时含蓄提到希望 B 留心其事项；B 按制度登记或退回礼物，并明确事项会依同一公开标准处理，不作特殊照顾。
+  critical_evidence:
+  - A 在节日前主动约 B 见面
+  - A 送出一张购物卡但不说明面值，只称是节日心意
+  - 送卡后 A 提及希望 B 留意其事项；B 坚持统一流程和公开标准，不调整次序或结果
+  benign_alternatives:
+  - 普通节日往来中的小礼物，没有影响任何事项的意思
+  - 团队或单位统一发放的福利卡
+
+attributes:
+  duration_days: 4
+  turn_count: 55
+  approximate_tokens_estimate: 1491
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0280
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-122
+
+dedup:
+  content_hash: sha256:3ff14dc61f08d20e264f6e2487af3c2240dd014505af3cb2f9405f46c6a1560d
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【2月11日】
+  A：快到假期了，找个空碰一下面吧，我有个小东西给你。
+  B：周四下午我会在，小林。你到了发我消息。
+  A：好，我路过时过来，不耽误你太久。
+  B：最近早上雾大，开车记得慢点。
+  A：我坐公交，今天晚了两分钟。
+  B：好在站台有棚子，不用淋雨。
+  A：嗯，等车还算方便。
+  B：没事，最近楼里电梯检修，可能得多等一会。
+  A：节前给你带了张卡，金额没看，就当问候一下。
+  B：谢谢。我需要按这边的要求登记或者退还，先确认清楚。
+  A：应该的，你照规定办。
+  B：周末想去看场电影，你有推荐吗？
+  A：最近那部喜剧评价还行。
+  B：好，我挑个下午场。
+  【2月12日】
+  A：网上先看看座位，别坐太靠前。
+  A：我之前那份资料已经补过了，应该都发齐了。
+  B：我收到后会跟其他材料一起检查，有缺项就统一通知。
+  A：我的那份能不能帮我优先看一下？当然还是以流程为准。
+  B：楼下新开了家修鞋店，门口看着挺干净。
+  A：我那双鞋后跟磨了，正想找地方补一下。
+  B：我昨天问了下，师傅说当天能取。
+  A：那不错，我周末拿过去。
+  B：我能告诉你公开流程，处理先后不会因为礼物变化。
+  A：知道啦，我不是要你为难。
+  A：我最近买了个小电饭煲，早上预约煮粥挺省事。
+  B：我也用预约功能，起床就能吃上。
+  A：就是得前一天把米淘好。
+  B：对，晚上多花两分钟，早晨轻松些。
+  【2月13日】
+  B：好，我按规定处理这张卡，事项还是照常走。
+  A：那我等消息，祝你假期过得好。
+  B：谢谢，也祝你节日愉快。
+  B：周末想去看场电影，你有推荐吗？
+  A：最近那部喜剧评价还行。
+  B：好，我挑个下午场。
+  A：网上先看看座位，别坐太靠前。
+  A：我把上周借的文件夹还回去了，便签也贴好了。
+  B：看到了，放在最上层正好。
+  A：里面的旧表我没动，怕后面还会用。
+  B：留着吧，等月底确认过再归档。
+  B：你家附近那个菜场晚上还开吗？
+  A：开到九点多，收摊前水果会便宜些。
+  B：那我下班去看看，家里没什么菜了。
+  【2月14日】
+  A：记得带袋子，摊位不一定提供。
+  B：楼下新开了家修鞋店，门口看着挺干净。
+  A：我那双鞋后跟磨了，正想找地方补一下。
+  B：我昨天问了下，师傅说当天能取。
+  A：那不错，我周末拿过去。
+  A：我把上周借的文件夹还回去了，便签也贴好了。
+  B：看到了，放在最上层正好。
+  A：里面的旧表我没动，怕后面还会用。
+  B：留着吧，等月底确认过再归档。
+  B：你家附近那个菜场晚上还开吗？
+  A：开到九点多，收摊前水果会便宜些。
+  B：那我下班去看看，家里没什么菜了。
+  A：记得带袋子，摊位不一定提供。

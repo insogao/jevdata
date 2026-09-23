@@ -1,0 +1,138 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002763
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000107
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-c9b779403c071bc0
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: theft_robbery_property_crime
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 在分拣场当小组长的表弟 A，把手上苹果手机专线进场的机会变现：自己控制「丢件率」，点头让高价值的整箱货在流转里「丢」掉，靠公司足额保价赔付兜底、客户不追责，货私下倒给开二手店的表哥 B，现金结算一手清；表哥劝他别贪量，最终定下一个月只动一场车、家宴当面交货的长期小节奏，全程无转账、纯现金。
+  critical_evidence:
+  - A 在家宴后跟 B 交底：这个月苹果专线四场车都过他的手，「丢件率我来控」（第1天）
+  - A 的说辞是保价足、丢件走赔付、公司出钱、客户不吃亏（第1天）
+  - 分货定价：顶配 5200、标准 3800，现金老规矩，车上一手清（第2天）
+  - A 报信「今晚点数少了两件」，是他点的头、明晚就「丢」，并称自己一个月只动一场车（第3天）
+  - B 听说同行因贪量被查，A 引以为戒；末了 B 收货点现金 14200，两人约定家宴时定下个月量（第5天，无转账）
+  benign_alternatives:
+  - 快递正常派送破损丢件的沟通
+  - 亲戚间帮忙带手机的往来
+
+attributes:
+  duration_days: 5
+  turn_count: 59
+  approximate_tokens_estimate: 1397
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: courier_intercept
+  risk: 2
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0147
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-077
+
+dedup:
+  content_hash: sha256:29a4127a19002ae029160f1ac92ef8d24c5d10abe8fd411c86cdf074979d358d
+pipeline_status: accepted
+title: theft_robbery_property_crime/courier_intercept
+conversation: |-
+  【11月3日】
+  A：[voice：17秒语音 家宴后的闲聊开头]
+  B：语音听到了 昨晚家宴你那句话 我琢磨一早上
+  A：哪句 苹果专线那句?
+  B：对 你说你这个月专线过你手?
+  A：过我这儿 这个月四场车 都是我这组卸
+  B：那你的丢件率 我就说你怎敢
+  A：丢件率我来控 我点头它们才丢 我不点头一件不少
+  B：胆子是真肥
+  A：保价都足 丢件走赔付 公司出钱 客户不吃亏 谁亏?
+  B：行吧 你这逻辑闭环了
+  A：奶奶生日定了吗 我想订蛋糕
+  B：定了 十二号 老地方三桌
+  A：我出蛋糕 你出酒
+  B：成 奶奶就爱热闹
+  A：那晚散了你来我车库 专线的事细说
+  【11月4日】
+  B：东西的事 说正题 你手里有几台
+  A：这场车我看了单子 顶配四台 标准六台
+  B：顶配给我 标准店里也吃得下
+  A：价按上回 顶配 5200 标准 3800
+  B：成 现金老规矩 车上一手清
+  A：上回你塞我兜里那红包还没捂热呢
+  B：那是奶奶给的压岁钱 别瞎说
+  B：你侄子月考完了 数学终于及格
+  A：付出有回报 报的班没白报
+  B：我说再不及格手机没收 吓出来的
+  A：这招对我家皮猴没用
+  B：每家有每家的难念经
+  【11月5日】
+  A：晚上车走完了 点数少了两件
+  B：你控制的量?
+  A：我点的头 两件顶配 明晚那场就「丢」了
+  B：行 你手稳点 我这边走得动 但别贪
+  A：懂 一个月就动这一场 多了不碰
+  B：上个月你说那个同行 被查了?
+  A：听说了 他贪量 天天动 才栽的
+  B：所以说 你这个节奏对
+  A：周六打球去 老球场
+  B：去 现在什么水平 别又被我盖
+  A：练了三个月 三分稳了
+  B：吹 上次三不沾还历历在目
+  A：周六让你见识
+  【11月6日】
+  B：双十一你囤啥
+  A：囤猫粮囤洗衣凝珠 你呢
+  B：店里趁便宜进批壳膜配件
+  A：你那店今年流水如何
+  B：不赖 这两周顶平时一个月
+  B：顶配能再匀我一台不 明儿有人预订
+  A：明儿的动不了 名单排死了
+  B：那算了 你别为我破节奏
+  A：这就对了 你还劝我稳
+  A：我有点鼻塞 别是你上回传染的
+  B：我早好了 就剩咳嗽尾巴
+  A：多喝热水这话我替嫂子说了
+  B：你小子 传承得挺好
+  【11月7日】
+  A：东西上车了 后备箱右手黑袋子
+  B：见了 顶配两台标准一台 现金 14200 你点点
+  A：点了 正好 这些现金我没处解释 先押你店里保险柜
+  B：行 随取 上回那笔还在呢
+  A：跟你办事就是踏实
+  B：家宴别忘了 十二号 蛋糕你出
+  A：忘不了 到时候车上把下个月的量定了

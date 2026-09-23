@@ -1,0 +1,156 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002772
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000044
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-aef1c65488fa2b48
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 放贷方跑腿 A 以「哥」之名向欠款人 B 软硬兼施：发其妻接孩子的照片、点出孩子学校与放学时间施压，逼其先转一季度利钱 8000 元并周六到茶楼「当面谈」，B 被迫就范——一条以家人行踪相要挟的逼债线。
+  critical_evidence:
+  - 5月12日 A 发来一张 B 爱人牵孩子在校门口的照片（image 事件），配文「嫂子气色不错……真准时」，明示摸得到其家人行踪
+  - 5月13日 A 点出孩子在实验二小念四年级、四点半放学，「校门口那条梧桐路我常走 顺路」（台词）
+  - 5月14日 B 被迫先转本季利钱 8000 元（转账事件，前后台词出现 8000），A 称「跟你哥垫话」
+  - 5月15日 A 约 B 周六下午茶楼「当面谈」，B 提出视频聊被拒，A 称「我哥的人也来几位置场」（台词）
+  - 5月16日 A 定调「该带的诚意带上 事谈妥了就翻篇」，并重提「嫂子孩子那边别多心」，威胁贯穿收尾（台词）
+  benign_alternatives:
+  - 正规借贷催收沟通
+  - 债权人当面核对账目的正常安排
+
+attributes:
+  duration_days: 6
+  turn_count: 75
+  approximate_tokens_estimate: 2140
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: debt_collection_threat
+  risk: 3
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0148
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-077
+
+dedup:
+  content_hash: sha256:c2103846d6693486fc9ca76e5930e835078cc48d56d60d773f21bfcb141d8d53
+pipeline_status: accepted
+title: violence_extortion/debt_collection_threat
+conversation: |-
+  【5月11日】
+  A：老周 上礼拜说的事 哥那边催第二遍了 你那笔到底几时动
+  B：建哥 真在凑 压货的款一回来我先紧着你那边
+  A：这话你上个月也说过
+  B：这回厂家尾款真下周三到账
+  A：行 我信你一回 帮你跟哥缓三天
+  B：谢哥 三天一定有个说法
+  A：对了 你东山那片杨梅这周熟没 我媳妇念叨一年了
+  B：熟了 我舅舅园子那坡全红 这周末回去摘
+  A：给我留两筐 运费我出
+  B：跟我还运费 摘好顺车给你捎过去
+  A：那感情好 到时候喊你
+  B：嗯 回头拍照给你看成色
+  A：再啰嗦一句 我哥那人你也知道 他底下跑腿的可没我这么好说话
+  B：懂 我心里有数 周三前给你准信
+  【5月12日】
+  A：早上好 昨晚睡得着吗
+  B：没睡踏实 你又有什么事
+  A：没事就不能问候了
+  A：[image：一张女人在校门口牵着背书包孩子的照片]
+  B：你发这是什么意思?!
+  A：没别的意思 嫂子气色不错 孩子也乖 嫂子每天早上七点四十准时到校门口 真守时
+  B：你派人跟着我家里人??
+  A：想哪去了 路过顺手拍的 事情往前推 大家都省心
+  B：建哥 冲孩子的事别做 钱我一定还 给你个安排
+  A：行 那周三等你的准信
+  A：这天一天比一天闷 你店里空调换了没
+  B：上个月刚加了一台 柜机老响
+  A：该换就换 生意人别省这个 我上礼拜也换了一台三匹的
+  B：多少钱入手的
+  A：八千多 师傅说能用十年
+  B：值 我那台修了两回 早晚也得换
+  【5月13日】
+  A：起来了没 跟你说个事
+  B：说
+  A：孩子在实验二小念四年级吧 四点半放学 校门口那条梧桐路我常走 顺路
+  B：你到底想怎样?!
+  A：不想怎样 我这人记性好 你家的事我都帮着记着
+  B：你吓唬我也没用 我真在筹
+  A：所以让你周三带个章程来 别再宽限了
+  B：……行
+  A：昨晚那场球看了没 最后那个绝杀绝了
+  B：看了 我押的另一边 白瞎一顿烧烤钱
+  A：看个热闹就行 别沾来钱的事
+  B：就是跟客户打了个赌 今晚他请我
+  A：那不错 客户关系就得这么处
+  B：嗯 喝完还得回去盘库
+  【5月14日】
+  A：老周 我哥放话了 本金可以慢慢谈 这季的利钱得先见着
+  B：多少
+  A：按老数 一个月八千 你先转过去 剩下的当着面谈
+  B：容我到下午 账上的钱我调一下
+  B：对了建哥 你上回租的那个仓库退了?
+  A：退了 太贵 城南找了个小的一年省两万多
+  B：城南那边下雨积水不
+  A：去年淹过一回 今年物业加了泵
+  B：那行 货放底层记得垫架子
+  A：懂 行家
+  B：调好了 我先把8000转你 替我在哥跟前垫句话 就说下周当面把总账说道清楚
+  【系统消息】B 向 A 转账 8000 元，已收款。
+  A：8000收到 我晚点就跟你哥提 你这态度他吃这套
+  B：麻烦哥了 剩下的大头我得当面核一下数
+  A：对 本来就该当面算清楚
+  【5月15日】
+  A：哥说了 周六下午来城南茶楼当面谈 就我仓库对面那家 你认得路
+  B：周六我约了去外地看货 能不能视频里聊
+  A：这事视频里说不清 你人到 礼数到了 什么都好谈
+  B：……几点
+  A：下午三点 我在茶楼等你 我哥的人也可能过来几位置个场
+  B：几位置场是什么意思
+  A：别多想 都是场面上的人 把事说开 拍个板
+  A：杨梅的事我跟媳妇说了 她高兴着呢
+  B：周末看能不能赶得上 回来直接给你送茶楼去
+  A：成 那你周六来的时候 后备箱记得腾地方
+  【5月16日】
+  A：明天下午三点 定了 别迟到
+  B：定了 我开车过去
+  A：行 话说前头 该带的诚意带上 事谈妥了就翻篇 谁也不想再来回折腾
+  B：我知道了
+  A：还有 嫂子孩子那边你别多心 我们办事的对事不对人
+  B：……嗯
+  A：中午陪哥吃饭 他笑呵呵的 你周六表现好点 这页就算过去了
+  B：好

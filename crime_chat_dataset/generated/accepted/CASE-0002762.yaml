@@ -1,0 +1,146 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002762
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000092
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-8d661e97d37fc1f3
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: money_laundering_obfuscation
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 老同学重逢后，A 亮出自己「水比所里高两个点」的场子收 U 放现，约定周三交 U 周五给现、见面点钞不走线上；B 替手里有大额现金的「朋友」出货，先转 20000 试了一小单，周五在茶楼包间当面点清大头现钞，A 当场多让半个点把 B 绑成每周三五固定的下家，实为绕开交易所监管的场外出金通道，全程只用「U」「米」「水」「出」等黑话。
+  critical_evidence:
+  - A 报价：收 U 的「水」比所里高两个点，量大还能谈，见面点不走线上（第1天）
+  - B 说手里「现的量大」帮朋友管事，A 定规矩：先小后大，周三交 U 周五给现（第2天）
+  - 试水小单：B 转 20000 过账，A 收到后一小时内放等值的 U（第3天，转账）
+  - 周五大单安排在茶楼包间，A 带验钞机当面点钞、点清两清，B 一个人来（第4天）
+  - 交割完成 A 多让半个点，定下「每周三五 老时间」的固定节奏，B 还想带朋友进场被要求一个一个来（第5天）
+  benign_alternatives:
+  - 持牌机构的合法兑换业务
+  - 币圈朋友间的正常出金讨论
+
+attributes:
+  duration_days: 5
+  turn_count: 67
+  approximate_tokens_estimate: 1377
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: crypto_offramp
+  risk: 2
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0147
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-077
+
+dedup:
+  content_hash: sha256:1675409643c248730a7b1fcab4cb3b96a29822a4dd2243c21cf0aadb0c66de99
+pipeline_status: accepted
+title: money_laundering_obfuscation/crypto_offramp
+conversation: |-
+  【10月13日】
+  A：老周? 是不是你 好些年没冒泡了
+  B：是我 换号了 老同学
+  A：听说你现在手上米多
+  B：帮朋友管点事 手里现的量大 你那边还收?
+  A：收 水比所里高两个点 量大还能谈
+  B：能给个实数?
+  A：一万U起谈 面议 见了面点
+  B：行 我这周就有货
+  A：别急 先小后大 熟了再说
+  B：你孩子上小学了吧
+  A：三年级 报了俩班 比我还忙
+  B：现在娃都这样 我侄子也是
+  A：你还单着?
+  B：单 自由身 哈哈
+  【10月14日】
+  B：货我齐了 你什么时候方便
+  A：老规矩 周三你把U交过来 周五我给现
+  B：中间隔两天 不嫌慢?
+  A：慢才稳 这行快的就是先出事的
+  B：行 那就周三交U周五给现
+  A：对 地点到时候发你 不走线上
+  B：见面好 我也信不过屏幕
+  A：你那台老车还开?
+  B：开 明天去做大保养 五万公里了
+  A：我那台才三万 4S非让我换火花塞
+  B：4S的话听一半 找个熟店
+  A：有道理 店址回头发我
+  【10月15日】
+  A：今晚老地方 茶楼后门 我车里坐坐 先试一单小的
+  B：多小
+  A：先走 20000 的账 你转过来 我放等值的U 大头周五现金当面点
+  B：行 先小后大 我认
+  B：现在转?
+  A：转
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  A：20000 到了 U一小时内到你钱包
+  B：见了 水按说好的两个点
+  A：按说的 你那头现金备好 周五走大的
+  B：你还定投那基金吗
+  A：停了 绿得发光
+  B：我全清了 落袋才安
+  A：你这是被割明白了
+  B：学费交够就是明白人 哈哈
+  【10月16日】
+  A：明晚七点 茶楼包间 我带验钞机 你人到位就行
+  B：成 面额怎么配
+  A：整零混着 当面点钞 点清两清
+  B：我一个人来 带包
+  A：一个人最好 包间安静
+  B：明白 安静局
+  B：蟹上了 我表哥塘里捞的 给你留五对
+  A：好事 我老婆念叨一秋天了
+  B：公四母三 送你的
+  A：那不行 蟹钱必须给 亲兄弟明算账
+  B：行 你看着给
+  【10月17日】
+  A：到包间了 茶沏上了
+  B：到了 停车场上来
+  A：点完了 一张不差 两清 你的货呢
+  B：钱包里 你看下到账
+  A：到了 今晚水给你多让半个点
+  B：痛快 以后跟你走
+  A：那就固定 每周三五 老时间
+  B：成 我那头还有俩朋友想出 带来见见?
+  A：先一个一个来 熟了再说
+  B：稳 跟你学的
+  A：对了 你老家房子装修完没
+  B：完了 就剩软装 我妈嫌窗帘贵
+  A：长辈都这样 我家买沙发 我妈说能睡就行
+  B：哈哈 一个世界
+  A：蟹别忘了 明天给我留着
+  B：明天给你送去 顺路

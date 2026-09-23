@@ -1,0 +1,156 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002731
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-c45587e29b01477e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A在节日前约熟人B见面并提出送购物卡，却没有说明面值；几天后A提到某项申请，希望B能留意。双方未明确谈及交换条件，既像日常节礼，也可能让人担心礼物影响工作判断。
+  critical_evidence:
+  - A在节日前约见B并提出送卡
+  - A没有说明购物卡的面值
+  - 节后A借口询问事项进度而暗示希望B留意
+  - B表示会按正常顺序处理，不承诺改变结果
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司福利卡
+
+attributes:
+  duration_days: 4
+  turn_count: 78
+  approximate_tokens_estimate: 1629
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0296
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-128
+
+dedup:
+  content_hash: sha256:2f13b1f7534ccc47b7a15fd0be32594040b40619fd1b80b41f1e8a682e6f80d7
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【8月1日】
+  A：这两天风挺大。
+  B：我早上出门差点把伞吹翻。
+  A：明天我换把结实点的。
+  B：看预报周末会好些。
+  A：这周找时间见一面吧，节前有张卡想给你。
+  B：上次午饭我先垫了36元，你把AA转我就行。
+  A：好，刚转你36元，午饭AA对上了。
+  【系统消息】A 向 B 转账 36 元，已收款。
+  B：收到了，36元对上了，谢谢。
+  A：冰箱里有菜的话简单炒一下。
+  A：今天路上比平时堵。
+  【8月2日】
+  B：是不是前面在修路？
+  A：对，公交临时绕了一站。
+  B：明天可以多留十分钟。
+  B：今天中午突然下雨了。
+  B：见面可以，卡就别准备了。
+  A：我刚好在楼下，躲了一会儿。
+  B：路面现在应该干得差不多了。
+  A：嗯，晚点出门不用绕路。
+  A：楼下新开了家小店。
+  B：卖什么的？
+  A：家常菜，分量看着还行。
+  B：下次路过我也去试试。
+  B：你现在还是坐地铁吗？
+  A：是张购物卡，面值没看，图个节日气氛。
+  A：是，最近换乘那段人少些。
+  B：我也考虑改成地铁。
+  A：早高峰可能还是得早点出门。
+  A：最近早晚温差有点大。
+  B：我包里放了件薄外套。
+  【8月3日】
+  A：这个办法不错，我也准备一件。
+  B：办公室空调有时挺冷。
+  B：最近你还喝冰咖啡吗？
+  A：少喝了，晚上容易睡不着。
+  B：我先不收，免得说不清楚。
+  B：换成茶可能好一点。
+  A：嗯，下午以后我喝温水。
+  A：共享单车还在原来那排吗？
+  B：昨天看还在，停车点没变。
+  A：好，我明早骑过去。
+  B：记得看下轮胎气够不够。
+  B：天气预报说明天晴。
+  A：那我把床单拿去晒晒。
+  B：太阳出来屋里也亮堂。
+  A：我那份材料你方便时帮我看一眼有没有更新。
+  A：是啊，最近总算不像前几天那么闷。
+  A：我周末试着煮了粥。
+  B：咸的还是甜的？
+  A：咸的，加了点青菜。
+  B：听起来不错，下回我也做一锅。
+  【8月4日】
+  B：今天下班你走哪条路？
+  A：走河边那条，人少一点。
+  B：天黑早了，路灯亮吗？
+  A：亮的，最近新换过。
+  B：我会按原来的流程处理，进度系统里也能查。
+  A：今天风小了，走路舒服多了。
+  B：我午休出去转了十分钟。
+  A：附近新修的步道平整吗？
+  B：挺平整的，晚上人也不多。
+  B：今天食堂有新菜。
+  A：味道怎么样？
+  B：还可以，就是排队有点久。
+  A：那我明天早点去。
+  A：知道，我只是想确认没漏项，不是催你。
+  A：停车位今天挺难找。
+  B：周边活动多，估计车都来了。
+  A：我绕了两圈才停好。
+  B：下次把车停远一点省时间。
+  A：刚把桌面收拾了下，文件总算没那么乱。
+  【8月5日】
+  B：今天窗外风挺大，阳台门我关上了。
+  A：晚饭打算做点清淡的，最近不想吃太油。
+  B：我把明天要带的东西放在玄关了。
+  B：中午吃饭了吗？
+  B：那就好，有变化会按常规通知。
+  A：吃了碗面，今天人不多。
+  B：我还没想好晚饭吃什么。
+  A：刚泡了杯茶，先缓一会儿再继续。
+  A：附近那家水果店换了招牌，你看见没？
+  B：这周睡得有点晚，今晚争取早点休息。

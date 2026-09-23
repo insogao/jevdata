@@ -1,0 +1,278 @@
+{
+ "key": "b77c010",
+ "archetype_id": "ARC-000089",
+ "subtype": "hotel_register_leak",
+ "latent_intent": "酒店夜班前台 A 受上线 B 指使，只在夜班把刚入住客人的登记信息即时翻出来给对方（「刚住下就出单」），按次计价、按周结款，B 转来 1200 元结算一周六次的「单子」，实为长期出售住客入住信息的黑产上下游，对话全程只称「单子」「人」，靠转账与语境才能推断。",
+ "critical_facts": [
+  "B 只在 A 夜班时来消息，深夜点名「今晚有两位要留意」，要求人刚住下就出单（第1天）",
+  "A 十分钟内把「刚进来那位 806」的单子递出去，B 验收「干净利落」（第1天）",
+  "B 明说白班人杂办不了、只有 A 夜班能办（第2天凌晨）",
+  "按次结算：一周六次、一条一次老价，B 转 1200 元，A 确认到账（第2天夜里，转账）",
+  "B 预约周五的团队入住，届时指名要其中几位的单子，老规矩刚住下就出（第3天）"
+ ],
+ "benign_alternatives": [
+  "前台正常的入住登记交接",
+  "警方依法查询的配合流程"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "11月20日 23:02",
+   "speaker": "B",
+   "text": "在班上?"
+  },
+  {
+   "type": "message",
+   "time": "11月20日 23:03",
+   "speaker": "A",
+   "text": "在 夜班刚接手"
+  },
+  {
+   "type": "message",
+   "time": "11月20日 23:05",
+   "speaker": "B",
+   "text": "今晚有两位要留意 一位刚办进去 一位半小时前"
+  },
+  {
+   "type": "message",
+   "time": "11月20日 23:07",
+   "speaker": "A",
+   "text": "刚进来那位 806 我记下了"
+  },
+  {
+   "type": "message",
+   "time": "11月20日 23:09",
+   "speaker": "B",
+   "text": "出单要快 人刚住下就要给那边"
+  },
+  {
+   "type": "message",
+   "time": "11月20日 23:11",
+   "speaker": "A",
+   "text": "明白 十分钟内给你"
+  },
+  {
+   "type": "message",
+   "time": "11月20日 23:12",
+   "speaker": "B",
+   "text": "嗯 发老规矩那个本子上"
+  },
+  {
+   "type": "message",
+   "time": "11月20日 23:15",
+   "speaker": "A",
+   "text": "这单出去了 你看下"
+  },
+  {
+   "type": "message",
+   "time": "11月20日 23:18",
+   "speaker": "B",
+   "text": "收到 干净利落"
+  },
+  {
+   "type": "message",
+   "time": "11月20日 23:40",
+   "speaker": "B",
+   "text": "吃了没"
+  },
+  {
+   "type": "message",
+   "time": "11月20日 23:42",
+   "speaker": "A",
+   "text": "泡面 前台就这待遇"
+  },
+  {
+   "type": "message",
+   "time": "11月20日 23:44",
+   "speaker": "B",
+   "text": "让楼下便利店给你带份关东煮 我请"
+  },
+  {
+   "type": "message",
+   "time": "11月20日 23:46",
+   "speaker": "A",
+   "text": "那不好意思了 嘿嘿"
+  },
+  {
+   "type": "message",
+   "time": "11月20日 23:48",
+   "speaker": "B",
+   "text": "谢什么 夜班辛苦"
+  },
+  {
+   "type": "message",
+   "time": "11月21日 00:20",
+   "speaker": "B",
+   "text": "昨儿那两位的事稳住了 后面还有"
+  },
+  {
+   "type": "message",
+   "time": "11月21日 00:23",
+   "speaker": "A",
+   "text": "你安排 我听着"
+  },
+  {
+   "type": "message",
+   "time": "11月21日 00:25",
+   "speaker": "B",
+   "text": "这周五有批团队进来 五六位 我只要其中两位的"
+  },
+  {
+   "type": "message",
+   "time": "11月21日 00:28",
+   "speaker": "A",
+   "text": "团队单前台不细看 我留心就行"
+  },
+  {
+   "type": "message",
+   "time": "11月21日 00:30",
+   "speaker": "B",
+   "text": "对 就你夜班能办 白班的人杂"
+  },
+  {
+   "type": "message",
+   "time": "11月21日 00:32",
+   "speaker": "A",
+   "text": "懂 夜里清净 出单快"
+  },
+  {
+   "type": "message",
+   "time": "11月21日 00:35",
+   "speaker": "B",
+   "text": "你嗓子怎么哑了"
+  },
+  {
+   "type": "message",
+   "time": "11月21日 00:37",
+   "speaker": "A",
+   "text": "昨晚着凉 一天喷了半瓶喷雾"
+  },
+  {
+   "type": "message",
+   "time": "11月21日 00:39",
+   "speaker": "B",
+   "text": "下了夜班去拿点药 别硬扛"
+  },
+  {
+   "type": "message",
+   "time": "11月21日 00:41",
+   "speaker": "A",
+   "text": "睡一觉就好 你别管我"
+  },
+  {
+   "type": "message",
+   "time": "11月21日 00:50",
+   "speaker": "B",
+   "text": "你喂的那只狸花还在后巷吗"
+  },
+  {
+   "type": "message",
+   "time": "11月21日 00:52",
+   "speaker": "A",
+   "text": "在 胖了两圈 天冷我给垫了纸箱"
+  },
+  {
+   "type": "message",
+   "time": "11月21日 00:54",
+   "speaker": "B",
+   "text": "行 那猫有福气 碰上你"
+  },
+  {
+   "type": "message",
+   "time": "11月21日 00:56",
+   "speaker": "A",
+   "text": "它现在见我下楼就跟着 要吃的"
+  },
+  {
+   "type": "message",
+   "time": "11月21日 22:50",
+   "speaker": "A",
+   "text": "今晚的单子给你留了一份 在老地方"
+  },
+  {
+   "type": "message",
+   "time": "11月21日 22:53",
+   "speaker": "B",
+   "text": "这周拢共六次 一条一次还是老价 1200"
+  },
+  {
+   "type": "message",
+   "time": "11月21日 22:55",
+   "speaker": "A",
+   "text": "行 你转吧"
+  },
+  {
+   "type": "transfer",
+   "time": "11月21日 22:57",
+   "from": "B",
+   "to": "A",
+   "amount": 1200,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "11月21日 22:58",
+   "speaker": "A",
+   "text": "1200 到了"
+  },
+  {
+   "type": "message",
+   "time": "11月21日 23:00",
+   "speaker": "B",
+   "text": "按次结 谁也不欠谁"
+  },
+  {
+   "type": "message",
+   "time": "11月21日 23:10",
+   "speaker": "B",
+   "text": "你追那部刑侦的更新没"
+  },
+  {
+   "type": "message",
+   "time": "11月21日 23:12",
+   "speaker": "A",
+   "text": "更了 就爱看夜班戏 有共鸣"
+  },
+  {
+   "type": "message",
+   "time": "11月21日 23:14",
+   "speaker": "B",
+   "text": "你可别看进去 教坏你 哈哈"
+  },
+  {
+   "type": "message",
+   "time": "11月21日 23:16",
+   "speaker": "A",
+   "text": "看别人上夜班 自己还得接着上"
+  },
+  {
+   "type": "message",
+   "time": "11月22日 21:30",
+   "speaker": "B",
+   "text": "周五团队的事别忘了 名单到时候发你"
+  },
+  {
+   "type": "message",
+   "time": "11月22日 21:33",
+   "speaker": "A",
+   "text": "记着呢 留哪几位你说"
+  },
+  {
+   "type": "message",
+   "time": "11月22日 21:35",
+   "speaker": "B",
+   "text": "到时候指给你 老规矩 刚住下就出单"
+  },
+  {
+   "type": "message",
+   "time": "11月22日 21:37",
+   "speaker": "A",
+   "text": "放心 夜班的事 夜里见"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0002760",
+  "status": "accepted",
+  "errors": []
+ }
+}

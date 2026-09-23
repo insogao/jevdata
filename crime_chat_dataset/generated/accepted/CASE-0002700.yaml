@@ -1,0 +1,124 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002700
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000025
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-5f068056e8d088f9
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 家长以助学捐赠之外的额外现金换取校内人员承诺预留入学名额，工作人员提出把收据写成其他名目，体现择校费用与名额交易。
+  critical_evidence:
+  - 家长明确表示愿在公开捐赠之外另付现金
+  - 校内人员表示某个入学名额已在内部预留
+  - 双方谈及把收据开成与实际用途不一致的其他名目
+  benign_alternatives:
+  - 合法捐赠助学
+  - 正常转学手续
+
+attributes:
+  duration_days: 5
+  turn_count: 47
+  approximate_tokens_estimate: 1195
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: school_admission_payment
+  risk: 2
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0281
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-123
+
+dedup:
+  content_hash: sha256:ba3532ea71b32fd8f79e2516fa76be5076735edb467c99e06c877f2406a5b60b
+pipeline_status: accepted
+title: bribery_corruption/school_admission_payment
+conversation: |-
+  【6月1日】
+  A：公开的助学款我会按要求交，另外那部分现金也准备好了。
+  A：这周雨挺大，路上堵得厉害。
+  B：我早上多坐了两站地铁，反而快些。
+  A：明天我也早点出门试试。
+  B：带把伞，预报说还要下。
+  B：你说的那个名额，校内已经先给你们留着。
+  B：中午吃的什么？
+  A：楼下新开了家面馆，味道还行。
+  B：我也想去，别点太辣。
+  A：放心，我最近胃不太舒服。
+  【6月2日】
+  A：收据能不能写成活动材料费？跟实际说法不一样也没关系。
+  A：家里那盆绿植最近叶子有点蔫。
+  B：是不是放在空调风口了？
+  A：我挪到窗边看看。
+  B：先少浇点水，周末再观察。
+  B：先别在群里说具体，反正那张收据我会按别的名目处理。
+  A：那就等名单出来后确认，不用再走公开申请了吗？
+  B：这个位置已经记下了，你们按之前讲的等通知。
+  A：捐助部分和额外那笔最好分开说明。
+  【6月3日】
+  B：我明白，收据只写前一项，名额的事内部已经安排。
+  A：我刚开完会，今天安排有点满。
+  B：辛苦了，记得喝水。
+  A：嗯，桌上还放着半杯咖啡。
+  B：冷了就别喝了，换点温水。
+  A：明早我先把日程看一下。
+  B：好，有变化再互相说一声。
+  B：你那边今天忙到几点？
+  A：差不多六点，晚点再回家。
+  【6月4日】
+  A：刚才网络断了一下，消息才发出去。
+  B：没事，我也刚看到。
+  B：快递送到了吗？
+  A：到了，放在门口柜子里。
+  A：这两天温差挺明显的。
+  B：是啊，晚上记得加件外套。
+  B：我先去处理下手头的事。
+  A：好，忙完再聊。
+  A：刚把桌面收拾了下，文件总算没那么乱。
+  【6月5日】
+  B：今天窗外风挺大，阳台门我关上了。
+  A：晚饭打算做点清淡的，最近不想吃太油。
+  B：我把明天要带的东西放在玄关了。
+  A：刚泡了杯茶，先缓一会儿再继续。
+  B：附近那家水果店换了招牌，你看见没？
+  B：这周睡得有点晚，今晚争取早点休息。
+  A：我把快递纸箱拆好了，准备拿去回收。
+  A：天气预报说周末会降温，衣服得带厚一点。
+  B：刚才整理照片，翻到去年那次出游了。
+  【6月6日】
+  B：家里的灯泡好像快坏了，闪了两下。

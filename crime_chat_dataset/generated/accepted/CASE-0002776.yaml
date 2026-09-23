@@ -1,0 +1,134 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002776
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000040
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-507103d1ce80f686
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 良性对照版：持证卷烟批发公司业务员 A 与烟酒店老板 B 的正常批发往来——订货平台下单、仓库营业时间看货、公司物流随货同行单齐全、对公转账 28800 元并开票。开口就问「一条多少」、约仓库看货，表面形似私烟交易，但全程证照票据齐备，是合法批发。
+  critical_evidence:
+  - 7月7日 B 问「硬包那种现在什么价」，A 称批发价全省统一、按订单档位走、与订货平台一致且「带票」（台词）
+  - 7月8日 看货约在公司仓库营业时间「上午九点到十一点收客 下午盘库不对外」，正门登记进（台词）
+  - 7月9日 货由公司厢式物流配送，随货同行单留一联、条码可扫入库（台词）
+  - 7月10日 B 点货后对公转账 28800 元货款，A 确认开票并核对发票名头（转账+台词）
+  - 7月11日 A 提醒 B 零售许可证十月底到期，政务网预约年审别断档（台词）
+  benign_alternatives:
+  - 免税店代购式的正常比价聊天（实为持证批发）
+  - 正常卷烟批发
+
+attributes:
+  duration_days: 5
+  turn_count: 55
+  approximate_tokens_estimate: 1538
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: tobacco_smuggle
+  risk: 0
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0148
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-077
+
+dedup:
+  content_hash: sha256:8c21f40c66b192019f0a242a290029bd66e7865e3d1814467f8bae4182ed01e1
+pipeline_status: accepted
+title: contraband_illicit_trade/tobacco_smuggle
+conversation: |-
+  【7月7日】
+  B：李经理 上个月那批货卖完了 硬包那种现在什么价
+  A：王老板 你订货平台上就能看价 跟我报的一致 我不加一分
+  B：平台价我看了 想问问量大了有没有浮动
+  A：批发价是全省统一的 按订单档位走 你那档没有浮动 带票
+  B：行 那按平台来 先订80条 常规那几个牌号
+  A：好 我给你锁量 明天上午安排
+  A：这天进蒸笼了 你店里空调开足没
+  B：开足 电费比冬天翻倍
+  A：烟酒店夏天难得清闲 忍忍就立秋了
+  B：就指着晚上出来遛弯的散客
+  A：你家门口那个夜市今年还摆吗
+  B：摆 上礼拜刚开 声音吵得很
+  【7月8日】
+  B：明天上午我能过去看货吗
+  A：来 公司仓库上午九点到十一点收客 下午盘库不对外
+  B：行 我十点前到 正门进?
+  A：对 门卫登记一下就放行 你来了正好把牌号定死
+  B：好 我带上订货本对价
+  B：你家小子暑假怎么安排的
+  A：送去他姥姥家了 天天下河摸鱼
+  B：痛快 我家那个报了三个班 苦哈哈
+  A：别卷太狠 孩子就得野一点
+  B：他姥姥也这么说
+  【7月9日】
+  A：王老板 货到了 物流车的随货同行单给你留一联 记得收好
+  B：好 单子我验收时一起核
+  A：条码你扫一下 入库好录系统
+  B：行 你们物流几点到我店
+  A：十一点前 厢式车直送 司机老赵 你认识的
+  B：哦老赵 那稳了
+  A：周末去水库不 我表哥新办了张年卡
+  B：去 就是这天真热 鱼都沉底
+  A：清早出竿 下午四点就收 记得带防晒
+  B：行 我把新买的钓箱带上
+  A：钓着了给你店里送两条
+  B：哈哈那我把锅都备好
+  【7月10日】
+  B：货点完了 80条一条不少 我把货款走对公了 28800 你查收
+  【系统消息】B 向 A 转账 28800 元，已收款。
+  A：28800收到了 票我今天就开 电子发票先发你邮箱 纸质的随下批货
+  B：好 票名头别错 还是公司那个老名头
+  A：错不了 系统里存着你的开票信息
+  B：效率 明白
+  A：对了 中秋礼盒的样册出来了 要不要给你留几组
+  B：留 那个铁盒的卖得快 给我留十组
+  A：行 我登记上 到时候随货带
+  B：去年那批礼盒卖到节前三天断货
+  A：所以早下手 今年配比调了 加了两款坚果的
+  B：行 都给我各来五组
+  【7月11日】
+  A：王老板 提个醒 你那个零售许可证十月底到期 年审材料早些备
+  B：哎 对 差点忘了 要带什么
+  A：执照副本跟场地照片 主要就这些 政务网能预约
+  B：好 我下周一就去办
+  A：办利索 年审别断档 断了影响你订货档位
+  B：明白
+  B：下周补货还照这个牌号组合来
+  A：行 我把这单存成模板 你下单一键就行
+  B：省心 就这么办
+  A：周末钓鱼别忘了 清早五点半水库门口集合

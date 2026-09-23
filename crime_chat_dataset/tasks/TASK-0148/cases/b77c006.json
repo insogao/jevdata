@@ -1,0 +1,570 @@
+{
+ "key": "b77c006",
+ "latent_intent": "冒充商城售后的 A：报出 B 的真实订单取信，谎称订单被误开扣费会员要「帮取消」，先发链接收卡号、再开屏幕共享「盯着填」，随后以「系统拦截需等额资金验证、转了秒退」为由让 B 转出 30000 元，到账后拖延、失联——退款诱饵式的骗局，全程没有一句直接点破，读者只能靠转账与上下文推断。",
+ "critical_facts": [
+  "11月10日 A 自称商城售后专员，准确报出 B 的订单：11月3日、空气炸锅、268 元（台词）",
+  "11月10日 A 称订单被误开年度批发会员、每月16号自动扣800，「别在App里操作 走我这边的人工通道」（台词）",
+  "11月11日 A 发来「链接」让 B 填收款卡号，并开远程窗口要求屏幕共享「我盯着您填」（台词）",
+  "11月12日 A 称卡号校验触发系统拦截，需转 30000 等额资金验证「秒退」，并阻拦 B 去银行和平台核实（台词）",
+  "11月12日 B 转 30000 到「验证通道账户」（转账事件）；次日24小时到期未退，A 先拖「复核排队」后失联（11月13日台词）"
+ ],
+ "benign_alternatives": [
+  "真实平台退款流程",
+  "商家主动补偿"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "11月10日 09:15",
+   "speaker": "A",
+   "text": "您好 这里是商城售后服务专线 请问是芳女士吗 我们备注您是尾号6207的用户"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 09:20",
+   "speaker": "B",
+   "text": "我是 你哪位"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 09:22",
+   "speaker": "A",
+   "text": "我是售后专员小柯 关于您11月3日下的那笔订单 空气炸锅 268元 那天上午十点多拍的 需要跟您核对一个问题"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 09:25",
+   "speaker": "B",
+   "text": "对是有这么一单 怎么了"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 09:27",
+   "speaker": "A",
+   "text": "系统升级时您的订单被误开了年度批发会员 按规则每月16号会自动扣800元 我们这边主动帮您取消"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 09:30",
+   "speaker": "B",
+   "text": "啊? 我没开过什么会员啊"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 09:32",
+   "speaker": "A",
+   "text": "对 就是误操作 责任在我们 取消是免费的 您放心"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 09:34",
+   "speaker": "B",
+   "text": "那怎么取消"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 09:36",
+   "speaker": "A",
+   "text": "您别在App里操作 那边走的是扣款端 我这边走人工通道帮您办"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 10:30",
+   "speaker": "A",
+   "text": "对了您那边降温了吧 我们客服区都开暖气了"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 10:33",
+   "speaker": "B",
+   "text": "下了 今年冷得早 羽绒服都翻出来了"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 10:35",
+   "speaker": "A",
+   "text": "我们这边还穿两件 好羡慕有暖气的地方"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 10:37",
+   "speaker": "B",
+   "text": "北方人全靠暖气续命"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 10:39",
+   "speaker": "A",
+   "text": "哈哈 那不耽误您事 咱们继续"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 11:00",
+   "speaker": "A",
+   "text": "先跟您确认 昨天有没有收到扣800的预提醒短信"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 11:03",
+   "speaker": "B",
+   "text": "没有啊"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 11:05",
+   "speaker": "A",
+   "text": "没有就好 说明卡在预授权环节 我给您申请了专属取消通道 一会您注意接我们专线的回电"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 11:07",
+   "speaker": "B",
+   "text": "行 那赶紧办吧 别到16号真扣了"
+  },
+  {
+   "type": "message",
+   "time": "11月10日 11:09",
+   "speaker": "A",
+   "text": "今天办完就不影响15号之后的扣款节点"
+  },
+  {
+   "type": "message",
+   "time": "11月11日 09:00",
+   "speaker": "A",
+   "text": "芳女士早 专员小柯 昨天那个取消通道我给您挂上了"
+  },
+  {
+   "type": "message",
+   "time": "11月11日 09:05",
+   "speaker": "B",
+   "text": "好 怎么弄"
+  },
+  {
+   "type": "message",
+   "time": "11月11日 09:07",
+   "speaker": "A",
+   "text": "您看我刚发您的链接 点开就三个空 收款人姓名 银行卡号 预留手机 填完提交"
+  },
+  {
+   "type": "message",
+   "time": "11月11日 09:10",
+   "speaker": "B",
+   "text": "等等 填银行卡号干什么 我这是要退钱?"
+  },
+  {
+   "type": "message",
+   "time": "11月11日 09:12",
+   "speaker": "A",
+   "text": "对 会员误开这段系统要给您做退款归档 钱原路退您卡 您填收款卡就行"
+  },
+  {
+   "type": "message",
+   "time": "11月11日 09:15",
+   "speaker": "B",
+   "text": "哦 那我填"
+  },
+  {
+   "type": "message",
+   "time": "11月11日 09:18",
+   "speaker": "A",
+   "text": "填好了吗 我这边看到您提交了"
+  },
+  {
+   "type": "message",
+   "time": "11月11日 09:20",
+   "speaker": "B",
+   "text": "填了 显示「卡号校验不一致」"
+  },
+  {
+   "type": "message",
+   "time": "11月11日 09:22",
+   "speaker": "A",
+   "text": "您把数位再核一遍 有没有多敲空格 或者您用的是二类卡"
+  },
+  {
+   "type": "message",
+   "time": "11月11日 09:25",
+   "speaker": "B",
+   "text": "我核了两遍 没错啊 就是这张工资卡"
+  },
+  {
+   "type": "message",
+   "time": "11月11日 10:40",
+   "speaker": "A",
+   "text": "您家里孩子上网课吗 我们同事家孩子今天网课闹翻天"
+  },
+  {
+   "type": "message",
+   "time": "11月11日 10:43",
+   "speaker": "B",
+   "text": "我家老二今天也有课 平板都抢不上"
+  },
+  {
+   "type": "message",
+   "time": "11月11日 10:45",
+   "speaker": "A",
+   "text": "哈哈 那您先忙 我下午再跟您对"
+  },
+  {
+   "type": "message",
+   "time": "11月11日 10:47",
+   "speaker": "B",
+   "text": "行 下午说"
+  },
+  {
+   "type": "message",
+   "time": "11月11日 14:00",
+   "speaker": "A",
+   "text": "芳女士 关于上午校验不一致的事"
+  },
+  {
+   "type": "message",
+   "time": "11月11日 14:03",
+   "speaker": "B",
+   "text": "怎么样"
+  },
+  {
+   "type": "message",
+   "time": "11月11日 14:05",
+   "speaker": "A",
+   "text": "这样 我给您开一个远程客服窗口 您开一下屏幕共享 我盯着您填 哪里卡了我实时说"
+  },
+  {
+   "type": "message",
+   "time": "11月11日 14:08",
+   "speaker": "B",
+   "text": "共享屏幕? 安全吗"
+  },
+  {
+   "type": "message",
+   "time": "11月11日 14:10",
+   "speaker": "A",
+   "text": "只看您操作这一页 我们的工单都有记录留痕 这是标准流程"
+  },
+  {
+   "type": "message",
+   "time": "11月11日 14:12",
+   "speaker": "B",
+   "text": "那行 我开"
+  },
+  {
+   "type": "message",
+   "time": "11月11日 14:15",
+   "speaker": "A",
+   "text": "好 您重新提交一次……看到了 您这笔显示「校验不一致 系统拦截」"
+  },
+  {
+   "type": "message",
+   "time": "11月11日 14:18",
+   "speaker": "B",
+   "text": "那怎么办"
+  },
+  {
+   "type": "message",
+   "time": "11月11日 14:20",
+   "speaker": "A",
+   "text": "别急 拦截不是拒付 是资金进了保护状态 需要一步验证解除 我明天一早给您方案"
+  },
+  {
+   "type": "message",
+   "time": "11月12日 09:10",
+   "speaker": "A",
+   "text": "芳女士 保护状态的处理方案下来了"
+  },
+  {
+   "type": "message",
+   "time": "11月12日 09:15",
+   "speaker": "B",
+   "text": "怎么解除"
+  },
+  {
+   "type": "message",
+   "time": "11月12日 09:17",
+   "speaker": "A",
+   "text": "您账户里需要有等额资金做验证 验证通过 资金和退款一起原路退回 一分钟都不多留"
+  },
+  {
+   "type": "message",
+   "time": "11月12日 09:20",
+   "speaker": "B",
+   "text": "等额是多少"
+  },
+  {
+   "type": "message",
+   "time": "11月12日 09:22",
+   "speaker": "A",
+   "text": "您填的是工资卡吧 系统按会员费十倍核算 要30000走一遍验证通道"
+  },
+  {
+   "type": "message",
+   "time": "11月12日 09:25",
+   "speaker": "B",
+   "text": "三万?? 我卡里没这么多 这钱转哪儿去"
+  },
+  {
+   "type": "message",
+   "time": "11月12日 09:27",
+   "speaker": "A",
+   "text": "转到验证通道的监管户 钱不过我个人手里 转完秒退 这是清算通道的统一流程"
+  },
+  {
+   "type": "message",
+   "time": "11月12日 09:30",
+   "speaker": "B",
+   "text": "听着不太对劲 能不能我直接去银行问"
+  },
+  {
+   "type": "message",
+   "time": "11月12日 09:33",
+   "speaker": "A",
+   "text": "银行柜台不受理线上工单 他们查不到这个保护单号 一去反而把流程打断 退款就真退不回来了"
+  },
+  {
+   "type": "message",
+   "time": "11月12日 09:36",
+   "speaker": "B",
+   "text": "……那我再想想"
+  },
+  {
+   "type": "message",
+   "time": "11月12日 09:38",
+   "speaker": "A",
+   "text": "您想 想好了跟我说 截止今天下午五点 过点保护单自动转扣款"
+  },
+  {
+   "type": "message",
+   "time": "11月12日 11:30",
+   "speaker": "A",
+   "text": "您小区快递柜好取件吗 我们看您那单签收挺快"
+  },
+  {
+   "type": "message",
+   "time": "11月12日 11:33",
+   "speaker": "B",
+   "text": "楼下就有 挺方便 就是高峰期抢不到格子"
+  },
+  {
+   "type": "message",
+   "time": "11月12日 11:35",
+   "speaker": "A",
+   "text": "我们这边也总听客户这么说 客户满意度嘛 您别介意"
+  },
+  {
+   "type": "message",
+   "time": "11月12日 11:37",
+   "speaker": "B",
+   "text": "哈哈 你们售后还管闲聊"
+  },
+  {
+   "type": "message",
+   "time": "11月12日 14:40",
+   "speaker": "B",
+   "text": "小柯 我又琢磨了下 下午四点前我把钱转了行不"
+  },
+  {
+   "type": "message",
+   "time": "11月12日 14:43",
+   "speaker": "A",
+   "text": "行 我把验证通道的收款账户发您 就一次机会 认准这个户名"
+  },
+  {
+   "type": "message",
+   "time": "11月12日 15:50",
+   "speaker": "B",
+   "text": "转了 30000 你看下到没到"
+  },
+  {
+   "type": "transfer",
+   "time": "11月12日 15:52",
+   "from": "B",
+   "to": "A",
+   "amount": 30000,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "11月12日 15:55",
+   "speaker": "A",
+   "text": "30000到账了 验证马上走 您记住 24小时内 三万本金加268退款一起原路回卡"
+  },
+  {
+   "type": "message",
+   "time": "11月12日 15:58",
+   "speaker": "B",
+   "text": "好 那我等消息"
+  },
+  {
+   "type": "message",
+   "time": "11月12日 16:00",
+   "speaker": "A",
+   "text": "您把短信提醒开着 到账一目了然"
+  },
+  {
+   "type": "message",
+   "time": "11月12日 17:30",
+   "speaker": "A",
+   "text": "您平时在小区群里团购吗"
+  },
+  {
+   "type": "message",
+   "time": "11月12日 17:33",
+   "speaker": "B",
+   "text": "团 水果青菜都团 省事"
+  },
+  {
+   "type": "message",
+   "time": "11月12日 17:35",
+   "speaker": "A",
+   "text": "我们客服小刘天天研究这个 她说团购比超市划算"
+  },
+  {
+   "type": "message",
+   "time": "11月12日 17:37",
+   "speaker": "B",
+   "text": "是 就是质量看运气"
+  },
+  {
+   "type": "message",
+   "time": "11月13日 09:00",
+   "speaker": "B",
+   "text": "小柯 24小时到了 钱没回卡啊"
+  },
+  {
+   "type": "message",
+   "time": "11月13日 09:03",
+   "speaker": "A",
+   "text": "您别急 单子在复核队列里 我催一下给您优先排"
+  },
+  {
+   "type": "message",
+   "time": "11月13日 09:06",
+   "speaker": "B",
+   "text": "复核要多久"
+  },
+  {
+   "type": "message",
+   "time": "11月13日 09:08",
+   "speaker": "A",
+   "text": "一般半天 快的话下午"
+  },
+  {
+   "type": "message",
+   "time": "11月13日 10:20",
+   "speaker": "A",
+   "text": "周末您一般在家收拾吗"
+  },
+  {
+   "type": "message",
+   "time": "11月13日 10:23",
+   "speaker": "B",
+   "text": "收拾 明天准备擦玻璃"
+  },
+  {
+   "type": "message",
+   "time": "11月13日 10:25",
+   "speaker": "A",
+   "text": "您真勤快 我们租的房子玻璃一年擦一次"
+  },
+  {
+   "type": "message",
+   "time": "11月13日 10:27",
+   "speaker": "B",
+   "text": "擦完亮堂 心情好"
+  },
+  {
+   "type": "message",
+   "time": "11月13日 15:30",
+   "speaker": "B",
+   "text": "小柯 都下午三点了 还没动静"
+  },
+  {
+   "type": "message",
+   "time": "11月13日 15:33",
+   "speaker": "A",
+   "text": "我催了 上头说这条验证单走的通道多 需要再核一道"
+  },
+  {
+   "type": "message",
+   "time": "11月13日 15:36",
+   "speaker": "B",
+   "text": "到底还要多久 就说个准话"
+  },
+  {
+   "type": "message",
+   "time": "11月13日 15:39",
+   "speaker": "A",
+   "text": "明天上午一定给您答复 这笔谁也动不了 全程留痕"
+  },
+  {
+   "type": "message",
+   "time": "11月13日 19:40",
+   "speaker": "B",
+   "text": "小柯? 人呢 说话"
+  },
+  {
+   "type": "message",
+   "time": "11月13日 20:10",
+   "speaker": "A",
+   "text": "芳女士 我刚下班 不好意思 您的单我明天一早就提交加急"
+  },
+  {
+   "type": "message",
+   "time": "11月13日 20:15",
+   "speaker": "B",
+   "text": "你们这个专线怎么变成空号了 我刚打"
+  },
+  {
+   "type": "message",
+   "time": "11月13日 20:18",
+   "speaker": "A",
+   "text": "我们今天系统割接 号码在切换 明天您再打"
+  },
+  {
+   "type": "message",
+   "time": "11月13日 20:21",
+   "speaker": "B",
+   "text": "那明天钱不到 我就去平台总部投诉 一路查到底"
+  },
+  {
+   "type": "message",
+   "time": "11月13日 20:24",
+   "speaker": "A",
+   "text": "别走平台线上工单 一走 那边不知道这个专项通道 流程就断给您转自动扣款了"
+  },
+  {
+   "type": "message",
+   "time": "11月13日 20:27",
+   "speaker": "B",
+   "text": "什么叫自动扣款?! 你不是说取消会员了吗"
+  },
+  {
+   "type": "message",
+   "time": "11月13日 20:30",
+   "speaker": "A",
+   "text": "您别激动 我说的是系统侧的默认流程 我明天盯着给您办"
+  },
+  {
+   "type": "message",
+   "time": "11月13日 21:00",
+   "speaker": "B",
+   "text": "小柯 你人呢"
+  },
+  {
+   "type": "message",
+   "time": "11月13日 21:10",
+   "speaker": "B",
+   "text": "专线还是空号"
+  },
+  {
+   "type": "message",
+   "time": "11月13日 21:15",
+   "speaker": "B",
+   "text": "30000块钱 你等着 明早我就把转账记录全打出来"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0002770",
+  "status": "accepted",
+  "errors": []
+ }
+}

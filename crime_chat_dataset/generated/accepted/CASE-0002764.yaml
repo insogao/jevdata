@@ -1,0 +1,153 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002764
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000039
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-0dfb0687894c4534
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: contraband_illicit_trade
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 货车司机 A 经中间人电话引荐，找上私油贩子 B 长期进不含票的便宜油：按吨报价 4300、固定在青龙高速口凌晨四点半辅道交接、先转定金再现金结尾款，实为绕开正规加油站偷逃税款的地下供油线，并约定每周固定走货长期化。
+  critical_evidence:
+  - A 深夜两点电话没打完，当晚追上 B 问「那批的事」，确认经中间人引荐的私油门路（第1天）
+  - B 按吨报价一吨 4300，明确「没票 走不了账」，比站里一吨省近两千（第2天）
+  - 交接地点固定在青龙高速口下匝道辅路、凌晨四点半，B 明说「别换地方」（第3天）
+  - 五吨总价 21500，A 先转 5000 定金，尾款 16500 交货当夜现金当面点清（第4-5天，转账）
+  - 交货后 B 定下「下周还走老时间」，车队里另外两台车也要搭，形成每周固定供油（第6天）
+  benign_alternatives:
+  - 私人加油点的会员优惠购油
+  - 工地内部渠道的批量加油
+
+attributes:
+  duration_days: 6
+  turn_count: 73
+  approximate_tokens_estimate: 1691
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: fuel_tax_evasion
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0147
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-077
+
+dedup:
+  content_hash: sha256:9be40fff1b01efa74668edc49e6486fb93b70534b38e686d7b0ca9bf0f17b5d6
+pipeline_status: accepted
+title: contraband_illicit_trade/fuel_tax_evasion
+conversation: |-
+  【7月6日】
+  A：昨晚两点电话里没说完 那边的事你真有门路?
+  B：门路谈不上 熟人而已 你要多少
+  A：我跑大件 油耗凶 站里的价实在扛不住
+  B：就你一台车?
+  A：先我一台试试 稳了再拉车队里俩兄弟
+  B：单车一个月烧几吨
+  A：五吨上下 看路线
+  B：那你等我信儿 周三给你准信
+  A：行 对了你上回说的那家羊汤面 到底哪一家
+  B：国道口往南第二个路口 那家只开早上
+  A：我夜路多 早上正好路过 回头去尝
+  B：大碗加肉 你跑车的量 吃小碗塞牙缝
+  A：哈哈 行
+  【7月7日】
+  B：昨晚说的事 有数了 按吨算 一吨 4300
+  A：这么一算一吨省小两千 怪不得车队里都传
+  B：就这个意思 不过没票 走不了账 你自己掂量
+  A：我个人车 要票也没用 数对就行
+  B：质量你放心 都是老链子上的 烧过的没回头骂过
+  A：行 那先来五吨
+  B：五吨 周五夜里给你备齐
+  A：你家小子期末咋样
+  B：数学又拉了 天天抱着手机
+  A：我闺女也是 说了八百遍不听
+  B：放暑假你给送哪去
+  A：他姥姥家 乡下能疯跑
+  B：那好 免得在家跟我干瞪眼
+  【7月8日】
+  B：地方想好了 就青龙高速口下匝道 辅路最里头
+  A：那口子我熟 几点
+  B：凌晨四点半 那会儿辅路没人 卡车也好调头
+  A：成 以后就定这儿?
+  B：定这儿 别换 换地方我这头不好约车
+  A：明白 你说几点就几点
+  A：说到凌晨 我这腰最近不行 座椅都换两套了
+  B：你这毛病十年了吧 去拍个片子
+  A：一直拖 上个月体检大夫也催
+  B：别拖 真压着神经了遭罪
+  【7月9日】
+  B：周五的货齐了 五吨一滴不差
+  A：快 价还按 4300?
+  B：按 老价 总共 21500 你先过 5000 定金 我好给上家交代
+  A：成 定金 5000 我现在转
+  【系统消息】A 向 B 转账 5000 元，已收款。
+  B：5000 见了
+  A：剩下的当面给
+  B：当面点清 老规矩
+  A：你这上头还挺严
+  B：我这是跟车队的兄弟们讲信用
+  A：昨晚那场球看了没 点球看得我心口疼
+  B：看了 加时才分 老了扛不住熬夜
+  A：我看半场就睡着了
+  B：跑车的人觉金贵 少熬
+  【7月10日】
+  B：到口子了 辅道最里头 车灯灭着等你
+  A：看到你了 我靠过来
+  B：抽管子自己接 慢点 别溅身上
+  A：五吨满表了 数给你
+  B：成 一路顺风 剩款这会儿结了吧
+  A：现金在驾驶室 你点点
+  B：点了 一万六千五 整 对的
+  A：辛苦 下回还是周五?
+  B：下回提前一天说
+  A：油烧着没异味 跟平时一个样
+  B：跟你说没事吧 烧一箱你就踏实了
+  A：那是 省下的都是纯利
+  B：朋友圈别发 车队里也别嚷嚷 闷声的事
+  A：懂 我嘴严
+  【7月11日】
+  B：下周还走不走 口子老时间
+  A：走 车队那俩也想搭 你那头量跟得上不
+  B：一个月十几吨没问题 再多我给你攒
+  A：那先按这个节奏 稳字当头
+  B：对 稳住 才有下文
+  A：对了羊汤面我去了 大碗加肉 确实实惠
+  B：跟你说吧 老板娘都认得我了
+  A：下回带我 咱俩算半个饭搭子
+  B：行 周五交完货正好早饭点
+  A：一言为定

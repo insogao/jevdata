@@ -1,0 +1,140 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002771
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000042
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-c0f21b157acfaf9d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: contraband_illicit_trade
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 化料厂的老熟人 A 把厂里压着的管制化工原料当「蓝桶货」倒给中间人 B：一桶一千三、出库单做成辅料、桶上重贴「通用清洗剂」标签、言明别问用途、夜里砂石场后门自提、尾款只收现金；B 先转 8000 定金，二十桶当晚提走并约定每月固定走量。
+  critical_evidence:
+  - 5月20日 B 来问「上回那种蓝桶的」，A 开价一桶一千三并立规矩「别问用途……我就当卖的是工业洗剂」（台词）
+  - 5月20日 A 称出库单自己做、账面走辅料、桶上重贴通用清洗剂标签（台词）
+  - 5月20日 定下夜里自提（城北砂石场后门、车直接开进来）、尾款现金当面点（台词）
+  - 5月21日 B 转 8000 元定金（转账事件，前后台词出现 8000），尾款一万八提货时现金点清
+  - 5月21日 A 发来换标后蓝桶的照片（image 事件），当夜二十桶装车、约定下月提前三天说继续走量
+  benign_alternatives:
+  - 正规化工原料采购
+  - 实验室试剂供应
+
+attributes:
+  duration_days: 2
+  turn_count: 63
+  approximate_tokens_estimate: 1529
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: shell_chemical_diversion
+  risk: 3
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0148
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-077
+
+dedup:
+  content_hash: sha256:dea4271169c739e8aa0c66d3df053d5178ce78e4fbfc25f64a21d49b4ace1b41
+pipeline_status: accepted
+title: contraband_illicit_trade/shell_chemical_diversion
+conversation: |-
+  【5月20日】
+  B：磊哥 起了没 找你问个事
+  A：说
+  B：上回那种 蓝桶的 还有吗 我下游老板催得紧
+  A：厂里压着三十桶 你要几桶
+  B：先二十桶 后头每月固定走
+  A：二十桶 一桶一千三 两万六 少一分不谈
+  B：还是老价…… 一千二不行?
+  A：这批成本涨了 一千三 到手你别往外报这个数
+  B：行 就一千三
+  A：先说好 老规矩 别问用途 你下游拿去做什么别跟我讲 我就当卖的是工业洗剂
+  B：懂 这么多年谁跟你说过用途
+  A：那就好 出库单我们自己做 账面上走辅料 你提货单拿洗剂的那联
+  B：稳 桶上的标呢
+  A：我让人重贴 通用清洗剂的标 看不出原先那版 你来之前我发你照片
+  B：你儿子几号中考来着
+  A：6月17 咋
+  B：我这有套押题卷 回头给你孩子拿去
+  A：别整那些虚的 他那个分 押题也白搭
+  B：哈哈 那也得给他备着
+  A：行 谢了
+  B：二十桶我这边的车装得下不
+  A：装得下 蓝桶不大 一车正好
+  B：司机我安排 我人就不露面了 你懂
+  A：懂 夜里提 明晚十一点 城北砂石场后门 车直接开进来 装完就走
+  B：行 尾款怎么给
+  A：现金 提货当面点 尾款我不走转账
+  B：定金呢
+  A：定金转没事 八千 先打过来我心里踏实
+  B：行 傍晚我让人转你
+  A：周日水库去不去 我表哥办年卡了
+  B：去 彻底放松一天 就是不知鱼开口不
+  A：五月底 鲫鱼正口 带你那根软竿
+  B：行 我饵料新买了两包
+  A：钓大的 别老用小钩
+  【5月21日】
+  B：磊哥 定金8000让会计转了 你查收
+  【系统消息】B 向 A 转账 8000 元，已收款。
+  A：8000收到 尾款一万八提货时现金点清
+  B：记下了 一万八现金
+  A：桶身上的标换好了 发你照片 你过目
+  A：[image：一张贴着通用清洗剂字样的蓝色塑料桶照片]
+  B：行 看不出别的 二十桶都换标了?
+  A：都换了 封条也重打的
+  B：磊哥 你那腰最近咋样
+  A：贴了半个月膏药 好多了 就是阴天还酸
+  B：别老搬重物 让小工干
+  A：厂里离不开我 不盯不行
+  B：那你雇个稳妥的班长
+  A：在挑了 挑人比挑货难
+  A：我们老家枇杷下来了 给你留了一箱
+  B：又让你破费 甜不
+  A：白沙的 甜得很 提货那天给你捎上
+  B：行 那我给司机备两条烟谢他
+  A：他就好这口
+  B：磊哥 车出发了 十一点前后到你那
+  A：行 后门进 堆场第三排 我在那等 尾款18000当面点
+  B：18000我让司机带着 点完装车
+  A：对 装完别停 直接走
+  B：懂
+  A：装完了 二十桶 你司机点了说没少
+  B：嗯 他说18000也点清了 磊哥办事麻利
+  A：下月这个数 提前三天说 我给你压着量
+  B：行 到时我言语
+  A：路上让司机稳着点 别赶
+  B：好 下回枇杷我自己去摘
+  A：行 下月见

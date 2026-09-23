@@ -1,0 +1,140 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002715
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000026
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-8743e5d907017e26
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A借与同事B的工作关系，试图以术前的私下心意影响家属手术安排；对话只显示利益与便利的关联，不展开交付方式。
+  critical_evidence:
+  - A提到家人即将手术，并希望联系到特定专家、尽快安排。
+  - A与B在术前以含糊说法提到一份私下心意，B将其与额外关照联系起来。
+  - 手术安排后A再次致谢，把此前的心意与得到的安排联系；对话没有把它说成公开收费服务。
+  benign_alternatives:
+  - 正常专家门诊挂号
+  - 医院特需服务费
+
+attributes:
+  duration_days: 4
+  turn_count: 64
+  approximate_tokens_estimate: 1199
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: medical_channel_fee
+  risk: 2
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0290
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-126
+
+dedup:
+  content_hash: sha256:a70d31b44dbfe7f02dae1ef38ef4a977928d46e3c8976f083ac2c6d366efddc9
+pipeline_status: rejected
+title: bribery_corruption/medical_channel_fee
+conversation: |-
+  【9月24日】
+  A：明天那边要开始安排了，想再跟你确认一下。
+  B：你说吧，我听着。
+  A：明晚方便吗？我想当面把事情聊清楚。
+  B：可以，找个不忙的时候。
+  A：好，那我来定地方。
+  B：行，到了发消息。
+  A：你家小狗最近还挑食吗
+  B：这周好点了 换了个碗
+  A：哈哈它还挺会挑
+  B：猫也一样 不喜欢就不碰
+  A：看来得慢慢试
+  B：嗯 先不折腾它了
+  A：它现在一听开罐声就跑来
+  B：哈哈这个反应很快
+  A：我给它买了个新玩具
+  B：别一次买太多
+  A：对 先看看它玩不玩
+  B：有意思就够了
+  A：它现在一听开罐声就跑来
+  B：哈哈这个反应很快
+  A：我给它买了个新玩具
+  B：别一次买太多
+  【9月25日】
+  A：你那边月底也要补台账吗
+  B：要啊 这周在核一遍
+  A：我们刚换了新版表格
+  B：我也收到了 看着清楚些
+  A：就是填起来多两栏
+  B：熟悉了就快了
+  A：我把旧表也留了一份
+  B：留着对照确实方便
+  A：同事说下周要培训
+  B：那你到时问清楚版本
+  A：行 我先把手头这版弄完
+  B：忙完早点休息
+  A：我把旧表也留了一份
+  B：留着对照确实方便
+  A：同事说下周要培训
+  A：家里人明早要手术，之前提到的那位专家能安排上吗。
+  B：我记得这事，会尽量帮你问问。
+  A：那份小心意我已经当面交给你了。
+  B：嗯，收到你的意思了，安排我会多留意。
+  A：麻烦你了，具体我等医院通知。
+  B：好，先安心休息，后面有消息我告诉你。
+  A：今天收到时间确认了，确实比预想顺一些。
+  【系统消息】A 向 B 转账 1402 元，已收款。
+  B：知道了，先把家里照顾好。
+  【9月26日】
+  A：这几天早晚温差挺大的
+  B：是啊 中午又有点热
+  A：我出门会带件薄外套
+  B：带着好 晚上用得上
+  A：预报说周末会降温
+  B：那我把厚衣服拿出来
+  A：我把外套放包里了
+  B：这个办法稳妥
+  A：刚看窗外又起风了
+  B：那你下班慢点走
+  A：好 我不赶时间
+  B：行 到家再说
+  A：我把外套放包里了
+  B：这个办法稳妥
+  A：刚看窗外又起风了
+  【9月27日】
+  A：事情办完了，之前那份心意谢谢你。
+  B：家里人平安就好。
+  A：还是想跟你说声谢谢。
+  B：嗯，早点休息。

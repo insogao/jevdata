@@ -1,0 +1,136 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002716
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000025
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-9b3db792fa313333
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A希望通过与校内同事B之间的额外利益影响孩子入学名额安排，并让款项凭据与实际目的不相吻合。
+  critical_evidence:
+  - A提到公开助学款之外另有一笔私下款项，并询问孩子名额是否已留。
+  - B回应名额安排已提前确定，与一般公开申请进度不同。
+  - 双方知道款项凭据所显示的用途与真实商议目的并不一致，但不讨论具体填报或操作方式。
+  benign_alternatives:
+  - 合法捐赠助学
+  - 正常转学手续
+
+attributes:
+  duration_days: 3
+  turn_count: 61
+  approximate_tokens_estimate: 1177
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: school_admission_payment
+  risk: 2
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0290
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-126
+
+dedup:
+  content_hash: sha256:b0b99b19ecdde55e0ddf34346bd19c96241fcb995e6e2d940e29b776e5e6c118
+pipeline_status: rejected
+title: bribery_corruption/school_admission_payment
+conversation: |-
+  【9月24日】
+  A：最近材料收得差不多了，想跟你聊聊孩子转学的事。
+  B：可以啊，具体哪天。
+  A：明晚方便吗？我想当面把事情聊清楚。
+  B：可以，找个不忙的时候。
+  A：好，那我来定地方。
+  B：行，到了发消息。
+  A：你那边月底也要补台账吗
+  B：要啊 这周在核一遍
+  A：我们刚换了新版表格
+  B：我也收到了 看着清楚些
+  A：就是填起来多两栏
+  B：熟悉了就快了
+  A：我把旧表也留了一份
+  B：留着对照确实方便
+  A：同事说下周要培训
+  B：那你到时问清楚版本
+  A：行 我先把手头这版弄完
+  A：这几天早晚温差挺大的
+  B：是啊 中午又有点热
+  A：我出门会带件薄外套
+  B：带着好 晚上用得上
+  A：预报说周末会降温
+  B：那我把厚衣服拿出来
+  A：我把外套放包里了
+  B：这个办法稳妥
+  A：刚看窗外又起风了
+  B：那你下班慢点走
+  A：好 我不赶时间
+  【9月25日】
+  A：附近新开了家面馆你去过没
+  B：去过一次 汤还不错
+  A：我上次点的拌面有点咸
+  B：那你下次试试番茄鸡蛋面
+  A：好 我记下了
+  B：中午人少点再去
+  A：我同事说那家早上也卖豆浆
+  B：那可以试试看
+  A：周末我路过买一份
+  B：别买太多 先尝尝
+  A：对 先试试味道
+  A：除了公开那项助学款，我还准备了另外一份心意。
+  B：我知道你关心名额，这边说过会帮你留意。
+  A：之前说的那个位置现在算稳了吗。
+  B：名单里已经给你留了位置，后面等通知。
+  A：那凭据上写的和咱们聊的不是一回事吧。
+  B：这件事先别展开说，材料之后会给你。
+  A：好，我知道你意思了。
+  【系统消息】A 向 B 转账 1403 元，已收款。
+  B：嗯，等正式消息。
+  【9月26日】
+  A：你最近还坐地铁吗
+  B：基本都坐 开车找位太费劲
+  A：我这两天改骑车了
+  B：路上注意点 早高峰车多
+  A：就两站路 还挺方便
+  B：嗯 下雨我就不骑了
+  A：我现在会提前十分钟出门
+  B：这样不容易慌
+  A：还顺路买了早餐
+  B：不错 能省点时间
+  A：孩子那边已经收到下一步通知了。
+  B：好，那就按通知准备。
+  A：之前聊的事情也多谢你。
+  B：先把孩子的安排弄好。

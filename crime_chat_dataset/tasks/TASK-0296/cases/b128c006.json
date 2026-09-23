@@ -1,0 +1,346 @@
+{
+ "key": "b128c006",
+ "archetype_id": "ARC-000019",
+ "subtype": "gift_card_channel",
+ "latent_intent": "申请人A在节日前约见把关人B，表示想送购物卡但回避面值；随后A询问材料进度。B对礼物表示疑虑并将事项拉回常规流程，整体仍留下节礼与申请是否相关的歧义。",
+ "critical_facts": [
+  "A在节日前主动约见负责申请的B",
+  "A提出购物卡但没有说明面值",
+  "A随后询问申请进度并请B留意",
+  "B提醒按正式流程办理，未承诺特殊照顾"
+ ],
+ "benign_alternatives": [
+  "正常节日人情往来",
+  "公司福利卡"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "8月1日 09:00",
+   "speaker": "A",
+   "text": "这两天风挺大。"
+  },
+  {
+   "type": "message",
+   "time": "8月1日 09:12",
+   "speaker": "B",
+   "text": "我早上出门差点把伞吹翻。"
+  },
+  {
+   "type": "message",
+   "time": "8月1日 09:24",
+   "speaker": "A",
+   "text": "节前想当面谢谢你，给你带张卡。"
+  },
+  {
+   "type": "message",
+   "time": "8月1日 09:36",
+   "speaker": "A",
+   "text": "明天我换把结实点的。"
+  },
+  {
+   "type": "message",
+   "time": "8月1日 09:48",
+   "speaker": "B",
+   "text": "看预报周末会好些。"
+  },
+  {
+   "type": "message",
+   "time": "8月1日 10:00",
+   "speaker": "B",
+   "text": "上次午饭我先垫了36元，你把AA转我就行。"
+  },
+  {
+   "type": "message",
+   "time": "8月1日 10:12",
+   "speaker": "A",
+   "text": "好，刚转你36元，午饭AA对上了。"
+  },
+  {
+   "type": "transfer",
+   "time": "8月1日 10:14",
+   "from": "A",
+   "to": "B",
+   "amount": 36,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "8月2日 09:00",
+   "speaker": "B",
+   "text": "收到了，36元对上了，谢谢。"
+  },
+  {
+   "type": "message",
+   "time": "8月2日 09:12",
+   "speaker": "A",
+   "text": "冰箱里有菜的话简单炒一下。"
+  },
+  {
+   "type": "message",
+   "time": "8月2日 09:24",
+   "speaker": "B",
+   "text": "我们不熟，礼物我不方便收。"
+  },
+  {
+   "type": "message",
+   "time": "8月2日 09:36",
+   "speaker": "A",
+   "text": "今天路上比平时堵。"
+  },
+  {
+   "type": "message",
+   "time": "8月2日 09:48",
+   "speaker": "B",
+   "text": "是不是前面在修路？"
+  },
+  {
+   "type": "message",
+   "time": "8月2日 10:00",
+   "speaker": "A",
+   "text": "对，公交临时绕了一站。"
+  },
+  {
+   "type": "message",
+   "time": "8月2日 10:12",
+   "speaker": "B",
+   "text": "明天可以多留十分钟。"
+  },
+  {
+   "type": "message",
+   "time": "8月2日 10:24",
+   "speaker": "B",
+   "text": "家里的灯修好了吗？"
+  },
+  {
+   "type": "message",
+   "time": "8月2日 10:36",
+   "speaker": "A",
+   "text": "就是购物卡，面值我也没看，别多想。"
+  },
+  {
+   "type": "message",
+   "time": "8月2日 10:48",
+   "speaker": "A",
+   "text": "换了个灯泡，现在正常了。"
+  },
+  {
+   "type": "message",
+   "time": "8月2日 11:00",
+   "speaker": "B",
+   "text": "还好只是接触不稳。"
+  },
+  {
+   "type": "message",
+   "time": "8月2日 11:12",
+   "speaker": "A",
+   "text": "我顺手把其他几个也检查了。"
+  },
+  {
+   "type": "message",
+   "time": "8月2日 11:24",
+   "speaker": "B",
+   "text": "今天中午突然下雨了。"
+  },
+  {
+   "type": "message",
+   "time": "8月3日 09:00",
+   "speaker": "A",
+   "text": "我刚好在楼下，躲了一会儿。"
+  },
+  {
+   "type": "message",
+   "time": "8月3日 09:12",
+   "speaker": "B",
+   "text": "路面现在应该干得差不多了。"
+  },
+  {
+   "type": "message",
+   "time": "8月3日 09:24",
+   "speaker": "B",
+   "text": "那份申请我只能按公开要求处理。"
+  },
+  {
+   "type": "message",
+   "time": "8月3日 09:36",
+   "speaker": "A",
+   "text": "嗯，晚点出门不用绕路。"
+  },
+  {
+   "type": "message",
+   "time": "8月3日 09:48",
+   "speaker": "A",
+   "text": "楼下新开了家小店。"
+  },
+  {
+   "type": "message",
+   "time": "8月3日 10:00",
+   "speaker": "B",
+   "text": "卖什么的？"
+  },
+  {
+   "type": "message",
+   "time": "8月3日 10:12",
+   "speaker": "A",
+   "text": "家常菜，分量看着还行。"
+  },
+  {
+   "type": "message",
+   "time": "8月3日 10:24",
+   "speaker": "B",
+   "text": "下次路过我也去试试。"
+  },
+  {
+   "type": "message",
+   "time": "8月3日 10:36",
+   "speaker": "A",
+   "text": "我主要想确认材料有没有到，麻烦留意下。"
+  },
+  {
+   "type": "message",
+   "time": "8月3日 10:48",
+   "speaker": "B",
+   "text": "你现在还是坐地铁吗？"
+  },
+  {
+   "type": "message",
+   "time": "8月3日 11:00",
+   "speaker": "A",
+   "text": "是，最近换乘那段人少些。"
+  },
+  {
+   "type": "message",
+   "time": "8月3日 11:12",
+   "speaker": "B",
+   "text": "我也考虑改成地铁。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 09:00",
+   "speaker": "A",
+   "text": "早高峰可能还是得早点出门。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 09:12",
+   "speaker": "A",
+   "text": "阳台那盆花长了新叶。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 09:24",
+   "speaker": "B",
+   "text": "最近温度合适，应该长得快。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 09:36",
+   "speaker": "B",
+   "text": "有收件回执，后续进度会按通知更新。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 09:48",
+   "speaker": "A",
+   "text": "我把它从空调旁边挪开了。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 10:00",
+   "speaker": "B",
+   "text": "少浇点水，先观察几天。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 10:12",
+   "speaker": "A",
+   "text": "最近早晚温差有点大。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 10:24",
+   "speaker": "B",
+   "text": "我包里放了件薄外套。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 10:36",
+   "speaker": "A",
+   "text": "这个办法不错，我也准备一件。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 10:48",
+   "speaker": "A",
+   "text": "好，那我等系统消息。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 11:00",
+   "speaker": "B",
+   "text": "办公室空调有时挺冷。"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 11:12",
+   "speaker": "B",
+   "text": "最近你还喝冰咖啡吗？"
+  },
+  {
+   "type": "message",
+   "time": "8月4日 11:24",
+   "speaker": "A",
+   "text": "少喝了，晚上容易睡不着。"
+  },
+  {
+   "type": "message",
+   "time": "8月5日 09:00",
+   "speaker": "B",
+   "text": "换成茶可能好一点。"
+  },
+  {
+   "type": "message",
+   "time": "8月5日 09:12",
+   "speaker": "A",
+   "text": "嗯，下午以后我喝温水。"
+  },
+  {
+   "type": "message",
+   "time": "8月5日 09:24",
+   "speaker": "A",
+   "text": "共享单车还在原来那排吗？"
+  },
+  {
+   "type": "message",
+   "time": "8月5日 09:36",
+   "speaker": "B",
+   "text": "谢谢理解，祝你节日愉快。"
+  },
+  {
+   "type": "message",
+   "time": "8月5日 09:48",
+   "speaker": "B",
+   "text": "昨天看还在，停车点没变。"
+  },
+  {
+   "type": "message",
+   "time": "8月5日 10:00",
+   "speaker": "A",
+   "text": "好，我明早骑过去。"
+  },
+  {
+   "type": "message",
+   "time": "8月5日 10:12",
+   "speaker": "B",
+   "text": "记得看下轮胎气够不够。"
+  }
+ ],
+ "source_seed_ids": [
+  "SEED-SRC-AEG-001-91d56b6d74326686"
+ ],
+ "_registered": {
+  "case_id": "CASE-0002730",
+  "status": "accepted",
+  "errors": []
+ }
+}

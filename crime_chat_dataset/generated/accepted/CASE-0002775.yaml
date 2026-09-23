@@ -1,0 +1,133 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002775
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000149
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-a5993b263b474381
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: other_illicit_coordination
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 散发违规贷款小广告的包头儿 A 组织贴手 B 等人夜里逐栋张贴「急用钱」小广告：一夜贴完一个片区、一栋十五按栋结现钱、被物业撕掉就扣钱、二维码换号必须用新批版本——一条绕开正规渠道的线下小广告投放网。
+  critical_evidence:
+  - 3月3日 A 派活「城东朝阳那片 一夜贴完」，「一栋十五 按栋结钱」点数付账（台词）
+  - 3月4日 A 定规矩：贴电梯间和单元门人眼平齐、工具自备、「被物业撕了的栋 扣钱」（台词）
+  - 3月5日 A 要求换贴新批二维码版本的单子，「旧的你别混着贴」错版白干（台词）
+  - 3月6日 B 报「朝阳片全完事 九十六栋」，A 称明早点数、周五结账现钱不走账（台词）
+  - 3月7日 A 邀 B 把名字报进「下周城西」的活，仍按栋结、撕了扣，活计长期成网（台词）
+  benign_alternatives:
+  - 正规广告投放
+  - 社区通知张贴
+
+attributes:
+  duration_days: 5
+  turn_count: 55
+  approximate_tokens_estimate: 1328
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: informal_loan_ads_network
+  risk: 1
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0148
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-077
+
+dedup:
+  content_hash: sha256:66e3a5bd0646deeed3616990984de8acb7b8983b32bd6a09ee1164aa65110611
+pipeline_status: accepted
+title: other_illicit_coordination/informal_loan_ads_network
+conversation: |-
+  【3月3日】
+  A：老五 周四晚上有活 城东朝阳那一片 一夜贴完 敢不敢接
+  B：多少栋
+  A：一个区 一百来栋 老规矩按栋算
+  B：一栋多少
+  A：十五 按栋结钱 一栋是一栋 点数付账
+  B：一百来栋一夜? 得叫上我表弟
+  A：叫人可以 出了岔子算你头上
+  B：懂 单子哪来
+  A：周四晚十点城东桥底下给你 一手交单一手开工 还是那种「急用钱找我们」的卡面版 新印的
+  A：干完活消夜去 桥头那家羊汤开到两点
+  B：行 上回那碗给我超厚肉
+  A：你跟老板娘熟 你点单
+  B：哈哈 那必须多撒香菜
+  A：就着烧饼 你一顿能干俩
+  【3月4日】
+  A：再交代一遍 贴电梯间和单元门 人眼平齐的高度 别贴歪
+  B：知道 拐角信报箱那块最显眼
+  A：胶水滚刷自备 我不管工具
+  B：行 我的家什齐全
+  A：丑话说前头 被物业撕了的栋 扣钱 一栋撕了算你没贴
+  B：这么狠 那我挑楼道里头贴
+  A：里头也得人眼平齐 贴严实点
+  B：哥 你那电动车换电池没
+  A：换了 一组三千多 肉疼
+  B：续航能到多少
+  A：八十公里 跑活够用
+  B：那值 我那车爬坡直喘
+  A：该换就换 干活的得有辆好车
+  【3月5日】
+  B：开贴了 桥东那排完事了 二十栋
+  A：速度行 主出入口那几栋必须满贴 那里检查严
+  B：放心 一门两张
+  A：对了 单子用新批那版 二维码换号了 旧的你别混着贴
+  B：明白 我包里就一份新版的
+  A：贴错版本的栋白干 自己对清楚
+  B：这天真冷 手冻僵了
+  A：倒春寒 贴完赶紧回去泡脚
+  B：买了副露指手套 好歹能按胶带
+  A：明天升温 你那件厚棉袄可以收了
+  B：盼着呢
+  【3月6日】
+  B：收工 朝阳片全完事 九十六栋
+  A：行 明早我找人挨栋点数
+  B：点吧 一栋都不少
+  A：点完周五结账 老规矩现钱 不走账
+  B：成
+  B：哥 拼的那款跑鞋到底行不行 九块九包邮那个
+  A：九块九你还指望科技 鞋底两周就磨平
+  B：干咱这活费鞋 想省点
+  A：省错了地方 上回你磨破脚耽误一夜
+  B：行 那我买双两三百的
+  A：这个钱不能省
+  【3月7日】
+  A：点数完了 九十六栋 一栋十五 一千四百四 今晚上老地方羊汤馆 一手点钱
+  B：成 表弟那份你一起给他 我把账记清了
+  A：行 带上你们俩 下周城西的活先报你名字
+  B：城西多少栋
+  A：还没定 反正老规矩 按栋结 撕了扣
+  B：晚上见

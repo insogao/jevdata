@@ -1,0 +1,123 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002699
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000022
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-11a57048da89a236
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 检查人员在检查前向经营者通风报信并持续收取固定月费，经营者的整改长期被拖成“还差一点”，构成以付款换取检查便利的安排。
+  critical_evidence:
+  - 检查人员在正式检查前异常联系经营者并透露检查将至
+  - 双方提到按月固定支付一笔费用
+  - 经营者承认整改长期停留在差一点完成的状态，检查人员把这与持续付款联系起来
+  benign_alternatives:
+  - 合规咨询顾问费
+  - 行业协会会费
+
+attributes:
+  duration_days: 2
+  turn_count: 48
+  approximate_tokens_estimate: 1083
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: regulatory_tip_payment
+  risk: 2
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0281
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-123
+
+dedup:
+  content_hash: sha256:6c9ca3fcd2c936d38040bf427fda67644a36e633bbd44e0fa2ec499401183499
+pipeline_status: rejected
+title: bribery_corruption/regulatory_tip_payment
+conversation: |-
+  【6月1日】
+  A：你刚才打电话说这两天要来检查？
+  A：整改我一直差最后一点，报告也还没补齐。
+  A：这周雨挺大，路上堵得厉害。
+  A：周末超市有活动，你要买什么吗？
+  B：我早上多坐了两站地铁，反而快些。
+  B：纸巾和洗衣液快用完了。
+  A：明天我也早点出门试试。
+  A：我顺路带点回来。
+  B：带把伞，预报说还要下。
+  B：嗯，时间快到了，我提前告诉你一声。
+  B：中午吃的什么？
+  A：楼下新开了家面馆，味道还行。
+  B：我也想去，别点太辣。
+  A：放心，我最近胃不太舒服。
+  A：每个月那笔我都照常安排，别的先不展开。
+  A：家里那盆绿植最近叶子有点蔫。
+  B：是不是放在空调风口了？
+  A：我挪到窗边看看。
+  B：先少浇点水，周末再观察。
+  B：只要月月不断，现场那几项就还是按老样子看。
+  B：手机电池最近掉得很快。
+  A：后台应用关掉几个试试。
+  B：好，我晚上清理一下。
+  A：还不行就去店里测测。
+  【6月2日】
+  A：这两天温差挺明显的。
+  B：是啊，晚上记得加件外套。
+  B：我先去处理下手头的事。
+  A：好，忙完再聊。
+  B：谢谢，别买太多囤家里。
+  A：我刚开完会，今天安排有点满。
+  【系统消息】B 向 A 转账 2384 元，已收款。
+  B：先保持现在这样，别把问题一次性全改完。
+  B：辛苦了，记得喝水。
+  A：这月的款已经转了，你看到了吧。
+  A：嗯，桌上还放着半杯咖啡。
+  B：看到了，检查前我再提醒你一次。
+  A：刚把桌面收拾了下，文件总算没那么乱。
+  B：今天窗外风挺大，阳台门我关上了。
+  A：晚饭打算做点清淡的，最近不想吃太油。
+  B：冷了就别喝了，换点温水。
+  A：明早我先把日程看一下。
+  B：好，有变化再互相说一声。
+  B：你那边今天忙到几点？
+  A：差不多六点，晚点再回家。
+  A：刚才网络断了一下，消息才发出去。
+  B：没事，我也刚看到。
+  B：快递送到了吗？
+  A：到了，放在门口柜子里。
+  【6月3日】
+  B：我把明天要带的东西放在玄关了。
