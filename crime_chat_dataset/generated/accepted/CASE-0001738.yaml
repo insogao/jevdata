@@ -1,0 +1,127 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001738
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000037
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-5ed79a909c36b553
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: contraband_illicit_trade
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 做考试资料生意的 B 向握有内部试卷的 A 求购开考前泄露的真题，A 表示要到开考前一夜才出、按科目逐门报价，B 先付一笔订金锁定名额，双方约定考前一晚交货。
+  critical_evidence:
+  - B 打听能不能在考试之前拿到内部那份东西，A 说太早没有、要等开考前一夜才出
+  - A 按科目报价，一门一个价，讲明不同科目价钱不一样
+  - B 转了一笔订金把名额锁住，约定考前一晚交货
+  - 双方用「资料」「那份东西」「原题」指代，不出现直接说法
+  benign_alternatives:
+  - 考前辅导资料购买，A 为机构老师提供内部押题讲义
+  - 模拟题库采购，双方谈的是正规教辅的批发价格与到货时间
+
+attributes:
+  duration_days: 3
+  turn_count: 51
+  approximate_tokens_estimate: 898
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: exam_leak_material
+  risk: 3
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0162
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:18dff08ed5b89b5c2414e04f94ffbffb4dcb979d9069a8876f05918a2da6164e
+pipeline_status: accepted
+title: contraband_illicit_trade/exam_leak_material
+conversation: |-
+  【10月8日】
+  A：你找我？
+  B：哥 想问你个事 那边的东西现在有吗
+  A：现在哪那么早 得等开考前一晚才出
+  B：那能提前给我留一份不 我这边有人要
+  A：留可以 你先说你要哪几门
+  B：数学和英语先要 综合再看
+  A：可以 一门一个价 数学贵点 英语便宜些
+  B：行 你报价
+  A：微信上就不说数了 你懂行情
+  B：懂 那定个名额要多少
+  A：先交两千订金 剩下的考前一晚给
+  B：名额紧不
+  A：紧 我这边就放几个 先到先得
+  B：你中午吃食堂还是外面
+  A：外面 食堂人多
+  B：学校门口那家米线还行
+  A：太咸 我口轻
+  B：哈哈 那你吃点清淡的
+  A：你们那边降温没
+  B：降了 早上骑车冻手
+  A：加个把套
+  B：买了 还没到
+  B：订金我现在转你
+  A：行 转了我就给你留着
+  【系统消息】B 向 A 转账 2000 元，已收款。
+  A：收到了 给你占一个
+  B：好 别给别人了
+  【10月9日】
+  B：你家娃上几年级了
+  A：初一 刚开学
+  B：压力大吧
+  A：还行 就是作业多
+  B：现在都这样
+  B：那双十一想买台平板给孩子 有推荐没
+  A：看用途 光网课随便买个就行
+  B：就是网课 便宜的就行
+  A：那两千出头够用了
+  B：行 我看看
+  A：综合那门你到底要不要
+  B：要 三门外加综合 一起
+  A：行 那就三份 明晚出我发你
+  B：怎么发 微信还是别的
+  A：明晚说 别在这儿留
+  【10月10日】
+  A：你上次问的那本教辅到货没
+  B：到了 昨天翻了一半
+  A：有用就行
+  B：嗯 讲得还行
+  A：东西出来了 你那边把尾款准备好
+  B：多少
+  A：老数 三门的 一万一
+  B：行 我凑一下 十分钟
+  A：别拖 我这边等回话
+  B：好

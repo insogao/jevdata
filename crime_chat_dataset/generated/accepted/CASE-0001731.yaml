@@ -1,0 +1,133 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001731
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000026
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-54a1f759843aaf94
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 家属 A 为让母亲尽快排到指定专家主刀的手术，找到医院里的熟人 B 帮忙加急，术前私下递一个信封、术后再补一笔感谢费，B 利用院内关系把手术插队安排到下周并指定了专家。
+  critical_evidence:
+  - A 母亲要做手术，A 想指定某位专家主刀并尽快安排，B 说正常排队要等一两个月
+  - A 提出术前先给个信封表示感谢，B 没有拒绝、答应帮忙想办法
+  - B 把手术提前安排到下周，并落实了 A 指定的那位专家主刀
+  - 术后 A 又转了一笔钱作为感谢费，B 收下，双方约定这事不外传
+  benign_alternatives:
+  - 正常专家门诊挂号，家属通过正规渠道预约专家手术排期
+  - 医院特需服务费，家属自愿选择特需通道并按院方标准付费
+
+attributes:
+  duration_days: 6
+  turn_count: 54
+  approximate_tokens_estimate: 1130
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: medical_channel_fee
+  risk: 2
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0162
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:4b482f8761469c372a0931f1ed5faec9b676d7419a4b4f284bbe7d328a2ad0a5
+pipeline_status: accepted
+title: bribery_corruption/medical_channel_fee
+conversation: |-
+  【11月3日】
+  A：哥 我妈那个手术你帮我问了没
+  B：问了 你妈这个排期靠后 正常等得一个多点月
+  A：一个多月? 我妈这情况拖不起啊
+  B：我知道 但床位和台次都排满了
+  A：能不能想想办法 指定王主任主刀
+  B：王主任的号本来就紧 我试试
+  A：哥 事成之后我一定好好谢你 术前我先给你个信封
+  B：这个先不说 我看看能不能挪
+  A：你中午吃了没
+  B：在科室随便吃了口
+  A：别老对付 胃受不了
+  B：习惯了 忙起来就这样
+  A：那也得按时吃
+  【11月4日】
+  B：跟麻醉和手术室那边碰了下 有个台次能空出来
+  A：真的? 什么时候
+  B：下周二 王主任那天在
+  A：太好了 那我今天就把那个给你
+  B：你小声点 见机行事
+  A：懂 我下午去办手续 顺便带过去
+  B：行 别在人多的地方
+  A：今天降温 你值班衣服够不
+  B：科室有空调 就是晚上冷
+  A：备件外套
+  B：嗯 你妈这几天注意别感冒 术前别发烧
+  A：好 我盯着
+  【11月5日】
+  A：手续办好了 护士站说排下周二
+  B：对 我给打过招呼了
+  A：那个信封收到了吧
+  B：嗯 收到了 你放心 我不会让人看清
+  A：王主任那边?
+  B：我都说好了 你们当正常病人就行
+  A：我侄子下周结婚 你说我随多少合适
+  B：看你关系 一般一千两
+  A：那我随两千吧
+  B：差不多
+  【11月6日】
+  A：术前要准备啥 你列一下
+  B：空腹 带好以前的片子 家属签字
+  A：好 我记下了
+  B：别紧张 王主任手艺没问题
+  A：有你我踏实多了
+  【11月7日】
+  A：我妈出来了 医生说顺利
+  B：那就好 好好养着
+  A：这回真多亏你 我转点心意给你 别嫌少
+  【系统消息】A 向 B 转账 5000 元，已收款。
+  B：你这太客气了
+  A：应该的 这事就咱俩知道
+  B：嗯 别往外说
+  A：晚上我在医院旁边住 方便照顾
+  B：行 有事喊我
+  【11月8日】
+  A：我妈今天能喝点粥了
+  B：循序渐进 别急
+  A：嗯 你昨天那笔别多想 就是我一点心意
+  B：知道了 你照顾好人就行
+  A：等她出院我请你吃饭
+  B：到时候再说吧

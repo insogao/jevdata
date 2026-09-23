@@ -1,0 +1,124 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001744
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000130
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-7963b568d8bde979
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 与 B 有过视频往来的 A 声称手里存着 B 那晚的画面和通讯录，以要发给其亲友相要挟，限时索要八千元，B 在分钟内被逼转账。
+  critical_evidence:
+  - A 声称手里有 B 那晚留下的东西，还说通讯录名单也导出来了
+  - A 开口先要八千，说不给就把东西发出去
+  - A 给了一个分钟的倒计时逼 B 尽快转钱，B 表示害怕
+  - B 被迫转出八千元，A 收下后说先安静一阵
+  benign_alternatives:
+  - 视频聊天误会，双方因一段聊天录像产生误会后澄清
+  - 诈骗预警提醒，朋友提醒对方视频聊天可能被截图，注意防范
+
+attributes:
+  duration_days: 4
+  turn_count: 47
+  approximate_tokens_estimate: 667
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: video_call_screen_cap
+  risk: 3
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0162
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:903a45dc48330bac6c093e1da756b42929e242afb5d004e50788216b159b0c09
+pipeline_status: accepted
+title: coercion_blackmail/video_call_screen_cap
+conversation: |-
+  【7月2日】
+  A：在吗
+  B：谁
+  A：上次跟你视频的那个 忘了?
+  B：……你想干嘛
+  A：没别的意思 你那天晚上的东西 我这儿都留着
+  B：你删了 那都是闹着玩的
+  A：闹着玩你怕什么
+  B：你到底要怎么样
+  A：你的名单在我这 亲戚朋友的我都能找到
+  B：你有病吧
+  A：先来个八千 事情就翻篇
+  B：八万? 我哪有那么多
+  A：八千 不是八万 你听清楚
+  B：我没钱
+  A：我给你十分钟 过了这村没这店
+  B：你别乱来
+  A：九分半
+  B：让我想想
+  A：八分 你拖延没用
+  B：钱转你了 东西删了
+  【系统消息】B 向 A 转账 8000 元，已收款。
+  A：收到了 算你识相
+  B：删啊
+  A：先安静一阵 别再联系我
+  【7月3日】
+  B：你到底删没删
+  A：我说了别烦我
+  B：那笔钱是我借的
+  A：少来这套
+  B：你今天吃的啥
+  A：关你什么事
+  B：……
+  B：外面下雨了
+  A：嗯
+  B：我想报警
+  A：你报啊 东西发出去的是你
+  B：……
+  【7月4日】
+  B：我失眠了一晚上
+  A：那是你的事
+  B：以后还会不会找我要
+  A：看你表现
+  B：我同事今天请客吃火锅
+  A：跟我有什么关系
+  B：随便说说
+  【7月5日】
+  B：我换了手机号 别再加我了
+  A：没用 名单我留着呢
+  B：你到底想怎么样才肯罢休
+  A：识相点 别逼我
+  B：……

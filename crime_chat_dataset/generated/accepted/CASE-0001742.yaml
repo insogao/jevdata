@@ -1,0 +1,142 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001742
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000148
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-5a245919a3200975
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: other_illicit_coordination
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 中介 A 向毕业生家属 B 兜售落户指标，说指标只有两个、需要社保挂靠一年来凑条件，收一笔代办费，承诺办不成全额退款，实为倒卖落户指标并造假凑社保。
+  critical_evidence:
+  - A 说手里的落户指标只剩两个，先到先得，让 B 抓紧
+  - A 提出要社保挂靠一年来满足条件，由他来操作、B 不用管
+  - A 报价代办费并说办不成全额退款，B 转了一笔费用
+  - 双方约定材料由 A 那边打理，B 只需配合补资料、别对外说
+  benign_alternatives:
+  - 人才引进代办，中介协助符合条件者走正规人才落户申请
+  - 积分落户咨询，中介提供积分落户政策咨询与材料准备服务
+
+attributes:
+  duration_days: 5
+  turn_count: 64
+  approximate_tokens_estimate: 1097
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: residency_quota_trade
+  risk: 2
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0162
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:31d2dd4561cc0c553cf0bd405cf545a12409f47bc3bf5beaeb4b2c3be3513dc4
+pipeline_status: accepted
+title: other_illicit_coordination/residency_quota_trade
+conversation: |-
+  【10月20日】
+  A：你好 是毕业生家长吧
+  B：对 孩子想落户
+  A：我这边有名额 指标只有两个了
+  B：什么条件
+  A：社保满一年就行 别的我来弄
+  B：孩子刚毕业 社保哪够一年
+  A：这个好办 社保挂靠一年 我这边有公司可以挂
+  B：挂靠合法吗
+  A：大家都这么办 你不说没人查
+  B：费用多少
+  A：代办费五万 含挂靠 办不成全额退
+  B：你中午吃了吗
+  A：吃了 客户请的
+  B：你们这行挺忙
+  A：年底冲量 名额紧
+  B：办不成真全退?
+  A：全退 我做了五年了 信誉在这
+  B：能签合同不
+  A：给个收条 合同那种不好写
+  【10月21日】
+  B：我跟孩子商量下
+  A：抓紧 另一个名额昨天有人问了
+  B：先交多少
+  A：先两万定金 锁名额 剩下的办成再给
+  B：转你了
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  A：收到 名额给你留着
+  B：要准备啥材料
+  A：身份证 学历证 还有照片 社保那边我挂
+  B：好 我整理
+  A：今天降温 你多穿点
+  B：嗯 你也是
+  A：跑材料冷得很
+  B：辛苦了
+  【10月22日】
+  B：材料发你了
+  A：收到 我看下缺不缺
+  A：缺一张社保参保证明 我这边先给你挂上
+  B：挂哪家公司
+  A：我合作的一家 名字你不用管
+  B：挂一年要交钱吧
+  A：含在代办费里了 你不用另外出
+  B：那就好
+  B：孩子档案要转吗
+  A：要转 我来协调 你配合就行
+  B：档案不能造假吧
+  A：正常转 就是流程我熟
+  【10月23日】
+  A：社保挂上了 你这个月就能查到
+  B：这么快
+  A：嗯 我打了招呼
+  B：接下来呢
+  A：等受理 到时有通知我转你
+  B：今天太阳好 我晒被子
+  A：在家歇着呗
+  B：是啊 等结果心焦
+  A：急也没用 走流程
+  【10月24日】
+  A：通知下来了 受理通过 准备面签
+  B：面签问什么
+  A：就问你工作情况 按我给你的说
+  B：说我孩子在哪上班
+  A：就说我给他挂的那家 别说漏嘴
+  B：好 我记着
+  A：尾款面签过了再给 你先别急
+  B：嗯 事成就给
+  B：这事别跟别人提
+  A：放心 各行有各行的规矩
+  B：好

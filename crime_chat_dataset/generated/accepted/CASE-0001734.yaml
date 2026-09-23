@@ -1,0 +1,141 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001734
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000129
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-b89b7dcd7cd39ee7
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 同部门的 A 拿着找人做出来的报告单要挟同事 B，声称怀了他的孩子、要按月给抚养费，威胁说 B 不认就闹到他单位去，B 怕影响工作先付了一笔钱。
+  critical_evidence:
+  - A 拿着一张报告单找 B，说事情有了、要 B 负责
+  - A 私下承认报告单是找人做的，但对外就用这张撑场面
+  - A 提出每月固定给抚养费，不给就闹到 B 单位、让领导都知道
+  - B 怕丢工作，先转了一笔钱稳住 A，约定后面再谈
+  benign_alternatives:
+  - 真实亲子纠纷，双方就孩子抚养问题进行协商
+  - 抚养费诉讼，当事人通过法律途径解决抚养费争议
+
+attributes:
+  duration_days: 4
+  turn_count: 63
+  approximate_tokens_estimate: 961
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: fake_pregnancy_claim
+  risk: 3
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0162
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:58179227ef4dc792f048269d84e19c196e6ee6067b3149905ace2a18f5118911
+pipeline_status: accepted
+title: coercion_blackmail/fake_pregnancy_claim
+conversation: |-
+  【6月3日】
+  A：在吗 有个事跟你说
+  B：什么事
+  A：我有反应了 你自己看
+  A：[image：一张检查报告单的照片，关键信息被打了码]
+  B：这跟我有什么关系
+  A：就那一次 你别装不知道
+  B：你说真的假的
+  A：单子都在这了 还能有假
+  B：你想怎么样
+  A：每月给抚养费 别的我不管
+  B：多少
+  A：三千 按月打
+  B：我得想想
+  A：你考虑可以 别拖太久
+  【6月4日】
+  B：单子能给我看看原件吗
+  A：原件不在手边 就这张
+  B：哪个医院做的
+  A：说了你也不认识
+  B：我怎么信你
+  A：你不用信 你就说给不给
+  A：单子我找人做的 你能怎么着
+  B：你这话什么意思
+  A：字面意思 反正外面就认这张
+  B：你这是敲诈
+  A：你爱怎么说 不认我就闹到你单位
+  B：中午吃饭了吗
+  A：吃了 食堂
+  B：我们一个食堂 你见过我?
+  A：你别试探我
+  A：你们领导姓什么来着
+  B：你想干嘛
+  A：让你领导评评理 看他管不管
+  B：别去 有话好说
+  A：那就给钱
+  B：我转你 先给一个月
+  A：转吧
+  【系统消息】B 向 A 转账 3000 元，已收款。
+  A：收到 下个月这个点
+  B：你保证别去单位
+  A：给钱我就不去
+  【6月5日】
+  B：你这事跟你家里说了没
+  A：说了 我妈气得不行
+  B：……
+  A：所以你老实点
+  A：今天外面挺热
+  B：嗯
+  A：你别耷拉着脸 装没事人一样
+  B：我知道
+  B：那单子到底是什么时候的
+  A：上个月 你问这么多干嘛
+  B：随便问
+  【6月6日】
+  A：想好了下个月的钱没
+  B：你能不能把单子给我复印件
+  A：不能 你给钱就行 要单子干嘛
+  B：我怕你以后一直拿这个找我要
+  A：那得看你表现
+  B：……
+  B：我下周要出差
+  A：出差也得把钱留够
+  B：知道
+  A：别想着跑 你单位地址我清楚
+  B：我没跑
+  A：那就好
+  B：我先忙了
+  A：嗯

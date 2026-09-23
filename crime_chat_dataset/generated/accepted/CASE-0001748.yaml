@@ -1,0 +1,142 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001748
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000095
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-be055d21b23b1b5b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 熟人 B 在做正规卡券回收，A 手里有几张用不完的公司福利购物卡，托 B 按平台公示的折扣帮忙转让，B 收款后按九四折把款转给 A，全程是合规的闲置卡券处理。
+  critical_evidence:
+  - A 说单位发了京东卡苏果卡，自己用不完，问 B 的正规回收平台收不收
+  - B 说平台公示九四折回收，走平台下单、卡密平台即时核销
+  - A 把卡的卡密提交给平台，B 帮忙操作并收到核销款
+  - B 按九四折把款转给 A，双方说好以后用不完还找平台
+  benign_alternatives:
+  - 正规卡券回收平台，闲置购物卡按平台公示折扣回收变现
+  - 公司福利卡转让，员工把用不完的福利卡折价让给熟人
+
+attributes:
+  duration_days: 4
+  turn_count: 65
+  approximate_tokens_estimate: 1144
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: gift_card_cashout
+  risk: 0
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0162
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:8b92c1145a2c6615d1725de2bd3b68dc0c2fe78f3438c12e149923516bfb707d
+pipeline_status: accepted
+title: money_laundering_obfuscation/gift_card_cashout
+conversation: |-
+  【5月10日】
+  A：在吗 问你个事
+  B：在 咋了
+  A：单位发了购物卡 京东和苏果的 我用不完
+  B：我们平台收 九四折
+  A：九四折是直接给钱吗
+  B：对 平台公示价 你把卡密提交上去 核销完当天打款
+  A：苏果的也收?
+  B：收 苏果八折 京东九四
+  A：行 我理一下有几张
+  B：你中午吃啥
+  A：食堂 今天有红烧肉
+  B：不错啊
+  A：食堂就这个菜像样
+  A：理出来了 京东三张 苏果两张 都是五百的
+  B：行 我把平台链接发你 你实名注册后自己提交
+  A：还要注册啊
+  B：正规平台都要 实名才能核销 你放心
+  A：行 我弄
+  A：填好了 提交了
+  B：看到单子了 平台在核 一般一两个小时
+  A：好 不急
+  【5月11日】
+  B：你的单子核完了 京东三张一千五 苏果两张八百 共两千三
+  A：好 打哪
+  B：平台打你注册的账户 你提现就行
+  A：我看下
+  A：到了 两千三 一分不少
+  B：对啊 平台按公示价 不会扣你
+  A：省得我到处找黄牛
+  B：黄牛压价 还不安全 平台踏实
+  A：嗯 以后有你方便多了
+  A：中午我带的饭 昨晚剩的菜
+  B：别吃坏了
+  A：放冰箱了 没事
+  B：今天降温 你穿够没
+  A：还行 加了件外套
+  B：这两天要下雨 带伞
+  A：好
+  A：我同事也发了卡 他也想弄
+  B：让他自己注册平台就行 一样的价
+  A：他信黄牛 我说说
+  B：黄牛有风险 卡被用了都不知道
+  A：对 还是平台正规
+  【5月12日】
+  B：你儿子这次考试咋样
+  A：中游 数学有点弱
+  B：补补基础就行
+  A：嗯 回头找个老师
+  A：你上次说的那个平台客服靠谱不
+  B：靠谱 有工单号 全程可查
+  A：那就行
+  B：有单号就不怕
+  【5月13日】
+  A：平台又发短信了 说到账了
+  B：对 以后到账都有短信
+  A：比我想的规范
+  B：正规平台就这样 有据可查
+  B：我下午去超市 你要带啥
+  A：帮我带箱牛奶
+  B：行 什么牌子
+  A：老样子 那个牌子的
+  B：好 晚上给你
+  B：牛奶买好了 放你楼下保安那了
+  A：好 多少钱我转你
+  B：六十
+  【系统消息】A 向 B 转账 60 元，已收款。
+  B：收到
+  A：谢了 改天请你吃饭
+  B：客气

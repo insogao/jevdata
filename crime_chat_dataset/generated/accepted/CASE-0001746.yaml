@@ -1,0 +1,143 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001746
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000086
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-908f2b92929dbc11
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 做电商的 B 有几单快件显示签收但买家没收到，找到片区的快递员 A 帮忙核实，A 按公司流程核对单号与收件信息、在驿站登记异常并申报理赔，B 最后收到一笔正常赔付，全程是合规的售后处理。
+  critical_evidence:
+  - B 反映三单显示已签收但买家没收到，请 A 帮忙查后台
+  - A 按流程让 B 提供单号和收件人信息，逐单核对派送记录
+  - A 在驿站做了异常件登记并帮 B 提交理赔申请
+  - 公司核实后赔付，B 收到一笔正常理赔转账，双方只处理合规售后
+  benign_alternatives:
+  - 快递理赔核实，快递员依规为商家核查异常派送
+  - 驿站正常登记，异常件按公司流程申报赔付
+
+attributes:
+  duration_days: 6
+  turn_count: 64
+  approximate_tokens_estimate: 1236
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: courier_info_leak
+  risk: 0
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0162
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:8e2c5b736c72f45fccd13442bd740f4083c0dfded16e49d90b00a9b269513255
+pipeline_status: accepted
+title: privacy_doxxing/courier_info_leak
+conversation: |-
+  【8月12日】
+  B：师傅在吗 我这边有个事
+  A：在 你说
+  B：有三单买家说没收到 但后台显示已签收
+  A：你把单号发我 我查派送记录
+  B：好 我等下发截图 就是后台那个单号页
+  A：行 别发别的 单号就行
+  B：发了 你看下
+  A：看到了 我先去驿站系统里对一下
+  A：你中午吃啥了
+  B：点的外卖 一份盖饭
+  A：我今天带的饭 省事
+  B：带饭健康 我懒得做
+  A：哈哈 将就吃
+  A：那三单我看了一单是驿站代收了
+  B：代收的话买家会去取吗
+  A：会 有的放驿站几天 你让买家去问下取件码
+  B：那另两单呢
+  A：另两单我再查 有一单可能错分到隔壁站点了
+  B：麻烦你了师傅
+  A：分内的事
+  【8月13日】
+  B：今天降温 你们派件够呛吧
+  A：车上有棚 还行 就是风大
+  B：注意保暖
+  A：嗯 你也一样
+  A：错分那单找到了 在隔壁站点
+  B：那能送过去不
+  A：我今天下午顺路带过去 明天派
+  B：好 那第三单呢
+  A：第三单派送记录是空的 我按异常件给你登记了
+  B：登记了就能赔吗
+  A：得公司核 你先等两天 我把材料交上去
+  B：我儿子明天开学 你那边孩子上学远不
+  A：不远 走路十分钟
+  B：那挺好 我们得坐车
+  A：习惯就好
+  【8月14日】
+  A：材料递上去了 客服那边会联系你确认
+  B：好 我接电话
+  A：到时候核对下收件电话 别答错
+  B：知道 我按后台的填
+  B：我那双鞋到了 你上次说想买同款
+  A：看看 发我链接
+  B：发了 打折呢 挺划算
+  A：行 我晚上下单
+  【8月15日】
+  A：公司那边核完了 第三单给你按丢失赔
+  B：赔多少
+  A：按申报价值 一百八 走你后台结算
+  B：行 谢谢师傅
+  A：客气 以后有异常早点说
+  【8月16日】
+  B：赔付款到了 一百八
+  A：到了就行
+  【系统消息】A 向 B 转账 180 元，已收款。
+  B：收到 麻烦你了
+  A：应该的
+  A：周末有雨 你生意受影响不
+  B：还好 室内打包不影响
+  A：那就行 雨天派件慢 你体谅下
+  B：没事 都理解
+  【8月17日】
+  B：师傅 后面再有这种单 还按这个流程走呗
+  A：对 你先发单号 我查 异常就登记
+  B：好 明白了
+  A：嗯 合作愉快
+  B：对了 我妈包了粽子 改天给你带两个
+  A：哈哈 那敢情好
+  B：客气啥 顺路
+  A：行 下次派件喊你

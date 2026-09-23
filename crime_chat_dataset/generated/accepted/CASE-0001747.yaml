@@ -1,0 +1,140 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001747
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000050
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-7e0af5b6bd265be9
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 同一市场的老商户 A 提醒新来的同行 B 遵守市场统一划分的摊位区域和管理规矩，两人为客流有点小摩擦后友好协商，B 把自己那份摊位租金转给代收的 A，全程是正常同业相处。
+  critical_evidence:
+  - A 主动找上 B，说这一片是市场统一划分的，新来的要按区摆、别越界
+  - 两人为客流和摆位有点同业摩擦，A 摆明按市场管理规劝、没有刁难
+  - B 表示理解，愿意按规来，把代收的那部分摊位租金转给 A
+  - B 转给 A 一笔正常的摊位租金，双方说定以后照市场规矩来
+  benign_alternatives:
+  - 同业竞争摩擦，两位摊主为摊位划分起了口角后和解
+  - 市场管理规劝，老商户提醒新人遵守市场统一管理的分区规则
+
+attributes:
+  duration_days: 4
+  turn_count: 63
+  approximate_tokens_estimate: 1121
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: territory_warning
+  risk: 0
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0162
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:79b3e7a73abde78d47a04a40ebc4f42f8766e4004f76042938950baba9efd28c
+pipeline_status: accepted
+title: violence_extortion/territory_warning
+conversation: |-
+  【9月5日】
+  A：你是新来的吧
+  B：嗯 上周才摆上
+  A：这一片是市场统一划的 你知道规矩不
+  B：啥规矩 我不懂
+  A：就是各摆各区 谁也别压谁的位置 摊位费统一收
+  B：哥 我就卖点小玩意 混口饭
+  A：混饭也得按区摆 不然管理处要来说
+  B：那你说咋弄
+  A：先看下划分图 你摆的位置稍微过去了一点
+  B：今天风真大 棚子差点吹跑
+  A：你那棚子扎得不牢
+  B：明天拿绳子绑一下
+  A：绑高点 别砸着人
+  B：好嘞 谢谢哥
+  【9月6日】
+  A：今天生意咋样
+  B：一般 刚开张 没几个客人
+  A：你摆得靠外 把我这边的客流挡了点
+  B：哥 我离你那挺远的
+  A：不是说离得远 是按划分该往里收一点
+  B：行 我待会挪回来
+  A：这就对了 大家按区摆才不打架
+  B：哥你中午吃的啥
+  A：门口那家卤面
+  B：那家我也吃过 量足
+  A：老板给我多加了肉
+  B：哈哈 熟客就是好
+  A：划分图你看了没
+  B：看了 我往里收了半米
+  A：行 这样管理处也不会来找
+  B：多亏你提醒 不然我还不知道
+  A：都是这么过来的 互相照应
+  B：嗯 谢谢哥
+  【9月7日】
+  B：哥 摊位费是统一交还是各交各的
+  A：我先垫了 大家按位置分摊 你这份给我就行
+  B：行 一个月多少
+  A：你这个位置一个月三百
+  B：好 先给你一个月的
+  A：我开个收条给你 免得说不清
+  B：转你了
+  【系统消息】B 向 A 转账 300 元，已收款。
+  A：收到 下个月我提前喊你
+  B：好
+  A：你棚子绑了没
+  B：绑了 拿了两根绳
+  A：嗯 别出岔子
+  B：我闺女明天幼儿园开学
+  A：多大了
+  B：四岁 头一回上学
+  A：那得哭几天 我家那个当年也是
+  B：哈哈 慢慢就好了
+  【9月8日】
+  A：今天几点出的摊
+  B：八点 按划分的位置摆的
+  A：行 守规矩就好
+  B：哥 钱我按月给 有事也找管理处
+  A：对 有争议找管理处评 别自己争
+  B：嗯
+  B：今天中午我自己带的饭
+  A：会过日子
+  B：能省一点是一点
+  A：嗯 好好摆你的摊
+  B：收摊了 今天还行
+  A：嗯
+  B：下月摊位费我按时给
+  A：知道

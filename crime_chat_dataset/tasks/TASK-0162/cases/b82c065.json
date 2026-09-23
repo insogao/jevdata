@@ -1,0 +1,415 @@
+{
+ "key": "b82c065",
+ "archetype_id": "ARC-000086",
+ "subtype": "courier_info_leak",
+ "latent_intent": "做电商的 B 有几单快件显示签收但买家没收到，找到片区的快递员 A 帮忙核实，A 按公司流程核对单号与收件信息、在驿站登记异常并申报理赔，B 最后收到一笔正常赔付，全程是合规的售后处理。",
+ "critical_facts": [
+  "B 反映三单显示已签收但买家没收到，请 A 帮忙查后台",
+  "A 按流程让 B 提供单号和收件人信息，逐单核对派送记录",
+  "A 在驿站做了异常件登记并帮 B 提交理赔申请",
+  "公司核实后赔付，B 收到一笔正常理赔转账，双方只处理合规售后"
+ ],
+ "benign_alternatives": [
+  "快递理赔核实，快递员依规为商家核查异常派送",
+  "驿站正常登记，异常件按公司流程申报赔付"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "8月12日 09:10",
+   "speaker": "B",
+   "text": "师傅在吗 我这边有个事"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 09:13",
+   "speaker": "A",
+   "text": "在 你说"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 09:15",
+   "speaker": "B",
+   "text": "有三单买家说没收到 但后台显示已签收"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 09:17",
+   "speaker": "A",
+   "text": "你把单号发我 我查派送记录"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 09:19",
+   "speaker": "B",
+   "text": "好 我等下发截图 就是后台那个单号页"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 09:21",
+   "speaker": "A",
+   "text": "行 别发别的 单号就行"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 09:25",
+   "speaker": "B",
+   "text": "发了 你看下"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 09:28",
+   "speaker": "A",
+   "text": "看到了 我先去驿站系统里对一下"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 12:20",
+   "speaker": "A",
+   "text": "你中午吃啥了"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 12:22",
+   "speaker": "B",
+   "text": "点的外卖 一份盖饭"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 12:24",
+   "speaker": "A",
+   "text": "我今天带的饭 省事"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 12:25",
+   "speaker": "B",
+   "text": "带饭健康 我懒得做"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 12:27",
+   "speaker": "A",
+   "text": "哈哈 将就吃"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 15:40",
+   "speaker": "A",
+   "text": "那三单我看了一单是驿站代收了"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 15:42",
+   "speaker": "B",
+   "text": "代收的话买家会去取吗"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 15:44",
+   "speaker": "A",
+   "text": "会 有的放驿站几天 你让买家去问下取件码"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 15:46",
+   "speaker": "B",
+   "text": "那另两单呢"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 15:48",
+   "speaker": "A",
+   "text": "另两单我再查 有一单可能错分到隔壁站点了"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 15:50",
+   "speaker": "B",
+   "text": "麻烦你了师傅"
+  },
+  {
+   "type": "message",
+   "time": "8月12日 15:52",
+   "speaker": "A",
+   "text": "分内的事"
+  },
+  {
+   "type": "message",
+   "time": "8月13日 08:50",
+   "speaker": "B",
+   "text": "今天降温 你们派件够呛吧"
+  },
+  {
+   "type": "message",
+   "time": "8月13日 08:53",
+   "speaker": "A",
+   "text": "车上有棚 还行 就是风大"
+  },
+  {
+   "type": "message",
+   "time": "8月13日 08:55",
+   "speaker": "B",
+   "text": "注意保暖"
+  },
+  {
+   "type": "message",
+   "time": "8月13日 08:56",
+   "speaker": "A",
+   "text": "嗯 你也一样"
+  },
+  {
+   "type": "message",
+   "time": "8月13日 10:30",
+   "speaker": "A",
+   "text": "错分那单找到了 在隔壁站点"
+  },
+  {
+   "type": "message",
+   "time": "8月13日 10:32",
+   "speaker": "B",
+   "text": "那能送过去不"
+  },
+  {
+   "type": "message",
+   "time": "8月13日 10:34",
+   "speaker": "A",
+   "text": "我今天下午顺路带过去 明天派"
+  },
+  {
+   "type": "message",
+   "time": "8月13日 10:36",
+   "speaker": "B",
+   "text": "好 那第三单呢"
+  },
+  {
+   "type": "message",
+   "time": "8月13日 10:38",
+   "speaker": "A",
+   "text": "第三单派送记录是空的 我按异常件给你登记了"
+  },
+  {
+   "type": "message",
+   "time": "8月13日 10:40",
+   "speaker": "B",
+   "text": "登记了就能赔吗"
+  },
+  {
+   "type": "message",
+   "time": "8月13日 10:42",
+   "speaker": "A",
+   "text": "得公司核 你先等两天 我把材料交上去"
+  },
+  {
+   "type": "message",
+   "time": "8月13日 16:10",
+   "speaker": "B",
+   "text": "我儿子明天开学 你那边孩子上学远不"
+  },
+  {
+   "type": "message",
+   "time": "8月13日 16:12",
+   "speaker": "A",
+   "text": "不远 走路十分钟"
+  },
+  {
+   "type": "message",
+   "time": "8月13日 16:14",
+   "speaker": "B",
+   "text": "那挺好 我们得坐车"
+  },
+  {
+   "type": "message",
+   "time": "8月13日 16:15",
+   "speaker": "A",
+   "text": "习惯就好"
+  },
+  {
+   "type": "message",
+   "time": "8月14日 09:20",
+   "speaker": "A",
+   "text": "材料递上去了 客服那边会联系你确认"
+  },
+  {
+   "type": "message",
+   "time": "8月14日 09:22",
+   "speaker": "B",
+   "text": "好 我接电话"
+  },
+  {
+   "type": "message",
+   "time": "8月14日 09:24",
+   "speaker": "A",
+   "text": "到时候核对下收件电话 别答错"
+  },
+  {
+   "type": "message",
+   "time": "8月14日 09:26",
+   "speaker": "B",
+   "text": "知道 我按后台的填"
+  },
+  {
+   "type": "message",
+   "time": "8月14日 14:30",
+   "speaker": "B",
+   "text": "我那双鞋到了 你上次说想买同款"
+  },
+  {
+   "type": "message",
+   "time": "8月14日 14:32",
+   "speaker": "A",
+   "text": "看看 发我链接"
+  },
+  {
+   "type": "message",
+   "time": "8月14日 14:34",
+   "speaker": "B",
+   "text": "发了 打折呢 挺划算"
+  },
+  {
+   "type": "message",
+   "time": "8月14日 14:36",
+   "speaker": "A",
+   "text": "行 我晚上下单"
+  },
+  {
+   "type": "message",
+   "time": "8月15日 10:05",
+   "speaker": "A",
+   "text": "公司那边核完了 第三单给你按丢失赔"
+  },
+  {
+   "type": "message",
+   "time": "8月15日 10:07",
+   "speaker": "B",
+   "text": "赔多少"
+  },
+  {
+   "type": "message",
+   "time": "8月15日 10:09",
+   "speaker": "A",
+   "text": "按申报价值 一百八 走你后台结算"
+  },
+  {
+   "type": "message",
+   "time": "8月15日 10:11",
+   "speaker": "B",
+   "text": "行 谢谢师傅"
+  },
+  {
+   "type": "message",
+   "time": "8月15日 10:13",
+   "speaker": "A",
+   "text": "客气 以后有异常早点说"
+  },
+  {
+   "type": "message",
+   "time": "8月16日 09:30",
+   "speaker": "B",
+   "text": "赔付款到了 一百八"
+  },
+  {
+   "type": "message",
+   "time": "8月16日 09:32",
+   "speaker": "A",
+   "text": "到了就行"
+  },
+  {
+   "type": "transfer",
+   "time": "8月16日 09:35",
+   "from": "A",
+   "to": "B",
+   "amount": 180,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "8月16日 09:37",
+   "speaker": "B",
+   "text": "收到 麻烦你了"
+  },
+  {
+   "type": "message",
+   "time": "8月16日 09:39",
+   "speaker": "A",
+   "text": "应该的"
+  },
+  {
+   "type": "message",
+   "time": "8月16日 15:20",
+   "speaker": "A",
+   "text": "周末有雨 你生意受影响不"
+  },
+  {
+   "type": "message",
+   "time": "8月16日 15:22",
+   "speaker": "B",
+   "text": "还好 室内打包不影响"
+  },
+  {
+   "type": "message",
+   "time": "8月16日 15:24",
+   "speaker": "A",
+   "text": "那就行 雨天派件慢 你体谅下"
+  },
+  {
+   "type": "message",
+   "time": "8月16日 15:26",
+   "speaker": "B",
+   "text": "没事 都理解"
+  },
+  {
+   "type": "message",
+   "time": "8月17日 10:40",
+   "speaker": "B",
+   "text": "师傅 后面再有这种单 还按这个流程走呗"
+  },
+  {
+   "type": "message",
+   "time": "8月17日 10:42",
+   "speaker": "A",
+   "text": "对 你先发单号 我查 异常就登记"
+  },
+  {
+   "type": "message",
+   "time": "8月17日 10:44",
+   "speaker": "B",
+   "text": "好 明白了"
+  },
+  {
+   "type": "message",
+   "time": "8月17日 10:46",
+   "speaker": "A",
+   "text": "嗯 合作愉快"
+  },
+  {
+   "type": "message",
+   "time": "8月17日 18:00",
+   "speaker": "B",
+   "text": "对了 我妈包了粽子 改天给你带两个"
+  },
+  {
+   "type": "message",
+   "time": "8月17日 18:02",
+   "speaker": "A",
+   "text": "哈哈 那敢情好"
+  },
+  {
+   "type": "message",
+   "time": "8月17日 18:03",
+   "speaker": "B",
+   "text": "客气啥 顺路"
+  },
+  {
+   "type": "message",
+   "time": "8月17日 18:05",
+   "speaker": "A",
+   "text": "行 下次派件喊你"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0001746",
+  "status": "accepted",
+  "errors": []
+ }
+}

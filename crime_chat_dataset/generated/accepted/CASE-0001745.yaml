@@ -1,0 +1,135 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001745
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000002
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-6aca034151e6c86b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 自称有内部渠道的上司 A 给下属 B 晒出高收益截图，劝他加大投入，还让 B 拉朋友一起进场拿分成，实则并无真实投资标的，B 转钱投入。
+  critical_evidence:
+  - A 给 B 发来收益截图，说自己靠内部渠道一个月翻了不少，劝 B 别错过
+  - A 劝 B 加大投入，说投得多赚得多、错过这波就没了
+  - A 让 B 拉个熟人一起进场，说老带新有分成
+  - B 转了一笔钱给 A 跟着投，A 说先带他小试、后面再加
+  benign_alternatives:
+  - 合法私募介绍，上司向同事介绍正规持牌机构的理财产品
+  - 正规理财推荐，同事之间交流银行理财产品与风险
+
+attributes:
+  duration_days: 3
+  turn_count: 59
+  approximate_tokens_estimate: 1041
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: investment_lead
+  risk: 2
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0162
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:3ca164c8080ed0f359454a0d8207ea1f421eb4089835ddf5b076945a28dbb07a
+pipeline_status: accepted
+title: fraud_scam/investment_lead
+conversation: |-
+  【1月5日】
+  A：小张 上次说的那个事考虑没
+  B：领导 您说的那个靠谱吗
+  A：靠谱 我上个月走的 你看截图
+  A：一个月多出来小两万 比你攒工资快吧
+  B：这么快? 是什么项目
+  A：内部渠道 别细问 说多了不好
+  B：风险大不大
+  A：稳 我做了小半年了 一次没亏
+  A：你要投就趁早 这波快满了
+  B：我手头不多
+  A：投得多赚得多 你先来点试试
+  B：领导 中午吃啥
+  A：应酬 陪客户
+  B：辛苦 少喝点
+  A：没办法 为了业绩
+  A：你今天报表交了吧
+  B：交了 您看下
+  A：行 回头我批
+  A：对了 你那个朋友老李有闲钱没
+  B：可能有 咋了
+  A：让他也进来 老带新有分成 你也能多拿点
+  B：我问问
+  【1月6日】
+  B：领导 我先投一万试试
+  A：一万有点少 三万起 效果才明显
+  B：我先凑两万
+  A：行 先两万 后面赚了再加
+  B：转您账上?
+  A：转我 我统一走渠道
+  B：转了 两万
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  A：收到 我这就给你排进去
+  B：多久能见收益
+  A：快的一周 你盯着我给你的截图就行
+  B：今天外面下雪了
+  A：看到了 路上滑
+  B：您开车慢点
+  A：嗯 你也是
+  A：我跟渠道那边说了 给你开了个高一点的额度
+  B：啥意思
+  A：意思是你还能再加 趁现在行情好
+  B：我等等看收益
+  A：等就晚了 机会不等人
+  【1月7日】
+  A：给你看 昨天的账
+  A：一天涨了一千二 你两万放着就是白放
+  B：这么快
+  A：所以让你加 老李那边你说了没
+  B：他还在犹豫
+  A：你跟他说保底 老客户都稳
+  B：行 我再劝劝
+  B：领导 月底考核您多担待
+  A：放心 跟着我干亏不了你
+  B：谢谢领导
+  A：再跟你透个底 这周要封盘 想加赶紧
+  B：我明天发工资 再加点
+  A：这就对了 有眼光
+  B：就指望这个翻身了
+  A：晚上还有个饭局 先这样
+  B：好 您忙
+  A：截图我晚点发你 让你看看啥叫赚钱
+  B：好嘞

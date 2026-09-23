@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001733
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000049
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-25b5d32cc0b2e663
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 替老板办事的 A 受命去警告欠事不配合的 B，A 说老板要「给他长长记性」、约他地下车库见面、还叮嘱动手别出人命就行，B 害怕后转钱求和。
+  critical_evidence:
+  - A 上门找 B，说老板对 B 很不满意、要 B 出来当面谈
+  - A 转述老板的意思「给他长长记性」，暗示要动手教训
+  - A 约 B 到地下车库见面，说别在明面上、动手有分寸、别出人命就行
+  - B 害怕，转给 A 一笔钱求和，A 说先替他跟老板回个话
+  benign_alternatives:
+  - 严格管理谈话，公司主管约员工严肃谈话处理工作纠纷
+  - 劳动纠纷调解，双方就欠薪问题约见协商解决
+
+attributes:
+  duration_days: 5
+  turn_count: 54
+  approximate_tokens_estimate: 814
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: beat_example_warning
+  risk: 3
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0162
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:ec0c7151fdfaff07c873d9063378f1205c59ac941b60a973a4881290a313f006
+pipeline_status: accepted
+title: violence_extortion/beat_example_warning
+conversation: |-
+  【4月10日】
+  A：你是老刘吧
+  B：你谁
+  A：老板让我来的 你最近不太配合
+  B：哪个老板
+  A：你自己心里有数 装什么
+  B：有事说事
+  A：出来当面谈 别在电话里
+  B：我不去
+  A：老板说给你长长记性 你躲得了一时
+  B：……
+  【4月11日】
+  A：想通了没
+  B：我真没钱
+  A：老板不缺你那点 是要你态度
+  B：什么态度
+  A：出来聊 地下车库 晚上八点
+  B：干啥非去那
+  A：明面上不方便 你自己来 别带人
+  B：我中午吃不下
+  A：吃不下就对了 早点了事早踏实
+  B：能不能换地方
+  A：就那儿 别磨叽
+  A：今晚别忘 八点
+  B：我不想挨打
+  A：看你怎么谈
+  A：人呢 没见着你
+  B：我在车里 不敢下
+  A：怂什么 下来 谈两句就走
+  B：我给你转点钱 你帮我说说话
+  A：多少
+  B：两万够不
+  A：行 你先转 我去回话
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  A：收到了 你先回去 这两天别露面
+  B：好 别让他找我
+  【4月12日】
+  A：老板说了 算你懂点事
+  B：那能不能就算了
+  A：看你表现 别再有下次
+  B：不会了
+  A：今天天挺好
+  B：嗯
+  A：出来晒晒太阳 别老窝着
+  B：没心情
+  【4月13日】
+  A：你老婆知道这事不
+  B：不知道 别牵扯她
+  A：那就好 家里的事别掺和
+  B：嗯
+  B：钱的事过去了就别再提了
+  A：放心 我说话算话
+  【4月14日】
+  A：以后有事正常谈 别躲着
+  B：知道了
+  A：动手的事老板没让真做 你运气好
+  B：……谢了
+  A：别谢我 谢你自己识相
+  B：我准备换个号 这些事不想留记录
+  A：随你

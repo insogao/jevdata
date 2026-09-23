@@ -1,0 +1,487 @@
+{
+ "key": "b82c020",
+ "archetype_id": "ARC-000086",
+ "subtype": "courier_info_leak",
+ "latent_intent": "做所谓「推广」的 B 向快递网点员工 A 长期收购当天新到的快递面单信息，要求带电话和住址、以张截图的形式发来、按条计价四块一条，A 利用职务便利提供并先收一笔预付款，实为出售公民个人信息。",
+ "critical_facts": [
+  "B 要的是当天新到的单，说旧单没用了、越新越好",
+  "B 明确要带电话和住址的截图，一条四块",
+  "A 表示量大的话要预付款，B 先转一笔订金",
+  "双方用「单子」「图」「条」指代信息，避免直接说法，约定不在白天上班时段发"
+ ],
+ "benign_alternatives": [
+  "快递理赔核实，双方在核对异常件收件信息",
+  "驿站正常登记，商家与网点沟通派送数据"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "8月20日 20:10",
+   "speaker": "A",
+   "text": "你加我干啥"
+  },
+  {
+   "type": "message",
+   "time": "8月20日 20:12",
+   "speaker": "B",
+   "text": "朋友介绍来的 说你能弄到单子"
+  },
+  {
+   "type": "message",
+   "time": "8月20日 20:14",
+   "speaker": "A",
+   "text": "看你要哪种"
+  },
+  {
+   "type": "message",
+   "time": "8月20日 20:16",
+   "speaker": "B",
+   "text": "要当天新的 旧的没用"
+  },
+  {
+   "type": "message",
+   "time": "8月20日 20:18",
+   "speaker": "A",
+   "text": "带电话地址的那种?"
+  },
+  {
+   "type": "message",
+   "time": "8月20日 20:20",
+   "speaker": "B",
+   "text": "对 就要那种 一条多少"
+  },
+  {
+   "type": "message",
+   "time": "8月20日 20:22",
+   "speaker": "A",
+   "text": "四块一条 不还价"
+  },
+  {
+   "type": "message",
+   "time": "8月20日 20:24",
+   "speaker": "B",
+   "text": "量大了能不能低点"
+  },
+  {
+   "type": "message",
+   "time": "8月20日 20:26",
+   "speaker": "A",
+   "text": "你先量大再说 现在别讲这个"
+  },
+  {
+   "type": "message",
+   "time": "8月20日 20:28",
+   "speaker": "B",
+   "text": "行 先要一百条试试"
+  },
+  {
+   "type": "message",
+   "time": "8月20日 20:30",
+   "speaker": "A",
+   "text": "一百条得先付一半 不然我不弄"
+  },
+  {
+   "type": "message",
+   "time": "8月20日 20:32",
+   "speaker": "B",
+   "text": "多少"
+  },
+  {
+   "type": "message",
+   "time": "8月20日 20:34",
+   "speaker": "A",
+   "text": "两百 支付宝还是微信"
+  },
+  {
+   "type": "message",
+   "time": "8月20日 20:36",
+   "speaker": "B",
+   "text": "微信吧 现在转"
+  },
+  {
+   "type": "transfer",
+   "time": "8月20日 20:40",
+   "from": "B",
+   "to": "A",
+   "amount": 200,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "8月20日 20:42",
+   "speaker": "A",
+   "text": "收到 明天我上班空的时候给你"
+  },
+  {
+   "type": "message",
+   "time": "8月20日 20:44",
+   "speaker": "B",
+   "text": "别拖 我这边急着用"
+  },
+  {
+   "type": "message",
+   "time": "8月20日 20:46",
+   "speaker": "A",
+   "text": "知道 白天别发消息 我这边忙"
+  },
+  {
+   "type": "message",
+   "time": "8月20日 21:20",
+   "speaker": "B",
+   "text": "你吃饭了没"
+  },
+  {
+   "type": "message",
+   "time": "8月20日 21:22",
+   "speaker": "A",
+   "text": "刚下班 泡了碗面"
+  },
+  {
+   "type": "message",
+   "time": "8月20日 21:24",
+   "speaker": "B",
+   "text": "辛苦了 干到几点"
+  },
+  {
+   "type": "message",
+   "time": "8月20日 21:26",
+   "speaker": "A",
+   "text": "八点半才收工 货多"
+  },
+  {
+   "type": "message",
+   "time": "8月20日 21:28",
+   "speaker": "B",
+   "text": "注意身体"
+  },
+  {
+   "type": "message",
+   "time": "8月20日 21:30",
+   "speaker": "A",
+   "text": "习惯了"
+  },
+  {
+   "type": "message",
+   "time": "8月21日 12:40",
+   "speaker": "A",
+   "text": "今天热死了"
+  },
+  {
+   "type": "message",
+   "time": "8月21日 12:42",
+   "speaker": "B",
+   "text": "多少度"
+  },
+  {
+   "type": "message",
+   "time": "8月21日 12:44",
+   "speaker": "A",
+   "text": "三十七 车厢里跟蒸笼一样"
+  },
+  {
+   "type": "message",
+   "time": "8月21日 12:46",
+   "speaker": "B",
+   "text": "多喝水 别中暑"
+  },
+  {
+   "type": "message",
+   "time": "8月21日 12:48",
+   "speaker": "A",
+   "text": "嗯 带了藿香正气水"
+  },
+  {
+   "type": "message",
+   "time": "8月21日 19:30",
+   "speaker": "B",
+   "text": "东西呢"
+  },
+  {
+   "type": "message",
+   "time": "8月21日 19:33",
+   "speaker": "A",
+   "text": "急啥 今天单子还没录完"
+  },
+  {
+   "type": "message",
+   "time": "8月21日 19:35",
+   "speaker": "B",
+   "text": "我要的是今天新到的"
+  },
+  {
+   "type": "message",
+   "time": "8月21日 19:37",
+   "speaker": "A",
+   "text": "知道 晚上扫件的时候顺手拍"
+  },
+  {
+   "type": "message",
+   "time": "8月21日 21:10",
+   "speaker": "A",
+   "text": "发你了 自己看"
+  },
+  {
+   "type": "message",
+   "time": "8月21日 21:12",
+   "speaker": "B",
+   "text": "就五十条?"
+  },
+  {
+   "type": "message",
+   "time": "8月21日 21:14",
+   "speaker": "A",
+   "text": "先给你五十 剩下的明天"
+  },
+  {
+   "type": "message",
+   "time": "8月21日 21:16",
+   "speaker": "B",
+   "text": "行 这批看着还行"
+  },
+  {
+   "type": "message",
+   "time": "8月21日 21:18",
+   "speaker": "A",
+   "text": "挑的都是齐全的 你自己对"
+  },
+  {
+   "type": "message",
+   "time": "8月22日 09:15",
+   "speaker": "B",
+   "text": "周末带孩子去哪玩"
+  },
+  {
+   "type": "message",
+   "time": "8月22日 09:17",
+   "speaker": "A",
+   "text": "没空 周末也上班"
+  },
+  {
+   "type": "message",
+   "time": "8月22日 09:19",
+   "speaker": "B",
+   "text": "那够累的"
+  },
+  {
+   "type": "message",
+   "time": "8月22日 09:20",
+   "speaker": "A",
+   "text": "没办法 站点缺人"
+  },
+  {
+   "type": "message",
+   "time": "8月22日 09:22",
+   "speaker": "B",
+   "text": "注意休息"
+  },
+  {
+   "type": "message",
+   "time": "8月22日 20:00",
+   "speaker": "A",
+   "text": "剩下五十条给你了 对下数"
+  },
+  {
+   "type": "message",
+   "time": "8月22日 20:02",
+   "speaker": "B",
+   "text": "收到 尾款下次见面给你现金"
+  },
+  {
+   "type": "message",
+   "time": "8月22日 20:07",
+   "speaker": "A",
+   "text": "行 下次要提前说"
+  },
+  {
+   "type": "message",
+   "time": "8月22日 20:09",
+   "speaker": "B",
+   "text": "我长期要 每天都要新的"
+  },
+  {
+   "type": "message",
+   "time": "8月22日 20:11",
+   "speaker": "A",
+   "text": "每天量太大 我得分批"
+  },
+  {
+   "type": "message",
+   "time": "8月22日 20:13",
+   "speaker": "B",
+   "text": "一批多少"
+  },
+  {
+   "type": "message",
+   "time": "8月22日 20:15",
+   "speaker": "A",
+   "text": "看当天货量 五十一百不等"
+  },
+  {
+   "type": "message",
+   "time": "8月22日 20:17",
+   "speaker": "B",
+   "text": "行 我先按天结"
+  },
+  {
+   "type": "message",
+   "time": "8月23日 08:40",
+   "speaker": "A",
+   "text": "今天这批信息全 你要不要"
+  },
+  {
+   "type": "message",
+   "time": "8月23日 08:42",
+   "speaker": "B",
+   "text": "要 多少条"
+  },
+  {
+   "type": "message",
+   "time": "8月23日 08:44",
+   "speaker": "A",
+   "text": "八十条 三百二"
+  },
+  {
+   "type": "message",
+   "time": "8月23日 08:46",
+   "speaker": "B",
+   "text": "转你 发我"
+  },
+  {
+   "type": "message",
+   "time": "8月23日 08:48",
+   "speaker": "A",
+   "text": "好"
+  },
+  {
+   "type": "message",
+   "time": "8月23日 10:30",
+   "speaker": "B",
+   "text": "你这活一年攒不少吧"
+  },
+  {
+   "type": "message",
+   "time": "8月23日 10:32",
+   "speaker": "A",
+   "text": "攒啥 就这点工资"
+  },
+  {
+   "type": "message",
+   "time": "8月23日 10:34",
+   "speaker": "B",
+   "text": "那才做这个呗"
+  },
+  {
+   "type": "message",
+   "time": "8月23日 10:36",
+   "speaker": "A",
+   "text": "嗯 补贴家用"
+  },
+  {
+   "type": "message",
+   "time": "8月23日 10:38",
+   "speaker": "B",
+   "text": "理解 大家都不容易"
+  },
+  {
+   "type": "message",
+   "time": "8月23日 21:05",
+   "speaker": "B",
+   "text": "你那边有没带姓名的那种"
+  },
+  {
+   "type": "message",
+   "time": "8月23日 21:07",
+   "speaker": "A",
+   "text": "有是有 那种贵 一张十块"
+  },
+  {
+   "type": "message",
+   "time": "8月23日 21:09",
+   "speaker": "B",
+   "text": "贵了 还是四块的吧"
+  },
+  {
+   "type": "message",
+   "time": "8月23日 21:11",
+   "speaker": "A",
+   "text": "行 随你"
+  },
+  {
+   "type": "message",
+   "time": "8月24日 09:30",
+   "speaker": "B",
+   "text": "昨天那批质量一般 有的重复了"
+  },
+  {
+   "type": "message",
+   "time": "8月24日 09:32",
+   "speaker": "A",
+   "text": "重复算我的 下次补你"
+  },
+  {
+   "type": "message",
+   "time": "8月24日 09:34",
+   "speaker": "B",
+   "text": "行 这批再要一百"
+  },
+  {
+   "type": "message",
+   "time": "8月24日 09:36",
+   "speaker": "A",
+   "text": "没问题 晚上给你"
+  },
+  {
+   "type": "message",
+   "time": "8月24日 09:38",
+   "speaker": "B",
+   "text": "别用你那个工作号发我 换个"
+  },
+  {
+   "type": "message",
+   "time": "8月24日 09:40",
+   "speaker": "A",
+   "text": "懂 我用小号"
+  },
+  {
+   "type": "message",
+   "time": "8月24日 15:40",
+   "speaker": "A",
+   "text": "我下午调休 出去剪了个头"
+  },
+  {
+   "type": "message",
+   "time": "8月24日 15:42",
+   "speaker": "B",
+   "text": "哈哈 清爽"
+  },
+  {
+   "type": "message",
+   "time": "8月24日 15:44",
+   "speaker": "A",
+   "text": "顺便去超市买了点东西"
+  },
+  {
+   "type": "message",
+   "time": "8月24日 15:46",
+   "speaker": "B",
+   "text": "周末打折没"
+  },
+  {
+   "type": "message",
+   "time": "8月24日 15:48",
+   "speaker": "A",
+   "text": "鸡蛋便宜点 别的照旧"
+  },
+  {
+   "type": "message",
+   "time": "8月24日 15:50",
+   "speaker": "B",
+   "text": "行 晚上等你消息"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0001732",
+  "status": "accepted",
+  "errors": []
+ }
+}

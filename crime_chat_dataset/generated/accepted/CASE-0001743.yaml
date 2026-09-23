@@ -1,0 +1,134 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001743
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000042
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-64ffa47f403ad540
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: contraband_illicit_trade
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 中间人 B 向化工门市老板 A 长期采购一批受管控的化工原料，要求换桶贴别的标签、按普通原料开票出库、现金自提且互不问用途，A 明知货不对路仍答应配合改标签改品名，把这批料导入非标渠道。
+  critical_evidence:
+  - B 提出要长期、大量进货，量按季度给，一次四十桶，A 答应可以供
+  - A 主动提出桶上不能按原来标签出、要贴别的标签，品名也要改成普通原料
+  - B 强调别问用途，A 表示只负责发货、不看票不留痕
+  - 约定现金自提、不走账，B 自己开车走后门提货，双方约定微信联系不打电话
+  benign_alternatives:
+  - 正规化工原料采购，双方因商业秘密不便透露下游用途
+  - 实验室试剂供应链，按普通原料目录正常开票出库
+
+attributes:
+  duration_days: 3
+  turn_count: 59
+  approximate_tokens_estimate: 967
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: shell_chemical_diversion
+  risk: 3
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0162
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:5264c84dbb00f55872bd9fda0a622f2d5723e204344a80be6ca0d371a8fc938d
+pipeline_status: accepted
+title: contraband_illicit_trade/shell_chemical_diversion
+conversation: |-
+  【9月1日】
+  A：在吗
+  B：在 你那批料还走货不
+  A：走 老样子
+  B：我要的量比上次大 你那边顶得住不
+  A：顶得住 你要多少
+  B：按季度给你 一次四十桶
+  A：行 就一个事
+  B：你说
+  A：桶上不能按原来的出 得换皮 贴别的
+  B：懂 你也别问我拿去干啥
+  A：我不问 我这人只管发货
+  B：中午吃的啥
+  A：门市旁边那家面 搁了两勺辣
+  B：你还吃辣 胃受得了
+  A：老毛病了 吃完嚼片药
+  B：悠着点 年纪不小了
+  B：你们那边下雨没
+  A：下了一早上 仓库门口全是水
+  B：那货可别受潮
+  A：都用雨布盖着呢 放心
+  B：行 你办事我踏实
+  【9月2日】
+  A：昨天说的四十桶 我理了下库存
+  B：够不
+  A：够 但开票的品名得改 不然走不了
+  B：开成啥
+  A：就按普通原料开 别写全称
+  B：好 反正我也不看票
+  A：钱怎么走
+  B：现金 我自提 不转账
+  A：那最好 省得留痕
+  B：你家小子开学了吧
+  A：高二了 天天打游戏
+  B：管管啊
+  A：管不动 他妈管 我一说就吵架
+  B：哈哈 都一样 我家那个也是
+  B：你门市就你一个人看
+  A：雇了个小工 搬货的
+  B：嘴严不严
+  A：就知道搬箱子 别的啥都不知道
+  B：那就行
+  A：我这行干久了 什么该说什么不该说 有数
+  【9月3日】
+  B：什么时候能提
+  A：后天早上八点 你来仓库后门
+  B：车我自己开 不用你的人搬
+  A：行 我把桶都换成白皮 外标另贴
+  B：那最好 谁问都说是普通料
+  A：放心 这一片我熟
+  B：以后长期合作 量还会加
+  A：加多少我都能弄 只要现金
+  B：现金没问题
+  A：你这阵子脸色不太好
+  B：熬夜熬的 家里用钱
+  A：少熬点 钱挣不完
+  B：没办法 走一步看一步
+  A：也是
+  A：那后天见
+  B：八点 后门
+  A：嗯 别打电话 微信说就行
+  B：好

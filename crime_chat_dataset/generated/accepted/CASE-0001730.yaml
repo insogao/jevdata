@@ -1,0 +1,145 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001730
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000145
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-29f848e9f5a09554
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: other_illicit_coordination
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 亲人间牵线的中间人 A 帮 B 找一个愿意配合登记的人，为的是赶上拆迁分户，A 报价领证费八万，约定拆迁前不离婚、协议写清楚，B 先付一笔定金把事定下来。
+  critical_evidence:
+  - A 说已经找好了愿意配合的人，走个手续就能把 B 的分户问题解决
+  - A 报价领证费八万，说这钱是给对方的一次性费用
+  - A 强调拆迁前不能离、协议要写清楚，白纸黑字免得后患
+  - B 先付一笔定金，约定材料备齐后去办，事成再补尾款
+  benign_alternatives:
+  - 婚介服务，中介为单身亲友介绍对象并收取正常介绍费
+  - 婚姻财产咨询，亲属咨询婚前财产与协议的合法安排
+
+attributes:
+  duration_days: 3
+  turn_count: 69
+  approximate_tokens_estimate: 1132
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: fake_marriage_benefit
+  risk: 2
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0162
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:413b56269be17853154e6d4499ee3ad3a2781cf57f64a68ca4106bc4da1e315c
+pipeline_status: accepted
+title: other_illicit_coordination/fake_marriage_benefit
+conversation: |-
+  【2月6日】
+  A：哥 你说的那个事 有信了
+  B：哪个
+  A：就是帮你分户那个 人我找好了
+  B：对方什么条件
+  A：外地来的 图个钱 走个手续就成
+  B：那得多少钱
+  A：领证费八万 一次性的
+  B：八万? 以前不是说六万
+  A：现在查得紧 愿意配合的人少了 涨了
+  B：这钱给谁
+  A：给配合的那个 事成之后我不沾
+  B：以后能离不
+  A：拆迁前不能离 离了钱就飞了 协议写清楚
+  B：写什么
+  A：什么时候领、什么时候能离、各拿多少 白纸黑字
+  B：我怕对方反悔
+  A：有协议怕啥 这行都这么办
+  B：中午吃啥呢
+  A：我妈炖了排骨 在家吃
+  B：有妈在真好
+  A：你也不常回家
+  B：忙 回头回
+  A：你那边的房子量了没
+  B：量了 说是按人头算
+  A：所以让你赶紧把手续办了 多一口人差不少
+  B：明白
+  【2月7日】
+  B：材料要准备啥
+  A：你俩的身份证户口本 照片 别的我来弄
+  B：对方离过婚没
+  A：离过 不影响 反正就是走个手续
+  B：那还好
+  A：先付两万定金 我把人给你定住
+  B：定金给谁
+  A：先给我 我转给人家 我图个信誉
+  B：行 我信你
+  B：转你了 两万
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  A：收到 人给你留着
+  B：啥时候去办
+  A：下周一 我安排车接
+  A：你中午别喝酒 待会要看材料
+  B：知道 我不喝
+  B：我媳妇知道了会不会闹
+  A：别让她知道 知道就麻烦
+  B：瞒不住吧
+  A：就说帮朋友个忙 别多解释
+  B：我侄子明天结婚 我随礼去
+  A：随多少
+  B：两千吧
+  A：差不多
+  【2月8日】
+  A：协议拟好了 你先看
+  B：写了几条
+  A：五条 领证时间 分账 拆迁前不离 违约赔 保密
+  B：违约赔多少
+  A：谁反悔赔双倍 这样谁都踏实
+  B：行 我签
+  A：尾款六万 办完证当天给
+  B：知道
+  B：拆迁办啥时候来量第二次
+  A：听说是下个月 你赶得上
+  B：那就好
+  A：这段时间你安分点 别出岔子
+  B：嗯
+  A：今天太阳好 我把被子晒了
+  B：我这也晒了
+  A：晚上有太阳味儿 睡得香
+  B：哈哈 是
+  B：办完事我请你吃饭
+  A：先把事办利索 吃饭不急
+  B：好

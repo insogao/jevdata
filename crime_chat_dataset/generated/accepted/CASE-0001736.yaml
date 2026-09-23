@@ -1,0 +1,120 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001736
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000027
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-fac4102684a3673f
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 做财务的 A 为了平账找票贩子 B 批量购买「替票」，按票面金额的点数结算，两人用税点话术谈价，A 先付一笔费用，约定出票后长期合作。
+  critical_evidence:
+  - A 找 B 开口要一批票，说这个月缺口大、要大量替票
+  - B 说明按票面点数结算、开什么品名都能配，两人用税点话术谈价
+  - A 认可点数后先付一笔费用，约定票寄到后补齐
+  - B 承诺票面公司和金额都做得像正常业务，A 叮嘱别出差错
+  benign_alternatives:
+  - 正常报销单据整理，财务委托代理公司代为整理合法票据
+  - 差旅平台开票，财务通过正规平台为员工差旅统一开具发票
+
+attributes:
+  duration_days: 4
+  turn_count: 43
+  approximate_tokens_estimate: 754
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: invoice_rebate
+  risk: 2
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0162
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:93c7b92526c32b07054d61df8c05ae485d72c692a4b382ee86dd550d13217d38
+pipeline_status: accepted
+title: bribery_corruption/invoice_rebate
+conversation: |-
+  【4月2日】
+  A：在吗 这个月缺口有点大
+  B：要多少
+  A：先要一批替票 二十万左右
+  B：可以 按票面点数结算 老规矩
+  A：几个点
+  B：普票三个点 专票另算 税点你也懂
+  A：专票能抵 贵多少
+  B：六个点 现在查得紧 专票不好弄
+  A：那先要普票 品名能配吗
+  B：办公用品 会务 都能配 你列个明细
+  A：中午吃啥
+  B：楼下砂锅
+  A：我带的饭 省钱
+  B：哈哈 会过
+  【4月3日】
+  A：明细发你了 会务费占大头
+  B：看了 金额三十万有点整 拆开好些
+  A：拆成几张
+  B：分成七八张 单张别太大
+  A：行 你安排 别出岔子
+  B：放心 公司名字都对得上
+  B：先付个定金 我这边好安排
+  A：多少
+  B：三千 按点的 票到了补剩下的
+  A：转了
+  【系统消息】A 向 B 转账 3000 元，已收款。
+  B：收到 明天给你出
+  A：今天降温 你那跑外勤冷不
+  B：冷 骑电动车手都僵了
+  A：加个手套
+  B：买了 还没到
+  【4月4日】
+  A：票好了没
+  B：出了六张 你先看样式
+  A：看着还行 抬头没问题
+  B：都是按你公司抬头开的 税号也对
+  A：尾款等票到手我打你
+  B：行 快递明天到
+  B：你孩子补习班报了没
+  A：报了 一门一千八
+  B：不便宜啊
+  A：没办法 不报跟不上
+  【4月5日】
+  A：票收到了 尾款转你 六千
+  B：好 下个月还走这个量?
+  A：差不多 有需要我提前找你
+  B：没问题 老客户给你留着量

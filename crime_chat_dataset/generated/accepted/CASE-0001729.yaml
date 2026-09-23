@@ -1,0 +1,140 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001729
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000050
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-7e0af5b6bd265be9
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: violence_extortion
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 在同一个片区做生意的老人 A 认为新来的同行 B 抢了地盘，用「这条街的规矩」「明天还来就别怪我」以及「兄弟们多问候」相威胁，逼 B 交出一笔份子钱才允许继续做，B 服软转账。
+  critical_evidence:
+  - A 主动找上 B，说这一片一直是他在做，新来的要懂「这条街的规矩」
+  - A 出言威胁，说 B 明天还来就别怪他不客气，还提到兄弟们会去多问候
+  - B 表示只是混口饭吃、愿意给点意思，A 点头收下
+  - B 转给 A 一笔钱，双方说定以后按这个规矩来
+  benign_alternatives:
+  - 同业竞争摩擦，两位摊主为摊位划分起了口角后和解
+  - 市场管理规劝，老商户提醒新人遵守市场统一管理的分区规则
+
+attributes:
+  duration_days: 4
+  turn_count: 63
+  approximate_tokens_estimate: 1056
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: territory_warning
+  risk: 2
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0162
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:eb37217bdded87e9a1550cd09b1963ecdf3b7c362fdc76f073d2e6000478e061
+pipeline_status: accepted
+title: violence_extortion/territory_warning
+conversation: |-
+  【9月5日】
+  A：你是新来的吧
+  B：嗯 上周才摆上
+  A：这一片我做了六年了 你知道规矩不
+  B：啥规矩 我不懂
+  A：这条街的规矩 就是谁的地盘谁说话
+  B：哥 我就卖点小玩意 混口饭
+  A：混饭也得有个混法
+  B：那你说咋弄
+  A：先别急 你摆你的 我看看
+  B：今天风真大 棚子差点吹跑
+  A：你那棚子扎得不牢
+  B：明天拿绳子绑一下
+  A：绑高点 别砸着人
+  B：好嘞 谢谢哥
+  【9月6日】
+  A：今天生意咋样
+  B：一般 刚开张 没几个客人
+  A：你这一摆 我这边客流少了一半
+  B：哥 我离你那挺远的
+  A：远不远我说了算 你先别摆那么多
+  B：我这都压着本呢
+  A：那你自己掂量 我话放这儿
+  B：哥你中午吃的啥
+  A：门口那家卤面
+  B：那家我也吃过 量足
+  A：老板给我多加了肉
+  B：哈哈 熟客就是好
+  A：你想好了没
+  B：想啥
+  A：明天还来摆 就别怪我不客气
+  B：哥你别这样 有话好说
+  A：我这人不爱废话 兄弟们多问候你几趟 你就懂了
+  B：……
+  【9月7日】
+  B：哥 我想通了 你说个数
+  A：懂事就好 一天两百 按月给
+  B：一天两百太多了 我一天挣不了这么多
+  A：那你摆半天 我也让一步
+  B：那先给一个月的 你说话算话
+  A：我说话向来算话
+  B：转你了 以后别为难我
+  【系统消息】B 向 A 转账 3000 元，已收款。
+  A：收到 以后就按这个来 没人动你
+  B：好
+  A：你棚子绑了没
+  B：绑了 拿了两根绳
+  A：嗯 别出岔子
+  B：我闺女明天幼儿园开学
+  A：多大了
+  B：四岁 头一回上学
+  A：那得哭几天 我家那个当年也是
+  B：哈哈 慢慢就好了
+  【9月8日】
+  A：今天几点出的摊
+  B：八点 按你说的摆半天
+  A：行 识相
+  B：哥 钱我按月给 你别再找人来了
+  A：只要规矩在 没人找你麻烦
+  B：嗯
+  B：今天中午我自己带的饭
+  A：会过日子
+  B：能省一点是一点
+  A：嗯 好好摆你的摊
+  B：收摊了 今天还行
+  A：嗯
+  B：下月我按时给
+  A：知道

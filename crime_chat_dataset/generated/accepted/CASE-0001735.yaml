@@ -1,0 +1,137 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001735
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000103
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-a11f6f56f2a571c6
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: POS 中介 A 提议把几台机器放到商户 B 的店里跑，声称流水由他来走、给 B 低费率并另付一笔场地好处费，实为借 B 的店铺做虚假交易套现。
+  critical_evidence:
+  - A 上门口头谈，说想把机器放 B 店里，白天正常做、晚上由他走量
+  - A 说流水他来做，B 不用管、只看设备就行
+  - A 承诺给 B 更优惠的费率并另外付一笔场地钱，B 松口
+  - A 转给 B 一笔好处费，两人约定先试一个月、不对外说
+  benign_alternatives:
+  - 正规收单服务，支付公司为商户布放 POS 并提供费率方案
+  - 信用卡正常消费，顾客在店内正常刷卡结账
+
+attributes:
+  duration_days: 2
+  turn_count: 62
+  approximate_tokens_estimate: 968
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: cross_shop_pos_machine
+  risk: 3
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0162
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:0dd41c75838c3206e2317324076c1221db1d7ee6f62e22d3968d8796d6e2291c
+pipeline_status: accepted
+title: money_laundering_obfuscation/cross_shop_pos_machine
+conversation: |-
+  【3月8日】
+  A：老板在店不 我上门聊个合作
+  B：在 你说
+  A：我有几台机器 想放你这店里跑
+  B：放我这干嘛 我自己有收款的
+  A：你那费率太高 我这机器便宜 还能帮你走量
+  B：走什么量
+  A：晚上那点量我自己做 流水我做 你不用管
+  B：那出了事算谁的
+  A：机器在我名下 你只管收你那点
+  B：有好处吗
+  A：费率给你降到最低 另外一个月给你两千场地费
+  B：机器放哪
+  A：柜台下面 不显眼
+  B：先试一个月
+  A：行 我现在把设备搬进来
+  B：你中午吃没
+  A：没顾上 在车里啃了个面包
+  B：别对付 楼下有家饺子馆
+  A：行 待会去
+  A：装好了 我给你试一笔小的
+  B：别用我店名
+  A：都是用别的户名 你放心
+  B：好
+  A：试通了 今晚就开始走
+  B：你那量多大
+  A：不大 一天几笔 免得惹眼
+  B：行 那你晚上来守
+  B：今天外头风大 你车停好没
+  A：停店门口了
+  B：别挡着路
+  A：知道
+  A：第一笔走了 三千
+  B：这么快
+  A：后面还有 你看机器就行
+  B：别太猛 我这店小
+  A：放心 有分寸
+  A：今晚四五笔 明天接着
+  B：你几点走
+  A：十一点 收拾下就走
+  【3月9日】
+  A：早 昨晚一共六笔
+  B：共多少
+  A：两万多 都在我这边
+  B：场地费先给我呗
+  A：这就转你 先一个月的
+  B：说好两千
+  【系统消息】A 向 B 转账 2000 元，已收款。
+  A：收到没
+  B：到了
+  A：这事别往外说 就说机器是给你装的
+  B：懂 我嘴严
+  A：有人问你就说正常收款用
+  B：好
+  B：中午你过来吃
+  A：不了 我去别家装机器
+  B：你还装了几家
+  A：好几家 分散点安全
+  B：行 你自己把控
+  A：你这店一天流水多少
+  B：正常三四千
+  A：那我把账做进你正常流水里 更看不出
+  B：别把我账搞乱
+  A：我专门做这个的 错不了
+  B：嗯

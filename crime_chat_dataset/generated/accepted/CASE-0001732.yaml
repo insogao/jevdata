@@ -1,0 +1,154 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001732
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000086
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-b16581efbae37f27
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: privacy_doxxing
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 做所谓「推广」的 B 向快递网点员工 A 长期收购当天新到的快递面单信息，要求带电话和住址、以张截图的形式发来、按条计价四块一条，A 利用职务便利提供并先收一笔预付款，实为出售公民个人信息。
+  critical_evidence:
+  - B 要的是当天新到的单，说旧单没用了、越新越好
+  - B 明确要带电话和住址的截图，一条四块
+  - A 表示量大的话要预付款，B 先转一笔订金
+  - 双方用「单子」「图」「条」指代信息，避免直接说法，约定不在白天上班时段发
+  benign_alternatives:
+  - 快递理赔核实，双方在核对异常件收件信息
+  - 驿站正常登记，商家与网点沟通派送数据
+
+attributes:
+  duration_days: 5
+  turn_count: 76
+  approximate_tokens_estimate: 1207
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: courier_info_leak
+  risk: 2
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0162
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-082
+
+dedup:
+  content_hash: sha256:2423538e4c64fcbc0f76378f74fc54650b73963a4ebe3f132a8c3a6d7cc40b90
+pipeline_status: accepted
+title: privacy_doxxing/courier_info_leak
+conversation: |-
+  【8月20日】
+  A：你加我干啥
+  B：朋友介绍来的 说你能弄到单子
+  A：看你要哪种
+  B：要当天新的 旧的没用
+  A：带电话地址的那种?
+  B：对 就要那种 一条多少
+  A：四块一条 不还价
+  B：量大了能不能低点
+  A：你先量大再说 现在别讲这个
+  B：行 先要一百条试试
+  A：一百条得先付一半 不然我不弄
+  B：多少
+  A：两百 支付宝还是微信
+  B：微信吧 现在转
+  【系统消息】B 向 A 转账 200 元，已收款。
+  A：收到 明天我上班空的时候给你
+  B：别拖 我这边急着用
+  A：知道 白天别发消息 我这边忙
+  B：你吃饭了没
+  A：刚下班 泡了碗面
+  B：辛苦了 干到几点
+  A：八点半才收工 货多
+  B：注意身体
+  A：习惯了
+  【8月21日】
+  A：今天热死了
+  B：多少度
+  A：三十七 车厢里跟蒸笼一样
+  B：多喝水 别中暑
+  A：嗯 带了藿香正气水
+  B：东西呢
+  A：急啥 今天单子还没录完
+  B：我要的是今天新到的
+  A：知道 晚上扫件的时候顺手拍
+  A：发你了 自己看
+  B：就五十条?
+  A：先给你五十 剩下的明天
+  B：行 这批看着还行
+  A：挑的都是齐全的 你自己对
+  【8月22日】
+  B：周末带孩子去哪玩
+  A：没空 周末也上班
+  B：那够累的
+  A：没办法 站点缺人
+  B：注意休息
+  A：剩下五十条给你了 对下数
+  B：收到 尾款下次见面给你现金
+  A：行 下次要提前说
+  B：我长期要 每天都要新的
+  A：每天量太大 我得分批
+  B：一批多少
+  A：看当天货量 五十一百不等
+  B：行 我先按天结
+  【8月23日】
+  A：今天这批信息全 你要不要
+  B：要 多少条
+  A：八十条 三百二
+  B：转你 发我
+  A：好
+  B：你这活一年攒不少吧
+  A：攒啥 就这点工资
+  B：那才做这个呗
+  A：嗯 补贴家用
+  B：理解 大家都不容易
+  B：你那边有没带姓名的那种
+  A：有是有 那种贵 一张十块
+  B：贵了 还是四块的吧
+  A：行 随你
+  【8月24日】
+  B：昨天那批质量一般 有的重复了
+  A：重复算我的 下次补你
+  B：行 这批再要一百
+  A：没问题 晚上给你
+  B：别用你那个工作号发我 换个
+  A：懂 我用小号
+  A：我下午调休 出去剪了个头
+  B：哈哈 清爽
+  A：顺便去超市买了点东西
+  B：周末打折没
+  A：鸡蛋便宜点 别的照旧
+  B：行 晚上等你消息

@@ -1,0 +1,337 @@
+{
+ "key": "b82c031",
+ "archetype_id": "ARC-000037",
+ "subtype": "exam_leak_material",
+ "latent_intent": "做考试资料生意的 B 向握有内部试卷的 A 求购开考前泄露的真题，A 表示要到开考前一夜才出、按科目逐门报价，B 先付一笔订金锁定名额，双方约定考前一晚交货。",
+ "critical_facts": [
+  "B 打听能不能在考试之前拿到内部那份东西，A 说太早没有、要等开考前一夜才出",
+  "A 按科目报价，一门一个价，讲明不同科目价钱不一样",
+  "B 转了一笔订金把名额锁住，约定考前一晚交货",
+  "双方用「资料」「那份东西」「原题」指代，不出现直接说法"
+ ],
+ "benign_alternatives": [
+  "考前辅导资料购买，A 为机构老师提供内部押题讲义",
+  "模拟题库采购，双方谈的是正规教辅的批发价格与到货时间"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "10月8日 10:02",
+   "speaker": "A",
+   "text": "你找我？"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 10:05",
+   "speaker": "B",
+   "text": "哥 想问你个事 那边的东西现在有吗"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 10:08",
+   "speaker": "A",
+   "text": "现在哪那么早 得等开考前一晚才出"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 10:10",
+   "speaker": "B",
+   "text": "那能提前给我留一份不 我这边有人要"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 10:13",
+   "speaker": "A",
+   "text": "留可以 你先说你要哪几门"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 10:15",
+   "speaker": "B",
+   "text": "数学和英语先要 综合再看"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 10:18",
+   "speaker": "A",
+   "text": "可以 一门一个价 数学贵点 英语便宜些"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 10:20",
+   "speaker": "B",
+   "text": "行 你报价"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 10:23",
+   "speaker": "A",
+   "text": "微信上就不说数了 你懂行情"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 10:25",
+   "speaker": "B",
+   "text": "懂 那定个名额要多少"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 10:28",
+   "speaker": "A",
+   "text": "先交两千订金 剩下的考前一晚给"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 10:30",
+   "speaker": "B",
+   "text": "名额紧不"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 10:32",
+   "speaker": "A",
+   "text": "紧 我这边就放几个 先到先得"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 12:10",
+   "speaker": "B",
+   "text": "你中午吃食堂还是外面"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 12:12",
+   "speaker": "A",
+   "text": "外面 食堂人多"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 12:14",
+   "speaker": "B",
+   "text": "学校门口那家米线还行"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 12:15",
+   "speaker": "A",
+   "text": "太咸 我口轻"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 12:17",
+   "speaker": "B",
+   "text": "哈哈 那你吃点清淡的"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 15:30",
+   "speaker": "A",
+   "text": "你们那边降温没"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 15:32",
+   "speaker": "B",
+   "text": "降了 早上骑车冻手"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 15:34",
+   "speaker": "A",
+   "text": "加个把套"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 15:36",
+   "speaker": "B",
+   "text": "买了 还没到"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:11",
+   "speaker": "B",
+   "text": "订金我现在转你"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:12",
+   "speaker": "A",
+   "text": "行 转了我就给你留着"
+  },
+  {
+   "type": "transfer",
+   "time": "10月8日 20:15",
+   "from": "B",
+   "to": "A",
+   "amount": 2000,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:17",
+   "speaker": "A",
+   "text": "收到了 给你占一个"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 20:18",
+   "speaker": "B",
+   "text": "好 别给别人了"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:05",
+   "speaker": "B",
+   "text": "你家娃上几年级了"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:08",
+   "speaker": "A",
+   "text": "初一 刚开学"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:10",
+   "speaker": "B",
+   "text": "压力大吧"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:12",
+   "speaker": "A",
+   "text": "还行 就是作业多"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 09:14",
+   "speaker": "B",
+   "text": "现在都这样"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 14:20",
+   "speaker": "B",
+   "text": "那双十一想买台平板给孩子 有推荐没"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 14:22",
+   "speaker": "A",
+   "text": "看用途 光网课随便买个就行"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 14:24",
+   "speaker": "B",
+   "text": "就是网课 便宜的就行"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 14:25",
+   "speaker": "A",
+   "text": "那两千出头够用了"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 14:27",
+   "speaker": "B",
+   "text": "行 我看看"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 16:40",
+   "speaker": "A",
+   "text": "综合那门你到底要不要"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 16:42",
+   "speaker": "B",
+   "text": "要 三门外加综合 一起"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 16:44",
+   "speaker": "A",
+   "text": "行 那就三份 明晚出我发你"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 16:46",
+   "speaker": "B",
+   "text": "怎么发 微信还是别的"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 16:48",
+   "speaker": "A",
+   "text": "明晚说 别在这儿留"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 08:30",
+   "speaker": "A",
+   "text": "你上次问的那本教辅到货没"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 08:32",
+   "speaker": "B",
+   "text": "到了 昨天翻了一半"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 08:34",
+   "speaker": "A",
+   "text": "有用就行"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 08:35",
+   "speaker": "B",
+   "text": "嗯 讲得还行"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 19:50",
+   "speaker": "A",
+   "text": "东西出来了 你那边把尾款准备好"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 19:52",
+   "speaker": "B",
+   "text": "多少"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 19:54",
+   "speaker": "A",
+   "text": "老数 三门的 一万一"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 19:56",
+   "speaker": "B",
+   "text": "行 我凑一下 十分钟"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 20:05",
+   "speaker": "A",
+   "text": "别拖 我这边等回话"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 20:08",
+   "speaker": "B",
+   "text": "好"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0001738",
+  "status": "accepted",
+  "errors": []
+ }
+}
