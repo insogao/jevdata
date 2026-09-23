@@ -1,0 +1,143 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000361
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000028
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-bb9952340c85812d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 甲方科长B压着18.6万尾款不签验收，翻出旧台账问题施压，索要三个点的辛苦费；乙方项目经理A为拿回工程款被迫当面送钱并转账三万。
+  critical_evidence:
+  - 尾款18.6万被压两个月，验收单迟迟不签
+  - B翻出去年台账签字问题施压，称纸还在人家手里
+  - B按三个点索要辛苦费，称规矩不是他定的、上头要打点
+  - A当面送东西后转账30000元，两天内验收即安排
+  benign_alternatives:
+  - 正常合同尾款催收
+  - 履约保证金扣除
+
+attributes:
+  duration_days: 5
+  turn_count: 65
+  approximate_tokens_estimate: 1258
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: contract_signature_fee
+  risk: 2
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0041
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-021
+
+dedup:
+  content_hash: sha256:df1a05eb3efe12021605717ccbfe462b71cc60aee0e66d4e5aff2e2842b9709f
+pipeline_status: accepted
+title: bribery_corruption/contract_signature_fee
+conversation: |-
+  【7月14日】
+  A：刘科，忙不
+  B：老郑，说吧，又是催款吧
+  A：哈哈您了解我，那18万6啥时候能走流程
+  B：流程在走，急不得
+  A：都压两个月了，公司财务天天问我
+  B：我也有我的难处
+  B：周末水库去了没
+  A：去了，空军，就几条小白条
+  B：你那技术还得多练
+  A：您来教教我
+  B：等忙完这阵
+  A：刘科，验收单到底卡在哪
+  B：上头翻台账，你们去年那批耗材两个单子签字时间对不上
+  A：那不是解释过了吗，库房搬迁日期记串了
+  B：解释是解释了，纸还在人家手里，验收的事就说不准了
+  A：您给我指条道
+  B：道要自己会走
+  A：听说周五有台风
+  B：雨大了正好歇着
+  A：停工您准备干啥
+  B：在家补觉，你呢
+  A：我躲店里对账
+  B：你们做工程的就是勤快
+  【7月15日】
+  A：我儿子婚期定了，十月一号
+  B：好事啊，喜糖给我留一份
+  A：必须的，您全家都请
+  B：到时候喝两杯
+  A：就盼着项目早点收尾，我好安心办喜事
+  B：你这拐弯倒快，哈哈
+  A：刘科，验收这关，想请您多费心
+  B：费心可以，这一摞台账我得一页页看嘛
+  A：怎么个费心法，您直说
+  B：都按三个点走，规矩不是我定的
+  A：三个点五万五，我尾款才18万6，利润就几个点
+  B：那你当初报价的时候怎么不想想
+  A：三万，到头了，这周把字签了
+  B：我去争取，最快周五安排
+  B：早上量血压，有点高
+  A：多高
+  B：145，95
+  A：少盐少酒，多走动
+  B：药也吃上了
+  A：健康第一，别的事都是小事
+  【7月16日】
+  A：刘科，昨天说的数，我准备安排
+  B：嗯，老样子，别走公司
+  A：明白，周五验收前给您
+  B：验收组那边我去打招呼
+  A：全靠您
+  B：院里种的西瓜熟了，给你留一个
+  A：那我自己去拿，顺便看看您
+  B：就几个，不值啥
+  A：您这自个儿种的甜
+  B：有机肥喂的
+  A：那我得尝尝，明天带盒茶叶去换
+  B：哈哈，来吧
+  【7月17日】
+  A：刘科，我到楼下了
+  B：上来吧，东西放下你就走
+  A：好嘞
+  B：收到了，周五上午十点验收，资料备齐
+  A：备齐了，台账也重新理了一版
+  B：这版没问题就签字
+  【7月18日】
+  A：刘科，那三万转过去了，您查收
+  【系统消息】A 向 B 转账 30000 元，已收款。
+  B：收到，十点整，别迟到
+  A：一定到，多谢费心
+  B：办完这单，下季度的框架你也有份

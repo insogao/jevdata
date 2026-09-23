@@ -1,0 +1,492 @@
+{
+ "key": "b21c021",
+ "archetype_id": "ARC-000023",
+ "subtype": "procurement_price_padding",
+ "latent_intent": "采购负责人A为供应商B定制参数排他、放水验收并模糊发票品名，B抬价中标后按合同额两个点向A输送好处，先转两万元。",
+ "critical_facts": [
+  "招标参数照B产品手册定制，仅B一家满足认证",
+  "单价按上期上浮四成，发票品名只开综合服务费、明细不走系统",
+  "验货走过场，翻新机按新品拍照存档",
+  "B转A两万元，按合同额两个点、验收完补齐"
+ ],
+ "benign_alternatives": [
+  "正常议价采购",
+  "集中采购折扣"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "10月20日 09:30",
+   "speaker": "A",
+   "text": "曹总，下周二开标，参数你发我那版我原样挂出去了"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 09:34",
+   "speaker": "B",
+   "text": "何经理够意思，那别人基本就没戏了"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 09:36",
+   "speaker": "A",
+   "text": "你那型号就你一家有认证，我也不用费劲做调研"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 09:38",
+   "speaker": "B",
+   "text": "报价我再抬一抬，预算还有空间"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 09:40",
+   "speaker": "A",
+   "text": "别太狠，评审那边不好看"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 09:41",
+   "speaker": "B",
+   "text": "懂，涨幅控制在预算线内"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 10:30",
+   "speaker": "A",
+   "text": "我下周去成都出差，顺路看个厂"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 10:33",
+   "speaker": "B",
+   "text": "成都这个季节舒服，不冷不热"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 10:34",
+   "speaker": "A",
+   "text": "客户非拉着我吃火锅"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 10:36",
+   "speaker": "B",
+   "text": "记得备肠胃药，我上次辣得怀疑人生"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 10:37",
+   "speaker": "A",
+   "text": "哈哈你也吃不了辣"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 10:39",
+   "speaker": "B",
+   "text": "江浙胃，没办法"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 10:40",
+   "speaker": "A",
+   "text": "那正好，咱俩点鸳鸯锅"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 14:00",
+   "speaker": "A",
+   "text": "报价单发我看看"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 14:03",
+   "speaker": "B",
+   "text": "发你了，单价按上一期上浮四成"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 14:05",
+   "speaker": "A",
+   "text": "四成？市场价摆在那，评审要问的"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 14:08",
+   "speaker": "B",
+   "text": "何经理，这型号除了我没第二家能供，参数就是照我产品手册写的"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 14:12",
+   "speaker": "A",
+   "text": "行吧。发票品名写笼统点，就开综合服务费，别落设备明细"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 14:14",
+   "speaker": "B",
+   "text": "明细我单独打一份纸质的给你，不走系统"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 14:16",
+   "speaker": "A",
+   "text": "评审那边我去打招呼，你把演示准备好"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 14:18",
+   "speaker": "B",
+   "text": "放心，演示我做了三年了"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 16:30",
+   "speaker": "B",
+   "text": "何经理最近瘦了？"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 16:33",
+   "speaker": "A",
+   "text": "办了健身卡，一周三练"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 16:35",
+   "speaker": "B",
+   "text": "私教贵不"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 16:36",
+   "speaker": "A",
+   "text": "一节四百，肉疼，但真有效"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 16:38",
+   "speaker": "B",
+   "text": "我也该动动了，肚子一圈"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 16:40",
+   "speaker": "A",
+   "text": "来，我卡能带人，明晚上"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 09:20",
+   "speaker": "A",
+   "text": "你家闺女工作定哪了"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 09:24",
+   "speaker": "B",
+   "text": "留上海做设计，忙得脚不沾地"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 09:26",
+   "speaker": "A",
+   "text": "年轻人熬几年就好了"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 09:27",
+   "speaker": "B",
+   "text": "视频里看着又瘦了"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 09:29",
+   "speaker": "A",
+   "text": "我儿子还念大二，操心在后头"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 09:30",
+   "speaker": "B",
+   "text": "都一样，哈哈"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 10:00",
+   "speaker": "A",
+   "text": "下午开标，来陪标的两家材料都齐"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 10:04",
+   "speaker": "B",
+   "text": "那两家都是老熟人了，往回也陪你演过"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 10:06",
+   "speaker": "A",
+   "text": "人家就是走个程序，你嘴上把住门"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 10:08",
+   "speaker": "B",
+   "text": "我嘴严"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 10:10",
+   "speaker": "A",
+   "text": "四点出结果"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 10:12",
+   "speaker": "B",
+   "text": "嗯，等信"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 14:30",
+   "speaker": "B",
+   "text": "评审有没有问价格的"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 14:33",
+   "speaker": "A",
+   "text": "问了，我让他们按预算顶格理解"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 16:20",
+   "speaker": "A",
+   "text": "中了，恭喜曹总"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 16:23",
+   "speaker": "B",
+   "text": "哈哈多亏何经理！晚上我安排"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 16:26",
+   "speaker": "A",
+   "text": "饭就免了，家里有事"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 16:28",
+   "speaker": "B",
+   "text": "那怎么行，总得表示表示"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 16:40",
+   "speaker": "B",
+   "text": "秋茶给你留了两盒，明天带给你"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 16:43",
+   "speaker": "A",
+   "text": "你那岩茶是真好喝"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 16:45",
+   "speaker": "B",
+   "text": "老茶农直供的"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 16:46",
+   "speaker": "A",
+   "text": "多少钱，我转你"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 16:48",
+   "speaker": "B",
+   "text": "谈钱伤感情，两盒茶而已"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 16:50",
+   "speaker": "A",
+   "text": "那下回我请你吃饭"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 10:00",
+   "speaker": "A",
+   "text": "第一批货周三到，验货那天你别过来了"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 10:03",
+   "speaker": "B",
+   "text": "不用我到场？"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 10:05",
+   "speaker": "A",
+   "text": "我签字就行，流程我最熟，你来反而多一道嘴"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 10:08",
+   "speaker": "B",
+   "text": "那批里有两台是翻新的，你验收时眼皮抬高点"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 10:10",
+   "speaker": "A",
+   "text": "知道了，照片我按新品拍，存档用"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 10:30",
+   "speaker": "B",
+   "text": "何经理爽快，那我直说，老规矩"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 10:31",
+   "speaker": "A",
+   "text": "你说"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 10:33",
+   "speaker": "B",
+   "text": "这单按合同额两个点，我先转两万，验收完补齐"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 10:36",
+   "speaker": "A",
+   "text": "行，老规矩，转我这张卡"
+  },
+  {
+   "type": "transfer",
+   "time": "10月22日 10:40",
+   "from": "B",
+   "to": "A",
+   "amount": 20000
+  },
+  {
+   "type": "message",
+   "time": "10月22日 10:41",
+   "speaker": "A",
+   "text": "收到"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 10:43",
+   "speaker": "B",
+   "text": "剩下的验收完三天内给你"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 10:45",
+   "speaker": "A",
+   "text": "不急，翻新那两台给我处理利索"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 10:48",
+   "speaker": "B",
+   "text": "放心，有退货机我给你换新"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 10:50",
+   "speaker": "A",
+   "text": "周三验货别掉链子"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 10:52",
+   "speaker": "B",
+   "text": "一定"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 11:20",
+   "speaker": "A",
+   "text": "下季度的维保也包给你，价格你看着写"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 11:23",
+   "speaker": "B",
+   "text": "何经理，这朋友我认定了"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 11:25",
+   "speaker": "A",
+   "text": "哈哈，互相成全"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 11:27",
+   "speaker": "B",
+   "text": "年底给我留个额度"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 11:30",
+   "speaker": "A",
+   "text": "先把这单干漂亮"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 14:00",
+   "speaker": "B",
+   "text": "闺女说十一回家，让我少喝酒"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 14:03",
+   "speaker": "A",
+   "text": "听闺女的，哈哈"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 14:05",
+   "speaker": "B",
+   "text": "你也别光顾着忙，身体要紧"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 16:30",
+   "speaker": "B",
+   "text": "明晚健身还去不"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 16:33",
+   "speaker": "A",
+   "text": "去，我把卡带上"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 16:35",
+   "speaker": "B",
+   "text": "带壶茶，练完咱俩喝"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000365",
+  "status": "accepted",
+  "errors": []
+ }
+}

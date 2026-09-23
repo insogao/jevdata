@@ -1,0 +1,138 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000344
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000046
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-bce8c24de04be151
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 两个场子的头面人物借对抗赛之名约定聚众对峙立地盘规矩:押金实为赌注、视频用于立威震慑,输的一方半步退出地盘。
+  critical_evidence:
+  - 约定10月12日晚九点老码头空场,规则三条:人数对半、点到为止、场内的事不带出门
+  - A要B把规矩原样带话给对方新来的人,并让阿坤全程拍摄、发给该看的人,把规矩立住
+  - 10月11日上午A先转B两万押金,连同对方两万交中间人老三,输的一边不退,赛前时序完整
+  - 当晚结束后B通报按规矩走的、他们输了,两万充作规矩金,半步退出,赌注与地盘利益闭环
+  benign_alternatives:
+  - 球赛对抗约战
+  - 单位之间竞争
+
+attributes:
+  duration_days: 3
+  turn_count: 62
+  approximate_tokens_estimate: 1889
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: gang_intimidation
+  risk: 3
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0039
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-021
+
+dedup:
+  content_hash: sha256:d26d4775b2dda685a14d6532f8ee35aeabcc770da5a39942fd410f9f75077d83
+pipeline_status: accepted
+title: violence_extortion/gang_intimidation
+conversation: |-
+  【10月10日】
+  A：赵总,昨儿饭局那瓶茶不错,什么来路
+  B：老家的荒山茶,回头给你寄两罐,咱这交情还客气啥
+  A：那就不客气,先谢了
+  B：客气话后头说,正事:老三让你我对接,12号晚上的事,你定细节
+  A：行。老码头后头那个空场,晚上九点,两边人数对半,按老规矩来
+  B：老规矩是哪几条?你把话说明白,我好带回去
+  A：就三条:点到为止不当真,输的一方退半步,场子里的事场子里了,不带出门
+  B：明白,这话我原样带到。不过他们那边新来的几个未必服气
+  A：服不服,12号见了就知道。规矩立一次就够了
+  B：行,那我带回去的就是:对半、点到为止、不带出门
+  A：你那车该洗了,上回饭局停我旁边,灰能写字
+  B：哈哈生意忙,车都排不上号,这就去洗
+  A：东顺那家用券便宜,我发你
+  B：收到,会过日子
+  A：对了,让阿坤把那天全程拍下来
+  B：拍下来干嘛,留纪念?
+  A：纪念是一方面,主要是发给该看的人。有影像在,规矩才立得住,以后省得再来一回
+  B：懂了,阿坤的设备我让他备好,到时候机位站边角
+  A：原样最好,别剪
+  B：说点轻松的,你家小子期中考完没,上回你说他数学头疼
+  A：考完了,92,全班第五,昨晚请他吃了顿烤肉
+  B：可以啊,第五还不满足,下一个目标前三?
+  A：他自己说的,冲前三,我就负责付烤肉钱
+  B：哈哈后援团当得好
+  【10月11日】
+  A：押金的事定了没,老三说两边各出两万,放中间人那,输的一边不退
+  B：定了,他们说行。两万我这边今天凑齐
+  A：那我先把我的两万打你那,你一起交老三,省得明天赶
+  B：行,你打吧,我拿到就转给老三
+  A：好,现在就打
+  【系统消息】A 向 B 转账 20000 元，已收款。
+  B：收到,两万。明早我送老三那去,让他打个收条
+  A：收条要,规矩之内才叫规矩
+  A：胃又不舒服,中午就喝了碗粥
+  B：你这胃,少喝酒,这两天养着点
+  A：大夫也这么说,粥配咸菜,清淡一周
+  B：忍住,身体是自己的
+  B：那边话带到了,他们应了三条规矩,人数也按对半,十个对十个
+  A：好,十个就十个,我这边数好了
+  B：时间再确认下,九点,老码头后空场
+  A：对,九点整,过点不候
+  A：周末钓鱼去不,听说东水库最近出鲫鱼
+  B：去,竿我都俩月没开了
+  A：那把12号的事忙完,周六一早出发
+  B：行,鱼获不分你我,哈哈
+  【10月12日】
+  A：今晚都安排妥了,你那边人到齐几个
+  B：十个,一个不少,都是熟面孔
+  A：我这也十个。再对一遍:点到为止,不带出门,拍视频的只拍场内
+  B：记下了,阿坤我也叮嘱了,他机位站边角
+  A：好。散场后各自带人回,别顺路吃喝,免得节外生枝
+  B：明白,各回各场
+  B：中午吃啥,陪客户吃了三天大餐,想吃碗素面
+  A：哈哈土豪的烦恼,我这胃还在喝粥
+  B：粥兄,哈哈哈,明晚请你吃硬菜
+  A：硬菜就免了,给我点份皮蛋瘦肉粥
+  A：都到位了没,我出门了
+  B：出发了,阿坤的车跟着,九点老码头见
+  A：见
+  B：结束了,按规矩走的,没出格,影像阿坤已经在弄了
+  A：好,影像明早发该看的人,这事就算立住了
+  B：押金怎么算,老三说他们输了,两万归场子做规矩金
+  A：按事先说的办,一分不动,老三拿着,立在那当规矩
+  B：行,那这事了了,半步他们退了
+  A：了了就好,周六水库,早点睡

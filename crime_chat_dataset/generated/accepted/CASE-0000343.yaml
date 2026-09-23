@@ -1,0 +1,153 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000343
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000116
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-9ae617b31a384b3c
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: theft_robbery_property_crime
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A提供囤积的原封包装膜与一一对应的条码把旧品充当全新品,B负责把货送进只认码的售后通道按新品套现,五单获利后当晚转账分赃。
+  critical_evidence:
+  - A手里有三十套原封未动的包装膜,封条与码一一对应,抽验过无重号
+  - 通道方认码不认别的,B按节奏分批送入,一天最多三套,五套全清一个没卡
+  - 一单吃一千出头,约定四六分成,第五套落袋当晚21:13,B转A 2000元
+  - 约定下批月底走货,还是老规格一套一号,持续合作结构明显
+  benign_alternatives:
+  - 正常七天无理由
+  - 瑕疵退货协商
+
+attributes:
+  duration_days: 3
+  turn_count: 77
+  approximate_tokens_estimate: 1736
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: delivery_fraud_returns
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0039
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-021
+
+dedup:
+  content_hash: sha256:717d98ae11f8b634478ec5ec7daff2e18d2ed7c37a626745cdb8014495c2582e
+pipeline_status: accepted
+title: theft_robbery_property_crime/delivery_fraud_returns
+conversation: |-
+  【10月6日】
+  A：返程高速堵疯了,一动不动
+  B：哈哈谁让你最后一天回来,我今天到的,畅通
+  A：明年学乖,提前一天
+  B：你那批到哪了,前天说的东西
+  A：到了到了,昨晚刚清点,三十套,膜全原封,封条我抽了三套验过,对得上
+  B：码呢,和膜是一套的吗
+  A：一套一号,我对着灯看的,没有重号
+  B：行。那边什么规矩你也知道,认码不认别的,码对上,后面就是走个流程
+  A：懂,所以我才找你,你这通道稳,我只管供货
+  B：先走两套试试,别一上来就放量
+  A：稳妥,两套先过
+  B：今天下午我安排人送进去,晚上给你信
+  A：奶茶点不点,我这有券,第二杯一元
+  B：点!杨枝甘露,少糖
+  A：行,十分钟到
+  B：到了到了,你这券哪领的,这么香
+  A：银行App每月送的,白嫖的快乐
+  B：回头教我,我也白嫖
+  B：第一套过了,进去了,短信都来了
+  A：快啊,这才几个小时
+  B：快,所以你说这门生意为什么有人排队,一单吃一千,谁不心动
+  A：第二套也送了?
+  B：送了,明早出结果
+  A：那今晚睡觉都踏实
+  B：睡你的,有事我喊你
+  【10月7日】
+  B：第二套也过了,两套都落袋
+  A：稳!那我这边再出五套,你接得住不
+  B：接得住,不过我一天最多走三套,通道就这个量,你别催
+  A：明白,细水长流,不贪
+  B：对了,你那渠道稳不稳,别中途断供
+  A：稳,你就说你要多少
+  B：行,不问了,货稳就行
+  A：球鞋看没看,那双复刻的又补货了
+  B：看了,忍住了,上个月才买了三双,再买家里领导要查账
+  A：哈哈男人最后的倔强
+  B：是,鞋柜比衣柜丰满
+  B：今天送进去一套了,剩两套明早
+  A：好,第五套的膜我重新擦了一遍,一点指印都不能有
+  B：细,难怪你货好出
+  A：月底对账你别慌,我有本小账,一单一笔记着
+  B：还是你细
+  B：健身房今天白跑,团课全满
+  A：谁让你不预约,我都是提前一天占位
+  B：明天陪我占一个,七点半的
+  A：行,占动感单车,再晚没好车了
+  B：成
+  【10月8日】
+  B：昨晚那套今早出了,过了
+  A：三套了,今天再过两套,这批就清完
+  B：最后一套下午送,晚上出结果,你把账备好
+  A：账早备好了:五套,一单吃一千出头,按说好的四六,你六我四,你转我2000整
+  B：差不多,等第五套落袋一起结
+  A：行,不差这一晚
+  A：键盘到了,茶轴的,敲着跟打字机似的
+  B：有声键盘,你同事不打死你
+  A：我自己单间,怕啥
+  B：单间,富婆生活,羡慕
+  A：羡慕啥,你不也是单间
+  B：我那叫次卧,哈哈
+  B：下午那套送进去了,等结果
+  A：好,我盯着手机
+  B：过了!五套全清,一个没卡
+  A：你这通道是稳,下一批什么时候
+  B：缓到月底,中间我歇几天,人手排不开
+  A：懂,正好补货
+  B：那今晚结账,老规矩
+  A：2000,老数
+  B：结账了,收一下
+  【系统消息】B 向 A 转账 2000 元，已收款。
+  A：收到,2000整,分毫不差
+  B：下批月底,你货备齐
+  A：放心,还是老规格,一套一号
+  B：好,月底见
+  A：对了单车课明早七点半,别忘了
+  B：占了没,我可去了
+  A：占了,倒数第二排靠窗
+  B：成,完事儿豆浆
+  A：加蛋
+  B：加蛋,大方,睡了晚安

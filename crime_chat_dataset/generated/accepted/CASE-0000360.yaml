@@ -1,0 +1,145 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000360
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000138
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-b03620cea9572a8b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: other_illicit_coordination
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A以保本高息为饵向熟人吸收资金，只收现金、不走公司账、只开收据；B帮忙拉人头赚返点，自己也投钱试水并转款到A个人卡。
+  critical_evidence:
+  - 月息三分、月结，承诺保本随时退
+  - 拉一个客户返两个点，一次性结算
+  - 大额只收现金、公司账上不走，只签收据不签合同
+  - B先转50000元到A个人卡，理由是公司账户在维护
+  benign_alternatives:
+  - 银行理财推荐
+  - 正规众筹
+
+attributes:
+  duration_days: 5
+  turn_count: 67
+  approximate_tokens_estimate: 1300
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: illegal_fundraising
+  risk: 2
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0041
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-021
+
+dedup:
+  content_hash: sha256:c269280aeb0d2e4fa7bf3bbc74f97e784e6bbc953286707894d66369fc9079d0
+pipeline_status: accepted
+title: other_illicit_coordination/illegal_fundraising
+conversation: |-
+  【11月17日】
+  A：薇姐，上次说的那个盘子，考虑得咋样
+  B：宏哥，月息三分，真三分？
+  A：三分，月结，随时能退
+  B：保本吗，别到时候本金都动不了
+  A：我们底子你还不有数，钱都在实物流通里转
+  B：咋个进法
+  A：五万起，大额只收现金，账上不走
+  B：现金？现在谁还抱现金
+  A：现金最省事，你也清净
+  B：昨晚开了瓶你送的赤霞珠
+  A：那瓶要醒半小时
+  B：我醒晚了，有点涩
+  A：下次提前备着
+  B：什么时候再搞一箱
+  A：我有个酒庄直邮的路子
+  【11月18日】
+  B：我家卫生间重做了，砸了三天
+  A：防水刷了几遍
+  B：三遍，闭水试验做了四十八小时
+  A：稳了，这钱不能省
+  B：装修真是个无底洞
+  A：谁说不是
+  A：你那边渠道的客户，帮我拉一个返两个点
+  B：两个点是按年还是按月
+  A：一次性，按进的钱算，客户月息照拿
+  B：那客户问起来我咋说
+  A：就说供应链金融，月结收益，比存银行强
+  B：不签合同？
+  A：签个收据就行，合同反而麻烦
+  B：行，我先给几个老客户吹吹风
+  B：晚上打球不
+  A：去，老时间老地方
+  B：带上我新买的拍子
+  A：输了请宵夜
+  B：没问题
+  【11月19日】
+  B：昨天跟两个老客户提了，都心动
+  A：让他们先小额进，尝到甜头再加
+  B：有个想直接进五十万
+  A：大额让他走现金，分两次送过来
+  B：收据我开还是你开
+  A：你开，拿去盖章，我给你送过去
+  B：成
+  A：我体检报告出来了，轻度脂肪肝
+  B：少熬夜少喝酒
+  A：你还不也一样
+  B：我那是老毛病，控制着呢
+  A：年底咱俩一起复查
+  【11月20日】
+  B：宏哥，我自己也想进一笔
+  A：欢迎啊，多少
+  B：先进五万试试水
+  A：行，现金送我公司
+  B：现金太麻烦，先转你个人卡行不
+  A：公司账户这几天在维护，你这笔先走我个人卡，就这一次啊
+  B：行，那我现在转
+  【系统消息】B 向 A 转账 50000 元，已收款。
+  A：收到，收据明天给你
+  B：利息从下月一号算吧
+  A：对，按整月
+  B：年底去哪玩，推荐个地儿
+  A：三亚，暖和
+  B：去年去过了
+  A：那西双版纳，冬天正合适
+  B：行，我研究下
+  【11月21日】
+  B：宏哥，第一个客户那五万今天送到你公司了
+  A：收到，收据下午给你送过去
+  B：下周还有两个要进
+  A：让他们都赶在十二月一号前进，早进早起息
+  B：懂，你把我的返点备好，哈哈
+  A：两个点，一分不少你的

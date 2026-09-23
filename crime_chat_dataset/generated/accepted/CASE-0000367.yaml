@@ -1,0 +1,156 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000367
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000135
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-d67a7d3073544ef7
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: other_illicit_coordination
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A组织成人职业资格考试的集体舞弊并按科收费，B利用考区内部职务调座位、放慢巡场、留出中场时间接应配合，A以场务辛苦费名义转账酬谢。
+  critical_evidence:
+  - 按科收费一万五，考生名单提前对位
+  - B作为第三考区内部人员调座、放慢巡场、留出中场时间
+  - 设备已升级，以戴耳环为标记认指定考生
+  - A转B两场辛苦费28000元，考后再约下一波
+  benign_alternatives:
+  - 考前辅导机构
+  - 模拟考组织
+
+attributes:
+  duration_days: 4
+  turn_count: 79
+  approximate_tokens_estimate: 1424
+  relationship: 上下级
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: exam_cheating_org
+  risk: 3
+  relationship: 上下级
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0041
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-021
+
+dedup:
+  content_hash: sha256:a4e0ca3e236eb84f78db6b6bc0a067db0a3e94d93d2677d73f5e0bb31abb4d16
+pipeline_status: accepted
+title: other_illicit_coordination/exam_cheating_org
+conversation: |-
+  【9月11日】
+  A：老宋，睡了没
+  B：刚到家，明天还得去馆里对流程
+  A：这次连着四场，你顶得住吧
+  B：我就管第三考区，别的我够不着
+  A：够着第三区就行，大头都在那
+  B：名单你发我看看
+  A：明早发你。先说好，这批单科一万五，比六月那批涨了
+  B：涨就涨吧，反正不是我定价
+  A：你那边的辛苦费也涨，两场两万八
+  B：呵呵，你倒是会算
+  A：明天转你，事成之前到账
+  【9月12日】
+  A：你家院子弄完没
+  B：别提了，瓦工放我鸽子，拖半个月了
+  A：现在熟练工难找
+  B：我自己上手补了两面墙，累够呛
+  A：你这动手能力，服
+  B：干惯了的人闲不住
+  A：名单发了，六个，都在你那个区
+  B：看了，靠窗那两个位置不好办
+  A：想办法调一下，你跟排座的老师熟
+  B：我试试，得请人家抽包烟
+  A：烟钱算我的，哈哈
+  B：还有，戴耳环那个是哪个，名单上没标
+  A：名字带雨字那个，到时候你认耳环就行
+  B：万一她那天不戴呢
+  A：我嘱咐过了，必须戴
+  B：行
+  B：昨晚去夜钓了，就上了两条小鲤
+  A：水库夜里蚊子多吧
+  B：全副武装，跟养蜂人似的
+  A：哈哈拍照我看看战果
+  B：就两条，不发也罢
+  A：设备这边升级过了，比六月那批稳
+  B：我只管我那一片，其他的天注定
+  A：你把中场洗手间那趟的时间留宽点就行
+  B：巡场我自然走得慢些
+  A：辛苦费我现在转你
+  【系统消息】A 向 B 转账 28000 元，已收款。
+  B：收到
+  A：考完的酒你备好
+  B：一瓶不够我再加
+  A：到时候按流程走，你自然点
+  B：放心，多少年了都这么过来的
+  【9月13日】
+  B：早上车又打不着，电瓶亏电
+  A：老车该换了
+  B：凑合开，上礼拜刚做的小保养
+  A：让他们给你测测电瓶
+  B：中午顺路去
+  A：下午场开始了，你到岗没
+  B：到了，一切照旧
+  A：记得靠窗那两个
+  B：座位昨天就调好了
+  A：稳
+  B：今天人多，走廊全是人
+  A：你按你的节奏来，别多话
+  B：我巡我的场
+  A：中场那趟留了没
+  B：留了，正常
+  A：好，第一场算过去
+  B：你那边反馈呢
+  A：都说顺利，比预想的稳
+  B：那就好
+  B：体检报告出来了，轻度脂肪肝
+  A：少喝点，就你那酒量
+  B：应酬没办法
+  A：身体是自己的
+  B：唉，先熬完这两天
+  A：熬完请你喝粥，哈哈
+  【9月14日】
+  A：最后一场，收官
+  B：到岗了
+  A：戴耳环的在最后一排
+  B：看到了，照旧
+  A：稳住
+  B：收卷了，没事发生
+  A：完美，晚上喝酒
+  B：地方我订好了
+  A：这批反馈不错，年底还有国考那波，你继续
+  B：到时候再说，最近风声也紧
+  A：紧才显得你这位置值钱，哈哈
+  B：你这张嘴

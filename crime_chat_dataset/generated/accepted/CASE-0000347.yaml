@@ -1,0 +1,155 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000347
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000051
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-157048a38bcfbfa8
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 看似私下串联同事要集体搞事情,实为通过工会实名邮箱对食堂承包问题做意见征集:不外泄任何个人信息、群里不发名字,转账只是请帮忙做表的同事喝奶茶。
+  critical_evidence:
+  - A立下底线:同事个人信息一律不往外发,签名表只交工会,群里不发任何名字
+  - 材料走官网实名信箱提交,回复时限十五个工作日;问卷47份、39人自愿实名附议,证据照片21张按日期排列
+  - 导出版对签名做遮罩处理只显示姓氏加工号,完整版仅存B本地电脑,不放共享盘
+  - 10月18日A转B的88元与此前奶茶加司康的请客承诺完全对应,系谢礼
+  benign_alternatives:
+  - 舆论监督讨论
+  - 维权信息征集
+
+attributes:
+  duration_days: 6
+  turn_count: 76
+  approximate_tokens_estimate: 2367
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: online mob_doxx_attack
+  risk: 0
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0039
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-021
+
+dedup:
+  content_hash: sha256:7bbb38efea91ac25561feaef41b620228e97e6102eecc3b2eb1a528c7f1a4b84
+pipeline_status: accepted
+title: violence_extortion/online mob_doxx_attack
+conversation: |-
+  【10月13日】
+  A：早,昨天说的食堂那事,我昨晚写了个反馈初稿,你帮我把把关
+  B：发来,我正想找你说呢,昨天那顿饭我是真没动几筷子
+  A：发你了,你看第三段,问题我列了七条,都有照片和日期
+  B：七条条条在理,特别是留样那块,台账要是有问题就是大问题
+  A：所以不能光在群里抱怨,得走正规渠道,我打算提交给工会和后勤管理中心,实名,走邮箱
+  B：支持,实名反馈才有分量,匿名的话他们拖着不办
+  A：对。还有一条底线:所有同事的个人信息一律不往外发,签名表只给工会,群里不发任何名字
+  B：这点你放心,表我来做,只收姓名工号,电话住址一概不收,收集齐直接锁私密文档
+  A：好,就这么定
+  A：你那减脂餐第几天了,我看你中午就吃水煮菜
+  B：第12天,掉了4斤,就是馋
+  A：馋就对了,周五食堂那个红烧大排,你扛得住?
+  B：你别提大排!!!我跟你拼了
+  A：哈哈哈哈
+  B：问卷我做好了,一共八个问题,最后一个是是否愿意实名附议,自愿勾选
+  A：细,加一条有无既往沟通记录,有备无患
+  B：加了。明早在茶水间贴个二维码,不写任何人的名字
+  A：好,二维码我打印,彩打的
+  【10月14日】
+  A：二维码贴出来了,一早就有三个人扫
+  B：我后台能看到,别念具体人数,咱知道有进展就行
+  A：懂,低调,免得承包商提前来打招呼
+  B：对,材料齐了一次性交上去,交之前不声张
+  B：周末爬北山去不,听说栈道修好了
+  A：去,我买好护膝了,中年人的膝盖不能省
+  B：哈哈哈同款中年,六点半山门口见
+  A：六点半?!你比我们家闹钟还狠
+  B：早上去,人少,凉快
+  A：工会那边的邮箱我确认了,是官网挂的实名信箱,回复时限十五个工作日
+  B：好,那咱们材料这周收齐,下周一一早提交
+  A：行,时间表就这么定
+  A：昨晚那个剧看完没,我弃了,男主智商下线
+  B：我也弃了,现在追的是那个纪录片,讲航拍的
+  A：纪录片好,看完心静
+  B：是,比狗血剧下饭
+  【10月15日】
+  B：问卷到昨晚47份了,愿意实名附议的39个,超过预期
+  A：39个实名,这分量够了。照片证据我按日期排好了,一共21张
+  B：那主体材料就齐了,我周末把表格汇总排版
+  A：辛苦,这活费眼,奶茶我包了
+  B：哈哈你说的,大杯,芋泥的
+  A：小气鬼,芋泥才贵几毛
+  B：咖啡豆到货,这次换了中烘的,给你留了一包
+  A：客气,豆子钱我给你
+  B：上回你帮我改周报,一包豆子抵了
+  A：那行,人情记账上
+  A：你听说没,地铁新线年底通车,咱们公司那站正好有口
+  B：听说了,以后能多睡二十分钟
+  A：二十分钟,人生啊
+  B：别感慨,先活到通车
+  【10月16日】
+  B：表格排好了,你过目,签名页我做了遮罩处理,导出版只显示姓氏加工号
+  A：专业。遮罩版交工会,完整版你自己存着,不放共享盘
+  B：放心,我电脑有密码,完整版只在我这
+  A：好,个人信息这条咱守住,谁问都是没有对外
+  B：本来也没有,咱这就是个意见征集,光明正大
+  A：今晚加班不,听说六楼要停电检修
+  B：加,材料我不急,周末弄,正好趁停电摸鱼
+  A：行,停电摸鱼联盟等你
+  B：停电了,整层黑,就应急灯亮着,氛围组拉满
+  A：哈哈拍了个照,发圈定住这个瞬间
+  B：配文我来:加班人的浪漫是应急灯
+  【10月17日】
+  A：周末麻烦你了,表弄完发我,奶茶兑现
+  B：不用奶茶,举手之劳
+  A：那不行,说好的,做表费眼睛,奶茶必须喝
+  B：哈哈行,那我就不客气了,顺便带个司康
+  A：加司康?你这售后加价啊
+  B：哈哈哈加急费
+  B：北山照片我传你了,你那张跳跃的,腿都没离地
+  A：删了删了,留我一张帅气仰望的就行
+  B：哈哈仰望那张构图是不错,发给我就行
+  A：小气
+  【10月18日】
+  B：表发你了,汇总版加遮罩版,你查收
+  A：收到,做得真规整。周一提交,奶茶今天到
+  B：好嘞,坐等
+  A：点了,芋泥大杯加司康,骑手已接单
+  B：哈哈效率。提醒你转我钱,别到时候忘了
+  A：忘不了,这就转,88,奶茶加司康凑个吉利数
+  【系统消息】A 向 B 转账 88 元，已收款。
+  B：收到,吉利。周一等你好消息,材料一交咱这心事就了了

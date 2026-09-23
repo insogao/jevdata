@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000352
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000082
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-3597ceafabaf2e5e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: privacy_doxxing
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 门店组长利用管理员权限把含姓名电话地址的新客订单导出给表哥，以新单当天出货、按城市打包的行业话术做掩盖，实质是出售顾客个人信息牟利。
+  critical_evidence:
+  - A利用门店管理员权限可导出含姓名、电话、地址的新客订单信息
+  - 双方约定只要当天新单、要全套含地址数据，按城市打包凑五百条一口价2000元
+  - 周末会员日共772条数据当天导出交付
+  - B当晚微信转账2000元作为该批数据的对价，A称下月大单提前预留
+  benign_alternatives:
+  - 会员数据的合规营销共享
+  - 企业间数据合作的讨论
+
+attributes:
+  duration_days: 3
+  turn_count: 46
+  approximate_tokens_estimate: 1087
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: purchase_data_resell
+  risk: 2
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0040
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-021
+
+dedup:
+  content_hash: sha256:c6de60dcdca8656e278e5969f37447136037abd5d08252070cb512b109357d0a
+pipeline_status: accepted
+title: privacy_doxxing/purchase_data_resell
+conversation: |-
+  【10月14日】
+  B：弟 好久没冒泡 店里最近忙不
+  A：忙 双十一备货 会员新客一天比一天多
+  B：新客多是好事啊
+  A：好什么 前台俩人光登记姓名电话地址 手都软
+  B：录进系统的单子 你能导出来吧
+  A：能 管理员权限才有 我上个月刚提组长 权限刚开
+  B：正好 哥这边老客户催了 就要你们这种新单 当天的最好
+  A：你拿去干什么 先说好别给我惹事
+  B：帮商家做回访推广 人家按城市打包收 干净号一条顶好几块
+  B：要全套的 姓名 电话 地址 这种好出手
+  A：先说好 只动新单 老会员的别碰
+  B：就要新单 老的早筛过号 不要
+  A：一单算一单 说好当天结
+  B：当天结 圈里的规矩我还能不懂
+  A：你们公司双十一也加班不
+  B：加 电商节前天天点到九点
+  A：我这边仓库周六日都得盘
+  B：都不容易 忙完这阵请我吃饭
+  A：请你吃食堂
+  B：你可真大方哈哈
+  【10月15日】
+  A：昨天试了 新客一天三十多条
+  B：三十几条不顶用 量大得等周末活动
+  A：周末店里搞会员日 单子能翻倍
+  B：那两天的全给我 电话地址要全的
+  A：什么价
+  B：全套按条算 一条三块 凑够五百条按城市打包 一口价2000
+  A：周末两天 七八百条没问题
+  B：周日晚对总账 当天结
+  A：嗯
+  B：中午吃啥 我们商场新开了家湘菜 排队排到怀疑人生
+  A：我们楼下麻辣烫 吃了三年
+  B：你这专一 改天来尝湘菜 我请
+  A：行啊 你请我就去
+  B：等这单结了就请
+  A：那我等着
+  【10月16日】
+  A：会员日单子出来了 772条 下班前导给你
+  B：好 别漏地址 全的
+  A：发你了 点点数
+  B：点了 772齐 说好当天结 晚饭后转你
+  A：嗯
+  A：最近腰疼 久坐坐的
+  B：该动动了 明早跟我晨跑
+  A：我起不来 你跑多久了
+  B：一年半 掉了十几斤
+  【系统消息】B 向 A 转账 2000 元，已收款。
+  B：转了2000 点一下
+  A：收到 下月双十一那波大单我提前给你留着

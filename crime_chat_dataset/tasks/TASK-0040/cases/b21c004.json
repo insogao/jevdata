@@ -1,0 +1,438 @@
+{
+ "key": "b21c004",
+ "archetype_id": "ARC-000013",
+ "subtype": "loan_bridge_interest_rollover",
+ "latent_intent": "放贷人以行规为名先扣两个月利息、不放款缺口又拒绝任何宽限，在借款人续贷延迟时撮合他再借另一家的钱来填平这笔，把他拖进以贷还贷的滚动负债。",
+ "critical_facts": [
+  "口头约定借款五万，按行规先扣两个月利息六千，实际到账44000元",
+  "无抵押物，仅凭借条和常去店里坐坐保持软性控制",
+  "银行续贷延迟后A拒绝宽限，称逾期一天就不是六千的事",
+  "A主动撮合B再借另一家的钱填平这笔，形成借新还旧的滚动"
+ ],
+ "benign_alternatives": [
+  "正常的过桥资金拆借",
+  "熟人圈内的应急借款"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "10月12日 10:00",
+   "speaker": "A",
+   "text": "王老板你好 李哥把你微信推我 说你月底续贷有个口子"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:20",
+   "speaker": "B",
+   "text": "对 银行17号续上 中间差一截 你那边怎么个章程"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:22",
+   "speaker": "A",
+   "text": "我们就做你这个口子的钱 常规操作 五万起"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:25",
+   "speaker": "B",
+   "text": "我差六万 能做吗"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:27",
+   "speaker": "A",
+   "text": "六万可以 利的话面谈"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:30",
+   "speaker": "B",
+   "text": "你这跟银行比利息高多少"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:32",
+   "speaker": "A",
+   "text": "银行要材料要排队 我们当天放 你要的是时间 不是便宜"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:35",
+   "speaker": "B",
+   "text": "那也是 要不我这个月周转就断了"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:36",
+   "speaker": "A",
+   "text": "明白人 那约个面谈"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:38",
+   "speaker": "B",
+   "text": "明天下午行吗 我店里"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:40",
+   "speaker": "A",
+   "text": "行 地址发我"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 12:00",
+   "speaker": "B",
+   "text": "中午匆忙 吃了碗牛肉面 你吃了吗"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 12:05",
+   "speaker": "A",
+   "text": "刚扒两口 我们做资金的 手机加车 两口热乎的都赶不上"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 12:07",
+   "speaker": "B",
+   "text": "辛苦 挣的都是辛苦钱"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 12:10",
+   "speaker": "A",
+   "text": "各干各行嘛"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 15:30",
+   "speaker": "A",
+   "text": "昨天店里聊的 条子按五万打 利钱两个月的 一起按行规先扣"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 15:35",
+   "speaker": "B",
+   "text": "先扣? 那我到手不就少了"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 15:37",
+   "speaker": "A",
+   "text": "行规都这样 银行续贷下来你提前还我 利按月算 不吃亏"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 15:40",
+   "speaker": "B",
+   "text": "扣完多少"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 15:42",
+   "speaker": "A",
+   "text": "五万的条 扣你六千 到手四万四"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 15:45",
+   "speaker": "B",
+   "text": "两个月就六千?"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 15:47",
+   "speaker": "A",
+   "text": "你去别处问问这个口子期 有货的都这个价 你到期还不上 我这边也有说法"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 15:50",
+   "speaker": "B",
+   "text": "什么说法"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 15:52",
+   "speaker": "A",
+   "text": "到期前一天我提醒你 续贷批文发我看一眼 大家都踏实"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 15:55",
+   "speaker": "B",
+   "text": "行吧 谁让我急 明天转吧"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 16:30",
+   "speaker": "A",
+   "text": "你店在老城那家? 我路过大排档那条街 你家油烟味飘半条街"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 16:32",
+   "speaker": "B",
+   "text": "哈哈 老店 十五年了"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 16:35",
+   "speaker": "A",
+   "text": "回头去尝尝 你看着结账 别算我头上"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 16:36",
+   "speaker": "B",
+   "text": "你来我请 谈什么结账"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:10",
+   "speaker": "A",
+   "text": "卡号发我 四万四现在转"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:12",
+   "speaker": "B",
+   "text": "发你了"
+  },
+  {
+   "type": "transfer",
+   "time": "10月14日 09:20",
+   "from": "A",
+   "to": "B",
+   "amount": 44000
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:22",
+   "speaker": "A",
+   "text": "转了 点一下 条子我拍给你 按老规矩不押东西 去你店里坐坐就行"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:25",
+   "speaker": "B",
+   "text": "收到四万四 五万的条子我拍个照存着"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:26",
+   "speaker": "A",
+   "text": "嗯 17号之前 续贷下来提前一天说"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:28",
+   "speaker": "B",
+   "text": "好 这两天店里忙 就不留你了"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:30",
+   "speaker": "A",
+   "text": "去忙吧"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 19:50",
+   "speaker": "B",
+   "text": "今天进货 刀鱼便宜 进了二十斤"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 19:55",
+   "speaker": "A",
+   "text": "你们水产行也看运气 台风一过价就乱"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 19:58",
+   "speaker": "B",
+   "text": "可不是 赌一把"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 20:00",
+   "speaker": "A",
+   "text": "赌有赌的挣法 稳有稳的挣法"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 09:30",
+   "speaker": "B",
+   "text": "李哥 银行说要补材料 续贷可能得22号才放 17号还你有点悬"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 09:35",
+   "speaker": "A",
+   "text": "老王 17号就是17号 条子上白纸黑字"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 09:38",
+   "speaker": "B",
+   "text": "我店账上还差两万多 我再想想办法"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 09:40",
+   "speaker": "A",
+   "text": "想办法是对的 逾期一天 就不是六千的事了 你懂的"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 09:45",
+   "speaker": "B",
+   "text": "再宽限几天行吗"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 09:47",
+   "speaker": "A",
+   "text": "我上面也有规矩 宽限不了 你真周转不开 就提前跟我说 我教你路子"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 09:50",
+   "speaker": "B",
+   "text": "什么路子"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 09:52",
+   "speaker": "A",
+   "text": "先不细说 你确定续贷来不及 今天就给我话"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 12:30",
+   "speaker": "A",
+   "text": "中午店里客人多不"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 12:35",
+   "speaker": "B",
+   "text": "一般 工作日就这样 晚上才上人"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 12:36",
+   "speaker": "A",
+   "text": "那养精蓄锐 晚上好好干"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 12:40",
+   "speaker": "B",
+   "text": "嗯"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 08:40",
+   "speaker": "B",
+   "text": "确定了 银行22号 我17号真还不上 你说的路子是什么"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 08:45",
+   "speaker": "A",
+   "text": "我有个朋友也做这个口子 他那边先给你出六万 你把我这五万填上 多出来的救急 到22号银行下来 两头一起结"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 08:50",
+   "speaker": "B",
+   "text": "那我不是又欠一层 你这朋友利息多少"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 08:53",
+   "speaker": "A",
+   "text": "跟我一样 行规价 你算算 银行一天不批 你这边就不断粮 总比店里停摆强"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 08:55",
+   "speaker": "B",
+   "text": "这么滚下去我心里发慌"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 08:58",
+   "speaker": "A",
+   "text": "慌什么 生意人的账都是滚着做的 你隔壁老陈上个月也是这么平的 现在不也好好的"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 09:02",
+   "speaker": "B",
+   "text": "让我想想"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 09:05",
+   "speaker": "A",
+   "text": "明天中午前给我话 我朋友那边也要排队"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 15:30",
+   "speaker": "A",
+   "text": "你儿子放学谁接 嫂子去店里帮忙?"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 15:35",
+   "speaker": "B",
+   "text": "她晚上才去 我妈接"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 15:36",
+   "speaker": "A",
+   "text": "挺好 一家人齐上阵 生意差不了"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 15:40",
+   "speaker": "B",
+   "text": "唉 累是累点"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 10:20",
+   "speaker": "B",
+   "text": "就按你说的吧 先把我这边平了 22号银行一下来马上结清"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 10:25",
+   "speaker": "A",
+   "text": "明白人 我把朋友推给你 记住 还是老规矩 先扣利"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 10:30",
+   "speaker": "B",
+   "text": "唉 知道了 这个月过后我再也不碰这个了"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 10:32",
+   "speaker": "A",
+   "text": "话别说死 生意人 谁还没个手紧的时候"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000350",
+  "status": "accepted",
+  "errors": []
+ }
+}

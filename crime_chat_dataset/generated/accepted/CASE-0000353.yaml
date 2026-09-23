@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000353
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000012
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-0b4cdbbfd28d4d64
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: fraud_scam
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 借熟人低价转让相机制造跳过平台、微信直付并收取定金的机会，暗藏二手骗定金的疑点；但相机最终到货且与描述一致，整体仍可用真实二手转让解释。
+  critical_evidence:
+  - 十年熟人以5500元（明显低于二手行情）转让相机，解释为换新机器急用钱
+  - 卖家提议跳过平台微信直付，买家先转500元定金并约定收货后付尾款
+  - 发货后物流单号一度只有揽收记录、长时间不更新，卖家解释为节前高峰大件转场站慢
+  - 10月10日买家确认相机到货，划痕位置与事前描述一致
+  benign_alternatives:
+  - 真实熟人二手转让，朋友价加微信直付属常见做法
+  - 节前快递高峰导致揽收后延迟更新物流
+
+attributes:
+  duration_days: 3
+  turn_count: 46
+  approximate_tokens_estimate: 1326
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: second_hand_deposit_run
+  risk: 1
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0040
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-021
+
+dedup:
+  content_hash: sha256:1f159d753f91cdf3e143ff029299864f9d8899346b6a021ee3d3f17cdae63ff9
+pipeline_status: accepted
+title: fraud_scam/second_hand_deposit_run
+conversation: |-
+  【10月8日】
+  A：在吗老周
+  B：在 公司摸鱼呢 啥事
+  A：我那台A7M3还出不出 你上回不是念叨半年了
+  B：出啊 预算一直没批下来哈哈 你现在多少出
+  A：5500 二手行里这台都挂6500往上了 你这价我先紧着熟人
+  B：这么便宜 该不会有什么问题吧哈哈
+  A：跟你还整这套 快门数不到两万 我就是换了新机器 急用钱而已
+  B：行 那走闲鱼吧 平台上我踏实点
+  A：老周 5500平台扣完手续费还要压七天的款 我这周转不开 你微信直接转我 明天顺丰发你 十年交情还能坑你?
+  B：行吧行吧 谁让咱俩铁 先转你500定金
+  【系统消息】B 向 A 转账 500 元，已收款。
+  A：收到 明天上午发顺丰保价 单号发你
+  B：成 有暗病啥的提前说啊
+  A：屏幕左下角有点小划痕 贴膜看不见 其他95新
+  B：中午约了客户 先这样 回聊
+  A：去吧去吧
+  A：对了 中秋你家去丈母娘那边还是回老家
+  B：回老家 票都抢好了 你呢
+  A：就在市里 我爸妈过来 省得折腾
+  B：行 中秋没事喊你喝酒
+  A：必须的 相机到货记得验验货
+  【10月9日】
+  A：发了 顺丰保价 单号发你微信了
+  B：收到 下班路上看下物流
+  B：哎 怎么只有揽收记录 半天不动
+  A：节前高峰 顺丰爆仓 大件要转场站 晚点扫件正常
+  B：那行 我明早再看
+  A：放心 保价底单我留着 丢了我比你急
+  B：你们最近忙不 我们季度末冲业绩 天天加班
+  A：差不多 这个节点都这样 我们仓库天天盘点
+  B：你不是调去仓储岗了
+  A：对 忙是忙 离家近 接送孩子方便
+  B：也好 嫂子上班远 你接娃正好
+  【10月10日】
+  B：还是只有揽收 你们到底发的哪家啊
+  A：顺丰 大件转场站 中转慢两天正常 我把底单拍你 你先核单号
+  B：嗯 单号对得上 那再等等 千万别整丢了
+  A：丢不了 你就担个心吧哈哈
+  B：中午食堂吃啥
+  A：土豆炖糊了 难吃 你们呢
+  B：楼下新开的轻食 我最近减脂
+  A：练得咋样了 上回说跑五公里
+  B：能跑七公里了 下个月报个半马
+  A：牛 到时候喊我给你加油
+  B：到了到了 刚驿站取的 装箱挺严实 划痕位置跟你说的分毫不差
+  A：那就放心了吧 尾款方便的时候转我 别拖过这个月哈
+  B：周五发工资一并转 晚上约饭
+  A：约什么饭 直接来我家 我下厨
+  B：成 那就周五 我带箱啤酒

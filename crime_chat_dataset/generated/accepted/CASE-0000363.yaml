@@ -1,0 +1,137 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000363
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000035
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-b931a5d2e7b3c3c7
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: contraband_illicit_trade
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: B想借A的机加工人脉凑齐一件管制器械的散件自行组装，A收定金代为从多处凑件并安排在亲戚厂房当面验证，全程对该物件讳莫如深。
+  critical_evidence:
+  - B托A寻找那种东西，A要求散件多处凑、买主自行组装
+  - 约在亲戚厂房当面验、试过再付尾款
+  - 定金12000元转账、尾款8000元现金
+  - 对外统一口径说是帮剧组做的道具
+  benign_alternatives:
+  - 五金工具采购
+  - 模型道具收藏
+
+attributes:
+  duration_days: 2
+  turn_count: 62
+  approximate_tokens_estimate: 1152
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: tool_weapon_parts
+  risk: 3
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0041
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-021
+
+dedup:
+  content_hash: sha256:b07f8a4b603244da1f59f7b2dba38aba5c5817d2e5cf6a39a2e69d8a2b8f2f5c
+pipeline_status: accepted
+title: contraband_illicit_trade/tool_weapon_parts
+conversation: |-
+  【11月4日】
+  B：老周，好久没冒泡了
+  A：忙厂里那摊子事，你呢
+  B：接点私活，凑合活着
+  A：你那手艺还怕饿着
+  B：上周回老家了，我爸七十八还下地呢
+  A：老人硬朗是福气
+  B：体检查出点基础病，让他去县医院不肯去
+  A：老人都这样，你抽空带他去市里好好查查
+  B：十一再跑一趟吧
+  A：顺路来我这坐坐
+  B：有个事想问问你，微信里说不太方便，你看着回
+  A：说
+  B：就是那个……你以前提过的，能弄到那种东西吗
+  A：哪种？
+  B：上回在你厂里门口聊的，你懂的
+  A：你要那玩意干啥
+  B：自己玩，收藏。你放心，绝不出你的手
+  A：这东西现在风声紧，不好搞
+  B：所以才找你啊，别人我不放心
+  A：让我想想，下午给你信
+  B：成，不急
+  B：对了，你那套渔具还在没
+  A：在，就是没时间
+  B：水库现在出鲫鱼，周末去？
+  A：看厂里安排
+  B：行，你定时间
+  A：事我想了下，能弄，但麻烦
+  B：你说
+  A：一整套出不了我的手，散件得从三个地方凑，你自己组装
+  B：我手艺你还不知道，装这个闭着眼
+  A：关键件我这边想办法，其余的你自己从渠道收
+  B：多少
+  A：凑齐一万八，先一万二定金，我要打点用
+  B：一万八不贵
+  A：定金先转我，尾款当面给现金
+  B：行，什么时候要
+  A：快则一周。齐了去我亲戚厂房试，试过你再给尾款八千现金
+  B：当面试？好，省得扯皮
+  A：丑话在前，这事就你知我知
+  B：懂，我嘴严
+  A：对外问起，就说是帮剧组做的道具
+  B：明白
+  【11月5日】
+  A：对了，老赵你还有联系没
+  B：前年断了，听说去南方了
+  A：他当年跟我一个班组，手最稳
+  B：可惜了，后来听说混得不好
+  A：唉，各人有各人的命
+  B：定金我备好了，现在转？
+  A：转
+  【系统消息】B 向 A 转账 12000 元，已收款。
+  A：收到
+  B：东西大概哪天能齐
+  A：最晚下周三，齐了叫你
+  B：到时候我开车过去拉
+  A：到时候再说，你别提前问
+  B：行，都听你的
+  A：试的时候别带外人
+  B：就我自己来
+  A：到了门口给我打电话，我出来接
+  B：好
+  A：剩下八千现金备好
+  B：忘不了
+  A：等我信

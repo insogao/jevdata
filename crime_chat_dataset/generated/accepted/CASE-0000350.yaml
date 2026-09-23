@@ -1,0 +1,147 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000350
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000013
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-10550b99b2aafb4b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 放贷人以行规为名先扣两个月利息、不放款缺口又拒绝任何宽限，在借款人续贷延迟时撮合他再借另一家的钱来填平这笔，把他拖进以贷还贷的滚动负债。
+  critical_evidence:
+  - 口头约定借款五万，按行规先扣两个月利息六千，实际到账44000元
+  - 无抵押物，仅凭借条和常去店里坐坐保持软性控制
+  - 银行续贷延迟后A拒绝宽限，称逾期一天就不是六千的事
+  - A主动撮合B再借另一家的钱填平这笔，形成借新还旧的滚动
+  benign_alternatives:
+  - 正常的过桥资金拆借
+  - 熟人圈内的应急借款
+
+attributes:
+  duration_days: 6
+  turn_count: 68
+  approximate_tokens_estimate: 1985
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: loan_bridge_interest_rollover
+  risk: 2
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0040
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-021
+
+dedup:
+  content_hash: sha256:8645f1d53c9bf16a217d213829eaac05cf544491fd1ce62aef0ab8c8aa227ccf
+pipeline_status: accepted
+title: fraud_scam/loan_bridge_interest_rollover
+conversation: |-
+  【10月12日】
+  A：王老板你好 李哥把你微信推我 说你月底续贷有个口子
+  B：对 银行17号续上 中间差一截 你那边怎么个章程
+  A：我们就做你这个口子的钱 常规操作 五万起
+  B：我差六万 能做吗
+  A：六万可以 利的话面谈
+  B：你这跟银行比利息高多少
+  A：银行要材料要排队 我们当天放 你要的是时间 不是便宜
+  B：那也是 要不我这个月周转就断了
+  A：明白人 那约个面谈
+  B：明天下午行吗 我店里
+  A：行 地址发我
+  B：中午匆忙 吃了碗牛肉面 你吃了吗
+  A：刚扒两口 我们做资金的 手机加车 两口热乎的都赶不上
+  B：辛苦 挣的都是辛苦钱
+  A：各干各行嘛
+  【10月13日】
+  A：昨天店里聊的 条子按五万打 利钱两个月的 一起按行规先扣
+  B：先扣? 那我到手不就少了
+  A：行规都这样 银行续贷下来你提前还我 利按月算 不吃亏
+  B：扣完多少
+  A：五万的条 扣你六千 到手四万四
+  B：两个月就六千?
+  A：你去别处问问这个口子期 有货的都这个价 你到期还不上 我这边也有说法
+  B：什么说法
+  A：到期前一天我提醒你 续贷批文发我看一眼 大家都踏实
+  B：行吧 谁让我急 明天转吧
+  A：你店在老城那家? 我路过大排档那条街 你家油烟味飘半条街
+  B：哈哈 老店 十五年了
+  A：回头去尝尝 你看着结账 别算我头上
+  B：你来我请 谈什么结账
+  【10月14日】
+  A：卡号发我 四万四现在转
+  B：发你了
+  【系统消息】A 向 B 转账 44000 元，已收款。
+  A：转了 点一下 条子我拍给你 按老规矩不押东西 去你店里坐坐就行
+  B：收到四万四 五万的条子我拍个照存着
+  A：嗯 17号之前 续贷下来提前一天说
+  B：好 这两天店里忙 就不留你了
+  A：去忙吧
+  B：今天进货 刀鱼便宜 进了二十斤
+  A：你们水产行也看运气 台风一过价就乱
+  B：可不是 赌一把
+  A：赌有赌的挣法 稳有稳的挣法
+  【10月15日】
+  B：李哥 银行说要补材料 续贷可能得22号才放 17号还你有点悬
+  A：老王 17号就是17号 条子上白纸黑字
+  B：我店账上还差两万多 我再想想办法
+  A：想办法是对的 逾期一天 就不是六千的事了 你懂的
+  B：再宽限几天行吗
+  A：我上面也有规矩 宽限不了 你真周转不开 就提前跟我说 我教你路子
+  B：什么路子
+  A：先不细说 你确定续贷来不及 今天就给我话
+  A：中午店里客人多不
+  B：一般 工作日就这样 晚上才上人
+  A：那养精蓄锐 晚上好好干
+  B：嗯
+  【10月16日】
+  B：确定了 银行22号 我17号真还不上 你说的路子是什么
+  A：我有个朋友也做这个口子 他那边先给你出六万 你把我这五万填上 多出来的救急 到22号银行下来 两头一起结
+  B：那我不是又欠一层 你这朋友利息多少
+  A：跟我一样 行规价 你算算 银行一天不批 你这边就不断粮 总比店里停摆强
+  B：这么滚下去我心里发慌
+  A：慌什么 生意人的账都是滚着做的 你隔壁老陈上个月也是这么平的 现在不也好好的
+  B：让我想想
+  A：明天中午前给我话 我朋友那边也要排队
+  A：你儿子放学谁接 嫂子去店里帮忙?
+  B：她晚上才去 我妈接
+  A：挺好 一家人齐上阵 生意差不了
+  B：唉 累是累点
+  【10月17日】
+  B：就按你说的吧 先把我这边平了 22号银行一下来马上结清
+  A：明白人 我把朋友推给你 记住 还是老规矩 先扣利
+  B：唉 知道了 这个月过后我再也不碰这个了
+  A：话别说死 生意人 谁还没个手紧的时候

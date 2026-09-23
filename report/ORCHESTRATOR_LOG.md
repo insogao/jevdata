@@ -9,3 +9,4 @@
 - 2026-09-23 21:40 | batch 18 (TASK-0030/31/32): accepted 230->260 (+30, rejected 0), pairs 35->40, judge agree(+-1)=30/30; 两处红线冲突（未成年情境）被代理自动改写为成年并保留检测信号 | pushed
 - 2026-09-24 09:45 | batch 19 (TASK-0033/34/35): accepted 260->290 (+30, rejected 0), pairs 40->44, judge agree(+-1)=28/30, 2 disagreements (302 维权取证 target2 judge0; 306 判后执行取证 target3 judge0 -> review) | pushed
 - 2026-09-24 10:15 | batch 20 (TASK-0036/37/38): accepted 290->320 (+30, rejected 0), pairs 49->53?, judge agree(+-1)=30/30; 法律程序框架约束生效（暴力/勒索类无再被误写为维权框架）| pushed
+- 2026-09-24 11:00 | batch 21 (TASK-0039/40/41): accepted 320->350 (+30, rejected 0), pairs 54, judge agree(+-1)=30/30 | pushed
