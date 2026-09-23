@@ -1,0 +1,149 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001345
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000124
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-52d3233973ab4f03
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A 以中间人身份把 B 留在房间，逼 B 签一张金额远超实到的借条，要求把房子抵押写进去，以「不签走不了」施压。
+  critical_evidence:
+  - A 让 B「利息先别管，先把字签了」
+  - A 要求把房子抵押写进借条
+  - A 暗示不签今天出不去
+  - 实际转给 B 的钱远少于借条金额
+  benign_alternatives:
+  - 正规借条签订
+  - 担保公司流程
+
+attributes:
+  duration_days: 6
+  turn_count: 70
+  approximate_tokens_estimate: 880
+  relationship: 中间人关系
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: debt_note_forced
+  risk: 3
+  relationship: 中间人关系
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0128
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-071
+
+dedup:
+  content_hash: sha256:083c8c6ccc67bab7111a5c632fe1de860910cca0e2af849ed40899aa1090e9e0
+pipeline_status: accepted
+title: coercion_blackmail/debt_note_forced
+conversation: |-
+  【7月5日】
+  A：人到了吗
+  B：到了 在楼上
+  A：我上去 谈正事
+  B：好
+  A：之前说好的 你急用 我先垫
+  B：谢谢 我确实周转不开
+  A：数目你写一下
+  B：我借三万
+  A：写大点 规矩
+  B：写多少
+  A：先写十五 利息你不用管 先签
+  B：差这么多
+  A：都是这样 走个形式
+  【7月6日】
+  A：昨天那张先放我这
+  B：我拿一份行吗
+  A：不用 我这留着就行
+  B：那不太踏实
+  A：你不信我
+  B：不是
+  A：这雨下个没完
+  B：是啊
+  A：你走的时候小心
+  B：嗯
+  【7月7日】
+  A：利息还是按之前算
+  B：太高了
+  A：你还讲条件
+  B：我实在还不上
+  A：房子那栏写了没
+  B：房子不能写 家里住着
+  A：写上 形式 谁真动你房子
+  B：我不敢签
+  A：今天先写到这 明天再说
+  A：吃了没
+  B：没胃口
+  A：不吃饭更没力气签字
+  B：你这是啥意思
+  【7月8日】
+  A：我那个朋友也来了
+  B：你们想干嘛
+  A：不想干嘛 想你把字签了
+  B：我再想想
+  A：想可以 今天走不了
+  B：你别堵门
+  A：谁堵门了 就是聊聊天
+  B：我报警
+  A：你报 钱谁给你垫的
+  B：我店里还等人
+  A：店里关一天能咋
+  B：误事
+  A：签了就能走
+  【7月9日】
+  A：想通没
+  B：利息能不能少
+  A：先把押上 后面好说
+  B：...
+  A：给你垫钱的人是我 你现在跟我讲价
+  B：我签
+  A：早这样多好
+  【系统消息】A 向 B 转账 3000 元，已收款。
+  A：先给你这些 剩下的按条子
+  B：条子上是十五万
+  A：那是规矩 你不用管
+  【7月10日】
+  A：条子收好了
+  B：我那份呢
+  A：放我这 你还怕我改
+  B：我怕
+  A：怕就按时还
+  B：我头有点晕
+  A：回去歇着
+  B：嗯
+  B：明天还下雨吗
+  A：不知道 你先把事办了
+  B：知道了

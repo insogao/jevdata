@@ -1,0 +1,120 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001354
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000023
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-0f5238624d51e5ef
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 采购员A和供应商B串通抬高耗材报价、发票品名写模糊，A验货时走过场，超出部分私下由B返给A作为好处。
+  critical_evidence:
+  - A利用唯一供应商身份和B议价、抬高单价
+  - A要求发票品名写模糊，别把明细列清楚
+  - A验货只走个过场、不去细查
+  - B按约定私下转账给A作为返点
+  benign_alternatives:
+  - 正常议价采购
+  - 集中采购折扣
+
+attributes:
+  duration_days: 4
+  turn_count: 43
+  approximate_tokens_estimate: 603
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: procurement_price_padding
+  risk: 2
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0129
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-071
+
+dedup:
+  content_hash: sha256:d6df0564e5cf1f17083e695e451e215f665ce2f9c9ad8acf63c5a88f3d722dd0
+pipeline_status: accepted
+title: bribery_corruption/procurement_price_padding
+conversation: |-
+  【10月10日】
+  A：老吴 上次那批耗材 你们报个价
+  B：按老价 加五个点
+  A：加太多了吧
+  B：你要的返点也得留出来啊
+  A：行 那你把单价再抬抬 反正就你一家
+  B：就咱俩这关系 我配合
+  A：发票品名别写太细
+  B：写啥
+  A：就写办公用品一批
+  B：懂了
+  A：今晚还得加班对账
+  B：你们也够呛
+  A：习惯了
+  【10月11日】
+  B：合同我拟好了 你看下
+  A：数量按我说的写
+  B：超出的那部分呢
+  A：混在里面 别单列
+  B：验货你咋弄
+  A：我去看一眼就行 走个过场
+  B：那可别被人盯上
+  A：就我一个人去 放心
+  B：你体检没
+  A：没空
+  B：别拖
+  A：年底再说
+  【10月12日】
+  A：货到了 我签了
+  B：这么快
+  A：我说了走过场
+  B：尾款你们财务几时打
+  A：月底 流程走完就付
+  B：差我那部分呢
+  A：老规矩 私下转你
+  【系统消息】A 向 B 转账 3000 元，已收款。
+  B：收到
+  A：这个月的
+  A：你儿子中考完没
+  B：完了 考得一般
+  A：花钱上个好点的
+  B：正愁呢
+  【10月13日】
+  A：下批还按这个来
+  B：行 单价我再往上提提
+  A：别太狠 财务要审
+  B：那写模糊点
+  A：对 品名别露

@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001348
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000059
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-e4269357dc9872b1
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 托亲戚 B 问之前提过的正规商务陪同（翻译加陪同）资源还在不在，报了身高年龄是为了定礼服尺码，酒店自理，转给 B 一点代订感谢费，属正常商务安排。
+  critical_evidence:
+  - A 问 B 之前说的正规商务陪同资源还在吗
+  - A 报了身高年龄（用于定礼服/准备资料）
+  - 约定酒店费用由 A 自付
+  - A 转给 B 一笔代订感谢费（正常往来）
+  benign_alternatives:
+  - 正规商务伴游澄清
+  - 朋友聚会邀约
+
+attributes:
+  duration_days: 3
+  turn_count: 56
+  approximate_tokens_estimate: 794
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: escort_arrangement
+  risk: 0
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0128
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-071
+
+dedup:
+  content_hash: sha256:05e0335bf46d8be9f835c5100ad4cc8569a76198d3d5632276af81bdb9948dfd
+pipeline_status: accepted
+title: sexual_transaction_exploitation/escort_arrangement
+conversation: |-
+  【9月1日】
+  A：姐 问你个事
+  B：说吧
+  A：你上回说的那个资源 还在吗
+  B：哪个
+  A：就你朋友做商务陪同的那个 翻译加陪同
+  B：哦 那个啊 还在 她最近接单
+  A：我这周去外地谈客户 想请一个
+  B：你要男的女的
+  A：都行 主要能撑场面 会点英语
+  B：你得给我个身高年龄 我好给人说
+  A：我一米七五 三十出头
+  B：那是给人看你 还是给人挑的
+  A：是给我定礼服 人家好按尺码准备
+  B：哦对 正经场合要穿正装
+  A：这两天降温
+  B：是啊 出差带厚衣服
+  A：嗯
+  B：别冻着
+  B：吃饭没
+  A：还在忙
+  B：再忙也得吃点
+  A：好
+  B：你妈让你周末回去
+  A：出差回来就去
+  B：她念叨你
+  A：知道
+  【9月2日】
+  B：我跟她说了 你那天能约
+  A：费用咋算
+  B：按天 你直接给她 我不经手
+  A：行
+  B：酒店你订
+  A：嗯 酒店我自付 就订会场旁边
+  B：那就方便了
+  A：帮我确认下她那天有空
+  B：她说没问题
+  A：客户那边改时间了
+  B：那你也跟人家说一声
+  A：好 我联系
+  B：别放人鸽子
+  【9月3日】
+  A：定下来了 周四下午
+  B：我让她提前到
+  A：好 正装就行 不用太隆重
+  B：知道 商务场合
+  A：对了 麻烦你跑前跑后 给你转点感谢费
+  B：这点事转啥
+  A：拿着 买杯咖啡
+  【系统消息】A 向 B 转账 200 元，已收款。
+  B：收到 你这孩子
+  A：应该的
+  B：周四有雨
+  A：我带伞
+  B：会场远不远
+  A：不远
+  B：到了记得吃饭
+  A：跟客户一起吃
+  B：少喝酒
+  A：知道啦

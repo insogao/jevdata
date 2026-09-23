@@ -1,0 +1,143 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001352
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000074
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-1f41c1b27f6a8e31
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 在康复机构里做事的A和外面的前同事B搭线，让B在外面找人，给“里面的人”安排有偿陪伴；A负责在里面递话、收钱，两人约定走后门、都别带手机避查。
+  critical_evidence:
+  - A提到里面的人也有需求、要找个伴
+  - A让B在外面先安排人、自己负责在里面递话
+  - 两人约定走侧门、都别带手机，避开正门
+  - 完事后A转账给B作为辛苦费
+  benign_alternatives:
+  - 正常家属会见沟通
+  - 所内小卖部
+
+attributes:
+  duration_days: 6
+  turn_count: 64
+  approximate_tokens_estimate: 784
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: rehab_house_pimping
+  risk: 3
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0129
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-071
+
+dedup:
+  content_hash: sha256:6efe1e3c45de835561d319b1a473f04d78752f73477274b3a8d41360d6d87cdb
+pipeline_status: accepted
+title: sexual_transaction_exploitation/rehab_house_pimping
+conversation: |-
+  【9月26日】
+  A：老陈 最近还在外面跑那摊不
+  B：跑着呢 你那边咋样
+  A：老样子 管得严
+  B：严有严的做法
+  A：里面的人也有想法 你懂的
+  B：想找伴?
+  A：小声点 就这意思
+  B：你那边几个?
+  A：先一个 试试水
+  B：要啥样的
+  A：你看着安排 别太张扬
+  B：你妈身体好点没
+  A：还行 吃药控制着
+  B：有空回去看
+  A：走不开
+  B：也是
+  【9月27日】
+  B：外面的人我问了 愿意的
+  A：稳当不
+  B：老手了 知道分寸
+  A：那就行
+  B：咋见面
+  A：你别来正门
+  B：那从哪
+  A：后头那个侧门 我跟门口说一声
+  B：别带手机
+  A：那肯定的 你也别带
+  B：这我懂
+  B：你那活儿累不
+  A：夜班多
+  B：注意身体
+  A：习惯了
+  【9月28日】
+  A：我递的话到了 他说行
+  B：那日子定没
+  A：下周二 午后
+  B：钱呢
+  A：老规矩 你先垫 完事我给你
+  B：别拖太久
+  A：放心 我这人你还信不过
+  B：信
+  B：下雨了
+  A：我这也下
+  B：天凉了 里面更闷
+  A：别提了
+  【9月29日】
+  A：周二那事 人到了没
+  B：到了 安排妥当
+  A：顺利吧
+  B：顺利 就是嘴碎 爱聊
+  A：下次挑个话少的
+  B：行
+  A：你把账号给我 我转你
+  【系统消息】A 向 B 转账 800 元，已收款。
+  B：收到
+  A：这个月就当辛苦费
+  【9月30日】
+  B：那边还想再来
+  A：上瘾了?
+  B：说挺好
+  A：那就还按老路子
+  B：你别老在我这压钱
+  A：月底一起结
+  B：成
+  【10月1日】
+  A：最近上头查得紧 先歇两天
+  B：我听你的
+  A：有信我再递话
+  B：别断就行
+  A：断不了

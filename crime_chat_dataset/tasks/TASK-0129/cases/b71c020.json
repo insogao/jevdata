@@ -1,0 +1,484 @@
+{
+ "key": "b71c020",
+ "archetype_id": "ARC-000081",
+ "subtype": "medical_record_browse",
+ "latent_intent": "A经人介绍找到医院检验科的B，托他“系统里点一下”查看一个并非本人、也没有授权的化验单；B一开始推脱，最终在系统里调出结果，A随即发红包作为答谢，双方都清楚这绕开了正常流程。",
+ "critical_facts": [
+  "A托B查的是一个不是A本人、也拿不到授权的化验单",
+  "B提到可以在系统里点一下调阅结果",
+  "A事后发红包作为答谢",
+  "双方都清楚这与正常调阅流程不同，B叮嘱别外传"
+ ],
+ "benign_alternatives": [
+  "陪诊代取报告授权",
+  "保险核保流程"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "9月10日 09:00",
+   "speaker": "A",
+   "text": "你好 是芳姐给的号吗"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 09:03",
+   "speaker": "B",
+   "text": "是我 你是?"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 09:05",
+   "speaker": "A",
+   "text": "我姓陈 芳姐让我找你 说你在医院上班"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 09:07",
+   "speaker": "B",
+   "text": "哦 芳姐啊 有事吗"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 09:09",
+   "speaker": "A",
+   "text": "想麻烦你个小忙"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 09:11",
+   "speaker": "B",
+   "text": "先说啥事"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 09:13",
+   "speaker": "A",
+   "text": "我有个朋友 前阵子在你那做了个检查"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 09:15",
+   "speaker": "B",
+   "text": "哪个科"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 09:16",
+   "speaker": "A",
+   "text": "检验科 抽血那块的"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 09:18",
+   "speaker": "B",
+   "text": "你到底要看啥"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 09:20",
+   "speaker": "A",
+   "text": "他的化验单 我想确认下结果"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 09:22",
+   "speaker": "B",
+   "text": "这个得本人来调 你不是本人我不好弄"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 09:24",
+   "speaker": "A",
+   "text": "我知道 就是图省事 不想惊动他"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 09:26",
+   "speaker": "B",
+   "text": "你这有点为难我"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 09:28",
+   "speaker": "A",
+   "text": "你看方便的话 系统里点一下就有了"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 09:30",
+   "speaker": "B",
+   "text": "系统里是有 但那是内部的东西"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 10:15",
+   "speaker": "A",
+   "text": "你们那今天下雨没 我这边菜都淋了"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 10:18",
+   "speaker": "B",
+   "text": "下了 我伞都吹翻了"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 10:19",
+   "speaker": "A",
+   "text": "这鬼天气"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 10:21",
+   "speaker": "B",
+   "text": "明天还降温 多穿点"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 10:22",
+   "speaker": "A",
+   "text": "嗯"
+  },
+  {
+   "type": "message",
+   "time": "9月11日 14:00",
+   "speaker": "A",
+   "text": "芳姐说你这人热心 我就直说了"
+  },
+  {
+   "type": "message",
+   "time": "9月11日 14:03",
+   "speaker": "B",
+   "text": "你别老提芳姐"
+  },
+  {
+   "type": "message",
+   "time": "9月11日 14:05",
+   "speaker": "A",
+   "text": "我真是急用 就一个结果"
+  },
+  {
+   "type": "message",
+   "time": "9月11日 14:07",
+   "speaker": "B",
+   "text": "名字发我"
+  },
+  {
+   "type": "message",
+   "time": "9月11日 14:09",
+   "speaker": "A",
+   "text": "姓周 上周三做的"
+  },
+  {
+   "type": "message",
+   "time": "9月11日 14:20",
+   "speaker": "B",
+   "text": "我看看啊"
+  },
+  {
+   "type": "message",
+   "time": "9月11日 14:26",
+   "speaker": "B",
+   "text": "查到了 有一项指标高"
+  },
+  {
+   "type": "message",
+   "time": "9月11日 14:28",
+   "speaker": "A",
+   "text": "高多少"
+  },
+  {
+   "type": "message",
+   "time": "9月11日 14:30",
+   "speaker": "B",
+   "text": "比正常高两倍 具体我不方便说太细"
+  },
+  {
+   "type": "message",
+   "time": "9月11日 14:32",
+   "speaker": "A",
+   "text": "行 够了我心里有数"
+  },
+  {
+   "type": "message",
+   "time": "9月11日 15:05",
+   "speaker": "B",
+   "text": "中午你吃啥"
+  },
+  {
+   "type": "message",
+   "time": "9月11日 15:08",
+   "speaker": "A",
+   "text": "点了份盖饭 咸得要死"
+  },
+  {
+   "type": "message",
+   "time": "9月11日 15:10",
+   "speaker": "B",
+   "text": "我们食堂还行 就是菜少"
+  },
+  {
+   "type": "message",
+   "time": "9月11日 15:12",
+   "speaker": "A",
+   "text": "你们有食堂真幸福"
+  },
+  {
+   "type": "message",
+   "time": "9月11日 15:13",
+   "speaker": "B",
+   "text": "也就那样"
+  },
+  {
+   "type": "message",
+   "time": "9月11日 15:15",
+   "speaker": "A",
+   "text": "改天我请你吃饭谢你"
+  },
+  {
+   "type": "message",
+   "time": "9月11日 15:16",
+   "speaker": "B",
+   "text": "先别说这个"
+  },
+  {
+   "type": "message",
+   "time": "9月12日 09:30",
+   "speaker": "A",
+   "text": "昨天的事 太谢谢了"
+  },
+  {
+   "type": "message",
+   "time": "9月12日 09:32",
+   "speaker": "B",
+   "text": "小事 你别往外说"
+  },
+  {
+   "type": "message",
+   "time": "9月12日 09:33",
+   "speaker": "A",
+   "text": "那肯定"
+  },
+  {
+   "type": "message",
+   "time": "9月12日 09:35",
+   "speaker": "A",
+   "text": "我意思意思 你别嫌少"
+  },
+  {
+   "type": "transfer",
+   "time": "9月12日 09:36",
+   "from": "A",
+   "to": "B",
+   "amount": 200,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "9月12日 09:38",
+   "speaker": "B",
+   "text": "你这干嘛"
+  },
+  {
+   "type": "message",
+   "time": "9月12日 09:40",
+   "speaker": "A",
+   "text": "就是个红包 别多想"
+  },
+  {
+   "type": "message",
+   "time": "9月12日 09:41",
+   "speaker": "B",
+   "text": "我收着不合适"
+  },
+  {
+   "type": "message",
+   "time": "9月12日 09:43",
+   "speaker": "A",
+   "text": "一杯茶钱 你不收我下次不好意思找你"
+  },
+  {
+   "type": "message",
+   "time": "9月12日 09:44",
+   "speaker": "B",
+   "text": "那…下不为例"
+  },
+  {
+   "type": "message",
+   "time": "9月12日 09:46",
+   "speaker": "A",
+   "text": "好说 好说"
+  },
+  {
+   "type": "message",
+   "time": "9月12日 12:20",
+   "speaker": "B",
+   "text": "对了 你家娃几年级了"
+  },
+  {
+   "type": "message",
+   "time": "9月12日 12:22",
+   "speaker": "A",
+   "text": "三年级 天天接送"
+  },
+  {
+   "type": "message",
+   "time": "9月12日 12:24",
+   "speaker": "B",
+   "text": "我闺女刚上幼儿园 哭了一个礼拜"
+  },
+  {
+   "type": "message",
+   "time": "9月12日 12:26",
+   "speaker": "A",
+   "text": "都这样 熬过就好"
+  },
+  {
+   "type": "message",
+   "time": "9月12日 12:27",
+   "speaker": "B",
+   "text": "当爹妈的命"
+  },
+  {
+   "type": "message",
+   "time": "9月13日 09:10",
+   "speaker": "A",
+   "text": "还有个事 顺便"
+  },
+  {
+   "type": "message",
+   "time": "9月13日 09:12",
+   "speaker": "B",
+   "text": "你说"
+  },
+  {
+   "type": "message",
+   "time": "9月13日 09:14",
+   "speaker": "A",
+   "text": "我另一个朋友 也想看看"
+  },
+  {
+   "type": "message",
+   "time": "9月13日 09:15",
+   "speaker": "B",
+   "text": "你可别拿我当通道"
+  },
+  {
+   "type": "message",
+   "time": "9月13日 09:17",
+   "speaker": "A",
+   "text": "就一两次 真的"
+  },
+  {
+   "type": "message",
+   "time": "9月13日 09:18",
+   "speaker": "B",
+   "text": "不行 上次那个我到现在心里都不踏实"
+  },
+  {
+   "type": "message",
+   "time": "9月13日 09:20",
+   "speaker": "A",
+   "text": "行行 不为难你"
+  },
+  {
+   "type": "message",
+   "time": "9月13日 09:21",
+   "speaker": "B",
+   "text": "谢谢理解"
+  },
+  {
+   "type": "message",
+   "time": "9月13日 20:10",
+   "speaker": "A",
+   "text": "昨晚那部片子看了没"
+  },
+  {
+   "type": "message",
+   "time": "9月13日 20:12",
+   "speaker": "B",
+   "text": "没 好看吗"
+  },
+  {
+   "type": "message",
+   "time": "9月13日 20:14",
+   "speaker": "A",
+   "text": "一般 睡着两次"
+  },
+  {
+   "type": "message",
+   "time": "9月13日 20:15",
+   "speaker": "B",
+   "text": "哈哈 那我不看了"
+  },
+  {
+   "type": "message",
+   "time": "9月13日 20:17",
+   "speaker": "A",
+   "text": "别去 浪费票钱"
+  },
+  {
+   "type": "message",
+   "time": "9月14日 08:30",
+   "speaker": "B",
+   "text": "你那个朋友的结果 别拿去乱说"
+  },
+  {
+   "type": "message",
+   "time": "9月14日 08:32",
+   "speaker": "A",
+   "text": "放心 就我自己看"
+  },
+  {
+   "type": "message",
+   "time": "9月14日 08:33",
+   "speaker": "B",
+   "text": "嗯 这事就到这"
+  },
+  {
+   "type": "message",
+   "time": "9月14日 08:35",
+   "speaker": "A",
+   "text": "明白 以后不麻烦你了"
+  },
+  {
+   "type": "message",
+   "time": "9月14日 18:00",
+   "speaker": "A",
+   "text": "最近开始跑步了"
+  },
+  {
+   "type": "message",
+   "time": "9月14日 18:02",
+   "speaker": "B",
+   "text": "好 坚持住"
+  },
+  {
+   "type": "message",
+   "time": "9月14日 18:04",
+   "speaker": "A",
+   "text": "跑了三天 腿疼"
+  },
+  {
+   "type": "message",
+   "time": "9月14日 18:05",
+   "speaker": "B",
+   "text": "正常 慢点加量"
+  },
+  {
+   "type": "message",
+   "time": "9月14日 18:07",
+   "speaker": "A",
+   "text": "行 听你的"
+  }
+ ],
+ "source_seed_ids": [
+  "SEED-SRC-AEG-001-b855698c10df37b2"
+ ],
+ "_registered": {
+  "case_id": "CASE-0001355",
+  "status": "accepted",
+  "errors": []
+ }
+}

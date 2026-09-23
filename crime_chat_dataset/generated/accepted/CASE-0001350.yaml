@@ -1,0 +1,131 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001350
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000117
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-f47e708446aafe9e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: theft_robbery_property_crime
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A约表弟B趁夜间去地里拆走灌溉电机，提醒等浇完地再动手、避开村口的狗从河沟绕后，得手后拉到废品站按铜价卖掉并分钱。
+  critical_evidence:
+  - A提出等浇完地后晚上动手收走电机
+  - A提到铜价现在高、卖一公斤顶过去一公斤半
+  - A提醒村口狗多、要从河沟后面绕过去
+  - 得手后约定拉到废品站并分钱，A先转了B一部分
+  benign_alternatives:
+  - 废品正常回收
+  - 农机维修
+
+attributes:
+  duration_days: 3
+  turn_count: 55
+  approximate_tokens_estimate: 676
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: farm_irrigation_motor_theft
+  risk: 2
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0129
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-071
+
+dedup:
+  content_hash: sha256:981a895a9034c440be2222fd0df4ebe00b62359deac6517f755ee3ca5e2c2416
+pipeline_status: accepted
+title: theft_robbery_property_crime/farm_irrigation_motor_theft
+conversation: |-
+  【9月23日】
+  A：弟 睡了没
+  B：没 刚喂完猪
+  A：这两天晚上有空不
+  B：干嘛
+  A：老地方那几台 该收拾了
+  B：那玩意儿现在能卖钱?
+  A：铜价现在高 一公斤顶过去一公斤半
+  B：你摸清了?
+  A：白天我去看了 就等你
+  B：行 啥时候
+  A：等地浇完 动静小
+  B：那我等信
+  A：你家玉米收了没
+  B：收了一半 剩下等天晴
+  A：再下雨就霉了
+  B：是啊 愁人
+  A：明天我去帮你
+  B：那感情好
+  【9月24日】
+  A：差不多了 今晚就能动
+  B：几点
+  A：后半夜 人都睡了
+  B：村口那几家狗多
+  A：所以绕后头 从河沟那边过去
+  B：你熟
+  A：带个扳手就行 别多带
+  B：车呢
+  A：三轮停大路边 用草盖着
+  B：我儿子学费又催了
+  A：这不就来了
+  B：就靠这几台?
+  A：凑一凑够一学期
+  B：唉
+  A：别唉了 干完就好
+  【9月25日】
+  B：弄回来了 放老院子了
+  A：数了没
+  B：四台
+  A：明早我拉去废品站
+  B：人家不问?
+  A：都熟人 拆开称重
+  B：那钱咋分
+  A：对半 我出力多点拿六
+  B：凭啥
+  A：踩点的活我干的
+  B：行吧
+  A：先转你一部分
+  【系统消息】A 向 B 转账 1200 元，已收款。
+  B：收到 剩下的?
+  A：卖完一起算
+  A：今晚有雨 你盖好
+  B：早盖了
+  A：那就睡吧
+  B：嗯
+  A：完事喝点
+  B：行 你带酒
+  A：老白干
+  B：够劲

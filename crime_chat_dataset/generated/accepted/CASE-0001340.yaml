@@ -1,0 +1,134 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001340
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000059
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-e4269357dc9872b1
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 找亲戚 B 打听之前提过的「资源」还在不在，让 B 帮忙安排有偿陪侍，报了自己的身高年龄要求，称酒店自付，并转去一笔定金。
+  critical_evidence:
+  - A 问 B「资源还在吗」
+  - B 让 A 报身高年龄要求
+  - 约定酒店费用由 A 自付
+  - A 转给 B 一笔定金
+  benign_alternatives:
+  - 正规商务伴游澄清
+  - 朋友聚会邀约
+
+attributes:
+  duration_days: 3
+  turn_count: 58
+  approximate_tokens_estimate: 748
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: escort_arrangement
+  risk: 2
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0128
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-071
+
+dedup:
+  content_hash: sha256:f3c20906fdd85f14872c63d5640095725d8bf69185f2b9d01a5237476121181a
+pipeline_status: accepted
+title: sexual_transaction_exploitation/escort_arrangement
+conversation: |-
+  【5月6日】
+  A：姐 问你个事
+  B：说吧
+  A：你之前说的那个资源 还在吗
+  B：哪个资源
+  A：就上次吃饭你提的 能安排人的那个
+  B：哦 那个啊 你咋突然问
+  A：我这周出差 一个人没意思
+  B：你想要啥样的
+  A：你那都什么条件
+  B：你先报下身高年龄 我好挑
+  A：我一米七八 三十出头
+  B：行 喜欢啥类型的
+  A：安静点的 别太吵
+  B：我先问问 不一定有
+  A：这两天热死了
+  B：可不是 开空调都嫌不够
+  A：你注意别中暑
+  B：你也是
+  B：吃饭没
+  A：刚应酬完
+  B：少喝点酒
+  A：没办法
+  B：你妈知道你这周出差吗
+  A：没细说
+  B：有空给家里打个电话
+  A：好
+  【5月7日】
+  B：问到了 有一个 你说的时间能来
+  A：条件咋样
+  B：按你要求 安静 人也精神
+  A：那费用呢
+  B：陪一晚 费用你直接给 我不经手
+  A：酒店呢
+  B：酒店你自己开 她不管这个
+  A：行 酒店我自付
+  B：定金先给点 我好跟人说
+  A：多少
+  B：一千二 意思一下
+  A：我转你
+  【系统消息】A 向 B 转账 1200 元，已收款。
+  B：收到了 我给你定
+  A：别跟家里提
+  B：知道 你放心
+  A：明天还有个会
+  B：忙完再说
+  A：嗯
+  B：别误了正事
+  A：不会
+  【5月8日】
+  A：几点到
+  B：晚上八点 到了给我消息
+  A：好
+  B：别迟到 人家时间紧
+  A：知道了
+  A：要是不合适呢
+  B：不合适你跟我说 我换
+  A：行
+  B：今晚有雨 带伞
+  A：好
+  B：路上慢点
+  A：嗯

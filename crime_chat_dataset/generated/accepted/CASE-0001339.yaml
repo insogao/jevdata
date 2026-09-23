@@ -1,0 +1,130 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001339
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000049
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-dd10ffc74d070dc2
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A 替上面传话，约 B 到地下车库以「给他长长记性」相威胁，并按「别出人命就行」的口径施压，逼 B 服软先交一笔钱。
+  critical_evidence:
+  - A 传话说要让 B「长长记性」
+  - A 约 B 到地下车库见面
+  - A 提到上面交代「别出人命就行」
+  - B 转给 A 一笔钱平息
+  benign_alternatives:
+  - 严格管理谈话
+  - 劳动纠纷调解
+
+attributes:
+  duration_days: 2
+  turn_count: 55
+  approximate_tokens_estimate: 882
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: beat_example_warning
+  risk: 3
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0128
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-071
+
+dedup:
+  content_hash: sha256:5e86a7aa32e1a787fbe4c7f110c2f21bcc9ff3dfe563ac56a35daedb2126677b
+pipeline_status: accepted
+title: violence_extortion/beat_example_warning
+conversation: |-
+  【3月10日】
+  A：在不在
+  B：在 张哥
+  A：你最近躲什么呢 电话也不接
+  B：没有 就是忙
+  A：忙不忙先放放 说正事 上面发话了
+  B：啥事啊
+  A：上次那笔账 你打算怎么算
+  B：我手头紧 再宽限几天
+  A：宽限 老板那边我压了两回了
+  B：我知道 我一定想办法
+  A：明晚地库见 给你长长记性 别怪我
+  B：张哥 别 有话好好说
+  A：上面交代了 别出人命就行 你自己掂量
+  B：这两天雨下得挺大
+  A：嗯 路上滑
+  B：出门当心
+  A：我开车没事
+  A：你吃饭没
+  B：还没 没胃口
+  A：该吃吃 事是事
+  B：嗯
+  B：我妈还等着我回去
+  A：谁家没老小 你把事办利索了都能回去
+  B：我知道
+  A：别让我难做
+  B：店里最近也没生意
+  A：那是你的事 账不还上 说啥都没用
+  B：我想办法凑
+  【3月11日】
+  A：晚上八点 老地方地库 别迟到
+  B：张哥 我凑了点 你看能不能先过去
+  A：多少
+  B：两千 先给你 剩下的这两周凑齐
+  A：就这点 你打发谁呢
+  B：真的就这些了 我把货都压了
+  A：行 先拿着 剩下的说好时间
+  B：明天我把钱转你
+  A：地库还去不去 你自己想清楚
+  B：我明天把钱转过去 咱别动手行吗
+  A：上面就等你个态度
+  B：明天下雨 我打车过去
+  A：随便 别迟到
+  B：好
+  A：到点先吃点
+  B：没心思吃
+  A：别到时候腿软站不稳
+  B：嗯
+  A：记住 别出人命 吓唬吓唬就行
+  B：我知道了
+  B：钱转过去了 你查下
+  【系统消息】B 向 A 转账 2000 元，已收款。
+  A：收到 剩下的一周内
+  B：好 谢谢张哥
+  A：谢啥 别让我再来找你
+  B：不会了
+  B：店里的事我尽快处理
+  A：嗯 踏实点

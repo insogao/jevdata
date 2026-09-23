@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001347
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000049
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-dd10ffc74d070dc2
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 请熟人 B 帮忙，用严肃谈话的方式让一名屡劝不改的员工「长长记性」，约在车库当面谈，只是口头敲打，并转给 B 一点误工油费。
+  critical_evidence:
+  - A 说想让那个员工「长长记性」，但明确是严肃谈话
+  - 约在地下车库当面沟通（下班顺路）
+  - A 叮嘱别把话说太狠、别闹起来
+  - A 转给 B 一点误工油费（正常往来）
+  benign_alternatives:
+  - 严格管理谈话
+  - 劳动纠纷调解
+
+attributes:
+  duration_days: 2
+  turn_count: 51
+  approximate_tokens_estimate: 765
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: beat_example_warning
+  risk: 0
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0128
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-071
+
+dedup:
+  content_hash: sha256:1013819e3dbb267d468a3d26adeb4285d39926bf9b1f4ae2af98cdf0b952a593
+pipeline_status: accepted
+title: violence_extortion/beat_example_warning
+conversation: |-
+  【3月10日】
+  A：老李 帮个忙
+  B：你说 张哥
+  A：车间那小刘 你认识吧
+  B：认识 老迟到的那个
+  A：说了多少回不改 我想让他长长记性
+  B：你打算咋弄
+  A：就是找他好好谈谈 你来帮我说几句
+  B：行 我跟他熟 能说上话
+  A：明天下了班 地库那儿 他停车在旁边
+  B：好 顺路 我等他
+  A：别把话说太狠 别闹起来
+  B：今天风大
+  A：降温了
+  B：多穿点
+  A：你也是
+  A：中午食堂吃的啥
+  B：随便打了两个菜
+  A：吃好点
+  B：嗯
+  A：这周产量还行
+  B：昨晚赶了一批
+  A：辛苦 回头给你记上
+  B：应该的
+  B：我闺女明天开家长会
+  A：那你先去 谈完再过去
+  B：来得及 谈完就走
+  A：好
+  【3月11日】
+  B：人我约到了 就在B2层
+  A：好好说 别动手
+  B：放心 我就是把话摆开
+  B：我问他是不是家里有事 老迟到
+  A：他咋说
+  B：说娃生病 早上要送医院
+  A：那也得按规矩来 请假报备
+  B：我跟他说了 让他写个情况说明
+  A：行 谈开就好 别闹僵
+  B：谈得挺顺 他答应改
+  A：那就好 我请你喝水
+  B：不用不用
+  A：对了 跑这一趟误工 我给你转点油费
+  B：这点事还转啥
+  A：拿着 别嫌少
+  【系统消息】A 向 B 转账 100 元，已收款。
+  B：收到 你这整的
+  A：辛苦了 以后他再犯我再跟你说
+  B：行 有数
+  B：明天下雨 开车小心
+  A：嗯 你也慢点
+  A：下午还有个会
+  B：那你忙
+  A：谈的事我记你一笔
+  B：用不着

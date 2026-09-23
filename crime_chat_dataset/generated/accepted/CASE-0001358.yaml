@@ -1,0 +1,175 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001358
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000138
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-cbe88b1952e3cc50
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: other_illicit_coordination
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A以老同事身份向上班族B推介一个所谓实体供应链项目，承诺月息三分保本、拉人头返两个点，反复强调只收现金不上账，B从怀疑到决定投一笔并答应帮忙带人。
+  critical_evidence:
+  - A称项目月息三分、到期保本连本带利
+  - A承诺拉来一个人返两个点
+  - A坚持只收现金、不走账，并让B别对外多说
+  - B最终决定投入五万，并表示可以问问朋友
+  benign_alternatives:
+  - 银行理财推荐
+  - 正规众筹
+
+attributes:
+  duration_days: 6
+  turn_count: 97
+  approximate_tokens_estimate: 1733
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: illegal_fundraising
+  risk: 3
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0129
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-071
+
+dedup:
+  content_hash: sha256:fb94b04ecde20d1003a5886e0b4557272be859c97749151885135712c7821b63
+pipeline_status: accepted
+title: other_illicit_coordination/illegal_fundraising
+conversation: |-
+  【9月1日】
+  A：老张 在忙不
+  B：刚开完会 咋了哥
+  A：有个事跟你念叨下 你手头宽不宽
+  B：看多宽 哈哈
+  A：我表弟弄了个项目 实体的 供应链那块的
+  B：金融的?
+  A：算半个 但很稳 月底固定兑付
+  B：收益多少
+  A：月息三分 保本 到期连本带利给你
+  B：三分? 这比银行高太多了吧
+  A：银行那点利息够干啥 我这都走了小半年了 每月准点到
+  B：你先说说 到底啥盘子
+  A：就是拿去做周转 有实体仓库压着 不用你操心
+  B：对了 咱们部门那个新版上线 测完了没
+  A：昨晚通宵测完 还剩俩小bug 白天就清
+  B：你可别又熬夜 血压高
+  A：没法子 上头催得紧
+  B：交给下面的人做啊
+  A：他们弄我不放心 就一天的事
+  B：那你悠着点
+  A：嗯 回头项目的事你再想想
+  B：我琢磨琢磨
+  【9月2日】
+  A：想的咋样
+  B：还有点半信半疑
+  A：我教你个法子 你先少放点试水
+  B：多少算少
+  A：三五万 一个月就能见着利息
+  B：那万一……
+  A：保本 亏了我兜 写条都行
+  B：那倒不用
+  A：你还能帮我带一带 拉一个我给你返两个点
+  B：这是让我拉人?
+  A：老同事之间互通有无 不算拉人
+  B：我朋友圈人少
+  A：够一个是一个 现金给你 不上账
+  B：为啥非得现金
+  A：走账要交税 麻烦 现金利索
+  B：说到钱 我妈下周复查 得请假陪她
+  A：阿姨身体咋样
+  B：老毛病 血糖高 得盯着
+  A：那你去 我准假 项目不耽误
+  B：谢了哥
+  A：复查完告诉我 我认识个老中医
+  B：行 回头聊
+  【9月3日】
+  A：老李今早刚拿了利息 你要不要问问
+  B：老李也入了?
+  A：早入了 他那人精明 不稳他能干?
+  B：那他也拉人?
+  A：人家半个月拉了仨 返点都拿小一万了
+  B：这么多
+  A：所以说先下手 月底这波就截止了
+  B：行 我放五万试试
+  A：痛快 现金还是我过去拿
+  B：我转你不一样吗
+  A：转得有记录 直接给现金省事
+  B：那我明天取给你
+  A：好 收条我打好 你签个字
+  B：还签条啊
+  A：规矩 到期拿条来换本息
+  B：成
+  B：你上次体检报告出来了没
+  A：出了 说血脂偏高 让少吃油
+  B：那你得管住嘴 别老点外卖
+  A：戒不掉 哈哈
+  B：我前年也高 后来天天走路 好了
+  A：我试试
+  B：身体是本钱 钱的事急不得
+  A：知道了哥
+  【9月4日】
+  B：哥 钱我带来了 你数数
+  A：不用数 我信你
+  B：条给我
+  A：给 收好 别丢了
+  B：那这个月利息啥时候到
+  A：每月三十号 准点 我给你送现金
+  B：也现金啊
+  A：都是现金 图个方便
+  B：好嘞
+  A：对了 你要有人问 就说跟着老同事理财 别的别多说
+  B：为啥
+  A：人多嘴杂 名额有限 满了就关
+  B：懂了
+  【9月5日】
+  A：我给小王也提了一嘴 他有意向
+  B：那你拉他呗
+  A：你带的人算你的 返点给你
+  B：我没拉他
+  A：你说一声就算 他冲你面子来的
+  B：行吧 我问问
+  A：三十号你先拿利息 尝到甜头他自己就来了
+  B：你还挺会
+  A：都是这么滚起来的
+  【9月6日】
+  B：哥 三十号真能到?
+  A：我啥时候骗过你 到不了我垫
+  B：那我安心了
+  A：放长线 年底咱们一起换车
+  B：哈哈 行
+  A：记住了 这事就咱几个知道
+  B：嗯

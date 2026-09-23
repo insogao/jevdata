@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001341
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000006
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-45e8afe43d50abfe
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: fraud_scam
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 以「内部渠道、不看征信、当天秒批」为诱饵吸引 B 申请额度，在放款前要求 B 先转一笔保证金，并用一张无法核实的合同图片搪塞，以限时名额催促 B 尽快交钱。
+  critical_evidence:
+  - A 自称有内部渠道，「不看征信、当天秒批」，诱导 B 申请五万额度
+  - A 以走流程为由要求 B 在放款前先转 1980 元保证金，称到账后原路退还
+  - A 发来一张合同的照片，公章模糊无法核实，且不让 B 找外人看
+  - A 以限时名额催促，B 最终转出保证金
+  benign_alternatives:
+  - 正规银行贷款流程
+  - 亲友借款
+
+attributes:
+  duration_days: 3
+  turn_count: 49
+  approximate_tokens_estimate: 1003
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: loan_fee_bait
+  risk: 3
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0128
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-071
+
+dedup:
+  content_hash: sha256:ff5bca63d2f2fd2cac262148afa0dc09f05c3f3c2675c195902939bc7f8f9d1f
+pipeline_status: accepted
+title: fraud_scam/loan_fee_bait
+conversation: |-
+  【3月3日】
+  A：哥们在吗
+  B：在 咋了
+  A：你上次说资金周转 我这边有办法了
+  B：真的假的 我征信不行 银行都不给批
+  A：我们走内部渠道 不看征信 当天就能放
+  B：这么快 我之前问银行说得等半个月
+  A：银行那套慢 我们另一条线 材料也简单
+  B：那利息呢
+  A：综合下来不高 你要多少
+  B：我大概要五万
+  A：五万属于小额 秒批 你把身份证正反面拍我
+  B：行 我找一下
+  A：对了今天降温 你那边冷不
+  B：还行 多加件外套
+  A：我这下雨 出来忘带伞
+  B：别感冒
+  A：中午吃了没
+  B：楼下吃了碗面
+  A：我随便应付了两口
+  B：忙也得吃饭
+  【3月4日】
+  A：材料收到了 系统说放款前要先过一笔保证金
+  B：保证金 多少钱
+  A：1980 到账以后原路退 就是走个流程
+  B：怎么还要先交钱 没听过这样的
+  A：内部通道跟银行不一样 你要嫌麻烦就走银行慢慢等
+  A：合同发你看下
+  A：[image：一张纸质合同的照片，字迹偏暗，公章位置模糊]
+  B：这合同怎么是拍的图 公章也看不清
+  A：原件在公司 先拍给你看 签了立马打款
+  B：我拿去让人帮我看看
+  A：别给外人看 他们不懂这个通道 传出去对你没好处
+  A：你妈身体最近咋样
+  B：老毛病 一直吃药
+  A：让她别太劳累
+  B：嗯 谢谢
+  A：你最近还加班吗
+  B：天天到九点 累
+  A：等这笔到账就松快了
+  B：但愿
+  【3月5日】
+  A：名额就今天 下午系统关 过了得等下个月
+  B：我还在犹豫
+  A：有啥犹豫的 1980换五万 到账就退你
+  B：那我把保证金转过去 你盯着点
+  【系统消息】B 向 A 转账 1980 元，已收款。
+  A：收到 系统在审核 三个小时出结果
+  B：好 我等你消息
+  A：别跟别人提这个通道 名额有限
+  A：明后天还要降温
+  B：我多穿点
+  A：你也是 别感冒
+  B：好

@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001349
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000091
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-40378ac60291678f
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A让做跑分的B帮忙走账，把一笔钱拆成二十个口子转到不同账户、到账立刻转出，按千分之五给佣金；B从试探到接下更大的金额。
+  critical_evidence:
+  - A要求把一笔钱拆成二十笔不同账户转出
+  - A强调到账就马上转出、别停在账上
+  - A按千分之五给B佣金
+  - B先接了一笔并收到佣金，之后又接下更大的一笔
+  benign_alternatives:
+  - 正常批量付款
+  - 群收款分账
+
+attributes:
+  duration_days: 4
+  turn_count: 49
+  approximate_tokens_estimate: 579
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: split_transfer_chain
+  risk: 3
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0129
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-071
+
+dedup:
+  content_hash: sha256:8d725f310226989167ce19f05adb2fe37db5603a19e518304d60af2b69c18be2
+pipeline_status: accepted
+title: money_laundering_obfuscation/split_transfer_chain
+conversation: |-
+  【11月15日】
+  A：老周 有个活 接不接
+  B：什么活
+  A：帮我走几笔账
+  B：多大
+  A：一笔 拆二十个口子出去
+  B：走哪
+  A：你那张卡就行 到账就转
+  B：这是啥钱
+  A：你别问 问多了不好
+  A：佣金千分之五
+  B：千五不高啊
+  A：走量 一天好几轮
+  B：中午吃啥
+  A：随便
+  B：明天降温
+  A：嗯 注意点
+  【11月16日】
+  B：我先试一笔
+  A：记住 到账别停 马上转出去
+  B：转给谁
+  A：我发你几个户 分着转
+  B：一下这么多户
+  A：所以要拆 别扎堆
+  B：懂了
+  A：你家孩子几年级
+  B：初二
+  A：花钱的时候到了
+  B：是啊
+  A：干这个不就是为这个
+  【11月17日】
+  B：到了 五万
+  A：现在就转 别过夜
+  B：转完了 分十六笔
+  A：好 佣金我算你
+  A：先转你一部分
+  【系统消息】A 向 B 转账 250 元，已收款。
+  B：收到
+  B：油又涨价
+  A：你那车费油
+  B：没办法
+  【11月18日】
+  A：今天还有一批 大点
+  B：多大
+  A：十万
+  B：太多了 我怕
+  A：怕啥 到账就转 又不停你账上
+  B：万一冻卡呢
+  A：所以才拆二十个 分散
+  B：那我试试
+  A：你最近咋样
+  B：累
+  A：干完这阵歇歇
+  B：嗯

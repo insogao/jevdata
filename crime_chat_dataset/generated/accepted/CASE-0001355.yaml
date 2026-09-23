@@ -1,0 +1,153 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001355
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000081
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-b855698c10df37b2
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: privacy_doxxing
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A经人介绍找到医院检验科的B，托他“系统里点一下”查看一个并非本人、也没有授权的化验单；B一开始推脱，最终在系统里调出结果，A随即发红包作为答谢，双方都清楚这绕开了正常流程。
+  critical_evidence:
+  - A托B查的是一个不是A本人、也拿不到授权的化验单
+  - B提到可以在系统里点一下调阅结果
+  - A事后发红包作为答谢
+  - 双方都清楚这与正常调阅流程不同，B叮嘱别外传
+  benign_alternatives:
+  - 陪诊代取报告授权
+  - 保险核保流程
+
+attributes:
+  duration_days: 5
+  turn_count: 75
+  approximate_tokens_estimate: 1218
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: medical_record_browse
+  risk: 2
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0129
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-071
+
+dedup:
+  content_hash: sha256:2874ed402227f075ad64d361536c89003f9f2ba1bdd61dca4c0a637fcaa67c99
+pipeline_status: accepted
+title: privacy_doxxing/medical_record_browse
+conversation: |-
+  【9月10日】
+  A：你好 是芳姐给的号吗
+  B：是我 你是?
+  A：我姓陈 芳姐让我找你 说你在医院上班
+  B：哦 芳姐啊 有事吗
+  A：想麻烦你个小忙
+  B：先说啥事
+  A：我有个朋友 前阵子在你那做了个检查
+  B：哪个科
+  A：检验科 抽血那块的
+  B：你到底要看啥
+  A：他的化验单 我想确认下结果
+  B：这个得本人来调 你不是本人我不好弄
+  A：我知道 就是图省事 不想惊动他
+  B：你这有点为难我
+  A：你看方便的话 系统里点一下就有了
+  B：系统里是有 但那是内部的东西
+  A：你们那今天下雨没 我这边菜都淋了
+  B：下了 我伞都吹翻了
+  A：这鬼天气
+  B：明天还降温 多穿点
+  A：嗯
+  【9月11日】
+  A：芳姐说你这人热心 我就直说了
+  B：你别老提芳姐
+  A：我真是急用 就一个结果
+  B：名字发我
+  A：姓周 上周三做的
+  B：我看看啊
+  B：查到了 有一项指标高
+  A：高多少
+  B：比正常高两倍 具体我不方便说太细
+  A：行 够了我心里有数
+  B：中午你吃啥
+  A：点了份盖饭 咸得要死
+  B：我们食堂还行 就是菜少
+  A：你们有食堂真幸福
+  B：也就那样
+  A：改天我请你吃饭谢你
+  B：先别说这个
+  【9月12日】
+  A：昨天的事 太谢谢了
+  B：小事 你别往外说
+  A：那肯定
+  A：我意思意思 你别嫌少
+  【系统消息】A 向 B 转账 200 元，已收款。
+  B：你这干嘛
+  A：就是个红包 别多想
+  B：我收着不合适
+  A：一杯茶钱 你不收我下次不好意思找你
+  B：那…下不为例
+  A：好说 好说
+  B：对了 你家娃几年级了
+  A：三年级 天天接送
+  B：我闺女刚上幼儿园 哭了一个礼拜
+  A：都这样 熬过就好
+  B：当爹妈的命
+  【9月13日】
+  A：还有个事 顺便
+  B：你说
+  A：我另一个朋友 也想看看
+  B：你可别拿我当通道
+  A：就一两次 真的
+  B：不行 上次那个我到现在心里都不踏实
+  A：行行 不为难你
+  B：谢谢理解
+  A：昨晚那部片子看了没
+  B：没 好看吗
+  A：一般 睡着两次
+  B：哈哈 那我不看了
+  A：别去 浪费票钱
+  【9月14日】
+  B：你那个朋友的结果 别拿去乱说
+  A：放心 就我自己看
+  B：嗯 这事就到这
+  A：明白 以后不麻烦你了
+  A：最近开始跑步了
+  B：好 坚持住
+  A：跑了三天 腿疼
+  B：正常 慢点加量
+  A：行 听你的
