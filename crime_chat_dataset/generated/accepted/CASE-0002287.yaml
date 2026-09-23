@@ -1,0 +1,156 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002287
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-5c8fab11249d1006
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A想借节前送购物卡维系与郑姐的关系，盼希望主管处理排期时留意自己这一份；这份礼物也可以被解释成普通节日问候。
+  critical_evidence:
+  - 节前A主动约郑姐见面，郑姐负责整理小组的项目排期申请。
+  - A见面时送出一张购物卡，但不提卡面金额；郑姐收下这份节日心意。
+  - 见面后A发消息提到自己的我交上去的排期表，暗示希望后续留意；郑姐只表示按通常流程处理。
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司福利卡
+
+attributes:
+  duration_days: 5
+  turn_count: 80
+  approximate_tokens_estimate: 1566
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0229
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-104
+
+dedup:
+  content_hash: sha256:eecd4b1b6aeb59c1baf06d9cd11a114478cf363d43199a68c798144d06bb55eb
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【9月24日】
+  A：郑姐，节前我想请您吃个便饭，感谢最近照顾工作。
+  B：不用客气，找个不忙的时间就行。
+  A：明晚方便吗？我来定地方，离单位不远。
+  B：明晚可以，别订太正式的地方。
+  A：好，就附近那家家常菜馆。顺便带一点节日小心意。
+  B：吃饭可以，东西真不用特意准备。
+  A：你上次说的那个保温杯买了吗
+  B：买了 挺轻的 不漏水
+  A：我还在挑颜色呢
+  B：深色耐脏一点
+  A：那我去店里看看实物
+  B：行 线上图有时不准
+  A：我准备周末带家里人一起去
+  B：一起挑比较方便
+  A：小孩喜欢亮色的
+  B：那就让他自己选
+  A：哈哈估计会挑半天
+  B：挺好 买喜欢的就行
+  A：我准备周末带家里人一起去
+  【9月25日】
+  A：你家小狗最近还挑食吗
+  B：这周好点了 换了个碗
+  A：哈哈它还挺会挑
+  B：猫也一样 不喜欢就不碰
+  A：看来得慢慢试
+  B：嗯 先不折腾它了
+  A：它现在一听开罐声就跑来
+  B：哈哈这个反应很快
+  A：我给它买了个新玩具
+  B：别一次买太多
+  A：对 先看看它玩不玩
+  B：有意思就够了
+  A：它现在一听开罐声就跑来
+  A：我到门口了，你慢慢来。
+  B：刚出来，马上到。
+  A：这个给你，一张小购物卡，过节图个方便。卡面金额我也没仔细看。
+  B：你太客气了，心意我收下，下次别这么见外。
+  B：今天聊得挺轻松的，回去路上注意。
+  A：好呀，你也早点休息。
+  【9月26日】
+  A：你那边月底也要补台账吗
+  B：要啊 这周在核一遍
+  A：我们刚换了新版表格
+  B：我也收到了 看着清楚些
+  A：就是填起来多两栏
+  B：熟悉了就快了
+  A：我把旧表也留了一份
+  B：留着对照确实方便
+  A：同事说下周要培训
+  B：那你到时问清楚版本
+  A：行 我先把手头这版弄完
+  B：忙完早点休息
+  A：我把旧表也留了一份
+  【9月27日】
+  A：这几天早晚温差也太大了
+  B：是啊 我中午还穿短袖呢
+  A：我早上出门带了件外套
+  B：带着好 晚上风一吹就冷
+  A：预报说明天会晴一点
+  B：那我把阳台衣服洗了
+  A：我把外套放包里了
+  B：这个办法稳妥
+  A：刚看窗外又起风了
+  B：那你下班慢点走
+  A：好 我不赶时间
+  B：行 到家再说
+  A：我把外套放包里了
+  【9月28日】
+  A：附近新开了家面馆你去过没
+  B：去过一次 汤还不错
+  A：我上次点的拌面有点咸
+  B：那你下次试试番茄鸡蛋面
+  A：好 我记下了
+  B：中午人少点再去
+  A：我同事说那家早上也卖豆浆
+  B：那可以试试看
+  A：周末我路过买一份
+  B：别买太多 先尝尝
+  A：对 先试试味道
+  B：有空告诉我好不好吃
+  A：前几天顺带提过的我交上去的排期表，我这边先等消息哈。
+  B：材料都按顺序处理，有消息会照常通知。
+  A：明白，我就是问问，节前事情多辛苦啦。
+  B：不客气，缺什么会统一联系，不用专门跑一趟。

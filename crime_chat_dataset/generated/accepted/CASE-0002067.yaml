@@ -1,0 +1,145 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002067
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-993d79cd17225ecc
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 为住院报销跑了几趟的A通过朋友拿到经办人员B的微信，节前送来一张不说面值的购物卡，反复要求B帮忙催办签字；B坚持报销按批次和材料走，把卡退回，只让A补齐材料走窗口。
+  critical_evidence:
+  - A 通过朋友拿到负责报销经办的B的联系方式，反复私聊请教
+  - A 送来一张购物卡，只说一点心意、不说明面值
+  - A 希望在报销上被帮忙催办、签字放行，声称急用钱
+  - B 明确拒收并退回购物卡，强调报销按批次和材料来、急也要合规
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司福利卡
+
+attributes:
+  duration_days: 5
+  turn_count: 68
+  approximate_tokens_estimate: 969
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0188
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-091
+
+dedup:
+  content_hash: sha256:02a9e4d66c5e43b0d79a1bcf3a6c3cac028dee84a9d2e78b9da5c3b91b202104
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【9月26日】
+  A：您好 是社保那边管报销的吗
+  B：你哪里来的号
+  A：朋友推的 我有笔住院费报不下来 想请教
+  B：报销窗口办
+  A：窗口说材料有问题 我跑三趟了
+  B：那就按他们说的补
+  A：这两天降温真快
+  B：嗯
+  A：您多穿点
+  B：谢谢
+  A：您吃了吗
+  B：吃了
+  A：附近哪家好吃 推荐下
+  B：随便对付
+  【9月27日】
+  A：姐 我材料又补了一遍 您帮我看看行不行
+  B：你发窗口
+  A：窗口的人脸难看 我就想先问您
+  B：那叫加塞 不叫问
+  A：过节东西买了吗
+  B：没
+  A：我囤了点米面
+  B：你挺会过
+  A：我给您带了张卡 一点心意 别嫌少
+  B：什么卡 你这个人
+  A：购物卡 多少没说 就是意思下
+  B：拿回去 我不收
+  A：放您那 又不耽误事
+  B：耽误 特别耽误
+  【9月28日】
+  A：姐 那个卡您先收着 我不求您办事
+  B：你不求办事送卡干嘛
+  A：就过节
+  B：过节发消息就行 卡退你
+  A：那报销的事您能不能帮催下
+  B：报销有流程 催不了
+  A：您在上面签个字就快
+  B：该签的自会签
+  A：您孩子多大了
+  B：上大学了
+  A：那省心了
+  B：花钱也不少
+  A：您颈椎好点没
+  B：老毛病 时好时坏
+  A：少低头看手机
+  B：说得轻巧
+  【9月29日】
+  A：姐 我再问最后一次 那笔钱啥时候能到
+  B：按批次 别催了
+  A：我急用
+  B：急也要合规
+  A：卡您真不收
+  B：不收 我已经放你上次来的前台了
+  A：今天雨好大
+  B：嗯 别出门
+  A：我得出门送单
+  B：那你注意安全
+  【9月30日】
+  A：姐 节前最后一天 祝您节日好
+  B：同乐
+  A：报销的事节后再说吧
+  B：嗯 材料齐全就快
+  A：中午吃的啥
+  B：盒饭
+  A：真辛苦
+  B：习惯了
+  A：卡我拿回来了 没让您为难
+  B：这就对了
+  A：以后我不整这些了
+  B：好好准备材料 比啥都强
+  A：明白
+  B：过节快乐

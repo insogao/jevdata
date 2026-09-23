@@ -1,0 +1,121 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002059
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-3a83729c421b55ea
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 借节前见面向能接触场地申请表进度的B送一张不说明面值的购物卡，并在送卡前后暗示希望B留意自己的场地申请表；B拒绝个人礼物，区分单位福利卡与私人礼物，坚持按公开流程处理。
+  critical_evidence:
+  - A 节前主动约见或联系能接触场地申请表进度的B
+  - A 提出送购物卡但不说明面值
+  - A 把礼物与自己的场地申请表联系起来，暗示希望B留意
+  - B 区分单位福利卡与私人礼物并拒绝个人礼卡
+  - B 表示按统一规则或正常顺序办理
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司统一发放的福利卡
+
+attributes:
+  duration_days: 3
+  turn_count: 44
+  approximate_tokens_estimate: 980
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0188
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-091
+
+dedup:
+  content_hash: sha256:b935f22aa7651c83fc793ab245b59f5b06f1ae28dc474a51800ef83d40c3bd94
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【10月23日】
+  A：老朋友，节前我想找你碰一下，你哪天方便？
+  B：这两天还好，什么事？
+  A：这周末天气如何
+  B：预报说周六有风
+  A：那我把窗户关好
+  B：下午在家收拾一下
+  A：我看了另一家预报
+  B：周日下午会转晴
+  A：我之前交的场地申请表还没消息，想知道大概到哪了。
+  B：我能看到流程走到哪一步，先后次序还是按统一安排。
+  A：你之前说可以帮我问问，过节前想当面谢谢你。
+  A：你新买的台灯亮不亮
+  B：亮度可以，还能调色
+  A：写东西眼睛会舒服点
+  B：是，晚上不刺眼
+  【10月24日】
+  A：我放在床头了
+  B：睡前别开太亮
+  B：见面可以，别特意带东西。
+  A：那张小卡我带来了，里面多少我没细看，节前一点心意。
+  【系统消息】A 向 B 转账 300 元，已收款。
+  A：早上那班车挤吗
+  B：比昨天好一点
+  A：我明天提早五分钟
+  B：可以，路上不那么赶
+  A：刚才看实时到站了
+  B：省得站台等太久
+  B：单位统一发的福利卡另有登记办法，私人送的我不能收。
+  A：那天说的那件事，你有空时顺口提一下就行。
+  A：你妈的药取到了吗
+  B：取到了，先按时吃
+  【10月25日】
+  A：药盒放在桌上醒目些
+  B：我已经摆好了
+  A：我设了个手机提醒
+  B：挺好，避免忘记
+  B：不管熟不熟，我这边都只能照流程往下走。
+  A：嗯，懂的，我就是想问问。
+  B：那张卡你先拿回去，后面有消息我照常告诉你。
+  A：那家面包店换菜单没
+  B：多了个咸奶酪口味
+  A：听着还行，改天试试
+  B：周末路过我买两个
+  A：你想吃甜口还是咸口
+  A：前两天说的那份有回音了吗？我还在等着安排。
+  B：我会按提交先后跟进，有变化走原来的通知方式。
+  A：好，我知道了，东西我拿回去，节前正常见面。

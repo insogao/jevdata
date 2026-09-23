@@ -1,0 +1,141 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002225
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-86f156dc193ed271
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 节前向能了解报名材料进度的B提出送一张不说明面值的购物卡，并在送卡前后暗示希望B留意自己的报名材料；B拒绝私人礼物，区分单位福利卡与个人送礼，坚持按统一流程处理。
+  critical_evidence:
+  - A 节前主动约见或联系能了解报名材料进度的B
+  - A 提到购物卡但不说面值
+  - A 将节礼和自己的报名材料联系起来，暗示希望B留意
+  - B 区分单位统一发放的福利卡与私人礼物并拒绝个人送礼
+  - B 表示按正常顺序或统一流程办理
+  benign_alternatives:
+  - 正常节日人情往来
+  - 单位统一发放的公司福利卡
+
+attributes:
+  duration_days: 3
+  turn_count: 65
+  approximate_tokens_estimate: 1225
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0220
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-101
+
+dedup:
+  content_hash: sha256:45eedd9b3cdbe9e670565664d3d2e3b57b8ce32aa18f180bb0cf16cf6f4e4aa9
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【12月7日】
+  A：您好，节前我想找你碰个面，你哪天有空？
+  B：这两天还好，你有什么事？
+  A：今天地铁人多吗
+  B：还好，我错开了早高峰
+  A：那你路上轻松点
+  B：是，比昨天快些
+  A：我听了会儿播客
+  B：路上时间快些
+  A：最近听什么主题
+  A：之前交的市集报名材料一直没听到动静，想问问进度。
+  A：你买的茶杯盖严实吗
+  B：挺严实，倒过来也不漏
+  A：那正好带去上班
+  B：我已经放包里了
+  A：装热水后还挺方便
+  B：喝完盖好就行
+  A：盖子洗起来也简单
+  B：我能看到大概进到哪一步，具体还是按统一次序走。
+  A：之前你跟我介绍过流程，节前想当面跟你道个谢。
+  A：周末要不要去旧书店
+  B：可以，下午一起去
+  A：我想找本菜谱
+  【12月8日】
+  B：那边有个旧书区
+  A：上回买的那本还没读完
+  B：那就先别买新的
+  B：见面可以，不用带什么。
+  A：那条灰色围巾找到没
+  B：找到了，在玄关柜里
+  A：天冷了记得带上
+  B：我挂在门边了
+  A：我把围巾洗好了
+  B：晾干了再收起来
+  A：本来想带张购物卡，面值没问，想节前给你。
+  B：单位发的福利卡按单位规定走，个人送来的我不能收。
+  A：你蒸的南瓜糕好吃吗
+  B：还行，甜度刚好
+  A：下次留两个给我
+  B：没问题，刚好做一批
+  A：我少放了一点糖
+  B：这样吃着不腻
+  A：我交的市集报名材料，你有空时能帮我留意一下吗？
+  A：楼道的灯修好了吧
+  B：物业换了灯泡
+  A：晚上回家亮堂些
+  【12月9日】
+  B：是的，昨天就好了
+  A：我换了个亮一点的灯泡
+  B：省得晚上看不清
+  B：我只按同一套规则办，不会因为认识就提前。
+  A：嗯，知道的，我就是问问。
+  A：你那盆吊兰要分株吗
+  B：等天气暖些再弄
+  A：别急，根长壮点
+  B：我看周末再整理
+  A：我先换了个大花盆
+  B：土也加了一点
+  B：那先别拿卡来，后面有消息照常通知。
+  A：午饭去哪里吃了
+  B：单位旁边那家粉店
+  A：味道怎么样
+  B：挺清爽的，汤也热
+  A：我下次试试另一家
+  B：那家也不远
+  A：之前那份市集报名材料现在有消息了吗？
+  B：我会按提交先后跟进，有变化就按原来方式通知。
+  A：明白，那卡我就不带了，节前正常见面。

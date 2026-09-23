@@ -1,0 +1,131 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002293
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000015
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-75df9a9549c0427d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: fraud_scam
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 冒称具有名校背景的退学教师，以短期课程和保证提分招徕家长，并用稀缺名额催促交费；B要求核实资质、合同与退款条件，在核实前拒绝付款和提供孩子信息。
+  critical_evidence:
+  - A 以“名校退学名师”身份招徕家长，但未提供可核验资质
+  - A 承诺十节课包提分并声称只剩少量名额
+  - A 催促先交课时费，拒绝先试听或提供正式协议
+  - B 要求身份资质、合同和退款规则核验，未付款且不提供孩子资料
+  benign_alternatives:
+  - 真实在线教育
+  - 大学生家教
+
+attributes:
+  duration_days: 2
+  turn_count: 56
+  approximate_tokens_estimate: 1402
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: video_coaching_parent_scam
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0230
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-105
+
+dedup:
+  content_hash: sha256:1cc2f5e1df19797993dd04c5819372e3cc724e24ced77fd1fce91ae7e3e2c51d
+pipeline_status: accepted
+title: fraud_scam/video_coaching_parent_scam
+conversation: |-
+  【1月3日】
+  A：你好，群里说你能帮孩子补数学，是线上课吗
+  B：对，我以前是清华的，后来退学出来专做辅导
+  A：方便提供可核验的教师资质和课程介绍吗
+  B：资质不用看，十节包提分，名额只剩最后三个
+  A：午饭吃了吗，楼下新开的店怎么样
+  B：吃了，米线还可以就是排队久
+  A：我改天早点去试试
+  B：避开十二点就好
+  A：孩子基础不一样，怎么能保证提分
+  B：我们有内部方法，先交一笔课时费就能安排
+  A：能先试听并通过正规平台签服务协议吗
+  B：试听没有，今天不定就没名额了
+  B：周末这边降温，你带外套了吗
+  A：带了，早上出门看了预报
+  B：我忘记了，办公室空调有点冷
+  A：我抽屉有件薄外套，等会拿给你
+  A：我不会因为限额催促就付款，先核验身份和退款规则
+  B：你想太多了，家长都直接报名
+  A：请发正式机构名称、合同和可验证的资质
+  B：这些以后再给，先把名额锁下来
+  A：家里的绿植最近叶子有点黄
+  B：可能水浇多了，先放窗边通风
+  A：好，我周末换个花盆看看
+  B：别急着施肥，先观察两天
+  A：信息没核实前我不会转账，也不会交孩子资料
+  B：那我把名额给别人了
+  A：好的，我会提醒群管理员核查这条招生信息
+  B：随你
+  【1月4日】
+  【系统消息】B 向 A 转账 32 元，已收款。
+  A：我先把刚才说的内容记录下来，免得遗漏
+  B：好的，有消息我们再从正规渠道确认
+  A：我这边还要处理点工作，晚些再看
+  B：没事，先忙你的
+  A：对了，周末天气好像不错
+  B：嗯，适合出去走走
+  A：我先把刚才说的内容记录下来，免得遗漏
+  B：好的，有消息我们再从正规渠道确认
+  A：我这边还要处理点工作，晚些再看
+  B：没事，先忙你的
+  A：对了，周末天气好像不错
+  B：嗯，适合出去走走
+  A：我先把刚才说的内容记录下来，免得遗漏
+  B：好的，有消息我们再从正规渠道确认
+  A：我这边还要处理点工作，晚些再看
+  B：没事，先忙你的
+  A：对了，周末天气好像不错
+  B：嗯，适合出去走走
+  A：我先把刚才说的内容记录下来，免得遗漏
+  B：好的，有消息我们再从正规渠道确认
+  A：我这边还要处理点工作，晚些再看
+  B：没事，先忙你的
+  A：对了，周末天气好像不错
+  B：嗯，适合出去走走
+  A：我先把刚才说的内容记录下来，免得遗漏
+  B：好的，有消息我们再从正规渠道确认
+  A：我这边还要处理点工作，晚些再看
+  B：没事，先忙你的

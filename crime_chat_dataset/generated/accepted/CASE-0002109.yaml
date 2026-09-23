@@ -1,0 +1,153 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002109
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-629746e1c4307ef9
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 借节前见面向能接触产品排期表进度的B送一张不说面值的购物卡，并在送卡前后暗示希望B留意自己的产品排期表；B拒绝个人礼物，区分单位福利卡与私人礼物，按正常流程处理。
+  critical_evidence:
+  - A 节前主动约见或联系能接触产品排期表进度的B
+  - A 提出送购物卡但不说明面值
+  - A 把礼物与自己的产品排期表联系起来，暗示希望B留意
+  - B 区分单位福利卡与私人礼物并拒绝个人礼卡
+  - B 表示按统一规则或正常顺序办理
+  benign_alternatives:
+  - 正常节日人情往来
+  - 单位统一发放的公司福利卡
+
+attributes:
+  duration_days: 6
+  turn_count: 73
+  approximate_tokens_estimate: 1365
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0210
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-098
+
+dedup:
+  content_hash: sha256:8b1b97ada371d014bdf3b320c1fba75b430899a15016e252c0cad72751a5c71d
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【8月6日】
+  A：老搭档，节前我想找你聊几句，你哪天方便？
+  A：今晚吃什么呀
+  B：煎了鱼，还剩点青菜
+  A：挺好，别做太多
+  B：我们俩吃刚好
+  A：我还煮了点饭
+  B：那就有菜有饭
+  A：简单吃一顿
+  B：这周还好，怎么啦？
+  A：我之前交的产品排期表没什么消息，想问问到哪一步了。
+  A：你家的热水器检查了吗
+  B：师傅周末来看过
+  A：有漏水吗
+  【8月7日】
+  B：没事，清了下滤网
+  A：他说以后定期清一下
+  B：这样水温也稳定
+  A：我记在手机里了
+  B：材料都是按顺序往下走，我只能照着统一办法处理。
+  A：那个旧相册找着没
+  B：在柜子最下面
+  A：有空翻翻看
+  B：我找到小时候的照片了
+  A：有张照片挺模糊的
+  B：但还能看出来是谁
+  A：我扫描一下试试
+  【8月8日】
+  A：咱俩一起做项目挺久了，过节前想当面谢谢你。
+  B：见面可以，东西真不用带。
+  A：周日要不要去江边走走
+  B：可以，下午不太晒
+  A：带上水就行
+  B：我有个小水壶
+  A：我查了天气预报
+  B：下午会凉快些
+  A：那就两点以后吧
+  A：那张卡你先收着，里头多少我没看，节前的一点心意。
+  【系统消息】A 向 B 转账 300 元，已收款。
+  A：最近开的那家水果店如何
+  【8月9日】
+  B：价格还行，桃子挺甜
+  A：那我下班也去看看
+  B：晚点去选择多些
+  A：我买了两只尝尝
+  B：挑软一点的
+  B：单位发的福利卡按单位办法登记，私人给的我不能收。
+  A：你的帆布包洗干净没
+  B：洗了，晒了一下午
+  A：下次装东西轻一点
+  B：我记住了
+  A：我以后不装那么重
+  B：肩膀会轻松些
+  A：你知道我说的那件事，有空时帮我提一句就行。
+  【8月10日】
+  B：不管咱们什么关系，我都只能按原来的顺序办。
+  A：你最近在听什么歌
+  B：老歌合集，挺放松的
+  A：发我几首我也听
+  B：我整理个列表
+  A：这首我以前也听过
+  B：旋律挺熟的
+  A：嗯，明白，我就是问问。
+  A：你爸妈打算什么时候出游
+  B：下个月找个周末
+  A：提前订票会轻松些
+  B：嗯，我正在看看
+  【8月11日】
+  A：我们想去海边
+  B：提前看天气吧
+  B：卡你拿回去吧，有进展会照常告诉你。
+  A：前几天说的那件事有动静吗？我还等着安排后面的事。
+  A：你最近还蒸馒头吗
+  B：周末蒸了一锅
+  A：用老面还是酵母
+  B：普通酵母，比较省事
+  A：我下次多蒸几个
+  B：冷冻起来也方便
+  B：我会按提交时间跟进，有变化走原来的通知方式。
+  A：好，我带回去，节前就正常见面。

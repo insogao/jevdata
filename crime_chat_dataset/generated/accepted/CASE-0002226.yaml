@@ -1,0 +1,124 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002226
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-e9010e55f5f4a967
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 借节前见面向能了解摊位登记表进度的B送一张不说明面值的购物卡，并在送卡前后暗示希望B留意自己的摊位登记表；B拒绝私人礼物，区分单位福利卡与个人送礼，坚持按统一流程处理。
+  critical_evidence:
+  - A 节前主动约见或联系能了解摊位登记表进度的B
+  - A 提到购物卡但不说面值
+  - A 将节礼和自己的摊位登记表联系起来，暗示希望B留意
+  - B 区分单位统一发放的福利卡与私人礼物并拒绝个人送礼
+  - B 表示按正常顺序或统一流程办理
+  benign_alternatives:
+  - 正常节日人情往来
+  - 单位统一发放的公司福利卡
+
+attributes:
+  duration_days: 2
+  turn_count: 48
+  approximate_tokens_estimate: 999
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0220
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-101
+
+dedup:
+  content_hash: sha256:b5085927d10e58592671019e9e48a2418119eda4080e188c81664f9e3dd5d4d9
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【7月9日】
+  A：师傅，节前我想找你碰个面，你哪天有空？
+  B：这两天还好，你有什么事？
+  A：那双棉鞋合脚吗
+  B：合脚，里面挺暖和
+  A：走路别穿太厚的袜子
+  B：知道，试过了
+  A：穿着走路不磨脚吧
+  B：不磨，鞋底也软
+  A：那挺好的
+  A：之前交的临时摊位登记表一直没听到动静，想问问进度。
+  B：我能看到大概进到哪一步，具体还是按统一次序走。
+  A：上次你说可以再来问，节前想当面跟你道个谢。
+  A：你最近在阳台种什么
+  B：种了点香菜和葱
+  A：做菜时摘一点正好
+  B：长得慢，先等等
+  A：我浇水没浇太多
+  B：叶子看着还不错
+  A：香菜出苗慢些
+  B：见面可以，不用带什么。
+  A：我备了张购物卡，面值没问，节前一点心意。
+  【系统消息】A 向 B 转账 300 元，已收款。
+  A：今天地铁人多吗
+  B：还好，我错开了早高峰
+  A：那你路上轻松点
+  【7月10日】
+  B：是，比昨天快些
+  A：我听了会儿播客
+  B：路上时间快些
+  A：最近听什么主题
+  B：单位发的福利卡按单位规定走，个人送来的我不能收。
+  A：我交的临时摊位登记表，你有空时能帮我留意一下吗？
+  A：你买的茶杯盖严实吗
+  B：挺严实，倒过来也不漏
+  A：那正好带去上班
+  B：我已经放包里了
+  A：装热水后还挺方便
+  B：喝完盖好就行
+  B：我只按同一套规则办，不会因为认识就提前。
+  A：嗯，知道的，我就是问问。
+  B：这张你拿回去，后面有消息我照常告诉你。
+  A：周末要不要去旧书店
+  B：可以，下午一起去
+  A：我想找本菜谱
+  B：那边有个旧书区
+  A：上回买的那本还没读完
+  B：那就先别买新的
+  A：之前那份临时摊位登记表现在有消息了吗？
+  B：我会按提交先后跟进，有变化就按原来方式通知。
+  A：好，那东西我拿回去，节前正常见面。

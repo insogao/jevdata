@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002185
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-657d8fd2cbc117c7
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 借节前见面向能接触名额登记表进度的B送一张不说明面值的购物卡，并在送卡前后暗示希望B留意自己的名额登记表；B拒绝私人礼物，区分单位福利卡与个人送礼，坚持按统一流程处理。
+  critical_evidence:
+  - A 节前主动约见或联系能接触名额登记表进度的B
+  - A 提到购物卡或小卡但不说明面值
+  - A 将节礼和自己的名额登记表联系起来，暗示希望B留意
+  - B 区分单位福利卡与私人礼物并拒绝个人送礼
+  - B 表示按统一流程或正常顺序办理
+  benign_alternatives:
+  - 正常节日人情往来
+  - 单位统一发放的公司福利卡
+
+attributes:
+  duration_days: 2
+  turn_count: 50
+  approximate_tokens_estimate: 1059
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0217
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-100
+
+dedup:
+  content_hash: sha256:19601af5bf516a3bcd2ef85f3c8b28a3c7ef356b4b2cf4138a1d21869d7950f4
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【10月11日】
+  A：哥，节前我想找你见一面，你哪天方便？
+  B：这阵子还行，怎么突然约我？
+  A：周末那个手作集市开门吗
+  B：开到下午五点
+  A：那我早点过去
+  B：可以顺便逛一圈
+  A：我看了下地图
+  B：入口在小广场那侧
+  A：到时我发定位给你
+  A：我交的临时名额登记表一直没等到消息，想问问现在大概什么情况。
+  B：我这边只能按收到的先后看，不能单独改顺序。
+  A：你平时挺照应我，我一直记得你平时的照应。
+  A：你最近喝乌龙还是红茶
+  B：最近喝乌龙多一些
+  A：我也想换个口味
+  B：下次给你带点试试
+  A：上次那包喝完了
+  B：我留了一点在罐子里
+  A：这两天就带给你
+  B：见面没问题，真不用带东西。
+  A：那张小卡我给你带来了，里面多少没细看，节前一点心意。
+  【系统消息】A 向 B 转账 300 元，已收款。
+  A：昨天洗的外套干了吗
+  B：阳台风大，已经干了
+  A：衣服别晾太密
+  B：我把间距留出来了
+  【10月12日】
+  A：我把窗户开了一会
+  B：屋里味道散了
+  A：天气好就多晒会
+  B：单位发的福利卡按单位规矩登记，私人送的我不能收。
+  A：你之前知道的那件事，方便时帮我提一下就行。
+  A：午休还会睡过头吗
+  B：现在定两个闹钟
+  A：挺好，下午不容易迟到
+  B：我把手机放远点了
+  A：下午精神好多了
+  B：晚上别再刷太久
+  A：我把视频关掉了
+  B：我只能按正常流程来，不会因为关系或礼物提前。
+  A：嗯，我懂的。
+  B：卡你先带回去，有进展会照平时方式告诉你。
+  A：你常坐的那家车行方便吗
+  B：挺方便，等车不久
+  A：我下周可能要用车
+  B：提前预约就行
+  A：我用手机看了路线
+  B：公交直达比较快
+  A：那挺省事的
+  A：前几天那件事有回信没？我想安排一下后面的事。
+  B：我会照先后跟进，有变化再按原来的方式通知。
+  A：好，我拿回去，节前就正常见面。

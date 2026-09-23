@@ -1,0 +1,123 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002062
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-18b3076ae931afa7
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A经共同朋友老李牵线认识负责材料验收的B，节前登门递上一张不说面值的卡，借老李的面子和过节由头催B在审核上照顾；B把卡留下但反复强调按规矩办，未承诺任何便利。
+  critical_evidence:
+  - A 由共同朋友老李介绍认识负责材料审核的B，节前提出登门拜访
+  - A 当面递出一张卡，只说没多少钱、不让问面值，并抬出老李
+  - A 送礼前后多次暗示希望B在材料审核上帮忙催、早点过
+  - B 把材料与礼物分开，强调该谁审谁审、走公开渠道问进度
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司福利卡
+
+attributes:
+  duration_days: 2
+  turn_count: 48
+  approximate_tokens_estimate: 853
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0188
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-091
+
+dedup:
+  content_hash: sha256:114867d3cf9b488d77dcfe8f14be8e657ed21614dbe7268f3c5eb8b98e48c145
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【9月29日】
+  A：B工 我是老李介绍的那个 明天节前想过来拜访下
+  B：老李说过 你有什么事
+  A：当面聊吧 也快过节了 一点小心意
+  B：心意就免了 有事说事
+  A：那我下午过去 不耽误你
+  B：你中午吃了没
+  A：刚吃 楼下饺子
+  B：那家馅大
+  A：是啊 就是有点咸
+  A：外面太阳还挺毒
+  B：嗯 秋老虎
+  A：我带了瓶水 你要不要
+  B：不用 办公室有
+  A：到了 这个你拿着 一点小意思
+  B：这什么
+  A：一张卡 没多少钱 你就别问面值了
+  B：你这样我很难办
+  A：老李也让带的 你就收下吧
+  B：老李这人...我先看看
+  A：那个材料的事 你看能不能帮我催催
+  B：材料归材料 该谁审谁审
+  A：我就是想早点过
+  B：急也没用 得合规
+  A：你家孩子多大啦
+  B：上初二
+  A：那正是费心的时候
+  B：可不是嘛
+  【9月30日】
+  A：B工 那个卡你收好了吧
+  B：卡我放前台了 你走的时候拿走
+  A：别啊 送出去的东西哪有拿回的
+  B：你别让我为难 我按规矩来
+  A：双十一你打算买啥
+  B：没想好 想换个手机
+  A：那款新出的不错
+  B：贵 再等等
+  A：我认识人能便宜点
+  B：不用 我不爱欠人情
+  A：材料我按你说的补齐了 麻烦你多上心
+  B：补齐了就走流程 上不上心都一样
+  A：那就拜托了
+  B：走公开渠道问进度 不用找我
+  A：明白
+  B：老李那边你替我问个好
+  A：好嘞
+  A：上次你帮我垫的停车费我转你 不能老让你破费
+  B：就几块钱
+  A：该给的 我转
+  【系统消息】A 向 B 转账 20 元，已收款。
+  B：收到了 你太客气

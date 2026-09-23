@@ -1,0 +1,140 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002298
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000012
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-4b8728903d406122
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: fraud_scam
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 在二手交易中用明显低价吸引B离开平台私下交易，催促先付定金并提供无法核验的物流信息；B识别风险，拒绝站外付款并通过平台申诉。
+  critical_evidence:
+  - A 以明显低价吸引买家并催促离开平台到私聊交易
+  - A 要求先付定金，未提供可核验商品凭证
+  - A 提供的物流信息显示未揽收或无法核实
+  - B 拒绝私下转账，通过平台核验并保留记录
+  benign_alternatives:
+  - 真实二手交易
+  - 朋友间转让
+
+attributes:
+  duration_days: 5
+  turn_count: 62
+  approximate_tokens_estimate: 1466
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: second_hand_deposit_run
+  risk: 1
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0230
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-105
+
+dedup:
+  content_hash: sha256:115a7a08a873cfb958b86673d81b763a5518bee2e69317537a1c6bda3ce51750
+pipeline_status: accepted
+title: fraud_scam/second_hand_deposit_run
+conversation: |-
+  【1月6日】
+  A：平台上那台平板还在吗，标价比同款低不少
+  B：还在，想买的话加我微信聊，平台聊太慢
+  A：我更想在平台里确认，能拍序列号吗
+  B：先转点定金我就留给你，今天好几个人问
+  B：最近公交改线了，你通勤受影响吗
+  A：多走一站，不过还算方便
+  B：我早上也绕了一下
+  A：估计过几天就恢复
+  A：有保修凭证和购买记录吗
+  B：回头发你，先把定金转来
+  A：你发的物流单号查不到揽收信息
+  B：系统更新慢，过会儿就有了
+  A：这周末想去看电影，有推荐吗
+  【1月7日】
+  B：新上映那部轻松点，适合放松
+  A：那我买两张票
+  B：记得选靠中间的位置
+  A：我不会私下转账，订单和物流都走平台
+  B：你不信就算了，名额马上给别人
+  A：我已经申请平台核验，不会再转钱
+  B：你再等等，单号晚点肯定更新
+  A：午饭吃了吗，楼下新开的店怎么样
+  B：吃了，米线还可以就是排队久
+  A：我改天早点去试试
+  B：避开十二点就好
+  A：平台客服确认没有揽收记录，我会保留聊天
+  【1月8日】
+  B：我先忙，之后再说
+  A：不用了，我会按平台流程处理并提醒其他买家
+  B：……
+  A：我先把刚才说的内容记录下来，免得遗漏
+  B：好的，有消息我们再从正规渠道确认
+  A：我这边还要处理点工作，晚些再看
+  【系统消息】B 向 A 转账 32 元，已收款。
+  B：没事，先忙你的
+  A：对了，周末天气好像不错
+  B：嗯，适合出去走走
+  A：我先把刚才说的内容记录下来，免得遗漏
+  B：好的，有消息我们再从正规渠道确认
+  A：我这边还要处理点工作，晚些再看
+  B：没事，先忙你的
+  【1月9日】
+  A：对了，周末天气好像不错
+  B：嗯，适合出去走走
+  A：我先把刚才说的内容记录下来，免得遗漏
+  B：好的，有消息我们再从正规渠道确认
+  A：我这边还要处理点工作，晚些再看
+  B：没事，先忙你的
+  A：对了，周末天气好像不错
+  B：嗯，适合出去走走
+  A：我先把刚才说的内容记录下来，免得遗漏
+  B：好的，有消息我们再从正规渠道确认
+  A：我这边还要处理点工作，晚些再看
+  B：没事，先忙你的
+  【1月10日】
+  A：对了，周末天气好像不错
+  B：嗯，适合出去走走
+  A：我先把刚才说的内容记录下来，免得遗漏
+  B：好的，有消息我们再从正规渠道确认
+  A：我这边还要处理点工作，晚些再看
+  B：没事，先忙你的
+  A：对了，周末天气好像不错
+  B：嗯，适合出去走走
+  A：我先把刚才说的内容记录下来，免得遗漏
+  B：好的，有消息我们再从正规渠道确认
+  A：我这边还要处理点工作，晚些再看
+  B：没事，先忙你的

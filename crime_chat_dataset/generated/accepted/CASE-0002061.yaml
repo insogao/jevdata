@@ -1,0 +1,157 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002061
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-d9792bf8310fbea7
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 开小店的A通过朋友拿到审批窗口人员B的微信，节前连续几天纠缠执照进度，中途塞上一张购物卡且不说面值，反复暗示希望B在审批上盯紧、帮忙；B只肯按流程指路，明确拒收购物卡，态度始终公事公办。
+  critical_evidence:
+  - A 通过朋友拿到负责审批的B的微信，自称姓林，主动联系并请求节前登门
+  - A 给B递上一张购物卡，只说一点心意、不值当提面值
+  - A 反复暗示希望B在执照审批上盯紧、帮忙、早点放行
+  - B 只肯按清单和流程指路，明确拒收购物卡并让A把东西退回去
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司福利卡
+
+attributes:
+  duration_days: 5
+  turn_count: 79
+  approximate_tokens_estimate: 1211
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0188
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-091
+
+dedup:
+  content_hash: sha256:f24de7692f0241a0b4e9cc4f08b02ae86fdc276b54134534751704a461ad058f
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【9月26日】
+  A：您好 是负责审批的小陈吗 我是朋友给的号
+  B：你哪位
+  A：我姓林 开了家小店 执照一直下不来 想请教您
+  B：执照的事去窗口问
+  A：窗口排队太久 就想先问问您
+  B：该走的程序都得走
+  A：今天风好大
+  B：嗯 降温
+  A：您注意保暖
+  B：谢谢
+  A：您吃午饭了吗
+  B：刚吃
+  A：附近有家面馆不错 改天我请您
+  B：不用客气
+  【9月27日】
+  A：陈哥 我材料都备齐了 您看还差啥
+  B：按清单对照
+  A：我对了三遍 就是卡在最后一步
+  B：那就等
+  A：眼看要过节了 想节前办下来
+  B：急也没用
+  A：我给您带了张购物卡 一点心意
+  B：你这就没意思了
+  A：没多少 不值当说面值
+  B：拿回去 我不收这个
+  A：就放您那 图个吉利
+  B：我再说一遍 不收 你拿回去
+  A：您今天忙吗
+  B：一堆事
+  A：那我不打扰
+  A：快过节了 超市人爆满
+  B：我都是网购
+  A：也是 我懒得挤
+  【9月28日】
+  A：陈哥 昨天那卡您考虑下
+  B：不考虑 别在这上面下功夫
+  A：我就是想请您帮个忙
+  B：帮忙可以 送礼不行
+  A：那您帮我看看材料到底缺哪
+  B：发我看看
+  A：您孩子放假谁带啊
+  B：老人带
+  A：那挺好 省心
+  B：也闹腾
+  A：哈哈 小孩都这样
+  B：你还没结婚吧
+  A：没呢
+  B：你那个材料 少一份场地证明
+  A：啊 我去补
+  B：补完重新提交
+  A：好 谢谢陈哥
+  【9月29日】
+  A：场地证明补好了 提交了
+  B：嗯 等通知
+  A：那个卡您真不收?
+  B：不收 你赶紧拿回去
+  A：行吧
+  B：你店开在哪
+  A：城南菜市场旁边
+  B：那边人流可以
+  A：就是租金贵
+  A：陈哥 快过节了 节后能不能帮我盯紧点
+  B：我会按流程办 你不用盯着
+  A：有您这句话我就放心了
+  B：别放心太早 该补的补
+  【9月30日】
+  A：陈哥 提前祝您节日快乐
+  B：同乐
+  A：那个卡我放您传达室了
+  B：你...行 我让门卫退回去
+  A：别退了 就当过节
+  B：林老板 我最后说一次 这个会影响你的进度
+  A：好好 我这就去拿
+  B：今天下雨 路上滑
+  A：知道了
+  A：节日东西买齐了没
+  B：早买好了
+  A：那挺好
+  A：上次您帮我垫的快递费 我转您
+  B：几块钱 不用
+  A：该给的
+  【系统消息】A 向 B 转账 15 元，已收款。
+  B：收到了 谢了
+  A：客气啥

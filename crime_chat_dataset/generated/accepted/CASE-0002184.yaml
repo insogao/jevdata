@@ -1,0 +1,121 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002184
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-8d8eed3064e1889b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 节前向能接触摊位申请进度的B提出送一张不说明面值的购物卡，并在送卡前后暗示希望B留意自己的摊位申请；B拒绝私人礼物，区分单位福利卡与个人送礼，坚持按统一流程处理。
+  critical_evidence:
+  - A 节前主动约见或联系能接触摊位申请进度的B
+  - A 提到购物卡或小卡但不说明面值
+  - A 将节礼和自己的摊位申请联系起来，暗示希望B留意
+  - B 区分单位福利卡与私人礼物并拒绝个人送礼
+  - B 表示按统一流程或正常顺序办理
+  benign_alternatives:
+  - 正常节日人情往来
+  - 单位统一发放的公司福利卡
+
+attributes:
+  duration_days: 3
+  turn_count: 45
+  approximate_tokens_estimate: 934
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0217
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-100
+
+dedup:
+  content_hash: sha256:3454553da5f646af145949d2837cf31974fcced52e8bfef5b7b06fee8552ddce
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【5月12日】
+  A：姐，节前我想找你见一面，你哪天方便？
+  B：这阵子还行，怎么突然约我？
+  A：冰箱里的馄饨还吃吗
+  B：还有一盒，周末煮掉
+  A：别放太久了
+  B：知道，我今晚就拿出来
+  A：我放冷藏室解冻了
+  B：晚上煮的话正合适
+  A：我交的集市摊位申请一直没等到消息，想问问现在大概什么情况。
+  B：我这边只能按收到的先后看，不能单独改顺序。
+  A：咱俩是亲戚，我一直记得你平时的照应。
+  A：你办公室那盆小树怎么样
+  B：新叶子长出来了
+  A：看来换位置有效
+  B：是，靠窗但不晒直射
+  【5月13日】
+  A：我每周转一下花盆
+  B：这样长得会均匀些
+  B：见面没问题，真不用带东西。
+  A：本来想带张购物卡，面值没问，想节前送你。
+  A：水壶烧水还会响吗
+  B：声音小多了，清理过水垢
+  A：那就不用换新的
+  B：用着挺顺手的
+  A：我买了个滤网
+  B：清水垢更省事
+  B：单位发的福利卡按单位规矩登记，私人送的我不能收。
+  A：我那份集市摊位申请，你有空时帮我留意一下行吗？
+  A：手机壳颜色选好没
+  B：选了深蓝色
+  A：耐脏，挺适合你
+  【5月14日】
+  B：我也是这么想的
+  A：到货了我拍给你看
+  B：不用急，慢慢挑
+  B：我只能按正常流程来，不会因为关系或礼物提前。
+  A：嗯，我懂的。
+  B：那就先别带卡来，后续有进展照常通知。
+  A：咳嗽好些了吗
+  B：夜里已经不怎么咳
+  A：温水多喝点
+  B：嗯，药也按时吃
+  A：今天白天也好多了
+  B：那挺好，晚上早点休息
+  A：上次说的集市摊位申请，最近有进展吗？
+  B：我会照先后跟进，有变化再按原来的方式通知。
+  A：明白，那卡就不带了，节前正常见面。

@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002065
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-ca61212b507d2320
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 老供应商A节前约采购负责人B见面，送来一张不说面值的卡，反复暗示希望B在来年续签评估上帮衬；B始终把卡搁在一边，强调续签只看服务与质量，坚持走正式渠道。
+  critical_evidence:
+  - A 以老合作和节前为由主动约负责采购续签的B见面
+  - A 送出一张只说朋友给的、不说明面值的购物卡
+  - A 在续签评估上反复暗示希望B通融、帮衬、说说话
+  - B 把卡搁置并退回，强调续签只看服务和质量、材料走私发不看
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司福利卡
+
+attributes:
+  duration_days: 4
+  turn_count: 56
+  approximate_tokens_estimate: 946
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0188
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-091
+
+dedup:
+  content_hash: sha256:0a9328a09264983905e7ebb4fe5426be59631ce05ff122a6ba61557bae6b981b
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【9月27日】
+  A：王经理 节前想约您见个面 顺便把合同的事聊了
+  B：合同走流程就行 不用见面
+  A：老合作了 当面说清楚点 也给您带了点东西
+  B：东西就算了
+  A：不值什么 就是个心意
+  A：今天降温挺厉害
+  B：是啊 秋天了
+  A：您注意别着凉
+  B：好
+  A：您中午吃了吗
+  B：吃了 食堂
+  A：食堂那家小炒还行
+  B：一般般
+  A：王经理 那个卡您别嫌薄 朋友送的 我用不上
+  B：什么卡
+  A：购物卡 具体多少没看 您拿去给家里买点东西
+  B：你这是干什么 咱们合作归合作
+  A：就是过节意思下 您别多想
+  B：先放着吧 我回头说
+  A：对了 明年那单续签 您多帮着说说话
+  B：续签看你们服务和质量
+  A：质量肯定没问题 就是怕有人挤
+  B：那也得按评估来
+  【9月28日】
+  A：王经理 卡您收好了吧
+  B：卡我没动 你自己拿回去
+  A：送出去哪能拿回
+  B：别让我难做
+  A：国庆打算出去玩不
+  B：人太多 在家歇着
+  A：也是 我打算去周边转转
+  B：近点好 不折腾
+  A：我订了民宿
+  B：挺好
+  A：您家老人身体还好吧
+  B：还行 老毛病
+  A：那得常回去看看
+  B：嗯 周末回
+  A：那个评估材料我提前给您发一份
+  B：发正式渠道
+  A：好 我让助理走流程
+  B：私发我不看
+  【9月29日】
+  A：王经理 合同那事您给个准话
+  B：评估没过说什么都没用
+  A：您通融通融 老客户了
+  B：通融不了 规矩不是给我一个人定的
+  A：行 我按您说的补材料
+  A：那卡您真要退我
+  B：退 放你公司前台了
+  A：唉 好吧
+  B：别唉声叹气 好好把方案做扎实
+  【9月30日】
+  A：王经理 提前祝您过节
+  B：同乐
+  A：方案我重新改了 节后发您
+  B：好 走正式渠道
+  A：明白
+  B：卡记得拿走

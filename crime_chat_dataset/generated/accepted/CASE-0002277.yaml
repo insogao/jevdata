@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002277
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-b2b0c892f3aff7c1
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 在节日前以购物卡作含糊的人情表示，并在交付后暗示希望 B 在其负责的事项上给予一点照顾；B 明确按统一标准和公开流程处理，不因礼物改变决定。
+  critical_evidence:
+  - A 节前主动约 B 见面，建立节日送礼的时间背景
+  - A 送出一张购物卡但没有说明面值，且表示只是节日心意
+  - 送卡后 A 用含蓄说法提到希望 B 对其事项多留意；B 表示按公开流程办理、不会因礼物区别对待
+  benign_alternatives:
+  - 普通节日人情往来或朋友间的小礼物
+  - 单位统一发放的福利卡，与具体事项无关
+
+attributes:
+  duration_days: 3
+  turn_count: 57
+  approximate_tokens_estimate: 1567
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0225
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-103
+
+dedup:
+  content_hash: sha256:a74e3d2cd9eea1efef50fa6c0c120f34b57c1118c70078c760a734a7daa1786b
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【12月9日】
+  A：我刚好要去你那附近，节前能不能见一面？
+  B：可以，林经理。你哪天过来？
+  A：节前后大家都忙，明天下午我路过时带点东西给你。
+  B：不用特意带东西，见面聊就行。
+  A：就是一点节日心意，卡片而已，面值我也没记。
+  A：这两天突然降温了，你那边也下雨吗？
+  B：刚停，早上出门还带了伞。
+  A：我也是，鞋都湿了，真烦。
+  B：回家烘一下吧，别着凉。
+  B：那个报表我昨晚补完了，发你邮箱了。
+  A：收到了，格式挺清楚的。
+  B：有两列我不确定，明天再一起看下？
+  A：行，上午我有空。
+  B：你上次说的那家店我去看了，款式还挺多。
+  A：是吧，价格也还行。
+  B：我挑了个浅色的，拍照给你看看。
+  A：挺好，日常搭衣服方便。
+  B：你上次说的那家店我去看了，款式还挺多。
+  A：是吧，价格也还行。
+  【系统消息】B 向 A 转账 48 元，已收款。
+  【12月10日】
+  B：我挑了个浅色的，拍照给你看看。
+  A：挺好，日常搭衣服方便。
+  B：你还真拿来了啊，我先收下，回头确认是不是单位发的那类。
+  A：我妈说周末回去吃饭，你也来吗？
+  B：应该能到，最近她老问我啥时候回。
+  A：她还准备了你爱吃的菜。
+  B：那我早点出发，顺便带点水果。
+  A：嗯，没别的意思，过节图个方便。
+  B：我手头这个事情还是按原来的顺序走，有材料就一起看。
+  A：懂，我就是想着你熟悉情况，能不能帮我多留意一下。
+  B：你上次说的那家店我去看了，款式还挺多。
+  B：我可以告诉你公开的办理要求，结果还是照标准来。
+  A：这两天突然降温了，你那边也下雨吗？
+  B：刚停，早上出门还带了伞。
+  A：我也是，鞋都湿了，真烦。
+  B：回家烘一下吧，别着凉。
+  B：如果和具体事项有关，我得退回去；普通节礼也要按单位规定登记。
+  A：知道了，先放你那儿，你有空再看。
+  B：我先问下规定，避免误会。
+  【12月11日】
+  B：午饭吃什么呀，附近新开了家面馆。
+  A：去过了，汤底还行，就是人有点多。
+  B：那我晚点去，避开高峰。
+  A：可以，记得点小份，分量挺大。
+  A：最近睡得怎么样？我这周总醒。
+  B：少喝点咖啡吧，下午以后别喝。
+  A：好，我试试换成热水。
+  B：我也是这么调过来的，慢慢来。
+  A：行，卡你别有压力，节日礼物嘛。
+  B：午饭吃什么呀，附近新开了家面馆。
+  A：去过了，汤底还行，就是人有点多。
+  B：那我晚点去，避开高峰。
+  A：可以，记得点小份，分量挺大。
+  A：昨天那张小卡你看过了吗？就当我提前拜个年。
+  B：收到了，我看了下，是普通购物卡。单位对收礼有规定，我会照规定处理。
+  A：明白，我那件事就按流程来，别因为这个为难。
+  B：好，材料齐了我会和其他申请一起处理，进度也会公开通知。
+  A：谢谢，节前有空再吃个饭。
+  B：可以，饭钱咱们各付各的哈。

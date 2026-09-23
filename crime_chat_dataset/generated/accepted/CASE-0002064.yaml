@@ -1,0 +1,141 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002064
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-98567690ff3841bd
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 为孩子入学发愁的A找老邻居B帮忙，登门送来一张不说面值的卡，口口声声不用B办事、只图情分，实则反复希望B在入学名额上递句话；B领情但坚决不收卡，只劝A按片区和政策早点准备材料。
+  critical_evidence:
+  - A 以老邻居关系主动找在相关单位工作的B打听入学门道
+  - A 登门送来一张卡，不说面值、声称不用B办事、只图情分
+  - A 多次暗示希望B在入学名额上帮忙递话、找门路
+  - B 领情但坚决不收卡，强调都得排队、都要合规，只劝A按政策准备材料
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司福利卡
+
+attributes:
+  duration_days: 2
+  turn_count: 67
+  approximate_tokens_estimate: 952
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0188
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-091
+
+dedup:
+  content_hash: sha256:54825b19f174d3a069c2cb49f4fad95712a7f9ec63ab017722484f7470758b01
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【10月2日】
+  A：姐 老邻居了 跟你打听个事
+  B：你说
+  A：我娃明年入学急死了 你那单位有没有门道
+  B：我这边也不是我说了算的
+  A：知道知道 就是想问问
+  B：都是网上报 按片区
+  A：你中午吃啥
+  B：在家做的
+  A：真勤快 我点外卖
+  B：外卖少吃
+  A：今天风大 你阳台衣服收了没
+  B：早上就收了
+  A：还是你细心
+  B：吃了亏就长记性了
+  A：过节超市打折 你去抢了没
+  B：没 人太多
+  A：我也懒得去 网上买
+  B：一样
+  A：姐 明天我去看你 给你带张卡
+  B：带卡干嘛
+  A：就一张卡 多少我都没看 你拿着花
+  B：你这无事献殷勤啊
+  A：嗨 就是过节
+  B：你先别 见面再说
+  A：那个入学的事你帮我说句话呗
+  B：我说了不算
+  A：你认识人 递句话就行
+  B：递话也得合规
+  A：你家老二上幼儿园了吗
+  B：刚上 天天哭
+  A：哈哈 过阵子就好
+  B：但愿吧
+  A：你妈腰还疼不
+  B：好多了 针灸管用
+  A：那坚持扎
+  B：嗯
+  【10月3日】
+  A：姐 我到你楼下了
+  B：上来吧
+  A：卡我放桌上了
+  B：我说了不收
+  A：你先拿着 不用你办事 就图个情分
+  B：情分我领 卡不行
+  A：你看你
+  B：你家那盆绿萝长得咋样了
+  A：疯长 都爬墙了
+  B：我那盆老黄叶
+  A：少浇水 见散光
+  B：行 我试试
+  A：中午在你家蹭饭啊
+  B：行 做你爱吃的
+  A：那我帮你打下手
+  B：别添乱就行
+  A：姐 那事你真不能帮
+  B：真帮不了 都得排队
+  A：好吧 那卡你留着
+  B：卡你带走 不然连饭都别吃
+  A：下午好像又要下雨
+  B：预报说晚上
+  A：那我早点回
+  B：嗯 路上小心
+  A：卡我拿走了 你别生气
+  B：我不生气 我替你急
+  A：咋了
+  B：你早点去准备材料 别指望歪门
+  A：知道了姐
+  B：娃的事是大事 好好弄
+  A：嗯 谢谢你

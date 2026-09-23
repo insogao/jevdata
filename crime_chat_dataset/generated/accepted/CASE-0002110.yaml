@@ -1,0 +1,154 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002110
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-c1299ca3246f8985
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 节前向能接触供应商复核材料进度的B提出送一张不说面值的购物卡，并在送卡前后暗示希望B留意自己的供应商复核材料；B拒绝个人礼物，区分单位福利卡与私人礼物，按正常流程处理。
+  critical_evidence:
+  - A 节前主动约见或联系能接触供应商复核材料进度的B
+  - A 提出送购物卡但不说明面值
+  - A 把礼物与自己的供应商复核材料联系起来，暗示希望B留意
+  - B 区分单位福利卡与私人礼物并拒绝个人礼卡
+  - B 表示按统一规则或正常顺序办理
+  benign_alternatives:
+  - 正常节日人情往来
+  - 单位统一发放的公司福利卡
+
+attributes:
+  duration_days: 5
+  turn_count: 76
+  approximate_tokens_estimate: 1414
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0210
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-098
+
+dedup:
+  content_hash: sha256:3230c20952167ead7568973b27d4f5f75f4aba2aa7918e0b8a93777d129f01aa
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【10月3日】
+  A：主管，节前我想找你聊几句，你哪天方便？
+  A：那个旧相册找着没
+  B：在柜子最下面
+  A：有空翻翻看
+  B：我找到小时候的照片了
+  A：有张照片挺模糊的
+  B：但还能看出来是谁
+  A：我扫描一下试试
+  B：这周还好，怎么啦？
+  A：我之前交的供应商复核材料没什么消息，想问问到哪一步了。
+  A：周日要不要去江边走走
+  B：可以，下午不太晒
+  A：带上水就行
+  B：我有个小水壶
+  A：我查了天气预报
+  B：下午会凉快些
+  【10月4日】
+  B：材料都是按顺序往下走，我只能照着统一办法处理。
+  A：最近开的那家水果店如何
+  B：价格还行，桃子挺甜
+  A：那我下班也去看看
+  B：晚点去选择多些
+  A：我买了两只尝尝
+  B：挑软一点的
+  A：我一直记得你之前的提醒，过节前想当面谢谢你。
+  A：你的帆布包洗干净没
+  B：洗了，晒了一下午
+  A：下次装东西轻一点
+  B：我记住了
+  A：我以后不装那么重
+  B：肩膀会轻松些
+  B：见面可以，东西真不用带。
+  【10月5日】
+  A：你最近在听什么歌
+  B：老歌合集，挺放松的
+  A：发我几首我也听
+  B：我整理个列表
+  A：这首我以前也听过
+  B：旋律挺熟的
+  A：我本来想带张购物卡，面值没看，想节前送给你。
+  B：单位发的福利卡按单位办法登记，私人给的我不能收。
+  A：你爸妈打算什么时候出游
+  B：下个月找个周末
+  A：提前订票会轻松些
+  B：嗯，我正在看看
+  A：我们想去海边
+  B：提前看天气吧
+  A：我那份供应商复核材料，你有空时帮我留意一下可以吗？
+  【10月6日】
+  A：你最近还蒸馒头吗
+  B：周末蒸了一锅
+  A：用老面还是酵母
+  B：普通酵母，比较省事
+  A：我下次多蒸几个
+  B：冷冻起来也方便
+  B：不管咱们什么关系，我都只能按原来的顺序办。
+  A：楼下修路修完了吗
+  B：昨天看到铺到拐角了
+  A：那明天走路应该方便点
+  B：我早上去看下
+  A：你晚上回家留意下
+  B：好，慢点走
+  A：嗯，明白，我就是问问。
+  A：你买的那把伞结实吗
+  【10月7日】
+  B：还行，风大时没翻
+  A：那挺好，旧伞总坏
+  B：我留了一把在办公室
+  A：我买了个小收纳袋
+  B：放伞刚好
+  B：那就先别拿卡来了，有进展会照常告诉你。
+  A：之前那份供应商复核材料这两天有消息了吗？
+  A：你家窗台的辣椒苗怎么样
+  B：长了三片叶子
+  A：最近太阳好，放外面吧
+  B：我中午再挪一下
+  A：我给它支了个小架
+  B：风大时不容易倒
+  B：我会按提交时间跟进，有变化走原来的通知方式。
+  A：好，那卡我就不带了，节前正常见面。

@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002187
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-b5c6583463a0c742
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 借节前见面向能接触入驻申请进度的B送一张不说明面值的购物卡，并在送卡前后暗示希望B留意自己的入驻申请；B拒绝私人礼物，区分单位福利卡与个人送礼，坚持按统一流程处理。
+  critical_evidence:
+  - A 节前主动约见或联系能接触入驻申请进度的B
+  - A 提到购物卡或小卡但不说明面值
+  - A 将节礼和自己的入驻申请联系起来，暗示希望B留意
+  - B 区分单位福利卡与私人礼物并拒绝个人送礼
+  - B 表示按统一流程或正常顺序办理
+  benign_alternatives:
+  - 正常节日人情往来
+  - 单位统一发放的公司福利卡
+
+attributes:
+  duration_days: 5
+  turn_count: 43
+  approximate_tokens_estimate: 984
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0217
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-100
+
+dedup:
+  content_hash: sha256:5636badd97496b2462137ab4ff232a828ac90fe24bb7f6155a7b2986c7ef7b73
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【12月6日】
+  A：合作方，节前我想找你见一面，你哪天方便？
+  B：这阵子还行，怎么突然约我？
+  A：我交的门店入驻申请一直没等到消息，想问问现在大概什么情况。
+  A：午休还会睡过头吗
+  B：现在定两个闹钟
+  A：挺好，下午不容易迟到
+  B：我把手机放远点了
+  A：下午精神好多了
+  B：晚上别再刷太久
+  【12月7日】
+  A：我把视频关掉了
+  B：我这边只能按收到的先后看，不能单独改顺序。
+  A：之前咱们有过几次合作，我一直记得你平时的照应。
+  B：见面没问题，真不用带东西。
+  A：你常坐的那家车行方便吗
+  B：挺方便，等车不久
+  A：我下周可能要用车
+  B：提前预约就行
+  A：我用手机看了路线
+  【12月8日】
+  B：公交直达比较快
+  A：那挺省事的
+  A：我给你准备了张购物卡，面值没问，就当节前一点心意。
+  【系统消息】A 向 B 转账 300 元，已收款。
+  B：单位发的福利卡按单位规矩登记，私人送的我不能收。
+  A：你上次借的那本书呢
+  B：看到最后两章了
+  A：不急，慢慢看
+  B：周末我还给你
+  【12月9日】
+  A：后面挺有意思的
+  B：那你继续看吧
+  A：我今晚看完
+  A：我那份门店入驻申请，你有空时帮我留意一下行吗？
+  B：我只能按正常流程来，不会因为关系或礼物提前。
+  A：嗯，我懂的。
+  A：你那台电动车补胎了吗
+  B：补好了，师傅说扎了个小钉子
+  A：慢点骑，路边碎石多
+  【12月10日】
+  B：嗯，现在打气也正常了
+  A：我把打气筒也放车筐里
+  B：路上遇到问题能处理
+  A：不过还是先找修车店
+  B：卡你先带回去，有进展会照平时方式告诉你。
+  A：上次说的门店入驻申请，最近有进展吗？
+  B：我会照先后跟进，有变化再按原来的方式通知。
+  A：好，我拿回去，节前就正常见面。

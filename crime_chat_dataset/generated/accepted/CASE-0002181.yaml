@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002181
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-5824e9b34b349a21
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 节前向能接触进修材料进度的B提出送一张不说明面值的购物卡，并在送卡前后暗示希望B留意自己的进修材料；B拒绝私人礼物，区分单位福利卡与个人送礼，坚持按统一流程处理。
+  critical_evidence:
+  - A 节前主动约见或联系能接触进修材料进度的B
+  - A 提到购物卡或小卡但不说明面值
+  - A 将节礼和自己的进修材料联系起来，暗示希望B留意
+  - B 区分单位福利卡与私人礼物并拒绝个人送礼
+  - B 表示按统一流程或正常顺序办理
+  benign_alternatives:
+  - 正常节日人情往来
+  - 单位统一发放的公司福利卡
+
+attributes:
+  duration_days: 4
+  turn_count: 45
+  approximate_tokens_estimate: 973
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0217
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-100
+
+dedup:
+  content_hash: sha256:c9a48946a4e86b2b48df8f7c9a30c6dc000febe4575b41f3a6cf1d0256e31086
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【3月20日】
+  A：主管，节前我想找你见一面，你哪天方便？
+  B：这阵子还行，怎么突然约我？
+  A：昨天洗的外套干了吗
+  B：阳台风大，已经干了
+  A：衣服别晾太密
+  B：我把间距留出来了
+  A：我把窗户开了一会
+  B：屋里味道散了
+  A：我交的进修名额材料一直没等到消息，想问问现在大概什么情况。
+  B：我这边只能按收到的先后看，不能单独改顺序。
+  A：平时你挺关照我，我一直记得你平时的照应。
+  A：午休还会睡过头吗
+  【3月21日】
+  B：现在定两个闹钟
+  A：挺好，下午不容易迟到
+  B：我把手机放远点了
+  A：下午精神好多了
+  B：晚上别再刷太久
+  B：见面没问题，真不用带东西。
+  A：本来想带张购物卡，面值没问，想节前送你。
+  A：你常坐的那家车行方便吗
+  B：挺方便，等车不久
+  A：我下周可能要用车
+  B：提前预约就行
+  【3月22日】
+  A：我用手机看了路线
+  B：公交直达比较快
+  B：单位发的福利卡按单位规矩登记，私人送的我不能收。
+  A：我那份进修名额材料，你有空时帮我留意一下行吗？
+  A：你上次借的那本书呢
+  B：看到最后两章了
+  A：不急，慢慢看
+  B：周末我还给你
+  A：后面挺有意思的
+  B：那你继续看吧
+  B：我只能按正常流程来，不会因为关系或礼物提前。
+  【3月23日】
+  A：嗯，我懂的。
+  B：那就先别带卡来，后续有进展照常通知。
+  A：你那台电动车补胎了吗
+  B：补好了，师傅说扎了个小钉子
+  A：慢点骑，路边碎石多
+  B：嗯，现在打气也正常了
+  A：我把打气筒也放车筐里
+  B：路上遇到问题能处理
+  A：上次说的进修名额材料，最近有进展吗？
+  B：我会照先后跟进，有变化再按原来的方式通知。
+  A：明白，那卡就不带了，节前正常见面。

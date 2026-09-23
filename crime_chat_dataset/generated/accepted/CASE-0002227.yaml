@@ -1,0 +1,125 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002227
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-2f22940c18f3804f
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 借节前见面向能了解场地表进度的B送一张不说明面值的购物卡，并在送卡前后暗示希望B留意自己的场地表；B拒绝私人礼物，区分单位福利卡与个人送礼，坚持按统一流程处理。
+  critical_evidence:
+  - A 节前主动约见或联系能了解场地表进度的B
+  - A 提到购物卡但不说面值
+  - A 将节礼和自己的场地表联系起来，暗示希望B留意
+  - B 区分单位统一发放的福利卡与私人礼物并拒绝个人送礼
+  - B 表示按正常顺序或统一流程办理
+  benign_alternatives:
+  - 正常节日人情往来
+  - 单位统一发放的公司福利卡
+
+attributes:
+  duration_days: 6
+  turn_count: 45
+  approximate_tokens_estimate: 990
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0220
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-101
+
+dedup:
+  content_hash: sha256:28501ba9e006f5684bbd3cdf458f9638128e9945eeb31db7887df759d308fac2
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【6月6日】
+  A：您好，节前我想找你碰个面，你哪天有空？
+  B：这两天还好，你有什么事？
+  A：那条灰色围巾找到没
+  B：找到了，在玄关柜里
+  A：天冷了记得带上
+  B：我挂在门边了
+  A：我把围巾洗好了
+  B：晾干了再收起来
+  【6月7日】
+  A：之前交的社区活动场地表一直没听到动静，想问问进度。
+  B：我能看到大概进到哪一步，具体还是按统一次序走。
+  A：上次窗口你提过这件事，节前想当面跟你道个谢。
+  A：你蒸的南瓜糕好吃吗
+  B：还行，甜度刚好
+  A：下次留两个给我
+  B：没问题，刚好做一批
+  A：我少放了一点糖
+  【6月8日】
+  B：这样吃着不腻
+  B：见面可以，不用带什么。
+  A：那张小卡给你带来了，里面多少我没看，算节前一点心意。
+  【系统消息】A 向 B 转账 300 元，已收款。
+  A：楼道的灯修好了吧
+  B：物业换了灯泡
+  A：晚上回家亮堂些
+  【6月9日】
+  B：是的，昨天就好了
+  A：我换了个亮一点的灯泡
+  B：省得晚上看不清
+  B：单位发的福利卡按单位规定走，个人送来的我不能收。
+  A：你知道我说的那件事，有空时帮我提一嘴就好。
+  A：你那盆吊兰要分株吗
+  B：等天气暖些再弄
+  A：别急，根长壮点
+  【6月10日】
+  B：我看周末再整理
+  A：我先换了个大花盆
+  B：土也加了一点
+  B：我只按同一套规则办，不会因为认识就提前。
+  A：嗯，知道的，我就是问问。
+  B：这张你拿回去，后面有消息我照常告诉你。
+  A：午饭去哪里吃了
+  B：单位旁边那家粉店
+  【6月11日】
+  A：味道怎么样
+  B：挺清爽的，汤也热
+  A：我下次试试另一家
+  B：那家也不远
+  A：前两天提的那件事有信儿了吗？我好做后面的打算。
+  B：我会按提交先后跟进，有变化就按原来方式通知。
+  A：好，那东西我拿回去，节前正常见面。

@@ -1,0 +1,150 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002068
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-c069bcc780641913
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 节前向能接触产品评审表进度的B提出送一张不说明面值的购物卡，并在送卡前后暗示希望B留意自己的产品评审表；B拒绝个人礼物，区分单位福利卡与私人礼物，坚持按公开流程处理。
+  critical_evidence:
+  - A 节前主动约见或联系能接触产品评审表进度的B
+  - A 提出送购物卡但不说明面值
+  - A 把礼物与自己的产品评审表联系起来，暗示希望B留意
+  - B 区分单位福利卡与私人礼物并拒绝个人礼卡
+  - B 表示按统一规则或正常顺序办理
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司统一发放的福利卡
+
+attributes:
+  duration_days: 4
+  turn_count: 73
+  approximate_tokens_estimate: 1399
+  relationship: 同事
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 同事
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0188
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-091
+
+dedup:
+  content_hash: sha256:06fc3c5d289b10c6ec385acd670733985c346a8f9b9f1df60a281ecfdf7a14dc
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【5月10日】
+  A：小组搭档，节前我想找你碰一下，你哪天方便？
+  A：你买的手冲壶用着顺手吗
+  B：挺顺手的，水流比较稳
+  A：那就好，别买太贵的豆子
+  B：我先试试家里那包
+  A：我周末再冲一杯试试
+  B：用温度低一点也许更好
+  A：好，我记下来了
+  B：这两天还好，什么事？
+  A：我之前交的产品评审表还没消息，想知道大概到哪了。
+  A：楼下早餐店还排队吗
+  B：今天人少，豆浆也热
+  A：下次我也早点去
+  B：七点前应该不用等
+  A：我明早设个闹钟
+  B：这样就不用空着肚子等
+  A：我先去买早点
+  B：我能看到流程走到哪一步，先后次序还是按统一安排。
+  A：你家的绿萝换盆了吗
+  【5月11日】
+  B：周末刚换，土还挺松
+  A：先别浇太多水
+  B：知道，我看着土干再浇
+  A：我把旧土留了一些
+  B：混一点比较稳妥
+  A：嗯，盆底也垫了石子
+  A：咱们一起跟这个项目挺久了，过节前想当面谢谢你。
+  B：见面可以，别特意带东西。
+  A：你那个保温袋找到了吗
+  B：在餐边柜下面
+  A：正好带饭能用上
+  B：我今晚洗一下晾干
+  A：我已经挂在阳台了
+  B：通风就容易干
+  A：今天太阳还不错
+  A：我本来想带张小卡，里面多少也没留意。
+  A：这周末天气如何
+  B：预报说周六有风
+  【5月12日】
+  A：那我把窗户关好
+  B：下午在家收拾一下
+  A：我看了另一家预报
+  B：周日下午会转晴
+  B：单位统一发的福利卡另有登记办法，私人送的我不能收。
+  A：你新买的台灯亮不亮
+  B：亮度可以，还能调色
+  A：写东西眼睛会舒服点
+  B：是，晚上不刺眼
+  A：我放在床头了
+  B：睡前别开太亮
+  A：那天说的那件事，你有空时顺口提一下就行。
+  B：不管熟不熟，我这边都只能照流程往下走。
+  A：早上那班车挤吗
+  B：比昨天好一点
+  A：我明天提早五分钟
+  B：可以，路上不那么赶
+  A：刚才看实时到站了
+  【5月13日】
+  B：省得站台等太久
+  A：嗯，懂的，我就是想问问。
+  A：你妈的药取到了吗
+  B：取到了，先按时吃
+  A：药盒放在桌上醒目些
+  B：我已经摆好了
+  A：我设了个手机提醒
+  B：挺好，避免忘记
+  B：卡先别拿来，后续有消息会照常通知。
+  A：前两天说的那份有回音了吗？我还在等着安排。
+  A：那家面包店换菜单没
+  B：多了个咸奶酪口味
+  A：听着还行，改天试试
+  B：周末路过我买两个
+  A：你想吃甜口还是咸口
+  B：咸口吧，早上更顶饿
+  B：我会按提交先后跟进，有变化走原来的通知方式。
+  A：好，那卡我就不带了，节前正常见面。
