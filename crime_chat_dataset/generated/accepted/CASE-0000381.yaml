@@ -1,0 +1,125 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000381
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000054
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-5715f05223962625
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A在开庭前反复给共同生意纠纷另一头的B递话施压，用知道接送孩子的时间点敲山震虎，再以一万块让B说话心里有数。
+  critical_evidence:
+  - 开庭前A多次找B打招呼，说见面别装不认识
+  - A点出B每天下午四点半在校门口接孩子，敲山震虎
+  - A反复说话想清楚再说、账是两个人的账
+  - A转B一万元，名为货架钱和孩子补贴，要B说话心里有数
+  benign_alternatives:
+  - 经济纠纷开庭前的正常沟通
+  - 老合伙人之间的还款协商
+
+attributes:
+  duration_days: 4
+  turn_count: 48
+  approximate_tokens_estimate: 1017
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: witness_intimidation
+  risk: 3
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0043
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:0b45453e3814395e964ebd13433ff7de1ded91ff172a5c4b4ca58de27214ba65
+pipeline_status: accepted
+title: violence_extortion/witness_intimidation
+conversation: |-
+  【10月14日】
+  A：在吗 那天的话想好了没
+  B：……什么话
+  A：就那天的事 你在场 你心里有数
+  B：我都说过了 我照实的说
+  A：照实 谁的实
+  B：哥 钱的事到时候当面对清楚不就行了
+  A：开庭那天你在门口吧 见面打个招呼 别装不认识
+  B：……打招呼可以
+  A：这就对了 老搭档 什么话不能说
+  B：我先忙了
+  A：忙吧 慢慢想 话想清楚再说
+  【10月15日】
+  A：降温了 每天下午四点半校门口风大 接孩子多穿点
+  B：……你怎么知道我四点半接
+  A：这条街谁不知道 你别多心 关心你
+  B：我有点事 忙
+  A：别紧张 我就问问
+  B：哥 咱们好歹合作三年 别来这套
+  A：哪套? 提你孩子怎么了 咱们谁跟谁
+  B：……
+  A：中午了 楼下新开火锅 涮点热的
+  B：不去 没胃口
+  A：天冷就该吃口热的 你这霜打的
+  B：哥 我真的累
+  A：那给你带份酸辣粉 公司楼下
+  B：……不用了
+  【10月16日】
+  A：昨晚球看了没 加时绝杀
+  B：没看 睡得早
+  A：你以前最爱熬这个 现在连球都不看了
+  B：没那个心思
+  A：一场球 有什么大不了 心态放宽
+  B：……嗯
+  A：旧店那批货架 我让人拆了 你那份折两千 一起算了?
+  B：折多少你说了算惯了
+  A：别这样 货架是铁的 能用 我按行价给你
+  B：行 你定
+  A：那就这么定 我让老四拉走
+  B：嗯
+  【10月17日】
+  A：后天就开庭 你说话前 想清楚 再想清楚
+  B：你到底想让我说什么
+  A：说什么你自己掂量 反正账是两个人的账
+  B：……钱的事我认一半 那是我签的字
+  A：这就对了 剩下的 心里再过过
+  【系统消息】A 向 B 转账 10000 元，已收款。
+  A：一万 拿着 货架的钱加孩子报班的补贴 别嫌少
+  B：……这钱我不能要
+  A：拿着 老搭档 我不能让弟妹和孩子跟着紧巴 你说话心里有数就行
+  B：……
+  A：开完庭 咱们饭照吃 生意照谈
+  B：……嗯

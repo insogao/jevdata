@@ -1,0 +1,120 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000374
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000042
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-ad63757adbd71c66
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: contraband_illicit_trade
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: B绕开正常采购流程，让在化工厂任职的前同事A无单据调出工业原料，出厂前换掉原厂贴纸并隐瞒真实用途，现金交易。
+  critical_evidence:
+  - B要求A不走单据调出十二桶（后加至十四桶）工业原料
+  - B要求出厂前揭掉原厂贴纸、换上自备货字，并拒绝说明用途
+  - 约定现金自提、不经公司账户，B先转6000元定金
+  - 两人约定赶在月底盘点前完成出货
+  benign_alternatives:
+  - 正规化工原料的私下调剂，换贴为代工贴牌
+  - 实验室试剂代购的行业现金结算习惯
+
+attributes:
+  duration_days: 4
+  turn_count: 43
+  approximate_tokens_estimate: 1161
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: shell_chemical_diversion
+  risk: 3
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0042
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:33e5cc08ed2862b958c264091cfb5f0e3a46978db7594d6429d4baead11c37cc
+pipeline_status: accepted
+title: contraband_illicit_trade/shell_chemical_diversion
+conversation: |-
+  【10月20日】
+  B：老陈，忙不
+  A：刚巡完库，啥事
+  B：你厂里上个月那种工业料，蓝桶25公斤的，还有富余没
+  A：有是有。走单子得加急审批，你要多少
+  B：十二桶，不走单子
+  A：不走单子？你这话什么意思
+  B：老规矩外那种，细节当面聊，晚上老位置
+  A：中午不行，晚上说
+  B：我到了，老位置，你带烟没
+  A：到了。先说正事，什么价
+  【10月21日】
+  B：昨晚没细说。十二桶，一桶一千二，随行就市
+  A：价好说。货怎么出？我这一关好过，出门那关呢
+  B：你把货弄到你车上就行，提货自提，现金结
+  A：现金可以。丑话说前头，月底盘点，厂里对得紧
+  B：所以赶盘点前办。名目你写厂房清洗养护就行
+  A：用途呢？你就不怕我多问
+  B：别问用途，问了你也不好办。我就是中间搭个线
+  A：行吧，你别给我惹事
+  B：你家闺女钢琴考级过了没
+  A：过了，良好。就是学费一年比一年狠
+  B：那这单做完，学费不就有了，哈哈
+  A：就你会说
+  【10月22日】
+  B：出货前把原厂的贴纸都揭干净，换我发你的那种白底蓝字货字
+  A：换字可以，原厂的票我可补不了
+  B：不用你补，你只管桶面干净
+  A：你那边到底谁收？连个公司名都不给我
+  B：问了你也帮不上，钱按时结就行
+  A：跟你做过三年同事，就没见你接过一单白净的
+  B：我这行当混口饭，你操哪门子心
+  B：晚上别做饭了，我订了那家羊汤，清汤的
+  A：行，正好降温，多加辣
+  B：你胃不好，辣的少吃
+  A：微辣微辣。几点
+  B：到店了，给你占了靠里的座
+  A：来了。定金怎么走
+  B：定金六千我现在转你，尾款提货当天现金结清
+  【系统消息】B 向 A 转账 6000 元，已收款。
+  A：收到了。11月2号提货，车你自己安排
+  【10月23日】
+  A：昨晚回去把桶点过了，库角还压着两桶临期的，九折一起给你
+  B：要，凑十四桶整，差价并进尾款
+  B：你腰怎么样了，上回见你还贴着膏药
+  A：好多了，就是搬不了重物，库里的活都支使年轻人了
+  B：那就好，别硬扛
+  A：货字明早发我。就这么定，盘点前把这事办利索

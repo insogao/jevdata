@@ -1,0 +1,372 @@
+{
+ "key": "b22c007",
+ "archetype_id": "ARC-000086",
+ "subtype": "courier_info_leak",
+ "latent_intent": "驿站员工利用经手入库的便利，把当天新落地的包裹面单截图按条卖给收料人，四块一条当天结算，两天就做成了六百条的大单。",
+ "critical_facts": [
+  "驿站员工发的是当天上午刚入库的包裹面单截图，收件人电话住址完整可读",
+  "计价明确为'四块一条'，只收当天新单，越新鲜越好出手",
+  "10月12日中午对方一次性要了600条并转账2400元，与条数单价严格对应，无任何正常业务场景",
+  "两天形成'上午入库—中午截图—下午成交'的固定出货节奏，并约定长期供货"
+ ],
+ "benign_alternatives": [
+  "快递理赔核实",
+  "驿站正常登记"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "10月11日 08:12",
+   "speaker": "A",
+   "text": "哥，昨天你说加我，我是站点小陈"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 08:20",
+   "speaker": "B",
+   "text": "对对，老宋推的这个号。你那边量还行？"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 08:22",
+   "speaker": "A",
+   "text": "我们站大学城这块，平时一天七八百件，旺季上千"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 08:25",
+   "speaker": "B",
+   "text": "那可以。你说的那种，当天新进来的，能弄到不"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 08:27",
+   "speaker": "A",
+   "text": "入库都是我经手，拍一下就行，就是得挑还没被领走的"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 08:30",
+   "speaker": "B",
+   "text": "行，先来一小批试试水，你稳的话往后天天要"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 08:32",
+   "speaker": "A",
+   "text": "成。你那边主要要哪类的"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 08:35",
+   "speaker": "B",
+   "text": "不挑，新进来的都要，越新越好"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 10:05",
+   "speaker": "A",
+   "text": "降温了哥，你那边穿秋裤没，我们这早上冻手"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 10:08",
+   "speaker": "B",
+   "text": "我们南方还热着，你们北方人真抗冻"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 10:10",
+   "speaker": "A",
+   "text": "我纯扛不住，早上分件手都是僵的"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 10:12",
+   "speaker": "B",
+   "text": "辛苦钱不好挣，回头让你多落点"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 11:48",
+   "speaker": "A",
+   "text": "一批拍好了，四十多条，都是今早刚入库的，电话住址全乎"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 11:55",
+   "speaker": "B",
+   "text": "发过来我看看成色"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 11:57",
+   "speaker": "A",
+   "text": "发了，你看下，清清楚楚"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 12:02",
+   "speaker": "B",
+   "text": "成色行。这批当验货，不算钱，交个朋友"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 12:04",
+   "speaker": "A",
+   "text": "大哥敞亮，那明天正式的开始算"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 12:10",
+   "speaker": "B",
+   "text": "明天量给我放大点，我那边等着下锅"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 12:12",
+   "speaker": "A",
+   "text": "明白，明天入库我多留心"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 14:30",
+   "speaker": "A",
+   "text": "中午吃了没，我端着饭箱在库房扒了两口"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 14:35",
+   "speaker": "B",
+   "text": "我刚点的外卖，麻辣烫。你站附近那家是不是挺正宗"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 14:37",
+   "speaker": "A",
+   "text": "有是有，忙起来顾不上，都泡面凑合"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 14:40",
+   "speaker": "B",
+   "text": "泡面配个卤蛋才算完整，哈哈"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 14:42",
+   "speaker": "A",
+   "text": "嘿，明天就加个蛋，遇上周哥你这单子，泡面都香"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 19:20",
+   "speaker": "B",
+   "text": "那四十条出得七七八八了，你的东西是真新鲜"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 19:25",
+   "speaker": "A",
+   "text": "大哥你效率也高"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 19:28",
+   "speaker": "B",
+   "text": "干我们这行讲究一个快，放两天就馊了"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 19:30",
+   "speaker": "A",
+   "text": "懂懂，新鲜的才值钱"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 19:33",
+   "speaker": "B",
+   "text": "明天给我备一百条起，老规矩四块一条，量稳定了我再给你提"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 19:35",
+   "speaker": "A",
+   "text": "好嘞，明早件一落地我就动手"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 07:50",
+   "speaker": "A",
+   "text": "哥，今早的刚开始落，我盯着呢"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 08:01",
+   "speaker": "B",
+   "text": "辛苦，多留意写字楼和城中村那片的"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 08:03",
+   "speaker": "A",
+   "text": "城中村的地址深，件也不好送"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 08:06",
+   "speaker": "B",
+   "text": "我要的不是送不送，是那片的人好说话"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 08:08",
+   "speaker": "A",
+   "text": "哦哦，我大概懂了，不多问"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:22",
+   "speaker": "A",
+   "text": "妈呀今天爆仓了，大促的件提前来了，扫码扫到手抽筋"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:30",
+   "speaker": "B",
+   "text": "爆仓好啊，你那边的存货不就多了"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:32",
+   "speaker": "A",
+   "text": "也是，忙归忙，收成也归我"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:35",
+   "speaker": "B",
+   "text": "聪明。一百条备够没"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:40",
+   "speaker": "A",
+   "text": "一百二了，正挑成色好的"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 12:15",
+   "speaker": "A",
+   "text": "好了，一百二打包发你了"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 12:20",
+   "speaker": "B",
+   "text": "收到，我先过一遍"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 12:22",
+   "speaker": "A",
+   "text": "你过，我去热个饭"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 12:45",
+   "speaker": "B",
+   "text": "过完了，条条带电话住址，成，这批我要了"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 12:47",
+   "speaker": "A",
+   "text": "按老规矩，一百二条，四块一条，480"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 12:50",
+   "speaker": "B",
+   "text": "这样，我兄弟那边还急要四百八，跟你这一百二凑个整，六百条一起结"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 12:52",
+   "speaker": "A",
+   "text": "六百条，四块一条，2400，行"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 12:55",
+   "speaker": "B",
+   "text": "痛快，我现在转你"
+  },
+  {
+   "type": "transfer",
+   "time": "10月12日 12:58",
+   "from": "B",
+   "to": "A",
+   "amount": 2400
+  },
+  {
+   "type": "message",
+   "time": "10月12日 13:00",
+   "speaker": "A",
+   "text": "收到了哥。往后每天这个量没问题"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 13:03",
+   "speaker": "B",
+   "text": "每天有，你别断供就行，断了我就找别家了"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 13:05",
+   "speaker": "A",
+   "text": "站里入库就我一个人管，稳得很"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 18:30",
+   "speaker": "A",
+   "text": "哥，晚上撸串去不，我请，今天进账得表示表示"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 18:40",
+   "speaker": "B",
+   "text": "改天，今晚有事。挣了钱给嫂子孩子买点好的"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 18:45",
+   "speaker": "A",
+   "text": "孩子就爱吃烤肠，回头我批发一箱"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 19:30",
+   "speaker": "B",
+   "text": "对了，以后尽量挑当天没派完的，那种新鲜，最好出"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 19:35",
+   "speaker": "A",
+   "text": "懂，专挑还在站里躺着的"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 19:40",
+   "speaker": "B",
+   "text": "行，明天见，老规矩"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000391",
+  "status": "accepted",
+  "errors": []
+ }
+}

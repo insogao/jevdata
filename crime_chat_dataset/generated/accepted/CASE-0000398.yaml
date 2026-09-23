@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000398
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000086
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-0faef064e826d4d7
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 开场像两个陌生人私下交易面单信息，实际是网店售后请驿站配合丢件理赔的官方核验：照片打码、平台垫付、代寄按单结费，每一分钱都有对应凭据。
+  critical_evidence:
+  - 网店售后索要的是丢件那几天的入库登记记录照片，电话已打码、住址只留到小区
+  - 理赔走平台官方流程，垫付款直接赔到客户账上，全程未要求任何人先交任何费用
+  - 10月12日转账48元对应12单退货代寄操作费（每单4元），与回传的单号数量一一对应
+  - 运费走店铺月结，驿站登记簿本身只留尾号，照片仅用于平台核验
+  benign_alternatives:
+  - 快递理赔核实
+  - 驿站正常登记
+
+attributes:
+  duration_days: 2
+  turn_count: 57
+  approximate_tokens_estimate: 1826
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: courier_info_leak
+  risk: 0
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0044
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:030e1fd5be65aa4c6a020e244b8de7745fb28b81b786d47f0301a86cc841dcf0
+pipeline_status: accepted
+title: privacy_doxxing/courier_info_leak
+conversation: |-
+  【10月11日】
+  B：您好，是同心路驿站的陈师傅吧？退货这块想找您帮个忙
+  A：我是，您哪位？
+  B：我是一家网店的售后，姓周。有个客户在你驿站寄的退货件丢了
+  A：哦，是有个件找不到了，客户还来问过一回
+  B：对，就那单。客户在我们平台申请了理赔，官方要我们提供入库登记记录做核实
+  A：登记记录我们有，不过面单上客户电话得打码，这是规定
+  B：应该的，官方也说不需要完整号码，打码的就行
+  A：我下午把那几天的登记记录翻出来拍给你
+  B：麻烦陈师傅了。平台核完，理赔款是直接赔给客户的，不打折也不收费
+  A：这流程正规，客户也少跑腿
+  A：今早降温了，您那边多加衣服
+  B：加了加了，仓库比外头还冷
+  A：我早上分件手都僵了，这鬼天气
+  B：秋天多变天，多喝热水哈哈
+  A：记录找到了，就这三张，电话都打了码，住址只留到小区
+  B：收到，我传给平台专员
+  B：陈师傅中午怎么解决？驿站能点外卖不
+  A：能是能，忙起来顾不上，今天泡面对付
+  B：泡面配个卤蛋才算完整哈哈
+  A：您这要求不高，我这就加个蛋
+  B：哈哈不打扰您干饭，下午等专员消息
+  B：专员说记录没问题，时间对得上，就差客户那边寄回商品核验了
+  A：那件丢的货是不是也得挂失
+  B：平台已经按流程备了案，理赔款昨天先垫付到客户账上了
+  A：那客户那边总算有个交代
+  A：周经理，核验完的退货件，后续还走我们驿站寄回吗
+  B：对，核验通过后商品要寄回我们仓。我一单给你备注4块操作费，老合作价，运费走我们的月结
+  A：四块一单，跟我们平时给网店代寄的价一样，行
+  B：好，明天有十二单要发，到时候麻烦你
+  【10月12日】
+  A：周经理早，昨天那客户的理赔到账了吗
+  B：到了，客户还发来个好评截图，说驿站记录帮了大忙
+  A：那就好，丢件我们驿站也有责任，总算补上了
+  B：各有各的不容易。今天十二单的退货单号我发你了
+  A：收到，我按单号一个个登记入库
+  B：麻烦了，老规矩，电话打码再拍照回传
+  A：放心，我们登记簿本来也只留尾号
+  A：你们大促什么时候开始？我媳妇天天蹲直播
+  B：我们不凑那个热闹，做的是宠物粮，四季都一样
+  A：宠物粮好啊，我家猫一天两顿比我吃得准时
+  B：哈哈那下次给你发张猫粮券，我们有员工内购
+  A：那敢情好
+  A：十二单都登记好了，照片回传你查收
+  B：收到，我看下……十二张都齐了，清楚
+  B：运费走月结，操作费十二单乘四块，四十八，我现在转你
+  【系统消息】B 向 A 转账 48 元，已收款。
+  A：到账了。以后有单尽管来
+  B：一定，登记规范对我们核验也省事
+  A：你那边丢件多吗
+  B：不多，一个月摊上两三单，平台都有官方流程，照着走就行
+  A：中午吃的啥，我今天学聪明了，提前备了饭盒
+  B：我点了家猪脚饭，仓库解决
+  A：猪脚饭配青菜，讲究
+  B：干体力活就得吃点硬的
+  A：对了那单丢件的客户，后续不用再来驿站开证明了吧
+  B：不用了，官方理赔都结清了，你这边记录留着备查就行
+  A：行，记录我都归档了，随时能调
+  B：好，合作愉快，回见
+  A：回见，周经理

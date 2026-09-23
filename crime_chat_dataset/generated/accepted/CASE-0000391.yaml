@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000391
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000086
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-0faef064e826d4d7
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: privacy_doxxing
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 驿站员工利用经手入库的便利，把当天新落地的包裹面单截图按条卖给收料人，四块一条当天结算，两天就做成了六百条的大单。
+  critical_evidence:
+  - 驿站员工发的是当天上午刚入库的包裹面单截图，收件人电话住址完整可读
+  - 计价明确为'四块一条'，只收当天新单，越新鲜越好出手
+  - 10月12日中午对方一次性要了600条并转账2400元，与条数单价严格对应，无任何正常业务场景
+  - 两天形成'上午入库—中午截图—下午成交'的固定出货节奏，并约定长期供货
+  benign_alternatives:
+  - 快递理赔核实
+  - 驿站正常登记
+
+attributes:
+  duration_days: 2
+  turn_count: 57
+  approximate_tokens_estimate: 1605
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: courier_info_leak
+  risk: 2
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0044
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:a573e93226012a6c26a84e602c5b9c8fb876ea98d6bad0e9abb2c67298234761
+pipeline_status: accepted
+title: privacy_doxxing/courier_info_leak
+conversation: |-
+  【10月11日】
+  A：哥，昨天你说加我，我是站点小陈
+  B：对对，老宋推的这个号。你那边量还行？
+  A：我们站大学城这块，平时一天七八百件，旺季上千
+  B：那可以。你说的那种，当天新进来的，能弄到不
+  A：入库都是我经手，拍一下就行，就是得挑还没被领走的
+  B：行，先来一小批试试水，你稳的话往后天天要
+  A：成。你那边主要要哪类的
+  B：不挑，新进来的都要，越新越好
+  A：降温了哥，你那边穿秋裤没，我们这早上冻手
+  B：我们南方还热着，你们北方人真抗冻
+  A：我纯扛不住，早上分件手都是僵的
+  B：辛苦钱不好挣，回头让你多落点
+  A：一批拍好了，四十多条，都是今早刚入库的，电话住址全乎
+  B：发过来我看看成色
+  A：发了，你看下，清清楚楚
+  B：成色行。这批当验货，不算钱，交个朋友
+  A：大哥敞亮，那明天正式的开始算
+  B：明天量给我放大点，我那边等着下锅
+  A：明白，明天入库我多留心
+  A：中午吃了没，我端着饭箱在库房扒了两口
+  B：我刚点的外卖，麻辣烫。你站附近那家是不是挺正宗
+  A：有是有，忙起来顾不上，都泡面凑合
+  B：泡面配个卤蛋才算完整，哈哈
+  A：嘿，明天就加个蛋，遇上周哥你这单子，泡面都香
+  B：那四十条出得七七八八了，你的东西是真新鲜
+  A：大哥你效率也高
+  B：干我们这行讲究一个快，放两天就馊了
+  A：懂懂，新鲜的才值钱
+  B：明天给我备一百条起，老规矩四块一条，量稳定了我再给你提
+  A：好嘞，明早件一落地我就动手
+  【10月12日】
+  A：哥，今早的刚开始落，我盯着呢
+  B：辛苦，多留意写字楼和城中村那片的
+  A：城中村的地址深，件也不好送
+  B：我要的不是送不送，是那片的人好说话
+  A：哦哦，我大概懂了，不多问
+  A：妈呀今天爆仓了，大促的件提前来了，扫码扫到手抽筋
+  B：爆仓好啊，你那边的存货不就多了
+  A：也是，忙归忙，收成也归我
+  B：聪明。一百条备够没
+  A：一百二了，正挑成色好的
+  A：好了，一百二打包发你了
+  B：收到，我先过一遍
+  A：你过，我去热个饭
+  B：过完了，条条带电话住址，成，这批我要了
+  A：按老规矩，一百二条，四块一条，480
+  B：这样，我兄弟那边还急要四百八，跟你这一百二凑个整，六百条一起结
+  A：六百条，四块一条，2400，行
+  B：痛快，我现在转你
+  【系统消息】B 向 A 转账 2400 元，已收款。
+  A：收到了哥。往后每天这个量没问题
+  B：每天有，你别断供就行，断了我就找别家了
+  A：站里入库就我一个人管，稳得很
+  A：哥，晚上撸串去不，我请，今天进账得表示表示
+  B：改天，今晚有事。挣了钱给嫂子孩子买点好的
+  A：孩子就爱吃烤肠，回头我批发一箱
+  B：对了，以后尽量挑当天没派完的，那种新鲜，最好出
+  A：懂，专挑还在站里躺着的
+  B：行，明天见，老规矩

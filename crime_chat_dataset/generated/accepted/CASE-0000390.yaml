@@ -1,0 +1,137 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000390
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000121
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-74d1e172db0ad778
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 知情人握着已婚商务伙伴的隐私把柄，以'老搭档分红'为名按月索款换沉默，句句不提敲诈二字，只有把'每月八号'和那笔8888元转账放在一起才看得清实质。
+  critical_evidence:
+  - 知情人反复提及'杭州那晚的事'和未删干净的往来记录，两次点出'让嫂子看见'的后果
+  - 明确提出'每月八号'的固定日子和固定数额，对方被逼到问出'你想要多少'
+  - 9月8日中午已婚方转账8888元，备注'货款'，双方之间并无任何真实货物往来
+  - 收款方以'照顾好你自己'式的话收尾，并预告十月八号仍是老规矩，付款将长期持续
+  benign_alternatives:
+  - 情感纠纷协商
+  - 离婚律师函
+
+attributes:
+  duration_days: 6
+  turn_count: 58
+  approximate_tokens_estimate: 1606
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: secret_affair_blackmail
+  risk: 3
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0044
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:4087f841c815b019dcd00492c28738bcb77994516902eb4680dc48af40a5c48d
+pipeline_status: accepted
+title: coercion_blackmail/secret_affair_blackmail
+conversation: |-
+  【9月3日】
+  A：老赵，睡没
+  B：刚到家。什么事
+  A：没事就不能找你叙叙旧？上海展会一别快俩月了
+  B：展会那阵子是真忙，展台搭到凌晨两点
+  A：你家展位人流最旺。对了，仓库租赁的事后来定了吗
+  B：定了，浦东两千平的，十月启用
+  A：飞黄腾达，别忘了老朋友
+  B：少贫。深夜来电肯定有事，说吧
+  A：那晚在杭州的事，就咱俩知道吧
+  B：大半夜的你说这个干什么
+  【9月4日】
+  B：昨晚的话我当没听见，以后别提
+  A：老赵你紧张什么，我嘴一向严实
+  A：周六球局打吗，老周他们约了朝阳那家新球场
+  B：打，好久没活动了，你订位还是我订
+  A：你订吧，你有会员价，输的请晚饭
+  B：成，就怕你月底吃土
+  A：说正事，我最近手头紧，你上回不是提过年底那笔分红嘛
+  B：分红是年底的事，哪有提前支的道理
+  A：那就别等年底，往后按月走，每月八号，你给我留一份辛苦费
+  B：你这算盘我听不懂
+  【9月5日】
+  A：到了，更衣室见
+  B：马上，换双鞋
+  A：最后那洞你那记推杆绝了
+  B：运气球。走，吃饭去，你请
+  A：你家小宝开学了吧，一年级还是二年级
+  B：二年级了，暑假作业拖到前晚才补完，愁人
+  A：哈哈都这样，我家那个当年把作业本藏狗窝里
+  A：孩子嘛，紧要的是大人自己稳当，大人稳了家才稳
+  B：你这话里有话
+  【9月6日】
+  A：老赵，我思来想去，还是把话挑明了吧
+  A：杭州那晚的事，还有你没删干净的那些来往，真让嫂子瞧见，这日子还过不过
+  B：你想要多少
+  A：瞧你说得多难听。老搭档之间，就按我说的，每月八号，你表个态
+  B：你就不怕我把这些话都留着
+  A：留呗，先想想嫂子那边会先看见谁的
+  B：你变了
+  A：我妈住院押金还差一截，人到中年谁容易
+  B：你编理由也编个像样的
+  A：对了，你上回给我那瓶赤霞珠不错，回头再匀我两瓶
+  B：那是朋友酒庄直酿的，市面上没有
+  B：行，下次给你留两箱，先把你的'正事'说完
+  【9月7日】
+  B：我想了两天。十二年前你创业，第一个大订单还是我拍板给的
+  A：这份情我一直记着，所以才一直没打算撕破脸
+  B：我妈下周手术，我这阵子医院公司两头跑
+  A：伯母的事我改天去看看，你安心陪护，照顾好你自己
+  B：少来这套。明天中午我安排，你把收款方式发我
+  A：好嘞，老赵还是痛快
+  B：先说好，就这一次
+  A：咱们这样都体面，我保准一个字不往外说
+  【9月8日】
+  B：备注写什么
+  A：随便写个货款，你那边好做账
+  【系统消息】B 向 A 转账 8888 元，已收款。
+  A：收到，老赵，痛快
+  B：拿了钱，杭州的事和那些来往，你给我处理干净
+  A：放心，在我这就当从来没有过
+  B：十月八号还是这个数？
+  A：老规矩，每月八号，你忙你的，我什么都不提
+  B：拿着钱，离我的生活远一点
+  B：哼，照顾好你自己

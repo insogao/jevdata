@@ -1,0 +1,134 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000369
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000010
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-30669ff9344d181a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A冒充平台内部渠道，以官方口吻通知同事B中奖48800元，要求先缴6800元手续费和公证费，并提供所谓盖章公证书催促B尽快转账。
+  critical_evidence:
+  - A以官方口吻通知B中奖48800元，称通过自己表哥的内部渠道获知
+  - 领奖须先交手续费2800元加公证费4000元共6800元，附倒计时施压
+  - A提供所谓盖章公证书，编号网上无法核验
+  - B借钱凑款后向客服对公账户转出6800元，随后客服电话停机
+  benign_alternatives:
+  - 真实平台促销活动的中奖通知
+  - 同事间转发的商场有奖销售信息
+
+attributes:
+  duration_days: 5
+  turn_count: 57
+  approximate_tokens_estimate: 1730
+  relationship: 同事
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: prize_fee
+  risk: 2
+  relationship: 同事
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0042
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:94a438d9233cd8855f90a2ae715ee7b4cb134e1846ecc1c318bf0875240499d3
+pipeline_status: accepted
+title: fraud_scam/prize_fee
+conversation: |-
+  【9月22日】
+  B：张哥，你上次说你表哥在尚购商城做活动运营
+  A：对啊，怎么突然问这个
+  B：我上个月不是参与他们周年庆抽奖嘛，刚收到站内信，说我中了二等奖！
+  A：多少
+  B：48800！截图我发你了，你帮我看看是真的不
+  A：我看看……哎呀，格式跟他们官方通知一个模子，编号也齐全，你这运气可以啊
+  B：真的假的！我都没敢跟我老婆说
+  A：别声张，这种事宣扬出去招人惦记
+  B：那领奖要走什么流程
+  A：我问问我表哥，他最清楚，晚上给你准信
+  【9月23日】
+  A：问了。说这批是公证处监督的抽奖，领奖前要结清手续费和公证费，一共6800
+  B：还要先交钱？
+  A：手续费2800，公证费4000，官方流程，交完48800直接打卡里
+  B：那也划算啊，可我卡里就五千出头
+  A：站内信你也看到了，24小时不确认就顺延给下一位
+  B：这么急？我跟我老婆商量下
+  B：中午吃啥，食堂排队长死了
+  A：点的猪脚饭，给你带了份糖水，看你一上午魂不守舍
+  B：还是张哥贴心
+  B：我老婆说哪有中奖先交钱的，不让动家里的钱
+  A：大平台都这流程，公证费是公证处收的，不然48800谁敢随便发
+  B：我再磨磨她
+  【9月24日】
+  A：怎么样，嫂子点头没
+  B：死活不让动钱
+  A：这样，我让客服把公证文件发你，你看完就踏实了
+  B：好好好
+  A：发你了，红章编号都在，存好
+  B：看着真正规，连监督电话都有
+  A：降温了，秋裤穿上没
+  B：穿了，我妈叮嘱三遍了
+  A：听说下周更冷，商场羽绒服开始打折了
+  B：等中了奖给你也买一件，哈哈
+  B：我从我兄弟那借到四千，还差八百
+  A：明天发了工资就齐了，稳住
+  【9月25日】
+  A：兄弟，客服刚催我，今天中午是最后期限
+  B：工资明天才到账！通融下呗
+  A：公证处流程不等人，要不你找同事先转一下
+  B：都借遍了，张不开嘴啊
+  A：下午三点项目对齐会别忘了，你那部分PPT好了没
+  B：好了，昨晚熬夜做的。中了奖请全组喝奶茶
+  A：客服又催了，说今晚是最终时限，过了名额真没了
+  B：明早工资一到我立马去银行办，中午前给你消息，帮我再压一压
+  【9月26日】
+  A：客服说这是最后通牒，中午十二点前
+  B：知道了，九点银行一开门我就去
+  A：别排队了，手机银行直接转客服那个对公账户快一些，账号短信发你了，备注写你的编号
+  B：中午去撸铁不
+  A：先把大事办完，钱转了没
+  A：兄弟，客服电话怎么打过去是关机
+  B：我转完了啊，一点半转的6800，回执都在，可客服提示已停机……
+  B：张哥，你表哥电话呢
+  A：他说去总部对接了，让我别打扰，你再等等看
+  B：总觉不对劲，我把公证书放大看，那个编号网上根本查不到
+  A：查不到可能是内部编号，别自己吓自己，奖肯定跑不了
+  B：昨晚那剧你追没……唉，说起来我这几天心神不宁的
+  A：剧好看，事别多想，周一没动静我再问表哥。红头通知、公证书、监督电话，哪样是假的
+  B：张哥，你说……我这不会是碰到假的了吧
+  B：但愿是我想多了，那可是借来的六千八

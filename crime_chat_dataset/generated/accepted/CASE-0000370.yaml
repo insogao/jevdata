@@ -1,0 +1,123 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000370
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000060
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-64e21e233b8a1bef
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A以带新人见客为名，安排缺钱的B周末夜间单独陪同陌生男客人应酬，按首单三成抽成，并用押金和保密规矩约束B。
+  critical_evidence:
+  - A以带新人见客为名安排B周六晚单独陪陌生老板吃饭
+  - A明言首单抽三成、之后两成五的分成
+  - A立规矩：客人谈话不外传、一律不留联系方式
+  - B为交房租同意入局并转3000元保证金
+  benign_alternatives:
+  - 礼仪活动中介带新人见客户谈合作
+  - 夜场正规服务岗位招聘的带教安排
+
+attributes:
+  duration_days: 6
+  turn_count: 44
+  approximate_tokens_estimate: 1039
+  relationship: 中间人关系
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: introductory_middleman
+  risk: 3
+  relationship: 中间人关系
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0042
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:66bf6f819b336ffe5209a139ea9a2b9f1b189f3b63ffce79371a1a431a3d1816
+pipeline_status: accepted
+title: sexual_transaction_exploitation/introductory_middleman
+conversation: |-
+  【10月9日】
+  B：K哥，在吗
+  A：在，说
+  B：房租又涨了，我这月有点顶不住
+  A：你那点工资是紧巴
+  B：可不是，天天加班也就那样
+  A：缺钱的话，我手上一直有个来钱的道，你形象气质都合适
+  B：什么道？你可别忽悠我
+  【10月10日】
+  A：中午吃的啥
+  B：楼下那家麻辣烫，都快吃吐了
+  A：省钱也不能天天这么吃，周六完事儿带你去吃烤鱼
+  B：那我不客气了哈哈
+  A：上午说的事，想着没
+  B：你先说清楚是干啥的，我这心里没底
+  A：周末带上你，见几位客人，陪吃陪聊，你放得开就行
+  【10月11日】
+  B：陪吃陪聊？就这？
+  A：客人都是周边几个老板，谈事谈累了想找人说话而已
+  B：那带你出场，你图啥
+  A：明说，首单抽三成，往后两成五，圈里都这个数
+  B：抽得也太多了吧
+  A：场子人脉是我的，你出人就行
+  A：降温了，你那件厚外套找出来没
+  B：还没收拾，正好想网购两件
+  【10月12日】
+  B：K哥，有啥要注意的不，我有点慌
+  A：规矩要懂：客人聊什么出门就忘，联系方式一律不留，场子里的事不往外说
+  B：搞这么神秘
+  A：懂事的新人才有人点，你机灵，别让我白带
+  B：……我再想想
+  A：昨晚追的那部剧更没
+  B：看了，男主也太惨了
+  A：你就是戏多，早点睡
+  【10月13日】
+  A：想好没，周六的场子就差你一个
+  B：房租下周就要交，我拼了
+  A：痛快。入圈有个老例，先押三千保证金，第一批做完当场退你
+  B：还要押金……
+  A：走个过场，客人跑了算谁的？押你三千我图个放心
+  B：行吧，转你了
+  【系统消息】B 向 A 转账 3000 元，已收款。
+  A：收到。周六晚上七点，我开车来接你
+  【10月14日】
+  A：周六穿那条白裙子，头发弄一下
+  B：夏天那件？都有点旧了
+  A：旧点显本分，客人就吃这套
+  B：行，我回去熨熨
+  A：对了，别跟你室友说来哪
+  B：知道，就说跟你去吃饭
+  A：嗯，周六见

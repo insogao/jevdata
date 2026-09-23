@@ -10,3 +10,4 @@
 - 2026-09-24 09:45 | batch 19 (TASK-0033/34/35): accepted 260->290 (+30, rejected 0), pairs 40->44, judge agree(+-1)=28/30, 2 disagreements (302 维权取证 target2 judge0; 306 判后执行取证 target3 judge0 -> review) | pushed
 - 2026-09-24 10:15 | batch 20 (TASK-0036/37/38): accepted 290->320 (+30, rejected 0), pairs 49->53?, judge agree(+-1)=30/30; 法律程序框架约束生效（暴力/勒索类无再被误写为维权框架）| pushed
 - 2026-09-24 11:00 | batch 21 (TASK-0039/40/41): accepted 320->350 (+30, rejected 0), pairs 54, judge agree(+-1)=30/30 | pushed
+- 2026-09-24 11:50 | batch 22 (TASK-0042/43/44): accepted 380 (+30, rejected 0), pairs 59, judge agree(+-1)=30/30（judge 首次触发内容过滤后改为 3×10 拆分盲判成功，流程固化）| pushed

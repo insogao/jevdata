@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000394
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-3caa3b83229e6b5a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 熟人为办证想向体制内的老同学示好，试探着匀购物卡、让对方'上心点'，对方始终保持边界，两人之间实际只发生了一笔月饼代购货款。
+  critical_evidence:
+  - 申请人节前提出匀两张单位发的购物卡，被对方婉拒，未形成任何交换约定
+  - '那事再上心点'仅停留在闲聊层面，对方回应'材料的事看系统不看人'
+  - 许可事项按系统流程进入公示并正常通过，对方明确'是你材料齐，系统批的'
+  - 9月25日转账320元对应两盒160元月饼的代购货款，金额与货品一一对应
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司福利卡
+
+attributes:
+  duration_days: 4
+  turn_count: 45
+  approximate_tokens_estimate: 1422
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0044
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:23c051a8eadd86453baac7251ec9f6968f323b5e829a9398f5b14724c77d6aef
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【9月22日】
+  A：老韩，忙着呢？看你朋友圈又在跑基层
+  B：哈哈老同学，跑乡镇卫生院，一年几十趟
+  A：我这不诊所备案的事嘛，材料递上去了，心里七上八下
+  B：你那材料我扫过一眼，齐的，系统该走走，别自己吓自己
+  A：那我就放心一半了
+  A：咱丫头今年二年级了吧，上次你说转学的事
+  B：转成了，就说老同学一句话的事，你非说要请我吃饭
+  A：那必须的，孩子的事再小也是大事
+  B：我也是托人问了划片，谁还没几个同学
+  A：哈哈，都一样
+  【9月23日】
+  B：你爸妈还住乡下？上次不就说要接城里来
+  A：接来了住不惯，又回去了，就爱村里那帮老伙计
+  B：老人嘛，熟人比什么都重要
+  A：是这个理。哎你血脂降下来没，上次体检你说偏高
+  B：降了，天天快走五公里，红烧肉都戒了
+  A：意志力可以，我还在三斤肉里挣扎
+  B：你那火锅店守着锅底，神仙也瘦不下来
+  A：对了，快过节了，备案那事你再帮我上心点，材料有啥问题吱声
+  B：材料的事看系统，不看人。有问题平台会发补正通知，你照着改就行
+  A：行行，我就是求个安心
+  A：你那会儿数学课代表，我就服你较真，这性子一直没变吧
+  【9月24日】
+  A：老韩，中秋你们单位发啥了，我们商会发了一堆破烂
+  B：两盒月饼一箱梨，福利卡的余额也换成卡发了，公司图省事
+  A：我们发的是购物卡，反正够买两箱螃蟹，我匀你两张？
+  B：别别，我家那几张还没拆呢，你有心了我领了
+  B：你要真过意不去，帮我代购两盒你店旁边那家月饼，160一盒的，我妈就认那口
+  A：这有何难，两盒320，我给你留最新出炉的
+  B：回头钱我转你，别跟我抢着请
+  A：螃蟹今年贵不，我订了两箱发老家
+  B：贵，母蟹都三两往上了
+  A：那也得吃，一年就这一季
+  A：老韩，备案那事今天再问最后一次哈，到哪步了
+  B：我看了下，进公示环节了，明天出结果，该你的跑不了
+  A：好，我就问问，不催你
+  【9月25日】
+  B：出结果了，你自己系统里看
+  A：看到了，通过了！老韩，多谢多谢
+  B：谢什么，你材料齐，系统批的，我一个字都没多说
+  A：明白，是我材料争气，哈哈
+  A：月饼两盒我上午给你寄，热乎的
+  【系统消息】B 向 A 转账 320 元，已收款。
+  B：钱转你了，两盒160，一分不差
+  A：收到，这就给你发货
+  A：中午回家吃蟹不，我妈今天蒸螃蟹
+  B：中午值班，晚上回丈母娘家吃
+  A：那中秋安康，改天店里聚，你带家人
+  B：一定，带娃尝尝你那招牌锅底

@@ -1,0 +1,378 @@
+{
+ "key": "b22c031",
+ "archetype_id": "ARC-000121",
+ "subtype": "secret_affair_blackmail",
+ "latent_intent": "无——A是B的律师同学，帮B处理离婚调解和财产清单确认，转账是按合同分期偿还垫付的律师费。",
+ "critical_facts": [
+  "B决定离婚并委托A所在律所，A发出财产清单确认函",
+  "A问嫂子是否知情，B表示国庆后才正式谈",
+  "约定垫付费用分三期、每月八号偿还",
+  "10月8日B按合同转20000元第一期并取得发票"
+ ],
+ "benign_alternatives": [
+  "朋友间的离婚协商与法律程序辅助",
+  "正常律师费垫付的分期还款安排"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "10月6日 09:30",
+   "speaker": "A",
+   "text": "老周，上次跟你说的那事，想得怎么样了"
+  },
+  {
+   "type": "message",
+   "time": "10月6日 10:05",
+   "speaker": "B",
+   "text": "老赵，想得差不多了，这回是认真的"
+  },
+  {
+   "type": "message",
+   "time": "10月6日 10:07",
+   "speaker": "A",
+   "text": "想清楚就好，拖了两年了"
+  },
+  {
+   "type": "message",
+   "time": "10月6日 10:10",
+   "speaker": "B",
+   "text": "唉，你也知道这两年我怎么过的"
+  },
+  {
+   "type": "message",
+   "time": "10月6日 10:12",
+   "speaker": "A",
+   "text": "所以才问你，嫂子那边知道这事吗"
+  },
+  {
+   "type": "message",
+   "time": "10月6日 10:15",
+   "speaker": "B",
+   "text": "还不知道，想等国庆后找机会跟她正式谈"
+  },
+  {
+   "type": "message",
+   "time": "10月6日 10:17",
+   "speaker": "A",
+   "text": "行，节奏你自己把握，协议我来把关，你只管把诉求列清楚"
+  },
+  {
+   "type": "message",
+   "time": "10月6日 10:20",
+   "speaker": "B",
+   "text": "有你这句话我心里就有底了"
+  },
+  {
+   "type": "message",
+   "time": "10月6日 10:22",
+   "speaker": "A",
+   "text": "咱俩谁跟谁。对了，委托手续先办，所里好排期"
+  },
+  {
+   "type": "message",
+   "time": "10月7日 08:50",
+   "speaker": "B",
+   "text": "手续我让行政对接了。费用的事谢谢你先垫着"
+  },
+  {
+   "type": "message",
+   "time": "10月7日 08:55",
+   "speaker": "A",
+   "text": "先办事。费用按说好的，每月八号还我一笔，别的不用管"
+  },
+  {
+   "type": "message",
+   "time": "10月7日 08:57",
+   "speaker": "B",
+   "text": "一期两万，真不跟你客气了？"
+  },
+  {
+   "type": "message",
+   "time": "10月7日 08:59",
+   "speaker": "A",
+   "text": "委托合同里写着呢，白纸黑字，你跟我客气什么"
+  },
+  {
+   "type": "message",
+   "time": "10月7日 09:02",
+   "speaker": "B",
+   "text": "行，按合同来，明天八号我先转两万"
+  },
+  {
+   "type": "message",
+   "time": "10月7日 09:04",
+   "speaker": "A",
+   "text": "嗯。函我今天让同事发出去，财产清单那部分你记得核对"
+  },
+  {
+   "type": "message",
+   "time": "10月7日 09:06",
+   "speaker": "B",
+   "text": "函是发给对方律师的吧"
+  },
+  {
+   "type": "message",
+   "time": "10月7日 09:08",
+   "speaker": "A",
+   "text": "对，程序上的事，正式确认清单，免得后面扯皮"
+  },
+  {
+   "type": "message",
+   "time": "10月7日 09:10",
+   "speaker": "B",
+   "text": "明白，下午我把房产那页再核一遍"
+  },
+  {
+   "type": "message",
+   "time": "10月7日 12:20",
+   "speaker": "A",
+   "text": "国庆回老家没，叔叔阿姨身体怎么样"
+  },
+  {
+   "type": "message",
+   "time": "10月7日 12:25",
+   "speaker": "B",
+   "text": "回了，我爸血压有点高，我妈倒硬朗"
+  },
+  {
+   "type": "message",
+   "time": "10月7日 12:26",
+   "speaker": "A",
+   "text": "让老爷子少喝酒，他那脾气"
+  },
+  {
+   "type": "message",
+   "time": "10月7日 12:28",
+   "speaker": "B",
+   "text": "说我呢，你不也一天二两"
+  },
+  {
+   "type": "message",
+   "time": "10月7日 12:30",
+   "speaker": "A",
+   "text": "我早戒了，上个月体检医生都警告了"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 09:00",
+   "speaker": "B",
+   "text": "老赵，八号了，两万转你了，查收"
+  },
+  {
+   "type": "transfer",
+   "time": "10月8日 09:05",
+   "from": "B",
+   "to": "A",
+   "amount": 20000
+  },
+  {
+   "type": "message",
+   "time": "10月8日 09:10",
+   "speaker": "A",
+   "text": "收到了，回单我存档。剩下的十一月、十二月各两万，对吧"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 09:12",
+   "speaker": "B",
+   "text": "对，合同写的三期，我按期来"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 09:15",
+   "speaker": "A",
+   "text": "发票我让财务给你开了，抬头是你名字，收好"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 09:18",
+   "speaker": "B",
+   "text": "好，这样我这边也说得清楚"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 10:30",
+   "speaker": "B",
+   "text": "函件对方律师今天回复了，清单没问题，约了下周调解"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 10:32",
+   "speaker": "A",
+   "text": "顺利。调解那天你也去，穿正式点，别带情绪"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 10:35",
+   "speaker": "B",
+   "text": "放心，这半年我什么情绪都磨没了"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 14:20",
+   "speaker": "A",
+   "text": "孩子那会儿跟你还是跟她妈"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 14:25",
+   "speaker": "B",
+   "text": "轮流，协议里写了单周我带。小满跟我亲，没事"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 14:27",
+   "speaker": "A",
+   "text": "那就好，大人怎么谈，别让孩子受委屈"
+  },
+  {
+   "type": "message",
+   "time": "10月8日 14:30",
+   "speaker": "B",
+   "text": "这话在理"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 08:40",
+   "speaker": "A",
+   "text": "昨晚睡怎么样，上次你说又开始失眠了"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 08:50",
+   "speaker": "B",
+   "text": "吃了半片才睡着。白天还好，就是夜里爱胡思乱想"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 08:52",
+   "speaker": "A",
+   "text": "少喝咖啡，晚上九点后手机放下，照顾好你自己，事情有我盯着"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 08:55",
+   "speaker": "B",
+   "text": "嗯，这段时间多亏你"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 11:30",
+   "speaker": "A",
+   "text": "下周三我去省城出差，项目评审，三天"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 11:35",
+   "speaker": "B",
+   "text": "你倒是空中飞人。调解就在下周吧，那你赶不上"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 11:36",
+   "speaker": "A",
+   "text": "我同事小孙代我对接，文件他都熟"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 11:40",
+   "speaker": "B",
+   "text": "行，麻烦你了，回头给你带省城那家牛肉干"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 11:42",
+   "speaker": "A",
+   "text": "这个可以有"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 16:10",
+   "speaker": "B",
+   "text": "老赵，问一下，调解要是她坚持要房子，我认了行不行"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 16:15",
+   "speaker": "A",
+   "text": "你的底线你自己定。我建议房子可以谈，孩子的账户一分不能动"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 16:18",
+   "speaker": "B",
+   "text": "明白，孩子那部分我从没想过"
+  },
+  {
+   "type": "message",
+   "time": "10月9日 16:20",
+   "speaker": "A",
+   "text": "那就好办"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 09:20",
+   "speaker": "A",
+   "text": "调解改到下周四了，对方律师说他们当事人要出差"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 09:25",
+   "speaker": "B",
+   "text": "行，正好我这边缓一缓"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 09:27",
+   "speaker": "A",
+   "text": "我把调解提纲发你，过一遍，有异议今天提"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 15:40",
+   "speaker": "B",
+   "text": "周末去钓鱼不，老地方"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 15:45",
+   "speaker": "A",
+   "text": "去，正想换换脑子，新买的竿子还没开张"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 15:46",
+   "speaker": "B",
+   "text": "又败家。说好钓不着不许提前收摊"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 15:48",
+   "speaker": "A",
+   "text": "行行行，坐到天黑"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 19:30",
+   "speaker": "B",
+   "text": "提纲看了，没意见。就一条，能不能写明调解不成再走下一步"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 19:35",
+   "speaker": "A",
+   "text": "能，我加上。一步是一步，你不用怕"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 19:40",
+   "speaker": "B",
+   "text": "嗯，这回心里踏实多了，谢了老赵"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000377",
+  "status": "accepted",
+  "errors": []
+ }
+}

@@ -1,0 +1,143 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000385
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000012
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-3c831eb5a23962a5
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: fraud_scam
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A以低价急出二手相机为名引导买家加微信私下成交，先收全款后发货，物流单号一度查无记录，全程未见明显异常。
+  critical_evidence:
+  - 二手相机成交总价1450元（机身1250加镜头200），按事先说好的明细转账
+  - 买家加微信私下沟通，没有走平台下单
+  - 10月10日上午物流单号一度查询不到，当日下午恢复更新并次日实际签收
+  - 买家签收验货满意，交易闭环完整
+  benign_alternatives:
+  - 真实的二手闲置转让交易
+  - 熟人帮忙出闲置的私下成交
+
+attributes:
+  duration_days: 4
+  turn_count: 66
+  approximate_tokens_estimate: 1503
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: second_hand_deposit_run
+  risk: 1
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0043
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:3fbe1d68eb364758f8a6a15ddfe4bf4fb8fc1e376eb7da3a3855395aba5a7799
+pipeline_status: accepted
+title: fraud_scam/second_hand_deposit_run
+conversation: |-
+  【10月8日】
+  B：老板在吗 相机还在吗
+  A：在的 昨天刚擦过
+  B：成色怎么样 有细节图吗
+  A：拍了段视频 逆光看快门帘 干净得很
+  B：看着挺新 快门数多少
+  A：八千多 基本放柜子里
+  B：周末想去山里拍星野 想换个机子 你这台扛得住吗
+  A：扛得住 高感还行 就是镜头你得单配
+  B：行 那山里夜里零度 蓄电顶几小时
+  A：满电两三个小时 带块备用电 我送你一块
+  B：那挺好
+  B：那周末前能到货吗
+  A：看你什么时候拍板 拍板了明早就发
+  B：1250能再让点不 行情我看过1350往上
+  A：1250真的到底了 边角有两处小磕碰 不然我挂1500
+  B：两处在哪 我看看细节图
+  A：左下角一个 屏幕右上一个 你放大看
+  B：确实有 要不1200?
+  A：1200真不行 包和备用电池都送你 1250 拿走直接能拍
+  B：行吧 1250就1250 主要看机器值
+  A：爽快 平台要抽八十多 要不咱加个V 细节视频发你方便 机器我也不再挂了给你留着
+  B：也行 平台聊天确实老卡
+  A：嗯 加我 备注相机
+  【10月9日】
+  B：加你了 通过下
+  A：看到了 机器我给你收起来了
+  B：镜头到底卖不卖 你一起算了
+  A：小痰盂 200 95新 没霉没灰
+  B：新的700你这卖200? 行 一起
+  B：总价1450
+  A：好 1450 今晚转我 明早发顺丰
+  B：食堂还是那三样 吃吐了
+  A：你们公司没餐补吗
+  B：有 十五块 隔壁面馆一碗都不止
+  A：哈哈我们楼下面馆 招牌牛肉面28 我一周吃三次
+  B：你是懂生活的 我加班到九点 连面都赶不上
+  A：别老加班 胃熬坏了不值
+  B：唉 项目上线 撑过这周就好
+  B：转你1450 你点一下
+  【系统消息】B 向 A 转账 1450 元，已收款。
+  A：收到了 1450 机器镜头我这就包起来
+  B：泡沫多塞点 塑料别省
+  A：放心 顺丰陆运 明早发 把单号发你
+  B：好 静静等机
+  【10月10日】
+  A：发了 顺丰 单号发你了
+  B：这单号怎么查不到 显示无记录?
+  A：刚揽收 系统有时候慢 中午再看
+  B：行 我再等等
+  A：跑不了 我截图发你 揽收底单都在
+  A：再查下 这回有了
+  B：有了有了 已揽收
+  B：吓我一跳
+  A：陆运明天到 顺丰就是稳
+  A：降温了 你那边冷不
+  B：冷 出门风跟刀子一样
+  A：把秋裤翻出来 别硬扛
+  B：还没买 今年入冬太快
+  A：网上囤两条加绒的 便宜暖和
+  B：行 晚上下单
+  B：到转运中心了 明天妥妥的
+  A：嗯 到了说一声
+  【10月11日】
+  A：今天应该到了 你留意电话
+  B：签收了! 包装裹得跟粽子似的
+  B：机器太新了吧 快门声脆得很
+  A：毕竟八千多次 当宝贝用的
+  B：电池也满电 直接开拍 周末山里试星野 回头给你返图
+  A：好呀 返图给我 拍糊了别怪镜头 哈哈
+  B：哈哈哈 谢老板 这次买值了

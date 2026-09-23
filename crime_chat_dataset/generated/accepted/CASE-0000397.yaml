@@ -1,0 +1,144 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000397
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000092
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-d320d55e05536d3a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 对话开场像私下找路子大额出金换现，实际全程走持牌平台托管通道：尽调、对公、面签、回单完税一样不少，无任何绕开监管的安排。
+  critical_evidence:
+  - 商务明确只接持牌通道：App挂单、平台托管结算、资金不过任何个人账户
+  - 客户按合规要求提供资金来源说明、工资流水与持仓记录，通过后才安排交割
+  - 报价即交易所中间价、仅收千分之三手续费，每笔回单与完税凭证可在App下载
+  - 大额放款安排银行柜台面签当面对回单，并提醒私下换汇钱卡两空的反面教训
+  benign_alternatives:
+  - 合法持牌交易
+  - 币圈出金讨论
+
+attributes:
+  duration_days: 6
+  turn_count: 66
+  approximate_tokens_estimate: 2003
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: crypto_offramp
+  risk: 0
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0044
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:1e1ebfcfcd30fce6ee19be4ce5d79219488a4dfcc7d457414a89980d7b675b46
+pipeline_status: accepted
+title: money_laundering_obfuscation/crypto_offramp
+conversation: |-
+  【10月12日】
+  B：康总早，上次饭局您说的那个出金的路子，我想细问问
+  A：纪哥早。先说清楚，我们现在只做持牌通道，App里挂单，平台托管结算
+  B：不走私下那种？
+  A：私下的一律不碰，资金不过我个人账户，都在托管账户里走
+  B：那稳妥，我这量的确不小，得走正道
+  A：你大概多少量，什么币
+  B：U，八万多个，想分批出
+  A：可以，持牌通道单笔限额内分批没问题，你先做个资金来源说明
+  B：这个我有，工资流水和持仓记录都能打出来
+  A：行，那计划周三先走第一笔
+  【10月13日】
+  B：康总，你们这个通道汇率怎么算
+  A：牌价就是交易所中间价，我们不加点，只收千分之三手续费
+  B：比我自己在App里挂着等还划算？
+  A：大额通道费率低，再省去你排队提现的时间
+  B：那行。对了你家房贷前阵子转LPR了吗
+  A：转了，一个月少还三百多，真香
+  B：我还在犹豫，银行客户经理天天给我打电话
+  A：你公积金占比高就更划算，让经理给你算细账
+  B：行，周末去网点跑一趟
+  A：资金来源说明你做好发我，我递给合规那边先过一眼
+  B：下午整理好发你
+  B：发你了康总，工资流水、持仓快照都在一个PDF里
+  A：收到，明天上午给你答复
+  【10月14日】
+  A：纪哥，合规那边过了，今天下午三点前把币打进平台托管账户
+  B：好，第一笔出多少
+  A：两万个，限额内，折算按今天下午的牌价
+  B：行，我先把要出的两万在平台里锁定，就等这一下
+  A：平台会给你托管回执，留意站内信
+  B：打进去了，回执也收到了
+  A：收到，银行那边今晚清算，明后天出金到你银行卡
+  B：这速度比我想的快
+  A：持牌通道就是这样，每一步都有记录，慢就是稳
+  B：周五剩下的批次一起走？
+  A：周五可以再走两万，其余的下周按限额排队
+  【10月15日】
+  B：康总，第一笔到卡了，扣完手续费折算价和我自己算的对得上
+  A：对，每笔都有回单，你在App里能下载
+  B：回单和完税凭证都有吧？我们公司账上要挂
+  A：都有，回单、完税凭证，按笔下载就行
+  A：昨晚去夜跑了没，降温后我都不敢跑了
+  B：跑了，五公里，回来膝盖有点酸
+  A：你这练法得加核心力量，别光堆里程
+  B：说得对，下周约你们那体育场一起？
+  A：行，周三之后我都有空
+  B：下午第二笔几点点进去
+  A：还是三点，牌价下午四点锁定
+  【10月16日】
+  A：纪哥，今天两万走完，明天上午你去银行面签一次，大额的按规矩当面核一次身份
+  B：带身份证就行？
+  A：身份证、银行卡，柜台当面对回单，这就是走正规通道的好处，当面点清
+  B：明白，比早年那些私下换汇的踏实多了
+  A：私下那个真不能碰，去年有个客户图场外汇率好，找人当面点现钞，结果钱卡两空，报警都说不清
+  B：所以我宁可手续费多花点
+  B：第二笔也托管进去了
+  A：收到，清算后就到卡
+  B：晚上来我家吃螃蟹？朋友从阳澄湖带的，还活着
+  A：那必须去，我带瓶黄酒
+  B：你带醋就行，吃蟹三件套我家齐着
+  A：哈哈行，七点准时
+  B：到卡了，这速度是真快
+  A：嗯，下周最后一批四万，分两个交易日走
+  【10月17日】
+  B：康总，昨晚螃蟹不错，黄酒也到位
+  A：那顿吃得舒坦，你欠我那场球还没还呢
+  B：下下周一定。最后一批是周一和周三各两万吧
+  A：对，按牌价走，完了给你出个汇总回单包
+  B：好。整个流程下来我算了下，比我自己挂单省心多了
+  A：正规通道就图个干净，凭条凭证都在，睡得着觉
+  B：行，周一见

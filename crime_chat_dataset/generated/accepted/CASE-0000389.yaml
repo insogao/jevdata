@@ -1,0 +1,140 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000389
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000024
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-b8af09ce838f6924
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: bribery_corruption
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 候选人在晋升考核前私下结交掌握名单的决策人，提前获知排名，事成后以'一点心意'名义支付大额酬谢，把晋升变成一笔权钱交易。
+  critical_evidence:
+  - 考核前两天（10月9日）候选人约决策人到城东茶室包间单独见面，特意避开公司和同事
+  - 10月12日晚决策人透露内部名单已过、只有三人且候选人排第二，反复叮嘱别声张
+  - 10月14日上午公示当天，候选人向决策人转账46000元，自称'没有您就没有我这个位子'
+  - 双方约定'数目的事出了这个门谁也别提'，转账金额与晋升结果直接咬合
+  benign_alternatives:
+  - 正常人情答谢
+  - 培训学费资助
+
+attributes:
+  duration_days: 6
+  turn_count: 61
+  approximate_tokens_estimate: 1637
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: promotion_payment
+  risk: 3
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0044
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:d9aad12bf4564c452813f6b2d6aa8c1b65ad549bab7fddf20e1488752f37ee9b
+pipeline_status: accepted
+title: bribery_corruption/promotion_payment
+conversation: |-
+  【10月9日】
+  A：组长，在吗
+  B：说
+  A：这次考核的事，微信里不方便细说，想当面跟您聊聊
+  B：什么事还非得当面
+  A：您见了就明白是哪件事了，对您对我都好
+  B：行，晚上七点半，城东沐春茶室，靠里那间
+  A：好，我先到，茶我安排
+  【10月10日】
+  A：组长，昨晚您那句话，我琢磨一晚上了
+  B：我什么都没说，就说了句'别自己瞎折腾'
+  A：懂了懂了。您那腰怎么样了，上次看您贴着膏药
+  B：老毛病，阴天就酸。你舅不是开推拿馆的吗
+  A：对，他手法确实好，我给他打个招呼，您去报我名字就行
+  B：那行，回头去看看
+  A：顺带说一句，下周二述职，我按您上次点的那几条准备
+  B：嗯，数字做扎实，别整花活
+  A：明白，我就讲降本那块，别的都收着
+  B：还有，这几天别往人堆里凑，少说话
+  A：知道，这几天我谁家都不串
+  【10月11日】
+  B：上午有空吗，水库那边走一圈
+  A：有空，我七点半到您楼下
+  B：不用接我，我自己开车，你在东坝口等
+  A：今天口不错，您那条草鱼得有六斤
+  B：多年没这么好手感了，晚上拿回家让我那口子炖了
+  A：那必须的。对了，您那天说的那个安排，还算数吧
+  B：我说什么安排了？
+  A：行行，当我没问，我自己心里有数
+  B：你这人就是急。周二先把述职弄利索
+  A：好，全听您的
+  【10月12日】
+  A：组长，睡了没
+  B：说事
+  A：今天考评委那边过得怎么样
+  B：名单内部已经过了一遍，就三个人
+  B：你排第二，别声张
+  A：收到，我嘴严。真到那天，我肯定得表示表示
+  B：你心里有数就行，不用跟我说这些
+  A：懂的，到时候您看数目就行，我来安排
+  B：前提是公示别出幺蛾子，这几天谁也别去找
+  A：明白，我连部门群都不冒泡
+  B：早点睡，明天述职别掉链子
+  【10月13日】
+  A：组长，述职完了，问答那几分钟我扛住了
+  B：听说了，姓孙的那个没难为你吧
+  A：他问了两个成本问题，我拿数字顶回去了
+  B：行。哎对了，你儿子家长会什么时候开
+  A：上礼拜开了，老师又告状，说他上课撕纸
+  B：男孩都这样，我家那个小时候把教室门都卸了
+  A：哈哈那您是真稳得住
+  B：明天上午十点公示就贴出来了，你给我安稳点
+  A：好的。那件事我明天上午一并办妥
+  B：办完就翻篇，以后正常处
+  【10月14日】
+  A：组长，公示看到了！真心感谢
+  B：恭喜。说过的，办完翻篇
+  A：那必须的，我这就去办
+  【系统消息】A 向 B 转账 46000 元，已收款。
+  A：组长，一点心意，您收好，别嫌少
+  B：你这是干什么，快撤回去
+  A：不能撤，这是我早备好的，跟您也说句直白的，没有您就没有我这个位子
+  B：……下不为例。数目的事，出了这个门谁也别提
+  A：就咱俩知道，我连媳妇都没说
+  B：中午一起吃个饭，食堂二楼新开的窗口
+  A：好嘞，我下楼等您
+  B：以后把新部门带好，比什么都强
+  A：一定，您放心。您那腰也记得去我舅那儿养养

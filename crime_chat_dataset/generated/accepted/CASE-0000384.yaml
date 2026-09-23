@@ -1,0 +1,128 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000384
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000069
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-f95118b367c48d10
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A以五万欠款和手里留存的私密照片拿捏B，提出没钱就用别的还、按次算一次抵两千，逼B用人身陪伴抵债。
+  critical_evidence:
+  - B欠A五万元，两期没还上
+  - A提出没钱就用别的还，按次算一次抵两千
+  - A称B的私密照片都在他手里留着，当作拿捏
+  - B被迫先转2000元，并约好周四晚上老地方按老办法
+  benign_alternatives:
+  - 分期还款的正常协商
+  - 以劳务抵偿债务的合法约定
+
+attributes:
+  duration_days: 4
+  turn_count: 51
+  approximate_tokens_estimate: 1044
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: debt_body_exchange
+  risk: 3
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0043
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:176a0e8bd6417a35386ce1c0cb5203c25d705657a9fcdbf7cbdb3bd8138c7cb8
+pipeline_status: accepted
+title: sexual_transaction_exploitation/debt_body_exchange
+conversation: |-
+  【9月22日】
+  A：小周 到日子了
+  B：哥 我知道 这个月真周转不动 你再宽限宽限
+  A：五万块 拖了两回了
+  B：工资押着 工程款也没下来
+  A：你上回也是这么说的
+  B：这回是真的 你看我现在租的房都换成隔断了
+  A：隔断房也能住人 我这钱也不是大风刮来的
+  B：我知道哥 再给我十几天
+  A：十几天后呢
+  B：十几天后一定有
+  A：行 先这么着
+  【9月23日】
+  B：哥 中午吃了吗 我这边泡面
+  A：刚吃了 你倒省事
+  B：搬完家锅都没拆 等发工资再置办
+  A：说到工资 你们那行今年不行?
+  B：不行 活少 工资七折发 泡面加个蛋都算改善
+  A：所以我说 光等工资 什么时候是个头
+  B：哥你别吓我
+  A：不吓你 我说个实在的 没钱 就用别的还
+  B：别的?我能有啥
+  A：你有的是 人都齐全 就看舍不舍得
+  B：哥 说笑呢吧
+  A：我说笑 你当我没说 想好了找我
+  【9月24日】
+  B：哥 昨天的话 我想了一晚上
+  A：想明白了?
+  B：你说抵账 是怎么个抵法
+  A：老规矩 按次来 一次抵两千
+  B：两千……五万要二十五次
+  A：你算得挺快 那就这么定
+  B：哥 我有点怕
+  A：怕什么 你忘了我这儿还有什么
+  B：……照片
+  A：照片我都留着 一张没删 对你对我都是保险
+  B：你这样 我真的没法做人
+  A：谁难为你了 这叫两清 你不欠我 我不逼你
+  B：……行吧
+  【9月25日】
+  A：这期先把两千走一下 剩的按老办法
+  B：……好
+  【系统消息】B 向 A 转账 2000 元，已收款。
+  A：收到了 这期清
+  B：下周几合适
+  A：周四晚上 老地方 你自己过来
+  B：嗯
+  B：哥 搬家公司哪家便宜 我那隔断到期了
+  A：老四给你算便宜点 东西多不
+  B：两箱一床被 越搬越少
+  A：先住下再说 别亏了自己
+  B：嗯
+  A：你嗓子怎么哑了 上午听着就不对
+  B：上夜班吹了风 咳两天了
+  A：买盒枇杷膏 周四要是还咳 就改周五
+  B：嗯 谢哥

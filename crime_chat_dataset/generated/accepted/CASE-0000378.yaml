@@ -1,0 +1,123 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000378
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000060
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-64e21e233b8a1bef
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 无——A是正规婚介门店红娘，按公司流程带新会员约见实名核验过的相亲对象，三成抽成是公开的服务提成结构。
+  critical_evidence:
+  - A是婚介门店红娘，安排B周六在门店见实名核验过的会员
+  - A公开说明首单提成三成、之后两成五的薪酬结构
+  - 规矩是资料必须真实、首次见面只能在合作咖啡厅大厅
+  - B转3000元首期服务费，A出具收据和电子合同，含退费条款
+  benign_alternatives:
+  - 正规婚介所的红娘服务签约流程
+  - 实体门店会员制相亲服务的正常推广
+
+attributes:
+  duration_days: 6
+  turn_count: 44
+  approximate_tokens_estimate: 1166
+  relationship: 中间人关系
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: introductory_middleman
+  risk: 0
+  relationship: 中间人关系
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0042
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:54d6ffb9cc4df9b1bb7906dd5244bf3d26ff185e3280b6f4f3c88416811d2c15
+pipeline_status: accepted
+title: sexual_transaction_exploitation/introductory_middleman
+conversation: |-
+  【10月9日】
+  B：莉姐，在吗
+  A：在，说
+  B：我妈又开始催了，我寻思着正经找个对象算了
+  A：早该了，你条件不差
+  B：自己圈子小，碰上合适的全靠运气
+  A：我们门店就做这个，你形象气质都合适，资料挂我这边准没错
+  B：真的假的，你可别哄我办卡
+  【10月10日】
+  A：中午吃的啥
+  B：楼下那家麻辣烫，都快吃吐了
+  A：周六来店里，完事儿带你去吃旁边那家烤鱼
+  B：那我不客气了哈哈
+  A：上午说的事，想着没
+  B：你先说清楚流程是啥，我心里没底
+  A：周六先到店里，我带你见两位实名登记的会员，就当认识朋友聊聊天
+  【10月11日】
+  B：见会员？就聊天？
+  A：对，职业房车信息店里都核验过，你放心
+  B：那你们图啥，白忙活
+  A：明说，你签约的话我首单抽三成提成，往后两成五，红娘都这个数
+  B：你这提成可以啊
+  A：门店客源都是成本，你出诚意就行，哈哈
+  A：降温了，周六来记得加件外套
+  B：好，正好想网购两件冬装
+  【10月12日】
+  B：莉姐，有啥要注意的不，我有点紧张
+  A：规矩要懂：资料必须真实，首次见面一律约在店里合作咖啡厅的大厅，不许单独去别处，公司就这么规定的
+  B：还挺正规
+  A：合同里都写着，有任何问题你随时投诉到门店
+  B：那我考虑考虑
+  A：昨晚追的那部剧更没
+  B：看了，男主也太惨了
+  A：你就是戏多，早点睡
+  【10月13日】
+  A：考虑好没，周六两位会员的时间就定你了
+  B：行，我妈都催成那样了，我办
+  A：痛快。服务费首期三千，电子合同我现在传你，转完我开收据给你
+  B：有合同收据就行
+  A：合同写明：三个月内安排不少于六次约见，没约成按条款退一半
+  B：那我转了，合同我先看看
+  【系统消息】B 向 A 转账 3000 元，已收款。
+  A：收到。收据和电子合同都发你邮箱了，周六下午三点店里见
+  【10月14日】
+  A：周六穿精神点，别太随意
+  B：正好把网购的那件毛衣穿上
+  A：行，显精神就行
+  B：好嘞
+  A：对了，把身份证和学历证明带上，门店核验存档用
+  B：好，我找找放哪了
+  A：嗯，周六见
