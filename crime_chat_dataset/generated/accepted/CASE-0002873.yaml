@@ -1,0 +1,146 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002873
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-892c04363cbb68ff
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A（上下级）在节日前向掌握流程的B提出一张未说明面值的购物卡，随后请B留意事项进度；这既可能是普通节礼，也留下礼物与请求相关的轻度疑虑，双方没有明确谈成交换。
+  critical_evidence:
+  - A在节日前联系或约见掌握流程的B
+  - A提到购物卡但没有说明卡面金额
+  - 节后A询问事项进度并请B留意
+  - 双方没有明确约定礼物换取特殊处理
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司福利卡
+
+attributes:
+  duration_days: 2
+  turn_count: 70
+  approximate_tokens_estimate: 1350
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0314
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-134
+
+dedup:
+  content_hash: sha256:a7711652b5edc41c57e98db0273257acd1528f9f7ed54f8d135070335d2ec3c3
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【12月1日】
+  A：我中午吃了馄饨。
+  B：那家店今天人多吗？
+  A：不多，很快就吃完了。
+  B：下回我也去看看。
+  A：今天风有点大。
+  B：出门的时候感觉明显吗？
+  A：伞差点被吹翻。
+  B：那就多留意天气预报。
+  A：这周找时间碰一下吧，卡我拿过去。
+  A：今天路上公交临时绕了一站。
+  B：有没有耽误时间？
+  A：还好，我提前留了点时间。
+  B：那就好，路上注意安全。
+  B：怎么还带卡？是什么卡？
+  A：我今天把阳台整理了一下。
+  B：弄完以后看着舒服多了吧？
+  A：是啊，顺手就做完了。
+  B：保持一下就不容易乱。
+  【12月2日】
+  A：最近睡得有点晚。
+  B：最近忙的话也要留点时间休息。
+  A：好，我尽量调整一下。
+  B：慢慢来，别给自己太大压力。
+  A：购物卡没拆开看，节前想当面给你。
+  B：上次午饭我先垫了52元，你把AA转我就行。
+  A：刚转你52元，上次午饭那份。
+  【系统消息】A 向 B 转账 52 元，已收款。
+  B：收到了，52元对上了，谢谢。
+  A：好，那就行。
+  A：今天中午下了阵雨。
+  B：出门的时候感觉明显吗？
+  A：我在楼下躲了一会儿。
+  B：那就多留意天气预报。
+  B：这种礼物我先按日常规定确认一下。
+  A：今天路上地铁换乘人少些。
+  B：有没有耽误时间？
+  A：还好，我提前留了点时间。
+  B：那就好，路上注意安全。
+  A：我想确认下进度，不需要特意加快。
+  A：我今天换了个灯泡。
+  B：弄完以后看着舒服多了吧？
+  A：是啊，顺手就做完了。
+  B：保持一下就不容易乱。
+  A：肩膀有点酸。
+  B：最近忙的话也要留点时间休息。
+  A：好，我尽量调整一下。
+  B：慢慢来，别给自己太大压力。
+  B：我会照常处理，进度以系统为准。
+  A：我中午吃了青菜粥。
+  B：那家店今天人多吗？
+  A：味道清淡，正合适。
+  B：下回我也去看看。
+  A：今天早晚温差明显。
+  B：出门的时候感觉明显吗？
+  【12月3日】
+  A：包里放了件薄外套。
+  B：那就多留意天气预报。
+  A：好，我只是问问进度，不急。
+  A：今天路上共享单车停在老位置。
+  B：有没有耽误时间？
+  A：还好，我提前留了点时间。
+  B：那就好，路上注意安全。
+  B：明白，有更新会按正常方式告诉你。
+  A：我今天拆了快递纸箱。
+  B：弄完以后看着舒服多了吧？
+  A：是啊，顺手就做完了。
+  B：保持一下就不容易乱。
+  A：今天记得多喝水。
+  B：最近忙的话也要留点时间休息。
+  A：好，我尽量调整一下。
+  B：慢慢来，别给自己太大压力。
+  A：好，我先记一下。
+  B：行，有消息再说。

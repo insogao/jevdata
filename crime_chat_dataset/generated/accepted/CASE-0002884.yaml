@@ -1,0 +1,147 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002884
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-47dc4b5b41e6547c
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A希望在B负责查看/把关一项待办材料的节日前后，通过购物卡表达私下关照，并在事后借此请B多留意自己的材料；B只礼貌回应，并未明确承诺改变处理结果。
+  critical_evidence:
+  - A有一份仍待B查看或把关的工作材料，节日前这一处理节点临近。
+  - A在节前主动约见B并送出一张购物卡，但没有说明卡面金额。
+  - 礼物之后，A发消息把此前的照应与自己的待办材料联系起来，暗示希望B继续留意。
+  - B回应礼貌但未承诺改变流程或结果，正常节日人情往来/公司福利卡仍是可能混淆。
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司福利卡或普通节庆礼物
+
+attributes:
+  duration_days: 4
+  turn_count: 70
+  approximate_tokens_estimate: 2017
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0315
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-134
+
+dedup:
+  content_hash: sha256:3de72cb973917e83e306a90ef311f78b08b21ad6ce55ed9879d5ac65562b6148
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【6月10日】
+  A：林姐，打扰下，我那份报销附件这周是不是会轮到你看？
+  B：我先看一下安排，最近都在按顺序处理。
+  A：嗯，知道你忙。刚好月底核对前我想当面跟你说声谢谢。
+  B：不用特意跑一趟，工作上的事照流程就行。
+  A：我手边有张购物卡，节前一点心意，卡面我也没特意看。
+  B：你太客气了，这个我收下，心意我知道了。
+  A：今天地铁又晚点，差点没赶上打卡。
+  B：早高峰就是这样，最近那条线在检修。
+  A：我以后可能提前十分钟出门。
+  B：留点余量安心些。
+  A：你是坐公交还是地铁？
+  B：我刚把昨天那顿饭的92元AA饭钱转给你了，别忘了看下。
+  【系统消息】A 向 B 转账 92 元，已收款。
+  A：我搜到了那档节目，先收藏起来。
+  B：慢慢听，路上时间一下就过去了。
+  A：我搜到了那档节目，先收藏起来。
+  B：慢慢听，路上时间一下就过去了。
+  A：我搜到了那档节目，先收藏起来。
+  B：慢慢听，路上时间一下就过去了。
+  【6月11日】
+  A：那份报销附件我又核了一遍，附件都齐了。
+  B：好，我还没看到最后一页，等轮到时一起核。
+  A：辛苦啦，最近催得有点急，我怕耽误后面的安排。
+  B：理解，不过每份都得一样看，别着急。
+  A：午饭你吃了吗，我刚点了个盖饭，今天忙得忘了看时间。
+  B：刚吃完，楼下那家新开的还行，就是排队有点长。
+  A：我也想试，听说他们的番茄牛腩不错。
+  B：嗯，别点太多，分量挺大的。
+  A：记下了，哪天一起去？
+  B：可以，等这阵子忙完吧。
+  A：我刚看了下评价，大家都说出餐挺快。
+  B：那中午早点去，应该不用等太久。
+  A：我刚看了下评价，大家都说出餐挺快。
+  B：那中午早点去，应该不用等太久。
+  A：我刚看了下评价，大家都说出餐挺快。
+  B：那中午早点去，应该不用等太久。
+  【6月12日】
+  A：这两天忽冷忽热的，早上出门差点又穿短袖。
+  B：我也是，办公室空调还开着，坐久了有点凉。
+  A：你放件薄外套在工位吧，最近温差挺大。
+  B：已经拿来了，昨天冻得我直打喷嚏。
+  A：周末预报说会下雨，出门记得带伞。
+  B：看到了，我包里常备一把折叠伞。
+  A：天气软件又改了，说下午云会散一些。
+  B：那还好，路上应该不会太难走。
+  A：天气软件又改了，说下午云会散一些。
+  B：那还好，路上应该不会太难走。
+  A：天气软件又改了，说下午云会散一些。
+  B：那还好，路上应该不会太难走。
+  A：我妈又问我假期回不回去，车票还没看呢。
+  B：早点定吧，临近节日票不好买。
+  A：她说家里要包饺子，非让我带点水果回去。
+  B：挺好啊，我上周也回去了一趟。
+  A：你家那边现在还热闹吗？
+  B：还行，邻居都在准备过节。
+  A：家里说不用带太多东西，人回去就行。
+  B：是啊，能一起吃顿饭就挺好了。
+  A：家里说不用带太多东西，人回去就行。
+  B：是啊，能一起吃顿饭就挺好了。
+  【6月13日】
+  A：最近肩膀有点僵，坐电脑前时间太久了。
+  B：我也是，记得起来活动一下，别一直窝着。
+  A：买了个小靠垫，感觉稍微好点。
+  B：我下班会走两圈，确实轻松些。
+  A：我得学你，最近运动量几乎为零。
+  B：先从散步开始，不用一下给自己太大压力。
+  A：我刚站起来活动了下，确实舒服点。
+  B：保持一会儿就好，别又坐两个小时。
+  A：我刚站起来活动了下，确实舒服点。
+  B：保持一会儿就好，别又坐两个小时。
+  A：前几天那份东西，多谢你照应一下。
+  B：我只是照常看材料，你别客气。
+  A：明白，就是想请你有空时帮我留意下进度。
+  B：我会按顺序处理，有消息再通知你。

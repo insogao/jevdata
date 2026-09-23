@@ -1,0 +1,133 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002897
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-2422fd2afcc53f35
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 申请人节前向熟悉事项办理的人递出一张面值未说明的节庆购物卡，并在之后含糊询问进度；对方保持按正常流程处理。礼物存在普通节庆往来的解释，但礼物时点和后续问询略显不寻常。
+  critical_evidence:
+  - 双方在节日前后约定见面
+  - 申请人送出一张面值未说明的购物卡作为节庆心意
+  - 送卡后申请人含糊询问事项进度，对方表示仍按正常流程办理
+  benign_alternatives:
+  - 普通节日人情往来
+  - 公司或商户提供的福利卡
+  - 有关事项按公开步骤与原有顺序处理
+
+attributes:
+  duration_days: 2
+  turn_count: 59
+  approximate_tokens_estimate: 979
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0316
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-134
+
+dedup:
+  content_hash: sha256:5ad0711c81b6e062bf66881328e1314fc48f2a3850150424379c356ba582d083
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【7月8日】
+  A：【7月8日】你上次说的那项我按要求补好了
+  B：我看到了 后面等统一消息
+  B：你最近在家办公吗
+  A：有两天 其他时间去单位
+  B：那挺灵活的
+  A：就是早会还是得准时
+  B：哈哈 线上也躲不过
+  A：是的
+  A：快到节前了 想约你见一下
+  B：周三下班后有空
+  A：楼下便利店换了老板
+  B：难怪布局不一样了
+  A：饮料柜也挪位置了
+  B：现在找水要绕一圈
+  A：不过面包种类多了
+  B：下次我也看看
+  A：我带张卡过去当个节日心意 面值真没留意
+  B：哈哈不用客气 有心就好
+  B：你上回买的收纳袋好用吗
+  A：挺好 终于不乱了
+  B：我也想买一套
+  A：挑厚一点的 不容易破
+  B：好 我周末看看
+  A：颜色选浅的比较好找
+  A：那我就不多打扰了
+  B：后续还是按正常安排走
+  A：上回提到的事情有消息了吗
+  B：还没有 更新后通知你
+  A：今天天气还挺舒服的
+  B：午后太阳出来了
+  【7月9日】
+  A：【7月9日】我把桌面清了清
+  B：是不是清出好多旧单子
+  A：晚饭想做点简单的
+  B：煮个面就行
+  A：我新买的杯子到了
+  B：颜色合你心意吗
+  A：今天路上车有点多
+  B：我也多等了两个灯
+  A：你推荐的面包店我去了
+  B：他们家的咸口也不错
+  A：下午会议提前结束了
+  B：那你能早点回家
+  A：我把照片备份好了
+  B：挺好 省出不少空间
+  A：最近办公室有点干
+  B：桌上放杯水会舒服些
+  A：你周末还去健身吗
+  B：看情况 可能周六上午去
+  A：快递已经拿到了
+  B：记得拆开检查一下
+  A：我今天睡过头五分钟
+  B：还好没迟到吧
+  A：准时赶上了
+  B：那就好
+  A：今天天气还挺舒服的
+  B：午后太阳出来了
+  A：我把桌面清了清
+  B：是不是清出好多旧单子
+  A：晚饭想做点简单的

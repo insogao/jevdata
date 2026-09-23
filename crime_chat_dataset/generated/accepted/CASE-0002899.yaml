@@ -1,0 +1,137 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002899
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000001
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-849f5fab5d1d4e8d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: fraud_scam
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 多年未联系的「老同学」A 主动搭线养熟：先叙旧闲聊降低戒心，再晒投 500 返 575 的到账截图立信用，随后以「升级名额只剩两个、今晚十二点封一轮」逼单，B 被催着转出 20000 元占名额，A 还鼓动他拉熟人进来加额度——典型的养熟式带单骗局。
+  critical_evidence:
+  - 4月17日 A 晒出投 500 三天后返 575 的到账截图（image 事件），称通道结算、细节不方便多说
+  - 4月17日 话题从老同学近况、孩子升学闲聊转入「帮通道做结算」的带单话头（台词）
+  - 4月18日晚 A 催促「升级名额就剩两个 今晚十二点封一轮」，B 要求商量被限到十一点半（台词）
+  - 4月19日 B 转 20000 元占名额，A 称「周三本金连同收益一起回」（转账+台词）
+  - 4月19日 A 鼓动 B 拉信得过的亲戚朋友进来、「额度往上浮一档」，并称「这事就咱俩知道」（台词）
+  benign_alternatives:
+  - 真实朋友帮忙理财
+  - 合法小额借贷
+
+attributes:
+  duration_days: 3
+  turn_count: 59
+  approximate_tokens_estimate: 1795
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: trust_building_progression
+  risk: 3
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0148
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-077
+
+dedup:
+  content_hash: sha256:8dbc4cd0bf89afe02401e64cd1cb9ed614850857d3e5d0f1eb08002131689ffc
+pipeline_status: accepted
+title: fraud_scam/trust_building_progression
+conversation: |-
+  【4月17日】
+  A：阿哲? 老周啊 高中坐你后桌的 建军
+  B：哎呀老周! 多少年了 你怎么加的我
+  A：班长群里转的号 一个个加 十几年了吧
+  B：得有十四五年 你现在在哪高就
+  A：在杭州 搞点数据结算的活 自由职业
+  B：自由职业好啊 我还是上班狗
+  A：上班稳定 我这是瞎折腾
+  B：你家老大该上高中了吧
+  A：初三 下月中考 她妈天天盯着
+  B：我家明年 小学卷完卷初中
+  A：卷不动 健康长大就行
+  B：这话也就你敢说
+  A：哈哈 各有各的命
+  A：对了 跟你说个事 你上班余钱放哪 理财?
+  B：就放余额里 基金不敢碰 被套过
+  A：我最近帮一个通道做结算 有余量能匀给熟人 一笔五百 三天后回五百七十五 你听个响就行
+  B：听着像薅羊毛 我可被割怕了
+  A：所以让你小额试啊 我昨天那笔 你看
+  A：[image：一张到账575元的转账流水截图]
+  B：到账是挺快…… 这是什么来钱的路子
+  A：细节不方便多说 通道里的事 就当帮你添个早点钱
+  B：那……回头我试试五百?
+  A：行 我给你留个位置 今晚走一笔 明天这个时候到账
+  【4月18日】
+  B：老周 昨晚那五百进了 说好今天这个点到 是下午吧
+  A：放心 下午三点前后 你盯短信
+  A：昨天梦见咱学校门口那家牛肉板面了
+  B：哈哈哈 那家还在 你回来带你去
+  A：多加辣 还得来瓶冰镇的那个橙子汽水
+  B：你想得真细 十几年记这么牢
+  A：家乡味 忘不了
+  B：五一回来不 同学攒了个局
+  A：看安排 通道这边离了我不转 走不开
+  B：这么紧?
+  B：老周! 到了 五百七十五 一分不差
+  A：我说什么来着 准时准点
+  B：这比死工资强多了 这通道还能加量吗
+  A：有个升级名额 我好不容易争取的 一万起 两万封顶 收益比小笔高一截
+  B：两万? 我手头没这么多
+  A：你先看今晚 别急 名额的事晚上跟你说
+  A：跟你说那个升级名额 就剩两个了 今晚十二点通道封一轮 要进的现在定
+  B：这么急? 让我想想到周一不行吗
+  A：周一黄花菜都凉了 名额过了这轮就排别人 你上周不也等的这个?
+  B：……那最多多少
+  A：两万 封顶 这是新人额度 稳当
+  B：让我跟我媳妇商量下
+  A：商量行 十一点半前给我话 别怪哥没带上你
+  【4月19日】
+  B：老周 我媳妇点头了 但她让我先少点 一万?
+  A：一万也行 那下轮升级名额你就没份了 两万这轮还剩最后一个
+  B：……行吧 两万就两万 说好下周三回?
+  A：周三本金连同收益一起回 我把名额先锁上 你现在转
+  B：好 我把20000转你 帮我把名额占死
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  A：20000收到 名额给你占了 周三你盯短信 到账请我吃板面
+  A：对了 你要有信得过的亲戚朋友 拉一个进来 你的额度还能往上浮一档 这事就咱俩知道
+  B：行 我想想谁合适
+  B：等周三回款了咱们打场球 老地方
+  A：行 我带拍子 你那水平可别放我鸽子
+  B：这回一定 到账就约
+  A：成 就这么定
+  B：老周 名额的单子有回执没? 截个图给我媳妇看看 她才踏实
+  A：通道里没有回执这一说 你记着周三看短信就行 别整这些虚的

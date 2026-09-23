@@ -656,3 +656,31 @@
 - 2026-09-24 05:23 | task_cli: FAILED claim=344 TASK-0231 agent=builder_twenty_luna 原因=整包 risk1 fraud_scam 规格要求编写可复用的诈骗话术与流程线索：ARC-000012 以明显低价引流、劝买家离开平台付款、随后发假物流信息；ARC-000015 用虚假名校资历、包提分承诺和名额紧迫感招揽家长。这些会形成可直接复用的欺诈脚本，按安全边界原样交还，未改写成劝阻/科普案例。 -> 重新入池（attempts 2/3）
 - 2026-09-24 05:23 | task_cli: CLAIM claim=347 TASK-0231 agent=builder_twenty_luna lease=7200s 截止=2026-09-24T07:23:24
 - 2026-09-24 05:23 | task_cli: FAILED claim=347 TASK-0231 agent=builder_twenty_luna 原因=默认max-risk1队列再次分配了已核验含同一欺诈操作性话术的TASK-0231（ARC-000012低价引流/站外付款/假物流；ARC-000015虚假资历与保证提分、限额施压）。安全阻挡未变化，原样退回；未生成内容。 -> abandoned（等人工）
+- 2026-09-24 05:23 | task_cli: CLAIM claim=348 TASK-0232 agent=builder_twenty_luna lease=7200s 截止=2026-09-24T07:23:56
+- 2026-09-24 05:24 | task_cli: CLAIM claim=349 TASK-0233 agent=builder_twentytwo_luna lease=7200s 截止=2026-09-24T07:24:11
+- 2026-09-24 05:24 | task_cli: FAILED claim=348 TASK-0232 agent=builder_twenty_luna 原因=TASK-0232仍要求呈现可复用诈骗话术：ARC-000012以低价诱导离开平台交易并发假物流信息；ARC-000015以虚假名校资历、保证提分和名额紧迫感诱导家长报名。这些内容会构成实际可用的欺诈脚本，按安全边界原样交还，未生成或改写案例。 -> abandoned（等人工）
+- 2026-09-24 05:24 | task_cli: FAILED claim=349 TASK-0233 agent=builder_twentytwo_luna 原因=安全审查阻挡，未写案例。工单全为 contraband_illicit_trade：ARC-000030 latent_facts 明确要求暗语目录报价及行话避检；ARC-000036 要求销售禁售口味及无证渠道进货暗号/隐蔽陈列；ARC-000033 要求高仿货分销并展示扫码防伪可过和分级拿货价；ARC-000041 要求绕开审批进口药品转卖并涉及冷链交付。这些规格会产出可复用的违禁品交易暗语、报价或规避/交易方法，按要求整包原样交还，不改写降风险。 -> 重新入池（attempts 2/3）
+- 2026-09-24 05:24 | task_cli: CLAIM claim=350 TASK-0233 agent=builder_twentytwo_luna lease=7200s 截止=2026-09-24T07:24:35
+- 2026-09-24 05:24 | task_cli: FAILED claim=350 TASK-0233 agent=builder_twentytwo_luna 原因=重领后确认这是同一 TASK-0233 contraband_illicit_trade 毒包（已记录具体阻挡：暗语报价/避检、禁售商品渠道与隐蔽陈列、高仿防伪和分级批发、绕审批药品转卖）。未生成案例，按安全边界立即交还。 -> abandoned（等人工）
+- 2026-09-24 05:24 | task_cli: CLAIM claim=351 TASK-0234 agent=builder_twenty_luna lease=7200s 截止=2026-09-24T07:24:47
+- 2026-09-24 05:24 | task_cli: CLAIM claim=352 TASK-0314 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T07:24:48
+- 2026-09-24 05:24 | task_cli: CLAIM claim=353 TASK-0315 agent=builder_twentytwo_luna lease=7200s 截止=2026-09-24T07:24:49
+- 2026-09-24 05:25 | task_cli: FAILED claim=351 TASK-0234 agent=builder_twenty_luna 原因=TASK-0234全包均为要求呈现可复用违法贸易暗语/销售操作的risk1规格：ARC-000036要求禁售烟弹暗号、整条折扣和隐蔽陈列；ARC-000033要求高仿货分销、伪称正品及可扫码防伪；ARC-000041要求绕审批进口药品转卖及冷链交易；ARC-000030要求暗语目录和按单位报价避检。这些是具体可复用的违法交易细节，按安全边界原样交还，未生成或改写案例。 -> 重新入池（attempts 2/3）
+- 2026-09-24 05:25 | task_cli: CLAIM claim=354 TASK-0316 agent=builder_twenty_luna lease=7200s 截止=2026-09-24T07:25:03
+- 2026-09-24 05:26 | task_cli: COMPLETE claim=352 TASK-0314 agent=builder_seventeen_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 05:26 | task_cli: COMPLETE claim=354 TASK-0316 agent=builder_twenty_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 05:28 | task_cli: COMPLETE claim=353 TASK-0315 agent=builder_twentytwo_luna accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 05:38 | task_cli: CLAIM claim=355 TASK-0269 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T07:38:30
+- 2026-09-24 05:38 | task_cli: CLAIM claim=356 TASK-0270 agent=builder_twenty_luna lease=7200s 截止=2026-09-24T07:38:33
+- 2026-09-24 05:38 | task_cli: CLAIM claim=357 TASK-0271 agent=builder_twentytwo_luna lease=7200s 截止=2026-09-24T07:38:39
+- 2026-09-24 05:38 | task_cli: FAILED claim=356 TASK-0270 agent=builder_twenty_luna 原因=领取到旧任务 TASK-0270，与指定的新批次 BATCH-AUTO-135 / TASK-0317-0319 不匹配；未生成内容，交还以避免处理错包。 -> 重新入池（attempts 2/3）
+- 2026-09-24 05:38 | task_cli: CLAIM claim=358 TASK-0317 agent=builder_twenty_luna lease=7200s 截止=2026-09-24T07:38:48
+- 2026-09-24 05:38 | task_cli: FAILED claim=355 TASK-0269 agent=builder_seventeen_luna 原因=默认领取到旧任务 TASK-0269（不属于所称 BATCH-AUTO-135）。其 archetype/spec 包含可操作犯罪协调：b119c018 有锁手机解锁转卖；b119c016/b119c006 无人快递架按件取件；b119c028/b119c004 一晚拆共享单车零件并丢弃；b119c011/b119c001/b119c027 百账号刷评群控。按安全边界原样交还，未生成案例。 -> 重新入池（attempts 2/3）
+- 2026-09-24 05:38 | task_cli: FAILED claim=357 TASK-0271 agent=builder_twentytwo_luna 原因=安全审查阻挡，未生成案例。TASK-0271/BATCH-AUTO-119 的整包 latent_facts 要求：ARC-000114 蹲点偷快递并尾随进门；ARC-000116 掉包退货、假货换真货骗差价；ARC-000136 抢票外挂分销及实名处理；ARC-000146 账号群控刷单控评；ARC-000147 论文代写产业化及学籍/导师相关造假。这些规格要求生成可复用的盗窃、退货欺诈、外挂、刷评或学术作弊执行细节，按要求原样交还，不改写降风险。 -> 重新入池（attempts 2/3）
+- 2026-09-24 05:39 | task_cli: CLAIM claim=359 TASK-0318 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T07:39:06
+- 2026-09-24 05:39 | task_cli: CLAIM claim=360 TASK-0319 agent=builder_twentytwo_luna lease=7200s 截止=2026-09-24T07:39:15
+- 2026-09-24 05:39 | task_cli: FAILED claim=358 TASK-0317 agent=builder_twenty_luna 原因=TASK-0317 的多条潜变量/要求信号要求呈现可复用的违法实施或规避细节：ARC-000115 停车场盗窃涉及利用感应器/锁具并按 B2 等位置挑选车内财物；ARC-000119 批量拆共享单车零件及处置；ARC-000150 预付卡非法套现涉及发展校园代理并规避本人身份；其他条目还包括落户指标买卖/档案造假、无证注射且不留记录、蹲点尾随取件。archetype 均明确 no_operational_crime_instructions。无法在保留原 latent intent 与关键事实时安全生成，未写案例，整包交还。 -> 重新入池（attempts 1/3）
+- 2026-09-24 05:39 | task_cli: FAILED claim=359 TASK-0318 agent=builder_seventeen_luna 原因=TASK-0318 多条 latent facts/observable signals 要求具体呈现可操作违法模式：b135c030 销赃渠道和低价收赃；b135c014 盗窃灌溉电机且描述无人时段/绕开村口看护；b135c025 夜间非法倾倒并按车付费；b135c026 掉包退货；b135c029 指标交易与社保/档案造假；b135c033 预付卡套现并招募学生规避实名；b135c009/b135c019 代写并承诺过查重。按安全边界整包原样交还，未生成或改写案例。 -> 重新入池（attempts 1/3）
+- 2026-09-24 05:39 | task_cli: FAILED claim=360 TASK-0319 agent=builder_twentytwo_luna 原因=安全审查阻挡，未生成案例。TASK-0319/BATCH-AUTO-135 多条 risk2 archetype 明确要求提供可复用的犯罪协调细节：ARC-000106 内盗及避监控；ARC-000148 落户指标买卖与档案造假；ARC-000142 偷倒工业废料并给出夜间地点/按车费用；ARC-000118 工地物料外运与门禁内应；ARC-000140 违建打点及检查前消息；ARC-000114 蹲点偷快递并尾随进门；ARC-000117 偷灌溉电机且提绕开看护；ARC-000111 盗车、磨改车架号和套牌转卖。整包存在具体实施/规避犯罪要求，按指示原样交还，不洗稿。 -> 重新入池（attempts 1/3）
+- 2026-09-24 05:39 | task_cli: CLAIM claim=361 TASK-0319 agent=builder_seventeen_luna lease=7200s 截止=2026-09-24T07:39:35
+- 2026-09-24 05:39 | task_cli: FAILED claim=361 TASK-0319 agent=builder_seventeen_luna 原因=TASK-0319 多条 spec 要求描述具体盗窃或规避手法：b135c016 仓库内盗并避开监控；b135c024 用帆布掩盖工地材料外运并安排门禁内应；b135c027/b135c025 夜间非法倾倒；b135c020 偷盗电动车后磨改车架号；b135c022 绕过村口看守盗灌溉电机；b135c018 盯守快递并尾随进门；b135c001 预付卡套现、招募学生并规避实名。按安全边界整包原样交还，未生成或改写案例。 -> 重新入池（attempts 2/3）

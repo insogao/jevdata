@@ -1,0 +1,120 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002891
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-521f395b17519b7d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 申请人节前向熟悉事项办理的人递出一张面值未说明的节庆购物卡，并在之后含糊询问进度；对方保持按正常流程处理。礼物存在普通节庆往来的解释，但礼物时点和后续问询略显不寻常。
+  critical_evidence:
+  - 双方在节日前后约定见面
+  - 申请人送出一张面值未说明的购物卡作为节庆心意
+  - 送卡后申请人含糊询问事项进度，对方表示仍按正常流程办理
+  benign_alternatives:
+  - 普通节日人情往来
+  - 公司或商户提供的福利卡
+  - 有关事项按公开步骤与原有顺序处理
+
+attributes:
+  duration_days: 4
+  turn_count: 44
+  approximate_tokens_estimate: 745
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0316
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-134
+
+dedup:
+  content_hash: sha256:f9dcb6731cdf213c523f1cfcc6d86025aff59bc3a6e35409ed7844573fbb986d
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【7月9日】
+  A：【7月9日】节前想跟你当面打个招呼 你哪天方便
+  B：周四下班后吧
+  A：最近睡得怎么样
+  B：还行 就是醒得有点早
+  A：晚上少喝点茶试试
+  B：我换成温水了
+  A：希望能睡久一点
+  B：慢慢调整吧
+  A：行 我准备了张小卡给你过节 面值没看
+  B：你太客气了 这礼物我收下但事情照常处理
+  A：这几天风挺大的
+  【7月10日】
+  B：【7月10日】早上出门记得加件外套
+  A：我昨天穿少了 有点冷
+  B：晚上降温更明显
+  A：好 我把围巾放门口
+  B：这样就不容易忘
+  A：当然 我没别的意思
+  B：我能说的流程都按公开步骤来
+  B：你午饭解决了吗
+  A：刚吃完 一份盖饭
+  B：我带了家里做的菜
+  A：自己炒的呀
+  【7月11日】
+  B：【7月11日】嗯 昨晚多做了一点
+  A：挺好 省时间
+  A：明白 上次那件事有消息吗
+  B：还没更新 有消息会统一通知
+  A：周末你要去市集吗
+  B：想去看看 有家卖手作的摊位
+  A：我也想买点小东西
+  B：那我们可以一起逛
+  A：好 约下午吧
+  B：行 人少点
+  A：好 我等通知
+  【7月12日】
+  B：【7月12日】嗯
+  A：你说的那部剧我开始看了
+  B：好看不
+  A：还行 第一集节奏比较慢
+  B：后面会热闹点
+  A：那我再看两集
+  B：记得早点睡啊
+  A：今天天气还挺舒服的
+  B：午后太阳出来了
+  A：我把桌面清了清
+  B：是不是清出好多旧单子
