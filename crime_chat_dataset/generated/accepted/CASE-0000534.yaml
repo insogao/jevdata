@@ -1,0 +1,120 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000534
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000088
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-96854a60628f5068
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: privacy_doxxing
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 保险理赔人员绕开正规流程，私下找诊所熟人把理赔客户当晚的急诊病历调出来拍照，用请客转账作交换，想核出客户隐瞒的饮酒伤情。
+  critical_evidence:
+  - A委托B把理赔客户上周五急诊病历调出来拍一份
+  - 明确要求别走系统，避免留下查询记录
+  - A称这条信息值一顿饭并转账666元
+  - B未交出病历，只答应引荐当晚值班的同事
+  benign_alternatives:
+  - 保险正常理赔调查
+  - 公估公司流程
+
+attributes:
+  duration_days: 2
+  turn_count: 45
+  approximate_tokens_estimate: 1149
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: insurance_claims_snoop
+  risk: 2
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0058
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:fe610acea9d54232a62c86d982ea6573b958b85991c197a301c047d0180810be
+pipeline_status: accepted
+title: privacy_doxxing/insurance_claims_snoop
+conversation: |-
+  【10月16日】
+  A：姐，你诊所楼下好停车不
+  B：不好停，你停对面商场吧
+  A：行，我十分钟后到
+  B：到了直接上三楼
+  A：面基了，表姐让我带的话带到了哈哈
+  B：我表姐也是，随便就把我卖了
+  A：客套完说正事，你们上周五晚上是不是接了个摔伤的急诊
+  B：哪个啊，周五晚上挺多的
+  A：骑车摔的，男的，四十来岁，膝盖缝针那个
+  B：哦有印象，喝了酒摔沟里那位
+  A：对就是他，找我们理赔，喝酒这段他一个字没提
+  B：哟，那得看病历啊，上头肯定写了
+  A：所以找你嘛，把那天病历调出来，拍一份给我
+  B：这……病历不是随便能给人的吧
+  A：他本人签了授权的，授权书还在总部流转，你先拍我救个急
+  B：那你们走系统调不就行了
+  A：别走系统，系统里一查一个记录，我这边考核受不了
+  B：你这么说我更不敢了
+  A：姐，就三页纸，你手机拍一份发我微信就行
+  B：总觉得这事不太对味
+  A：哎呀我们干理赔的，都讲究个先斩后奏
+  B：容我再想想
+  A：你嗓子咋哑了
+  B：秋燥，前台一天说八百句话
+  A：泡点胖大海，我包里正好有一罐
+  B：谢了，回头拿两颗
+  B：周五那事，我想了想，给你指条道行不
+  A：你说
+  B：病历复印件他本人能去病案室复印，你让他自己来，光明正大
+  A：他要肯配合我至于找你吗，他就是怕喝酒这段写进去
+  B：那不就是想瞒着点啥嘛
+  A：嘘，心里有数就行，话别挑明
+  A：你帮我收个快递呗，寄你们诊所了
+  B：行，几号的件
+  A：明天到，一箱橘子，老家寄的
+  B：成，到了放前台你说一声
+  【10月17日】
+  B：哎，后来我又想了想
+  A：怎么样，帮不帮
+  B：病历我没给你拍，但周五值班的是同事小刘，我引荐，你自己跟她谈
+  A：小刘那边好说话不
+  B：她上个月刚跟你同行的人吃过饭，你懂的
+  A：懂，这条信息值一顿饭，回头一块安排
+  【系统消息】A 向 B 转账 666 元，已收款。
+  A：饭钱先转上，六六六图个顺
+  B：你这人办事真讲究，行，周五中午我作陪
+  A：就这么说定了

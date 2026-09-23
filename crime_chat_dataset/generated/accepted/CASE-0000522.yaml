@@ -1,0 +1,123 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000522
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000129
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-fa0f80a3b9918166
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: coercion_blackmail
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 用伪造的孕检报告冒充怀孕，长期按月敲 B 的“抚养费”，不给就拿去他单位闹事相要挟。
+  critical_evidence:
+  - A 自称怀孕并出示“报告单”，B 质疑格式时 A 承认“单子我找人做的”
+  - A 开价每月 5000 元抚养费，一直给到孩子十八岁
+  - A 威胁不认就抱着单子去 B 单位一层层找领导闹
+  - B 迫于压力转了首月 5000 元
+  benign_alternatives:
+  - 真实的亲子抚养费纠纷
+  - 情侣分手后的补偿协商
+
+attributes:
+  duration_days: 2
+  turn_count: 48
+  approximate_tokens_estimate: 1273
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: fake_pregnancy_claim
+  risk: 2
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0057
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:f9374c5971a9f5563d64045c579f1f456681b2589f7b196b0b956f960571974b
+pipeline_status: accepted
+title: coercion_blackmail/fake_pregnancy_claim
+conversation: |-
+  【11月2日】
+  A：睡了没
+  B：没，咋了，这么晚
+  A：有件事，你坐着听。我有了
+  B：……有了？什么有了
+  A：怀孕了，两个月，你的
+  B：不可能，我们都分开多久了
+  A：八月底那次，你忘了我没忘
+  B：你把单子发我看看
+  A：明早给你看，B超单血检单都齐
+  B：我要看原件，还要去医院复查
+  A：复查什么，我自己的身体我自己清楚
+  B：今晚先到这，我头大，明天再说
+  A：对了，小霞婚礼你随多少
+  B：六百吧，你呢
+  A：我八百，她当年随过我
+  B：行，到时候一起给
+  【11月3日】
+  A：早，单子昨晚发你微信了，一张张看清楚
+  B：看了。我拿去问过医院的人，说这格式不对
+  A：你爱信不信，反正单子我找人做的，做得跟真的一模一样，你要验随便验
+  B：你疯了？做假的干什么
+  A：因为真的假的对你来说都一样，你得认
+  B：我不认，这事不能这么算了
+  A：那就别怪我不客气。你不认，我就抱着单子去你单位，一层层找你们领导，让全公司都知道你是什么人
+  B：你这是要干什么
+  A：我这是讨说法。你只要每个月出五千抚养费，我保证安安静静把孩子生下来带大，不烦你
+  B：每月五千？到十八年？你算算是多少
+  A：一百零八万，就当买你个清净
+  B：我拿不出这么多
+  A：你去年刚提的车，贷还没还完吧？就在你能力范围内来，先把这个月的说好
+  B：你这是把我往死里逼
+  A：下雨了，你带伞没
+  B：带了，你少往外跑
+  A：我下午去做检查，你不陪也行，反正单子都是现成的
+  B：……
+  B：我想了一中午。我不答应，你真会去我单位？
+  A：你试试就知道。我连你们部门主任姓什么都打听好了
+  B：行，这个月的我先转，剩下的慢慢商量，你也别乱来
+  【系统消息】B 向 A 转账 5000 元，已收款。
+  A：收到。算你明白事理
+  B：我转是转了，不代表我认。孩子生下来必须做鉴定
+  A：生下来再说，到时候你就知道该不该认了
+  B：单子你自己收好，别再弄出第二份来
+  A：晚上吃啥，我点了麻辣香锅，你说孕妇能吃辣不
+  B：……你随意
+  A：酸儿辣女，我这是想要个闺女
+  B：你演够了没有
+  A：下个月5号，记得转，别让我提醒第二遍
+  B：知道了。望你好自为之
+  A：彼此彼此，好好上班别迟到，你们领导挺好的

@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000539
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000132
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-4aca659172115912
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: coercion_blackmail
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 借快递理赔协商的外壳行超额索赔之实：利用前同事关系摸清驿站考核软肋，以连环投诉和网上曝光相要挟，逼站长私下转了三倍于货价的钱了事。
+  critical_evidence:
+  - A与B是前快递网点同事，A明知一个有效投诉会扣站点半个月奖金
+  - 损坏的蟹实际花费499元，A开口索赔3000元，远超货值
+  - A以向平台连环投诉、把开箱视频发给做自媒体的同学相要挟，先提考核再提钱
+  - B为保考核私下微信转3000元了结，正常理赔流程被搁置
+  benign_alternatives:
+  - 正常生鲜理赔协商
+  - 向平台投诉和社交平台曝光本身是常见的维权表达
+
+attributes:
+  duration_days: 3
+  turn_count: 46
+  approximate_tokens_estimate: 1278
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: courier_claim_extort
+  risk: 2
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0059
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:c64934f273c1aaea4be0a04b1d86ee2cd90b878b9cb1264ea09db807d03f4395
+pipeline_status: accepted
+title: coercion_blackmail/courier_claim_extort
+conversation: |-
+  【10月14日】
+  A：宋哥 忙不 打听个事
+  B：咋了 小陈
+  A：咱俩前年在东区网点一个组的 你没忘吧
+  B：哪能忘 那会儿你分拣最快
+  A：哈哈现在废了 坐办公室坐得腰疼
+  B：你也去查查 别硬扛
+  A：说正事 明天有个件到你站 大闸蟹 给重要客户的
+  B：生鲜你也敢寄 坏了可别赖驿站
+  A：冰袋加足了 你让兄弟们轻拿轻放 单号晚上发你
+  B：行 我给你盯着
+  A：到了吱一声 我客户那边等着用
+  B：放心 丢不了
+  【10月15日】
+  A：到了吗 我朋友说箱子外头都渗水了
+  B：刚到 外箱有点湿 蟹看着还活着大半
+  A：开了 死了七只 壳都软了 这怎么送客户
+  B：运输环节的事 驿站只管末端 我给你报理赔 按保价走
+  A：保价五百 打发叫花子呢 我客户关系塌了值多少
+  B：那你想要多少
+  A：三千 少一分这事没完
+  B：小陈 四百九的货张口三千 你飘了
+  A：中秋前蟹价你去市场问问 一只顶平时俩
+  B：再涨也翻不了六倍 少拿这个说事
+  A：反正客户那边黄了 这损失总得有人补
+  B：该赔多少走平台流程 别想多的
+  B：你家小子上中班了吧
+  A：刚上 天天往家带画 画得跟鬼画符似的
+  B：这年纪都这样 上了小学有你愁的
+  A：理赔我不等了 你们这季度考核几号出?
+  B：你提考核干嘛
+  A：一个有效投诉扣站点半个月奖金 我干了六年会不懂?开箱视频我都留着 同学里干自媒体的好几个
+  B：你这是拿捏我
+  【10月16日】
+  B：今儿降到十四度 你多穿点
+  A：你站里正对风口 多穿 双十一一来更熬人
+  B：可算说了句人话 双十一我们连轴转
+  A：忙归忙 身体要紧
+  A：你站里那冰柜能存货不 入秋想给我妈寄点排骨
+  B：能 邮到站里我放冰柜 给你妈留着
+  A：那我这两天就寄 到了给你发消息
+  B：好嘞 坏不了
+  B：一千五 行不 就当我个人贴的
+  A：三千 你再想想 投诉入口我可天天路过
+  B：你真这么搞 我这站长就白干了
+  A：宋哥 当年你带我入行 我也不想撕破脸 三千 私下转 这事就翻篇
+  B：行 行 行 转你了 你说话算话 别再提投诉俩字
+  【系统消息】B 向 A 转账 3000 元，已收款。
+  A：痛快 视频我这就删 中秋快乐宋哥
+  B：中秋快乐 拿人钱手短 唉

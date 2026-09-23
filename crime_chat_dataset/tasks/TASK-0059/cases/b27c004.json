@@ -1,0 +1,450 @@
+{
+ "key": "b27c004",
+ "archetype_id": "ARC-000011",
+ "subtype": "customer_service_reverse",
+ "latent_intent": "A冒充乘机服务中心客服，以航班取消全额退款加延误补贴开场，层层引导乘客下载会议软件、交通道费、报出短信数字，最终乘客银行卡被盗刷。",
+ "critical_facts": [
+  "B没有申请任何改签，A却主动称其23号航班取消，可全额退款另补300元",
+  "A以线上专办为由引导B下载云会议软件共享屏幕，称一步步指导操作",
+  "B先转388元通道占用费，A承诺办结连补贴一起原路退回",
+  "A以退款核销为名索要B收到的六位短信数字，B当晚照做，次日发现卡被盗刷6800元"
+ ],
+ "benign_alternatives": [
+  "航司真实的退改签通知",
+  "OTA平台客服回电协助退票"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "10月20日 09:12",
+   "speaker": "A",
+   "text": "您好 这里是乘机服务中心 工号8206 您23号的Z8652航班 因机组调配取消了"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 09:20",
+   "speaker": "B",
+   "text": "啊 票都出过了 航司没给我发短信啊"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 09:24",
+   "speaker": "A",
+   "text": "批量通知有延迟 您这单在优先处理名单里 可以全额退票 另有300元延误补偿"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 09:27",
+   "speaker": "B",
+   "text": "全额退还补300 那挺好的"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 09:30",
+   "speaker": "A",
+   "text": "公司今年抓服务口碑 优先处理老会员 我一步步带您办"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 09:52",
+   "speaker": "A",
+   "text": "看您是去南方 出差还是旅游"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 09:55",
+   "speaker": "B",
+   "text": "出差 参个行业展会 顺道看客户"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 09:58",
+   "speaker": "A",
+   "text": "南方这几天有台风尾巴 记得带伞"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 10:02",
+   "speaker": "B",
+   "text": "谢谢提醒 预报还真有雨"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 10:06",
+   "speaker": "A",
+   "text": "您哪个行业的展会"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 10:09",
+   "speaker": "B",
+   "text": "智能硬件的 你们服务行业也卷吧"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 10:12",
+   "speaker": "A",
+   "text": "卷 都是为乘客服务嘛"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 10:20",
+   "speaker": "A",
+   "text": "您是老会员 这次耽误行程 积分我再帮您申请两千"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 10:24",
+   "speaker": "B",
+   "text": "还有这福利 那必须好评"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 10:45",
+   "speaker": "A",
+   "text": "退款走线上专办通道 您先下载一个云会议这样的软件 我共享屏幕一步步教您"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 10:50",
+   "speaker": "B",
+   "text": "还要下软件 挺麻烦"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 10:53",
+   "speaker": "A",
+   "text": "不下软件您就得去机场柜台排一天队 补贴也没了"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 10:58",
+   "speaker": "B",
+   "text": "行行 那您把房间号发我"
+  },
+  {
+   "type": "message",
+   "time": "10月20日 11:00",
+   "speaker": "A",
+   "text": "好嘞 您先进会议室 我稍后到"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 09:00",
+   "speaker": "A",
+   "text": "早 软件装好了吗"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 09:10",
+   "speaker": "B",
+   "text": "装好了 进了房间"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 09:15",
+   "speaker": "A",
+   "text": "好 先核对订单 乘机人 证件尾号 航班日期"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 09:33",
+   "speaker": "B",
+   "text": "对的 都对"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 09:40",
+   "speaker": "A",
+   "text": "退款前需要交388元通道占用费 办结后连300补贴一起原路退您"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 09:47",
+   "speaker": "B",
+   "text": "还要交钱 正规退票不是免费吗"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 09:52",
+   "speaker": "A",
+   "text": "退票免费 通道费是两码事 三分钟退回 不吃亏"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 09:58",
+   "speaker": "B",
+   "text": "行吧 为了300补贴"
+  },
+  {
+   "type": "transfer",
+   "time": "10月21日 10:05",
+   "from": "B",
+   "to": "A",
+   "amount": 388
+  },
+  {
+   "type": "message",
+   "time": "10月21日 10:10",
+   "speaker": "A",
+   "text": "收到 您的单进加急队列 今天内办结"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 10:40",
+   "speaker": "B",
+   "text": "要是今天办不完 我先抢张高铁票备着"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 10:45",
+   "speaker": "A",
+   "text": "别急着买 退款下来重新出票更划算 我给您留优先舱位"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 10:50",
+   "speaker": "B",
+   "text": "优先舱 还有这说法"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 10:53",
+   "speaker": "A",
+   "text": "内部渠道 您放心"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 10:56",
+   "speaker": "B",
+   "text": "好 再等等"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 15:20",
+   "speaker": "B",
+   "text": "下午了 还没动静"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 15:25",
+   "speaker": "A",
+   "text": "队列人多 您的单在处理 稍安勿躁"
+  },
+  {
+   "type": "message",
+   "time": "10月21日 15:30",
+   "speaker": "B",
+   "text": "行 我再等等"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 09:05",
+   "speaker": "A",
+   "text": "您的退款进入终审 需要最后一步核销"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 09:15",
+   "speaker": "B",
+   "text": "怎么核"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 09:20",
+   "speaker": "A",
+   "text": "您手机马上收到一条六位数字短信 把数字报给我 系统对上立刻放款"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 09:26",
+   "speaker": "B",
+   "text": "这不是验证码吗 给您干什么"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 09:31",
+   "speaker": "A",
+   "text": "那是核销码 退款通道专用的 您放心"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 09:36",
+   "speaker": "B",
+   "text": "我卡里前几天刚进一笔货款 别出岔子啊"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 09:40",
+   "speaker": "A",
+   "text": "您不报这个 之前交的388和补贴都卡在通道里"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 09:48",
+   "speaker": "B",
+   "text": "唉 行 行"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 09:55",
+   "speaker": "B",
+   "text": "048219 报给你了"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 09:58",
+   "speaker": "A",
+   "text": "收到 半小时内到账 您留意短信"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 10:30",
+   "speaker": "A",
+   "text": "核销完就消停了 您家孩子上学接送来得及吧"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 10:35",
+   "speaker": "B",
+   "text": "别提了 每天早上跟打仗一样"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 10:38",
+   "speaker": "A",
+   "text": "都一样 我家那个喊八遍不起床"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 10:42",
+   "speaker": "B",
+   "text": "你也有娃 看不出来"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 10:45",
+   "speaker": "A",
+   "text": "俩 累并快乐着"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 11:00",
+   "speaker": "B",
+   "text": "说了半小时到账 还没动"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 11:05",
+   "speaker": "A",
+   "text": "高峰期队列长 我帮您催单"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 11:30",
+   "speaker": "B",
+   "text": "还没有 到底行不行"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 11:35",
+   "speaker": "A",
+   "text": "系统显示银行端延迟 最迟今晚 到不了我赔双倍"
+  },
+  {
+   "type": "message",
+   "time": "10月22日 11:50",
+   "speaker": "B",
+   "text": "那我等到晚上"
+  },
+  {
+   "type": "message",
+   "time": "10月23日 07:40",
+   "speaker": "B",
+   "text": "昨晚也没到账"
+  },
+  {
+   "type": "message",
+   "time": "10月23日 08:30",
+   "speaker": "A",
+   "text": "今早系统升级 退款统一顺延24小时"
+  },
+  {
+   "type": "message",
+   "time": "10月23日 08:35",
+   "speaker": "B",
+   "text": "又延 我假都请了 机票也误了"
+  },
+  {
+   "type": "message",
+   "time": "10月23日 08:40",
+   "speaker": "A",
+   "text": "升级完优先处理您这单"
+  },
+  {
+   "type": "message",
+   "time": "10月23日 08:55",
+   "speaker": "B",
+   "text": "不对劲 我刚收到银行短信 卡凌晨少6800 我根本没消费"
+  },
+  {
+   "type": "message",
+   "time": "10月23日 09:02",
+   "speaker": "A",
+   "text": "这是通道的冻结预授权 会自动解冻"
+  },
+  {
+   "type": "message",
+   "time": "10月23日 09:10",
+   "speaker": "B",
+   "text": "冻结 你们动我卡了"
+  },
+  {
+   "type": "message",
+   "time": "10月23日 09:15",
+   "speaker": "A",
+   "text": "核销通道的常规流程 明天恢复"
+  },
+  {
+   "type": "message",
+   "time": "10月23日 09:30",
+   "speaker": "B",
+   "text": "我刚打电话问银行 人家说我这张卡在境外渠道被盗刷 让我赶紧挂失"
+  },
+  {
+   "type": "message",
+   "time": "10月23日 09:40",
+   "speaker": "A",
+   "text": "您别听银行吓唬 钱跑不了"
+  },
+  {
+   "type": "message",
+   "time": "10月23日 09:50",
+   "speaker": "B",
+   "text": "你到底是谁 退款退了三天 钱没见着倒少6800"
+  },
+  {
+   "type": "message",
+   "time": "10月23日 10:00",
+   "speaker": "A",
+   "text": "您这是污蔑正规平台 我要投诉您"
+  },
+  {
+   "type": "message",
+   "time": "10月23日 10:10",
+   "speaker": "B",
+   "text": "投诉 聊天记录转账记录我都留着 你等着"
+  },
+  {
+   "type": "message",
+   "time": "10月23日 10:25",
+   "speaker": "B",
+   "text": "骗子 还我钱"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000540",
+  "status": "accepted",
+  "errors": []
+ }
+}

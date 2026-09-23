@@ -1,0 +1,143 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000525
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000141
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-df9ae8819934e909
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: other_illicit_coordination
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 表哥从山里弄来的野味夜里两点送到城里开馆子的表弟手上，避人耳目、现金结算，生客一律不接。
+  critical_evidence:
+  - A 说这个月“只有四只”，按老价论斤，估摸三千五六
+  - 约定夜里两点在东环桥底交货，B 把冰袋备好、带保温箱
+  - B 转 2000 元定金锁货，尾款 3600 元现金交割
+  - 生面孔到店里打听时，两人口径统一只说有冻货
+  benign_alternatives:
+  - 山货土产收购生意
+  - 养殖场供货的夜间配送
+
+attributes:
+  duration_days: 2
+  turn_count: 67
+  approximate_tokens_estimate: 1701
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: forest_poaching
+  risk: 2
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0057
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:1243a6d789d34af5995d0354125bb0db1b998e80e32645069a910b9ff553a84b
+pipeline_status: accepted
+title: other_illicit_coordination/forest_poaching
+conversation: |-
+  【12月10日】
+  A：老二，起了没
+  B：刚起，哥，山里下雪没
+  A：薄薄一层，踩上去咯吱响
+  B：你那批土产备得咋样了，店里等着上冬菜单
+  A：急不得，这个月只有四只，山里收成看天
+  B：就四只？上个月不还有八个
+  A：入冬了都缩着，能下来几只是几只，你要就这四只，别挑
+  B：妈今年灌的腊肠给你寄了两挂
+  A：收到了，昨晚蒸了一截，就是这个味
+  B：让嫂子多晾点，过年回去拿
+  A：她早灌上了，房檐下挂一排
+  B：行，四只都给我留着，别放跑了
+  A：跑不了，都安置妥了
+  B：咋送？大白天我可不敢往店里带
+  A：老规矩，夜里两点交，东环桥底下那个口进，冰袋你备好，我给你装筐
+  B：两点也太熬人了
+  A：两点路上没人，你也清净，白天碰上熟人不好看
+  B：行吧行吧，就怕起不来
+  A：闹钟定上，冬天的货放不住，得趁夜里的凉气
+  B：我家那个期末考完了，数学又七十多
+  A：七十多可以了，比他爸强，你当年数学及格都费劲
+  B：别提当年哈哈
+  A：寒假送我那住几天，山里空气好，管胖
+  B：再说吧，他妈不撒手
+  B：哥，四只什么价
+  A：老价，论斤，估摸六十来斤，你备三千五六
+  B：让一点呗，店里冬天生意也就那样
+  A：你要是紧，定金先转两千，尾款交货给现钱
+  B：行，这就转
+  【系统消息】B 向 A 转账 2000 元，已收款。
+  A：收到，两千定金，四只给你留死了，别人问都不卖
+  B：这么抢手？
+  A：城里就你一家长期要，散户我不搭理
+  【12月11日】
+  A：早上桥上结冰了，骑电驴慢点
+  B：知道，昨天差点滑一跤
+  A：让你换防滑胎不换
+  B：这就去换，下午就去
+  A：四只我下午先挪到河边老地方，晚上好走
+  B：行，你弄好，我两点前到
+  A：带个大点的保温箱，我筐就四个
+  B：有两个泡沫箱行不
+  A：行，冰袋垫好，别捂着
+  B：哥，下午店里来了个生面孔，一直打听有没有野味，我没敢接话
+  A：不熟的口子别开，就老客户之间走，生人一律说没有
+  B：懂，我说店里只有冻货
+  A：机灵。晚上到点直接来，别带生人
+  B：冰袋冻上了，六个
+  A：够了，再带条旧毛毯，筐底垫上
+  B：行，闹钟定一点半
+  A：路上慢点，桥口那片冰没化
+  B：出来了，路上没人，导航显示十五分钟到
+  A：好，我桥头老位置等你
+  【12月12日】
+  B：到了，你那车尾灯我看见了
+  A：停我后面，过来搭把手，轻点搬，别出声
+  B：好家伙，这四只真肥
+  A：筐里垫着呢，你点数，点完我封筐
+  B：一二三四，齐了，都活泛着
+  A：活泛才好，你回去先吊起来缓两天再动手
+  B：懂。尾款三千六，现钱你点点
+  A：点过了，三千六整，一个子不差。回去路上稳着骑
+  B：行。下个月还有不，年根底下店里要得急
+  A：看雪大不大，雪一大它们不出来，有货我喊你
+  B：成，那我走了，你回山里也慢点
+  A：去吧，到家发个信
+  B：到家了，冰袋真管用，到店还活蹦乱跳
+  A：那可不，你哥我伺候它们比伺候自己还上心
+  B：哈哈，回头我给妈捎点老红糖回去
+  A：行，妈就认那种老红糖，你看着买
