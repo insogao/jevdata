@@ -1,0 +1,136 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000293
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000009
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-1f0be26c87031f65
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A以高薪日结'商务陪同'为饵，靠服装押金和面试资料费收割求职者，B明知排班遥遥无期仍抽成并继续拉人入局。
+  critical_evidence:
+  - A开出一天一千五、当场日结的高额陪同费作诱饵
+  - 上岗前须先交服装押金2980元，口头承诺离职可退
+  - 面试先收300元'资料费'，未上岗先收费
+  - B从小林处收3500元抽成200元后转A 3300元；面试后一直被拖延排班，A还催B再推人来
+  benign_alternatives:
+  - 正规商务礼仪兼职
+  - 会展临时工中介的正常收费
+
+attributes:
+  duration_days: 5
+  turn_count: 58
+  approximate_tokens_estimate: 1385
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: escort_payment_claim
+  risk: 2
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0034
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-019
+
+dedup:
+  content_hash: sha256:31e63cfc74a8e532e9d340100b77121a28ec00a48af11ce61fd01674b6d2f127
+pipeline_status: accepted
+title: fraud_scam/escort_payment_claim
+conversation: |-
+  【10月9日】
+  A：王哥早 冒昧打扰 我是做高端商务接待的 免贵姓陈
+  B：陈总好 朋友说你这边常年要人?
+  A：对 商务陪同 高端局 一天一千五 日结
+  B：一千五? 行里算高的
+  A：正规商务局 酒局宴会 形象过关就行
+  B：这两天降温 你们正装得备厚的
+  A：对 服装这块有讲究 后面细说
+  B：我手里几个闲着的 模特班毕业的和自由职业的
+  A：发三个资料过来 我挑挑
+  B：照片晚上发 规矩先说清
+  A：简单 先面试 面过就上岗
+  B：成 我晚上联系
+  【10月10日】
+  B：照片发了
+  A：第二个不错 约明天下午
+  B：面试在哪
+  A：市中心那家酒店二楼茶室 我们刘经理面
+  B：面试收费不? 我得跟人说清楚
+  A：交300资料费 简历包装摄影一套 行规
+  B：行 我说去
+  B：这帮孩子也缺钱 我闺女补课一学期上万
+  A：都一样 我儿子大学更费
+  B：所以这行有市场 哈哈
+  A：好好干 月结给你返点
+  B：小林说周四下午行
+  A：周四14:30 提前十分钟到 面完当天能排班
+  B：服装呢 要自备不
+  A：不用 公司统一 服装押金2980 离职退 这条提前说清楚
+  【10月11日】
+  B：小林嫌押金贵 有点犹豫
+  A：正常 你跟她说押金可退 我们做长线的
+  B：她问日结是不是真日结
+  A：一千五当天结 到手 还有茶水贴
+  B：行 我先去吃饭 楼下沙县
+  A：我还在开会 会议盒饭都凉了
+  B：哈哈你们老板也吃盒饭
+  A：装样子 走流程
+  B：她答应了两笔一起3500 我抽两百 转你3300
+  A：转吧 到账就排周四
+  B：转了 你看下
+  【系统消息】B 向 A 转账 3300 元，已收款。
+  A：收到 排班截图发她了 你也留一份
+  B：行 事成再给你介绍两个
+  A：随时 人越多越好
+  【10月12日】
+  B：小林到酒店了
+  A：好 让她直接上二楼 刘经理已经到了
+  B：面完了 说还不错 回去等排班
+  A：嗯 表现可以 下周一第一单 高端局 一千五日结
+  B：成
+  B：小林问要不要自备低跟鞋
+  A：不用买 服装全套公司配 押金里含了
+  B：行 她还问住得远补不补车费
+  【10月13日】
+  B：陈总 第一单几点
+  A：稍等 开会中
+  B：下午没回我 晚上的单子还排吗
+  A：这周局子推迟了 下周一定 补贴先记账上 一起结
+  B：行吧 小林那边我怎么说
+  A：就说高端局档期满 让她先备着 随时候命 押金离职前都有效
+  B：你这排班有点飘啊 陈总
+  A：做生意嘛 有淡旺季 你手里人多不怕 再推两个过来 面试费照旧
+  B：我再看看 她们要问急了

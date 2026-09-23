@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000280
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000038
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-e113222db283651b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: contraband_illicit_trade
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 借亲友人脉批量办理实名卡转交上家，卡主对卡的最终用途毫不知情。
+  critical_evidence:
+  - 实名卡一人一天限额两张，要换人换网点分批办
+  - 每张五十元现金结算，凑批支付
+  - 卡办完连服务密码一并上交，本人不留用
+  - 卡主只被告知帮公司冲任务，不知真实去向
+  benign_alternatives:
+  - 公司统一办理工作号
+  - 家庭副卡办理
+
+attributes:
+  duration_days: 6
+  turn_count: 44
+  approximate_tokens_estimate: 1198
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: sim_card_pool
+  risk: 2
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0033
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-019
+
+dedup:
+  content_hash: sha256:fa7c6bbcb941ed23a2749d89a250349f7357157496817bc83f3c342753310510
+pipeline_status: accepted
+title: contraband_illicit_trade/sim_card_pool
+conversation: |-
+  【10月7日】
+  B：哥，中秋回家给姥爷带点啥
+  A：两盒好茶，他好这口
+  A：你最近手头紧不紧，我这有个来钱的道
+  B：咋说
+  A：你不是在营业厅有熟人吗，办卡能不能走个方便
+  B：办卡？办了干嘛
+  A：有人收，一张我给你五十，凑十张五百，先给你垫上
+  【10月8日】
+  A：降温了，你那件旧棉袄还能穿不
+  B：能，我妈又给我絮了层棉花，臃肿但暖和
+  A：你妈手艺没得说。说正事，昨晚想得怎么样
+  B：有点悬，卡收去干啥的
+  A：上头的公司做注册推广用，正规生意，图个量大
+  B：那咋不让他们自己员工办
+  A：一人一天一个地方限两张，他们人手不够才外包
+  B：那倒是，我上个月补张卡都限着
+  A：所以要人手，今天你去，明天换你小舅子，轮着来
+  B：卡办下来送到哪
+  【10月9日】
+  A：老地方，城东物流园那排库房，提我就行
+  B：行。哎，我电动车又半路没电，推回来的
+  A：该换电池了，别省那个钱
+  B：一组电池小一千，割肉啊
+  A：你这批卡结完，半块电池就出来了
+  A：办的时候别扎堆，一家网点办两张就换地方，带上自己身份证
+  B：明白，分头办
+  【10月10日】
+  A：昨天那批收到七张，今天就结
+  B：一张五十，七张三百五？
+  A：对，晚上吃饭给你现金
+  B：现金顺手，懒得跑银行
+  A：上次相亲那姑娘后来呢
+  B：嫌我休不了周末，黄了
+  B：哎对了，柜台问办卡用途咋说
+  A：就说家里小公司办工作号冲任务领东西，别多说
+  【10月11日】
+  B：昨天我拉我妈也办了一张，我说是帮哥你公司冲任务
+  A：对，就这么说，别提上头，他们也弄不清
+  B：我小姨听说有钱拿也想办，一人能办几张
+  A：实名一人五张顶天，别贪，过期身份证的别收
+  A：办完连卡带服务密码一起给我，自己别留
+  B：知道，上批不都全给你了
+  A：嗯，上头的规矩，卡上不能留咱的人
+  【10月12日】
+  A：今天到货十一张，连昨天尾款一共九百，哪天给你
+  B：中秋聚会上给吧，正好见着面
+  A：行，盯着姥爷别让他喝酒，血压高
+  A：这活以后每月来一轮，长干不长？
+  B：长干，一个月小一千，够氪两个赛季皮肤了

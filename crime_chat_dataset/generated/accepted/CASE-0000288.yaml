@@ -1,0 +1,135 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000288
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000070
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-eebcea0719c310c1
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 公会运营带新主播走完结算、报税与误充值退回的合规流程，全程公开留痕。
+  critical_evidence:
+  - 签约合同写明底薪加分成，公司对公结算并备注劳务费
+  - 个税由公司代扣代缴，工资单逐项列明，可开完税证明
+  - 观众误充六万礼物，全程走平台客服原路退回，拒绝私下退款
+  - 分成与后台数据一致，公开提醒远离刷量
+  benign_alternatives:
+  - 正常直播打赏结算
+  - 公会与主播的正常商务讨论
+
+attributes:
+  duration_days: 2
+  turn_count: 60
+  approximate_tokens_estimate: 1888
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: live_stream_reward_launder
+  risk: 0
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0033
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-019
+
+dedup:
+  content_hash: sha256:c41acd8c2f8b6a06bbf505ba33ab794b924b7c9ea6b539d9435a800ed2eacca3
+pipeline_status: accepted
+title: sexual_transaction_exploitation/live_stream_reward_launder
+conversation: |-
+  【10月20日】
+  A：早，合同昨天法务盖完章了，电子版发你邮箱
+  B：收到，我看了，底薪加礼物分成的写法挺清楚
+  A：对，每月十五号发上个月的，公司账户统一走
+  B：私户不行吗，到账快点
+  A：不行，公司规定一律对公，备注劳务费，你记账也好记
+  B：懂了，正规
+  A：个税公司代扣代缴，劳务报酬那一档，明细每月随工资单发你
+  B：税点怎么算的，我怕搞不清
+  A：工资单里一行一行列着，拿不准随时问，年底还能给你拉完税证明
+  B：好咧，比我自己折腾强
+  B：中午吃什么，楼下轻食难吃哭了
+  A：点了家川菜，水煮肉片，给你拼一份？
+  B：拼个番茄牛腩，不能太辣，下午要开播护嗓
+  A：行，记下了
+  A：晚上八点播，今天按试播流程走，后台我陪你过一遍
+  B：后台那个礼物结算入口我还没点过
+  A：别自己点，礼物全走平台统一结算，月初自动到公会账户，再按合同分你
+  B：明白，我不碰钱的事
+  A：对，主播只管内容，资金全走平台和公司，这是保护你
+  B：呀，有个大哥一上来刷了六万块的礼物
+  A：你先稳住，别在直播间口头承诺任何私下返利
+  B：我没答应啥，他说想加我微信私聊转账
+  A：千万别，一切走平台，你回一句礼物平台统一结算谢谢支持就行
+  B：他会不会是被家里小孩拿手机乱充的，六万不像随手刷的
+  A：有可能，真误充平台有客服通道能原路退，你别私下退他钱
+  B：好，我把公会客服电话发他了
+  A：对，就这么办，下播把这两分钟录像存好，备注时间
+  B：存了，太吓人了，六万
+  A：以后遇到大额先报我，别慌
+  B：好嘞，八点半开播，你帮我盯会儿弹幕
+  【10月21日】
+  A：昨晚那单退回办妥了没
+  B：办妥了，平台客服说三到五个工作日原路退回，家长来电道谢了
+  A：处理得漂亮，全程平台通道，留痕清楚
+  B：嗯，我录屏也交给客服了
+  B：今天嗓子有点哑，昨晚话说太多了
+  A：泡点胖大海，别喝冰的，你下周还有五场
+  B：买了，保温杯里泡着呢，你们运营也是铁嗓子
+  A：我这算啥，我们主管一场大促连盯十二个小时
+  B：服，敬你是条汉子
+  A：下午三点公会例会，你线上旁听，认认人
+  B：好，会议号发我
+  A：发了。顺便说下，你这个月数据不错，底薪外首笔分成一并到账
+  B：多少呀，第一次有分成
+  A：底薪五千加分成分一千八，共六千八，下午公司账户出
+  【系统消息】A 向 B 转账 6800 元，已收款。
+  B：到账了！备注真写着十月劳务费及分成
+  A：对，工资单也发你邮箱了，税扣了三百多，明细都在里面
+  B：清清楚楚，我截图给我妈看，她老担心我搞直播不正经
+  A：让她看合同和完税明细，比啥都有说服力
+  B：下播了，今天涨了两百粉
+  A：不错，按这个节奏下个月给你排黄金档
+  B：黄金档压力大，我得再练练口条
+  A：你游戏打得好，就多带水友开黑，自然有人看
+  B：行，今晚就排一场水友赛
+  A：对了，新出的限定皮肤你别氪，公会置换渠道下周开
+  B：还有这福利？那我省下六十八
+  A：省下的都是纯利，哈哈
+  B：今晚水友赛人气破了五千
+  A：看到了，后台曲线很健康，没有异常刷量，放心
+  B：咱们公会对刷量啥态度，我看别家都在刷
+  A：平台查得严，刷了扣分封号，咱老老实实做内容，走得远

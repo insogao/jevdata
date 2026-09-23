@@ -1,0 +1,140 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000305
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000066
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-f6fe7d3b6cba0fa9
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 已婚的A以每月10号固定资助和代付房租维持与年轻女店员B的长期陪伴关系，并要求B在社交层面配合伪装，对A的妻子和双方亲友隐瞒这段以金钱换陪伴的安排。
+  critical_evidence:
+  - A自4月起每月10号固定给B转1万元，从未间断（10月10日转账10000并称“哪个月10号断过”）
+  - B每月2600元的房租实际由A承担（“10号老规矩”“房东收到啦”）
+  - A要求对配偶隐瞒：微信备注伪装成中性称呼、朋友圈分组屏蔽、“她老翻我手机”
+  - B以固定陪伴（周五陪同吃饭看电影）作为回应，A安排见面细节并叮嘱保密（“谁都不用知道”）
+  benign_alternatives:
+  - 正常恋爱关系中的赠与和开销分担
+  - 长辈或熟人对晚辈出于好意的定期资助
+
+attributes:
+  duration_days: 5
+  turn_count: 62
+  approximate_tokens_estimate: 1610
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: long_term_support_exchange
+  risk: 2
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0035
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-019
+
+dedup:
+  content_hash: sha256:a437fcc20141f033201e6d8667332942392f6639febb64bbba2cff287e0dd292
+pipeline_status: accepted
+title: sexual_transaction_exploitation/long_term_support_exchange
+conversation: |-
+  【10月8日】
+  A：早，醒了没
+  B：刚醒呜呜，今天早班
+  A：那赶紧收拾，路上买早饭
+  B：嗯嗯，地铁口那家包子铺排队人超多
+  A：店里这几天忙吗
+  B：忙死了，秋装上新，天天盘点到十点
+  A：别太累，新上的卖得好不
+  B：风衣卖爆了，昨天补了两次货
+  A：可以啊，你们店里就数你穿搭最好看
+  B：那必须的哈哈
+  B：对了，房东刚刚又催了，说这周得把房租交了
+  A：多少来着
+  B：还是2600，他说明年要涨到2800
+  A：10号老规矩，你先别自己垫，跟他说10号给
+  B：好，那我就这么回他
+  A：嗯，别动你自己的钱
+  B：下班啦，地铁挤成沙丁鱼
+  A：辛苦，到家说一声
+  B：到了，累瘫。最近换季，店里好几个同事都感冒了
+  A：你别也中招，家里有药没
+  B：没有诶，就剩半包板蓝根
+  A：明早我去药店配点感冒灵和润喉的，顺路放你们前台
+  B：麻烦你啦，再帮我拿一盒维C
+  A：行，早点睡
+  【10月9日】
+  A：药在前台了，牛皮纸袋
+  B：收到谢谢，前台小姐姐还以为谁给我送的呢哈哈
+  B：你吃了吗，我趁休息扒两口
+  A：吃了。晚上有个饭局，又是陪客户，烦
+  B：那你少喝点酒
+  A：没法少。周五不是说好了嘛，我把这阵忙完，周五晚上过来
+  B：嗯，你上周也这么说，结果放我鸽子
+  A：这次真的，都推了。对了，你朋友圈那条周末的照片，分组了吗
+  B：分了，早就分了，你放心
+  A：备注也改一下，改成“小周”这种，她老翻我手机
+  B：早就改了，我现在叫“健身教练周教练”哈哈
+  A：机灵。就这样，晚上聊
+  【10月10日】
+  A：早上好，10号了
+  B：来了来了，房东刚走，我正要转给他
+  A：不用你转，我直接转你，你给他
+  【系统消息】A 向 B 转账 10000 元，已收款。
+  B：收到10000，怎么多了这么多
+  A：上个月你不是说秋鞋挤脚嘛，拿去补一双，别记在账上
+  B：你每次都这样，都不知道说什么好
+  A：从4月份到现在，哪个月10号断过，说这干嘛
+  B：周五想看那个新上的悬疑片，听说口碑不错
+  A：你定场次我买票，看完吃那家烤鸭
+  B：好耶，我看下7点半的场
+  A：嗯，看完送你回去，不耽误你周六上班
+  B：店里周六搞会员日，估计忙得跟流水席一样
+  A：那票买早点场的，让你早点回去歇着
+  B：听你的
+  【10月11日】
+  A：今天到杭州，客户磨了一下午
+  B：辛苦，酒店订好了吗
+  A：嗯，明晚高铁回来，周五晚上直接过去找你
+  B：好，我把周五的退货单子都推给晚班了
+  A：乖。到了饭点我先去停车，你别出来太早
+  B：嗯嗯，想想就开心
+  【10月12日】
+  B：房东收到啦，他把收据拍给我了
+  A：好。往后每月10号都是这个点，你不用开口
+  B：有时候我觉得这样不太好，你家里那边……
+  A：家里的事我来安排，你过好你自己的。这些话别往外说，谁都不用知道
+  B：嗯，我从没跟任何人讲过，跟我表姐也只说你是我爸的朋友
+  A：这样最稳妥。周五见

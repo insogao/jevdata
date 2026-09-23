@@ -1,0 +1,118 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000304
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000141
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-c87ecdf1b0102862
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: other_illicit_coordination
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A向B出售野外捕获的野味活体，用暗语、定金和凌晨两点偏僻地点交接来绕开正常购销渠道，双方心照不宣。
+  critical_evidence:
+  - 货源稀缺且来自山里：“这个月只有四只，山里今年不行”，暗示野生而非养殖
+  - B先转2000元定金锁定四只货，按只计价共3200元，余款现金
+  - A已备好八个冰袋和泡沫箱，保证鲜活运输
+  - 交接约定凌晨两点在“桥头老槐树”老地方，要求不按喇叭、发暗号、拿完就走
+  benign_alternatives:
+  - 山货土产收购
+  - 养殖野味的合法购销讨论
+
+attributes:
+  duration_days: 2
+  turn_count: 43
+  approximate_tokens_estimate: 1083
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: forest_poaching
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0035
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-019
+
+dedup:
+  content_hash: sha256:29c4d386c438b1e64ca864e9ac71a1695d26ba86d31779c3bfeeb0ecf42ad13e
+pipeline_status: accepted
+title: other_illicit_coordination/forest_poaching
+conversation: |-
+  【10月20日】
+  B：老哥，上次那批还有不，老客户又来催了
+  A：没了，这个月只有四只，山里今年不行
+  B：四只就四只，给我留着，怎么算
+  A：老价，一只八百，四只3200
+  B：行，先转你2000定着
+  【系统消息】B 向 A 转账 2000 元，已收款。
+  A：收到。冰袋我备好了，八个，撑到城里没问题
+  B：今早风大得很，你们山里更冷吧
+  A：嗯，早上都上冻了，草上全是白霜
+  B：城里还好，就是干，你多穿点
+  A：我早把棉袄翻出来了
+  B：你那片今晚报了有雨，东西别受潮
+  A：放心，都用油布盖着呢
+  B：上午去了趟镇上集市，山货摊又少了几个
+  A：年轻人都不干这个了，剩几个老把式
+  B：你家那几筐核桃我拿了两斤，真香
+  A：自己家树上打的，管够，下回给你留五斤
+  B：行，钱一起结给你
+  A：跟你还客气啥
+  A：你妈腰好些没，上次不是贴着膏药
+  B：好多了，天一冷就犯，昨天又去做了个理疗
+  A：老寒腿就这样，让她别沾凉水
+  B：说了八百遍了。对了你家小子期中考完没
+  A：考完了，数学又拉了，得寻个家教
+  B：我家楼下有个大学生带课，不贵，回头发你号码
+  【10月21日】
+  B：快过节了，你说给老丈人送啥好
+  A：酒加茶叶，稳当
+  B：上年就送的酒，换个新花样
+  A：那就添一盒红枣，咱这边的枣好
+  B：成，回头你去镇上帮我捎两盒
+  A：行，捎回来放你驿站
+  A：你上次要的泡酒方子我忘了发：枸杞当归，一斤药材泡三斤酒
+  B：哈哈正想着呢，玻璃罐都买好了
+  A：罐子先用热水烫过，晾干再用
+  B：懂，我妈泡过。药材去哪买
+  A：镇上康民大药房，别买地摊的
+  B：好嘞，谢老哥
+  A：都拾掇利索了，老地方
+  B：夜里两点交？
+  A：嗯，两点，桥头老槐树底下，你开皮卡来
+  B：好，余款1200现金我备好了
+  A：东西装四个泡沫箱了，冰袋也在里头，一人拿两个
+  B：到了怎么喊你，按喇叭？
+  A：别按喇叭，到了发俩字“到了”就行，拿完就走

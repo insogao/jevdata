@@ -1,0 +1,127 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000282
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000054
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-3e3178320fc35ba7
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 借寒暄和钱在开庭前给证人递话施压，想让人在庭上含糊其辞。
+  critical_evidence:
+  - 开庭前连续走动，提出法庭见面点个头打个招呼就行
+  - 精准过问证人孩子放学托管接送，暗示知悉其家庭行踪
+  - 不该说的想清楚再说、对谁都好式的软性施压
+  - 庭前以咨询费名义转账五千，证人未敢收下
+  benign_alternatives:
+  - 律师庭前会见沟通
+  - 证人保护事项告知
+
+attributes:
+  duration_days: 6
+  turn_count: 48
+  approximate_tokens_estimate: 1258
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: witness_intimidation
+  risk: 3
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0033
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-019
+
+dedup:
+  content_hash: sha256:60e5cfd22e6761e8ad7d616674e9d37c26ffc8477d0f0824ed394ae9bd44e799
+pipeline_status: accepted
+title: violence_extortion/witness_intimidation
+conversation: |-
+  【10月9日】
+  A：好久不见，当年那个商场项目做得真漂亮
+  B：是你啊，好久没联系了
+  A：那阵子天天加班到半夜，你还给我带过热干面
+  B：都记得呢，一晃三四年
+  A：听说你后来去了新公司，还做老本行？
+  B：嗯，还是工程那摊子事
+  【10月10日】
+  A：新闻说大降温，你胃不好，早餐记得吃口热的
+  B：谢谢，老毛病你还记得
+  A：共事两年忘不了。我最近也戒了冰美式
+  B：你能戒？公司咖啡机最离不开的就是你
+  A：体检报告逼的，现在保温杯里泡枸杞
+  A：顺口提一句，咱们那笔旧账的官司，下周开庭了吧
+  B：我也收到通知了，让我到场说明情况
+  A：到时候法庭上碰见，点个头打个招呼就行，别的不用多想
+  B：我照实际经过说，合同怎么签的就怎么说
+  A：行，成年人说话做事总要讲分寸，你说呢
+  B：…嗯
+  【10月11日】
+  A：你家小家伙上三年级了吧
+  B：是，放学没人接，一般送托管班
+  A：托管班人多手杂，这阵子多留个心眼，别接晚了
+  B：你这话什么意思
+  A：随口一提，最近路口车多，孩子放学你得盯紧
+  B：…哦，知道了
+  A：楼下新开了家面馆，油泼面一绝
+  B：我们中午还是外卖凑合
+  A：下回带你来，手擀的
+  B：行，沾你光
+  【10月12日】
+  A：有句话直说，庭上把该说的说了，不该说的想清楚再说，对谁都好
+  B：我不明白什么叫不该说的
+  A：你明白的，那是公司之间的账，你一个经办犯不着往自己身上揽
+  B：我只说我经手的部分
+  A：经办的口风最值钱，这点辛苦你拿着，别嫌少
+  【系统消息】A 向 B 转账 5000 元，已收款。
+  B：这钱我不能收
+  A：名目就是咨询费，你以前帮我出过方案，理所应当
+  B：先放着再说
+  【10月13日】
+  A：周末去河口钓鱼吗，鲫鱼正肥
+  B：最近没心思，家里事多
+  A：别把事都堆在心里，记性这东西越简单越好
+  B：事实就是事实，我说我记的
+  A：托管班几点接人？别到点没人
+  B：六点，谢谢关心
+  【10月14日】
+  A：后天就开庭了吧，准备得怎么样
+  B：按记着的说，没什么好准备的
+  A：到时候见面还是那句话，点个头打个招呼，大家体面
+  B：我会到场
+  A：咨询费那事想好没，收下，算老同事心意
+  B：先这样吧
+  A：行，后天见，注意休息

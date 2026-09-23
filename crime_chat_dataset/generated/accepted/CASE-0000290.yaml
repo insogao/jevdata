@@ -1,0 +1,134 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000290
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000070
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-eebcea0719c310c1
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A以公会扶持为名借主播直播间虚构礼物流水：大额礼物秒打秒退制造人气，30000元以'推广服务费'对公走账，刷完再提现转回公司平账，资金空转闭环。
+  critical_evidence:
+  - 公会大额礼物'秒打秒退'、原路退回，不发生真实消费
+  - 30000元本金以'推广服务费'名目对公转账，签服务合同
+  - '税点另算'六个点，从扶持款里扣；秒退约定不写进合同
+  - 刷榜后礼物流水提现转回公司对公账户'平账'，并预告下一笔30000元
+  benign_alternatives:
+  - 公会正常的流量与礼物流水扶持
+  - 平台官方冲榜活动补贴
+
+attributes:
+  duration_days: 2
+  turn_count: 59
+  approximate_tokens_estimate: 1237
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: live_stream_reward_launder
+  risk: 2
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0034
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-019
+
+dedup:
+  content_hash: sha256:21c378e783a495b98df74e3d027e1f4f2cd342ffdb017a9f13753edf101fe785
+pipeline_status: accepted
+title: sexual_transaction_exploitation/live_stream_reward_launder
+conversation: |-
+  【10月22日】
+  A：你好 我是晨星公会的运营阿凯 看了你直播间
+  B：你好 有什么事
+  A：你这唱功在我们区能排前五 想签你
+  B：我现在小打小闹 三四十人在线
+  A：我们有扶持 流量加礼物流水
+  B：流水扶持怎么讲
+  A：公会号进直播间刷礼物 把榜面做起来
+  B：正好我声卡最近有电流声
+  A：签约送全套设备 声卡麦克风都换
+  B：挺全乎
+  A：你设备什么型号
+  B：入门款 灯光也拉胯 哈哈
+  A：全换 灯也补
+  B：扶持的钱不用我还吧
+  A：正常扶持不用 但有一块冲榜要配合
+  B：怎么配合
+  A：我们刷你的榜 大额礼物秒打秒退 原路退回 你不亏 数据好看
+  B：礼物秒退? 那不就是刷量
+  A：行业里都这么玩 走个流程 真粉看到榜一就来了
+  B：我再想想
+  A：行 这周定 下周就上
+  B：下午刚练完回来
+  A：主播还健身 自律
+  B：播两年 颈椎先不行了 不练废得快
+  A：练背还是跑步
+  B：跑步机刷剧 两不误
+  A：考虑好没 这样 本金我们出 走对公 30000 第一笔
+  B：对公?
+  A：对公走账 签服务合同 名目推广服务 不然财务过不了
+  B：听着倒挺正规
+  【10月23日】
+  A：合同模板发你邮箱了
+  B：看了 推广服务费30000 甲方晨星文化
+  A：对 今天走款 税点另算 六个点从扶持里扣
+  B：合同里没写秒退这块啊
+  A：口头约定 这块不落纸 你懂
+  B：懂 哈哈
+  A：晚上八点开始 公会三个号进 你正常开播感谢榜哥
+  B：昨晚那剧大结局你追没
+  A：没追 就刷短视频
+  B：烂尾了 白熬两星期
+  A：哈哈别气 不值当
+  B：下次不追了
+  A：款走了 对公 查收下
+  【系统消息】A 向 B 转账 30000 元，已收款。
+  B：到了 备注推广服务费
+  A：好 晚上刷完榜 这笔按约定明天原路回我们 再走下一笔
+  B：回款怎么走
+  A：提现后转回公司对公账户 财务好平账
+  B：行
+  A：开播 三个号进了
+  B：看到 榜一榜二都是你们 哈哈
+  A：稳住 唱拿手的
+  B：第一轮刷完 礼物显示又退了 平台没扣
+  A：对 秒退 正常
+  B：今晚降温 播完嗓子有点干
+  A：多喝温水 直播间太干
+  B：加湿器明天安排
+  A：设备费里含了
+  B：下播了 峰值破纪录
+  A：数据不错 明天回款后继续 还是30000 对公

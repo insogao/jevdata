@@ -1,0 +1,282 @@
+{
+ "key": "b19c023",
+ "archetype_id": "ARC-000039",
+ "subtype": "fuel_tax_evasion",
+ "latent_intent": "车队司机在公司老板压成本的压力下，长期从私人渠道按吨购入没有正规票据的低价油品，深夜联系、转账定金、在固定高速服务区夜间交接，绕开正常采购和开票流程。",
+ "critical_facts": [
+  "按吨报价，一吨3000元，比加油站零售每吨省两千出头",
+  "三吨共9000元：先转6000元，余款3000元交接时给现金，全程无票据",
+  "货源联系发生在深夜十二点多（“昨晚十二点多给你打电话”）",
+  "交接固定在G50青山服务区南区第二个车位“老位置”，夜里两点，自带空桶散装拉走"
+ ],
+ "benign_alternatives": [
+  "私人加油站的打折优惠",
+  "工地内部加油点的内部价"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "10月13日 21:47",
+   "speaker": "A",
+   "text": "老板今天又开会骂，说油钱把利润吃没了"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 21:52",
+   "speaker": "B",
+   "text": "零售价是黑，你们一公里油钱本来能省一半"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 21:54",
+   "speaker": "A",
+   "text": "所以问你嘛，你那边最近有货不"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 22:05",
+   "speaker": "B",
+   "text": "你今晚跑哪条线"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 22:06",
+   "speaker": "A",
+   "text": "还是省道那趟，两点钟才到得了一半"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 22:08",
+   "speaker": "B",
+   "text": "夜里路上空，稳当点开"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 22:10",
+   "speaker": "A",
+   "text": "嗯，困了就嚼口香糖，红牛囤了一箱"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 22:11",
+   "speaker": "B",
+   "text": "别硬撑，服务区眯二十分钟不亏"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:30",
+   "speaker": "A",
+   "text": "我妈又开始腌雪里蕻了，一坛一坛的"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:32",
+   "speaker": "B",
+   "text": "哈哈每年这时候我家也是，楼下全是坛子味"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:35",
+   "speaker": "A",
+   "text": "腌好了给你拎一坛，下饭"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:36",
+   "speaker": "B",
+   "text": "那感情好，我拿粥换"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:38",
+   "speaker": "A",
+   "text": "换啥换，回头给你带两块我妈蒸的芋头糕"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:40",
+   "speaker": "B",
+   "text": "哈哈哈你有这心，路上顺"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:42",
+   "speaker": "A",
+   "text": "对了你吃不吃辣，我做剁椒的"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:43",
+   "speaker": "B",
+   "text": "吃！无辣不欢"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 22:30",
+   "speaker": "A",
+   "text": "昨晚十二点多给你打电话没接，正事呢"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 22:33",
+   "speaker": "B",
+   "text": "在卸车，手机搁驾驶室了。有货，老客户的价，一吨3000，比加油站一吨省两千出头"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 22:35",
+   "speaker": "A",
+   "text": "行，先来三吨"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 10:15",
+   "speaker": "B",
+   "text": "三吨9000，先转我6000，余下3000交接时给现金"
+  },
+  {
+   "type": "transfer",
+   "time": "10月15日 10:40",
+   "from": "A",
+   "to": "B",
+   "amount": 6000
+  },
+  {
+   "type": "message",
+   "time": "10月15日 10:45",
+   "speaker": "B",
+   "text": "收到6000，周四夜里给你安排"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 15:30",
+   "speaker": "A",
+   "text": "腰又不行了，昨天搬防滑链闪了一下"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 15:33",
+   "speaker": "B",
+   "text": "你这老毛病，膏药别断"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 15:35",
+   "speaker": "A",
+   "text": "贴着呢，效果一般，想去做个推拿"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 15:36",
+   "speaker": "B",
+   "text": "小区门口那家挺管用，我常去，给你报我名号"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 15:38",
+   "speaker": "A",
+   "text": "行，改天去试试"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 15:40",
+   "speaker": "B",
+   "text": "推拿师傅姓刘，五十来岁，手劲大，你受得了不"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 15:41",
+   "speaker": "A",
+   "text": "受得了，我皮糙肉厚"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 20:20",
+   "speaker": "A",
+   "text": "你上回说的那罐茶还在不，我想再弄点"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 20:25",
+   "speaker": "B",
+   "text": "在呢，我姑家自己炒的，让你续上"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 20:26",
+   "speaker": "A",
+   "text": "给我留半斤，钱下次一起"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 20:28",
+   "speaker": "B",
+   "text": "行，一起给你放车上"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 20:30",
+   "speaker": "A",
+   "text": "谢了，回头给你捎箱苹果"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 20:31",
+   "speaker": "B",
+   "text": "哈哈客气，别拿贵的"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 09:10",
+   "speaker": "B",
+   "text": "降温了，今天风大，出车加件衣服"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 09:12",
+   "speaker": "A",
+   "text": "秋裤都上身了，中年人不敢逞强"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 09:14",
+   "speaker": "B",
+   "text": "哈哈同款秋裤，保暖要紧"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 09:15",
+   "speaker": "A",
+   "text": "你们那片早上结霜没"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 09:17",
+   "speaker": "B",
+   "text": "结了，车玻璃都得刮半天"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 09:18",
+   "speaker": "A",
+   "text": "我明天出发前给你发路况"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 15:20",
+   "speaker": "B",
+   "text": "周四夜里两点，G50青山服务区南区第二个车位，老位置，空桶备够"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 15:23",
+   "speaker": "A",
+   "text": "好，桶我攒了六个，到时候见"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000303",
+  "status": "accepted",
+  "errors": []
+ }
+}

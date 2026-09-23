@@ -1,0 +1,157 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000285
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000131
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-d6da9c93f9f2641e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 以人身当抵押放高息借款，还清前人不得离开，实则变相扣人。
+  critical_evidence:
+  - 五万现金借款，月息十个点，逾期三天利息翻倍
+  - 不押房不押车，担保是人先过来跟我们待一阵
+  - 吃住我们管、钱结清人回去的话术淡化人身限制
+  - 不签书面手续只凭口头，当天跟人走、每月现金送息
+  benign_alternatives:
+  - 正常抵押担保借贷
+  - 工地扣押证件的劳务纠纷讨论
+
+attributes:
+  duration_days: 5
+  turn_count: 80
+  approximate_tokens_estimate: 1891
+  relationship: 上下级
+  obfuscation: extreme
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: agent_debt_bodily_collateral
+  risk: 3
+  relationship: 上下级
+  obfuscation: extreme
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0033
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-019
+
+dedup:
+  content_hash: sha256:3eeee08277994cc4697d76cfca70b0df92f201ed11ff2543e31130d1c1ce437d
+pipeline_status: accepted
+title: coercion_blackmail/agent_debt_bodily_collateral
+conversation: |-
+  【10月6日】
+  B：哥，起了没，今天降温，库房那边冷不冷
+  A：仓库不冷，你小子怎么想起问候我了
+  B：那年冬天你在工地把我拉进板房烤火，我记着呢
+  B：哥，有个事想求你
+  A：说
+  B：工地工资被包工头拖了三个月
+  A：又是这个，你不是找过劳务公司吗
+  B：推来推去，我妈下周住院押金要两万，孩子学费也催
+  A：缺多少
+  B：五万，我先顶着，工资一到就还
+  A：五万不是小数，你拿什么还
+  B：我有手有脚，大不了再打两份工
+  A：别处问过没
+  B：银行要流水，我没有，亲戚躲着我
+  A：你当我面把话说明白，利息能扛多少
+  B：哥你开个数
+  A：老规矩，月息十个点，五万块一个月五千
+  B：十个点…能不能低点
+  【10月7日】
+  A：给你的是熟人价，外面管这叫良心价
+  B：哥，利息我咬牙认了，就一件事，押金我拿啥抵
+  A：你有房？
+  B：老家的房，不值钱
+  A：房车我都看不上
+  B：那您要啥
+  A：要你这个人，借条不用写，你人先过来，跟我们待一阵
+  B：待一阵是什么意思
+  A：字面意思，你上我们那边住着，钱结清，人回去
+  B：我人过去，家里怎么办
+  A：你家事你自己安排，我管不了那么多
+  B：哥，我就一打工的，你留我在这没用啊
+  A：谁说留你，吃住我们管，你就当换个地方上班
+  B：那我白天能出去上工吗
+  A：人都在我这了，还上什么工，安心待着
+  B：这……让我想想
+  【10月8日】
+  B：哥，医院催了，我实在走投无路了
+  A：想通了？
+  B：您交个底，过去之后到底怎么个章程
+  A：章程简单，今天钱给你，人跟我们走，吃住全包，跟上班一样
+  B：那我什么时候能回来
+  A：本金利息一天不欠，当天就能走，我说话算话
+  B：中间我妈出院要人陪呢
+  A：你弟呢，他不能去？人在我这不耽误打电话
+  B：行吧……合同总得签一份吧
+  A：咱这行不兴那个，纸面上的东西是给外人看的，凭信用
+  B：利息晚交几天呢
+  A：晚三天翻一倍，晚十天，你在我这的日子就长十天
+  B：……好
+  A：爽快。下午三点，老仓库那院，带身份证来
+  B：不是不签合同吗，还要身份证
+  A：核实身份，兄弟归兄弟，规矩归规矩
+  【10月9日】
+  B：哥，我到车站了，坐几路过去
+  A：出站口等着，让小刘开车接你
+  B：好嘞
+  B：哥，到院里了，多谢你救急
+  A：谢话别说太早，五万现金点好
+  B：点了两遍，整整齐齐
+  A：点好就行，第一个月利息呢
+  B：留出来了，五千，你说几号交
+  A：每月十号，现金送老地方
+  B：明白，现金
+  A：中午吃得惯不，让你嫂子多打了份红烧肉
+  B：惯，比工地伙食强多了
+  A：吃饱跟老三熟熟环境，别乱跑
+  B：哥，这院里信号不好，给我妈打电话老断
+  A：天台信号好，下午去天台打
+  B：好的。哥，我得住多久啊
+  A：按月还，早还早走，又不是让你常住
+  B：唉，盼着工程款早点到吧
+  【10月10日】
+  B：哥早，昨晚睡得还行，就是床板硬了点
+  A：明天给你换间带褥子的，既来之则安之
+  B：嗯。我弟说想来看看我
+  A：来呗，你又不是不自由，让他来认认门
+  B：那敢情好
+  A：降温，你那外套太薄，让嫂子给你找件旧的
+  B：麻烦嫂子了，这边比北边暖和
+  A：暖不暖和，你心里有数就行
+  B：哥，包工头来电，欠款这周能到账
+  A：那正好，到账当天本金利息一次结清
+  B：结清当天就能回去？
+  A：说话算话，车送你到车站，你弟来接都行。晚上加餐，给你接风
