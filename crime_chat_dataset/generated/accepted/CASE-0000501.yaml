@@ -1,0 +1,149 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000501
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000001
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-3de71b039a238cb8
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A 借中间人关系长期嘘寒问暖培养信任，用小额返利和限时名额诱导 B 把两万元转入其个人账户跟单。
+  critical_evidence:
+  - A 连续多日晨间问候、聊生活琐事建立信任
+  - 体验金收益 88 元按时到账取得 B 信任
+  - A 以名额周四截止、下期要等很久为由催促 B 尽快投入
+  - B 向 A 个人账户转账 20000 元，随后提现问题被含糊带过
+  benign_alternatives:
+  - 真实朋友帮忙理财
+  - 合法小额借贷
+
+attributes:
+  duration_days: 5
+  turn_count: 71
+  approximate_tokens_estimate: 1528
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: trust_building_progression
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0055
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:7ef74c6a19b6f4eea0cb5dce5f419046b62503051ef9cad4e1b7351899e0c9cd
+pipeline_status: accepted
+title: fraud_scam/trust_building_progression
+conversation: |-
+  【9月15日】
+  A：早呀，今天降温，出门加件外套
+  B：早，谢谢提醒，正好穿了新买的
+  A：那正好，新衣服也扛冻
+  B：你怎么起这么早
+  A：习惯了，晨跑完给你发的消息
+  B：自律，佩服
+  A：周末我们跑团有活动，你要不要来
+  B：我跑不动，给你们拍照
+  A：成，拍照的也管咖啡
+  【9月16日】
+  A：早，昨晚睡得好不
+  B：还行，你呢
+  A：睡前泡了个脚，睡眠好多了，你也试试
+  B：我试试
+  A：中午吃啥
+  B：食堂，今天有红烧肉
+  A：我囤了点牛腩，晚上炖，教你个去腥的方子
+  B：你还会做饭
+  A：被逼的，一个人住久了啥都会
+  B：那下次尝尝你的手艺
+  A：随时欢迎
+  【9月17日】
+  A：早，跟你说的那个事，前天那 88 到你卡里没
+  B：到了，还挺准时
+  A：这是平台给新用户的体验金收益，按时发，一分不差
+  B：不错，体验挺好
+  B：昨晚那个剧大结局看了没
+  A：看了，男主洗白那段我快进了
+  B：我哭惨了，纸巾用掉半包
+  A：泪点这么低，哈哈
+  B：你等着看第二季
+  A：到时候一起追
+  A：说到那 88，平台十月有个内部名额，我跟管事的熟，能给你留一个
+  B：什么名额
+  A：短线跟单，老师带，门槛两万起，上一期的人均赚了一千五
+  B：听着有点心动，但我没弄过这个
+  A：所以是老师带着，你只管跟。你表姐那批都在做
+  B：让我想想
+  A：不急，名额周四截止，我先给你占着
+  【9月18日】
+  A：早，名额今天有人问，我压着没放
+  B：我再考虑考虑
+  A：行，不过这个月就这一期，下期得等到年底
+  B：两万进去，真能像你说的那样？
+  A：我自己放了两万五在里面，跑了一个月，随时能提，秒到
+  B：那行吧，试试，就当帮你冲业绩
+  A：痛快！转我，我帮你走内部通道，今晚就能看到持仓
+  B：转两万够不
+  A：够，两万正好一个标准名额
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  A：收到，我这就给你占上，晚上发你持仓
+  B：好，麻烦你了
+  A：跟我还客气
+  A：周日跑团活动别忘了
+  B：记着呢，相机充满电了
+  A：完事一起吃个早茶
+  B：行啊
+  B：持仓看到了，今天涨了六十多
+  A：稳着呢，这才第一天
+  【9月19日】
+  A：早，昨晚睡得咋样
+  B：好，账户又涨了点
+  A：名额盘子稳，你就安心
+  B：我想问下，这钱我要急用能随时提不
+  A：随时提，过一天到账。不过这期收益月底统一结算，中途提了就亏了资格
+  B：那我月底再看
+  A：嗯，对了下周还有一波加仓名额，跟这期的人优先，你要不要加
+  B：先不加，我看看这期到月底咋样
+  A：也稳，你再观察
+  A：周日记得带广角镜头
+  B：有，18-200 那支
+  A：专业，那就说定了，跑完早茶
+  B：好
+  B：对了，我表姐说她那期月底就能提，是真的吧
+  A：真的，她比我进来还早，提过两回了
+  B：那我就放心了

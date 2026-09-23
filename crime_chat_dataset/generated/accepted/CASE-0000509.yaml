@@ -1,0 +1,157 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000509
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000032
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-0eac01176b689a34
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: contraband_illicit_trade
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 患者家属拿母亲和表姨的医保卡长期超量开出安眠类处方药，按板卖给长期收药的贩子赚差价，形成每月固定供货的倒卖链条。
+  critical_evidence:
+  - B长期按板收购安眠类处方药，六十到七十元一板，量大价高
+  - A用母亲的医保卡超量开出安眠药，约定月供三十板起步
+  - 双方每月十号地铁口当面交货，十五板转账九百四十五元结算
+  - A计划再借表姨医保卡把量扩到每月五十板，B承诺包销
+  benign_alternatives:
+  - 帮忙代买常用药
+  - 亲属间代取药
+
+attributes:
+  duration_days: 5
+  turn_count: 79
+  approximate_tokens_estimate: 2438
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: prescription_diversion
+  risk: 2
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0056
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:dc400ef7a61fb838098050b76bd6a47889c9a8f070f05aff45a70719160dfd1e
+pipeline_status: accepted
+title: contraband_illicit_trade/prescription_diversion
+conversation: |-
+  【10月9日】
+  A：你好，群里看到你收药的信息，还想收吗
+  B：收，长期收。你手上有啥
+  A：安定那类的，我自己失眠开的，一个月能开出五六板，吃不完
+  B：铝箔没拆的要，拆封的不要，一板六十
+  A：六十？我打听到有人收七十
+  B：七十那是零售倒一道，我走量，你放手里也是放到过期，现结现走
+  A：那量大了价能谈不
+  B：一次二十板往上六十五，五十板往上七十，长期有得谈
+  A：行，我先出十板试试你爽不爽快
+  B：你哪片的？约个地铁口自提，当面点板子，数错扯皮麻烦
+  A：我骑电动车，西边方便
+  B：明天上午十点，西郊地铁B口，你带十板我带六百
+  A：成，到了我打电话
+  【10月10日】
+  A：出门了，板子都是这个月的日期，保鲜袋单独装的
+  B：我也到了，蓝冲锋衣
+  A：给，你点点，十板没拆封
+  B：嗯，铝箔都平的，这单我认六百
+  A：爽快。问你个事，你收这么多，卖给谁啊
+  B：一半是倒班的买不着药睡不着，一半是外地代购扫货，反正我下游长期要，你有多少我吃多少
+  A：跟你说实话，我那些药一半是用我妈的医保卡开的，她老失眠，一次能开俩月的量，额度不用白不用
+  B：哦？你能稳定出？那把话说开，你每月能出三十板往上，我长期收
+  A：三十板能凑，我妈那卡反正每月都开呢
+  B：那定下：每月十号，老地方，三十板起步
+  A：成
+  A：刚才地铁口那大爷逆行，差点把我别倒
+  B：电动车都野，我上月被蹭一回，赔了三百私了
+  A：人没事吧
+  B：没事，车把歪了，我懒得扯皮
+  【10月11日】
+  A：问个事，板子有划痕的你要不
+  B：有划痕算九成新，五十五收，别拿压箱底的糊弄我
+  A：放心，家里就两板旧的自己吃，给你的都是新的
+  B：嗯，咱这生意货对板，你实在，我回头客才稳
+  A：中午点了新开的酸菜鱼，辣得我怀疑人生
+  B：我减脂，中午一个玉米，晚上五公里
+  A：意志力真强，我不吃饱连药盒都数不清
+  B：哈哈你这行当，是得吃好点
+  B：对了，除了安眠的，助眠的喷雾缓释那类你妈那个科能开不，能开也算上
+  A：缓释能开，就是一次限两盒，我把这路子养着，下月一起给你
+  B：好，能开的都要，我这边走得飞快
+  A：你下游到底啥路子，走得这么快，不会拿去干坏事吧
+  B：钱货两清，别打听，对你好
+  A：行行，我赚我的差价
+  【10月12日】
+  A：我妈今天复诊，医生问咋又睡不好，我说换季，又给加了一板的量
+  B：好事，你这叫可持续，比硬囤强
+  A：那是，以养代收哈哈
+  B：少贫，十五板凑齐没
+  A：今天这风刮得邪乎，外卖都停了半小时
+  B：停好啊，去年这天气有个骑手被广告牌砸了
+  A：咱这行的都注意点，钱是赚不完的
+  A：凑齐了，十二板新的三板九成新
+  B：十二个六十五加三个五十五，九百四十五，明天老地方
+  A：明天九点半行不，下午还有事
+  B：行，别迟到
+  A：再说个事，我表姨也失眠，她那张卡我要是也借来开，一个月能吃到五十板
+  B：五十板？行，五十板往上我给七十，不过账得清楚，谁出的岔子谁担
+  A：明白，日期批号我都拍照留底，出不了岔子
+  B：嗯，你这脑子不做买卖可惜了
+  A：还有，量大了你钱备得开吗
+  B：放心，我这月流水好几万，几百板都吃得下
+  【10月13日】
+  A：到了，九点半整，十五板你验
+  B：验了没问题，九百四十五转你
+  【系统消息】B 向 A 转账 945 元，已收款。
+  A：收到。我表姨那批月底起量，你把钱备好
+  B：备好了一把结
+  A：好几万流水，你比我原来经理挣得都多
+  B：辛苦钱，收货验货送货，一天睡五小时
+  A：行，下月十号老地方，我回去把话跟我妈说圆
+  B：等下，立个规矩：每月十号，三十板起步，六十五一板，量大七十，你手上的量就供我一家，别到处撒
+  A：行，就供你一家，省心
+  B：你那两板旧的自己吃完就完了，别往外匀，朋友要吃让他自己上医院开
+  A：懂，我朋友问过我，我说这玩意儿不能瞎给
+  B：开窍。药盒不要，你留着卖废品
+  A：那月底到五十板，是不是就按七十算
+  B：到了就七十，一板不让
+  A：爽快，那我回去动员动员
+  B：动员归动员，别拉生手，货出岔子砸的是两家的招牌
+  A：明白，只带熟人
+  B：下月十号见，今天风大，路上慢点
+  A：好，围巾裹上，回见
+  B：回见，注意保暖

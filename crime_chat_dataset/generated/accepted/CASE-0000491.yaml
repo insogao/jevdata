@@ -1,0 +1,123 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000491
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000075
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-e7e80b122549fdb7
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: privacy_doxxing
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A 因欠款人失联,通过群友介绍找素不相识的 B 按条付费查询手机号对应的姓名与常住区域,几分钟即出结果;B 以倒卖个人信息为业,按条收费。
+  critical_evidence:
+  - A 经群友老K介绍找到 B「处理号码的事」,两人此前素不相识
+  - B 按条计费一条150元,A 转300元查两个尾号号码
+  - A 上午10:31付款,十几分钟后即收到姓名与常住区域结果
+  - A 称所查对象是借走八万元跑路的欠款人;B 拒做实时位置,只做静态资料
+  benign_alternatives:
+  - 平台实名核验或律师依法调证的讨论
+  - 朋友间帮忙打听失联人员的闲聊
+
+attributes:
+  duration_days: 3
+  turn_count: 47
+  approximate_tokens_estimate: 1318
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: id_address_lookup
+  risk: 2
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0054
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:eb84610ef9ea26d9f564685890a64dd48b2d7eb8050be10da67d8d355be7adb4
+pipeline_status: accepted
+title: privacy_doxxing/id_address_lookup
+conversation: |-
+  【10月14日】
+  A：在吗?群里老K介绍来的,说你这边能处理号码的事。
+  B：哪个号码?先发来看看能不能做。
+  A：俩,尾号4402和8807,人失联了,我只要姓名和常住的大概区域。
+  B：能做。按条计费,一条150,十条以内不议价。
+  A：行,两条三百,这就转你。
+  【系统消息】A 向 B 转账 300 元，已收款。
+  B：到了,坐等,快的话几分钟,慢的当天。
+  A：这么快?听说你们都是秒出?
+  B：看号,常规的随手出,个别要等库更新。
+  B：发你了,两条都出到了,同名同区的不少,你自己核对。
+  A：对上了,市南区那个就是我要找的人。
+  B：那就成了,以后有单子常来。
+  A：你们那个群今天又发口令红包了没?手慢无那种。
+  B：抢了,三毛六,请全群喝水,哈哈。
+  A：老K手气一直那么好,开挂了吧。
+  B：他定七点的闹钟蹲的,正经人干不出这事。
+  A：哈哈,明早我也蹲一个试试。
+  B：蹲到请客,蹲不到别哭。
+  【10月15日】
+  A：昨晚盯着那个地址看到两点,越看越觉得眼熟。
+  B：你这是憋着大事?查人干嘛,欠钱的?
+  A：嗯,借走八万跑路的,我先按住址找找看。
+  B：劝你想清楚,找着人也别冲动,别钱花了把自个搭进去。
+  A：你们沿海那边台风预警没?我这预报说连下三天雨。
+  B：今天风已经大了,窗户嗡嗡响。
+  A：关好门窗,别上街瞎溜达。
+  B：囤了两桶泡面,准备宅着看剧。
+  A：再备充电宝,台风天爱停电路灯的。
+  B：有数,三个充电宝全满着呢。
+  B：对了,你那把客制化键盘还出不出?
+  A：出,轴我换成快银的了,得加点钱。
+  B：多少?
+  A：六百五,送手托和线,基本全新。
+  B：五百五,我自提,顺路。
+  A：行吧,看你是回头客,成交。
+  【10月16日】
+  B：你们那边那家炸串店几点关门?馋那口了。
+  A：十点半,不过九点以后有的串就售罄了。
+  B：主要馋那家的辣椒面,别处没那个味。
+  A：下次我拍菜单发你,找个同城代购,现金互免。
+  B：成,跑腿费我出,别跟我客气。
+  A：一顿炸串的事,谈钱伤感情。
+  A：再问个事,人在哪这种实时的,你们做不做?
+  B：不做,那玩意碰不得,我们只做静态资料,这是底线。
+  B：晚上开黑不?新赛季我掉到钻石了。
+  A：打,八点,我玩辅助。
+  B：你那英雄池还是那么浅,哈哈。
+  A：会玩的辅助一顶三,懂不懂。
+  B：行行行,晚上见,输了算我的。
+  A：这可是你说的,截图为证。

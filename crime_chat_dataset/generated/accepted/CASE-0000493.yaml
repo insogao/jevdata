@@ -1,0 +1,144 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000493
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000098
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-a84caaade06d68e6
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A 组织 B 等跑腿人分人分天携带现金过境,每人每趟卡着两万额度走,五天往返八次为境外收货方输送现金,并按趟支付提成。
+  critical_evidence:
+  - A 称老客户「要用现的,账上绕不过去」,总量十六个分五天走
+  - A 要求一人一天两万顶格、卡着数走,B 带两人凑够往返八次
+  - B 争取多带减趟,被 A 以「稳当第一」拒绝
+  - A 事后转账6400元作为八趟辛苦费与路费,由 B 分给下线,并预告下月还有更大的单
+  benign_alternatives:
+  - 利用个人年度额度的正常换汇安排
+  - 跨境代购跑腿与商务差旅代办
+
+attributes:
+  duration_days: 5
+  turn_count: 66
+  approximate_tokens_estimate: 1832
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: cross_border_smurfing
+  risk: 3
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0054
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:33b911ba72460fe71a02ad316904e2f0d5af865074c4e1dd3ada5a980b4d881a
+pipeline_status: accepted
+title: money_laundering_obfuscation/cross_border_smurfing
+conversation: |-
+  【10月12日】
+  A：老陈,下周那边有个单子,还得辛苦你跑跑腿。
+  B：哥你说,还是过去那边?
+  A：嗯,老客户催得急,要用现的,账上绕不过去。
+  B：量多大?
+  A：一共十六个,分五天走。
+  B：就我一个人跑?
+  A：你带俩靠谱的,一人一天两万,卡着数走,别贪多。
+  B：人我熟,小刘和跑船的老周,都稳。
+  A：提成老规矩,一趟八百,船票路费实报。
+  B：成,那我周三先走头一趟。
+  A：上回寄你那饼老白茶,开了没?
+  B：开了,周末就着它泡了一下午,有枣香。
+  A：那茶得煮才出味,你拿壶闷,可惜了。
+  B：学到了,回头入个煮茶器,你推荐个牌子。
+  A：我用的是老铁壶,烧水都香,回头拍照片给你。
+  B：行,照着抄作业,哈哈。
+  【10月13日】
+  B：哥,今天第一趟,东西交到王姐手上了,收条拍你了。
+  A：收条我看了,对。明天起你和小刘错开,一人一天一趟。
+  B：五天一共几趟?
+  A：你四趟,他俩各两趟,凑够八次,正好收尾。
+  B：那每趟顶格两万?能不能多带点,少跑两趟?
+  A：顶格就是顶格,一分别多加,稳当第一。
+  B：懂,稳字当头,听你的。
+  B：周四那边有雨,过海怕颠。
+  A：不急,安全第一,王姐那边我打过招呼了。
+  B：行,我看下船期,避开风最大那班。
+  A：改签的票都留着,回头一起报。
+  B：好,我这人证物票俱全,哈哈。
+  A：你小子,报销还挺专业。
+  A：你爸那腰,理疗做完一疗程没?
+  B：做完了,好多了,能绕小区遛两圈了。
+  A：那就好,老腰这毛病,三分治七分养。
+  B：他还念叨你送那护腰,说比医院的玩意好使。
+  A：下次回去我再给他带两贴膏药,老配方那个。
+  B：他指定高兴,你就他嘴里的「别人家孩子」。
+  【10月14日】
+  B：今天两趟跑完,小刘那趟也交割了,都顺。
+  A：辛苦,晚上吃点好的,记你卡上。
+  B：王姐问,剩下的量什么时候能齐。
+  A：就这两天。让她收货的人手排开点,别扎堆签收。
+  B：明白,我提醒她分批来,一天一批。
+  A：昨晚那球看了没?最后那脚单刀,气死我。
+  B：看了,我血压都看高了,白瞎那机会。
+  A：咱这岁数,看个热闹,别真动气。
+  B：下回还是看乒乓球,稳,心脏受不了。
+  A：哈哈,你这是输怕了。
+  B：是怕自己再买一份降压药。
+  【10月15日】
+  B：哥,今天出状况了,关口抽查,小刘被叫去问了两句。
+  A：问什么了?
+  B：常规的,带多少、干嘛用。小刘说是给姨带生活费,就放行了。
+  A：应变可以,没露怯吧?
+  B：没有,出来还跟我比了个耶。
+  A：行,明天照旧,你那趟正常走。
+  B：那边有什么要捎的?你嫂子上回要的药油。
+  A：带两瓶,再来盒杏仁饼,王姐爱吃那口。
+  B：行,我顺路捎,记你账上。
+  A：这几十块还记账,你小子账比会计还细。
+  B：咱这叫亲兄弟明算账,哈哈。
+  A：行,周三见了货一起清。
+  【10月16日】
+  B：哥,第八趟交割完,王姐点收齐了,十六个整,一张不差。
+  A：好,辛苦兄弟们,今晚我摆一桌,酒随便点。
+  B：那可不客气,老周点名要喝好的。
+  【系统消息】A 向 B 转账 6400 元，已收款。
+  A：转6400,八趟的辛苦费加路费,你分下去。
+  B：收到。小刘和老周一人一千六,剩下一趟我的加路费我收。
+  A：行,分完把数报我一声。
+  B：晚上六点半,老地方那家湘菜?
+  A：对,包间订好了。下个月那边还有个大的,细节饭桌上说。

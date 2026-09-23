@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000513
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000038
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-1ab2986ce4c0e65b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: contraband_illicit_trade
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 收卡人以外卖骑手当跑腿，按张四十收购实名新电话卡，对外谎称电商拉新工作号，卡主对卡的最终用途一无所知。
+  critical_evidence:
+  - A以电商代运营拉新的名义按张四十收购实名新电话卡，当天现结
+  - 一个身份证一天限办两张，A让B多叫几个人分头去办
+  - 卡主问用途时A定好口径让B照说，B自认不用知道卡的去向
+  - 二十张办齐后A一次性转账八百元，并约定下月继续
+  benign_alternatives:
+  - 公司统一办理工作号码
+  - 家庭副卡或亲情号
+
+attributes:
+  duration_days: 5
+  turn_count: 44
+  approximate_tokens_estimate: 1546
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: sim_card_pool
+  risk: 2
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0056
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:7759b7bdf9480c8f5937e4562a9a852f5f892d294f02c58818f01fb13f1ed461
+pipeline_status: accepted
+title: contraband_illicit_trade/sim_card_pool
+conversation: |-
+  【10月9日】
+  A：是小赵吧？老周介绍来的，我这边收卡的
+  B：是我。先问清楚，您收卡干嘛用，我怕惹麻烦
+  A：我们做电商代运营，一个店配一张客服卡，行话叫拉新，正规业务，就是量大
+  B：哦……那这个月要多少
+  A：先来二十张，一张四十，当天现结
+  B：一张四十……一天能办几张啊？我怕营业厅不给办
+  A：一个身份证一天好像限两张，你多叫几个信得过的人，一人两张慢慢凑
+  B：那卡主要问起用途呢，我咋说
+  A：就说公司统一办工作号，卡主不用管用途，办完把卡给我就行
+  B：你们那边降温没，我们这今天风大，骑车冻手
+  【10月10日】
+  A：降了，被子都潮，你们送外卖的注意保暖
+  B：嗯，昨晚收工点了份烤冷面，五块加蛋六块，治好了精神内耗
+  A：哈哈你们年轻人会过日子，我们那时候五块能吃碗牛肉面
+  B：时代不同了，现在牛肉面十八还得看老板脸色
+  A：上午三张的钱结你了，一百二，点一下
+  B：收到，一百二对的。身份证复印件要不要留？
+  A：不用，实名是营业厅的事，我这只收卡，别的东西你一概别留
+  B：明白，下午我再跑两家，凑够五张
+  【10月11日】
+  B：哥，你看这双鞋，二手平台三百二，原主说穿过两次
+  A：底都磨平了还说两次，砍到二百五，不卖拉倒
+  B：厉害，还是您会砍，我这就去还价
+  A：现在几张了
+  B：九张，今天最多，有俩卡主多嘴问了句用途，我照你教的口径回的
+  A：回得对，工作号，别多讲一个字
+  B：哥，说句掏心窝的，这些卡最后干嘛去，我真不用知道？
+  A：你赚你的跑腿钱，知道越少越轻松，这行规矩就这样
+  【10月12日】
+  B：我爸叫我回去掰玉米，我说走不开，挨了顿骂
+  A：哈哈都一样，我爸让我回去收花生，我说我贩花生呢他不信
+  B：哈哈您这算哪门子贩花生
+  A：少贫，下午那几张办得顺不顺
+  B：顺，凑一凑今晚能到十九张
+  A：差一张，明天补上，二十张齐了我把尾款一把结清
+  B：行，明天上午办最后一个，直接给您送去
+  A：好，送到老地方，我请你吃碗牛肉面，补涨价的部分哈哈
+  【10月13日】
+  B：第二十张齐了，哥，二十张都在这了
+  A：我点点……齐，钱这就给你
+  【系统消息】A 向 B 转账 800 元，已收款。
+  A：八百，你点点，多的四十是昨天那张多跑一趟的补贴
+  B：收到，八百整，对上了
+  B：昨晚看了个老剧，快递员创业那部，看得我怪有共鸣
+  A：等你攒够钱自己当老板，也算创业了
+  B：哥，下批啥时候要？一起跑单的几个都问我还能不能接
+  A：下月再说，这批先稳住，别一下子放量
+  B：懂，循序渐进，卡主那边我也都安抚好了
+  A：嗯，手脚麻利点，别拖到营业厅下班，下批提前三天跟我说

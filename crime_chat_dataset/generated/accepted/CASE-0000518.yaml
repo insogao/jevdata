@@ -1,0 +1,146 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000518
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000120
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-cb4370daf4979c99
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 无恶意：男女朋友之间拿一张睡相丑照开玩笑打闹，女方误发照片后慌忙撤回道歉，男方当面删除照片，女方归还此前垫付的演唱会票钱，全程是情侣间玩笑。
+  critical_evidence:
+  - A留着B一张睡着流口水的丑照，开玩笑说十二点前不叫哥就设成头像，实为打闹
+  - B误把自拍发进家人群，三秒内撤回并向A求助道歉
+  - A答应当面删除丑照并展示回收站，两人互无把柄
+  - B归还A垫付的演唱会票钱480元，金额与聊天上下文一致
+  benign_alternatives:
+  - 情侣间玩笑打闹
+  - 误发照片后道歉撤回
+
+attributes:
+  duration_days: 6
+  turn_count: 67
+  approximate_tokens_estimate: 2320
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: intimate_photo_extort
+  risk: 0
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0056
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:78c145eeefa377a14b564ea7f9869b3be4a1ade4adc02145e6dbdb10e876909f
+pipeline_status: accepted
+title: coercion_blackmail/intimate_photo_extort
+conversation: |-
+  【10月9日】
+  A：还没下班？
+  B：加班呢，方案改第三版了，我头发都要薅秃了
+  A：辛苦，给你点杯奶茶？加班的人有糖分才活得下去
+  B：要要要，少糖去冰，你是我的神
+  A：那你可得对我好点，你那张睡着流口水的丑照还在我手机里呢
+  B：周嘉树你敢！删掉！
+  A：哈哈考虑一下，今晚十二点前不叫我一声哥，我就把它设成你头像
+  B：你试试，我立马分手，顺便把你军训照发我闺蜜群
+  A：好家伙，互相伤害是吧，行，看在奶茶的份上扯平
+  B：这还差不多，奶茶多加一份珍珠，谢谢
+  【10月10日】
+  B：今天总算把方案交了，领导看完就说了个嗯
+  A：嗯字千斤重，他心里估计已经过了
+  B：但愿吧，改得我人都麻了，就想回家撸猫
+  A：猫在你妈那养着呢，你撸的是空气
+  B：对了说到照片，我昨天闯大祸了
+  A：怎么了
+  B：我把自拍发咱们家人群了！本来想发你的！手一滑！
+  A：哪张？就你昨晚那个猫耳滤镜的？
+  B：对！！我三秒内撤回了，但是我二姨已经截图了，还问我是不是艺术照
+  A：哈哈哈哈笑死，你二姨挺潮，还懂艺术照
+  B：别笑了！我社死了，快安慰我，不然我拿你黑历史抵命
+  A：行行行，周五请你吃烤肉给你压压惊，你发照片的事我保证一个字不往外说
+  【10月11日】
+  A：你妈说咱家橘猫又胖了，上称十六斤
+  B：十六斤？！它上个月才十四斤，你是不是又偷偷喂罐头
+  A：冤枉，我就周末喂了三次
+  B：三次还叫没喂？下周起罐头归我管，它再长下去要穿加大码猫衣了
+  A：说正经的，那张丑照我明晚当面删给你看，省得你天天惦记
+  B：真的？你可别背着我又存一份
+  A：明晚吃饭的时候当着你的面删，删完给你看回收站
+  B：行，那我信你一回，不过按你的尿性，总得有点交换条件吧
+  【10月12日】
+  B：昨晚那个悬疑剧大结局了，凶手居然是管家，我猜了一半
+  A：我猜是双胞胎，还是我强，这部我三年前就看过结局
+  B：恶心，剧透狗退散，下周换我挑剧，我看恐怖片
+  A：行，你半夜敢关灯看算你赢
+  A：对了，周末演唱会的事，票钱的事我一直想跟你说
+  B：咋了，票出问题了？不会是假票吧
+  A：不是，上次你临时出差，四百八的票是我先垫的，本来想着你回来请你吃饭就算了
+  B：哦对！我都忘了，该我给你的，你咋不早说
+  A：现在说也不晚，你看什么时候方便
+  B：周五吃完烤肉我转你，我记账上了，四百八，一分不少
+  【10月13日】
+  A：周日天气不错，去爬北山不？看日出那种，四点半起
+  B：四点半？你是想看日出还是想看我起床气那张脸
+  A：那不是更全乎，日出加丑照二合一
+  B：滚，去可以，我背一保温杯咖啡，谁也别想让我笑
+  A：明晚烤肉还是上回那家，七点，你直接来
+  B：好，我把票钱也带上，吃完就转你，省得再拖
+  A：行，不着急这一时半刻
+  B：拖了快俩月了，再拖我都过意不去了
+  A：那我不客气了，到时候连烤肉钱一起给我转了呗
+  B：想得美，说好我请客，哪有让客人掏钱的，你就等着吃吧
+  【10月14日】
+  A：今天下班早点来，那家烤肉六点半就要排队
+  B：收到，我已经在路上了，饿得前胸贴后背
+  A：那正好，先垫个垫。对了，回收站也给你看，丑照正式火化
+  B：好，仪式感拉满，火化了你就自由了
+  A：嘛，毕竟你二姨那还有艺术照流出呢哈哈
+  B：周嘉树！烤肉减一盘！五花肉没收！
+  A：别别别，我错了，五花肉是我的命
+  B：吃好了，说好的票钱，我这就转，四百八
+  【系统消息】B 向 A 转账 480 元，已收款。
+  B：演唱会那笔，两清啦，下回旅行我请机票
+  A：收到，两清，机票我先记账上，利息按奶茶算
+  B：美得你，奶茶管够，饭都不给你加
+  A：那我现在把回收站的截图发你，火化证明，拿好
+  B：嗯看到了，存档了，这下咱俩互相都没有把柄，平等了
+  A：平等，这才是恋爱最好的状态哈哈
+  B：那可不，互相捏着把柄的那才吓人，咱这叫互相有表情包
+  A：哈哈行，表情包外交。回家路上慢点，到家吱一声
+  B：知道啦，你也是，到家说一声，晚安

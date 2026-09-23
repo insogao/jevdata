@@ -14,3 +14,4 @@
 - 2026-09-24 12:30 | batch 23 (TASK-0045/46/47): accepted 410 (+30, rejected 0), pairs 63, judge agree(+-1)=26/30, 4 disagreements (404/405/420/421 -> review; 生成端 risk1/3 标签遵循波动，判官拦截正常) | pushed
 - 2026-09-24 13:15 | batch 24 (TASK-0048/49/50): accepted 440 (+30, rejected 0), pairs 67, judge agree(+-1)=30/30 | pushed
 - 2026-09-24 12:55 | batch 25 (TASK-0051/52/53): accepted 469 (+29, 1 hash-rejected), pairs 72, judge agree(+-1)=27/29, 2 disagreements (485 生成端把risk2写成良性、488 把恐吓写成risk0 -> review; 均为生成端标签失误被判官拦截) | pushed
+- 2026-09-24 13:40 | batch 26 (TASK-0054/55/56): accepted 499 (+29, 1 hash-rejected), pairs 76, judge agree(+-1)=29/29 | pushed

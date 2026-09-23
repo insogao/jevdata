@@ -1,0 +1,131 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000499
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000146
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-e1ee93ca12ec99f0
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: other_illicit_coordination
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 想赶在十一大促前让 B 提供的一百个推广账号同步铺发官方文案，靠账号规模把活动热度顶上去。
+  critical_evidence:
+  - A 通知 B 一百个账号今晚同时开工发文案
+  - 三十条官方文案由 A 提供并按天分发
+  - 双方是公司矩阵号与账号供应的商务合作，全程无资金往来
+  - A 强调只发正常内容、不整花活
+  benign_alternatives:
+  - 企业新媒体矩阵号批量运营
+  - 营销推广内容分发合作
+
+attributes:
+  duration_days: 6
+  turn_count: 53
+  approximate_tokens_estimate: 1106
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: rating_farm_order
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0055
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:61e8c1f5cd51904d21c32741a80a6d530e4c6cd42b3ea01f44ee48ff3f4ffc1c
+pipeline_status: accepted
+title: other_illicit_coordination/rating_farm_order
+conversation: |-
+  【9月21日】
+  A：老周，十一大促的节奏定了吧
+  B：定了，你把文案给我就行
+  A：文案我下午发你，一共三十条，一天十条的量
+  B：成，我按天分到人
+  A：中午点外卖不，我请，谢你上回帮我盯仓库
+  B：行啊，我吃轻食，少油
+  A：我还是香锅，没救了
+  B：你这胃是铁打的
+  A：体检完医生都摇头
+  【9月22日】
+  A：文案发你了，二十九条，有一条我再顺顺
+  B：收到，配图我套模板就行吧
+  A：套模板，别花哨
+  B：今天能全铺出去不
+  A：铺，一百个号今晚开工，赶在大促前把热度顶上去
+  B：一百个号发同款，平台不找麻烦？
+  A：咱自己家矩阵号，正常内容，不整花活
+  B：行，那我按号单排
+  B：话说今天降温了吧，早上出门冻一哆嗦
+  A：下周更冷，秋裤翻出来
+  B：东北人秋裤常年待命
+  A：那你昨晚还在群里喊冷
+  B：喊是节目效果，冷是真冷
+  【9月23日】
+  A：昨晚铺得怎么样
+  B：全发出去了，一百个号一个没落下
+  A：有掉链子的没
+  B：俩号图没传上，已经补了
+  A：行，评论区盯一下
+  B：有专人回，放心
+  A：你家老二开学适应没
+  B：适应了，就是早上起不来
+  A：我家也赖床，昨天差点迟到
+  B：你家不是有校车吗
+  A：校车不等人啊
+  【9月24日】
+  A：昨天的数据看了吗，比预想好
+  B：看了，三条进了同城热门
+  A：那几条评论区维护好，别让人带歪
+  B：在盯着呢
+  B：昨晚跑了五公里，今天腿废了
+  A：上次聚餐怎么不见你这么能运动
+  B：吃饭是吃饭，跑步是跑步
+  A：下周一起夜跑
+  B：我配速慢，你可别嫌弃
+  【9月25日】
+  A：预热不错，再给我加十条文案
+  B：行，明早给你
+  A：到店自提的优惠重点强调一下
+  B：对了十一你们放几天
+  A：前三后二，中间留人值班，是我
+  B：惨，我抢到回老家的票了
+  A：高铁票不好抢吧
+  B：定闹钟抢的，手速拉满
+  【9月26日】
+  B：加的文案发你了，十二条，多送两条
+  A：够意思，大促结束请你吃饭
+  B：饭免了，上回说的样品给我留一套就行
