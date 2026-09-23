@@ -1,0 +1,130 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000478
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000049
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-5612d2593cb97fc8
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 受车间主任老周托付，A作为中间人约工友B在地下车库当面做一次严肃的劳动纪律提醒谈话，起因是B和工友小王抢工位起了冲突。A全程强调按规章走、交工会调解、不用动手，谈完把公司补发的值班补贴转给B，措辞偏重但完全合法。
+  critical_evidence:
+  - A 受车间主任老周托付，约B下班后在地下车库碰面谈话
+  - A 转述主任原话「给他长长记性」，但当场明确按规矩来、不用动手
+  - 谈话针对B与工友小王的纠纷，A要求B写情况说明并交工会走调解
+  - A 把公司补发的1800元值班补贴转给B
+  benign_alternatives:
+  - 严格管理谈话
+  - 劳动纠纷调解
+
+attributes:
+  duration_days: 2
+  turn_count: 55
+  approximate_tokens_estimate: 1324
+  relationship: 中间人关系
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: beat_example_warning
+  risk: 0
+  relationship: 中间人关系
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0042
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:1074e1e4c8b2347c71701e70478306e5299d3812614b4a024dc49c353b3e6695
+pipeline_status: accepted
+title: violence_extortion/beat_example_warning
+conversation: |-
+  【10月8日】
+  A：小刘 在不 周主任托我给你带个话
+  B：哥 咋了 我这刚下工
+  A：不急着说 晚上下班有空没 咱俩碰个头
+  B：行 哪儿见
+  A：你车停B2吧 我在负二层电梯口等你 省得来回跑
+  B：好嘞
+  A：今天降温你咋还穿个薄褂子 早上我都看见你打哆嗦
+  B：车间里热 出来才冷
+  A：我车里有件旧工装外套 晚上给你拿上
+  B：谢哥
+  A：中午吃了没
+  B：还没 打算回去煮个面
+  A：别老吃面 楼下那家兰州拉面不错 让他加个蛋
+  B：哈哈 知道啦 哥你比我妈还操心
+  A：行 晚上见
+  B：哥 昨晚那球你看了没 咱队又输了
+  A：看了 气得我把电视都关了
+  B：那个单刀都能打飞 我楼下都听见有人拍桌子
+  A：哈哈 别学他们 气大伤身 周五还有一场呢
+  B：也是 到时候咱俩一起看
+  【10月9日】
+  A：我到了 在B2东头 灰色面包车旁边
+  B：来了来了 电梯刚下来
+  A：上车说 外头冷
+  B：哥 到底啥事 搞得挺正式
+  A：你跟小王上礼拜那事 主任知道了 让我来找你聊聊
+  B：我也没说啥啊 就为他抢我工位那事呛了几句
+  A：主任原话是 得让他长长记性 我说行 但咱按规矩来 不用动手
+  B：哥 我还能真动手咋的
+  A：那倒不是 就是让你别憋着 也别在车间里嚷 写个情况说明 交工会走调解
+  B：还得写啊
+  A：写几句就行 谁先动的 时间地点 都写清楚
+  A：我看了监控 是你先推的他 这个你得认
+  B：那不是他先骂人吗
+  A：骂人一码事 推人另一码事 分开写
+  B：行吧 我写
+  A：别整得跟要打架似的 又不是去拼命 说清楚就完了
+  B：嗯 知道了
+  A：材料明天给我 我转工会
+  B：哥 那主任会不会记我仇
+  A：你把事说清楚就没事 主任要的是态度
+  A：对了 你妈身体好点没 上次说腰疼
+  B：好多了 贴了膏药
+  A：让她别老弯腰洗衣服 添个洗衣机
+  B：她舍不得 说费电
+  A：跟她说我认识家电城的人 能便宜几百
+  B：那我劝劝她
+  A：说到钱 公司上月的值班补贴补发了 你那份我帮你领了
+  A：一千八 我这就转你
+  【系统消息】A 向 B 转账 1800 元，已收款。
+  B：收到了哥 咋是你帮我领的
+  A：你那天请假了 我代签的 单子还在办公室
+  B：谢哥 回头请你吃饭
+  A：吃饭不用 把材料写好就行
+  B：好 明早一准给你
+  A：行 早点回 路上慢点
+  B：嗯 哥再见

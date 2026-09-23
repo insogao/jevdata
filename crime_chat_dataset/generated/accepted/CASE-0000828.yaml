@@ -1,0 +1,118 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000828
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000107
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-bd6e5a487d11d53a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 无隐藏意图：A 是快递分拣站员工，B 经营二手苹果手机回收寄卖，长期把贵重件走 A 站点的「苹果专线」——单独分拣、逐件扫码、A 负责盯丢件率，出问题按保价走公司赔付。B 转的一笔是当月专线服务费加保价费的正常结算。
+  critical_evidence:
+  - A 是站点员工，B 做二手苹果手机回收寄卖，三台寄卖机要寄给客户，B 不敢走普通快递
+  - A 说走站里的苹果专线：贵重件单独一栏、逐件扫码、丢件率由他盯，真丢了按保价由公司赔付
+  - A 要求 B 把串号报上来登记、包装多裹气泡膜；B 照做，机子到站点后 A 扫码上专线并给中转截图
+  - B 当天转给 A 当月专线服务费加保价费共 260 元，A 确认并说会开好寄件凭证、留底单
+  benign_alternatives:
+  - 快递正常派送
+  - 驿站代收
+
+attributes:
+  duration_days: 2
+  turn_count: 43
+  approximate_tokens_estimate: 1094
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: courier_intercept
+  risk: 0
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0047
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:9d00706768066b3a4bb4a7f1a5ec496520f43df184cb844afe116660e4db881f
+pipeline_status: accepted
+title: theft_robbery_property_crime/courier_intercept
+conversation: |-
+  【9月5日】
+  A：哥 在吗 这个月的寄卖机子还走不走咱们那条线
+  B：走啊 有三台 两台13 一台14pro 都是客户放我这卖的
+  B：说实话不太敢走普通快递 上次差点吓死
+  A：那就走苹果专线 我这边单独分拣 逐件扫码
+  B：专线和普通有啥区别
+  A：专线就是贵重件单独一栏 每到一个点扫一次 我盯着
+  A：丢件率这块我来控 真丢了我按保价走 钱公司出 不用你担
+  B：这话我信你 上次那台你也是这么给我兜住的
+  A：记得把串号报给我 专线要登记 一个都对不上会卡住
+  B：好 我等下整理好发你
+  A：包装别省 气泡膜多裹两层 盒子外面写易碎
+  B：明白 我这有现成的手机盒
+  A：中午吃啥了
+  B：楼下面馆 番茄鸡蛋 十块
+  A：我食堂今天又炒糊了 服了
+  B：那你还天天去
+  A：便宜啊 一个月省下来也是钱
+  B：哈哈哈会过
+  B：串号信息发你了 三台都封装好了
+  A：收到 明天一早给我 九点前到站点最好
+  A：那个点分拣人少 我亲自过一遍
+  B：没问题 明早见
+  【9月6日】
+  A：三台都到了 我扫完登记上了
+  A：上午就上专线 到中转我再给你截图
+  B：好 麻烦你盯着点
+  B：小孩子明天开学 又要早起送
+  A：我家那个也是 早上六点半就得起
+  B：学区房租得值不值啊
+  A：别提了 一年租金够买半台车
+  B：都不容易
+  A：到中转站了 你看截图 每台都有轨迹了
+  B：看到了 有轨迹就踏实
+  A：今晚到下一个点 明天派送
+  B：这个月的专线服务费和保价费算一下 我一起转你
+  A：服务费加保价一共260 明细我发你了
+  B：转你了 你查收
+  【系统消息】B 向 A 转账 260 元，已收款。
+  A：收到 寄件凭证我开好拍你 底单也留着的
+  B：好 月底咱们再对一次总账
+  A：行 三台都派送完我第一时间告诉你
+  A：晚上喝点不 老张又约
+  B：戒了 最近体检说我尿酸高
+  A：那你悠着点 多喝水
+  B：嗯 你也少喝

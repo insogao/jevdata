@@ -1,0 +1,111 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000876
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000149
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-6c339b072cd849c0
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: other_illicit_coordination
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 让赋闲在家的表弟 B 帮忙，趁夜里把一个区的推广卡片贴满各栋楼，按栋给钱、被撕就扣，B 答应后两人约好动手。
+  critical_evidence:
+  - A 找亲戚 B 帮忙，把一摞推广卡片在一个区连夜贴完
+  - 报酬按栋结算，一栋十块，被撕掉的要扣钱
+  - A 让 B 后半夜去、挑人少的时候、贴在不显眼的位置
+  - B 答应周末夜里动手，完工后口头记账
+  benign_alternatives:
+  - 帮亲戚张贴开业海报或促销单页
+  - 雇人发放正规传单
+
+attributes:
+  duration_days: 2
+  turn_count: 36
+  approximate_tokens_estimate: 604
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: informal_loan_ads_network
+  risk: 1
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0055
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:01e9355833811fd5459b6c882d9553870758ec6c68b50e574ed40101eb63b833
+pipeline_status: accepted
+title: other_illicit_coordination/informal_loan_ads_network
+conversation: |-
+  【4月2日】
+  A：弟 最近还闲着不
+  B：找着呢 投了一堆简历没回音
+  A：那正好 姐这有个活 一晚上挣几百
+  B：啥活
+  A：帮我贴单子 一个区贴完 按栋算钱
+  B：贴啥单子
+  A：就那种推广卡片 你只管贴 别多问
+  B：让物业看见不得罚款
+  A：后半夜去 挑人少的时候 贴门口别太显眼
+  B：一栋给多少
+  A：一栋十块 撕了扣钱 你自己贴稳当点
+  B：那我一晚上能贴多少
+  A：手脚利索点 五六十栋没问题
+  B：今天降温你注意点
+  A：知道 你也是 别光顾着耍
+  B：我穿得厚着呢
+  A：那就行
+  A：你对象找着没
+  B：没呢 工作都没着落 哪敢谈
+  A：先挣钱 姐给你留意着
+  B：行 靠你了
+  A：晚上吃啥
+  B：楼下盖饭 十块钱管饱
+  A：省着点 不然哪有钱攒
+  B：这不是没办法嘛
+  【4月3日】
+  A：今晚去不去 板子都给你备好了
+  B：去 你发我位置
+  A：老城区那边 你早点睡 十二点开干
+  B：行
+  B：到了 开贴
+  A：别漏楼 尤其单元门
+  B：知道
+  【4月4日】
+  B：贴完俩小区了
+  A：厉害 明天姐给你算
+  B：你先记着 别到时候忘
+  A：忘不了你的

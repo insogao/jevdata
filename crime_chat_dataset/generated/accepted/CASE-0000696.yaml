@@ -1,0 +1,127 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000696
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-159b54f196a22cb1
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: privacy_doxxing
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A 是 B 的领导，让 B 帮忙深挖一个网名叫“南山客”的人的底细。B 手上有些论坛和平台的路子，称小号也能翻出来、相册原图的时间戳能定位、转发过什么都能查，能绕过平台的限制拿到后台资料。A 转账后，B 陆续交付了对方的账号关联信息和部分发帖记录。
+  critical_evidence:
+  - A 要求 B 深挖网名“南山客”这个人的真实身份和黑料
+  - B 说对方的小号也能翻出来，相册原图的时间戳、转发记录都能查
+  - B 表示能绕过平台限制、从后台拿到普通用户看不到的资料
+  - A 转账后，B 交付了对方的账号关联信息和部分发帖记录
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 5
+  turn_count: 49
+  approximate_tokens_estimate: 1077
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 2
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0046
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:4d5278bb72710b233815be4d4aa105ce516d3873eb9da372a434b7f7e3460cc2
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【9月8日】
+  A：小周 有个事交给你 私下办
+  B：您说
+  A：论坛上有个叫南山客的 天天发帖挤兑咱们 我想知道他到底是谁
+  B：那个号我知道 注册信息是假的
+  A：假的也能查 你不是有路子吗
+  B：能查 他小号我也能给你翻出来
+  A：小号都能翻 怎么弄的
+  B：后台有几个朋友 绕过限制不算难
+  A：安全吗
+  B：查信息又不犯法 您放心
+  A：那相册呢 我想看他都去过哪
+  B：相册原图的时间戳能定位 转发过什么也都能查 这些都能出
+  A：好 那你尽快
+  B：这个要花钱 后台那边得打点
+  A：多少
+  B：四千 包括小号和发帖记录
+  A：行 你先动手 我让财务走一下
+  B：中午食堂人真多
+  A：你去外面吃 回头报销
+  B：谢领导
+  【9月9日】
+  A：钱的事你别跟别人提
+  B：我懂 这事就咱俩知道
+  A：嗯 我这边转给你 别走公司账
+  B：行 转我个人就行
+  【系统消息】A 向 B 转账 4000 元，已收款。
+  B：收到 四千 我今天就开始拉数据
+  A：先把小号给我 别的慢慢来
+  B：小号查到一个 用的同一张头像 昵称就差一个字
+  A：发我看看
+  B：截图发你了 那号在别的版块也发过
+  A：就是他 你看他关注了谁
+  B：我整理一下 过两天给你全的
+  【9月10日】
+  A：你孩子开学适应了吧
+  B：还行 就是接送累
+  A：都这样 熬两年就好
+  B：借您吉言
+  B：原图时间戳出来了 他七月底在城南一家咖啡馆发过定位
+  A：城南 具体哪家
+  B：照片里有招牌 我放大了 能看清
+  A：好 你继续 把转发记录也拉出来
+  【9月11日】
+  B：转发记录拉了一部分 他转过两个竞品的水军帖
+  A：果然有人背后指使
+  B：这个我就不好下结论了 数据就摆这
+  A：够了 把这些都发我 我留着有用
+  B：发你了 后面的先不查了吧
+  A：查到这就行 记住这事没发生过
+  B：明白
+  【9月12日】
+  B：那个帖子今天被删了 论坛在清
+  A：删了正好 你别再去看了
+  B：好

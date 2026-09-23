@@ -1,0 +1,138 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000695
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000025
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-d90e9c3ca75ecfaf
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 家长 A 的孩子分数差一点够不上重点初中，A 找到在该校工作的熟人 B 想内部锁定一个入学名额。B 表示正规捐资助学款可以照捐走个流程，但名额是内部的、得单独操作：那部分要转到 B 的私人账户、不写备注，收据只能开成资料费或活动费的名目、不走学校账。A 照办并转款后，B 确认名额已经锁住。
+  critical_evidence:
+  - A 孩子分数差几分够不上重点初中，A 找在学校的熟人 B 想内部锁一个名额
+  - B 说正规捐资助学款照捐、走流程给外人看，但内部名额得单独说、另算
+  - B 要求那部分转到私人账户、不写转账备注，收据开成资料费或活动费的名目，不走学校账
+  - A 转账后 B 确认名额已经锁定，并叮嘱对外只说是正常捐资助学
+  benign_alternatives:
+  - 合法捐赠助学
+  - 正常转学手续
+
+attributes:
+  duration_days: 4
+  turn_count: 61
+  approximate_tokens_estimate: 1308
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: school_admission_payment
+  risk: 2
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0046
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:32a69cd4034101acbc6fa22b8391a9d5ecfb0a9386c2a43338cf2cfad647072a
+pipeline_status: accepted
+title: bribery_corruption/school_admission_payment
+conversation: |-
+  【6月2日】
+  A：老同学 在忙吗 想问你点事
+  B：刚下课 你说
+  A：我家孩子这次差几分 够不上你们学校 心里急
+  B：分数线卡得死 明面上确实进不来
+  A：你在里面 能不能帮着想想办法
+  B：名额是有的 但走不了正门 得单独说
+  A：怎么个单独法
+  B：正规捐资助学那笔你照捐 走流程 给外面看的
+  A：那笔要多少
+  B：按标准来 你查一下就有 那笔明账
+  A：我明白了 那另一部分呢
+  B：电话里不方便 见面说 这周找个时间
+  A：行 你定
+  B：中午食堂的排骨还行
+  A：你还有心情吃 我都愁死了
+  B：急也没用 按我说的走 有戏
+  A：那全靠你了
+  【6月3日】
+  A：昨天那条丝巾给你看了吗 我媳妇说适合你
+  B：看了 太客气了
+  A：一点心意 不值钱
+  B：你这就见外了 咱老同学
+  B：说正事 你说的那部分 转我私人那个号 别走学校账
+  A：私人号 大概多少
+  B：三万 这个数你心里有数就行
+  A：明白
+  B：收据那边我给你开成资料费 学校统一的那种本子
+  A：开成资料费 这不合适吧
+  B：就是个名目 走别的账没法过 你懂就行 别到处说
+  A：行 我听你的
+  B：对外就说是正常捐资助学 别的别露
+  A：这事我媳妇还不知道 我回去怎么跟她说
+  B：就说捐资助学 别的别提 越少人知道越好
+  A：嗯
+  【6月4日】
+  B：你爸身体好些没 上回说住院
+  A：好多了 出院在家养着
+  B：那就行 老人要紧
+  A：是啊 两头事
+  B：对了 明后天把东西准备好 我这边先递材料
+  A：要准备什么
+  B：孩子的学籍资料 照片 还有那部分
+  A：好 我这两天弄齐
+  B：捐资助学那笔你先去财务交 拿个回执
+  A：那笔我明天就去
+  【6月5日】
+  A：捐资助学那笔交了 回执拍了发你
+  B：收到 明账这就算齐了
+  A：那另外那部分 我什么时候给你
+  B：现在就转 别写备注 转我那个私人号
+  A：行 我这就转
+  【系统消息】A 向 B 转账 30000 元，已收款。
+  B：到账了 我这边先递材料
+  A：都弄好了吧
+  B：弄好了 收据回头给你
+  B：资料费的本子 回头夹你孩子资料里给你
+  A：行
+  A：家门口那家烧烤晚上去不去
+  B：今晚有事 改天
+  A：好 你忙
+  B：名额我给你锁上了 后面等通知
+  A：真的?!太感谢了
+  B：记住对外只说是捐资助学进来的 别的别提
+  A：放心 我嘴严
+  B：那就这样 有事再说

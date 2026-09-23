@@ -1,0 +1,129 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000823
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-3bd2c72cb75005a9
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: privacy_doxxing
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 家长 A 托在中学当老师的熟人 B，用班主任系统帮忙查一下别人家孩子的月考成绩和排名。B 收了红包后答应，只答应私下截图给 A 看，并叮嘱别外传、别让孩子知道是谁查的。
+  critical_evidence:
+  - A 的孩子与班上另一名同学成绩较劲，A 想打听那个同学这次月考的分数和排名
+  - A 让 B 用班主任系统「点一下」就能看到，说不用惊动别人、也不走正式查询
+  - A 先给 B 发了个红包，说事成再谢；B 收下后答应只给个大概
+  - B 说能截图给 A 看但只能私下看，叮嘱 A 别外传、也别让孩子知道是她查的
+  benign_alternatives:
+  - 家长查自己孩子
+  - 学校官方查询
+
+attributes:
+  duration_days: 6
+  turn_count: 50
+  approximate_tokens_estimate: 992
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 2
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0047
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:ee460a23850441ec938cf08302af2b9102f69c606eeea8608f3219108250c6dd
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【9月12日】
+  A：王老师 在忙不
+  B：刚下课 咋了
+  A：我家孩子那个同桌 这次月考考多少你知道不
+  B：你问人家孩子成绩干嘛
+  A：就好奇 他俩老较劲 我想心里有数
+  B：这个不好说吧 学校有规定
+  A：你就班主任系统点一下 几秒钟的事 别人又不知道
+  B：随便查别的学生不行
+  A：咱啥关系 帮个忙呗
+  A：我先给你发个红包 别嫌少 事成再谢
+  【系统消息】A 向 B 转账 200 元，已收款。
+  B：红包我收下了 但我只能说个大概
+  A：行行 截图就行
+  B：明天上班我看看 你别催
+  A：好嘞 谢谢王老师
+  【9月13日】
+  A：今天天气转凉了 你们学校开空调没
+  B：开了 教室人多 闷
+  A：我家那个一换季就咳嗽 愁
+  B：多喝热水 备点止咳的
+  A：那个成绩看了没
+  B：忙 晚点
+  【9月14日】
+  A：王老师 早
+  B：早
+  A：今天学校有活动吗
+  B：下午家长会 你记得来
+  A：来 我请假了
+  B：我看了下 你家孩子这回比他高几分 你安心吧
+  A：太好了 谢谢王老师
+  B：这事你别往外说 也别让孩子知道是我查的
+  A：放心 就我自己知道
+  B：嗯 别害我
+  A：哪能啊
+  【9月15日】
+  A：周末你家孩子补课吗
+  B：补数学 一周两节
+  A：贵不贵 我们这也想报
+  B：一学期三千多 不便宜
+  A：现在养个孩子真费钱
+  B：是啊
+  【9月16日】
+  A：王老师 那个排名是年级的还是班级的
+  B：我说了只给你个大概 你别追太细
+  A：好好 不问了
+  B：这种事下不为例 别让我为难
+  A：明白 谢了
+  【9月17日】
+  A：体检报告出来了 血脂有点高
+  B：我也高 医生让我少吃油
+  A：一起戒口吧 哈哈
+  B：说得容易 晚上又想吃烧烤
+  A：忍住
+  A：家长会老师点名夸我家那个了 谢谢你平时照顾
+  B：孩子自己努力 你别老盯着别人家
+  A：知道了 以后不比了

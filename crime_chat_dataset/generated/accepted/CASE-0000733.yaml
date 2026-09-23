@@ -1,0 +1,114 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000733
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000106
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-ec17f94f65041098
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: theft_robbery_property_crime
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 仓库管理员 A 与外面收货的表舅 B 里应外合：趁周三盘点前，从西门把仓库里的手机和酒按件顺出去，B 在外面接货按件结钱。
+  critical_evidence:
+  - A 说趁周三盘点之前的空档，账还没对上，东西出去了能平掉
+  - A 提到从西门走，那边没有监控，岗亭晚上也换成了新来的保安不看监控
+  - 两人说好按件结算，A 每批货到手多少就结多少
+  - 第一次出货后 B 打了一笔钱给 A 作为这次的分成
+  benign_alternatives:
+  - 仓库正常出货
+  - 库存调拨
+
+attributes:
+  duration_days: 5
+  turn_count: 37
+  approximate_tokens_estimate: 876
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: insider_stocktip_theft
+  risk: 3
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0045
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:5a4d3914e7f2a57872ddefa9d15718956d6fffbf9464e666ae004ac2a7bb167c
+pipeline_status: accepted
+title: theft_robbery_property_crime/insider_stocktip_theft
+conversation: |-
+  【6月3日】
+  B：大外甥 你们仓库最近货多不
+  A：多得很 手机堆了两个货架 还有酒
+  B：你都盘过一次了没
+  A：周三盘 还有两天 这两天账还平着
+  B：那正好 拿点出来 我这边有人要
+  A：多少
+  B：先拿十台手机 两箱酒 试试水
+  A：西门那边没人看监控 岗亭这个月换了新人 就知道打盹
+  B：行 那你几点方便
+  A：明晚十一点 我值夜班 你车停后门那条巷子 别挂灯
+  【6月4日】
+  B：今天热得邪乎 你仓库有空调没
+  A：有风扇 闷得很 衣服一天湿两回
+  B：晚上我路过给你带瓶冰的
+  A：顺便带个手电 西门那段路灯坏了
+  B：到了 在巷子里
+  A：稍等 我先去关那边那盏感应灯
+  A：货出来了 你推车过去装
+  B：十台手机先看下 成色不错
+  A：都是新的 原包装我给你拆了 免得扫码响
+  B：酒呢
+  A：两箱在门后头 你搬的时候轻点 别磕了瓶口
+  B：好 都装上了
+  A：记住按件结 手机一台八十 酒一箱一百五
+  B：知道 老价格 我明天给你转
+  【6月5日】
+  B：昨晚十台手机两箱酒 出手很快
+  A：别急 周三盘完再说 这两天你别来
+  B：行 我把这次的先打给你
+  【系统消息】B 向 A 转账 1100 元，已收款。
+  A：收到一千一 对得上
+  B：盘完再拿第二批 这次我要平板
+  A：看情况 你别催 催了容易出事
+  B：放心 我这边从不问来路
+  【6月6日】
+  B：周末你回不回老家 你妈念叨你
+  A：周天回 给她买点药
+  B：我捎两箱奶 你坐我车
+  A：你那车后座不是装货的 我坐不下
+  B：哈哈 到时候我清空
+  A：行 就这么定

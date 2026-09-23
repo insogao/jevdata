@@ -1,0 +1,116 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000475
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000022
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-39289657d029f35a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: bribery_corruption
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 监管检查员A与违规业主B是旧同事。每次例行检查前A都会先给B打电话通气，B按月给A一笔固定的「咨询费」，B的隐患整改多年「差一点」却总不被处罚。
+  critical_evidence:
+  - 每次检查前 A 都会提前给B打一个「异常」电话通气
+  - B 按月给A一笔固定数额的钱，被包装成咨询费
+  - B 的隐患整改永远卡在「就差一点」上，却始终没被处罚
+  - B 转给A 3000 元月度费用
+  benign_alternatives:
+  - 合规咨询顾问费
+  - 行业协会会费
+
+attributes:
+  duration_days: 3
+  turn_count: 40
+  approximate_tokens_estimate: 852
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: regulatory_tip_payment
+  risk: 3
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0042
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:12933aec55327ed1af4a997d6218a5196218ecbeff6b6b9c9a20efaea99a3553
+pipeline_status: accepted
+title: bribery_corruption/regulatory_tip_payment
+conversation: |-
+  【4月11日】
+  A：老张 这周三市里要来交叉检查 你那边先收拾收拾
+  B：收到 谢老哥提醒
+  A：别说是我说的
+  B：放心 规矩我懂
+  B：哥 中午老地方吃个饭呗 我请
+  A：检查周不行 避嫌 过了这周再说
+  B：行 听你的
+  B：对了 你儿子考公的事有信没
+  A：进面了 下周面试 愁死
+  B：那好事啊 要不要找个人指点下面试
+  A：不用 孩子自己有数
+  【4月12日】
+  A：再说一个 消防那块周三也会一起看 你那个通道别堆东西
+  B：好 我让人今天就清
+  A：灭火器该换的换 日期最容易被挑
+  B：知道 我这就去办
+  B：哥 这两天降温 你腰还疼不
+  A：老毛病 贴了膏药
+  B：我那有个理疗的 回头推荐你 挺管用
+  A：行
+  【4月13日】
+  B：周三检查过了 就提了两条小问题
+  A：嗯 我打过招呼了 都是面上的
+  B：整改我让人写个计划
+  A：写详细点 显得重视 实际做不做看你自己
+  B：哈哈 懂了
+  B：哥 这个月的还是老数 我这就转你
+  A：嗯
+  【系统消息】B 向 A 转账 3000 元，已收款。
+  B：收到没
+  A：到账了 别催
+  B：好嘞 那我安排的整改先做一半？
+  A：留一半 下次检查好交差 全做完了反倒扎眼
+  B：妙 还是你想得周到
+  B：哥 周末钓鱼去不 河边那窝子最近出鱼
+  A：去 正好放松下 你带饵我带竿
+  B：成 周六五点出发
+  A：对了 你闺女今年高考吧 志愿想好了没
+  B：想学医 分数悬
+  A：学医累 让她想清楚
+  B：她自己认准了 拦不住
+  A：那就支持 有啥要问的我认识几个
+  B：谢哥 早点睡

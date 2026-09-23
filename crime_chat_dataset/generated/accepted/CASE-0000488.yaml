@@ -1,0 +1,125 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000488
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000006
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-32e7b819e60104a8
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 银行助贷经理 A 给手头紧的客户 B 办一笔正规消费贷：按流程讲明要查征信、走审批、线上签可核验的电子合同，反复强调放款前不收任何费用，审批通过后把到账的一笔贷款转给 B。
+  critical_evidence:
+  - B 手头紧想借一笔周转，A 是正规银行助贷经理，介绍消费贷产品
+  - A 说明要查征信、走审批，不存在不看征信就秒批的情况
+  - A 强调放款前不收任何提前费用，合同在官方 APP 里电子签约、可核验
+  - 审批通过后 A 把到账的一笔贷款转给 B
+  benign_alternatives:
+  - 正规银行贷款流程
+  - 亲友借款
+
+attributes:
+  duration_days: 3
+  turn_count: 49
+  approximate_tokens_estimate: 1264
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: loan_fee_bait
+  risk: 0
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0043
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:93773ac7551731c92ab06b4c9642695fb2803aa2f2eda878e2fbf360c3987128
+pipeline_status: accepted
+title: fraud_scam/loan_fee_bait
+conversation: |-
+  【4月8日】
+  A：王先生早 我是银行这边的小李 上次说的那笔款有眉目了
+  B：李经理 我想借点钱周转 你们能批吗
+  A：能 但我们正规流程 得先看下你的征信和流水 不能拍脑袋批
+  B：我听说有的地方不看征信就秒批 你们做不到吗
+  A：那种就是坑 正规银行没有不看征信的 谁跟你说秒批你别信
+  B：那我这征信花过 能过吗
+  A：花过不一定过不了 我看下具体 有逾期再想办法补材料
+  B：行 我把征信报告发你
+  A：你在官方 APP 上自己拉 别用第三方 免得信息外泄
+  B：好 我这就弄
+  A：中午吃了没
+  B：还没 忙着看材料
+  A：先吃饭 贷款的事不急这一会儿
+  B：行 楼下随便吃点
+  A：附近那家饺子不错 我常去
+  B：李经理 报告拉好了 发你邮箱了
+  A：收到 我看了下 你有一张卡逾期了两次 金额不大
+  B：那还能办吗
+  A：我帮你走特批 但额度可能低点 先别急
+  B：能批就行 多少我不挑
+  A：还有个事我先跟你说清楚
+  B：您说
+  A：正规贷款放款前不收任何费用 谁管你要保证金手续费 都是骗子
+  B：对 我朋友就被要先交保证金的骗过
+  A：所以找正规渠道 合同也别信图片 我们都在 APP 里电子签 能查到
+  B：明白 那我按流程走
+  A：对了 你孩子上小学了吧
+  B：一年级 天天接送累够呛
+  A：一年级最磨人 熬过这两年就好
+  B：借你吉言
+  【4月9日】
+  A：审批过了 额度八千 你先看看合同
+  B：合同在哪儿看
+  A：你登录 APP 在贷款那栏 有电子合同 编号能查 你看完在线签
+  B：好 我看看利息多少
+  A：年化写得明明白白 没有隐藏费用 你放心
+  B：我签了 审批还会变吗
+  A：签了就等放款 今天应该能到
+  A：今天这天说热就热
+  B：是啊 昨天还穿外套
+  A：换季最容易感冒 你注意点
+  B：嗯 你也是
+  A：款放下来了 我给你转过去 你收一下
+  【系统消息】A 向 B 转账 8000 元，已收款。
+  B：收到了 八千到账 谢谢李经理
+  A：客气 按时还就行 有困难提前跟我说 别逾期
+  B：放心 我记着还款日
+  【4月10日】
+  B：李经理 头一期我提前还行不行
+  A：可以 提前还款不收违约金 你在 APP 上操作就行
+  B：好 那我有钱就先还
+  A：行 有需要再找我

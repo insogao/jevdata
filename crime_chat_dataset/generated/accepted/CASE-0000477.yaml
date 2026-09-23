@@ -1,0 +1,124 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000477
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000068
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-89bea89660fd933d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A以「商务考察团」名义招揽老客户B参加出境游，签证和机票打包报价，实际行程表上只安排夜场与娱乐陪侍，老客户可优先选人；B转来打包费用。
+  critical_evidence:
+  - A 用打包价把签证、机票、住宿一口价卖给B
+  - 行程表上白天购物、晚上只写「夜市」和「自由活动」
+  - A 说老客户优先挑，新客只能等安排
+  - B 转给A 8800 元打包费用
+  benign_alternatives:
+  - 出境游团购
+  - 商务考察团
+
+attributes:
+  duration_days: 5
+  turn_count: 47
+  approximate_tokens_estimate: 921
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: overseas_tour_group
+  risk: 3
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0042
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:99e7b1bc87b9c45b327ce98287878578e22a71db9753e28304fac981f7b51627
+pipeline_status: accepted
+title: sexual_transaction_exploitation/overseas_tour_group
+conversation: |-
+  【6月2日】
+  A：老李 今年那条线又开了 还去不
+  B：哪条
+  A：老地方 五天四晚 你熟
+  B：哦 那个啊 今年啥价
+  A：签证机票住宿一口价 八千八 比去年便宜
+  B：机票我自己订不行吗
+  A：打包才走这个价 单订不划算 你也知道
+  B：行 那就打包
+  A：老客户优先 你先挑 位置给你留着
+  B：还有挑的？
+  A：懂就行 别在群里说
+  B：行程单发我看看
+  A：发了 白天购物点 晚上夜市和自由活动
+  B：晚上都是自由活动啊
+  A：自由活动才是重点 你懂的
+  B：哈哈 你安排就行
+  【6月3日】
+  A：护照和照片尽快给我 签证要提前递
+  B：今天就拍 明天给你电子版
+  A：嗯 我这边有渠道 出签快 别自己瞎弄
+  B：好 听你的
+  B：对了 到了那边语言通不
+  A：有人带 你不用管 跟我走就行
+  B：那就省心
+  A：这几天降温 你带件外套 那边晚上凉
+  B：好 我记下
+  A：现金少带 那边刷卡方便 别露富
+  【6月4日】
+  B：合同要不要签一份
+  A：咱这老关系不用 签了反倒麻烦
+  B：也行 我信你
+  A：钱转我 我给你排位置 这周就截止了
+  B：转多少来着
+  A：八千八 老客户就这个数 新客要一万二
+  B：那我这就转
+  【系统消息】B 向 A 转账 8800 元，已收款。
+  A：收到 位置给你留最好的
+  B：谢了
+  B：我同事也想去 能带上不
+  A：新客得排队 而且嘴要紧 你自己掂量
+  B：那算了 别带
+  【6月5日】
+  A：出团定在下周三 你提前一天来我这碰头 说下注意事项
+  B：好 几点
+  A：下午两点 我办公室
+  B：行
+  A：到了那边手机别乱拍 场子里管得严
+  B：知道 我不拍
+  B：酒店定好了没
+  A：定好了 单间 别担心
+  B：好 那就等出发

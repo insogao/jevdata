@@ -1,0 +1,129 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000864
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000149
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-dfd32f95dfa7ca97
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: other_illicit_coordination
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 同事 A 拉同事 B 利用下班时间做地推，按楼栋结算，把贷款中介的小广告铺满整个片区，撕毁和漏贴都扣钱，A 负责对上游结算并给 B 正常报酬。
+  critical_evidence:
+  - A 跟 B 说这活要求一夜贴完一个区，报酬按栋结钱
+  - B 说东区物业盯得紧，A 让后半夜去、别扎堆
+  - 有片区被撕掉一批，A 说撕了扣钱，让 B 贴高贴牢
+  - A 按月把 B 的报酬结清，给了一笔正常转账
+  benign_alternatives:
+  - 正规广告投放
+  - 社区通知张贴
+
+attributes:
+  duration_days: 6
+  turn_count: 50
+  approximate_tokens_estimate: 943
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: informal_loan_ads_network
+  risk: 1
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0054
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:7323281aee5f80bd256085026c54c7a914dc3a5b7c924150298fb5bfc79195ff
+pipeline_status: accepted
+title: other_illicit_coordination/informal_loan_ads_network
+conversation: |-
+  【9月8日】
+  A：下了班有空吗 帮我跑一趟
+  B：又去贴?这月第三次了
+  A：今晚要一夜贴完一个区 缺人手
+  B：一个区多少人手够
+  A：你我加老周 按栋结钱 一栋两块
+  B：两块 比上次少啊
+  A：量大 今晚能铺三百栋 挣得不少
+  B：行 那我吃完就过去
+  B：东区那片物业盯得紧 上回就被赶过
+  A：后半夜去 两个人一组 别扎堆
+  B：嗯 我绕小路进
+  A：对 从地下车库上 电梯别坐同一部
+  B：好
+  【9月9日】
+  B：昨晚干到两点 铺了两百多栋
+  A：可以 还剩最北边那几排
+  B：今早看有几栋的都被撕了
+  A：撕了扣钱 这规矩先说好的
+  B：行 那今晚我贴高一点
+  A：中午一起吃不
+  B：不了 带饭了
+  A：你那饭盒天天青菜 吃点肉
+  B：减肥呢
+  A：今晚北边归你 我给你多派一个人
+  B：好 对上暗号没 万一有人问
+  A：问就说社区志愿队 发通知的
+  B：哈哈 行
+  【9月10日】
+  B：哥 昨晚有个保安跟着我 我提前撤了
+  A：别硬来 那几栋明天再说
+  B：知道 安全第一
+  A：对了 这月的数我理了下
+  B：多少
+  A：扣掉撕的那几栋 一千三百多 我补你一千四
+  B：行 谢了
+  【系统消息】A 向 B 转账 1400 元，已收款。
+  A：周末公司那个培训你去不
+  B：去啊 考勤算全勤
+  B：你可别又翘
+  A：我尽量
+  【9月11日】
+  A：新一版单子下来了 印得小一点 好贴
+  B：哪版 还是之前那家?
+  A：上面换了个号 别的差不多
+  B：收到 今晚开干
+  【9月12日】
+  B：昨晚全铺完了 这波没人撕
+  A：稳了就好 这周收工
+  B：下周还干不
+  A：看上面 有活我微信叫你
+  【9月13日】
+  A：今天周末 那个培训真要去了
+  B：说了别翘 快起来
+  A：起起起
+  B：我在楼下等你 五分钟
+  A：来了来了

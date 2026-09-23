@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000621
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000102
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-ca67bdc4866ff965
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A 的便利店与同事 B 合作做充值跑量走账：上游把充值卡密直接发给 B，一天几十单不问下单人是谁，A 负责在店里出货记账、按流水抽点，每周结一次账。
+  critical_evidence:
+  - B 说上游直接把充值卡密发过来，一天几十单，不问下单的是谁
+  - A 在店里负责出货记账，按流水抽两个点，和 B 一人一个点
+  - 两人约定每周结一次账，算清这周的量和点数
+  - 全程用「跑量」「卡密」「点」等行话，不点破在做什么走账
+  - 有一笔结账转账
+  benign_alternatives:
+  - 正规充值代理
+  - 便利店代缴业务
+
+attributes:
+  duration_days: 6
+  turn_count: 52
+  approximate_tokens_estimate: 826
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: phone_topup_layering
+  risk: 3
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0044
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:db7f74d49f6160a1dab309a7f1584c01093ae95adae214d3a640826d675613e1
+pipeline_status: accepted
+title: money_laundering_obfuscation/phone_topup_layering
+conversation: |-
+  【7月5日】
+  B：哥 店里最近忙不
+  A：老样子 白天人多点
+  B：有个跑量的活儿 你接不
+  A：什么量
+  B：充值 上游直接给卡密 一天几十单
+  A：下单的都是什么人
+  B：你别问 我都不问 只管出
+  A：抽多少
+  B：流水两个点 咱俩一人一个
+  A：客户问起来咋说
+  B：就说代缴代充 正常业务
+  A：行 我先试试
+  B：你闺女暑假报班没
+  A：报了个游泳 天天喊累
+  B：我家那个就知道打游戏
+  A：都一样 管不住
+  【7月6日】
+  B：今晚先来二十单 卡密发你了
+  A：收到 我一个个出
+  A：出完了 记了账
+  B：利索 明天再多点
+  A：别一下太多 我店里还卖货
+  B：懂 控制着来
+  【7月7日】
+  A：昨晚那批有个退的
+  B：退的就撤下来 别追
+  A：好
+  B：中午吃啥
+  A：店里叫的外卖
+  B：别老吃外卖
+  A：忙起来顾不上
+  B：周末我请你吃好的
+  【7月8日】
+  B：今天单多 你多担待
+  A：今天三十多单 手都酸了
+  B：量大才有点赚头
+  A：这周流水得算算了
+  B：周六一起算
+  A：对了 昨天下那么大雨 你车没事吧
+  B：没事 就是堵
+  A：这雨还得下一周
+  【7月9日】
+  A：有个老客户一下要十单
+  B：给他 别多问
+  A：嗯 出了
+  B：这周量差不多到了
+  A：流水我拉出来了 两个点
+  B：我的那份转你 你再一起记
+  A：行
+  【7月10日】
+  B：这周结一下 我算的六千流水
+  A：差不多 我这边六千二
+  B：那就按六千二 两点 你抽一份
+  A：嗯 我把账记上
+  B：下周接着来
+  【系统消息】B 向 A 转账 240 元，已收款。
+  A：收到
+  B：合作愉快

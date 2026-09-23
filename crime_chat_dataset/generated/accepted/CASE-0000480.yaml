@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000480
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000006
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-32e7b819e60104a8
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 冒充贷款中介向手头紧的 B 放贷，宣称不看征信当天秒批，以走流程为名要 B 先交一笔保证金，发来的合同只是张核对不了的图片，B 信了转过去一笔钱后 A 就开始拖。
+  critical_evidence:
+  - B 缺钱想借一笔，A 自称贷款中介，宣称不看征信、当天就能秒批
+  - A 说放款前要先交一笔保证金才能走流程
+  - A 发来的合同是一张图片，编号查不到、没法核实真假
+  - B 转给 A 一笔保证金，之后 A 开始拖
+  benign_alternatives:
+  - 正规银行贷款流程
+  - 亲友借款
+
+attributes:
+  duration_days: 3
+  turn_count: 56
+  approximate_tokens_estimate: 1393
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: loan_fee_bait
+  risk: 2
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0043
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:89950ab2d5e0a2c31516c9799e5a746f2ded5885790f901b05b618e2412e4306
+pipeline_status: accepted
+title: fraud_scam/loan_fee_bait
+conversation: |-
+  【4月8日】
+  A：王先生早 我是做贷款的 你朋友介绍来的吧
+  B：对 我想借点钱周转 你们能批吗
+  A：能 我们不看征信 当天就能秒批 别的地方办不下来的我这儿都能办
+  B：不看征信真能批？我征信花过
+  A：花不花无所谓 我这边走的是内部通道 你就放心
+  B：那利息咋算
+  A：利息先不谈 你先说要多少 十万以内我这都能搞定
+  B：我先借个两万看看
+  A：行 两万没问题 你把身份证正反面拍给我
+  B：好 我这就拍
+  A：中午吃了没
+  B：还没 忙着弄材料
+  A：先吃饭 资料齐了下午就能走
+  B：行 楼下随便吃点
+  A：附近那家饺子不错 我常去
+  B：身份证拍好了 发你了
+  A：收到 我看了下 你这情况能过 就是得先走个流程
+  B：什么流程
+  A：公司的规矩 放款前先交一笔保证金 证明你有还款能力
+  B：保证金多少 能退吗
+  A：一千五 放款后连同本金一起退你 这是走账用的
+  B：我朋友说正规的都不收保证金
+  A：那是他们额度小 我们大额都这样 你不交我没法往上递件
+  B：那合同呢 我先看看
+  A：合同我发你 你先看着 我这边等你一句话
+  A：[图片：贷款合同照片]
+  B：这合同是个图片啊 编号我也查不到
+  A：内部合同都这样 你先签个字拍回来 编号后补
+  A：对了 你孩子上小学了吧
+  B：一年级 天天接送累够呛
+  A：一年级最磨人 熬过这两年就好
+  B：借你吉言
+  【4月9日】
+  A：考虑得咋样 名额就今天 过了这村没这店
+  B：我真急着用钱 保证金打给你就能放款是吧
+  A：对 你把保证金打过来 我马上递件 最快下午到账
+  B：行 那我先转给你
+  A：转吧 转完把截图发我
+  【系统消息】B 向 A 转账 1500 元，已收款。
+  B：转好了 你看下
+  A：收到 我这就递上去 你等消息
+  B：哥 递上去了吗
+  A：在走了 你别催 系统排队
+  B：款到账没 我这边等着用
+  A：财务那边卡了一下 明天上午肯定到
+  B：你可别骗我 那一千五是我借的
+  A：骗你干啥 明天不到你骂我
+  【4月10日】
+  B：哥 一上午了 还没动静
+  A：你征信那个逾期的原因 银行要补充说明 你再交五百材料费
+  B：还要交钱？我不交了 你把保证金退我
+  A：你别急 材料费交了今天就能下来
+  B：我打你电话怎么不接
+  B：你把钱退我
+  B：在不在了
+  B：退钱 不然我报警了
+  A：你报吧 合同你都签了 上面写得清清楚楚
+  B：那合同就是张图片 我一查就知道是假的
+  A：随你便

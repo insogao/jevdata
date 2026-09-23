@@ -1,0 +1,120 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000625
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-61deab4f6651e577
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 做舆情合作的 A 想借小号、相册原图时间和过往转发记录把一个匿名账号对到真人，B 提醒这已经越界、只应做公开信息与品牌舆情，双方最终守住只分析公开数据的边界，并有一笔正常业务结算。
+  critical_evidence:
+  - A 说已经把对方的小号翻出来，想和主号对上
+  - A 提到可以看相册原图的拍摄时间和过往转发记录来推断本人
+  - B 提醒这类做法越界，只做公开舆情、不针对个人身份
+  - 两人有一笔正常的业务结算转账
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 6
+  turn_count: 43
+  approximate_tokens_estimate: 797
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0044
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:2a86072cf3cea75129fab10156e26134842eb1d754494c244530fb2aa368854d
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【9月3日】
+  A：这个月舆情简报我看完了
+  B：数据还行吗
+  A：热度挺高 但有个匿名号一直带节奏
+  B：哪个
+  A：我把他小号也翻出来了 想跟主号对上
+  B：对上干嘛 咱们只看公开数据
+  A：就看看是谁在后面带
+  B：那越界了 别碰个人身份
+  A：我就看一眼
+  B：看一眼也不行 咱们的合同写的就是公开范围
+  A：中午吃啥
+  B：楼下快餐 随便对付
+  A：我也一样 最近忙
+  B：忙完这阵歇歇
+  A：其实看相册原图的时间就能推出大概在哪
+  B：停 这就是拿公开痕迹拼人
+  A：还有他以前转发过什么都能查到
+  B：查到是一回事 用来对身份是另一回事
+  A：行 那我不往下挖了
+  【9月4日】
+  B：今天的榜单出来没
+  A：出来了 我整理成表发你
+  B：好 只留公开来源的
+  A：放心 都是公开链接
+  A：昨天降温 你那边下雨没
+  B：下了一夜 早上还阴着
+  A：我出门忘带伞 淋了
+  B：哈哈 注意别感冒
+  【9月5日】
+  A：那个匿名号又发了 我没理他
+  B：对 咱们按数据说话 不针对人
+  A：嗯 我把话题热度图和来源都列好了
+  B：发我 我这边做可视化
+  B：你周末回老家不
+  A：回 我妈包饺子
+  B：羡慕 我加班
+  A：辛苦 下次一起
+  【9月6日】
+  A：这周的活交了吧
+  B：交了 客户挺满意
+  A：那咱把账结一下
+  B：按合同这单我转你
+  A：行
+  【系统消息】B 向 A 转账 3200 元，已收款。
+  A：收到 下月继续
+  B：继续 只做公开的
+  A：明白

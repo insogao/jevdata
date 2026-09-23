@@ -1,0 +1,137 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000694
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000126
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-2ba7254df44e6efb
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: coercion_blackmail
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 技术骨干 A 提出离职，但不想按约定承担竞业限制赔偿，还向老板 B 索要一笔额外补偿。A 暗示公司核心项目代码已经拷到自己手里，并以“不答应就把东西发到对手公司邮箱”相威胁。B 评估风险后被迫妥协，免除了竞业条款约定的赔偿并转账一笔钱，A 确认收到后承诺不再纠缠。
+  critical_evidence:
+  - A 提出离职，并明确要求免除自己该承担的竞业限制赔偿和相关条款
+  - A 暗示公司核心项目的代码资料已经拷到了自己手里
+  - A 威胁如果 B 不答应免除赔偿、不给补偿，就把代码发给竞争对手公司的邮箱
+  - B 被迫妥协、转账一笔补偿款，A 确认到账后表示会按约定离开
+  benign_alternatives:
+  - 离职交接谈判
+  - 技术方案转让
+
+attributes:
+  duration_days: 5
+  turn_count: 59
+  approximate_tokens_estimate: 1359
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: trade_secret_threat
+  risk: 2
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0046
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:7e3bd2892fdffd8cbe1c5e2c84a3bf1c5feae064c3627e056c847bbb70570ff0
+pipeline_status: accepted
+title: coercion_blackmail/trade_secret_threat
+conversation: |-
+  【11月3日】
+  A：老板 我想跟你谈个事 关于我离职的
+  B：你说 我也正想找你聊聊
+  A：我这边定了 月底走
+  B：行 好聚好散 交接做好
+  A：交接没问题 但那个竞业协议 赔偿我承担不了
+  B：当初可是你自己签的 白纸黑字
+  A：所以我不是来通知你 是来跟你商量
+  B：商量什么
+  A：条款免了 再给我一笔 大家都省事
+  B：你这话什么意思
+  A：我刚整理项目 顺手把核心那部分代码都拷了 备份在我这
+  B：你疯了 那是公司的东西
+  A：我知道是公司的 所以我才跟你好好说
+  B：你先冷静 事情不是这么谈的
+  A：我很冷静 你考虑一下 别逼我
+  B：中午一起吃饭 边吃边聊
+  A：不去了 你什么时候想通什么时候说
+  B：你这脾气 好歹同事几年
+  【11月4日】
+  B：昨天说的 我再问一句 你想要多少
+  A：竞业那块免了 另外给我六万 就当补偿
+  B：六万 你张口就来
+  A：跟那批代码比 这数不贵
+  B：我要是不给呢
+  A：那我就把东西发到城建那边对手的邮箱 他们早想要了
+  B：你别冲动 那是要出事的
+  A：出事的是你 不是我
+  A：对了 你上回让我看的那个竞品 我整理了个对比表 回头给你
+  B：先不谈这个 我头都大了
+  A：哈哈 你也知道头疼
+  B：晚上有空吗 我想当面聊聊 别在微信说
+  A：没什么好聊的 条件就那样 你答应就答应
+  B：给我一天时间 我周转一下
+  A：行 明天中午前 过时不候
+  【11月5日】
+  B：孩子发烧 我一晚上没睡
+  A：要紧吗
+  B：退了 折腾人
+  A：那就行
+  B：我想好了 但你要当着面把东西删了
+  A：删不删的你别管 钱到了我就不往外发 我说话算话
+  B：行 我下午转 竞业那块我让法务出个解除函
+  A：解除函必须出 这是前提
+  B：知道了
+  B：法务函我让拟了 下午盖章
+  A：嗯 钱呢
+  B：财务走一笔 今天就到你账
+  【系统消息】B 向 A 转账 60000 元，已收款。
+  B：六万转你了 解除函明天给你 你按约定办
+  A：收到 放心 我这边不会往外发 咱两清
+  B：交接清单你这两天给我
+  A：明天整理 该交的我交
+  【11月6日】
+  B：解除函盖章了 拍照给你
+  A：收到 这就稳了
+  B：以后别再做这种事 谁也保不齐谁
+  A：你不要我 我也不惹你 就这样吧
+  【11月7日】
+  B：工具人走了 组里这几天忙疯
+  A：该招人了 别指望我回头
+  B：放心 不会找你
+  B：周末球赛还看吗 老地方
+  A：看 但不是跟你
+  B：随你

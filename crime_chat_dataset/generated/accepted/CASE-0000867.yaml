@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000867
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000146
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-cf33a0961465ab7e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: other_illicit_coordination
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 带头的 A 向供号的 B 要一批养熟的账号，配上统一文案在指定时间分波带节奏，做成有组织的水军控评，B 供号拿货、A 结款，表面像一场普通的线上推广。
+  critical_evidence:
+  - A 要求一百个号今晚开工，让 B 按排期分波上
+  - A 说文案我发你，让 B 安排人照发、别扎堆
+  - B 抱怨号商欠我货、库存不够，A 催先垫上并结了一笔正常货款
+  - 节奏数据起来后，两人约定月底统一结算
+  benign_alternatives:
+  - 营销推广讨论
+  - UGC运营
+
+attributes:
+  duration_days: 6
+  turn_count: 53
+  approximate_tokens_estimate: 896
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: rating_farm_order
+  risk: 1
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0054
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:1ca4623eb1c879c8ec1422da7ae7dbd0236ddd098e9baf04caed0010fa1d142e
+pipeline_status: accepted
+title: other_illicit_coordination/rating_farm_order
+conversation: |-
+  【8月2日】
+  A：这批的号备得咋样了
+  B：一百个 昨晚刚养完
+  A：行 今晚开工 文案我发你
+  B：发吧 我让人等着
+  A：分三波 九点十一点一点 别扎堆
+  B：收到 我排个班
+  B：午饭一起?
+  A：不了 我在外面办事
+  B：行 那我自己吃
+  A：号都登上了吗
+  B：登了 有个别卡 我换了几台
+  A：别用太集中的 分开发
+  B：嗯
+  【8月3日】
+  B：昨晚那批都发了 有几条被吞
+  A：正常 换文案再顶 别硬刷
+  B：好
+  A：号商欠我货 你那边还有没有余量
+  B：不多了 你先结上一批的吧
+  A：结 我这就转 你先把缺口垫上
+  【系统消息】A 向 B 转账 2600 元，已收款。
+  B：行 我去调
+  B：你上次推荐那个膏药挺好用
+  A：对吧 我妈也说管用
+  B：再帮我买两盒 我给你钱
+  A：送你了 别客气
+  【8月4日】
+  A：数据起来没
+  B：那条热了 评论也顺
+  A：稳住 这两天别断
+  B：号够的话没问题
+  B：晚上加个班行不 人手不够
+  A：加 加班的钱另算
+  B：好 我留两个人
+  【8月5日】
+  B：又到了一百五十个 上午能上
+  A：好 老规矩排表 分波
+  B：表发我
+  A：这周孩子开学 你送不
+  B：送 早上堵得厉害
+  A：早点出门 别赶
+  B：嗯 你娃呢
+  A：奶奶送 我省心
+  【8月6日】
+  A：这两天节奏乱 有人发重了
+  B：我查下 估计是新人没看清表
+  A：重了会被人看出来 盯紧点
+  B：知道 我重新培训下
+  B：这波量大 分成怎么算
+  A：还是老比例 你多劳多得
+  B：行 那我多接点
+  【8月7日】
+  A：这批完歇两天 别太密
+  B：好 让大家缓口气
+  A：月底一块结 我这边也盘下账
+  B：行 老时间
+  B：下周有批新号到 提前说声
+  A：留着 等通知
+  B：好

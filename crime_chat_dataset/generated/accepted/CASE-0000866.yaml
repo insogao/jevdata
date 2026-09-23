@@ -1,0 +1,119 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000866
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000136
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-106878250e634d38
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: other_illicit_coordination
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 写脚本的同事 A 把改好的抢票加速包交给做代抢的同事 B，B 用它在放票时段批量下单再按张加价转售，实名认证的缺口由 B 用备用资料兜底，两人按月分成。
+  critical_evidence:
+  - A 告诉 B 加速包参数调好了，让 B 先拿周末一场跑二十单试稳不稳，还叮嘱别用自己常用设备
+  - B 跑了一晚中了三单，A 说成功一张三百，按这个走
+  - 客户资料不全时 B 说实名问题我来搞，A 让用那批备用的、别用真的
+  - 收工后按你七我三分成，A 给 B 转了一笔正常的分成款
+  benign_alternatives:
+  - 候补购票技巧
+  - 正规代购
+
+attributes:
+  duration_days: 4
+  turn_count: 42
+  approximate_tokens_estimate: 770
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: ticket_scalp_bot
+  risk: 1
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0054
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:2682a231ac12a7f6671bbee95fe19fd4ab743d0e14e5f102cd1db7e8136f29a4
+pipeline_status: accepted
+title: other_illicit_coordination/ticket_scalp_bot
+conversation: |-
+  【8月20日】
+  A：在吗 加速包参数调好了 你测下
+  B：好 我拿周末那场试试
+  A：先跑二十单 看稳不稳
+  B：行 稳了我就放量
+  A：记得用那台备机 别拿自己的号练
+  B：知道 老规矩
+  B：下午那个会你替我说一声 我请个假
+  A：又请假 主管昨天还问你
+  B：家里有点事 真走不开
+  A：给你挡了 下次别太频
+  B：谢了
+  A：中午吃啥了
+  B：楼下那家面 凑合
+  A：食堂新开了个档口 还行
+  B：明天去尝尝
+  【8月21日】
+  B：跑了一晚 中了三单
+  A：可以 成功一张三百 按这个走
+  B：客户那边催得急 能不能先给一张
+  A：先给 别一次给完 吊着点
+  B：昨晚熬到三点 眼睛疼
+  A：悠着点 就那几波 抢完补觉
+  B：嗯 今天早点睡
+  【8月22日】
+  B：实名问题我来搞 有几个客户资料不全
+  A：别用真的 用那批备用的
+  B：放心 我懂
+  A：你那显示器哪买的 推我个链接
+  B：618 买的 便宜 我发你
+  A：好 正好想换个大的
+  B：对了 下一场啥时候
+  A：周五那场 热门 提前把参数再压一压
+  B：好 我盯着
+  【8月23日】
+  B：这周的单算下 分我多少
+  A：老规矩 你七我三 我这就转你
+  B：行
+  【系统消息】A 向 B 转账 2100 元，已收款。
+  A：周末回老家不
+  B：回 我妈让带点东西
+  A：那顺路捎我一段
+  B：行 老地方等
+  A：周五那场我再调调 你先把号养住
+  B：嗯 这几天都在放风
+  A：别放太猛 留点
+  B：知道

@@ -1,0 +1,159 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000482
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000050
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-53ce17bf0e95ad40
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: violence_extortion
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 在街口摆摊多年的 A 见新来的 B 在同段支摊抢生意，便以「这条街的规矩」为由软硬兼施，让 B 交钱或挪走，话里夹着「明天还来就别怪我」「兄弟多问候」的暗示，B 被逼转了一笔钱换平安。
+  critical_evidence:
+  - A 是这条街口摆摊多年的老摊主，见 B 新来在同段支摊
+  - A 反复拿「这条街的规矩」说事，语气先软后硬
+  - A 警告 B 明天还来就别怪他，还提「兄弟多，可以来问候问候」
+  - B 被逼转给 A 一笔钱
+  benign_alternatives:
+  - 同业竞争摩擦
+  - 市场管理规劝
+
+attributes:
+  duration_days: 2
+  turn_count: 84
+  approximate_tokens_estimate: 2199
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: territory_warning
+  risk: 2
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0043
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:6c0684c399a02cad2879eba6def09fc88e58557b2b66808beaa7edcbee3fd301
+pipeline_status: accepted
+title: violence_extortion/territory_warning
+conversation: |-
+  【9月15日】
+  A：兄弟 新来的吧
+  B：是啊 哥 第一天来这摆
+  A：我这摊在这摆了七年了 你这位置 正对着我炉子
+  B：我不知道哇 看着这儿人多我就搁这了 要不我挪挪
+  A：挪不挪的先不急 你先明白这条街的规矩
+  B：啥规矩 哥你说
+  A：这条街口就我们几家 谁来摆都得先跟老的打个招呼 这是规矩
+  B：那我这不打招呼了吗 哥你别介意 我真不懂
+  A：打招呼是打招呼 规矩是规矩 两码事
+  B：那哥你给个明白话 我咋做
+  A：我今儿还得备货 回头跟你说 你先摆着
+  B：行 哥
+  A：你这锅贴一份多少钱
+  B：八块 我这是薄利
+  A：八块？我这卖十块 你这不是砸行市吗
+  B：哥 我就图个回头客 没想那么多
+  A：这条街谁不图回头客 可你价压这么低 我们老的喝西北风
+  B：那我涨上来跟你们一样行不
+  A：涨价是一方面 你这位置还得说
+  B：哥 你到底想让我咋弄 你直说
+  A：我这人不爱绕 你在这摆 一天得有个说法
+  B：说法是啥 交管理费吗 隔壁市场好像也交
+  A：管理费那是市场收的 我这是老规矩 一天五十 你摆一天给一天
+  B：哥 我这刚开张 一天五十我这没赚头啊
+  A：没赚头就别摆 这条街不缺你一个
+  B：哥你这话就不好听了
+  A：我这是好话 你听听清楚
+  A：中午吃啥呢
+  B：就自己摊上剩的 随便吃点
+  A：我这有卤的 给你夹个饼 都是这条街的 别饿着
+  B：谢哥 不用不用
+  A：拿着 我不是那小气人 该讲规矩讲规矩 该照应照应
+  B：那谢谢哥
+  A：你先吃着 想明白了跟我说
+  B：哥 我想了 一天五十我确实顶不住 你看能不能少点
+  A：少点？我这都还没跟你算你抢我多少客
+  B：我真没抢 我这新摊哪抢得过你老的
+  A：嘴上说没抢 你这一天卖多少你自己清楚
+  B：哥 要不说个整的 我一个月给你多少 别按天
+  A：你要包月也行 一千五 少一分我不管你是不是新来的
+  B：一千五……哥我一个月净赚都没这么多
+  A：那是你的事 这条街的规矩不是我定的 是我接手以前就这样
+  B：那我今天先不摆了 我回去想想
+  A：随你 但你要明天还来 就别怪我没提前跟你说
+  B：哥 你这话啥意思
+  A：没啥意思 就是这条街上我兄弟多 平时没事就来问候问候
+  B：……哥 你这是威胁我啊
+  A：我可没说什么 我就是提醒你 出门在外多个朋友少个对头
+  B：我懂了哥 我明天不来了 我把摊撤了
+  A：撤不撤是你的事 我不是要赶你 是要你有个态度
+  B：啥态度
+  A：你占了这条街最旺的口子 总得意思意思吧
+  B：意思多少
+  A：你这今天一天 给两百 就算见面礼 以后我给你看着点
+  B：两百……行吧 我给 但话说前头 我明天真不来了
+  A：来不来另说 钱先给我 我记你个明白
+  B：我转你
+  【系统消息】B 向 A 转账 200 元，已收款。
+  A：收到了 你这人还算上道
+  B：哥 钱给了 你说的话也算了
+  A：放心 我说话算话 你在这摆我给你罩着
+  B：嗯
+  A：对了 你那面糊是自己和的还是买的
+  B：自己和的 加了点东西 香
+  A：看着是比我那软 回头教教我
+  B：行 哥你要学我告诉你
+  A：这就对了 一条街的 互相照应
+  B：哥 我收摊了 明天我想想再说
+  A：行 明天我在 你随时来
+  【9月16日】
+  B：哥 我今天没出摊 在家歇着
+  A：歇歇也好 想清楚 这口子我给你留三天
+  B：谢谢哥 我心里有数了
+  A：嗯 那条街上的事 你记住个分寸就行
+  B：记住了
+  A：今天天阴 你那边要是出摊记得带篷布
+  B：没出 在家修那台三轮
+  A：三轮咋了
+  B：链条掉了 自己接上就行
+  A：那简单 我这有工具 缺啥来说
+  B：好 哥
+  A：考虑得咋样
+  B：哥 我不回那条街了 我去南边市场找个位置
+  A：行 你去哪我不管 咱们把话说开就行
+  B：嗯 那两百就当交个朋友的学费了
+  A：识相 以后路过我摊 免费给你来一份

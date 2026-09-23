@@ -1,0 +1,129 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000698
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000045
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-c5da4d01df2e3737
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 无隐藏意图：A 是沿街商铺所在片区的物业代收员，也是 B 的老乡。月初 A 按惯例提醒 B 缴纳本月物业管理费，提到隔壁店因长期拖欠费用导致公共下水道疏通维修被排在最后，B 随后微信转账缴纳本月物业费 800 元，A 承诺开好正规物业发票并安排电工修门口的灯。
+  critical_evidence:
+  - A 是负责这一片商铺的物业管理费代收员，和 B 是同乡，月初固定提醒 B 缴费
+  - A 提到隔壁理发店拖欠两个月物业费，报修单被排到最后，公共下水道疏通先紧着交了费的店
+  - A 说自己人手少、挨家挨户跑不容易，让 B 体谅把本月费用先交上
+  - B 转账 800 元本月物业费，A 确认收到并承诺开好正规物业发票、安排电工修店门口的灯
+  benign_alternatives:
+  - 物业费催缴
+  - 商会会费
+
+attributes:
+  duration_days: 6
+  turn_count: 50
+  approximate_tokens_estimate: 1228
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: protection_fee
+  risk: 0
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0046
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:e759d8ea92b6694af7c2e0b958bc0e389851718c141b902a62eb3945a00c826b
+pipeline_status: accepted
+title: violence_extortion/protection_fee
+conversation: |-
+  【9月1日】
+  A：老乡 在店里没 月初了 我把这月的费用单子给你送过去
+  B：在呢 刚开门 你放前台就行
+  A：我一会儿到 顺便跟你说个事
+  A：咱这一排的下水道堵了 上周找人通了半天
+  B：我听说了 巷口那家味儿挺大
+  A：就是那家 货堆门口 油污全往沟里倒
+  B：那家也是 一天天的
+  A：我人手不够 这一片就我一个人跑 月初还得挨家收
+  B：你也够累的
+  A：兄弟们都不容易 我也是替公司跑腿
+  B：嗯 这月多少
+  A：还是老数 800 物业管理费
+  B：行 我这两天转你
+  B：中午吃啥 对面新开了家面馆
+  A：我随便对付一口 还得跑三家
+  B：那面馆牛肉面不错 改天一起
+  A：行 等忙完这阵子
+  【9月2日】
+  B：对了 隔壁理发店是不是上月费用没交
+  A：拖俩月了 报修单排到最后 通下水道先紧着交费的店
+  B：还能这样
+  A：公司也是这规矩 你也知道 钱到位事好办
+  B：那我这月先交 省得到时候有事没人管
+  A：你交了我这边好登记 回头帮你盯着点
+  A：你家小子开学了吧
+  B：上初一了 天天闹腾 作业也不写
+  A：我家那个也皮 前两天把台灯弄坏了
+  B：哈哈 男孩都这样 熬着吧
+  【9月3日】
+  B：费用单子我看了 就按单子转
+  A：对 单子上写得清清楚楚 物业管理费
+  B：发票要正规的 我记账要用
+  A：知道 公司抬头开给你 这周就送来
+  【系统消息】B 向 A 转账 800 元，已收款。
+  A：收到 800 分文不差
+  B：好 顺便把门口那个灯修一下 坏好几天了
+  A：记下了 明天让电工过去看
+  【9月4日】
+  A：电工上午去了 说是灯管坏了 换上就好
+  B：这么快 谢了
+  A：客气啥 交了费的事 该修的都给修
+  B：这两天降温 店里空调开起来了
+  A：我看天气预报 后天还有雨 门口那货盖一下
+  B：知道了 你比我媳妇还操心
+  A：哈哈 干这行的 见天惦记你们这些店
+  【9月5日】
+  A：发票开好了 明天路过给你送店里
+  B：行 放前台
+  A：这个月就齐活了 下月我再提醒你
+  【9月6日】
+  B：发票收到了 抬头没问题
+  A：那就好 有事随时喊我
+  B：好嘞 老乡
+  A：晚上那面馆还去不去 我收完了
+  B：去 我关门就过来
+  A：老位置等你

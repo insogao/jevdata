@@ -1,0 +1,123 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000825
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000051
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-e16c9995597bfb9c
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A 与一名网友结怨，拉上 B 组织群里的人一起冲对方：A 许诺谁扒到对方真实信息、住址就给线索费，先转了一笔钱让 B 在群里发红包带节奏；两人商量把对方全家的信息挂到小区群、学校群，并叮嘱都不要用大号出面。
+  critical_evidence:
+  - A 称对方在自己评论区一直蹦跶，要发动群里一起冲他，让 B 帮忙带节奏
+  - A 提出悬赏线索费，谁扒到对方真实信息、住址就给钱，先转一笔让 B 在群里发红包
+  - A 说等线索凑齐就把对方全家的信息挂到小区群、学校群，让他没脸
+  - 两人商量都别用大号出面，事后谁也别说谁带的头
+  benign_alternatives:
+  - 舆论监督讨论
+  - 维权信息征集
+
+attributes:
+  duration_days: 3
+  turn_count: 47
+  approximate_tokens_estimate: 982
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: online mob_doxx_attack
+  risk: 3
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0047
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:a3367d4e44bec747f9f052f04d35ccf47d4272b2be9b4b38c61c591c0e81c9cf
+pipeline_status: accepted
+title: violence_extortion/online mob_doxx_attack
+conversation: |-
+  【9月8日】
+  A：哥几个 那货又在我评论区蹦跶
+  B：哪个 就上回骂你那个
+  A：对 就是他 我忍不了了
+  A：我想发动群里一起冲他 你会带节奏 帮我一把
+  B：怎么冲 骂几句
+  A：骂是基础 得把他搞怕
+  A：谁能扒到他真实信息 住哪 电话 我给线索费
+  B：这个有点狠啊
+  A：他先招惹我的 别替他心疼
+  A：我先转你点钱 你拿去发红包 激励一下群里
+  【系统消息】A 向 B 转账 1500 元，已收款。
+  B：收到 那我先在小号群里说
+  A：别用大号 到时候查起来麻烦
+  B：懂
+  A：睡没
+  B：还没 刷手机呢
+  A：明早记得把红包发出去
+  B：知道 你早点睡
+  【9月9日】
+  B：红包发完了 群里有人接了
+  A：好 有人接活没
+  B：有俩说认识那片区 正在打听
+  A：让他们快点 谁先弄到给谁加钱
+  A：到时候把全家信息挂出来 看他还敢不敢嘴硬
+  B：挂哪
+  A：就挂他们小区群 学校群 让他没脸做人
+  B：他家好像有小孩在上学
+  A：那更好 家长最怕这个
+  B：中午吃点啥 天气太热没胃口
+  A：随便点了份面 你那边热不
+  B：三十多度 空调不敢关
+  A：晚上就凉快了
+  B：有个哥们说打听到大概在哪片了
+  A：让他继续 门牌要准的
+  A：照片也备一张 挂的时候一起发
+  B：行
+  【9月10日】
+  B：打听到他家在哪个小区了 门牌还在确认
+  A：好 别打草惊蛇
+  A：凑齐了一起发 配张图 效果拉满
+  B：哥 这事会不会太过了
+  A：开弓没有回头箭 你钱都收了还想退
+  B：行吧 我跟着弄
+  A：记住 谁都别说是谁带的头
+  B：放心 都用的新号
+  A：今晚先把骂的那批放出去 造点势
+  B：好 我让他们分几个号发
+  A：嗯 别扎堆 看着像真的
+  B：发出去了 评论已经炸了
+  A：好 等门牌 一到位就给最后一击

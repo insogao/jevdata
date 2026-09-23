@@ -1,0 +1,130 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000861
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000136
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-fbd3129a7e390680
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: other_illicit_coordination
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 带人的 A 把抢票脚本交给跑单的 B 执行，B 在放票时批量下单、处理实名，按成功张数加价转售，A 负责对接客户和定期分账。
+  critical_evidence:
+  - A 说加速包参数调好，让 B 拿周五那场先跑，别用自己账号
+  - B 反馈中了几张，A 说成功一张三百，让 B 分波给客户别一次出完
+  - 客户资料不齐时 A 说实名问题我来搞，指示 B 用备用资料顶上
+  - A 按本周张数给 B 转了一笔正常分成
+  benign_alternatives:
+  - 候补购票技巧
+  - 正规代购
+
+attributes:
+  duration_days: 6
+  turn_count: 51
+  approximate_tokens_estimate: 853
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: ticket_scalp_bot
+  risk: 1
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0054
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:dc486556985ebd4d439d6c505fc68fa5413f1656906be2375858cea8c6856d24
+pipeline_status: accepted
+title: other_illicit_coordination/ticket_scalp_bot
+conversation: |-
+  【7月10日】
+  A：周五那场 你准备下
+  B：参数还是老的那套?
+  A：我重新调过了 加速包参数调好 你直接跑
+  B：好 我先拿小号试
+  A：对 别用你自己常用的 出过事就麻烦
+  B：懂
+  B：中午那家新开的去不去
+  A：人多不
+  B：排队 我先占位
+  A：行 十分钟到
+  B：那边客户又加了两张 能接不
+  A：接 让他先付定金
+  B：好
+  【7月11日】
+  B：昨晚试跑 中了一张
+  A：成功一张三百 按这个走 稳了放量
+  B：好 周五多跑点
+  A：别贪 先稳
+  A：你这月体检做了没
+  B：没 拖了
+  A：公司有免费额度 去做了
+  B：行 下周去
+  【7月12日】
+  B：周五那场跑完了 中了六张
+  A：可以 分波给客户 别一次出完
+  B：知道 我压着两张
+  A：对 越往后价越能谈
+  B：有个客户资料不全 只有身份证
+  A：实名问题我来搞 用备用那批资料
+  B：好 那我不用管
+  A：对 你别经手 免得留痕
+  A：下午开个短会 你替我把材料发群
+  B：好 几点
+  A：三点 我发你文件
+  【7月13日】
+  B：那几张都出完了
+  A：价格怎么样
+  B：后面两张抬了一点 客户认了
+  A：好 这周数我理下
+  B：这周的份子啥时候结
+  A：这就转 本周你七我三
+  【系统消息】A 向 B 转账 1470 元，已收款。
+  B：收到
+  A：下周还有两场 你先歇一天
+  B：行 正好陪孩子
+  【7月14日】
+  B：周末去你那边钓鱼不
+  A：来啊 我新买了竿
+  B：带点吃的过去
+  A：行 早点来
+  【7月15日】
+  A：下场周三 提前把号预热
+  B：收到 我这两天放风
+  A：这次想多跑点 你看看人手
+  B：我再拉一个帮我点
+  A：行 嘴要严
+  B：放心

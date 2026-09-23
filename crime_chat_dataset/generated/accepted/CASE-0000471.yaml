@@ -1,0 +1,130 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000471
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000140
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-31f379c31ada5ad5
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: other_illicit_coordination
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 包工头A的临街自建房违规加层，靠亲戚B（在城管巡查口做事）通风报信、巡查时放水；A按老规矩给B送上好处费，B称年前不会来查，让A尽管施工。
+  critical_evidence:
+  - A 的临街房未批先建、违规加层，怕被巡查叫停
+  - B 是城管巡查口的关系人，口头承诺「年前不会来查」
+  - B 提到「烟酒照旧」，即按老规矩收好处
+  - A 转给B 5000 元好处费
+  benign_alternatives:
+  - 正规报建流程
+  - 物业装修管理
+
+attributes:
+  duration_days: 3
+  turn_count: 54
+  approximate_tokens_estimate: 1226
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: illegal_construction_bribe_inspect
+  risk: 2
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0042
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:c94eeed7d3eb0d950d81bd2c7d0fb3deb413e714d65479f21ffee75356ffcb6e
+pipeline_status: accepted
+title: other_illicit_coordination/illegal_construction_bribe_inspect
+conversation: |-
+  【11月3日】
+  A：表哥 忙不
+  B：咋了 一大早的
+  A：我那临街那栋 想往上再接半层 钢筋都进场了
+  B：加层？手续呢
+  A：报了 卡在规划那边 你也知道 走不下来
+  B：你这胆子不小
+  A：所以先跟你通个气 这几天有巡查没
+  B：正常每天都有人巡 不过你那边是背街 一般看一眼就走
+  A：那就行 我抓紧干
+  B：对了 昨儿降温 你工地那边给工人弄点姜汤 别冻感冒耽误工期
+  A：弄了 一桶放那随便喝
+  B：那就行 你那材料别堆马路上 被人看见就麻烦
+  A：知道 都圈在院里
+  A：哥 你闺女那奥数班还上着没 我儿子也想报一个
+  B：上着呢 周六上午 就是有点远
+  A：远没事 我接送 正好跟你家的一起
+  B：行 回头把老师微信推你
+  A：谢哥
+  【11月4日】
+  B：跟你说个事 这周片区有统一整治 你先停两天
+  A：啊 那材料放那生锈
+  B：停两天总比被拆强 你听我的
+  A：行 听你的 我让工人先歇着
+  B：我也不是白帮你 到时候照老样子
+  A：懂 哥放心
+  A：哥 中午过来吃个饭不 我这边炖了排骨
+  B：不了 所里食堂
+  A：那给你留一碗 晚上给你送我婶那
+  B：行 你婶爱吃
+  A：哥 我叔那高血压药还得吃吧
+  B：吃着呢 断不了
+  A：我认识个心内科的 回头带你俩去复查下
+  B：有心了
+  【11月5日】
+  B：整治过了 我跟队里打过招呼 你那片年前不会来查 放心干
+  A：稳了？谢谢表哥
+  B：老规矩 烟酒照旧 你自己看着办
+  A：明白 中午给你转过去
+  B：别在微信上说这些 回头见面再说
+  A：好 我注意
+  A：哥 上回你说的那个数 我按老规矩来了
+  【系统消息】A 向 B 转账 5000 元，已收款。
+  B：收到 别声张
+  A：嗯 我嘴严
+  B：你那院墙的颜色太扎眼 刷个灰的 别让人老远就注意
+  A：行 今天下午就让人刷
+  B：还有 晚上别开工 动静太大
+  A：白天干 晚上停 知道
+  A：哥 周末老家上坟你去不 我开车 顺道接你
+  B：去 你婶还说今年该提前
+  A：那周六早上七点 我到楼下
+  B：好
+  A：对了年货要不要一起订 我看那家腊味又涨价了
+  B：订 给我来两份 钱见面给你
+  A：客气啥 我一起付了
+  B：那不行 该咋给咋给
+  A：行行 回头说

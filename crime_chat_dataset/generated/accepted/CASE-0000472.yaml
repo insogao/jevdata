@@ -1,0 +1,118 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000472
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000060
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-99fc18523890fcaa
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A在社交平台私信招揽外地来打工的B，称能介绍去邻市「上班」，负责约见客人、陪场；A要求首单抽成三成，并再三交代行规——用化名、不私联客人、遇事只找A。全称未发生实际转账。
+  critical_evidence:
+  - A 主动私信招揽B，称能安排B去邻市「上班」
+  - A 说首单抽三成，条件好可以再谈
+  - A 交代行规：用化名、不私联客人、出事只找A
+  - A 催B尽快过去，并让B别跟家里说实话
+  benign_alternatives:
+  - 婚介红娘
+  - 夜场合法招聘讨论
+
+attributes:
+  duration_days: 4
+  turn_count: 43
+  approximate_tokens_estimate: 837
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: introductory_middleman
+  risk: 3
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0042
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:d493fc8c50ac769eeebf43fd9a9c5f083a02e77000c51eb3003147489e196983
+pipeline_status: accepted
+title: sexual_transaction_exploitation/introductory_middleman
+conversation: |-
+  【3月14日】
+  A：你好 看你在找工作 我这边有个岗位适合你
+  B：什么岗位
+  A：陪场 收入高 日结 你来钱快
+  B：在哪
+  A：邻市 高铁四十分钟 我这边管接送
+  B：我没什么经验
+  A：没经验才要带 我专带新人 上手快
+  B：一天能挣多少
+  A：看你 勤快点一两千 我抽三成 首单
+  B：抽三成挺多
+  A：场地 客人 摆事都是我 你只管上
+  B：让我想想
+  A：想啥 这种机会不等人 我这边名额就俩
+  B：我家里管得严
+  A：跟家里说在电子厂 你也不是第一个这么说的
+  B：那倒行
+  A：过来前先定几条 你别嫌我啰嗦
+  A：第一 用化名 真名谁都不许说
+  B：好
+  A：第二 客人加你私号一律不理 有事通过我
+  A：第三 场子里的事只跟我说 别自己找人说
+  B：懂了 都听你的
+  A：行 你什么时候能来
+  B：我这周把奶茶店的班辞了 下周能去
+  A：别辞 先请假 试两天合适再说
+  B：也对
+  【3月15日】
+  B：哥 我昨天跟我妈说去电子厂 她信了
+  A：嗯 这样就对了 少一事
+  B：我到了住哪
+  A：先住我这安排的地方 四个人一间 便宜
+  B：好
+  A：带两套像样的衣服 别穿太学生气
+  B：我衣服不多
+  A：到了先买 钱我垫着 从你工钱里扣
+  B：行 谢谢哥
+  【3月16日】
+  A：票买了没 周五下午三点那趟我接你
+  B：买了 周五3点18到
+  A：出站往东 白色SUV 我把车牌发你
+  B：好 到了联系你
+  A：到时候我教你 头一个客人咋应对 别怯场
+  B：嗯 我紧张
+  A：紧张正常 听话就行 我罩着你
+  B：好

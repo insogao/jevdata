@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000624
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000034
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-47438411e4cc0bb6
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: contraband_illicit_trade
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 是山货供货方，向老客户 B 长期供应山上野捕的货，全程用「山货」「山上跑的」代称、只在深夜联系、以冰鲜冷链发到固定地点，B 先付全款走熟客私下渠道。
+  critical_evidence:
+  - A 主动向 B 通报今年货情，说山里雨水足但货比去年瘦、价要往上走
+  - 两人全程用「山货」「山上跑的，不是圈里那种」代称，不直说是什么物种
+  - A 约定冰鲜走冷链发货，并反复强调只在夜里联系、白天不接电话不回消息
+  - B 先转账付全款，A 承诺到货后按斤结清，交付约在偏僻服务区固定位置
+  benign_alternatives:
+  - 合法养殖食材
+  - 工艺品收藏讨论
+
+attributes:
+  duration_days: 5
+  turn_count: 48
+  approximate_tokens_estimate: 970
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: wildlife_trade
+  risk: 3
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0044
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:e90aae9511d1c6a0a714493d14ab2e879193515e9151ef6403f20f1b7d65c6d5
+pipeline_status: accepted
+title: contraband_illicit_trade/wildlife_trade
+conversation: |-
+  【3月12日】
+  A：在的没
+  B：在 你说
+  A：今年货怎么样 我先给你透个底
+  B：我一直等你的信 今年山里雨水是足
+  A：雨水足 但货比去年瘦 价得往上走点
+  B：还是老规矩 按斤还是整只
+  A：按斤 冰鲜发 走冷链 老地方那个点
+  B：行 别换地方 上次那位置我熟
+  A：放心 只夜里联系 白天别打 我这边不方便
+  B：懂 白天我不吵你
+  B：娃这学期住校还习惯不
+  A：还那样 周六才回 天天嫌食堂难吃
+  B：我家那个也挑 周末回来我给炖排骨
+  A：哈哈 你这手艺娃有口福
+  B：下次给你捎点自己腌的酱
+  A：成
+  【3月13日】
+  B：在么
+  B：看到回我一句
+  A：白天不方便 跟你说了晚上说
+  B：知道 就是问下价
+  A：整斤二百六 比去年高二十 山上跑的 不是圈里那种 你懂
+  B：懂 要十斤 冰鲜别给我断了
+  A：冷链我盯着 到了给你信
+  B：先给你转全款 你查下
+  【系统消息】B 向 A 转账 2600 元，已收款。
+  A：收到 有数了
+  B：我妈下周来住几天 屋里得收拾收拾
+  A：老人来好 我那客房床垫该换了 睡一晚腰疼
+  B：换个硬点的 我上次买的那个还行 链接回头发你
+  A：行 你发我
+  【3月14日】
+  A：发车了 明早到 手机盯好
+  B：几点
+  A：后半夜 别白天打
+  B：行
+  B：你上次说换车那事定了没
+  A：还没 先凑合开 油价涨得凶
+  B：我那车也想换 等年底
+  A：到时候一起去看 能砍点
+  【3月15日】
+  A：到了 服务区老位置 你自己来取
+  B：好 明早去
+  B：对了天气预报要降温 你那边下雪没
+  A：飘了点 路上滑 你慢点开
+  B：嗯 我换雪地胎了
+  A：稳妥
+  【3月16日】
+  B：拿到了 冰得挺好
+  A：嗯 东西别放外面 先处理
+  B：知道 谢了
+  A：客气 下批大概月底 到时候夜里说
+  B：好 等你信

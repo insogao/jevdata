@@ -1,0 +1,110 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000736
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000105
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-c72dff03dacde537
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: theft_robbery_property_crime
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 长期搭档：A 负责「进货」，B 是收赃的下家，验货从不问来路，按老价格收走，事后再结一笔钱。
+  critical_evidence:
+  - A 说昨晚货刚到，让 B 过来看，东西来路不问也不用发票
+  - B 每次验货都不问来源，只看成色和数量就开价，这次按「老价格」收
+  - B 收到货后打给我一笔钱作为这一单的货款
+  - 两人是长期合作，B 明说了来路不明的货他一概不追
+  benign_alternatives:
+  - 二手回收商
+  - 闲置转让
+
+attributes:
+  duration_days: 6
+  turn_count: 35
+  approximate_tokens_estimate: 749
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: fence_stolen_goods
+  risk: 3
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0045
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:0b7566b70e567b17797131ebe0047eb4e11070be67454ff3d93a8398b2ebe2ea
+pipeline_status: rejected
+title: theft_robbery_property_crime/fence_stolen_goods
+conversation: |-
+  【11月2日】
+  A：哥 昨晚货到了 你要不要过来看看
+  B：多少台
+  A：六台 还有两副耳机 都挺新
+  B：成色怎么样 有没有磕碰
+  A：屏幕干净 后盖有点划痕 不影响出手
+  B：行 老地方见 十点半
+  B：说好啊 我只看货不看来源 你不用给我讲这些
+  A：懂 这么多年规矩我明白
+  A：你早饭吃了没 巷口那家包子不错
+  B：吃了 我媳妇煮的粥
+  A：嫂子勤快 我家那位一早出门跳操去了
+  B：哈哈 跳操好啊 少生病
+  B：到了 你把卷帘门拉起来
+  A：进来了 货在里屋桌上
+  B：六台都是好的 耳机也能听 这个牌子好卖
+  A：那是 我挑的都是好东西
+  B：按老价格收 一台三百 耳机一副一百 一共两千
+  A：行 就按你的来
+  B：现金还是走卡
+  A：走卡吧 现金太厚 我媳妇要问
+  B：行 我这就转
+  【系统消息】B 向 A 转账 2000 元，已收款。
+  A：两千到了
+  B：下周还有没有
+  A：有 我这边一直在弄 你放心
+  B：越多越好 我店里销得掉
+  A：哥 下午有空没 帮我看个车
+  B：看啥车
+  A：二手的 人家要价有点高 你会看 帮我压压价
+  B：行 我下午没事 你发个位置
+  A：城东那个汽配城
+  B：两点半到 你在那等我
+  【11月3日】
+  B：昨天那车还行 你真买了
+  A：买了 压下去三千 谢哥
+  B：客气啥 有空把这批货也备齐
+  A：知道了 我这两天就去弄

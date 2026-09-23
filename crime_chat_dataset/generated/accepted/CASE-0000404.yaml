@@ -1,0 +1,149 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000404
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000018
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-2858570e5fdd223d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 掌握评审话语权的负责人亲属 A，以“专家评审顾问”为名与企业主 B 约定签空白评审合同、按月固定付费，A 从不参加评审也不出具意见，用顾问费名义长期收钱。
+  critical_evidence:
+  - A 以负责人亲属身份压过 B，让 B 按他的安排走一份评审顾问合同
+  - 合同的服务内容空着，A 说回头自己补，B 只需盖章
+  - 约定每月固定一笔评审顾问费，按人头按月结，不做工作量核算
+  - 合作几个月 A 一次评审会没参加过，也没出过任何意见
+  - B 按约定打出第一笔固定评审顾问费
+  benign_alternatives:
+  - 真实行业顾问
+  - 正常专家评审费
+
+attributes:
+  duration_days: 3
+  turn_count: 71
+  approximate_tokens_estimate: 1561
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: consulting_fee_disguise
+  risk: 2
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0038
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-020
+
+dedup:
+  content_hash: sha256:06730d6d9f025da33efdcdf6691d8eaf0585caa8a8d5bf3484b990a4cce9d67c
+pipeline_status: accepted
+title: bribery_corruption/consulting_fee_disguise
+conversation: |-
+  【6月3日】
+  A：早上好 老李 上次说的那事 你这边准备得怎么样了
+  B：您好 我这边都听安排 就等您一句准话
+  A：那就走评审顾问这块 名字体面 也经得起问
+  B：好 那合同我来准备还是您那边出
+  A：我这有一份模板 内容先空着 你盖章就行
+  B：内容空白的话 我这边财务会不会问
+  A：问就说还在细化 你先走流程 别的不用管
+  B：行 我按您说的办
+  A：费用按人头算 一个月一结 固定数 别搞成一次性
+  B：明白 细水长流
+  A：对 按月走账 谁看着都正常
+  B：您最近还钓鱼吗 我看天热起来了
+  A：去 周末一般都在水库那边 一坐一天
+  B：悠闲啊 我这忙得脚不沾地
+  A：忙才有的赚 哈哈
+  B：借您吉言
+  A：合同电子版我发你 你打印盖章 扫描回我
+  B：好 收到就办 下午给您回
+  B：盖好章了 发您了 您看下
+  A：看到了 没问题 服务内容我回头填
+  B：好 您定
+  【6月4日】
+  A：第一笔这个月内安排一下吧 别拖到月底
+  B：好 我让财务这两天走
+  A：发票内容开评审费 别写别的
+  B：明白 专家评审费
+  A：嗯 以后每月我都提前跟你打招呼
+  B：行 我记着
+  B：我家那口子最近非要重新装修 烦死了
+  A：装就装呗 反正钱也是花在家里
+  B：关键是天天拉着我看材料 我哪有空
+  A：哈哈 男人都这命
+  B：可不是
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  A：到了 收到了
+  B：好 那这个月的齐了
+  A：对 下月老时间
+  【6月5日】
+  B：对了 月底那个评审会 您会来吗
+  A：我就不过去了 手上有别的事
+  B：那意见材料需要我们准备吗
+  A：不用 你们自己找人应付就行 别写我名字
+  B：哦 好
+  A：合同上挂个名 人会到不到位不重要
+  B：懂了 您放心
+  B：快递到了吗 我昨天寄的那箱山货
+  A：到了 我媳妇说挺好 谢了
+  B：客气啥 老家带来的 不值钱
+  A：有心了
+  A：你那边二期什么时候上 我看看能不能帮你说两句
+  B：下月 就等您这句话了
+  A：规矩你懂 别自己去乱找人 找我一个就够了
+  B：明白 只认您
+  A：嗯 顾问这块对谁都别提 免得节外生枝
+  B：放心
+  B：孩子期末考试考得咋样
+  A：一般 数学拉分 又要报班了
+  B：现在都卷 我闺女也一样
+  A：花钱如流水
+  B：哈哈 没办法
+  【6月6日】
+  A：提醒你一句 下月那笔还是老日期 别忘
+  B：记着呢 每月都安排好了
+  A：嗯 稳定就好
+  B：对了 评审合同那份内容您填好了吗 我这边备案用
+  A：随便写两句服务范围就够了 别太具体
+  B：好 那我就不催了
+  A：嗯 这事就这么定了
+  B：昨天有个同行问我你们这个评审费标准
+  A：你怎么说的
+  B：我说不了解 没敢多说
+  A：对 这种事越少人知道越好
+  B：嗯 我懂轻重
+  A：行 那就这样 有事微信说
+  B：好 您忙

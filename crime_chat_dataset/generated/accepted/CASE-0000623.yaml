@@ -1,0 +1,129 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000623
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000108
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-3926658d0a12e8c7
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: theft_robbery_property_crime
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 中间人 A 给 B 物色了一户老小区独居住户，告诉 B 那家好处理、傍晚五点半那阵人刚走、只去一次；B 动手后按老规矩给 A 转了一笔分成，全程不点破具体做什么。
+  critical_evidence:
+  - A 说给 B 物色了老小区那种，反复讲「好处理」，不点破用途
+  - A 提到傍晚五点半那阵人刚走，是最合适的空档
+  - 两人约定「只去一次」，拿完就走，事后分账
+  - B 完事后按老规矩给 A 转了一笔分成，双方只说「老规矩」
+  benign_alternatives:
+  - 正规开锁换锁
+  - 物业钥匙管理
+
+attributes:
+  duration_days: 6
+  turn_count: 50
+  approximate_tokens_estimate: 669
+  relationship: 中间人关系
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: key_copy_burglary
+  risk: 3
+  relationship: 中间人关系
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0044
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:efa58aa45c86c366f0cb453bbcec6cc9f2ad5e585875886b927adc51c9c57808
+pipeline_status: accepted
+title: theft_robbery_property_crime/key_copy_burglary
+conversation: |-
+  【5月6日】
+  B：哥 最近有合适的没
+  A：有个 位置我已经摸过了
+  B：什么样
+  A：老小区那种 你懂的 好处理
+  B：几点方便
+  A：五点半那阵 人刚走
+  B：就一次?
+  A：对 只去一次 拿完就走
+  B：里面啥情况
+  A：上班的 白天没人 楼道黑
+  B：行 我记下了
+  A：别急 这两天先去看看
+  B：晚上喝点不
+  A：不了 明早有事
+  B：那我自斟
+  A：少喝点
+  【5月7日】
+  B：那家我去看了 位置对
+  A：嗯 那就等点
+  B：前后楼有人不
+  A：那点都在做饭 没人在意
+  B：明白
+  A：今天降温 你加件衣服
+  B：知道了 你也是
+  A：我没事 天天跑
+  B：辛苦
+  【5月8日】
+  B：哥 那家车一直在楼下
+  A：白天不在就行 别盯着
+  B：好
+  A：成了之后老规矩 一半
+  B：懂
+  B：对了 球赛看了没
+  A：没看 没那心思
+  B：回头我告诉你结果
+  A：行
+  【5月9日】
+  B：我到了 那个点刚好
+  A：嗯 稳着点
+  B：出来了 顺
+  A：好 别多话
+  B：回头把钱给你
+  A：嗯 记得就行
+  【5月10日】
+  A：这两天别乱逛
+  B：知道 我在家待着
+  A：嗯
+  B：我妈让我回去吃饭 推不掉
+  A：去呗 正常点就行
+  B：好
+  【5月11日】
+  B：老规矩 给你转过去了
+  【系统消息】B 向 A 转账 4000 元，已收款。
+  A：收到 以后再说
+  B：行 有合适的再喊我
+  A：嗯 先歇着

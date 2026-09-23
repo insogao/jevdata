@@ -1,0 +1,157 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000402
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000148
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-e9795d4c76334772
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: other_illicit_coordination
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 中间人 A 向急着落户的毕业生家属 B 兜售两个稀缺落户指标，要求 B 先把社保挂靠在 A 指定的公司挂满一年，收取一笔好处费，并承诺办不成全额退款，实质是通过虚假社保做假落户。
+  critical_evidence:
+  - A 称手里就两个落户指标，让 B 抓紧，晚了就没了
+  - A 要求 B 把孩子的社保挂到指定公司，先挂满一年再说
+  - A 收 B 一笔指标好处费，承诺办不成就全额退
+  - B 怕夜长梦多，先打了一半定金过去
+  - A 反复叮嘱这事别到处说，材料按他给的走
+  benign_alternatives:
+  - 人才引进代办
+  - 积分落户咨询
+
+attributes:
+  duration_days: 4
+  turn_count: 79
+  approximate_tokens_estimate: 1839
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: residency_quota_trade
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0038
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-020
+
+dedup:
+  content_hash: sha256:ed5c3b382901e838d7094f24f2d91b3f9e4fb999754f11d7cd0feedf349cf269
+pipeline_status: accepted
+title: other_illicit_coordination/residency_quota_trade
+conversation: |-
+  【3月5日】
+  A：您好 是陈姐介绍的 说您家孩子今年落户的事
+  B：对对对 您是办这个的老师吧
+  A：嗯 现在指标紧 我这边还剩两个 您要办得抓紧
+  B：这么少吗 那得赶紧
+  A：是啊 一个季度就放这么几个 抢得快
+  B：那需要什么条件 孩子刚毕业 社保才交几个月
+  A：社保这块得先挂一年 我给您安排个公司挂上
+  B：挂靠?这样能查得出来吗
+  A：挂满了就对得上 谁还一户户去核 放心
+  B：哦 那费用怎么算
+  A：指标好处费一笔 社保那边另算 我给您个打包价
+  B：您说个数 我心里有底
+  A：八万 先付一半 剩下的办下来再给
+  B：不便宜啊
+  A：指标就这行情 过了这波涨得更凶
+  B：那要是办不成呢 钱能退吗
+  A：办不成全额退 我做这行好几年了 讲的是诚信
+  B：行 那我信您
+  A：您那边今天天气咋样 我这儿阴了一天
+  B：风大 冷得很
+  A：倒春寒 别急着收厚衣服
+  B：是 去年就吃了这个亏
+  A：哈哈 一样的
+  【3月6日】
+  B：老师 定金我这就打给您 您把账号发我
+  A：好 我发您 打过来我这边就锁名额
+  B：锁了就不给别人了吧
+  A：对 定金一到我就跟上面打招呼
+  B：行 我马上转
+  【系统消息】B 向 A 转账 40000 元，已收款。
+  A：收到了 名额给您锁上
+  B：麻烦您了 孩子的事就拜托您
+  A：客气 交给我
+  A：社保那边公司我找好了 回头把孩子的资料发我
+  B：要身份证和毕业证那些吗
+  A：身份证正反面 毕业证 还有一寸照 先这些
+  B：好 我晚上拍给您
+  A：嗯 社保挂上就等一年 期间别断
+  B：断了会怎样
+  A：断了前面白挂 得重新数 注意点就行
+  B：明白 我盯着
+  B：老师 我家孩子其实想考公 这落户影响吗
+  A：先落了再说 有了户口啥都好办
+  B：也是 我就是着急这个
+  A：都这样 早办早省心
+  【3月7日】
+  A：资料收到了 我这边今天就去递
+  B：好 顺利的话多久能下来
+  A：社保满一年才受理 所以急不来 先把一年挂满
+  B：那就是明年这个时候
+  A：差不多 中间我会盯着 有动静告诉您
+  B：好 那我等消息
+  B：对了老师 您老家哪的 听口音不像本地的
+  A：隔壁省的 来这边十几年了
+  B：怪不得 我说怎么听着亲切
+  A：哈哈 都是外地打拼的
+  B：都不容易
+  A：再跟您说一句 这事别往外说 传出去名额容易被截
+  B：放心 我嘴严 连他爸我都没细说
+  A：对 越少人知道越稳
+  【3月8日】
+  B：老师 我妹妹家孩子也想办 还有名额吗
+  A：就两个 您占了一个 还剩最后一个
+  B：那我让她赶紧找您
+  A：行 不过最后一个价可能高一点 您理解
+  B：明白 物以稀为贵
+  A：哈哈 陈姐介绍的人就是爽快
+  B：都是为孩子 没办法
+  A：您平时买菜是自己做还是外面吃
+  B：自己做 一家三口外面吃太贵
+  A：会过日子 我媳妇也爱做饭
+  B：自己做干净 就是费时间
+  A：是 下班还得买菜洗菜
+  B：哈哈 都一样
+  A：社保那边下月就开始扣 您孩子卡里留点钱
+  B：好 我让他留够 每个月多少
+  A：按最低基数 不多 具体我给您算好发过去
+  B：好的 谢谢您费心
+  A：应该的 拿钱办事
+  B：尾款到时候办下来一起给对吧
+  A：对 办不成我退您全款 一分不少
+  B：那我踏实了
+  A：嗯 就这样 有进展我找您

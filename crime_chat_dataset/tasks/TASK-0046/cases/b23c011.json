@@ -1,0 +1,282 @@
+{
+ "key": "b23c011",
+ "archetype_id": "ARC-000033",
+ "subtype": "replica_counterfeit",
+ "latent_intent": "A 是工厂渠道，向做微商的 B 推销一批货源，自称是“原厂尾单”、跟正品同一条产线出来，防伪码都能扫过，拿货价按量分级。B 心里犯嘀咕但没深究，先转一笔货款拿一小批试卖，A 承诺当天发货。证据止于口头暗示，B 始终没拿到货物真伪的确证。",
+ "critical_facts": [
+  "A 自称手里是原厂尾单，跟正品同一条产线出来，货和专柜没差别",
+  "A 强调防伪码能扫过，扫码验真没问题",
+  "A 说拿货价按拿货量分级，量大价更低",
+  "B 转账一笔货款拿一批试卖，A 确认收款并发货，双方未再确认货物真伪"
+ ],
+ "benign_alternatives": [
+  "工厂尾单正品",
+  "平替国货推荐"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "7月5日 10:05",
+   "speaker": "A",
+   "text": "哥 最近微商那边好不好做"
+  },
+  {
+   "type": "message",
+   "time": "7月5日 10:08",
+   "speaker": "B",
+   "text": "一般 你那个厂还有货吗"
+  },
+  {
+   "type": "message",
+   "time": "7月5日 10:11",
+   "speaker": "A",
+   "text": "有 我这批是原厂的尾单 跟正品一条线下来的"
+  },
+  {
+   "type": "message",
+   "time": "7月5日 10:13",
+   "speaker": "B",
+   "text": "尾单?质量靠谱吗"
+  },
+  {
+   "type": "message",
+   "time": "7月5日 10:16",
+   "speaker": "A",
+   "text": "靠谱 你就是专柜拿的也就那样 同一批工人做的"
+  },
+  {
+   "type": "message",
+   "time": "7月5日 10:18",
+   "speaker": "B",
+   "text": "那防伪怎么算 客户都爱扫码"
+  },
+  {
+   "type": "message",
+   "time": "7月5日 10:21",
+   "speaker": "A",
+   "text": "防伪码能扫过 验真没问题 你要多少有多少"
+  },
+  {
+   "type": "message",
+   "time": "7月5日 10:24",
+   "speaker": "B",
+   "text": "扫码能过 那不就是正品了"
+  },
+  {
+   "type": "message",
+   "time": "7月5日 10:26",
+   "speaker": "A",
+   "text": "你就当正品卖 别声张就行 量大了价我另给"
+  },
+  {
+   "type": "message",
+   "time": "7月5日 10:29",
+   "speaker": "B",
+   "text": "价格怎么算"
+  },
+  {
+   "type": "message",
+   "time": "7月5日 10:32",
+   "speaker": "A",
+   "text": "拿货价按层分 走量的一个价 小批一个价"
+  },
+  {
+   "type": "message",
+   "time": "7月5日 10:34",
+   "speaker": "B",
+   "text": "发个价目我看"
+  },
+  {
+   "type": "message",
+   "time": "7月5日 10:36",
+   "speaker": "A",
+   "text": "你报个量 我给你算"
+  },
+  {
+   "type": "message",
+   "time": "7月5日 12:00",
+   "speaker": "B",
+   "text": "中午吃啥"
+  },
+  {
+   "type": "message",
+   "time": "7月5日 12:02",
+   "speaker": "A",
+   "text": "厂里食堂 吃完还得盯一批货"
+  },
+  {
+   "type": "message",
+   "time": "7月5日 12:04",
+   "speaker": "B",
+   "text": "你这行也累"
+  },
+  {
+   "type": "message",
+   "time": "7月5日 12:06",
+   "speaker": "A",
+   "text": "哪行不累"
+  },
+  {
+   "type": "message",
+   "time": "7月6日 09:15",
+   "speaker": "B",
+   "text": "我算了下 先拿三十个试试水"
+  },
+  {
+   "type": "message",
+   "time": "7月6日 09:18",
+   "speaker": "A",
+   "text": "三十个有点少 五十起我才好走量价"
+  },
+  {
+   "type": "message",
+   "time": "7月6日 09:21",
+   "speaker": "B",
+   "text": "五十我怕压手里 先少来点"
+  },
+  {
+   "type": "message",
+   "time": "7月6日 09:23",
+   "speaker": "A",
+   "text": "行 看你面子 三十就三十 价给你按最低档"
+  },
+  {
+   "type": "message",
+   "time": "7月6日 09:25",
+   "speaker": "B",
+   "text": "多少钱"
+  },
+  {
+   "type": "message",
+   "time": "7月6日 09:28",
+   "speaker": "A",
+   "text": "三千 含运费 比你去市场拿省一半"
+  },
+  {
+   "type": "message",
+   "time": "7月6日 09:30",
+   "speaker": "B",
+   "text": "行 我转你"
+  },
+  {
+   "type": "transfer",
+   "time": "7月6日 09:31",
+   "from": "B",
+   "to": "A",
+   "amount": 3000
+  },
+  {
+   "type": "message",
+   "time": "7月6日 09:33",
+   "speaker": "A",
+   "text": "收到就给你发货 今天能出"
+  },
+  {
+   "type": "message",
+   "time": "7月6日 14:40",
+   "speaker": "B",
+   "text": "货到了我先让客户扫扫码 心里没底"
+  },
+  {
+   "type": "message",
+   "time": "7月6日 14:43",
+   "speaker": "A",
+   "text": "放心扫 要是一扫假的 货我全退你"
+  },
+  {
+   "type": "message",
+   "time": "7月6日 14:45",
+   "speaker": "B",
+   "text": "你这话说得 我就试试"
+  },
+  {
+   "type": "message",
+   "time": "7月7日 10:20",
+   "speaker": "A",
+   "text": "货今天上午发了 单号回头给你"
+  },
+  {
+   "type": "message",
+   "time": "7月7日 10:23",
+   "speaker": "B",
+   "text": "好"
+  },
+  {
+   "type": "message",
+   "time": "7月7日 11:50",
+   "speaker": "B",
+   "text": "这两天我们这边下雨 物流慢吧"
+  },
+  {
+   "type": "message",
+   "time": "7月7日 11:52",
+   "speaker": "A",
+   "text": "雨天是慢点 别急"
+  },
+  {
+   "type": "message",
+   "time": "7月7日 11:54",
+   "speaker": "B",
+   "text": "嗯 不急"
+  },
+  {
+   "type": "message",
+   "time": "7月9日 16:30",
+   "speaker": "B",
+   "text": "货收到了 包装还行"
+  },
+  {
+   "type": "message",
+   "time": "7月9日 16:33",
+   "speaker": "A",
+   "text": "跟正品一样吧 我什么时候骗过你"
+  },
+  {
+   "type": "message",
+   "time": "7月9日 16:35",
+   "speaker": "B",
+   "text": "客户扫了几个 说能扫出来"
+  },
+  {
+   "type": "message",
+   "time": "7月9日 16:37",
+   "speaker": "A",
+   "text": "那不就得了 后面要量提前跟我说"
+  },
+  {
+   "type": "message",
+   "time": "7月9日 16:40",
+   "speaker": "B",
+   "text": "先卖着看 别出岔子"
+  },
+  {
+   "type": "message",
+   "time": "7月9日 16:42",
+   "speaker": "A",
+   "text": "出不了岔子 有事找我"
+  },
+  {
+   "type": "message",
+   "time": "7月10日 18:10",
+   "speaker": "B",
+   "text": "周末聚不聚 老地方撸串"
+  },
+  {
+   "type": "message",
+   "time": "7月10日 18:12",
+   "speaker": "A",
+   "text": "去 正好跟你聊聊下批货"
+  },
+  {
+   "type": "message",
+   "time": "7月10日 18:14",
+   "speaker": "B",
+   "text": "饭桌上别谈生意"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000692",
+  "status": "accepted",
+  "errors": []
+ }
+}

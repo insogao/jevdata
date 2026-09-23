@@ -1,0 +1,170 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000734
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000005
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-f0fa7398555acbc6
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 熟人 A 以「手机做任务、当天返现」为饵把 B 拉进兼职群，首单小额秒返建立信任后改口要求连做三单垫付，群里托儿晒收益催进度，B 垫付大额后卡住不返。
+  critical_evidence:
+  - A 说做任务先垫小额本金，做完马上返、秒到账，让 B 先试一单
+  - B 第一单垫的小额确实很快返了回来，B 开始相信
+  - A 随后要求连做三单、每单都要 B 先垫付，说走完流程一起结
+  - 群里有人不停晒收益截图、报进度，催 B 别掉队
+  - B 垫付一笔大额后任务卡住，A 以连单没走完为由让 B 再等等
+  benign_alternatives:
+  - 正规众包平台上接单做任务
+  - 朋友介绍的按单结算兼职
+
+attributes:
+  duration_days: 2
+  turn_count: 89
+  approximate_tokens_estimate: 1857
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: part_time_task
+  risk: 2
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0045
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:09d0ff4a1873bdd14cce50a6610aa363224ee9f609bac8dcd02c4f741f8d15b8
+pipeline_status: accepted
+title: fraud_scam/part_time_task
+conversation: |-
+  【4月3日】
+  A：在忙不 跟你说个能赚点的路子
+  B：啥路子 别又是微商那套
+  A：不是 手机上做任务的 一单一结 当天返
+  B：靠谱吗
+  A：我自己做了小半个月了 你先试一单就知道
+  B：要交钱不
+  A：就垫个小的 做完立马返 秒到 不压你钱
+  B：垫多少
+  A：三十 做完返三十八 你试试水
+  B：三十还行 怎么弄
+  A：我拉你进群 你按群里单号操作
+  B：做完了 还真返了 到得好快
+  A：我就说吧 这还能骗你
+  B：那再来一单
+  A：别急 群里有规矩 新人先跟三单
+  B：跟三单是啥意思
+  A：就是连着做三单 每单先垫 走完一起结
+  B：三单一起垫 垫多少
+  A：看单子 头一单大点 后面两单小 走完就返
+  B：中午我还说这个月房贷紧
+  A：所以让你多做点任务补补 我还能坑你
+  A：群里的单看了没
+  B：看了 头一单要垫一千五
+  A：嗯 大单返得也多 走完这单返两千一
+  B：一千五有点多啊
+  A：你自己看群里 大家都做完在返钱
+  C：刚走完三单 到账了 谢谢群管
+  C：[image：收益到账截图]
+  A：看到没 人家昨天跟的单
+  D：我今天第二单也到了 稳的
+  D：[image：返款记录截图]
+  A：跟上进度 群管说了今天名额不多
+  B：那我再想想
+  A：第一单不都秒返了吗 还想啥
+  A：今晚有雨 你带伞没
+  B：没带 跑回去的 淋了个透
+  A：注意别感冒 明天还上班呢
+  【4月4日】
+  A：想好没 群里头单还剩两个名额
+  B：一千五我手头也紧
+  A：走完就返两千一 等于白挣六百 你还紧啥
+  B：行吧 我试试
+  A：对 跟着我 我都带你这么久了
+  B：垫进去了 单号也提交了
+  A：好 等群管核 核完走下一单
+  B：不是一起返吗
+  A：三单是连着的 得三单都走完才结
+  B：下一单多少
+  A：后两单小 各七百 走完一起返
+  B：怎么不早说 我还得再垫一千四
+  A：群里规则写着呢 你没细看
+  B：我哪懂这些
+  A：都到这一步了 半途退前单就废了
+  C：都跟上了吗 我三单走完了
+  C：[image：到账截图]
+  A：看 人家多利索
+  D：我也快了 就差最后一单
+  A：老B 别拖 拖了名额给别人
+  B：行 我下午凑一下
+  A：嗯 你老婆那先别说 省得她瞎想
+  B：第二单也提交了
+  A：好 就差最后一单
+  B：最后一单垫了 这下三千多了
+  【系统消息】B 向 A 转账 3400 元，已收款。
+  A：嗯 等群管统一核完就返
+  B：大概多久
+  A：当天一般 慢了就明天
+  【4月5日】
+  B：怎么还没返
+  A：群管说系统堵了 在排队
+  B：昨天群里那俩不都到了吗
+  A：他们是老号 你新号慢一点正常
+  B：你别忽悠我
+  A：我忽悠你干啥 我自己钱也在里头
+  B：我下午要交房租 你先把返的给我
+  A：走流程呢 我也动不了 你上面那单不急
+  B：房东催两天了
+  A：撑两天 返了一起到了
+  B：群怎么被禁言了 群管也不说话
+  A：在升级 忍忍
+  B：我打你电话你也不接
+  A：我开会呢 别老催
+  B：你到底啥意思 给我个准话
+  A：连单没走完 你那个号还得补一单
+  B：还要垫 我已经三千多了
+  A：补完就全返 不补前面作废 你自己定
+  【4月6日】
+  B：群里那些晒图的也不见了
+  A：人家做完走了呗
+  B：你是不是早跟他们一伙的
+  A：你别血口喷人 我也是受害者
+  B：钱我不要了 就当我买个教训
+  A：别啊 再等等 真能返
+  B：中午没胃口 吃不下
+  A：别气 钱的事我盯着
+  B：嗯

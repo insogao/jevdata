@@ -1,0 +1,127 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000693
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000045
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-c5da4d01df2e3737
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A 是这一片混的，和开店的 B 是同乡。每月初 A 都以问候为名找 B，实为催缴当月的“费用”。A 提到另一家不交钱的店最近被人找麻烦、货被砸了，又说自己带的一帮兄弟不容易，暗示会照应 B 的店。B 不敢得罪，转账交了当月的钱，A 确认收到并答应帮忙压事。
+  critical_evidence:
+  - A 每月初固定以问候为名找 B，实际是催缴当月的费用，双方是同乡关系
+  - A 提到另一家不交钱的店最近被人找上门、门口货被砸了
+  - A 用自己和兄弟们不容易施压，并暗示交了钱会照应 B 的店、帮忙压事
+  - B 转账当月的钱，A 确认收到并表示这片有他在、让 B 安心做生意
+  benign_alternatives:
+  - 物业费催缴
+  - 商会会费
+
+attributes:
+  duration_days: 6
+  turn_count: 48
+  approximate_tokens_estimate: 1008
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: protection_fee
+  risk: 3
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0046
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:9fe43e67cd4d63dc69d45d375355acb3520a13421c6af5ff1d3a237a835ea609
+pipeline_status: accepted
+title: violence_extortion/protection_fee
+conversation: |-
+  【3月1日】
+  A：老乡 在店里没 月初了 过来跟你坐坐
+  B：在呢 你来吧
+  A：上个月辛苦了 生意还行吧
+  B：凑合 勉强糊口
+  A：我昨天去看了趟老李那店 你听说没
+  B：怎么了
+  A：门口货给人掀了 玻璃也碎了两块
+  B：报警了没
+  A：报了 没啥用 查不到人
+  B：老李也是 前阵子还跟我念叨 说那点钱不想给
+  A：他嘴硬 觉着自己行 现在呢
+  B：唉 做生意不容易
+  A：可不是 我这一帮兄弟也都指着这片吃饭 都不容易
+  B：嗯
+  A：老规矩 这个月那份意思你也知道
+  B：多少
+  A：跟以前一样 两千 你懂的
+  B：行 这两天给你
+  B：中午吃啥 门口那家快餐
+  A：随便 你请我就去
+  B：你倒是不客气
+  A：哈哈 老乡嘛
+  【3月2日】
+  A：老乡 昨天说的那事
+  B：记着呢 下午转你
+  A：你转了我好跟兄弟们交代 这月都催着呢
+  B：知道了 我又没说不给
+  A：不是催你 主要是这月管得紧 别让我难做
+  B：孩子学习的事问你 你家那个在哪补课
+  A：没补 现在查得严 老师都不敢在外头带
+  B：也是 我家那个成绩掉得厉害
+  A：愁也没用 慢慢来
+  【3月3日】
+  A：对了 隔壁街那个小吃店 你认识吧
+  B：认识 怎么了
+  A：上礼拜也让人找上门了 现在老实了
+  B：你家的事我不掺和
+  A：我没说你掺和 我就是让你安心 你这片有我照应
+  B：我这就把钱给你 别再说了
+  【系统消息】B 向 A 转账 2000 元，已收款。
+  A：收到 两千 这就对了
+  B：以后别老拿这些事吓我 我做正经生意
+  A：你安心开店 有事我帮你压着 咱老乡一场
+  【3月4日】
+  B：这两天降温 门口菜冻了
+  A：让你盖棚你不盖
+  B：盖了 风大
+  【3月5日】
+  A：这月收齐了 下月我再过来
+  B：嗯
+  【3月6日】
+  A：晚上路过你店 灯都没关
+  B：忘关了 这就回去
+  A：行 有我在 丢不了东西

@@ -1,0 +1,158 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000483
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000098
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-d8f6fb1c5c2f3543
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 安排手下的 B 帮他把手头的钱一趟趟带到关口那边去，要求每人在一天额度内分次走、往返多趟、每趟尽量多带点，B 明知这事不干净还是照办，A 先转一笔钱给 B 当路费和辛苦钱。
+  critical_evidence:
+  - A 让 B 把手里的钱分批带到关口那边去
+  - A 交代一人一天只走额度内的数，反反复复多跑几趟
+  - A 让 B 每一趟尽量多带点，越往后越多
+  - A 先转给 B 一笔钱当路费和辛苦费
+  benign_alternatives:
+  - 合理换汇额度使用
+  - 留学缴学费
+
+attributes:
+  duration_days: 6
+  turn_count: 79
+  approximate_tokens_estimate: 1589
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: cross_border_smurfing
+  risk: 3
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0043
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:cf38bbeab3905707776e935e5caa58112cca9fc3d07fa3e63ee82d4a37c38d92
+pipeline_status: accepted
+title: money_laundering_obfuscation/cross_border_smurfing
+conversation: |-
+  【7月6日】
+  A：阿海 这周有个事交给你
+  B：哥 你说
+  A：我这边一批钱要过去 你腿脚利索 帮我走几趟
+  B：带多少
+  A：一个人一天不是有个额度嘛 你就照那个数走 别超
+  B：哥 那不就是分几次带吗
+  A：对 一天两万 你一天走一趟 走上几趟就差不多了
+  B：往返几趟
+  A：八趟吧 分几天走 别一天来回好几趟 那样扎眼
+  B：哥 这钱哪来的 干不干净
+  A：你别问 你只管带 送到老地方 那边有人接
+  B：……行吧
+  A：放心 事成给你大头 你比跑外卖强多了
+  B：哥 你说咋弄我就咋弄
+  A：先说第一趟 你先自己走一遍熟悉路 带个一万 剩下下次
+  B：好
+  A：每趟都多带一点 头趟少点 后面加 一趟比一趟多
+  B：明白 我这几天不接别的活
+  A：中午吃了没
+  B：还没 正准备煮点
+  A：别煮了 我请你吃 楼下那家牛肉面 顺便把细节跟你对
+  B：好 我这就下来
+  A：顺便 你那护照还在有效期吧
+  B：在 还有两年
+  A：那就好 证件齐才好办事
+  A：路费和辛苦钱我先转你 该花的别省
+  B：哥 转多少
+  A：先给你两千 车马费 住店吃饭都够 别省出事
+  【系统消息】A 向 B 转账 2000 元，已收款。
+  B：收到哥
+  A：到了那边发个消息 别打电话
+  B：好 我记住了
+  A：这两天那边下雨 你带把伞
+  B：嗯 我最烦下雨天出门
+  A：雨天关口慢 你早点走 别赶
+  B：知道
+  【7月7日】
+  B：哥 我出发了
+  A：路上小心 到了报
+  B：嗯
+  B：哥 我到了 老地方见到人了
+  A：货交了就回 别在那边逗留
+  B：好 我下午就回
+  A：回到没
+  B：刚过关 累趴了
+  A：辛苦 明天歇一天 后天再走
+  B：哥 下一趟带多少
+  A：加到一万五 一次比一次多
+  B：好
+  【7月8日】
+  A：歇够了没
+  B：睡了一整天 缓过来了
+  A：明天再走一趟 这次一万五
+  B：行 几点走
+  A：还是赶早 人少 你懂的
+  B：嗯 我七点就动身
+  A：你妈那药吃完没
+  B：还剩一周 我这两天得去买
+  A：钱不够跟我说 先把家里顾好再出来跑
+  B：够 哥 你上次给的不都是家里用了吗
+  A：那就行 家稳了心才稳
+  【7月9日】
+  B：哥 这趟也送到了
+  A：好 后面每趟加两千 一直加到走完八趟
+  B：那最后一趟不就带三万多
+  A：对 越多越好 你分开放 别攒一块儿
+  B：分几个包是吧
+  A：你自己看着办 反正别一次全身上 具体我不细说
+  B：懂 我有数
+  A：今晚有球 你看不看
+  B：看 我买点啤酒
+  A：看球别误了明早的趟
+  B：不会 我定闹钟
+  【7月10日】
+  B：这两趟走得挺顺 后面还有几趟
+  A：还有四趟 走完这批就歇一阵
+  B：嗯 这批量大 我也有点虚
+  A：虚啥 前几趟不都好好的 稳住节奏别贪快
+  B：好 我听你的
+  【7月11日】
+  B：哥 第五趟也到了
+  A：可以 你办事我放心 钱凑齐了我再给你加辛苦费
+  B：那我把剩下三趟走完
+  A：走完这三趟 你就能歇了 别声张
+  B：知道 我嘴严

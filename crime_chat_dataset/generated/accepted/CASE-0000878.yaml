@@ -1,0 +1,123 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000878
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000136
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-f5686a51ffc62c1d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: other_illicit_coordination
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 上级 A 让技术 B 调好抢购工具的加速参数、锁定热门场次，按成功一张三百分成，实名环节由 A 包办，并先转了一笔工具调校费。
+  critical_evidence:
+  - A 让 B 把抢购工具的加速参数调好，锁定这周的目标场次
+  - 报酬按成品计价，每成功一张给三百
+  - A 表示实名环节由他来处理，还给 B 一批号，叮嘱别用自己常用的设备
+  - A 按张数分成，先向 B 转了一笔费用，约定下批继续
+  benign_alternatives:
+  - 正规的候补购票技巧
+  - 代客下单的跑腿服务
+
+attributes:
+  duration_days: 4
+  turn_count: 46
+  approximate_tokens_estimate: 677
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: ticket_scalp_bot
+  risk: 1
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0055
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:3e36e62a692c7140fd9746b4c7d64a21bdf521c8c87e190c32c9bb51ce77a842
+pipeline_status: accepted
+title: other_illicit_coordination/ticket_scalp_bot
+conversation: |-
+  【6月1日】
+  A：那个工具参数调得咋样了
+  B：在调 峰值还是上不去
+  A：这周有场 你抓紧 参数调好就能跑
+  B：好 我再压测下
+  A：成了按张算 一张给你三百
+  B：那还行
+  A：实名问题我来搞 你不用管
+  B：号从哪来
+  A：我这边有一批 回头给你 别用你自己那台
+  B：明白
+  B：最近天天加班
+  A：忙完这阵给你放两天
+  B：说话算话
+  A：哥什么时候骗过你
+  A：中午吃的啥
+  B：盒饭 边调边吃
+  A：悠着点 别熬坏了
+  B：知道
+  【6月2日】
+  A：今晚试跑一批
+  B：好 我盯着
+  B：跑了 成功率一般
+  A：参数再调 别急
+  B：嗯 延时那块我再优化
+  A：好 明晚那场是重点
+  B：球赛你看不 今晚有德比
+  A：看啥 干活要紧
+  B：也是 等跑完再看回放
+  【6月3日】
+  A：那场几点开
+  B：十点 我提前守着
+  A：好 进多少算多少
+  B：进了十几张
+  A：可以啊 继续
+  B：外面下大雨 你带伞没
+  A：带了 你那边呢
+  B：没 淋了一身
+  A：哈哈 活该
+  A：家里催你回去了没
+  B：催呢 说中秋必须回
+  A：回吧 钱我给你留着
+  B：行
+  【6月4日】
+  A：这批总共进了多少
+  B：二十几张
+  A：按一张三百 先给你结一部分
+  【系统消息】A 向 B 转账 2000 元，已收款。
+  B：收到
+  A：下批继续 参数再优化
+  B：行

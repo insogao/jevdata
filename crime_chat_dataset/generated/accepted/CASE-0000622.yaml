@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000622
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000022
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-717fdeec7855fe53
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 检查员 A 与亲戚 B 是监管对象关系，A 在检查前提前给 B 通风报信让其收拾，B 按月固定给 A 一笔钱当「顾问费」，B 的整改永远差最后一步却次次过关。
+  critical_evidence:
+  - A 在检查前暗地给 B 打电话透消息，让 B 把后厨和台账先收好
+  - B 每月固定给 A 转一笔钱，名义上是「顾问费」，双方心照不宣
+  - B 的整改总是差最后一步没做完，但每次检查都能顺利过关
+  - 双方全程用「这个月的」「老规矩」「上面」代称，不点破是好处费
+  benign_alternatives:
+  - 合规咨询顾问费
+  - 行业协会会费
+
+attributes:
+  duration_days: 2
+  turn_count: 47
+  approximate_tokens_estimate: 819
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: regulatory_tip_payment
+  risk: 2
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0044
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:f5d7b1650347bd20c3dd3cc0150ffcc8eb7111fdda7212abe7a05489247d2555
+pipeline_status: accepted
+title: bribery_corruption/regulatory_tip_payment
+conversation: |-
+  【4月8日】
+  A：这周上面可能下来 你那边注意点
+  B：哥 又是哪个组
+  A：老规矩 不用问那么细 后厨那块别摆明面上
+  B：知道 我让人收一下
+  A：台账补齐 整改照片拍好看点
+  B：行 每次就差那么一点 这次我一定弄全
+  A：差一点也是差 别让我难做
+  B：明白 辛苦哥了
+  B：嫂子最近腰好点没
+  A：老样子 贴了膏药不当用
+  B：我认识个正骨的 回头发你
+  A：行 有心了
+  B：这个月的我给哥转过去 你收一下
+  【系统消息】B 向 A 转账 3000 元，已收款。
+  A：嗯 收到
+  B：对了 我家小子小升初 愁学区
+  A：现在都这样 慢慢来
+  B：愁得睡不着
+  A：孩子的事急不来
+  B：那整改报告我还按上次那样写?
+  A：嗯 照片把前后对比放一起
+  B：成
+  B：中午吃啥 我请你
+  A：不用 回头再说
+  B：行 哥忙
+  A：后厨那台旧设备别开 检查时盖起来说在维修
+  B：好 我就说等配件
+  A：对 别多说
+  B：哥 明早几点到
+  A：别问 到时候人到了照常接待
+  B：懂 我不慌
+  【4月9日】
+  B：人来了 我亲自接待的
+  A：嗯 稳住
+  B：看了台账 没挑出啥
+  A：我说了吧
+  B：就是后厨那个师傅嘴碎 差点说漏
+  A：回头敲打一下 别留话柄
+  B：知道 我已经说了
+  A：走了 这次算过去了
+  B：谢哥 改天请你吃饭
+  B：整改最后一项我还得拖着?
+  A：慢慢弄 别一次弄完
+  B：明白 一直差一点
+  A：嗯 就这个意思
+  B：下午下雨 你开车慢点
+  A：知道
+  B：这个月还是老日子转你
+  A：嗯 老规矩

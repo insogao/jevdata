@@ -1,0 +1,129 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000737
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000024
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-69e5b081694d11ab
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: bribery_corruption
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 单位中层 A 想在这次任前考核里更进一步，通过老同学 B 牵线，在公示前单独密会打点关系；B 提前透口风说名单已在酝酿、A「能进」，叮嘱别声张；公示期满无人反对后，A 以子女学费周转为由向 B 转账一笔大额作为对价。
+  critical_evidence:
+  - 考核公示前，A 通过老同学牵线，与关键环节的 B 单独约在茶馆包间密会，并约定当天的话出了门就没有过
+  - B 提前告知晋升名单的酝酿情况、确认 A「在里头」，叮嘱不许声张、不留电话和文字
+  - 公示期满无人提意见的次日，A 以孩子学费周转、算借的名义转账六万元
+  - 敏感内容全程只在当面说，聊天里只用隐语和共享背景，没有一句明言
+  benign_alternatives:
+  - 正常人情答谢
+  - 培训学费资助
+
+attributes:
+  duration_days: 2
+  turn_count: 51
+  approximate_tokens_estimate: 1259
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: promotion_payment
+  risk: 3
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0045
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:498f26f61ee8c398b90a3f7acc91a0bc99e4a78f6cb8307ccd309565402f5fe5
+pipeline_status: rejected
+title: bribery_corruption/promotion_payment
+conversation: |-
+  【3月9日】
+  B：老A 周四下午有空没 出来喝口茶
+  A：周四行 老地方吗
+  B：老地方 靠里那间 就咱俩
+  A：好 我带点新茶过去
+  B：你闺女这次模考怎么样 上次听你说偏科
+  A：理科还行 语文拉胯 愁人
+  B：找个好老师补一个假期就上来了 嫂子不是教书的嘛
+  A：她带毕业班 忙得很
+  B：那周四当面说 电话里我不多讲
+  A：懂 明天见
+  【3月10日】
+  A：出发了 一刻钟到
+  B：我先进去了 老位子
+  A：聊透了 心里踏实多了
+  B：今天这话 出了这个门就没有过
+  A：我记性不好 转头就忘
+  B：这段时间你别到处打听 也别在群里吭声
+  A：这几天我把饭局都推了
+  【3月11日】
+  B：上午那边的事你不用再问了 按那天说的来
+  A：明白了 全仗老哥
+  B：名单还差最后一道手续 这两天你别声张 尤其那几位没进去的
+  A：我嘴严 家里都不说
+  A：晚上江边走路去不 我这膝盖得活动活动
+  B：去 我这两天血糖又飘了
+  A：你就是应酬太多 晚上少喝汤
+  B：道理都懂 桌上由不得自己
+  A：那今晚我监督你 走满五圈
+  【3月12日】
+  B：上午挂出来了 一切都按那天说的走的
+  A：看到了 我就当没看见 该干嘛干嘛
+  B：对 稳住 这几天谁来探口风都说不知道
+  A：嗯 刚才就有人来绕弯子了
+  B：一概不接话 等尘埃落定
+  A：中午吃啥 楼下新开了家面馆
+  B：我带了饭 老婆做的 省一点
+  A：羡慕 嫂子厨艺好
+  B：就是家常菜 哈哈
+  【3月16日】
+  B：公示期满了 没人提意见 下周一发文
+  A：谢谢老哥 这份情我记着
+  B：说这些没意思 你懂规矩就行
+  A：对了 上回你说孩子那个培训班 学费交了没
+  B：还差一截呢 正发愁 那班贵得吓人
+  A：我手上正好有笔闲钱放着 先给你周转 别客气 就当补上我之前欠的人情
+  B：你这 行吧 那我收了 算借的 以后你用钱只管开口
+  A：应该的 孩子念书的事不能省 我现在转你
+  【系统消息】A 向 B 转账 60000 元，已收款。
+  B：收到了 你这手笔 我都不好意思了
+  A：一点心意 学费要紧
+  B：发文那天我组个局 就咱几个老同学
+  A：行 我带两瓶存着的
+  B：晚上走路照旧
+  A：照旧 今天多走两圈 心情好
+  B：那五圈改七圈
+  A：哈哈行 奉陪

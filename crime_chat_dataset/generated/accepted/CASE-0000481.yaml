@@ -1,0 +1,134 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000481
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000113
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-e34c17f07de1da8b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: theft_robbery_property_crime
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 收机倒货的 A 从各处低价收来一批来源说不清、带账号锁的二手手机，找号称能硬解的 B 帮忙把锁清掉好出货；两人谈妥按台数结算、量大有优惠，全程用行话遮掩，最后 A 给 B 转了一笔解机费。
+  critical_evidence:
+  - A 手里有一批来源说不清、带账号锁的二手机器，急着出手换钱
+  - A 知道 B 有硬解账号锁的路子，主动找 B 帮忙处理那批带锁机器
+  - B 报价硬解按台算，量大批量来更优惠，让 A 别多问机器来路
+  - A 按约定转给 B 一笔解机费
+  benign_alternatives:
+  - 二手手机回收
+  - 失物招领
+
+attributes:
+  duration_days: 5
+  turn_count: 55
+  approximate_tokens_estimate: 1283
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: phone_reset_resell
+  risk: 2
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0043
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:cf8173bf733aba12e5d50fe08e237ee0232fe9e1883f2b9ca5b814439e0059c5
+pipeline_status: accepted
+title: theft_robbery_property_crime/phone_reset_resell
+conversation: |-
+  【9月8日】
+  A：老K 在吗 手上有批货想请你看看
+  B：什么货 说个数
+  A：机子 十来台 有几台带着锁 状态不太好看
+  B：带锁的哪来的 我可不问来路啊
+  A：你不问就对了 反正有锁的我就便宜出 你要能吃下最好
+  B：硬解我有渠道 但你得给我时间 不是一台两台的事
+  A：懂 你开个价 我这批走量
+  B：单台一个价 十台以上一个大价 批量来更优惠 你自己算
+  A：行 那我先给你八台 剩下两台我再看看
+  B：成 你下午送过来 别在楼下停久
+  A：中午吃了没
+  B：还没 你这单子一来我饭都顾不上
+  A：楼下那家面馆不错 我给你带一碗
+  B：行 老样子多放辣
+  A：到楼下了 车停哪
+  B：后门 别停正门 一会儿我就下来
+  A：好
+  B：八台收到了 我看下成色
+  A：有几台屏有点花 但不影响出
+  B：能出就行 锁的我这两天给你弄 弄好再算钱
+  A：行 不急这两天
+  【9月9日】
+  B：昨晚弄了两台 还行 你这个锁不算难
+  A：那太好了 全弄完能出个好价
+  B：你别急着出 我告诉你 一次清干净再走市面上稳
+  A：明白 听你的
+  A：今天这天说下就下 你那边淋着没
+  B：没 我一天没出门 在屋里弄机子
+  A：那正好 我这边路上堵成狗
+  B：哈哈 你这跑腿的命
+  【9月10日】
+  B：八台都过了 有两台主板状态一般 我按低的给你算
+  A：行 你说了算 别坑我
+  B：合作这么久 我还能坑你 总共这个数
+  A：收到 我这就转
+  B：转完说一声 我把东西给你放好
+  【系统消息】A 向 B 转账 3200 元，已收款。
+  B：收到 合作愉快
+  A：对了 我租那个门面房东又涨租 烦
+  B：涨多少
+  A：一个月多三百 说是行情
+  B：你跟他磨磨 现在铺子不好租 你有底气
+  A：嗯 我试试 不行就搬
+  【9月11日】
+  A：剩下那两台我还是想一块给你
+  B：可以 量大批量来更优惠 一起给我更省事
+  A：那明天给你送过去
+  B：行 老地方
+  A：我闺女学校要家长去开家长会 你说去不去
+  B：去啊 老师那关得走
+  A：请半天假 少跑两单
+  B：孩子的事要紧
+  【9月12日】
+  A：到你楼下了 两台带来
+  B：上来吧 门口给你开
+  B：两台也弄好了 一起结了
+  A：好 还是转你刚才那个
+  【系统消息】A 向 B 转账 900 元，已收款。
+  B：收到 这批清了
+  A：谢了 下批有货再找你
+  B：随时

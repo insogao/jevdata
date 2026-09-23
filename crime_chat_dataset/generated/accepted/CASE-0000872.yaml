@@ -1,0 +1,117 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000872
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000147
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-8b83990d249ae320
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: other_illicit_coordination
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 中间人 A 把写手 B 引荐进代写单子，按篇结算、查重与提交环节都由 A 摆平，还承诺打点导师关系，B 答应先试写一篇。
+  critical_evidence:
+  - A 作为中间人把 B 拉进稿子单，报价一篇一千五、量稳定
+  - A 承诺查重由他保过、署名和提交环节由他处理，不让 B 出面
+  - A 称导师那边他打招呼，出问题由他兜着
+  - B 同意接单，约定先交一篇试稿，结款方式当天结
+  benign_alternatives:
+  - 写作外包派单中介
+  - 论文排版与格式服务
+
+attributes:
+  duration_days: 3
+  turn_count: 42
+  approximate_tokens_estimate: 615
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: homework_ghostwriting_ring
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0055
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:46c305c7d23ee5cc86b2e6448684a4e8d7cebdab8e1beee96a62ab44c5926738
+pipeline_status: accepted
+title: other_illicit_coordination/homework_ghostwriting_ring
+conversation: |-
+  【5月6日】
+  A：兄弟 最近接活不
+  B：接啊 有单子?
+  A：有 量还稳 一篇一千五
+  B：什么类型的
+  A：老样子 那边要交的东西 你懂的
+  B：查重这块呢
+  A：查重我保过 署名提交我来 不用你露面
+  B：靠谱吗
+  A：导师那边我打招呼 出事我兜 你怕啥
+  B：行 先来一篇
+  A：爽快 我把要求转你
+  A：晚上出来喝点
+  B：不去了 省钱
+  A：我请
+  B：那行 老地方
+  A：七点 别迟到
+  B：你那房租又涨没
+  A：涨了一百 烦
+  B：都这样 我这也快到期
+  A：到期搬我这边 有个空房
+  B：行 看看
+  【5月7日】
+  A：客户催了 你写到哪了
+  B：一半 有几个数据找不到
+  A：发我 我让那边给
+  B：好
+  B：每天通勤俩小时 累死
+  A：你不是有车吗
+  B：油钱太贵 改坐地铁
+  A：也是 省钱要紧
+  【5月8日】
+  A：那边定人了 你先接长期不
+  B：先看这篇结钱快不快
+  A：当天结 不拖
+  B：那就继续
+  A：记住别在群里多说话 客户信息我来对
+  B：放心 我有数
+  A：好 下一批还有两篇
+  B：第一个要求发我下
+  A：这就发 字数两万 你先搭框架
+  B：行
+  A：喝多了没
+  B：早回了 你少喝点
+  A：哈哈 知道

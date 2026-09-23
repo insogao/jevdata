@@ -1,0 +1,140 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000873
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000147
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-3102938eefe0258f
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: other_illicit_coordination
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 陌生中介 A 在网上招揽写手 B，以一篇一千五的长期代写单相诱，承诺查重、署名与导师关系都由他摆平，B 从戒备转为试接一单。
+  critical_evidence:
+  - A 在网上找到陌生写手 B，抛出按篇一千五的长期单，量稳定
+  - A 承诺查重由他保过、署名和交付环节由他处理，不让 B 出面
+  - A 称导师那边他打招呼，让 B 放心接单
+  - B 先从戒备转为愿意试写一篇，交稿当天结款
+  - 正常转账：A 按约定向 B 转账 1500 元结清首篇稿酬
+  benign_alternatives:
+  - 写作外包派单平台
+  - 文案与论文排版服务
+
+attributes:
+  duration_days: 6
+  turn_count: 60
+  approximate_tokens_estimate: 919
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: homework_ghostwriting_ring
+  risk: 1
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0055
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:3e72652795e02034627c43df578b8b39ca7de9053b0a4f67c99dab6146c0830f
+pipeline_status: accepted
+title: other_illicit_coordination/homework_ghostwriting_ring
+conversation: |-
+  【7月1日】
+  A：你好 群里看到你 你接写作单吗
+  B：什么单
+  A：长期的 一篇一千五 量稳
+  B：内容呢
+  A：就是帮人交差那种 你懂的
+  B：代写?这个有点灰
+  A：灰不灰的 钱干净 查重我保过
+  B：你怎么保证
+  A：署名提交我来 不用你出面 导师那边我打招呼
+  B：你到底是干嘛的
+  A：中介 只对接单不写 你就说接不接
+  B：我先看看要求
+  B：现在兼职太难找了
+  A：是啊 所以这单算好的
+  B：我之前被坑过押金
+  A：我这边不收押金 交稿才结
+  A：吃了吗
+  B：刚吃完 你呢
+  A：随便对付一口
+  【7月2日】
+  A：考虑好了吗 客户等回复
+  B：你先发个要求我看看难度
+  A：好 字数两万 方向偏管理
+  B：数据要自己找?
+  A：你列需求 我让客户给
+  B：那行 我试一篇
+  B：今天好热 空调都带不动
+  A：我这也热 电费都涨了
+  B：熬吧 夏天还长
+  【7月3日】
+  B：写到一半 有几处对不上
+  A：发我
+  A：客户补了 我转你
+  B：好
+  A：中午点外卖不
+  B：点了 螺蛳粉
+  A：这味儿 你室友受得了
+  B：哈哈 挨骂了
+  【7月4日】
+  A：进度咋样
+  B：快了 今晚给你
+  A：那边催得紧 辛苦
+  B：你打游戏不 排一把
+  A：不会 我只会干活
+  B：无趣
+  A：哈哈
+  【7月5日】
+  B：写完了 发你了
+  A：我看了 可以 比预期好
+  A：这篇先给你结 后续长期
+  【系统消息】A 向 B 转账 1500 元，已收款。
+  B：收到
+  A：下篇要求明天发你
+  B：行
+  B：你那房租多少 我想换个地方
+  A：我这偏 一千五
+  B：那还行 我看看
+  【7月6日】
+  A：群里别暴露我们对接 你少发言
+  B：放心 我潜水
+  A：好 合作愉快
+  B：愉快
+  A：对了 你老家哪的
+  B：南边的 小地方
+  A：难怪普通话没口音
+  B：哈哈 夸我呢

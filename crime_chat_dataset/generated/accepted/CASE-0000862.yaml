@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000862
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000147
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-2361c99ba079743f
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: other_illicit_coordination
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 陌生接单的 A 经人介绍找到写手 B，谈好按篇付酬，把一篇要交的毕业设计整体外包，并声称查重和老师那关由自己兜底，实为论文代写交易。
+  critical_evidence:
+  - 经人介绍，A 找到 B 谈一篇要交的稿，开价一篇一千五
+  - A 说查重我保过，让 B 只管写、别管怎么过
+  - A 说导师那边我打招呼，让 B 按提纲填、别问是谁的单
+  - 谈拢交稿时间，钱等交付后按约定结
+  benign_alternatives:
+  - 写作辅导服务
+  - 论文润色
+
+attributes:
+  duration_days: 2
+  turn_count: 52
+  approximate_tokens_estimate: 871
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: homework_ghostwriting_ring
+  risk: 1
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0054
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:a00014bd75bd0a0a97a8b3f6176c1b7ae0bbda91c9cef2277404e1389260ce4b
+pipeline_status: accepted
+title: other_illicit_coordination/homework_ghostwriting_ring
+conversation: |-
+  【11月2日】
+  A：你好 老陈介绍的 说你能写
+  B：哪个老陈
+  A：做培训那个 你不记得了
+  B：哦 想起来了 什么事
+  A：有篇东西要交 你能不能接
+  B：什么方向 多少字
+  A：经管的 一万出头 月底要
+  B：价格呢
+  A：一篇一千五 你熟这方向的话再加点
+  B：时间够 我接
+  A：那说好 提纲我晚点发你
+  B：好
+  B：查重这块谁负责
+  A：查重我保过 你不用管 写好内容就行
+  B：现在系统严 真没事?
+  A：我有渠道 之前几篇都过了 你别操心
+  B：行 那我按提纲来
+  A：对了 别在群里说这事
+  B：放心 就单聊
+  A：对 少传一个人少一分事
+  B：提纲什么时候发
+  A：今晚 你先把框架搭起来
+  B：好
+  【11月3日】
+  A：提纲发了 你看下
+  B：收到 结构挺清楚
+  A：写作风格按上面来 别太口语
+  B：懂 学术点
+  A：数据我后面补给你 你先写正文
+  B：行
+  B：中午吃了没
+  A：还没 忙
+  B：那先写 下午再吃
+  B：大纲里有两处引用要确认来源
+  A：随便配几个近年的就行 别太空
+  B：好
+  A：老师那边我打过招呼了 你按提纲填就行
+  B：哪个老师 需要我对接吗
+  A：不用 你别问是谁的单 我全权处理
+  B：明白 我只管写
+  A：有个要求 语言别跟你以前那篇太像
+  B：知道 我会换句式
+  A：对 别让人看出来同一手笔
+  B：今晚能出初稿 发你邮箱?
+  A：发微信就行 别用邮箱留记录
+  B：好
+  B：初稿好了 你过一遍
+  A：挺快 我看下再回你
+  A：有几段要收 明天改一版
+  B：行
+  B：钱怎么结
+  A：交付后一次性付 老陈介绍的 我不会差你
+  B：好 那我明天改

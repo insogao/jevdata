@@ -1,0 +1,150 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000487
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000102
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-ca67bdc4866ff965
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 手机配件店老板 A 与兼职跑腿 B 合伙做正规话费充值代理：A 从运营商上游渠道拿充值卡密，B 在外跑单帮顾客代充，按每单两个点分成，一天几十单，两人对账后 A 把当天分成转给 B，属于正常代理经营。
+  critical_evidence:
+  - A 经营手机配件店，也是运营商授权的话费充值代理，从上游正规渠道拿充值卡密
+  - B 负责跑单，用卡密帮顾客代充，一天几十单，按面额一视同仁不挑单
+  - 分成按每单两个点，当天对账日结
+  - A 当天结算后转给 B 一笔分成款
+  benign_alternatives:
+  - 正规充值代理
+  - 便利店代缴业务
+
+attributes:
+  duration_days: 6
+  turn_count: 69
+  approximate_tokens_estimate: 1578
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: phone_topup_layering
+  risk: 0
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0043
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:09fe515d24d3621882436fa91dd1b7c21ed457b562bf7d0c0a13fee139e10f9a
+pipeline_status: accepted
+title: money_laundering_obfuscation/phone_topup_layering
+conversation: |-
+  【9月1日】
+  A：小陈 今天上午单量报我一下
+  B：哥 到这会儿走了三十二单 还在加
+  A：行 卡密我发你了 二十张 不够再喊我
+  B：收到 我看下
+  A：五十面额的 照着顾客报的号充就行 别充错
+  B：放心 我都核两遍
+  B：哥 有个顾客要一次充一千 接不
+  A：接 代理哪有挑单的 按面额走就是
+  B：行 那我一样办
+  A：中午吃啥
+  B：楼下快餐 随便对付口
+  A：别老吃快餐 胃受不了
+  B：哈哈 跑单没工夫 凑合
+  A：晚上我店里炖了汤 给你留一碗
+  B：谢哥 那我不客气了
+  B：哥 店里那台新样机到了没
+  A：到了 摆柜台上了 晚上你过来瞅瞅
+  B：好 顺道帮你把棚里的灯装一下
+  A：那再好不过 梯子在角落
+  A：今天总共多少单
+  B：六十七单 卡密用了五十九张 剩的明天用
+  A：行 我算下 还是两个点 你今天这份
+  B：哥你算就行 我不细抠
+  【9月2日】
+  A：今天上游又批了一批卡密 量足 够你跑两天
+  B：那这两天好跑了
+  A：嗯 利润不变 你跑多少算多少
+  B：明白 我多跑两趟
+  A：别硬撑 累了就歇 单子跑不完有明天
+  A：对了 你妈复查结果咋样
+  B：好多了 医生说指标稳了
+  A：那就好 复查单子留好 报销能用
+  B：哥你想得真细
+  B：这边写字楼单多 一上午又走了四十
+  A：行 卡密不够随时喊 我这边库存足
+  B：哥 我明天想早点出 七点半就开始
+  A：可以 早高峰单多 你多穿件外套
+  B：嗯 明天降温
+  【9月3日】
+  A：昨天前天两天的一起结 你看下对不对
+  B：一百二十单出头 我记的是这个数
+  A：嗯 两个点 我给你转过去
+  A：到了说一声
+  【系统消息】A 向 B 转账 680 元，已收款。
+  B：收到了哥 数对
+  A：行 接着跑 今天卡密我再发你三十张
+  B：好嘞
+  B：哥 昨晚那球你看了没 咱队终于赢了
+  A：看了 最后一个球绝了
+  B：我跑单路上看的直播 差点错过一单
+  A：哈哈 跑单别分心 看回放就行
+  【9月4日】
+  A：这周末我回趟老家 店里交给小刘看
+  B：那卡密还照旧发我不
+  A：照发 微信跟我说一声就行
+  B：明白 不影响跑单
+  B：哥 今天有个老顾客一次走了十单 都是公司的座机号
+  A：那是公司批量充 正常 你按面额给就行
+  B：好 那我记一笔
+  【9月5日】
+  A：昨天单量
+  B：五十八单 加那个公司的十单
+  A：行 一起算 我转你
+  【系统消息】A 向 B 转账 410 元，已收款。
+  B：收到 对
+  A：今天中午店里做了红烧肉 过来吃
+  B：马上到 刚好跑完一单
+  【9月6日】
+  A：今天上游说下月政策要调 两个点可能变一个半
+  B：那也还行 比没有强
+  A：嗯 到时候再说 这月还是老规矩
+  B：好 我这两天多跑跑
+  B：哥 今天六十三单 卡密还剩八张
+  A：行 我这就把这两天的结给你
+  【系统消息】A 向 B 转账 730 元，已收款。
+  B：收到哥 辛苦了
+  A：彼此 明天见

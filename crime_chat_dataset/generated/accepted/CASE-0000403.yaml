@@ -1,0 +1,142 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000403
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000047
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-70d17509065b03f8
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: violence_extortion
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 雇 B 带几个兄弟去一场谈事现场站着镇场子，按天结算，要求全程别说话、别动手，只用人数和气势把对方压住，事后走一笔现金。
+  critical_evidence:
+  - A 让 B 带几个人去一场见面谈事的现场站着，问要几个人
+  - A 交代规矩：只要站着别说话，全程不开口、不动手
+  - 约定按天结算，人来一天给一天的钱，人走账清
+  - B 说可以带几个兄弟，A 让统一穿深色、看着精神点
+  - 事后 A 向 B 结清这场的钱
+  benign_alternatives:
+  - 活动安保兼职
+  - 婚礼挡酒兄弟
+
+attributes:
+  duration_days: 3
+  turn_count: 65
+  approximate_tokens_estimate: 1278
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: hired_standing_off
+  risk: 2
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0038
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-020
+
+dedup:
+  content_hash: sha256:18514a56bb7fe3df2254343d3925deef1ae4855af871f57889fcc65baa91ab62
+pipeline_status: accepted
+title: violence_extortion/hired_standing_off
+conversation: |-
+  【7月12日】
+  A：兄弟 周末有安排没
+  B：没啥事 哥你说
+  A：我周日要跟个人谈点事 想让你带几个人过去站着
+  B：站着就行?不用干别的
+  A：就站着 一个都别说话 我谈我的 你们看着就行
+  B：懂了 要几个
+  A：带三四个吧 看着有分量
+  B：行 我这边兄弟够 几个都有空
+  A：钱按天算 来一天给一天 别要价太狠
+  B：知道 老规矩 哥你说了算
+  A：让兄弟们穿深色 别花里胡哨 看着利索点
+  B：好 统一黑T就行吧
+  A：行 别戴帽子 别戴墨镜 太刻意
+  B：明白 自然点
+  A：你最近还去健身没
+  B：去 一周三次 练着玩
+  A：难怪了 看着就壮
+  B：哈哈 哥你才壮
+  A：老了 不行了
+  【7月13日】
+  A：地点在城南那家茶楼 二楼包间 周日下午两点
+  B：收到 我们提前到
+  A：提前十分钟就行 别太早杵那儿 看着怪
+  B：好 卡点到
+  A：记住啊 全程别说话 谁问你们都别答 站墙边
+  B：放心 我们就是背景板
+  A：对 就是这个意思
+  B：哥 万一对方报警咋办
+  A：站着又不犯法 我们又没动手 你怕啥
+  B：也是 那我放心了
+  A：对 别人问就说朋友一起来喝茶的
+  B：嗯 口径一致
+  B：哥你中午吃啥
+  A：随便煮了点面 凑合
+  B：你这日子过得 天天面
+  A：一个人吃啥都行
+  B：改天我请你整顿好的
+  【7月14日】
+  B：我们出发了 四个人 都到齐了
+  A：好 到了在楼下等我 我一块上去
+  B：好嘞
+  A：上来了 站门边就行
+  B：站好了 没人说话
+  A：那人一见你们脸色就变了 哈哈
+  B：就站着 效果到了就行
+  A：他松口了 说三天内给答复
+  B：那挺顺啊
+  A：嗯 今天就这样 你们先撤
+  B：好 我们走
+  A：楼下茶楼旁边等你 把钱给你
+  B：好 我这就下来
+  【系统消息】A 向 B 转账 1600 元，已收款。
+  A：四个人的 一天的 数好了 转你了
+  B：谢谢哥 哥办事敞亮
+  A：跟着我干亏不了你
+  A：后天可能还得去一趟 他要不兑现 咱再去站一次
+  B：行 随叫随到
+  A：这次多带两个 让他看看咱人多
+  B：没问题 六个够不够
+  A：差不多 别太过 站一排就行
+  B：懂 还是老规矩 不说话
+  A：对 你办事我放心
+  B：那钱也是当天结吧
+  A：嗯 人来一天给一天 人走账清 不欠你
+  B：爽快
+  A：兄弟之间 讲的就是这个
+  B：哥 那我先回店里了 有事联系
+  A：好 路上慢点

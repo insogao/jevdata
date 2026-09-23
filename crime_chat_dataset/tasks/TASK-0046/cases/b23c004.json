@@ -1,0 +1,366 @@
+{
+ "key": "b23c004",
+ "archetype_id": "ARC-000143",
+ "subtype": "false_invoicing_group",
+ "latent_intent": "A 是组织倒票的中间人，手上串着一批空壳公司和会计。这个月票量不够，A 找 B 帮忙走一批货（虚开发票），要求把资金流截图做成有真实交易的样子、别留破绽，并强调挑的公司都避开了税务稽查名单。B 按点数转账后，A 确认票已经开出、次日寄出。",
+ "critical_facts": [
+  "A 说这个月票量不够，让 B 帮忙开一批，双方按点数结算",
+  "A 要求把资金流截图做成有真实交易的样子、走账要像真的，别留破绽",
+  "A 说挑的公司都避开了税务稽查名单，不会有人查",
+  "B 支付开票点数费用后，A 确认票已开好、次日寄出"
+ ],
+ "benign_alternatives": [
+  "代账公司开票",
+  "税务筹划讨论"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "12月2日 09:40",
+   "speaker": "A",
+   "text": "这月票量不太够 你那边还能走点不"
+  },
+  {
+   "type": "message",
+   "time": "12月2日 09:43",
+   "speaker": "B",
+   "text": "要多少"
+  },
+  {
+   "type": "message",
+   "time": "12月2日 09:46",
+   "speaker": "A",
+   "text": "先来五十个 点数还是老样子"
+  },
+  {
+   "type": "message",
+   "time": "12月2日 09:48",
+   "speaker": "B",
+   "text": "五十个 品目写什么"
+  },
+  {
+   "type": "message",
+   "time": "12月2日 09:51",
+   "speaker": "A",
+   "text": "照上回的 材料那类 金额别整太齐"
+  },
+  {
+   "type": "message",
+   "time": "12月2日 09:53",
+   "speaker": "B",
+   "text": "行 那资金这块"
+  },
+  {
+   "type": "message",
+   "time": "12月2日 09:56",
+   "speaker": "A",
+   "text": "资金流截图你给我做好 走账要像真的"
+  },
+  {
+   "type": "message",
+   "time": "12月2日 09:58",
+   "speaker": "B",
+   "text": "截图我来做 可别到时候对不上"
+  },
+  {
+   "type": "message",
+   "time": "12月2日 10:01",
+   "speaker": "A",
+   "text": "你做细点 进出都有 别一堆整数"
+  },
+  {
+   "type": "message",
+   "time": "12月2日 10:03",
+   "speaker": "B",
+   "text": "放心 我做了好几年这个 看不出破绽"
+  },
+  {
+   "type": "message",
+   "time": "12月2日 10:06",
+   "speaker": "A",
+   "text": "还有 收票那几家挑好了没"
+  },
+  {
+   "type": "message",
+   "time": "12月2日 10:08",
+   "speaker": "B",
+   "text": "挑的都是干净壳 不在本季稽查名单里"
+  },
+  {
+   "type": "message",
+   "time": "12月2日 10:11",
+   "speaker": "A",
+   "text": "不在名单就好办 名单内的千万别碰"
+  },
+  {
+   "type": "message",
+   "time": "12月2日 10:13",
+   "speaker": "B",
+   "text": "我懂 碰那个不是找事吗"
+  },
+  {
+   "type": "message",
+   "time": "12月2日 12:10",
+   "speaker": "A",
+   "text": "中午吃啥"
+  },
+  {
+   "type": "message",
+   "time": "12月2日 12:12",
+   "speaker": "B",
+   "text": "楼下快餐 你又不来"
+  },
+  {
+   "type": "message",
+   "time": "12月2日 12:14",
+   "speaker": "A",
+   "text": "我在外面跑 随便垫一口"
+  },
+  {
+   "type": "message",
+   "time": "12月2日 12:16",
+   "speaker": "B",
+   "text": "你这行常年在外 累"
+  },
+  {
+   "type": "message",
+   "time": "12月2日 14:30",
+   "speaker": "B",
+   "text": "对了 上批那个尾款结了没"
+  },
+  {
+   "type": "message",
+   "time": "12月2日 14:33",
+   "speaker": "A",
+   "text": "结了 打你卡上了 你查查"
+  },
+  {
+   "type": "message",
+   "time": "12月2日 14:35",
+   "speaker": "B",
+   "text": "看到了 我还以为你要拖"
+  },
+  {
+   "type": "message",
+   "time": "12月2日 14:37",
+   "speaker": "A",
+   "text": "这行做的是信誉 拖你一次下次谁跟我干"
+  },
+  {
+   "type": "message",
+   "time": "12月3日 09:10",
+   "speaker": "A",
+   "text": "票量凑得怎么样 这边下游催得紧"
+  },
+  {
+   "type": "message",
+   "time": "12月3日 09:13",
+   "speaker": "B",
+   "text": "开了二十多个 系统有点卡"
+  },
+  {
+   "type": "message",
+   "time": "12月3日 09:15",
+   "speaker": "A",
+   "text": "分开开 别一个点开太多 容易触发预警"
+  },
+  {
+   "type": "message",
+   "time": "12月3日 09:18",
+   "speaker": "B",
+   "text": "知道 我隔几个点开一张"
+  },
+  {
+   "type": "message",
+   "time": "12月3日 09:20",
+   "speaker": "A",
+   "text": "行 明天把截图一起给我"
+  },
+  {
+   "type": "message",
+   "time": "12月3日 11:50",
+   "speaker": "B",
+   "text": "你家老爷子生日过了吧"
+  },
+  {
+   "type": "message",
+   "time": "12月3日 11:52",
+   "speaker": "A",
+   "text": "过了 七十了 一家人吃了顿饭"
+  },
+  {
+   "type": "message",
+   "time": "12月3日 11:54",
+   "speaker": "B",
+   "text": "那挺好 我姥爷今年也七十多"
+  },
+  {
+   "type": "message",
+   "time": "12月3日 11:56",
+   "speaker": "A",
+   "text": "老人身体好比啥都强"
+  },
+  {
+   "type": "message",
+   "time": "12月3日 16:40",
+   "speaker": "B",
+   "text": "资金流截图我做完了 你过目"
+  },
+  {
+   "type": "message",
+   "time": "12月3日 16:43",
+   "speaker": "A",
+   "text": "我看看 时间对得上吧"
+  },
+  {
+   "type": "message",
+   "time": "12月3日 16:45",
+   "speaker": "B",
+   "text": "对得上 先打款后开票 逻辑顺的"
+  },
+  {
+   "type": "message",
+   "time": "12月3日 16:48",
+   "speaker": "A",
+   "text": "这个好 有痕迹才像真生意"
+  },
+  {
+   "type": "message",
+   "time": "12月3日 16:50",
+   "speaker": "B",
+   "text": "那点数怎么算 还是三个点"
+  },
+  {
+   "type": "message",
+   "time": "12月3日 16:53",
+   "speaker": "A",
+   "text": "五十个给你让半个点 两点五 老关系"
+  },
+  {
+   "type": "message",
+   "time": "12月3日 16:55",
+   "speaker": "B",
+   "text": "行 你把总数发我 我算"
+  },
+  {
+   "type": "message",
+   "time": "12月4日 09:20",
+   "speaker": "A",
+   "text": "总数算好了 八千 你付这个数就行"
+  },
+  {
+   "type": "message",
+   "time": "12月4日 09:23",
+   "speaker": "B",
+   "text": "好 我转你"
+  },
+  {
+   "type": "transfer",
+   "time": "12月4日 09:25",
+   "from": "B",
+   "to": "A",
+   "amount": 8000
+  },
+  {
+   "type": "message",
+   "time": "12月4日 09:27",
+   "speaker": "A",
+   "text": "收到 八千 这就给你把票安排上"
+  },
+  {
+   "type": "message",
+   "time": "12月4日 09:30",
+   "speaker": "B",
+   "text": "明天能出吗 下游催呢"
+  },
+  {
+   "type": "message",
+   "time": "12月4日 09:32",
+   "speaker": "A",
+   "text": "今晚系统过了 明天一早寄"
+  },
+  {
+   "type": "message",
+   "time": "12月4日 09:35",
+   "speaker": "B",
+   "text": "好 寄到我老地址"
+  },
+  {
+   "type": "message",
+   "time": "12月4日 15:20",
+   "speaker": "A",
+   "text": "票开好了 五十个 品目按说好的"
+  },
+  {
+   "type": "message",
+   "time": "12月4日 15:23",
+   "speaker": "B",
+   "text": "截图我再核一遍 别到时候金额串了"
+  },
+  {
+   "type": "message",
+   "time": "12月4日 15:25",
+   "speaker": "A",
+   "text": "都核过了 你收到就知道"
+  },
+  {
+   "type": "message",
+   "time": "12月4日 15:28",
+   "speaker": "B",
+   "text": "嗯 最近风声紧 还是稳点"
+  },
+  {
+   "type": "message",
+   "time": "12月4日 15:30",
+   "speaker": "A",
+   "text": "名单我都筛过 安心"
+  },
+  {
+   "type": "message",
+   "time": "12月5日 10:10",
+   "speaker": "B",
+   "text": "快递收到了 数对 品目也对"
+  },
+  {
+   "type": "message",
+   "time": "12月5日 10:13",
+   "speaker": "A",
+   "text": "那就好 下月要量提前说 这月名额不多了"
+  },
+  {
+   "type": "message",
+   "time": "12月5日 10:15",
+   "speaker": "B",
+   "text": "行 到月底我联系你"
+  },
+  {
+   "type": "message",
+   "time": "12月5日 18:40",
+   "speaker": "A",
+   "text": "周五那顿饭别忘了"
+  },
+  {
+   "type": "message",
+   "time": "12月5日 18:42",
+   "speaker": "B",
+   "text": "忘不了 老地方"
+  },
+  {
+   "type": "message",
+   "time": "12月5日 18:44",
+   "speaker": "A",
+   "text": "就咱俩 别带人"
+  },
+  {
+   "type": "message",
+   "time": "12月5日 18:46",
+   "speaker": "B",
+   "text": "懂"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000690",
+  "status": "accepted",
+  "errors": []
+ }
+}

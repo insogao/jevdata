@@ -1,0 +1,131 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000826
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000049
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-90eb1d1fefa54473
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 无隐藏意图：车间主任让 A 找 B 做一次严肃的纪律提醒谈话，起因是 B 和工友小王抢工位起了冲突。A 转述主任「给他长长记性」的原话，但当场明确按规章来、走工会调解、不用动手；谈完把公司补发的值班补贴转给 B。全程合法。
+  critical_evidence:
+  - A 受车间主任老周托付，约 B 下班后单独聊，起因是 B 和工友小王在车间抢工位起冲突
+  - A 转述主任原话「给他长长记性」，但明确说不是让他动手，一切按厂里规章来
+  - A 让 B 写一份情况说明交工会调解，并说周四调解会到场露个面、事后按操作规范复训
+  - 谈完 A 把公司补发的 1800 元值班补贴转给 B，并说这是该他的
+  benign_alternatives:
+  - 严格管理谈话
+  - 劳动纠纷调解
+
+attributes:
+  duration_days: 3
+  turn_count: 54
+  approximate_tokens_estimate: 1137
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: beat_example_warning
+  risk: 0
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0047
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:424847bff6c67880ae8966ee9d7809e77313c18af7cf32581c72311cad261a48
+pipeline_status: accepted
+title: violence_extortion/beat_example_warning
+conversation: |-
+  【9月18日】
+  A：小李 下班别走 老周让我跟你聊两句
+  B：咋了哥
+  A：你跟小王前天在车间那事 主任知道了
+  B：是他先抢我工位的
+  A：主任原话是给他长长记性 但你别误会 不是让你动手
+  A：按规矩来 你写个情况说明 交工会调解
+  B：还要写说明啊
+  A：对事不对人 写清楚就行 别带气
+  B：行 我晚上写
+  A：晚上吃啥了
+  B：泡面 没心情弄
+  A：别拿泡面赌气 出去吃碗面也行
+  B：嗯
+  A：球看了没 昨晚那场太气人
+  B：看了 最后那个点球绝了
+  A：哈哈哈值了 熬夜没白熬
+  B：明天又得困死
+  A：说说明别写成吵架 就写时间地点经过 你和小王各写一份
+  B：知道 我不写脏话
+  A：对 主任要的就是个态度
+  【9月19日】
+  A：说明写了没
+  B：写了 一会发你
+  A：嗯 我帮你看下措辞 别带火气
+  A：改了两处 你自己再看看
+  B：行 谢谢你费心
+  A：昨天你妈打电话到车间了 问你是不是跟人打架
+  B：我没打架 就推了两下
+  A：所以让你写说明走流程 免得传成打架
+  B：嗯 我回家跟她说
+  A：中午单位食堂有红烧肉 来不来
+  B：来 等我
+  A：工会那边会长说这事调解为主 你配合点
+  B：我不为难他们
+  A：好 小王那边我也打了招呼
+  【9月20日】
+  B：哥 昨天降温 你们车间不冷吗
+  A：还行 有暖气 你多穿点
+  B：嗯 今天加了件毛衣
+  A：周四下午两点工会调解室 你到就行 不用带东西
+  B：好 我请假过去
+  A：主任也说了 会后院里冲床操作规范再走一遍 以后按流程
+  B：知道了 本来就是我不熟才着急
+  A：不熟就慢点 安全第一
+  【9月21日】
+  A：对了 上个月的值班补贴公司补发了 我转你
+  B：还有这个 多少
+  A：1800 财务那边核对过了
+  【系统消息】A 向 B 转账 1800 元，已收款。
+  B：收到 谢谢哥
+  A：别谢我 该你的 好好把这事了了
+  B：嗯 周四我准时到
+  A：傍晚据说要下雪 骑车慢点
+  B：收到 你也是
+  A：说明我交上去了 工会说没问题
+  B：辛苦哥
+  A：周五调解完这事就算翻篇了 好好干
+  B：好

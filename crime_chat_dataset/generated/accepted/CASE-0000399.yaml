@@ -1,0 +1,145 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000399
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000058
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-88bdd5fd3c9044eb
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: violence_extortion
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A 出钱请带节奏的 B 组织水军，在指定主播开播时集中刷屏攻击，约定一单五十块钱冲十分钟，话术由 B 提供，号被封了就换号继续，全程用行话遮掩。
+  critical_evidence:
+  - A 提出要在某主播开播的时候去冲她的直播间，问 B 接不接
+  - B 报出价码：一单五十，冲十分钟，人多的话另算
+  - B 表示攻击用的话术由他统一发，让 A 别自己乱说
+  - B 交代号被封了就换号继续，账号他这边备着
+  - 双方约好线下结账，避开线上留痕
+  benign_alternatives:
+  - 差评维权
+  - 营销互喷讨论
+
+attributes:
+  duration_days: 5
+  turn_count: 67
+  approximate_tokens_estimate: 1398
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: livestream_hate_raid_for_hire
+  risk: 2
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0038
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-020
+
+dedup:
+  content_hash: sha256:9ce985fec8bcb3d26695d8cda63f75c6a52242c54fe52229ff13a579b48ae6ff
+pipeline_status: accepted
+title: violence_extortion/livestream_hate_raid_for_hire
+conversation: |-
+  【10月8日】
+  A：在吗 有个事想找你
+  B：在 你说
+  A：就那个做穿搭直播的 周三晚上八点播 我想让她那天不好过
+  B：懂 带节奏是吧 冲评论区还是冲弹幕
+  A：都冲 让她自己播不下去就行
+  B：这种我们常做 一单五十 冲十分钟
+  A：十分钟够吗
+  B：够 人多一起上 十分钟她心态就崩了 要久就加钱
+  A：先来一次试试 效果好再说
+  B：行
+  B：对了 你晚饭吃了没 我这边刚忙完
+  A：吃了 泡面 懒得做
+  B：老吃泡面不行 胃要坏
+  A：一个人就凑合呗
+  B：哈哈 也是 我老婆不在家我也这样
+  【10月9日】
+  A：那话术怎么办 我随便骂会不会被人看出是一个人
+  B：话术我发你 照着复制就行 别自己发挥
+  A：好 你发我看看
+  B：晚点给你 我这边整理一份 要统一口径才有气势
+  A：行 听你的
+  B：你们那边天气怎么样 我这下雨了
+  A：阴着 闷得慌
+  B：这种天最难受 衣服晾不干
+  A：是啊 我阳台一堆
+  【10月10日】
+  B：账号我这边备了一批 到时候一起上
+  A：你自己也有号啊
+  B：嗯 平时养着 就是为了这种时候用
+  A：要是被封了呢
+  B：封了就换号继续 别在一个号上犟
+  A：明白了 换号接着冲
+  B：对 节奏别断 一断就没气势了
+  A：你养猫了吗 昨天我楼下有只小猫一直叫
+  B：养了一只橘的 能吃了 一天到晚睡
+  A：橘猫都这样 我朋友那只胖得走不动
+  B：哈哈 是的 又懒又粘人
+  A：有猫陪着挺好的 不那么闷
+  【10月11日】
+  B：周三几点开播你确认下 我好排人
+  A：她主页写的八点 一般会提前几分钟
+  B：那就七点五十进场 先埋伏着 一开播就上
+  A：专业 哈哈
+  B：干这个的 得掐点
+  A：钱怎么给你 线上转会不会留记录
+  B：别线上转 回头见面给现金就行
+  A：行 那说个地方
+  B：老地方 地铁口那家奶茶店 完事我找你
+  A：好
+  B：话说你最近加班多吗
+  A：多 天天到九点 头都大了
+  B：我这也一样 项目赶得要命
+  A：钱没多挣 活翻倍
+  B：哈哈 都一样
+  B：话术整理好了 一会儿发你 你挑几条复制
+  A：好 我看看
+  B：记住别带明显一样的词 不然一眼看出是一伙的
+  A：懂了 穿插着来
+  B：对 聪明
+  【10月12日】
+  B：进场了 人已就位
+  A：好 我盯着
+  B：一开播就开始冲 你看着弹幕
+  A：哈哈 她脸都僵了
+  B：有几个号被封了 我换号顶上 别慌
+  A：行 继续 别停
+  B：十分钟到了 收工
+  A：爽 她下播了
+  B：效果满意吧 下次要久点提前说
+  A：满意 奶茶店见
+  B：好 我这就过去

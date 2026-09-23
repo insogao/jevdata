@@ -1,0 +1,133 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000689
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000015
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-491eae5ed0d9b3d7
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: fraud_scam
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 冒充“清华退学名师”，在视频号上向焦虑家长 B 推销所谓提分课。A 自称带过很多届毕业班、十节课包提分、无效退费，并制造稀缺感说只剩最后三个名额、当晚截止。B 将信将疑，一直犹豫没有付款，A 连日催单。证据止于夸大宣传与饥饿营销，全程没有发生任何转账。
+  critical_evidence:
+  - A 自称清华退学、带过多届毕业班的资深名师来包装自己
+  - A 承诺十节课包提分、无效退费，宣称效果立竿见影
+  - A 制造稀缺，说优惠名额只剩最后三个、当晚就截止
+  - B 始终犹豫没有付款，A 连日催单，双方全程没有任何转账
+  benign_alternatives:
+  - 真实在线教育
+  - 大学生家教
+
+attributes:
+  duration_days: 5
+  turn_count: 56
+  approximate_tokens_estimate: 1525
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: video_coaching_parent_scam
+  risk: 1
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0046
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:1fb8af12745f873b38e22c7592c9657d4a73786a46cc1c816c445eff9c055a02
+pipeline_status: accepted
+title: fraud_scam/video_coaching_parent_scam
+conversation: |-
+  【4月6日】
+  A：家长您好 看到您在群里问孩子数学的事 我是周老师
+  B：您好 我家孩子初二 数学总在及格线上下
+  A：这种情况太常见了 我带过十几届毕业班 一眼就看出问题
+  B：您是哪个学校的
+  A：我清华读到大三退的 觉得应试那套没意思 出来专做提分
+  B：清华退学?那怎么不去学校教书
+  A：体制内放不开 我自己做视频课 带的学生提分都很快
+  B：怎么上课 多少钱
+  A：十节精品视频课 一对一答疑 我这边收一万八
+  B：一万八 有点贵
+  A：包提分 十节课下来至少提二十分 无效给你退
+  B：真的能包提分?
+  A：我这口碑不是吹的 你去打听 名额还不一定抢得到
+  B：我再跟孩子他爸商量下
+  A：抓紧 这期就剩最后三个名额
+  【4月7日】
+  B：早上好 我想问下课程怎么安排时间
+  A：每晚七点 视频课加一次答疑 不耽误孩子写作业
+  B：孩子晚上还要上晚自习
+  A：那更好 晚自习回来正好消化 我这课就是给自驱差的孩子设计的
+  B：行 我考虑一下
+  A：午饭吃了吗 别为孩子的事气坏身体
+  B：吃了 就是心里没底
+  A：跟我学一个月您就踏实了 家长都这样过来的
+  B：嗯
+  A：刚又走了一个名额 还剩最后两个了
+  B：这么快
+  A：我学员多 都盯着这期 您要我就先给您留一个
+  B：留着我也不一定报 先别占
+  A：行 那您尽快 过今晚可能就没了
+  【4月8日】
+  B：我看了您视频号 怎么都没几个学生出镜
+  A：家长不愿意露脸 提分案例我私发您几个
+  B：发我看看
+  A：截图发您了 从六十多提到九十多的一大把
+  B：这些成绩单看着有点像做的
+  A：我做教育的 犯得着造假吗 您要信就报 不信我也不强求
+  A：刚最后一个名额也被人订了 我给您加了半个出来
+  B：你们这名额怎么天天变
+  A：热门就这样 今晚十二点前定还能按老价
+  B：我再想想
+  B：你之前带的学生在哪个学校 方便说吗
+  A：这个不方便透露 涉及隐私
+  B：那你们有没有正规资质
+  A：我做的是口碑 不看那些表面东西 您纠结这些就错过机会了
+  【4月9日】
+  A：家长 考虑得怎么样了 名额真不等人
+  B：我还在犹豫 一万八不是小数
+  A：为孩子的前途 一万八算什么 无效退款您怕什么
+  B：万一无效 退款找谁去
+  A：找我 我人在这 跑不了
+  【4月10日】
+  A：最后问您一次 今天截止 报名我就锁名额
+  B：还是算了 我再跟学校老师聊聊
+  A：错过这期再等半年 您舍得?
+  B：我再想想吧 先不报
+  A：行 想通了随时找我 名额不一定还在
+  B：晚上孩子又要开家长会
+  A：家长会正好问问老师 看我说得对不对
+  B：嗯 先这样

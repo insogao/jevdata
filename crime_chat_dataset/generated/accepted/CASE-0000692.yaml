@@ -1,0 +1,120 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000692
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000033
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-9f16dfc373049355
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: contraband_illicit_trade
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A 是工厂渠道，向做微商的 B 推销一批货源，自称是“原厂尾单”、跟正品同一条产线出来，防伪码都能扫过，拿货价按量分级。B 心里犯嘀咕但没深究，先转一笔货款拿一小批试卖，A 承诺当天发货。证据止于口头暗示，B 始终没拿到货物真伪的确证。
+  critical_evidence:
+  - A 自称手里是原厂尾单，跟正品同一条产线出来，货和专柜没差别
+  - A 强调防伪码能扫过，扫码验真没问题
+  - A 说拿货价按拿货量分级，量大价更低
+  - B 转账一笔货款拿一批试卖，A 确认收款并发货，双方未再确认货物真伪
+  benign_alternatives:
+  - 工厂尾单正品
+  - 平替国货推荐
+
+attributes:
+  duration_days: 6
+  turn_count: 42
+  approximate_tokens_estimate: 914
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: replica_counterfeit
+  risk: 1
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0046
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:5c5e5102b840a166ac13321d50b61c51bc16647415d59bc6dac2142162621856
+pipeline_status: accepted
+title: contraband_illicit_trade/replica_counterfeit
+conversation: |-
+  【7月5日】
+  A：哥 最近微商那边好不好做
+  B：一般 你那个厂还有货吗
+  A：有 我这批是原厂的尾单 跟正品一条线下来的
+  B：尾单?质量靠谱吗
+  A：靠谱 你就是专柜拿的也就那样 同一批工人做的
+  B：那防伪怎么算 客户都爱扫码
+  A：防伪码能扫过 验真没问题 你要多少有多少
+  B：扫码能过 那不就是正品了
+  A：你就当正品卖 别声张就行 量大了价我另给
+  B：价格怎么算
+  A：拿货价按层分 走量的一个价 小批一个价
+  B：发个价目我看
+  A：你报个量 我给你算
+  B：中午吃啥
+  A：厂里食堂 吃完还得盯一批货
+  B：你这行也累
+  A：哪行不累
+  【7月6日】
+  B：我算了下 先拿三十个试试水
+  A：三十个有点少 五十起我才好走量价
+  B：五十我怕压手里 先少来点
+  A：行 看你面子 三十就三十 价给你按最低档
+  B：多少钱
+  A：三千 含运费 比你去市场拿省一半
+  B：行 我转你
+  【系统消息】B 向 A 转账 3000 元，已收款。
+  A：收到就给你发货 今天能出
+  B：货到了我先让客户扫扫码 心里没底
+  A：放心扫 要是一扫假的 货我全退你
+  B：你这话说得 我就试试
+  【7月7日】
+  A：货今天上午发了 单号回头给你
+  B：好
+  B：这两天我们这边下雨 物流慢吧
+  A：雨天是慢点 别急
+  B：嗯 不急
+  【7月9日】
+  B：货收到了 包装还行
+  A：跟正品一样吧 我什么时候骗过你
+  B：客户扫了几个 说能扫出来
+  A：那不就得了 后面要量提前跟我说
+  B：先卖着看 别出岔子
+  A：出不了岔子 有事找我
+  【7月10日】
+  B：周末聚不聚 老地方撸串
+  A：去 正好跟你聊聊下批货
+  B：饭桌上别谈生意

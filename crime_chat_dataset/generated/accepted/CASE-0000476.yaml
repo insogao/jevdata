@@ -1,0 +1,129 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000476
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000147
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-a7e83c1e3bce9b3b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: other_illicit_coordination
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 中介A组织写手池代写学位论文，按一篇1500元报价，承诺「查重我保过」，还能替客户跟导师打招呼疏通；A把定金转给写手B安排开工。
+  critical_evidence:
+  - A 组织写手代写学位论文，一篇报价一千五
+  - A 承诺查重保过，过不了全额退
+  - A 说导师那边他能打招呼、递材料
+  - A 转给写手B 900 元定金安排开工
+  benign_alternatives:
+  - 写作辅导服务
+  - 论文润色
+
+attributes:
+  duration_days: 2
+  turn_count: 54
+  approximate_tokens_estimate: 1124
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: homework_ghostwriting_ring
+  risk: 2
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0042
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:c6b525e33c44ef7bf7c4036e73c2e0e2a55f9f3d9c02aa911d7555a300194803
+pipeline_status: accepted
+title: other_illicit_coordination/homework_ghostwriting_ring
+conversation: |-
+  【5月20日】
+  A：老陈 最近手上有空不
+  B：咋了
+  A：又接了个硕士的 你这个方向的 你熟 给你吧
+  B：多少字
+  A：三万五 开题都给了 资料发你
+  B：啥价
+  A：客户那边一篇一千五 你拿九百 剩下的我担风险
+  B：九百有点低 这个方向难查资料
+  A：一千 不能再多了 我这还要压查重还要打点
+  B：行 一千
+  B：查重过了吗 别到时候翻车
+  A：查重我保过 过不了我退钱 这你放心
+  B：你已经跑过一遍了？
+  A：有工具 先降重再交 老套路 你只管写
+  B：那行
+  B：客户别到时候又改来改去
+  A：改三次以内包 超了加钱 我跟他说好了
+  B：好
+  A：还有个事 他导师那边我打招呼 送两盒茶 让他别卡得太严
+  B：你路子真广
+  A：干这行就得有人脉 不然谁敢接
+  B：导师那边我打招呼 这话别跟客户说
+  A：知道 客户只知道查重保过就行
+  B：定金先给我点 我这边要买文献
+  A：给你九百 剩下的交稿结
+  B：行
+  【系统消息】A 向 B 转账 900 元，已收款。
+  B：收到 我今晚就开始看开题
+  A：一周能交不 客户下月初答辩
+  B：十天吧 一周太赶 质量保不住
+  A：行 十天 先给个提纲我转客户
+  B：这客户自己学啥的 怎么连开题都找人
+  A：在职的 忙 花钱买省事 这种最好带
+  B：哈哈 也是
+  A：对了你上次那篇给结了吗
+  B：结了 拖了半个月
+  A：这种客户以后先要全款
+  B：学到了
+  【5月21日】
+  B：提纲出来了 发你 你看行不行
+  A：可以 挺顺 就这么写 数据那块别造假 编图表容易被看出来
+  B：用公开数据 换个说法
+  A：对 稳一点 别搞花活
+  B：客户要是问写作过程我咋说
+  A：让他说跟导师课题组做的 别提别人
+  B：好 我来跟他对接还是你
+  A：你直接对接 我不露面 有争议找我
+  B：明白
+  A：中午吃饭没
+  B：刚吃 楼下快餐
+  A：别老吃快餐 注意胃
+  B：知道啦 忙起来顾不上
+  B：写到八千了 明天继续
+  A：稳 慢慢来 质量第一
+  B：嗯 交稿前给你过一遍查重
+  A：好 我等你消息

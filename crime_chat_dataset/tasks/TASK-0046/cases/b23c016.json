@@ -1,0 +1,384 @@
+{
+ "key": "b23c016",
+ "archetype_id": "ARC-000126",
+ "subtype": "trade_secret_threat",
+ "latent_intent": "技术骨干 A 提出离职，但不想按约定承担竞业限制赔偿，还向老板 B 索要一笔额外补偿。A 暗示公司核心项目代码已经拷到自己手里，并以“不答应就把东西发到对手公司邮箱”相威胁。B 评估风险后被迫妥协，免除了竞业条款约定的赔偿并转账一笔钱，A 确认收到后承诺不再纠缠。",
+ "critical_facts": [
+  "A 提出离职，并明确要求免除自己该承担的竞业限制赔偿和相关条款",
+  "A 暗示公司核心项目的代码资料已经拷到了自己手里",
+  "A 威胁如果 B 不答应免除赔偿、不给补偿，就把代码发给竞争对手公司的邮箱",
+  "B 被迫妥协、转账一笔补偿款，A 确认到账后表示会按约定离开"
+ ],
+ "benign_alternatives": [
+  "离职交接谈判",
+  "技术方案转让"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "11月3日 09:20",
+   "speaker": "A",
+   "text": "老板 我想跟你谈个事 关于我离职的"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 09:23",
+   "speaker": "B",
+   "text": "你说 我也正想找你聊聊"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 09:25",
+   "speaker": "A",
+   "text": "我这边定了 月底走"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 09:27",
+   "speaker": "B",
+   "text": "行 好聚好散 交接做好"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 09:30",
+   "speaker": "A",
+   "text": "交接没问题 但那个竞业协议 赔偿我承担不了"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 09:33",
+   "speaker": "B",
+   "text": "当初可是你自己签的 白纸黑字"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 09:36",
+   "speaker": "A",
+   "text": "所以我不是来通知你 是来跟你商量"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 09:38",
+   "speaker": "B",
+   "text": "商量什么"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 09:40",
+   "speaker": "A",
+   "text": "条款免了 再给我一笔 大家都省事"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 09:43",
+   "speaker": "B",
+   "text": "你这话什么意思"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 09:45",
+   "speaker": "A",
+   "text": "我刚整理项目 顺手把核心那部分代码都拷了 备份在我这"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 09:47",
+   "speaker": "B",
+   "text": "你疯了 那是公司的东西"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 09:50",
+   "speaker": "A",
+   "text": "我知道是公司的 所以我才跟你好好说"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 09:52",
+   "speaker": "B",
+   "text": "你先冷静 事情不是这么谈的"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 09:55",
+   "speaker": "A",
+   "text": "我很冷静 你考虑一下 别逼我"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 12:30",
+   "speaker": "B",
+   "text": "中午一起吃饭 边吃边聊"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 12:32",
+   "speaker": "A",
+   "text": "不去了 你什么时候想通什么时候说"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 12:34",
+   "speaker": "B",
+   "text": "你这脾气 好歹同事几年"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 10:10",
+   "speaker": "B",
+   "text": "昨天说的 我再问一句 你想要多少"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 10:13",
+   "speaker": "A",
+   "text": "竞业那块免了 另外给我六万 就当补偿"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 10:15",
+   "speaker": "B",
+   "text": "六万 你张口就来"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 10:18",
+   "speaker": "A",
+   "text": "跟那批代码比 这数不贵"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 10:20",
+   "speaker": "B",
+   "text": "我要是不给呢"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 10:23",
+   "speaker": "A",
+   "text": "那我就把东西发到城建那边对手的邮箱 他们早想要了"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 10:25",
+   "speaker": "B",
+   "text": "你别冲动 那是要出事的"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 10:28",
+   "speaker": "A",
+   "text": "出事的是你 不是我"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 12:40",
+   "speaker": "A",
+   "text": "对了 你上回让我看的那个竞品 我整理了个对比表 回头给你"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 12:42",
+   "speaker": "B",
+   "text": "先不谈这个 我头都大了"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 12:44",
+   "speaker": "A",
+   "text": "哈哈 你也知道头疼"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 17:50",
+   "speaker": "B",
+   "text": "晚上有空吗 我想当面聊聊 别在微信说"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 17:52",
+   "speaker": "A",
+   "text": "没什么好聊的 条件就那样 你答应就答应"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 17:54",
+   "speaker": "B",
+   "text": "给我一天时间 我周转一下"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 17:56",
+   "speaker": "A",
+   "text": "行 明天中午前 过时不候"
+  },
+  {
+   "type": "message",
+   "time": "11月5日 09:30",
+   "speaker": "B",
+   "text": "孩子发烧 我一晚上没睡"
+  },
+  {
+   "type": "message",
+   "time": "11月5日 09:33",
+   "speaker": "A",
+   "text": "要紧吗"
+  },
+  {
+   "type": "message",
+   "time": "11月5日 09:35",
+   "speaker": "B",
+   "text": "退了 折腾人"
+  },
+  {
+   "type": "message",
+   "time": "11月5日 09:37",
+   "speaker": "A",
+   "text": "那就行"
+  },
+  {
+   "type": "message",
+   "time": "11月5日 11:50",
+   "speaker": "B",
+   "text": "我想好了 但你要当着面把东西删了"
+  },
+  {
+   "type": "message",
+   "time": "11月5日 11:53",
+   "speaker": "A",
+   "text": "删不删的你别管 钱到了我就不往外发 我说话算话"
+  },
+  {
+   "type": "message",
+   "time": "11月5日 11:55",
+   "speaker": "B",
+   "text": "行 我下午转 竞业那块我让法务出个解除函"
+  },
+  {
+   "type": "message",
+   "time": "11月5日 11:57",
+   "speaker": "A",
+   "text": "解除函必须出 这是前提"
+  },
+  {
+   "type": "message",
+   "time": "11月5日 12:00",
+   "speaker": "B",
+   "text": "知道了"
+  },
+  {
+   "type": "message",
+   "time": "11月5日 15:30",
+   "speaker": "B",
+   "text": "法务函我让拟了 下午盖章"
+  },
+  {
+   "type": "message",
+   "time": "11月5日 15:33",
+   "speaker": "A",
+   "text": "嗯 钱呢"
+  },
+  {
+   "type": "message",
+   "time": "11月5日 15:35",
+   "speaker": "B",
+   "text": "财务走一笔 今天就到你账"
+  },
+  {
+   "type": "transfer",
+   "time": "11月5日 16:02",
+   "from": "B",
+   "to": "A",
+   "amount": 60000
+  },
+  {
+   "type": "message",
+   "time": "11月5日 16:05",
+   "speaker": "B",
+   "text": "六万转你了 解除函明天给你 你按约定办"
+  },
+  {
+   "type": "message",
+   "time": "11月5日 16:07",
+   "speaker": "A",
+   "text": "收到 放心 我这边不会往外发 咱两清"
+  },
+  {
+   "type": "message",
+   "time": "11月5日 16:09",
+   "speaker": "B",
+   "text": "交接清单你这两天给我"
+  },
+  {
+   "type": "message",
+   "time": "11月5日 16:11",
+   "speaker": "A",
+   "text": "明天整理 该交的我交"
+  },
+  {
+   "type": "message",
+   "time": "11月6日 10:20",
+   "speaker": "B",
+   "text": "解除函盖章了 拍照给你"
+  },
+  {
+   "type": "message",
+   "time": "11月6日 10:23",
+   "speaker": "A",
+   "text": "收到 这就稳了"
+  },
+  {
+   "type": "message",
+   "time": "11月6日 10:25",
+   "speaker": "B",
+   "text": "以后别再做这种事 谁也保不齐谁"
+  },
+  {
+   "type": "message",
+   "time": "11月6日 10:27",
+   "speaker": "A",
+   "text": "你不要我 我也不惹你 就这样吧"
+  },
+  {
+   "type": "message",
+   "time": "11月7日 12:10",
+   "speaker": "B",
+   "text": "工具人走了 组里这几天忙疯"
+  },
+  {
+   "type": "message",
+   "time": "11月7日 12:13",
+   "speaker": "A",
+   "text": "该招人了 别指望我回头"
+  },
+  {
+   "type": "message",
+   "time": "11月7日 12:15",
+   "speaker": "B",
+   "text": "放心 不会找你"
+  },
+  {
+   "type": "message",
+   "time": "11月7日 18:40",
+   "speaker": "B",
+   "text": "周末球赛还看吗 老地方"
+  },
+  {
+   "type": "message",
+   "time": "11月7日 18:42",
+   "speaker": "A",
+   "text": "看 但不是跟你"
+  },
+  {
+   "type": "message",
+   "time": "11月7日 18:44",
+   "speaker": "B",
+   "text": "随你"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000694",
+  "status": "accepted",
+  "errors": []
+ }
+}

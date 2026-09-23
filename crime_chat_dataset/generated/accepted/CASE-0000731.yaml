@@ -1,0 +1,112 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000731
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000107
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-bd6e5a487d11d53a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: theft_robbery_property_crime
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 快递分拨中心的内部人员 A 与外面的中间人 B 合作，专门截走高价值快递（苹果手机专线），由 A 制造丢件、利用公司赔付兜底，货私下转给 B 出手。
+  critical_evidence:
+  - A 说这批是苹果手机专线，件值高、好出手，让 B 先备好渠道
+  - A 表示丢件率由他来控，出了事情赔付由公司兜，不用 B 承担
+  - 两人商量让 B 在指定站点等着接货，A 负责把件从流水线上拿下来
+  - 事后 B 转给 A 一笔钱作为这一批的分成
+  benign_alternatives:
+  - 快递正常派送
+  - 驿站代收
+
+attributes:
+  duration_days: 2
+  turn_count: 37
+  approximate_tokens_estimate: 820
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: courier_intercept
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0045
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:10f7c823977a2977e8dc319c829abade8f987ecf5f2e377f5a32921a24324610
+pipeline_status: accepted
+title: theft_robbery_property_crime/courier_intercept
+conversation: |-
+  【8月11日】
+  A：这批是苹果专线 件多 值高
+  B：能出多少
+  A：看情况 一批拿三个五个都行 反正认不出
+  B：你怎么弄 会不会查到你这
+  A：丢件率我来控 我这班次上的量本来就大 少几个看不出来
+  B：那要是客户投诉呢
+  A：赔付有公司 走个流程就行了 不用你赔
+  B：行 那你说怎么接
+  A：你到我们西区那个分拨点外面等着 我下班把东西放你车上
+  B：几点
+  A：晚上九点 我值晚班 那会儿交接的人少
+  B：中午吃啥 我在外面随便对付
+  A：我们食堂今天有红烧肉 我打了双份
+  B：羡慕 我这只有盒饭
+  A：晚上干完我请你撸串 顺便把规矩说清
+  B：行 就等你这句话
+  B：到了 停在对面那个巷子口
+  A：别停正门 往后退点 有摄像头
+  A：东西拿出来了 三个盒子 你别当场拆
+  B：多重 我这包能装下
+  A：不重 你回去再看 别留外包装
+  B：知道 我做这个有经验 拆了才出手
+  A：嗯 那明晚老地方 我这边稳定出
+  B：好 我这边随时要
+  【8月12日】
+  A：昨晚那三个出了吗
+  B：出了 一个两千六 一共七千八
+  A：行 我的那份按说好的来
+  【系统消息】B 向 A 转账 1500 元，已收款。
+  B：一千五 你查下
+  A：收到 这数对
+  B：今晚还有没有
+  A：有 但别太频繁 一批隔一两天 稳一点
+  B：懂 细水长流
+  B：今晚下雨 你带雨衣没
+  A：带了 分拨棚里不漏 就是湿
+  B：那晚上还去不
+  A：去 雨大反而没人盯 你准时
+  B：好 九点见

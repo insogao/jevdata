@@ -1,0 +1,123 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000697
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000143
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-5198a47b8a0287f4
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 无隐藏意图：A 是代账公司负责人，B 是合作企业的会计。双方签有正式的代理记账合同，日常做账、开票、纳税申报。A 提示本月开票额度快用完、真实业务可安排到下月初开票，请 B 把公司银行流水截图整理归档用于账目核对，并说明企业不在本季税务稽查抽查名单内、按流程正常申报即可；月底 B 按合同支付代账服务费 1500 元。
+  critical_evidence:
+  - A 为 B 所在企业提供代理记账与开票服务，双方有正式的代账合同和服务清单
+  - A 说这个月开票额度快用完了，提醒还有真实业务的话可以安排到下月初再开，避免超额
+  - A 请 B 把公司本月银行流水截图整理好发来，用于账目核对与凭证归档
+  - A 说企业不在本季度税务稽查抽查名单里，按流程正常申报即可；月底 B 转账代账服务费 1500 元并收到正规发票
+  benign_alternatives:
+  - 代账公司开票
+  - 税务筹划讨论
+
+attributes:
+  duration_days: 4
+  turn_count: 46
+  approximate_tokens_estimate: 1146
+  relationship: 中间人关系
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: false_invoicing_group
+  risk: 0
+  relationship: 中间人关系
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0046
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:be591dac0ba8ea31ff3221c8a638cfb6487a6f7a080fb7de0a05550df8e20489
+pipeline_status: accepted
+title: other_illicit_coordination/false_invoicing_group
+conversation: |-
+  【10月8日】
+  A：早 B会计 这个月的账我这边开始做了 先跟你对几件事
+  B：好 你说
+  A：这个月开票额度快用完了 还有没有要开的
+  B：有两单客户还没确认 估计得压到下月
+  A：那就下月初开 别超了额度 超了麻烦
+  B：行 我提醒销售那边
+  A：还有 把公司银行流水截图发我一下 这月要核对入账
+  B：从哪个银行导 基本户还是那个一般户
+  A：基本户为主 一般户有大额也一起 我按流水对凭证
+  B：好 我下午导出来整理成截图给你
+  A：急不急看月底申报 这周内就行
+  B：中午吃啥 楼下新开了家轻食
+  A：我吃了碗面 你们年轻人讲究
+  B：主要最近长肉 得控一下
+  A：哈哈 我这一把年纪无所谓了
+  【10月9日】
+  B：流水截图发你邮箱了 基本户 17 页
+  A：收到了 我看一下有没有异常大额
+  B：有一笔 8 号收了货款 5 万 对应那张票我放凭证里了
+  A：对得上 这张我按真实业务入账 没问题
+  B：嗯 都是真单子 你按规矩来就行
+  A：对 该怎么做怎么做 咱合规最重要
+  A：对了 本季稽查抽查名单我看了 咱不在名单里
+  B：那太好了 省得提心吊胆
+  A：不在名单也照常申报 别抱侥幸 该留的凭证都留好
+  B：明白 我这边资料都齐全
+  【10月10日】
+  B：我孩子学校要开个社会实践证明 你有模板吗
+  A：哦这个我没有 你网上下一个吧
+  B：行 那我随便找找
+  A：你娃几年级了
+  B：初二 正是费钱的时候
+  A：都一样 咬牙供吧
+  A：这个月的申报表我填好了 发你看一眼
+  B：收到 我核对下数字
+  A：有出入跟我说 申报前还能改
+  B：好 我看完回你
+  【10月11日】
+  B：数字都对 没问题
+  A：那我就提交了 申报完把回执发你
+  B：辛苦
+  A：月底了 把服务费结一下 老规矩 1500
+  B：好 我走公户转你
+  A：发票我一起开了 抬头还是公司
+  B：对 正规发票寄过来
+  A：明后天寄
+  【系统消息】B 向 A 转账 1500 元，已收款。
+  A：收到 1500 代账服务费
+  B：好 下月还按这个来
+  A：对 流程都顺 有事随时说

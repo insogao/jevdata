@@ -1,0 +1,114 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000626
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000026
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-7e597259d60b8258
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: bribery_corruption
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A 为家人手术托医院里的熟人 B 指定专家并把排期加急，术前给 B 递了信封当「心意」，手术顺利后再转一笔感谢费；双方全程用「走个流程」「主任那边」代称好处。
+  critical_evidence:
+  - A 托 B 帮忙指定某专家主刀，并把家人的手术排期加急
+  - A 在术前把信封当「心意」交给 B，B 推让后收下
+  - 手术顺利后 A 又转一笔感谢费给 B
+  - 双方用「走个流程」「心意」「主任那边」代称，不点破是好处费
+  benign_alternatives:
+  - 正常专家门诊挂号
+  - 医院特需服务费
+
+attributes:
+  duration_days: 3
+  turn_count: 38
+  approximate_tokens_estimate: 678
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: medical_channel_fee
+  risk: 3
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0044
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:4676a93c1d14d9dc640bca40ad608b58f3de93913b572b06a398b1ef66b1ed66
+pipeline_status: accepted
+title: bribery_corruption/medical_channel_fee
+conversation: |-
+  【6月2日】
+  A：哥 我妈那个手术 能不能帮我想想办法
+  B：排期是排在哪天
+  A：排到月底了 我妈等不起
+  B：我看能不能往前提 主任那边我去说
+  A：太谢谢了 哥你说个数
+  B：先别谈这个 走个流程看能不能加进去
+  A：需要我准备啥材料
+  B：病历和之前的片子发我 我拿过去
+  A：这就发
+  B：主任看了 说可以提前到周四
+  A：真的?太感谢了哥
+  B：先把入院办了 其他我来
+  A：中午吃了吗
+  B：随便吃了点
+  A：别对付 胃要紧
+  A：住院押金交上了
+  B：嗯 周四早上第一台
+  【6月3日】
+  A：哥 明天术前 那个信封你收下 一点心意
+  B：这不行 看病归看病
+  A：哥你别客气 我妈就靠你了
+  B：那先放这 我记着
+  A：谢谢哥
+  A：术前还要签啥吗
+  B：麻醉同意书 护士会叫你
+  A：好 我守着
+  A：我妈有点紧张
+  B：正常 让她别多想 主任手稳
+  A：有你这句话我踏实多了
+  【6月4日】
+  A：推进去了
+  B：别急 我盯着
+  B：出来了 很顺利
+  A：太好了 谢谢哥
+  A：哥 感谢费我给你转过去 你别嫌少
+  B：都说了不用
+  A：拿着 不然我心里过不去
+  【系统消息】A 向 B 转账 5000 元，已收款。
+  B：行吧 你妈恢复要紧
+  A：嗯 明天能下床不
+  B：看情况 别急

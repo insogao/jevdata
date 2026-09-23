@@ -1,0 +1,117 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000405
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000059
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-934d59546efad241
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 托熟人 B 介绍陪侍安排，先问上次那批“资源”还在不在，报了自己的身高年龄要求，约定酒店由 A 自付、费用另结，B 从中牵线并收一笔介绍费。
+  critical_evidence:
+  - A 上来就问上次那批“资源”还在不在，B 说还有
+  - A 报了身高年龄等要求，让 B 照这个条件安排
+  - B 交代酒店由 A 自己订、自己付，别走他的号
+  - 双方约好时间段和见面地点，事后再结费用
+  - A 先付给 B 一笔介绍费
+  benign_alternatives:
+  - 正规商务伴游澄清
+  - 朋友聚会邀约
+
+attributes:
+  duration_days: 2
+  turn_count: 41
+  approximate_tokens_estimate: 863
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: escort_arrangement
+  risk: 3
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0038
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-020
+
+dedup:
+  content_hash: sha256:b299054326b8f5c1c7b91cd934c1d849fe3bfcc50d43f371ec4f90ac74276bd3
+pipeline_status: accepted
+title: sexual_transaction_exploitation/escort_arrangement
+conversation: |-
+  【4月18日】
+  A：在吗 上次那个还在做吗
+  B：在 你说哪批
+  A：就上回给我安排的那个 资源还在吗
+  B：还有 换了一批新的 你要什么条件
+  A：一米六五以上 年纪小点的 别太成熟
+  B：懂 我给你挑 什么时候要
+  A：明天晚上 我出差在这边
+  B：行 我给你问一个 你报下自己情况
+  A：三十多 一米七八 做生意的
+  B：好 我发过去 对方挑单也会看
+  A：对了 房你们提供还是我自己开
+  B：房你自己订 别用我的名字 用我的容易留记录
+  A：明白 那酒店钱我出
+  B：对 房费你自己结 别的到时候结
+  A：行 那订市里那家就行 我熟
+  B：可以 别订太偏的 对方也看位置
+  A：嗯 我明天到了就订
+  B：你这次待几天 还是明天就走
+  A：两天 后天下午回
+  B：那够安排 时间我跟你对一下
+  A：好
+  【4月19日】
+  B：给你问到了 条件符合 晚上有空
+  A：几点 我下午到的
+  B：你说几点就几点 提前一小时告诉我就行
+  A：九点吧
+  B：行 我让她九点过去 你把地址发我
+  A：到了发你
+  A：介绍费还是老数吗
+  B：涨了一点 现在都这个价
+  A：你说个数 我先转你
+  B：先转八百 剩下的你跟她谈
+  A：好 马上
+  【系统消息】A 向 B 转账 800 元，已收款。
+  B：收到 我把她联系方式发你
+  A：好 剩下的事我们自己对
+  B：对 我就牵个线 后面你们谈
+  A：你这边最近忙不忙 生意咋样
+  B：就那样 靠你们这些老主顾照顾
+  A：哈哈 都好说
+  A：酒店订好了 一会儿地址发你
+  B：好 我跟她说一声 让她别迟到
+  A：嗯 谢了

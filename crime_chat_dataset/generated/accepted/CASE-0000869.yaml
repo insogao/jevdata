@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000869
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000147
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-6592934b36867dcb
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: other_illicit_coordination
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 表哥 A 以亲友身份把表弟 B 拉进论文代写链条，按篇结算并许诺查重与导师关系都由自己摆平，B 顾虑学术风险后仍答应先试写一篇。
+  critical_evidence:
+  - A 以亲友身份提出论文代写的活儿，报价一篇一千五、交稿当天结
+  - A 承诺查重由他保过、格式和署名都由他这边处理，用不上 B 的个人信息
+  - A 称导师那边他打招呼，出事由他兜着，劝 B 放心接单
+  - B 起初担心学术风险，最终答应先试着写一篇短的
+  benign_alternatives:
+  - 朋友之间的无偿写作互助
+  - 正规的有偿论文润色与排版服务
+
+attributes:
+  duration_days: 4
+  turn_count: 55
+  approximate_tokens_estimate: 1073
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: homework_ghostwriting_ring
+  risk: 1
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0055
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:9a1d585c179aa243b10e6294bf8ecb52f660d4c71cf9955737349f0370494c87
+pipeline_status: accepted
+title: other_illicit_coordination/homework_ghostwriting_ring
+conversation: |-
+  【3月2日】
+  A：弟 最近忙啥呢
+  B：赶毕业论文呢 头发都快掉光了
+  A：哈哈 那正好 哥这有个活儿给你
+  B：啥活儿
+  A：帮人写点东西 你笔头好 一篇一千五
+  B：帮谁写啊 什么内容
+  A：就是那种交差的东西 不用我说太明白 哈哈
+  B：代写论文?哥这可不太行
+  A：别说得那么难听 就是帮个忙 人家赶时间
+  B：学校查重很严的 我这要是被牵连
+  A：查重我保过 格式署名那边我处理 用不上你的信息
+  B：我考虑考虑 有点慌
+  A：有啥慌的 天塌下来哥顶着
+  B：再说吧
+  A：对了 姨妈又给你张罗相亲没
+  B：安排了 上周见一个 全程尬聊
+  A：你要求别太高
+  B：我不是挑 是真没感觉 聊不到一块
+  A：慢慢来 你才多大
+  B：你跟我妈一个口气
+  A：那我闭嘴 哈哈
+  【3月3日】
+  A：考虑得咋样 那边催得紧 先来一篇小的试水
+  B：一篇到底多少
+  A：一千五 交稿当天结 不打白条
+  B：万一被查出来呢
+  A：导师那边我打招呼 你只管写 出事算我的
+  B：你还认识人家导师?
+  A：圈子就这么大 你信哥
+  B：那...我先试一篇 说好就一篇
+  A：这就对了 要求我整理好发你
+  B：昨晚那球你看了没
+  A：看了 最后三分钟绝了
+  B：我熬夜看完 今天上课困成狗
+  A：值了 哈哈
+  【3月4日】
+  B：写了一半 有几个点对不上 题目也偏
+  A：哪几个 发我 我让那边补
+  B：资料我这边查不到 得买
+  A：你先垫上 回头给你
+  【系统消息】A 向 B 转账 200 元，已收款。
+  B：收到
+  A：中午吃啥
+  B：沙拉 最近胖了
+  A：你哪胖了
+  B：别安慰我 裤子都紧了
+  A：那晚上别吃夜宵
+  B：说谁呢 你才天天点烧烤
+  A：哈哈 被你发现了
+  【3月5日】
+  B：写完了 你查下
+  A：可以啊 比我想的快
+  B：那钱...
+  A：今晚结 下一批还有三篇 你接不接
+  B：先结这篇再说 别画饼
+  A：哈哈 少不了你的
+  B：别用我学校邮箱发 我怕留痕
+  A：放心 我这边走别的路子
+  B：嗯

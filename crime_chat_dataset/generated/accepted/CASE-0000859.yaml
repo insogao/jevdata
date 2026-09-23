@@ -1,0 +1,124 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000859
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000146
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-7fa1bfe8eea18524
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: other_illicit_coordination
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 表哥 A 以自家人的名义，向做号供应的表弟 B 批量借调养熟的账号，按排期表在平台文案下带节奏控评，本质是有组织的水军刷量，B 只当是帮亲戚冲数据。
+  critical_evidence:
+  - A 找 B 要一批号，说一百个号今晚开工，让 B 安排人按点发
+  - A 说文案我发你，按排期分三波发、别扎堆
+  - B 说号商欠我货，A 催 B 先垫上别断供，并有一条正常结款转账
+  - 两人把节奏做起来后约定月底一起结账
+  benign_alternatives:
+  - 营销推广讨论
+  - UGC运营
+
+attributes:
+  duration_days: 6
+  turn_count: 45
+  approximate_tokens_estimate: 867
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: rating_farm_order
+  risk: 1
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0054
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:8d9a66252e233df1e6a473f4664f9931e1c24116cd055db600121ad831a70ea9
+pipeline_status: accepted
+title: other_illicit_coordination/rating_farm_order
+conversation: |-
+  【8月12日】
+  A：在忙不
+  B：刚哄睡娃 咋了哥
+  A：明晚要一批号 你那边能凑多少
+  B：一百个应该没问题 老规矩?
+  A：对 号都养熟了没 别一上去就挂
+  B：养着呢 每天都有在刷 稳的
+  A：行 一百个号今晚开工 文案我发你 你安排人按点发
+  B：好 几点开始
+  A：我排个表 分三波 别扎堆
+  B：收到
+  A：小侄女上幼儿园适应了没
+  B：哭了三天 现在好了 天天吵着要去
+  A：哈哈 随你 从小能说
+  B：随她爸 嘴碎
+  【8月13日】
+  B：哥 昨天那批有个号说没动静 是不是被限了
+  A：正常 冷一冷再用 别硬顶
+  B：嗯 我换一批
+  A：对了 号商欠我货 你那边先垫上 别断
+  B：我这也不多了 你先结上一批的
+  A：结 我这就转你
+  【系统消息】A 向 B 转账 3200 元，已收款。
+  A：今天热死了 你那下雨没
+  B：下了 闷得要命
+  A：让干活的人多喝水 别中暑
+  B：哈哈 你比我还会操心
+  【8月14日】
+  A：文案看了没
+  B：看了 有几条太冲 我让改软点
+  A：听你的 别太假 自然点
+  B：嗯 我盯着
+  B：哥 我这边想再招俩帮忙的 你看行不
+  A：行 手脚干净点 别乱问
+  B：懂 嘴严
+  【8月15日】
+  A：数据咋样
+  B：那几条起来了 评论也顺
+  A：好 稳住节奏 这两天别停
+  B：号够的话没问题
+  A：你上次说的那个耳机 好用不
+  B：一般 降噪还行 打电话凑合
+  A：那我再看看
+  【8月16日】
+  B：哥 货到了 五十个新的 下午就能上
+  A：好 老规矩排表
+  B：表发我
+  【8月17日】
+  A：这批完了歇两天 别太密
+  B：好 我让她们休整下
+  A：结账还是老时间?
+  B：行 月底一起

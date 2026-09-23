@@ -1,0 +1,149 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000470
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000079
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-8f785cfe238541c3
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: privacy_doxxing
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 论坛用户A受托「扒」一个id，翻出对方的小号、相册原图时间线、历史转发记录，整理成一份曝光帖，并和版主关系户B商量怎么绕开版规发出去、避免被删。风险程度较低，属于起底曝光。
+  critical_evidence:
+  - A 帮人查一个id，翻出了对方从未公开的小号
+  - A 通过相册原图的拍摄时间线锁定对方真实活动轨迹
+  - A 说对方转发过什么都能查出来，做成材料
+  - A 与B商量怎么规避版规把曝光帖发出去
+  benign_alternatives:
+  - 公开信息检索讨论
+  - 品牌舆情分析
+
+attributes:
+  duration_days: 5
+  turn_count: 72
+  approximate_tokens_estimate: 1446
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: social_thread_expose
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0042
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:054aa43113c256a58778a7c4b26c509748f693545d99d4af9984a768cd1ffa14
+pipeline_status: accepted
+title: privacy_doxxing/social_thread_expose
+conversation: |-
+  【8月1日】
+  A：在吗 帮我个事
+  B：说
+  A：有个id老在帖子里阴阳我朋友 想扒扒他底
+  B：你要扒到什么程度
+  A：先看他还有没有别的号
+  B：你把他主页链接发我 我看看
+  A：发了
+  B：这号注册三个月 但关注列表跟一个老号高度重合
+  A：小号？
+  B：大概率 那个老号五年前的相册跟这个对上
+  A：小号也给你翻了 厉害
+  B：继续看 他那相册没关原图 能读拍摄时间
+  A：原图时间能说明啥
+  B：说明他哪天在哪 几张一气看 路线就出来了
+  A：这有点狠了
+  B：你让我扒的 别心软
+  A：中午吃啥
+  B：食堂 你那边呢
+  A：点了外卖 黄焖鸡
+  B：减脂呢你还吃这个
+  A：管不住嘴 晚上再说
+  A：他转发过的东西能查不
+  B：能 转发记录、点赞、评论时间都能拉出来
+  A：转发过什么都能查 那够写一篇了
+  B：对 挑几条劲爆的一放 人设就塌
+  B：今天降温 你骑车回去加件衣服
+  A：知道 你也是
+  【8月2日】
+  A：材料我理了个初稿 你看下结构
+  B：别写太满 太满容易被判违规删帖
+  A：那怎么发才留得住
+  B：把真名和手机号处理掉 剩下的用截图 标题起得普通点
+  A：不打真名那还有人信吗
+  B：让认识的自己对号入座 懂的自然懂
+  A：行 我先改一版
+  B：发之前给我看一眼 我给你把把关
+  A：好 晚上发你
+  A：问一下 分开发还是集中发
+  B：分楼发 一楼一个点 别一口气放完
+  A：为啥
+  B：一楼一个爆点 楼层高 删一节不至于全没
+  A：学到了
+  B：你上次那个健身卡退了没
+  A：退了 扣了两百手续费
+  B：现在都这样 我那张转给别人了
+  【8月3日】
+  A：初稿发你了 你看看
+  B：第三段太直白 改含蓄点 名字打码
+  A：改了 第四段那个时间线留不留
+  B：留 但别说怎么推出来的 就说网友发现
+  A：好
+  A：标题我想了个「说说某位大V的另一面」
+  B：太冲 用「关于最近的一些疑问」这种
+  A：看着像澄清帖 哈哈
+  B：就是要这个效果
+  B：周末看球不 来我家
+  A：去 带点卤味
+  B：行 别带多了
+  【8月4日】
+  A：今晚就发 我有点紧张
+  B：紧张啥 你又不是第一个扒的
+  A：万一他找我咋办
+  B：用你那个新号发 谁知道是你
+  A：对 我早申请好了
+  B：发完别留言 别回帖 沉两天再看
+  A：明白 沉住气
+  A：发出去了 三十分钟就两百层
+  B：别飘 我盯着板块 有人举报我压一下
+  A：谢了 这事没你办不成
+  B：少说 过几天删帖前再说
+  【8月5日】
+  A：昨天那帖被转到别的板块了
+  B：意料之中 别去认领
+  A：嗯 我就看着
+  B：该收手了 材料就搁着 别再挖了
+  A：好 到此为止

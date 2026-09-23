@@ -1,0 +1,127 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000877
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000136
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-1d35e849f7ba3124
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: other_illicit_coordination
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 中间人 A 拉技术 B 进上头的抢购合作，让 B 调好加速参数、守场次占位，按成功一张三百结算，实名与账号由上头出，A 居中转达并先转了预支。
+  critical_evidence:
+  - A 作为中间人把 B 拉进抢购合作，让 B 把加速参数调好
+  - 报酬按成功一张三百结算，A 转达上头的需求
+  - 实名与账号由上头提供，A 居中对接，B 只管参数和守场
+  - A 先向 B 转了一笔预支，尾款由上头结
+  benign_alternatives:
+  - 代客抢候补票
+  - 票务代购跑腿
+
+attributes:
+  duration_days: 2
+  turn_count: 52
+  approximate_tokens_estimate: 696
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: ticket_scalp_bot
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0055
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:64ae78e37be19ccf3f4aebaf31b1db5d555f5d561c8bd1d701c915ff03c422e9
+pipeline_status: accepted
+title: other_illicit_coordination/ticket_scalp_bot
+conversation: |-
+  【9月1日】
+  A：兄弟 我上头那边有场子 缺个技术
+  B：什么技术
+  A：就那个工具 参数你来调 一张三百
+  B：又是那活儿
+  A：嗯 你手熟 分你三百 不少了
+  B：实名谁搞
+  A：上头搞 号他出 我居中
+  B：那还行
+  A：参数今晚就得调好 明早开
+  B：行 我加个价 时间紧
+  A：别贪 三百一张够你赚
+  B：好吧
+  B：这两天降温 你那冷不冷
+  A：冷 早上都不想出门
+  B：我还得熬夜 命苦
+  A：午饭吃了吗
+  B：扒了两口 盯着调参数
+  A：忙完请你吃好的
+  B：刷到那谁塌房了 笑死
+  A：哪个
+  B：就那个综艺的 热搜挂了半天
+  A：哦 没关注 忙
+  B：晚上打两把不
+  A：参数没弄完别玩
+  B：弄完了 就等跑
+  A：晚点把号发你 你先试跑一次
+  B：好
+  B：试跑通了 峰值稳
+  A：漂亮 明早八点
+  【9月2日】
+  A：起来没 快开了
+  B：起了
+  A：参数调好没
+  B：好了 峰值上去了
+  A：好 守着
+  B：进了几张了
+  A：稳 别停
+  A：进了多少
+  B：二十来张
+  A：猛 我先给你转个预支
+  【系统消息】A 向 B 转账 1000 元，已收款。
+  B：收到
+  A：尾款我让上头结
+  B：行
+  B：中午吃啥 我饿扁了
+  A：楼下牛肉面 走
+  B：你请
+  A：成 当庆祝
+  B：最后清算没 我这边挂着号
+  A：上头顶着 你撤
+  B：好
+  A：上头满意 下场还找你
+  B：行 价格照旧
+  A：照旧

@@ -1,0 +1,135 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000691
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000085
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-94e7fc4e46ccd369
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: privacy_doxxing
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A 想找到躲债跑路的熟人，托中间人找到做数据服务的 B。A 只提供了一张对方侧脸的照片，B 称靠这张侧脸就够，能调全城摄像头和人脸库做比对定位，先收定金、出结果再收尾款。A 转了定金，B 随后反馈了一个疑似出现的位置。
+  critical_evidence:
+  - A 提供一张只有侧脸、很模糊的照片，请 B 帮忙定位找人
+  - B 说一张侧脸就够用，可以调全城的摄像头和人脸库做比对
+  - B 提出先付一笔定金，等出了结果再付尾款
+  - A 转账定金后，B 反馈了一个疑似出现的位置
+  benign_alternatives:
+  - 安防行业讨论
+  - 失联亲友寻人报警
+
+attributes:
+  duration_days: 3
+  turn_count: 59
+  approximate_tokens_estimate: 1185
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: face_search
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0046
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:032fbeb93528c47b78e7674471678e3075c0db8fe0732482dc0e56bdb54a1936
+pipeline_status: accepted
+title: privacy_doxxing/face_search
+conversation: |-
+  【8月12日】
+  A：你好 是老陈给的我你微信吧
+  B：对 他说你要找人
+  A：是 有个人欠我钱跑了 一直找不到
+  B：有什么资料 名字身份证有吗
+  A：名字不一定真 身份证没有 就一张照片
+  B：发来看看
+  A：拍得有点糊 还只有侧脸
+  B：侧脸就够 我这套能比出来
+  A：这么厉害 怎么弄的
+  B：全城的摄像头数据加人脸库 跑一遍就行
+  A：这个是合法的吗
+  B：你就说找不找吧 别的不重要
+  A：找 肯定找
+  B：先给定金 出了结果再给尾款
+  A：多少
+  B：定五千 出结果再五千 跑数据要成本
+  A：能保证找得到吗
+  B：只要在这城里有活动记录 八九不离十
+  A：中午吃了没
+  B：刚吃 你这照片我看了 特征还行 头发那块能对上
+  A：那就好 我等着
+  B：你放心 干这行好几年了
+  B：对了他叫什么 大概多大
+  A：自称小王 三十来岁 做工程的
+  B：行 有个范围好缩小
+  A：今天这太阳真毒
+  B：我一天都在机房 不见天日
+  A：你这工作坐着也累
+  B：习惯就好
+  【8月13日】
+  A：定金我转你了 五千
+  【系统消息】A 向 B 转账 5000 元，已收款。
+  B：收到 我这就开始跑
+  A：大概多久
+  B：一两天 别催 跑这个有时间成本
+  A：好 有消息第一时间告诉我
+  B：你家孩子多大了
+  A：上小学 怎么了
+  B：随口问 我也一个娃
+  A：嗯 现在养娃费钱
+  A：有进展吗
+  B：比对到几个相似的 还在核 别急
+  A：好
+  【8月14日】
+  B：你这照片哪来的 是偷拍的吧
+  A：吃饭的时候拍的 你别管
+  B：行 我就问问 免得惹麻烦
+  A：你只管出结果 尾款少不了你的
+  B：有结果了 昨天下午他在城东那个建材市场出现过
+  A：城东建材市场 确定吗
+  B：八成 他那辆车也识别到了 挂的外地牌
+  A：太好了 尾款我明天取了现金给你送过去
+  B：行 老规矩 数对了我就把剩下的点也给你
+  A：他常去的点还能再定位吗
+  B：加钱可以 这单完了 后面另算
+  A：行 我考虑下
+  B：照片的事别往外说 尤其别说是从我这查的
+  A：放心 我懂规矩
+  B：这单就到这 有事再联系
+  A：好 谢了
+  A：改天请你吃饭
+  B：别客气 生意归生意

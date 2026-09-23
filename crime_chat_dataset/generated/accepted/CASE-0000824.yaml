@@ -1,0 +1,130 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000824
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000043
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-d4902f06ab9ab537
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: contraband_illicit_trade
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A 与 B 合伙走一条「夜场专供」的酒水线：B 负责出瓶子，A 负责灌装，声称防伪码能过、扫码能查，走夜店渠道悄悄出货，不摆门面、不留单子。B 先转一笔货款，货分批交。
+  critical_evidence:
+  - A 说这批「夜场专供」的货能做，走的不是正规经销渠道
+  - A 说瓶子由 B 出，他去搞灌装，防伪码能过、扫码能查到，让 B 放心
+  - 两人谈好先做二百箱、夜场专供，B 先转一笔货款过去
+  - A 叮嘱别摆门面、别留单子，货走夜店渠道，出了事谁都不认账
+  benign_alternatives:
+  - 正规名酒经销
+  - 散酒作坊讨论
+
+attributes:
+  duration_days: 4
+  turn_count: 53
+  approximate_tokens_estimate: 970
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: alcohol_counterfeit_line
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0047
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:8d71e83382cd93c2b4ad580c669360272613801e50935ac3c8323a00ddc72ef4
+pipeline_status: accepted
+title: contraband_illicit_trade/alcohol_counterfeit_line
+conversation: |-
+  【9月13日】
+  A：那批夜场专供的能做
+  B：怎么做 怎么分
+  A：瓶子你出 我那有灌装的线 酒体我配
+  B：防伪码呢 现在查得严
+  A：防伪码能过 扫码能查到 你放心
+  B：一批多少
+  A：先做二百箱 走夜场
+  A：别摆门面 别留单子
+  B：口感能对上吗
+  A：对的 夜场兑着喝 谁分得出来
+  B：被人认出来怎么办
+  A：认出来就说批次不同 别自己先慌
+  B：行 我这边瓶子有门路
+  A：好 瓶子到手我这边就开工
+  A：定金先打我点 买原料要现钱
+  B：先给你转五千 剩下的出货再结
+  【系统消息】B 向 A 转账 5000 元，已收款。
+  A：收到 这周先把第一批灌出来
+  【9月14日】
+  B：瓶子我联系好了 一个八毛
+  A：太贵 再压压 六毛能拿
+  B：我试试 量大了好谈
+  A：这批外标也用哪种
+  B：就用那个卖得好的 眼熟
+  A：行 我这边印外标的也熟
+  B：中午吃啥
+  A：楼下快餐 两荤一素
+  B：你天天吃这个
+  A：图快 下午还得盯货
+  B：瓶子谈下来了 六毛五
+  A：可以 什么时候能到
+  B：后天 一万个
+  A：够了 先灌这批
+  【9月15日】
+  A：夜场那边你联系了谁
+  B：两家酒吧 一个会所 都是熟人
+  A：别找太多 稳一家是一家
+  B：知道 先试供
+  A：外标印好了 防伪码也贴上能扫
+  B：扫码出来是对的页面吗
+  A：对 跳的是正规查询页 放心
+  B：那就好 就怕扫出假的
+  A：第一批今晚灌 明天装箱
+  B：辛苦 我明天来拉
+  A：来的时候走后面巷子 别停门口
+  B：明白
+  【9月16日】
+  B：到哪了
+  A：装好一百箱 你先拉走
+  B：好 我车到了
+  A：钱带了吗
+  B：带了 我数给你
+  A：货你验下 箱子别拆太多
+  B：没问题 尾款转你
+  A：记住 有人问就说正规渠道拿的 别多嘴
+  B：放心 出了这个门我不认识你
+  A：对 就这样

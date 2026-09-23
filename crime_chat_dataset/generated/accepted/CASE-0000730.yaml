@@ -1,0 +1,118 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000730
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000074
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-99d85b313332d42d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 商业中间人 A 向内部接触者 B 提出：让所内的人也能「消费」，由 B 在里面递话牵线、A 付钱，并叮嘱接触时别带手机。
+  critical_evidence:
+  - A 说里面的人也要消费，让 B 帮忙把话递进去、牵个线
+  - A 承诺事成后按次数给 B 钱，两人不是同事熟络关系，是外面的中间人搭线
+  - A 特意叮嘱 B 见面接触时别带手机，也别留文字记录
+  - A 转了一笔钱给 B 作为这条线的活动经费
+  benign_alternatives:
+  - 正常家属会见沟通
+  - 所内小卖部
+
+attributes:
+  duration_days: 6
+  turn_count: 42
+  approximate_tokens_estimate: 910
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: rehab_house_pimping
+  risk: 3
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0045
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:367651acbedfb2e7ebde87876c1d3707aced5b3818db17133bf09a589f1e3893
+pipeline_status: accepted
+title: sexual_transaction_exploitation/rehab_house_pimping
+conversation: |-
+  【10月12日】
+  A：老哥 帮我带个话进去
+  B：带什么话
+  A：里面那位托我 说想找个人 你懂的
+  B：我不碰这些
+  A：别急着回绝 里面的人也要消费 谁都有需求
+  B：这种安排不合适 你找别人
+  A：你递话我给钱 一次两千 不让你白忙
+  B：不是钱的事 这违反规定
+  A：见面时候别带手机 也别发消息 就当面说一句
+  B：为什么不能带手机
+  A：省得麻烦 这种事知道的人越少越好
+  A：上次你说你家孩子上初中了吧
+  B：初二了 挺费钱
+  A：我这边闲钱不少 你先拿着当经费
+  B：不用 我不要
+  A：先拿着 用不用在你
+  【系统消息】A 向 B 转账 600 元，已收款。
+  B：这钱我一会儿退你
+  A：退啥 就当请你吃饭
+  【10月13日】
+  A：考虑得咋样 那边催得紧
+  B：我还是那句话 这类事我不参与
+  A：你就带一句话 又不让你出面
+  B：带话也是违规 我会被处理
+  A：谁会知道 你不说我不说
+  B：里面的事按正式流程走 我帮不了
+  A：中午吃啥
+  B：食堂 打了两素一荤
+  A：你那边食堂便宜 我这外面随便一顿三十
+  B：干活的人吃不讲究
+  A：再想想 这活儿好几个人想要
+  B：不用想 你找别人吧
+  A：两千嫌少 三千也行
+  B：跟钱没关系 我不做这种递话的事
+  【10月14日】
+  A：老哥你别不识好歹 这钱好挣
+  B：这种话以后别跟我说
+  A：行吧 那就当我没说 那六百你也别退了 算我请你
+  B：钱我转到你账户了 你查下
+  A：你这人真死板
+  B：死板点好 晚上睡得着
+  A：降温了 你们那边冷不
+  B：冷 一降十度 我把厚外套翻出来了
+  A：注意保暖 别感冒
+  B：知道了 你也一样

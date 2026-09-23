@@ -1,0 +1,115 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000860
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000136
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-672662063546d4ec
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: other_illicit_coordination
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 上级 A 把调试好的抢票工具交给下级 B 去跑，B 负责放票时段批量下单并处理实名资料，按中签张数加价卖，A 定期把分成打给 B。
+  critical_evidence:
+  - A 说加速包参数调好，让 B 今晚那场直接上
+  - B 中了几张，A 说成功一张三百，让 B 稳步放量
+  - B 提到有几个客户资料不齐，A 说实名问题我来搞，用备用那批
+  - A 按张数给 B 结了一笔正常分成款
+  benign_alternatives:
+  - 候补购票技巧
+  - 正规代购
+
+attributes:
+  duration_days: 3
+  turn_count: 39
+  approximate_tokens_estimate: 605
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: ticket_scalp_bot
+  risk: 1
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0054
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:42d79187eb28ca533b8b463fc3057eec5fcfaf9b268f88580f2c658a40e52ec8
+pipeline_status: accepted
+title: other_illicit_coordination/ticket_scalp_bot
+conversation: |-
+  【7月3日】
+  A：那套东西我调好了 你今晚直接上
+  B：今晚那场人多 先小试?
+  A：先来十张的 看稳不稳
+  B：好 我按老点开抢
+  B：午饭吃了没
+  A：还没 你先去
+  B：给你带个饭?楼下那家
+  A：行 一个盖饭
+  B：晚上那场你盯着吗
+  A：我看着 到点发信号
+  B：收到
+  【7月4日】
+  B：昨晚中了两张
+  A：可以 成功一张三百 按这个走
+  B：有个客户资料不全
+  A：实名问题我来搞 用备用那批
+  B：好 那我不动
+  A：你这几天睡够没
+  B：睡四个钟 熬人
+  A：白天补一觉 别硬扛
+  B：嗯
+  A：明晚那场大 提前把号养住
+  B：知道 下午就开始放风
+  B：对了 那个软件我手机装不上
+  A：用那台旧的 别动你常用的
+  B：行
+  【7月5日】
+  B：昨晚一批全中 五张
+  A：放量可以 但别一次全出
+  B：懂 分几波给客户
+  A：周末去打球不
+  B：这周太累 不去了
+  A：运动一下反而精神
+  B：下次
+  B：这波的分成算下
+  A：五张 你七我三 我转你
+  B：好
+  【系统消息】A 向 B 转账 1050 元，已收款。
+  A：下周还有两场大的 留着精神
+  B：行 我调整下
+  A：周末给你放一天
+  B：谢了哥

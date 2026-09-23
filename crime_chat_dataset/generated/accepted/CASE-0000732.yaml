@@ -1,0 +1,118 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000732
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000021
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-3795c472f03ad588
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: bribery_corruption
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 评标相关的 A 与投标方 B 是同单位同事，私下串通：B 提前透露另一家投标人的报价区间，暗示 A 把技术参数写向某品牌；A 中标后深夜以「居间协调」为名向 B 转账一笔返点。
+  critical_evidence:
+  - B 在标书封标前把另一家的报价区间透给 A，暗示按这个区间做量、别报高了
+  - B 口头指点 A 在技术文件里把参数写成某品牌的专有指标，好抬掉别家
+  - 中标结果出来当晚，A 以一笔深夜转账向 B 兑现事先说好的返点
+  - 全程没有出现明说行贿受贿的词，只用同事间的隐语和默契
+  benign_alternatives:
+  - 合法分包合作
+  - 居间佣金合规申报
+
+attributes:
+  duration_days: 5
+  turn_count: 40
+  approximate_tokens_estimate: 950
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: project_bid_kickback
+  risk: 3
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0045
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:58593e4f73200b333b8854f510faa0fd14c21011edf33f81e9bc1084e5534be6
+pipeline_status: accepted
+title: bribery_corruption/project_bid_kickback
+conversation: |-
+  【4月8日】
+  A：图纸改完了 忙了一整宿
+  B：辛苦 早上电梯里看你眼睛都红了
+  A：中午补个觉 下午还得送娃去练琴
+  B：你家琴童进步大不
+  A：老师说还行 就是坐不住
+  B：晚上加个班 封标前还有两处要核
+  A：那我陪你 顺便把我那份也过一遍
+  B：你技术分那块的写法有点保守 按这个量走就行
+  A：我心里没底 那边大概什么水位
+  B：窗口摆在那 你比它低一点最稳 别贴着打
+  A：明白 那我调一下
+  【4月9日】
+  B：参数那栏你别写通用的 改成那家的专用型号名
+  A：改了会不会被人说卡太死
+  B：就这样 别家对不上就自然出局 这活儿讲究的是稳
+  A：行 听你的
+  B：下午例会你那份材料带了没
+  A：带了 顺便把上周的进度表一起
+  B：记得把文件名统一 上次又被办公室点名
+  A：哈哈 我怕的就是这个
+  【4月10日】
+  A：今天雨大 你下班怎么走
+  B：等雨小点 地铁口那段积水太深
+  A：带伞了没 我这有把多的
+  B：不用 我车里有 谢了
+  【4月12日】
+  B：开完了 你那个进去下一轮了
+  A：真的 我这心总算落地
+  B：别高兴太早 后面还有一轮 少说话
+  A：懂 我最近连同学群都不冒泡
+  B：对了 你家周末是不是要回老家
+  A：回 我妈住院复查 顺路
+  B：替我问候 上次那事还帮过忙
+  A：记着呢
+  【4月15日】
+  A：结果出来了 中了
+  B：知道了 恭喜
+  A：该给的我一分不少 别拖着 免得夜长梦多
+  B：随你 我就当是居间协调的辛苦费
+  A：行 我现在转你
+  【系统消息】A 向 B 转账 38000 元，已收款。
+  B：收到了 这钱我先压着 回头请你们吃饭
+  A：客气啥 以后还有合作
+  B：早点睡 明天还有总结会
+  A：嗯 晚安

@@ -1,0 +1,136 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000486
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000109
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-71a65cbeba73ab4a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 银行自助设备维保员 A 带新同事 B 做 ATM 例行巡检：订的新读卡器模块到货，安排避开取款高峰上门更换检查，工具分两批带进网点，事后 A 把配件报销款转给 B，全程是正常维保作业。
+  critical_evidence:
+  - A 是银行自助设备维保员，带新同事 B 一起做 ATM 巡检
+  - 订的新读卡器模块到货了，要去网点更换和检查
+  - A 交代避开取款高峰期上门，别影响客户办理业务
+  - A 转给 B 一笔配件和差旅报销款
+  benign_alternatives:
+  - 银行设备巡检
+  - 金融安防讨论
+
+attributes:
+  duration_days: 4
+  turn_count: 59
+  approximate_tokens_estimate: 1472
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: atm_skim_team
+  risk: 0
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0043
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:4e5c077f7fdf916fecf70b4d4fb757583e341741a42b17bb559483df5b36e8a9
+pipeline_status: accepted
+title: theft_robbery_property_crime/atm_skim_team
+conversation: |-
+  【3月10日】
+  A：小周 早 今天带你跑几个网点
+  B：师傅 我准备好了
+  A：先说好 咱这行是给银行自助设备做维保的 规矩多 你跟着看
+  B：好 我认真学
+  A：订的那批新读卡器模块到了 今天正好换几个老的
+  B：读卡器是机器上插卡那个吧
+  A：对 老化的容易读卡慢 得按季度排查
+  B：那咱啥时候去
+  A：避开高峰 上午十点前或者下午两点半后 人多的时候别上去拆
+  B：为啥 人多不是正好多检查几台
+  A：人多的时候客户要取钱 你把机器停了人家排队骂街 影响业务
+  B：懂了 挑闲的时候
+  A：对 算好取款高峰 错开 这是基本职业素养
+  A：中午吃了没
+  B：还没 刚跟你跑完两个点
+  A：那一起吃 网点旁边有家面馆
+  B：好 我请师傅
+  A：下午去城东那两个点 装备我分两批带
+  B：为啥分两批
+  A：一批是常用工具 一批是备用模块 分开装好清点 丢件要报账的
+  B：明白 那我拿哪批
+  A：你拿工具包 模块我背着 到点了我喊你递
+  A：城东这个点换好了 你登记下序列号
+  B：好 我记在巡检表上
+  A：记仔细 这表要银行签字的
+  B：放心 我一个个对
+  A：今天跑了三个点 还行 明天继续
+  B：师傅 这活比我想的正规多了
+  A：本来就是正规活 手里过的是机器不是密码 你记住就好
+  B：嗯 我记住了
+  【3月11日】
+  A：今天降温 你穿厚点 网点里外跑容易感冒
+  B：穿了 师傅你也注意
+  A：昨天那几个读卡器换下来 我还得带回库里报废登记
+  B：报废也要登记啊
+  A：那当然 进出都得有账 少一个都不行
+  A：今天这个点开关有异响 你听没听出来
+  B：没注意 是哪个位置
+  A：卡槽边上 我拆开看看 你帮我照下单子
+  B：好
+  A：刚才那台是螺丝松了 紧了就好 没大毛病
+  B：师傅你手真稳
+  A：干久了 你要是干三年也这样
+  【3月12日】
+  A：备用模块用完了 我让仓库再发一批
+  B：那这两天跑什么
+  A：抽查 看看设备运行日志 不用拆
+  B：好 我跟你去
+  B：师傅 中午我还吃面 你来不
+  A：来 今天你请的昨天 今天我请
+  B：哈哈 那我不客气了
+  【3月13日】
+  A：这批配件和差旅的钱公司报了 我把你垫的那部分转你
+  B：我还垫了钱啊 我都不记得
+  A：你买工具包那天垫的 三百 我记着呢
+  【系统消息】A 向 B 转账 300 元，已收款。
+  B：收到了 师傅你还真细
+  A：该谁的钱是谁的 干咱这行账要清
+  B：师傅 这周巡检报告我整理好了 你过目
+  A：放这 我签完字交上去
+  B：下周还跑这几个点吗
+  A：轮一遍 设备这玩意不能偷懒 按时检才不出事
+  B：明白

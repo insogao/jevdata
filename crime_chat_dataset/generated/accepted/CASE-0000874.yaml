@@ -1,0 +1,117 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000874
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000146
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-98646cf1726b4023
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: other_illicit_coordination
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 刷量头目 A 向号商 B 批量要号，要求一百个号当晚开工、文案由 A 统一发，B 因上一批号被上家欠货只能先交一部分，双方赊账开工月底结算。
+  critical_evidence:
+  - A 向号商 B 要一百个号，今晚就要开工
+  - A 把要发的文案整理好发给 B，让 B 安排人照发
+  - B 说手上的号被上家欠着货，先给六十个、过两天再补
+  - 双方约定先赊账开工，账号数量记账、月底一起结算
+  benign_alternatives:
+  - 正规的营销推广与账号运营
+  - UGC 内容运营
+
+attributes:
+  duration_days: 4
+  turn_count: 41
+  approximate_tokens_estimate: 584
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: rating_farm_order
+  risk: 1
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0055
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:0265a3783149640b7a6a0ac65c18e5db261849d7b7a0aca2ee41fd49e0f685c0
+pipeline_status: accepted
+title: other_illicit_coordination/rating_farm_order
+conversation: |-
+  【10月1日】
+  A：老B 这批号备好了没
+  B：紧张 上家还欠我一批
+  A：欠你多少
+  B：两百来个 拖着不给
+  A：那今晚我这边一百个号要开工 你先凑
+  B：先给你六十 明后天补
+  A：行 文案我发你 你安排人照发
+  B：还是老一套?
+  A：差不多 评价往好了说 别太假
+  B：懂
+  B：最近行情是真差
+  A：都差 单子少
+  B：价格还得压 不然没得做
+  A：别压我这 我量大
+  A：中午吃啥
+  B：炒饭 对付
+  A：别老吃这个 伤胃
+  【10月2日】
+  B：那六十个号发完了
+  A：效果一般 你号养得不行
+  B：便宜货 你将就
+  A：下批给我好的 钱不是问题
+  B：好
+  B：今天降温 你加衣服没
+  A：加了 你也是
+  B：我这跑外头 冻死
+  【10月3日】
+  B：上家给我补了货
+  A：今晚继续
+  B：文案更新没
+  A：这就发你 换了个说法
+  B：收到
+  A：这批号别一次全上 分时段
+  B：老规矩 我懂
+  【10月4日】
+  A：总共跑了多少号
+  B：一百二
+  A：行 记账 月底一起结
+  B：你上次的还没结
+  A：急啥 一起算
+  B：行吧 别拖太久
+  B：月底前你得给我个数
+  A：放心 少不了
+  B：成

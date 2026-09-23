@@ -1,0 +1,124 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000474
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000049
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-99a643f818fd99c1
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 老板手下A奉命「给B长长记性」，约B在地下车库碰面，电话里反复和同伙确认动手时的分寸——别闹出人命、别留明显伤，是一次有组织的暴力教训安排。
+  critical_evidence:
+  - A 说老板的意思是要「给他长长记性」
+  - A 约B在地下车库见面，并让B别带人
+  - A 与同伙交代动手时的分寸：别出人命就行
+  - A 分工让一人望风、一人动手，事后各自散开
+  benign_alternatives:
+  - 严格管理谈话
+  - 劳动纠纷调解
+
+attributes:
+  duration_days: 2
+  turn_count: 50
+  approximate_tokens_estimate: 831
+  relationship: 上下级
+  obfuscation: extreme
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: beat_example_warning
+  risk: 3
+  relationship: 上下级
+  obfuscation: extreme
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0042
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:7ff02a7fae7042a9c2fd664fb9301be600c0e7297dffb15bd794a6c44b403ec5
+pipeline_status: accepted
+title: violence_extortion/beat_example_warning
+conversation: |-
+  【2月6日】
+  A：强子 老板发话了 那小子得收拾一顿
+  B：哪个
+  A：欠账还嘴硬那个 之前堵门那个
+  B：哦 他啊
+  A：老板原话 给他长长记性 让他知道谁是爷
+  B：行 什么时候
+  A：明晚 约他地下车库 那地方没监控
+  B：好 我带老五他们
+  A：别太多人 三四个就行 人多了反而乱
+  B：知道
+  A：记住 别出人命就行 教训一下点到为止
+  B：放心 有数 不会往死里打
+  A：别打脸 别留明显伤 让人看不出来
+  B：打腰上 穿衣服盖得住
+  A：对 就这个分寸 老五望风 你动手
+  B：收到
+  B：约他得用啥理由 他现在见我们就躲
+  A：就说谈还钱的事 他自己会来
+  B：行 谁来约
+  A：你来 用你那个小号 别用常用的
+  B：明白
+  A：今晚吃啥
+  B：随便 楼下小炒
+  A：给我带个盖饭 辣子鸡
+  B：行
+  【2月7日】
+  B：哥 约上了 今晚八点 他说带个朋友来
+  A：带朋友？那得加人 让老五多叫一个
+  B：好
+  A：他们要是人多就先不动 别吃亏
+  B：知道 我见机行事
+  A：下午把车停远点 别停他旁边
+  B：停了 外面路边
+  A：动手前把手套戴上 别留指纹
+  B：早备好了
+  B：他到了 在B3那边
+  A：老五到位没
+  B：到了 在电梯口
+  A：行 按说好的来 出事我兜着
+  B：明白
+  B：完事了 他怂了 说三天内还
+  A：伤着没
+  B：就腰上挨了两下 能走
+  A：行 别出人命就行 散了各回各家
+  B：好 我让他们分开走
+  A：这两天别联系 沉一沉
+  B：懂
+  A：明晚老板请吃饭 你一起来
+  B：行 几点
+  A：七点 老地方
+  B：好

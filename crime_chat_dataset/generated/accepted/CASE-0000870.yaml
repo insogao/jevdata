@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000870
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000136
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-40fcee4fe8ca7e0c
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: other_illicit_coordination
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 熟人 A 拉 B 一起用抢购工具占票，让 B 调加速参数并守场次，按成功一张三百分成，实名和号由 A 解决，暂未结款。
+  critical_evidence:
+  - A 跟熟人 B 提起能抢购的工具，让 B 把加速参数调好
+  - 约定成功一张分三百，实名与账号问题由 A 解决
+  - A 让 B 用单独的号守着，别用 B 自己常用的
+  - 两人连干两场后只记账未结款，约定下场继续
+  benign_alternatives:
+  - 帮朋友抢候补票
+  - 代购跑腿服务
+
+attributes:
+  duration_days: 6
+  turn_count: 44
+  approximate_tokens_estimate: 639
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: ticket_scalp_bot
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0055
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:b1ceb329e7b7dcd66f8c80aaef595e7af7e645f7aa9f02e35d5d00e2722779d6
+pipeline_status: accepted
+title: other_illicit_coordination/ticket_scalp_bot
+conversation: |-
+  【8月1日】
+  A：哥 最近忙啥
+  B：上班呗 你呢
+  A：我搞了个工具 能抢那玩意
+  B：抢票啊?
+  A：别说得那么直 帮人占位 一张给我三百
+  B：你让我干啥
+  A：你手快 帮我盯场次 参数调好你就守着
+  B：实名呢
+  A：实名问题我来搞 号我有一批
+  B：那你稳点 别用我号
+  A：知道 给你单独的
+  B：周末聚不聚 老周说摆一桌
+  A：去啊 好久没见
+  B：那就周六 老地方
+  【8月2日】
+  A：参数调得咋样
+  B：昨晚弄了 峰值还差点
+  A：加个代理不就行了
+  B：加多了容易封
+  A：也是 你看着调
+  B：最近健身房人爆满
+  A：你还有空健身
+  B：下班去撸铁 解压
+  A：行 练壮点好帮我搬东西
+  【8月3日】
+  A：明晚有场 你守着
+  B：行 几点
+  A：八点 提前十分钟
+  B：嗯
+  【8月4日】
+  B：昨晚下雨 你没淋着吧
+  A：淋透了 衣服到现在没干
+  B：哈哈 谁让你不带伞
+  B：进了几张
+  A：不错 继续
+  【8月5日】
+  A：昨天总共多少
+  B：七八张
+  A：那两千多了 记着 完了结你
+  B：不急
+  B：你老家那边今年还回不
+  A：回 中秋回去一趟
+  B：帮我带点特产
+  A：行 你出运费
+  【8月6日】
+  A：下场还来不来
+  B：来 你优化下再说
+  A：好 老规矩
+  B：嗯

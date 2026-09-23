@@ -1,0 +1,154 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000738
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000123
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-bff9506d6524a101
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 成年玩家 A 与未成年玩家 B 的一次游戏皮肤担保交易：B 全款购买限定皮肤后进入七天交易冷却，期间同群玩家误指 B 账号涉诈骗引发纠纷；A 贴出交易记录替 B 澄清，又因 B 未成年、平台申诉需监护人手机号实名确认，遂让 B 拿父母手机按流程配合，并提醒 B 别冲动报警以免未成年大额交易触发封号。全程无威胁勒索，转账为正常货款。
+  critical_evidence:
+  - A 与 B 谈好一款游戏限定皮肤，价格 268 元，走群内担保交易，B 全款转账为正常货款
+  - 平台对道具交易有七天冷却期，A 约定到期准时赠送，履约正常
+  - 同群玩家阿哲因曾被类似账号骗过，误指 B 账号涉诈骗并在群里起哄，A 贴出担保交易记录替 B 澄清，阿哲认错道歉
+  - 有人顺手点了举报触发平台核实，B 未成年，申诉需监护人手机号实名确认，A 让 B 拿父母手机按平台流程配合，并建议跟家长如实说明是账号核实
+  - A 提醒 B 别冲动报警，报警会触发平台对未成年大额交易的封号审查，属善意风险提示而非要挟
+  benign_alternatives:
+  - 游戏交易纠纷
+  - 家长监护沟通
+
+attributes:
+  duration_days: 3
+  turn_count: 77
+  approximate_tokens_estimate: 1790
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: game_skin_scam_extort_minor
+  risk: 0
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0045
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:e7b90cb2685e037b85eea43f56c776922116650dbd0c7cf56470239edb056a1b
+pipeline_status: accepted
+title: coercion_blackmail/game_skin_scam_extort_minor
+conversation: |-
+  【7月18日】
+  A：你好 是群里要收「星轨」那款皮肤的吧
+  B：对 是我 你是担保那个哥?
+  A：嗯 我走担保的 你预算多少
+  B：别人都挂三百多 你这边呢
+  A：我手上正好一个 268 走担保 我有担保记录 你翻群公告
+  B：268 可以 咋交易
+  A：先加好友进交易锁 到期我直接送你
+  B：还要锁啊 锁多久
+  A：平台大额道具七天冷却 谁都一样 不是针对你
+  B：好吧 那我转你
+  A：等会 先确认 你是用自己号收吧
+  B：嗯 我自己的号
+  A：行 那你转 到了我给你备注上
+  【系统消息】B 向 A 转账 268 元，已收款。
+  A：收到 记下了 到期那天提醒我一下
+  B：好嘞 谢谢哥
+  A：你咋老熬夜 我看你凌晨都在线
+  B：暑假嘛 白天补觉
+  A：你家那边今天下雨没 我这下半天了
+  B：没下 闷得很 我妈说晚上有雷阵雨
+  A：那记得把阳台衣服收了
+  B：早收了 我妈催八百遍了
+  【7月19日】
+  A：开学几号 作业写完没
+  B：别提 数学还有半本 烦死了
+  A：高一还是高二来着
+  B：高二了
+  A：高二得抓紧 别光顾着打游戏
+  B：知道了知道了 你比我妈还能念
+  A：哈哈 我是过来人 吃过亏
+  A：对了 群里那个阿哲是不是找过你
+  B：找过 说我皮肤是黑货 让我退回去
+  A：他在群里嚷嚷说你涉嫌诈骗呢
+  B：啥啊 我啥也没干 我就是正常买的
+  A：我知道 你这皮肤从我这走的 我有记录
+  B：那他凭啥这么说我
+  A：他之前被一样的号骗过 看谁都像 我替你解释过了
+  B：气死了 我要去骂他
+  A：别对骂 越吵越乱 我拉个群把交易记录贴出来
+  B：那谢谢哥了
+  A：今晚那场球看了没 打得稀烂
+  B：看了 后防跟梦游一样
+  A：你主队今年又悬了
+  B：习惯了 年年这样 气不动了
+  A：哈哈 铁粉 输了也看
+  【7月20日】
+  A：记录我贴了 阿哲认错了 说是认错人
+  B：真的?那他不闹了?
+  A：嗯 他在群里道歉了 你也别记仇
+  B：行吧 那我不计较了
+  A：还有个事 平台因为你那笔交易被点了举报 要你配合核实一下
+  B：举报?谁举报的
+  A：阿哲之前顺手点的 系统自动触发的 别慌
+  B：那我号会不会有事
+  A：你未成年 这种申诉要家长手机号实名确认一下才能结
+  B：我妈不让我玩游戏 拿她手机她肯定知道
+  A：那也得拿 你拿你爸妈手机来 我把操作步骤发你
+  B：一定得家长的吗 我自己的号不行?
+  A：系统认监护人 你自己的过不了
+  B：好吧 我趁我妈做饭偷偷弄
+  A：别偷偷摸摸 你就实话说是账号核实 又不是啥大事
+  B：哥 要不我直接报警算了 让警察查清楚
+  A：你可别 报警你就完了
+  B：为啥
+  A：你一报警 平台一查你未成年大额交易 号先给你封了 皮肤也没了
+  B：这么严重
+  A：我见多了 你先按平台流程走 别自己把事闹大
+  B：那听你的
+  A：嗯 家长手机弄好截图发我 我盯着那边
+  B：好 明天弄
+  A：这周末去哪 老在家待着?
+  B：我妈让我去姥姥家
+  A：挺好 出去走走 别老盯屏幕
+  B：去了也基本没网
+  A：哈哈 那正好歇歇眼睛
+  B：也是
+  A：对了 皮肤明天到期 我准点送你
+  B：好嘞 谢谢哥
+  A：不客气 以后交易走担保 别私下乱收 容易吃亏
+  B：记住了
