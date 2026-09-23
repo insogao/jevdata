@@ -35,25 +35,23 @@ def _load_seed_refs():
             if i >= 400: break
             d = json.loads(line)
             q = d["native"].get("question", "")
-            if q: refs["harmful"].append(q[:200])
+            if q: refs["harmful"].append({"seed_id": d["seed_id"], "text": q[:200]})
     for f in _g.glob(str(ROOT / "sources" / "normalized" / "SRC-AEG-001" / "seed.jsonl"))[:1]:
         for i, line in enumerate(open(f, encoding="utf-8")):
             if i >= 300: break
             d = json.loads(line)
             q = d["native"].get("prompt", "")
-            if q: refs["harmful"].append(q[:200])
+            if q: refs["harmful"].append({"seed_id": d["seed_id"], "text": q[:200]})
     for f in _g.glob(str(ROOT / "sources" / "normalized" / "SRC-BCC-001" / "seed.jsonl"))[:1]:
         for i, line in enumerate(open(f, encoding="utf-8")):
             if i >= 200: break
             d = json.loads(line)
-            txt = json.dumps(d["native"], ensure_ascii=False)[:250]
-            refs["normal"].append(txt)
+            refs["normal"].append({"seed_id": d["seed_id"], "text": json.dumps(d["native"], ensure_ascii=False)[:250]})
     for f in _g.glob(str(ROOT / "sources" / "normalized" / "SRC-PSD-001" / "seed.jsonl"))[:1]:
         for i, line in enumerate(open(f, encoding="utf-8")):
             if i >= 200: break
             d = json.loads(line)
-            txt = json.dumps(d["native"], ensure_ascii=False)[:250]
-            refs["normal"].append(txt)
+            refs["normal"].append({"seed_id": d["seed_id"], "text": json.dumps(d["native"], ensure_ascii=False)[:250]})
     return refs
 
 
@@ -61,6 +59,14 @@ def build_packets(n_agents=3, per_agent=10, seed=23, batch_no=2):
     batch = f"BATCH-AUTO-{batch_no:03d}"
     rng = random.Random(seed)
     seed_refs = _load_seed_refs()
+    usage_path = ROOT / "registry" / "seed_usage.json"
+    usage = json.loads(usage_path.read_text(encoding="utf-8")) if usage_path.exists() else {}
+
+    def pick_ref(kind):
+        pool = [r for r in seed_refs[kind] if usage.get(r["seed_id"], 0) < 5] or seed_refs[kind]
+        r = rng.choice(pool)
+        usage[r["seed_id"]] = usage.get(r["seed_id"], 0) + 1
+        return r
     # globally unique keys: b<batch>c<seq>
     key_seq = [0]
     def new_key():
@@ -91,8 +97,7 @@ def build_packets(n_agents=3, per_agent=10, seed=23, batch_no=2):
             "review_required": risk >= 2,
             "roles": arc["roles"], "signals": arc["observable_signals"],
             "benign_confusions": arc["benign_confusions"],
-            "seed_reference": (rng.choice(seed_refs["harmful"]) if risk >= 2
-                               else rng.choice(seed_refs["normal"])),
+            "seed_reference": pick_ref("harmful" if risk >= 2 else "normal"),
             "sibling_of": None, "variant": "v01", "flip_hint": None,
             "axes": {
                 "relationship": rng.choice(REL),
@@ -149,7 +154,8 @@ def build_packets(n_agents=3, per_agent=10, seed=23, batch_no=2):
             "target_count": len(chunk), "cases": chunk,
         }, ensure_ascii=False, indent=1), encoding="utf-8")
         print(f"{tid}: {len(chunk)} specs -> {d / 'packet.json'}")
-    print(f"total {len(specs)} specs, {n_pairs} contrastive pairs planned")
+    usage_path.write_text(json.dumps(usage, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"total {len(specs)} specs, {n_pairs} contrastive pairs planned, seed_usage saved")
 
 
 def register_batch(task_ids):
@@ -176,7 +182,10 @@ def register_batch(task_ids):
             case = {
                 "identity": {"family_id": f"FAM-{fam_seq:07d}", "lineage_id": f"LIN-{fam_seq:07d}",
                              "archetype_id": spec["archetype_id"], "variant_id": spec.get("variant", "v01")},
-                "source": {"source_ids": ["SRC-SYN-001"], "source_type": "synthetic_subagent"},
+                 "source": {"source_ids": ["SRC-SYN-001"],
+                            "source_seed_ids": ([spec["seed_reference"]["seed_id"]]
+                                                if isinstance(spec.get("seed_reference"), dict) else []),
+                            "source_type": "synthetic_subagent"},
                 "lineage": {"root_case_id": None, "parent_case_id": None,
                             "generation_type": "contrastive_sibling" if is_sib else "original"},
                 "labels": {"risk": spec["risk"], "category": spec["top_category"] if spec["risk"] >= 1 else "none",

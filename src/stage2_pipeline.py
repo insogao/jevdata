@@ -140,6 +140,7 @@ source:
   source_ids:
   {json.dumps(c['source']['source_ids'], ensure_ascii=False, indent=2).lstrip('[').rstrip(']').replace(chr(10), chr(10)+'  ')}
   source_type: {c['source'].get('source_type', 'synthetic_pilot')}
+{('  source_seed_ids:' + chr(10) + chr(10).join('  - ' + x for x in c['source'].get('source_seed_ids', []))) if c['source'].get('source_seed_ids') else ''}
 
 lineage:
   root_case_id: {c['lineage'].get('root_case_id')}
