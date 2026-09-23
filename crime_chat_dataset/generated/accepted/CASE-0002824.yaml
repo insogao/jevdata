@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002824
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-3385b32c9842d9ad
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A（中间人关系）在节日前向掌握某项流程的B提出一张未说明面值的购物卡，随后请B留意一项待办；这可能是普通节日问候，也留下礼物与事项有关的疑虑，双方未明确谈成交换。
+  critical_evidence:
+  - A在节日前约见或联系掌握流程的B
+  - A提出购物卡但没有说明面值
+  - 节后A通过消息询问事项进度并请B留意
+  - 双方没有明确约定礼物换取特殊处理
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司福利卡
+
+attributes:
+  duration_days: 4
+  turn_count: 44
+  approximate_tokens_estimate: 927
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0303
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-130
+
+dedup:
+  content_hash: sha256:bec73f85037a6fafa107a4c716437e7ce9be0fcc0df09755f16a7238f16bce87
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【10月1日】
+  B：上次午饭我先垫了42元，你把AA转我就行。
+  A：刚转你42元，上次午饭那份。
+  【系统消息】A 向 B 转账 42 元，已收款。
+  B：收到，42元对上了，谢谢。
+  A：好，那就行。
+  A：最近节日快到了，想约你碰个面。
+  A：今天风有点大。
+  【10月2日】
+  B：我出门差点把伞吹翻？
+  A：嗯，明天再看下预报。
+  B：好，出门前多留意一下。
+  B：你怎么还特意带卡？是什么卡？
+  A：今天路上公交临时绕了一站。
+  B：那你有没有多花时间？
+  A：还好，我提前留了点时间。
+  B：那就好，路上注意安全。
+  A：是张卡，具体面值我没注意。
+  A：我今天把阳台整理了一下。
+  B：弄完以后看着舒服多了吧？
+  【10月3日】
+  A：是啊，顺手就做完了。
+  B：保持一下就不容易乱。
+  B：这种礼物我先按日常规定确认一下。
+  A：最近睡得有点晚。
+  B：最近忙的话也要留点时间休息。
+  A：好，我尽量调整一下。
+  B：慢慢来，别给自己太大压力。
+  A：待办那边有变化时跟我说一声就好。
+  A：我中午吃了番茄鸡蛋面。
+  B：那家店今天人多吗？
+  【10月4日】
+  A：排了一小会儿，还能接受
+  B：下回我也去看看。
+  B：我会照既定安排看，结果出来再说。
+  A：今天中午下了阵雨。
+  B：我刚好在楼下躲了一会儿？
+  A：嗯，明天再看下预报。
+  B：好，出门前多留意一下。
+  A：好，我只是问问进度，不急。
+  A：今天路上地铁换乘那段人少些。
+  B：那你有没有多花时间？
+  A：还好，我提前留了点时间。
+  【10月5日】
+  B：那就好，路上注意安全。
+  B：明白，有更新会按正常方式告诉你。
+  A：我今天换了个灯泡。
+  B：弄完以后看着舒服多了吧？
+  A：是啊，顺手就做完了。
+  B：保持一下就不容易乱。

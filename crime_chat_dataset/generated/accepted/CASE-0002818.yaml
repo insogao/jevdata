@@ -1,0 +1,155 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002818
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-9cc5c43b46ad538c
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 节前，申请人借见面机会送出一张面值未说明的节庆购物卡，并在之后含糊询问相关事项进度；接收方没有承诺改变处理顺序。往来有节日礼物的良性解释，但时间点和后续问询带来轻度疑点。
+  critical_evidence:
+  - 双方在节日前约定见面
+  - 申请人送出一张未说明面值的节庆购物卡
+  - 之后申请人含糊询问事项进度，接收方表示一切仍按正常流程
+  benign_alternatives:
+  - 普通节日问候与人情往来
+  - 常见福利卡或节庆赠礼
+  - 相关事项仍按公开步骤办理并等待统一通知
+
+attributes:
+  duration_days: 5
+  turn_count: 77
+  approximate_tokens_estimate: 1398
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0304
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-130
+
+dedup:
+  content_hash: sha256:94b074cf636c57b6e3bc4ee9a65ae0889b6d27e06f2094f4a2be232f6d12b32b
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【9月5日】
+  B：【9月5日】我们上回聊的那份东西你补齐了吗
+  A：补了 还差一个附件我今晚发
+  B：你那个水杯还漏吗
+  A：换了个密封圈 好多了
+  B：我上次那个也是这个问题
+  A：小配件不贵 换了就好
+  B：那我也找找抽屉
+  A：别弄丢了就行
+  B：好 我收到后按顺序看
+  A：节前我想跟你碰个面 方便吗
+  A：这两天眼睛还干不干
+  B：好点了 我把屏幕亮度调低了
+  A：记得隔一会看远处
+  B：嗯 放了个提醒
+  A：我也要学你
+  B：一起少盯一会手机
+  【9月6日】
+  B：【9月6日】周三下班之后行
+  A：带张卡给你过节 面值我没留意
+  B：你买的那本书到了没
+  A：到了 还没来得及拆
+  B：我周末应该能看几页
+  A：封面挺好看的
+  B：内容也不厚 适合通勤看
+  A：那挺好 不用背太重
+  B：你的心意我知道了 卡我先不收
+  A：行 不让你为难
+  A：最近小区门口在修路
+  B：难怪早上有点堵
+  A：我今天绕到东边走了
+  B：那边人行道宽点
+  A：是啊 走起来舒服些
+  【9月7日】
+  B：【9月7日】等修完应该快了
+  B：谢谢理解 后面的事照常排队
+  A：那项最近到哪步了
+  B：还在等统一通知
+  A：明白 有消息再说
+  A：下午的会改到三点半了
+  B：看到了 我把日程挪开
+  A：刚把桌上的资料分好类
+  B：这样找起来快很多
+  A：晚饭打算简单弄点面
+  B：加个蛋就够了
+  A：你那边快递到了吗
+  B：刚收到 还没拆呢
+  A：今天下班路上挺堵
+  B：我也是 多等了两个灯
+  A：周末想去逛下超市
+  【9月8日】
+  B：【9月8日】我也要买点日用品
+  A：你上次说的播客我听了一期
+  B：是不是讲得还挺轻松
+  A：家里灯泡我换好了
+  B：终于不用闪了 哈哈
+  A：我把手机里的照片备份了
+  B：挺好 省得空间不够
+  A：今天办公室空调有点冷
+  B：我放了件外套在抽屉
+  A：午后阳光还挺舒服
+  B：这会儿看着是不错
+  A：晚上早点休息吧
+  B：嗯 你也别熬夜
+  A：下午的会改到三点半了
+  B：看到了 我把日程挪开
+  【9月9日】
+  A：【9月9日】刚把桌上的资料分好类
+  B：这样找起来快很多
+  A：晚饭打算简单弄点面
+  B：加个蛋就够了
+  A：你那边快递到了吗
+  B：刚收到 还没拆呢
+  A：今天下班路上挺堵
+  B：我也是 多等了两个灯
+  A：周末想去逛下超市
+  B：我也要买点日用品
+  A：你上次说的播客我听了一期
+  B：是不是讲得还挺轻松
+  A：家里灯泡我换好了
+  B：终于不用闪了 哈哈
+  A：对了 上回饭钱AA我现在转你131元了 你看下
+  【系统消息】A 向 B 转账 131 元，已收款。

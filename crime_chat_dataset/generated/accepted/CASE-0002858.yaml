@@ -1,0 +1,128 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002858
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-4a156bb6341d2d87
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 节前申请人向办理相关事项的熟人/联系人赠送一张面值未说明的节庆购物卡，随后含糊询问事项进度；接收方维持正常办理边界。节庆人情或福利卡是可行解释，但时间点与后续问询略显可疑。
+  critical_evidence:
+  - 双方在节日前约定见面
+  - 申请人送出一张未说明面值的节庆购物卡
+  - 事后申请人含糊询问相关事项进度，接收方表示按原流程处理
+  benign_alternatives:
+  - 节庆人情往来
+  - 单位福利卡或普通节日赠礼
+  - 事项按既有清单与顺序办理
+
+attributes:
+  duration_days: 2
+  turn_count: 54
+  approximate_tokens_estimate: 947
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0312
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-133
+
+dedup:
+  content_hash: sha256:e017cab3464333c4632c56d6c209ae1778c54ba5b77e044de495a9f948f8bbbd
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【8月14日】
+  A：【8月14日】节前想跟你碰个面 有个小东西给你
+  B：这两天可以 下班后吧
+  A：这周温度掉得挺快
+  B：早晚都凉 白天还好
+  A：我差点只穿了件薄衫
+  B：出门前多看一眼预报吧
+  A：嗯 明天把外套放包里
+  B：带着总比冻着强
+  A：好 我带张节庆卡过去 面值我真没看
+  B：你太客气了 这我不太好收
+  A：周末你回家吗
+  B：应该会回去看看
+  A：家里说想一起吃顿饭
+  B：那我带点水果过去
+  A：橘子最近挺甜的
+  B：好 我路上买
+  A：一点过节心意 你别放在心上
+  B：心意收到啦 那件事还是照原来的顺序处理
+  B：你办公室那盆花活过来了吗
+  A：换了个地方之后好些了
+  B：别老忘记浇水
+  A：我设了每周提醒
+  B：哈哈这回靠谱
+  A：先观察几天
+  A：我明白 不会让你为难
+  B：那几项我会按那几项看 有缺的会告诉你
+  A：今天路上是不是很堵
+  【8月15日】
+  B：【8月15日】嗯 高架那边排了好一阵
+  A：我走地面反而快点
+  B：我下次也试试
+  A：学校那条路现在修好了
+  B：那就好 省十来分钟
+  A：上次说的那个那边现在怎么样
+  B：暂时没变化 有消息按通知走
+  A：好 我等着
+  B：嗯
+  A：下午的会议挪到四点了
+  B：我看见提醒了
+  A：这下中午能慢慢吃
+  B：也别吃太迟
+  A：我的充电器找到啦
+  B：在哪儿 原来在包夹层
+  A：今天天气还挺亮堂
+  B：午后有太阳 出去走走
+  A：刚把工作台清了一遍
+  B：终于能看见桌面了
+  A：晚上想煮点粥
+  B：放点青菜就行
+  A：这周事情有点多
+  B：慢慢做 别把自己弄太累
+  A：你上回说的店我路过了
+  B：下次有空进去看看
+  A：我把照片备份到硬盘了
+  B：做得好 空间能腾出来

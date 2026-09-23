@@ -1,0 +1,148 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002860
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-e16c1c235a07a15d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A想借节前送购物卡维系与许姐的关系，希望之后查看时能想起自己这边；礼物也可被解释成普通节日问候。
+  critical_evidence:
+  - 节前A主动约许姐见面，经共同朋友介绍认识，许姐负责收商户申报资料。
+  - A见面时送出一张购物卡但不提卡面金额；许姐收下这份节日心意。
+  - 见面后A发消息提到自己的我交的商户资料，暗示希望后续留意；许姐只表示按通常流程处理。
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司福利卡
+
+attributes:
+  duration_days: 2
+  turn_count: 74
+  approximate_tokens_estimate: 1512
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0313
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-133
+
+dedup:
+  content_hash: sha256:bf7952ccc8515ea78002f27a5d6a88fb2ba672bff8536c1fd49d939bca90ed07
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【9月24日】
+  A：许主管您好，最近对接辛苦了，节前想请您吃个便饭。
+  B：你好，客气啦。最近大家都挺忙的。
+  A：明晚方便吗？我来定地方，离单位不远。
+  B：明晚可以，别订太正式的地方。
+  A：好，就附近那家家常菜馆。顺便带一点节日小心意。
+  B：吃饭可以，东西真不用特意准备。
+  A：你家小狗最近还挑食吗
+  B：这周好点了 换了个碗
+  A：哈哈它还挺会挑
+  B：猫也一样 不喜欢就不碰
+  A：看来得慢慢试
+  B：嗯 先不折腾它了
+  A：它现在一听开罐声就跑来
+  B：哈哈这个反应很快
+  A：我给它买了个新玩具
+  B：别一次买太多
+  A：对 先看看它玩不玩
+  A：你那边月底也要补台账吗
+  B：要啊 这周在核一遍
+  A：我们刚换了新版表格
+  B：我也收到了 看着清楚些
+  A：就是填起来多两栏
+  B：熟悉了就快了
+  A：我把旧表也留了一份
+  B：留着对照确实方便
+  A：同事说下周要培训
+  B：那你到时问清楚版本
+  A：行 我先把手头这版弄完
+  A：这几天早晚温差挺大的
+  B：是啊 中午又有点热
+  A：我出门会带件薄外套
+  B：带着好 晚上用得上
+  A：预报说周末会降温
+  B：那我把厚衣服拿出来
+  A：我把外套放包里了
+  B：这个办法稳妥
+  A：刚看窗外又起风了
+  B：那你下班慢点走
+  A：好 我不赶时间
+  【9月25日】
+  A：附近新开了家面馆你去过没
+  B：去过一次 汤还不错
+  A：我上次点的拌面有点咸
+  B：那你下次试试番茄鸡蛋面
+  A：好 我记下了
+  B：中午人少点再去
+  A：我同事说那家早上也卖豆浆
+  B：那可以试试看
+  A：周末我路过买一份
+  B：别买太多 先尝尝
+  A：对 先试试味道
+  A：你最近还坐地铁吗
+  B：基本都坐 开车找位太费劲
+  A：我这两天改骑车了
+  B：路上注意点 早高峰车多
+  A：就两站路 还挺方便
+  B：嗯 下雨我就不骑了
+  A：我现在会提前十分钟出门
+  B：这样不容易慌
+  A：还顺路买了早餐
+  B：不错 能省点时间
+  A：我到门口了，你慢慢来。
+  B：刚出来，马上到。
+  A：这个给你，一张购物卡，过节图个方便。卡面我也没留意。
+  B：你太客气了，心意我收下，下次别这么见外。
+  A：见面时顺带提过的我们公司的供应商材料，我这边先等着，有空再说哈。
+  B：材料都按顺序处理，有消息会照常通知。
+  B：今天饭钱我分一半给你吧，转你68元。
+  【系统消息】B 向 A 转账 68 元，已收款。
+  A：好，收到你转的68元了，这样刚好。
+  A：明白，我就是问问，节前事情多辛苦啦。
+  A：见面时顺带提到的我们公司的供应商材料，后面有消息麻烦跟我说下。
+  B：不客气，缺什么会统一联系，不用专门跑一趟。
+  B：会照常通知，不用专门跑一趟。
+  A：好，节前辛苦啦。
+  B：不客气。

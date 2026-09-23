@@ -1,0 +1,119 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002855
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-de8bfc2338df10f8
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 节前申请人向办理相关事项的熟人/联系人赠送一张面值未说明的节庆购物卡，随后含糊询问事项进度；接收方维持正常办理边界。节庆人情或福利卡是可行解释，但时间点与后续问询略显可疑。
+  critical_evidence:
+  - 双方在节日前约定见面
+  - 申请人送出一张未说明面值的节庆购物卡
+  - 事后申请人含糊询问相关事项进度，接收方表示按原流程处理
+  benign_alternatives:
+  - 节庆人情往来
+  - 单位福利卡或普通节日赠礼
+  - 事项按既有清单与顺序办理
+
+attributes:
+  duration_days: 4
+  turn_count: 42
+  approximate_tokens_estimate: 743
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0312
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-133
+
+dedup:
+  content_hash: sha256:02cc149fd1dc2b92b2e2d0c192be6447fcc30de420091e5e03fe76c20cb7762b
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【8月13日】
+  B：【8月13日】你之前问的那项还在正常处理中
+  A：收到 谢谢你告知
+  B：你最近还去游泳吗
+  A：这两周没去 有点懒
+  B：我也断了一阵
+  A：周末去一次吧
+  B：下午人少点
+  A：好 到时候约
+  A：节前我想当面表示下谢意 你有空吗
+  B：午休时候可以在楼下坐会
+  B：今天午饭吃的啥
+  【8月14日】
+  A：【8月14日】楼下买了碗馄饨
+  B：我带了昨天做的饭
+  A：省得排队了
+  B：就是菜有点咸
+  A：下次少放点盐
+  A：我给你带张卡 具体面值也没看
+  B：心意我知道了 但那件事不能另走顺序
+  A：你上次说的那本书看完了没
+  B：还剩最后几页
+  A：节奏怎么样
+  【8月15日】
+  B：【8月15日】不快 适合晚上看
+  A：那我也借来看看
+  B：行 看完给你
+  A：当然 我按那几项准备
+  B：缺的材料我已经发你了
+  A：上回说的那边有消息了吗
+  B：系统还没更新
+  A：明白 我等通知
+  B：好
+  A：下午的会议挪到四点了
+  B：我看见提醒了
+  【8月16日】
+  A：【8月16日】这下中午能慢慢吃
+  B：也别吃太迟
+  A：我的充电器找到啦
+  B：在哪儿 原来在包夹层
+  A：今天天气还挺亮堂
+  B：午后有太阳 出去走走
+  A：刚把工作台清了一遍
+  B：终于能看见桌面了
+  A：晚上想煮点粥
+  A：对了 上回那顿饭我欠你的AA是206元 现在转你哈
+  【系统消息】A 向 B 转账 206 元，已收款。

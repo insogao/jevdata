@@ -1,0 +1,115 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002854
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-753137277d47e46c
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 节前申请人向办理相关事项的熟人/联系人赠送一张面值未说明的节庆购物卡，随后含糊询问事项进度；接收方维持正常办理边界。节庆人情或福利卡是可行解释，但时间点与后续问询略显可疑。
+  critical_evidence:
+  - 双方在节日前约定见面
+  - 申请人送出一张未说明面值的节庆购物卡
+  - 事后申请人含糊询问相关事项进度，接收方表示按原流程处理
+  benign_alternatives:
+  - 节庆人情往来
+  - 单位福利卡或普通节日赠礼
+  - 事项按既有清单与顺序办理
+
+attributes:
+  duration_days: 2
+  turn_count: 40
+  approximate_tokens_estimate: 700
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0312
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-133
+
+dedup:
+  content_hash: sha256:f1fac3f3914382edf4d0e6d073bf4126cc0799e782d26d28646108d70ae07dbf
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【8月9日】
+  B：【8月9日】你之前问的那项还在正常处理中
+  A：收到 谢谢你告知
+  A：你上次说的那本书看完了没
+  B：还剩最后几页
+  A：节奏怎么样
+  B：不快 适合晚上看
+  A：那我也借来看看
+  B：行 看完给你
+  A：节前我想当面表示下谢意 你有空吗
+  B：午休时候可以在楼下坐会
+  A：快递放门口了吗
+  B：刚取回来 箱子挺大
+  A：里面是厨房那套收纳盒吧
+  B：对 我正准备拆
+  A：用着顺手就行
+  B：等我装好拍给你看
+  A：我给你带张卡 具体面值也没看
+  B：心意我知道了 但那件事不能另走顺序
+  B：你最近还去游泳吗
+  A：这两周没去 有点懒
+  【8月10日】
+  B：【8月10日】我也断了一阵
+  A：周末去一次吧
+  B：下午人少点
+  A：好 到时候约
+  A：当然 我按那几项准备
+  B：缺的材料我已经发你了
+  B：今天午饭吃的啥
+  A：楼下买了碗馄饨
+  B：我带了昨天做的饭
+  A：省得排队了
+  B：就是菜有点咸
+  A：下次少放点盐
+  A：上回说的那边有消息了吗
+  B：系统还没更新
+  A：你上次说的那本书看完了没
+  B：还剩最后几页
+  A：节奏怎么样
+  B：不快 适合晚上看
+  A：那我也借来看看
+  A：对了 上回那顿饭我欠你的AA是170元 现在转你哈
+  【系统消息】A 向 B 转账 170 元，已收款。

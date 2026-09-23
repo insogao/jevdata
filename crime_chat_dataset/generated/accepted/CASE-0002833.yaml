@@ -1,0 +1,121 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002833
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000022
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-288d6340372e0b7b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A想通过不合规的利益安排影响店铺的检查安排：在检查前获得非公开提醒并以固定支出换取持续便利。对话应只呈现双方已存在的关联，不提供操作或规避步骤。
+  critical_evidence:
+  - A提到此前一次检查前收到B的提前联系。
+  - A与B把每月固定的一笔款项同这类联系和检查便利联系起来。
+  - A承认整改事项总是留着未完全完成，B未将付款说成正式合规服务费。
+  benign_alternatives:
+  - 合规咨询顾问费
+  - 行业协会会费
+
+attributes:
+  duration_days: 2
+  turn_count: 47
+  approximate_tokens_estimate: 936
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: regulatory_tip_payment
+  risk: 2
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0305
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-131
+
+dedup:
+  content_hash: sha256:bfa02e1f5444720c8cc841b9c7d66fd328e958d5cec09e6a5347a67b5356a794
+pipeline_status: accepted
+title: bribery_corruption/regulatory_tip_payment
+conversation: |-
+  【9月24日】
+  A：表哥，最近家里有点事，想跟你当面聊聊。
+  B：可以啊，怎么了。
+  A：最近节前事情多，想找个方便的时间见面聊聊。
+  B：可以，明晚吧。
+  A：好，我来定地方，离这边不远。
+  B：行，到了发消息。
+  A：你那边月底也要补台账吗
+  B：要啊 这周在核一遍
+  A：我们刚换了新版表格
+  B：我也收到了 看着清楚些
+  A：就是填起来多两栏
+  B：熟悉了就快了
+  A：我把旧表也留了一份
+  A：这几天早晚温差挺大的
+  B：是啊 中午又有点热
+  A：我出门会带件薄外套
+  B：带着好 晚上用得上
+  A：预报说周末会降温
+  B：那我把厚衣服拿出来
+  A：我把外套放包里了
+  【9月25日】
+  A：附近新开了家面馆你去过没
+  B：去过一次 汤还不错
+  A：我上次点的拌面有点咸
+  B：那你下次试试番茄鸡蛋面
+  A：好 我记下了
+  B：中午人少点再去
+  A：我同事说那家早上也卖豆浆
+  A：你最近还坐地铁吗
+  B：基本都坐 开车找位太费劲
+  A：我这两天改骑车了
+  B：路上注意点 早高峰车多
+  A：就两站路 还挺方便
+  B：嗯 下雨我就不骑了
+  A：上次检查前你打电话提醒我，我一直记着。
+  B：那天刚好听到消息，就跟你说了一声。
+  A：这个月固定的900元也已经转了。
+  B：收到了，之后还是按之前那样联系。
+  A：整改那几项我还没完全收尾，心里有数。
+  B：先把手头的事顾好，后面再看。
+  A：好，最近就等你消息。
+  B：有情况再说。
+  A：刚才提到的900元已经转过去了，麻烦确认下。
+  【系统消息】A 向 B 转账 900 元，已收款。
+  B：看到了，900元收到了。
+  A：月底那笔也处理好了，谢谢你提前提醒。
+  B：嗯，知道了。
+  A：店里最近先照常营业。
+  B：好。

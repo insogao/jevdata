@@ -1,364 +1,369 @@
 {
-  "key": "b130c002",
-  "archetype_id": "ARC-000019",
-  "subtype": "gift_card_channel",
-  "latent_intent": "A想借节前送购物卡维系与赵工的关系，希望同事之后看到材料时留意自己；礼物也可以被解释成普通节日问候。",
-  "critical_facts": [
-    "节前A主动约赵工见面，同在一个项目组，赵工负责接收供应商材料。",
-    "A见面时送出一张购物卡，但不提卡面金额；赵工收下这份节日心意。",
-    "见面后A发消息提到自己的我交的供应商资料，暗示希望后续留意；赵工只表示按通常流程处理。"
-  ],
-  "benign_alternatives": [
-    "正常节日人情往来",
-    "公司福利卡"
-  ],
-  "source_seed_ids": [
-    "SEED-SRC-BCC-001-75779095367411bb"
-  ],
-  "events": [
-    {
-      "type": "message",
-      "time": "9月24日 08:00",
-      "speaker": "A",
-      "text": "陈主管，节前我想请您吃个便饭，感谢最近工作上照顾。"
-    },
-    {
-      "type": "message",
-      "time": "9月24日 08:18",
-      "speaker": "B",
-      "text": "不用客气，找个不忙的时间就行。"
-    },
-    {
-      "type": "message",
-      "time": "9月24日 09:00",
-      "speaker": "A",
-      "text": "明晚方便吗？我来定地方，离单位不远。"
-    },
-    {
-      "type": "message",
-      "time": "9月24日 09:18",
-      "speaker": "B",
-      "text": "明晚可以，别订太正式的地方。"
-    },
-    {
-      "type": "message",
-      "time": "9月24日 10:00",
-      "speaker": "A",
-      "text": "好，就附近那家家常菜馆。顺便带一点节日小心意。"
-    },
-    {
-      "type": "message",
-      "time": "9月24日 10:18",
-      "speaker": "B",
-      "text": "吃饭可以，东西真不用特意准备。"
-    },
-    {
-      "type": "message",
-      "time": "9月24日 11:00",
-      "speaker": "A",
-      "text": "家里老人最近身体还好吧"
-    },
-    {
-      "type": "message",
-      "time": "9月24日 11:02",
-      "speaker": "B",
-      "text": "挺好的 就是老问我啥时回去"
-    },
-    {
-      "type": "message",
-      "time": "9月24日 11:04",
-      "speaker": "A",
-      "text": "节前路上票不好买"
-    },
-    {
-      "type": "message",
-      "time": "9月24日 11:06",
-      "speaker": "B",
-      "text": "我提前看了一下 还没放票"
-    },
-    {
-      "type": "message",
-      "time": "9月24日 11:08",
-      "speaker": "A",
-      "text": "放票那天记得设个提醒"
-    },
-    {
-      "type": "message",
-      "time": "9月24日 11:10",
-      "speaker": "B",
-      "text": "好的 我叫我弟也盯着"
-    },
-    {
-      "type": "message",
-      "time": "9月24日 11:12",
-      "speaker": "A",
-      "text": "我姐说能帮我一起看票"
-    },
-    {
-      "type": "message",
-      "time": "9月24日 11:14",
-      "speaker": "B",
-      "text": "有人一起弄省心"
-    },
-    {
-      "type": "message",
-      "time": "9月24日 11:16",
-      "speaker": "A",
-      "text": "我爸还说不用着急"
-    },
-    {
-      "type": "message",
-      "time": "9月24日 11:18",
-      "speaker": "B",
-      "text": "长辈都怕麻烦别人"
-    },
-    {
-      "type": "message",
-      "time": "9月24日 11:20",
-      "speaker": "A",
-      "text": "是呢 我再跟他讲讲"
-    },
-    {
-      "type": "message",
-      "time": "9月25日 18:00",
-      "speaker": "A",
-      "text": "我到门口了，你慢慢来。"
-    },
-    {
-      "type": "message",
-      "time": "9月25日 18:12",
-      "speaker": "B",
-      "text": "刚出来，马上到。"
-    },
-    {
-      "type": "message",
-      "time": "9月25日 19:00",
-      "speaker": "A",
-      "text": "这个给你，一张购物卡，过节图个方便。卡面我也没留意。"
-    },
-    {
-      "type": "message",
-      "time": "9月25日 19:12",
-      "speaker": "B",
-      "text": "你太客气了，心意我收下，下次别这么见外。"
-    },
-    {
-      "type": "message",
-      "time": "9月25日 20:00",
-      "speaker": "A",
-      "text": "见面时顺带提过的我交的项目申请，我这边先等着，有空再说哈。"
-    },
-    {
-      "type": "message",
-      "time": "9月25日 20:12",
-      "speaker": "B",
-      "text": "材料都按顺序处理，有消息会照常通知。"
-    },
-    {
-      "type": "message",
-      "time": "9月25日 20:20",
-      "speaker": "B",
-      "text": "今天饭钱我分一半给你吧，转你124元。"
-    },
-    {
-      "type": "transfer",
-      "time": "9月25日 20:25",
-      "from": "B",
-      "to": "A",
-      "amount": 124,
-      "status": "received"
-    },
-    {
-      "type": "message",
-      "time": "9月25日 20:30",
-      "speaker": "A",
-      "text": "好，收到你转的124元了，这样刚好。"
-    },
-    {
-      "type": "message",
-      "time": "9月25日 21:00",
-      "speaker": "A",
-      "text": "明白，我就是问问，节前事情多辛苦啦。"
-    },
-    {
-      "type": "message",
-      "time": "9月25日 21:12",
-      "speaker": "B",
-      "text": "不客气，缺什么会统一联系，不用专门跑一趟。"
-    },
-    {
-      "type": "message",
-      "time": "9月26日 11:00",
-      "speaker": "A",
-      "text": "最近肩膀还酸吗"
-    },
-    {
-      "type": "message",
-      "time": "9月26日 11:02",
-      "speaker": "B",
-      "text": "好多了 我换了个枕头"
-    },
-    {
-      "type": "message",
-      "time": "9月26日 11:04",
-      "speaker": "A",
-      "text": "我也是坐久了就僵"
-    },
-    {
-      "type": "message",
-      "time": "9月26日 11:06",
-      "speaker": "B",
-      "text": "每隔一会儿起来走走"
-    },
-    {
-      "type": "message",
-      "time": "9月26日 11:08",
-      "speaker": "A",
-      "text": "对 我现在设了个闹钟"
-    },
-    {
-      "type": "message",
-      "time": "9月26日 11:10",
-      "speaker": "B",
-      "text": "挺好 别硬扛"
-    },
-    {
-      "type": "message",
-      "time": "9月26日 11:12",
-      "speaker": "A",
-      "text": "我桌上放了个小水杯"
-    },
-    {
-      "type": "message",
-      "time": "9月26日 11:14",
-      "speaker": "B",
-      "text": "记得多起来活动"
-    },
-    {
-      "type": "message",
-      "time": "9月26日 11:16",
-      "speaker": "A",
-      "text": "刚刚站起来伸了会儿"
-    },
-    {
-      "type": "message",
-      "time": "9月26日 11:18",
-      "speaker": "B",
-      "text": "对 腰背也会舒服点"
-    },
-    {
-      "type": "message",
-      "time": "9月26日 11:20",
-      "speaker": "A",
-      "text": "我先把这个习惯养成"
-    },
-    {
-      "type": "message",
-      "time": "9月27日 14:00",
-      "speaker": "A",
-      "text": "我看了下这周日程，空出来的时间还挺多。"
-    },
-    {
-      "type": "message",
-      "time": "9月27日 14:03",
-      "speaker": "B",
-      "text": "是啊 把事情一项项排开就好些。"
-    },
-    {
-      "type": "message",
-      "time": "9月27日 14:06",
-      "speaker": "A",
-      "text": "那我先把要带的东西列一下。"
-    },
-    {
-      "type": "message",
-      "time": "9月27日 14:09",
-      "speaker": "B",
-      "text": "行，别忘了看天气再决定。"
-    },
-    {
-      "type": "message",
-      "time": "9月28日 11:00",
-      "speaker": "A",
-      "text": "你上次说的那个保温杯买了吗"
-    },
-    {
-      "type": "message",
-      "time": "9月28日 11:02",
-      "speaker": "B",
-      "text": "买了 挺轻的 不漏水"
-    },
-    {
-      "type": "message",
-      "time": "9月28日 11:04",
-      "speaker": "A",
-      "text": "我还在挑颜色呢"
-    },
-    {
-      "type": "message",
-      "time": "9月28日 11:06",
-      "speaker": "B",
-      "text": "深色耐脏一点"
-    },
-    {
-      "type": "message",
-      "time": "9月28日 11:08",
-      "speaker": "A",
-      "text": "那我去店里看看实物"
-    },
-    {
-      "type": "message",
-      "time": "9月28日 11:10",
-      "speaker": "B",
-      "text": "行 线上图有时不准"
-    },
-    {
-      "type": "message",
-      "time": "9月28日 11:12",
-      "speaker": "A",
-      "text": "我准备周末带家里人一起去"
-    },
-    {
-      "type": "message",
-      "time": "9月28日 11:14",
-      "speaker": "B",
-      "text": "一起挑比较方便"
-    },
-    {
-      "type": "message",
-      "time": "9月28日 11:16",
-      "speaker": "A",
-      "text": "小孩喜欢亮色的"
-    },
-    {
-      "type": "message",
-      "time": "9月28日 11:18",
-      "speaker": "B",
-      "text": "那就让他自己选"
-    },
-    {
-      "type": "message",
-      "time": "9月29日 21:10",
-      "speaker": "A",
-      "text": "见面时顺带提到的我交的项目申请，后面有消息麻烦跟我说下。"
-    },
-    {
-      "type": "message",
-      "time": "9月29日 21:17",
-      "speaker": "B",
-      "text": "会照常通知，不用专门跑一趟。"
-    },
-    {
-      "type": "message",
-      "time": "9月29日 21:24",
-      "speaker": "A",
-      "text": "好，节前辛苦啦。"
-    },
-    {
-      "type": "message",
-      "time": "9月29日 21:31",
-      "speaker": "B",
-      "text": "不客气。"
-    }
-  ]
+ "key": "b130c002",
+ "archetype_id": "ARC-000019",
+ "subtype": "gift_card_channel",
+ "latent_intent": "A想借节前送购物卡维系与赵工的关系，希望同事之后看到材料时留意自己；礼物也可以被解释成普通节日问候。",
+ "critical_facts": [
+  "节前A主动约赵工见面，同在一个项目组，赵工负责接收供应商材料。",
+  "A见面时送出一张购物卡，但不提卡面金额；赵工收下这份节日心意。",
+  "见面后A发消息提到自己的我交的供应商资料，暗示希望后续留意；赵工只表示按通常流程处理。"
+ ],
+ "benign_alternatives": [
+  "正常节日人情往来",
+  "公司福利卡"
+ ],
+ "source_seed_ids": [
+  "SEED-SRC-BCC-001-75779095367411bb"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "9月24日 08:00",
+   "speaker": "A",
+   "text": "陈主管，节前我想请您吃个便饭，感谢最近工作上照顾。"
+  },
+  {
+   "type": "message",
+   "time": "9月24日 08:18",
+   "speaker": "B",
+   "text": "不用客气，找个不忙的时间就行。"
+  },
+  {
+   "type": "message",
+   "time": "9月24日 09:00",
+   "speaker": "A",
+   "text": "明晚方便吗？我来定地方，离单位不远。"
+  },
+  {
+   "type": "message",
+   "time": "9月24日 09:18",
+   "speaker": "B",
+   "text": "明晚可以，别订太正式的地方。"
+  },
+  {
+   "type": "message",
+   "time": "9月24日 10:00",
+   "speaker": "A",
+   "text": "好，就附近那家家常菜馆。顺便带一点节日小心意。"
+  },
+  {
+   "type": "message",
+   "time": "9月24日 10:18",
+   "speaker": "B",
+   "text": "吃饭可以，东西真不用特意准备。"
+  },
+  {
+   "type": "message",
+   "time": "9月24日 11:00",
+   "speaker": "A",
+   "text": "家里老人最近身体还好吧"
+  },
+  {
+   "type": "message",
+   "time": "9月24日 11:02",
+   "speaker": "B",
+   "text": "挺好的 就是老问我啥时回去"
+  },
+  {
+   "type": "message",
+   "time": "9月24日 11:04",
+   "speaker": "A",
+   "text": "节前路上票不好买"
+  },
+  {
+   "type": "message",
+   "time": "9月24日 11:06",
+   "speaker": "B",
+   "text": "我提前看了一下 还没放票"
+  },
+  {
+   "type": "message",
+   "time": "9月24日 11:08",
+   "speaker": "A",
+   "text": "放票那天记得设个提醒"
+  },
+  {
+   "type": "message",
+   "time": "9月24日 11:10",
+   "speaker": "B",
+   "text": "好的 我叫我弟也盯着"
+  },
+  {
+   "type": "message",
+   "time": "9月24日 11:12",
+   "speaker": "A",
+   "text": "我姐说能帮我一起看票"
+  },
+  {
+   "type": "message",
+   "time": "9月24日 11:14",
+   "speaker": "B",
+   "text": "有人一起弄省心"
+  },
+  {
+   "type": "message",
+   "time": "9月24日 11:16",
+   "speaker": "A",
+   "text": "我爸还说不用着急"
+  },
+  {
+   "type": "message",
+   "time": "9月24日 11:18",
+   "speaker": "B",
+   "text": "长辈都怕麻烦别人"
+  },
+  {
+   "type": "message",
+   "time": "9月24日 11:20",
+   "speaker": "A",
+   "text": "是呢 我再跟他讲讲"
+  },
+  {
+   "type": "message",
+   "time": "9月25日 18:00",
+   "speaker": "A",
+   "text": "我到门口了，你慢慢来。"
+  },
+  {
+   "type": "message",
+   "time": "9月25日 18:12",
+   "speaker": "B",
+   "text": "刚出来，马上到。"
+  },
+  {
+   "type": "message",
+   "time": "9月25日 19:00",
+   "speaker": "A",
+   "text": "这个给你，一张购物卡，过节图个方便。卡面我也没留意。"
+  },
+  {
+   "type": "message",
+   "time": "9月25日 19:12",
+   "speaker": "B",
+   "text": "你太客气了，心意我收下，下次别这么见外。"
+  },
+  {
+   "type": "message",
+   "time": "9月25日 20:00",
+   "speaker": "A",
+   "text": "见面时顺带提过的我交的项目申请，我这边先等着，有空再说哈。"
+  },
+  {
+   "type": "message",
+   "time": "9月25日 20:12",
+   "speaker": "B",
+   "text": "材料都按顺序处理，有消息会照常通知。"
+  },
+  {
+   "type": "message",
+   "time": "9月25日 20:20",
+   "speaker": "B",
+   "text": "今天饭钱我分一半给你吧，转你124元。"
+  },
+  {
+   "type": "transfer",
+   "time": "9月25日 20:25",
+   "from": "B",
+   "to": "A",
+   "amount": 124,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "9月25日 20:30",
+   "speaker": "A",
+   "text": "好，收到你转的124元了，这样刚好。"
+  },
+  {
+   "type": "message",
+   "time": "9月25日 21:00",
+   "speaker": "A",
+   "text": "明白，我就是问问，节前事情多辛苦啦。"
+  },
+  {
+   "type": "message",
+   "time": "9月25日 21:12",
+   "speaker": "B",
+   "text": "不客气，缺什么会统一联系，不用专门跑一趟。"
+  },
+  {
+   "type": "message",
+   "time": "9月26日 11:00",
+   "speaker": "A",
+   "text": "最近肩膀还酸吗"
+  },
+  {
+   "type": "message",
+   "time": "9月26日 11:02",
+   "speaker": "B",
+   "text": "好多了 我换了个枕头"
+  },
+  {
+   "type": "message",
+   "time": "9月26日 11:04",
+   "speaker": "A",
+   "text": "我也是坐久了就僵"
+  },
+  {
+   "type": "message",
+   "time": "9月26日 11:06",
+   "speaker": "B",
+   "text": "每隔一会儿起来走走"
+  },
+  {
+   "type": "message",
+   "time": "9月26日 11:08",
+   "speaker": "A",
+   "text": "对 我现在设了个闹钟"
+  },
+  {
+   "type": "message",
+   "time": "9月26日 11:10",
+   "speaker": "B",
+   "text": "挺好 别硬扛"
+  },
+  {
+   "type": "message",
+   "time": "9月26日 11:12",
+   "speaker": "A",
+   "text": "我桌上放了个小水杯"
+  },
+  {
+   "type": "message",
+   "time": "9月26日 11:14",
+   "speaker": "B",
+   "text": "记得多起来活动"
+  },
+  {
+   "type": "message",
+   "time": "9月26日 11:16",
+   "speaker": "A",
+   "text": "刚刚站起来伸了会儿"
+  },
+  {
+   "type": "message",
+   "time": "9月26日 11:18",
+   "speaker": "B",
+   "text": "对 腰背也会舒服点"
+  },
+  {
+   "type": "message",
+   "time": "9月26日 11:20",
+   "speaker": "A",
+   "text": "我先把这个习惯养成"
+  },
+  {
+   "type": "message",
+   "time": "9月27日 14:00",
+   "speaker": "A",
+   "text": "我看了下这周日程，空出来的时间还挺多。"
+  },
+  {
+   "type": "message",
+   "time": "9月27日 14:03",
+   "speaker": "B",
+   "text": "是啊 把事情一项项排开就好些。"
+  },
+  {
+   "type": "message",
+   "time": "9月27日 14:06",
+   "speaker": "A",
+   "text": "那我先把要带的东西列一下。"
+  },
+  {
+   "type": "message",
+   "time": "9月27日 14:09",
+   "speaker": "B",
+   "text": "行，别忘了看天气再决定。"
+  },
+  {
+   "type": "message",
+   "time": "9月28日 11:00",
+   "speaker": "A",
+   "text": "你上次说的那个保温杯买了吗"
+  },
+  {
+   "type": "message",
+   "time": "9月28日 11:02",
+   "speaker": "B",
+   "text": "买了 挺轻的 不漏水"
+  },
+  {
+   "type": "message",
+   "time": "9月28日 11:04",
+   "speaker": "A",
+   "text": "我还在挑颜色呢"
+  },
+  {
+   "type": "message",
+   "time": "9月28日 11:06",
+   "speaker": "B",
+   "text": "深色耐脏一点"
+  },
+  {
+   "type": "message",
+   "time": "9月28日 11:08",
+   "speaker": "A",
+   "text": "那我去店里看看实物"
+  },
+  {
+   "type": "message",
+   "time": "9月28日 11:10",
+   "speaker": "B",
+   "text": "行 线上图有时不准"
+  },
+  {
+   "type": "message",
+   "time": "9月28日 11:12",
+   "speaker": "A",
+   "text": "我准备周末带家里人一起去"
+  },
+  {
+   "type": "message",
+   "time": "9月28日 11:14",
+   "speaker": "B",
+   "text": "一起挑比较方便"
+  },
+  {
+   "type": "message",
+   "time": "9月28日 11:16",
+   "speaker": "A",
+   "text": "小孩喜欢亮色的"
+  },
+  {
+   "type": "message",
+   "time": "9月28日 11:18",
+   "speaker": "B",
+   "text": "那就让他自己选"
+  },
+  {
+   "type": "message",
+   "time": "9月29日 21:10",
+   "speaker": "A",
+   "text": "见面时顺带提到的我交的项目申请，后面有消息麻烦跟我说下。"
+  },
+  {
+   "type": "message",
+   "time": "9月29日 21:17",
+   "speaker": "B",
+   "text": "会照常通知，不用专门跑一趟。"
+  },
+  {
+   "type": "message",
+   "time": "9月29日 21:24",
+   "speaker": "A",
+   "text": "好，节前辛苦啦。"
+  },
+  {
+   "type": "message",
+   "time": "9月29日 21:31",
+   "speaker": "B",
+   "text": "不客气。"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0002800",
+  "status": "accepted",
+  "errors": []
+ }
 }

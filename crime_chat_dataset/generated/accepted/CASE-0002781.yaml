@@ -1,0 +1,119 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002781
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-b49e6bc3ca589c3c
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: A（商务关系）在节日前向掌握某项流程的B提出一张未说明面值的购物卡，随后请B留意一项待办事项；这可能只是日常节礼，也留下礼物与事项相关的疑虑，双方未明确谈成交换。
+  critical_evidence:
+  - A在节日前约见或联系掌握流程的B
+  - A提出购物卡但没有说明卡面金额
+  - 节后A通过消息询问事项进度并请B留意
+  - 双方没有明确约定礼物换取特殊处理
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司福利卡
+
+attributes:
+  duration_days: 2
+  turn_count: 43
+  approximate_tokens_estimate: 859
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0300
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-129
+
+dedup:
+  content_hash: sha256:e82e1efbca9cfe3890f5a7b23c97fc311aa20bf715e8c5d17e510c6e6717fc54
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【9月1日】
+  B：上次午饭我先垫了42元，你把AA转我就行。
+  A：刚转你42元，上次午饭那份。
+  【系统消息】A 向 B 转账 42 元，已收款。
+  B：收到，42元对上了，谢谢。
+  A：好，那就行。
+  A：节前想跟你聊两句，手上有张购物卡。
+  A：今天风有点大。
+  B：我早上出门差点把伞吹翻。
+  A：明天我换把结实点的。
+  B：预报说周末会好些。
+  B：怎么还特意带卡？是什么卡？
+  A：今天路上比平时堵。
+  【9月2日】
+  B：是不是前面在修路？
+  A：对，公交临时绕了一站。
+  B：明天可以多留十分钟。
+  A：是张卡，具体多少我也没问。
+  B：晚饭想好吃什么了吗？
+  A：可能煮点粥，最近想吃清淡些。
+  B：加点青菜就挺好。
+  A：嗯，家里正好还有。
+  B：这种礼物我先按单位规定确认一下。
+  B：中午突然下雨了。
+  A：我刚好在楼下，躲了一会儿。
+  B：路面现在应该干得差不多。
+  A：嗯，晚点出门不用绕路。
+  A：那件事我不着急，方便时告诉我进展即可。
+  B：你现在还是坐地铁吗？
+  A：是，最近换乘那段人少些。
+  B：我也考虑改成地铁。
+  A：早高峰可能还是得早点出门。
+  B：我会照既定安排看，结果出来再说。
+  A：今天食堂换菜单了。
+  B：有什么新菜？
+  【9月3日】
+  A：多了个番茄炒蛋，味道不错。
+  B：下次我也点这个。
+  A：好，我只是问问进度，不急。
+  A：最近早晚温差挺明显。
+  B：我包里放了件薄外套。
+  A：我也准备一件吧。
+  B：办公室空调有时挺冷。
+  B：明白，有更新会按正常方式告诉你。
+  A：好，我先记在日历里。
+  B：行，晚点我再看一下。
+  A：嗯，回头再聊。

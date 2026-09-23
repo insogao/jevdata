@@ -1,0 +1,121 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002834
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000028
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-b355ff55e9bdac2d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A想通过不合规的利益安排影响项目验收与尾款：以私下好处换取验收签字并借台账问题施压。对话应只呈现双方已存在的关联，不提供操作或规避步骤。
+  critical_evidence:
+  - A询问验收进展与尾款签字。
+  - B把合同外额外表示与签字或尾款放行联系起来，并提及未结清的问题记录。
+  - A与B的后续消息显示款项与签字安排相关，而不是公开合同费用。
+  benign_alternatives:
+  - 正常合同尾款催收
+  - 履约保证金扣除
+
+attributes:
+  duration_days: 2
+  turn_count: 47
+  approximate_tokens_estimate: 922
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: contract_signature_fee
+  risk: 2
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0305
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-131
+
+dedup:
+  content_hash: sha256:79cbdb88e472ac30acf9007f236687f1077fd378cce9d59a7b0da6034c6ae6b4
+pipeline_status: accepted
+title: bribery_corruption/contract_signature_fee
+conversation: |-
+  【9月24日】
+  A：陈主管，节前哪天有空，一起吃个便饭呗。
+  B：可以呀，正好最近都没碰上。
+  A：最近节前事情多，想找个方便的时间见面聊聊。
+  B：可以，明晚吧。
+  A：好，我来定地方，离这边不远。
+  B：行，到了发消息。
+  A：你那边月底也要补台账吗
+  B：要啊 这周在核一遍
+  A：我们刚换了新版表格
+  B：我也收到了 看着清楚些
+  A：就是填起来多两栏
+  B：熟悉了就快了
+  A：我把旧表也留了一份
+  B：留着对照确实方便
+  A：同事说下周要培训
+  A：这几天早晚温差挺大的
+  B：是啊 中午又有点热
+  A：我出门会带件薄外套
+  B：带着好 晚上用得上
+  A：预报说周末会降温
+  B：那我把厚衣服拿出来
+  A：我把外套放包里了
+  B：这个办法稳妥
+  A：刚看窗外又起风了
+  【9月25日】
+  A：附近新开了家面馆你去过没
+  B：去过一次 汤还不错
+  A：我上次点的拌面有点咸
+  B：那你下次试试番茄鸡蛋面
+  A：好 我记下了
+  B：中午人少点再去
+  A：我同事说那家早上也卖豆浆
+  B：那可以试试看
+  A：周末我路过买一份
+  A：验收节点快到了，想问下签字还差什么。
+  B：台账里有几项问题，尾款也还压着。
+  A：上次说的那份额外心意，我准备了1400元。
+  B：那就等这件事有个说法，再安排签字。
+  A：钱我已经转过去了，麻烦确认一下。
+  B：看到了，后面再看台账情况。
+  A：我希望还是按项目约定处理。
+  B：之后再联系。
+  A：刚才提到的1400元已经转过去了，麻烦确认下。
+  【系统消息】A 向 B 转账 1400 元，已收款。
+  B：看到了，1400元收到了。
+  A：验收签字有进展吗？
+  B：我还在看那几项记录。
+  A：明白，等你回复。
+  B：好。

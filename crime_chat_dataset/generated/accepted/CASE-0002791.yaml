@@ -1,0 +1,136 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002791
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-8944c17be09d5f14
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 节日前后，申请人借见面机会递出一张面值未说明的购物卡并表达节日心意，之后含糊打听一项普通事项进度；接收方保持流程边界。礼物可能只是人情往来，相关时点与事后问询带来轻度疑点。
+  critical_evidence:
+  - 双方在节日前后约定见面
+  - 申请人递出一张未说明面值的购物卡
+  - 之后申请人含糊询问事项进度，接收方强调按公开流程办理
+  benign_alternatives:
+  - 正常节日人情往来
+  - 常见福利卡或节庆赠礼
+  - 事项按公开清单办理并等待统一通知
+
+attributes:
+  duration_days: 5
+  turn_count: 59
+  approximate_tokens_estimate: 1250
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0301
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-129
+
+dedup:
+  content_hash: sha256:fc14e25d319b0ceb23d911e9c21f2bac809308ce2ebd1c001b9154ae670d100a
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【10月4日】
+  B：【10月4日】节前你说想见面 是要聊那份那件事吗
+  A：嗯 也想当面谢谢你帮忙解释流程
+  A：周末家里问你回不回去
+  B：可能周六回一趟 看下车票
+  A：我妈说想包点饺子
+  B：那我回去帮忙擀皮
+  A：她肯定高兴
+  B：顺便把上次落下的围巾拿走
+  B：可以 下班后咖啡店坐一下
+  A：我顺手带张卡给你当节日心意 没看面值
+  B：你最近还去跑步吗
+  A：这周忙得断了两天
+  【10月5日】
+  B：【10月5日】我也是 下班就想躺着
+  A：周末补一圈吧 公园那条路不挤
+  B：行 早上别太早叫我
+  A：九点行不行
+  B：这个我收了不太好 先放回去吧
+  A：没别的意思 你别多想
+  A：家里那盆绿萝我换了个位置
+  B：放窗边了吗
+  A：嗯 叶子看着精神点了
+  B：记得别浇太多水
+  A：我上次就是手重了
+  B：干一点也比泡着强 哈哈
+  【10月6日】
+  B：【10月6日】事情还是照流程走 我只看齐不齐东西
+  A：那我知道了 该补的我补
+  A：前天提的那项现在到哪了
+  B：状态没变化 有通知会告诉你
+  A：好 我不急
+  B：收到 我按规定办
+  A：我把桌面收拾了一下 终于能放下水杯了
+  B：哈哈我桌上也堆满了文件
+  A：下午会议改到三点了
+  B：看到通知了 我把时间空出来
+  A：你那个充电线是不是还在我这
+  B：对 有空的时候顺手带给我就行
+  【10月7日】
+  A：【10月7日】今天路上车有点多
+  B：我也堵了一会 还好没迟到
+  A：晚上准备自己做饭
+  B：做个简单的就行 别弄太晚
+  A：我把资料重新排了下顺序
+  B：这样找起来方便多了
+  A：周末的天气预报看了吗
+  B：看了 好像有太阳 可以出去走走
+  A：我买的水果今天到了
+  B：记得洗了再吃 最近挺甜的
+  A：刚刚同事问我打印机怎么连
+  B：那台有点挑线 重新插下就行
+  【10月8日】
+  A：【10月8日】你上回推荐的播客我听了两集
+  B：后面还有一集讲得挺有意思
+  A：今天下班比预想的早
+  B：挺好 回去路上慢点
+  A：我把家里的灯泡换好了
+  B：终于不用摸黑找开关了
+  A：最近眼睛有点干
+  B：少盯屏幕 记得歇一会
+  A：你那边还需要我帮忙看文件吗
+  B：暂时不用 有需要我再发你
+  A：我把桌面收拾了一下 终于能放下水杯了

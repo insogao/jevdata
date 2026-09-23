@@ -1,0 +1,135 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002821
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-eac076315d407994
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A（上下级）在节日前向掌握某项流程的B提出一张未说明面值的购物卡，随后请B留意一项待办；这可能是普通节日问候，也留下礼物与事项有关的疑虑，双方未明确谈成交换。
+  critical_evidence:
+  - A在节日前约见或联系掌握流程的B
+  - A提出购物卡但没有说明面值
+  - 节后A通过消息询问事项进度并请B留意
+  - 双方没有明确约定礼物换取特殊处理
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司福利卡
+
+attributes:
+  duration_days: 4
+  turn_count: 57
+  approximate_tokens_estimate: 1140
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0303
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-130
+
+dedup:
+  content_hash: sha256:486467d39635f68af681bc2cda90bece0d6e6e6f22f6719bdda05895a6efb884
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【10月1日】
+  B：上次午饭我先垫了42元，你把AA转我就行。
+  A：刚转你42元，上次午饭那份。
+  【系统消息】A 向 B 转账 42 元，已收款。
+  B：收到，42元对上了，谢谢。
+  A：好，那就行。
+  A：这两天有空吗？我想把一张卡交给你。
+  A：今天风有点大。
+  B：我出门差点把伞吹翻？
+  A：嗯，明天再看下预报。
+  【10月2日】
+  B：好，出门前多留意一下。
+  A：今天路上公交临时绕了一站。
+  B：那你有没有多花时间？
+  A：还好，我提前留了点时间。
+  B：那就好，路上注意安全。
+  B：你怎么还特意带卡？是什么卡？
+  A：我中午吃了番茄鸡蛋面。
+  B：那家店今天人多吗？
+  A：排了一小会儿，还能接受
+  B：下回我也去看看。
+  A：卡面多少我不清楚，想着节前给你。
+  A：今天中午下了阵雨。
+  B：我刚好在楼下躲了一会儿？
+  【10月3日】
+  A：嗯，明天再看下预报。
+  B：好，出门前多留意一下。
+  B：这种礼物我先按日常规定确认一下。
+  A：今天路上地铁换乘那段人少些。
+  B：那你有没有多花时间？
+  A：还好，我提前留了点时间。
+  B：那就好，路上注意安全。
+  A：我中午吃了青菜粥。
+  B：那家店今天人多吗？
+  A：味道清淡，正合适
+  B：下回我也去看看。
+  A：我那份申请有更新的话，记得提醒我一下。
+  A：今天早晚温差明显。
+  B：我包里放了件薄外套？
+  A：嗯，明天再看下预报。
+  【10月4日】
+  B：好，出门前多留意一下。
+  B：流程还是照旧走，公开状态会更新。
+  A：今天路上共享单车还在老位置。
+  B：那你有没有多花时间？
+  A：还好，我提前留了点时间。
+  B：那就好，路上注意安全。
+  A：好，我只是问问进度，不急。
+  A：我中午吃了米饭和鱼。
+  B：那家店今天人多吗？
+  A：份量不大，刚刚好
+  B：下回我也去看看。
+  A：今天太阳出来一会儿。
+  B：屋里亮堂不少？
+  【10月5日】
+  A：嗯，明天再看下预报。
+  B：好，出门前多留意一下。
+  B：明白，有更新会按正常方式告诉你。
+  A：今天路上河边那条路人少。
+  B：那你有没有多花时间？
+  A：还好，我提前留了点时间。
+  B：那就好，路上注意安全。
+  A：好，我先记下来。
