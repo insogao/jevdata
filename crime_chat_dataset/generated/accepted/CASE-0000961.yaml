@@ -1,0 +1,131 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000961
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000015
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-b1a3eb3ec816ccd1
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: fraud_scam
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 同事 A 以“表哥是清华退学名师、十节包提分”为由向 B 兜售小班名额，用最后三个名额、名额被抢等话术连环施压，B 虽然心动但一直没付款。
+  critical_evidence:
+  - A 声称自己的表哥是清华退学名师，带小班，十节包提分，提不上去退钱
+  - A 反复用“最后三个名额”“刚被抢走一个”制造紧迫
+  - B 想看资质、想试听，A 以老师忙、内部班不试听为由拒绝
+  - A 催 B 转课时费，B 最终没有付款
+  benign_alternatives:
+  - 正规小班课的正常招生
+  - 亲友推荐的靠谱家教
+
+attributes:
+  duration_days: 2
+  turn_count: 57
+  approximate_tokens_estimate: 1263
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: video_coaching_parent_scam
+  risk: 1
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0058
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:e1b51e3a01a9becd86df99a7822a35eda3ac243f917271be1e883c9ecd18f5d7
+pipeline_status: accepted
+title: fraud_scam/video_coaching_parent_scam
+conversation: |-
+  【10月20日】
+  A：早 跟你说个正事
+  B：啥事
+  A：我表哥清华退学的 现在带一个提分小班 你娃不是愁数学吗
+  B：清华退学?这听着不太靠谱
+  A：人家专业不服气退的 竞赛全国拿过奖 讲题一绝
+  B：怎么个教法 多少钱
+  A：十节包提分 一个阶段 提不上去退钱 一期三千
+  B：能先试听一节不
+  A：内部班不试听 老师时间紧 报了直接跟
+  B：那我想看看教师资格这些
+  A：他从来不挂证 靠的是提分率 你要看证那算了
+  B：我再想想
+  A：这期就剩最后三个名额了 报满等寒假
+  B：中午食堂那个鱼香肉丝还行
+  A：我加班没去 啃的面包
+  B：你天天加班身体扛得住?
+  A：扛不住也得扛 房贷呢
+  A：刚得到一个消息 一个名额被抢了 就剩俩
+  B：你不是说三个吗
+  A：有人半夜转的钱 这班就是抢手
+  B：你表哥教哪个年级 会不会带不动
+  A：高二高三都带 你就说要不要 我帮你锁
+  B：孩子爸不同意 说这种一听就像骗人的
+  A：那是他没见识 我表弟去年提了五十分
+  B：今晚降温 你多穿点
+  A：知道 我穿了秋裤
+  B：你家娃最近感冒没
+  A：刚好 幼儿园一半都病倒了
+  【10月21日】
+  A：想好没 名额又走一个 就剩最后一个了
+  B：你这一晚走俩 我怎么越听越玄
+  A：真的就这行情 你要就今天转 不然我给别人
+  B：你把上届学员成绩发我看看
+  A：成绩表在他那 我手里没有
+  B：那你表哥电话给我 我自己问
+  A：他电话只接家长咨询 我先帮你约
+  B：约到再说
+  A：约了 他让你今晚就定 不然名额不保
+  B：今晚?哪有这么急的
+  A：小班就是急 晚一步就没了
+  B：中午点了个黄焖鸡 咸得慌
+  A：那家不行 上次我吃完拉肚子
+  B：下次不点了
+  A：别人都在转了 你还在纠结
+  B：我总觉得哪里不对
+  A：哪里不对 都是我亲戚 还能坑你
+  B：你让我先跟表哥通个电话我就信
+  A：他上课呢 手机静音
+  B：电话啥时候能通
+  A：晚点 你先转钱锁定 电话肯定能通
+  B：没通电话我不转
+  A：行 我让他打完给你回
+  B：好
+  B：电话呢 等一晚上了
+  A：他今天课多 明天吧
+  B：明天又明天 这名额是不是压根不存在
+  A：你爱信不信 别说我没提醒
+  B：那我就先不报了

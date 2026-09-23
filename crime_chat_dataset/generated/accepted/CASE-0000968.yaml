@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000968
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000015
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-14eefe05d82b0ec6
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: fraud_scam
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 同事 A 以“清华退学名师”人设向为孩子成绩焦虑的 B 兜售十节包提分课，用“最后三个名额”不断催单，资质始终说不清，B 半信半疑先交了一笔课时费。
+  critical_evidence:
+  - A 自称认识一位清华退学的名师，高考省里前几，带出过提分学生
+  - A 用“十节包提分、提不上退钱”和“最后三个名额”反复制造紧迫
+  - B 是同事、孩子高二数学拉分，想看教师资格证和试听，A 只说证肯定有、以隐私为由推脱
+  - B 最终先交了一笔十节课时费，A 承诺拉班群、发资料却一直往后拖
+  benign_alternatives:
+  - 真实在线教育机构的招生推广
+  - 大学生家教上门辅导
+
+attributes:
+  duration_days: 4
+  turn_count: 44
+  approximate_tokens_estimate: 1134
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: video_coaching_parent_scam
+  risk: 1
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0058
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:91637e443fbe604e0c74a2b4f1d6ed19863a8616ad1a039ff03977299b9446d2
+pipeline_status: accepted
+title: fraud_scam/video_coaching_parent_scam
+conversation: |-
+  【9月2日】
+  A：早 你家娃高二了吧 是不是该冲刺了
+  B：嗯 数学老拉分 愁死了
+  A：我这边认识个老师 清华退学的 现在带小班 提分很猛
+  B：退学?那毕业证都没有吧
+  A：人家专业不对口主动退的 高考省里前几 真会做题的都这样
+  B：教什么的 大班小班
+  A：十节包提分 一个阶段十节 提不上去退钱
+  B：这么有底气
+  A：我侄子去年在他那提了四十多分 我才跟你说这个
+  B：多少钱啊
+  A：先别急钱 这期就剩最后三个名额 报满等寒假
+  B：行 我先想想 中午食堂红烧肉又没了
+  A：我啃了个面包 你天天掐点去能抢到才怪
+  B：减肥 少吃点
+  A：你家娃学习也得管住嘴 别老吃外卖
+  B：你比我还能念叨
+  【9月3日】
+  B：那老师有教师资格证没 我想看看
+  A：证肯定有 人家不靠证吃饭 靠的是成绩
+  A：给你发两张喜报
+  A：[image：两张打了码的提分喜报截图 字迹模糊]
+  B：这也看不清名字啊
+  A：家长隐私 打了码 你要真心报我给你约试听
+  B：试听收费吗
+  A：试听一节两百 报了能抵学费
+  B：我们这周末要加班 团建改成值班了 烦
+  A：我们也改值班 会开到七点 破领导
+  B：那试听只能下周了
+  A：下周名额怕是没了 你自己掂量
+  【9月4日】
+  A：昨晚老师又空出两个名额 我特意给你留的
+  B：你不是说最后三个吗
+  A：有人退课啊 错过真没了
+  B：我再跟孩子爸商量下
+  A：商量完名额就没了 你孩子这分数耽误不起
+  B：那你先帮我垫上 我发工资还你
+  A：我帮你问 你直接转给老师 别经我手 我也不想担这个
+  B：行 转多少
+  A：先交十节的 1980 后面续不续再说
+  【系统消息】B 向 A 转账 1980 元，已收款。
+  B：转了 收一下
+  A：收到 我把你拉进班群 资料晚点发你
+  【9月5日】
+  B：班级群呢 我怎么没进
+  A：老师这两天忙 周末统一拉
+  B：那什么时候开课
+  A：等下批 你先把孩子的错题拍我 我转给他看看基础
+  B：好 谢谢啊
+  A：客气啥 都是为了孩子

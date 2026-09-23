@@ -1,0 +1,131 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000964
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000012
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-b98510843535fa36
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: fraud_scam
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 熟人 A 低价转让一台无人机，催 B 私下转定金，声称已经发货并给了单号，但 B 始终查不到物流、也没见到货，钱一直没转出去。
+  critical_evidence:
+  - A 以低于市场价很多的价格转让一台大疆无人机，说是朋友抵账来的
+  - A 拒绝走平台，反复要求 B 直接私下转定金
+  - A 谎称已经发货并给出单号，B 查询无果
+  - B 多次要求看实物或当面交易，A 始终推脱，最终没付款
+  benign_alternatives:
+  - 熟人之间正常转卖闲置数码产品
+  - 平台二手无人机的正常交易
+
+attributes:
+  duration_days: 6
+  turn_count: 52
+  approximate_tokens_estimate: 1083
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: second_hand_deposit_run
+  risk: 1
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0058
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:d9d4f8038bb5756546ae9b334bb216424835081d0496961170b4a1998ae57c61
+pipeline_status: accepted
+title: fraud_scam/second_hand_deposit_run
+conversation: |-
+  【9月15日】
+  A：老弟 玩不玩无人机
+  B：想玩 一直没舍得买
+  A：我一台大疆要出 去年买的 飞过几次 三千给你
+  B：那款新的得七千吧
+  A：朋友抵账给我的 我用不上 便宜出
+  B：能看看真机吗
+  A：可以 你先定 我好跟别人回话
+  B：走平台不
+  A：别走平台 你直接给我转定金 我懒得挂
+  B：我先看看机子再说
+  A：中午吃啥
+  B：楼下面馆 涨价涨得离谱
+  A：一碗面二十多 抢钱
+  B：自己带饭一个月能省好几百
+  B：下周家长会 你去不
+  A：去啊 老师又要念排名
+  B：我家那个倒数 愁
+  A：都一样 慢慢来吧
+  【9月16日】
+  A：无人机想好没 有人出三千二了
+  B：你先给我拍两张照片
+  A：[image：两张无人机照片 机身在盒子里]
+  B：怎么不飞起来拍个视频
+  A：电池没充 先看外观 你要就转定金
+  B：那我等你充电拍视频
+  A：充好了 不过内存卡找不到了 反正这点钱
+  B：没卡咋飞
+  A：你可以自己买 几十块的事 别磨叽了
+  B：那你给我个准话 在哪见面
+  A：我这两天忙 给你发快递吧 到时到付
+  B：先给钱再发?哪门子生意
+  A：定金总得给 要不我凭啥留给你
+  【9月17日】
+  A：我发货了 单号 YT998 你补尾款
+  B：我没给过你定金啊 你发什么
+  A：我先垫的 你要讲信用
+  B：单号我查了 空的
+  A：刚揽件 明天就有了
+  B：明天要体检 还得空腹
+  A：我上周刚体检完 抽血排半天
+  B：人到中年 一身毛病
+  【9月18日】
+  B：单号还是查不到
+  A：你那个牌子的官网查不到 用别的平台查
+  B：都试了 没有
+  A：快递的问题 跟我没关系 你尾款先给
+  B：货没到我不给钱
+  B：周末下雨 郊游泡汤了
+  A：预报说连着下
+  【9月19日】
+  A：无人机到底要不要 给个准话
+  B：见不到货我不要了
+  A：那算了 我把单子撤了
+  B：撤吧 你撤了我正好放心
+  【9月20日】
+  B：后来单号还是没消息吧
+  A：别提了 快递弄丢了 我还在跟他们扯
+  B：幸好我没转钱

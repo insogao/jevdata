@@ -1,0 +1,120 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000967
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000012
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-6011da9366d5423b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: fraud_scam
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 熟人 A 低价转让一台投影仪，催 B 私下转定金，收了定金后给的单号一直查不到，之后对交货和退款都开始拖延。
+  critical_evidence:
+  - A 以远低于市场价的价格转让一台几乎全新的投影仪
+  - A 不让 B 走平台，要求直接私下转定金
+  - B 转了一笔定金之后，A 给的物流单号查不到
+  - B 要求交货或退款时，A 一再拖时间
+  benign_alternatives:
+  - 熟人之间正常转卖闲置
+  - 平台二手投影仪的合规交易
+
+attributes:
+  duration_days: 6
+  turn_count: 40
+  approximate_tokens_estimate: 784
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: second_hand_deposit_run
+  risk: 1
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0058
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:c2ce0ec9f89352b514ff6b5176d975ed911d64326b7c180ecaee4fad07f7fad1
+pipeline_status: accepted
+title: fraud_scam/second_hand_deposit_run
+conversation: |-
+  【7月1日】
+  A：哥 我那台投影仪要出 你要不要
+  B：什么牌子 多少钱
+  A：极米新款的 买了两个月 一千二给你 新的快三千
+  B：便宜这么多
+  A：换了大的 这个闲置 走平台还得压价 麻烦
+  B：能看看吗
+  A：能 你先定 我下午给你拍
+  B：走平台不
+  A：别走 私下简单 你转定金我就给你留着
+  B：中午吃啥
+  A：随便对付了个饭团
+  B：周末要不要去看球
+  A：去啊 好久没看现场了
+  【7月2日】
+  A：投影仪还要不要 有人问
+  B：照片呢
+  A：[image：一张投影仪照片 摆在客厅电视柜上]
+  B：看着不错 转多少定金
+  A：三百就行 尾款到付
+  【系统消息】B 向 A 转账 300 元，已收款。
+  A：收到 明天给你发
+  B：好
+  A：你家空调修好没
+  B：修了 师傅说要加氟
+  A：这天没空调能热死人
+  【7月3日】
+  B：发货了没
+  A：发了 单号 JD882
+  B：查不到
+  A：刚揽件 明天就更新
+  B：家里娃放暑假了 天天在家打游戏
+  A：我家的也一样 管不住
+  B：报个夏令营算了
+  【7月4日】
+  B：物流还是没动
+  A：大促期间都慢 你别老盯着
+  B：这不是盯着 是根本查不到
+  A：放心 跑不了
+  【7月5日】
+  B：投影仪我不要了 定金退我
+  A：都发了退啥 到了不喜欢我帮你转
+  B：你到底发没发
+  A：发了 你不信我也没办法
+  【7月6日】
+  B：最后问一次 货呢
+  A：在路上 我这两天忙 晚点给你查
+  B：行 我等着 但你要是一直拖 这钱我认了 人我记着

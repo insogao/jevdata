@@ -1,0 +1,134 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000965
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000012
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-419001805efd614f
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: fraud_scam
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 同事 A 以远低于市价的价格兜售二手相机，催 B 离开平台走微信私下交易，收下定金后又发了一个查不到的物流单号，B 追问时 A 开始拖和躲。
+  critical_evidence:
+  - A 以明显低于市场价的价格出售一台成色很好的相机，理由是“急用钱”
+  - A 劝 B 不要在平台交易，说平台抽点、走微信可以少收两百
+  - A 让 B 先转一笔定金到个人微信，声称尾款到付
+  - A 给了一个查不到物流信息的快递单号，被追问后以网点积压搪塞并回避退款
+  benign_alternatives:
+  - 真实二手平台的当面交易
+  - 同事之间正常的闲置转让
+
+attributes:
+  duration_days: 5
+  turn_count: 55
+  approximate_tokens_estimate: 1118
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: second_hand_deposit_run
+  risk: 1
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0058
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:ac3def5f5bf68b482fccc7d56dc766648a6933ba055b0f1b9ed56e92fdde1012
+pipeline_status: accepted
+title: fraud_scam/second_hand_deposit_run
+conversation: |-
+  【9月10日】
+  A：在吗 我那台索尼相机要出 你不是一直想要
+  B：真的?哪款的
+  A：A7M4 去年双十一买的 快门不到三千
+  B：多少钱
+  A：新的上市一万六 我八千八出 急用钱才这个价
+  B：这么低 不会有什么问题吧
+  A：有啥问题 我根本不会玩 一直吃灰
+  B：能看看成色不
+  A：可以 不过平台太麻烦 走微信聊 加我同号
+  B：平台不是有保障吗
+  A：平台抽点还扣我手续费 走微信我少收你两百 图个痛快
+  B：也行 我看看
+  B：今天降温了 你穿外套没
+  A：穿了 早上冻成一团
+  B：我家猫昨晚又吐毛球 烦死
+  A：哈哈哈 养猫费钱 我养鱼省事
+  B：周末团建你去不
+  A：去啊 又要爬山 我这膝盖受不了
+  B：说是改烧烤了 不用爬
+  A：那还行 我带点饮料
+  【9月11日】
+  B：相机能拍个视频看看不
+  A：[voice：9秒 手持展示相机外观与镜头]
+  B：看着还行 能走平台吗 我放心点
+  A：我信用分高 你放心 走微信我今天就能发
+  B：那怎么算
+  A：八千八 你先转五百定金 我帮你留着 尾款到付
+  B：定金转你个人?
+  A：对 微信就行 平台走流程太慢 我等钱用
+  B：那行
+  【系统消息】B 向 A 转账 500 元，已收款。
+  A：收了 下午就给你发
+  B：好 麻烦你了
+  【9月12日】
+  B：发货了吗
+  A：发了 走的顺丰 单号晚上给你
+  B：好 我等着
+  A：中午吃啥
+  B：楼下那家面 又涨价了
+  A：通胀啊 工资就是不涨
+  A：单号 SF7612 你查查
+  B：查不到啊
+  A：刚收件 系统慢 明早肯定有
+  B：行 早上我看
+  【9月13日】
+  B：还是没物流信息 你问下快递
+  A：我问了 网点积压 大促快到了
+  B：可现在才九月啊
+  A：反正会有 你急啥
+  B：我有点不踏实 尾款先不打了
+  A：说好的事 定金都收了
+  B：那相机取消吧 定金退我
+  A：都发出去了退不了 你要不喜欢我帮你转卖
+  【9月14日】
+  B：相机我不要了 定金退我
+  A：定金是留着货的 退不了
+  B：你这就没意思了 同事一场
+  A：我下午开会 晚点说
+  B：人呢
+  B：回个话
+  B：你把我屏蔽了?

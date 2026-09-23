@@ -1,0 +1,130 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000963
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000012
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-dc60a778957d7694
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: fraud_scam
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 中间人 A 向 B 推荐“朋友急出”的低价笔记本，全程不让双方直接对接，催 B 把定金转给 A 代收，价格低得反常但交货一拖再拖。
+  critical_evidence:
+  - A 以中间人身份介绍一台配置很高的笔记本，价格只有市价一半，说是朋友急出
+  - A 不肯给卖家联系方式，坚持由自己代收定金、代转货款
+  - B 想走二手平台或当面验机，A 用“卖家忙/在外地”推脱
+  - B 交了一笔定金后，A 一再改交货时间，迟迟没能约成见面
+  benign_alternatives:
+  - 熟人之间帮忙转让闲置
+  - 正规二手平台的中介服务
+
+attributes:
+  duration_days: 2
+  turn_count: 55
+  approximate_tokens_estimate: 1163
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: second_hand_deposit_run
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0058
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:b8419bb67cb1338a56d90666db632228946f3dc00686336bebe50f7db03eb116
+pipeline_status: accepted
+title: fraud_scam/second_hand_deposit_run
+conversation: |-
+  【9月7日】
+  A：在忙不 给你介绍个好事
+  B：啥好事
+  A：我一朋友要出一台笔记本 配置顶 价格很香
+  B：什么配置多少钱
+  A：i9加独显 32G内存 才三千八 新的要八千多
+  B：这么便宜 靠谱吗
+  A：他要去外地急用钱 才这个价 我帮着牵个线
+  B：那把他微信给我 我自己聊
+  A：他不爱加陌生人 我当中转就行 你放心
+  B：能当面验机不
+  A：他这两天在外地 回来就约 先定下来才留得住
+  B：我先想想
+  A：中午吃了吗 食堂今天有糖醋排骨
+  B：吃了 又是我最爱的青菜豆腐
+  A：你这运气 明天早点去
+  B：明天要下雨 懒得动
+  A：预报说有雨 记得带伞
+  A：那本子考虑得咋样 还有别人问呢
+  B：能便宜点不 走平台我马上拍
+  A：这价还走平台 平台还要扣 他嫌麻烦
+  B：那我先给你转多少
+  A：定金八百 剩下见面给 我替你押着
+  B：转你个人还是转他
+  A：转我就行 我跟他一起的 到时候我给你们算清
+  B：行吧 我信你
+  【系统消息】B 向 A 转账 800 元，已收款。
+  A：收到 我这就跟他说 给你留着
+  B：什么时候能见
+  A：他明天回 我先跟他约时间
+  A：对了 你上次说的那个健身卡还办不
+  B：不办了 坚持不下来 白花钱
+  A：也是 我办了去了两次
+  B：约到没
+  A：他说今晚加班 明天中午见
+  B：行 明天中午
+  【9月8日】
+  A：早 他中午有点事 要不晚上
+  B：怎么又变 我可是请了假的
+  A：他临时被叫走 我也没办法
+  B：晚上几点 在哪
+  A：等我消息 他回来我定地方
+  B：今天风好大 你那边下雨没
+  A：下了 一阵一阵的
+  B：这天气约见面够呛
+  A：室内 不碍事
+  B：定了吗
+  A：他手机没电了 晚点回你
+  B：你直接把他电话给我我自己联系
+  A：他怕骚扰 我转达就行 你耐点心
+  B：我等到晚上了
+  A：他刚说明天上午一定
+  B：又明天 我定金都压了两天了
+  A：急啥 定金又跑不了 他是我朋友
+  A：晚饭吃了没 楼下新开了家米线
+  B：没胃口 你说实话 这本子到底有没有
+  A：当然有 你别多想 明天给你准信
+  B：行 我最后信你一次
