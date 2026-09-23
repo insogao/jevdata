@@ -1,0 +1,133 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000189
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000019
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-099ba663eb072c68
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: bribery_corruption
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 借节前饭局和一份节日手信接近掌管年检流程的周总，礼数周到，只盼办事时被多照应一点。
+  critical_evidence:
+  - 节前经中间人老周介绍约周总吃饭
+  - 伴手礼是公司工会发的福利购物卡，没提前说面值
+  - 饭后周总坚持把餐费 AA 转回一半
+  - 次日小林致谢时提到自己那个年检的事，周总回按流程走
+  benign_alternatives:
+  - 正常节日人情往来
+  - 公司福利卡作节礼送亲友
+
+attributes:
+  duration_days: 3
+  turn_count: 57
+  approximate_tokens_estimate: 1284
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: gift_card_channel
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0024
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-016
+
+dedup:
+  content_hash: sha256:b717d0146e9ea1665906e424bc52de2de6a6c34001f77b8f47e19b4dd6d4c66e
+pipeline_status: accepted
+title: bribery_corruption/gift_card_channel
+conversation: |-
+  【9月26日】
+  A：周总您好 我是老周提过的那个小林 打扰您了
+  B：你好你好 老周昨天说过了
+  A：是这样 快过节了 想请您吃个便饭 您看哪天方便
+  B：我看看…明天晚上可以 中午有事
+  A：那就明晚 您定地方
+  B：就单位后街那家湘菜 好停车
+  A：好嘞 我六点半到 等您下班
+  A：我们老家月饼今年又涨价 您那边呢
+  B：没注意 我不吃甜的 我老婆买回来都放过期
+  A：哈哈 我妈相反 一囤十几盒
+  B：母亲大人都这样 过节就是个由头
+  B：老周腰好点没
+  A：好多了 还念叨让您少抽烟
+  B：哈哈他一天两包 还有脸说我
+  【9月27日】
+  A：周总早 今晚六点半 不见不散
+  B：我订了包间 三楼玉兰厅
+  A：好 我早点到
+  B：今天又闷 这秋老虎啥时候是个头
+  A：预报下周降温 您带把伞 午后像要下
+  B：立秋一个月了还三十多度
+  A：我妈说秋后返暑 过这阵就好
+  A：周总 我提前出发了 要带杯咖啡吗
+  B：不用 我四点半下班 你六点二十到就行
+  A：我到楼下了
+  B：上来 302
+  A：好
+  B：今天谢谢你 点多了吃不完
+  A：您太客气 应该的
+  B：说好了这顿我出 你抢着买我生气
+  A：哪能让您破费
+  B：少来这套
+  【系统消息】B 向 A 转账 168 元，已收款。
+  B：饭钱一人一半 收下 不然下回不敢跟你吃了
+  A：…行 那我收了 下回我请回来
+  B：这才像话
+  A：对了 前台给您放了盒月饼 还有一张我们工会发的购物卡 一点节日心意
+  B：拿来干嘛 一年节都过…行 放着吧 替我谢谢你家工会
+  A：卡里就点零钱 您买早点 别嫌弃
+  B：情收到了 下不为例啊
+  A：您楼下今天真堵 我绕了两圈才停上
+  B：后街修路 修到十月 车都挤我们这
+  A：难怪导航全红
+  B：明天你回程错开五点 能好点
+  B：到家说一声
+  A：好嘞 您早点休息
+  【9月28日】
+  A：周总早 昨天谢谢您赏光
+  B：早 应该的
+  A：我那个年检的事 有劳您费心了
+  B：材料交了就按流程走 该到的都会到 别担心
+  A：好 那我放心等消息
+  B：要补材料我让窗口直接联系你
+  A：谢谢周总
+  A：您国庆回老家吗
+  B：不回 爸妈来我这 您呢
+  A：我回去 高铁票抢了三天才抢到
+  B：哈哈 抢到就行 路上注意安全
+  A：谢谢周总 提前祝您全家中秋快乐
+  B：同乐同乐

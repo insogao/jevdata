@@ -1,0 +1,128 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000192
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000044
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-5ba686a5a877ca62
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 表哥讨债步步升级，用刚上过门、认识你弟领导的软刀子，逼常年拖欠的表弟低头还钱。
+  critical_evidence:
+  - 六万欠款拖了近一年，当初说好三个月
+  - 深夜发来表弟父母家门口的视频，暗示人刚上过门
+  - 点出表弟工作单位有自己同学当车间主任，并约当面谈
+  - 表弟惶恐之下先转两万，承诺十月底前结清余款
+  benign_alternatives:
+  - 亲戚间正常催还借款
+  - 法院诉讼前的沟通协商
+
+attributes:
+  duration_days: 3
+  turn_count: 52
+  approximate_tokens_estimate: 1189
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: debt_collection_threat
+  risk: 3
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0024
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-016
+
+dedup:
+  content_hash: sha256:85e083974cfceb6d9bd8e094512a47c898a1e75bbe6584339463240a8925bd70
+pipeline_status: accepted
+title: violence_extortion/debt_collection_threat
+conversation: |-
+  【8月20日】
+  A：小宇 起了没
+  B：哥 早
+  A：舅妈让我问你 十月初外婆九十生日 酒席你回来不
+  B：回 搭姐夫的车
+  A：行 酒店订好了 两桌
+  B：礼物我想好了 给外婆配个助听器
+  A：有心 她念叨半年了
+  A：对了 有个事正月初三就该说 一直没开口
+  B：你说
+  A：你那六万 到十月底就整一年了 去年腊月说好三个月的
+  B：哥 工地年底压了钱 我真不是躲你
+  A：我知道你难 表哥也难 你嫂子天天算房贷
+  B：我十月发薪 一定先清你一半
+  A：行 我信你一回
+  A：台风昨晚过你们那没
+  B：过了 老屋顶又漏 我爸拿盆接
+  A：让他喊人修 别自己上房
+  B：舅犟 上礼拜自己上去补的
+  【8月21日】
+  A：你现在工地活多不
+  B：多 天天十一个钟 监理还挑刺
+  A：钱到位就行
+  B：倒还行 就是压一个月
+  A：睡了没
+  B：没 哥 这么晚
+  A：刚路过你爸妈家 门口那枣树果子熟了 我拍了段视频发你
+  B：……你去我家了？
+  A：路过 替你看看二老 身子骨都硬朗 你爸还问起你
+  B：你去干啥
+  A：没干啥 你半年没回去了 我替你看看家
+  B：哥 我 十月一定还 你别这样
+  A：还有个事 你弟在新区那个厂 我同学正好是他们车间主任 世界真小
+  B：你这话啥意思
+  A：没意思 唠家常 你弟挺好的 踏实
+  B：哥 你吓着我了
+  A：吓你干啥 亲戚之间 谈谈钱而已
+  A：周六有空没 当面谈谈 老地方吃个饭
+  B：周六我排班 调休一下 周日行不
+  A：那周日 周日别忘了
+  【8月22日】
+  B：哥 周日见 我先转你两万 表个态
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  A：收到 行 小宇 表哥也是为你好 面子给你留着
+  B：嗯 剩下四万十月底前一定清 我写字据拍照发你
+  A：字据不用 都是亲戚 十月底 我等着
+  B：中秋你回村吃舅妈打的糍粑不
+  A：回 外婆老念叨你 问你咋不回来
+  B：十月连生日一起补上
+  A：应该的 人得到场
+  A：入秋了 早晚凉 工地夜里备件外套
+  B：知道 哥你也是
+  A：晚上别冲凉水澡 你舅就这毛病
+  B：知道了 跟你一个啰嗦
+  A：哈哈 就这样 月底我等信儿
+  B：嗯 哥

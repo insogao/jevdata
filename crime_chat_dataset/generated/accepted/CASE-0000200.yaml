@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000200
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000032
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-064fb20874a34684
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: contraband_illicit_trade
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A盯着家里老人的慢病处方，月月多开安眠类药攒板数，按板卖给收药的同事B换现钱。
+  critical_evidence:
+  - B长期按板大量收购安眠类处方药
+  - 新日期八十一板、快过期五十
+  - A盘算用家里两张慢病卡每月开药攒量
+  - 首批六板四百八十元当场结清
+  benign_alternatives:
+  - 帮亲属代取多余常用药
+  - 临期药品处置
+
+attributes:
+  duration_days: 6
+  turn_count: 43
+  approximate_tokens_estimate: 1070
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: prescription_diversion
+  risk: 2
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0025
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-016
+
+dedup:
+  content_hash: sha256:c2840b466d0c38ea53714db703edb89359ecab4bacde2bb62b7834730ea039fc
+pipeline_status: accepted
+title: contraband_illicit_trade/prescription_diversion
+conversation: |-
+  【9月8日】
+  B：今晚又加班？会议室灯还亮着
+  A：报表没做完，你先走呗
+  B：走了，给你带了杯咖啡放前台
+  A：谢了老铁，救命
+  A：哎对了，上回你说那个门路还收不
+  B：收啊，常年收，你手里有货？
+  A：我爷爷每个月都开那种白色小药片，安眠那类的，吃不完攒了一抽屉
+  【9月9日】
+  B：那种好啊，紧俏，按板收
+  A：啥价
+  B：看日期，新日期的八十一板，快过期的五十
+  A：我爷爷那个量，一个月也就两三板
+  B：不够塞牙缝，你家没有别的卡？慢病卡月月都能开
+  A：我爸那边也有一张慢病的，能一起用不
+  B：卡的事你别问我，你自己琢磨，能开出来我都要
+  A：明天食堂有红烧肉，去不
+  B：去，十二点差五分就下去排队
+  A：你倒是积极
+  B：民以食为天嘛
+  【9月10日】
+  A：问过了，两张卡加起来一个月能开五六板
+  B：那就有搞头，你先攒着，攒够一个月的量叫我
+  A：行，我把药盒都留着，别弄丢日期
+  B：对了只收原包装的，散片不要
+  A：懂，板都齐着
+  【9月11日】
+  B：周末去水库钓鱼不，老张也去
+  A：去不了，得陪我爸复查
+  B：行吧，钓到鱼给你留着
+  A：鳜鱼留着，别的随便
+  A：复查顺便问问，医生要是加量，板子更多
+  B：那敢情好，你这是要成大客户
+  【9月12日】
+  A：第一批攒出来了，六板，日期都是今年下半年的
+  B：验下货，原封的我看一眼就收
+  A：明天带公司来？
+  B：行，放你车里，下班停车场交接
+  【系统消息】B 向 A 转账 480 元，已收款。
+  B：转你四百八，点一下
+  A：收到，爽快
+  【9月13日】
+  A：早就说你们收购是常年的，量再大点你能吃下不
+  B：吃得下，我这边的下家稳定，你就管供货
+  A：那行，下个月开完我约你
+  B：嗯，多攒点，按板收，板越多越好谈
+  A：哎你说这玩意咋这么紧俏
+  B：你别管那么多，有的吃就有的赚
+  A：也是，闷声发财
+  B：对了下周食堂好像有小龙虾，别忘了叫我

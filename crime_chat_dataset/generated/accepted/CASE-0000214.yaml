@@ -1,0 +1,145 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000214
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000121
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-d4027c5bc6a0f478
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 下属 A 手握上级 B 在酒店与第三者见面的照片，借整理团建照片之机层层点破并暗示备份未删，B 为息事宁人以空挂的外聘顾问费名义让财务每月八号给 A 发一万元。
+  critical_evidence:
+  - A 以酒店大堂照片和开重的酒店发票反复提醒 B 自己掌握其私会行踪，并称照片网盘手机电脑各存一份
+  - A 直接问出嫂子知道这事吗，B 央求 A 别对其爱人多嘴
+  - B 主动提出让 A 挂名外聘顾问费每月一万元、每月八号发放，换取事情翻篇，A 欣然接受
+  - A 在 B 提出适可而止后仍以舍不得原图施压，3月8日 B 向 A 转账一万元，A 回以照顾好你自己收尾
+  benign_alternatives:
+  - 上级与下属之间的正常顾问津贴安排
+  - 双方就误会进行的澄清和补偿协商
+
+attributes:
+  duration_days: 4
+  turn_count: 68
+  approximate_tokens_estimate: 1721
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: secret_affair_blackmail
+  risk: 3
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0026
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-016
+
+dedup:
+  content_hash: sha256:3ef5963236b7156ee1d5566917797f948e486e1e861f0ccdb7497a217fc4e57c
+pipeline_status: accepted
+title: coercion_blackmail/secret_affair_blackmail
+conversation: |-
+  【3月5日】
+  A：领导早 昨天您让我整理的团建照片我打包发您邮箱了
+  B：收到 挑几张好的发工作群就行
+  A：好的
+  A：对了领导 那晚十点多在酒店大堂拍的那几张 也一起发吗
+  B：哪几张?
+  A：就是您说已经回房休息之后的那批 我看您还在楼下会客呢
+  B：那几张拍糊了 不用发
+  A：哦 好嘞 我这边原图都存着 回头您可以再挑
+  B：…嗯
+  B：玉渊潭樱花开了没 你上周不是要去拍
+  A：开了 周末人山人海 我拍了半天全是人头
+  B：哈哈 网红景点都这样
+  A：下周再错峰去一趟
+  A：领导 四月份的差旅报销我对了一遍 酒店那两晚的发票好像开重了
+  B：重了?你先放着 回头我处理
+  A：好的 您忙
+  【3月6日】
+  B：早上来我办公室一趟
+  A：好的领导
+  A：领导 早上是为照片的事吧
+  B：那几张你到底想怎么处理
+  A：没想怎么处理啊 我这人习惯备份 网盘手机电脑各存一份 图个安心
+  B：小陈 我平时待你不薄
+  A：您对我是好 我都记着 就最近看中个车位 首付还差点 跟您发发牢骚而已
+  B：……你的意思我明白了
+  B：我爱人那边你别去多嘴 这是我私事
+  A：领导 嫂子知道这事吗
+  B：……
+  A：领导 周四球馆订上了 别忘
+  B：嗯 记着呢 最近肩有点僵 正好活动活动
+  A：您那杀球我还是接不住
+  B：多练 周四见
+  B：下午想了个安排 公司每月八号发外聘顾问费 有个名额一直空着 我让财务把你的名字加上 一个月一万
+  A：这 多不好意思
+  B：顾问费 名正言顺 事情就当翻篇
+  A：那我却之不恭了 谢领导
+  【3月7日】
+  A：领导 顾问的事您跟财务提了吗 我这边好安心等着
+  B：提了 八号正常发 你把卡号给人事
+  A：好嘞 那每月都是八号吧 我记一下 正好还贷款
+  B：每月八号 你放心
+  A：另外那些照片 我今晚就清一清 只留工作群里那版
+  B：嗯 应该的
+  A：就是有些原图拍得挺好 舍不得 譬如十点多重拍那几张 您的姿态特别自然
+  B：陈明远 你适可而止
+  A：领导消气 我就一提 万一哪天网盘抽风 也有个念想
+  B：……
+  A：领导 行政那台咖啡机坏了 修了三次了
+  B：我知道了 报废申请我签了 换新的
+  A：换带奶泡的吧 大家呼声高
+  B：行 你挑
+  A：领导 明天八号 财务说要我先补一份顾问服务记录表
+  B：你就写行业资讯整理 每月一份 不用真写
+  A：明白 那我字数多凑点了
+  【3月8日】
+  A：领导早 今天八号 顾问费应该今天到账吧
+  B：嗯 财务上午走流程
+  A：好
+  【系统消息】B 向 A 转账 10000 元，已收款。
+  A：到账了 一万 谢领导
+  A：领导 周末调休单我帮您递了 下周五休一天
+  B：好 谢了 你也歇歇 这阵子你加班多
+  A：我年轻扛得住
+  B：也别硬扛
+  A：领导 以后每月八号我请您喝茶 就当顾问见面会
+  B：不用搞这些
+  A：一定的 我这人讲究礼数 您多担待
+  B：…随你
+  A：领导 我先下班了 照片的事您放心 群里那版大家都一样
+  B：嗯
+  A：领导 照顾好你自己 身体最要紧 别太累
+  B：你也是

@@ -1,0 +1,145 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000205
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000078
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-157048a38bcfbfa8
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: privacy_doxxing
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A托中间人买拖欠工程款一家的底细，连老人病史都要，就为上门谈判时捏住软肋逼对方还钱。
+  critical_evidence:
+  - B称连目标大人当年在哪念书、哪个班都能查出来
+  - 老人病历等病史资料单独计价
+  - 基础档加病史打包三千八、看样后全额转账
+  - B建议上门谈时拿对方软肋施压、点到为止
+  benign_alternatives:
+  - 商务背景尽调咨询
+  - 旧友家谱寻访
+
+attributes:
+  duration_days: 3
+  turn_count: 69
+  approximate_tokens_estimate: 1546
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: family_info_dump
+  risk: 3
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0025
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-016
+
+dedup:
+  content_hash: sha256:dca9ab6fcdb92f92bfe07edb2f404196060301b4597ea6e07f1ca94dfa1653a3
+pipeline_status: accepted
+title: privacy_doxxing/family_info_dump
+conversation: |-
+  【10月21日】
+  A：老李，早上好，听说你们那边下霜了
+  B：是，今早车玻璃都结冰了
+  A：我们这儿还好，穿件外套就行
+  B：你们南方人抗冻是真不行
+  A：哈哈，是，一降温就往被窝钻
+  A：上回你说的那位朋友，能联系上不
+  B：你说的王家人那事？
+  A：对，就是拖着工程款那家
+  B：能，人是我一个哥们介绍的，靠谱
+  A：他在那个圈子混了多少年
+  B：十来年了，只做熟人生意，你放心
+  B：你还在喝那茶不，上次给你的那罐
+  A：喝着呢，挺顺口
+  B：那是朋友茶山直发的，不对外卖
+  A：难怪有股山场的味道
+  B：回头再给你捎一罐
+  B：你先说说要哪一档
+  A：他们家大人的情况，越细越好
+  B：大人的话，工作单位、车、老家这些算基础
+  A：老两口的身体情况也在里头吗
+  B：在，医院那头的历史都能整出来，就是费工夫
+  A：费工夫不怕，等得起
+  【10月22日】
+  A：今早加油没，又涨了两毛
+  B：我都加不起，车快成摆设了
+  A：我通勤三十公里，一个月油费一千多
+  B：换电车呗
+  A：纠结着呢，电池衰减又怕
+  B：那位朋友今早给我回话了
+  A：这么快
+  B：他说连老王当年在哪念的书、哪个班，都能给你捋出来
+  A：这也要？
+  B：有些人就吃这套，觉得你们连他老家底都摸透了，心里先怯三分
+  A：有道理，谈判桌上气势不能输
+  B：老人病历那份要另算，得等几天
+  A：等得起，这事不急这一两天
+  B：你老家哪的来着
+  A：皖北的，你们呢
+  B：我祖上江苏，爷爷那辈过来的
+  A：那也算半个老乡
+  B：过年要回去不
+  A：回，每年都回，老人还在
+  B：报价给你：基础档两千五，老人病历那份两千，打包三千八
+  A：打包划算，就打包
+  B：行，我先让朋友动手，东西齐了给你看样
+  A：看样是看样，钱怎么个走法
+  B：样品你看过满意，再全款，不走空
+  A：爽快，就喜欢你这种规矩
+  【10月23日】
+  A：我家厨房刚翻新完，油烟机吵得要命
+  B：没装止逆阀吧
+  A：装了，还是串味
+  B：那是楼道风压大，装个防烟宝试试
+  A：回头我研究下，谢谢老哥
+  B：东西出来了，我给你发过来看看
+  A：看完了，细节比我想的还全
+  B：那是，朋友干了十几年的手艺
+  A：行，三千八转你
+  【系统消息】A 向 B 转账 3800 元，已收款。
+  B：收到，我给他结
+  A：剩下的事你帮我参谋参谋
+  B：东西在手，上门谈的时候腰杆硬，他们怕什么你都知道
+  A：就是要这个效果，拖了两年，不能再拖
+  B：话别说太满，点到为止，知道他们怕什么就行
+  A：懂，我又不想把事闹大，就是要个说法
+  B：嗯，见好就收
+  A：对了，这事你知我知
+  B：放心，我这行当，嘴就是饭碗
+  A：以后有事还找你
+  B：随时，老客户给你留名额
+  A：哈哈，先请我喝茶再说
+  B：下周那罐茶给你留着

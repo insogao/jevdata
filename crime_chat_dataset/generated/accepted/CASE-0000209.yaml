@@ -1,0 +1,117 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000209
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000018
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-f108e45806fe7774
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 老板 B 为让扩建批文顺利过审，聘请审批处处长的外甥 A 挂名政府事务顾问，签空白模板合同、每月固定打款一万二、从不需要交付任何咨询成果，批文随后火速上会通过。
+  critical_evidence:
+  - A 的叔叔是管审批的处长，扩建批文卡在处里，A 以政府事务顾问名义接下此事
+  - 顾问合同用空白模板先签、内容由行政回头统一填，A 开价每月一万二按月固定打款
+  - 行政要求顾问配季度成果清单，A 让只写政策资讯每月推送、具体内容不用给他看，从不交付成果
+  - B 转账首月顾问费一万二当天，A 即告知上会通过、批文下周走流程，付款与审批节点前后相接
+  benign_alternatives:
+  - 真实在岗的行业顾问按月收取顾问费
+  - 专家评审与政策咨询的正常劳务报酬
+
+attributes:
+  duration_days: 3
+  turn_count: 41
+  approximate_tokens_estimate: 1201
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: consulting_fee_disguise
+  risk: 2
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0026
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-016
+
+dedup:
+  content_hash: sha256:0bc97c8ced13bf2f2fee47cf9b772b3b49f04e0e20b32669887083cb5b6b4d4d
+pipeline_status: accepted
+title: bribery_corruption/consulting_fee_disguise
+conversation: |-
+  【4月10日】
+  B：小艾 今年扩建那个批文 催了三回了 还卡在处里
+  A：老板 别急 我叔就管这一片 这周处里开协调会 我知道了
+  B：你叔那边 方便搭句话吗
+  A：他管审批的 话我不能随便递 你懂的 规矩
+  B：那咋办 一直卡着 一天损失好几万
+  A：所以去年不说了嘛 聘我做政府事务顾问 一年下来材料有人帮你盯 口风也有人给你递
+  B：顾问费行 那合同呢
+  A：用咱公司统一的咨询模板 先签了 行政存档 内容回头他们统一填 别整花里胡哨的
+  B：空白模板直接签?
+  A：对 一个月一万二 按月固定 你省心 我省事
+  B：是不是高了点 上个顾问才八千
+  A：高有高的道理 协调会我这周就把你扩建的递上去 材料再补两页环评说明
+  B：行 听你的
+  B：中午食堂还是外卖
+  A：食堂 今天有酱肘子
+  B：那走 你占座我去拿
+  【4月11日】
+  A：老板 材料我昨天给叔看过一眼了 他说环评那块表述改一下 周内上会
+  B：这么快?那太好了
+  A：顾问费的事 这个月的你先结了 下月起固定每月十五号走 我也省得催
+  B：记着呢 财务今天就把顾问费做了 这个月起按月走
+  A：你那车位又被人占了
+  B：物业说了 下月装地锁
+  A：早该装了
+  B：晚上球赛看不 湖人打勇士
+  A：看 老地方烧烤店投影
+  B：行 你请 上回你赢了
+  B：对了 行政说顾问协议要配季度成果清单 这咋写
+  A：写政策资讯每月推送就行 模板我发他们 具体内容不用给我看
+  B：行 那上会结果出来吱一声
+  【4月12日】
+  【系统消息】B 向 A 转账 12000 元，已收款。
+  B：首月顾问费转你 一万二 查收 下月十五号准时
+  A：收到
+  B：对了 你叔上个月体检咋样 他那个血压
+  A：控制住了 老爷子现在天天走路一万步
+  B：那挺好的 替我问好
+  A：老板 上会过了 处里意见下周批文就走流程
+  B：真过了?!太好了 这顾问请得值
+  A：说了吧 有事说话
+  B：必须的 中午加餐我请
+  B：五一放假咋安排 带家里人出去玩?
+  A：回老家 待五天 我妈已经开始腌菜了
+  B：好 回来给我带一罐 哈哈

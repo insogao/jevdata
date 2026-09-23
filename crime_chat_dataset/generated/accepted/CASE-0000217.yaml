@@ -1,0 +1,146 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000217
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000121
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-2d97e809aaf1b2f7
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 无隐藏意图：A 作为两家共同的多年好友，在 B 婚变中受双方所托居间传话、劝和促签，帮 B 垫付律师定金、督促其按离婚协议每月八号支付抚养费，全程为良性情感纠纷协商。
+  critical_evidence:
+  - 妻子已委托律师发来律师函，A 受其请托转达只想好好协商、主要是为了孩子的态度
+  - 协议条款由双方律师对接商定：抚养权归女方、房子归母女、B 每月八号前支付抚养费、孩子补课费另算，B 主动同意并称该给的一样不少
+  - A 垫付了 B 拖欠的三万元律师定金并保留发票，双方约定事后报销
+  - B 签完协议当天向 A 转账三万元归还垫付的律师费，并说抚养费已设自动转账，两人以照顾好你自己互道珍重
+  benign_alternatives:
+  - 朋友居间协助的情感纠纷协商
+  - 律师函与离婚协议框架下的正常履行
+
+attributes:
+  duration_days: 4
+  turn_count: 69
+  approximate_tokens_estimate: 1934
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: secret_affair_blackmail
+  risk: 0
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0026
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-016
+
+dedup:
+  content_hash: sha256:77191b1f46b25f197fc60929d61fac8045d7109f86d9361adc34480b7cd3480a
+pipeline_status: accepted
+title: coercion_blackmail/secret_affair_blackmail
+conversation: |-
+  【4月14日】
+  A：老周 周末钓鱼去不 老地方水库
+  B：先不去了 这阵子心乱
+  A：咋了 那事嫂子知道了吗
+  B：律师函都到了 能不知道吗
+  A：她昨天来找过我 让我劝劝你 她其实不想闹僵 主要是为了孩子
+  B：唉 是我对不住她 这事怨我
+  A：知道就好 她说只要你痛快签 协议都好商量
+  B：她那边的条件我律师发我了 抚养权归她 我每月看孩子两次 房子归她们娘俩
+  A：我看行 你也五十的人了 痛快点 体面点
+  B：我就是这个意思 别让孩子受罪
+  A：等你这事消停 咱再去钓鱼 我新买了根碳素的
+  B：行 到时候我请客 鱼获管够
+  A：你上次钓那条草鱼 八斤 照片还在群里呢
+  B：那是运气 别提了哈哈
+  A：对了 嫂子说 她那边律师问你名下那个门面怎么算
+  B：门面我主动写进协议里 本来就是婚后买的
+  A：你这态度 你律师都得夸你
+  B：该给的 我一样不少
+  【4月15日】
+  B：协议改到第三版了 我律师说这版差不多了
+  A：让两边律师直接对接 别来回让你俩传话 你现在见一面吵一面
+  B：也是 这两天她律师约我律师周三碰
+  A：好 我跟你嫂子说一声 让她那边配合
+  A：你胃药还吃没 上回你疼得脸色发白
+  B：吃着呢 去复查了 医生说没大问题 规律吃饭
+  A：你那吃饭没规律的毛病 得改
+  B：这阵子更没规律 唉
+  A：你律师定金交了吗 我记得三万
+  B：还没 我这几天在外地项目上飞 头大
+  A：要不我先给你垫上 你别耽误事
+  B：那多不好意思
+  A：咱俩谁跟谁 发票我来 我回头找你报销
+  B：行 那先谢了 钱我记账上
+  A：记什么账 见外
+  B：亲兄弟明算账 你不变
+  A：行行行 随你
+  【4月16日】
+  B：昨天两边律师碰完了 条款基本定了
+  A：嫂子给我发消息 说谈得挺顺 就剩日子的事
+  B：抚养费她要每月八号之前打 我说行 本来就该我出 孩子补课钱我另算
+  A：这个数你承受得住吧 你公司最近也紧
+  B：扛得住 门面下个月收租 我算过
+  A：你能这么想 嫂子那边也安心 她就怕你后面拖着不给
+  B：我这人别的不行 这点信用还有
+  A：那小子小升初划片出了没
+  B：出了 划到实验 中不溜的学校 他妈想让他考民办
+  A：孩子成绩是不错 随他妈
+  B：唉 随谁都行 别随我脾气就行
+  A：协议签字定哪天
+  B：明早 民政局那边约了 我们律师都在
+  A：我陪你过去 有个搭把手的
+  B：不用了 都办利索了 你忙你的
+  A：那我等你信儿
+  B：嗯
+  【4月17日】
+  B：签完了 都挺平静 她还哭了
+  A：好聚好散 你们能这样收尾 比多少夫妻强
+  B：托你的福 要不是你两头劝 还不知道闹成啥样
+  【系统消息】B 向 A 转账 30000 元，已收款。
+  A：你转这三万干嘛 说了别急着还
+  B：律师费垫付的 说好了报销 拖着算什么 发票留好
+  A：行 收了 发票我拍照给你 数目对 三万
+  B：嗯 以后每月八号的抚养费也不用你操心 我设了自动转账
+  A：你接下来啥打算 项目还跑吗
+  B：跑 下个月去杭州驻场半年 正好清静清静
+  A：也好 换个环境 那边…你前妻那边 记得逢年过节问候下孩子
+  B：那必须的 视频我天天盯
+  A：你呀 爸爸当得比丈夫强
+  B：这话我收下 哈哈
+  A：老周 照顾好你自己 到那边按时吃饭 胃药带上
+  B：知道了 你也是 别光顾着给别人操心
+  A：咱都好好的 往后还是兄弟
+  B：嗯 兄弟

@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000196
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000039
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-ea5a8d8bbdadcf5b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: contraband_illicit_trade
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 长途司机想省油钱，经车队群摸到低价货源，约定后半夜在固定高速口外一手钱一手货。
+  critical_evidence:
+  - 按吨报价，算下来比加油站每升便宜一块多
+  - 只做后半夜，固定在高速出口往东两公里的停车场交接
+  - 对方强调只做熟人、别往外说
+  - 先转六千定金，尾款现金当面点清
+  benign_alternatives:
+  - 私人加油站批量优惠
+  - 工地内部加油点价格优势
+
+attributes:
+  duration_days: 4
+  turn_count: 55
+  approximate_tokens_estimate: 1279
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: fuel_tax_evasion
+  risk: 2
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0024
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-016
+
+dedup:
+  content_hash: sha256:62e83fe5e8678e5f2e4274e717fab666ca932bdedc07f478211de56bc748bb11
+pipeline_status: accepted
+title: contraband_illicit_trade/fuel_tax_evasion
+conversation: |-
+  【7月10日】
+  A：兄弟 还没歇？
+  B：夜猫子 我问你 群里老赵说你那有路子 价格是真的？
+  A：真不真 你自己算 站里一升多少
+  B：我那卡打折还得七块二
+  A：我这边按吨谈 一吨算下来一升五块八九
+  B：差这么多？
+  A：一个吨位一个价 你要是长期跑 再给你抹零
+  B：先问下 咋个交接法
+  A：见面再说 群里别聊这个 你记我私人号
+  A：你常跑哪条线
+  B：京沪来回 冷链
+  A：那你懂 京沪服务区那盒饭 三十八一份 猪食
+  B：哈哈 涨到四十二了 我都自己带饭
+  【7月11日】
+  B：昨天说的那个价 咋个走法
+  A：老规矩 高青口 出口再往东两公里 那个停车场
+  B：啥时候
+  A：只做后半夜 两点 四点 你挑
+  B：为啥只半夜
+  A：白天那口子堵得死 没法作业 装卸也慢
+  B：成 那咋结算
+  A：先转定金六成 到地方验了货 补尾款现金
+  B：现金？大热天揣一沓
+  A：尾款我就认现金 别问为啥
+  B：这天热得 引擎盖能煎蛋
+  A：跑冷藏的还好 你驾驶室有冰箱没
+  B：有 我老婆给塞的绿豆汤 冻成冰坨
+  A：幸福 你小子
+  【7月12日】
+  B：我寻思半天 头一回搞 犯嘀咕
+  A：嘀咕啥 这条线多少老司机常年在我这拿 你就说我坑过谁
+  B：不是坑不坑 就是觉得便宜有点邪乎
+  A：邪乎？你卡里七块二 我这五块八九 中间差价去哪了你猜
+  B：得得得 我不猜了
+  A：记住一条 只做熟人 你要往外嚷嚷 我这买卖就断了
+  B：放心 我就想省个油钱
+  A：那就明晚两点 老地方 一吨 你开双驱那台来
+  B：一吨我能加几台车
+  A：你一台加满 再拿两桶备着 桶自带
+  B：行 我那还有俩铁桶
+  B：你一个人干这摊？
+  A：跟小舅子俩人 他盯夜里的场子
+  B：亲兄弟明算账 分钱随意不
+  A：他拿大头我跑腿 谁让我是他姐夫
+  B：哈哈 那你是自家人干活
+  【7月13日】
+  A：出发了 半小时到
+  B：好 我在停车场东头 灯下停着那台
+  A：到了 蓝色皮卡
+  B：看见了
+  A：验货 桶都摇匀了 你自己看着办
+  B：行 转你六千 定金
+  【系统消息】B 向 A 转账 6000 元，已收款。
+  A：收到 尾款三千一 现金
+  B：点好了 你数
+  A：没错 下回提前一天言语
+  B：加满了 刚拉到九十 动力一点不虚
+  A：就这么回事 省的都落你兜里
+  B：行 下趟回来再找你

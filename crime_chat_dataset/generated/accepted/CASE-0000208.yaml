@@ -1,0 +1,120 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000208
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000069
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-2d6c1da56a043854
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 无隐匿意图：欠款人按月分期还款，并以正规劳务抵偿缺口，双方记账签字、拍照留底、公开透明。
+  critical_evidence:
+  - A按约支付第十二期两千元并备注期数
+  - B当场核对总账：本金四万、已还两万四、还差一万六
+  - 双方约定按市价以进货理货劳务抵账、一趟抵两千
+  - 每趟抵账签字对账、拍照留底
+  benign_alternatives:
+  - 分期还款协商
+  - 劳动抵偿合法约定
+
+attributes:
+  duration_days: 2
+  turn_count: 45
+  approximate_tokens_estimate: 1149
+  relationship: 中间人关系
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: debt_body_exchange
+  risk: 0
+  relationship: 中间人关系
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0025
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-016
+
+dedup:
+  content_hash: sha256:3561d84d06b06ef0bb8f631418d518080dcd2c2ca7fea0b3a9eb102cf628720c
+pipeline_status: accepted
+title: sexual_transaction_exploitation/debt_body_exchange
+conversation: |-
+  【12月8日】
+  A：赵哥，明天大降温，你那件旧棉服找出来没
+  B：找啥找，我媳妇早给买新的了
+  A：还是你媳妇疼你
+  B：那可不，家里领导说了算
+  A：哈哈，都一样
+  A：赵哥，跟你说个事，这个月十号的还款，我可能凑不齐整
+  B：差多少
+  A：上月店里压了货款，能拿出两千
+  B：两千就两千，先转过来，剩下的咱们商量
+  A：钱我照转，缺口我想拿别的抵
+  B：你说
+  A：你们仓库旺季不是缺人手嘛，我每周末带车过去帮你进货理货，一趟抵两千，干到账清为止
+  B：这法子实在，比干耗着强
+  A：那就这么定，一次一笔都记清楚
+  B：行，记账，谁也不糊涂
+  B：快过年了，你家香肠灌了没
+  A：我妈灌了二十斤，等我回去拿
+  B：给我留两节呗，我妈就认这口
+  A：行，回去给你带一挂
+  B：那我不客气了
+  A：那我先把这期的两千转你
+  B：转吧，我给你记上
+  【系统消息】A 向 B 转账 2000 元，已收款。
+  A：转了，备注写着第十二期，你看下
+  B：收到了，账本记上：借条本金四万，前十一期你还了两万二，今天这两千到账，还差一万六，对得上吧
+  【12月9日】
+  B：你那面包车修好没
+  A：修好了，换根皮带三百多
+  B：老车就这样，小毛病不断
+  A：再陪我两年，回本就换
+  A：赵哥，昨天说的仓库的事，这周末就能开始
+  B：行，周六早上七点到，货多，正好用你那车
+  A：一趟运费按啥算，按行情抵还是包干
+  B：按行情，一天连装带卸按两千抵账，白纸黑字写清楚
+  A：行，我拉个单子，每趟对完账你签字，我拍照留底
+  B：应该的，照片我都留着，一笔一笔对得上，以后谁也不扯皮
+  A：对，亲兄弟明算账
+  B：抵扣完了剩下的本金你慢慢还，我不催
+  A：谢赵哥体谅，这份情我记着
+  B：说这些干啥，你踏实干活比啥都强
+  A：周六我带保温饭盒，中午仓库凑合一顿
+  B：行，食堂卡我给你办一张
+  A：那敢情好
+  B：账本我今晚拍给你，你看下有出入没
+  A：好，有出入咱电话对，别耽误事
+  B：那就说定了，周六见
+  A：周六见，赵哥

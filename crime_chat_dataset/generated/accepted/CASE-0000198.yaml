@@ -1,0 +1,145 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000198
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000105
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-846d698e5f1bfe21
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 想把公司设备处刚批量淘汰的三台旧笔记本按老价格出给相熟的二手回收店，凭证齐全、回款快，顺路照顾熟店生意。
+  critical_evidence:
+  - 机器是公司设备处批量淘汰的旧笔记本，附盖章的资产处置单
+  - B 只收凭证齐全的机器，否则一律不收
+  - 沿用老价格结算，三台共四千二
+  - 转账金额与交接清单逐台对得上
+  benign_alternatives:
+  - 二手回收商正规回收带处置单的公司淘汰设备
+  - 员工经审批处置单位闲置资产
+
+attributes:
+  duration_days: 6
+  turn_count: 66
+  approximate_tokens_estimate: 1605
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: fence_stolen_goods
+  risk: 0
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0024
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-016
+
+dedup:
+  content_hash: sha256:21e5d51de494ce8b86e9f5a165fc45d0b511791b8b0796aacf1d643bf5c4c64f
+pipeline_status: accepted
+title: theft_robbery_property_crime/fence_stolen_goods
+conversation: |-
+  【3月10日】
+  A：早
+  B：早 刚开门就等你信儿
+  A：公司设备处那批淘汰机我今天提出来了 三台本本 成色不赖
+  B：提出来了？行 拍几张图发我
+  B：今天降温你多穿点 我这老寒腿又开始闹
+  A：真降了 早上出门冻一激灵
+  B：我电暖气都搬出来了 忽冷忽热最招感冒
+  A：你那膏药还有没 上回那贴好使
+  B：有 你过来拿两贴 顺路
+  A：图发了 两台轻薄本 一台游戏本
+  B：看着成 电池循环几次
+  A：不多 几十次 反正能打
+  B：行 老价格 一千四一台 三台四千二
+  A：还老价格 你也给我涨涨
+  B：老价格就是稳定 不过丑话说前头 这批的资产处置单和发票复印件你得带齐
+  B：没凭证的机器我一张不收 上回收了台没单子的 被平台罚得不轻
+  A：放心 处置单行政盖过章 一式两份 发票复印件也齐全
+  B：那就明天下午拿来 我对着清单一台台验
+  A：成 明天下午
+  【3月11日】
+  B：昨晚那场看了没 最后那球绝了
+  A：看了 加时我困死了 值
+  B：我就说他们这赛季有戏 你还不信
+  A：行行 下回听你的
+  B：晚饭吃了没 我泡面凑合呢
+  B：说正事 明天单据和充电器都带齐 对不上清单的我可不收
+  A：知道 单子都装文件袋了
+  B：老客户归老客户 规矩归规矩 价还是给你老价格
+  【3月12日】
+  A：问你个事 你店里那面墙谁刷的
+  B：我小舅子刷的 咋 你也装修
+  A：刚交房 问问人工多少钱一平
+  B：他那阵三十五 包料另算 我把他电话发你
+  A：行 贵了我自己滚墙
+  B：自己刷 累死你信不
+  B：明天两点半 我三点要去市场进货
+  A：忘不了 单据都备一块了
+  B：游戏本那台记得把账号都退干净 资产编号贴撕下来留底给我
+  A：退干净了 到手我都恢复出厂一遍
+  B：那就行 明天见
+  【3月13日】
+  A：出门了 三台装袋 单据在侧兜
+  B：慢点开 下雨了
+  A：到了 你门头灯换了？
+  B：上礼拜换的 亮堂 进来说
+  A：咋样
+  B：都开机看了 单机对得上 没毛病 一千四一台 四千二 老价格
+  A：成 微信转？
+  B：嗯 现在转
+  【系统消息】B 向 A 转账 4200 元，已收款。
+  A：收到
+  B：下回有轻薄本优先给我 手机不收了 压手
+  A：行 听你的
+  B：周六钓鱼去不 老地方
+  A：周六我得补觉 上夜班补货伤不起
+  B：那你周日 我下午都在
+  A：行 周日 带我新竿试试
+  B：你那竿比我手艺都多
+  A：钓鱼佬的规矩 你不懂
+  【3月14日】
+  A：膏药忘了拿 给我留着
+  B：留着呢 周日来拿
+  A：今天店里人多不
+  B：还行 刚卖了台台式机
+  A：周日我多带一台轻薄本 行政说下月还有一台淘汰的 单子我一起复印
+  B：行 单子齐就好办 成色好就收
+  【3月15日】
+  A：睡了没
+  B：没呢 刚关店 下批啥时候
+  A：看设备处安排 四五月还有一批淘汰的 到时我先问
+  A：好 周日钓鱼别忘
+  B：忘不了 带你膏药

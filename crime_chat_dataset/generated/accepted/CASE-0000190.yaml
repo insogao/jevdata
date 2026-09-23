@@ -1,0 +1,146 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000190
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000006
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-031b18d6b1e6a635
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 自称信贷经理用免征信秒批钓急用钱的小店主，真实目的是在放款前收走保证金，再层层加码。
+  critical_evidence:
+  - 自称利息八厘、不看征信、当天秒批
+  - 放款前先收三千保证金，说是走形式
+  - 合同只发图片，公司网上查不到
+  - 转账后又冒出两成解冻金，前后说辞互相打架
+  benign_alternatives:
+  - 正规银行贷款先费后款的说辞难辨
+  - 熟人介绍的小额信贷业务
+
+attributes:
+  duration_days: 5
+  turn_count: 68
+  approximate_tokens_estimate: 1703
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: loan_fee_bait
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0024
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-016
+
+dedup:
+  content_hash: sha256:78bb3402d2bc0b94890622ecafd19e0e9c70991f573924bc086214d733933685
+pipeline_status: accepted
+title: fraud_scam/loan_fee_bait
+conversation: |-
+  【6月17日】
+  B：您好 娜娜姐介绍的 我姓方 开小吃店的
+  A：方老板好 我姓刘 恒信金融客户经理 要做多少
+  B：想盘个门面 差五万
+  A：五万小事 利息八厘 不看征信 秒批
+  B：不看征信？银行都得查啊
+  A：我们走内部渠道 银行那套是外行的
+  B：那咋办
+  A：身份证 店铺照片发我 今天提交 明天放款
+  A：你店做啥的
+  B：凉皮肉夹馍 早上四点起来备料
+  B：没办法 头天晚上就得发面
+  【6月18日】
+  A：材料齐了 合同出来了 发你图
+  B：图？没纸质的？
+  A：电子合同 你看清章就行
+  B：恒信金融 网上搜不到官网啊
+  A：渠道单 不挂网 搜不到正常
+  B：额度五万 期限一年 利息八厘
+  A：对 明天上午放款 放款前交三千保证金 走个形式
+  B：保证金？银行没这说啊
+  A：银行要征信要抵押 我们啥都不要 就收个保证金 放款当天退
+  B：我想想
+  A：想啥 你资质内部都过了 就差这步
+  B：你们那下雨没 我这梅雨 馍都潮
+  A：下了三天 晚上还打雷
+  A：买个除湿机 铺子里用得上
+  B：一千多呢 舍不得
+  A：门面盘起来就不差这点
+  B：借您吉言
+  【6月19日】
+  B：刘经理 保证金能不能放下款再交
+  A：不能 规矩 放款委员会都批你了 就差保证金这步
+  B：什么委员会 听着玄乎
+  A：内部流程 你别操心 名额给你占着 今晚十二点截止
+  B：我想到晚上回你
+  A：行 名额不等人
+  B：我表姐也是先交的钱？
+  A：娜娜姐上个月在你之前 两万当天放 你问她
+  B：行 我信她
+  A：晚上等我信儿
+  B：刘经理吃饭没
+  A：刚点外卖 你呢
+  B：我自己卖吃的 还得吃别人家的 哈哈
+  【6月20日】
+  B：刘经理 我转了
+  【系统消息】B 向 A 转账 3000 元，已收款。
+  A：收到 放款流程走起 十一点前到账
+  B：好 谢谢
+  A：方老板 系统显示你卡号一位不对 资金被冻结了
+  B：不可能 我发你的截图没错啊
+  A：截图我看是对的 但银行拦截了 要交两成解冻金才放行
+  B：两成 那一万？
+  A：对 解冻后连本五万一起下来 解冻金也退
+  B：刘经理 我一下拿不出一万
+  A：想办法 信用卡 借朋友 今天不解冻 保证金也一起冻着
+  B：我跟我老婆说了 她说哪有贷款先收钱的
+  A：她懂什么 她见过渠道单？
+  A：不放心我现在退你保证金 单子作废 委员会那边我担着
+  B：退？不是说冻着吗
+  A：冻的是放款 保证金能退 但单子作废 五万就没了 下月重新排队
+  【6月21日】
+  A：考虑咋样 解冻金下午前给我 名额保住
+  B：刘经理 朋友都说正规贷款不会先收钱
+  A：你朋友做过金融？十个九个不懂渠道业务
+  B：我昨天去银行问了 人家听完说我这情况不对劲 让我别再转
+  A：银行当然那么说 断人财路 你钱冻在我这 你自己算
+  B：那先把三千退我
+  A：退可以 单子作废 之前交的白搭
+  B：我再想想
+  A：嗯 别过十二点
+  B：刘经理 我决定不弄了 三千退我 不退我去所里问了
+  A：你冷静点 钱在走流程 退 退你
+  B：明天到账 我就当买个教训

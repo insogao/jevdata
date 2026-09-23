@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000203
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000111
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-ab0ae8f5c4e6b4f0
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: theft_robbery_property_crime
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A把来路不正的准新车贱价甩给做二手生意的同事B，B收货翻新后加价快出，还点名收带牌的。
+  critical_evidence:
+  - A出手一台九成九新无牌电驴、称来源别管且便宜
+  - 车架号被磨掉重新打过、验完看不出问题
+  - B按两千八收车、称新车三天就能出手
+  - B说带牌的更俏、弄到带牌的加八百收
+  benign_alternatives:
+  - 正常二手电动车买卖
+  - 帮同事代卖闲置车辆
+
+attributes:
+  duration_days: 4
+  turn_count: 49
+  approximate_tokens_estimate: 1126
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: electric_bike_resale_chain
+  risk: 2
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0025
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-016
+
+dedup:
+  content_hash: sha256:8472d9e526519107ac79f637ebaacc76189947e4acbf9fb1e42dae85d7517fc9
+pipeline_status: accepted
+title: theft_robbery_property_crime/electric_bike_resale_chain
+conversation: |-
+  【10月20日】
+  A：今天食堂有糖醋排骨
+  B：多打一份，我十二点十分到
+  A：你天天踩着点
+  B：上面刚开完会，没办法
+  A：跟你说个事，我这两天手上来了台新的，电驴，九成九新，还没上牌
+  B：哪来的
+  A：你别管哪来的，反正便宜
+  B：新车三天出，你要今天给我，周五前我就能走掉
+  A：多少收
+  B：无牌的看配置，两千八，带牌的能到三千六
+  A：带牌的咋算
+  B：贵在省事，买家最认带牌的
+  【10月21日】
+  A：对了，那台架子号的位置动过，磨掉重新打了一遍
+  B：打得平不平，懂行的师傅一眼就能瞧出来
+  A：找人弄的，说是手工的，看不太出
+  B：那就按无牌二手的价走，别指望按新车算
+  A：行吧，那两千八就两千八
+  B：今晚带来，我验完就给钱
+  B：明天好像有雨，记得带伞
+  A：早上下雨我肯定迟到
+  B：你又不是一天两天了，哈哈
+  A：互相伤害是吧
+  【10月22日】
+  A：车带来了，停在地下室B区，钥匙在头盔里
+  B：我先验验
+  B：嗯，成色可以，车架那块做得还行，看不出大问题
+  A：我说吧，那边手艺没得挑
+  B：钱我明天转你，别催
+  B：周六打球去不，老地方
+  A：去，带我那瓶功能饮料
+  B：就你事多
+  A：哈哈，谁让我年纪大了
+  【10月23日】
+  【系统消息】B 向 A 转账 2800 元，已收款。
+  B：两千八转你了，点一下
+  A：收到，这车你多久能出
+  B：新车三天出，最迟周末挂出去，诚心要的多的是
+  A：下次还有好的，还找你
+  A：下午帮我带杯奶茶，三分糖
+  B：你这体重还三分糖
+  A：喝个气氛嘛
+  B：行行行，伺候您呐
+  B：哦对了，带牌的真更俏，你那边要是能弄到带牌的，一台我加八百
+  A：牌不好弄，上牌要发票合格证，一套下来麻烦
+  B：我知道麻烦，所以才加钱，有带牌的优先给我留着
+  A：行，有信儿我叫你
+  B：公司体检报告出了没
+  A：出了，轻度脂肪肝，其他没事
+  B：我也是，咱俩一起戒宵夜吧
+  A：下辈子吧，哈哈
+  B：那台车出手了跟你吱一声，完事了这单就算齐活
+  A：行，周六球场见

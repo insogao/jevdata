@@ -1,0 +1,146 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000199
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000121
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-2d97e809aaf1b2f7
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A捏着B婚外情的旧账不放，每月八号雷打不动收两万，拿『让嫂子知道』当长期饭票。
+  critical_evidence:
+  - A以『嫂子知道这事吗』旁敲侧击、拿家室把柄施压
+  - 双方约定每月八号固定两万、逾期要补
+  - B八号中午转账两万、含此前拖欠部分
+  - A以『照顾好你自己』作抽象警告并称何时收手看B表现
+  benign_alternatives:
+  - 私下情感纠纷协商
+  - 长期合作分红或借款月结
+
+attributes:
+  duration_days: 4
+  turn_count: 69
+  approximate_tokens_estimate: 1474
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: secret_affair_blackmail
+  risk: 3
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0025
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-016
+
+dedup:
+  content_hash: sha256:607051936133483481b6128fa8ff5aeee5b0f912fc5e0115cc2c4c6fc6fb29a6
+pipeline_status: accepted
+title: coercion_blackmail/secret_affair_blackmail
+conversation: |-
+  【11月5日】
+  A：你这次出差订哪家酒店
+  B：就市里那家，老位置
+  A：上回那顿饭的酒店不错，菜地道
+  B：下回来带你去吃他们家腌笃鲜
+  A：一言为定
+  A：转眼又快八号了
+  B：嗯，我知道
+  A：上次说好的事，别再拖了啊，上个月就晚了三天
+  B：这个月不会，项目回款这两天就到
+  A：最好，咱都是明白人，有些话不用挑明
+  B：你到底还要到什么时候
+  A：看心情，也看你表现
+  B：你这就是拿捏我
+  A：随你怎么说，反正你也有你的顾忌
+  B：……八号，我记住八号
+  A：这就对了，合作愉快
+  【11月6日】
+  B：上次你留的普洱，我带办公室了
+  A：那饼放五年了，正当时
+  B：客户来都夸好
+  A：下回给你再留一饼
+  B：行，钱货两讫，老规矩
+  A：今晚有空吗，出来坐坐
+  B：我在外面陪客户，走不开
+  A：那不勉强，就问问，嫂子知道这事吗
+  B：……什么事，你什么意思
+  A：没什么意思，就是提醒你，有些事，嫂子知道和不知道，是两个活法
+  B：你少拿我家的事说事
+  A：我这是为你好，真闹到那一步，你丢的是整个家
+  B：你想要什么，直说
+  A：每月八号，老数目，别让我把话挑明
+  B：行，八号见
+  【11月7日】
+  A：你家小子该小升初了吧
+  B：嗯，明年，正发愁学区
+  A：慢慢来，孩子有他的路
+  B：借你吉言
+  A：为了孩子，你也得稳住啊
+  B：明天八号，我把上上个月晚的那部分一起补上
+  A：算你上道
+  B：你说，咱们认识十几年，何至于此
+  A：有些事，过去了就是过去了，就看你守不守得住
+  B：我早断了，这些年我哪点对不起你
+  A：对不起我没用，得对得起你自己家
+  B：补的这些还不够？
+  A：够不够，看你以后的表现，照顾好你自己，比什么都强
+  B：你这是威胁
+  A：我这是提醒，朋友之间的提醒
+  B：……明天中午，老地方，你把数发我
+  【11月8日】
+  A：早，今天八号，别忘了
+  B：忘不了，中午转你
+  A：嗯，别再晚了，晚了嫂子那边要是听到风声，我可拦不住
+  B：你到底想不想让人活
+  A：想啊，所以才按月来，细水长流，大家都体面
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  A：收到，两万，数目对
+  B：以后每个月都要这样吗
+  A：你表现好，总有到头的时候
+  B：什么时候是个头
+  A：等我哪天说不用了，自然就不用了
+  B：最近这雨下得没完
+  A：是，车都懒得洗
+  B：你那边新楼盘交房了吗
+  A：交了，物业一般，收了房空着
+  B：现在房子不好卖，我们项目也压着
+  A：慢慢来吧，熬得住才有得赚
+  B：这个月的事就算了了？
+  A：了了，下月八号老时间，不用我提醒吧
+  B：不用
+  A：记住，照顾好你自己，别节外生枝
+  B：……知道了
+  A：晚安，做个好梦

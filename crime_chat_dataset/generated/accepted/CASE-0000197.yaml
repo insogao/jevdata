@@ -1,0 +1,131 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000197
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000104
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-b98775d7ab26918d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 企业主打算以公益捐赠名义对公支出十万换取全额票据冲抵报表，对接人负责把大头以服务名目绕回给他。
+  critical_evidence:
+  - 以公益捐赠名义对公转出十万
+  - 票据按十万全额开具，公示名录同步挂名
+  - 其中八万五以会务、咨询类名目分两笔回到企业主手里
+  - 双方素未谋面，由中间人方总牵线，且并非首次操作
+  benign_alternatives:
+  - 合法公益捐赠抵税安排
+  - 基金会年度募捐对接
+
+attributes:
+  duration_days: 5
+  turn_count: 54
+  approximate_tokens_estimate: 1251
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: charity_receipt_wash
+  risk: 3
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0024
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-016
+
+dedup:
+  content_hash: sha256:af95f8e64c19411f479be1ece75ae61e49ea67e4da3f8666681d2f101959a5dc
+pipeline_status: accepted
+title: money_laundering_obfuscation/charity_receipt_wash
+conversation: |-
+  【3月3日】
+  A：曾总您好 我是华衡基金的陈默 方川总介绍
+  B：陈老师好 方总跟我说过您
+  A：客气 方总说您公司今年账面想收得体面些
+  B：他嘴真快 是有这个打算 想找个稳妥的口子
+  A：我们这边每年春天这一期 名额不多
+  B：具体怎么个章程
+  A：电话里说不透 加了微信 细节慢慢对
+  B：您打球不 周六有个球局
+  A：打 十八洞差点十八 见笑
+  B：那正好 陪练有了 哈哈
+  【3月4日】
+  A：想好了 我们这样 十万 走对公
+  B：打到哪
+  A：我们基金对公户 下午我把户名账号给您
+  B：票呢
+  A：票按十万全额开 公益捐赠统一票据 查验码都能验
+  B：我要这个干嘛您懂 报表和年检都指着它好看
+  A：懂 都懂
+  B：您喝茶吗 我有朋友寄的凤凰单丛
+  A：喝 我办公室一柜子茶 您这单丛得配对水温
+  B：哦？您说说
+  A：沸水快出 不然苦 您这茶不赖
+  B：行家 改天寄您一罐
+  【3月5日】
+  B：协议怎么签
+  A：捐赠协议 正规模板 网上公示也挂 您名字进年度理事名录
+  B：公示上写十万？
+  A：写十万 票也是十万 一分不差 外面看着挑不出毛病
+  B：那我实际负担呢
+  A：老比例 八万五 你懂的 分两次 从别的科目走
+  B：周期多久
+  A：打款后五个工作日起 票同步寄您
+  B：稳不稳
+  A：我们做七年了 协议 公示 票 全是真的 您签的就是正经捐赠
+  B：对了 您那台车…换了？
+  A：换了台电车 老婆嫌太安静 不习惯 呵
+  B：电车省啊 一公里几分钱
+  A：省是省 高速充电排队头疼
+  【3月6日】
+  A：定哪天 下周一您对公过十万
+  B：行 周一一早 一笔过 还是
+  A：一笔 干净
+  B：理事名录那个头衔 对外我能用不
+  A：能 名片 简介都行 反正手续是真的
+  B：好 那这单成了 方总那份也一起续？
+  A：续 他在我这就是这么走的老客户
+  B：周末半马您跑不
+  A：报了 河滨那场 您也去？
+  B：去 凑个热闹 顺便聊聊后续名额
+  A：跑完聊 那儿安静
+  【3月7日】
+  B：陈老师 周一见 款我让财务备好了
+  A：好 票随款走 快递到您公司 周三前第一笔八万五
+  B：第二笔呢
+  A：下月中 老时间老科目
+  B：成 有劳
+  A：名录位置给您留着 别客气
+  B：谢谢 回头让方总请您吃饭

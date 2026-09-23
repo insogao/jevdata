@@ -1,0 +1,125 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000194
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000034
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-ebb09c7edc534e43
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: contraband_illicit_trade
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 老主顾只在夜里接头，从山里熟人手里定期拿冰鲜「山货」，双方对货的来路心照不宣。
+  critical_evidence:
+  - 老主顾开口就问今年货怎么样
+  - 说好冰鲜加冰走冷链发货
+  - 两人只在大半夜联系，白天从不碰这个话头
+  - 尾款九百见单转清，差数下批补
+  benign_alternatives:
+  - 合法养殖场山货食材的老客订购
+  - 山珍干货和文玩串珠的熟客往来
+
+attributes:
+  duration_days: 5
+  turn_count: 47
+  approximate_tokens_estimate: 929
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: wildlife_trade
+  risk: 2
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0024
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-016
+
+dedup:
+  content_hash: sha256:3080b5e3d1fa8d3ed2930a61e0e1d811535dfddb304a3e4dd75154cd29711b87
+pipeline_status: accepted
+title: contraband_illicit_trade/wildlife_trade
+conversation: |-
+  【11月6日】
+  B：老陈 睡了没
+  A：没呢 刚喂完炉子
+  B：今年货怎么样 有准信没
+  A：急啥 头茬得等下霜 这几天正上冻
+  B：我就问问 心里有个数
+  A：老规矩 冰鲜加冰 给你走冷链
+  B：嗯 别的都老样子
+  A：你那茶我收到了 喝了两泡 香
+  B：喝着好就行 我舅自己炒的
+  A：替我谢谢他 下回留两斤
+  B：成 包我身上
+  【11月7日】
+  B：睡了没
+  A：刚躺下 说
+  B：白天发你消息也不回
+  A：白天进山哪有信号 你又不是不知道
+  A：跟你说 头茬有两样了 鲜的 给你留着
+  B：都有啥
+  A：一样你去年念叨的老东西 一样新的 到手你就认得
+  B：行 我等你信儿
+  B：你腰咋样 上回你说搬东西闪了
+  A：贴着膏药呢 阴天就疼
+  B：我有个朋友推拿看得好 你下山我去约
+  A：行 到时候再说
+  【11月8日】
+  B：这批啥价
+  A：还是老价 一百六一斤 加冰另算十块
+  B：先来五斤
+  A：五斤八百 冰加运费给你抹个整 九百
+  B：行 就五斤
+  A：明天一早货站发 后天到 你手机留神
+  B：好
+  B：你们山上冷了吧
+  A：一场霜下来 白菜都得抢收
+  【11月9日】
+  A：发走了 单子拍照你了
+  B：收到 钱现在转你
+  【系统消息】B 向 A 转账 900 元，已收款。
+  A：到了
+  B：到货要是对不上数 你给我补
+  A：放心 冰加得足足的 差了下批补你
+  B：对了那串星月 我朋友看了 说盘得比他的亮
+  A：那可不 天天盘着 你也来一副 原料管够
+  B：行 回头给我挑一颗
+  【11月10日】
+  B：到了 冰还硬着呢
+  A：嗯 路上没化就行
+  B：下批啥时候有
+  A：等下场雪 雪后货才肥
+  B：行 到时候你说
+  A：你那茶我又泡了两回 回甘长
+  B：那给我舅长脸了 让他多炒点

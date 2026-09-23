@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000213
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000058
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-fb7d43047aef80c2
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: violence_extortion
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 同事 A 因竞品主播抢走客户，花钱雇了带队的在对方直播开播时带人集中冲进直播间搞乱场面，B 不仅知情还答应报名参加，按一单五十一个人头计价，双方用小号和口令配合行动。
+  critical_evidence:
+  - A 因主播小鹿截走客户，通过表哥认识的带队约了周六晚八点对方大场时动手，十分钟见分晓
+  - 计价方式为一单五十、一个头、一次冲十分钟，二十个人约一千元，A 先垫钱、效果不好不收
+  - 带队的提供话术，A 转发给 B 让其照着节奏来，两人都换小号、提前二十分钟进直播间等口令统一行动
+  - A 交代带队的说万一有号顶不住就现场换备用号接着来，中途别停
+  benign_alternatives:
+  - 商家之间正常的市场竞争和差评维权讨论
+  - 粉丝团自发组织的直播间互动玩梗
+
+attributes:
+  duration_days: 4
+  turn_count: 56
+  approximate_tokens_estimate: 1386
+  relationship: 同事
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: livestream_hate_raid_for_hire
+  risk: 2
+  relationship: 同事
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0026
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-016
+
+dedup:
+  content_hash: sha256:a51d3f7751f245b4ec42d4dc8bb9d35c3daa4bc0fbb36f1dbe2b72bef0913cbc
+pipeline_status: accepted
+title: violence_extortion/livestream_hate_raid_for_hire
+conversation: |-
+  【12月1日】
+  A：忙不 跟你说个事
+  B：说
+  A：就那个小鹿 你不是看她直播间来气吗 上周把我客户全截走了
+  B：她是挺烦的 上次还阴阳怪气内涵你
+  A：我打听了个路子 周六晚上她大场 有办法让她那场办不下去
+  B：什么路子 你别惹事啊
+  A：我表哥认识一个带队的 能叫人 细节到时候说
+  B：行吧 你先说说怎么个章程
+  A：周六晚八点开播 十分钟见分晓 具体我约了人再跟你说
+  A：下午茶走不走 我请 这周业绩好
+  B：走 三分糖去冰 谢谢老板
+  A：你这就一杯?我记得你爱那款芋泥的
+  B：减肥 半年前立的目标 现在破功了 芋泥也来一份 哈哈
+  【12月2日】
+  B：昨天那事我寻思了一晚上 能成吗 别搞一半没人
+  A：人家专业的 一单五十 一个头 冲十分钟 讲信用
+  B：叫二十个 一千块?你还垫钱
+  A：我垫 先办事后结 效果不好不收
+  B：那行 周六你安排
+  A：今天真够冷 键盘都敲不动
+  B：零下四还带风 我秋裤已经安排上了
+  A：我妈非让我穿毛裤 我拒绝
+  B：话术呢 你说人家提供?
+  A：带队今晚发我 我转你一份 照着节奏来就行
+  B：我也要上? 我以为光出钱
+  A：你来几个 真人有气氛 混在里头也自然
+  B：行吧
+  A：晚上发你
+  【12月3日】
+  A：话术发你邮箱了 看了没
+  B：看了 挺全 连开场节奏都标好了
+  A：周六提前二十分钟进直播间蹲着 等我口令
+  B：为啥还要对口令
+  A：统一行动才有气势 也怕她管理员瞧出苗头
+  B：行 听你安排
+  A：你常用号别用了 她粉丝认得你头像 上小号 起个普通名
+  B：有道理 今晚就弄一个
+  B：昨晚那大结局你看了吗
+  A：看了 男主下线那集我哭懵了
+  B：我猜第二部要原班人马
+  A：号弄好了没
+  B：弄好了 风景头像 绝对认不出
+  A：嗯 周六就靠你了
+  A：对了 带队说万一有号顶不住 现场换备用号接着来 别停
+  B：懂 不停就行
+  【12月4日】
+  A：周六的人齐了 二十个头 加咱俩
+  B：定金给了?
+  A：给了 完事当场结尾款 效果不好不要钱
+  B：行 我那一千 周五发你
+  B：我鼻子有点塞 别是着凉了
+  A：让你穿毛裤不穿
+  B：行行行 你赢了 今晚就翻出来
+  A：多喝热水 周六还得靠你壮声势
+  A：周六流程最后对一遍 七点四十进直播间 手机静音 等口令
+  B：好 口令一发就动
+  A：中途谁问都不接茬 十分钟到点就撤 干净利落
+  B：明白 周六见分晓
+  A：好 到时候等我口令

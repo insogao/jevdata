@@ -1,0 +1,128 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000212
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000072
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-dd2bef2cc5c5e601
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 表哥 A 以参展和杂志资源为筹码，连日向做模特的表妹 B 施压，逼她接自己工作室的室内私房约拍，B 明确别扭后仍被拿捏，最后只能以带女助理在场、成片先审为条件勉强松口。
+  critical_evidence:
+  - A 约婚龄成年的表妹 B 拍室内私房主题参展作品，B 第一反应是只穿内衣那种、表示别扭
+  - B 拒绝后 A 连日施压：想红就别矫情、这组只有我能拍、多少模特求我拍
+  - A 用资源要挟，称不拍就把下月杂志封面内页给安排别人，还暗示别让家里长辈知道这组的事
+  - B 最终被迫谈条件：换大片室、女助理全程在场、成片先审不合格就删，A 不情愿地答应
+  benign_alternatives:
+  - 正规的艺术约拍合作
+  - 经纪公司安排的正常试镜与作品拍摄
+
+attributes:
+  duration_days: 4
+  turn_count: 52
+  approximate_tokens_estimate: 1426
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: photographer_private_pressure
+  risk: 2
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0026
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-016
+
+dedup:
+  content_hash: sha256:8098ca748270f077459b18a145607928a5acd92a0beb81086e84dd99ece485c9
+pipeline_status: accepted
+title: sexual_transaction_exploitation/photographer_private_pressure
+conversation: |-
+  【5月9日】
+  A：妹 明晚有空没 哥工作室想约你拍组片子
+  B：什么主题 又是外景吗
+  A：这次室内的 我想出一组私房主题 参展用
+  B：私房?就穿内衣那种?
+  A：艺术私房 光影为主 不是你想的那样 咱家自己人我能害你?
+  B：我再想想 总觉得有点别扭
+  A：哥这组憋半年了 就缺你这样的气质 模特费照付 不让你白来
+  B：我不缺钱 你别拿这个说事
+  B：对了 下月奶奶八十大寿的酒席订了没
+  A：订了 就老地方酒楼 你妈说你带男朋友回来?
+  B：我妈八卦 人家在出差呢
+  A：行 奶奶念叨你呢 有空回去看看
+  B：嗯
+  【5月10日】
+  A：考虑得咋样 明晚档期就给你留着
+  B：哥 我还是不想拍那种 换个主题呗 外景我随时到
+  A：你都毕业两年的人了 想红就别矫情 哪个模特不是从私房拍出来的
+  B：我没想大红大紫 我就喜欢拍商拍
+  A：这组只有我能拍 别人拍不出那个光影 你出去打听打听
+  B：那也是要穿那么少啊哥
+  A：国外艺术展都这路子 你上次不是说要进画廊
+  B：我再想想吧
+  A：请你喝奶茶 半糖 就当赔罪
+  B：我减肥 你自己喝
+  A：你哪肥 就腿粗那么一点
+  B：???哥你会不会聊天
+  A：哈哈
+  【5月11日】
+  A：妹 想好了没 今晚布光我都调好了
+  B：哥 说实话我心里过不去 这个忙我帮不了
+  A：行 那下月新锐那组封面内页 我只能给安排别人了 本来主推你
+  B：你这是拿资源压我
+  A：我这是对事不对人 机会就这一次 过时不候
+  B：你要跟姑姑姑父说这组的事 我都没脸回家吃饭了
+  A：那你自己掂量 是脸面重要还是前程重要
+  B：你上回让我帮看的丝巾 我给你拍了两款 你看
+  A：都行 你眼光比我好 就第一个
+  B：好嘞 那我下单了 啥时候给你
+  A：周末奶奶席上给我 哈哈
+  A：今晚影棚我留到十点 你要想通了直接来
+  B：…容我再想想
+  【5月12日】
+  A：咋样 今晚最后一天档
+  B：哥 我可以拍 但有条件 换大片室 带我女助理小雅全程在场 成片我先审 不合格的删
+  A：你这条件一大堆 圈里谁这样拍
+  B：那就算了 反正杂志也不只你一家能推
+  A：…行吧 你咋这么多事 就依你 但主题听我的
+  B：行 这才像话
+  A：说好了 这次拍完我把你推给主编 说话算话
+  B：拍完看片再说
+  B：对了 周末天气好不 你不是说带我拍外景那组森系的
+  A：查了 周日晴 带上那两条白裙子
+  B：好嘞 那组我喜欢
+  A：那组拍好了也给你投杂志
+  B：嗯 那组随便投

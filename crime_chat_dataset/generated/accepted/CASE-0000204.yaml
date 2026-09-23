@@ -1,0 +1,134 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000204
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000024
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-8050ad4f4c736c7d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: bribery_corruption
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A盯上了晋升名额，考核前密会拍板的B示好，公示当晚借『给孩子添学费』送出四万八谢关照。
+  critical_evidence:
+  - 考核前B单独约A周五晚老地方密会
+  - B称晋升名单内部意向已定、催A考核别掉链子
+  - B多次提及儿子留学一年花费小四十万、学费压力大
+  - 公示当天夜里A转四万八并以给孩子添学费为名、B收下说记下了
+  benign_alternatives:
+  - 长辈对晚辈的人情答谢
+  - 真实资助同事孩子学费
+
+attributes:
+  duration_days: 5
+  turn_count: 56
+  approximate_tokens_estimate: 1281
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: promotion_payment
+  risk: 3
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0025
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-016
+
+dedup:
+  content_hash: sha256:ae8267f27b2dd116b8e454a66b33b31f77e04918c4b9b8ce3a993d247809f577
+pipeline_status: accepted
+title: bribery_corruption/promotion_payment
+conversation: |-
+  【9月21日】
+  A：总，下午那泡单枞还有吗
+  B：有，来我办公室拿
+  A：你这茶一喝，我家里那些都咽不下去了
+  B：哈哈，回头我给你分一罐
+  B：周五晚上有空没
+  A：有空，您安排
+  B：老地方，八点，就咱俩，别带其他人
+  A：明白
+  B：这周考核的事你也知道了吧
+  A：知道，材料我都备齐了
+  B：材料是死的，人是活的，周五聊
+  A：您现在天天爬楼梯？刚才看您走的消防道
+  B：嗯，电梯等得烦，爬十八楼当锻炼
+  A：佩服，我三楼都想坐电梯
+  B：年轻人要保养膝盖，像我这样
+  【9月22日】
+  A：总，昨晚的事我琢磨了一路
+  B：想明白就行
+  A：名单那边真有数了？
+  B：内部意向基本定了，就等走流程，你上点心，考核别掉链子
+  A：懂，那周五该表示的，您别客气
+  B：客气话免了，我家那小子留学的事你也听说了，学费压力不小
+  A：侄子出息，这是好事，好事就该办得体面
+  B：昨晚球看了没，绝杀那球漂亮
+  A：看了！最后十秒我跳起来了
+  B：我们那代人看球才有味道
+  A：周末约一场？您别又要加班
+  B：加班，你们的命真是苦
+  A：哈哈，互相体谅
+  【9月23日】
+  A：总，明早汇报的稿子我再顺一遍，您给把把关？
+  B：发我，晚上看
+  A：考核组那边，您方便的话……
+  B：我知道分寸，你把你的事做好，剩下的有我
+  A：我闺女今天开学，一早就闹起床气
+  B：哈哈，我家那小子当年也这样
+  A：他留学走的哪国来着
+  B：澳洲，一年小四十个，肉疼
+  A：有出息就行，这钱花得值
+  B：周五老地方，八点，别忘了
+  A：忘不了，我记着呢
+  B：嗯，带上你上次说想聊的思路，咱们细谈
+  【9月24日】
+  A：总，考核刚完，发挥还行
+  B：我听组委会的人提了一嘴，反馈不错
+  A：托您的福
+  B：这周连着下雨，你们项目上没淹吧
+  A：抽了半天水，没事
+  B：注意防汛，别出岔子
+  A：嗯，值班的排好了
+  A：名单什么时候出
+  B：明早就公示，你安心睡你的觉
+  【9月25日】
+  B：出了，公示栏你看了没
+  A：看了，谢谢总，我不知道怎么感谢您
+  B：谢啥，是你自己争气
+  【系统消息】A 向 B 转账 48000 元，已收款。
+  A：总，一点心意，给侄子添点学费，您千万别推
+  B：你这是干啥，太见外了
+  A：您不收就是看不起我，孩子的事就是大事
+  B：……行，那我替孩子收了，你这份心我记下了
