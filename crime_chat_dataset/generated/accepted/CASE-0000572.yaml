@@ -1,0 +1,133 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000572
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000030
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-61ef3f8be1229760
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: contraband_illicit_trade
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 无隐藏违法意图：老客向相熟的数码配件店主补货，问『上次那种还有吗』、按『片/条/个』报价，用语随意像行话，实际商品是钢化膜、内存条、散热器等普通货，线下门店当面现金结付。
+  critical_evidence:
+  - 买家以『上次那种』『磨砂那种』等代称询价、按片条个计价，商品名前期不直说（单一弱信号）
+  - 商品最终明确为手机钢化膜、内存条、散热器等普通数码配件（可完全良性解释）
+  - 交易为线下门店当面现金结付，全程无任何转账事件（无资金闭环）
+  - 双方为熟客关系，话题多为双十一购物、追剧、降温换座垫等日常寒暄（低可疑背景）
+  benign_alternatives:
+  - 行业黑话的正规交易
+  - 游戏道具交易
+
+attributes:
+  duration_days: 5
+  turn_count: 56
+  approximate_tokens_estimate: 973
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: code_word_catalog
+  risk: 1
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0062
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-028
+
+dedup:
+  content_hash: sha256:f90790170344588c3b18b7d1474a462273597166f364d95b5911a332505d1ded
+pipeline_status: accepted
+title: contraband_illicit_trade/code_word_catalog
+conversation: |-
+  【11月4日】
+  B：老板，上次那种还有吗
+  A：哪种？你拿过好几种
+  B：磨砂那种，来一片，我妹给我抠坏了
+  A：磨砂钢化膜啊，有，同型号还剩六片
+  B：行，周六过去拿，老价吧
+  A：八块，老价
+  B：你店里双十一搞活动不
+  A：满50减5，膜就几个点，凑个热闹
+  B：那我清清购物车，顺便把你那凑了
+  A：行，来了给你挑张没气泡的
+  B：你存货真多
+  A：批发拿的，摊薄了
+  A：你推那刑侦剧大结局没
+  B：还差两集，舍不得看
+  A：我一晚上刷完了，结局有点赶
+  B：毒你，那我不抱期待了
+  A：当下饭剧看
+  B：行，明晚看完对线
+  A：随时
+  【11月5日】
+  B：降温了，你车座垫换毛的没
+  A：换了，早市五块一个
+  B：给我捎一个
+  A：行，明早带
+  B：多少钱，一起结
+  A：五块，到店给
+  B：成
+  A：对了，你上回念叨的内存条到货了
+  B：到了几条
+  A：十条，还是你要那个牌
+  B：给我留一条，八年的老机器升级，再战三年
+  A：老平台加条内存最划算，一条九十九
+  B：行，周六膜加条一起拿
+  A：成，一百零七
+  B：记上了
+  【11月6日】
+  B：对了，我同事也要一片磨砂的，苹果那款
+  A：有货，让他报机型，别拿错
+  B：我问问，晚上回你
+  A：行
+  B：机型发你了，他那屏碎成蜘蛛网了
+  A：有，周六一起，两片十六
+  B：好，钱我垫，他转我
+  A：成
+  【11月7日】
+  B：再问一句，塔式散热器还有吗
+  A：有，剩三个
+  B：先不买，我原装扇夏天吼得慌，问个价
+  A：塔式八十九，风冷四十九
+  B：等我发工资
+  A：不急，给你留着
+  【11月8日】
+  B：到了，你店开门没
+  A：开了，进来
+  B：膜两片、内存一条、座垫一个，对下数
+  A：十六加九十九加五，一百二，抹零收一百一十八
+  B：你还抹零，可以啊
+  A：老客了，下回留新品给你
+  B：成，现金点给你了
+  A：收到，慢走

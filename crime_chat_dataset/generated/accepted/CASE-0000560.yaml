@@ -1,0 +1,143 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000560
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000129
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-1b3aeb08eb3af1b7
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: coercion_blackmail
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A用一份来路存疑的孕检报告把自己包装成怀孕方，按月向B索要8000元，并以去其单位施压作筹码；B为息事宁人按月付款。
+  critical_evidence:
+  - A暗示两张孕检单来路是找人办的，叮嘱B别问来路，却声称经得起看
+  - A按月索要8000元，限定月底之前支付
+  - A以挑个下午去B的写字楼楼下坐坐、知道前台在几楼相要挟
+  - B在周五期限前妥协，先转8000元首月费用
+  benign_alternatives:
+  - 真实亲子纠纷的抚养费协商
+  - 旧识之间的经济旧账拉扯
+
+attributes:
+  duration_days: 6
+  turn_count: 63
+  approximate_tokens_estimate: 1250
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: fake_pregnancy_claim
+  risk: 2
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0061
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-028
+
+dedup:
+  content_hash: sha256:11fd84324b5a8ae6e2e944757d303cb2051e389cc3006f3d4523f17d4b2575d9
+pipeline_status: accepted
+title: coercion_blackmail/fake_pregnancy_claim
+conversation: |-
+  【9月7日】
+  A：在吗
+  B：在，刚盘完店里的账
+  A：有些事，该说清楚了
+  B：你说
+  A：上个月厦门那一趟，之后的事你心里有数
+  B：好端端的提这个干什么
+  A：我先不点破，你这几天想想
+  B：你别吓唬我
+  A：我从来不吓唬人
+  A：对了，以前合伙那批货的尾款，账上还挂着呢
+  B：那笔不是说抵了装修么，你都签过字的
+  A：行，那就回头一起算
+  【9月8日】
+  A：想好了吗
+  B：有话直说，别打哑谜
+  A：两张单子，马上拍给你
+  B：什么单子
+  A：你看了就知道
+  A：[image：一张孕检报告单照片，姓名与日期栏为手写补填]
+  B：这……你什么时候做的检查
+  A：单子怎么来的你不用问，反正经得起看
+  B：我怎么信它是真的
+  A：你可以不信，但我敢拿它去任何地方
+  B：那你说，你想怎么办
+  A：先不说这个，你们那边下雨没
+  B：下了两天，总算凉快了
+  A：厦门这会儿还是热
+  B：别提厦门了行吗
+  【9月9日】
+  B：你到底要个什么说法
+  A：不难为你，往后每个月八千，月底之前给我
+  B：八千？你抢钱呢
+  A：嫌多可以再商量，我无所谓
+  B：什么都没落地，这钱算什么名目
+  A：名目你自己定，日子我记着就行
+  B：容我几天
+  A：我等你到周五
+  A：对了，老周十月办酒，你去不去
+  B：份子让人带到就行，我就不露面了
+  A：行，那我替你带到
+  B：谢了
+  【9月10日】
+  B：最近腰疼，医生让少坐
+  A：让你媳妇给你按按
+  B：她没那耐心
+  A：那去正规店里按，别省这钱
+  B：这两天我把手头的账都理了理
+  A：不用跟我哭穷，我也不等米下锅
+  A：但你要是拖着，我只能挑个下午去你们写字楼楼下坐坐了
+  B：你别乱来
+  A：我很讲道理的，你们前台在几楼我都清楚
+  【9月11日】
+  A：中秋你们店排班没
+  B：排我值班，跑不掉
+  A：做餐饮的就是过节最忙
+  B：谁说不是
+  B：我想明白了，闹僵了对谁都没好处
+  A：想明白就好
+  B：先把这个月的结了，后面按月来
+  A：行，我说话算话，你也一样
+  B：转了，你收一下
+  【系统消息】B 向 A 转账 8000 元，已收款。
+  A：收到了
+  【9月12日】
+  A：这个月就这样，下月还是月底之前
+  B：知道了，月中发了工资就给你
+  A：随你，别让我催第二遍
+  B：唉，知道了
+  A：中秋值班完早点歇着
+  B：嗯，就这样

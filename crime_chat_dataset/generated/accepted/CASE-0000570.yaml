@@ -1,0 +1,140 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000570
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000085
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-23b9dea7c0df73b9
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: privacy_doxxing
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A 因合伙人卷货款失联，绕开官方渠道，经人介绍付费委托 B 用其图像排查线，凭一张侧脸照对全市卡口过图定位对方落脚点，出结果再付尾款，全程私下交易他人行踪信息。
+  critical_evidence:
+  - A 手头只有一张右侧脸照片，B 称清晰度够就能跑图（一张侧脸就够）
+  - B 自称有跑图的线，可把全城卡口过一遍排查目标活动轨迹（全城摄像头扫）
+  - 收费模式为跑图不收费、出结果付费两千五，先交五百定金排单（出结果付费）
+  - B 中途反馈目标仍在城南活动，最终交付落脚点与车辆信息，尾款在确认结果后支付（信息与资金对价闭环）
+  benign_alternatives:
+  - 安防行业讨论
+  - 失联亲友寻人报警
+
+attributes:
+  duration_days: 4
+  turn_count: 63
+  approximate_tokens_estimate: 1398
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: face_search
+  risk: 2
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0062
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-028
+
+dedup:
+  content_hash: sha256:e73a160328b5453754efd7df3f42547394621a88434c7051ca880f88aaaf647f
+pipeline_status: accepted
+title: privacy_doxxing/face_search
+conversation: |-
+  【9月9日】
+  A：你好，是老K介绍来的，说你能帮人找照片对的人
+  B：介绍人不重要，先说事
+  A：我合伙人八月中带着货款走了，人一直联系不上，照片我只有一张侧脸
+  B：侧脸也行，清晰度够就能跑
+  A：我发你，去年年会抓拍的
+  B：发
+  A：就这张，右侧脸，有点糊
+  B：收到，糊了点，能跑
+  A：你怎么个跑法
+  B：我有跑图的线，全城的卡口过一遍，看他还走不走实名那条路
+  A：多久出结果
+  B：三到五天，你这单周四能跑完
+  A：你们老家这时候玉米收完了吧
+  B：早收完了，今年价不行
+  A：我爹还种着两亩，嫌累又不肯撂
+  B：都这样，我家那两位也一样
+  A：改天回去交流晒粮经验哈哈
+  B：行，先说正事，价钱讲清楚
+  【9月10日】
+  B：规矩：跑图不收费，出结果付费两千五，含落脚点
+  A：出不了结果呢
+  B：出不了分文不收，但要先交五百定金排单
+  A：行，怎么转
+  B：微信转我就行，备注写资料费
+  A：好嘞
+  A：对了，我这两天鼻塞得厉害，是不是换季
+  B：我前两天也这样，灌了三天葱白水
+  A：管用吗
+  B：管点用，不行就去抓点药，别硬扛
+  A：行，晚上药店转转
+  B：嗯
+  【系统消息】A 向 B 转账 500 元，已收款。
+  A：定金五百转了，收到说一声
+  B：收到，今晚排进去
+  A：这事你怎么保密，我怕他那边的人盯上你
+  B：我们单线联系，事完了就翻篇，你这边也嘴严点
+  A：懂，我只跟你说
+  【9月11日】
+  A：帮我看眼，十一的高铁票几点放
+  B：提前十五天，早上六点抢
+  A：那我定个闹钟
+  B：抢不到找我，我有捡漏的路子
+  A：到时候麻烦你
+  B：小事
+  B：中途报个信，图过完两轮，你那位在城南有活动轨迹，人没出城
+  A：真的假的，那他跑什么
+  B：没跑远，要么躲风头，要么换了窝，反正人还在活动
+  A：那我把尾款备好，找到了怎么算
+  B：尾款付完，我给你地址加近照，剩下的你自己拿主意
+  A：行，君子协定
+  A：晕，车停店门口吃个饭，吃出一张违停
+  B：那条街我熟，周末晚七点后不管
+  A：你连这个都门清
+  B：干这行的，地图就是饭碗
+  A：行吧，服了
+  【9月12日】
+  B：出结果了
+  A：说
+  B：人没出城，落脚城南那片公寓，车也停楼下，细节我整理了
+  A：等我缓缓，有点不敢信
+  B：尾款两千五，确认就要结，规矩讲在前
+  A：我下午凑齐转你，先给我看眼截图
+  B：可以，截图打了码，尾款到账发全的
+  A：明白
+  B：想好没，单子我留着，过今晚就让给别人
+  A：别别，五点前转你，截图先发来
+  B：发了，等信

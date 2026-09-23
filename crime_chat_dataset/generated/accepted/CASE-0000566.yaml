@@ -1,0 +1,136 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000566
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000112
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-d77e72490318284e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: theft_robbery_property_crime
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A利用周三夜班独自值守的排班，给B的箱货留门放行，让人连夜拉走一整车货，按车收一万；B组织车和人手，事后还想再来一车。
+  critical_evidence:
+  - A明确这周三夜班是我值，巡逻表上就他一个人
+  - A说卷帘门留条缝就够了，装完还要恢复原样
+  - 双方谈定一车一万，两个钟头完事
+  - 事成当晚B转给A一万元，几天后追问下个月还有没有
+  benign_alternatives:
+  - 夜班临时放行送货的调度配合
+  - 大宗货物夜间出库的正常交接
+
+attributes:
+  duration_days: 4
+  turn_count: 59
+  approximate_tokens_estimate: 1324
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: warehouse_insider_out
+  risk: 3
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0061
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-028
+
+dedup:
+  content_hash: sha256:daf913c00fb042722a4aeb15529b04a996ae20d3c7da655d85fde70f4babd686
+pipeline_status: accepted
+title: theft_robbery_property_crime/warehouse_insider_out
+conversation: |-
+  【9月21日】
+  B：老周，吃了没
+  A：刚交完班，食堂那碗面糊弄人
+  B：周三夜班还是你值吧
+  A：对，这周三我值，上半夜后半夜都我一个人
+  B：正好，我手头有批货急，客户催得紧，想周三夜里走一车
+  A：走账的？那你得跟仓库主任打招呼啊
+  B：这批不走账，你懂就行，别多问
+  A：……一车怎么算
+  B：一车一万，老价，装完就走，两个钟头完事
+  A：车呢
+  B：车和人我出，你只管你那一摊
+  A：门呢
+  B：卷帘门给我留条缝就够了，别的你不用管
+  A：说真的食堂是真不行，周三还是最差的菜单
+  B：周三半夜我给你带两个菜，垫垫肚子
+  A：行，卤味来一份
+  B：记着呢
+  【9月22日】
+  B：定好了，车是朋友的箱货
+  A：牌照那些干净吧
+  B：干净，做我们这行讲究的就是不拖泥带水
+  A：周三零点以后，巡逻表上就我一个人
+  B：好，两点前装完，天亮前车出园区
+  A：装什么我心里有数就行是吧
+  B：对，你别往货区去，装完我给你发消息
+  B：你老家玉米收了没
+  A：我爸说这两天正掰呢，今年价不行
+  B：种地是真辛苦，一亩地挣不了几个钱
+  A：谁说不是，所以打工的更得自己想辙
+  B：想辙归想辙，稳妥第一
+  A：懂
+  【9月23日】
+  A：下午消防演习，闹得跟真的一样，站一天
+  B：演习挺好，真着了火谁都跑不了
+  A：就是走个形式
+  B：形式也得走，夜里你该忙还得忙
+  A：什么夜里，我夜班天天这样
+  B：到门口了，老位置
+  A：门留了缝，进来轻点
+  【9月24日】
+  B：人手到了，六个，动静不大
+  A：你们抓紧，我三点还得巡东边一趟
+  B：装了一大半，比想的顺
+  A：装完把帘子给我放下来，恢复原样
+  B：完事了，帘子放好了，人车这就走
+  A：走吧，路上稳着点
+  B：一万马上转你
+  【系统消息】B 向 A 转账 10000 元，已收款。
+  A：收到了
+  B：昨晚那车客户很满意，问下个月还有没有
+  A：先缓缓，这两天园区风声有点紧，主任开会点名说库容对不上
+  B：那正好歇歇，你那份一分没少
+  A：知道，做事得稳
+  B：下回有整批好出的再喊你，价好商量
+  A：再说吧，过了这阵子
+  A：降温了，你出车多穿点
+  B：是，早上车玻璃都起雾了
+  A：你们跑长途的更得注意
+  B：嗯，你夜班也添件衣
+  B：我弟孩子满月酒定在下周六，你来喝一个
+  A：那必须去，红包我都想好包多少了
+  B：人来就行，中午开席
+  A：行，到时候见

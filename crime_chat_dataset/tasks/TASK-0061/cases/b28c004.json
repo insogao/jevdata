@@ -1,0 +1,492 @@
+{
+ "key": "b28c004",
+ "archetype_id": "ARC-000011",
+ "subtype": "customer_service_reverse",
+ "latent_intent": "A冒充航司渠道票务，谎称航班取消，以退款加补偿为饵，一步步引导老人装会议软件、交出验证码、转验证金；B全程以为自己在正常办退款。",
+ "critical_facts": [
+  "A主动联系称B的航班取消，可全额退款加延误补偿",
+  "A引导B下载会议用的软件并让人带着一步步操作",
+  "A索要B收到的短信验证码，B照念给了对方",
+  "B先转9800元验证金，事后核实航班从未取消，A随即失联拉黑"
+ ],
+ "benign_alternatives": [
+  "航司真实的退改签流程",
+  "OTA客服的回电核实"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "9月8日 10:15",
+   "speaker": "A",
+   "text": "叔，在忙没"
+  },
+  {
+   "type": "message",
+   "time": "9月8日 10:20",
+   "speaker": "B",
+   "text": "小王啊，怎么了"
+  },
+  {
+   "type": "message",
+   "time": "9月8日 10:22",
+   "speaker": "A",
+   "text": "跟您说个事，您18号飞海口那趟航班，航司那边取消了"
+  },
+  {
+   "type": "message",
+   "time": "9月8日 10:25",
+   "speaker": "B",
+   "text": "啊？我没收到通知啊"
+  },
+  {
+   "type": "message",
+   "time": "9月8日 10:26",
+   "speaker": "A",
+   "text": "系统里已经显示取消了，短信可能还在路上"
+  },
+  {
+   "type": "message",
+   "time": "9月8日 10:28",
+   "speaker": "B",
+   "text": "那票怎么办，两千多买的呢"
+  },
+  {
+   "type": "message",
+   "time": "9月8日 10:30",
+   "speaker": "A",
+   "text": "别急，全额退，另外每位还有三百的延误补偿"
+  },
+  {
+   "type": "message",
+   "time": "9月8日 10:32",
+   "speaker": "B",
+   "text": "那敢情好"
+  },
+  {
+   "type": "message",
+   "time": "9月8日 10:33",
+   "speaker": "A",
+   "text": "当初就是您侄子介绍在我这订的票，信息都现成，我直接给您走加急"
+  },
+  {
+   "type": "message",
+   "time": "9月8日 10:35",
+   "speaker": "B",
+   "text": "行，亏得有你，省心"
+  },
+  {
+   "type": "message",
+   "time": "9月9日 09:10",
+   "speaker": "A",
+   "text": "叔，加急通道这边要做个回访确认"
+  },
+  {
+   "type": "message",
+   "time": "9月9日 09:15",
+   "speaker": "B",
+   "text": "怎么弄"
+  },
+  {
+   "type": "message",
+   "time": "9月9日 09:17",
+   "speaker": "A",
+   "text": "一会您手机上会来条短信，先别自己乱点，我教您正规的"
+  },
+  {
+   "type": "message",
+   "time": "9月9日 09:20",
+   "speaker": "A",
+   "text": "您先在手机上装一个开会用的软件，客服对接用的，装好我教您操作"
+  },
+  {
+   "type": "message",
+   "time": "9月9日 09:24",
+   "speaker": "B",
+   "text": "退个票还要装软件？"
+  },
+  {
+   "type": "message",
+   "time": "9月9日 09:26",
+   "speaker": "A",
+   "text": "补偿是银联通道结算，要视频确认是本人，防冒领"
+  },
+  {
+   "type": "message",
+   "time": "9月9日 09:29",
+   "speaker": "B",
+   "text": "行吧，你们大公司流程就是多"
+  },
+  {
+   "type": "message",
+   "time": "9月9日 09:31",
+   "speaker": "A",
+   "text": "装好了跟我说一声"
+  },
+  {
+   "type": "message",
+   "time": "9月9日 09:35",
+   "speaker": "B",
+   "text": "装好了，进去了"
+  },
+  {
+   "type": "message",
+   "time": "9月9日 09:37",
+   "speaker": "A",
+   "text": "好，下午三点客服老师跟您对接，我陪着您"
+  },
+  {
+   "type": "message",
+   "time": "9月9日 09:40",
+   "speaker": "B",
+   "text": "先不说了，孙子开学头一天，我去接放学"
+  },
+  {
+   "type": "message",
+   "time": "9月9日 09:42",
+   "speaker": "A",
+   "text": "好嘞，您忙您的"
+  },
+  {
+   "type": "message",
+   "time": "9月9日 15:10",
+   "speaker": "B",
+   "text": "接回来了，一年级小豆包，书包比我行李箱还沉"
+  },
+  {
+   "type": "message",
+   "time": "9月9日 15:13",
+   "speaker": "A",
+   "text": "哈哈，那晚上还得辅导作业吧"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 14:30",
+   "speaker": "A",
+   "text": "叔，下午的确认做了，卡在资金核验这一步"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 14:35",
+   "speaker": "B",
+   "text": "什么意思，钱呢"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 14:37",
+   "speaker": "A",
+   "text": "系统提示您的卡交易状态异常，补偿款放不进来"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 14:40",
+   "speaker": "B",
+   "text": "那咋办，卡坏了？"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 14:42",
+   "speaker": "A",
+   "text": "常见，银行系统升级闹的，走一遍冲正就好，客服老师带着您弄"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 14:45",
+   "speaker": "B",
+   "text": "那赶紧的，我这两天等着交物业费呢"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 14:47",
+   "speaker": "A",
+   "text": "刚客服老师说了，您手机上收到的验证码念一下，要做登记"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 14:50",
+   "speaker": "B",
+   "text": "来了条短信，六个数，念给您？"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 14:52",
+   "speaker": "A",
+   "text": "对，念给我，我帮您录进去"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 14:55",
+   "speaker": "B",
+   "text": "二八一五零九"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 15:01",
+   "speaker": "B",
+   "text": "弄完了？钱到哪一步了"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 15:03",
+   "speaker": "A",
+   "text": "显示处理中，24小时内到账，您留意短信"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 19:20",
+   "speaker": "B",
+   "text": "先不说了，你婶子喊我去广场舞队凑数"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 19:22",
+   "speaker": "A",
+   "text": "正好，您血压高，活动活动"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 19:25",
+   "speaker": "B",
+   "text": "医生说别跳太猛，我站最后一排甩甩手"
+  },
+  {
+   "type": "message",
+   "time": "9月11日 09:30",
+   "speaker": "B",
+   "text": "小王，一晚上没动静，钱没到"
+  },
+  {
+   "type": "message",
+   "time": "9月11日 09:35",
+   "speaker": "A",
+   "text": "叔，我正要找您，系统提示核验超时，通道把您那笔冻结了"
+  },
+  {
+   "type": "message",
+   "time": "9月11日 09:38",
+   "speaker": "B",
+   "text": "冻结了？那我那两千多票款呢"
+  },
+  {
+   "type": "message",
+   "time": "9月11日 09:40",
+   "speaker": "A",
+   "text": "票款和补偿都在通道里，做个资金验证就能一起放行"
+  },
+  {
+   "type": "message",
+   "time": "9月11日 09:42",
+   "speaker": "A",
+   "text": "您先转9800到通道的验证账户，验证完连本带退，原路回来"
+  },
+  {
+   "type": "message",
+   "time": "9月11日 09:46",
+   "speaker": "B",
+   "text": "还要我先掏钱？"
+  },
+  {
+   "type": "message",
+   "time": "9月11日 09:48",
+   "speaker": "A",
+   "text": "银联的规矩，验证金不动您本金，十分钟就回卡"
+  },
+  {
+   "type": "message",
+   "time": "9月11日 09:52",
+   "speaker": "B",
+   "text": "我一个退休老头，你可别把我绕进去"
+  },
+  {
+   "type": "message",
+   "time": "9月11日 09:55",
+   "speaker": "A",
+   "text": "叔，咱都处两年了，您侄子介绍的，我能坑您吗"
+  },
+  {
+   "type": "message",
+   "time": "9月11日 09:58",
+   "speaker": "B",
+   "text": "那行，你说怎么转"
+  },
+  {
+   "type": "message",
+   "time": "9月11日 10:00",
+   "speaker": "A",
+   "text": "转我发您的那个通道账户，备注写验证俩字"
+  },
+  {
+   "type": "message",
+   "time": "9月11日 10:05",
+   "speaker": "B",
+   "text": "转了，9800，你给我盯着"
+  },
+  {
+   "type": "transfer",
+   "time": "9月11日 10:06",
+   "from": "B",
+   "to": "A",
+   "amount": 9800
+  },
+  {
+   "type": "message",
+   "time": "9月11日 10:10",
+   "speaker": "A",
+   "text": "收到，我盯着系统呢"
+  },
+  {
+   "type": "message",
+   "time": "9月11日 11:30",
+   "speaker": "B",
+   "text": "外面起风了，说是台风外围到了"
+  },
+  {
+   "type": "message",
+   "time": "9月11日 11:32",
+   "speaker": "A",
+   "text": "是，周末您那边有雨，别出门乱跑"
+  },
+  {
+   "type": "message",
+   "time": "9月11日 11:35",
+   "speaker": "B",
+   "text": "下周航班要再有变动，你第一时间告诉我"
+  },
+  {
+   "type": "message",
+   "time": "9月11日 11:37",
+   "speaker": "A",
+   "text": "必须的"
+  },
+  {
+   "type": "message",
+   "time": "9月12日 09:00",
+   "speaker": "B",
+   "text": "小王，一宿了还是没短信"
+  },
+  {
+   "type": "message",
+   "time": "9月12日 09:10",
+   "speaker": "A",
+   "text": "叔，通道反馈您那笔验证超时了，得重新走一遍冲正"
+  },
+  {
+   "type": "message",
+   "time": "9月12日 09:15",
+   "speaker": "B",
+   "text": "怎么又要来一遍"
+  },
+  {
+   "type": "message",
+   "time": "9月12日 09:18",
+   "speaker": "A",
+   "text": "系统升级闹的，这次客服总监亲自盯您的单"
+  },
+  {
+   "type": "message",
+   "time": "9月12日 09:22",
+   "speaker": "B",
+   "text": "我怎么心里有点不踏实"
+  },
+  {
+   "type": "message",
+   "time": "9月12日 11:00",
+   "speaker": "B",
+   "text": "我跟你婶子念叨这事，她说哪有退款倒让人先转账的"
+  },
+  {
+   "type": "message",
+   "time": "9月12日 11:05",
+   "speaker": "A",
+   "text": "婶子没接触过银联通道，外面的验证流程她们不懂"
+  },
+  {
+   "type": "message",
+   "time": "9月12日 11:08",
+   "speaker": "B",
+   "text": "那你让客服给我正儿八经回个电话"
+  },
+  {
+   "type": "message",
+   "time": "9月12日 16:30",
+   "speaker": "B",
+   "text": "哎，变天了，老寒腿又开始疼"
+  },
+  {
+   "type": "message",
+   "time": "9月12日 16:33",
+   "speaker": "A",
+   "text": "您贴两片膏药，这几天别去河边钓鱼了"
+  },
+  {
+   "type": "message",
+   "time": "9月12日 16:35",
+   "speaker": "B",
+   "text": "竿子都收拾好了，罢了罢了"
+  },
+  {
+   "type": "message",
+   "time": "9月13日 09:40",
+   "speaker": "B",
+   "text": "小王，说好上午回电呢"
+  },
+  {
+   "type": "message",
+   "time": "9月13日 09:50",
+   "speaker": "A",
+   "text": "叔，总监临时开会，改到下午，一有信我马上告诉您"
+  },
+  {
+   "type": "message",
+   "time": "9月13日 10:30",
+   "speaker": "B",
+   "text": "刚才我让侄子查了，18号那班根本没取消，准点落的地"
+  },
+  {
+   "type": "message",
+   "time": "9月13日 10:40",
+   "speaker": "A",
+   "text": "叔您听我解释，系统显示和实际舱单不同步，常有的事"
+  },
+  {
+   "type": "message",
+   "time": "9月13日 10:45",
+   "speaker": "B",
+   "text": "常有的事？你给我个准话，票款加那九千八怎么办"
+  },
+  {
+   "type": "message",
+   "time": "9月13日 10:50",
+   "speaker": "A",
+   "text": "您再给我二十四小时，流程走完一分不会少"
+  },
+  {
+   "type": "message",
+   "time": "9月13日 11:00",
+   "speaker": "B",
+   "text": "这事我闺女和我侄子都知道了"
+  },
+  {
+   "type": "message",
+   "time": "9月13日 16:10",
+   "speaker": "B",
+   "text": "电话也不接了是吧"
+  },
+  {
+   "type": "message",
+   "time": "9月13日 20:00",
+   "speaker": "B",
+   "text": "微信也把我拉黑了，好啊"
+  },
+  {
+   "type": "message",
+   "time": "9月13日 20:05",
+   "speaker": "B",
+   "text": "九千八买个明白，明天我去所里，把聊天记录都交上去"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000562",
+  "status": "accepted",
+  "errors": []
+ }
+}

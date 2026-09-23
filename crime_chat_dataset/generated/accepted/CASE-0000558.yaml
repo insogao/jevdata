@@ -1,0 +1,129 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000558
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000020
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-64b81a8825872924
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 表面疑似家长托关系花钱安排子女入职的利益交换，实为走正规内推渠道、受亲属回避制度约束的正常求职，转账是归还上月私人借款，与求职无关。
+  critical_evidence:
+  - A明确告知按亲属回避制度，B的女儿不能进入与其父公司有业务往来的部门，只能去计划或仓储线
+  - 笔试、面试全流程按公司公开渠道进行，内推仅是正规推荐方式，A未做任何录用承诺
+  - B转账3000元前，对话已确认该笔款项是归还上月B在机场被偷时向A借的应急钱
+  - 终面结果取决于本人表现，A建议「别背模板，凭本事进来腰杆硬」
+  benign_alternatives:
+  - 正常内推
+  - 亲属回避制度内调岗
+
+attributes:
+  duration_days: 5
+  turn_count: 51
+  approximate_tokens_estimate: 1966
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: relative_employment_exchange
+  risk: 0
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0060
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-028
+
+dedup:
+  content_hash: sha256:e2da38702fcd00bfab82d5d3dd30c3e7abf726452a6aa29820645dc718c80439
+pipeline_status: accepted
+title: bribery_corruption/relative_employment_exchange
+conversation: |-
+  【9月22日】
+  B：王总，冒昧问下，你们秋招通道开了没？我家丫头今年研究生毕业，学供应链的。
+  A：开了，月中就开了。丫头想投哪个方向？
+  B：采购或计划都行，你们今年有坑位不？
+  A：有，这批招得不少。简历发我，我给她走内推，多一层保障；不过面试该几轮还是几轮，这个我搭不了手。
+  B：那必须，凭本事，咱就求个别被系统一筛就没影。
+  A：这个内推能保，其他看她自己。
+  A：食堂今天有糖醋排骨，可惜你吃不着。
+  B：拉倒吧，我们厂门口小馆的红烧鱼才是一绝。
+  B：周六钓了没？看你朋友圈晒得黑黢黢的。
+  A：去了，空军，就俩小白条，还搭了半盒饵。
+  B：哈哈，我上回也这样，油钱都回不了本。
+  A：下周天气好再约，你那根碳素杆借我耍耍。
+  B：简历发你邮箱了，得空帮掌掌眼。
+  A：看了，实习那段写得不错，比多数应届生强。我转给招生的同事，内推码明天给你。
+  B：麻烦王总，回头请你喝茶。
+  【9月23日】
+  A：内推码发你丫头了，让她填的时候核对下邮箱。
+  B：填好了，显示「已推荐」，她紧张得来回检查三遍。
+  A：正常，我当年投简历也这样。系统里状态我能看到，有动静跟你说。
+  B：哎，要是能进你们采购部，以后两家对账都方便。
+  A：那可不行，正好有个制度上的事提前跟你交底：你们厂是我们的供应商，按亲属回避制度，丫头入职不能进跟你们有业务往来的部门，采购、品控都不行，得走计划或者仓储那条线。
+  B：应该的应该的，我们单位也有这规矩，直系亲属不进一个部门。听公司的，省得人说闲话。
+  A：嗯，这样干干净净，谁也挑不出理。
+  B：中秋你们公司发啥？
+  A：两盒月饼，五仁和流心，你呢？
+  B：我们发大米和油，实在。丫头就惦记流心那口。
+  A：那给她留一盒，让她来面试那天带回家。
+  【9月24日】
+  A：跟丫头同步：简历过了，周四上午十点线上笔试，提前把摄像头调好。
+  B：收到，我今晚就让她模拟一遍。
+  B：丫头问我内推算不算走后门，我说王总说了，面试一视同仁。
+  A：问她这话啥意思。内推就是人力资源的正规渠道，系统里都留痕，她踏实准备就行。
+  A：笔试结束没？
+  B：刚交，说行测太赶，大题没写完。
+  A：这批都反映时间紧，按比例给分，别慌，等面试通知。
+  A：晚上江边跑了五公里，你那张健身卡还去吗？
+  B：一年去了三回，私教课快过期了，肉疼。
+  A：咱俩结对子，互相盯着，谁鸽谁请串。
+  【9月25日】
+  B：对了王总，差点忘了正事。上个月我在机场钱包被偷，借你那三千，拖到今儿，实在不应该。
+  A：不急，三千块而已，你倒一直惦记。
+  B：那不行，亲兄弟明算账，我现在就转。
+  【系统消息】B 向 A 转账 3000 元，已收款。
+  B：转了，点点，别回头又赖账，哈哈。
+  A：收到。就你这记性，做账是好料。
+  B：跟你做了五年生意，我账上就没红过。
+  B：你家小子这周月考完没？
+  A：考完了，数学又拉了，发榜都不敢看。
+  【9月26日】
+  A：好消息，丫头进终面了，下周三下午两点，现场面，提前半小时到。
+  B：太好了！替她谢谢王总！她有点慌，我今晚再给她模拟模拟。
+  A：让她放轻松，就聊实习和毕设，别背模板，我们最烦背模板的。
+  B：嗯，我嘱咐她，进了公司就踏实干，不给您丢人。
+  A：凭本事进来的，腰杆硬，丢不了人。
+  B：终面完要不要跟你说一声？
+  A：要，过了我请你喝茶，没过也别灰心，春招还有一批，渠道我照样给她留着。

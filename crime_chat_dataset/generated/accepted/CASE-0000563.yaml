@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000563
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000111
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-37579a2d6377f263
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: theft_robbery_property_crime
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A手上有来路快得反常的电动车低价出给B，B磨号处理后加价倒卖；两人按台结价，刻意不谈来路，准备做长期通道。
+  critical_evidence:
+  - A说自己的货到手里超不过三天就得出，新车出手快得不正常
+  - B收去后架子磨掉重打，带牌的还能加价出
+  - 两台车一起2600元低价成交，明显低于市价
+  - A叮嘱来路的话咱不多说，你知我知，之后还要长期匀货
+  benign_alternatives:
+  - 二手电动车正常收售
+  - 熟人之间的车辆转让
+
+attributes:
+  duration_days: 4
+  turn_count: 55
+  approximate_tokens_estimate: 1220
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: electric_bike_resale_chain
+  risk: 2
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0061
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-028
+
+dedup:
+  content_hash: sha256:05a65697dbba67a761661d92e4fcc94afdecfefcacc9c939f7e8ca6ca59cb79e
+pipeline_status: accepted
+title: theft_robbery_property_crime/electric_bike_resale_chain
+conversation: |-
+  【9月8日】
+  A：哥们，老马让你加我的，说你长期收车
+  B：对，我修车铺长期收电动车，他跟你说了？
+  A：说了，我手上有两台，都是今年的新车
+  B：新车？发票和锁呢
+  A：发票那种东西你甭问，锁钥匙原配的都在
+  B：老马说你这儿的车三天就能出手
+  A：我的货到手里超不过三天就得出，压着烫手
+  B：什么车
+  A：一台牛油果绿的小龟款，一台黑色大踏板
+  B：成色呢
+  A：九九新，骑了没几天，公里数都少
+  【9月9日】
+  B：照片发来我看看
+  A：发你了
+  B：车是不错，牌子呢，带牌不带
+  A：一台带牌一台不带，带牌的贵
+  B：贵多少
+  A：带牌的一千五，不带的一千一，两台一起两千六
+  B：这价实在。牌子跟车能对上吗
+  A：你收去架子磨掉重打，谁还对得上
+  B：磨号这活我铺子里常干，不怕
+  B：行，明天看车
+  B：我们铺子最近生意一般，就靠倒腾车走量
+  A：现在满街共享电单车，新车不好卖
+  B：谁说不是，外卖骑手倒是换车勤
+  【9月10日】
+  B：今天这雨大，你那边淹了没
+  A：下水道又堵了，路口一片水
+  B：这天最烦，铺子里没人上门
+  B：下午两点，雨小了你就过来
+  A：到你铺子门口了
+  B：进来，车推进来
+  A：你看，两台都是我说的成色
+  B：车没毛病，就是我得费工夫处理架子
+  A：所以给你的是友情价
+  B：行，两千六，两台都要了
+  A：痛快，转微信就行
+  【系统消息】B 向 A 转账 2600 元，已收款。
+  A：到了，牌和钥匙都在袋里
+  B：成，以后有这种车第一时间喊我
+  A：记住了，来路的话咱不多说，你知我知
+  B：懂，我做生意的规矩比你还熟
+  B：对了，我媳妇网购买了三箱东西，昨天退了两箱
+  A：我姐也这样，退货比买的还勤
+  B：快递员都认识她了
+  【9月11日】
+  B：昨天那台带牌的我挂出去，当天就卖了
+  A：多少出的
+  B：两千二，赚个几百，走量
+  A：你要好出，下回多给你匀两台
+  B：行，还是这个价，带牌的优先
+  A：晚上出来撸串不，认识认识
+  B：行，就我铺子边上那家
+  A：晚上七点，我带两瓶好的
+  B：刚赚你两千六就请客，会做人
+  B：对了，骑手退下来的那种车你有渠道没
+  A：有，过两天给你信
+  B：成，那晚上见
+  A：见

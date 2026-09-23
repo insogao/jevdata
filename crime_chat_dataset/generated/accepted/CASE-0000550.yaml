@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000550
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000044
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-eec31c7695e63902
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A借熟人身份对逾期借款人B实施恐吓式催收：点出掌握B家人出行照片、孩子学校和接送规律，再以指定地点「当面谈」相逼，迫使B在恐惧中先还款项，全程不走任何合法讨债途径。
+  critical_evidence:
+  - A在催款中两次点出B家人的动向（动物园照片）与孩子就读学校、周一至周日的接送规律，B反问「你怎么连他在哪个学校都知道」
+  - B在压力下先行转账5000元并自述「这个月就这些」，A仍嫌不够并拒绝收手
+  - A指定茶馆「当面谈」并暗示不去就找上家人或单位，B称「心里发毛」「真怕了」但仍被迫应约
+  - 四万欠款拖欠三个月，A以「别闹得大家不体面」「后面的事不好说」收尾，始终不提合同、诉讼等任何正规途径
+  benign_alternatives:
+  - 亲友间正常债务催讨
+  - 正规催收沟通
+
+attributes:
+  duration_days: 6
+  turn_count: 43
+  approximate_tokens_estimate: 1614
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: debt_collection_threat
+  risk: 3
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0060
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-028
+
+dedup:
+  content_hash: sha256:573d25f952887ca1e12afb4c2ca3b58049989b030bc99a49955ca2f11b6e4b5d
+pipeline_status: accepted
+title: violence_extortion/debt_collection_threat
+conversation: |-
+  【10月8日】
+  A：阿凯，十月了。上个月你说九月底先还一笔，我这等到今天。
+  B：周哥，对不住。工程款卡在甲方那没下来，我比你急。
+  A：这话你七月说一回，八月又说一回。四万，拖进第三个月了。
+  B：这周我再催催甲方，有动静马上跟你说。
+  B：对了，叔叔阿姨身体咋样？上回婶子住院我都不知道，怪不地道的。
+  A：出院了，能自己遛弯了。
+  B：那就好，改天我提点水果去看看二老。
+  A：人有心就到了。钱的事有眉目你主动说，别等我开口。
+  【10月9日】
+  B：周哥，甲方那边说流程下周走完，最迟下周三到账。
+  A：行。下午翻朋友圈，你媳妇带儿子去动物园了？照片拍得挺好，一家三口真让人羡慕。
+  B：……嗯，周末陪家人出去转了转。
+  A：过日子嘛，平平安安最要紧。你也多陪陪，孩子这个岁数，一晃就大了。
+  B：周哥，你这话我怎么听着不太是味。
+  A：没什么不是味的，随口一说。四万块在，兄弟情在，都别变味就行。
+  【10月10日】
+  A：对了，你家小子在实验小学读三年级了吧？下午那门口堵得很，你们两口子轮流接？
+  B：……你怎么连他在哪个学校都知道？
+  A：咱俩二十年的交情，你家的事我能不知道？周一妈妈接，周二往后爸爸接，挺规律。
+  B：周哥，你这么整，我心里发毛。
+  A：我说的是实情。你把钱当个正事，咱们就都还是兄弟，孩子上学也不受打扰。
+  B：晚饭就对付了碗牛肉面，加了个蛋。
+  A：我应酬三场，胃都喝抽了。
+  B：少喝点，身体是自己的。
+  A：身体没垮，钱包先垮了。四万块压着，山珍海味也嚼不出味。
+  【10月11日】
+  B：周哥，我先转5000，这个月就这些，宽限到月底，剩余的一定补上。
+  【系统消息】B 向 A 转账 5000 元，已收款。
+  B：收到了吧。
+  A：5000，连利息的零头都不够。
+  B：我真挪不出来了，信用卡都刷空了。
+  A：空口的话说三年了。明晚你出来一趟，当面把话说清，别让我上你家或者去你单位寻你。
+  B：明晚真不行，我在外地跑客户。
+  A：那就后天。老地方那家茶馆，七点。你人到，什么都好说。
+  【10月12日】
+  B：刚辅导完作业，鸡飞狗跳，血压上来了。
+  A：三年级那点题还用你辅导？
+  B：奥数那块我早还给老师了。
+  A：他们学校门口那栋楼里好几个老师我都熟，孩子学习上有事，招呼一声就有人到。
+  B：……不用麻烦，他成绩还行。
+  A：后天茶馆，晚七点，带上能凑的，三万五也行，剩下的写个新条子，按个手印。
+  B：周哥，你现在这样，我是真怕了。
+  A：怕就对了。怕，说明你还没忘了那四万。
+  【10月13日】
+  B：后天我一定到。你别去我公司，行吗？
+  A：看你表现。手机保持开机，别玩消失。你住哪栋、车停哪个位，我心里都有数，跑没用的。
+  A：明晚七点，三万五。放我鸽子的话，后面的事就不好说了，别闹得大家不体面。
+  B：我会到。
+  A：好兄弟，明天见。

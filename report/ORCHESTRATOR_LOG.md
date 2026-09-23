@@ -16,3 +16,4 @@
 - 2026-09-24 12:55 | batch 25 (TASK-0051/52/53): accepted 469 (+29, 1 hash-rejected), pairs 72, judge agree(+-1)=27/29, 2 disagreements (485 生成端把risk2写成良性、488 把恐吓写成risk0 -> review; 均为生成端标签失误被判官拦截) | pushed
 - 2026-09-24 13:40 | batch 26 (TASK-0054/55/56): accepted 499 (+29, 1 hash-rejected), pairs 76, judge agree(+-1)=29/29 | pushed
 - 2026-09-24 14:20 | batch 27 (TASK-0057/58/59): accepted 529 (+30, rejected 0), pairs 82, judge agree(+-1)=31/31 | pushed
+- 2026-09-24 15:05 | batch 28 (TASK-0060/61/62): accepted 559 (+30, rejected 0), pairs 86, judge agree(+-1)=30/30; 对照组（556/559 居间合法vs贿赂、557/550 债务重组vs胁迫）被判官独立正确分档 | pushed

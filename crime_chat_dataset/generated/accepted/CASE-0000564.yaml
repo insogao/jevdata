@@ -1,0 +1,138 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000564
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000133
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-54462e59774d9e4a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: coercion_blackmail
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A借楼上噪音旁敲侧击想占点小便宜，一句玩笑话就自己带过；B主动整改想息事宁人，整体更像邻里之间的拉扯。
+  critical_evidence:
+  - A半开玩笑说每月两条烟这事就翻篇，随即自己收回
+  - A提过认识城管老同学和物业王经理想找人评理施压，最终没用上
+  - B主动买隔音垫换静音轮铺地毯整改
+  - 双方都强调抬头不见低头见，以和为贵翻篇
+  benign_alternatives:
+  - 邻里噪音的正常调解拉扯
+  - 物业投诉流程的日常讨论
+
+attributes:
+  duration_days: 5
+  turn_count: 61
+  approximate_tokens_estimate: 1460
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: resident_noise_leverage
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0061
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-028
+
+dedup:
+  content_hash: sha256:e56fd6fc5d6c6459b7f38ed2e54b1e17ee8a92e3b24e284f0a9e8a751f09fa7d
+pipeline_status: accepted
+title: coercion_blackmail/resident_noise_leverage
+conversation: |-
+  【9月15日】
+  B：小张啊，早，我是你楼上502的老李
+  A：李叔早，怎么了
+  B：昨晚我家那口子没睡好，说楼上半夜拖拉椅子
+  A：啊？是我家孩子练跳绳，跳完收垫子拖桌子来着
+  B：拖桌子那声跟拉锯似的
+  A：对不住对不住，我们肯定改
+  B：也不是非要计较，都是邻居
+  A：李叔您人真好
+  B：我这人不爱得罪人，抬头不见低头见的
+  A：是是，远亲不如近邻
+  B：今晚开始给孩子买个跳绳垫，桌腿我也包上
+  A：应该的应该的
+  B：那就这样，有事微信说
+  【9月16日】
+  B：今天降温了，你出门多穿点
+  A：是，早上骑车手都冻僵了
+  B：我秋裤都翻出来了
+  A：李叔您年纪大更得注意保暖
+  B：哎，不服老不行
+  B：昨晚怎么样，还听见响没
+  A：我半夜起来看了下，孩子跳绳挪到客厅垫子上了
+  B：好好好
+  A：我本来都想找我认识的那位城管老同学来评评理，后来一想都是邻居，算了
+  B：找什么外人，咱们自己解决最好
+  【9月17日】
+  B：我在阳台种的辣椒红了，摘一盘给你们送点
+  A：那多不好意思，您留着自己吃
+  B：一大棵吃不完，放楼下信箱上
+  A：那我晚上回去拿，谢谢李叔
+  B：拿来做辣椒炒肉，一绝
+  A：晚上就这么定了
+  B：隔音垫今天到货，静音轮也买了
+  A：李叔您这效率，我都不好意思了
+  B：我再客气两句？要不下个月你每月给我上两条烟，这事我就彻底翻篇，哈哈
+  A：哈哈李叔您真会开玩笑，我给您把椅子全换静音垫还不行么
+  B：逗你的，把你家桌子腿包好比啥都强
+  A：包了包了，昨晚就包了
+  B：那这事就算翻篇
+  A：以后有啥事您随时说
+  【9月18日】
+  A：李叔，楼下停车费是不是要涨了
+  B：是，下个月起涨五十，业主群都炸了
+  A：我那台老车停着都肉疼
+  B：物业王经理说业主大会再议议
+  A：那您认识王经理，帮大家说句话呗
+  B：我提了一嘴，人家按流程来，咱不好越界
+  A：也是，按流程走踏实
+  B：你小子现在学乖了
+  A：跟您学的
+  B：晚上你听听效果怎么样
+  A：李叔，今晚真的一点声都没有，我还以为楼上没人住
+  B：哈哈，垫子加轮子一起上，能没效果么
+  A：太好了，这事彻底了了
+  【9月19日】
+  B：中秋近了，商场月饼都摆出来了
+  A：我媳妇单位发了两盒，吃不完
+  B：我们老两口就爱吃鲜肉的
+  A：那给您留一盒鲜肉的
+  B：哎哟那多不好意思
+  A：应该的，前段时间是我们吵着您了
+  B：提这个干嘛，邻居嘛
+  B：周末我去河边钓鱼，你去不
+  A：我得陪孩子上体验课，下回一定
+  B：行，钓着了给你送两条鲫鱼
+  A：那我等着，李叔慢走
