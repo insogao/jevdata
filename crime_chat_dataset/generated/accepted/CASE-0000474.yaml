@@ -1,0 +1,157 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000474
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000004
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-c49b2a6c86482470
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 上线带新人按话术扮演平台客服，靠名单里与订单一字不差的信息取信客户，以退款为名诱导屏幕共享和外部处理通道转走资金，按单抽成分给下线。
+  critical_evidence:
+  - A每天下发名单，要求把订单信息字段背死、报得一字不差，客户信息对上才会当你是平台派来的，名单来源不许问
+  - 按A的流程，让客户开启屏幕共享对账、点掉自动扣款开关，再顺势引到外部“处理通道”链接里做验证，全程只动嘴不碰对方手机
+  - B第一周成单后，A按一成抽成于10月17日12:40转账3600元结算
+  - A立规矩：名单不留底过夜、只用工作号联系客户、客户追问一律往后拖
+  benign_alternatives:
+  - 真实平台退款流程
+  - 商家主动补偿
+
+attributes:
+  duration_days: 4
+  turn_count: 80
+  approximate_tokens_estimate: 2498
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: refund_deposit_bait
+  risk: 2
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0052
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-025
+
+dedup:
+  content_hash: sha256:adc33de2b43c3f6498607ab19a098d01d7860028ce7af4e00f19563a458f2f16
+pipeline_status: accepted
+title: fraud_scam/refund_deposit_bait
+conversation: |-
+  【10月14日】
+  A：小飞 起了没 今天跟你过完开场白
+  B：龙哥早 起了 前台背熟了 就怕客户问细节
+  A：客户问什么都往订单上引 单子里有信息 手册第七页那些字段给我背死
+  B：收到 姓名 尾号 下单日期 收货地址 这一串我过五十遍了
+  A：对 必须一字不差 人家一听信息全对上 才会当你是平台派来的
+  B：懂了 名单里这几条都是昨天的单子 新鲜的
+  A：名单你别管哪来的 用就行 上面信息对得上就是好名单
+  B：明白
+  A：还有 今天下午你先试两条 我在旁边听 说话慢一点 语气像客服 别急
+  B：好紧张 说岔了怎么办
+  A：说岔了就挂 明天再来 谁都有第一条
+  B：龙哥 中午吃什么 楼下那家黄焖鸡还排队
+  A：点外卖吧 我请你 你第一天 加油餐
+  B：那我点了 两份米饭一份鸡 谢龙哥
+  A：少喝奶茶 下午要打起精神
+  B：收到 白水都戒了三天了
+  A：那不叫戒 那叫正常喝水
+  A：第一条名单 打吧 别报我名字 静音就行
+  B：第一条没成 客户说没丢东西 直接挂了
+  A：正常 十个里两三个就够看 别灰心
+  B：第二条接了 是个阿姨 我报了她儿子下的单 她信了一半
+  A：然后呢 别自己加戏 照流程
+  B：我说她账户被误开了批发商会员 每月要扣钱 帮她取消 她就慌了 一直问怎么取消
+  A：你让她加咱们的处理通道 先核对再说取消 链接我一会发你 短链 注意别发错
+  B：好 阿姨那边说等孙子回来弄 挂了
+  A：行 有苗头 今天两条练手 明天正式上量
+  【10月15日】
+  B：龙哥 我房东说要涨两百 我这房子旧成那样
+  A：涨就换 城东那边单间便宜 四百五的我都见过
+  B：你还帮我看房呢
+  A：顺手 我表弟就住那片 熟
+  B：那周末我去转转
+  A：带上现金 押一付一 别到时候抓瞎
+  A：今天名单打到第几条了
+  B：第6条成了！大哥 特配合 我说订单异常要清退会员费 他一直哦哦哦
+  A：稳住 慢点来 你让他先开屏幕共享对个账 教他把自动扣款开关点掉 再顺势说账户要做验证 钱才能原路退回
+  B：他开了！我看着他余额了 龙哥 六万多
+  A：别催 就说检测到异常资金 让他自己在通道里操作验证 你全程只动嘴 别碰数字
+  B：懂了 我全程嘴上引导 手不碰
+  A：对 你就当教长辈用手机 语气放软
+  B：他说要跟老婆商量 我说通道半小时失效 他立马就去弄了
+  A：好了没
+  B：到账了！通道显示退款处理中
+  A：你别问后面的事 做完把单号和金额记本子上 晚上对
+  B：记了 32800
+  A：今天到这 收工 名单别带走 桌上那本留下来
+  【10月16日】
+  B：龙哥 晚上来一把 我新号带你
+  A：我上号都是十一点以后了 你们年轻人打得凶
+  B：那你玩什么位置 我补
+  A：我就玩辅助 躺赢型选手
+  B：哈哈那正好 我carry
+  A：少吹牛 说来就来
+  A：你这周成了两条账 按老规矩提一成 算下来三千六 明天发你
+  B：龙哥 这么快 我才来一周
+  A：你上道快 报单稳 客户信你
+  B：那个阿姨后来又来电问进度 我照手册说四十八小时内通道关闭 她就没再问了
+  A：处理得好 追问就往后拖 话说前头 客户那边一个字都别多发 联系只用工作号 别用你自己的
+  B：明白 专门的工作号 我手机里就这一个工作软件
+  A：好 记住单子不过夜 名单不留底
+  【10月17日】
+  A：今早风大 你穿那么少
+  B：年轻火力壮 哈哈 我给你带了豆浆
+  A：行 甜的
+  B：加了糖 您尝
+  A：嗯 正宗 这家开了十几年了吧
+  B：我高中就喝这家
+  A：今天三条名单 一条是上周回头客的资料 优先打
+  B：收到 回头客更好说话吧
+  A：熟门熟路 直接说上次退款有尾款 让他点链接补个签收
+  B：妙啊 一环扣一环
+  A：少拍马屁 打完这批中午跟你结账
+  【系统消息】A 向 B 转账 3600 元，已收款。
+  A：三千六 你这周的 点一下
+  B：收到！谢龙哥 我给我妈寄点东西 她还以为我真在平台上班呢
+  A：咱这不就是平台业务嘛 工牌收好 丢了我可不好补
+  B：好嘞
+  A：下午名单发你了 六条 都是新出的 都带着全信息
+  B：收到 我从第一条开始
+  A：嗯 记得开场那三句 信息先报 对上了再进通道
+  B：背得滚瓜烂熟
+  B：龙哥 第4条进了通道 对方在开共享了
+  A：稳住节奏 别催 让他自己操作 输完让他把页面关了 别多聊
+  B：好 我盯着

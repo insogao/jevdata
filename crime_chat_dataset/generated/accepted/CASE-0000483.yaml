@@ -1,0 +1,140 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000483
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000103
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-589cada9d02d4b4a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: money_laundering_obfuscation
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 以「机器放店里、流水我做、费率给你优惠」拉熟人店主出借店面名义代管POS机过账走钱，按月两千好处费维系，全程不点破用途。
+  critical_evidence:
+  - POS机存放在店主店内、名头挂在店里
+  - 对方向店主包揽「流水」并给费率优惠
+  - 每月固定两千元好处费
+  - 叮嘱对外统一口径「合伙朋友的机器」
+  benign_alternatives:
+  - 正规收单机构装机服务
+  - 信用卡正常消费账单
+
+attributes:
+  duration_days: 2
+  turn_count: 65
+  approximate_tokens_estimate: 1374
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: cross_shop_pos_machine
+  risk: 2
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0053
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-025
+
+dedup:
+  content_hash: sha256:b1527c5319f82bdd0ee8912aeda3747842afd3c758361d58a42a2504532f97b3
+pipeline_status: accepted
+title: money_laundering_obfuscation/cross_shop_pos_machine
+conversation: |-
+  【11月18日】
+  A：强子，店里最近生意咋样
+  B：就那样，年底能好点
+  A：烟酒走量还是靠老巷子那批熟客
+  B：都有，中午工人来买水的多
+  A：找你商量个事，你店里位置还宽裕不
+  B：柜台底下还有空，咋了
+  A：我有台机子，想搁你店里，就收银机那么大，不占地方
+  B：搁我这干啥
+  A：机器放你店里，名头用你的店，流水我做，你啥都不用管
+  B：这听着就不对劲啊
+  A：怕啥，单子我都做得干净，费率给你优惠，你自己用还省点
+  B：我先说好，出事你别扯上我
+  A：放心，做这行五六年了，比你还怕出事
+  B：我再想想
+  A：一个月两千，坐地就拿，你想清楚
+  B：先不说了，我儿子他妈又催我开家长会
+  A：孩子几年级了
+  B：初二，正是费人的时候
+  A：成绩咋样
+  B：数学能看，英语一塌糊涂
+  A：跟我家一个样，随他吧
+  A：降温了，中午吃啥
+  B：店里随便对付口
+  A：晚上整火锅去，我把老赵也叫上
+  B：行，还去那家牛油锅
+  A：六点半我去接你
+  B：你那事，我问下，流水都是谁的单子
+  A：你别管谁的单子，你就当店里自己走的账
+  B：一个月两千，实打实给
+  A：月月初转，比你卖两条烟利都厚
+  B：那，机子啥时候拿过来
+  A：明天上午我送过去，你把柜台底下腾一格
+  B：行吧
+  【11月19日】
+  A：出门了，半小时到
+  B：恩，我在店里
+  A：给你带了箱苹果，给孩子吃
+  B：客气啥
+  A：到你店门口了
+  B：进来吧，后门好停
+  A：机子给你搁柜台底下了，线我下午来接
+  B：这玩意用的时候你提前跟我说不
+  A：一般不用，都是定时定点来，你该干嘛干嘛
+  B：有人问起来我咋说
+  A：就说是你小舅子店里挪过来的，别的不用解释
+  B：我小舅子在南方，别编他
+  A：那就说合伙朋友的，反正一句话的事
+  B：你那车不是该年检了
+  A：下个月，正好到期
+  B：我都提前一个月弄，怕排队
+  A：你帮我问下你那个检测站的熟人，到时候招呼下
+  B：行，到时发你电话
+  A：中午想好吃啥没
+  B：巷口那家羊汤开了
+  A：敢情好，冬天就得羊汤
+  B：中午就吃它，我请，就当看机子的面子
+  A：你这是变着法让我请回来
+  B：下午那笔你弄完没
+  A：弄完了，机子你平时别动它，落灰就行
+  B：恩，我就当没这玩意
+  A：首月的两千我现在给你
+  【系统消息】A 向 B 转账 2000 元，已收款。
+  A：转了，点下
+  B：收到了，这么痛快
+  A：月月初都这样，你把心思放你店里
+  B：行，晚上火锅别忘
+  A：忘不了

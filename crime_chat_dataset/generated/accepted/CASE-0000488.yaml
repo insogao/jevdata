@@ -1,0 +1,135 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000488
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000008
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-36832c34856c64a6
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 无隐藏意图：驿站学长在双十一前招募学生做快递理货兼职，按件加工时透明结算，明确不涉卡、不押金、不看证件，全程正规。
+  critical_evidence:
+  - 按入库件数8分加时薪15元的计件规则
+  - 明确不用办卡、不交押金、不看任何证件
+  - 三天件数与工时逐单核对后一并结算
+  - 240元报酬与计件明细单完全吻合
+  benign_alternatives:
+  - 帮朋友代收快递
+  - 合法兼职发传单
+
+attributes:
+  duration_days: 5
+  turn_count: 57
+  approximate_tokens_estimate: 1443
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: account_lending
+  risk: 0
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0053
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-025
+
+dedup:
+  content_hash: sha256:2e1d4346936276d1ce9d35a28818771f0e7fc799014eacbc2988cf13f136cf7f
+pipeline_status: accepted
+title: fraud_scam/account_lending
+conversation: |-
+  【11月4日】
+  A：同学你好，我是在咱学校北门开驿站的，看你之前在兼职群里问过活儿
+  B：嗯是我，您那边现在有活吗
+  A：双十一快到了，驿站件量要爆，招人理货上架，按件结算
+  B：具体怎么算钱
+  A：入库扫码一件8分，理货上架另算时薪15，活多的时候一天能挣几十
+  B：会不会是那种要先交钱或者办卡的
+  A：不用卡不交押金，就扫码登记入库，账我这边都留着，随时对
+  B：那我先去看看环境
+  A：行，明晚六点驿站见
+  【11月5日】
+  B：学长，昨晚谢谢你占的座，我八点去差点没位置
+  A：客气啥，我今天不去图书馆，你随意
+  B：那你常坐那角我给你留上，你晚上来不
+  A：晚上不去，全天守驿站，你帮我留着我改天去自习
+  B：好
+  B：我到北门了
+  A：来吧，直接进
+  B：店里件好多啊，都堆到门口了
+  A：这还算少的，双十一得翻三倍
+  B：扫码入库复杂吗
+  A：一学就会，你先看我一单
+  B：我试了十单了，挺顺手
+  A：挺灵，今晚你就正式上，时薪另算
+  B：成
+  A：今晚收工，你入了260件，工时3小时，账先记着，跟后面的一起结
+  B：行，不急这一晚
+  A：单子我都留着，回头一笔笔给你对
+  【11月6日】
+  A：今晚还来不，预报件量更大
+  B：来，正好晚上没课
+  A：好，六点到
+  B：学长，食堂新开那个麻辣香锅窗口你去过没
+  A：去了，排半小时，味道还行，就是油大
+  B：那我晚上下班去试试，你们驿站附近还有吃的没
+  A：北门一条街都是，你收工顺路吃
+  B：好嘞
+  A：今晚单量破千，你入了480件，工时4小时，接着记账上
+  B：好嘞，胳膊都有点酸了
+  A：明天量还大，你掂量着来，别累着
+  【11月7日】
+  B：今晚照旧，我室友也想来，还有活吗
+  A：来，正缺人，让她也六点到
+  B：她问要不要带什么证
+  A：啥证都不用，学生卡都不看，到场扫码上岗就行
+  B：好，那她跟我一起
+  A：恩
+  A：中午吃了吗
+  B：在图书馆啃面包，赶论文
+  A：别糊弄自己，中午吃口热的
+  B：晓得，晚上去吃香锅再上岗
+  A：带上你室友，完事一起干活
+  A：三天总账出来了：你一共入库1660件、工时10小时，算下来233块，凑个整给你240，明细单我拍给你
+  B：这么快就结了
+  【系统消息】A 向 B 转账 240 元，已收款。
+  A：转了，查收，明细单一会发你核对
+  B：收到，我对了单子，一件不差，谢谢学长
+  【11月8日】
+  A：周末两天是峰值，你来不来，按老规矩记账
+  B：来，我把排班发宿舍群里，谁有空谁来
+  A：好，你帮我盯着点人，带新人有补贴
+  B：没问题，学长这兼职靠谱，我们宿舍都夸
+  A：哈哈，那周日见

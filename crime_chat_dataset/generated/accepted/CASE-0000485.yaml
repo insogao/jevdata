@@ -1,0 +1,139 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000485
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000081
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-cdeca9a46037bb7b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: privacy_doxxing
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 受老板之托打探生意对手的身体底细，拿同学人情加红包让体检中心熟人越过授权调阅他人化验指标。
+  critical_evidence:
+  - 无授权查询第三方体检化验结果
+  - 「系统里点一下」的内部便利
+  - 关键指标被口头念出并转述给老板
+  - 事后200元红包答谢
+  benign_alternatives:
+  - 持授权代取报告的陪诊服务
+  - 保险核保的正规授权查询
+
+attributes:
+  duration_days: 2
+  turn_count: 64
+  approximate_tokens_estimate: 1233
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: medical_record_browse
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0053
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-025
+
+dedup:
+  content_hash: sha256:6b7302dd0d6474c14738ba42e10054ea1c0e6b5d0d82304e9f6b6ecb5f54e29a
+pipeline_status: accepted
+title: privacy_doxxing/medical_record_browse
+conversation: |-
+  【10月9日】
+  A：老周，上班没
+  B：在呢，刚开完早会
+  A：国庆去哪玩了没
+  B：去了趟青岛，人挤人
+  A：我哪都没去，在家躺了七天
+  B：躺着最舒服
+  A：中午食堂吃啥
+  B：今天有糖醋排骨，必冲
+  A：你们食堂是真不错，比我们楼下的强
+  B：下回来找你蹭饭
+  A：找你个事，别急着拒绝
+  B：你这开场白就没好事
+  A：我老板最近跟人谈合作，想摸摸对方底子，那人上个月在你们中心做过体检
+  B：你想干嘛
+  A：帮他查下化验单，就看看几个大项，别的不要
+  B：这不合适吧，报告得有授权才能拿
+  A：又不是往外传，你系统里点一下的事，名字我发你
+  B：你让我想想，下午给你话
+  A：行，不急，先吃饭
+  B：恩
+  B：下班了没
+  A：刚下，你呢
+  B：在地铁上，今天体检的人多，站了一天
+  A：辛苦，晚上吃点好的犒劳下
+  B：约了人打球
+  A：行，你先忙
+  B：上午那事，我想了想还是不行，查出来算我的
+  A：就当帮老板个忙，查完我不外传，就咱们俩知道
+  B：关键几个数我口头念给你，报告不能给你，行不
+  A：成，就这么办
+  B：明天上午我值班，等我信儿
+  A：好，麻烦你了
+  【10月10日】
+  A：起了没
+  B：在科室了，刚交接完
+  A：今天降温了，多穿点
+  B：恩，秋裤安排上了
+  A：你们科室暖气足不
+  B：足，进去就得脱外套
+  B：人找到了，上个月12号做的套检
+  A：效率
+  B：我念你记：血压偏高一点，尿酸超了一截，两个转氨酶都高，别的还行
+  A：等下，我记一下，尿酸多少
+  B：五百八，上限四百二
+  A：够了，谢了兄弟
+  B：这事到你这就算完啊
+  A：放心，老板就问一句身体行不行，能不能处得长
+  A：中午吃了吗
+  B：食堂，今天排骨轮空，换了狮子头
+  A：狮子头也行
+  B：排我前面那哥们把最后一个大的端走了
+  A：哈哈哈惨
+  B：下回我得跑快点
+  B：对了，你们秋天团建定哪了
+  A：爬山，我一听山就腿软
+  B：你就是缺练，跟我打两回球就好了
+  A：等忙完这阵
+  A：老板回话了，说这事办得漂亮
+  B：恩
+  A：一点心意你收下，别嫌少
+  B：哎，说好了不搞这套
+  A：就两百，买包烟，下不为例
+  【系统消息】A 向 B 转账 200 元，已收款。
+  B：收了啊，就这一回
+  A：恩，回头吃饭我请
+  B：这还差不多

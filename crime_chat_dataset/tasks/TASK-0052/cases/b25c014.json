@@ -1,0 +1,306 @@
+{
+ "key": "b25c014",
+ "archetype_id": "ARC-000013",
+ "subtype": "loan_bridge_interest_rollover",
+ "latent_intent": "上级借职务地位向下属放五万过桥贷，先扣两个月利息，并暗示到期可再借另一家的钱来平这一笔，让债务循环滚动。",
+ "critical_facts": [
+  "A是B的下属部门经理，为补五万房款缺口向上级B拆借，约定月息三分、两个月一结",
+  "B按规矩先扣头两个月利息3000元，实际只转账47000元，借据条款由B方财务单方出具",
+  "双方约定11月14日到期，到期前一周B主动提出介绍恒信钱总再借一笔把这笔平掉",
+  "B叮嘱别断供，利滚起来数额就不是这个数了，A默许借新还旧"
+ ],
+ "benign_alternatives": [
+  "正常过桥资金",
+  "亲友应急借款"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "10月14日 09:05",
+   "speaker": "A",
+   "text": "孙总 早 方便的时候我想跟您单独聊聊"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:10",
+   "speaker": "B",
+   "text": "来我办公室"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 10:40",
+   "speaker": "A",
+   "text": "孙总 上午您提的那事我想了一上午 我那套房尾款还差五万 银行那边批得慢"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 10:43",
+   "speaker": "B",
+   "text": "银行就是慢 卖房的业主等不了你"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 10:44",
+   "speaker": "A",
+   "text": "所以想找您拆借五万 走个过桥 年内年终奖发了就还上"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 10:46",
+   "speaker": "B",
+   "text": "行 老规矩 利息按月息三分 两个月一结"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 10:47",
+   "speaker": "A",
+   "text": "三分是不是高了点"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 10:48",
+   "speaker": "B",
+   "text": "市面价 我这是帮你不是做生意 你去外面问问 哪家不是这个数往上"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 10:50",
+   "speaker": "A",
+   "text": "那行 就三个月周转 不会拖您"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 10:52",
+   "speaker": "B",
+   "text": "先扣头两个月的息 到账四万七 借条我让财务给你出个标准的"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 10:53",
+   "speaker": "A",
+   "text": "好的 那我卡号发您"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 10:55",
+   "speaker": "B",
+   "text": "发吧 下午三点前给你安排"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 11:02",
+   "speaker": "B",
+   "text": "对了 下午三点验收会 你PPT改完没"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 11:03",
+   "speaker": "A",
+   "text": "改完了 数据组上午刚给我的新口径 我换了三张图"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 11:05",
+   "speaker": "B",
+   "text": "第三页那个同比别用环比 上回甲方就挑这毛病"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 11:06",
+   "speaker": "A",
+   "text": "收到 我顺手就改"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 11:08",
+   "speaker": "B",
+   "text": "会上你主讲 我补充就行 锻炼锻炼你"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 11:09",
+   "speaker": "A",
+   "text": "得嘞 那我中午再顺一遍稿"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 14:20",
+   "speaker": "A",
+   "text": "孙总 卡号发您了 尾号0616那张"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 14:25",
+   "speaker": "B",
+   "text": "收到 你注意看下到账"
+  },
+  {
+   "type": "transfer",
+   "time": "10月14日 14:28",
+   "from": "B",
+   "to": "A",
+   "amount": 47000
+  },
+  {
+   "type": "message",
+   "time": "10月14日 14:30",
+   "speaker": "A",
+   "text": "到了 四万七 没错"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 14:31",
+   "speaker": "B",
+   "text": "借条下班前给你 上面写清楚 11月14号结后面两个月的息 到期本金一次还清"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 14:33",
+   "speaker": "A",
+   "text": "明白 11月14号"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 16:10",
+   "speaker": "A",
+   "text": "诶孙总 您家老二家长会您去不 明天下午"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 16:12",
+   "speaker": "B",
+   "text": "去不了 出差 老大他妈去 您家呢"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 16:13",
+   "speaker": "A",
+   "text": "我去 闺女非要我去 说她画被贴墙上了"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 16:15",
+   "speaker": "B",
+   "text": "可以啊 回头发照片我看看"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 16:16",
+   "speaker": "A",
+   "text": "必须的 她管那画叫 会飞的饺子"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 16:18",
+   "speaker": "B",
+   "text": "哈哈哈 小孩儿这想象力随她妈"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 18:40",
+   "speaker": "A",
+   "text": "孙总 到期那天我要是手头紧 咱能宽限几天不"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 18:45",
+   "speaker": "B",
+   "text": "小赵 我跟你交个底 到期前一周你跟我说 我给你指条路 我认识恒信那边的钱总 你再从他那借一笔把我这笔平了 过桥嘛 都是这个玩法 倒一手就活了"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 18:47",
+   "speaker": "A",
+   "text": "再借一家还您这家"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 18:48",
+   "speaker": "B",
+   "text": "对 拆东墙补西墙 不丢人 额度养起来了以后随借随用"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 18:50",
+   "speaker": "A",
+   "text": "行 那我到期前跟您打招呼"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 18:52",
+   "speaker": "B",
+   "text": "嗯 记着别断 利滚起来就不是这个数了"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 19:30",
+   "speaker": "B",
+   "text": "明儿团建投票出来没"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 19:32",
+   "speaker": "A",
+   "text": "出了 汤山温泉第一 钓鱼第二"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 19:33",
+   "speaker": "B",
+   "text": "那帮年轻人就知道泡澡 钓鱼它不香吗"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 19:35",
+   "speaker": "A",
+   "text": "您拉票了没 一票之差 喊俩人就能翻盘"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 19:36",
+   "speaker": "B",
+   "text": "算了 犯不上 泡澡我也带泳裤"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 19:38",
+   "speaker": "A",
+   "text": "哈哈哈那画面我不敢想"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 20:50",
+   "speaker": "A",
+   "text": "孙总 您上回说的那个医药基金 我小买了五千 这礼拜还绿着"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 20:52",
+   "speaker": "B",
+   "text": "拿住 跌就补点 我都拿了两年了"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 20:54",
+   "speaker": "A",
+   "text": "我这心态不行 一绿就睡不着"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 20:55",
+   "speaker": "B",
+   "text": "那你就别看盘 十一月赎出来还我本金 正好"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 20:57",
+   "speaker": "A",
+   "text": "哈哈得 都指着它回血了"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000471",
+  "status": "accepted",
+  "errors": []
+ }
+}

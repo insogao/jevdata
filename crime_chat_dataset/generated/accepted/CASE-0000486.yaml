@@ -1,0 +1,121 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000486
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000064
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-9eaa77e7f672f1bf
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 公会中间人用深夜固定档和礼物五五分成绑定女主播，提前布置封号后用备用群和暗号导粉换号，靠抽成持续获利。
+  critical_evidence:
+  - 固定晚上十点开播，房间由中间人统一安排
+  - 礼物收益五五分成的分账规矩
+  - 备好二群与暗号、公告不写房间号，封号即导粉换号
+  - 以报销裙子等方式维系主播配合
+  benign_alternatives:
+  - 正规直播公会的排班与分成结算
+  - 才艺主播与合作方的正常合作
+
+attributes:
+  duration_days: 3
+  turn_count: 45
+  approximate_tokens_estimate: 1114
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: cam_room_fee_split
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0053
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-025
+
+dedup:
+  content_hash: sha256:3019b2549afd1c7197d3ef68fbb1bd467b7b01fce8d69dda884c2b6f039a4908
+pipeline_status: accepted
+title: sexual_transaction_exploitation/cam_room_fee_split
+conversation: |-
+  【11月3日】
+  A：小雅，今晚老时间，十点开播，房间我挂好了
+  B：好的，补光灯昨晚有点闪，我新买了一个，今天到
+  A：早点调好，十点后大哥们才上线，前半小时别划水
+  B：知道啦
+  A：昨天你那场收了六千四，我记上账了
+  B：降温了，你那边冷不冷
+  A：冷，秋裤都安排上了，你下播晚别冻着
+  B：我囤了两箱泡面，还有自热锅
+  A：泡面少吃，嗓子要紧，你还得唱呢
+  B：行吧，那我多买点梨炖着吃
+  A：老规矩，礼物五五分，你一半我一半
+  B：恩，一直这个数
+  A：最近平台管得严，号要是没了别慌，粉都往二群里引，我新号随时开
+  B：明白，上次晴晴的号说没就没
+  A：所以让她把老粉也导过去备份，鸡蛋别放一个篮子
+  A：快十点了，人进来了，开播吧
+  B：来了，先唱两首暖场
+  【11月4日】
+  A：今晚破七千了，可以啊
+  B：嗓子冒烟了，睡了
+  A：辛苦，白天补觉
+  B：刚醒，中午吃啥，楼下米线店装修了
+  A：点黄焖鸡呗，我家楼下那家分量足
+  B：行，跟你凑同款
+  A：我加辣，你估计不行
+  B：我微辣，昨天吃太辣胃还有点疼
+  A：那你还凑，点微辣啊
+  A：下午把二群公告改下，写老时间，别写房间号
+  B：房间号为啥不能写
+  A：管得严的时候，露房间号容易被一锅端，群里只留暗号，开播前十分钟我发
+  B：懂了，这就去改
+  A：今晚十点照旧，新裙子穿上，三哥点名了
+  B：就一条啊，别天天让我穿这个
+  A：效果好多备两条，钱走公账我报销
+  【11月5日】
+  B：我家猫凌晨踩我脸上，把我踩醒了
+  A：哈哈哈，猫比你闹钟好使
+  B：它还把我水杯扒拉下床了
+  A：晚上锁卧室门吧
+  B：锁了它挠门更吵，认了
+  A：昨天共八千六，五五你四千三，这就转你
+  【系统消息】A 向 B 转账 4300 元，已收款。
+  A：转了，查收
+  B：到了，房东刚催，正好
+  A：把二群置顶，号万一有事，粉丝自己能找到组织
+  B：置顶了，换号就得重新暖场，累
+  A：号是消耗品，人在钱就在
+  B：也对，晚上十点见

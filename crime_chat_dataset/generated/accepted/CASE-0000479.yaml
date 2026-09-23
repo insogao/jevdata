@@ -1,0 +1,138 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000479
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000021
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-69a34e35d374ba67
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: bribery_corruption
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 评审环节的关键人提前给关系承包商递参数、教「带量」报法，中标当晚以深夜大额转账兑现「老规矩」的事前默契，全程不点破回扣二字。
+  critical_evidence:
+  - 要求报价「把量带足」的内部授意
+  - 指定品牌与参数页不许改动
+  - 中标当晚23点后转账5万元
+  - 「那页纸」「老规矩」的事前分成默契
+  benign_alternatives:
+  - 合法分包与居间佣金申报
+  - 正常商务往来与人情往来
+
+attributes:
+  duration_days: 5
+  turn_count: 60
+  approximate_tokens_estimate: 1353
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: project_bid_kickback
+  risk: 3
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0053
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-025
+
+dedup:
+  content_hash: sha256:017eb0b4106ba9e3c50defc578a1be7f681e20187b1f06b5b5e6b30849f4ded5
+pipeline_status: accepted
+title: bribery_corruption/project_bid_kickback
+conversation: |-
+  【9月8日】
+  B：周总，园区二期到哪步了
+  A：下周一开，流程都在走
+  A：报价单重新做一版，把量带足，别按你习惯压价
+  B：带量？总价高了不好看吧
+  A：横向一比就显你实在，评审那关我看的是这个
+  B：懂了，那我重排
+  A：参数页用我发你那版，品牌就那三个，一个别动
+  B：收到，照单子来
+  A：先不聊了，我去接孩子，今天家长会
+  B：你忙，孩子几年级
+  A：五年级，费心的时候
+  B：回聊
+  【9月9日】
+  B：周总，参数页第三个牌子，我们代理关系是现成的，货也没问题
+  A：行，就按这个来，别的牌子报上来也是陪跑
+  B：明白
+  B：量我按你说的带足了，总价压不下来咋办
+  A：压不住就压不住，这个标比的不是便宜
+  A：周末水库钓鱼去不
+  B：去不了，赶标书
+  A：那下周，鱼获给你留着
+  B：行，钓上大的别动，给我留着
+  B：周总，开完之后怎么个章程，你给个准话，我心里有数
+  A：老章程，那页纸你心里有数就行，别落在纸面上
+  B：懂，都按老规矩
+  A：做得干净点，账面谁也别看出什么
+  【9月10日】
+  A：明天专家那轮你别露面，让你技术负责人去
+  B：好，我安排老陈去
+  A：有人问智能化那块，就往参数页第三个牌子引
+  B：收到
+  A：评审当天手机要交，今天有事提前说
+  B：恩，那今天把该定的都定完
+  B：你那腰最近咋样，还针灸不
+  A：好多了，坐久发僵
+  B：评审一坐一天，带个靠垫
+  A：恩，办公室常备一个
+  B：标书装订出来了，八本，明早我亲自送
+  A：送前台就行，别上楼找我
+  B：明白，避嫌
+  【9月11日】
+  A：今天过了一天，情况不错，你那版数评委没挑出毛病
+  B：辛苦了，晚上安排个便饭？
+  A：这两天免了，眼杂，等落定
+  B：恩，听你的
+  A：明天下结果，回去等信儿
+  B：朋友寄了点今年的新茶，回头给你留一罐
+  A：你留着喝，我不缺茶
+  B：一罐茶而已，别推
+  A：行，不推了
+  【9月12日】
+  A：名字公示了，你们家的，恭喜
+  B：托您的福，那页纸的数我给您备好了
+  A：不急，晚上十一点以后再说，白天账上别动
+  B：懂，老规矩
+  A：后面运维的量我给你留心，先把手上这单做漂亮
+  B：放心，班组我都排好了
+  B：周总，睡了没
+  A：说
+  B：单子我做了，您点下
+  【系统消息】B 向 A 转账 50000 元，已收款。
+  A：收了，这个数对上老规矩了
+  B：应该的，后面二期还有的是合作
+  A：恩，维护的量给你留心，夜里凉，回去了
+  B：恩，您早些休息

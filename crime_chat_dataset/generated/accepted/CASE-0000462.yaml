@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000462
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000054
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-882798d8499a70d0
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 被告一方在开庭前主动找到旧识证人，借知晓其家庭作息、赠与钱财、反复叮嘱'想清楚再说话'等手段软硬兼施，诱导证人在庭上含糊其辞、少说记不清。
+  critical_evidence:
+  - 开庭前两天被告方约证人'周四法庭门口碰到打个招呼'
+  - 证人透露自己接送家人的时间都被人掌握，为此改了作息
+  - 对方反复施压'想清楚再说话'，并暗示'记不清就记不清，别把话说满'
+  - 被告方向证人转账5000元'茶水费'，证人纠结后收下
+  benign_alternatives:
+  - 律师会见沟通
+  - 证人保护告知
+
+attributes:
+  duration_days: 2
+  turn_count: 47
+  approximate_tokens_estimate: 1286
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: witness_intimidation
+  risk: 3
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0051
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-025
+
+dedup:
+  content_hash: sha256:dd4373e798937db2815d7ec0793cf5a475967a28a7eaeefe3ac0f32d8f3278be
+pipeline_status: accepted
+title: violence_extortion/witness_intimidation
+conversation: |-
+  【11月4日】
+  A：老宋，忙不
+  B：哟，凯哥，稀客啊。咋想起我了
+  A：过两天不是要碰头嘛，先跟你透个气
+  B：周四那个事……我知道。有话你就说
+  A：今年冷得早，你店里羊汤上了没
+  B：上了，一早就排队，冬天就指着这口
+  A：改天去喝一碗，还是老味道不
+  B：老味道，还是你爱多放胡椒
+  A：你手艺一直稳，当年要不是你掌灶，咱那馆子也火不起来
+  B：都是过去的事了，别提了
+  A：说正事。周四法庭门口碰到了，打个招呼，别跟见鬼似的
+  B：……行。我到时候正常说我的
+  A：说话之前想清楚再说话，说出去的每个字都有人记着
+  B：凯哥，你这话什么意思
+  A：没什么意思。那笔账你经的手，你比谁都清楚。记不清就记不清，别把话说满
+  B：我说的都是我记得的
+  A：嗯，记性这东西，跟心情也有关系
+  B：你闺女今年初二了吧
+  A：初二，个子窜得比我高了
+  B：好啊，有出息
+  A：她就想学你做菜，说大厨酷
+  B：哈哈，让她来店里，围裙管够
+  A：行，回头带她去
+  A：对了，嫂子现在改五点去接了？以前不是四点半
+  B：……你打听这个干嘛
+  A：没干嘛。你家里老小都在跟前，稳稳当当的，挺好
+  B：凯哥，咱们认识十几年，你别来这套。我现在连出门接人都换着时间
+  A：换时间说明有人上心，这是好事。想清楚再说话，对你对大家都好
+  B：我考虑下
+  【11月5日】
+  B：昨晚上翻出张老照片，咱仨在新店门口那张
+  A：发来看看。哎，那时候头发真多
+  B：哈哈，你那发型，现在掏钱都剪不出来
+  A：岁月是把杀猪刀。老宋，生意归生意，咱们交情归交情
+  B：我就是这么想的
+  A：所以才找你聊，别人我懒得开口
+  A：给你转了个茶水费，不多，给孩子买点文具
+  【系统消息】A 向 B 转账 5000 元，已收款。
+  B：这我不能收
+  A：拿着。不是买你什么，是老交情。周四的事，你心里有杆秤就行
+  B：凯哥，说实话，我这两天觉都睡不好
+  A：睡不好说明你懂事。把记不清的都归到记不清，没人会为难你
+  B：……钱我先收着，别的我不敢保证
+  A：聪明。收了就别拧巴，拧巴伤肝
+  B：周四我在家属那侧站，不跟你并排啊
+  A：随你。门口碰见点个头就行
+  A：记住，想清楚再说话
+  B：知道了
+  A：周四见。羊汤给我留一碗，完事我去喝

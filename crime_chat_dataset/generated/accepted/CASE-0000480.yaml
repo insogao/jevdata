@@ -1,0 +1,153 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000480
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000085
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-1cd58c10a7821c36
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: privacy_doxxing
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 绕开正常途径，私下找做安防数据的熟人凭一段监控侧脸分片排查全城找卷款跑路的合伙人，约定出结果付费，命中后立即转账。
+  critical_evidence:
+  - 只有一段侧脸监控的寻人需求
+  - 「一张侧脸就够」的能力承诺与分片排查
+  - 「出结果付费」的约定
+  - 命中小区结果后转账2000元
+  benign_alternatives:
+  - 安防行业技术交流
+  - 报警后由警方协查寻人
+
+attributes:
+  duration_days: 4
+  turn_count: 76
+  approximate_tokens_estimate: 1811
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: face_search
+  risk: 2
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0053
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-025
+
+dedup:
+  content_hash: sha256:e67406ac37bea16ce4a23ccca41a6c8adc23505e6ed1792367255dc7db6f6a46
+pipeline_status: accepted
+title: privacy_doxxing/face_search
+conversation: |-
+  【9月2日】
+  A：建斌，忙不
+  B：刚到公司，咋了
+  A：出事了，老蒋跑了
+  B：跑了？哪个老蒋
+  A：跟我合伙开修车厂那个，卷了账上四十来万，电话全停机
+  B：这么狠
+  A：派出所去登记了一趟，让我自己多留意，可我去哪留意
+  B：那你打算咋整
+  A：我手里就一段他走那天店门口监控的侧脸，正脸没有
+  B：侧脸啊……
+  A：你不是干这行的么，帮我瞅瞅，一张侧脸就够，能不能认出来
+  B：认是能认，我这边能碰的点位不少，就是费工夫
+  A：费多少工夫，钱不是事
+  B：先说好，出结果再付费，认不出来一分不收
+  A：够意思
+  B：监控那段今晚发我，原片别剪
+  A：晚上给你
+  B：中午吃了吗
+  A：随便对付了口，没胃口
+  B：没胃口也得吃，晚上照旧夜跑不
+  A：跑，不跑心里更堵
+  B：那老地方，河边步道
+  A：恩，七点半
+  B：片子收到了，画质还行，侧脸能看清下颌那块
+  A：能认出不
+  B：别急，全城摄像头扫一遍动静太大，我分片来，先碰他常去那几个片
+  A：行，你安排，需要我再提供点啥不
+  B：他手机号、车牌给我，车牌最有用
+  A：他那台老捷达，车牌尾号877，我发你
+  B：行，这几天别催我
+  【9月3日】
+  A：早起问一句，有眉目没
+  B：刚上班就来催，说了别催
+  A：忍不住，四十万呢
+  B：恩，我先碰西边那片，他丈母娘家不是在那边
+  A：对，城西纺织厂宿舍
+  B：那我从那片的店先碰起
+  A：降温了，我那件厚外套找不着了
+  B：你那衣柜还有能穿的衣服？
+  A：嘚瑟啥，你上周不还让我陪你看冲锋衣
+  B：那是冲锋衣，跟外套两码事
+  A：晚上一起去商场转转，就当散心
+  B：行，六点半我去接你
+  A：今天商场转完，有感觉点了没
+  B：买了件卫衣，你那外套还是没看上
+  A：再看看，不急
+  B：片子那事，今天碰了七八个店，还没撞上
+  A：麻烦你了
+  B：明天继续，晚上早点睡
+  【9月4日】
+  B：上午有情况，客运站旁边那家便利店，夜里两点过撞到一个像的，旁边也停个老捷达
+  A：真的假的，能确定？
+  B：七成像，侧脸轮廓对上了，车不太一样，牌照是新上的
+  A：那也接着往下顺啊
+  B：恩，我在看他夜里往哪个方向走，你先别声张
+  A：好，我等信儿
+  A：我那车该保养了，你认识的哪家店实在
+  B：就你常去那家就行，别乱换
+  A：上回给我推了个五千的套餐，我寻思有点贵
+  B：五千那是大保养，你才四万公里，做个小保养够了
+  A：行，听你的
+  B：晚上又有收获，他夜里在城北一个小区门口下了车，进去没再出来
+  A：哪个小区
+  B：城北锦绣园，我把那片位置发你，具体哪栋再核一晚
+  A：亏得有你，兄弟
+  B：先别说这些，认准了再谢
+  【9月5日】
+  B：核实了，锦绣园9号楼，他最近早上七点常在小区门口早点摊买豆浆
+  A：稳了，真是他
+  B：人给你圈到这了，按说好的，出结果付费
+  A：必须的，两千，我现在转你
+  【系统消息】A 向 B 转账 2000 元，已收款。
+  A：转了，点下
+  B：收到
+  A：我这两天就去堵他，四十万一分不能少
+  B：你别犯浑啊，找到人是一回事，怎么谈你冷静点
+  A：恩，我就找他当面谈，谈不拢再说
+  B：有事先打我电话，别一个人上头
+  A：知道了，回头请你吃饭
+  B：吃饭免了，这事到此为止，别再找我

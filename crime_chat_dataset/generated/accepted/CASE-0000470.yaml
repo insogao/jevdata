@@ -1,0 +1,139 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000470
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000098
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-f2ee50338efa84e7
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A把大额现金拆成多人多日的小额携带，卡着一人一天两万的额度分趟带到对面存放进亲属账户，四天里让B往返八趟，按趟结算跑腿钱。
+  critical_evidence:
+  - A让B和其表弟分人分日携带现金，明确按一人一天两万额度的上限运作，谁也不多占
+  - B四天里往返八次，每次一万元上下，A要求从第二天起每次比之前多带两三千把量加上去
+  - A指定现金存进自己妹妹的账户，叮嘱B不要用自己的卡，每趟存完要回传到店截图交差
+  - 10月12日八趟跑完当日，A立即按每趟五百结清B份额4000元，账目分毫不差
+  benign_alternatives:
+  - 合理换汇额度使用
+  - 留学缴学费
+
+attributes:
+  duration_days: 4
+  turn_count: 62
+  approximate_tokens_estimate: 1700
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: cross_border_smurfing
+  risk: 3
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0052
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-025
+
+dedup:
+  content_hash: sha256:3066f1b9718a6270a3ac73c08d6651aef49c2d4059d4061524c549dd5030284a
+pipeline_status: accepted
+title: money_laundering_obfuscation/cross_border_smurfing
+conversation: |-
+  【10月9日】
+  A：小谭 起了没
+  B：蒋总早 刚醒 您说
+  A：上回跟你提的那个活儿定下来了 你这两天有空档吗
+  B：有 手头就剩两个快递单子
+  A：事情简单 我这边收了些现金占地方 你帮我分几天带到对面存了
+  B：多少
+  A：二十二万多 分四天 你跟你表弟一人一半 一人一天跑两趟
+  B：一趟带多少
+  A：一趟一万一二 别贪多 规矩你懂的 一人一天两万额度 咱不多占
+  B：明白 那对面还是存老地方那个号
+  A：嗯 到了打给我妹妹那个账户 你别用自己的卡
+  B：知道 每趟跑费还是四百
+  A：涨到五百 这趟活急 完事一起结
+  B：成 那我上午先去您那取现金
+  B：对了蒋总 我这腰前几天闪了 您那膏药还有吗
+  A：有 我抽屉一抽屉 昨儿还贴了一片 你过来拿
+  B：好嘞 您这膏药真管用 上回贴两天就见轻
+  A：我这老腰全靠它续命 你年轻更没问题
+  B：那我顺路去您那取钱顺便拿膏药
+  A：行 中午前都在
+  A：钱送到了 你点点
+  B：点了 今天这一万二 我和表弟一人六千 他先跑第一趟
+  A：行 每趟存完发我个到店的截图 我好跟上面交差
+  B：晓得 存完我就发
+  B：第一天两趟都完了 截图发您微信了
+  A：收到 明天一样 别图快
+  【10月10日】
+  A：你店里这几天生意咋样
+  B：一般 工作日人少 猪肉倒是便宜了 敢多进货了
+  A：猪肉跌了 你把红烧肉定价降降 走量
+  B：听您的 明儿挂牌子
+  A：对 做生意就得会看菜篮子
+  B：哈哈跟您学着点
+  A：今天照昨天的走法 一天两趟 一趟一万出头
+  B：明白 我和表弟轮着来
+  A：嗯 另外从今天起 每趟比昨天多带个两三千 那边等钱用 尾声这几天把量加上去
+  B：加量不加趟数
+  A：加量 趟数不变 总共八趟跑完就收工 你拿小本记好别搞混
+  B：记着呢 一趟都不会乱
+  B：今日四趟完 我两趟九千和一万 表弟两趟九千五和一万 都有截图
+  A：对上账了 明天照旧
+  【10月11日】
+  B：蒋总 降温了 您早上出门加外套 别老穿件衬衫
+  A：收到 我这不风度不要温度嘛哈哈
+  B：您夫人炖的汤多喝点
+  A：她天天炖 我都快喝成汤了
+  B：哈哈幸福
+  A：走了走了 各干各的
+  A：今天正常走 表弟那两趟也带上量
+  B：晓得 他一万和一万二 我一万和九千五
+  A：行 傍晚给我报数
+  B：今日完 都进了 截图发过去了
+  A：好 明天收尾 跑完把单子都发我 我好结账
+  【10月12日】
+  B：最后一天 我和表弟都到位了
+  A：嗯 最后一趟带足 一万加一万 收工
+  B：晓得 中午前给您信儿
+  B：完事 八趟齐了 单子回头一起发您
+  A：辛苦 账我核了 分毫不差
+  【系统消息】A 向 B 转账 4000 元，已收款。
+  A：你那八趟的一起结了 四千 表弟的我另外转他 收到回个话
+  B：收到了 谢蒋总 下回有活儿还找我
+  A：会的 你办事我放心
+  B：对了 膏药真管用 我腰好利索了
+  A：好使吧 我说啥来着 秋冬别搬太重的东西
+  B：记下了 那您忙 我回店里开火
