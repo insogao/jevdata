@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001522
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000128
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-134901b6669815b8
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 王哥仗着当年帮老李牵线拿铺面的旧交情，以隔壁奶茶店被整停业为例暗示自己有能力让老李的店也开不下去，向老李索要每月三千的「平安钱」；老李拒不答应，王哥撂下「明天见分晓」的威胁。全程未实际转账。
+  critical_evidence:
+  - A 以「隔壁奶茶店你知道的」为警告，暗示那家店突然停业整顿是被人做了手脚
+  - A 单方面要求 B 每月交三千，称这是「保平安」的规矩
+  - B 明确拒绝并说这是威胁、要报警，A 反称隔壁店当初也说要报警，现在人都不见了
+  - A 用旧交情与铺面人情施压，最后以「明天见分晓」收尾，未完成任何转账
+  benign_alternatives:
+  - 商业竞争摩擦
+  - 物业纠纷
+
+attributes:
+  duration_days: 4
+  turn_count: 46
+  approximate_tokens_estimate: 1321
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: competitor_sabotage_threat
+  risk: 3
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0159
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:80ad188abadeb2e6882346277bcc05315ed68725b5c6c8bd2b88711baaec6da7
+pipeline_status: accepted
+title: coercion_blackmail/competitor_sabotage_threat
+conversation: |-
+  【9月2日】
+  A：老李 最近生意咋样 听说你那位置客流不错啊
+  B：还行 王哥 你这两天忙啥呢
+  A：瞎忙 对了 隔壁奶茶店的事你知道吧
+  B：哪个事 就那家换了老板的?
+  A：嗯 上个月突然停业整顿 到现在没开 你猜为啥
+  B：不知道啊 是不是卫生没过
+  A：有些事 不是过不过的问题 是懂不懂规矩
+  B：王哥你这话我没听懂
+  A：不用懂 到时候自然有人跟你说
+  B：我娃下周开学 这两天正买文具呢 忙得脚不沾地
+  A：哦 上几年级了
+  B：三年级 皮得很 一天到晚要买卡
+  A：哈哈 男孩淘点正常
+  B：今天又下雨 门口台阶滑 有个客人差点摔了
+  A：铺个垫子 细节做不好也留不住人
+  【9月3日】
+  A：老李 想清楚没
+  B：想清楚啥啊 你倒是说明白点
+  A：你这店一个月流水不少吧 我也不要多 每月三千 保你平安
+  B：三千? 王哥你开什么玩笑 我刨去房租人工哪还有那么多
+  A：隔壁奶茶店当初也觉得多 现在店都空着呢
+  B：你这是威胁我?
+  A：我这是照顾你 当初要不是我帮你牵线拿的这个铺面 你现在还在摆摊呢
+  B：我进货价又涨了 奶精一箱贵了十块 什么都涨就我价不敢涨
+  A：所以啊 得有人罩着 不然谁都来涨你的
+  B：我不需要谁罩着 我本分做生意 谁也别想拿我怎么样
+  A：本分? 你以为本分就没人来找你麻烦
+  B：晚上盘点 今天算下来就挣了两百多 真难
+  A：所以说趁早想通 别到时候哭都来不及
+  【9月5日】
+  A：我最后问你一次
+  B：王哥 你这样我真没法答应 你再逼我我就报警了
+  A：报警? 你报 你看你说得清不 隔壁那家当时也说要报 现在人在哪呢
+  B：你到底想干嘛 我们无冤无仇的
+  A：每月三千 就这么多 给不给 一句话
+  B：我妈这两天住院 我实在没心思扯这些
+  A：住院要花钱吧 那就更得图个安生 你说是不是
+  B：你先让我缓缓 这事我真做不了主
+  A：行 给你一晚上 别让我等太久
+  【9月6日】
+  A：想好了吗
+  B：我没什么可想的 我不会给你钱 一分都不会
+  A：那行 明天见分晓
+  B：你什么意思 把话说清楚
+  A：没什么意思 你自己看着办
+  B：王哥 做人别太过 抬头不见低头见的
+  A：过不过 明天就知道了
+  B：这几天降温 你也注意身体 别老上火
+  A：用不着你操心

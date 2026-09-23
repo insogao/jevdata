@@ -1,0 +1,109 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001494
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000032
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-a1c8b4613018d7e9
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: contraband_illicit_trade
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 收药的 A 大量从同事 B 处收购安眠类处方药，按板计价，并借 B 的医保卡反复开药，形成处方药转卖的供应链。
+  critical_evidence:
+  - A 大量收购安眠药类处方药，按板结价
+  - A 让 B 用医保卡去开药，卡借给他反复刷
+  - B 担心开太多被查，A 教他分开不同医院开
+  - 结算方式为按量转账
+  benign_alternatives:
+  - 帮忙代买常用药
+  - 亲属间代取药
+
+attributes:
+  duration_days: 3
+  turn_count: 33
+  approximate_tokens_estimate: 662
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: prescription_diversion
+  risk: 3
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0158
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:d87cb01d54d7bb20fadfae8f865f90cdb7e13e37b5cd0052b150b7156cf1ff18
+pipeline_status: accepted
+title: contraband_illicit_trade/prescription_diversion
+conversation: |-
+  【5月6日】
+  A：哥 最近手头宽不宽
+  B：就那样 咋了
+  A：你卡里额度还没用吧 帮我拿点那种药
+  B：哪种
+  A：就安眠那类 我这边大量收 按板给你结
+  B：那玩意儿一次开不了多少吧
+  A：一次少 多跑几家 卡借我用用 我来跑
+  B：卡给你不太好吧
+  A：就当帮我个忙 我给你好处费 不白用
+  B：开多了会不会被注意
+  A：分开医院开 别老在同一家 没人较真
+  B：行吧 卡先借你几天
+  A：够意思
+  【5月7日】
+  A：跑了三家 收了一板多点
+  B：这么多
+  A：一板我给你按三百 你看行不
+  B：行 你说了算
+  A：你下午有空没 卡我再拿两天
+  B：下午要上班
+  A：那你放你那 我自己去取 不耽误你
+  B：中午食堂那个新菜真难吃
+  A：我就没去 外面吃了碗馄饨
+  B：还是你懂享受
+  A：今天又跑了四家 攒够一板了
+  B：你这跑得也太勤 别把卡刷爆
+  A：放心 额度够 月底给你结账
+  【5月8日】
+  A：这周的给你结一下
+  【系统消息】A 向 B 转账 3000 元，已收款。
+  B：收到了 下周还拿吗
+  A：拿 你卡别停 咱细水长流
+  B：嗯 说好了别声张
+  B：晚上你加班不 帮我带个饭
+  A：行 你想吃啥 给你带黄焖鸡
+  B：中 不要太辣

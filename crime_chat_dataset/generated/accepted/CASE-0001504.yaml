@@ -1,0 +1,110 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001504
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000021
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-8869954d75d2752b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: bribery_corruption
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 评标方的 A 向投标方 B 泄露倾向：要求报价带量、技术参数写成指定品牌，暗示中标后按点数返还，中标当晚 B 深夜转账给 A。
+  critical_evidence:
+  - A 暗示 B 报价要带上量，把参数写成指定那家
+  - A 表示只要照做，评标这关他来打点
+  - 双方谈妥中标后按合同额返还一定点数
+  - 中标结果出来后，B 深夜把好处费转给 A
+  benign_alternatives:
+  - 合法分包合作
+  - 居间佣金合规申报
+
+attributes:
+  duration_days: 2
+  turn_count: 34
+  approximate_tokens_estimate: 653
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: project_bid_kickback
+  risk: 3
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0158
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:4b4306f5c8e5d61f8ecb6395053c287da8892b82b7668e245370cdb69fbc1f2c
+pipeline_status: accepted
+title: bribery_corruption/project_bid_kickback
+conversation: |-
+  【4月9日】
+  A：老周 睡了没
+  B：没呢 王工这么晚
+  A：那个项目 你们准备得咋样
+  B：标书差不多了 就是怕竞争激烈
+  A：你报价带上量 参数就写指定那家的规格
+  B：指定那家?那不是摆明了吗
+  A：摆明才好 评标的时候好说话
+  B：那这关
+  A：我来打点 你只管把标书做漂亮
+  B：成了之后怎么算
+  A：按合同额六个点 老规矩
+  B：六个点有点高
+  A：高啥 多少人想搭这条线 你不要有的是人
+  B：行 那就按你说的
+  A：你嘴巴严点 这事天知地知
+  【4月10日】
+  B：中午有安排不 一起吃个饭
+  A：不了 今天上面有人来 我脱不开
+  B：那改天 标书我今晚发你过目
+  A：嗯 参数那栏重点改
+  B：改好了 就按指定那家写的
+  A：行 我看着靠谱
+  B：你女儿钢琴比赛咋样了
+  A：拿了个二等奖 挺高兴
+  B：厉害啊 随你
+  A：她妈盯得紧 比我上心
+  A：评标结果差不多了 你稳
+  B：真的?那就好
+  A：公示完就定
+  B：那我把数给你备好
+  A：嗯 老时间老规矩
+  【系统消息】B 向 A 转账 60000 元，已收款。
+  A：收到了 后面施工款按节点走
+  B：合作愉快
+  【4月11日】
+  A：昨晚那事别在群里提
+  B：放心 我懂分寸

@@ -1,0 +1,229 @@
+{
+ "key": "b81c011",
+ "archetype_id": "ARC-000032",
+ "subtype": "prescription_diversion",
+ "latent_intent": "收药的 A 大量从同事 B 处收购安眠类处方药，按板计价，并借 B 的医保卡反复开药，形成处方药转卖的供应链。",
+ "critical_facts": [
+  "A 大量收购安眠药类处方药，按板结价",
+  "A 让 B 用医保卡去开药，卡借给他反复刷",
+  "B 担心开太多被查，A 教他分开不同医院开",
+  "结算方式为按量转账"
+ ],
+ "benign_alternatives": [
+  "帮忙代买常用药",
+  "亲属间代取药"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "5月6日 13:10",
+   "speaker": "A",
+   "text": "哥 最近手头宽不宽"
+  },
+  {
+   "type": "message",
+   "time": "5月6日 13:12",
+   "speaker": "B",
+   "text": "就那样 咋了"
+  },
+  {
+   "type": "message",
+   "time": "5月6日 13:13",
+   "speaker": "A",
+   "text": "你卡里额度还没用吧 帮我拿点那种药"
+  },
+  {
+   "type": "message",
+   "time": "5月6日 13:15",
+   "speaker": "B",
+   "text": "哪种"
+  },
+  {
+   "type": "message",
+   "time": "5月6日 13:16",
+   "speaker": "A",
+   "text": "就安眠那类 我这边大量收 按板给你结"
+  },
+  {
+   "type": "message",
+   "time": "5月6日 13:18",
+   "speaker": "B",
+   "text": "那玩意儿一次开不了多少吧"
+  },
+  {
+   "type": "message",
+   "time": "5月6日 13:19",
+   "speaker": "A",
+   "text": "一次少 多跑几家 卡借我用用 我来跑"
+  },
+  {
+   "type": "message",
+   "time": "5月6日 13:21",
+   "speaker": "B",
+   "text": "卡给你不太好吧"
+  },
+  {
+   "type": "message",
+   "time": "5月6日 13:23",
+   "speaker": "A",
+   "text": "就当帮我个忙 我给你好处费 不白用"
+  },
+  {
+   "type": "message",
+   "time": "5月6日 13:25",
+   "speaker": "B",
+   "text": "开多了会不会被注意"
+  },
+  {
+   "type": "message",
+   "time": "5月6日 13:26",
+   "speaker": "A",
+   "text": "分开医院开 别老在同一家 没人较真"
+  },
+  {
+   "type": "message",
+   "time": "5月6日 13:28",
+   "speaker": "B",
+   "text": "行吧 卡先借你几天"
+  },
+  {
+   "type": "message",
+   "time": "5月6日 13:30",
+   "speaker": "A",
+   "text": "够意思"
+  },
+  {
+   "type": "message",
+   "time": "5月7日 09:40",
+   "speaker": "A",
+   "text": "跑了三家 收了一板多点"
+  },
+  {
+   "type": "message",
+   "time": "5月7日 09:42",
+   "speaker": "B",
+   "text": "这么多"
+  },
+  {
+   "type": "message",
+   "time": "5月7日 09:43",
+   "speaker": "A",
+   "text": "一板我给你按三百 你看行不"
+  },
+  {
+   "type": "message",
+   "time": "5月7日 09:45",
+   "speaker": "B",
+   "text": "行 你说了算"
+  },
+  {
+   "type": "message",
+   "time": "5月7日 09:48",
+   "speaker": "A",
+   "text": "你下午有空没 卡我再拿两天"
+  },
+  {
+   "type": "message",
+   "time": "5月7日 09:50",
+   "speaker": "B",
+   "text": "下午要上班"
+  },
+  {
+   "type": "message",
+   "time": "5月7日 09:52",
+   "speaker": "A",
+   "text": "那你放你那 我自己去取 不耽误你"
+  },
+  {
+   "type": "message",
+   "time": "5月7日 12:20",
+   "speaker": "B",
+   "text": "中午食堂那个新菜真难吃"
+  },
+  {
+   "type": "message",
+   "time": "5月7日 12:22",
+   "speaker": "A",
+   "text": "我就没去 外面吃了碗馄饨"
+  },
+  {
+   "type": "message",
+   "time": "5月7日 12:24",
+   "speaker": "B",
+   "text": "还是你懂享受"
+  },
+  {
+   "type": "message",
+   "time": "5月7日 18:30",
+   "speaker": "A",
+   "text": "今天又跑了四家 攒够一板了"
+  },
+  {
+   "type": "message",
+   "time": "5月7日 18:32",
+   "speaker": "B",
+   "text": "你这跑得也太勤 别把卡刷爆"
+  },
+  {
+   "type": "message",
+   "time": "5月7日 18:34",
+   "speaker": "A",
+   "text": "放心 额度够 月底给你结账"
+  },
+  {
+   "type": "message",
+   "time": "5月8日 10:15",
+   "speaker": "A",
+   "text": "这周的给你结一下"
+  },
+  {
+   "type": "transfer",
+   "time": "5月8日 10:20",
+   "from": "A",
+   "to": "B",
+   "amount": 3000,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "5月8日 10:22",
+   "speaker": "B",
+   "text": "收到了 下周还拿吗"
+  },
+  {
+   "type": "message",
+   "time": "5月8日 10:24",
+   "speaker": "A",
+   "text": "拿 你卡别停 咱细水长流"
+  },
+  {
+   "type": "message",
+   "time": "5月8日 10:26",
+   "speaker": "B",
+   "text": "嗯 说好了别声张"
+  },
+  {
+   "type": "message",
+   "time": "5月8日 19:50",
+   "speaker": "B",
+   "text": "晚上你加班不 帮我带个饭"
+  },
+  {
+   "type": "message",
+   "time": "5月8日 19:52",
+   "speaker": "A",
+   "text": "行 你想吃啥 给你带黄焖鸡"
+  },
+  {
+   "type": "message",
+   "time": "5月8日 19:54",
+   "speaker": "B",
+   "text": "中 不要太辣"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0001494",
+  "status": "accepted",
+  "errors": []
+ }
+}

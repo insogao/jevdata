@@ -1,0 +1,121 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001517
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000029
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-41284e65abd547ee
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: contraband_illicit_trade
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 供货方 A 与分销方 B 长期以「货」代称某批违禁物品，只谈数量批次、交接地点和现结方式，约定在老地方当面交接、不留账；B 先转一笔定金，双方全程回避任何品名与用途。
+  critical_evidence:
+  - A、B 只谈「几个」「批次」「大份小份」，从不提具体品名
+  - A 指定「老地方」当面交接，强调现结、走现金不留账
+  - B 先转一笔定金锁量，约定到货后补齐尾款
+  - 双方约定分批取、不一次拿完，避免引人注意
+  benign_alternatives:
+  - 大宗合法批发
+  - 朋友间代购
+
+attributes:
+  duration_days: 5
+  turn_count: 43
+  approximate_tokens_estimate: 828
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: batch_quantity_pickup
+  risk: 3
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0159
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:0e3a0fb471b74d0e149142587e4dcad0b54d42d5d3d478c54c7468fdb478f60b
+pipeline_status: accepted
+title: contraband_illicit_trade/batch_quantity_pickup
+conversation: |-
+  【7月4日】
+  A：在吗
+  B：在 说吧
+  A：这周有新的 你要几个
+  B：先看货 上次那种还剩着
+  A：这次的比上次整 大份的 五份起拿
+  B：五份多了 先三份 稳一点
+  A：三份也行 老地方 什么时候
+  B：后天晚上 还是那个点
+  A：现结 不留账 你懂
+  B：懂 老规矩
+  【7月5日】
+  B：今天太热了 三十八度 不动都出汗
+  A：所以晚上才办事 白天谁出去
+  B：也是 晚上凉快
+  B：晚饭随便煮了个面 一个人懒得做
+  A：我也是 凑合吃
+  B：对了 定金我先给你一半 心里有底
+  A：行 到账我就给你留着 别放鸽子
+  【系统消息】B 向 A 转账 3000 元，已收款。
+  A：收到 后天见
+  【7月6日】
+  B：明天定了没 我这边好安排
+  A：定了 十一点 老地方后门
+  B：别从大路走 那条街晚上有巡逻
+  A：我知道 走老巷子
+  B：下午接了个电话 烦得很 一堆破事
+  A：什么事
+  B：家里催相亲 没劲
+  A：哈哈 先把事办了再说
+  A：刚去看了下地方 没人 明天放心来
+  B：好 我带现金 尾款当面清
+  【7月7日】
+  B：到了 你人在不
+  A：在里面 你自己进来 别按喇叭
+  B：东西我看了 数也对 尾款给你
+  A：好 分开放 别一次都拿走
+  B：知道 先拿两份 剩的一份过两天
+  A：嗯 下次要提前说 别临时加
+  B：放心 老客户了
+  【7月8日】
+  B：早上好 昨天的事挺顺
+  A：顺就好 以后少提
+  B：懂 我这人不记事
+  B：中午吃啥 楼下新开了家粉店
+  A：随便 你吃你的
+  B：剩那份哪天拿
+  A：等我通知 这两天风大
+  B：行 不急

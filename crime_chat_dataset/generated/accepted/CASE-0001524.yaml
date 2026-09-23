@@ -1,0 +1,118 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001524
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000117
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-0143b99174a819fb
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: theft_robbery_property_crime
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 夜里下地的一伙人 A 盯上农田灌溉电机，趁浇完地、人回家后卸走机泵里的铜件，转手卖给收废品的 B；A 熟悉村口狗多、要绕后走，B 按铜价收货并先付定金。双方用「家伙」「料」「下地」等词遮掩。
+  critical_evidence:
+  - A 说等农户浇完地、人歇了再下地动手，专挑夜里
+  - A 提到现在铜价高，拆下来的铜件能卖好价
+  - A 交代村口狗多、要从后面绕，避开人和监控
+  - B 按行情收料并先付一笔定金，约好夜里在收废点交货
+  benign_alternatives:
+  - 废品正常回收
+  - 农机维修
+
+attributes:
+  duration_days: 4
+  turn_count: 41
+  approximate_tokens_estimate: 815
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: farm_irrigation_motor_theft
+  risk: 2
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0159
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:9d5debd7b7c6d9601b943a4f45370075b2e0661a1ed7a4e808bf8395b68c1707
+pipeline_status: accepted
+title: theft_robbery_property_crime/farm_irrigation_motor_theft
+conversation: |-
+  【8月12日】
+  A：老陈 今晚有家伙 你收不收
+  B：什么料 多少
+  A：泵里的 铜的 好几台 浇完地就收
+  B：现在铜价还行 你弄干净点 别带泥
+  A：放心 老手了 拆下来就擦
+  B：几台 什么时候到
+  A：三台 后半夜 你那边别关灯 我直接进去
+  B：先给你定金 免得到时候扯皮
+  【系统消息】B 向 A 转账 500 元，已收款。
+  A：收到 我这就叫人
+  B：村口那几家狗多 你走后面那小路
+  A：知道 从渠边绕 狗闻不到
+  A：到了地头 农户家灯灭了 开始
+  B：快进快出 别用大灯
+  【8月13日】
+  A：有一台螺丝锈死了 费了点劲
+  B：慢慢来 别砸出响
+  A：三台搞定 装车了
+  B：过来吧 我等着称
+  A：到了 料在这
+  B：成色好 称完给你算 尾款转你
+  A：行 下次还有一批
+  B：昨晚睡太晚 今天起不来
+  A：干这个就这样 昼伏夜出
+  A：中午家里炖了鸡 补一补
+  B：日子滋润 晚上还得干活
+  B：听说村里有人在找丢的东西
+  A：找不到的 那片没监控
+  B：最近风声紧不紧
+  A：换个村 别老在一个地方 我都记着
+  【8月14日】
+  A：今天孩子开学 送了一趟
+  B：学费不便宜吧
+  A：是啊 不然我这么拼干嘛
+  A：今晚还去不去 那边还有两台
+  B：去 但小心点
+  A：老规矩 绕后 狗多的地方走渠边
+  B：料弄好了直接拉我这
+  【8月15日】
+  A：昨晚两台也到手 累够呛
+  B：这周够了 歇两天
+  A：行 钱什么时候结
+  B：下午给你打 放心
+  A：到账了 数对
+  B：合作愉快 下次提前说

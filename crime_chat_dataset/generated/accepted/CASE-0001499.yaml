@@ -1,0 +1,120 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001499
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000149
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-315239891ee584b0
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: other_illicit_coordination
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 做贷款中介引流的三舅 A 拉外甥 B 夜里到各小区楼道、电线杆贴贷款小卡片，按栋计酬、被撕就扣钱，属无资质小广告引流链条中的末端张贴协作。
+  critical_evidence:
+  - A 拉 B 夜里出去贴贷款小卡片，要求一晚上贴完一个区
+  - 报酬按栋结算，一栋八块，撕掉的不算还要扣钱
+  - B 需要拍照回传作为计数凭证，料由 A 提供
+  - 事后 A 约定下周换别的区继续贴
+  benign_alternatives:
+  - 正规广告投放公司的地推派单
+  - 社区通知、传单的合法张贴
+
+attributes:
+  duration_days: 6
+  turn_count: 42
+  approximate_tokens_estimate: 846
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: informal_loan_ads_network
+  risk: 1
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0158
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:bf01e939ae1840f94e344c857744362db31469399e85b71246fae139f77a3aa0
+pipeline_status: accepted
+title: other_illicit_coordination/informal_loan_ads_network
+conversation: |-
+  【6月1日】
+  A：三舅 最近忙啥呢
+  B：在家闲着 找工作呢 咋了
+  A：有个活儿 想不想接 晚上出去转一圈
+  B：贴啥的
+  A：贷款的小卡片 走量的 不费事
+  B：这个…晚上贴?能行不 别惹事
+  A：就楼道 门缝 电线杆 都是走量的小活 没人管
+  B：我妈要是知道又得念叨
+  A：你别跟她说 挣点零花
+  B：对了 你闺女今年高考考得咋样
+  A：还行 上了个二本 月底摆两桌
+  B：那得去 我把红包备上
+  A：人来就行 别整那些虚的
+  【6月2日】
+  A：明晚先试试 你把这个区一口气贴完
+  B：一个区有多少
+  A：七八个小区 一千多张吧
+  B：一晚上贴得完?
+  A：贴得完 手快就行 后半夜人少
+  B：行 我试试
+  【6月3日】
+  B：贴了三个小区 手都酸了
+  A：慢点没事 贴完一个区算钱
+  B：咋算
+  A：按栋给你结 一栋八块
+  B：那这一晚上也没多少啊
+  A：走量 你贴得越多越多 一晚上两三百正常
+  【6月4日】
+  A：昨天那批被物业撕了不少
+  B：我贴的时候没人啊
+  A：撕了的就不算 你拍个照给我 我按数扣钱
+  B：这么严
+  A：不然料白瞎了 都是一张张印出来的
+  【6月5日】
+  B：今天下大雨 晚上还去不
+  A：雨天更好 没人出来 你穿个雨衣
+  B：也是 就是鞋又得湿
+  A：买个雨披 回头我给你补上
+  B：对了 我妈让你周末回去吃饭
+  A：行 我带两瓶酒过去
+  【6月6日】
+  A：这周贴得不错 我给你结了
+  B：多少
+  A：三十二栋 两百五十六 你核对下
+  B：行 谢了三舅
+  A：下周换个区 那边量大 你早点睡
+  B：好嘞

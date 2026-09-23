@@ -1,0 +1,361 @@
+{
+ "key": "b81c039",
+ "archetype_id": "ARC-000115",
+ "subtype": "parking_lot_breakin",
+ "latent_intent": "A 手里有能快速开锁的设备，向 B 兜售并商量去商场地下停车场找目标，只拿车里的包不动车；两人分工，一个负责盯车望风、一个动手，约定事后分钱、避开有监控的位置。",
+ "critical_facts": [
+  "A 称自己的家伙三秒就能开，演示过一次给 B 看",
+  "A 说商场 B2 层车多、巡逻少、下手机会最好",
+  "两人约定只取车里的包和值钱物件，不碰车本身，降低动静",
+  "B 支付一笔钱从 A 处拿工具/入伙，商定事后按份分"
+ ],
+ "benign_alternatives": [
+  "开锁救援服务",
+  "停车场管理讨论"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "11月2日 20:10",
+   "speaker": "A",
+   "text": "睡了没 上次跟你说的事 想好没有"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 20:14",
+   "speaker": "B",
+   "text": "哪个事"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 20:17",
+   "speaker": "A",
+   "text": "就那个 我手上有个好东西 开起来三秒的事 别人拿它当救援工具"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 20:21",
+   "speaker": "B",
+   "text": "靠谱吗 别整半天开不了"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 20:24",
+   "speaker": "A",
+   "text": "我上周在朋友车上试过 嘀一下就完了 不是硬撬 不留痕迹"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 20:28",
+   "speaker": "B",
+   "text": "你想在哪动手"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 20:31",
+   "speaker": "A",
+   "text": "商场地下 负二层车停得满 保安就一个人转悠 最好下手"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 20:35",
+   "speaker": "B",
+   "text": "负一层人多 负二层黑"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 20:38",
+   "speaker": "A",
+   "text": "对 就负二 而且咱们只在车里找东西 不动车 动静小"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 20:42",
+   "speaker": "B",
+   "text": "只拿包?车别动"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 20:45",
+   "speaker": "A",
+   "text": "对 车一动就是大案 只拿看得见的东西 拿了就走"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 20:49",
+   "speaker": "B",
+   "text": "分我多少"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 20:52",
+   "speaker": "A",
+   "text": "东西归我出手 钱五五 工具你先给我点本钱"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 20:56",
+   "speaker": "B",
+   "text": "多少"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 20:58",
+   "speaker": "A",
+   "text": "两千 拿到手就是你的 一次就回本"
+  },
+  {
+   "type": "transfer",
+   "time": "11月2日 21:05",
+   "from": "B",
+   "to": "A",
+   "amount": 2000,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 21:07",
+   "speaker": "A",
+   "text": "收到 明天我给你 先踩点"
+  },
+  {
+   "type": "message",
+   "time": "11月2日 21:10",
+   "speaker": "B",
+   "text": "行"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 10:20",
+   "speaker": "B",
+   "text": "今天降温了 你出门没"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 10:24",
+   "speaker": "A",
+   "text": "刚从商场出来 踩了一圈 负二层西边那排车最多 摄像头有个死角"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 10:27",
+   "speaker": "B",
+   "text": "你怎么知道是死角"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 10:30",
+   "speaker": "A",
+   "text": "柱子挡着 转过去就看不见 我看了半小时"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 10:33",
+   "speaker": "B",
+   "text": "保安呢"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 10:36",
+   "speaker": "A",
+   "text": "一小时转一圈 你盯他 我动手 你负责望风"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 10:39",
+   "speaker": "B",
+   "text": "我手生"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 10:42",
+   "speaker": "A",
+   "text": "不用你动 你就在入口那边看着 有人过来咳嗽一声"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 10:45",
+   "speaker": "B",
+   "text": "懂了"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 12:30",
+   "speaker": "B",
+   "text": "中午吃了碗面 有点咸"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 12:33",
+   "speaker": "A",
+   "text": "晚上动手前别吃太饱 容易犯困"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 12:36",
+   "speaker": "B",
+   "text": "今晚就干?"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 12:39",
+   "speaker": "A",
+   "text": "周末晚上车多 人逛得晚 十点以后最好"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 19:50",
+   "speaker": "A",
+   "text": "工具在我这 到时候我教你怎么拿 别慌"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 19:54",
+   "speaker": "B",
+   "text": "别在微信上说太细"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 19:57",
+   "speaker": "A",
+   "text": "我知道 见面说"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 21:40",
+   "speaker": "B",
+   "text": "我到了 你在哪"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 21:43",
+   "speaker": "A",
+   "text": "负二电梯口 穿黑衣服 别乱走"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 22:15",
+   "speaker": "B",
+   "text": "第一辆那SUV后备箱好像有个包"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 22:18",
+   "speaker": "A",
+   "text": "别急 先看四周围 有没有人回来"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 22:25",
+   "speaker": "B",
+   "text": "没人 动手"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 22:40",
+   "speaker": "A",
+   "text": "走了 东西到手 包里有台平板和几百现金"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 22:43",
+   "speaker": "B",
+   "text": "快撤 别坐电梯 走楼梯"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 22:46",
+   "speaker": "A",
+   "text": "知道 分开走"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 23:30",
+   "speaker": "B",
+   "text": "到家了 吓出一身汗"
+  },
+  {
+   "type": "message",
+   "time": "11月3日 23:33",
+   "speaker": "A",
+   "text": "第一次都这样 东西我明天出手 钱到了分你"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 09:10",
+   "speaker": "B",
+   "text": "今天看到商场群里说昨晚有车主报警了"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 09:14",
+   "speaker": "A",
+   "text": "正常 找不到人的 咱们啥也没留下"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 09:18",
+   "speaker": "B",
+   "text": "那个平板会不会有定位"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 09:21",
+   "speaker": "A",
+   "text": "已经关机了 出手前不碰"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 09:25",
+   "speaker": "B",
+   "text": "这几天先消停消停"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 09:28",
+   "speaker": "A",
+   "text": "嗯 过阵子换个商场 别老在同一个地方"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 12:40",
+   "speaker": "B",
+   "text": "钱什么时候给我"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 12:43",
+   "speaker": "A",
+   "text": "东西还没出掉 急什么"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 12:46",
+   "speaker": "B",
+   "text": "我投了两千呢"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 12:49",
+   "speaker": "A",
+   "text": "少废话 出了自然给你"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 20:00",
+   "speaker": "B",
+   "text": "我妈问我在外面忙啥 我都不敢说"
+  },
+  {
+   "type": "message",
+   "time": "11月4日 20:04",
+   "speaker": "A",
+   "text": "这种跟谁都不能说 记牢"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0001520",
+  "status": "accepted",
+  "errors": []
+ }
+}

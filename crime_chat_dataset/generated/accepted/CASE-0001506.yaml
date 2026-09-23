@@ -1,0 +1,106 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001506
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000069
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-70033df08c308738
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 良性对照：同事间借款到期，债权方 A 同意债务人 B 用代班顶夜班折抵部分欠款、其余分期归还，借条和转账凭证齐全，属合法的债务协商。
+  critical_evidence:
+  - B 之前向同事 A 借了八千，到了约定还款日还不上
+  - A 提议 B 帮忙顶几个夜班，每次按两千的劳务折抵欠款
+  - 剩下的部分分期还，借条和每次转账凭证都留着
+  - 双方把还款安排说清楚，约定了还清时间
+  benign_alternatives:
+  - 分期还款协商
+  - 劳动抵偿合法约定
+
+attributes:
+  duration_days: 2
+  turn_count: 30
+  approximate_tokens_estimate: 693
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: debt_body_exchange
+  risk: 0
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0158
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:d3335907dce01d74c53df9c4c6236b4c352c0f2c642c209ffb2ff376a76dda2e
+pipeline_status: accepted
+title: sexual_transaction_exploitation/debt_body_exchange
+conversation: |-
+  【6月12日】
+  A：在吗 上次说那八千的事
+  B：在 不好意思 这个月实在周转不开
+  A：我也不催你 就是想商量个办法
+  B：你说 我这边工资月底才发
+  A：我夜班缺人 你要是愿意顶几个 每次给我算两千抵账
+  B：这样好 我正好夜班方便 抵两千我记着
+  A：剩下的你分期 我们不急着一次清
+  B：那太谢谢了 借条还在你那吧
+  A：在 照片我都留着 每次抵扣我也记一笔 到时对账
+  B：清楚点好 免得以后生分
+  A：就是这么个理
+  B：你中午吃了吗 我带了饭多点了一份
+  A：吃过了 谢了 你自己留着晚上热
+  B：行 那我就不客气了
+  【6月13日】
+  A：今晚那个夜班你能来吗
+  B：能 几点交接
+  A：晚上八点 我先带你走一遍流程
+  B：好 那先抵两千 还剩六千
+  A：对 我给你记上 你核对
+  B：对了 周末单位团建你报不报
+  A：报啊 好久没放松了
+  B：那我也报一个 一起
+  A：今晚辛苦 抵账那笔我记好了
+  B：应该的 我还欠六千 月底再还你一部分
+  A：不急 按你的节奏来
+  【6月14日】
+  B：先还你两千 剩下的下月
+  【系统消息】B 向 A 转账 2000 元，已收款。
+  A：收到 记上了 还剩四千
+  B：好 谢谢哥体谅
+  A：晚上降温 你多穿点
+  B：嗯 你也是

@@ -1,0 +1,118 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001521
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000029
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-54aeadece7192213
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: contraband_illicit_trade
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 供货方 A 与老关系的分销方 B 谈一批违禁品的数量与交接：只论「份」「批」，约在熟悉的老地方当面现结、不留账，B 先付定金，货分几次取走。全程不谈品名，需结合转账与交接细节推断。
+  critical_evidence:
+  - A、B 只用「份」「批」计量，从不提具体是什么货
+  - A 指定熟悉的「老地方」交接，强调现结、走现金不记账
+  - B 先转定金锁量，约定分几次取、不一次搬空
+  - 双方强调低调、不固定的时间，避免留下可追溯的记录
+  benign_alternatives:
+  - 大宗合法批发
+  - 朋友间代购
+
+attributes:
+  duration_days: 3
+  turn_count: 41
+  approximate_tokens_estimate: 703
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: batch_quantity_pickup
+  risk: 3
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0159
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:c11262c1a4d3136210158f75d973cb1ee6ab0098b4be2e6cde9b8f76aec9f4c6
+pipeline_status: accepted
+title: contraband_illicit_trade/batch_quantity_pickup
+conversation: |-
+  【5月20日】
+  A：睡了吗 有批新的 你要多少
+  B：多少一份
+  A：老价 一份两千六 这批成色整
+  B：先要四份 看看
+  A：四份行 老地方 明天夜里
+  B：几点
+  A：两点 那个时候没人
+  B：定金先给你
+  【系统消息】B 向 A 转账 5000 元，已收款。
+  A：收到 给你留着
+  【5月21日】
+  B：今天太忙 一堆事
+  A：忙你的 晚上记得
+  B：中午随便吃了点
+  A：晚上办完事再好好吃
+  A：东西备好了 你那边别带生人
+  B：就我一个 放心
+  B：出发了
+  【5月22日】
+  A：我在里面 你从侧门进
+  B：看到了 东西呢
+  A：两箱 你先拿四份 现结 不走账
+  B：数对 尾款给你 现金
+  A：好 下次要提前说 别临时加
+  B：知道 老客户了
+  B：睡到现在 头还晕
+  A：干这个就这样 黑白颠倒
+  B：中午熬了点粥
+  A：养养胃
+  B：这批比上批好 下次再多要点
+  A：先说数 我这边好备
+  B：六份吧
+  A：六份得看那边 最近货紧
+  B：你先给我留着 定金照给
+  A：行 老规矩 老地方
+  【5月23日】
+  B：昨天新闻说最近查得紧 你注意点
+  A：我知道 换个时间 别固定
+  B：那我等你通知
+  B：中午家里来客人 热闹
+  A：你过你的日子 有事我找你
+  B：钱的事我不急 你尽快备货
+  A：放心 分两次给你 别一次拿完
+  B：懂 稳一点好
+  A：就这样 少发消息

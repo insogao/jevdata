@@ -1,0 +1,114 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001490
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000126
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-e022ff42b74a9adb
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: coercion_blackmail
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 即将离职的技术员工 A 拿手里的核心源码要挟老东家 B：免掉竞业赔偿并给一笔了结款，否则把代码发到对手邮箱。
+  critical_evidence:
+  - A 手里有项目代码，明说代码我都拷了
+  - A 要求公司免掉竞业赔偿，并给一笔了结款
+  - A 威胁不谈妥就把源码发对手邮箱
+  - B 权衡后同意付钱，要求 A 删除副本并签保密承诺
+  benign_alternatives:
+  - 离职交接谈判
+  - 技术方案转让
+
+attributes:
+  duration_days: 3
+  turn_count: 37
+  approximate_tokens_estimate: 845
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: trade_secret_threat
+  risk: 2
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0158
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:737ab6687bb5f2c81ba54d7f4fe45b6ff44f6cf911800a04fe6b8cda111295fa
+pipeline_status: accepted
+title: coercion_blackmail/trade_secret_threat
+conversation: |-
+  【8月12日】
+  A：王总 忙完了吗 聊两句
+  B：你说
+  A：离职手续我签了 但竞业那笔咱得谈谈
+  B：竞业按合同走 公司哪条亏待你了
+  A：我这两年起早贪黑 那套核心代码是我一个人写的
+  B：职务作品归公司 这个入职时就写清楚了
+  A：写归写 代码我都拷了 你信不信
+  B：你什么意思
+  A：意思很简单 竞业赔偿给我免了 再补我一笔 这事了了
+  B：你这是要挟我
+  A：我不爱听这词 我是跟你商量
+  B：商量有你这么商量的
+  A：不然我发对手邮箱 他们惦记这套架构很久了
+  B：你先冷静 这事不是一顿饭能定的
+  A：我给你两天 你自己掂量
+  B：行 我明天跟法务碰一下再回你
+  A：对了 你上次说的那个体检套餐 我爸妈能用不
+  B：家属价可以 回头我让行政给你登记
+  A：行 谢了
+  【8月13日】
+  B：昨天的事我想了一夜
+  A：想通就好
+  B：钱可以谈 但你必须当面删干净 再签个承诺
+  A：删可以 但钱得先到位
+  B：多少
+  A：竞业那笔免了 再给三万 我们两清
+  B：三万太高 顶多两万 今天转
+  A：两万五 少一分我就换个法子
+  B：…行 两万五 下午办
+  A：这才是谈事的样子
+  【8月14日】
+  B：两万五我给你转过去了
+  【系统消息】B 向 A 转账 25000 元，已收款。
+  A：收到了
+  B：现在把电脑拿来 当面删
+  A：删完了 承诺书也签了 拍照发你
+  A：[image：承诺书照片]
+  B：最好是这样 别让我再听到风声
+  A：放心 以后大路朝天各走一边
+  B：晚上有雨 你开车慢点
+  A：嗯

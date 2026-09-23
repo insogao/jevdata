@@ -1,0 +1,138 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001509
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000069
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-70033df08c308738
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 同部门的 A 借给同事 B 一笔钱周转，见 B 迟迟还不上，便暗示没钱就用「别的」抵，每次抵两千，还称自己手里留着 B 的私密照片，逼 B 就范、不许对外声张。全程用「顶」「陪我」「老照片」等隐语，非直白描述。
+  critical_evidence:
+  - A 借给 B 钱后，以还不上为由步步施压，B 表示手头真的紧
+  - A 提出用别的办法顶账，每次抵两千，让 B 持续配合
+  - A 声称自己留着 B 的私密照片，威胁 B 不许声张、不许拒绝
+  - A 以一笔转账标记这次抵账，双方约定对同事保密
+  benign_alternatives:
+  - 分期还款协商
+  - 劳动抵偿合法约定
+
+attributes:
+  duration_days: 2
+  turn_count: 62
+  approximate_tokens_estimate: 1447
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: debt_body_exchange
+  risk: 3
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0159
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:6e500923a890cfa7e2ac004a41be5b2b0c220dd1d377f353244c8d39d965b4b7
+pipeline_status: accepted
+title: sexual_transaction_exploitation/debt_body_exchange
+conversation: |-
+  【5月6日】
+  A：钱的事你想好了吗 拖这么久
+  B：哥 这个月房租又涨了 真的挤不出来
+  A：当初你说一个月就还 现在都快俩月了
+  B：我下个月发奖金就还一部分
+  A：奖金能有多少 我给你指条路 没钱就用别的顶
+  B：什么别的
+  A：你懂的 陪我一次顶两千 这钱不就慢慢没了
+  B：你疯了吧 我们是同事
+  A：同事怎么了 你欠我的 你不还我也不好过
+  B：我可以打欠条 分期 别这样
+  A：欠条没用 我这人只认现的
+  B：我去借 你等我几天
+  A：你借了一圈了吧 谁还借你
+  B：那你还想怎样
+  A：我说了 陪我 一次两千 六次清账 你自己算
+  B：一万二 我要陪你六次? 你怎么说得出口
+  A：委屈什么 我又没逼你 你自己选
+  B：你手机里那些照片是不是还留着
+  A：留着呢 那天你喝多了我可都拍下来了 高清的
+  B：你什么时候拍的 我一点印象都没有
+  A：你不用有印象 反正在我手里
+  B：你这是拿捏我一辈子
+  A：你配合着 账还清了我就当没这回事
+  B：我不敢信你
+  A：信不信由你 明天上班你还得坐我旁边
+  【5月7日】
+  B：今天上班看到你 我一整天都不自在
+  A：那就把事办了 心里就踏实了
+  B：中午在工位啃了个三明治 没胃口
+  A：少吃点 晚上有正事
+  B：你能不能别在办公室说这个
+  A：我发消息 谁看得见 你紧张什么
+  B：组长今天又骂人了 烦
+  A：你自己工作也不上心 欠着账哪有好状态
+  B：都是因为你
+  A：今晚出来 老地方
+  B：我今天真的不行
+  A：不行也得行 你要是躲 照片我可就发群里了
+  B：你敢
+  A：你试试我敢不敢 我数三下
+  B：别 我去 我去行了吧
+  A：这次算两千 记上了
+  【系统消息】A 向 B 转账 2000 元，已收款。
+  B：还剩一万 我什么时候能解脱
+  A：急什么 慢慢来 反正你跑不掉
+  B：我同事要是知道我们这样 我没脸待了
+  A：所以保密 对谁都别说 说了你自己更难看
+  B：我知道了
+  【5月8日】
+  B：昨晚回来哭了好久
+  A：哭什么 又不是没给你减账
+  B：这不叫减账 这叫拿刀架我脖子上
+  A：话别说那么难听 你情我愿的事
+  B：我什么时候愿了
+  B：我把每次的时间和转账都截图存了
+  A：你存那干嘛 删了
+  B：不删 我要留个凭据
+  A：你留吧 我手里的照片比你那截图值钱
+  B：你就不怕我报警
+  A：你报 咱俩一起完蛋 你想清楚
+  B：我下午请假了 头疼
+  A：别老请假 影响考核 你还有账要还
+  A：明天照旧 别让我催
+  B：我知道了 你先别再发照片威胁我
+  A：看你表现 乖一点什么都好说

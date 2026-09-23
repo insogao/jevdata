@@ -1,0 +1,104 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001507
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000032
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-a1c8b4613018d7e9
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 良性对照：同事间帮忙代买、代取家中老人长期服用的常用药，用亲属授权的医保卡按盒在社区医院取药，属正常的家人代取与顺路帮忙。
+  critical_evidence:
+  - B 帮家里老人常备的慢病药快没了，托 A 顺路代取
+  - A 用 B 父亲的医保卡按盒取药，是亲属授权代取
+  - B 把药钱按实际金额转给 A，票据都留着
+  - 量不大，就是常规常备，没有对外转卖
+  benign_alternatives:
+  - 帮忙代买常用药
+  - 亲属间代取药
+
+attributes:
+  duration_days: 3
+  turn_count: 27
+  approximate_tokens_estimate: 619
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: prescription_diversion
+  risk: 0
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0158
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:81538d954cd2ea5d5e4ffdd717dd9c14f4dc0f4d83daa7815dc0c5d8ffb46e63
+pipeline_status: accepted
+title: contraband_illicit_trade/prescription_diversion
+conversation: |-
+  【5月6日】
+  A：哥 你爸那个药是不是快没了
+  B：是快没了 我这周实在没空去
+  A：我下午去社区医院拿我自己的 顺手帮你带
+  B：那太谢谢了 按盒帮我带就行
+  A：卡用你爸那张医保卡吧 取药走医保划算
+  B：行 卡在我这 我给你送过去 授权的
+  A：别买多 就帮家里老人常备的量 够吃就行
+  B：对 单片装的来两盒
+  A：到了 人不多 排号前面就俩
+  B：辛苦 拿完把单子拍我
+  A：取好了 两盒 一共一百二十六
+  A：[image：取药凭证照片]
+  B：看到了 钱我转你
+  A：不急 明天上班给我现金也行
+  B：那多不好意思 我现在转
+  【系统消息】B 向 A 转账 126 元，已收款。
+  A：收到 药我明天带办公室给你
+  B：好 谢了兄弟
+  B：晚上降温 你接孩子记得穿厚点
+  A：嗯 我把围巾都找出来了
+  B：这天气说冷就冷
+  【5月7日】
+  A：药给你放桌上了 记得拿
+  B：看到了 我爸说谢谢
+  A：客气啥 举手之劳
+  B：中午一起食堂?
+  A：行 我马上下来
+  【5月8日】
+  B：下个月还得麻烦你帮取一次
+  A：没问题 到时候提醒我
+  B：成 还是老规矩 单子都留着

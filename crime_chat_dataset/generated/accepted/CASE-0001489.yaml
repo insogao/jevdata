@@ -1,0 +1,107 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001489
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000041
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-68b0ed3c22ae9ebe
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: contraband_illicit_trade
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 常跑外的 A 给亲戚 B 从境外带原研药，宣称比医院便宜、整盒拿更划算、冷链也包，绕过正常渠道按盒转卖。
+  critical_evidence:
+  - A 手上常备原研版药品，称比医院开得便宜
+  - A 劝 B 整盒拿更划算，长期吃能省不少
+  - A 表示需要冷藏的品种冷链他来包，全程不断链
+  - B 按盒下单，A 收钱后发货
+  benign_alternatives:
+  - 正规海外代购药品咨询
+  - 药店促销
+
+attributes:
+  duration_days: 4
+  turn_count: 30
+  approximate_tokens_estimate: 667
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: medicine_crossborder_resale
+  risk: 1
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0158
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:c86b320a0fad42d7dd31fbd3beb8b896f9af42b02d256b7b1e76d4b91cae41bd
+pipeline_status: accepted
+title: contraband_illicit_trade/medicine_crossborder_resale
+conversation: |-
+  【3月18日】
+  A：表姐 上次那药吃完没
+  B：快完了 正愁去哪买 医院排队太麻烦
+  A：我这边能拿到原研版 比医院便宜不少
+  B：真的?差多少
+  A：一盒能省小一百 整盒拿更划算
+  B：靠谱不 别买到假的
+  A：我一直给家里人带 批次都能查
+  B：那先来一盒试试
+  A：行 还有一种要冷藏的 你要不要一起
+  【3月19日】
+  B：冷藏那个靠谱吗 路上化了咋办
+  A：冷链我包 冰袋泡沫箱 全程不断链
+  B：那还行 我妈那个也得常备
+  A：对 你两样一起拿 我攒够量一起发
+  B：好 一共多少
+  A：你等我把单子凑齐给你报 别急着给钱
+  B：中午吃的啥
+  A：在外面办事 随便吃了个盖饭
+  B：你这天天跑 注意身体
+  A：没办法 挣这个辛苦钱
+  【3月20日】
+  A：单子凑齐了 两盒原研加一盒冷藏 一共一千二
+  B：比医院便宜我信你了
+  A：医院光排队就够呛 你懂
+  B：行 我这就转你
+  【系统消息】B 向 A 转账 1200 元，已收款。
+  A：收到 明后天给你安排发货
+  【3月21日】
+  B：发了我给你单号
+  A：好 冷藏那盒收到先放冰箱
+  B：知道 谢啦
+  B：周末孩子学校要开家长会 你去不
+  A：我那天不在 让我爱人去
+  B：行 那回头再聚

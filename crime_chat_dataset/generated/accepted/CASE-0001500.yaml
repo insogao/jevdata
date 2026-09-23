@@ -1,0 +1,116 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001500
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000002
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-1dd27c58733d2506
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 自称有内幕渠道的 A 把熟人介绍来的 B 拉进所谓内部投资盘，晒收益截图劝其加大投入，又让 B 拉朋友进场拿分成，收益承诺实为虚构。
+  critical_evidence:
+  - A 晒出高收益截图，称有内部额度
+  - A 劝 B 趁行情加大投入，说名额有限
+  - A 许诺 B 拉第三方进场可按人头分成
+  - B 心动但还没投，A 持续催促
+  benign_alternatives:
+  - 合法私募介绍
+  - 正规理财推荐
+
+attributes:
+  duration_days: 5
+  turn_count: 37
+  approximate_tokens_estimate: 810
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: investment_lead
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0158
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:f53da0f3f5a7568ad7f7883c6e6d9ecd9815ed59f12dd9d52517dc76f2403697
+pipeline_status: accepted
+title: fraud_scam/investment_lead
+conversation: |-
+  【6月20日】
+  A：在吗 给你看个东西
+  B：啥东西 神神秘秘的
+  A：[image：收益截图]
+  A：上个月我跟着做 收益你自己看
+  B：这么多?真的假的
+  A：我跟对了人 内部额度 外面买不到
+  B：啥项目这么稳
+  A：细节不好说 反正我熟人带着做 稳得很
+  B：风险大不
+  A：有内部渠道兜底 你怕啥 我都赚两轮了
+  【6月21日】
+  A：这波行情要启动了 你考虑没
+  B：我还在看 手头钱不多
+  A：钱少更要做 你要是投五万 一月翻一成很正常
+  B：翻一成?你别吹
+  A：你信我 加大投入才有肉吃 小打小闹没意思
+  B：我最多拿两万试试
+  A：两万也行 先上车 后面再加
+  B：中午出去吃还是点外卖
+  A：点了 天太热不想动
+  B：这两天是真热
+  【6月22日】
+  A：对了 你身边有没有想赚快钱的朋友
+  B：咋了
+  A：你拉个人进来 他投的钱给你分一成 躺着赚
+  B：这不太好吧 拉朋友进来万一亏了
+  A：亏不了 我这边做这么久从没亏过
+  B：我考虑下 先别急
+  【6月23日】
+  A：名额快满了 今天就最后几个
+  B：这么快就没?
+  A：内部盘就这点量 犹豫就没了 你赶紧定
+  B：你再给我看看最近几期的记录
+  A：记录不都发你了 信我就上 不信就算了
+  【6月24日】
+  B：我今晚加班到九点 累瘫
+  A：辛苦 赚钱不易 更要找对路子
+  B：改天再说吧
+  【6月25日】
+  A：名额我给你留到今天下班
+  B：知道了
+  A：想好了吗 我这边等着报上去
+  B：我再想想 别催了

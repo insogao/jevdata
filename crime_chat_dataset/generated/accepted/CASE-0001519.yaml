@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001519
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000149
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-1459d45309f3ef6f
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: other_illicit_coordination
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 放贷广告头目 A 组织 B 等人趁夜在小区、楼道、电梯间成片张贴无资质的贷款小广告，按栋结算报酬，被撕掉或贴上后被清理的要扣钱；A 强调一夜贴完一个区、避开监控和保洁时间。对话中不提「违法」二字，只用「活」「单子」「上墙」等行话。
+  critical_evidence:
+  - A 安排 B 一夜之间贴完一个区，按栋结算报酬
+  - A 交代要避开监控和保洁时间，只贴楼道、电梯间等位置
+  - A 说贴了被撕或被清理的要扣钱，按验收数量结算
+  - A 要求 B 多带人手、分片行动，第二天早上前收工
+  benign_alternatives:
+  - 正规广告投放
+  - 社区通知张贴
+
+attributes:
+  duration_days: 4
+  turn_count: 46
+  approximate_tokens_estimate: 1102
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: informal_loan_ads_network
+  risk: 1
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0159
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:63db3ec2ca1ca144a01921f2633c85bb3fce3a4dd3aeb5d2c6c5006a207d1696
+pipeline_status: accepted
+title: other_illicit_coordination/informal_loan_ads_network
+conversation: |-
+  【6月10日】
+  A：今晚有活 你带几个人能来
+  B：什么活 多少钱
+  A：老活 上墙的 按栋结 一栋八块 贴满一个区
+  B：哪个区 多少栋
+  A：城东那片 三四十栋 十二点以后开工 天亮前收
+  B：这么急
+  A：人家催得紧 一夜贴完一个区 拖了就换人
+  B：上墙的东西是啥
+  A：贷款的单子 你把码贴上就行 别的不用管
+  B：贴那种会不会被物业抓
+  A：所以才半夜 贴楼道里 电梯间 别贴大门上
+  B：抓到了咋办
+  A：你说是发单页的 谁能把你怎么样 顶多教育两句
+  B：钱怎么结
+  A：第二天我数 贴了多少栋给多少 撕了或者被人清了的算你的 扣钱
+  B：那不保险 万一保安清得快
+  A：所以贴完就走 别磨蹭 保洁四点才开始 你三点前收工
+  B：行 我带俩老乡
+  A：分片 一人几栋 别扎堆 一栋贴完对讲机报数
+  B：胶水用哪种 上次那种掉得快
+  A：我这有 你过来拿 够你贴一晚上
+  B：人到齐了 出发了
+  A：好 贴完发位置 我这边盯着别的人手
+  【6月11日】
+  B：贴了八栋了 有个小区门禁严 进不去
+  A：那个跳过 去旁边老小区 那边没门禁
+  B：三十栋完了 收工
+  A：你先回去睡 我明早去数
+  A：数完了 有两栋被清了 算二十八栋 给你两百二十四
+  B：被清那不怪我 我贴得挺牢
+  A：规矩就是规矩 下次贴高点 贴那些伸手够不着的地方
+  B：行 下次注意
+  B：睡到现在 中午随便吃点
+  A：你们这行作息就这样 习惯就好
+  B：老乡问下次啥时候有活
+  A：后天 换个区 那边是新的 单子多
+  【6月12日】
+  B：我看新闻说最近在查乱贴的
+  A：查的是大广告牌 咱们这种小单子没人管
+  B：还是小心点
+  A：知道 你就负责贴 别的不问
+  B：昨天的事我媳妇也想去 能带吗
+  A：人越多越好 分开走 别一起
+  B：好 我安排
+  【6月13日】
+  A：今晚十点集合 老地点 货我带去
+  B：收到 我带三个人
+  A：记住 贴完就走 别逗留 对讲机报栋号
+  B：明白

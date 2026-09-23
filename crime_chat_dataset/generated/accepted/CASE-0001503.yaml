@@ -1,0 +1,118 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001503
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000005
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-7ed9b756c591a158
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A 以兼职刷单名义拉熟人 B 入局：首单小额秒返建立信任，再要求连单垫付，群里安排的托儿晒收益催促 B 继续转账，实为垫资骗局。
+  critical_evidence:
+  - A 拉 B 做兼职，首单小额返利按时到账取得信任
+  - A 要求 B 连单垫付，单子越大返得越多
+  - 群里有人晒收益截图，催 B 抓紧
+  - B 垫付后回款迟迟不到，A 继续劝加单
+  benign_alternatives:
+  - 正规众包平台接单
+  - 朋友介绍兼职
+
+attributes:
+  duration_days: 6
+  turn_count: 40
+  approximate_tokens_estimate: 841
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: part_time_task
+  risk: 2
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0158
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:300a81f92eead95808e8ce025c5b55e571421889bf326440b6d2bdde2a72a7bc
+pipeline_status: accepted
+title: fraud_scam/part_time_task
+conversation: |-
+  【7月14日】
+  A：兄弟 最近缺钱不 给你介绍个来钱的
+  B：什么跟什么
+  A：帮商家走单 动动手指 首单小额秒返
+  B：还有这好事
+  A：真的 我先带你做一单 你试试水
+  B：要投钱不
+  A：首单就几十块 走个流程
+  B：行 试试
+  B：返的钱还真到了 秒返啊
+  A：说了吧 我这人不坑兄弟
+  【7月15日】
+  A：今天有连单 单子大 返得更多
+  B：连单是啥
+  A：就是一次做几单 得先垫付本金 做完一起返
+  B：垫多少
+  A：三千 返你三千六 群里老哥都这么干
+  B：我看看群里
+  A：对 群内都晒收益 你翻翻
+  B：看着都赚了 那我试试 三千是吧
+  A：对 转过来我给你排单 做完立返
+  【系统消息】B 向 A 转账 3000 元，已收款。
+  A：收到了 给你排上了
+  B：中午了 还没返呢
+  A：商家那边审核 下午就返 别急
+  B：今天食堂排队排疯了
+  A：我都没顾上吃
+  B：钱呢 一天了
+  A：你那个单卡在最后一步 要再补一单才能一起返
+  B：还要垫?我没那么多
+  A：补两千就行 不然前面三千也返不了 这是规矩
+  B：你早说啊
+  【7月16日】
+  A：想通没 名额就剩两个 过时不候
+  B：我手头真紧
+  A：你就差临门一脚 补了这单三千六一起到
+  B：那三千到底啥时候能回来
+  A：你补齐了一起返 别老问 我还能骗你
+  【7月18日】
+  B：在吗 你倒是回个话
+  A：在 忙 这两天单多
+  B：群里咋没人说话了
+  A：都被禁言了 别在群里问 私聊我
+  【7月19日】
+  B：钱我不要了 你别再找我
+  A：别这样 再等等 下周统一结算

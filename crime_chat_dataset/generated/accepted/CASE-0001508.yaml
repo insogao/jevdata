@@ -1,0 +1,107 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001508
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000043
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-7908af40018df5e1
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 良性对照：做酒水批发的亲戚 A 给开酒吧的 B 正规供货，谈的是回收空瓶、可扫防伪码、夜场专供的合法经销，走票据走账。
+  critical_evidence:
+  - A 做正规酒水批发，长期给 B 的酒吧供货
+  - 讨论回收空瓶做展示陈列，瓶子由 B 这边出
+  - 强调防伪码可查、扫码验真，走正规渠道
+  - 按夜场专供的常规批量结算，正常转账
+  benign_alternatives:
+  - 正规名酒经销
+  - 散酒作坊讨论
+
+attributes:
+  duration_days: 4
+  turn_count: 30
+  approximate_tokens_estimate: 666
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: alcohol_counterfeit_line
+  risk: 0
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0158
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:ab0c03f76a273fe1761b9db07bffcf15aece1e73713516bbd6f9995b33a3f747
+pipeline_status: accepted
+title: contraband_illicit_trade/alcohol_counterfeit_line
+conversation: |-
+  【10月8日】
+  A：表弟 酒吧那边酒快见底了吧
+  B：是快了 这周生意好 得补一批
+  A：我这边正好到了新一批 扫码可查的正品
+  B：多少一件
+  A：整箱拿三百八 比单瓶划算 防伪码能扫过
+  B：能扫就行 客人现在爱扫码验
+  A：对 你摆柜台那两瓶空瓶要不要换换
+  B：瓶子你出还是我出
+  A：瓶子你出 回收的我给你洗干净 陈列用旧的就行
+  B：行 空了给你攒着
+  A：夜场专供那款要不要也带两箱
+  B：带 那款走得好
+  【10月9日】
+  A：今天给你送货 你在店里不
+  B：下午都在
+  A：那我三点过去 带对账单和发票
+  B：还有发票 够正规的哈哈
+  A：必须的 舅舅做这行十年了 不整虚的
+  A：到了 门口卸货
+  B：来了 先搬到后厨
+  A：你点一下 八箱整 单据给你
+  B：数量对 扫码试了两瓶 都能查
+  A：那肯定 假的东西我可不做
+  【10月10日】
+  B：昨晚空了六个瓶 给你留着
+  A：攒着吧 够一箱我来收
+  B：对了 周末外婆生日你回来不
+  A：回 我买了个蛋糕
+  B：那我也早点过去
+  【10月11日】
+  B：货款我转你 八箱的对吧
+  【系统消息】B 向 A 转账 3040 元，已收款。
+  A：收到 对账单你留着
+  B：好 下批到了再喊我

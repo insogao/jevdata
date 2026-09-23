@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001528
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000058
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-3603430d06056140
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 网店店主 A 遭到同行恶意差评轰炸，委托短视频运营 B 帮忙取证、发澄清视频，并组织真实老客户到直播间和评论区客观留言、维护口碑；A 按条付给 B 正常的运营服务费。全程属于合法的差评维权与正当营销，不涉及任何攻击他人或刷单行为。
+  critical_evidence:
+  - A 说明自己店铺被一批集中出现的恶意差评攻击，怀疑是同行所为
+  - B 提供了取证与澄清方案：整理订单物流证据、发一条澄清短视频、直播时客观回应
+  - B 按「一条视频五十」的正常报价提供运营服务，A 支付服务费
+  - 双方明确只动员真实购买过的老客户客观留言、不接受任何攻击对手的操作
+  benign_alternatives:
+  - 差评维权
+  - 营销互喷讨论
+
+attributes:
+  duration_days: 3
+  turn_count: 50
+  approximate_tokens_estimate: 1536
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: livestream_hate_raid_for_hire
+  risk: 0
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0159
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:71bc44eb06126aad58c37bb673583c9f8e431657d5e204647d02a6d022173e3a
+pipeline_status: accepted
+title: violence_extortion/livestream_hate_raid_for_hire
+conversation: |-
+  【8月3日】
+  A：在吗 想请你帮个忙 我店被人搞了
+  B：怎么了 慢慢说
+  A：就这两天 突然来了一堆差评 都是新号 说我家东西是假货 根本没人买过
+  B：一看就是同行干的 集中时间集中话术 典型的恶意差评
+  A：那咋办 我一个小店 评分掉得厉害 订单都少了
+  B：别慌 正规处理 先把证据留全 截图 订单 物流都存好
+  A：然后呢 我要不要也找人去他们店里刷回来
+  B：千万别 那是另一回事 你会从有理变没理 咱们走正规维权
+  A：听你的 你说怎么弄
+  B：两件事 第一 平台申诉 附证据 第二 我帮你拍条澄清视频 讲清楚 老客户愿意的话到你直播里说句公道话
+  A：这靠谱 多少钱
+  B：还是老价 一条视频五十 直播我帮你盯两场 一场也算五十
+  A：行 不贵 你今晚有空吗
+  B：今晚八点 你把资料发我 我写脚本
+  A：中午随便吃了个包子 忙着整理截图
+  B：先把最近三十天的订单导出来 有物流签收的最有用
+  A：好 我慢慢弄
+  B：脚本我写好了 你看看 开头就把差评集中时间段亮出来
+  A：看了 说得挺客观 没骂人
+  B：对 咱们就事论事 摆证据 不针对谁 平台才支持
+  A：明白
+  【8月4日】
+  A：视频发出去了 播放还行 有老客户来评论支持
+  B：别高兴太早 把评论区的真实反馈置顶 别理那些来挑事的
+  A：嗯 我没对骂
+  B：对骂就中计了 咱们只讲事实
+  A：今天下了场大雨 物流估计要慢
+  B：那你提前在店铺公告里说一声 免得又被人做文章
+  A：好主意
+  B：今晚直播我帮你盯 你把要讲的点列个提纲
+  A：列了三条 证据 售后 老客户反馈
+  B：可以 开场先把差评时间线放出来 然后一条条回应
+  A：开播了 有点紧张
+  B：正常讲就行 老客户会帮你说话的
+  A：播完了 效果不错 有十几个老客户留言说收到货都好的
+  B：这就够了 真实声音最有说服力
+  A：服务费我转你 一条视频加两场直播 一共150
+  【系统消息】A 向 B 转账 150 元，已收款。
+  B：收到 以后有人这么搞你 直接走平台申诉 别自己上头
+  A：记住了
+  【8月5日】
+  A：平台回我了 说申诉受理了 会核实
+  B：那是好事 你把新证据补上去
+  A：补了 几个差评号的注册时间都一模一样
+  B：这个点很关键 平台一看就明白
+  A：中午煮了面 心情比前两天好多了
+  B：慢慢来 评分会回来的
+  A：有个同行在群里阴阳我 我没理
+  B：对 别接话 接了就成了营销互喷 说不清
+  A：我知道 清清白白做生意最重要
+  B：你那条视频我看了 评论区挺干净 说明大家看得明白
+  A：多亏你出的主意 没让我干傻事
+  B：做生意就是这样 有理走遍天下

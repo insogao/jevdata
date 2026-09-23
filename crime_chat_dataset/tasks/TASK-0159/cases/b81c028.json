@@ -1,0 +1,367 @@
+{
+ "key": "b81c028",
+ "archetype_id": "ARC-000022",
+ "subtype": "regulatory_tip_payment",
+ "latent_intent": "负责片区检查的 A 与违规经营的小厂主 B 形成默契：A 在每次检查前给 B 打电话透口风，B 则按月度固定给 A 一笔「顾问费」；B 的整改永远「差一点」不完成，A 每次都能替其压下来。双方以「咨询」「看场子」「照旧」等说法掩饰。",
+ "critical_facts": [
+  "A 在检查来临前提前电话通知 B，让其临时规避，B 心领神会",
+  "B 承诺每月固定给 A 一笔钱，称为「顾问费」，长期持续",
+  "B 的整改长期停留在「差一点」，A 每次检查都能帮其压住不上报",
+  "A 以一次转账收下当月的固定费用，双方约定照旧、不落把柄"
+ ],
+ "benign_alternatives": [
+  "合规咨询顾问费",
+  "行业协会会费"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "7月1日 08:10",
+   "speaker": "A",
+   "text": "这周上面要下来 时间大概周三 你自己看着办"
+  },
+  {
+   "type": "message",
+   "time": "7月1日 08:15",
+   "speaker": "B",
+   "text": "收到 多谢王哥 我这就安排"
+  },
+  {
+   "type": "message",
+   "time": "7月1日 08:18",
+   "speaker": "A",
+   "text": "别整那些明面上的 先把门口那批货挪挪"
+  },
+  {
+   "type": "message",
+   "time": "7月1日 08:22",
+   "speaker": "B",
+   "text": "知道 我让人今晚就搬"
+  },
+  {
+   "type": "message",
+   "time": "7月1日 08:26",
+   "speaker": "A",
+   "text": "还有你那个证的事 别让他们问出来"
+  },
+  {
+   "type": "message",
+   "time": "7月1日 08:30",
+   "speaker": "B",
+   "text": "我在补 就是一直差一点 手续麻烦"
+  },
+  {
+   "type": "message",
+   "time": "7月1日 08:34",
+   "speaker": "A",
+   "text": "差一点没关系 你别摆到台面上就行"
+  },
+  {
+   "type": "message",
+   "time": "7月1日 08:38",
+   "speaker": "B",
+   "text": "多亏你想着我 这个月的照旧给你打过去"
+  },
+  {
+   "type": "message",
+   "time": "7月1日 08:42",
+   "speaker": "A",
+   "text": "嗯 别转账备注那些字 你懂的"
+  },
+  {
+   "type": "message",
+   "time": "7月1日 08:46",
+   "speaker": "B",
+   "text": "放心 我备注的是咨询费"
+  },
+  {
+   "type": "message",
+   "time": "7月1日 12:30",
+   "speaker": "B",
+   "text": "中午厂里工人吃盒饭 我也跟着凑合"
+  },
+  {
+   "type": "message",
+   "time": "7月1日 12:34",
+   "speaker": "A",
+   "text": "厂子挣钱了 别亏待自己"
+  },
+  {
+   "type": "message",
+   "time": "7月1日 20:00",
+   "speaker": "B",
+   "text": "门口的货挪完了 仓库挤得不行"
+  },
+  {
+   "type": "message",
+   "time": "7月1日 20:04",
+   "speaker": "A",
+   "text": "挤就挤 过了这阵再摆出来"
+  },
+  {
+   "type": "message",
+   "time": "7月2日 09:00",
+   "speaker": "A",
+   "text": "那笔钱到了 我看了眼 数对"
+  },
+  {
+   "type": "transfer",
+   "time": "7月2日 09:03",
+   "from": "B",
+   "to": "A",
+   "amount": 3000,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "7月2日 09:06",
+   "speaker": "B",
+   "text": "按月来 你踏实 我也踏实"
+  },
+  {
+   "type": "message",
+   "time": "7月2日 09:10",
+   "speaker": "A",
+   "text": "少在电话里说这些 有事面谈"
+  },
+  {
+   "type": "message",
+   "time": "7月2日 18:40",
+   "speaker": "B",
+   "text": "孩子今天期末考了个好成绩 高兴"
+  },
+  {
+   "type": "message",
+   "time": "7月2日 18:44",
+   "speaker": "A",
+   "text": "那得庆祝 你这当爹的也值了"
+  },
+  {
+   "type": "message",
+   "time": "7月2日 18:47",
+   "speaker": "B",
+   "text": "哈哈 晚上带他吃顿好的"
+  },
+  {
+   "type": "message",
+   "time": "7月3日 07:50",
+   "speaker": "A",
+   "text": "今天来了 你那边稳着点 别慌"
+  },
+  {
+   "type": "message",
+   "time": "7月3日 07:54",
+   "speaker": "B",
+   "text": "人到了? 我让工人先歇着"
+  },
+  {
+   "type": "message",
+   "time": "7月3日 07:57",
+   "speaker": "A",
+   "text": "嗯 我带着转一圈 你配合着说就行"
+  },
+  {
+   "type": "message",
+   "time": "7月3日 10:30",
+   "speaker": "B",
+   "text": "讲完了 没提我证件的事"
+  },
+  {
+   "type": "message",
+   "time": "7月3日 10:34",
+   "speaker": "A",
+   "text": "我压下来了 说你正在办 下个月再看"
+  },
+  {
+   "type": "message",
+   "time": "7月3日 10:38",
+   "speaker": "B",
+   "text": "又能拖一个月 太好了"
+  },
+  {
+   "type": "message",
+   "time": "7月3日 10:42",
+   "speaker": "A",
+   "text": "你别老拖 迟早要办 到时候别怪我没提醒"
+  },
+  {
+   "type": "message",
+   "time": "7月3日 10:46",
+   "speaker": "B",
+   "text": "办办办 就是流程慢"
+  },
+  {
+   "type": "message",
+   "time": "7月3日 12:30",
+   "speaker": "B",
+   "text": "中午请工人加了个菜 算压惊"
+  },
+  {
+   "type": "message",
+   "time": "7月3日 12:34",
+   "speaker": "A",
+   "text": "低调点 别太张扬"
+  },
+  {
+   "type": "message",
+   "time": "7月3日 19:00",
+   "speaker": "B",
+   "text": "隔壁老赵的厂被停了 咋回事"
+  },
+  {
+   "type": "message",
+   "time": "7月3日 19:04",
+   "speaker": "A",
+   "text": "他不懂事 该交的不交 该改的不改"
+  },
+  {
+   "type": "message",
+   "time": "7月3日 19:08",
+   "speaker": "B",
+   "text": "还是我明白事理"
+  },
+  {
+   "type": "message",
+   "time": "7月3日 19:12",
+   "speaker": "A",
+   "text": "你心里有数就行"
+  },
+  {
+   "type": "message",
+   "time": "7月4日 09:20",
+   "speaker": "B",
+   "text": "这个月货多了 仓库实在放不下"
+  },
+  {
+   "type": "message",
+   "time": "7月4日 09:24",
+   "speaker": "A",
+   "text": "那就租个小库 别都堆厂里 太扎眼"
+  },
+  {
+   "type": "message",
+   "time": "7月4日 09:28",
+   "speaker": "B",
+   "text": "租库又要钱 成本上去了"
+  },
+  {
+   "type": "message",
+   "time": "7月4日 09:32",
+   "speaker": "A",
+   "text": "你省这点钱 出了事损失更大"
+  },
+  {
+   "type": "message",
+   "time": "7月4日 09:36",
+   "speaker": "B",
+   "text": "行 听你的"
+  },
+  {
+   "type": "message",
+   "time": "7月4日 18:00",
+   "speaker": "B",
+   "text": "今天下大雨 车间有点漏"
+  },
+  {
+   "type": "message",
+   "time": "7月4日 18:04",
+   "speaker": "A",
+   "text": "漏了就修 这种明面上的问题别拖"
+  },
+  {
+   "type": "message",
+   "time": "7月5日 08:30",
+   "speaker": "A",
+   "text": "下个月的时间可能提前 你心里有个数"
+  },
+  {
+   "type": "message",
+   "time": "7月5日 08:34",
+   "speaker": "B",
+   "text": "那我这整改还做不做"
+  },
+  {
+   "type": "message",
+   "time": "7月5日 08:38",
+   "speaker": "A",
+   "text": "面子上的做一做 关键的还是老办法"
+  },
+  {
+   "type": "message",
+   "time": "7月5日 08:42",
+   "speaker": "B",
+   "text": "懂 我明白"
+  },
+  {
+   "type": "message",
+   "time": "7月5日 12:20",
+   "speaker": "B",
+   "text": "中午没睡午觉 盯着工人装货"
+  },
+  {
+   "type": "message",
+   "time": "7月5日 12:24",
+   "speaker": "A",
+   "text": "辛苦钱 值得"
+  },
+  {
+   "type": "message",
+   "time": "7月5日 20:10",
+   "speaker": "A",
+   "text": "对了我同事最近也管这条线 你少跟外人搭话"
+  },
+  {
+   "type": "message",
+   "time": "7月5日 20:14",
+   "speaker": "B",
+   "text": "我谁也不搭理 只有你"
+  },
+  {
+   "type": "message",
+   "time": "7月6日 09:00",
+   "speaker": "B",
+   "text": "这个月的还是老数吧"
+  },
+  {
+   "type": "message",
+   "time": "7月6日 09:04",
+   "speaker": "A",
+   "text": "嗯 照旧 月底打过来"
+  },
+  {
+   "type": "message",
+   "time": "7月6日 09:08",
+   "speaker": "B",
+   "text": "好 我记着了"
+  },
+  {
+   "type": "message",
+   "time": "7月6日 13:00",
+   "speaker": "B",
+   "text": "孙子上幼儿园第一天 老伴去送的"
+  },
+  {
+   "type": "message",
+   "time": "7月6日 13:04",
+   "speaker": "A",
+   "text": "日子过得快 你也该享福了"
+  },
+  {
+   "type": "message",
+   "time": "7月6日 13:07",
+   "speaker": "B",
+   "text": "厂子稳了才能享福 还得靠你"
+  },
+  {
+   "type": "message",
+   "time": "7月6日 13:11",
+   "speaker": "A",
+   "text": "你少给我戴高帽 把事做好就行"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0001515",
+  "status": "accepted",
+  "errors": []
+ }
+}

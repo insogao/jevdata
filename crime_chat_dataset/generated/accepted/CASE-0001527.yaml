@@ -1,0 +1,124 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001527
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000090
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-e792826c5c24519a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A 以「日结五百」为诱饵向在校学生 B 收购银行卡、U 盾和手机号一整套，要求卡片日均流水额度越大越好，还让 B 手持身份证与银行卡合影留档；A 声称只是「走账过一下」，实为帮人过渡不明资金。
+  critical_evidence:
+  - A 提出日结五百、按天使用 B 名下的一套卡和账号，用完归还
+  - A 强调卡的额度越大越好，最好是一类账户，流水多也不怕
+  - A 要求 B 手持身份证和银行卡拍照发给他留档
+  - A 用「走账过一下」「帮公司过渡」等说法解释用途，回避资金来源
+  benign_alternatives:
+  - 废品回收创业讨论
+  - 银行卡办卡优惠
+
+attributes:
+  duration_days: 3
+  turn_count: 48
+  approximate_tokens_estimate: 1367
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: card_four_piece_pool
+  risk: 3
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0159
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:d647f997c300d9846de24fe59a54b8c8687d309dd9e274399bd996a70d4ccf46
+pipeline_status: accepted
+title: money_laundering_obfuscation/card_four_piece_pool
+conversation: |-
+  【10月20日】
+  A：同学 上次说的那个事 考虑得咋样了
+  B：有点怕 那个卡不是随便能借人的吧
+  A：怕啥 又不是不还你 就是走个账过一下 当天用完当天还
+  B：一天给多少
+  A：日结五百 你啥也不用干 卡放着就行
+  B：就一张卡?
+  A：手机号也得给我用一下 收验证码 一套给你算齐
+  B：我这张是学校里发的 额度不大
+  A：那你去办张一类卡 额度越大越好 最好日限额高的 流水多也不怕
+  B：办卡干嘛 你不是有过账的吗
+  A：公司业务量上来了 小额卡不够用 别问那么多
+  B：会留记录吗
+  A：就过一下 当天进当天转走 跟你没关系
+  B：那钱是谁的
+  A：公司的 帮客户过渡一下 你就当兼职 别想太多
+  A：对了我还要个东西 你拿身份证和卡拍张照 手举着 一起发我
+  B：为啥要拍照
+  A：内部登记 证明这卡是你本人同意借的 免得以后扯皮
+  B：听着还正规
+  A：本来就是正规公司 你以为随便谁都收啊
+  B：我先想想 下午还有课
+  A：想清楚 名额就两个 明天还缺人我就给别人了
+  B：下课了 食堂都没菜了 泡了包面
+  A：学生就是辛苦 跟着我做几天 生活费就有着落了
+  【10月21日】
+  A：想好了没 我这今天急用
+  B：我卡里还有生活费 能先取出来吗
+  A：你先取出来 卡给我用 生活费我另给你
+  B：行 我今天去把卡腾出来
+  A：拍照那个别忘了 手持身份证 卡面朝上
+  B：好
+  B：卡空出来了 照片也拍了 现在发你?
+  A：发吧 密码先改成我给你的那个 手机号这几天别停机
+  B：为什么要改密码
+  A：走账要操作 不改密码我进不去 放心 用完给你改回来
+  B：好吧
+  A：今天第一笔到了 五百日结我先给你 晚上再转点
+  【系统消息】A 向 B 转账 500 元，已收款。
+  B：收到了 比打工强
+  A：所以让你办大额度 流水越大你挣得越多
+  【10月22日】
+  B：我手机收到好几条转账提醒 都是大额进出
+  A：正常 过账就是这样 你不用管 也别回那些短信
+  B：有笔好像被银行拦了 说我账户异常
+  A：没事 换个通道走 你明天去柜台把那个限制解一下
+  B：我有点后悔了 万一出事找我咋办
+  A：能出啥事 卡是你的 钱不是你的 你怕啥
+  B：我查了 帮人过账好像犯法
+  A：谁跟你说的 别听网上吓唬 我做这行两年了
+  B：卡我先要回来 钱我不赚了
+  A：卡还在走账 现在拿不了 你再等等

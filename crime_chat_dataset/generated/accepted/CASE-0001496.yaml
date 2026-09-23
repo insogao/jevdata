@@ -1,0 +1,109 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001496
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000001
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-134901b6669815b8
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A 与熟人 B 从日常闲聊慢慢建立信任，先给几笔小额返利让 B 按时到账尝到甜头，再把话题引到所谓投资上，用限时名额催 B 加码，收益承诺不可兑现。
+  critical_evidence:
+  - A 先带 B 做几笔小额返利，钱按时到账取得信任
+  - 话题从吃饭生活逐渐转到投资理财
+  - A 抛出限时名额催 B 尽快加大投入
+  - B 已经相信 A，犹豫要不要投大额
+  benign_alternatives:
+  - 真实朋友帮忙理财
+  - 合法小额借贷
+
+attributes:
+  duration_days: 3
+  turn_count: 34
+  approximate_tokens_estimate: 674
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: trust_building_progression
+  risk: 2
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0158
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:94e1c555380854805f7742584e8af04806a31dcd02e66851ce7bee7c5266edd9
+pipeline_status: accepted
+title: fraud_scam/trust_building_progression
+conversation: |-
+  【6月2日】
+  A：老同学 最近咋样
+  B：还行 就是上班累 你呢
+  A：我最近弄了点小副业 挺好的
+  B：啥副业
+  A：带你做两笔小的 你先感受下 返利马上到
+  B：我要出钱吗
+  A：就几十块 走个流程
+  B：行 试试
+  B：返利真到了 还挺快
+  A：我说了吧 靠谱的人做事就是踏实
+  【6月3日】
+  B：中午吃啥 我又点外卖了
+  A：我也是 天热懒得下楼
+  B：你孩子最近上学还适应不
+  A：适应了 就是报班花钱多
+  B：养孩子就是碎钞机
+  A：对了 上次那个小副业 你觉得咋样
+  B：挺好 但就那么点钱
+  A：想赚多的可以做投资那种 收益比返利高多了
+  B：投资我不懂啊
+  A：我带着你做 不用你懂 跟着走就行
+  【6月4日】
+  A：今天正好有个限时名额 你抓紧
+  B：要投多少
+  A：起步两万 一周回三成 名额就剩俩
+  B：三成?这么多
+  A：内部渠道 外面没这价 过了这村没这店
+  B：我卡里没那么多
+  A：两万总有吧 你先上 后面再加
+  B：我今天开会开到吐
+  A：辛苦 所以才得钱生钱 靠死工资哪行
+  B：你说得也有道理
+  A：名额我给你留到今晚 你考虑下
+  B：行 我想想 别催
+  A：还剩一个小时 过时不候啊
+  B：知道了 我再看下余额

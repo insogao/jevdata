@@ -1,0 +1,113 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001501
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000062
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-5248e4fffd88fda2
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A 长期向熟人 B 出售素人私密影像素材，按套计价，样品打码试看、付款后走网盘秒发，属私密影像材料的地下买卖。
+  critical_evidence:
+  - A 手里有素人原创题材的素材，按套对外出售
+  - 先发打码样品给 B 试看，满意再谈价
+  - B 付款后 A 通过网盘秒发给货，删档不留存
+  - 双方约定更新频率，B 是老主顾
+  benign_alternatives:
+  - 摄影约拍合作
+  - 情侣间分享
+
+attributes:
+  duration_days: 6
+  turn_count: 34
+  approximate_tokens_estimate: 640
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: photo_material_trade
+  risk: 3
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0158
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:82b86a894dba8b29c513934a063ddd18a171778320e0bd2e13daf19512e6d3a0
+pipeline_status: accepted
+title: sexual_transaction_exploitation/photo_material_trade
+conversation: |-
+  【1月5日】
+  A：在吗 新到了一批
+  B：啥题材
+  A：素人原创的 生活场景那种 你懂的
+  B：看看成色
+  A：样品给你打码 先看感觉
+  A：[image：打码样品缩略图]
+  B：画质一般啊 这次就这点
+  A：整套清楚多了 样品都压缩过
+  B：一套多少
+  A：老规矩 一套六百 更新快
+  B：比上次贵
+  A：这批素人不好找 新面孔 你外面拿不到
+  B：行吧 先来一套
+  【1月6日】
+  A：昨晚睡了没
+  B：睡了 今天还得早会
+  A：打工人命 我这也刚起
+  B：昨晚那个先给我吧
+  A：转过来我就发 过网盘 秒发
+  B：文件大不 别又半天传不完
+  A：不大 分卷发 两分钟的事
+  B：好
+  【系统消息】B 向 A 转账 600 元，已收款。
+  A：收到了 链接发你了 记得尽快转存
+  B：在下了
+  A：转存完告诉我 我这边要清档
+  B：好了
+  【1月7日】
+  A：周末更新 还有两套 你要不要留
+  B：先留一套
+  A：行 我给你留着 别催
+  B：对了 你上次说的那个硬盘买了没
+  A：买了 加了个柜子 现在踏实了
+  B：还是稳妥点好
+  【1月8日】
+  A：外面降温了 你记得加衣服
+  B：嗯 你也是
+  【1月9日】
+  A：这波的都出得差不多了 下周再上新
+  B：行 有新面孔喊我

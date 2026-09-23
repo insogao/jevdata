@@ -1,0 +1,129 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001510
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000005
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-0c609f5f486e1e4a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: fraud_scam
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 自称兼职招募方的 A 以「刷单返利」为名招揽 B，先给一单小额任务并迅速返现建立信任，随后要求 B 连做多单、自己先垫付货款，并让群里的托儿晒收益截图；B 垫付后对方以任务未完成、需要继续做单才能提现为由拖延。
+  critical_evidence:
+  - A 先派一单十元的小任务并立刻连本带利返现，让 B 尝到甜头
+  - A 声称连做三单收益翻倍，但要求 B 先自行垫付货款，做完统一结算
+  - 群里有多个账号晒出高额到账截图，不断怂恿 B 加码
+  - B 转账垫付后 A 以「任务未完成、需要再做一单才能解冻提现」为由继续索要
+  benign_alternatives:
+  - 正规众包平台接单
+  - 朋友介绍兼职
+
+attributes:
+  duration_days: 2
+  turn_count: 53
+  approximate_tokens_estimate: 1667
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: part_time_task
+  risk: 3
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0159
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:1d6f151c82d89320346b7863f65484ec78949107d21463ebbddaa9a21aaf3174
+pipeline_status: accepted
+title: fraud_scam/part_time_task
+conversation: |-
+  【9月10日】
+  A：亲 看到你申请兼职了 我们这边是电商店铺做数据 日结 有兴趣吗
+  B：什么数据 要我做什么
+  A：很简单 帮店铺下单走个量 不用真收货 做完就返 佣金一单一结
+  B：会不会要我垫钱啊
+  A：先给你一个小单试试 十块钱 你出十块 我返你十五 秒到账 你先感受下
+  B：才十块 试试就试试
+  A：来 点这个链接 拍下不付款 截图发我 我给你代付 你先垫十块走个流程
+  A：好了 返你十五 收到了吧
+  B：收到了 还挺快
+  A：我们这行讲的就是信誉 做久了日入两三百很正常
+  B：那再做几单
+  A：现在有个连单任务 三单一起做 佣金翻倍 但需要你先垫货款 做完平台统一结算
+  B：垫多少
+  A：三单加起来两百 做完返你三百 一小时就到
+  B：有点多啊 我考虑下
+  A：你看群里 大家都做过 收益截图一堆
+  A：你看 我给你截的群里的 刚做完三单 到账三百 都在谢老板
+  A：这是老客户了 做了半个月 现在一天好几百
+  B：那行 我试试 怎么垫
+  A：你先转两百到我这边 我帮你统一下单 省得你一个个点
+  【系统消息】B 向 A 转账 200 元，已收款。
+  A：收到 稍等 我在给你匹配任务
+  B：好了没 怎么还没返
+  A：系统显示你这单是组合任务 还差一单没完成 得把第三单也做了才能一起结
+  B：你事先没说还有一单啊
+  A：这是系统判定的 我也没办法 你补一百五做完 之前的两百加佣金一起返你
+  B：我没那么多钱了
+  A：就差这一步 不做前面的就卡住了拿不出来 你想想
+  B：先吃个饭再说 心烦
+  A：别拖 任务有时效的 过点系统就清零了
+  B：这不是逼我吗
+  A：群里有人刚补完 到账了 你看
+  A：群里刚有人补完最后一单 连本带佣六百到账 截图发你了
+  B：好吧 我再转一百五 这是最后一次
+  【系统消息】B 向 A 转账 150 元，已收款。
+  A：收到 正在提交
+  B：到账了没 我等着这钱交话费
+  A：系统又卡了 说你账户有风险 需要再做个验证单 九十九 做完一起提
+  B：你耍我呢 一次次加钱
+  A：我干嘛耍你 大家都这么走 你做完这次保证到账
+  B：我不做了 你把前面的钱退我
+  A：任务没完成退不了 平台规则 你要不做就白做 前面也拿不回
+  B：晚上跟我妈说了这事 她让我报警
+  A：报什么警 我们正经公司 你看看你签的协议
+  B：我什么时候签协议了
+  A：下单前那个勾选就是 别闹 做完这单啥事没有
+  B：我查了下 这就是骗人的 前面返小钱引我上钩
+  A：你这人真没意思 好心带你赚钱
+  B：钱我不要了 你别再找我
+  A：随你 错过这村没这店
+  【9月11日】
+  B：我昨晚把聊天记录都存下来了 准备去派出所问问
+  A：你爱咋咋 反正钱是自愿转的
+  B：群里那几个晒图的我看了 头像都是新号 你们一伙的吧
+  A：少血口喷人
+  B：我认栽 就当买个教训 提醒我同事别再上当

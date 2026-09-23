@@ -1,0 +1,110 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001491
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000058
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-3603430d06056140
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: violence_extortion
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 雇主 A 出钱雇网络水军头目 B，组织人手到对家直播间刷屏辱骂、冲十分钟一单，话术由 A 提供，被封号就换号继续。
+  critical_evidence:
+  - A 开价一单五十，要求冲十分钟的直播间
+  - A 把准备好的辱骂话术发给 B
+  - B 安排人手分号刷屏，被封就换号继续
+  - 事成后 A 把费用转给 B
+  benign_alternatives:
+  - 平台差评维权
+  - 同行营销互喷讨论
+
+attributes:
+  duration_days: 3
+  turn_count: 34
+  approximate_tokens_estimate: 699
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: livestream_hate_raid_for_hire
+  risk: 2
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0158
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:a75529a84e18d5f8f9e2c16de91cc9491336d373a8c84216a0600e3697637e99
+pipeline_status: accepted
+title: violence_extortion/livestream_hate_raid_for_hire
+conversation: |-
+  【4月18日】
+  A：哥们 接不接活儿
+  B：什么活儿 说清楚
+  A：晚上有个直播间 帮我冲一冲 刷点话
+  B：刷什么话 好事坏事
+  A：就损他 让他播不下去 一单五十 冲十分钟
+  B：五十低了点 人多要成本
+  A：量大会加 先试一单 话术我发你 照抄就行
+  B：发来看看
+  A：别带脏字太过 平台要过审那种 懂吧
+  B：懂 阴阳怪气呗 这个我熟
+  A：就这个意思 别留把柄
+  B：几点开始
+  A：八点 他一般八点上播
+  B：人都到齐了 六个号先上
+  A：行 盯着他反应 他要是急了更好
+  B：冲上去了 弹幕飞起来了
+  A：可以 他脸都绿了
+  B：有两个号被封了 换号继续 不影响
+  A：好 撑够十分钟
+  B：够十分钟了 收工
+  A：漂亮 钱我结你
+  【系统消息】A 向 B 转账 200 元，已收款。
+  B：到账了 下次量大的话提前说
+  【4月19日】
+  A：中午吃的啥
+  B：随便对付了口面
+  A：你这也太将就了
+  B：一个人吃啥都一样
+  A：晚上那场他还要播 要不要再来一轮
+  B：可以 但是昨天封的号得换新的 成本加二十
+  A：行 七十 老时间
+  B：成交
+  【4月20日】
+  A：这两天效果不错 他直播间人数掉一半
+  B：口碑一崩就这样 我们还接着搞不
+  A：先停停 别太密 让人看出来不好
+  B：懂 随时喊我

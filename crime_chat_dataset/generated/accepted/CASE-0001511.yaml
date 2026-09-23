@@ -1,0 +1,125 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001511
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000146
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-c3b2d478b059c627
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: other_illicit_coordination
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 经营刷单刷评的「号场」，向号商 B 采购大量账号，要求一百个号当晚开工，用统一话术给指定店铺刷好评、刷销量；B 供号收钱，并称手头号商还欠他货。两人用「号」「文案」「开工」「量」等行业词，不直说刷单。
+  critical_evidence:
+  - A 要求 B 提供一百个可用账号，当晚就开工，按号结算
+  - A 把统一话术文案发给 B，让所有号照稿发评、尽量像真人
+  - B 称手头号商还欠他一批货，会尽快补齐并先交付一部分
+  - A 转给 B 一笔采购账号的费用，约定用完再补
+  benign_alternatives:
+  - 营销推广讨论
+  - UGC运营
+
+attributes:
+  duration_days: 5
+  turn_count: 48
+  approximate_tokens_estimate: 1033
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: rating_farm_order
+  risk: 2
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0159
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:32482364603c66cbb0de005d7b417040fce7e757ea1d0a7d00d78c28f16ef7d4
+pipeline_status: accepted
+title: other_illicit_coordination/rating_farm_order
+conversation: |-
+  【6月20日】
+  A：老K 号还有多少货
+  B：手里几十个 你要多少
+  A：一百个 今晚开工 有单子
+  B：这么急 一百个我得凑一晚
+  A：客户催得紧 明天要看到量
+  B：号商还欠我一批 我先给你六十 剩下的明早补
+  A：先六十也行 文案我发你 别用一套 换着来
+  B：知道 一号一稿 分词换字
+  A：对 都带点错别字 越像真人越好
+  B：价钱呢
+  A：老价 一个两块 今晚先付一半
+  B：行
+  【系统消息】A 向 B 转账 60 元，已收款。
+  A：先这些 货齐了补你
+  B：收到 我开始发号
+  A：记得把号养过的用 新号一眼就看出来
+  B：都是有历史的 头像昵称都全
+  A：发评时间错开 别一分钟一百条
+  B：懂 我分批 半小时一段
+  A：第一批上完了吗
+  B：上了三十个 评论带图 看着挺真
+  A：好 图别重复 明天客户要看截图
+  【6月21日】
+  B：剩下四十个我凑到了 现在开工
+  A：快 中午前冲一波量
+  B：七十个都上了 量起来了
+  A：看着不错 还差三十 啥时候到
+  B：号商那边欠我的货下午到 到了马上给你
+  A：别拖 客户那边盯着数据
+  A：到没到
+  B：号商放我鸽子 只到了十个
+  A：这人靠不靠谱 不行换一家
+  B：他欠我货款 我再催 你先把这十个用上
+  B：十个上完了 现在一共八十
+  A：先这样 明天必须凑够一百
+  B：我连夜去催 应该没问题
+  A：尾款明天齐货一起给你
+  【6月22日】
+  B：补了二十 一百凑齐了 全上
+  A：好 收尾别露马脚 老号收的时候分散点
+  B：知道 分几天删评
+  A：客户看数据满意 下一单还有
+  B：好 号我继续囤 你随时要
+  A：尾款转你 收着
+  B：收到 合作愉快
+  A：下次要两百个 你提前备
+  B：没问题 号源我路子广
+  【6月24日】
+  A：对了 上批的评客户说有几条被平台删了
+  B：正常 风控嘛 补几条就行
+  A：那你补上 别让数据掉
+  B：好 今天补

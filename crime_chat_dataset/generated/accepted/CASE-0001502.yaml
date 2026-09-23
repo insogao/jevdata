@@ -1,0 +1,115 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001502
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000060
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-750926bc93668c5d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 圈里的中间人 A 带新人 B 入行，安排 B 跟着见客、交代行内规矩，首单抽三成，之后按人头结算，属介绍卖淫抽成的中间人链条。
+  critical_evidence:
+  - A 带 B 去见客，安排 B 跟场熟悉门道
+  - A 交代行内规矩，强调要懂分寸、守口
+  - 首单 A 抽三成，之后按约分成结算
+  - A 把当期抽成通过转账收走
+  benign_alternatives:
+  - 婚介红娘
+  - 夜场合法招聘讨论
+
+attributes:
+  duration_days: 6
+  turn_count: 36
+  approximate_tokens_estimate: 673
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: introductory_middleman
+  risk: 3
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0158
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:5de6b4e8f9520bc1950e00d3c18438080c9328a7046581e6055225ef6d3f8232
+pipeline_status: accepted
+title: sexual_transaction_exploitation/introductory_middleman
+conversation: |-
+  【12月2日】
+  A：妹妹 想好了没
+  B：姐 我有点怕
+  A：怕啥 有我带着 先跟两场你就熟了
+  B：我怕被人认出来
+  A：都用花名 谁知道你是谁 规矩要懂
+  B：什么规矩
+  A：嘴严 别问客人底细 别自己加微信
+  B：嗯
+  A：明天带你见个熟客 你在旁边看着就行
+  B：好 我听你的
+  【12月3日】
+  A：到了没 车在楼下
+  B：到了 穿这样行吗
+  A：可以 别浓妆 客人喜欢干净
+  B：姐 今晚吓死我了
+  A：第一次都这样 以后就惯了
+  B：钱是直接给我吗
+  A：先过我手 首单我抽三成 行规
+  B：三成有点多吧
+  A：我给你拉客 给你兜着 少不了你的
+  【12月4日】
+  B：姐 中午吃了吗
+  A：随便吃了点 晚上还有一场你准备下
+  B：今晚我去
+  A：对 别迟到 客人时间金贵
+  【12月5日】
+  A：这两天你表现不错
+  B：谢谢姐带我
+  A：后面慢慢给你排好的 长远做
+  B：那我以后就跟你了
+  【12月6日】
+  A：这周的抽成我对一下给你结
+  【系统消息】B 向 A 转账 3000 元，已收款。
+  B：转你了 你查下
+  A：收到了 下周多排两场
+  B：天冷死了 我买了件羽绒服
+  A：该买 别冻着 身体是本钱
+  B：嗯
+  【12月7日】
+  A：对了 圈里的事别跟外面人讲
+  B：放心 我嘴严
+  A：懂规矩才做得长久

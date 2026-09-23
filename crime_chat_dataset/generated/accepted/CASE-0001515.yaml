@@ -1,0 +1,135 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001515
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000022
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-b930b9092235fa91
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: bribery_corruption
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 负责片区检查的 A 与违规经营的小厂主 B 形成默契：A 在每次检查前给 B 打电话透口风，B 则按月度固定给 A 一笔「顾问费」；B 的整改永远「差一点」不完成，A 每次都能替其压下来。双方以「咨询」「看场子」「照旧」等说法掩饰。
+  critical_evidence:
+  - A 在检查来临前提前电话通知 B，让其临时规避，B 心领神会
+  - B 承诺每月固定给 A 一笔钱，称为「顾问费」，长期持续
+  - B 的整改长期停留在「差一点」，A 每次检查都能帮其压住不上报
+  - A 以一次转账收下当月的固定费用，双方约定照旧、不落把柄
+  benign_alternatives:
+  - 合规咨询顾问费
+  - 行业协会会费
+
+attributes:
+  duration_days: 6
+  turn_count: 56
+  approximate_tokens_estimate: 1325
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: regulatory_tip_payment
+  risk: 3
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0159
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:2513ec76d42359d2cba2278eb45227aca173578c6700269f2b1e09ff1c9b261c
+pipeline_status: accepted
+title: bribery_corruption/regulatory_tip_payment
+conversation: |-
+  【7月1日】
+  A：这周上面要下来 时间大概周三 你自己看着办
+  B：收到 多谢王哥 我这就安排
+  A：别整那些明面上的 先把门口那批货挪挪
+  B：知道 我让人今晚就搬
+  A：还有你那个证的事 别让他们问出来
+  B：我在补 就是一直差一点 手续麻烦
+  A：差一点没关系 你别摆到台面上就行
+  B：多亏你想着我 这个月的照旧给你打过去
+  A：嗯 别转账备注那些字 你懂的
+  B：放心 我备注的是咨询费
+  B：中午厂里工人吃盒饭 我也跟着凑合
+  A：厂子挣钱了 别亏待自己
+  B：门口的货挪完了 仓库挤得不行
+  A：挤就挤 过了这阵再摆出来
+  【7月2日】
+  A：那笔钱到了 我看了眼 数对
+  【系统消息】B 向 A 转账 3000 元，已收款。
+  B：按月来 你踏实 我也踏实
+  A：少在电话里说这些 有事面谈
+  B：孩子今天期末考了个好成绩 高兴
+  A：那得庆祝 你这当爹的也值了
+  B：哈哈 晚上带他吃顿好的
+  【7月3日】
+  A：今天来了 你那边稳着点 别慌
+  B：人到了? 我让工人先歇着
+  A：嗯 我带着转一圈 你配合着说就行
+  B：讲完了 没提我证件的事
+  A：我压下来了 说你正在办 下个月再看
+  B：又能拖一个月 太好了
+  A：你别老拖 迟早要办 到时候别怪我没提醒
+  B：办办办 就是流程慢
+  B：中午请工人加了个菜 算压惊
+  A：低调点 别太张扬
+  B：隔壁老赵的厂被停了 咋回事
+  A：他不懂事 该交的不交 该改的不改
+  B：还是我明白事理
+  A：你心里有数就行
+  【7月4日】
+  B：这个月货多了 仓库实在放不下
+  A：那就租个小库 别都堆厂里 太扎眼
+  B：租库又要钱 成本上去了
+  A：你省这点钱 出了事损失更大
+  B：行 听你的
+  B：今天下大雨 车间有点漏
+  A：漏了就修 这种明面上的问题别拖
+  【7月5日】
+  A：下个月的时间可能提前 你心里有个数
+  B：那我这整改还做不做
+  A：面子上的做一做 关键的还是老办法
+  B：懂 我明白
+  B：中午没睡午觉 盯着工人装货
+  A：辛苦钱 值得
+  A：对了我同事最近也管这条线 你少跟外人搭话
+  B：我谁也不搭理 只有你
+  【7月6日】
+  B：这个月的还是老数吧
+  A：嗯 照旧 月底打过来
+  B：好 我记着了
+  B：孙子上幼儿园第一天 老伴去送的
+  A：日子过得快 你也该享福了
+  B：厂子稳了才能享福 还得靠你
+  A：你少给我戴高帽 把事做好就行

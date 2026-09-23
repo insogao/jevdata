@@ -1,0 +1,113 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001492
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000098
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-4648ede86c8e5853
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A 组织熟人 B 在口岸间来回跑，利用每人每天的换汇额度分批带钱出境，往返多趟、每趟加量，事成后按趟结算，属蚂蚁搬家式跨境资金搬运。
+  critical_evidence:
+  - A 安排 B 按每人每天两万的上限分批处理，避免集中
+  - 要求 B 在两地间往返八次，每次比上次多带一点
+  - B 担心被查，A 让他分不同时段不同通道
+  - 事成后 A 按趟数把好处费转给 B
+  benign_alternatives:
+  - 合理换汇额度使用
+  - 留学缴学费
+
+attributes:
+  duration_days: 6
+  turn_count: 34
+  approximate_tokens_estimate: 657
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: cross_border_smurfing
+  risk: 3
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0158
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:25e5cd56a15243a938eca5e2db51c65554074d90b7c45a129f05382d8ff2feec
+pipeline_status: accepted
+title: money_laundering_obfuscation/cross_border_smurfing
+conversation: |-
+  【11月2日】
+  A：阿强 有趟活儿 跑腿 钱不少
+  B：跑哪
+  A：两边来回跑几趟 帮着把东西带过去
+  B：带啥
+  A：就那边要的款子 你懂的 一次别太多
+  B：有限制吧
+  A：一人一天两万额度 我们分几个人 你只管你的
+  B：被抓了咋办
+  A：走正常通道 别慌 分时段走 没人盯你
+  B：跑几趟
+  A：先定八趟 每次比上次多带点 熟了加量
+  B：一趟给我多少
+  A：六百一趟 八趟四千八 干不干
+  B：行 我试试
+  【11月3日】
+  B：今天走了两趟 累死了
+  A：别集中一天走 隔开点
+  B：知道 明天换另一条道
+  A：对 机灵点
+  【11月4日】
+  B：中午在关口吃的盒饭 又贵又难吃
+  A：那边都那价 忍忍
+  B：你倒是痛快 我可跑断腿了
+  A：钱给到位就行
+  【11月5日】
+  B：今天带得比昨天多 心里发毛
+  A：这才哪到哪 后面还要加
+  B：加多少
+  A：每次递增一点 别一次跳太快 稳
+  【11月6日】
+  B：跑完六趟了 还剩两趟
+  A：不错 收尾我盯着
+  【11月7日】
+  B：八趟跑完 累瘫了
+  A：辛苦 钱我这就给你结
+  【系统消息】A 向 B 转账 4800 元，已收款。
+  B：收到 下次有这种还喊我
+  A：少不了你的 嘴巴严点
+  B：晚上吃点好的犒劳自己
+  A：去吧 别喝多

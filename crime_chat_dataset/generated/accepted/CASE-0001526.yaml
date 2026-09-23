@@ -1,0 +1,137 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0001526
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000127
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-fda7d398ef9549e8
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A 手里握着对 B 名声不利的把柄，反复软硬兼施要 B 拿五万「一次清」，威胁不给就把事捅出去；B 怕影响工作和家庭，被迫谈价并先转了一笔钱，A 仍不满足继续加码。双方用「那件事」「名声」「闹大」等说法遮掩，不点破具体内容。
+  critical_evidence:
+  - A 以「这事对你名声不好」开场，暗示手握 B 的把柄
+  - A 开口要五万一次了结，称给了就永远闭嘴
+  - A 威胁别闹大、闹大了对 B 没好处，反复施压
+  - B 先转一笔钱试图息事宁人，A 收下后仍表示不够、继续索要
+  benign_alternatives:
+  - 侵权赔偿和解
+  - 人身损害调解
+
+attributes:
+  duration_days: 6
+  turn_count: 58
+  approximate_tokens_estimate: 1305
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: victim_silence_fee
+  risk: 3
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0159
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-081
+
+dedup:
+  content_hash: sha256:fa25608ce73fb622cd6e7000c0e96ba4fe0b9611a18210a2e3e767e96fc7da20
+pipeline_status: accepted
+title: coercion_blackmail/victim_silence_fee
+conversation: |-
+  【11月10日】
+  A：好久不见 最近过得挺风光啊
+  B：你是
+  A：不记得我了? 上个月那件事我可记得清清楚楚
+  B：什么事 你把话说清楚
+  A：别装 这事对你名声不好 传出去你单位家里都得炸
+  B：你想干嘛
+  A：五万 一次清 给了我就当没这回事
+  B：五万? 你抢钱啊
+  A：跟你的名声比 五万不多
+  B：我根本没有你说的那事
+  A：有没有 我这儿有东西 你要不要看看
+  B：你到底是谁 想怎么样
+  A：就是缺钱 你给钱 我闭嘴 两清
+  【11月11日】
+  B：我一晚上没睡 你要真有东西就发出来
+  A：别急 发出来对谁都没好处 你冷静点
+  B：你这样是敲诈
+  A：说那么难听干嘛 我这是跟你商量
+  B：中午在单位 饭都咽不下
+  A：想通就好 商量个时间
+  B：我拿不出五万 最多两万
+  A：两万打发叫花子? 我说了五万一次清
+  B：我真没那么多 你先放过我
+  A：别闹大 闹大了对你没好处 你现在工作家庭都好好的
+  B：你让我想想
+  【11月12日】
+  A：想好了没 我耐心有限
+  B：我先给你两万 你把东西删了 剩下的我再凑
+  A：先收两万 算是诚意 剩下的月底前给我
+  B：你先删
+  A：钱到了再说 我说话算话
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  A：收到 你还欠三万 别让我催
+  B：你不是说一次清吗 怎么还欠
+  A：那是指五万 你只给了两万 当然还欠
+  B：我把这事跟我对象说了 她说要报警
+  A：报警? 你敢报我就把你那事捅出去 你掂量
+  B：你到底删不删
+  A：给完钱自然删 现在别问
+  B：我实在凑不出三万 你能不能少点
+  A：不能 说好的数
+  【11月13日】
+  B：我把转账记录和聊天都存了
+  A：存那个干嘛 删了 别自找麻烦
+  B：我不删 我要留个证据
+  A：你留吧 你那事比我这钱值钱多了
+  B：这几天我天天做噩梦
+  A：钱给完就没事了 别自己找不痛快
+  B：我决定不给了 你要捅就捅吧
+  A：你确定? 你可想清楚后果
+  B：想清楚了 我不受你威胁
+  A：行 那就走着瞧
+  【11月14日】
+  B：我已经去派出所了
+  A：你疯了吧
+  B：你把两万退我 我们到此为止
+  A：退不了 你别逼我
+  B：民警让我把证据都留着 你也别删
+  A：你狠
+  B：我不想闹大 是你逼的
+  A：我们谈谈 钱我不要了 你把事撤了
+  B：晚了
+  【11月15日】
+  B：这件事交给警察处理 我不再回你消息了
