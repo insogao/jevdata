@@ -30,7 +30,9 @@ DEFAULT_DB = DATA / "registry" / "dataset_registry.sqlite"
 LOG = REPO / "report" / "ORCHESTRATOR_LOG.md"
 
 DEFAULT_LEASE_SECONDS = int(os.environ.get("TASK_LEASE_SECONDS", "7200"))  # 2h
-MAX_ATTEMPTS = 3
+# 多厂商自服务模式下的重试预算：敏感任务会被保守模型反复失败回池，直到写得动的厂商会话领走。
+# 调大 = 更能忍；abandoned 后仍可人工改回 pending。
+MAX_ATTEMPTS = int(os.environ.get("TASK_MAX_ATTEMPTS", "3"))
 
 SCHEMA_SQL = """
 CREATE TABLE IF NOT EXISTS tasks(

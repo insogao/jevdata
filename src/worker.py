@@ -50,6 +50,8 @@ def _print_workorder(claim_id, row, deadline, as_json=False):
     print(f"写作规则    : {RULES_FILE}   （硬性规则 + 样式参考用法，先读完再动笔）")
     print(f"输出格式样例: {FORMAT_EXAMPLE}")
     print(f"写回位置    : 任务包同目录 cases/<key>.json，每条 spec 一个文件，缺一不可")
+    print("续写规则    : cases/ 里已存在的有效 key 跳过不重写，只补缺的（可能是上个 agent 留下的半成品）")
+    print("能力红线    : 某条 spec 触发你的安全策略就立刻 fail 交还该任务，禁止洗稿凑数")
     print(f"写完回写    : {wo['done_cmd']}")
     print("注意：不要跑 register/judge，那由总控执行；还活着但快超时就 "
           "python3 src/task_cli.py heartbeat --claim " + str(claim_id))
@@ -70,18 +72,36 @@ def cmd_done(conn, args):
     if r is None:
         sys.exit(f"任务 {args.task} 没有属于 {args.agent} 的 active claim"
                  "（可能已超时被判死，请重新 start）")
+    task = conn.execute("SELECT target_count, packet_path FROM tasks WHERE task_id=?",
+                        (args.task,)).fetchone()
     cases_dir = Path(REPO) / "crime_chat_dataset" / "tasks" / args.task / "cases"
-    written = 0
+    written, have = 0, set()
     if cases_dir.exists():
         for f in sorted(cases_dir.glob("*.json")):
             try:
                 if json.loads(f.read_text(encoding="utf-8")).get("events"):
                     written += 1
+                    have.add(f.stem)
             except Exception:  # noqa: BLE001
                 pass
+    target = args.target or (task["target_count"] if task else None) or written
     if written == 0:
         sys.exit(f"{cases_dir} 下没有任何有效产出（含 events 字段），先完成写作再 done；"
                  f"做不完就 python3 src/task_cli.py fail --claim {r['claim_id']} --reason ...")
+    if target > written:
+        # 续写模式：列出缺失 key；已写文件保留在 cases/，下个领单 agent 只补缺
+        missing = []
+        if task and task["packet_path"]:
+            try:
+                pkt = json.loads((Path(REPO) / task["packet_path"]).read_text(encoding="utf-8"))
+                missing = [c["key"] for c in pkt.get("cases", []) if c["key"] not in have]
+            except Exception:  # noqa: BLE001
+                pass
+        sys.exit(f"还差 {target - written} 条没写（缺 key: {missing}）。"
+                 f"补齐后再 done；实在写不了（如触发你的安全策略）就立刻 "
+                 f"python3 src/task_cli.py fail --claim {r['claim_id']} "
+                 f"--reason \"无法写 {missing}\" 交还——已写的文件会保留，下一个 agent 只补缺。"
+                 "禁止洗稿凑数。")
     ns = argparse.Namespace(claim=r["claim_id"], accepted=written, pairs=0,
                             note=f"worker done: {written} case files written"
                                  + (f"/{args.target} expected" if args.target else ""))

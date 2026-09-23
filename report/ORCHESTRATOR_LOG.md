@@ -7,3 +7,4 @@
 - 2026-09-23 20:35 | batch 16 (TASK-0024/25/26): accepted 170->200 (+30, rejected 0), pairs 26->30, 对照对 0190/0197 与 0202/0207 被判官独立正确分级 | pushed
 - 2026-09-24 00:21 | task_cli: CLAIM claim=1 TASK-0026 agent=worker-a lease=7200s 截止=2026-09-24T02:21:18
 - 2026-09-24 00:21 | task_cli: COMPLETE claim=1 TASK-0026 agent=worker-a accepted=10 pairs=0 | worker done: 10 case files written/10 expected
+- 2026-09-24 00:28 | task_cli: CLAIM claim=1 TASK-0026 agent=test-a lease=7200s 截止=2026-09-24T02:28:41
