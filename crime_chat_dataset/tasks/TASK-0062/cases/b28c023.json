@@ -1,0 +1,408 @@
+{
+ "key": "b28c023",
+ "archetype_id": "ARC-000043",
+ "subtype": "alcohol_counterfeit_line",
+ "latent_intent": "餐馆供应商 A 经中间人介绍找到灌装作坊的 B，由 A 自备瓶盒、B 负责灌装封盖仿造名牌窖藏酒，防伪码可过官方扫码验真，货物专走夜场渠道、单据按散装料酒开具，A 先付六千元瓶盒款启动这条线。",
+ "critical_facts": [
+  "分工为 A 出瓶子盒子、B 负责灌装封盖，仿做『窖藏』款名酒（瓶子你出）",
+  "防伪码走中间人渠道制作，一物一码，扫码跳转官方页面可过验真（防伪码能过）",
+  "约定该批货只走夜场、散单不接，夜间分两趟自行送货、单据按散装料酒开具（夜场专供）",
+  "单件成本三百出头、夜场售价六百八，A 先行转账六千元瓶盒款，B 确认开工（资金闭环）"
+ ],
+ "benign_alternatives": [
+  "正规名酒经销",
+  "散酒作坊讨论"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "10月28日 08:40",
+   "speaker": "A",
+   "text": "鲁哥早，老蔡把你微信推我了，说酒的事你最门儿清"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 09:02",
+   "speaker": "B",
+   "text": "客气，他要的什么货，你清楚吧"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 08:41",
+   "speaker": "A",
+   "text": "清楚，窖藏那一款，光瓶带盒的"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 09:03",
+   "speaker": "B",
+   "text": "嗯，那款瓶子盒子你那边出，我只管灌和封"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 08:42",
+   "speaker": "A",
+   "text": "瓶子我们出没问题，量上头两个月先来三百件"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 09:05",
+   "speaker": "B",
+   "text": "三百件，紧赶能出来"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 09:30",
+   "speaker": "A",
+   "text": "等下还得去开家长会，烦"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 09:50",
+   "speaker": "B",
+   "text": "孩子多大了"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 09:31",
+   "speaker": "A",
+   "text": "初二，物理拉胯"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 09:51",
+   "speaker": "B",
+   "text": "男孩子开窍晚，我家那个当年也这样"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 09:32",
+   "speaker": "A",
+   "text": "借你吉言"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 09:52",
+   "speaker": "B",
+   "text": "嗯，开完会聊"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 14:10",
+   "speaker": "A",
+   "text": "还有码的事，盒上那个码，扫出来得是正品页面那种"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 14:30",
+   "speaker": "B",
+   "text": "能过，一物一码，扫出来是他们官方那种跳转"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 14:12",
+   "speaker": "A",
+   "text": "那就不怕懂行的翻"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 14:31",
+   "speaker": "B",
+   "text": "夜场里没人翻这个"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 14:13",
+   "speaker": "A",
+   "text": "也是"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 16:35",
+   "speaker": "A",
+   "text": "今晚有球，看不"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 16:55",
+   "speaker": "B",
+   "text": "看，看你主队又被揍"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 16:36",
+   "speaker": "A",
+   "text": "呸，这赛季稳了"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 16:56",
+   "speaker": "B",
+   "text": "上回你也这么说"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 16:37",
+   "speaker": "A",
+   "text": "等着瞧"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 16:57",
+   "speaker": "B",
+   "text": "行，赌一顿烧烤"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 20:10",
+   "speaker": "B",
+   "text": "算下账：瓶子加盒一套十五，灌装人工每件加二十"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 20:25",
+   "speaker": "A",
+   "text": "那一件合三百出头，我夜场一瓶给他们上六百八"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 20:26",
+   "speaker": "B",
+   "text": "所以说这生意稳，但这批只走夜场，别往商超电商流"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 20:27",
+   "speaker": "A",
+   "text": "懂，夜场专供，别的渠道不出"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 20:28",
+   "speaker": "B",
+   "text": "嗯，散单不接，都是熟脸"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 20:29",
+   "speaker": "A",
+   "text": "明天我把瓶子样拍你"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 20:30",
+   "speaker": "B",
+   "text": "发吧，防伪那块别自己瞎弄，走蔡哥那条线"
+  },
+  {
+   "type": "message",
+   "time": "10月28日 20:31",
+   "speaker": "A",
+   "text": "知道，都听他的"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 09:10",
+   "speaker": "A",
+   "text": "昨晚看球坐太久，腰直不起来"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 09:28",
+   "speaker": "B",
+   "text": "三十多岁就废了，贴膏药去"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 09:11",
+   "speaker": "A",
+   "text": "贴了，没啥用"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 09:29",
+   "speaker": "B",
+   "text": "游泳去，比啥膏药都强"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 09:12",
+   "speaker": "A",
+   "text": "冬天游什么泳，你行你先"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 09:30",
+   "speaker": "B",
+   "text": "我一周两游，服不服"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 11:20",
+   "speaker": "A",
+   "text": "瓶子样拍好了，你看这个瓶型"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 11:40",
+   "speaker": "B",
+   "text": "行，就这个，磨砂的显档次"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 11:22",
+   "speaker": "A",
+   "text": "盒子也定了，酒红那款"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 11:41",
+   "speaker": "B",
+   "text": "那就按三百件走，先付六千瓶子盒子钱，我这边开工"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 11:23",
+   "speaker": "A",
+   "text": "六千含运费吗"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 11:42",
+   "speaker": "B",
+   "text": "含到你仓库，运费我出"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 11:24",
+   "speaker": "A",
+   "text": "行，我转你"
+  },
+  {
+   "type": "transfer",
+   "time": "10月29日 11:30",
+   "from": "A",
+   "to": "B",
+   "amount": 6000
+  },
+  {
+   "type": "message",
+   "time": "10月29日 11:31",
+   "speaker": "A",
+   "text": "转了六千，收到言语一声"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 11:50",
+   "speaker": "B",
+   "text": "到了，下周三交货"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 14:05",
+   "speaker": "A",
+   "text": "这雨下得，仓库门口又积水"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 14:25",
+   "speaker": "B",
+   "text": "你们那地势低，备个抽水泵"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 14:06",
+   "speaker": "A",
+   "text": "前年淹过一回，怕了"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 14:26",
+   "speaker": "B",
+   "text": "备一个，百来块的事"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 14:07",
+   "speaker": "A",
+   "text": "嗯，下午就让采购下单"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 16:30",
+   "speaker": "A",
+   "text": "下周三怎么交，走物流还是你送"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 16:50",
+   "speaker": "B",
+   "text": "我自己送，夜里装车，分两趟"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 16:31",
+   "speaker": "A",
+   "text": "单据怎么开"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 16:51",
+   "speaker": "B",
+   "text": "单子按散装料酒开，入库你自己做平"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 16:32",
+   "speaker": "A",
+   "text": "明白，我们库里一直这么做账"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 16:52",
+   "speaker": "B",
+   "text": "嗯，各记各的，别串"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 18:40",
+   "speaker": "A",
+   "text": "周末出钓不，蔡哥说寻着个新塘子"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 18:58",
+   "speaker": "B",
+   "text": "去，正好把下周尾款当面点"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 18:41",
+   "speaker": "A",
+   "text": "行，我带钓箱还是带秤"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 18:59",
+   "speaker": "B",
+   "text": "都带，鱼和事两不误"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 18:42",
+   "speaker": "A",
+   "text": "哈哈，这么说定了"
+  },
+  {
+   "type": "message",
+   "time": "10月29日 19:00",
+   "speaker": "B",
+   "text": "嗯，周三等信"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000575",
+  "status": "accepted",
+  "errors": []
+ }
+}

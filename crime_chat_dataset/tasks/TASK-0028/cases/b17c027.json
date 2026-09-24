@@ -1,0 +1,438 @@
+{
+ "key": "b17c027",
+ "archetype_id": "ARC-000086",
+ "subtype": "courier_info_leak",
+ "latent_intent": "快递驿站员工长期偷拍当日新鲜面单出售，买家按条结算倒卖个人信息，形成持续多日的个人信息买卖通道。",
+ "critical_facts": [
+  "A 每日将当天新鲜快递面单拍照卖给 B，含姓名、手机号、详细住址",
+  "双方按四块钱一条结算，只要当天新单，隔夜的不收",
+  "B 转账 600 元结清 150 条货款，交易连续多日",
+  "B 要求优先城东城南片区、电话能打通的单子，并计划下周加量提价收取件码"
+ ],
+ "benign_alternatives": [
+  "快递理赔核实时对收件信息的正常核对",
+  "驿站入站登记等正常信息登记流程"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "10月13日 08:40",
+   "speaker": "B",
+   "text": "小邓，起了没，今天有新鲜的没"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 08:42",
+   "speaker": "A",
+   "text": "娜姐早，刚到站，下午新单多，四点半以后给你截"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 08:45",
+   "speaker": "B",
+   "text": "行，老规矩，要当天的，过夜的我不收"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 08:47",
+   "speaker": "A",
+   "text": "知道，放心"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 11:30",
+   "speaker": "A",
+   "text": "娜姐，上午到的一批我拍了，38条，城东那片的，都是送到门的"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 11:32",
+   "speaker": "B",
+   "text": "发来我看看"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 11:34",
+   "speaker": "A",
+   "text": "发你了，姓名电话地址全乎，糊的我剔掉了"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 11:36",
+   "speaker": "B",
+   "text": "成，这批要了。四块一条，38条152，先记着"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 11:38",
+   "speaker": "A",
+   "text": "好"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 11:40",
+   "speaker": "B",
+   "text": "你们驿站这几天爆仓没，大促预热了"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 11:42",
+   "speaker": "A",
+   "text": "爆了，一天八百多件，理货理到腿软"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 11:44",
+   "speaker": "B",
+   "text": "那你正好顺手多拍点，都在手边"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 11:46",
+   "speaker": "A",
+   "text": "嘿，娜姐你是懂排班的"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 11:48",
+   "speaker": "B",
+   "text": "互相成就嘛"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:20",
+   "speaker": "A",
+   "text": "今天上午就到了46条，比昨天多，下午还有一波"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:23",
+   "speaker": "B",
+   "text": "好，凑够150一起结，省得你老跑"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:25",
+   "speaker": "A",
+   "text": "成"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:31",
+   "speaker": "A",
+   "text": "对了姐，明天断崖式降温，你秋裤该出场了"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:34",
+   "speaker": "B",
+   "text": "嘁，我羽绒服都上身了。站里冷不"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:36",
+   "speaker": "A",
+   "text": "棚子里还行，就是早上卸货手冻得慌"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:38",
+   "speaker": "B",
+   "text": "让站里配副手套嘛，劳保的"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:40",
+   "speaker": "A",
+   "text": "说了八百回，人家说我是铁手"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 14:10",
+   "speaker": "A",
+   "text": "下午那波到了，66条，我挑的都是电话打得通的"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 14:12",
+   "speaker": "B",
+   "text": "电话能打通的才是硬通货，好"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 14:14",
+   "speaker": "A",
+   "text": "晚上八点打包发你"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 08:50",
+   "speaker": "A",
+   "text": "娜姐，昨晚那150条打包发你微信了，查收"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 09:05",
+   "speaker": "B",
+   "text": "收到，齐的。转你钱"
+  },
+  {
+   "type": "transfer",
+   "time": "10月15日 09:10",
+   "from": "B",
+   "to": "A",
+   "amount": 600
+  },
+  {
+   "type": "message",
+   "time": "10月15日 09:12",
+   "speaker": "A",
+   "text": "600到了，四块一条一分不差，娜姐敞亮"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 09:15",
+   "speaker": "B",
+   "text": "咱这买卖讲究长久"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 09:21",
+   "speaker": "A",
+   "text": "姐，你们那边新开的奶茶店咋样，天天排队"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 09:24",
+   "speaker": "B",
+   "text": "一般，甜齁，我只喝美式"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 09:26",
+   "speaker": "A",
+   "text": "自律达人，怪不得身材那么好"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 09:28",
+   "speaker": "B",
+   "text": "少来，你昨天不还晒炸鸡"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 09:30",
+   "speaker": "A",
+   "text": "嘿嘿，夜里的炸鸡和白天不是一个东西"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 15:40",
+   "speaker": "B",
+   "text": "小邓，问你个事，取件码尾号那几位，面单上有不"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 15:42",
+   "speaker": "A",
+   "text": "有，条码边上就印着，你要这个干啥"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 15:44",
+   "speaker": "B",
+   "text": "有客户要全一点的，回头加价收，五块一条"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 10:10",
+   "speaker": "A",
+   "text": "娜姐，今早52条，新鲜出炉"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 10:13",
+   "speaker": "B",
+   "text": "要了。五块带取件码那条，你想好没，多挣四分之一呢"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 10:15",
+   "speaker": "A",
+   "text": "我手慢，先还是四块的走量吧"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 10:18",
+   "speaker": "B",
+   "text": "也行，量大什么都好说"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 10:25",
+   "speaker": "B",
+   "text": "昨晚那把你赢了没"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 10:27",
+   "speaker": "A",
+   "text": "输麻了，队友挂机，气得我下楼吃了俩包子"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 10:29",
+   "speaker": "B",
+   "text": "哈哈哈化悲愤为包子"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 10:31",
+   "speaker": "A",
+   "text": "你今晚带我上分"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 10:33",
+   "speaker": "B",
+   "text": "就你那手速，我玩辅助保你吧"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 16:20",
+   "speaker": "A",
+   "text": "傍晚又到40条，挑好了，晚上发"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 16:22",
+   "speaker": "B",
+   "text": "好，今天量可以"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 09:30",
+   "speaker": "A",
+   "text": "娜姐，昨天40条发了，加上今早48条，现在结还是攒着"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 09:35",
+   "speaker": "B",
+   "text": "攒着，周五一起"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 09:41",
+   "speaker": "A",
+   "text": "姐，我妈又催我回去相亲，说村里介绍了个老师"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 09:44",
+   "speaker": "B",
+   "text": "挺好啊，稳定"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 09:46",
+   "speaker": "A",
+   "text": "稳定啥呀，我这活儿走不开"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 09:48",
+   "speaker": "B",
+   "text": "挣钱要紧，缘分晚点不耽误"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 09:50",
+   "speaker": "A",
+   "text": "借你吉言"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 14:25",
+   "speaker": "B",
+   "text": "小邓，下周我要放量，你一天能供到八十不"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 14:28",
+   "speaker": "A",
+   "text": "八十悬，顶多六七十，理不过来"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 14:30",
+   "speaker": "B",
+   "text": "六十也行，先应下"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 14:32",
+   "speaker": "A",
+   "text": "成"
+  },
+  {
+   "type": "message",
+   "time": "10月18日 09:15",
+   "speaker": "A",
+   "text": "娜姐，今早开门就55条，周六单就是多"
+  },
+  {
+   "type": "message",
+   "time": "10月18日 09:18",
+   "speaker": "B",
+   "text": "好，挑送到门、电话通的，隔夜的别掺"
+  },
+  {
+   "type": "message",
+   "time": "10月18日 09:20",
+   "speaker": "A",
+   "text": "放心，当日达当日出"
+  },
+  {
+   "type": "message",
+   "time": "10月18日 09:22",
+   "speaker": "B",
+   "text": "有个大客户点名要城东城南两个片的，你多留"
+  },
+  {
+   "type": "message",
+   "time": "10月18日 09:25",
+   "speaker": "A",
+   "text": "明白，分区挑，老规矩"
+  },
+  {
+   "type": "message",
+   "time": "10月18日 10:40",
+   "speaker": "B",
+   "text": "昨天那88条记上，周五一起结"
+  },
+  {
+   "type": "message",
+   "time": "10月18日 10:43",
+   "speaker": "A",
+   "text": "成，小本本记着呢"
+  },
+  {
+   "type": "message",
+   "time": "10月18日 10:45",
+   "speaker": "B",
+   "text": "好嘞，合作愉快"
+  },
+  {
+   "type": "message",
+   "time": "10月18日 11:00",
+   "speaker": "A",
+   "text": "那必须的，长期合作嘛"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000236",
+  "status": "accepted",
+  "errors": []
+ }
+}

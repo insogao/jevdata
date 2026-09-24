@@ -1,0 +1,456 @@
+{
+ "key": "b27c014",
+ "archetype_id": "ARC-000013",
+ "subtype": "loan_bridge_interest_rollover",
+ "latent_intent": "A 借同事情谊放高息短期贷，先扣利息、到期还不上时诱导 B 再从别家借钱来还这家，把 B 拖进以贷养贷的循环。",
+ "critical_facts": [
+  "A 以同事身份放款 5 万，月息六分，一个月期限",
+  "先扣两个月利息，B 实际只到手 4.4 万",
+  "A 转账 44000 元给 B",
+  "到期前 B 表示凑不齐，A 让他再借另一家的钱先把这笔结了，利息接着滚"
+ ],
+ "benign_alternatives": [
+  "正常的过桥资金周转",
+  "亲友之间的应急借款"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "10月10日 09:05",
+   "speaker": "B",
+   "text": "何哥，你到了没，经理找你"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 09:10",
+   "speaker": "A",
+   "text": "在电梯里，啥事"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 09:11",
+   "speaker": "B",
+   "text": "让你把上季度报销单补了"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 09:13",
+   "speaker": "A",
+   "text": "知道了，烦"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 11:20",
+   "speaker": "B",
+   "text": "哎，你上次说你外面有放款的路子，还算数不"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 11:25",
+   "speaker": "A",
+   "text": "你真要用？"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 11:26",
+   "speaker": "B",
+   "text": "嗯，我妈住院要手术，缺口五万，银行批太慢"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 11:30",
+   "speaker": "A",
+   "text": "什么时候能用"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 11:32",
+   "speaker": "B",
+   "text": "这周就得交住院费"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 11:35",
+   "speaker": "A",
+   "text": "行，五万一个月期，月息六分，老规矩"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 11:36",
+   "speaker": "B",
+   "text": "六分？一个月三千，有点狠啊哥"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 11:40",
+   "speaker": "A",
+   "text": "我这钱也是凑来的，应急可以，长期别碰。先扣两个月利息，你到手四万四"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 11:42",
+   "speaker": "B",
+   "text": "先扣？那我就拿四万四"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 11:45",
+   "speaker": "A",
+   "text": "对，行业规矩，到期还五万整"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 11:50",
+   "speaker": "B",
+   "text": "让我想想……行吧，医院等不起"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 14:10",
+   "speaker": "A",
+   "text": "下午那个报表帮我看看，第三列是不是错了"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 14:15",
+   "speaker": "B",
+   "text": "看了，把9月数字粘成8月的了"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 14:16",
+   "speaker": "A",
+   "text": "我说是呢，这就改"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 14:18",
+   "speaker": "B",
+   "text": "经理还夸你报表快呢"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 16:30",
+   "speaker": "A",
+   "text": "卡号私发我，今晚让财务给你走"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 16:32",
+   "speaker": "B",
+   "text": "发了，谢何哥，真救急了"
+  },
+  {
+   "type": "transfer",
+   "time": "10月10日 20:15",
+   "from": "A",
+   "to": "B",
+   "amount": 44000
+  },
+  {
+   "type": "message",
+   "time": "10月10日 20:18",
+   "speaker": "B",
+   "text": "收到四万四，明早交住院费。真的谢谢哥"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 20:20",
+   "speaker": "A",
+   "text": "都是同事别客气。记住一个月，11月10号，别拖"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 20:22",
+   "speaker": "B",
+   "text": "记了，日历上设了闹钟"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 10:30",
+   "speaker": "A",
+   "text": "帮你带了杯美式，放你桌上了"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 10:32",
+   "speaker": "B",
+   "text": "谢哥，多少钱我转你"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 10:33",
+   "speaker": "A",
+   "text": "18块都跟我算，没劲哈哈"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 10:35",
+   "speaker": "B",
+   "text": "那中午食堂加个鸡腿，我请"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 15:40",
+   "speaker": "B",
+   "text": "我妈手术排明天上午了"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 15:42",
+   "speaker": "A",
+   "text": "那就好，钱的事这两天你不用急"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 15:45",
+   "speaker": "B",
+   "text": "嗯，我也在想怎么还，光靠工资有点悬"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 15:50",
+   "speaker": "A",
+   "text": "到时候再说，我这边有路子"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 09:20",
+   "speaker": "A",
+   "text": "周六团建改钓鱼了，你去不"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 09:22",
+   "speaker": "B",
+   "text": "我不钓鱼，我去也是喂鱼"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 09:24",
+   "speaker": "A",
+   "text": "哈哈那你负责烧烤"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 09:25",
+   "speaker": "B",
+   "text": "行，这个我在行"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 16:10",
+   "speaker": "B",
+   "text": "何哥，跟你说实话，我工资到手七千，月底还你五万真够呛"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 16:15",
+   "speaker": "A",
+   "text": "我知道，所以早给你想好后路了"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 16:16",
+   "speaker": "B",
+   "text": "什么后路"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 16:20",
+   "speaker": "A",
+   "text": "到期你要是转不开，就再从别家借一笔，先把我的结了，利息别断就行"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 16:22",
+   "speaker": "B",
+   "text": "再借一家？那不越欠越多"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 16:25",
+   "speaker": "A",
+   "text": "过桥都是这么倒的，先保住信用，下个月你绩效下来不就缓过来了"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 16:28",
+   "speaker": "B",
+   "text": "听着心里发毛，但好像也只能这样"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 16:30",
+   "speaker": "A",
+   "text": "我认识的资金方也有，到时候我搭线，利息帮你谈到五分"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 16:33",
+   "speaker": "B",
+   "text": "……行，先这样"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 19:30",
+   "speaker": "A",
+   "text": "降温了，明天穿厚点，你那小身板"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 19:32",
+   "speaker": "B",
+   "text": "秋裤已经安排上了"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 19:33",
+   "speaker": "A",
+   "text": "病房空调冷，给阿姨也带条毯子"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 19:35",
+   "speaker": "B",
+   "text": "带了，谢哥提醒"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 08:50",
+   "speaker": "B",
+   "text": "手术顺利！医生说恢复得好"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 08:55",
+   "speaker": "A",
+   "text": "太好了，替我问阿姨好"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 12:30",
+   "speaker": "B",
+   "text": "购物车塞满了，就等双十一清空"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 12:32",
+   "speaker": "A",
+   "text": "我省了，今年啥都不买"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 12:33",
+   "speaker": "B",
+   "text": "你不是想换钓竿吗"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 12:35",
+   "speaker": "A",
+   "text": "忍住了，先回血"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 15:20",
+   "speaker": "B",
+   "text": "何哥，还款的事我算了下，确实凑不齐"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 15:25",
+   "speaker": "A",
+   "text": "嗯，我猜到了。我那兄弟那边五分，你借四万八，还我五万，剩三千你周转"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 15:28",
+   "speaker": "B",
+   "text": "等于我又多了个债主"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 15:30",
+   "speaker": "A",
+   "text": "就一个月的事，你年底绩效还有一笔"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 15:33",
+   "speaker": "B",
+   "text": "四万八……到手多少"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 15:35",
+   "speaker": "A",
+   "text": "他家不扣息，到期还四万八千九，就九百利息，很良心了"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 15:38",
+   "speaker": "B",
+   "text": "为啥他家这么便宜"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 15:40",
+   "speaker": "A",
+   "text": "人家做长期攒口碑。到时候你直接还我，两边别互相认识"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 15:45",
+   "speaker": "B",
+   "text": "……好吧，明天你把人微信推我"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 15:47",
+   "speaker": "A",
+   "text": "嗯，晚上发你"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 20:10",
+   "speaker": "B",
+   "text": "哥，我越想越不对，这么倒下去工资全填利息了"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 20:15",
+   "speaker": "A",
+   "text": "想那么多干嘛，先把11月10号过去。多少人都这么倒过来的"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 20:18",
+   "speaker": "B",
+   "text": "那行吧，就这一个月"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 20:20",
+   "speaker": "A",
+   "text": "乖，把心放肚子里。住院费那事都齐了？"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 20:22",
+   "speaker": "B",
+   "text": "齐了，谢谢何哥，这周请你吃大餐"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 20:25",
+   "speaker": "A",
+   "text": "哈哈行，大餐记账上，利息可不能记账上"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000520",
+  "status": "accepted",
+  "errors": []
+ }
+}

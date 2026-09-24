@@ -1,0 +1,336 @@
+{
+ "key": "b28c014",
+ "archetype_id": "ARC-000006",
+ "subtype": "loan_fee_bait",
+ "latent_intent": "自称资金方的 B 以『内部通道、不看征信、当天批』的话术，诱使开小吃店的熟人 A 在放款前缴纳三千元保证金；合同只以印章发虚的图片出示、拒绝一切核验，收款后放款一拖再拖，次日又以『解冻金』追加收费，典型先收费后消失的套路。",
+ "critical_facts": [
+  "B 自称走内部通道、不查征信，五万额度当天到账（不看征信秒批）",
+  "放款前要求先转三千元保证金，承诺随后原路退还（先交保证金）",
+  "合同仅以图片发送、印章发虚，拒绝视频与网点核验，称原件下款当天才给（合同为图片无法核实）",
+  "保证金到账后放款拖延，次日以流水对不上为由要求再交解冻金，A 起疑（收费链条与拖延手法）"
+ ],
+ "benign_alternatives": [
+  "正规银行贷款流程",
+  "亲友借款"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "10月13日 19:10",
+   "speaker": "A",
+   "text": "周哥，睡没，问你个事"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 19:30",
+   "speaker": "B",
+   "text": "说"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 19:11",
+   "speaker": "A",
+   "text": "店里想进台新冰柜再囤批货，差五万周转"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 19:31",
+   "speaker": "B",
+   "text": "银行不批？"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 19:12",
+   "speaker": "A",
+   "text": "我征信前两年花过，卡在系统上"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 19:32",
+   "speaker": "B",
+   "text": "那正好，我们这边不查那个，看日常流水就行"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 19:13",
+   "speaker": "A",
+   "text": "那太好了，要准备啥"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 19:33",
+   "speaker": "B",
+   "text": "先把近三个月流水发来，其他一会说"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 20:30",
+   "speaker": "A",
+   "text": "你家老大月考完没"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 20:50",
+   "speaker": "B",
+   "text": "完了，数学又没上九十，愁"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 20:31",
+   "speaker": "A",
+   "text": "我家回回卡作文，一对一半学期一千二"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 20:51",
+   "speaker": "B",
+   "text": "都是碎钞机，认了"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 20:32",
+   "speaker": "A",
+   "text": "哈哈，同命相怜"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 08:50",
+   "speaker": "A",
+   "text": "流水发你了，你给看眼"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:20",
+   "speaker": "B",
+   "text": "收到，够数，五万能批，当天到账"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:21",
+   "speaker": "B",
+   "text": "我们走内部通道，不占银行那套流程"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:22",
+   "speaker": "B",
+   "text": "下款前走笔保证金三千，到账即放，保证金随后原路退"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:25",
+   "speaker": "A",
+   "text": "还要交保证金啊"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:23",
+   "speaker": "B",
+   "text": "都这么走，行业规矩，不信问老周"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:26",
+   "speaker": "A",
+   "text": "行，我问问"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 12:10",
+   "speaker": "A",
+   "text": "断崖降温，你家暖气费交没"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 12:30",
+   "speaker": "B",
+   "text": "交了，去年拖到最后吃亏"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 12:11",
+   "speaker": "A",
+   "text": "我这就去交"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 12:31",
+   "speaker": "B",
+   "text": "顺道把厚被子晒晒"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 12:12",
+   "speaker": "A",
+   "text": "好嘞"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 19:40",
+   "speaker": "A",
+   "text": "周哥，合同呢，我看一眼再转"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 20:00",
+   "speaker": "B",
+   "text": "图发你了，看条款"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 19:41",
+   "speaker": "A",
+   "text": "这章是打上去的吧，发虚"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 20:01",
+   "speaker": "B",
+   "text": "电子章都这样，我们不走网点，原件下款当天连保证金一起退你"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 19:42",
+   "speaker": "A",
+   "text": "要不做个视频，我看眼你们办公室"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 20:02",
+   "speaker": "B",
+   "text": "通道那边不让录，资金方都低调，你理解下"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 19:43",
+   "speaker": "A",
+   "text": "那行吧，老周说他朋友在你那拿过两回钱"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 20:03",
+   "speaker": "B",
+   "text": "嗯，老面孔了"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 20:30",
+   "speaker": "A",
+   "text": "你们食堂还外包没，上回那烧鸭一绝"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 20:50",
+   "speaker": "B",
+   "text": "换了家，烧鸭没了"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 20:31",
+   "speaker": "A",
+   "text": "那来我店里，给你炒个粉多加蛋"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 20:51",
+   "speaker": "B",
+   "text": "行，改天"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 09:10",
+   "speaker": "A",
+   "text": "想好了，保证金我转"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 09:30",
+   "speaker": "B",
+   "text": "转，四点前，今天排放款"
+  },
+  {
+   "type": "transfer",
+   "time": "10月16日 10:20",
+   "from": "A",
+   "to": "B",
+   "amount": 3000
+  },
+  {
+   "type": "message",
+   "time": "10月16日 10:21",
+   "speaker": "A",
+   "text": "转了三千，你点下"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 10:40",
+   "speaker": "B",
+   "text": "收到，交复核了，今晚出额度"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 16:30",
+   "speaker": "A",
+   "text": "你老家房子装修完没"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 16:50",
+   "speaker": "B",
+   "text": "还差吊顶，工头天天催"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 16:31",
+   "speaker": "A",
+   "text": "装修无底洞，我家去年深有体会"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 16:51",
+   "speaker": "B",
+   "text": "谁说不是"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 16:32",
+   "speaker": "A",
+   "text": "回头开工喊我，给你监工"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 08:40",
+   "speaker": "A",
+   "text": "周哥，说好的额度呢"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 09:30",
+   "speaker": "B",
+   "text": "卡在复核，你流水有笔进账对不上，得再交笔解冻金重新核"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 08:42",
+   "speaker": "A",
+   "text": "怎么又要交钱"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 09:31",
+   "speaker": "B",
+   "text": "不交就放着，额度保留到明天中午"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 08:45",
+   "speaker": "A",
+   "text": "……"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000573",
+  "status": "accepted",
+  "errors": []
+ }
+}

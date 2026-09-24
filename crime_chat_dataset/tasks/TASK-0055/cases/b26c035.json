@@ -1,0 +1,378 @@
+{
+ "key": "b26c035",
+ "archetype_id": "ARC-000026",
+ "subtype": "medical_channel_fee",
+ "latent_intent": "A 为父亲手术咨询医院工作人员 B，B 全程引导走官方特需门诊与公示收费流程，并明确拒绝红包，无任何私下对价。",
+ "critical_facts": [
+  "特需门诊诊查费 600 元按院内公示价目收取",
+  "A 微信转 600 元由 B 代交住院处，电子票据直接推送本人手机",
+  "A 想术前给专家递红包，被 B 明确制止并建议送锦旗",
+  "手术排期、陪护证明、出院结算全部走正规流程"
+ ],
+ "benign_alternatives": [
+  "正常专家门诊挂号",
+  "医院特需服务费"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "9月14日 08:30",
+   "speaker": "A",
+   "text": "李老师早，我爸复查结果出了，医生说胆囊得做手术"
+  },
+  {
+   "type": "message",
+   "time": "9月14日 09:02",
+   "speaker": "B",
+   "text": "早。报告发我看看"
+  },
+  {
+   "type": "message",
+   "time": "9月14日 09:10",
+   "speaker": "A",
+   "text": "发您了"
+  },
+  {
+   "type": "message",
+   "time": "9月14日 09:25",
+   "speaker": "B",
+   "text": "看了，符合手术指征，不用慌，这手术很成熟"
+  },
+  {
+   "type": "message",
+   "time": "9月14日 09:30",
+   "speaker": "A",
+   "text": "我们想找王主任主刀，能约上不"
+  },
+  {
+   "type": "message",
+   "time": "9月14日 09:40",
+   "speaker": "B",
+   "text": "王主任的普通号得抢，但我建议直接走特需门诊加急会诊，他把关更快"
+  },
+  {
+   "type": "message",
+   "time": "9月14日 09:45",
+   "speaker": "A",
+   "text": "特需怎么收费"
+  },
+  {
+   "type": "message",
+   "time": "9月14日 09:48",
+   "speaker": "B",
+   "text": "诊查费 600 一次，医院价格栏公示的，我把收费目录发您"
+  },
+  {
+   "type": "message",
+   "time": "9月14日 09:52",
+   "speaker": "A",
+   "text": "那太好了，怎么办理"
+  },
+  {
+   "type": "message",
+   "time": "9月14日 09:55",
+   "speaker": "B",
+   "text": "您带身份证和报告来门诊三楼特需接待处，我提前给您留位"
+  },
+  {
+   "type": "message",
+   "time": "9月15日 08:40",
+   "speaker": "A",
+   "text": "李老师，特需那 600 诊查费咋交，窗口说系统升级"
+  },
+  {
+   "type": "message",
+   "time": "9月15日 08:45",
+   "speaker": "B",
+   "text": "您转我，我到住院处代交，电子票据直接推您手机，价目就是公示那个数"
+  },
+  {
+   "type": "message",
+   "time": "9月15日 08:50",
+   "speaker": "A",
+   "text": "好，这就转"
+  },
+  {
+   "type": "transfer",
+   "time": "9月15日 08:55",
+   "from": "A",
+   "to": "B",
+   "amount": 600
+  },
+  {
+   "type": "message",
+   "time": "9月15日 09:10",
+   "speaker": "B",
+   "text": "收到，交上了，票据您手机看看"
+  },
+  {
+   "type": "message",
+   "time": "9月15日 09:15",
+   "speaker": "A",
+   "text": "看到了，写着特需诊查费，正规"
+  },
+  {
+   "type": "message",
+   "time": "9月15日 09:20",
+   "speaker": "A",
+   "text": "这几天降温，我爸老说膝盖疼"
+  },
+  {
+   "type": "message",
+   "time": "9月15日 09:25",
+   "speaker": "B",
+   "text": "术后让他注意保暖，别贪凉"
+  },
+  {
+   "type": "message",
+   "time": "9月15日 09:28",
+   "speaker": "A",
+   "text": "秋裤我早给他套上了"
+  },
+  {
+   "type": "message",
+   "time": "9月15日 09:30",
+   "speaker": "B",
+   "text": "听话就行"
+  },
+  {
+   "type": "message",
+   "time": "9月16日 15:20",
+   "speaker": "A",
+   "text": "李老师，术前我想备个红包，手术那天塞给王主任，图个安心"
+  },
+  {
+   "type": "message",
+   "time": "9月16日 15:35",
+   "speaker": "B",
+   "text": "千万别。医院三令五申，收一个处分一个，王主任最烦这个，递了反而坏事"
+  },
+  {
+   "type": "message",
+   "time": "9月16日 15:40",
+   "speaker": "A",
+   "text": "真不用？我们老家都这风俗"
+  },
+  {
+   "type": "message",
+   "time": "9月16日 15:45",
+   "speaker": "B",
+   "text": "特殊时期别添乱。真想感谢，术后送面锦旗，比啥都强"
+  },
+  {
+   "type": "message",
+   "time": "9月16日 15:50",
+   "speaker": "A",
+   "text": "行，听您的"
+  },
+  {
+   "type": "message",
+   "time": "9月16日 15:55",
+   "speaker": "A",
+   "text": "周四手术，我跟单位请两天假"
+  },
+  {
+   "type": "message",
+   "time": "9月16日 15:58",
+   "speaker": "B",
+   "text": "让单位开陪护假，医院能出证明"
+  },
+  {
+   "type": "message",
+   "time": "9月16日 16:02",
+   "speaker": "A",
+   "text": "还能开这个？"
+  },
+  {
+   "type": "message",
+   "time": "9月16日 16:05",
+   "speaker": "B",
+   "text": "住院处窗口就能打，带工牌去"
+  },
+  {
+   "type": "message",
+   "time": "9月16日 16:08",
+   "speaker": "A",
+   "text": "好嘞"
+  },
+  {
+   "type": "message",
+   "time": "9月17日 07:50",
+   "speaker": "A",
+   "text": "今天手术，我们到了"
+  },
+  {
+   "type": "message",
+   "time": "9月17日 08:00",
+   "speaker": "B",
+   "text": "手术室在六楼，家属在门口大屏看进度"
+  },
+  {
+   "type": "message",
+   "time": "9月17日 13:10",
+   "speaker": "A",
+   "text": "出来了，医生说很顺利"
+  },
+  {
+   "type": "message",
+   "time": "9月17日 13:15",
+   "speaker": "B",
+   "text": "好，今晚禁食，明早查房王主任亲自来"
+  },
+  {
+   "type": "message",
+   "time": "9月17日 13:20",
+   "speaker": "A",
+   "text": "他醒了就惦记喝粥"
+  },
+  {
+   "type": "message",
+   "time": "9月17日 13:25",
+   "speaker": "B",
+   "text": "得等排气之后，先流食"
+  },
+  {
+   "type": "message",
+   "time": "9月17日 13:28",
+   "speaker": "A",
+   "text": "明白，米汤备上了"
+  },
+  {
+   "type": "message",
+   "time": "9月17日 13:30",
+   "speaker": "B",
+   "text": "逐步来，别急"
+  },
+  {
+   "type": "message",
+   "time": "9月17日 13:32",
+   "speaker": "A",
+   "text": "听您安排"
+  },
+  {
+   "type": "message",
+   "time": "9月18日 10:15",
+   "speaker": "A",
+   "text": "查房完了，王主任说恢复得好。术前想塞红包那事，真是我不该想"
+  },
+  {
+   "type": "message",
+   "time": "9月18日 10:22",
+   "speaker": "B",
+   "text": "想都别想，这是规矩。恢复好就是最大的感谢"
+  },
+  {
+   "type": "message",
+   "time": "9月18日 10:25",
+   "speaker": "A",
+   "text": "锦旗我订了，写啥好"
+  },
+  {
+   "type": "message",
+   "time": "9月18日 10:28",
+   "speaker": "B",
+   "text": "医术精湛医德高尚，老八股，但王主任吃这套"
+  },
+  {
+   "type": "message",
+   "time": "9月18日 10:32",
+   "speaker": "A",
+   "text": "哈哈行"
+  },
+  {
+   "type": "message",
+   "time": "9月18日 10:35",
+   "speaker": "A",
+   "text": "明天来送饭，院里停车好停不"
+  },
+  {
+   "type": "message",
+   "time": "9月18日 10:38",
+   "speaker": "B",
+   "text": "别停院内，对面商场前两小时免费"
+  },
+  {
+   "type": "message",
+   "time": "9月18日 10:40",
+   "speaker": "A",
+   "text": "学到了"
+  },
+  {
+   "type": "message",
+   "time": "9月18日 10:42",
+   "speaker": "B",
+   "text": "记得拿住院凭据，商场给减"
+  },
+  {
+   "type": "message",
+   "time": "9月18日 10:45",
+   "speaker": "A",
+   "text": "国庆你们科室放假不"
+  },
+  {
+   "type": "message",
+   "time": "9月18日 10:48",
+   "speaker": "B",
+   "text": "轮着来，我初一值一天"
+  },
+  {
+   "type": "message",
+   "time": "9月18日 10:50",
+   "speaker": "A",
+   "text": "辛苦，那节后请你吃饭"
+  },
+  {
+   "type": "message",
+   "time": "9月18日 10:52",
+   "speaker": "B",
+   "text": "饭就不必，你爸出院顺利比啥都强"
+  },
+  {
+   "type": "message",
+   "time": "9月19日 09:30",
+   "speaker": "A",
+   "text": "明天出院，结算单我看着有点乱，医保报完自付三千二，对吗"
+  },
+  {
+   "type": "message",
+   "time": "9月19日 09:40",
+   "speaker": "B",
+   "text": "对，自费药那部分单列的，窗口给你明细了"
+  },
+  {
+   "type": "message",
+   "time": "9月19日 09:45",
+   "speaker": "A",
+   "text": "清楚，出院小结也给了"
+  },
+  {
+   "type": "message",
+   "time": "9月19日 09:50",
+   "speaker": "B",
+   "text": "回去按时复查，两周后来拆线，挂普通号就行"
+  },
+  {
+   "type": "message",
+   "time": "9月19日 09:55",
+   "speaker": "A",
+   "text": "好，这回真谢谢您，全程麻烦您了"
+  },
+  {
+   "type": "message",
+   "time": "9月19日 10:00",
+   "speaker": "B",
+   "text": "应该的，患者顺当我们就顺当"
+  },
+  {
+   "type": "message",
+   "time": "9月19日 10:05",
+   "speaker": "A",
+   "text": "锦旗周五到，我给您送去"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000508",
+  "status": "accepted",
+  "errors": []
+ }
+}

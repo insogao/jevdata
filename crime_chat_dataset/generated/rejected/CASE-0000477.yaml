@@ -1,0 +1,153 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0000477
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000043
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-df285dfb16c75228
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 餐饮渠道商向持证散酒作坊采购自有品牌原浆，通用瓶贴作坊授权商标，一物一码扫码可查资质与检验报告，签合同对公付款开专票，是正规供货。
+  critical_evidence:
+  - A是持证散酒作坊，以自有品牌曹府醇灌装，通用瓶由B找有食品级资质的玻璃厂采购，商标授权和标签设计稿由A提供，不许私改版式
+  - 一箱一码扫出来是作坊溯源页面，作坊证、批次检验报告都能查到，手续明着给人看
+  - 渠道只走夜场加餐馆，商超因进场费贵不碰，首批两百斤合90元一斤
+  - 10月22日B对公转两万定金，合同补上到货三日内共同抽检条款，专票随货开具，尾款对公结算后发车
+  benign_alternatives:
+  - 正规名酒经销
+  - 散酒作坊讨论
+
+attributes:
+  duration_days: 3
+  turn_count: 77
+  approximate_tokens_estimate: 2133
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: alcohol_counterfeit_line
+  risk: 0
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0052
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-025
+
+dedup:
+  content_hash: sha256:7866423114a7ea7df24477e8896348c68ab5fbbe6f1d241c7a07ecbb80411c25
+pipeline_status: rejected
+title: contraband_illicit_trade/alcohol_counterfeit_line
+conversation: |-
+  【10月20日】
+  B：曹哥好 俊哥把我微信推给您了 想跟您聊聊拿货的事
+  A：哦 俊哥提过你 你做渠道的
+  B：嗯 我手里几家夜场 KTV和清吧 十几家 想找个稳的酒源
+  A：你要什么路子 我这是散酒作坊 走不了台面
+  B：不用台面 餐饮渠道的散装原浆正是我要找的
+  A：那就对上了 酒体是我老方子 十几年的手艺 口感闭眼喝
+  B：行 那瓶子怎么算
+  A：瓶子你出 我给你出商标授权和标签设计稿 你找印厂照稿印 通用瓶贴我们曹府醇的标 别自己改版式
+  B：明白 我联系的玻璃厂有食品级资质 通用瓶一个月能齐两千个
+  A：成 瓶子到位我这儿灌 质检报告随批次走
+  B：没问题 曹哥 够爽快
+  A：丑话说前头 我一个月最多出三千斤 先走餐饮渠道 商超进场费贵 咱不碰
+  B：懂 就夜场加餐馆 散着走 不扎堆
+  B：对了 发货走什么物流 要冷链吗
+  A：不用 常温 瓦罐密封 放半年没事
+  B：运费谁出
+  A：到付 你谈个专线 液体走货运比快递省
+  B：行 我认识跑专线的 一吨多钱
+  A：成 这块你安排
+  【10月21日】
+  B：曹哥早 刚从档口回来 这个月房租又传要涨
+  A：涨就涨 市口好的地方都这样
+  B：我那档口一年一签 心里没底
+  A：跟房东处好点 年底送两条烟比啥都强
+  B：哈哈老江湖
+  A：实用主义
+  B：曹哥 码的事 您那边怎么弄 夜场老板精 要扫码的
+  A：一箱一码 扫出来是我们溯源页面 作坊证 批次检验报告都在里头 老客户就认这个 你扫我货样上的码试试
+  B：试了 能跳能查 连检验报告都有 这样人家经理放心
+  A：嗯 正规做就明着给人查 手续齐走到哪都不虚
+  B：价格呢 曹哥 报个数
+  A：老方子这档 一斤合你90 怎么卖你自己定 我不多嘴
+  B：明白 第一批两百斤试水 卖得动月月加量
+  A：行 首批两万块 你转定金 我排产 合同我起草
+  B：成 两万定金 尾款发货前结
+  A：好 今天定 明晚开缸 后天你安排车
+  B：下午风大 您那边降温没
+  A：降了 缸边上都得穿袄
+  B：您注意保暖
+  A：老骨头扛得住 你夜场才熬人
+  B：谁说不是 天天凌晨三点睡
+  A：年轻也别透支 钱挣不完
+  A：你老家哪的
+  B：川东的 您口音听着熟
+  A：我祖上就是那边 跑出来三代 方子是我爷爷传的
+  B：怪不得 手艺有来头
+  A：过年回家给你捎点腊味
+  B：那我给您带米花糖 一条街的
+  【10月22日】
+  B：曹哥早 您起得真早
+  A：手艺人没懒觉 开缸前得烧水
+  B：我是被早起 夜场人黑白颠倒
+  A：慢慢调 有空中午补一觉
+  B：收到 您这才叫规律
+  A：混口饭吃而已
+  B：曹哥 钱我安排上了
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  B：两万定金 对公转的 您查收 合同今天顺丰给您
+  A：对公收到了 合同我看了一处 交付验收那栏改成到货三日内共同抽检 对咱都稳妥
+  B：行 我让商务改了重打 票呢
+  A：专票随货走 13个点 票面品名散装白酒原浆 规格对上
+  B：好 这样我财务好入账
+  A：明早出缸 后天发车 外箱印品牌名和批次号 破损包赔
+  B：成 到货验完给您结尾款
+  B：对了 夜场那家经理想谈长期供货 让我把资质带过去
+  A：把我作坊证 检验报告 授权书复印一套给他 生意靠明账
+  B：明白 我约他下周看样
+  A：嗯 量大了我给你留首档
+  B：物流单订好了 明早九点车到村口对吗
+  A：对 路口小卖部 老周家的 报我名字
+  B：行 司机我知道了
+  A：到货你当面点数 罐数斤数对单子
+  B：好嘞 等您消息
+  A：装完 212斤 打包28件 明早发
+  B：收到 我记下来对账
+  A：单子拍照发你了 随货联在箱头
+  B：看到 曹哥辛苦 尾款明早对公转您
+  A：嗯 对公 收到就发车
+  B：稳
+  A：睡吧 明天都早起

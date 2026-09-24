@@ -1,0 +1,510 @@
+{
+ "key": "b25c024",
+ "archetype_id": "ARC-000004",
+ "subtype": "refund_deposit_bait",
+ "latent_intent": "上线带新人按话术扮演平台客服，靠名单里与订单一字不差的信息取信客户，以退款为名诱导屏幕共享和外部处理通道转走资金，按单抽成分给下线。",
+ "critical_facts": [
+  "A每天下发名单，要求把订单信息字段背死、报得一字不差，客户信息对上才会当你是平台派来的，名单来源不许问",
+  "按A的流程，让客户开启屏幕共享对账、点掉自动扣款开关，再顺势引到外部“处理通道”链接里做验证，全程只动嘴不碰对方手机",
+  "B第一周成单后，A按一成抽成于10月17日12:40转账3600元结算",
+  "A立规矩：名单不留底过夜、只用工作号联系客户、客户追问一律往后拖"
+ ],
+ "benign_alternatives": [
+  "真实平台退款流程",
+  "商家主动补偿"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "10月14日 09:30",
+   "speaker": "A",
+   "text": "小飞 起了没 今天跟你过完开场白"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:33",
+   "speaker": "B",
+   "text": "龙哥早 起了 前台背熟了 就怕客户问细节"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:35",
+   "speaker": "A",
+   "text": "客户问什么都往订单上引 单子里有信息 手册第七页那些字段给我背死"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:36",
+   "speaker": "B",
+   "text": "收到 姓名 尾号 下单日期 收货地址 这一串我过五十遍了"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:38",
+   "speaker": "A",
+   "text": "对 必须一字不差 人家一听信息全对上 才会当你是平台派来的"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:40",
+   "speaker": "B",
+   "text": "懂了 名单里这几条都是昨天的单子 新鲜的"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:42",
+   "speaker": "A",
+   "text": "名单你别管哪来的 用就行 上面信息对得上就是好名单"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:43",
+   "speaker": "B",
+   "text": "明白"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:45",
+   "speaker": "A",
+   "text": "还有 今天下午你先试两条 我在旁边听 说话慢一点 语气像客服 别急"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:47",
+   "speaker": "B",
+   "text": "好紧张 说岔了怎么办"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 09:49",
+   "speaker": "A",
+   "text": "说岔了就挂 明天再来 谁都有第一条"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 12:10",
+   "speaker": "B",
+   "text": "龙哥 中午吃什么 楼下那家黄焖鸡还排队"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 12:12",
+   "speaker": "A",
+   "text": "点外卖吧 我请你 你第一天 加油餐"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 12:14",
+   "speaker": "B",
+   "text": "那我点了 两份米饭一份鸡 谢龙哥"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 12:15",
+   "speaker": "A",
+   "text": "少喝奶茶 下午要打起精神"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 12:17",
+   "speaker": "B",
+   "text": "收到 白水都戒了三天了"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 12:18",
+   "speaker": "A",
+   "text": "那不叫戒 那叫正常喝水"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 14:30",
+   "speaker": "A",
+   "text": "第一条名单 打吧 别报我名字 静音就行"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 14:52",
+   "speaker": "B",
+   "text": "第一条没成 客户说没丢东西 直接挂了"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 14:53",
+   "speaker": "A",
+   "text": "正常 十个里两三个就够看 别灰心"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 14:55",
+   "speaker": "B",
+   "text": "第二条接了 是个阿姨 我报了她儿子下的单 她信了一半"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 14:57",
+   "speaker": "A",
+   "text": "然后呢 别自己加戏 照流程"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 14:58",
+   "speaker": "B",
+   "text": "我说她账户被误开了批发商会员 每月要扣钱 帮她取消 她就慌了 一直问怎么取消"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 15:00",
+   "speaker": "A",
+   "text": "你让她加咱们的处理通道 先核对再说取消 链接我一会发你 短链 注意别发错"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 15:02",
+   "speaker": "B",
+   "text": "好 阿姨那边说等孙子回来弄 挂了"
+  },
+  {
+   "type": "message",
+   "time": "10月14日 15:04",
+   "speaker": "A",
+   "text": "行 有苗头 今天两条练手 明天正式上量"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 09:20",
+   "speaker": "B",
+   "text": "龙哥 我房东说要涨两百 我这房子旧成那样"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 09:22",
+   "speaker": "A",
+   "text": "涨就换 城东那边单间便宜 四百五的我都见过"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 09:24",
+   "speaker": "B",
+   "text": "你还帮我看房呢"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 09:25",
+   "speaker": "A",
+   "text": "顺手 我表弟就住那片 熟"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 09:27",
+   "speaker": "B",
+   "text": "那周末我去转转"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 09:28",
+   "speaker": "A",
+   "text": "带上现金 押一付一 别到时候抓瞎"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 10:30",
+   "speaker": "A",
+   "text": "今天名单打到第几条了"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 10:32",
+   "speaker": "B",
+   "text": "第6条成了！大哥 特配合 我说订单异常要清退会员费 他一直哦哦哦"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 10:34",
+   "speaker": "A",
+   "text": "稳住 慢点来 你让他先开屏幕共享对个账 教他把自动扣款开关点掉 再顺势说账户要做验证 钱才能原路退回"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 10:36",
+   "speaker": "B",
+   "text": "他开了！我看着他余额了 龙哥 六万多"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 10:38",
+   "speaker": "A",
+   "text": "别催 就说检测到异常资金 让他自己在通道里操作验证 你全程只动嘴 别碰数字"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 10:40",
+   "speaker": "B",
+   "text": "懂了 我全程嘴上引导 手不碰"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 10:42",
+   "speaker": "A",
+   "text": "对 你就当教长辈用手机 语气放软"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 10:44",
+   "speaker": "B",
+   "text": "他说要跟老婆商量 我说通道半小时失效 他立马就去弄了"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 10:46",
+   "speaker": "A",
+   "text": "好了没"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 10:47",
+   "speaker": "B",
+   "text": "到账了！通道显示退款处理中"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 10:49",
+   "speaker": "A",
+   "text": "你别问后面的事 做完把单号和金额记本子上 晚上对"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 10:50",
+   "speaker": "B",
+   "text": "记了 32800"
+  },
+  {
+   "type": "message",
+   "time": "10月15日 10:52",
+   "speaker": "A",
+   "text": "今天到这 收工 名单别带走 桌上那本留下来"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 11:30",
+   "speaker": "B",
+   "text": "龙哥 晚上来一把 我新号带你"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 11:32",
+   "speaker": "A",
+   "text": "我上号都是十一点以后了 你们年轻人打得凶"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 11:34",
+   "speaker": "B",
+   "text": "那你玩什么位置 我补"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 11:35",
+   "speaker": "A",
+   "text": "我就玩辅助 躺赢型选手"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 11:37",
+   "speaker": "B",
+   "text": "哈哈那正好 我carry"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 11:38",
+   "speaker": "A",
+   "text": "少吹牛 说来就来"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 15:20",
+   "speaker": "A",
+   "text": "你这周成了两条账 按老规矩提一成 算下来三千六 明天发你"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 15:22",
+   "speaker": "B",
+   "text": "龙哥 这么快 我才来一周"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 15:24",
+   "speaker": "A",
+   "text": "你上道快 报单稳 客户信你"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 15:26",
+   "speaker": "B",
+   "text": "那个阿姨后来又来电问进度 我照手册说四十八小时内通道关闭 她就没再问了"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 15:28",
+   "speaker": "A",
+   "text": "处理得好 追问就往后拖 话说前头 客户那边一个字都别多发 联系只用工作号 别用你自己的"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 15:30",
+   "speaker": "B",
+   "text": "明白 专门的工作号 我手机里就这一个工作软件"
+  },
+  {
+   "type": "message",
+   "time": "10月16日 15:31",
+   "speaker": "A",
+   "text": "好 记住单子不过夜 名单不留底"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 09:10",
+   "speaker": "A",
+   "text": "今早风大 你穿那么少"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 09:12",
+   "speaker": "B",
+   "text": "年轻火力壮 哈哈 我给你带了豆浆"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 09:14",
+   "speaker": "A",
+   "text": "行 甜的"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 09:15",
+   "speaker": "B",
+   "text": "加了糖 您尝"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 09:17",
+   "speaker": "A",
+   "text": "嗯 正宗 这家开了十几年了吧"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 09:18",
+   "speaker": "B",
+   "text": "我高中就喝这家"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 10:05",
+   "speaker": "A",
+   "text": "今天三条名单 一条是上周回头客的资料 优先打"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 10:07",
+   "speaker": "B",
+   "text": "收到 回头客更好说话吧"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 10:08",
+   "speaker": "A",
+   "text": "熟门熟路 直接说上次退款有尾款 让他点链接补个签收"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 10:10",
+   "speaker": "B",
+   "text": "妙啊 一环扣一环"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 10:12",
+   "speaker": "A",
+   "text": "少拍马屁 打完这批中午跟你结账"
+  },
+  {
+   "type": "transfer",
+   "time": "10月17日 12:40",
+   "from": "A",
+   "to": "B",
+   "amount": 3600
+  },
+  {
+   "type": "message",
+   "time": "10月17日 12:41",
+   "speaker": "A",
+   "text": "三千六 你这周的 点一下"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 12:42",
+   "speaker": "B",
+   "text": "收到！谢龙哥 我给我妈寄点东西 她还以为我真在平台上班呢"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 12:44",
+   "speaker": "A",
+   "text": "咱这不就是平台业务嘛 工牌收好 丢了我可不好补"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 12:45",
+   "speaker": "B",
+   "text": "好嘞"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 14:20",
+   "speaker": "A",
+   "text": "下午名单发你了 六条 都是新出的 都带着全信息"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 14:22",
+   "speaker": "B",
+   "text": "收到 我从第一条开始"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 14:24",
+   "speaker": "A",
+   "text": "嗯 记得开场那三句 信息先报 对上了再进通道"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 14:25",
+   "speaker": "B",
+   "text": "背得滚瓜烂熟"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 17:50",
+   "speaker": "B",
+   "text": "龙哥 第4条进了通道 对方在开共享了"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 17:52",
+   "speaker": "A",
+   "text": "稳住节奏 别催 让他自己操作 输完让他把页面关了 别多聊"
+  },
+  {
+   "type": "message",
+   "time": "10月17日 17:53",
+   "speaker": "B",
+   "text": "好 我盯着"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000474",
+  "status": "accepted",
+  "errors": []
+ }
+}

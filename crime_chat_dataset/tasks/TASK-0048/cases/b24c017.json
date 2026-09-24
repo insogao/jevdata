@@ -1,0 +1,414 @@
+{
+ "key": "b24c017",
+ "archetype_id": "ARC-000089",
+ "subtype": "hotel_register_leak",
+ "latent_intent": "酒店夜班前台利用当班便利长期向前同事出售住客入住登记信息，按次收费、只在夜班操作，帮助对方连续追踪一名躲债人的落脚点。",
+ "critical_facts": [
+  "B 只在夜班帮 A 查人，白班有经理盯着不敢动，两人约定白天谁也不提，形成固定默契",
+  "住客刚办完入住几分钟内 B 就把房号和登记信息发给 A，刚入住就出单",
+  "费用按次结算，一次五百，昨晚加之前两回一共三单凑整一千五",
+  "A 凭 B 提供的入住记录连续多日锁定躲债人纪某的行踪，并要求 B 继续留意"
+ ],
+ "benign_alternatives": [
+  "前台同事间正常的工作互助",
+  "酒店按流程配合的住客查询"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "10月10日 23:05",
+   "speaker": "A",
+   "text": "还没睡？这个点你该上班了吧"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 23:07",
+   "speaker": "B",
+   "text": "在打卡了，夜班命。你这么晚干嘛"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 23:08",
+   "speaker": "A",
+   "text": "睡不着，刷手机"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 23:10",
+   "speaker": "B",
+   "text": "羡慕能失眠的，我一上夜班困得要死"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 23:12",
+   "speaker": "A",
+   "text": "你们酒店最近生意行不行"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 23:13",
+   "speaker": "B",
+   "text": "一般，周一到周四空得很"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 23:15",
+   "speaker": "A",
+   "text": "哦，那清净"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 23:17",
+   "speaker": "B",
+   "text": "你别光哦，早点睡，黑眼圈都到下巴了"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 23:40",
+   "speaker": "A",
+   "text": "哎对了，求你个事。咱老同事了——帮我留个心，姓纪那个，就我跟你说过的那个"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 23:41",
+   "speaker": "B",
+   "text": "你还惦记他呢"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 23:43",
+   "speaker": "A",
+   "text": "废话，卷了我八十万跑掉的人。他来开房总得用他自己的身份证"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 23:45",
+   "speaker": "B",
+   "text": "人在前台一挂证我就知道了呗"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 23:46",
+   "speaker": "A",
+   "text": "就这意思。到没到吱一声"
+  },
+  {
+   "type": "message",
+   "time": "10月10日 23:48",
+   "speaker": "B",
+   "text": "行，我今晚先盯着，你睡你的"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 00:35",
+   "speaker": "A",
+   "text": "睡不着，问一句，有动静没"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 00:36",
+   "speaker": "B",
+   "text": "暂时没，才十二点多，急啥"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 00:40",
+   "speaker": "A",
+   "text": "行，辛苦，有他消息第一时间喊我"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 09:20",
+   "speaker": "B",
+   "text": "下班，腿站麻了，早八的地铁都不敢坐，怕坐过"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 09:25",
+   "speaker": "A",
+   "text": "回去补觉吧，辛苦"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 09:26",
+   "speaker": "B",
+   "text": "你上班别摸鱼"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 09:30",
+   "speaker": "A",
+   "text": "摸一会，中午还约了人吃饭"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 09:32",
+   "speaker": "B",
+   "text": "又是饭局，你这月第几顿了"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 09:34",
+   "speaker": "A",
+   "text": "数不清，老板画饼局"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 14:10",
+   "speaker": "A",
+   "text": "想起个事，你白天能帮我看一眼系统不"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 14:15",
+   "speaker": "B",
+   "text": "白天不行，白班俩人盯着，经理办公室就在后头，我白天连前台都站不上去"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 14:18",
+   "speaker": "A",
+   "text": "那只能等你夜班"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 14:20",
+   "speaker": "B",
+   "text": "嗯，夜班就我一个，经理十一点就走，我干活没人盯"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 14:22",
+   "speaker": "A",
+   "text": "那就辛苦你夜班，白天咱俩谁也别提这事"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 14:25",
+   "speaker": "B",
+   "text": "懂，我又不傻"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 14:27",
+   "speaker": "A",
+   "text": "事成之后不会亏你"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 14:29",
+   "speaker": "B",
+   "text": "先说好，我就帮你看一眼，别整出别的事"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 14:31",
+   "speaker": "A",
+   "text": "能有啥事，我就是想找人把话说开"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 12:00",
+   "speaker": "A",
+   "text": "中午吃的啥"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 12:03",
+   "speaker": "B",
+   "text": "楼下便当，卤鸡腿那款"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 12:05",
+   "speaker": "A",
+   "text": "天天便当，你就不能自己做"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 12:07",
+   "speaker": "B",
+   "text": "做什么做，出租屋连个灶都没有"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 12:09",
+   "speaker": "A",
+   "text": "那你工资都花哪了"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 12:11",
+   "speaker": "B",
+   "text": "买衣服，喝奶茶，快乐穷"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 12:13",
+   "speaker": "A",
+   "text": "下回带你吃顿好的，犒劳你上夜班"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 22:48",
+   "speaker": "B",
+   "text": "到了到了！姓纪的刚在前台办完入住，302，刚办的，身份证我都过目了"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 22:49",
+   "speaker": "A",
+   "text": "真的？！你看准了没"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 22:50",
+   "speaker": "B",
+   "text": "错不了，照片对得上，名字也是那三个字"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 22:51",
+   "speaker": "A",
+   "text": "我马上过来"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 22:53",
+   "speaker": "B",
+   "text": "你别在前台晃啊，我还在班上"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 22:55",
+   "speaker": "A",
+   "text": "我就在大堂坐坐，不给你惹麻烦"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 23:02",
+   "speaker": "B",
+   "text": "他人上楼了，你悠着点，别在我班上出事"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 23:05",
+   "speaker": "A",
+   "text": "我就跟他聊聊。你把登记那页拍给我留个底"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 23:07",
+   "speaker": "B",
+   "text": "拍了发你了。就这一回啊，下回可不一定"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 10:30",
+   "speaker": "B",
+   "text": "昨晚折腾到三点，今天眼睛肿成核桃"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 10:35",
+   "speaker": "A",
+   "text": "昨天多亏你，事情有眉目了"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 10:36",
+   "speaker": "B",
+   "text": "找到他人了？"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 10:38",
+   "speaker": "A",
+   "text": "嗯，总算逮着尾巴了，这几个月没白等"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 10:40",
+   "speaker": "B",
+   "text": "那挺好，心里石头落地了"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 10:42",
+   "speaker": "A",
+   "text": "落地一半，钱还没着落呢"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 10:44",
+   "speaker": "B",
+   "text": "缺钱吱声，我这还有点，先给你周转"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 10:50",
+   "speaker": "A",
+   "text": "昨天那单怎么算，你说个数"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 10:52",
+   "speaker": "B",
+   "text": "按老规矩呗，一次五百"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 10:53",
+   "speaker": "A",
+   "text": "加上之前那两回，一共三单，一起算吧"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 10:55",
+   "speaker": "B",
+   "text": "三单啊……那你给个整，一千五"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 10:56",
+   "speaker": "A",
+   "text": "就一千五，转你了，别嫌少，往后还靠你"
+  },
+  {
+   "type": "transfer",
+   "time": "10月13日 10:57",
+   "from": "A",
+   "to": "B",
+   "amount": 1500
+  },
+  {
+   "type": "message",
+   "time": "10月13日 10:59",
+   "speaker": "B",
+   "text": "收到，行吧，看在你找人的份上"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 11:01",
+   "speaker": "A",
+   "text": "他这几天肯定还在附近，你多留意"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 11:03",
+   "speaker": "B",
+   "text": "只限夜班啊，我可说好了"
+  },
+  {
+   "type": "message",
+   "time": "10月13日 11:05",
+   "speaker": "A",
+   "text": "知道，夜班夜班，你有数就行"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000434",
+  "status": "accepted",
+  "errors": []
+ }
+}

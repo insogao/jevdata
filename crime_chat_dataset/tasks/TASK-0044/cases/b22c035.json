@@ -1,0 +1,372 @@
+{
+ "key": "b22c035",
+ "archetype_id": "ARC-000086",
+ "subtype": "courier_info_leak",
+ "latent_intent": "开场像两个陌生人私下交易面单信息，实际是网店售后请驿站配合丢件理赔的官方核验：照片打码、平台垫付、代寄按单结费，每一分钱都有对应凭据。",
+ "critical_facts": [
+  "网店售后索要的是丢件那几天的入库登记记录照片，电话已打码、住址只留到小区",
+  "理赔走平台官方流程，垫付款直接赔到客户账上，全程未要求任何人先交任何费用",
+  "10月12日转账48元对应12单退货代寄操作费（每单4元），与回传的单号数量一一对应",
+  "运费走店铺月结，驿站登记簿本身只留尾号，照片仅用于平台核验"
+ ],
+ "benign_alternatives": [
+  "快递理赔核实",
+  "驿站正常登记"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "10月11日 09:02",
+   "speaker": "B",
+   "text": "您好，是同心路驿站的陈师傅吧？退货这块想找您帮个忙"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 09:10",
+   "speaker": "A",
+   "text": "我是，您哪位？"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 09:12",
+   "speaker": "B",
+   "text": "我是一家网店的售后，姓周。有个客户在你驿站寄的退货件丢了"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 09:15",
+   "speaker": "A",
+   "text": "哦，是有个件找不到了，客户还来问过一回"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 09:18",
+   "speaker": "B",
+   "text": "对，就那单。客户在我们平台申请了理赔，官方要我们提供入库登记记录做核实"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 09:20",
+   "speaker": "A",
+   "text": "登记记录我们有，不过面单上客户电话得打码，这是规定"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 09:22",
+   "speaker": "B",
+   "text": "应该的，官方也说不需要完整号码，打码的就行"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 09:26",
+   "speaker": "A",
+   "text": "我下午把那几天的登记记录翻出来拍给你"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 09:28",
+   "speaker": "B",
+   "text": "麻烦陈师傅了。平台核完，理赔款是直接赔给客户的，不打折也不收费"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 09:30",
+   "speaker": "A",
+   "text": "这流程正规，客户也少跑腿"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 10:05",
+   "speaker": "A",
+   "text": "今早降温了，您那边多加衣服"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 10:08",
+   "speaker": "B",
+   "text": "加了加了，仓库比外头还冷"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 10:10",
+   "speaker": "A",
+   "text": "我早上分件手都僵了，这鬼天气"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 10:12",
+   "speaker": "B",
+   "text": "秋天多变天，多喝热水哈哈"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 11:40",
+   "speaker": "A",
+   "text": "记录找到了，就这三张，电话都打了码，住址只留到小区"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 11:45",
+   "speaker": "B",
+   "text": "收到，我传给平台专员"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 12:10",
+   "speaker": "B",
+   "text": "陈师傅中午怎么解决？驿站能点外卖不"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 12:15",
+   "speaker": "A",
+   "text": "能是能，忙起来顾不上，今天泡面对付"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 12:18",
+   "speaker": "B",
+   "text": "泡面配个卤蛋才算完整哈哈"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 12:20",
+   "speaker": "A",
+   "text": "您这要求不高，我这就加个蛋"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 12:22",
+   "speaker": "B",
+   "text": "哈哈不打扰您干饭，下午等专员消息"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 13:20",
+   "speaker": "B",
+   "text": "专员说记录没问题，时间对得上，就差客户那边寄回商品核验了"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 13:25",
+   "speaker": "A",
+   "text": "那件丢的货是不是也得挂失"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 13:28",
+   "speaker": "B",
+   "text": "平台已经按流程备了案，理赔款昨天先垫付到客户账上了"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 13:30",
+   "speaker": "A",
+   "text": "那客户那边总算有个交代"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 15:40",
+   "speaker": "A",
+   "text": "周经理，核验完的退货件，后续还走我们驿站寄回吗"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 15:45",
+   "speaker": "B",
+   "text": "对，核验通过后商品要寄回我们仓。我一单给你备注4块操作费，老合作价，运费走我们的月结"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 15:50",
+   "speaker": "A",
+   "text": "四块一单，跟我们平时给网店代寄的价一样，行"
+  },
+  {
+   "type": "message",
+   "time": "10月11日 15:52",
+   "speaker": "B",
+   "text": "好，明天有十二单要发，到时候麻烦你"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 08:15",
+   "speaker": "A",
+   "text": "周经理早，昨天那客户的理赔到账了吗"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 08:20",
+   "speaker": "B",
+   "text": "到了，客户还发来个好评截图，说驿站记录帮了大忙"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 08:22",
+   "speaker": "A",
+   "text": "那就好，丢件我们驿站也有责任，总算补上了"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 08:25",
+   "speaker": "B",
+   "text": "各有各的不容易。今天十二单的退货单号我发你了"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 08:28",
+   "speaker": "A",
+   "text": "收到，我按单号一个个登记入库"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 08:30",
+   "speaker": "B",
+   "text": "麻烦了，老规矩，电话打码再拍照回传"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 08:32",
+   "speaker": "A",
+   "text": "放心，我们登记簿本来也只留尾号"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:10",
+   "speaker": "A",
+   "text": "你们大促什么时候开始？我媳妇天天蹲直播"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:15",
+   "speaker": "B",
+   "text": "我们不凑那个热闹，做的是宠物粮，四季都一样"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:18",
+   "speaker": "A",
+   "text": "宠物粮好啊，我家猫一天两顿比我吃得准时"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:20",
+   "speaker": "B",
+   "text": "哈哈那下次给你发张猫粮券，我们有员工内购"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 10:22",
+   "speaker": "A",
+   "text": "那敢情好"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 11:50",
+   "speaker": "A",
+   "text": "十二单都登记好了，照片回传你查收"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 11:55",
+   "speaker": "B",
+   "text": "收到，我看下……十二张都齐了，清楚"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 12:01",
+   "speaker": "B",
+   "text": "运费走月结，操作费十二单乘四块，四十八，我现在转你"
+  },
+  {
+   "type": "transfer",
+   "time": "10月12日 12:03",
+   "from": "B",
+   "to": "A",
+   "amount": 48
+  },
+  {
+   "type": "message",
+   "time": "10月12日 12:05",
+   "speaker": "A",
+   "text": "到账了。以后有单尽管来"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 12:08",
+   "speaker": "B",
+   "text": "一定，登记规范对我们核验也省事"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 12:10",
+   "speaker": "A",
+   "text": "你那边丢件多吗"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 12:12",
+   "speaker": "B",
+   "text": "不多，一个月摊上两三单，平台都有官方流程，照着走就行"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 13:30",
+   "speaker": "A",
+   "text": "中午吃的啥，我今天学聪明了，提前备了饭盒"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 13:35",
+   "speaker": "B",
+   "text": "我点了家猪脚饭，仓库解决"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 13:38",
+   "speaker": "A",
+   "text": "猪脚饭配青菜，讲究"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 13:40",
+   "speaker": "B",
+   "text": "干体力活就得吃点硬的"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 16:20",
+   "speaker": "A",
+   "text": "对了那单丢件的客户，后续不用再来驿站开证明了吧"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 16:25",
+   "speaker": "B",
+   "text": "不用了，官方理赔都结清了，你这边记录留着备查就行"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 16:28",
+   "speaker": "A",
+   "text": "行，记录我都归档了，随时能调"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 16:30",
+   "speaker": "B",
+   "text": "好，合作愉快，回见"
+  },
+  {
+   "type": "message",
+   "time": "10月12日 16:32",
+   "speaker": "A",
+   "text": "回见，周经理"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000398",
+  "status": "accepted",
+  "errors": []
+ }
+}

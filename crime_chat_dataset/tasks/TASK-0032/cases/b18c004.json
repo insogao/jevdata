@@ -1,0 +1,414 @@
+{
+ "key": "b18c004",
+ "archetype_id": "ARC-000013",
+ "subtype": "loan_bridge_interest_rollover",
+ "latent_intent": "放款的上级以先扣两个月利息的方式借给下属三万过桥款，续贷受阻时又安排到期再借另一家来平账，利息越滚越高、以贷养贷。",
+ "critical_facts": [
+  "借三万先扣两个月利息2400，实际到账27600，与转账金额一致",
+  "借条只写三万本金，不写扣息的事",
+  "续贷未批时，被安排到期再借一家还这家，新渠道月息四个半、先扣三个月",
+  "上下级加朋友关系，叮嘱此事别让公司其他人知道"
+ ],
+ "benign_alternatives": [
+  "正常的过桥资金周转",
+  "亲友间的应急借款"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "9月8日 08:40",
+   "speaker": "B",
+   "text": "哥，早，我那笔过桥的钱，下周三就要还银行了"
+  },
+  {
+   "type": "message",
+   "time": "9月8日 08:45",
+   "speaker": "A",
+   "text": "三万对吧，还差多少"
+  },
+  {
+   "type": "message",
+   "time": "9月8日 08:47",
+   "speaker": "B",
+   "text": "差三万整，银行续贷卡在半道，得先还旧贷才放新贷"
+  },
+  {
+   "type": "message",
+   "time": "9月8日 08:50",
+   "speaker": "A",
+   "text": "行，我给你安排，老规矩，月息四个点"
+  },
+  {
+   "type": "message",
+   "time": "9月8日 08:52",
+   "speaker": "B",
+   "text": "先扣两个月的？"
+  },
+  {
+   "type": "message",
+   "time": "9月8日 08:53",
+   "speaker": "A",
+   "text": "对，先扣两个月利息2400，到手两万七千六"
+  },
+  {
+   "type": "message",
+   "time": "9月8日 08:55",
+   "speaker": "B",
+   "text": "行吧，救急要紧"
+  },
+  {
+   "type": "message",
+   "time": "9月8日 09:00",
+   "speaker": "A",
+   "text": "中午走给你"
+  },
+  {
+   "type": "message",
+   "time": "9月8日 09:02",
+   "speaker": "B",
+   "text": "好嘞，谢哥"
+  },
+  {
+   "type": "message",
+   "time": "9月8日 09:04",
+   "speaker": "A",
+   "text": "到账给我回个话，新贷那边有进展也第一时间说"
+  },
+  {
+   "type": "transfer",
+   "time": "9月8日 12:30",
+   "from": "A",
+   "to": "B",
+   "amount": 27600
+  },
+  {
+   "type": "message",
+   "time": "9月8日 12:35",
+   "speaker": "B",
+   "text": "到账两万七千六，看到了"
+  },
+  {
+   "type": "message",
+   "time": "9月8日 12:37",
+   "speaker": "A",
+   "text": "嗯，收条不用打，咱俩心里有数"
+  },
+  {
+   "type": "message",
+   "time": "9月8日 12:40",
+   "speaker": "B",
+   "text": "借条要不要写一张"
+  },
+  {
+   "type": "message",
+   "time": "9月8日 12:42",
+   "speaker": "A",
+   "text": "写也行，就写借三万，日期写今天，扣息的事不用写"
+  },
+  {
+   "type": "message",
+   "time": "9月8日 12:45",
+   "speaker": "B",
+   "text": "懂"
+  },
+  {
+   "type": "message",
+   "time": "9月8日 14:20",
+   "speaker": "A",
+   "text": "中秋那三天你值哪天班"
+  },
+  {
+   "type": "message",
+   "time": "9月8日 14:22",
+   "speaker": "B",
+   "text": "值中间那天，反正我也回不去"
+  },
+  {
+   "type": "message",
+   "time": "9月8日 14:25",
+   "speaker": "A",
+   "text": "值完我请你吃烤鱼，公司楼下那家"
+  },
+  {
+   "type": "message",
+   "time": "9月8日 14:27",
+   "speaker": "B",
+   "text": "行，我要微辣的"
+  },
+  {
+   "type": "message",
+   "time": "9月8日 16:40",
+   "speaker": "B",
+   "text": "哥，银行客户经理说续贷还要补一份流水"
+  },
+  {
+   "type": "message",
+   "time": "9月8日 16:45",
+   "speaker": "A",
+   "text": "那就补，这两天把流水做齐一点"
+  },
+  {
+   "type": "message",
+   "time": "9月8日 16:48",
+   "speaker": "B",
+   "text": "我余额不够啊，刚被你扣了利息，哈哈"
+  },
+  {
+   "type": "message",
+   "time": "9月8日 16:50",
+   "speaker": "A",
+   "text": "贫嘴，晚上我想想办法"
+  },
+  {
+   "type": "message",
+   "time": "9月8日 16:52",
+   "speaker": "B",
+   "text": "哈哈"
+  },
+  {
+   "type": "message",
+   "time": "9月9日 09:30",
+   "speaker": "B",
+   "text": "哥，银行说续贷还得等两周，可你的钱下月初就到期了"
+  },
+  {
+   "type": "message",
+   "time": "9月9日 09:35",
+   "speaker": "A",
+   "text": "别慌，到期前我给你指条路"
+  },
+  {
+   "type": "message",
+   "time": "9月9日 09:37",
+   "speaker": "B",
+   "text": "什么路"
+  },
+  {
+   "type": "message",
+   "time": "9月9日 09:40",
+   "speaker": "A",
+   "text": "到期前再借一家，先把我的这笔平了，新贷下来你再还那边"
+  },
+  {
+   "type": "message",
+   "time": "9月9日 09:42",
+   "speaker": "B",
+   "text": "那利息不就垒起来了"
+  },
+  {
+   "type": "message",
+   "time": "9月9日 09:45",
+   "speaker": "A",
+   "text": "垒是垒点，可你不逾期啊，一逾期征信就花了"
+  },
+  {
+   "type": "message",
+   "time": "9月9日 09:48",
+   "speaker": "B",
+   "text": "也是，那从哪儿借"
+  },
+  {
+   "type": "message",
+   "time": "9月9日 09:50",
+   "speaker": "A",
+   "text": "我认识个做资金的朋友，利息跟我这边差不多，也是先扣"
+  },
+  {
+   "type": "message",
+   "time": "9月9日 09:53",
+   "speaker": "B",
+   "text": "行，到时你帮我引荐"
+  },
+  {
+   "type": "message",
+   "time": "9月9日 09:55",
+   "speaker": "A",
+   "text": "嗯，这事别跟公司里别人说"
+  },
+  {
+   "type": "message",
+   "time": "9月9日 09:57",
+   "speaker": "B",
+   "text": "知道"
+  },
+  {
+   "type": "message",
+   "time": "9月9日 15:20",
+   "speaker": "B",
+   "text": "哥，晚上沿江跑步去不，我最近胖了五斤"
+  },
+  {
+   "type": "message",
+   "time": "9月9日 15:23",
+   "speaker": "A",
+   "text": "去，七点半楼下等你"
+  },
+  {
+   "type": "message",
+   "time": "9月9日 15:25",
+   "speaker": "B",
+   "text": "我带上手环，上回你说我心率偏高"
+  },
+  {
+   "type": "message",
+   "time": "9月9日 15:28",
+   "speaker": "A",
+   "text": "对，你慢慢跑，别上来就冲"
+  },
+  {
+   "type": "message",
+   "time": "9月9日 15:30",
+   "speaker": "A",
+   "text": "别空腹跑，垫两口再下"
+  },
+  {
+   "type": "message",
+   "time": "9月9日 20:10",
+   "speaker": "A",
+   "text": "明天我把朋友推给你，条款一条条看清楚再签"
+  },
+  {
+   "type": "message",
+   "time": "9月9日 20:13",
+   "speaker": "B",
+   "text": "好，服务费那些我留心"
+  },
+  {
+   "type": "message",
+   "time": "9月9日 20:15",
+   "speaker": "A",
+   "text": "逾期费和提前还款那两栏重点看"
+  },
+  {
+   "type": "message",
+   "time": "9月9日 20:18",
+   "speaker": "B",
+   "text": "行，明天等信儿"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 10:05",
+   "speaker": "B",
+   "text": "哥，你朋友那方案我看了，月息四个半，先扣三个月"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 10:10",
+   "speaker": "A",
+   "text": "比我高半点，正常，人家也担着收不回的份儿"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 10:13",
+   "speaker": "B",
+   "text": "我算下，借三万扣四千零五十，到手两万五千九百五"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 10:16",
+   "speaker": "A",
+   "text": "你拿这笔把我的三万平了，剩下的窟窿等新贷下来补"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 10:20",
+   "speaker": "B",
+   "text": "行，中午我去签"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 11:00",
+   "speaker": "A",
+   "text": "你那房子装到哪步了"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 11:03",
+   "speaker": "B",
+   "text": "瓦工完了，下周进木工"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 11:05",
+   "speaker": "A",
+   "text": "木工好好盯，我家当年就在木工上吃了亏"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 11:08",
+   "speaker": "B",
+   "text": "记住了，师傅是我小舅子，不敢糊弄我"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 11:10",
+   "speaker": "A",
+   "text": "那行"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 15:40",
+   "speaker": "B",
+   "text": "签了，钱下午到卡，到账我就转你还三万"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 15:43",
+   "speaker": "A",
+   "text": "嗯，到账你说一声"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 16:30",
+   "speaker": "A",
+   "text": "三万到了，清了，借条我撕了"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 16:33",
+   "speaker": "B",
+   "text": "哥，这月真多亏你拉了一把"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 16:35",
+   "speaker": "A",
+   "text": "谢啥，以后别老卡着点儿借钱，提前规划"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 20:20",
+   "speaker": "B",
+   "text": "烤鱼还记得不，中秋值完班你请的"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 20:23",
+   "speaker": "A",
+   "text": "记得，到时喊上小陈"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 20:25",
+   "speaker": "B",
+   "text": "行，说定了"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 20:28",
+   "speaker": "A",
+   "text": "嗯，早点休息"
+  },
+  {
+   "type": "message",
+   "time": "9月10日 20:30",
+   "speaker": "B",
+   "text": "晚安哥"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0000270",
+  "status": "accepted",
+  "errors": []
+ }
+}
