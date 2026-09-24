@@ -1,0 +1,152 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000225
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000085
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-1cd58c10a7821c36
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A想借老同学在安防公司的人脸检索资源快速找回失联的舅舅，B坚守合规底线，把人引向报警和救助站正规渠道，最终通过官方比对找回。
+  critical_evidence:
+  - A的舅舅（67岁、有认知障碍前兆）失联两天，A手里只有旧照片和背影照，想请B用公司系统全城扫脸
+  - B所在安防公司的人脸系统只对接政务项目，个人照片进不了库，公民人脸数据不允许私人查询
+  - B建议报警调监控并陪同A去救助站登记人脸比对，随后民警靠医保消费记录锁定城北区域
+  - 舅舅在城北救助站被民警照片比对找回，事后A转520元红包谢B跑前跑后，B提议下月回请
+  benign_alternatives:
+  - 安防行业合规讨论
+  - 失联亲友寻人报警
+
+attributes:
+  duration_days: 4
+  turn_count: 75
+  approximate_tokens_estimate: 2081
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: face_search
+  risk: 0
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0052
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-025
+
+dedup:
+  content_hash: sha256:f7b8550bd7636f531dc6e3c0c556932d17791fb73e9984e6afffce0e1720a7e3
+pipeline_status: accepted
+title: privacy_doxxing/face_search
+conversation: |-
+  【10月8日】
+  A：在吗老周
+  B：在 刚开完周会 咋了
+  A：你还在那家人脸识别公司吧
+  B：在啊 跑政企销售的 你问这干嘛
+  A：我舅失联两天了 手机一直关机 舅妈快急疯了
+  B：老人多大
+  A：六十七 前年查出有点认知障碍 上礼拜还走丢过一回
+  B：那得赶紧 报警了吗
+  A：报了 所里登记了 说帮着留意
+  B：对 这事主要靠他们
+  A：我寻思你干这行的 你们系统不是全城摄像头都能扫吗 我这有他旧照片 还有一张背影 你帮我跑一下呗
+  B：兄弟 这个真帮不了 咱系统只对接政务项目 个人照片进不了库 更不许随便查
+  A：我就问问 一张侧脸照够不够 不行我回去再翻翻
+  B：不是照片的事 是合规红线 公民人脸数据谁碰谁担责 我们入行第一天就背这个
+  A：唉 我也是急糊涂了
+  B：听我的 正规路子最快 派出所调监控 再去救助站把老人信息录进去 现在救助系统全国联网 还带人脸比对 老人被送站里 一比就出来
+  A：救助站还有这功能
+  B：有 民政这块项目我们还中过标呢
+  B：先不说了 我外卖到了 凉了就坨了
+  A：你们这才吃午饭
+  A：你们加班费给吗
+  B：给个寂寞 上个月加六十多个钟头
+  A：行 你吃 我下午再去趟所里
+  B：去所里没
+  A：在呢 民警帮调了家门口两个路口的监控 没看到人
+  B：把我电话也留一份 有协查消息我也能搭把手
+  A：好 已经写上了
+  B：你舅医保卡最近有消费吗 有记录能圈个范围
+  A：问了舅妈 昨天在城西刷过药
+  B：那重点找城西 所里旁边不就有救助站 明早直接去 把照片留给他们请人比对
+  A：行 明天一早就去
+  B：我陪你 我认那片 车也闲着
+  【10月9日】
+  A：出门了 在救助站门口
+  B：马上到 等我两分钟
+  A：你还真跑一趟 大忙人
+  B：顺路 公司就在高新 工作人员在吧
+  A：在 让填表 留照片
+  B：填吧 这比对一周跑两轮 比咱瞎转强
+  A：填完了 有消息就打电话
+  B：成 走 我请你吃楼下牛肉面
+  B：面不算饭 面是水
+  B：对了 你家那位还天天在家长群里接龙吗
+  A：我娃才三岁半 哪来的家长群
+  B：记岔了 那是我姐家的 一天二百条 看得脑仁疼
+  A：等你娃上学 有你受的
+  B：我未婚哈哈 全替我姐操心了
+  A：也是 连对象都没有 操这心
+  A：舅妈说医保卡上午在城北药店又刷了一次
+  B：城北 那没出城 把药店位置发所里 让他们锁周边
+  A：发了 民警说马上调
+  B：把他常去的地方捋一遍 早市 棋牌室 公园
+  A：我这就去北门早市找他棋友
+  B：行 有消息吱一声
+  A：有眉目了 民警在早市边的监控里看到我舅 跟一个收废品的在一块
+  B：那人啥情况
+  A：看着没恶意 像是管他饭 民警已经过去认人了
+  B：好 太好了 人没事就行
+  A：哎 你中秋回不 家里月饼还剩六盒 我妈发愁
+  B：不回 我妈寄来四盒 咱换 你拿两盒五仁走
+  A：你可别害我 五仁是月饼界的期末考
+  B：那你啃着 我家老人就认五仁
+  A：行 明天去你家搬两盒莲蓉抵账
+  B：没问题 管够
+  【10月10日】
+  A：人找到了！城北救助站 舅妈下午去接
+  B：太好了 比想的还快
+  A：民警拿照片一比对就中了 还给做了体检 没大碍
+  B：好 这回该谢的是人家民警和救助站
+  A：是 回头送面锦旗
+  【10月11日】
+  B：你舅恢复咋样
+  A：挺好 昨天接回家 今天吵着去早市下棋
+  A：对了 昨天转你的红包咋还不收
+  【系统消息】A 向 B 转账 520 元，已收款。
+  B：说好不收 你非要转 下回换我请
+  A：一顿饭而已 你跑前跑后的 别推了
+  B：那这样 下月我爸妈来 我组局 你掌勺
+  A：成 一言为定

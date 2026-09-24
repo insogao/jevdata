@@ -1,0 +1,141 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000103
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000119
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-2ccc0fe5ef8d9e80
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 无隐藏意图：表弟是共享单车运维员，清运处理的是公司统一报废拍卖、单据齐全的退役车批次，表哥的旧货摊按废钢价收走；表面像私下拆车卖件，实为有报废单与过磅记录的合规处置。
+  critical_evidence:
+  - 清运的二十辆是公司统一报废拍卖的退役车，报废单号在公司群公示，站长签字
+  - 车架锁具按过磅吨数和当日废钢价结算，变速器车筐由公司单独回收
+  - 10月10日 B 向 A 转账 4500 元废钢款，与磅单一吨九百四十斤完全对上
+  - 拉货前 B 主动到市场管理办拍照备案，报废单与成交单一式两份
+  benign_alternatives:
+  - 共享单车运维的正规报废流程
+  - 旧货市场的废品回收
+
+attributes:
+  duration_days: 5
+  turn_count: 63
+  approximate_tokens_estimate: 1644
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: shared_bike_parts_strip
+  risk: 0
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0038
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-020
+
+dedup:
+  content_hash: sha256:5a2fa0112252fc9236c893b12eac9d922d68158b48270d2e43fb92894f94bd5a
+pipeline_status: accepted
+title: theft_robbery_property_crime/shared_bike_parts_strip
+conversation: |-
+  【10月6日】
+  B：早上好，秋菜买了没，妈让你捎两颗酸菜
+  A：公司楼下超市有，晚上给你带回去
+  B：你这工作现在咋样，还是天天满街跑？
+  A：嗯，调运加维修，这阵公司清旧车，活多
+  B：清啥旧车
+  A：骑满四年的那种，公司统一报废，一批批拍给有资质的回收商
+  B：那你手上过不过车
+  A：过啊，一晚上清运二十辆是排班单上的活，扫码入库有工单
+  B：行。中午吃啥
+  A：食堂，周四有烧鸭
+  B：那你下班把酸菜带上，妈炖粉条
+  A：好嘞
+  B：路上慢点
+  【10月7日】
+  A：哥，问个事，你摊子上收废铁不
+  B：收啊，怎么，你有货？
+  A：公司这批报废车，中标那家嫌远不想拉，放到员工内部竞拍，我拍了一个小批次
+  B：多少辆
+  A：二十辆，车架锁具按斤卖，变速器和车筐公司拆走单独回收
+  B：有手续不？旧货市场现在查得严，没单子我不敢碰
+  A：有，报废单在公司群里公示，编号我拍给你，回收资质函也在
+  B：那你把磅数发我，按当日废钢价走
+  A：行，我让站点过磅，晚上给你数
+  B：中午记得吃饭
+  A：刚吃完，烧鸭没排上，吃的鸡腿
+  B：哈哈，明天早点去排队
+  【10月8日】
+  A：哥，磅出来了，车架锁具一共一吨九，变速和车筐公司拖走了
+  B：一吨九，废钢今天两千四一吨，我按市场价给你算
+  A：按市场价来就行，都是公司批的，我不挣这个差价
+  B：那你也留点辛苦钱，拆装你搭了人工
+  A：那锁具里挑两把好的给我，给站上兄弟当钥匙链
+  B：哈哈行，给你留着
+  B：明早我开车去拉，你把报废单复印件带上
+  A：好，站长也签字了，一式两份
+  B：妥。晚上妈问，你咋还没对象
+  A：又来，我这是事业上升期
+  B：上升期也得吃饭，周日回来炖鸡
+  A：周日我值班，下周日
+  【10月9日】
+  B：我到了，车码哪了
+  A：西库第三排，磅单贴在第一辆上
+  B：看到了，一吨九百四十斤，跟你说的对上
+  A：对，复印件在塑封袋里，拍卖成交单也在
+  B：行，我拍个照发市场管理办备个案
+  A：应该的，正规点谁都踏实
+  B：车拉走了，款我回去就转
+  A：好嘞，中午别将就，路上买个饼
+  B：知道了，你快上班去
+  A：嗯，今天大批新车投放，得忙到晚上
+  B：新车好，亮堂
+  【10月10日】
+  【系统消息】B 向 A 转账 4500 元，已收款。
+  B：转你4500，按磅算的，你核下
+  A：收到，跟中标价一分不差，回头请哥喝啤酒
+  B：喝你厂里发的汽水吧，存着钱娶媳妇
+  A：哎，又催。对了那批锁具，市场有人问是哪来的
+  B：我照实说，公司报废批次，单子在我这，谁问给谁看
+  A：这样最好，咱不占便宜也不背锅
+  B：那是。周日真回来不？妈炖鸡
+  A：调到下周了，鸡先冻着，哈哈
+  B：没良心的，酸菜自己来拿
+  A：小气，明天下班顺路拿
+  B：行。下批报废还有不
+  A：有，下月还有一批，给你留竞拍名额，手续一样齐
+  B：好，这买卖做得踏实
+  A：踏实，晚上给你带两瓶汽水
+  B：哈哈，妈叫吃饭，挂了

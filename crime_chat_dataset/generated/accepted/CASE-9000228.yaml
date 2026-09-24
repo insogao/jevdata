@@ -1,0 +1,136 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000228
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000033
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-f443af48cf71711b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: contraband_illicit_trade
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 工厂业务用「版型一比一复刻」的话术暗示对标大牌招揽客户，但实际交易的是无标自有品牌平替并要求按自有品牌卖，话术游走在边缘。
+  critical_evidence:
+  - 「版型一比一复刻」的招揽话术
+  - 明确无标无logo、要求按自有品牌卖
+  - 吊牌二维码是自家品控批次页而非品牌标
+  - 阶梯拿货价、随货收据与出库单
+  benign_alternatives:
+  - 工厂尾单正品渠道
+  - 国货平替好物推荐
+
+attributes:
+  duration_days: 6
+  turn_count: 57
+  approximate_tokens_estimate: 1456
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: replica_counterfeit
+  risk: 1
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0053
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-025
+
+dedup:
+  content_hash: sha256:6d7ecffc0237363dadd855217540a1d818fb1231310e3ac110e925788a46e62e
+pipeline_status: accepted
+title: contraband_illicit_trade/replica_counterfeit
+conversation: |-
+  【10月20日】
+  B：李工您好，我是上周展会上加您的那位，做网店的
+  A：哦对，想起来了，小陈是吧
+  B：对，那天在您摊位看了鞋，回去想了想还是想聊聊
+  A：随时欢迎，您先看样品册
+  B：您这边主要做鞋的厂对吧
+  A：对，做了十几年，自有牌子，也接定制
+  B：好，我这两天看下款式
+  【10月21日】
+  B：李工，看了几款，102和107这两款跑步鞋有现货吗
+  A：有现货，颜色也全
+  B：拿货什么价
+  A：阶梯价，20双起45，50双起40，100双以上36
+  B：45含运费吗
+  A：满二十双包邮，发正常快递
+  B：恩，我再对比下
+  B：最近为了双十一天天熬夜上货，头都大了
+  A：你们做网店的这个月最忙吧
+  B：恩，页面、库存、客服全要提前弄
+  A：忙点好，说明有单子
+  B：借您吉言
+  【10月22日】
+  B：李工，问句实话，你们这版型看着眼熟，是不是照着专柜那几个大牌做的
+  A：版型是一比一复刻的，楦头都对着调的，但咱们没标没logo，是自有牌子
+  B：无标的啊
+  A：对，您卖的时候按自有品牌卖，别拿人家牌子宣传，这我得说在前头
+  B：明白，那样卖着也踏实
+  A：嗯，咱们做长久生意，不碰那些
+  A：你们北方这几天降温了吧
+  B：恩，风大，早上骑车冻手
+  A：我们厂里刚开始供暖，车间里暖和
+  B：有暖气的冬天是真舒服
+  A：就是外头冷，出门全靠装备
+  【10月23日】
+  B：李工，还有个事，顾客收到货扫二维码，会不会扫出是别人家的信息
+  A：不会，吊牌上的码是我们自己的品控页，扫出来是咱的批次和检测记录
+  B：那就好，就怕顾客较真
+  A：您放心，售后也找咱们，七天无理由，质量问题我们承担运费
+  B：行，这个说清楚了我就好跟客人交代
+  【10月24日】
+  A：样品给您寄了，顺丰，单号我发您
+  B：好的，到了我跟您说
+  B：样到了，我试穿了，做工可以，鞋底也软
+  A：那款是我们跑量的，复购挺好
+  B：我朋友也看了，说版型正
+  A：恩，您先卖卖看，卖顺了再上量
+  B：我老家这周收玉米，我爸还非自己下地
+  A：辛苦，我们老家也是这几天收
+  B：劝不住，只能多给他买点护腰的
+  A：我给我爸寄了个护膝，他说挺好使
+  B：那我也给我爸整一套
+  【10月25日】
+  B：李工，我想好了，先拿102这款20双，试下水
+  A：成，45一双，一共900，地址发我
+  B：好，转您
+  【系统消息】B 向 A 转账 900 元，已收款。
+  B：转了，您点下
+  A：收到，我这边开收据跟出库单，明细写102无标款，随货一起发您
+  B：好嘞，有单据我记账方便
+  B：大概几天到
+  A：今天下午发，后天到
+  B：效率可以
+  A：卖好了跟我说，量上去价格再谈
+  B：好嘞，合作愉快

@@ -1,0 +1,119 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000079
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000148
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-485be678a0157bb0
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: other_illicit_coordination
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 借同事身份兜售紧缺落户指标，把毕业生社保挂到自己合伙的公司名下凑年限、虚拟最低档工资，收八千定金锁两个名额之一，一口价三万五、写明不成全退。
+  critical_evidence:
+  - 这一批落户指标只有两个，给钱也不加，先交定金占名额，A 已压下一个
+  - B 弟弟的社保挂到 A 合伙的公司名下、从上个月起补满一年，工资按最低档做、账上过得去，B 不用出一分
+  - 一口价三万五，先交八千定金，签一式两份字据写明办不成全退
+  - 定金 8000 元由家里转给 A 指定的其妹妹账户，备注不写真实用途
+  benign_alternatives:
+  - 人才引进政策代办咨询
+  - 积分落户材料辅导
+
+attributes:
+  duration_days: 3
+  turn_count: 43
+  approximate_tokens_estimate: 1173
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: residency_quota_trade
+  risk: 2
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0036
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-020
+
+dedup:
+  content_hash: sha256:81a0b165364a67f78c790b71cc2c7903dbfe02562add05e3f7b82bb586ca4035
+pipeline_status: accepted
+title: other_illicit_coordination/residency_quota_trade
+conversation: |-
+  【10月9日】
+  A：中午食堂见，你弟那事我问了
+  B：咋说，有戏没
+  A：有，但这一批指标就俩，给钱也不加
+  B：俩？！那不是抢破头
+  A：所以得早定，你弟应届，专业对口，走这个口子正合适
+  B：他自己申报不行吗
+  A：排队排到明年去，再说他社保一分没交过，这才是卡脖子的
+  B：社保咋弄，他人还没入职呢
+  A：挂我合伙那家公司名下，从上个月起补，凑满一年就齐了
+  B：从上个月起补？这……能行吗
+  A：前头几批都这么走的，你放心
+  B：那费用多少，我得跟家里报个数
+  A：这批一口价三万五，先交八千定金，剩下等指标落定再补
+  B：要是办不成呢
+  A：办不成全退，一分不少，同事一场还能骗你？
+  B：行，给我两天，我跟家里商量
+  B：先吃饭，今儿有糖醋排骨
+  A：打了，给你留了俩
+  B：谢啦，明天请你喝汤
+  A：紫菜蛋花就行，哈哈
+  【10月10日】
+  B：家里同意了，按你说的办，但字据得有
+  A：有，一式两份，写清楚办人才引进的服务费，不成全退，你签字按手印
+  B：我弟的材料要啥，成绩单学校还没寄到
+  A：先不急，定金到位我就把名额压上，这一批俩指标，我已经压下去一个，就剩这一个了
+  B：这么抢手？！行，我今天就让家里转
+  A：转我妹妹那个号，存一下，备注随便写点别的
+  B：好，转完我告诉你，身份证复印件我明早带给你
+  A：嗯，还有社保那边，挂我合伙那家公司，从他毕业那个月起补，凑满一年正好赶上申报
+  B：工资流水也得有吧
+  A：公司给他按最低档做，账上过得去，你不用出一分，一年后材料一交就齐了
+  A：这事出了办公室别提，组里人多嘴杂
+  B：懂，我嘴严
+  A：下周验收你材料备齐没
+  B：齐了，就差你签字
+  B：周末加班不
+  A：加半天，先送娃上课
+  B：那不喊你打球了
+  A：下周补上
+  【10月11日】
+  B：哥，定金让家里转过去了，你看看
+  【系统消息】B 向 A 转账 8000 元，已收款。
+  A：到了，八千，名额明早我给你钉死
+  B：太好了，拜托了，成事我好好谢你
+  A：字据今天给你，收好，那是凭证
+  B：好嘞，麻烦哥了

@@ -1,0 +1,143 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000004
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000061
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-329f967d12d3fbd2
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A以同事身份把B拉进一个不公开的『卡片预约』平台，凭暗号下单、老客带新拿返点，实为把B发展成继续拉新的下线，疑似线下陪伴订单的熟人分销。
+  critical_evidence:
+  - A发来卡片式图片（编号预约卡），要求保存勿外传、凭编号对接，并特意叮嘱不出现于单位任何群
+  - 到店需报编号与暗号，前台凭编号放行，B实际体验后确认『凭暗号』通行
+  - A明确老客带新有返：按所带新人消费返两个点、月结，并许诺下月涨到三个点
+  - 10月14日A向B转账600元作为带新返点，鼓励B继续发展同事朋友圈之外的人
+  benign_alternatives:
+  - 交友类App的会员邀请
+  - 兴趣社群拉新返利活动
+
+attributes:
+  duration_days: 6
+  turn_count: 63
+  approximate_tokens_estimate: 1835
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: platform_referral
+  risk: 2
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0027
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-017
+
+dedup:
+  content_hash: sha256:7700552b7815c9fe31284e39966892d904fcdc37d3d58b87b6274d9cb8f95c8b
+pipeline_status: accepted
+title: sexual_transaction_exploitation/platform_referral
+conversation: |-
+  【10月10日】
+  A：早啊，周末过得咋样
+  B：还行，陪我妈去了趟花鸟市场，你呢
+  A：在家躺了两天，腰都快锈住了
+  A：对了，上次吃饭说的那个事儿，你回去想没想
+  B：哪个事，你一嘴带过的我哪记得住哈哈
+  A：就我提过一嘴的那个小圈子啊，放松那种
+  B：哦那个啊，还没细想，听着有点神神秘秘的
+  A：不神秘，就是人少点，干净
+  B：中午吃啥，食堂今天好像有糖醋排骨
+  A：排队的人能排到门口，我点外卖了
+  B：那你帮我带杯冰美式，下来拿
+  A：放你桌上了，赶紧喝，化了别怪我
+  【10月11日】
+  A：在吗，给你看个东西
+  A：[image：一张卡片式图片：深色底描金边框，中央一行六位编号，下方一行小字『凭编号预约，非请勿扰』]
+  B：这是啥，会员卡？
+  A：差不多，图你存好，别转发，更别在单位任何群里出现
+  B：搞得跟地下党接头似的哈哈哈
+  A：本来就是熟人带的，不对外，你报我编号后头那串就行
+  B：所以到底怎么个玩法，放松？
+  A：你自己体验一次就懂了，语言表达不了的
+  B：你这么一说我不困了
+  A：第一次我陪你去，稳的
+  B：行吧，周三晚上试试，反正加班也没事干
+  【10月12日】
+  B：今天降温了，你穿这么少？
+  A：风度不要温度，再说我这体格抗冻
+  B：下午还出去跑客户呢，你别冻感冒了
+  A：行行行，我回去加件外套，跟大妈似的
+  A：跟你商量个事，你身边要是有靠谱的朋友，也可以带着一起
+  B：带人？这还能拉人？
+  A：老客带新有返，你带的人消费了，我按两个点返你，月结
+  B：还有返点，你们这圈子做得挺正规啊
+  A：圈子就这么大，全靠老哥们相互介绍，不给外头的抽成
+  B：行，我先自己体验了再说，别回头砸你招牌
+  A：就等你这句
+  【10月13日】
+  B：到地方了，前台小妹妹问我是不是预约的
+  A：你把那串编号报给她，再说是我让你来的
+  B：报了，她冲我一笑就领进去了，还真凭暗号
+  A：对，嘴说没用，认编号认人
+  B：出来了，环境挺安静，比我想的像样
+  A：我就说吧，比外头那些强
+  B：就是价格不便宜，一晚上小一千没了
+  A：一分钱一分货，你带朋友来的话你还能拿返点
+  B：合着你拉我入伙还惦记让我继续拉啊
+  A：互惠互利嘛，圈子大了对你也好
+  B：先看看，我心跳还没平复
+  【10月14日】
+  A：季度汇报的PPT发我下，老大下午要
+  B：发你了，第七页数据我又核了一遍
+  A：收到，还是你细心
+  B：对了，楼下停车场又涨价没
+  A：涨了，我现在改坐地铁，省钱还锻炼
+  A：上个月你带的那两个朋友的返点，我算出来了
+  【系统消息】A 向 B 转账 600 元，已收款。
+  B：哟，还真到账了，600
+  A：两个点，一分不少你的，月结
+  B：行，那我回头问问老李有没有兴趣
+  【10月15日】
+  A：老李那边问得怎么样
+  B：有点心动，就是嫌远，问能不能约到城东那家
+  A：可以，下个月带他的话，你的返点给你涨到三个点
+  B：你这是把我发展成下线了啊
+  A：说什么下线，咱这叫互助，朋友带朋友
+  B：行吧行吧，谁让第一次体验那么好呢
+  A：对了，卡片图和编号你千万收好，别截图外传
+  B：知道啦，我又不傻，这种事肯定不声张
+  A：晚上一起吃饭？新开的那家湘菜
+  B：走起，正好把老李的事细聊

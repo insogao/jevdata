@@ -1,0 +1,143 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000068
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000117
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-8ceb5fa8e8a56f31
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: theft_robbery_property_crime
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 收废品的B雇同村的A趁夜里浇完地偷井灌电机，按铜价折算货款倒卖分赃，B明知来路仍压价收购。
+  critical_evidence:
+  - B提议'浇完地就收'地里的井灌电机，一晚三百外加货款两成
+  - 铜价现在高，按斤算钱：一百零六斤、一斤四十、共四千二
+  - 动手当晚'村口狗多'，约定从村后绕、走进地那头
+  - 出货后B转账4200元给A，另欠两晚工钱六百元现金
+  benign_alternatives:
+  - 正常废品回收生意
+  - 农机以旧换新、维修拆件
+
+attributes:
+  duration_days: 5
+  turn_count: 65
+  approximate_tokens_estimate: 1325
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: farm_irrigation_motor_theft
+  risk: 2
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0034
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-019
+
+dedup:
+  content_hash: sha256:85efc01631170263e25f3445c19445483c9a77896a1a6a16894761a7e49d9008
+pipeline_status: accepted
+title: theft_robbery_property_crime/farm_irrigation_motor_theft
+conversation: |-
+  【10月14日】
+  B：起没 今年浇地排到哪了
+  A：快了 十几亩 明天轮到我家
+  B：正好 我这边收点货 你跟我跑两晚 一晚三百
+  A：收啥货
+  B：地里的电机 井上那种 收了卖铜 铜价现在高 一斤四十多
+  A：井上的电机? 那是人家地里的东西吧
+  B：浇完地就收 放那儿也是闲着 老规矩 干不干
+  A：……干 两晚都跟?
+  B：跟 三百一晚 货款另给你算两成
+  A：我家玉米还站着呢 等浇完就收
+  B：今年玉米价还行 一块三
+  A：比去年强点 就盼别下雨
+  【10月15日】
+  A：昨晚浇完我家了 后天轮村东头那几户
+  B：好 那就后天夜里 地块我看过了
+  A：看上哪几个
+  B：井房那三台 都是旧型号 前年换新那家不动
+  A：你可真熟 我说你怎么总来村里收废品
+  B：收了八年 谁家新谁家旧门儿清
+  A：哎我这腰 昨晚弯一夜 直不起来
+  B：贴膏药 那种黑的 便宜是便宜
+  A：你上回给的那贴还剩两片
+  B：回头给你捎两盒
+  A：谢了哥
+  B：后天带两条编织袋 一袋装一台 别俩挤一块哐当
+  A：不用带家伙? 卸螺丝那种
+  B：井房门虚掩着 不用带啥 手上有劲就行
+  A：后天几点碰头
+  B：夜里十点 村后老槐树
+  【10月16日】
+  B：起了没 村口狗多 咱从后头绕 走进地那头
+  A：起了 刚出门
+  B：到了 慢点 脚下有水管
+  A：第一台下来了
+  B：袋口扎紧 别哐当
+  A：三台都齐 撤?
+  B：撤 原路 后头那条道
+  A：装车了
+  B：辛苦 回家睡 明早老地方过秤
+  【10月17日】
+  B：起了没 拉过来过秤
+  A：拉了 三袋沉死
+  B：一台四十一斤 一台三十七 这台二十八
+  A：这台怎么轻
+  B：老牌子铜厚 差不多的 共一百零六斤
+  B：一斤四十 四千二 老熟人价
+  A：行 转我还是给现
+  B：转账 当天到
+  A：顺路集上割二斤肉 今天啥价
+  B：猪肉降了 十三一斤 上周还十五
+  A：那割点 晚上炖了
+  B：我请 就当这单顺遂
+  A：下波啥时候 别的村也有井
+  B：这批先出手 那边买家等信 这周先缓缓
+  A：成 两晚工钱你记着 六百
+  B：记着 一起给
+  【10月18日】
+  B：出了 那边全要
+  A：钱呢
+  B：转你 四千二 你点下
+  【系统消息】B 向 A 转账 4200 元，已收款。
+  A：收到 速
+  B：工钱六百晚上给 现金
+  A：成
+  A：我家玉米明天收 帮我叫个收割机
+  B：给你问老刘 明早就到
+  A：一亩多少钱
+  B：五十 给你抹零
+  A：谢哥 改天搬两箱酒
+  B：拿西凤 那个对口

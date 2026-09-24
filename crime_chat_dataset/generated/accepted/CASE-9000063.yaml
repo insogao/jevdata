@@ -1,0 +1,155 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000063
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000109
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-190f95542a7f8e68
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: theft_robbery_property_crime
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A与发小B组成两人团伙，借配件到货、发薪高峰时序与望风分工，对自助取款点下手后按四六分成，全程以行话与省略掩盖真实意图。
+  critical_evidence:
+  - A通知B：上回说的那批'小玩意儿'（读卡器）到货了，共两枚
+  - 两人刻意选在月底发薪、节前取款高峰的时段动手
+  - 装备分两批携带，A动手B望风，三个点错开、事成各回各家
+  - 事成后按'老规矩四六'分成，A转账12000元给B
+  benign_alternatives:
+  - 银行自助设备例行巡检与配件更换
+  - 金融安防设备供应商的维护排班沟通
+
+attributes:
+  duration_days: 6
+  turn_count: 76
+  approximate_tokens_estimate: 1376
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: atm_skim_team
+  risk: 3
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0034
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-019
+
+dedup:
+  content_hash: sha256:bf0451c99b88cd66216cd70525d81f3f8e209f0ec1a24448f67ae86e208b0d32
+pipeline_status: accepted
+title: theft_robbery_property_crime/atm_skim_team
+conversation: |-
+  【10月12日】
+  A：起了没
+  B：刚醒 咋了
+  A：没事问一句 上回说的那批小玩意儿 到货了
+  B：这么快
+  A：嗯 两枚 都齐了
+  B：周日水库去不去 老李约了
+  A：去啊 蹲一天就上一条也去 哈哈
+  B：带杆还是带网
+  A：杆 我那根新的还没开张
+  B：行 饵我备
+  A：说正事 周五前把手头的事推一推
+  B：懂 月底那波对吧
+  A：对 老时间老地方
+  【10月13日】
+  A：我看了下 上个月发薪那天 门口队排到台阶下
+  B：发薪号 都赶那两天取钱
+  A：所以算好取款高峰 就月底那两天 上午十点后 下午四点前
+  B：懂 人一多 手忙脚乱的
+  A：嗯 你把眼放活点 少说话
+  B：我车该保养了 4S店报价八百
+  A：八百贵了 外面厂子四百搞定
+  B：就换机油机滤
+  A：回头介绍老赵给你 靠谱
+  A：点子我排了三个 都在东边
+  B：三个都跑?
+  A：嗯 错开 一家完事换下一家 中间隔两条街
+  B：行 我骑车转
+  A：穿利索点 像上班的
+  【10月14日】
+  B：我闺女期中出分了 数学98
+  A：可以啊 得请她吃顿好的
+  B：点名要那双带灯的鞋
+  A：买 女儿要富养 哈哈
+  A：东西别放一块 装备分两批 我背包你拎工具箱 看着像修设备的
+  B：懂
+  A：周五先合练一遍 流程走顺
+  B：在你库房?
+  A：嗯 老地方
+  B：行 我把灯泡换亮点的
+  A：别 太扎眼
+  【10月15日】
+  B：昨晚走完了 挺顺
+  A：嗯 周六上
+  A：这周六正赶发薪 又挨着过节 取钱的人翻倍
+  B：就那天 上午一趟 下午一趟
+  A：嗯 两趟完事
+  B：点子怎么分
+  A：三个点一下午 你只管看人 我手快
+  B：晚上收工我请 炭火烧烤 新开那家
+  A：行 就当庆功 别喝多
+  B：两瓶封顶
+  A：你回回都这么说
+  B：哈哈这次真的
+  A：当天完事各回各家 别扎堆
+  B：懂 烧烤店碰头
+  A：嗯 分开走
+  【10月16日】
+  A：成了 顺得很
+  B：我看你下午那趟稳 就低头看手机的工夫
+  A：嗯 账我盘了 老规矩 四六 你四
+  B：这波比上回肥
+  A：节前人多 明天给你
+  B：不急 你歇着 忙一天了
+  A：明早钓鱼前碰个面
+  B：行 水库路上那个早市
+  A：嗯
+  【10月17日】
+  A：起了没 豆花给你带了一碗
+  B：刚到 你也太早
+  A：老习惯
+  A：数好了 你那份拿着
+  B：多少
+  A：一万二 点一下
+  B：不用点 你的数还能错
+  A：点点好 习惯
+  B：下波啥时候
+  A：等信儿 货还在路上
+  B：行
+  A：现金你先拿去家里周转 电子的我转你 方便
+  【系统消息】A 向 B 转账 12000 元，已收款。
+  B：收到 周日水库别忘了 新杆开张
+  A：忘不了 饵你备 走吧

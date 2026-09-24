@@ -1,0 +1,150 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000012
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000077
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-165bfe9d2aa6dba2
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: privacy_doxxing
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 因猜疑丈夫出轨，出钱委托有票务系统权限的熟人违规查询其行程、同机人及酒店入住记录，并约定每月常态化盯梢。
+  critical_evidence:
+  - A 因猜疑委托 B 查丈夫数日内的航班值机、同行人与酒店入住记录
+  - B 利用票务底单查到同行人林某、座位相邻，并经同行渠道查到四晚大床房双人入住，截图发给 A
+  - 双方约定每月核对行程的长期安排，并强调查完即删、不留记录
+  - A 转账 1200 元茶水费作为报酬
+  benign_alternatives:
+  - 差旅代理帮客户核对自家票务底单
+  - 行政或秘书例行核对老板出差行程
+
+attributes:
+  duration_days: 3
+  turn_count: 74
+  approximate_tokens_estimate: 2140
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: travel_record_query
+  risk: 2
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0028
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-017
+
+dedup:
+  content_hash: sha256:4e4e721b2d099173a64da0b4caa06a3f5de74cb9dbcff693fc535e643c59476f
+pipeline_status: accepted
+title: privacy_doxxing/travel_record_query
+conversation: |-
+  【10月9日】
+  A：康哥，睡了没，有个私事求你
+  B：陈姐？说
+  A：老陈说6号到9号在上海开会。可他同事媳妇跟我说，那个会早就取消了。你帮我看看他那几天的行程，住哪儿、跟谁
+  B：姐，这……咱这几百张票的年度单子是贵司撑着，可人家的行程记录……
+  A：康哥，我不是要闹，我就想弄明白。票是你出的，你总有个底单吧
+  B：他那几趟走的公付，票确实是我出的。我翻翻
+  B：查到了，10月6日早上8:40虹桥那班，值机记录有。姐，同行人那一栏……你确定要看？
+  A：你都说到这份上了，能不看吗
+  B：同行人：林某，同一个值机口，挨着的座位
+  A：林某？他助理不是老周吗，林某又是谁
+  B：底单就这么记的。我把系统界面截给你，看完就删
+  A：发
+  B：发你了。姐，我头一回干这个，下不为例
+  A：谢谢康哥。那酒店呢，他住的哪儿，一个人开的房吗
+  B：酒店不走我这，我只有票。我问问上海的同行，得等到明天
+  A：麻烦你了。这事天知地知你知我知
+  B：我懂，界面我这就清了。姐，你也别太往心里去
+  B：姐，你们公司年会礼品那批，双十一囤购物卡能省一截，要备不
+  A：备，老规矩200张。哎，你还有心思做生意
+  B：生意归生意嘛，账清了心里才不乱
+  A：也是，就按去年那家走
+  B：成，明天报价单给您
+  A：好
+  B：对了，老陈下月广州那趟，还按头等订？
+  A：……按经济舱订吧，他不是喜欢挤吗
+  B：哎？那……行，我改
+  A：改吧，就说我说的
+  【10月10日】
+  B：姐，上海同行回话了：6号到9号，静安那家酒店，一间房，入住登记两个人，陈和林
+  A：四晚都是一间？
+  B：四晚一间，订单备注大床房
+  A：好，康哥，够了，我心里有数了
+  B：姐，我发你的那几张界面，你确认都删了没
+  A：删了删了，就留在脑子里
+  B：我把入住登记那一页也截给你？看完删
+  A：发
+  B：发了。姐，到此为止，往真里查就过了
+  A：哎，周日囡囡家长会，我都不想去了，一屋子熟人脸
+  B：姐，孩子归孩子，该去还得去，别让囡囡看出来
+  A：你说得对，她这学期语文进步大，我得笑着去
+  B：对，奖状都贴一墙了
+  A：哈哈她那字比我强
+  B：随您，基因好
+  A：康哥，还有个事。往后每个月，他出差的票，你都帮我核对一遍，老规矩
+  B：姐，这个口子一开……唉，行吧，谁让咱这买卖绑在一起呢。但说好，只看票面，别的我不碰
+  A：行，就票面。你放心，亏待不了你
+  B：姐言重了，我不是图这个
+  A：对了，新开那家牛油锅你吃过没
+  B：去过，毛肚脆得很，就是排号排到哭
+  A：那你订个位，我约几个姐妹
+  B：包我身上，跟领班熟，给你留靠窗那桌
+  A：哈哈敢情好，就下周三
+  【10月11日】
+  A：康哥，昨晚想了一宿，我暂时不动声色。你那截图，真删干净了？
+  B：我这边一条不剩。姐，你自己手机相册也清了，回收站也别落
+  A：清了。你办事，我放心
+  A：对了，说好的心意你收下，别推
+  B：姐，这就见外了……
+  A：一码归一码，你跑前跑后，茶水钱总得有。你不收，往后我都不好意思开口
+  B：那……却之不恭
+  【系统消息】A 向 B 转账 1200 元，已收款。
+  B：收到。姐，往后你的事就是我的事——票面上的事
+  A：懂，就票面上的事
+  A：广州那趟照旧盯。他要真带谁，我要知道舱位和座位
+  B：记下了。姐，丑话前头，查归查，你可别自己冲过去，不值当
+  A：我有分寸。我要的从来不是闹，是明白
+  B：明白就好，就冲这句，我敬你
+  A：年会那200张购物卡，报价单今天能来吗
+  B：上午刚核完价，比去年省一万二，单子发您邮箱了
+  A：好，走老流程
+  B：哎，下周三火锅我订好了，靠窗
+  A：哈哈好，到时见
+  B：到时见
+  A：康哥，囡囡家长会开完了，老师夸了她，我心情好多了
+  B：该这样嘛，孩子高兴比什么都强
+  A：嗯，下周三见
+  B：见，给您留靠窗，毛肚管够

@@ -1,0 +1,144 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000165
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000038
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-2ccc0fe5ef8d9e80
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: contraband_illicit_trade
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 组织熟人收集新办电话卡，按张计酬收购后转供上游使用，卡主对卡的真正去向毫不知情。
+  critical_evidence:
+  - B从老乡处收新办电话卡，一张80元现结
+  - 一天每人能办的张数有限制，只能分批慢慢凑
+  - 卡主不知道卡的真实用途，交付时也不得多问
+  - A持续加量加价，下周要三十张、单价涨到90
+  benign_alternatives:
+  - 公司统一办理工作副卡
+  - 家庭套餐副卡代办
+
+attributes:
+  duration_days: 5
+  turn_count: 66
+  approximate_tokens_estimate: 1637
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: sim_card_pool
+  risk: 2
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0045
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:47684a1ce443a1c7d38fe7ba7953bdacd100d1afe2787110dd569c4f6c6ee618
+pipeline_status: accepted
+title: contraband_illicit_trade/sim_card_pool
+conversation: |-
+  【7月14日】
+  A：哥们 起了没 上回说的货 想好干不干
+  B：干是能干 就是我上哪弄去
+  A：你表弟不是在厂里嘛 老乡多 一人办一张 两张的 凑凑就有了
+  B：那倒能凑 有啥讲究没
+  A：没讲究 新的没拆封的都行 一张我给80
+  B：行 我这两天问问
+  A：有几张算几张 收一张结一张的钱
+  B：这天真热 厂区跟蒸笼似的
+  A：三十八度 谁受得了
+  B：我买个大冰扇放床头
+  A：那玩意顶啥用 空调才是正经
+  B：电费贵啊哥
+  A：抠成你这样 少打两把游戏啥都有了
+  【7月15日】
+  B：哥 上午问了一圈 表弟他们宿舍有仨愿意 一人一张
+  A：好 让他们今天就去办 办完拍个卡面给我看
+  B：有一哥们问 办这干啥用啊
+  A：你就说公司要用 具体的别讲 多一个字都别多说
+  B：行 我有数
+  A：中午吃了没
+  B：点了份黄焖鸡 你呢
+  A：外卖 麻辣香锅 减肥失败
+  B：哈哈 你那减肥口号喊三年了
+  A：嚷嚷归嚷嚷 吃归吃
+  B：办出来了三张 还有俩说明天去 柜台说一天办几张有限制
+  A：有限制 顶格也就那样 慢慢来 不急这一两天
+  B：懂了 那我明天接着凑
+  A：嗯 凑够五张先给我 我结一轮的钱
+  【7月16日】
+  B：哥 又凑了五张 老李家哥俩加表弟那边仨
+  A：行 今天给你过数 八张了啊 连昨天三张
+  B：对 八张
+  A：他们家里人没问用途吧
+  B：没问 老乡都实诚 一人一张八十现结 高兴着呢 反正空着也是空着
+  A：行 就这么说 别的多一句都别提
+  B：知道 咱懂规矩
+  A：晚上老地方交给我 当面点清
+  B：我爸说老家房子开始打顶了
+  A：那得随份子 回去吃席不
+  B：十一回去 正好赶上上梁
+  A：行 到时候你捎两瓶好酒
+  B：记着呢
+  【7月17日】
+  B：哥 到哪了 老地方
+  A：到了 你过来
+  B：八张都给你 点下
+  A：点了 都齐 720给你 按张结的 你数数
+  【系统消息】A 向 B 转账 720 元，已收款。
+  B：收到 一分不差
+  A：下边还有活 下周那边要三十张 价给你涨到90 你再想想辙
+  B：三十张 厂里就那些人 我得往别处想辙
+  A：村里你叔叔婶子那辈也行啊 他们的闲卡更多
+  B：我回去问问 反正他们都听我爸的
+  B：晚上有球 看不
+  A：看 你押谁
+  B：押主队 昨晚输我五十
+  A：就你还玩这个 小玩怡情啊
+  B：玩玩 别当真
+  【7月18日】
+  A：哥们 三十张有眉目没
+  B：村里问了一圈 这两天先能凑十来张 我叔他们几个后天回村
+  A：十张也行 先给我 那边催得紧 周五前再补
+  B：行 那我明天跑一趟
+  A：卡要新办的 别拿注销过的充数 上回有个愣的给我整旧的 害我挨说
+  B：放心 都是现场办的我盯着
+  A：还有 卡主那头 用途一个字都别提 人家不问你也别说
+  B：知道 从来不多说
+  A：干好了 这买卖细水长流 月月都有
+  B：行 我这两天就把它当正事干
+  A：对了老乡的钱别拖 人心散了队伍不好带
+  B：懂 我都是当天结

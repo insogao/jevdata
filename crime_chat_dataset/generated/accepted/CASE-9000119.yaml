@@ -1,0 +1,149 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000119
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000121
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-d1c21434b27aea6a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 掌握官员婚外情材料（时间地点、聊天记录、车内遗留物）的陌生人，以隐晦口吻按月收取钱款换取材料不外流，用家庭与位置作要害筹码，形成持续性要挟。
+  critical_evidence:
+  - 陌生网友准确说出B婚外私会的时间地点，并声称持有当晚聊天记录和车内遗留物
+  - 以嫂子知道这事吗点破要害，要求每月八号支付8000元换取安静
+  - 10月8日B被迫如约转账8000元，A随即预告下个月八号老时间再见
+  - A持续展示对B日常行踪的掌握（食堂卤味窗口、白色车辆、江边低洼车位）施加压力
+  benign_alternatives:
+  - 情感纠纷双方的私下协商
+  - 涉及离婚谈判的经济往来讨论
+
+attributes:
+  duration_days: 4
+  turn_count: 72
+  approximate_tokens_estimate: 1591
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: secret_affair_blackmail
+  risk: 3
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0040
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-021
+
+dedup:
+  content_hash: sha256:5ffbef265f05714e5723f83cc063910a18328ecdc2bf29bc4627c197c3d20e22
+pipeline_status: accepted
+title: coercion_blackmail/secret_affair_blackmail
+conversation: |-
+  【10月5日】
+  A：张处 通过一下 朋友推的 有事找你
+  B：你哪位
+  A：你别管我是谁 3号晚上 滨江路那个停车场 白色车
+  B：你什么意思
+  A：你和那位女士聊的记录 存得挺全的
+  B：你到底想怎么样
+  A：不怎么样 就问一句 嫂子知道这事吗
+  B：你想要多少钱
+  A：先不谈钱 交个朋友 我这人好说话
+  B：你这样是犯法的
+  A：我就是关心老哥 聊聊天而已 你想多了
+  A：那些东西我都存好了 放哪儿你不用知道
+  B：让我想想
+  A：有的是时间 明后天再聊
+  A：对了 最近降温 你那老胃病少碰凉的
+  B：……嗯
+  【10月6日】
+  A：早 睡好了吗
+  B：你说个数吧 这样拖着我难受
+  A：急什么 我说的不是一锤子买卖
+  B：什么意思
+  A：每月八号 老哥是聪明人一点就透 我这边安安静静 你那边安安稳稳
+  B：每月? 你这是要长期
+  A：一个月几千块 买你家不散 买你那把椅子稳稳的 划算
+  B：我一个月工资才多少
+  A：那我不管 你的办法总比我多
+  B：太多了 做不到
+  A：那就没意思了 那些东西发给谁 我再想想
+  B：别 你别乱来
+  A：那就看老哥的诚意了
+  A：中午了 你单位食堂还是老几样? 你爱的那个卤味窗口还排队吗
+  B：排 你怎么连这个都知道
+  A：我就是关注老哥嘛
+  B：上午的会都开不下去了
+  A：饭还是要吃 身体是本钱
+  B：4000 行不行 从下个月开始
+  A：4000打发叫花子? 你那个位置 随便一个项目都不止
+  B：6000 真不能再多了 家里的钱嫂子管着
+  A：8000 就这个数 别让我说第二遍
+  B：给我两天 我凑凑
+  A：八号之前见不着钱 那些东西就该自己长腿了
+  【10月7日】
+  B：我又想了想 这事不能这么办
+  A：老哥 又想通了?
+  B：你拿着那些东西 每月找我拿钱 这算什么
+  A：朋友之间互相照顾罢了
+  B：我不可能一直给
+  A：那就看你家后院安不安稳喽
+  B：你别扯我家里人
+  A：你安分 我比谁都盼着你家好好的
+  B：我需要时间凑钱
+  A：八号 记住这个日子 以后每月八号
+  B：知道了
+  A：这才对 照顾好你自己 比什么都强
+  A：下午这场雨不小 江边那个低洼车位年年淹 你车挪一挪
+  B：谢谢提醒 这就去挪
+  A：你那白车前两天刚洗的吧 淹了可惜
+  B：……嗯
+  A：3号那晚你车里落的东西我都替你收着 到八号你自然知道
+  B：你到底还留了什么
+  A：都是替你保管的东西 放心 丢不了
+  【10月8日】
+  A：早啊老哥 今天几号了
+  B：在凑了 中午前一定给
+  A：不急 我等你消息
+  B：别催了 下午一定
+  A：我没催 你自己心里有数就行
+  A：中午还是二楼卤味窗口?
+  B：嗯
+  A：多吃点 人在 什么都在
+  B：……
+  【系统消息】B 向 A 转账 8000 元，已收款。
+  A：收到了 老哥办事痛快 下个月八号 老时间
+  B：希望你说话算话
+  A：我一向算话 只要老哥安分 照顾好你自己
+  B：……嗯

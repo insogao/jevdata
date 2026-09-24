@@ -1,0 +1,156 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000187
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000060
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-5a0aeeb113f11d26
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 夜场老员工以带新人见客为名，把新来的年轻女同事引荐给熟客作陪侍，抽走三成收入并立下不能外传、不能挑客的规矩，全程用行业黑话回避言明。
+  critical_evidence:
+  - A 以带你见个大客户为名将 B 引荐给常来的黄老板，实际是安排有偿陪侍
+  - A 明确抽成规则：这种一趟5000，头一单抽三成拿3500，往后熟了只抽两成，钱由 A 经手再分
+  - A 立规矩：客人的事出门一个字不提、不能挑客、客人说轻佻话不能翻脸，并叮嘱见客别多问
+  - 见客当晚 A 转给 B 3500 元，正是客人给的 5000 抽走三成后的数目，并预告下周生日局继续
+  benign_alternatives:
+  - 正规婚介或商务活动的引荐
+  - 夜场合法岗位的工作带教
+
+attributes:
+  duration_days: 3
+  turn_count: 79
+  approximate_tokens_estimate: 1865
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: introductory_middleman
+  risk: 3
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0048
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-024
+
+dedup:
+  content_hash: sha256:7beae11fd77cddf65ab4f40a308c67ad3da8f56dfb1a31f0b054a5ae4567edf7
+pipeline_status: accepted
+title: sexual_transaction_exploitation/introductory_middleman
+conversation: |-
+  【10月9日】
+  B：莉姐早，今天几点到店
+  A：六点半，你呢新来的小蔓
+  B：我七点。昨天第一天，腿都站酸了
+  A：正常，站一个礼拜就习惯了
+  B：姐，咱这除了端酒还有别的活吗，房租有点吃紧
+  A：有的是活，看你肯不肯干
+  B：肯啊，我就是出来攒钱的
+  A：机灵，姐喜欢
+  A：小蔓，晚上别给你排班了，跟姐出去一趟
+  B：去哪呀
+  A：有位姓黄的老板，常来咱店，想认识认识新朋友，姐带你见个客
+  B：就……吃饭聊天那种？
+  A：对，吃饭聊天。你嘴甜，陪他把这顿饭吃好
+  B：这样啊，那有报酬吗
+  A：当然有，一顿饭顶你端三天盘子，姐还能坑你？
+  B：那我要不要打扮一下
+  A：要，穿你那条白裙子，头发盘起来，显得干净
+  B：好嘞，那我下班回去换
+  A：姐七点到你宿舍楼下接你
+  B：收到，谢谢莉姐
+  A：对了，见客别问东问西，人家不愿说的不打听
+  B：懂，我又不傻
+  A：懂就行，姐带你吃这碗饭
+  B：姐，中午吃啥，楼下新开了家酸菜鱼
+  A：我减肥，你吃你的
+  B：减什么肥，你这身材多少人羡慕
+  A：那也是饿出来的
+  B：哈哈，那我替你多吃点
+  A：吃吧，晚上可别吃撑打嗝
+  B：知道啦，晚上我只抿两口水
+  【10月10日】
+  A：昨晚回来啦？黄老板夸你了，说你乖
+  B：就吃了个饭呀，他还非要加我微信
+  A：加了就加了，姐都懂。趁热打铁，跟你把规矩说说
+  B：嗯嗯，姐你说
+  A：第一条，客人的事，出了那个门一个字都不能往外说，店里同事面前也不行
+  B：明白，我又不是长舌妇
+  A：第二条，不能挑客。姐安排的都是熟客，你别这也不去那也不去
+  B：嗯，我听姐的
+  A：第三条，客人喝多了说两句轻佻话，笑一笑就过去，脸不能垮
+  B：这个有点难……我尽力
+  A：习惯就好，咱们这行吃的就是这碗饭
+  B：姐，那钱怎么算呀，我心里有个数
+  A：黄老板这种一趟5000。头一单姐抽三成，你拿3500，往后熟了姐只抽两成
+  B：姐抽得也不多，比我自己瞎摸索强
+  A：姐带你，规矩都教到位，外面野路子学不来
+  B：嗯嗯，还好遇到姐
+  A：他周末还约，你把周五晚上空出来
+  B：姐，你上次说的代购面膜还靠谱吗
+  A：靠谱，我自己都在用
+  B：那给我来两盒，这月工资还没发
+  A：先拿去用，发了工资再说
+  B：姐你人真好
+  A：姐吃过的盐比你吃过的米多，少走点弯路
+  B：比心比心
+  【10月11日】
+  B：姐，昨晚下班去吃了顿烧烤，现在还渴
+  A：晚上少撸串，对皮肤不好
+  B：哎呀偶尔一次嘛
+  A：你今年多大来着
+  B：二十三，毕业就过来这边了
+  A：年轻真好，姐像你这么大时还在流水线上呢
+  B：姐也是苦过来的吧，抱一个
+  A：好了，去睡个回笼觉吧
+  A：晚上八点，还是荔湾那家酒楼，黄老板订的包间
+  B：收到，裙子都熨好了
+  A：到了先给姐发个位置
+  B：好
+  A：到哪了
+  B：快到了，打车堵在桥上
+  A：让师傅靠边停，走过去也就十分钟
+  B：好的，到了给你发消息
+  A：出来没，怎么样
+  B：刚出来，老板挺高兴，说下周还叫我
+  A：你今晚都陪他做什么了
+  B：就吃饭，敬了几杯酒，唱了会儿歌呀
+  A：行。记住规矩，出了那个门一个字不提
+  B：放心吧姐，我嘴严
+  【系统消息】A 向 B 转账 3500 元，已收款。
+  【10月12日】
+  B：收到！姐，是说好的3500诶
+  A：姐从不亏待自己人。下周他生日，周五接着空出来
+  B：好嘞，跟着姐好好干

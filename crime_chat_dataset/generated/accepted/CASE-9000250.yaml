@@ -1,0 +1,119 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000250
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000002
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-a259466111a8f39a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 拉客者以伪造的收益截图和内部群话术诱使朋友的朋友重金入场，资金打入个人账户，再用拉人返点怂恿其继续发展下线，合同一拖再拖。
+  critical_evidence:
+  - A发来两周盈利四成一的账户收益截图劝B入场
+  - A以五万进内部群、老师一对一带单为饵劝B加大投入
+  - A声称拉一人进场返两个点，怂恿B把表姐也拉进来
+  - B向A个人账户转五万元，A以周五结算日为由拖延群邀请和电子合同
+  benign_alternatives:
+  - 合法私募产品介绍
+  - 正规理财经理推荐
+
+attributes:
+  duration_days: 2
+  turn_count: 44
+  approximate_tokens_estimate: 1839
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: investment_lead
+  risk: 2
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0056
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:6249b84accf21a0abdb508a91748ffa8ec13c6988f81a03a27711b4a15569b07
+pipeline_status: accepted
+title: fraud_scam/investment_lead
+conversation: |-
+  【10月15日】
+  A：小陈吧，老周介绍的那个，他说你最近想搞点副业
+  B：是我，老周叔说您这边有个理财的路子，我就是好奇问问
+  A：先说清楚，这不是理财，是跟单，老师带，我自己就是从两千块起步的
+  B：两千块能做出啥
+  A：你看，这是我这半个月的，今天中午刚截的图，从四万二做到五万九，你自己算翻了多少
+  B：四成一？半个月？正规基金一年能有十个点就烧高香了
+  A：所以说是老师带，人家在交易所有席位，内部通道，散户自己玩玩不过
+  B：你们那边降温了吧，我妈说秋裤都翻出来了
+  A：下了三天雨，冷得我想装个壁炉
+  B：哈哈那也得有房装啊，我先攒钱吧
+  B：那我这个水平，多少能进
+  A：门槛两千就能跟着做，但我劝你一步到位，五万进内部群，老师一对一给点位，收益完全两个概念
+  B：五万？我全部家当也就六万多
+  A：所以才让你早点进，钱放着也是放着，按我这个收益率，五万一个月顶你一年工资
+  B：话说得好听，赔了呢
+  A：你看我的曲线，半个月最大回撤不到两个点，老师风控盯着的，到点强制平，想赔都难
+  B：嗯……容我想想，这事我得跟我妈说一声
+  A：别别别，家里知道你拿钱搞这个，十个有九个反对，等赚了再告诉他们，那是惊喜
+  B：也是，我妈胆小，一说准拦着
+  【10月16日】
+  B：昨晚抢了双鞋，差点没抢过机器人，手速拼不过脚本
+  A：哈哈你们年轻人玩这个，我都在二手市场淘，便宜一半
+  B：淘的那能一样吗，得是新的，穿出去才有面
+  A：跟你说个事，内部群还剩三个名额，今晚十点截止，过了这村没这店
+  B：这么快？我再考虑考虑行不
+  A：我再给你交个底：你进群之后拉一个人进场，给你返两个点，你表姐不也一直念叨想搞副业？她进五万，你躺赚一千
+  B：还有返点？这跟拉人头似的啊
+  A：什么拉人头，这叫市场推广补贴，人家平台缺的是活跃度，懂了吧
+  B：嗯……那行，我先上自己的五万，表姐那边我问问口气
+  A：对喽，先把自己做起来，赚到钱了把截图发给表姐，比你说一百句都管用
+  B：那我现在转您这边？流程咋走
+  A：转我我这个账户，我给你报备进群，电子合同下午发你，别转错，就我头像这个号
+  B：好，我转五万，您给我留名额
+  【系统消息】B 向 A 转账 50000 元，已收款。
+  A：收到了，五万整，我现在给你报备，你等群邀请
+  B：好嘞，这么快，那合同呢
+  A：电子合同晚点统一发，那边要盖章，你别急，群里几千号人都这么走的流程
+  B：等得无聊，昨晚看了个谍战剧，反派特务头子居然是好人
+  A：哈哈现在的编剧就爱反转，我都不看新的，翻老片
+  B：推荐两部呗，我等群邀请的功夫正好刷
+  A：《暗算》《风筝》，不用谢
+  B：哎，群邀请还没来，我心里有点打鼓，不会出啥岔子吧
+  A：放心，今天周五，人家结算日，群里统一晚上八点发邀请，你等着收钱就行
+  B：那行，晚上我盯着手机。表姐那边我拍了你那个截图发她了，她说周末来找我细聊
+  A：这就对了，让她抓紧，名额这东西手快有手慢无，下周门槛据说要提到八万
+  B：嗯，那我先谢过哥，赚到钱了请你吃大餐

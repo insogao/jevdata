@@ -1,0 +1,147 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000016
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000086
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-1c9e720be6090491
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: privacy_doxxing
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 快递驿站员工长期偷拍当日新鲜面单出售，买家按条结算倒卖个人信息，形成持续多日的个人信息买卖通道。
+  critical_evidence:
+  - A 每日将当天新鲜快递面单拍照卖给 B，含姓名、手机号、详细住址
+  - 双方按四块钱一条结算，只要当天新单，隔夜的不收
+  - B 转账 600 元结清 150 条货款，交易连续多日
+  - B 要求优先城东城南片区、电话能打通的单子，并计划下周加量提价收取件码
+  benign_alternatives:
+  - 快递理赔核实时对收件信息的正常核对
+  - 驿站入站登记等正常信息登记流程
+
+attributes:
+  duration_days: 6
+  turn_count: 68
+  approximate_tokens_estimate: 1615
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: courier_info_leak
+  risk: 2
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0028
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-017
+
+dedup:
+  content_hash: sha256:018a83510ac157b2eb0b27aea91af7fe2dda73e893e016c4160f7b7f600e9103
+pipeline_status: accepted
+title: privacy_doxxing/courier_info_leak
+conversation: |-
+  【10月13日】
+  B：小邓，起了没，今天有新鲜的没
+  A：娜姐早，刚到站，下午新单多，四点半以后给你截
+  B：行，老规矩，要当天的，过夜的我不收
+  A：知道，放心
+  A：娜姐，上午到的一批我拍了，38条，城东那片的，都是送到门的
+  B：发来我看看
+  A：发你了，姓名电话地址全乎，糊的我剔掉了
+  B：成，这批要了。四块一条，38条152，先记着
+  A：好
+  B：你们驿站这几天爆仓没，大促预热了
+  A：爆了，一天八百多件，理货理到腿软
+  B：那你正好顺手多拍点，都在手边
+  A：嘿，娜姐你是懂排班的
+  B：互相成就嘛
+  【10月14日】
+  A：今天上午就到了46条，比昨天多，下午还有一波
+  B：好，凑够150一起结，省得你老跑
+  A：成
+  A：对了姐，明天断崖式降温，你秋裤该出场了
+  B：嘁，我羽绒服都上身了。站里冷不
+  A：棚子里还行，就是早上卸货手冻得慌
+  B：让站里配副手套嘛，劳保的
+  A：说了八百回，人家说我是铁手
+  A：下午那波到了，66条，我挑的都是电话打得通的
+  B：电话能打通的才是硬通货，好
+  A：晚上八点打包发你
+  【10月15日】
+  A：娜姐，昨晚那150条打包发你微信了，查收
+  B：收到，齐的。转你钱
+  【系统消息】B 向 A 转账 600 元，已收款。
+  A：600到了，四块一条一分不差，娜姐敞亮
+  B：咱这买卖讲究长久
+  A：姐，你们那边新开的奶茶店咋样，天天排队
+  B：一般，甜齁，我只喝美式
+  A：自律达人，怪不得身材那么好
+  B：少来，你昨天不还晒炸鸡
+  A：嘿嘿，夜里的炸鸡和白天不是一个东西
+  B：小邓，问你个事，取件码尾号那几位，面单上有不
+  A：有，条码边上就印着，你要这个干啥
+  B：有客户要全一点的，回头加价收，五块一条
+  【10月16日】
+  A：娜姐，今早52条，新鲜出炉
+  B：要了。五块带取件码那条，你想好没，多挣四分之一呢
+  A：我手慢，先还是四块的走量吧
+  B：也行，量大什么都好说
+  B：昨晚那把你赢了没
+  A：输麻了，队友挂机，气得我下楼吃了俩包子
+  B：哈哈哈化悲愤为包子
+  A：你今晚带我上分
+  B：就你那手速，我玩辅助保你吧
+  A：傍晚又到40条，挑好了，晚上发
+  B：好，今天量可以
+  【10月17日】
+  A：娜姐，昨天40条发了，加上今早48条，现在结还是攒着
+  B：攒着，周五一起
+  A：姐，我妈又催我回去相亲，说村里介绍了个老师
+  B：挺好啊，稳定
+  A：稳定啥呀，我这活儿走不开
+  B：挣钱要紧，缘分晚点不耽误
+  A：借你吉言
+  B：小邓，下周我要放量，你一天能供到八十不
+  A：八十悬，顶多六七十，理不过来
+  B：六十也行，先应下
+  A：成
+  【10月18日】
+  A：娜姐，今早开门就55条，周六单就是多
+  B：好，挑送到门、电话通的，隔夜的别掺
+  A：放心，当日达当日出
+  B：有个大客户点名要城东城南两个片的，你多留
+  A：明白，分区挑，老规矩
+  B：昨天那88条记上，周五一起结
+  A：成，小本本记着呢
+  B：好嘞，合作愉快
+  A：那必须的，长期合作嘛

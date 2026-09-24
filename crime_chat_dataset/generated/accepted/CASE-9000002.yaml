@@ -1,0 +1,123 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000002
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000066
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-7bba86ee6dccab2d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 认识仅数月的年长男性以每月固定转账加包租房费，维系与年轻女性的长期陪伴关系，转账与陪同安排绑定，并要求对其婚姻状况严格保密。
+  critical_evidence:
+  - A固定每月12号转8000元，自称『老规矩』，已成惯例，比B发工资都准时
+  - B住处的押金和整季度房租由A直接替其向房东结清，B无需经手
+  - A要求B不发照片、关闭定位、对『家里那位』保密，B自嘲是『高兴时才出现的玩伴』
+  - 转账与周五陪同吃饭看展的安排绑定，两人认识时间短、无亲属或正常资助基础
+  benign_alternatives:
+  - 恋人间的正常开销往来
+  - 长辈对晚辈的资助
+
+attributes:
+  duration_days: 6
+  turn_count: 44
+  approximate_tokens_estimate: 1439
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: long_term_support_exchange
+  risk: 2
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0027
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-017
+
+dedup:
+  content_hash: sha256:6ae79004e7ea1ce3e645f57c39573a4dbf1e133e958211f305b74e5146507916
+pipeline_status: accepted
+title: sexual_transaction_exploitation/long_term_support_exchange
+conversation: |-
+  【9月8日】
+  A：早，这几天降温，你那件大衣别急着收
+  B：知道啦，你每天比我妈还啰嗦
+  A：这个月忙不忙，别硬扛
+  B：还行，就是甲方老改需求，烦死了
+  B：对了你今天怎么这么早发消息
+  A：在高铁上，出差，顺便跟你说个事
+  【9月9日】
+  B：说到大衣，我前两天下单了一件新的，等发货呢
+  A：多少钱的，发链接我看看
+  B：八百多，打折买的，绝不告诉你原价
+  A：小滑头，穿着好看比啥都强
+  A：跟你说的事：还是老规矩，12号我让助理转你，你把卡号再确认下
+  B：知道啦，卡号没换，还是那张
+  A：确认下别耽误，这个月手头紧不紧
+  B：还好，就是想报个瑜伽课，一节两百多，有点舍不得
+  【9月10日】
+  A：瑜伽该报就报，别在钱上委屈自己
+  B：你这么说我可就真报了啊
+  A：报。还有你那房子，押金和这季度房租，房东那边我今天让人结清了
+  B：啊？你动作也太快了吧，我还没跟房东确认呢
+  A：跟他确认什么，我直接转的他，你安心住着就行
+  B：行吧，那这季我留给自己的钱刚好够报瑜伽嘿嘿
+  A：对了，周五晚上有空吗，陪我去吃饭，饭后看个展
+  【9月11日】
+  B：早，今天一睁眼收到甲方六十条语音，人麻了
+  A：六十条？他怎么不直接打电话
+  B：打电话更吓人好吗，语音我还能假装没看到
+  A：你这打工人哲学还挺通透
+  A：周五的事，你到了直接上我订的位子，照片别发圈，定位关一下
+  B：知道啦，从第一次见面我就跟你说过我嘴严
+  A：不是你嘴严不严的事，家里那位人多心，看见什么又要起风波
+  B：懂，家庭和睦最重要，我就是你高兴时才出现的玩伴嘛
+  【9月12日】
+  【系统消息】A 向 B 转账 8000 元，已收款。
+  B：到账了，这个月的
+  A：嗯，每月12号，你记住这个日子就行，别的不用操心
+  B：记着呢，比我自己发工资都准时
+  A：工资本来就该是你的，我只是不想你为了房租委屈周末
+  B：说不过你，瑜伽课我现在就去交钱
+  A：去吧去吧，钱花在自己身上才有意思
+  B：楼下新开的奶茶店排队五十米，我当场劝退
+  A：周五我让司机接你，路过给你带一杯
+  B：你可说话算话，我要少冰三分糖
+  【9月13日】
+  A：周五的展订好了，餐厅二选一你挑，江景那家还是胡同里那家
+  B：要江景那家！拍照好看
+  A：就它了，六点我让司机接你，穿正式点
+  B：好嘞，正好新大衣到了，首秀
+  A：还有，周五拍的照片也别发，展会人多眼杂，你懂的
+  B：懂懂懂，我们就是两个恰好在同一个展里看画的陌生人

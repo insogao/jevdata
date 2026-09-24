@@ -1,0 +1,152 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000020
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000004
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-5b69eb3e7a310c70
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 借熟人客服身份与真实订单信息，伪造平台「加急退款」通道，诱导受害者装插件共享屏幕、点外部链接，最后以「验证金」名义转走4800并层层拖延。
+  critical_evidence:
+  - A准确报出B的订单：尾号8823、金额10250、灰色按摩椅，自称在工单池看到
+  - A引导B点开与正常购物页面不同的「售后专用」入口链接并装小插件，共享屏幕指路
+  - 核验环节要求先转4800验证金、钱转给A个人代交，承诺连退款带补偿退8950
+  - 放款迟迟不到，A拒发凭证、称内部通道查不到，官方客服确认平台并无验证金流程
+  benign_alternatives:
+  - 熟人热心代办的平台内部加急
+  - 真实的平台退款流程差异
+
+attributes:
+  duration_days: 6
+  turn_count: 73
+  approximate_tokens_estimate: 1760
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: refund_deposit_bait
+  risk: 2
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0029
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-017
+
+dedup:
+  content_hash: sha256:ae2f718e160731e823223f8fd69b70ff6d4b60bf6a14a0d96d6d81db0eaaf6a9
+pipeline_status: accepted
+title: fraud_scam/refund_deposit_bait
+conversation: |-
+  【10月9日】
+  B：王磊！好久没冒泡了
+  A：哈哈老张，忙成狗
+  B：你家闺女上小学适应没
+  A：适应了，早上照样鸡飞狗跳
+  B：我们家那个也一样，吃饭跟打仗似的
+  A：都这德行。你找我有事吧？听你这话头不对
+  B：正事。上个月买了台按摩椅，到货异响退了，退款卡十三天了
+  A：八千多的那台？
+  B：对，你记性可以
+  A：你在群里晒过，我有印象。一直「处理中」？
+  B：对，客服就会复读
+  A：这个有加急的路子，我帮你问问内部同事
+  B：那太感谢了
+  【10月10日】
+  A：问到了，有绿色通道，但得验证是本人操作
+  B：怎么验
+  A：我直接帮你插进去。你那单尾号8823，10250的灰色那台？
+  B：哇你连金额都知道
+  A：我在工单池里看到你的单了，信息全着呢
+  B：那要给你提供什么
+  A：先不用，明天下午我拉个远程带你点
+  B：行，我明天调休在家
+  B：你们平台最近大促吧，不得忙死
+  A：忙，天天十一点下班，头发一把把掉
+  B：注意身体，才三十多
+  A：熬到活动结束就好了
+  【10月11日】
+  A：下午三点有空不，远程带你走流程
+  B：有空，怎么弄
+  A：我发你一个售后专用的入口，跟平时购物那个页面不一样
+  B：收到，点了
+  A：第一步授权客服协助，会提示装个小插件
+  B：装了
+  A：装完我能看到你的屏幕，卡住我直接指给你
+  B：这操作没问题吧
+  A：放心，全程你可见，我也不碰你手机
+  A：你那页点「退款加速」
+  B：点了，跳出来「资质核验」，让填银行卡号
+  B：哎对了，周末爬山你去不，老周组局
+  A：去，装备都翻出来了
+  B：那周六早上七点山门口集合
+  【10月12日】
+  A：上午接着弄，核验做完今天就提交加急
+  B：那个核验怎么弄，提交后说要「验证金」
+  A：对，系统要验本人账户，转一笔4800的验证金，核完连退款带补偿8950一起退你
+  B：还要我先出钱？
+  A：就走个流程，钱原路回来，都这么核
+  B：官方客服可没跟我说过验证金
+  A：客服哪懂加急通道，这是风控那边的内部流程
+  B：那转给谁，平台对公账户？
+  A：转我，我帮你走内部代交，完了截图给你
+  B：……让我想想
+  A：别想了，加急名额下午五点清零，下个月都不一定排上
+  B：哎行吧，八千多呢，别打水漂
+  B：晚上请你吃饭，谢你跑腿
+  A：行，去吃新开那家酸菜鱼
+  B：成，五点前我把钱转你
+  【系统消息】B 向 A 转账 4800 元，已收款。
+  A：收到，我这就去代交，回头发你凭证
+  【10月13日】
+  B：凭证发我看看
+  A：内部系统截图外发要担责，你放心，明早九点前统一放款
+  B：……行
+  B：放款是原路退回我卡里吧
+  A：对，8950一起
+  B：到了我请你吃酸菜鱼
+  A：好嘞，等着
+  B：对了爬山改时间没
+  A：老周项目黄了，下周再约
+  B：行，正好我这没心思玩
+  A：很快，明早就好
+  【10月14日】
+  B：还没到账。我去官方App查了，工单还是「处理中」，根本没有加急记录
+  A：内部通道不走工单池，你看不到正常
+  B：我刚打官方客服电话了，人家说平台没有任何「验证金」流程
+  A：你问的层级不对，这个是风控专线才有的
+  B：王磊，4800今天必须退我
+  B：不然我只能报警了
+  A：别冲动，再给我一天，今天肯定到

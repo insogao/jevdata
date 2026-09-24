@@ -1,0 +1,127 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000064
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000122
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-b28c1e7564b24d05
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: coercion_blackmail
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 基层员工手握公司采购违规凭证，以'审计见'为要挟逼高管给自己升职，晋升落定当天再收30000元'项目节余奖'作为封口对价。
+  critical_evidence:
+  - A声称那批设备验收单比发票早半个月、三家比价公章相同，'我都留了底'
+  - 开价明确：晋升名单让A上去，'这事就算了'
+  - 施压时限：'周五前文件下来 不然审计见'，并称复印件存了三处
+  - 晋升公示当天B以项目节余奖名义转账30000元，A承诺材料'一份不留'
+  benign_alternatives:
+  - 员工合法举报前留证
+  - 劳动晋升沟通、劳动仲裁协商
+
+attributes:
+  duration_days: 6
+  turn_count: 48
+  approximate_tokens_estimate: 1130
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: workplace_wrongdoing_leverage
+  risk: 2
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0034
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-019
+
+dedup:
+  content_hash: sha256:f3469445821e418022336a718a8019b1445ebed873516e264b1d03f50f40db79
+pipeline_status: accepted
+title: coercion_blackmail/workplace_wrongdoing_leverage
+conversation: |-
+  【10月13日】
+  A：李总早 冒昧加您 采购部小周
+  B：早 有事?
+  A：关于去年那批设备采购 想跟您单独聊聊
+  B：采购早走完了 有问题走流程
+  A：流程里查不到的部分 我手里有点东西
+  B：中午食堂香锅窗口知道吧 排队人少
+  A：好嘞 那边阿姨手不抖都不习惯
+  B：哈哈回回堆成山
+  【10月14日】
+  A：李总 白天忙 忙完看下材料的事
+  B：什么材料
+  A：那批设备验收单比发票早半个月 三家比价公章是同一个 我都留了底
+  B：你想要什么 直说
+  A：简单 下批晋升名单让我上去 这事就算了
+  B：明早七点半我把车挪一下 B2出口堵着了 你要出去跟我说
+  A：您那辆黑SUV吧 我认得
+  B：对 半小时就到
+  A：好
+  【10月15日】
+  B：晋升的事我说了不算 班子会定
+  A：名单您拟的 您一句话的事
+  B：小周 你这是要挟
+  A：话难听但我没辙 材料在手 心里才踏实
+  B：周末团建爬山 天气预报说降温 备件外套
+  A：您也注意 这周雨水多
+  B：嗯
+  【10月16日】
+  A：昨晚财务那层灯亮到十一点 在备审计?
+  B：例行内审 年年有
+  A：那正好 我那袋材料闲着也是闲着 交上去算了
+  B：别急 你的事在推 班子会争取挂个主管
+  A：负一新进了器械 中午去吗
+  B：我中午就散步 习惯晨练
+  A：那晚上约
+  B：行
+  【10月17日】
+  A：李总 审计月底进场 我手里的东西到时就不好控制走向了
+  B：你什么意思
+  A：没什么意思 周五前文件下来 不然审计见 复印件存了三处
+  B：你在拿公司的事做交易
+  B：给我两天
+  【10月18日】
+  B：家长群里那个周先生是你吧 我家五年级的
+  A：对 三年级二班
+  B：放学碰见过 挎蓝书包那个
+  A：缘分 哈哈
+  B：班子会提前到今天上午了
+  A：等您信
+  B：文件下了 采购管理部主管 下周公示
+  A：谢李总 材料的事翻篇 我一份不留
+  B：你上季度报的项目节余奖批了 30000 今天随薪发 你查收
+  【系统消息】B 向 A 转账 30000 元，已收款。
+  A：收到 材料今天就清
+  B：嗯 以后踏实干

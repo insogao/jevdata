@@ -1,0 +1,120 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000289
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000087
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-6fbb7769dd33f266
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: privacy_doxxing
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A想提前拿到儿子班级的全区统考成绩和全班排名（含别人家孩子的分数），利用同公司同事B负责该校成绩系统运维的职务便利，以666元红包为对价让B违规导出数据。
+  critical_evidence:
+  - B说明只需用班主任账号在成绩系统里「点一下」即可导出全班成绩带排名
+  - A发出666元红包称「一点心意」，B先推辞后收下并约定「下不为例」
+  - B在周四晚系统维护时后台导出，次日早上把五张截图发给A，含全班40人的语数英成绩和排名
+  - A叮嘱「这事就咱俩知道，别往外提」，B承诺嘴严并强调仅此一次
+  benign_alternatives:
+  - 家长查询自己孩子的成绩
+  - 学校官方渠道发布成绩
+
+attributes:
+  duration_days: 5
+  turn_count: 42
+  approximate_tokens_estimate: 1408
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: exam_score_lookup
+  risk: 2
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0060
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-028
+
+dedup:
+  content_hash: sha256:78409418aea3f4b2a36eb4a6ed99e934eb3687896c846ceeb4158762a7f1530f
+pipeline_status: accepted
+title: privacy_doxxing/exam_score_lookup
+conversation: |-
+  【11月4日】
+  A：早，你们系统这周维护不？我儿子他们学校用的不就是你公司那套成绩系统嘛。
+  B：早。华阳中学吧？我们组做运维，周四晚上例行维护。
+  A：巧了，正好想问你个事。这周区里统考，成绩是不是都进系统了？
+  B：考完录机，一般周五晚上到周一出。
+  A：你上回体检那个结节复查没？
+  B：查了，医生说没长，一年后随诊。
+  A：那就好，少熬夜，你们上线那阵太吓人。
+  A：我这有个不情之请。孩子他们班主任嘴严，排名也不让家长知道，我就想知道全班到底啥水平，我家那个到底在班里啥位置。
+  B：你要全班还是全年级？
+  A：全班就行，带排名最好。
+  B：这个……班主任账号登进去，成绩表就在里头，点一下导出的事。不过这属于内部数据，按说不能外传。
+  A：就咱俩，我又不外发，自己看看心里有数。
+  B：你让我想想，周四维护我正好在后台。
+  A：麻烦你了，回头请你喝奶茶。
+  【11月5日】
+  B：周末去香山了，人山人海，红叶才红三成。
+  A：我这周没敢出门，陪娃上课。
+  B：下次十二月初去，人少叶红。
+  A：行，到时候带上你家那位一起。
+  A：帮大忙了兄弟，一点心意，红包已发，你收一下，买点茶叶。
+  【系统消息】A 向 B 转账 666 元，已收款。
+  B：你这整得跟回事似的……那我就却之不恭了，下不为例啊。
+  A：应该的，占用你后台权限，怪不好意思。
+  B：周五晚上数据全了，我截图给你，别传群里。
+  【11月6日】
+  B：咱们部门团建定了，去十渡烤全羊。
+  A：舒服，我们团建还在会议室搞破冰。
+  B：哈哈哈，那你们领导是真抠。
+  B：今晚维护，我在后台盯着，数据一到齐我就截给你。
+  A：辛苦兄弟，这么晚还在机房。
+  B：习惯了，一学期两回。
+  【11月7日】
+  B：截图发你了，五张，班里40个人的语数英和排名都在，看完别外传。
+  A：收到，我家那个数学第9，比月考退了……行，我心里有数了。
+  B：你家语文不错，稳在前五。
+  A：这数据真细，连缺考标记都带着。
+  B：系统里本来就带，点开就有。
+  A：楼下新开的生椰拿铁，给你带一杯？
+  B：带吧，少糖，下午还得对着机房日志。
+  A：好嘞，放前台了。
+  【11月8日】
+  A：对了，这事就咱俩知道，孩子他们家长群里我一个字没提，你也别往外提。
+  B：放心，我嘴严。真就下不为例，以后别再让我弄这个了。
+  A：就这一回。对了，你家娃英语咋样？
+  B：还行，就是单词不爱背，报了个周末班。
+  A：我家也在背，天天打卡，跟打仗似的。
+  B：都一样，哈哈。

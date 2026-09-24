@@ -1,0 +1,130 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000307
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000053
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-93fc72fd62ed984b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 表哥以三年前垫资旧账为名强行追加两万『利息』并限次日中午到账，借亲戚关系与『别人家店』的下场作暗示步步紧逼，钱到账后仍不放话收手，真实目的是逐步夺走表弟的店铺。
+  critical_evidence:
+  - B 凭三年前垫资六万的旧账强行追加两万利息，限次日中午十二点前到账（对价与时序）
+  - B 宣称『明天铺子归我』『合同就别找了』，并称明早叫兄弟们过去搬东西（强占经营资产）
+  - B 以东街老周关店离场作隐性施压参照，全程无一字明说（抽象威胁暗示）
+  - A 在期限前被迫转账两万，B 收款后仅称『先这么放着』，胁迫并未解除（资金闭环）
+  benign_alternatives:
+  - 亲属间借贷利息纠纷
+  - 商铺合伙经营分成争议
+
+attributes:
+  duration_days: 2
+  turn_count: 55
+  approximate_tokens_estimate: 1192
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: asset_seizure_force
+  risk: 3
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0062
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-028
+
+dedup:
+  content_hash: sha256:4c762f824bd7c252e025bf97eccf1aab4db793a323abefd67f1a34a87183c098
+pipeline_status: accepted
+title: violence_extortion/asset_seizure_force
+conversation: |-
+  【10月14日】
+  A：哥，昨晚电话里那事，我想了一宿
+  B：想明白就行
+  A：可铺子我才开了六年，客源刚养起来
+  B：这条街往后的事，你还看不明白？早点拿主意对谁都好
+  A：对了，妈那降压药吃了说头晕
+  B：头晕还接着吃？赶紧去医院换
+  A：她舍不得，嫌挂号贵
+  B：周六我回去一趟，陪她去
+  A：行，那这两天先给她停了
+  B：嗯，别乱换药，等我回去问过大夫
+  A：行，先减半片顶着
+  B：上午说的事，你别打哈哈
+  A：哥，铺子好好开着，能有什么主意好拿
+  B：前年你进那批设备，谁给你垫的钱
+  A：六万我去年就还清了，转账记录都在
+  B：本清了，利呢
+  A：当初可没人跟我说什么利
+  B：现在说了，两万，清了咱俩就两清
+  A：两万也太狠了吧哥
+  B：你那位置一天流水多少，自己没数？
+  A：对了，你家小子运动会哪天
+  B：下周五
+  A：我爸说想去凑热闹，到东门找你行不
+  B：行，让叔叔直接来东门找我
+  A：好嘞
+  B：想好没有
+  A：哥，两万我一时真凑不出来，宽限些日子行吗
+  B：不用凑了，有个省事的法子，铺子过到我名下，账一笔勾销
+  A：？？？那是我爸留下的铺子
+  B：你爸要在，你问问他答不答应
+  A：咱们是亲表兄弟啊哥
+  B：亲戚才跟你这么客气
+  B：东街开五金的老周，你记得吧
+  A：记得，上个月不是去南方了
+  B：他那店，走之前也是这么谈下来的
+  A：你这是要我的命……
+  B：明天铺子归我，你就当歇两年
+  A：那执照、进货单这些，我总得收拾一下吧
+  B：合同就别找了，找了也就是一张纸
+  B：明早十点我叫兄弟们过去搬东西，你在不在都一样
+  A：哥……
+  B：明天十二点前，两万到账，铺子的事就翻篇
+  B：到不了账，就按刚才说的办
+  A：我尽量凑
+  【10月15日】
+  B：十二点，记住
+  A：在凑了
+  A：周六陪完妈，中午来家吃饭吧，让你嫂子炖个鸭子
+  B：行，正好给小子捎校服钱
+  A：好嘞
+  B：我先忙，中午再说正事
+  【系统消息】A 向 B 转账 20000 元，已收款。
+  A：转过去了，两万，你点点
+  B：收到
+  B：铺子的事先这么放着
+  A：什么叫先放着？不是说好翻篇
+  B：下月再说，你该干嘛干嘛

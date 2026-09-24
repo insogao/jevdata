@@ -1,0 +1,137 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000106
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000110
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-fdf3119fdc313398
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: theft_robbery_property_crime
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 两人沿用骑车控速加下手拿货的老分工,在人流密集的老位置实施抢夺,当晚变现金饰并按六四分成转账,约定隔十天半月再干。
+  critical_evidence:
+  - 分工明确且沿袭既往:A控车带速度,B手起货落,不停不回头,各干各的熟活
+  - 约定周五晚老位置动手,车况和袋子提前准备,得手后清点为小件五枚成色都好
+  - 当晚23:04出货得款24000,23:09即按老规矩六四分成,B转A 9600元,时序紧贴
+  - 约定下回隔十天半月、别连着来,细水长流式持续作案意图明显
+  benign_alternatives:
+  - 摩的载客
+  - 骑行俱乐部
+
+attributes:
+  duration_days: 3
+  turn_count: 61
+  approximate_tokens_estimate: 1469
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: snatch_divide_role
+  risk: 3
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0039
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-021
+
+dedup:
+  content_hash: sha256:32e6281051112e6dac0bc0feeb25c3eea5c38a543d1c84979c39e71828d48145
+pipeline_status: accepted
+title: theft_robbery_property_crime/snatch_divide_role
+conversation: |-
+  【10月16日】
+  A：中午吃啥,楼下那家黄焖鸡换人了,味不对
+  B：那今天吃食堂,周三有糖醋排骨
+  A：就冲排骨,走
+  B：说正事,还是老位置不?
+  A：老位置,那边人多,咱的节奏熟
+  B：分工还按上回,你控车,我下手,不停不回头
+  A：老规矩,你的手要快,我的轮要稳
+  B：周五晚上来?人多,货也多
+  A：周五就周五,晚上八点后,天黑透了再动
+  B：行,老时间老地方,东西我提前擦亮
+  A：晚上撸串去不,新开那家烤牛油
+  B：走啊,牛油配蒜蓉茄子,绝了
+  A：你请,上回台球是你输的
+  B：记这么清楚,行,我请
+  B：吃爽了,牛油确实香
+  A：下周还来,我把台球赢回来
+  【10月17日】
+  A：你那双白鞋我洗坏了…送洗护店了,别骂我
+  B：啊?那是我最贵的鞋
+  A：店里说能救,修好了请你吃饭赔罪
+  B：算了算了,鞋如人生,总要有旧的
+  B：下午把车推去保养下,刹车和胎你过一遍,晚上靠它
+  A：知道,下午就去,链条也上油,今晚车比人重要
+  B：对,车稳,我手上的活才稳
+  A：我那个电瓶不行了,跑四十公里就虚
+  B：换个容量大的,省得半路掉链子,你懂的
+  A：周末去换,明天先凑合
+  B：都妥了?东西擦亮了,袋也换了新的
+  A：妥了,车刚试了一圈,静得很
+  B：八点半老位置碰头,先各吃点东西垫垫
+  A：行,别迟
+  A：对了我妹今天生日,视频里正吹蜡烛呢,哈哈
+  B：替我说生日快乐,蛋糕什么味
+  A：芒果,她非要的,小孩子的口味
+  B：芒果行啊,我也爱
+  B：到了,桥洞这边风大
+  A：快了,两个红灯,等我
+  A：到了,上车前最后对一遍:老位置那段,我带速度过去,你手起货落,不停不回头,老路线散
+  B：记死了,你只管把速度带起来,剩下的交给我
+  A：成,出发
+  B：落袋,小件五枚,成色都好,没磕碰
+  A：干净利落,先散,老地方碰头
+  B：走
+  B：到齐了,收货的老周还在,正过秤
+  A：别急,让他细看,咱的货不怕看
+  B：出了!24000,他给得爽快
+  A：行啊,比上回还高。今晚就结,老规矩六四,你六我四
+  B：记着呢,秤完就转
+  【系统消息】B 向 A 转账 9600 元，已收款。
+  A：收到,9600,不差分毫,今晚痛快
+  B：痛快,东西一出手,心里就落地了
+  A：落地就散,早点回,明早再聊
+  B：懂,到家发个睡了
+  A：行,睡了
+  【10月18日】
+  B：早起,昨晚睡得踏实
+  A：踏实,钱在卡里躺着最踏实
+  B：下回啥时候?老位置这节奏还能再顺几单
+  A：不急,隔个十天半月,别连着来
+  B：行,听你的,细水长流
+  A：那个赛车片看没看,评价很高
+  B：看了,车戏拍得真,看得手心冒汗
+  A：周末二刷?我请,昨晚手气好
+  B：你请那我必到,二刷更过瘾

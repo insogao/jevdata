@@ -1,0 +1,130 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000262
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000101
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-53b0c3b51fd666aa
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A 以资金服务为幌子拉拢 B 当取现车手，把上家来路不明的资金分点提现搬走，千分之五的抽成让 B 沉默入伙。
+  critical_evidence:
+  - A 以“千分之五、日结”的报酬招 B 帮上家跑取现
+  - A 要求只带身份证和银行卡、当天往返，并明确“规矩就是别问”
+  - 次日 B 按单子跑完四个点位完成取现交接
+  - A 给 B 转账 5000 元（96万的千分之五加路费）
+  benign_alternatives:
+  - 正规跑腿代办类兼职
+  - 帮公司财务提取备用金的差事
+
+attributes:
+  duration_days: 2
+  turn_count: 55
+  approximate_tokens_estimate: 1351
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: help_move_fund_fee
+  risk: 3
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0057
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:c002d69941c5da4a2f6453e4f17029d6c29864262acc18c9aefed4b6cfa7915d
+pipeline_status: accepted
+title: money_laundering_obfuscation/help_move_fund_fee
+conversation: |-
+  【10月14日】
+  A：蒋老弟早
+  B：周哥早，昨晚去打球了没
+  A：去了，你说了几次一起练，一次没来
+  B：腰不行，练不动，改天改天
+  A：年轻轻的哪来这么多改天
+  A：对了，展会那天聊的资金上的事，你考虑得咋样
+  B：你说帮忙走账那个？我这人不碰财务的事
+  A：不走账，是取现。上家手里有几笔要提现，缺个腿脚勤快的
+  B：取现？取谁的
+  A：规矩就是别问。报酬按千分之五结算，日结
+  B：千分之五，一笔十万才五百，这钱怕是不好挣
+  A：一天跑几个点，量大。你不是说年终奖被扣了嘛，正好补上
+  B：我心里没底，来路不清楚的钱我不敢碰
+  A：什么来路不清楚，做资金服务的讲究效率。人带着身份证和银行卡过去就行，当天往返
+  B：就带身份证和卡？
+  A：对，到了有人对接，取完装包交接，后面的事不用你管
+  B：万一卡出什么岔子，我人还在里头呢
+  A：上家的卡出不了岔子，真有事也轮不到你兜。先试一趟，不合适随时收手
+  B：容我想想，下午回你
+  A：中午吃啥，楼下新开了家牛肉面
+  B：今天带饭了，回头去尝
+  A：带饭党，会过日子
+  B：省着娶媳妇呢哈哈
+  B：降温了，风跟刀子似的
+  A：是，我出门加了件外套，你们办公室暖和不
+  B：暖和，就是干，嗓子疼
+  B：周哥，想了下，先干一趟试试。千分之五别变卦
+  A：不变，日结。明早七点半，高铁站对面麦当劳碰头，有人给你交东西
+  B：我要带什么
+  A：身份证，卡，别的都不用。今晚早点睡
+  B：行
+  A：国庆票抢到了吗
+  B：候补中，你呢
+  A：早买好了，回去看爸妈
+  B：我姐也帮刷着呢
+  A：那稳了，候补一般都能上
+  B：屏碎了想换个手机，你懂行不
+  A：走官方渠道，别贪便宜去小店
+  B：行，贵点踏实
+  【10月15日】
+  B：到了，麦当劳人不多
+  A：穿灰外套那桌就是接你的人，拿到东西按单子跑，别绕路
+  B：单子拿到，一共四个点
+  A：嗯，中午前弄完
+  B：第一趟出来了，挺顺
+  A：别磨蹭，按顺序来
+  B：官方换屏预约要多久
+  A：一两天，正好你跑完这趟去办
+  B：都交接完了，回你算账
+  A：今天走了96个，千分之五4800，路费另算200，一共5000
+  【系统消息】A 向 B 转账 5000 元，已收款。
+  B：到账了。后面还有活吗
+  A：上家满意的话一周两三趟，卡和身份证自己收好
+  B：行，下趟提前一天说
+  A：没问题，晚上吃点好的犒劳下
+  B：麻辣烫走起哈哈
+  A：行，注意休息

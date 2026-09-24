@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000291
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000114
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-50801f446d1c0acc
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: theft_robbery_property_crime
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A借「同城兼职日结」名义从兼职群招募陌生人B，双十一期间到无人看管的老小区快递架窃取他人包裹，按件计酬，A负责统一收尾处理，二人合谋盗窃。
+  critical_evidence:
+  - A明确招募B去「快递架上件堆成山、没人盯着」的老小区「取件」，收尾归A统一处理
+  - 报酬按件结算25元一件，首日现金525元，双十一当天定下40件目标并追加50元跑腿费
+  - 双十一当晚39件实收，1025元于次日通过转账结清
+  - B两次动摇（小区贴告示要调监控、家里有事），A以「年底还有一波、价只高不低」继续挽留
+  benign_alternatives:
+  - 帮忙代拿快递
+  - 驿站自提点兼职
+
+attributes:
+  duration_days: 4
+  turn_count: 55
+  approximate_tokens_estimate: 1875
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: package_porch_pickup
+  risk: 2
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0060
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-028
+
+dedup:
+  content_hash: sha256:5212a4fb82d3c08cae08fff71e0a184a3c1475901399c7477ef89b25840cc036
+pipeline_status: accepted
+title: theft_robbery_property_crime/package_porch_pickup
+conversation: |-
+  【11月9日】
+  A：兄弟，同城兼职群里加的你，看到你想找日结。我这有个活，就这四五天，时间自由，来钱快。
+  B：啥活？搬货还是分拣？我白天下午都有空档。
+  A：比那个轻省。城南有几个老小区，快递架上件堆成山，没人盯着。你帮我把件取出来送到我这，按件结钱。
+  B：取出来？那是人家的快递吧？
+  A：双十一，件多到驿站自己都数不清，主人一堆地址记不全。你取你的，收尾归我，一件25。
+  B：这不就是顺人家快递吗……
+  A：话说那么难听干嘛。放了三天没人领的多了去了，我这算帮驿站消化库存，懂？干不干？
+  B：一天能过几件？
+  A：看勤快。一个架子下午扫一趟，二十件起步，双十一当天翻倍。
+  B：今儿风是真大，出门手都冻木了。
+  A：我秋裤都套上了。你还是穿厚点，干这活全靠腿。
+  B：行，我把冲锋衣找出来了。
+  B：再问一句，要是被主人撞见咋整？
+  A：问这么多还干不干了？胆子大就来，一天两三百到五六百不等，日结。丑话说前头，出了岔子自己担，我只管结账。
+  B：……成，先试一天。
+  A：明天下午三点，文昌街地铁站B口碰头，我带你去小区。
+  【11月10日】
+  A：到哪了？出口右手边便利店门口等我。
+  B：到了，穿黑羽绒服那个就是我。
+  A：走，第一个小区就在对面，你看那排架子，都漫出来了。
+  B：这也太多件了，都没地方下脚。
+  A：所以说现在是好时候。你专挑轻省的小件，沉的别硬搬，别跟件较劲。
+  B：拿完了，21件，有两个太沉没动，都搁你面包车上了。
+  A：行。第一次先给现钱，525，你点点，信得过咱以后走转账。
+  B：点了，一分不差。
+  A：痛快才留得住人。明天正日子，件最多，最好干就这两天，明晚有没有档？
+  B：有，跟师傅换好班了。
+  B：晚上吃啥？我这边外卖就那几家，吃吐了。
+  A：路口那家安徽牛肉板面，加蛋加肠七块五。
+  B：你去吃，给我带一碗，微辣。
+  A：行，微辣加蛋。
+  【11月11日】
+  A：今儿正日子，驿站早八点就开始卸货，架子眼看着满。
+  B：我十点才脱得开身，不急吧？
+  A：不急，下午四点才是正席，大小件全堆齐。
+  B：出门了，今晚目标多少？
+  A：四十件，加急那个小区也去一趟，多给你五十跑腿。
+  B：成，干了。
+  B：第一批14件，先搁你车边上了。
+  A：搁着，我一会儿收。你直接去第二个小区，回来一块算。
+  B：第二批19件，加急的6件，腿要断了。
+  A：39件加跑腿50，一共1025。今天太晚，明早转你，微信额度也到顶了。
+  B：行，我可记着数呢，39件。
+  B：你双十一给自己买啥了？
+  A：一箱牛奶一双劳保鞋，全是干活的消耗品。你呢？
+  B：给我闺女抢了个半价乐高，手速封神。
+  【11月12日】
+  A：早，昨晚的1025现在转你。
+  【系统消息】A 向 B 转账 1025 元，已收款。
+  B：到了。不过说个事，第二个小区门口贴了告示，说最近快递老丢，业主要调监控，我心里有点打鼓。
+  A：小区告示年年贴，双十一一过就没人记得。你要怕，歇几天，活反正天天有。
+  B：这两天家里有事，我先缓缓。
+  A：不勉强。过了这波，年底还有一波，价只高不低，到时候我喊你。
+  B：再说吧。
+  B：中午吃啥，还板面？
+  A：换换，路口新开的猪脚饭，十五管饱。
+  B：成，我请，庆祝开工两天圆满收工。
+  A：你小子想得开。下午把上回那件外套来取走，落我车上了。
+  B：哎哟忘了，下午顺路去拿。

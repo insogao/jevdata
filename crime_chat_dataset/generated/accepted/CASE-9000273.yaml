@@ -1,0 +1,135 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000273
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000011
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-dfcddc5e350053b7
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 假客服话务组内，老手向新同事复盘冒充航司客服、以航班取消为由诱导乘客装会议软件并索取验证码的全过程，新人按三七分成上交提成入伙。
+  critical_evidence:
+  - 主动致电乘客谎称航班取消，报对日期航班号骗取信任
+  - 引导乘客下载会议软件，借口改签要视频核对
+  - 拿到了乘客报出的验证码，单子结了
+  - 新同事按三七分成向A转账3000元提成入伙
+  benign_alternatives:
+  - 航司真实退改签通知
+  - OTA客服回电
+
+attributes:
+  duration_days: 5
+  turn_count: 57
+  approximate_tokens_estimate: 1301
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: customer_service_reverse
+  risk: 2
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0058
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:02f282cb72dccecd74392670fca868449738e9e13dcb2e2ce5c0651c5976d07c
+pipeline_status: accepted
+title: fraud_scam/customer_service_reverse
+conversation: |-
+  【10月9日】
+  B：组长，还在赶工啊
+  A：嗯，月底冲业绩，白天电话打不完
+  B：给你带了杯奶茶，放你桌上了
+  A：有心，三分糖吧
+  A：你昨天问我那单，今天有进展了
+  B：哪单
+  A：航线那位，上午我主动去的电话，张口就说航班取消了
+  B：他信了？
+  A：日期航班号我都报对了，他就没有不信的道理
+  B：然后呢
+  A：顺话头让他装了那个开会软件，说改签要视频核对
+  B：这就装了？
+  A：装了，后面顺理成章，码也到手了
+  B：组长你是老手，这些话术我背都背不熟
+  A：背熟了也别得意，这行吃的是心态
+  B：周末那个科幻片看了没
+  A：看了，特效值回票价，剧情稀烂
+  B：我还没看，别剧透
+  A：没啥可透的，剧情约等于没有
+  【10月10日】
+  B：组长，昨天那单成了没
+  A：成了，晚上他把验证码一报，这单就结了
+  B：码一报就等于
+  A：就等于成了呗，他还跟我说了声谢谢，你信不
+  B：听得我有点发毛
+  A：干我们这行，心软吃不上饭
+  B：那这单你分多少
+  A：组里三七，我七你们三，老规矩
+  B：那我这份啥时候发
+  A：钱还在缓冲，月底一起走账
+  B：行吧，我等着
+  B：国庆回去的高铁票你抢到没
+  A：抢到了，靠窗，候补加三十出的
+  B：我没抢到，准备坐大巴了
+  A：大巴八个钟头，你狠人
+  【10月11日】
+  A：明天断崖式降温，穿厚点
+  B：秋裤已经安排上了
+  A：你们年轻人现在都知道穿秋裤了？
+  B：冻过才知道，去年我就是硬扛的
+  B：组长，我想了下，你那单带带我呗
+  A：想好了？这条线不像发传单，嘴得严
+  B：想好了，房租都快交不起了
+  A：行，下周你先坐我旁边听，别插话
+  B：就听就行？
+  A：什么时候你能把人稳住十分钟，什么时候开口
+  B：稳住十分钟很难？
+  A：你试试就知道，对面不是机器人
+  B：成，那我周一坐你后排
+  【10月12日】
+  B：组长，昨天后排听了一天，头皮发麻
+  A：怎么说
+  B：那位阿姨讲到孩子学费的时候，你声音都放软了
+  A：客服腔嘛，该软的时候软，该挂的时候挂
+  B：我感觉我下不去这个嘴
+  A：下不去就先坐着底薪工位，别勉强
+  【10月13日】
+  B：组长，那单提成到账了，我转你三成
+  【系统消息】B 向 A 转账 3000 元，已收款。
+  A：收到，算你懂事，下周正式上线
+  B：这就算入伙了？
+  A：入伙了，规矩就一条，对外咱就是正经客服外包

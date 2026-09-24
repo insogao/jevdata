@@ -1,0 +1,121 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000246
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000061
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-62fbd505ce025b12
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: A 作为正规实名交友 App 的城市推广，邀请 B 注册，并按平台官方老带新活动发放 88 元拉新奖励，全程公开透明。
+  critical_evidence:
+  - App 可在应用商店直接下载，注册需实名认证
+  - B 填 A 的邀请码注册，触发平台官方拉新活动
+  - A 当场微信转 88 元奖励并附官方活动规则截图，备注写明用途
+  - 双方约的是公开的周末爬山活动，无任何私下交易安排
+  benign_alternatives:
+  - 交友软件正常邀请
+  - 兴趣社群拉新
+
+attributes:
+  duration_days: 4
+  turn_count: 44
+  approximate_tokens_estimate: 1040
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: platform_referral
+  risk: 0
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0055
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:67105ed2c8aff27b3dac78ddcf942e6b9fce45139400dad84abf83a791254f4b
+pipeline_status: accepted
+title: sexual_transaction_exploitation/platform_referral
+conversation: |-
+  【9月15日】
+  A：上回业主群说的爬山，周六十点老地方，你来不
+  B：来，正好把相机带上
+  A：行，我在群里接龙把你也写上了
+  B：好，吃的我带两袋坚果
+  A：成，对了你上次说想认识点新朋友，我们平台周末也有线下活动
+  B：你不就是做那个交友 App 的嘛
+  A：对，正经实名那种，应用商店直接搜得到
+  B：我这种社恐，线上凑合看看吧
+  A：线上也行，先下着
+  B：山顶那家豆花还开着不
+  A：开着，老板娘还问你上次咋没去
+  B：那必须去
+  【9月16日】
+  A：App 你下了没，我给你发个卡片图，扫开就是应用商店的下载页
+  B：下了，要实名认证啊
+  A：对，人脸加身份证，不然后面全是机器人
+  B：这倒是，之前下过一个，十条九条是假的
+  A：我们这认证过的才有标志，聊着放心
+  B：行，我认证一个
+  A：今儿有雨记得带伞
+  B：刚看了，下午有雷阵雨
+  A：那周六要也下就改室内，打台球去
+  B：台球我菜得很
+  A：菜才好玩
+  【9月17日】
+  B：注册好了，这界面还行
+  A：邀请码私发你了，填上
+  B：填了
+  A：老带新有奖励，88，平台把活动预算拨到我这种城市推广这儿，我直接转你，活动规则截图也发你
+  B：这么实在？
+  A：比打广告划算，预算就该花在真人身上
+  B：行，那我体验体验
+  【系统消息】A 向 B 转账 88 元，已收款。
+  A：转了，备注写了平台拉新奖励，规则截图你核对下
+  B：收到，还挺正规
+  B：对了你们楼下那家烤鱼还排队不
+  A：排，工作日都得等四十分钟
+  B：改天你带路，我请客
+  A：就等你这句话
+  A：周六爬完山去正好
+  B：行，听你安排
+  【9月18日】
+  B：用了两天，匹配推荐还挺准
+  A：算法天天在调，意见尽管提
+  B：有个哥们儿也单身，我拉他进来还有奖励不
+  A：有，老带新活动到月底，一人一份，规则一样
+  B：那我今晚就跟他说
+  A：成，周六爬山见

@@ -1,0 +1,127 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000161
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000002
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-bf8560b37837e8ed
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 借亲友信任展示收益制造高回报暗示，诱导对方转账进场并追加投入，再让对方引荐第三方进场扩大盘子。
+  critical_evidence:
+  - A以名额有限和收益截图制造稀缺与高回报暗示
+  - B转账20000元由A代为进场
+  - A怂恿追加至五万并称自家大头和表嫂都已投入
+  - A让B引荐第三方直接与其对接进场
+  benign_alternatives:
+  - 合法私募额度的熟人介绍
+  - 正规理财渠道推荐
+
+attributes:
+  duration_days: 4
+  turn_count: 50
+  approximate_tokens_estimate: 1093
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: investment_lead
+  risk: 2
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0045
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:e0cadafc349202e3ebb00efcb5edbd3195e7e82ab73d157db9dacaa035606807
+pipeline_status: accepted
+title: fraud_scam/investment_lead
+conversation: |-
+  【9月12日】
+  B：表哥 早 打扰下
+  A：说
+  B：我手里攒了点闲钱 放着利息看着着急 你平时咋打理的
+  A：我自己的路子 不太好到处说
+  B：自己人还卖关子
+  A：知道的人越少越好 你真有兴致 明天细说
+  B：昨天炖了排骨玉米汤 手艺见长
+  A：可以啊 秋天就该这么吃
+  B：下回给你留一锅
+  A：感情好 玉米哪买的
+  B：菜市场东头那家 甜
+  【9月13日】
+  A：昨天那事 要真想了解 我给你看前段时间的收益
+  B：想看 发我
+  A：截图发你了 自己看 这还算保守的
+  B：嚯 一个月这个数？
+  A：算少的 这期名额有限 就带几个人
+  B：那怎么进
+  B：先不说这个 家里那位正盯孩子背课文 鸡飞狗跳
+  A：开学都这样 我家那个陪读到十点
+  B：你家闺女不是挺自觉
+  A：自觉啥 昨天忘带作业本 让我跑一趟
+  B：哈哈都一样
+  【9月14日】
+  B：表哥 我想好了 先弄两万试试
+  A：行 转我 给你排进明天这期
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  B：转过去了 看下
+  A：收到 名额占上了
+  B：稳不稳啊 我可就这些家底
+  A：我自己的大头都在里面 你说呢
+  B：对了周末去不去水库 老周问呢
+  A：去 啥时候
+  B：周六早上五点 他顺路接你
+  A：行 新买的竿正好试手感
+  B：钓两条回来炖汤
+  【9月15日】
+  A：在没 跟你说个数
+  B：说
+  A：昨天进的今天就有数了 又涨了一截
+  B：真给劲 那我要不要再加点
+  A：能凑到五万就一次到位 这期过了下批要等好久
+  B：五万 得跟家里那位商量
+  A：要快 你表嫂前两天也追加了一笔
+  B：行 我问问去
+  B：哎看中一件卡其风衣 换季打折 参谋下
+  A：深色耐脏 就它
+  B：那拍了 正好降温穿
+  B：对了我们同学老郑也念叨钱没处放 我跟他说说
+  A：可以 让他直接联系我 名额留一个
+  B：行 晚上跟他说
+  A：尽快 这期再进两人就封了
+  B：我爸说地里玉米这周收 比去年强
+  A：忙完让他捎点新的来 那个甜

@@ -1,0 +1,142 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000072
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000076
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-becdff255083523b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: privacy_doxxing
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A经表哥介绍找到B，按周付费持续购买某个手机号机主的大致活动片区，实为追踪前女友的行踪；B刻意只提供模糊位置并反复撇清责任。
+  critical_evidence:
+  - A按周支付1500元，已连续数周，“这周照旧”成为固定节奏
+  - B每次只提供该号码机主的大致活动片区和大致时段，从不给具体地址
+  - A只要“大概位置”，却反复追问对方是否搬家、是否与人同住，情绪挂在行踪变化上
+  - B多次撇清：一周两次封顶、只管号码不问身份、“别用于违法”、不接陌生人
+  benign_alternatives:
+  - 家长对家人的监护式定位
+  - 公司对车辆和人员的合规调度
+
+attributes:
+  duration_days: 4
+  turn_count: 65
+  approximate_tokens_estimate: 1572
+  relationship: 中间人关系
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: phone_number_trace
+  risk: 3
+  relationship: 中间人关系
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0035
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-019
+
+dedup:
+  content_hash: sha256:12b7b644f5424ccff2280527d4d330c4d597f7f21b19c60978bddc6a082884a6
+pipeline_status: accepted
+title: privacy_doxxing/phone_number_trace
+conversation: |-
+  【9月22日】
+  A：哥，我表哥把你推给我的，说这事你稳妥
+  B：哪个号，发过来
+  A：138打头尾号8873那个。我就想知道她大概在哪个片区，别的不要
+  B：丑话说前头，只给个大概范围，具体门牌我没有
+  A：够了，大概就行
+  B：明后天给你信
+  A：费用怎么算
+  B：按周，一周1500，你不要了提前说一声
+  A：行，先来一周
+  A：哥顺带问下，你出租屋那水龙头修了没
+  B：修了，换了阀芯，十块钱的事
+  A：我那边也滴，回头照你说的买一个
+  B：五金店都有，别买塑料的
+  A：懂，铜的耐用
+  B：嗯，装不上喊我
+  【9月23日】
+  B：昨晚上加班到几点
+  A：十二点，改标书改到眼花，外卖都凉了
+  B：你这班上得没劲，钱多不
+  A：钱一般，就图个稳定，先干着
+  B：稳定也值钱，别想不开裸辞
+  A：不敢，房贷压着呢
+  B：都一样，扛着吧
+  B：那个号最近活动基本在城西，软件园到桂花路那一片
+  A：城西？她不是说回老家了吗
+  B：我只说我看到的。上周有四天都在那片，晚上基本不动
+  A：好，这钱花得值，1500现在给你
+  【系统消息】A 向 B 转账 1500 元，已收款。
+  B：收到，下周一给下一次
+  A：她是不是跟人住了那种，你能看出来不
+  B：说不了，我只给位置，别的别问我
+  【9月24日】
+  A：哥，今天能再看一眼不，我总觉得她要搬
+  B：一周两次封顶，再多我这边不稳
+  A：行，那就今天一次
+  B：还在桂花路那片，早上八点有个从地铁口过去的移动轨迹
+  A：桂花路……她以前公司就在那附近，合租的姐妹也在那
+  B：打住，别跟我讲这些，我只管号
+  B：还有，我这服务别用于违法，你也别往外传
+  A：放心，我就自己看看
+  B：嗯，号码有变动提前说
+  B：换季了，你外套买了没
+  A：还没，正好问你，风衣和夹克买哪个
+  B：夹克，实用，风衣容易显邋遢
+  A：哈哈行，听你的，晚上下单
+  B：买深色，耐脏
+  A：收到，马上加购物车
+  【9月25日】
+  A：哥，我朋友说昨天在城东看见像她的人，是不是搬家了
+  B：城东没有记录，号还在城西。信我还是信你朋友，随意
+  A：信你信你。这周照旧，1500晚上发你
+  B：嗯，老规矩，一周两次，到顶
+  A：唉，要是能知道她几点在家就好了……算了，你也不容易
+  B：打住，这个不碰，你要的“大概位置”就到这一步
+  A：行行，那先这样，下周再说
+  B：嗯，别乱介绍人来，我只接熟人的
+  A：知道啦，谢了哥
+  B：你那健身卡还去不，都快长草了
+  A：去啊，今晚就去，练背
+  B：行啊你，练完记得拉伸
+  A：教练盯着呢，不敢偷懒
+  B：那挺好，练出样子来
+  A：争取年底之前瘦十斤
+  A：哥，手机最近卡得不行，是不是该换了
+  B：用了几年了？三年以上直接换，别修
+  A：四年整，电池也不行
+  B：那就换，内存买大点的，别图便宜
+  A：好，周末去逛逛
+  B：嗯，旧手机别乱扔，里面东西清干净

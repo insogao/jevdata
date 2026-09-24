@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000175
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000002
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-bf8560b37837e8ed
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 无隐藏意图：证券从业者向表弟介绍持牌公募产品，反复提示自主决策、闲钱投资、拒绝代客操作和晒收益截图，属合规的正规理财推荐。
+  critical_evidence:
+  - A在券商营业部工作，只介绍持牌公募产品，引导B自己在官方App开户购买
+  - A拒绝晒收益截图，让B以官方产品页历史净值为准
+  - A提醒只用闲钱、不借钱买入，并拒绝替三叔代操作资金
+  - B转A的3000元系偿还上月借款，与投资无关
+  benign_alternatives:
+  - 合法私募介绍
+  - 正规理财推荐
+
+attributes:
+  duration_days: 4
+  turn_count: 49
+  approximate_tokens_estimate: 1273
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: investment_lead
+  risk: 0
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0046
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:bd096e27184f4ea0bbf06a23d07a732d8773eee0f02d33e08c1a46019c3dfed7
+pipeline_status: accepted
+title: fraud_scam/investment_lead
+conversation: |-
+  【10月16日】
+  B：哥，下班没，请教个事
+  A：刚到家，说
+  B：我那五万块死期到了，放着也是放着，你有门路没
+  A：门路谈不上，我就在营业部上班，要说的就是别瞎找门路
+  B：推荐一个呗，稳一点的
+  A：稳字我说不满，任何产品都有波动，我只能告诉你哪类适合你这种怕操心的
+  B：那你说
+  A：你去App里搜那两只老牌公募，名字我发你，持牌机构，天天能查净值
+  B：你晒下你的收益呗，我看看多香
+  A：不晒，别人晒的图做不得准，你自己看产品页的历史净值，几年的都有，那个做不了假
+  B：行吧，我自己看
+  B：你们国庆咋调休，我记得你们最惨
+  A：连上七天，节后歇三天
+  B：我们更惨，节前连上九天
+  【10月17日】
+  B：哥，那两只我看了，一只稳一只波动大
+  A：对，什么性子配什么，怕睡不着就多配稳的那只
+  B：我先放两万试水
+  A：用闲钱试，别一把全进，也别借钱买
+  B：懂，我的钱我做主，亏了不怨你
+  A：这话我爱听
+  B：妈今晚炖肉，喊你来吃
+  A：来，顺路，我带瓶醋
+  B：带醋干嘛
+  A：妈炖肉放醋才香，她忘了三十年了
+  【10月18日】
+  B：哥，我买了，两万，App里直接弄的，五分钟
+  A：好，从你自己银行卡走的吧
+  B：对，我自己的卡我自己的账户
+  A：中，分红赎回都在你自己账户里，谁也碰不着
+  B：三叔听说了，非让我带他买，说把钱转我帮他操作
+  A：别接，他自己的钱自己开户自己买，找客户经理讲清楚。你替他操作，赚了是情分，亏了是仇人
+  B：有道理，我今天回他
+  A：回他也别说保本，就说自己买着玩
+  B：今天油价又涨，我排队加了半小时
+  A：我那车半年没加油了，地铁月票真香
+  B：你这是凡尔赛还是哭穷
+  A：姥姥这周腿好点没
+  B：好多了，能自己下楼遛弯，还嫌我们跟踪她
+  A：那是硬朗，下周回去看她，带点钙片
+  B：她就缺人陪，你回来准高兴
+  【10月19日】
+  B：哥，上回借你的三千，发工资了，给你转
+  A：不急啊
+  B：急，欠钱睡不踏实
+  【系统消息】B 向 A 转账 3000 元，已收款。
+  B：收到没
+  A：收到，你这记性比我还好
+  B：那必须，有借有还
+  B：双十一你囤啥
+  A：就囤猫砂和咖啡，别的都是伪需求
+  B：我囤了十袋米，我妈说我准备开粮店
+  A：你这是要过冬的架势

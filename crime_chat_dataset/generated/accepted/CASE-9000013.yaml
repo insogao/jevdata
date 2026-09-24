@@ -1,0 +1,151 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000013
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000055
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-e9ec21c3d6549492
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 借工伤事故漫天要价，以弟兄们闲着等软暴力暗示施压，逼迫对方签自愿赔偿字据并分期支付远超实际损失的补偿款。
+  critical_evidence:
+  - 实际损失两万出头，A 开口十八万，压价后定为十五万
+  - 多次以弟兄们闲着、老莫的腿等不了等说法暗示上门与伤害
+  - 逼迫 B 写自愿补偿、一次了结的字据并按手印，原件由 A 方留存
+  - B 转账 5 万元第一期，余款限 10 月 31 日前现金结清
+  benign_alternatives:
+  - 正常交通事故或工伤私了的赔偿协商
+  - 保险理赔金额的调解谈判
+
+attributes:
+  duration_days: 5
+  turn_count: 73
+  approximate_tokens_estimate: 2376
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: settlement_by_force
+  risk: 3
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0028
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-017
+
+dedup:
+  content_hash: sha256:5ebb0b1784d6ded192551ef32e721ab1f318d1b360bc072c6568301396ae0e79
+pipeline_status: accepted
+title: violence_extortion/settlement_by_force
+conversation: |-
+  【10月20日】
+  A：老范，我，青山。你工地那搅拌车碰了我堂弟老莫，人刚从医院出来
+  B：青山哥，正想找您呢，老莫咋样
+  A：腿上打了钢钉，大夫说将养大半年。单子我压着，两万出头
+  B：该我们担的我们担，医药费我全包
+  A：医药费是医药费。老莫靠腿吃饭的，误工、复查、往后的名声，你算过没
+  B：您说个数，咱商量
+  A：十八万。不是我开口大，我手底下弟兄这几天跟着跑医院，车马人工都得算
+  B：十八万？哥，这数太大了，工伤走保险……
+  A：保险是保险，那是给公司的脸面。弟兄们认的是你这个人
+  A：这几天弟兄们在工地门口闲着。人一闲，事就多，我压得住一天，压不住一个月
+  B：哥，消消气，容我到晚上给您个话
+  A：行，给你脸。晚上八点前
+  B：哥，要不先两万五？老莫住院这阵我全包，剩下的我分期……
+  A：分期？弟兄们的钱分期？老莫那条腿也分期？
+  B：不是不是，哥您听我说，我手头真的一下子腾不出
+  B：哥，中午了，工地食堂今天炖排骨，要不您过来，边吃边谈
+  A：不去，弟兄们自己解决。排骨留给工人补身子
+  B：哥您这话，我脸上挂不住
+  A：挂不挂得住，看晚上那个数
+  B：哎，一定一定。要不我炖点汤给老莫送去
+  A：不必，他妈天天炖着呢
+  【10月21日】
+  B：哥，昨晚想了半宿：十四万，真到顶了，卖了二手泵车才凑得出
+  A：泵车留着还得干活挣钱，卖啥卖。十五万，一分不能再少
+  B：哥……行，十五万，您说了算。咋个给法
+  A：先转五万表态度，剩下月底前结清。中间再让我弟兄白跑一趟，话就不好说了
+  B：明白明白。哥，立个字据写清楚两清成不，我心里踏实
+  A：字据你写：自愿补偿，一次了结，与工地无涉，按手印。写好带来，我兄弟做见证
+  B：成，今晚就写
+  B：这两天要降温，老莫病房被子够不，我让后勤送两床厚的
+  A：这个可以有。夜里凉，打钢钉的腿最怕凉
+  B：记下了，下午就送。哥您也添衣，嗓子听着哑
+  A：老毛病，换季就这样
+  B：我那有盒胖大海，回头捎去
+  A：行
+  【10月22日】
+  A：老莫今天复查，骨头对位还行，就是阴雨天要疼，大夫白纸黑字写着
+  B：大夫咋说咋办，钱上我不含糊
+  A：记住，十五万，月底清。字据带来没
+  B：写好了，自愿补偿，手印按了，下午送你兄弟那
+  A：格式不对就重写。还有，工地夜里别让车乱响，老莫要静养
+  B：晚上十点后全停，一定
+  B：哥，您家小子初二了吧，没被这些事耽误吧
+  A：他住校，两周一回，不知道这些，这样最好
+  B：那就好，大人的事别进孩子耳朵
+  A：你倒明白事理。你闺女呢
+  B：幼儿园，啥也不懂，就知道她爸老加班
+  A：加班就加班，事了了，天天能早回家
+  【10月23日】
+  A：字据我兄弟收了，格式行。今天的态度呢
+  B：哥，五万凑齐了，这就转您
+  【系统消息】B 向 A 转账 50000 元，已收款。
+  A：收到。态度钱，记账上了。剩下的，10月31号前
+  B：明白，月底前一定清。哥，宽限到11月5号行不，工程款没下来
+  A：款没下来，你先处理车。31号，一天不能晃
+  B：哎，好，我尽力
+  A：不是尽力，是必须。老莫的腿等不了，弟兄们的耐心也等不了
+  B：哥，中午我让饭店给您那送四菜一汤，弟兄们辛苦
+  A：这个收下，算你有眼力见
+  B：晚上我把字据复印件给您送一份备着
+  A：不用，原件在我手上就够了，你管钱
+  B：哎，好，我这就安排
+  【10月24日】
+  A：老莫今早自己拄拐上厕所了，恢复得比你想的快，别觉得能拖
+  B：没敢拖哥，我真在联系卖车了，这几天全用来筹钱
+  A：嗯。打听着你中标了东头那个活？好事啊，有钱了
+  B：是上月中的，就是回款慢……
+  A：回款慢，你身上新夹克可不慢。弟兄们眼尖着呢
+  B：这……媳妇买的。哥，十五万我记着呢，一分不会少
+  A：记着就好。31号晚八点，老地方，现金带齐，字据当时还你
+  B：现金？大额我取着麻烦，转账不行吗
+  A：就现金，老规矩。嫌麻烦，让弟兄们陪你跑趟银行
+  B：哎不用不用，我自己取，31号八点准到
+  A：这就对。往后工地见着老莫，烟递一根，算你懂事
+  B：应该的，我亲自去
+  B：哥，中午的饭菜加到六菜了，您弟兄们别客气
+  A：行。31号，等你
+  B：哎，等我，一定等我

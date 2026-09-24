@@ -1,0 +1,145 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000029
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000120
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-431e9dbff656218a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 商务合作方攥着对方一年前酒局后的私密照片，先装作正常业务往来试探，随后限期当晚十二点前拿两万，扬言不办就发进对方单位群，逼人在期限夜里转账。
+  critical_evidence:
+  - A称去年杭州酒局散场后拍下的那张照片一直留在自己手机里
+  - A索要两万元，限期当晚十二点前，且不许讨价还价
+  - A威胁不给就把照片发进B几百人的单位群，点名列张总也在群里
+  - 期限当晚23:25前后B被迫转账20000元，A承诺删照片
+  benign_alternatives:
+  - 旧同事间玩笑式调侃
+  - 商务往来中的借款沟通
+
+attributes:
+  duration_days: 4
+  turn_count: 68
+  approximate_tokens_estimate: 1556
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: intimate_photo_extort
+  risk: 3
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0030
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-018
+
+dedup:
+  content_hash: sha256:a170013a368975c8fab6f1865aab2b628225031c28cc1cda17081ba823c4daf6
+pipeline_status: accepted
+title: coercion_blackmail/intimate_photo_extort
+conversation: |-
+  【10月20日】
+  A：韩经理，上周的验收单财务说还差个签字
+  B：我下午补给你，这两天忙得脚打后脑勺
+  A：辛苦，尾款那三十万走完我也好跟老板交代
+  B：急啥，又跑不了你的
+  A：哈哈，也是
+  B：展会你去不，下个月深圳那个
+  A：看安排吧，今年预算卡得紧
+  B：行，到时候一起吃个饭
+  A：签字收到了，多谢韩哥
+  B：客气啥，流程嘛
+  A：韩哥，睡没，问你个闲事
+  B：说
+  A：去年杭州那次团建，你还记得不
+  B：记得，KTV唱到后半夜，咋了
+  A：那天散场之后，有个东西留在我手机里，一直没舍得删
+  B：什么东西
+  A：你自己想想吧，想起来了咱们再聊，不急
+  B：你别卖关子，我那晚喝断片了
+  A：那张照片还在我这儿呢
+  B：什么照片？你发我看看
+  A：不方便发，你懂的，先睡了，改天聊
+  【10月21日】
+  B：昨晚你说的照片，到底怎么回事，你直说
+  A：韩哥，有些东西放着，对谁都不好
+  B：你想怎样，直说
+  A：我最近资金紧，垫了不少工程款，你多少帮衬点
+  B：多少
+  A：两万，对你来说一个月零花
+  B：这话就难听了，咱俩什么关系
+  A：难不难听的，那张照片的分量你自己清楚
+  B：都过去一年多了，留着有什么意思
+  A：我也没意思，就是手头紧，帮个忙，谁都不损失
+  B：我考虑考虑
+  A：别考虑太久，最晚明晚，过了时候就不好说了
+  B：你这是威胁我
+  A：求人办事而已，你非要往难听了说
+  B：下午再说
+  B：你说的那个梨膏哪买的，我这两天嗓子冒烟
+  A：让店里给你寄一瓶，梨膏加胖大海，泡水就行
+  B：多少钱我转你
+  A：一瓶膏子还收你钱，笑话
+  B：那多谢
+  A：你家小子开学适应不，初三了吧
+  B：适应，就是月考排名掉了些，愁人
+  A：初三都这样，我闺女当年一路追上来的
+  B：借你吉言
+  A：想得怎么样
+  B：两万太多，五千行不行，就当兄弟间帮忙
+  A：韩哥，这不是买菜，没法砍
+  B：一万呢
+  A：两万，一分不能少，你单位群几百号人，张总也在里面吧
+  B：你发那个对你没好处，项目也别想要了
+  A：项目我不要都行，就问你给不给
+  B：明天给，今天真凑不出来
+  A：行，明晚十二点前，两万，转老号码
+  【10月22日】
+  B：钱在筹了，你别乱来
+  A：我能怎么乱来，我等着而已
+  B：理财明天才到期，能不能宽限到后半夜
+  A：十二点前，过了点我就当你不给面子
+  B：照片到底几张
+  A：就一张，事办完我当面删给你看
+  【10月23日】
+  A：准备好没，今晚十二点前，还有三个半小时
+  B：在凑，大额有限额，我分两笔转
+  A：行，尽快
+  B：转了，查收
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  A：收到了，说到做到，照片我这就删，你就当没这回事
+  B：你最好删干净，以后别再联系我
+  A：放心，桥归桥路归路，尾款的事回头财务照常走
+  B：呵

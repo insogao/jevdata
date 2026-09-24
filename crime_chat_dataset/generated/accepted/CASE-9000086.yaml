@@ -1,0 +1,151 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000086
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000120
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-f7a4f7d876f7b6d4
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 同事A以掌握B的一段私密影像留底为筹码，先要两万、逾期涨到两万八，威胁发到对方单位大群并拿其家人施压，逼B分期掏钱。
+  critical_evidence:
+  - A称'那个文件夹里特别的'东西一直留在自己手里
+  - A给出最后期限'今晚十二点前，我要看到动静'
+  - A威胁不给钱就发到B的部门大群，还点出能联系上B的姐姐
+  - B被迫赎回理财并向姐姐借钱，转28000元换A清空'东西'
+  benign_alternatives:
+  - 情侣间关于旧照片的玩笑
+  - 误发照片后的道歉与解释
+
+attributes:
+  duration_days: 6
+  turn_count: 72
+  approximate_tokens_estimate: 1574
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: intimate_photo_extort
+  risk: 3
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0037
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-020
+
+dedup:
+  content_hash: sha256:4de205b4236654de047e5b2029cf1de8a66c8e141a26c0075c0abe2978953830
+pipeline_status: accepted
+title: coercion_blackmail/intimate_photo_extort
+conversation: |-
+  【10月19日】
+  A：早，昨天团建的照片我整理好了，发群里了
+  B：收到，还没敢看，昨晚喝大了
+  A：你抱着啤酒桶唱歌那几张，绝了
+  B：别吓我，有丑照私发我先审
+  A：群里的都是能看的，放心
+  B：你这话怎么怪怪的
+  A：今天降温，围巾带上没
+  B：在包里呢，办公室暖气足
+  A：上回感冒咳了半个月，长点心
+  B：遵命
+  【10月20日】
+  B：楼下新开的轻食店，中午去试试，减脂餐
+  A：你不是每天晚上跑步吗，还吃草
+  B：双管齐下，年底前瘦五斤
+  A：行，捎我一份
+  B：好，十二点半楼下见
+  A：睡了没
+  B：刚加班回来，这个点，怎么了
+  A：说个事，你听完别激动
+  A：去年三月，你发过我一个文件夹，记得吗
+  B：什么文件夹，我发你东西多了
+  A：里头有「特别的」，你还叮嘱我看完就删
+  B：我不记得有这回事
+  A：没关系，东西我留着，一直都在我这儿
+  B：……你想干什么
+  A：不想干什么，最近手头紧，想跟你周转两万
+  B：两万？我下个月房贷都紧
+  A：年薪二十几万的人跟我哭穷
+  B：你这是威胁我
+  A：我这是请你帮忙，帮不帮你自己定
+  A：不帮的话，明早它会出现在你们部门大群，你猜谁先看到
+  B：你疯了……
+  A：今晚十二点前，我要看到动静
+  B：现在几点了，你让我上哪弄两万
+  A：那是你自己的事
+  【10月21日】
+  B：微信单日限额，转不了这么多，得明天去银行
+  A：那就明早九点前，别玩花样
+  B：我在银行排队了，你别乱来
+  A：排着就好
+  B：话说双十一你购物车清了没
+  A：清了一半，加购了个加湿器
+  B：我加了一堆猫粮，我家猫吃得比我好
+  A：它又胖了，上次视频我都没认出来
+  B：它拒绝减肥
+  B：钱在理财里，赎回要明天才到账，真不是拖
+  A：行，明天中午。多拖一天多两千，你自己算
+  【10月22日】
+  A：下午评审，你PPT第几页讲成本
+  B：第八页，数据核了三遍
+  A：别紧张，上次你讲得挺好
+  B：谢谢，昨晚就睡了四个小时
+  A：咖啡少喝，你胃不好
+  B：记着呢
+  A：想好了吗，数字变了，两万八
+  B：怎么还涨了
+  A：逾期费，道理你懂
+  B：我姐那儿我实在张不开口
+  A：你姐手机尾号我都背得出来，要我帮你开口吗
+  B：你别碰我家人
+  A：周五中午前，两万八，一次结清
+  B：给我点时间
+  A：时间就是钱，你懂的
+  【10月23日】
+  B：今天食堂酸菜鱼，队排到门口
+  A：我带饭，我妈做的红烧肉
+  B：馋了，明天我也带
+  A：带饭好，省下的都是攒下的
+  B：理财全赎了，又跟我姐借了八千，明天中午能凑齐两万八，你把东西删干净
+  A：痛快，就等你这句
+  【10月24日】
+  【系统消息】B 向 A 转账 28000 元，已收款。
+  B：转了，两万八，你查收
+  A：收到，挺守时
+  B：说好的，东西删了
+  A：删了，回收站都清空了，你可以安心上班了
+  B：希望你说的是真话
+  A：同事一场，就当什么都没发生过

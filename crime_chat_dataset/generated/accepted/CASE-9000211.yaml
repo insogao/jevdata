@@ -1,0 +1,147 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000211
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000088
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-d318342034d4133a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: privacy_doxxing
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 保险理赔人员绕开正规调查流程，以院长介绍的名义接近门诊前台，用小额好处费诱使其私自翻拍并外传客户病历，用来在理赔里挑毛病压赔付。
+  critical_evidence:
+  - 理赔方开口就是'把病历调出来'，并强调'别走系统'、不登记
+  - 门诊人员深夜从档案室底单翻拍四页病历发给对方
+  - 对方以'这条信息值一顿饭'许诺日料和红包
+  - 转账888元作为对价，并叮嘱'这事就咱俩知道'
+  benign_alternatives:
+  - 保险正常理赔调查
+  - 公估公司流程
+
+attributes:
+  duration_days: 5
+  turn_count: 69
+  approximate_tokens_estimate: 1703
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: insurance_claims_snoop
+  risk: 2
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0051
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-025
+
+dedup:
+  content_hash: sha256:3b1b66df93c60742b5e29cb103796c6063d0bbd5f7362c08c33d7bc4642509f3
+pipeline_status: accepted
+title: privacy_doxxing/insurance_claims_snoop
+conversation: |-
+  【9月22日】
+  A：小凌你好，我是老鲁，你们王院长让我加你，说你办事最妥帖
+  B：鲁经理您好，院长前几天是提过您
+  A：我做理赔这块十来年了，以后少不了打交道
+  B：多多关照，我们就是打杂的
+  A：你们门诊晚上开到几点
+  B：到十点，我常值晚班，困得靠咖啡吊命
+  A：一天几杯
+  B：三四杯吧，再多半夜心慌
+  A：少喝点，伤胃，泡点浓茶顶一顶
+  B：茶没用，哈哈，该困还是困
+  A：问个事，你们那儿病历档案都锁谁那儿
+  B：档案室铁柜子，钥匙就我和护士长有
+  A：外人想查一份，得走什么流程
+  B：得登记，科主任签字，麻烦着呢
+  A：哦，这么严
+  B：规定是规定，嘿嘿
+  【9月23日】
+  A：早。有个小事想请你搭把手
+  B：您说
+  A：有个客户姓段，今年3月在你们那看过外伤，你帮我把病历调出来
+  B：他是你客户？他自己不能来开吗
+  A：他在外地等不了。你翻出来拍照发我就行，别走系统，就当帮我个忙
+  B：别走系统是啥意思
+  A：你手头有底单吧，复印件那种，翻出来拍一下，不用登记
+  B：这个……不太合规矩吧鲁经理
+  A：正常理赔核查而已，材料齐了赔付快，段先生还得感谢你
+  B：我考虑考虑
+  A：行，不急，今天内就行
+  B：周末你们爬山不，我看天气不错
+  A：爬啊，香山红叶快了
+  B：我上周去了，人山人海
+  A：所以要赶早，六点上山没人
+  B：六点我还没下班呢，哈哈，夜班的苦
+  A：你们这行是辛苦，改天约个饭给你补补
+  【9月24日】
+  A：想好了没
+  B：真不好办，铁柜子钥匙不在我手里的时候居多
+  A：你不是常值晚班嘛，值班室隔壁不就是档案室
+  B：您这比我还清楚，哈哈……真不行的
+  A：一条信息值一顿饭。这样，事成我请你吃日料，另给你包个红包
+  B：红包就不用了……
+  A：就两页纸的事。你帮了忙，段先生理赔快，里外都是好事
+  B：我再想想
+  A：别想了，今晚值不值班？
+  B：值……
+  【9月25日】
+  B：拍好了，一共四页，你看看收不收得到
+  A：收到，清楚。段先生3月14这次的对吧，我再核下
+  B：对，底单我放回去了
+  A：看了，很好用。他自己说摔伤，病历上写的和他的说法有出入，这单能省不少
+  B：能省是好事吧？
+  A：对我们是。你就是机灵，难怪院长夸你
+  B：嘿嘿，那日料和红包呢
+  A：跑不了，这周约
+  B：对了你上次说帮我带的枸杞到没
+  A：到了到了，宁夏直邮，明天给你
+  B：邮费多少我转你
+  A：几块钱的事，别见外
+  B：那多不好意思，哈哈
+  【9月26日】
+  A：饭钱先打给你，888图个吉利，日料改天补
+  【系统消息】A 向 B 转账 888 元，已收款。
+  B：这也太多了……那我就却之不恭了
+  A：应该的。以后有这种核查还找你，咱们长期
+  B：行吧，反正就两页纸
+  A：对，就两页纸。这事就咱俩知道，医院那边别提
+  B：晓得，我嘴严
+  B：鲁经理，周末日料定哪家，我看看点评
+  A：院长家附近那家，他常去，味道正
+  B：好嘞
+  A：对了下月我们还有几单在你那看过病的，到时候还麻烦你
+  B：……再说吧，我先下班了
+  A：行，路上慢点
+  B：拜拜

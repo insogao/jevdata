@@ -1,0 +1,143 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000006
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000131
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-30669ff9344d181a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 熟人间的正规民间借款：包工头为赶在发薪日前结清工人工资借款三万，双方立借条、按银行利率计息、约定车管所办理车辆抵押登记，并明确拒绝扣证件押人一类的做法，与基础版相比把人身扣押翻转为合法抵押手续。
+  critical_evidence:
+  - B为在后天发薪日结清工人工资向A借3万元，明确写明用途
+  - 双方写借条：金额、利息按银行一年期利率、11月底前分两期还清，照片双方留存
+  - A拒绝任何押证件押人的说法，只认车管所抵押登记，4月10日办完登记再放款
+  - 4月10日A转30000元并备注借款，还款计划设提醒：下月底一万五、11月中一万五加利息
+  benign_alternatives:
+  - 正常民间借贷有借条
+  - 工头临时周转发工资
+
+attributes:
+  duration_days: 2
+  turn_count: 68
+  approximate_tokens_estimate: 2173
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: agent_debt_bodily_collateral
+  risk: 0
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0027
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-017
+
+dedup:
+  content_hash: sha256:27fba0ec07cfbd022d0186cddb0a723676f7b3d16d5da77f9701c85f0ec6f8d5
+pipeline_status: accepted
+title: coercion_blackmail/agent_debt_bodily_collateral
+conversation: |-
+  【4月9日】
+  B：老齐，起了没，跟你借个急
+  A：这么早，咋了这是
+  B：工地上个月的工资还差三万，后天发薪日，工人等米下锅
+  A：甲方又拖着？
+  B：可不是，进度款卡在审计，我总不能让工人空手回家
+  A：三万我倒是有，你打算啥时候还
+  B：下月底甲方款一到先还一半，剩下年底前结清
+  A：你们工地食堂咋样，上次你说伙食差
+  B：换了大师傅好多了，昨天还有红烧排骨
+  A：那工人有干劲，吃不好活干不好
+  B：谁说不是，我宁可自己少赚点，伙食不能省
+  A：借钱的事把话说前头，我不怕你跑，是怕咱俩以后见面尴尬
+  B：应该的，你说怎么弄
+  A：借条要写，金额、利息、还款日，白纸黑字
+  B：写写写，利息你定
+  A：按银行一年期那个利率来，咱是帮忙不是放账
+  B：你这利息跟没有差不多，行，就冲这个我更得按时还
+  A：还有，要不要弄个担保
+  B：我有辆皮卡，要不押你那
+  A：押车可以，但不是把车开我家放着，明天去车管所办个抵押登记，合法合规，谁也不吃亏
+  B：懂了，登记完才算数，这规矩好，省得以后掰扯
+  A：对，一码归一码，手续齐了朋友照做
+  B：老齐，就冲你这些讲究，这三万我借得踏实
+  A：那你下午把借条写好拍我看
+  B：不说了，先去给娃开家长会，初中班主任又告状
+  A：咋了，闯祸了
+  B：上课画漫画，被没收一本，老师让我也签字反省
+  A：那是随你，你上学时课本上不也全是画
+  B：借条写好拍你：借到老齐叁万元整，利息按银行一年期利率，11月底前分两期还清，借款人签字
+  A：行，再加一句：用于工地工人工资发放，免得日后说不清用途
+  B：加上，还是你想得细
+  B：对了，工友老张几个听我借钱说要给我凑，我没要，工人的钱不能乱动
+  A：你这点做得对
+  B：明天上午车管所见，九点，我皮卡开过去
+  【4月10日】
+  A：出发了，你直接到三号窗口那边
+  B：好，材料带齐了：登记证书、行驶证、我俩身份证
+  B：办完了！抵押权人写的你，编号我拍你存档
+  A：好，回执你也拍一份，款还清咱再来解除
+  B：回执存好了，回头发你微信一份
+  A：手续齐了，我现在转你，转30000，备注写借款
+  【系统消息】A 向 B 转账 30000 元，已收款。
+  B：收到了，老齐，大恩不言谢，后天工人工资一分不差发下去
+  A：发完在群里拍个工资表，咱俩都踏实
+  B：还款我设了提醒：下月底还一万五，11月中还一万五加利息
+  A：行，到点你主动转，我账本上都记着
+  B：必须的，我啥都能拖，账不能拖
+  A：对喽，账清人亲
+  A：下午没事去钓会儿鱼不，就河边那种
+  B：去，今天心情好，鱼不咬钩也坐得住
+  A：那就三点，老地方，你带两把伞
+  B：带上，顺便把新买的鱼护试试
+  B：哎跟你说个道听途说的事，隔壁工地有个包工头扣工人身份证押着不让走
+  A：那是害人的事，身份证哪能随便押，工人直接去劳动监察告他
+  B：可不是，我都跟自己工人说了，谁要扣你们证件就去告，别怕
+  A：对，现在讲究手续，白纸黑字加登记，比押这押那都稳
+  B：所以你昨天非要去办抵押登记，我是真服气，你这脑子清楚
+  A：手续是保护两个人的，不光是你
+  B：钓了两条小鲫鱼，全放了，太小
+  A：我也空军，改天去水库
+  B：好，等工资发完我心落肚了，请你吃大餐
+  A：吃啥大餐，把借条利息算清就行
+  B：借条正本我明天给你送家里去，照片咱俩都存着
+  A：不用送，后天你发工资顺路过来吃饭，婶子包饺子，把正本带来我收
+  B：成，后天一定到，我再拎两瓶酒
+  A：酒就免了，人来就行
+  B：工资表明天做好先发你过目
+  A：好，发了我核一眼。以后资金周转提前半个月跟我说，别老火烧眉毛
+  B：记下了，这次是被审计拖的，下次提前备着
+  A：早点睡，明天还得爬架子

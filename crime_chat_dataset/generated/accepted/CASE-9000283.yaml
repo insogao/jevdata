@@ -1,0 +1,151 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000283
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000043
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-014ccf6d47fc3d8d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 照着来路不明的酒水供货骨架铺对话，实际是酒厂授权经销商与餐饮供应商谈夜场渠道定制小瓶装的正规生意：授权文件、发票、一瓶一码官网可验。
+  critical_evidence:
+  - A是酒厂区域授权经销商，主动出示授权书、生产许可和检验报告，合同抬头能对上
+  - 夜场专供的是厂家定制128ml小瓶装，瓶身包材由酒厂统一出，一瓶一码官网可查渠道
+  - 供货签合同、月结三十、开增值税专票、随货带同行单
+  - B转20000元为首批两百箱的部分货款，尾款发货前结清
+  benign_alternatives:
+  - 正规名酒经销合作
+  - 小瓶装散酒作坊的正常供货讨论
+
+attributes:
+  duration_days: 5
+  turn_count: 73
+  approximate_tokens_estimate: 1614
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: alcohol_counterfeit_line
+  risk: 0
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0059
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:c0d1046e25986ed21820a083975cd5c49111d850294198856e37bdf4a0809f2f
+pipeline_status: accepted
+title: contraband_illicit_trade/alcohol_counterfeit_line
+conversation: |-
+  【10月13日】
+  B：王经理吧 老周把你微信推我的 说你们厂做夜场渠道
+  A：是我 魏总吧 你那供应公司在河西
+  B：对 我们给市里十几家livehouse和KTV供货
+  A：对上路子了 我们今年正好推夜场专供线
+  B：什么产品
+  A：128ml小瓶装 浓香42度 一杯一瓶方便控量
+  B：形式好 现在场子就认小瓶装
+  A：出厂价九块八一支 一箱24支
+  A：今儿降温了 河西早上都起雾
+  B：可不 我早上骑车来公司 呛一鼻子
+  A：入秋就这样 你们仓库注意防潮
+  B：酒水不怕潮 就怕热 你厂里恒温吧
+  A：恒温库 全程
+  【10月14日】
+  B：行 样品先给我寄两箱 我拿给场子老板看
+  A：样品免费 今早顺丰发出 运费到付
+  A：资质先给你交底 授权书 生产许可 检验报告 都齐
+  B：好 我最怕场子那边扯皮假货
+  A：一瓶一码 官网能查到哪一瓶走的哪个渠道
+  B：这个硬 防串货也好使
+  A：秋糖会你去不 下月在蓉城
+  B：每年都去 顺便见老客户
+  A：我们也摆展 来喝茶
+  B：好 给你带我们那儿的柑橘
+  B：瓶子怎么算 你们出还是我出
+  A：瓶子酒厂统一定制 包材全含 你只管渠道
+  B：结算呢
+  A：签合同 月结三十 开增值税专票 随货同行单齐全
+  B：正规 老板们就认这套
+  A：首批建议两百箱 先试渠道
+  B：可以 我内部过一下
+  【10月15日】
+  B：样品到了 瓶子质感不错 场子老板闻了说正
+  A：让他们先试卖 反馈给我
+  B：两家今晚上架 零售定38一支
+  A：这个价场子毛利够肥
+  A：你老家陇西的吧 老周说的
+  B：对 娃在老家我妈带着 每月回去一趟
+  A：辛苦 挣的都给娃攒着
+  B：可不 奶粉钱学费钱 不敢歇
+  A：等渠道铺开 把娃接过来上学
+  B：借你吉言
+  B：内部过了 首批两百箱 明天安排打款
+  A：合同电子版发你 授权书附在后面 核对抬头
+  B：看了 对得上
+  A：对公账户在合同第三条 别走错
+  B：明白
+  【10月16日】
+  B：合同签了扫给你 货款今天转
+  A：收到 见款排产
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  A：两万收到 合同里写了 尾款发货前结清
+  B：对 按合同来
+  A：你胳膊粗了一圈啊
+  B：报了个拳馆 一周三次
+  A：我也该动动 应酬肚子先富起来
+  B：你少喝两场就瘦了
+  A：那不成 断人财路
+  B：发票记得开 写酒水销售
+  A：专票随货到 同行单放箱里
+  B：周五前能发不
+  A：排产三天 周五专车发河西
+  B：到了清点签收单给你
+  【10月17日】
+  A：车装完了 两百箱点了一遍
+  B：司机电话发我
+  A：电话车牌一起发你
+  B：中午能到
+  A：货到了没
+  B：到了 抽三箱验码全对 已上架
+  A：明晚我们业务员过去 你带我们吃那条街的烧烤
+  B：行 订老位置 烤腰子管够
+  A：好 我叫代驾 不挡你生意
+  B：场子下午就补货 小瓶装走得快
+  A：下月加量 返点也快够着了
+  B：行 月底对账见
+  A：对账单我做好发你
+  B：好

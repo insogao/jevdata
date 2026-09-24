@@ -1,0 +1,128 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000198
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000076
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-2eee959c5e01d752
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: privacy_doxxing
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A 通过中间人介绍找到 B，按周付费打听某个人的大概行踪动向，B 用一句不用于违法的免责话术开脱后接单，只给大概范围并先款后消息。
+  critical_evidence:
+  - A 只要目标人物的大概活动范围，还不断追问细节
+  - B 按周计费一千二，先款后消息
+  - B 要求 A 先回一句不用于违法才肯接
+  - A 要求平时只发文字不打电话
+  benign_alternatives:
+  - 家长对在外子女的监护性了解
+  - 企业外勤人员的合规调度查询
+
+attributes:
+  duration_days: 3
+  turn_count: 52
+  approximate_tokens_estimate: 1533
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: phone_number_trace
+  risk: 3
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0049
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-024
+
+dedup:
+  content_hash: sha256:c86a65fb37c55d6e5a51c34799e16e8043b77ec9d4d19e800ce4a4fbf6c9ce1f
+pipeline_status: accepted
+title: privacy_doxxing/phone_number_trace
+conversation: |-
+  【10月13日】
+  A：你好,是小凡吗,老曹说你有路子
+  B：我是。他说你有件事想问问
+  A：嗯,就是城南那边,有个人,我想知道他最近还在不在那片活动
+  B：可以看,但丑话说前面,只给个大概范围,具体到门到楼这种没有,你也别问
+  A：不用不用,我只要大概,他是不是还在那一带住着、平时在哪儿转悠就行
+  B：明白你的意思。这种按周算,一周一结,先款
+  A：多少
+  B：一千二,老客户老曹那边也是这个价
+  A：行,那从这周开始
+  B：还有一条,你回我一句只做参考不用于违法,我就当你确认过了,这是规矩
+  A：只做参考,不用于违法。这样行了吧
+  B：行,周二你等消息
+  A：今天降温了,你那边冷不
+  B：还好,我这早上雾大,跑步都改中午了
+  A：你还跑步?我最近也办了健身卡,江北那家
+  B：江北那家可以,器械全,就是晚上人多
+  A：是,抢器械跟抢车位似的
+  B：哈哈,那你就中午去,跟我跑步一个思路
+  【10月14日】
+  B：你还买基金吗,上个月绿得我心慌,这个月回了一点血
+  A：早就割了,现在只放货币的,睡得着觉
+  B：你这是被伤着了
+  A：伤透了,不看就当没亏
+  B：哈哈,眼不见心不烦,羡慕
+  B：城南那个,今天有动静,上午在农贸市场那边出现过,下午往江边方向去了,大概就这个范围,再细的没有
+  A：行,这就够用了。他人还在城南住着对吧
+  B：看动向是这样,但我说了,只做参考
+  A：明白,那明天还照旧?
+  B：照旧,一周内的都算在这一千二里
+  【10月15日】
+  A：帮我看看,我买的折叠晾衣架,客服说发错仓库了,得再等三天
+  B：三天算快的,我的破壁机等了一礼拜
+  A：一礼拜?那你催了吗
+  B：催了,就回那句已在加急处理,气人
+  A：哈哈,客服话术全国统一
+  B：今天他在城北待了半天,晚上回城南了,就这些
+  A：收到。城北是走亲戚还是办事,这个能看出来不
+  B：那就超出我给你的范围了,说好了只给大概位置,你别一步步问
+  A：好,是我不懂规矩
+  A：那这周就到这,钱我转你,下周续的话我明晚给准信
+  【系统消息】A 向 B 转账 1200 元，已收款。
+  B：收到。下周要续就提前一天说,我这边也要排
+  A：好,大概率续
+  A：对了老曹说你周末钓鱼,哪座水库,水好不
+  B：城西那个,鱼一般,图个清静
+  A：带我一个,我也好这口,钓具我都有
+  B：行啊,周六早上,地点我发你
+  A：成,那就这么说定了
+  B：那个,周六之前要是续,你今晚或者明早说,别拖到周六
+  A：明晚一定给你准信
+  B：好
+  A：哦对了,以后有动静直接发文字就行,别打电话,我上班不方便接
+  B：我这边也是,能文字绝不说,都习惯了
+  A：好,那就这样,晚安
+  B：晚

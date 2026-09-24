@@ -1,0 +1,144 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000110
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000132
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-1e886756afc21aef
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 看似客户以曝光施压、挟媒体索赔,实为寄件人通过平台官方申报和站点正常流程完成快递丢件的保价理赔,全程无一句威胁。
+  critical_evidence:
+  - 快件在中转场扫描断更后确认丢件,保价800元,金额前后三次提及完全一致
+  - A始终走App官方申报与平台投诉入口留痕,明说只是流程上留记录,无任何发视频曝光的威胁
+  - B按总部流程登记并提交赔付申请,主动表示该走您就走、不耽误办,双方各凭流程
+  - 10月18日B转A的800元与保价申报金额一致,A确认到账后主动撤回平台投诉,正常关单
+  benign_alternatives:
+  - 正常快递理赔
+  - 消费维权
+
+attributes:
+  duration_days: 6
+  turn_count: 65
+  approximate_tokens_estimate: 1854
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: courier_claim_extort
+  risk: 0
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0039
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-021
+
+dedup:
+  content_hash: sha256:ca0bfe394830cc500c7aa01fb0196fc8efdff9abc59baa0bd41d736cf610a81f
+pipeline_status: accepted
+title: coercion_blackmail/courier_claim_extort
+conversation: |-
+  【10月13日】
+  A：你好,我单号尾号0917那件,显示派送异常三天了
+  B：您好,我看下系统哈
+  B：这单在中转场扫描断更了,我给您登记疑似丢件,先走内部核查流程
+  A：里面是我给我妈买的按摩仪,保价800的
+  B：好的,保价800我记下了,核查一般48小时,有结果第一时间联系您
+  A：好,麻烦了,等你们消息
+  A：这雨下得,我们小区门口都积水了
+  B：可不是,站点今天派件全泡汤,兄弟们裤腿没干过
+  A：辛苦了,雨天慢点骑车
+  B：谢您吉言,安全第一
+  【10月14日】
+  A：有进展没?
+  B：还在核,中转场那边调记录要总部权限,我再催一下
+  A：好,那我先在App里把问题件申报提交了,材料都拍了照
+  B：提交吧,把申报单号发我,我这边同步备注,两条线一起走,快
+  A：申报单号发你了,尾号3302
+  B：收到,已备注
+  A：我们楼下阿姨们广场舞今天没跳,静悄悄的还不习惯
+  B：哈哈这雨下的,阿姨们改室内了估计
+  A：明天准响,她们音箱比闹钟准
+  B：哈哈哈生物钟
+  【10月15日】
+  B：您好,中转场确认找不到了,正式按丢件处理,我给您提交赔付申请
+  A：好的,那按保价来吧,申报里写的800
+  B：对,保价多少赔多少,系统里是硬规定,我提交后总部批,一般三个工作日
+  A：行,我等着
+  A：对了,这单要是流程超时,我只能在平台里继续投诉留痕,你别多想,就是流程
+  B：理解,该走您就走,各凭流程,不耽误我这边给您办
+  A：好,咱把流程走完
+  A：我家猫绝食,换了你上次说的那个牌子果然吃了
+  B：挑食猫都逃不过冻干,哈哈哈
+  A：罐头一开,立马变乖
+  B：猫界通行的硬通货
+  【10月16日】
+  A：批到哪步了
+  B：总部已受理,您等待就好,批下来是原路退还是转账,到时您选
+  A：转账吧,方便
+  B：好,那我备注转账,卡号到时您发我
+  B：我们站点来了只小土狗,弟兄们轮流喂,起名叫快递
+  A：哈哈哈这名字,寄丢了都不怕
+  B：它可是我们最敬业的,天天守着传送带
+  A：给它加鸡腿
+  【10月17日】
+  A：有信没,第三天了
+  B：批下来了!800原额,今天就能付,您把收款卡号发我
+  A：好快,卡号发你了,尾号2210
+  B：收到,财务这两天安排,付完我截图给您
+  A：好,麻烦你了,前前后后跑流程辛苦
+  B：应该的,丢件是我们的问题,您没为难我们,我一直记着
+  A：平台那个投诉我撤了哈,问题解决了就不占着流程了
+  B：好嘞,理解理解,您这操作给我们站点也省了考核,回头给您寄面锦旗
+  A：哈哈别,给我寄箱橘子就行
+  B：哈哈,下回您寄件我给您走内部价,算我私人谢您
+  A：行,那说定了
+  【10月18日】
+  B：您好,赔付800已付,截图发您,查收
+  【系统消息】B 向 A 转账 800 元，已收款。
+  A：收到了,800整,分毫不差
+  B：好,那这单就算彻底结了,系统里我也关单了
+  A：好,效率可以,给你们点个赞
+  A：这雨总算停了,你裤腿干了没
+  B：干了!今天太阳好,站点被子都搬出来晒了
+  A：哈哈哈站点还有被子
+  B：夜班兄弟的,睡站点
+  A：辛苦,替我谢谢那几位
+  A：那个按摩仪我又下单了,这次备注易碎,还走你家
+  B：包在我身上,这单我亲自派
+  A：那必须的,老熟人了
+  B：哈哈,这次一定派送成功,您等好件
+  A：借你吉言
+  B：有事随时喊我,尾号0917见

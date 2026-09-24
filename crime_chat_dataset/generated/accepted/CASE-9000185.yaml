@@ -1,0 +1,148 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000185
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000098
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-2358ec1aecca4de0
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 组织者利用每人每次携带现金的额度规矩，安排跑腿者用蚂蚁搬家的方式一天往返八次搬运现金送到对面，为来历不明的钱款做跨境搬运，全程不提钱的来路。
+  critical_evidence:
+  - A 给 B 定的规矩是一个人一次就带两万、多一分都不要，靠趟数把量堆上去
+  - A 要求 B 一天往返八趟、中午不歇，最后一天加到九趟并多带，每次多带点加多少看情况
+  - B 每趟把东西交给对面收货的老陈点数签单，单子留存对账
+  - A 转给 B 三天趟费共 3000 元（一天八趟一趟三百加加量奖励），并约定下周继续、再拉一个老乡入伙
+  benign_alternatives:
+  - 合理使用个人换汇额度
+  - 为留学缴学费分批换汇携带
+
+attributes:
+  duration_days: 4
+  turn_count: 71
+  approximate_tokens_estimate: 1839
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: cross_border_smurfing
+  risk: 3
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0048
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-024
+
+dedup:
+  content_hash: sha256:c8bd0291fa593121d7e994e32bfeac57c768fbef92aaed8b68ec1a22ac780099
+pipeline_status: accepted
+title: money_laundering_obfuscation/cross_border_smurfing
+conversation: |-
+  【10月11日】
+  A：阿伟，早，吃早饭没
+  B：强哥早，吃了，一份肠粉
+  A：我不敢多吃，血糖有点高
+  B：你少应酬点就好了
+  A：应酬就是生意，没办法
+  A：有个活，你干不干，三天，来钱快
+  B：什么活？先说好，犯法的不碰啊强哥
+  A：说什么呢，就是跑腿。我这边有几笔款子要送到对面去，你腿脚勤快就行
+  B：送款子？怎么个送法
+  A：规矩很简单：一个人一次就带两万，多一分我都不要
+  B：就两万？那得跑到啥时候
+  A：靠趟数。你一天多跑几趟，一趟三百，日结
+  B：一天能跑几趟
+  A：看你腿速，手脚快的一天能跑七八个来回
+  B：那不是一天两千多？真的假的
+  A：我几时骗过你。就一样，嘴严，这事别跟第三个人提
+  B：行，我最近正缺钱，干了
+  A：明早六点，老地方面馆门口碰头，穿双舒服的鞋
+  【10月12日】
+  B：强哥，到了，就等我了吗
+  A：到了，东西在我车上，一趟拿一包，点清楚再走
+  B：点了，两万整，走了
+  B：第四趟了，腿有点酸
+  A：能撑住不，不行换人
+  B：撑得住，就是中午没歇
+  A：中午吃口饭接着来，今天争取跑满
+  B：第六趟完事，垫了碗牛腩面
+  A：好，下午人少，抓紧
+  B：强哥，第八趟，收工！腿都不是自己的了
+  A：好样的，一天八趟。明早还是六点
+  B：每一趟都交给老陈了，他点完给我签单
+  A：对，单子收好，回头对账用
+  B：收着呢，今天八张单
+  B：强哥，今晚泡了个热水脚，舒服多了
+  A：泡脚好，再去买瓶喷雾，抹腿那种
+  B：明天去药店买
+  A：你这体力比我年轻那会强
+  B：我以前在工地扛过水泥，练出来的
+  【10月13日】
+  B：到了，今天还八趟？
+  A：八趟起步。今天跟你说，每趟往上加一点，能多带就多带点，加多少到了那边看情况
+  B：加了老陈那边不会有意见吧
+  A：他说多少就是多少，你把单子拿回来就行
+  B：第一趟加了，老陈没意见
+  A：好，就这么跑
+  B：强哥，第五趟了。问你个事，路上要是有人盘问，我照实说送东西？
+  A：问什么答什么，别自己编。你一个跑腿的怕什么
+  B：也对，我就当锻炼身体了
+  B：第七趟。今天比昨天还累，加量就是不一样
+  A：累点好，累点挣钱。明天最后一天，跑满九趟，给你加五百
+  B：九趟？！行，冲这五百也跑
+  A：顺便问下，你那个老乡最近有闲不，我想再拉一个人
+  B：他工地停工，正闲着呢
+  B：强哥，晚上一起吃个宵夜不，我请
+  A：你挣辛苦钱还请我，折我寿
+  B：那你请，大老板
+  A：行，宵夜我请。明天最后一天，冲一冲
+  B：好嘞，我把老乡约出来认认人
+  A：可以，就当提前带个班
+  【10月14日】
+  B：最后一天，出发
+  A：今天九趟，老陈那边打好招呼了
+  B：第三趟完，今天状态不错
+  A：保持，中午多吃点
+  B：第六趟！面都没工夫好好吃
+  A：撑住，还剩三趟，加的五百等你
+  B：强哥！第九趟收工！三天把我腿都跑细了
+  A：哈哈，辛苦钱，该你的。三天趟费连加的，三千整，我现在转你
+  B：好嘞！
+  【系统消息】A 向 B 转账 3000 元，已收款。
+  B：到账！强哥办事就是爽快
+  A：下周还来三天，你把老乡带上，还是一个人一次两万的老规矩，他跑他的，你带你的
+  B：行，我跟他说。强哥，这活长期有吗
+  A：长期有。你只要嘴严腿勤，就有你的份
+  B：懂，你放心，我什么都没看见，光看见钱了

@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000275
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000113
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-7e071f6ea3c4e059
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 二手回收商与维修师傅之间的正常旧机交易：按平台回收价收三台旧手机，带锁机器坚持走官方渠道，捡来的手机主动移交失物招领，全程合规留凭证。
+  critical_evidence:
+  - 三台旧机经官保查询后按平台回收价共3260元成交
+  - 带ID锁的机器要求机主本人带发票走官方售后解锁，商家不碰
+  - 老人捡来的手机被引导送派出所失物招领，不收来路不明的机器
+  - A转账3260元并开具写明序列号的回收凭证
+  benign_alternatives:
+  - 二手手机回收
+  - 失物招领
+
+attributes:
+  duration_days: 5
+  turn_count: 54
+  approximate_tokens_estimate: 1347
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: phone_reset_resell
+  risk: 0
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0058
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:63fed62d706e3c2b94b48726df5355929510ae6c2b22ff85acce3e1569c539d2
+pipeline_status: accepted
+title: theft_robbery_property_crime/phone_reset_resell
+conversation: |-
+  【10月20日】
+  A：强哥，上回说的那三台旧机，考虑得咋样
+  B：考虑好了，新房贷压着，能回点血是点
+  A：你把序列号发我，我先查下官保
+  B：发你了，三台都在备忘录里
+  A：查了，一台还有八个月保修，两台过保
+  B：那能值多少
+  A：按平台回收价，三台三千二上下，成色好再加
+  B：比我挂闲鱼省心就行，懒得上架
+  B：你国庆回老家没
+  A：回了，高速堵了六个钟头
+  B：我没敢动，在家躺了七天
+  A：躺着好，我回来腰都直不起来
+  【10月21日】
+  A：机子明天带来，我当面验
+  B：行，电池健康度截图我都存着
+  A：有ID锁的记得先退干净，带锁的我只能按配件价压，很狠
+  B：都退干净了，我还不懂这个
+  A：上礼拜收的一台，机主自己退不出去，我让他带发票去官方售后解的
+  B：对，那种就得走官方，咱不碰
+  A：嗯，规矩不能破，省得后头麻烦
+  B：明白，明天上午十点到你店
+  B：哎你儿子期中考完没
+  A：考了，数学九十二，语文拉了
+  B：语文靠积累，急不来
+  A：是，每天逼他读半小时书
+  【10月22日】
+  B：到你楼下了，三台都在包里
+  A：来来先坐，我开机验一下
+  B：验完咋样
+  A：成色跟截图一致，三台我出三千二百六
+  B：行，就这个数
+  A：走平台担保还是直接转
+  B：熟人还走啥平台，你直接转吧
+  A：凭证还是得开一张，回收凭证上写清序列号，以后扯不清
+  B：行，你这儿就是正规
+  【系统消息】A 向 B 转账 3260 元，已收款。
+  A：转你了，备注写的三台旧机回收款
+  B：收到，凭证也拍我一份
+  A：拍了发你了，微信里存好
+  B：中午别糊弄，楼下那家羊汤开了
+  A：走啊，贴秋膘正当时
+  B：你请，刚挣了三千多
+  A：请请请，大客户
+  【10月23日】
+  A：对了，昨天你走后来了个大姐，说家里老人捡了台手机
+  B：捡的？那咋处理
+  A：我让她送派出所失物招领了，卡里能查到失主挂号信息
+  B：处理得对，捡的来路不清，攥手里是雷
+  A：可不，我店里规矩，来路不明的机器不收
+  B：你这么搞，回头街坊都认你家
+  A：生意长久靠的就是这个
+  【10月24日】
+  B：我店里还有几台客人置换下来的旧机，你要不
+  A：要啊，批量来我价格还能上浮点
+  B：都有正规来路吗，置换单据得齐
+  A：齐的才收，单据不全的直接回掉
+  B：那行，我筛一遍周末给你送过去
+  A：成，还是老流程，验机、开凭证、当天结款
+  B：跟你做生意省心

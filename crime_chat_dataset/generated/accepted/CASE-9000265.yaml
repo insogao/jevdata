@@ -1,0 +1,141 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000265
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000011
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-c893e939c06f1e05
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 看似典型的“主动告知航班取消、引导操作”话术开场，实际是公司协议票务在正常帮客户免费改签并全额退款，还顺手教客户识别冒充客服的骗子。
+  critical_evidence:
+  - 航班因台风取消，取消通知航司官方 App 和短信都能查到，票是 A 从协议渠道代出的
+  - A 办理改签退款全程不索要验证码和卡号，并明确告诉 B“验证码谁问都不能给”
+  - 退款为票面 1520 元全额，航变免收退改费，航司退款有凭证编号
+  - A 原额转账 1520 元给 B，备注“CA1857票款退回”，金额与航司退款通知一致
+  benign_alternatives:
+  - 航司真实退改签流程
+  - OTA/票务代理的正常回访服务
+
+attributes:
+  duration_days: 4
+  turn_count: 64
+  approximate_tokens_estimate: 1758
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: customer_service_reverse
+  risk: 0
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0057
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:421e5884f5a7357ecfa4d41b9eeecfab20804768e4bfdab1819951025d109622
+pipeline_status: accepted
+title: fraud_scam/customer_service_reverse
+conversation: |-
+  【9月15日】
+  B：何姐，我明天上午CA1857那班怎么显示取消了
+  A：对，航司今早发了航变通知，台风影响，明后天华南好几个航班都调了
+  B：那我这16号上午的会还怎么开
+  A：别急，你那张票是上月我从协议渠道帮你出的，订单我系统里能查
+  B：对，就你订的那张，1520那张
+  A：航变取消免退改费，两个方案：改签17号下午以后，或者全额退
+  B：会重要，改签吧，17号下午有吗
+  A：有，15:05一班，我先帮你锁位，你确认就出票
+  B：锁！谢姐
+  A：你自己也登录航司App查一下取消通知，一切以官方为准
+  B：今天食堂有糖醋排骨
+  A：排队排到几点，我泡面解决的
+  B：十一点半去的，人少
+  A：明天我也早去，蹭你攻略
+  B：姐，刚才有个陌生电话说我航班取消，让我下个App处理退费，我挂了
+  A：挂得对！你的改签我直接在系统办，不需要你下任何软件
+  B：他还让我报什么验证码来着
+  A：验证码谁问都不能给，包括我。我这边办任何业务都不需要你的验证码和卡号
+  B：懂了，怪不得听着不对劲
+  A：改签出票了，17号15:05，靠前排的座，出票短信你核对下发件号码
+  B：收到，我看下
+  【9月16日】
+  A：你健身卡还续吗，我这张到期了
+  B：续！咱俩拼私教课
+  A：行，周四晚上一起去
+  B：说定了
+  B：台风外围今天过境，风呼呼的，还好改签了
+  A：是，安全第一，明天你那班不受影响
+  【9月17日】
+  B：姐，机场大巴正常吗
+  A：恢复了，正常发车，路上注意安全
+  B：到机场了，值机人不多
+  A：嗯，登机口以现场大屏为准，别只看短信
+  B：落地了。逛了下电商，购物车又多了八件
+  A：你那购物车是我三倍
+  B：双十一一起凑满减
+  A：行，到时候互发链接
+  B：姐，这班准点起飞了
+  A：好，落地报平安
+  B：回程也订一下吧，19号晚上，还走协议价
+  A：19号21:10有班，同价位还有票，我给你留一张
+  B：留，老位置
+  A：出好了，这趟是你个人支付，凭证留好，报销对账用
+  【9月18日】
+  A：同步一下：16号取消那班的退款航司批了，票面1520全额，免收退改费
+  B：退到哪
+  A：票从协议账户出的，钱先退回账户，我原额转你，备注写清楚，航司退款凭证编号我都留了
+  B：行，麻烦姐了
+  【系统消息】A 向 B 转账 1520 元，已收款。
+  B：收到1520，备注“CA1857票款退回”，跟航司短信通知的金额对得上
+  A：对上就好，退款凭证发你邮箱了，留着对账
+  B：全程没让我提供卡号验证码，比上次冒充客服的来电强多了
+  A：记住这个感觉，正规流程就这样，谁绕开官方管你要东西都是幌子
+  A：晚上江边跑步去不，风小了
+  B：去，正好消食
+  A：五公里起步
+  B：你可别又跑一半让我等你
+  B：我妈喊我国庆回去，你票买了没
+  A：买了，28号的
+  B：我候补着，放票你喊我
+  A：行，喊你自己官网下单，钱各付各的
+  B：必须的，亲兄弟明算账哈哈
+  A：周四私教七点，别迟到
+  B：忘不了，你带好水杯
+  A：19号回程提前两小时到机场，台风季可能有临时调整，一切以航司App为准
+  B：收到，有事只认App和官方短信，陌生来电一概核实
+  A：孺子可教，晚安
+  B：晚安姐

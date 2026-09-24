@@ -1,0 +1,156 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000213
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000039
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-4491fe42d5e6d77f
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: contraband_illicit_trade
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 表哥向跑长途的表弟兜售远低于市价、不开票的来路不明燃油，按吨报价现金结算，约定半夜在固定高速口旁的辅路桥下交接，帮表弟逃掉大笔油钱差额。
+  critical_evidence:
+  - 按吨报价一吨四千八，远低于加油站七千二，明确'这个价就是没票的价'
+  - 交接固定在青银高速出口下来那条辅路桥底下，且在半夜十二点之后
+  - 表哥半夜打电话通知到货、安排交接
+  - 表弟预转3000元定金，余款一吨四千八现场结
+  benign_alternatives:
+  - 私人加油站优惠
+  - 工地内部加油
+
+attributes:
+  duration_days: 3
+  turn_count: 80
+  approximate_tokens_estimate: 1985
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: fuel_tax_evasion
+  risk: 2
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0051
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-025
+
+dedup:
+  content_hash: sha256:68c2dfbc4201927f3f1ca28a518c3797d28827d5f70b110ebe2519aee166790d
+pipeline_status: accepted
+title: contraband_illicit_trade/fuel_tax_evasion
+conversation: |-
+  【10月13日】
+  B：大伟，这两天跑哪呢
+  A：刚从临沂回来，表哥咋这么早
+  B：睡不着，问你个事，你那车这个月加了几回油了
+  A：这月跑长途，加油加了快八千，心疼
+  B：现在运价多少一吨公里
+  A：别提了，两毛八都有人抢，卷死了
+  B：油还死贵，你们这行是真难
+  A：可不，刨去油钱过路费，就剩个辛苦钱
+  B：你那车百公里多少个油
+  A：满载三十五六个，一公里一块多，全给加油站打工
+  B：懂你，所以才问你个事
+  A：啥事您说
+  B：油的事，我能给你便宜上，你敢不敢用
+  A：便宜多少
+  B：按吨报价，一吨四千八，市里站上一吨都快七千了
+  A：差这么多？油靠谱不，别把我车弄趴窝了
+  B：放心，我用两年了，车队六台车都吃这个油
+  A：先跑车啊，一会上货
+  B：行，晚上聊。对了妞妞开学适应没
+  A：适应了，就是作业多，昨晚写到十点
+  B：现在的娃是真累，我家的也天天打卡
+  A：你还给他报了俩班吧
+  B：砍掉一个了，鸡娃不起
+  A：哈哈哈，想开点
+  B：回来了没
+  A：刚进服务区，吃口饭
+  B：油的事你琢磨得咋样
+  A：一吨合多少升，我算算账
+  B：一千一百多升，你自己算，比站上省小两千一吨
+  A：这么一算……我一个月能用一吨半，省三千
+  B：对吧，跑车的谁跟钱过不去
+  A：咋个来法，我不懂啊
+  B：我安排，你只管把车开到地方
+  【10月14日】
+  B：电话咋不接
+  A：刚跑完夜车睡死过去了，咋了表哥
+  B：好事，明晚就有油到，你加不加
+  A：加！咋个章程
+  B：早上给你捋一遍：按吨报价，一吨四千八，现结，一吨起送
+  A：有票没
+  B：这个价就是没票的价，要票七千二
+  A：明白了，省的都在这差价里
+  B：对，你拿去用就行，别处别提
+  A：行，那我今晚加一吨，先试试
+  B：试啥试，保证你吃不了亏
+  A：加这个对发动机没影响吧，我这车还得再跑五年
+  B：你放一百个心，我那六台车天天跑高速，发动机比你金贵
+  A：那就成，机油我照常保养
+  B：对，该保养保养，别跟站上的油混着加就行
+  A：表哥，你那边认识修变速箱的吗，我这台二挡有点打滑
+  B：认识，老蔡，滨州那边，手艺没得说
+  A：贵不
+  B：比四儿子店便宜一半，就是得排队
+  A：那介绍下，我月底过去
+  B：行，我给他打电话
+  A：老蔡这人实在不
+  B：实在，收费给你列单子，一样样对
+  B：明晚的油定了，老位置，青银高速出口下来那条辅路，桥底下
+  A：那个桥洞子我知道，白天老有货车歇脚
+  B：对，就那，油车夜里十二点后才到得了
+  A：行，我算好油箱空着过去
+  B：带上油桶和漏斗，我再给你拿两根管子
+  A：表哥，这油哪儿来的，稳不稳啊
+  B：你甭管来路，用你的心，两年了我没出过一回岔子
+  A：成，那听你的
+  A：表哥，今晚我十一点半能到，管子给我留着
+  B：行，我等你信儿，东西都在车上
+  【10月15日】
+  A：表哥，今晚一吨我肯定要，定金我先转点
+  【系统消息】A 向 B 转账 3000 元，已收款。
+  B：收到三千，算你头一车的定金，剩余现场结
+  A：好。几点来着，桥底下对吧
+  B：十二点后，青银出口辅路桥底下，到了给我打电话
+  A：得嘞
+  B：油车已经出发了
+  A：好，我把油箱放空，正好晚上跑完这趟
+  B：我到桥底了，你还有多久
+  A：十分钟，看到你的车灯了
+  B：弄好了，一吨，你自己看泵数
+  A：没错。尾款明早转你，今晚身上现金不够了
+  B：行，明早别忘了，一吨四千八减定金三千，剩一千八
+  A：忘不了，表哥这可是帮兄弟大忙了
+  B：自家兄弟说啥帮不帮的，用得好下月再来

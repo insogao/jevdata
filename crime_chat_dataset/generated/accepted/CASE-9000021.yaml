@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000021
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000106
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-4242c594f9593dcd
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: theft_robbery_property_crime
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 仓管利用周三盘库前的账面空窗和无监控的西门通道，把库存电动工具按件卖给外面收货的熟人，先收压金、尾款老方式结。
+  critical_evidence:
+  - A是仓库理货员，B是外面收五金的熟人，按件结、一件四十五现结
+  - 行动特意卡在下周三盘库之前，「周三之前怎么动都是糊涂账」
+  - 走西门、那头没装监控、夜里十一点后一次运走三十七件，用周转袋掩人耳目
+  - B先转2000压金，尾款约定「老方式」事后结
+  benign_alternatives:
+  - 仓库正常出货
+  - 熟人间帮忙处理积压库存的调拨
+
+attributes:
+  duration_days: 5
+  turn_count: 54
+  approximate_tokens_estimate: 1278
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: insider_stocktip_theft
+  risk: 2
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0029
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-017
+
+dedup:
+  content_hash: sha256:1f6d552d9c4f55c2a912763f5d69b62f5c02cf507d082c485a47e6715e5f2138
+pipeline_status: accepted
+title: theft_robbery_property_crime/insider_stocktip_theft
+conversation: |-
+  【11月4日】
+  B：老陈，最近仓里忙不
+  A：淡季，一天理三车货，闲得很
+  B：那正好，我那边五金走量大，你手上顺手的匀我点
+  A：你还是老路数，见了我准没好事
+  B：咱这叫资源整合嘛，按件结，老规矩
+  A：一件多少
+  B：四十，现结，我出手也就这个行情
+  A：四十是五年前的价了吧
+  B：那四十五，封顶，再高我不如找别家
+  A：行吧，看在老交情，量不大就帮你带带
+  B：量不大，稳字当头
+  A：你这人就这点好，不贪
+  【11月5日】
+  A：跟你说个准信，下周三仓里盘库
+  B：盘库跟你我有什么关系
+  A：账面数就盯那几天，周三之前，怎么动都是糊涂账
+  B：懂了，那就赶在前头
+  A：对，就这两天，过了时候别提
+  B：老刘退了没
+  A：上个月退的，现在天天水库报到
+  B：他那水平，空军大队长哈哈
+  A：他还吹呢，说下月约你比划比划
+  B：让他来，我教他两招
+  B：这周降温，你夜班多穿点
+  A：库里阴冷，西门那头正对风口，站一会就透心凉
+  B：你们西门不是常年锁着
+  A：锁归锁，钥匙在我这儿，那头又没装监控，清净
+  【11月6日】
+  B：那批电动工具你心里有数没
+  A：三十七件，下午又核了一遍
+  B：一次走还是分两回
+  A：一次，明晚十一点后走西门，那头没监控
+  B：成，我车停老位置，后备箱腾好了
+  A：纸箱子别带，太扎眼，我用周转袋给你装
+  B：懂行，看着就像自家搬货的
+  A：三十七件，一件四十五，你算算
+  B：一千六百六十五，抹个零一千六百五
+  A：你这算盘比财务还精
+  B：先转两千压着，剩下的当面结清
+  【系统消息】B 向 A 转账 2000 元，已收款。
+  A：收到，两千整，多退少补
+  B：明晚见。对了你闺女期中考完没
+  A：考完了，数学又拉胯，愁人
+  B：我儿子物理全班倒数，我说你随谁
+  A：哈哈这玩意还论随谁的
+  【11月7日】
+  A：今晚利索点，别喝多了来
+  B：放心，我办事你还不清楚
+  A：货我下午先挪到西门工具间隔壁，你到点直接装
+  B：你这手速，老江湖了
+  A：你带两个厚袋子来就行
+  B：你腰好点没，上回搬货闪了
+  A：贴了膏药，好多了，阴天还酸
+  B：少搬点，让我这壮劳力来
+  A：就等你这句话
+  【11月8日】
+  A：昨晚顺，三十七件一件不少
+  B：稳。尾款我明天给你结，还是老方式
+  A：行，老方式，你懂的

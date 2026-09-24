@@ -75,3 +75,10 @@
 - 程序化对齐审计结论：4 条 review（2931/2937/2938/2940）文件 latent_intent 与 spec 全部对齐，分歧系 0267 批判官 agent 自身 case_id 错位（与 0148 批判官错位同模式）→ 已恢复 accepted
 - 判官提示词修正：今后判官必须逐文件"读一个写一对"（追加模式），且每行 JSONL 附 excerpt 字段（对话前 20 字），总控程序化核对 excerpt 与源文一致后才采信判定
 - 遗留：0267 批判官给出的 fact 算术硬伤归属同样不可靠，整批判定作废，下轮以新提示词重判
+
+## 2026-09-24 双产线合并（GLM，按用户策略执行）
+- 策略：来源 seed id 重叠 → glm-line 覆盖；不重叠 → 重键合并
+- 执行：远端 main（auto batch 19-28）545 条 accepted → 导入 308（新段 CASE-9000001+）、seed 重叠跳过 187（glm 覆盖）、共有同内容跳过 194、对照对并入 47
+- 远端 14 条 review / 1 条 rejected 不并入（未经终审）
+- 冲突解决全部取 glm-line（含 registry、AGENTS.md、task_cli/worker 等工具代码）
+- 遗留：远端 12 个提交里的 judge agree 数据按其本地判官口径，未与我方判官口径互校；合并后总量 3163 YAML（DB accepted 3097）

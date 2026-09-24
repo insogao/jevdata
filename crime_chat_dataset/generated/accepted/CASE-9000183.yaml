@@ -1,0 +1,133 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000183
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000031
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-23b9dea7c0df73b9
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: contraband_illicit_trade
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 上级安排下级跨省接收一批来路不便言明的货物，要求改掉原厂包装、走不留真名的运输渠道、收货人用化名，刻意切断货物来源的可追溯性。
+  critical_evidence:
+  - A 要求 B 在收货前备普通纸箱，把原厂包装一件不留全换掉，带厂标的胶带也撕掉
+  - A 指定不走物流平台，走老站那趟单子不用登记真名的车
+  - 运单收件人统一写化名陈工，B 只用小号接电话，换箱不许找人帮忙
+  - B 收货换箱后转给 A 尾款 28000 元，A 预告月底再发一批量翻倍的货
+  benign_alternatives:
+  - 正常跨省网购调货
+  - 土特产批量邮寄
+
+attributes:
+  duration_days: 3
+  turn_count: 57
+  approximate_tokens_estimate: 1450
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: cross_region_shipping
+  risk: 2
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0048
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-024
+
+dedup:
+  content_hash: sha256:1b7e5f9f0fac613d4a82bafa3c02ad1026e74e03599e1d070286b2425217175f
+pipeline_status: accepted
+title: contraband_illicit_trade/cross_region_shipping
+conversation: |-
+  【10月14日】
+  A：早起没，你们那边降温没
+  B：降了，早上骑车冻手
+  A：买个护膝，别硬扛
+  B：晚上炖了排骨汤，喝完全身暖和
+  A：会过日子。仓库那边最近忙不
+  B：忙，一天卸三车
+  A：跟你说个事，周五有一批到你们那边，你安排人接一下
+  B：多大的量？老规矩那个吗
+  A：对，就那个。这次有个要求，货到之前先备几十个普通纸箱
+  B：要换包装？
+  A：对，原厂的箱子一件不留，外头那圈带厂标的胶带也撕了换普通的
+  B：明白，不能让人看出货的来路
+  A：就是这个意思。纸箱去批发市场买，别在原来那家买了
+  B：行，小几百块的事。买多大号的
+  A：两种号，大件套小箱，看着不起眼就行
+  B：收到，我周五请了半天假，专门盯着
+  A：到了站别拖，上午就去提，下午人多眼杂
+  B：知道了，提完直接拉我那小仓库
+  【10月15日】
+  B：头儿，中午一起点外卖？新开了家湘菜馆
+  A：我在开会，你吃你的
+  B：那我给你也点一份，放你桌上
+  A：别辣的，胃今天不舒服
+  B：知道了，番茄牛腩套餐
+  A：想得周到
+  B：哥，货走哪条线？物流我这边报不了价
+  A：别走物流平台，还是老站那趟车，那边单子上的名字随便写，不用登记真名
+  B：那收件人写谁
+  A：写陈工，一直都这么写，别用你的真名和主号手机
+  B：用我小号接行吗
+  A：行，就用小号
+  B：明白。那车什么时候发
+  A：明晚装车，后天上午到站，你直接去站上提
+  B：提完回我那仓库换箱？地方够不够
+  A：就你那仓库，门一关慢慢换，别找人帮忙
+  B：一个人得换到半夜吧
+  A：换到半夜也得换完，当天的事当天清
+  B：哥，问你句实话，这批到底啥来头，搞得神神秘秘的
+  A：该你知道的你知道，不该问的别问。你把手上的事办利索就行
+  【10月16日】
+  B：哥，昨晚换箱换到两点，腰快断了
+  A：辛苦，年轻人睡一觉就缓过来了
+  B：你倒是会安慰人
+  A：中午补个觉，下午的事不急
+  B：那可不，我这会儿还困着呢
+  B：货点齐了，四十八件一件不少，箱子全换完，厂标胶带都撕干净了
+  A：好，拍两张换完的样子发我看看
+  B：发你了，你过目
+  A：可以，看不出名堂。尾款今天让会计走
+  B：还是转你个人，还是走公账
+  A：转我个人，跟以前一样
+  B：行，两万八对吧
+  A：对，28000，一分不能少
+  B：现在就转
+  【系统消息】B 向 A 转账 28000 元，已收款。
+  A：收到。下批月底发，量比这回大一倍，纸箱多备点
+  B：得，我这两天就去收纸箱
+  A：嗯，老规矩，办利索点
+  B：月底那批还是老站走？
+  A：嗯，还是老站，单子照样写陈工

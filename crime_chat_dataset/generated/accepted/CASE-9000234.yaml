@@ -1,0 +1,137 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000234
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000111
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-db4b4da216f6bb49
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: theft_robbery_property_crime
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A 持续向熟人 B 供应当晚「到手」的低价电动车并称号码已重新打过,B 加价近六成转卖,双方约定统一口径「抵账收的」,形成稳定的流通链条。
+  critical_evidence:
+  - A 称车「昨晚到」,九成新小牛只卖2200元,带牌还要加300
+  - A 称车架号码「处理利索,重新打过看不出来」,嘱咐 B 压两天再挂
+  - B 以2200元收车后标价3500元转卖,约定三天为限快速出手
+  - A 预告下批货时间并问要留几台,双方长期按「老规矩」先验后付
+  benign_alternatives:
+  - 熟人之间的二手电动车串货调货
+  - 正常二手车收购与加价转卖
+
+attributes:
+  duration_days: 3
+  turn_count: 61
+  approximate_tokens_estimate: 1623
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: electric_bike_resale_chain
+  risk: 2
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0054
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:c7eb12af5f6c3a1ea7aeb0e117618819902d81b6e3498eb2ae645be1b81b924a
+pipeline_status: accepted
+title: theft_robbery_property_crime/electric_bike_resale_chain
+conversation: |-
+  【10月20日】
+  A：昨晚到一台,九成新,小牛新款,白绿配色。
+  B：多新?
+  A：骑了俩月不到,里程表才三百多公里。
+  B：带牌不带?
+  A：带牌贵三百,证都齐;不带牌一千六。
+  B：那我要带牌的,好出手。
+  A：新车好走,这种三天准没。
+  B：牌子号码那些干净不?
+  A：处理利索了,重新打过,看不出来的,你放一百个心。
+  B：你小区门口新开那家胡辣汤到底行不行?
+  A：量大实惠,六块一碗,加牛肉九块,我一周喝四回。
+  B：听得我馋了,明早去尝尝,你带路。
+  A：行,七点半,去晚了队排到马路牙子。
+  B：说好了你请第一顿,谁让你馋我的。
+  A：想得美,AA,亲兄弟明算账。
+  B：车明天什么时候看?
+  A：明晚八点,白天车不在手边。
+  B：成,老地方。
+  B：你那号这赛季上王者没?
+  A：别提,卡在星耀二,一把上去两把下来。
+  B：中午我带你上分,我打野贼稳。
+  A：你?上回把我中路带崩的就是你。
+  B：那是网络卡,冤枉好人。
+  A：行行行,中午试一把,再崩我可挂机了。
+  A：对了,这台你出的时候别挂太早,压两天再发。
+  B：懂,先发外县群探探行情。
+  【10月21日】
+  B：昨晚车我看了,车架号那块摸着有点毛糙。
+  A：打过码的地方都这样,不影响骑,便宜都让你占了还挑。
+  B：行,就冲这价,我认了。
+  A：你那房子续了没?
+  B：续了,房东张嘴一年涨两百,认栽。
+  A：现在搬家折腾,凑合住呗。
+  B：是,搬一次家脱层皮,东西越攒越多。
+  A：回头你那屋要退提前跟我说,我弟正找呢。
+  B：行,最少住到年底,到时候给你信。
+  A：车今晚给你送过去,钱备好。
+  B：两千二,我转你还是现金?
+  A：转吧,省得点现找零。
+  【系统消息】B 向 A 转账 2200 元，已收款。
+  B：转了2200,你点点,车钥匙记得两把都给。
+  A：到了,我这就骑过去,二十分钟到你那。
+  A：明天断崖式降温,直接掉十度,你那薄外套收起来。
+  B：秋裤我已经翻出来了,谁先怂谁孙子。
+  A：骑车风大,护膝戴上,你那老寒腿别不当回事。
+  B：知道了,你比我妈还能念叨。
+  A：呵,上次谁冻感冒发烧一周来着。
+  B：那是流感!跟穿多少没关系!
+  【10月22日】
+  B：车挂出去了,标三千五,照片我修了修。
+  A：你这加一千三,黑心程度堪比车贩子祖师爷。
+  B：我还得带人试车陪砍价,利润就薄薄一层。
+  A：行,出得快就行,我说的是三天为限。
+  B：傍晚就有人约看车了,姑娘,上班通勤用。
+  A：有人问来路就说抵账收的,前车主去外地了,口径别乱。
+  B：记住了,抵账,外地,妥了。
+  B：周末去不去水库?老周约夜钓,说最近口好。
+  A：去,新买的夜光漂还没开张呢。
+  B：上回就钓了俩小白条,汤都没做出来。
+  A：这回我换窝点,再空军你笑话我一年。
+  B：行,渔具我带,你负责选点和宵夜。
+  A：成,鲫鱼汤安排上,大不了买两条下锅。
+  A：下批下周二三到,给你留两台踏板?
+  B：留,这批出完我还要,细水长流。

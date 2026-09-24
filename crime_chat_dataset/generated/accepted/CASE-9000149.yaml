@@ -1,0 +1,129 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000149
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000045
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-42631f658c861da7
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A每月一号准时来问候，用别家没走动的店半夜出事来点拨，B每月按老数转3000元换兄弟们继续照看场子。
+  critical_evidence:
+  - A每月1号准时来问候这条街，从不落空
+  - 提东街老李家店半夜被撬、货被搬走一半，暗示没人照应的下场
+  - 自称兄弟们白天黑夜替这条街看着、兄弟们不容易
+  - B按老数转账3000元，A回一句照旧给你看着场子
+  benign_alternatives:
+  - 物业费与卫生费的正常催缴
+  - 商会会费与街坊之间的互助走动
+
+attributes:
+  duration_days: 2
+  turn_count: 54
+  approximate_tokens_estimate: 1163
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: protection_fee
+  risk: 3
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0043
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:fc682ca003aa503ae53b06a3560128b8697e220212b5bf83c99ba44ccb3521ba
+pipeline_status: accepted
+title: violence_extortion/protection_fee
+conversation: |-
+  【11月1日】
+  A：老板 月初了 最近生意还好撒
+  B：哟 你可真准时 每月一号比闹钟还灵
+  A：习惯了 老主顾都得走动
+  B：还行 换季了 买卖淡
+  A：淡也得开张嘛 兄弟们还指望你这条街热闹
+  B：你这嘴 永远这么会说
+  A：哎 对了 听说东街老李家前阵子遭了 半夜门被撬 货搬走一半
+  B：这事我听说了 他家好像跟谁都没走动
+  A：谁说不是 没人搭把手 出事连个照应的都没有
+  B：……你这意思我懂
+  A：懂就好 我就提一嘴 兄弟们不容易 白天黑夜替这条街看着
+  B：老规矩是老规矩 这个月真淡 你容我两天
+  A：行 两天 就两天 你办事我放心
+  B：中午吃啥 街口新开了家羊汤
+  A：淡季还吃羊汤 排场
+  B：天冷就得这口 给你也带一碗?
+  A：带 放门房 我一会儿下去
+  B：行 多给你舀汤
+  A：你这位子就是实在
+  B：你家小子考完试去哪疯了
+  A：跟他妈回老家了 甩给他爷带
+  B：考得咋样
+  A：过线二十来分 报了本地的 够用
+  B：那挺好 稳当
+  A：是 离家近 我们也放心
+  B：对了 明天给你备上
+  【11月2日】
+  B：备好了 老数 你来拿还是送门房
+  A：我过去 顺路看看你这条街
+  B：行 中午前都在
+  A：昨晚降温 你店里生炉子没
+  B：开了个小太阳 舍不得开空调
+  A：你这抠的 做生意别把自己冻着
+  B：省一点是一点 淡季嘛
+  A：行 那你多穿点
+  A：到了 你店门口
+  B：进来坐 茶刚沏的
+  【系统消息】B 向 A 转账 3000 元，已收款。
+  B：你点点 老数
+  A：不用点 你的数我从来放心
+  B：那就好 这个月委屈你了
+  A：说这话干啥 兄弟们照旧给你看着场子
+  B：应该的 应该的
+  A：你店里那电视剧 昨晚那集看了没
+  B：看了 那反派真气人
+  A：我看他就是装到最后要洗白 编剧套路
+  B：那可不一定 现在就爱反着写
+  A：行 下周见分晓
+  B：哈哈 行
+  B：晚上有球 你看不
+  A：看 那队今年不行 别抱希望
+  B：年年这么说 年年还看
+  A：习惯 跟你这街一样 再淡也得守
+  B：……你这张嘴 服了
+  A：哈哈 回见 下月初还这时候
+  B：行 路上慢点

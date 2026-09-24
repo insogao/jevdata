@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000137
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000099
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-9cfb8d954007c371
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: money_laundering_obfuscation
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: B替来路不明的资金做退款过账：钱以订单款进店，再原路退到指定人银行卡，B抽两个点手续费，顺带把店铺流水做起来。
+  critical_evidence:
+  - B提出货不用真发、退款退到指定银行卡的过单模式
+  - B转30000元订单款，A扣两个点600元后退回29400
+  - B拒绝说明资金来路，只强调日结和流水好看
+  - 两人约定下一批放大到二十万，并每天发退款截图备查
+  benign_alternatives:
+  - 正常电商促销退款的资金往来
+  - 商家间代退代付的合作结算
+
+attributes:
+  duration_days: 2
+  turn_count: 57
+  approximate_tokens_estimate: 1589
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: refund_cycle_wash
+  risk: 2
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0042
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:2d223155d736d44458c1cea86c09b9b14f83a4937a24b7d86eaa06706c5c67bc
+pipeline_status: accepted
+title: money_laundering_obfuscation/refund_cycle_wash
+conversation: |-
+  【10月26日】
+  B：老板在吗，昨天群里加的你
+  A：在，是老周介绍的那个吧
+  B：对对。听说你店里能走退款单？
+  A：老周没跟我细说，你先讲讲怎么个走法
+  B：简单。你店里挂个链接，我们付款拍下，钱进你账，你再把钱原路退到我指定的一张卡上
+  A：货不用真发？
+  B：发个空包有物流记录就行，单子干干净净
+  A：那我图什么
+  B：每笔抽两个点，你顺带把店流水做起来，回头你自己卖货的权重也好看
+  A：听着就是刷单那一套啊
+  B：差不多，但我们这头量稳，日结
+  A：钱从我账上过，出事算谁的
+  B：入行到现在没出过岔子。这样，先来一笔三万的试试水
+  A：先说好，我只按你发我的卡退
+  A：你那边下雨没，我这快递都泡两天了
+  B：也下，骑车送单的都遭罪
+  A：你平时都骑车跑？
+  B：电动车，风里来雨里去，挣的就是辛苦钱
+  B：卡号发你了，尾号6688那张。三万这就安排
+  【系统消息】B 向 A 转账 30000 元，已收款。
+  A：收到了，链接也挂上了，你那边拍
+  B：拍好了，你看下订单
+  A：订单正常。退款这就操作，扣两个点，退两万九千四
+  B：对，600块是你的，痛快
+  A：退了，你查收
+  B：到账了。老板爽快，明天起给你排日单
+  B：晚饭吃了没，别光守着店
+  A：泡面凑合，我妈住院这段日子没空做饭
+  B：那你辛苦。我给你点个外卖，就当认识一下
+  A：那怎么好意思，谢了
+  【10月27日】
+  B：早，今天日单照旧，两笔三万的
+  A：行。对了问你，你们这些单子到底是给谁走的账
+  B：问那么多干嘛，到账结账，两不清
+  A：随口一问。你们钱来路正不正？我这店是小本生意
+  B：比你还正。你只管两个点抽着，流水做起来，年底换个新车都行
+  B：昨晚那局你上没上，就差你一个
+  A：没顾上，店里盘账。你段位又掉了吧
+  B：别提了，掉了一大截，周末带我上分
+  A：行，周末不忙的话
+  B：今天两笔都安排上了，卡还是尾号6688那张，到账你就挂链接
+  A：行，老规矩，扣两个点退
+  B：痛快！
+  A：正好问下，我店上新那款收纳盒，你们能不能顺带带一带
+  B：可以啊，挂进日单里，销量也给你做上去
+  A：那就好，新品就怕没流量
+  B：跟着我，流量不是事
+  B：今天两笔都退完了，两个点你账上今晚一并结
+  A：看到了。下周要是接着做，量能到多少
+  B：下周起放大，一批二十万起，你店里再挂两个链接
+  A：行，我把链接备好
+  B：对了，以后每天晚上八点前把当天退款的截图发我，我们那边要核
+  A：行，截图我整理好一次发你
+  B：辛苦。你那店我发现评论全是好评，自己刷的吧
+  A：哪能呢，都是真买家，哈哈
+  B：行吧。早点休息，明早单子照旧
+  A：好，明天见
+  B：忘了问，后天你妈出院吧？到时候给你排轻一点的量
+  A：你有心了，轻一天没事，正好去接老人

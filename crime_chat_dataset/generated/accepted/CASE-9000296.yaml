@@ -1,0 +1,151 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000296
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000030
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-d7e41bcf7dc0c93d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: contraband_illicit_trade
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: B想从熟人A处再补一批货，全程用行话代称不点品名，A也含糊带过货源；两人靠老客户默契完成口头订货，更像熟客间避着同行的习惯。
+  critical_evidence:
+  - B开口就问上次那种还有吗，全程只说代称不点品名
+  - 报价按片/条/个计，价格与市价相当
+  - A对货源只说老地方来的，含糊带过
+  - 约定到店自提当面验货，聊天里没有资金往来
+  benign_alternatives:
+  - 数码配件熟客补货的行业黑话
+  - 线下自提当面验货的正常交易
+
+attributes:
+  duration_days: 2
+  turn_count: 77
+  approximate_tokens_estimate: 1500
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: code_word_catalog
+  risk: 1
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0061
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-028
+
+dedup:
+  content_hash: sha256:ca97ba8f47319523d374e7c9a35756db2df1782f4f7903b5ab52fcecaf9eef1f
+pipeline_status: accepted
+title: contraband_illicit_trade/code_word_catalog
+conversation: |-
+  【9月19日】
+  B：哥，在店没
+  A：在，刚开门
+  B：上次那种还有吗
+  A：哪种，你说是磨砂的还是高清的
+  B：就上次拿的那种，你懂的
+  A：磨砂的是吧，有，这批新到的，比上回那批还透亮
+  B：对对，就它。几片起拿
+  A：老价格，一片十二，拿十片给你抹零，一百一
+  B：行。线呢，上回那种扁口的还有几条
+  A：扁口的到了一箱，条十五，拿三条给你四十
+  B：成。再要两个壳，上次那个磨砂黑的同款
+  A：壳一个二十五，两个四十五
+  B：你这价一直没涨，实在
+  A：老客户了，涨什么涨
+  B：今晚出来撸串不，老地方
+  A：去啊，周五了正好
+  B：那晚上见，我先去趟理发店
+  A：行，六点半
+  B：你先把货给我留着，别又被人撬走
+  A：放心，给你压箱底呢
+  B：对了，她下周生日，你店里有那种小夜灯没
+  A：有，月亮那款卖得好，八十八
+  B：帮我留一个，别卖给别人
+  A：记下了，到时候给你包起来，再送你一张包装纸
+  B：够意思
+  A：晚上看球没，八点半
+  B：看，串都定了就着球吃
+  A：我看好那个客队，你信不信
+  B：行，输了你加十串
+  A：成交
+  B：那批货哪天到的，新鲜不
+  A：前天刚到的，老地方来的，你就放心吧
+  B：行，怎么给你结
+  A：明天到店里，扫码就行，我给你开个单子
+  B：好，那明天见
+  A：明儿见
+  B：哦对，磨砂的再给我留两片，给同事带
+  A：一共十二片，记着呢
+  B：靠谱
+  【9月20日】
+  A：昨晚看了没，客队真输了
+  B：看了，加十串，今晚补上
+  A：我记得就行
+  B：大雨天你还敢开门啊
+  A：雨再大店也得开，房租不等人
+  B：也是，路上都积水了
+  A：你过来带把伞，门口那段没遮
+  B：知道，我打车
+  B：到楼下了，上去喽
+  A：来，货给你点一遍，十二片膜、三条线、两个壳，加夜灯一个
+  B：数了，对。夜灯包好了没
+  A：包好了，盒子也给你套了袋
+  B：多少钱
+  A：膜一百三、线四十、壳四十五、灯八十八，一共三百零三，抹了三，三百整
+  B：行，扫过去了，你看下到没
+  A：到了。发票要不要
+  B：不要，给同事带的不用
+  A：行，线用之前先试，有问题随时来换
+  B：知道，你这儿售后一直没得说
+  B：夜灯今晚就送出去，成了请你吃饭
+  A：借你吉言，稳稳的
+  B：你上次说那种蜡烛灯还有吗，万一要补
+  A：有两台，你随时来拿
+  B：成
+  A：雨小点了，你回去趁早
+  B：嗯，下午还有个局
+  A：周一店里到新货，提前跟你说一声
+  B：行，有上次那种第一时间喊我
+  A：一定
+  B：对了磨砂的那款，同事用了说好，回头再来拿五片
+  A：给他留上，攒多给你算批发价
+  B：哥你生意越做越大
+  A：托兄弟们的福
+  B：晚上球还看不
+  A：看，不过今晚你请，说好的十串
+  B：记着呢，跑不了
+  A：那晚上见
+  B：见

@@ -1,0 +1,149 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000232
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000133
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-5b9e3232013c8677
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: coercion_blackmail
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: A 借居中调解楼上住户与楼下老人的噪音纠纷之机,转述「每月两条烟这事就平」的玩笑话并称认识城管,隐约试探能否捞点好处,但全程未形成实际对价,纠纷最终以正常方式化解。
+  critical_evidence:
+  - A 转述楼下老刘的玩笑话「每月两条烟这事就平」,并补了一句别当真
+  - A 自称认识城管队的老周,垃圾堆的事打个招呼就能搭把手
+  - A 强调街坊抬头不见低头见,面子上过得去比啥都强
+  - B 转账160元为四只螃蟹100元加胶和压条成本60元且有收据,属明确日常结算
+  benign_alternatives:
+  - 邻里噪音的普通调解与玩笑话
+  - 热心中间人帮忙跑腿修关系
+
+attributes:
+  duration_days: 2
+  turn_count: 74
+  approximate_tokens_estimate: 2533
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: resident_noise_leverage
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0054
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:43ce1aef54a8ed72fd05dc8fa621fc96b6c2e6ea3f62a864caf45145d7318af9
+pipeline_status: accepted
+title: coercion_blackmail/resident_noise_leverage
+conversation: |-
+  【10月11日】
+  A：早啊,问一句,你们家这几天上午是不是在打孔?电钻一响一响的我听着都替你累。
+  B：对,装置物架,今明两天就完事。咋了?
+  A：不是我说,是楼下老刘。昨晚他在楼下跟我念叨,说你家一开工他脑仁疼。
+  B：啊?我都是白天干的呀,中午和晚上都没碰。
+  A：白天他也午休,人上了岁数觉轻,一点动静就醒。
+  B：那我避开他午休那阵,上午十点前不动钻,下午三点以后再干。
+  A：行,我帮你递个话,先缓缓,别让小事闹大。
+  B：麻烦你了,多亏有你居中传话,不然我都不知道找谁。
+  A：你吃了没?我买了两根油条,多出一根。
+  B：吃过了,我妈熬的红豆粥还剩半锅呢。
+  A：秋天早上凉,热乎的养胃,你们年轻人也别糊弄。
+  B：知道啦,中午让我妈给我带排骨,沾沾光。
+  A：你那秋裤可以安排上了,别硬扛。
+  B：哈哈还没到那步,我自封小区抗冻第一人。
+  A：对了提醒你一句,老刘那人嘴硬心软,好个面子。
+  B：他没放啥狠话吧?我心里有点打鼓。
+  A：他跟棋友开玩笑说「每月两条烟这事就平」,你听着乐就行,别当真,他就那股幽默劲。
+  B：哈哈这开价方式挺复古的,还以为穿越了。
+  A：街坊嘛,抬头不见低头见,面子上过得去比啥都强。
+  B：明白,我下午就去买两块加厚隔音垫,来点实在的。
+  A：要买就买橡胶底的,别买泡沫的,泡沫的压一学期就塌了。
+  B：懂行啊你,这都有讲究?
+  A：我早年干过两年装修,略懂一二。
+  B：那回头你帮我看看铺法,可别让我白花钱。
+  A：正事前问一句,中午想不想吃螃蟹?市场搞活动,二十五一只。
+  B：这么便宜?现在正是母蟹顶盖肥的时候。
+  A：我拿了一箱,帮你带四只?一百块,专挑个头大的母的。
+  B：带带带,晚上蒸了给我妈尝鲜。
+  A：行,下午送工具的时候一起拎过去。
+  B：蟹钱我一起转你,该多少是多少。
+  A：另外说个事,楼下那个装修垃圾堆要是没人管,我认识城管那边的老周,打个招呼的事。
+  B：你这路子挺宽啊,还有啥人脉一并交代了吧。
+  A：哈哈,老周是我发小,一个院长大的,这种事他能搭把手。
+  B：我家垃圾前天清走了,不过这个人情我先记下。
+  A：有备无患嘛,住小区谁家没个用得着人的时候。
+  B：你这中间人当得是真称职,业主群该给你开工资。
+  A：那必须的,我在这片儿说话还是有俩分量的。
+  B：垫子买好了,八毫米加厚橡胶底,四块。
+  A：可以,满铺活动区域,边上用压条收边,不然要起翘。
+  B：收到,下班就动手,给你直播进度。
+  A：需要工具不?压条器和专用胶我这都有。
+  B：那太好了,借我使两天,省得买一堆用一次。
+  A：晚饭后给你送过去,正好遛弯消食。
+  B：行,那我把螃蟹钱和材料钱一起给你。
+  A：不急这一会儿,一百块还怕你跑了?
+  【系统消息】B 向 A 转账 160 元，已收款。
+  B：转160:螃蟹100,胶和压条按成本算你60,收据拍照发你了,该多少是多少。
+  A：收到,你这账算得比我们单位出纳还细。
+  B：明算账才有长久街坊,不然我心里不踏实。
+  A：工具一会儿带到,顺便教你怎么打胶。
+  B：对了,东门那排电动车充电桩是不是坏了俩?
+  A：坏一个,另一个接触不良,物业报修了,说周内来。
+  B：我那台车三天没充上,天天绕北门。
+  A：忍忍,北门那排新装,功率还足。
+  B：行吧,就当晚饭后散步锻炼了。
+  A：充完记得拔,别过充,天干物燥的。
+  B：这个我有数,定了闹钟拔插头,我妈都夸我。
+  B：垫子铺好了,胶味有点冲,窗户全开了散味。
+  A：正常,通一晚明早就散,人别在屋里闷着。
+  B：明天起家里全换软底拖鞋,双保险。
+  A：再给椅子腿贴圈毛毡,拖椅子那声就没了。
+  B：学到了,你这服务比物业周到多了。
+  A：街坊一场互相搭把手,以后有用得着我的尽管开口。
+  【10月12日】
+  B：早,昨晚你家那边动静咋样?
+  A：一觉到天亮,真没声,跟换了层楼似的。
+  B：那就成了,我再问问老刘那边。
+  A：早上遛弯碰到他了,拎着鸟笼,脸色多云转晴。
+  B：哈哈,那中午我给他送碗蟹汤,再带俩花卷。
+  A：可以,他就吃这套,保准烟字都不带提的。
+  B：那这事算圆满,两条烟钱省下来够我买半年隔音垫。
+  A：哈哈你上什么账,他就嘴上占个乐子。
+  B：中午你也过来喝碗汤呗,反正一锅的事。
+  A：中午有个饭局,改天,回头杀两盘。
+  B：行,等你得空,先说好这回不许悔棋。
+  A：那叫战术性调整,懂不懂。

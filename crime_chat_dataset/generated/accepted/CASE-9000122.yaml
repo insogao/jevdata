@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000122
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000082
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-3597ceafabaf2e5e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 无隐藏违法意图：表兄弟之间就门店会员脱敏统计数据达成正式合作协议，数据只做聚合分析，费用走采购流程并开发票，用于品牌投放分析。
+  critical_evidence:
+  - A仅提供脱敏的会员统计报表（年龄段、到店时段、品类占比），不含任何联系方式
+  - 数据合作走双方公司正式协议流程，总部模板限定只做聚合分析、不留存原始明细
+  - B以公司采购流程签约并要求月底开具发票，首期服务费2000元
+  - 报表经B的数据组核验口径后用于品牌投放分析，双方约定下季度续作
+  benign_alternatives:
+  - 企业间脱敏数据合作
+  - 合规的会员营销分析服务
+
+attributes:
+  duration_days: 3
+  turn_count: 46
+  approximate_tokens_estimate: 1470
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: purchase_data_resell
+  risk: 0
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0040
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-021
+
+dedup:
+  content_hash: sha256:5a1e3d8b0d96aafe7a3b7df5f103387113f2602445bd9294c257b92ec5f0def1
+pipeline_status: accepted
+title: privacy_doxxing/purchase_data_resell
+conversation: |-
+  【10月14日】
+  B：弟 好久没冒泡 店里最近忙不
+  A：忙 双十一备货 会员新客一天比一天多
+  B：新客多是好事啊 我们最近正好在做品牌投放分析 缺线下样本
+  A：你又说你们那套分析的 我们店会员数据倒是多 就是一堆姓名电话 涉及个人隐私 我可不敢随便给
+  B：谁要你给姓名电话 我们要的是脱敏的 年龄段 到店时段 品类占比 这种统计口径就行
+  A：脱敏的啊 那得走我们总部流程 有专门的数据合作模板 管理员权限导统计报表 不露个人信息
+  B：正好 合同走我们采购流程 你们总部出个协议 盖章的那种
+  A：行 我把这周提给店长 让区域批
+  B：费用怎么算 我们预算里有市场调研科目
+  A：按报告期算 一个月一版 首期你们看着给 个数就行
+  A：你们公司双十一也加班不
+  B：加 电商节前天天点到九点
+  A：我这边仓库周六日都得盘
+  B：都不容易 忙完这阵请我吃饭
+  A：请你吃食堂
+  B：你可真大方哈哈
+  【10月15日】
+  A：总部把协议模板发我了 数据使用范围写得很死 只能做聚合分析 不得留存原始明细
+  B：应该的 我们法务还要再过一遍 盖完章我拍照给你
+  A：周末店里搞会员日 正好把这周新客一起进报告 样本量好看点
+  B：行 周日晚上你把报表导出 我让数据组核一遍口径
+  A：都按模板口径来 不带任何联系方式
+  B：对了 首期费用多少 我们好走款
+  A：2000吧 首期 后面按季度结
+  B：中午吃啥 我们商场新开了家湘菜 排队排到怀疑人生
+  A：我们楼下麻辣烫 吃了三年
+  B：你这专一 改天来尝湘菜 我请
+  A：行啊 你请我就去
+  B：等合作协议盖了章就请
+  A：那我等着
+  【10月16日】
+  A：会员日结束 样本够 我把脱敏报表导出给你
+  B：好 只带统计口径啊
+  A：发你了 年龄段 到店时段 品类占比 连客单价都是分档的 没有一条能对到具体人
+  B：收到 我们数据组说口径没问题 可以直接进投放模型
+  A：那首期你转我吧 说好2000
+  B：协议还在走章 丑话说前头 发票月底必须开我
+  A：开 抬头你发我 税号别写错
+  【系统消息】B 向 A 转账 2000 元，已收款。
+  B：首期2000转你 协议章一下来我寄你一份
+  A：收到
+  A：最近腰疼 久坐坐的
+  B：该动动了 明早跟我晨跑
+  A：我起不来 你跑多久了
+  B：一年半 掉了十几斤
+  A：佩服 等我忙完这波
+  B：那你先把报告期的第二版备着
+  B：对了 报告我们品牌方那边挺满意 下季度续
+  A：行 区域那边也没意见 双十一后我给你出大促版

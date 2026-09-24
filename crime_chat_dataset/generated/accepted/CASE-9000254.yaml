@@ -1,0 +1,131 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000254
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000150
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-d5ff1def0902b5f2
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: other_illicit_coordination
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 表哥借“运营商返现活动”名义让表弟组织同学办新电话卡统一上交倒手，按张返现按人头提成，卡的真实去向对办卡人隐瞒。
+  critical_evidence:
+  - A以运营商充话费返现活动的名义让B组织同学办新电话卡，每张返现五十
+  - B每拉一人参与另得八十元提成，账由A记着
+  - A明确要求B别用自己的身份证办，卡办完统一上交，单据拍照存底
+  - A一次转账1280元结算返现和提成，并催月底前放量再办一批
+  benign_alternatives:
+  - 正规校园卡或运营商校园促销
+  - 消费券或话费返现活动
+
+attributes:
+  duration_days: 6
+  turn_count: 52
+  approximate_tokens_estimate: 1854
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: prepaid_card_pony_layer
+  risk: 2
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0056
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:aa1aba810f8a15f57caae648d8ad2bf33094930c0bfcbb340211eab780f9d6c9
+pipeline_status: accepted
+title: other_illicit_coordination/prepaid_card_pony_layer
+conversation: |-
+  【10月8日】
+  B：哥，上次说的那个事，我们宿舍有人感兴趣
+  A：哪个活动？哦那个，行，你先弄三五张试试水
+  B：具体咋弄啊，他们问是啥活动我说不上来
+  A：就说是运营商冲业绩的充话费返现，新卡激活送话费，人人有份，别的不用多讲
+  B：那办一张我能拿多少
+  A：一张五十，现结，你要能拉一个人来帮你推，一张再加八十
+  B：这么好？那我先把室友搞定
+  A：记住一点，别拿你自己的身份证办，你的名字在这边挂过号了，换着人来
+  B：懂了，那用谁的
+  A：谁办用谁的名，你只管收卡，办完统一给我，卡别留手里
+  【10月9日】
+  B：哎我那件卫衣到了，尺码买大了，愁人
+  A：退了重拍呗，现在运费险都白送
+  B：懒得折腾，我拿去裁缝店改改，十五块钱的事
+  A：也行，改完跟定做的一样
+  B：室友说他下周才回学校，卡的事等他回来？
+  A：等不了，这批要得急，周五之前先给我凑到十张，激活要本人到场
+  B：十张有点赶，我尽力
+  【10月10日】
+  B：咱学校二食堂新开了个麻辣香锅，人爆多
+  A：好吃不，毕业五年都馋学校食堂那一口
+  B：味道行，就是阿姨手抖，肉给得看心情
+  A：哈哈哪都一样，你多打点菜补补，别老吃泡面
+  B：哥，今天办了四张，有两张用了我同学的名，没问题吧
+  A：没事，只要卡是新办的、本人到场办的就行，你把卡和那张单子一起收好
+  B：那个单子也要交给你吗
+  A：单子你拍照发我存个底，原件你自己收着，别弄丢了
+  B：行。对了，拉人头那个怎么算，我隔壁班的跟我一起跑了两栋宿舍
+  A：他算你的人，他每张给你算八十，他自己那边我再给返现，账我这边一笔笔记着
+  B：明白，那这周五结算吗
+  A：结，一分不会少你的
+  【10月11日】
+  B：这周末班里组织去山里看红叶，去不去啊哥
+  A：我得看店，你去呗，年轻人多走走
+  B：报名费八十，含车费，还挺值
+  A：值，记得带件厚外套，山里风硬
+  B：哥，又办了六张，现在一共十张了，齐了
+  A：好，今晚你来店里一趟，当面点卡，顺便把结算的事办了
+  B：要带什么吗，他们问我这活动是不是官方的
+  A：官方搞活动哪有让底下人贴钱跑的，话别说太满，就说名额有限先到先得
+  B：懂了，吊着点胃口
+  A：对，还有就是激活的时候本人都得到场，别替谁代办，这点你把好关
+  【10月12日】
+  B：昨晚那场球看了没，最后十分钟绝杀，宿舍楼都炸了
+  A：看了，我这暴脾气，差点把瓜子撒一地
+  B：下周还有一场，我约了人一起看
+  A：行，看完早点睡，别耽误正事
+  A：卡我点过了，十张都在，今天的钱转你
+  B：好嘞，我看看账对不对
+  【系统消息】A 向 B 转账 1280 元，已收款。
+  A：一千二百八你点点：十张的返现五百，带人头的一层提成四百，你垫的充值三百八，都在里头了
+  B：对上了，那我给我同学分他那份
+  【10月13日】
+  B：哥，这周五之前我还能再赶一批吗
+  A：能，上头说月底这一波要放量，你手里有多少我要多少，但规矩不变，别沾自己的名字
+  B：放心，经我手的都用本人到场办，我一个都不掺和
+  A：嗯，你机灵，这行就是赚个跑腿钱，别问那么多，也别往外说
+  B：知道哥，我就当勤工俭学了，周末我把下一批约起来

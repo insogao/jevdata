@@ -1,0 +1,129 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000304
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000006
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-e11066b771dfe776
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 自称资金方的 B 以『内部通道、不看征信、当天批』的话术，诱使开小吃店的熟人 A 在放款前缴纳三千元保证金；合同只以印章发虚的图片出示、拒绝一切核验，收款后放款一拖再拖，次日又以『解冻金』追加收费，典型先收费后消失的套路。
+  critical_evidence:
+  - B 自称走内部通道、不查征信，五万额度当天到账（不看征信秒批）
+  - 放款前要求先转三千元保证金，承诺随后原路退还（先交保证金）
+  - 合同仅以图片发送、印章发虚，拒绝视频与网点核验，称原件下款当天才给（合同为图片无法核实）
+  - 保证金到账后放款拖延，次日以流水对不上为由要求再交解冻金，A 起疑（收费链条与拖延手法）
+  benign_alternatives:
+  - 正规银行贷款流程
+  - 亲友借款
+
+attributes:
+  duration_days: 5
+  turn_count: 51
+  approximate_tokens_estimate: 1088
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: loan_fee_bait
+  risk: 2
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0062
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-028
+
+dedup:
+  content_hash: sha256:ba55c2f45a03f0387059f7f0fa78fdc850feb93bd7fe602924aa2f11d821660c
+pipeline_status: accepted
+title: fraud_scam/loan_fee_bait
+conversation: |-
+  【10月13日】
+  A：周哥，睡没，问你个事
+  B：说
+  A：店里想进台新冰柜再囤批货，差五万周转
+  B：银行不批？
+  A：我征信前两年花过，卡在系统上
+  B：那正好，我们这边不查那个，看日常流水就行
+  A：那太好了，要准备啥
+  B：先把近三个月流水发来，其他一会说
+  A：你家老大月考完没
+  B：完了，数学又没上九十，愁
+  A：我家回回卡作文，一对一半学期一千二
+  B：都是碎钞机，认了
+  A：哈哈，同命相怜
+  【10月14日】
+  A：流水发你了，你给看眼
+  B：收到，够数，五万能批，当天到账
+  B：我们走内部通道，不占银行那套流程
+  B：下款前走笔保证金三千，到账即放，保证金随后原路退
+  A：还要交保证金啊
+  B：都这么走，行业规矩，不信问老周
+  A：行，我问问
+  A：断崖降温，你家暖气费交没
+  B：交了，去年拖到最后吃亏
+  A：我这就去交
+  B：顺道把厚被子晒晒
+  A：好嘞
+  【10月15日】
+  A：周哥，合同呢，我看一眼再转
+  B：图发你了，看条款
+  A：这章是打上去的吧，发虚
+  B：电子章都这样，我们不走网点，原件下款当天连保证金一起退你
+  A：要不做个视频，我看眼你们办公室
+  B：通道那边不让录，资金方都低调，你理解下
+  A：那行吧，老周说他朋友在你那拿过两回钱
+  B：嗯，老面孔了
+  A：你们食堂还外包没，上回那烧鸭一绝
+  B：换了家，烧鸭没了
+  A：那来我店里，给你炒个粉多加蛋
+  B：行，改天
+  【10月16日】
+  A：想好了，保证金我转
+  B：转，四点前，今天排放款
+  【系统消息】A 向 B 转账 3000 元，已收款。
+  A：转了三千，你点下
+  B：收到，交复核了，今晚出额度
+  A：你老家房子装修完没
+  B：还差吊顶，工头天天催
+  A：装修无底洞，我家去年深有体会
+  B：谁说不是
+  A：回头开工喊我，给你监工
+  【10月17日】
+  A：周哥，说好的额度呢
+  B：卡在复核，你流水有笔进账对不上，得再交笔解冻金重新核
+  A：怎么又要交钱
+  B：不交就放着，额度保留到明天中午
+  A：……

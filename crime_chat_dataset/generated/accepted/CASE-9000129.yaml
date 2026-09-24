@@ -1,0 +1,153 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000129
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000023
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-1ed926347c1b0e1a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 采购负责人A为供应商B定制参数排他、放水验收并模糊发票品名，B抬价中标后按合同额两个点向A输送好处，先转两万元。
+  critical_evidence:
+  - 招标参数照B产品手册定制，仅B一家满足认证
+  - 单价按上期上浮四成，发票品名只开综合服务费、明细不走系统
+  - 验货走过场，翻新机按新品拍照存档
+  - B转A两万元，按合同额两个点、验收完补齐
+  benign_alternatives:
+  - 正常议价采购
+  - 集中采购折扣
+
+attributes:
+  duration_days: 3
+  turn_count: 77
+  approximate_tokens_estimate: 1631
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: procurement_price_padding
+  risk: 2
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0041
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-021
+
+dedup:
+  content_hash: sha256:f3124cbadea592b46750f4194beea967580423ecd66c17d09a3b81aff62796a4
+pipeline_status: accepted
+title: bribery_corruption/procurement_price_padding
+conversation: |-
+  【10月20日】
+  A：曹总，下周二开标，参数你发我那版我原样挂出去了
+  B：何经理够意思，那别人基本就没戏了
+  A：你那型号就你一家有认证，我也不用费劲做调研
+  B：报价我再抬一抬，预算还有空间
+  A：别太狠，评审那边不好看
+  B：懂，涨幅控制在预算线内
+  A：我下周去成都出差，顺路看个厂
+  B：成都这个季节舒服，不冷不热
+  A：客户非拉着我吃火锅
+  B：记得备肠胃药，我上次辣得怀疑人生
+  A：哈哈你也吃不了辣
+  B：江浙胃，没办法
+  A：那正好，咱俩点鸳鸯锅
+  A：报价单发我看看
+  B：发你了，单价按上一期上浮四成
+  A：四成？市场价摆在那，评审要问的
+  B：何经理，这型号除了我没第二家能供，参数就是照我产品手册写的
+  A：行吧。发票品名写笼统点，就开综合服务费，别落设备明细
+  B：明细我单独打一份纸质的给你，不走系统
+  A：评审那边我去打招呼，你把演示准备好
+  B：放心，演示我做了三年了
+  B：何经理最近瘦了？
+  A：办了健身卡，一周三练
+  B：私教贵不
+  A：一节四百，肉疼，但真有效
+  B：我也该动动了，肚子一圈
+  A：来，我卡能带人，明晚上
+  【10月21日】
+  A：你家闺女工作定哪了
+  B：留上海做设计，忙得脚不沾地
+  A：年轻人熬几年就好了
+  B：视频里看着又瘦了
+  A：我儿子还念大二，操心在后头
+  B：都一样，哈哈
+  A：下午开标，来陪标的两家材料都齐
+  B：那两家都是老熟人了，往回也陪你演过
+  A：人家就是走个程序，你嘴上把住门
+  B：我嘴严
+  A：四点出结果
+  B：嗯，等信
+  B：评审有没有问价格的
+  A：问了，我让他们按预算顶格理解
+  A：中了，恭喜曹总
+  B：哈哈多亏何经理！晚上我安排
+  A：饭就免了，家里有事
+  B：那怎么行，总得表示表示
+  B：秋茶给你留了两盒，明天带给你
+  A：你那岩茶是真好喝
+  B：老茶农直供的
+  A：多少钱，我转你
+  B：谈钱伤感情，两盒茶而已
+  A：那下回我请你吃饭
+  【10月22日】
+  A：第一批货周三到，验货那天你别过来了
+  B：不用我到场？
+  A：我签字就行，流程我最熟，你来反而多一道嘴
+  B：那批里有两台是翻新的，你验收时眼皮抬高点
+  A：知道了，照片我按新品拍，存档用
+  B：何经理爽快，那我直说，老规矩
+  A：你说
+  B：这单按合同额两个点，我先转两万，验收完补齐
+  A：行，老规矩，转我这张卡
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  A：收到
+  B：剩下的验收完三天内给你
+  A：不急，翻新那两台给我处理利索
+  B：放心，有退货机我给你换新
+  A：周三验货别掉链子
+  B：一定
+  A：下季度的维保也包给你，价格你看着写
+  B：何经理，这朋友我认定了
+  A：哈哈，互相成全
+  B：年底给我留个额度
+  A：先把这单干漂亮
+  B：闺女说十一回家，让我少喝酒
+  A：听闺女的，哈哈
+  B：你也别光顾着忙，身体要紧
+  B：明晚健身还去不
+  A：去，我把卡带上
+  B：带壶茶，练完咱俩喝

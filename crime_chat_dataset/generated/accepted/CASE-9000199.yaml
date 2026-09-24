@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000199
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000073
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-5b69eb3e7a310c70
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 兼职群里认识的学姐以夜间坐场兼职为名，把大一新生带进有偿陪侍性质的场子，一场三百当场结，并要求对宿舍统一口径保密，用保密维持隐蔽。
+  critical_evidence:
+  - A 说晚上的场陪人坐一坐热闹热闹，一场三百当场结
+  - A 以学姐身份说周六我先带你一回
+  - A 反复叮嘱别在宿舍说，对外只讲是社团活动
+  - 首场结束后凌晨 A 转账三百元并再次嘱咐保密
+  benign_alternatives:
+  - 正规礼仪接待兼职
+  - 社团夜间活动
+
+attributes:
+  duration_days: 6
+  turn_count: 43
+  approximate_tokens_estimate: 1522
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: dorm_introduction_network
+  risk: 3
+  relationship: 陌生人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0049
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-024
+
+dedup:
+  content_hash: sha256:7158601abad25c55ca1b48425d55a8e7bc0c64a78796c3a1fccf5f66a970f6ab
+pipeline_status: accepted
+title: sexual_transaction_exploitation/dorm_introduction_network
+conversation: |-
+  【9月21日】
+  B：学姐好,我是群里加你的那个大一新生,听群里说你有兼职路子
+  A：嗯,我。你哪级哪系的
+  B：大一,工商管理。我今年十九,第一次离家这么远上学,想攒点生活费
+  A：哦哦,那平时晚上有空吗,我们那儿缺人手
+  B：有空!我课都在白天,就是没啥经验,但我肯学
+  A：经验不要紧,人看着干净利落就行。周六晚上有个场子,我先带你一回
+  B：场子是干嘛的呀,发传单吗
+  A：不是发传单,就是陪人坐一坐,热闹热闹,一场三百,当场结
+  B：就,就坐着聊天?
+  A：嗯,机灵点就行,穿得精神点。别在宿舍说这个,就说是社团活动
+  B：哦哦,好吧,我看看周六的时间
+  【9月22日】
+  B：学姐,食堂三楼的麻辣香锅是不是比一楼好吃,我昨天才发现
+  A：三楼是躲不过的坑,二楼那个窗口才是隐藏款,鸭腿饭
+  B：明天就去!谢谢学姐投喂
+  A：客气,带饭卡,二楼不收现金
+  A：你哪里人,川渝的?听你说话有点那个味儿
+  B：贵州的,我家那边的辣椒可香了,回头我妈寄了我分你
+  A：好啊,我无辣不欢,就怕一瓶撑不过一礼拜
+  B：哈哈那我让她寄两瓶
+  【9月23日】
+  B：学姐,选修课选影视鉴赏还是书法啊,我纠结死了
+  A：书法,给分好,老师佛系。影视鉴赏要写三篇影评
+  B：听学姐的!那我有救了
+  A：选课这种事,听老人言,少吃亏
+  【9月24日】
+  A：菜鸟驿站又排长队了,我取个件排了二十分钟
+  B：你取的啥呀,我看你抱着个大箱子
+  A：给我妈买的披肩,她下个月生日
+  B：学姐好贴心,我妈生日我都忘了,完了完了
+  A：现在记下来也不迟,哈哈
+  【9月25日】
+  B：学姐,明天那个场子,我想好了,我去,反正就坐着聊天对吧
+  A：对,我带你,你就坐我旁边,少喝别人递的东西,人多了就往我身后站
+  B：那我穿啥,我有件白衬衫
+  A：白衬衫就行,简单干净最好。九点我来宿舍区门口接你
+  B：好嘞。三百是当场给吗,我想好拿这笔给我妈买个按摩仪
+  A：当场结,有时候是转账,看场合
+  B：学姐你看,宿舍楼下那只橘猫今天蹲我窗台了,我拍了照片
+  A：哈哈它认吃的就是认人,你喂过它火腿肠吧
+  B：喂过一次,它就记仇,不对,记恩
+  A：猫比人实在,谁给吃的记谁
+  【9月26日】
+  A：回去睡吧,今天表现可以,人也没闹,下次有这种场子我再问你
+  B：嗯,今天有点累。不过姐,说好的三百还给我了吗
+  【系统消息】A 向 B 转账 300 元，已收款。
+  A：转你了,查收。这钱先拿着,别跟宿舍的人提今晚去哪了
+  B：知道,就说社团活动。姐,下次要是时间不太晚,我再来吧,三百确实挺香的
+  A：懂事,睡吧,明天中午叫你吃鸭腿饭

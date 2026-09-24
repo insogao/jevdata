@@ -1,0 +1,143 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000069
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000088
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-64b81a8825872924
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: privacy_doxxing
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A为核赔绕过公函流程，借老乡关系私购体检机构前台的客户病历截图，用'请吃饭'名义支付信息费并暗示长期合作。
+  critical_evidence:
+  - A请B'把病历调出来'发他，明确'别走系统'，只要前台手头的打印件
+  - A用'这条信息值一顿饭'暗示对价
+  - B犹豫一天后把体检报告既往史页拍照发给A，并叮嘱别外传
+  - 信息送达次日A转账888元'折现饭钱'，并提出以后'老规矩'
+  benign_alternatives:
+  - 保险正常理赔调查的调证需求
+  - 公估公司公函调档流程
+
+attributes:
+  duration_days: 4
+  turn_count: 66
+  approximate_tokens_estimate: 1370
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: insurance_claims_snoop
+  risk: 2
+  relationship: 陌生人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0034
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-019
+
+dedup:
+  content_hash: sha256:c7d9ffcddc45dfb332be3920aaf1129ddbdb9b91011458beb5e1fe29fc9cc958
+pipeline_status: accepted
+title: privacy_doxxing/insurance_claims_snoop
+conversation: |-
+  【10月9日】
+  A：你好 同乡群里老周介绍 说你在仁和体检前台?
+  B：是我 你好
+  A：我做保险理赔的 以后多有麻烦
+  B：客气 常来
+  A：你们这儿体检要排号吧
+  B：排 明天上午就剩三个号了
+  A：你后台还能看剩号呢
+  B：前台都看得到
+  A：那挺方便
+  B：我们早上队能排到马路牙子
+  A：对了改天细聊 我手头有个单子 可能要麻烦你
+  B：单子? 我们这只能出体检报告
+  A：对 就是报告的事 不急 周五前都行
+  B：行 先这么说
+  【10月10日】
+  A：早 有个客户在你那做过体检 理赔要用材料
+  B：什么材料
+  A：把病历调出来 那份体检报告的明细 发我一份
+  B：这得走流程 你发公函来 我们对接
+  A：函件太慢 客户坐在理赔大厅哭呢 就别走系统了 你手头打印的帮我拍一份
+  B：这不太好 涉隐私
+  A：都是为干活 我不外传 就核既往症
+  B：我再想想
+  A：行不急 这条信息值一顿饭 改天请你吃饭 老乡价
+  B：先上班了 今天又降温
+  A：你们大厅门口风大吧
+  B：风幕机坏了半个月
+  A：报修啊兄弟
+  B：报了 说等配件
+  A：大公司流程都慢
+  B：谁说不是
+  A：考虑得怎么样
+  B：你到底核什么 那客户什么纠纷
+  A：车险人伤 对方说摔的 我们要核细节 你懂的
+  B：哦
+  A：就既往史那一页 拍得模糊点都行 我要个大概
+  B：下班我看看 那份要是没销毁再说
+  A：好 晚上等你信
+  B：接孩子去了 一年级作业比我还忙
+  A：我家二年级 一样
+  B：陪写到九点
+  A：家长群比董事会还忙
+  B：哈哈哈
+  B：晚上我看看那份东西
+  A：好 你先忙家里
+  【10月11日】
+  A：早 考虑得咋样
+  B：急啥 又没说不帮 咱俩还是老乡
+  A：老周老提你 说你俩一个村的
+  B：河边摸鱼长大的 哈哈
+  A：那时候偷地瓜挨打没
+  B：挨过 现在想想香
+  B：那份没销毁 拍了几页 你看是不是这些
+  A：对 就要这个 既往史那页再拍清楚点更好
+  B：行 你收好 别外传啊
+  A：放心 就核赔用
+  B：这事天知地知
+  A：懂 老乡饭局我来安排
+  A：那页有点糊 再补一张
+  B：重拍了 你看下
+  【10月12日】
+  A：核完了 报告没问题 你帮大忙了
+  B：那就好
+  A：说好的一顿饭就不请了 直接折现 自己加个菜
+  B：哈哈这多不好意思
+  A：应该的 老乡 888 图个吉利
+  【系统消息】A 向 B 转账 888 元，已收款。
+  B：收到 你太客气了
+  A：以后有单子再麻烦你 老规矩
+  B：你可少来点 哈哈 不过老乡的事 能帮就帮

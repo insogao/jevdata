@@ -1,0 +1,130 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000057
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000050
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-a2179c47f01ad924
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 借行规向新入驻商户索取开张心意，不给就发动同行排挤其生意。
+  critical_evidence:
+  - A 以这条街有这条街的规矩要求新店开张前走动
+  - 明天还照原样来就别怪我没提醒式的通牒
+  - 兄弟们都会来多问候你，借人多势众施压
+  - 开业前夜 B 转出备注茶叶款的一万八千八，次日 A 态度转好带人捧场
+  benign_alternatives:
+  - 同业竞争的正常摩擦
+  - 市场管理方的开业规劝
+
+attributes:
+  duration_days: 4
+  turn_count: 53
+  approximate_tokens_estimate: 1567
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: territory_warning
+  risk: 3
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0033
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-019
+
+dedup:
+  content_hash: sha256:c904d02a114ef51e45bfc22a7c7dc99aebe8c62cec839657802949930ff2d931
+pipeline_status: accepted
+title: violence_extortion/territory_warning
+conversation: |-
+  【10月11日】
+  A：听说街尾新开了家湘菜馆，是你铺子？
+  B：是我，下周六开业，还请多关照
+  A：咱这条街十年没换过招牌了，你年轻人手笔大
+  B：没办法，租金刚性，只能往前冲
+  A：不过老弟，咱们这条街有这条街的规矩
+  B：哦？愿闻其详
+  A：开张前，得跟街坊老户走动走动，这是老传统
+  B：好说，开业宴我给各位老街坊都留了座
+  A：吃饭是吃饭，规矩是规矩，你是个明白人
+  B：呃，我尽我所能
+  A：今天台风外围，你门口那招牌得加固
+  B：收到，下午就让工人加两道钢丝
+  【10月12日】
+  A：昨晚风大，你招牌没事吧
+  B：加固了，稳得很，谢提醒
+  A：嗯，街里就怕砸着人，你这种新招牌最扎眼
+  B：哥，中午过来尝尝我们的剁椒鱼头？提提意见
+  A：试菜就不必了，说正事，明天市场管理所要来查消防，我给你递过话
+  B：消防我全按标准做的，不怕查
+  A：不是怕不怕的事，这条街抬头低头都是熟人，做人留一线
+  B：您这话我有点听不明白
+  A：明天你要还照现在这个架势往外推促销，就别怪我没提醒你
+  B：促销怎么了，开业让利不正常吗
+  A：正常，太正常了，正常到兄弟们都会来多问候你
+  B：问候？
+  A：街上老户多，你店门口就那么大地方，到时候人进人出，不好看
+  【10月13日】
+  B：哥，昨晚我想了想，您明说，我该怎么做
+  A：明人不说暗话，联谊会年年要办，老街坊红白喜事要随，新户入伙，有个茶水份
+  B：多少
+  A：没定数，看你心意。心意到了，往后你门口搞活动，兄弟们帮你撑场，没人来找麻烦
+  B：这听着不太合适吧，我小本经营
+  A：小本有小本的交法，你别把话想歪，这是人情，不是买卖
+  B：我再想想
+  A：周日带嫂子去水库钓鱼了？那边坡陡，当心点
+  B：……您消息真灵通
+  A：这条街就这么大，谁家去哪儿我都清楚，都是为你好
+  B：今天师傅把后厨排风装完了，总算齐了
+  A：排风口朝巷子，晚上老张家的窗户正对着，让他给你装个导流
+  B：好的，我今晚就去说
+  A：想得怎么样了
+  B：哥，能不能缓缓，开业回本再说
+  A：缓可以，明天你那开业气球拱门，怕是要漏气哦
+  B：您这是威胁
+  A：我这是善意提醒，街上的事，从来都是和气生财
+  【10月14日】
+  B：哥，我想通了，入乡随俗
+  A：嗯，懂事的孩子有糖吃
+  B：这是我一点心意，给联谊会添点茶叶，您别嫌弃
+  【系统消息】B 向 A 转账 18888 元，已收款。
+  A：收到了，你这个人情我记下了
+  B：那我明天开业…
+  A：放心，明晚我带几个老户去捧场，门口活动照搞，谁也不会多说一句
+  B：那我就放心了，谢谢哥
+  A：客气什么，以后这条街，你我就是自己人
+  B：应该的，那批金骏眉我特意挑的，您慢用
+  A：早点休息，明天大日子，开业大吉

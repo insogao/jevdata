@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000301
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000099
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-835fd275ce854b6e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: money_laundering_obfuscation
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: B 手里一笔趴着不动的钱需要过一遍变成名正言顺的退款，借熟人强子的烟酒店收款码把四万分四笔扫成『营业款』，再由店里以活动退款名义原路退到他指定的银行卡，强子抽两个点手续费，店里的月底流水也顺带做漂亮。
+  critical_evidence:
+  - B 的四万元分四笔、每笔一万、分两天扫入 A 店收款码，伪装成顾客购物款（资金入口）
+  - 到齐后由 A 以『活动商品退款』名义原路退到 B 指定的第三方银行卡（原路退回指定卡）
+  - A 按行价抽两个点手续费共八百，实退三万九千二（手续费两个点）
+  - B 明言借通道走一遍钱才『名正言顺』，A 自认月底流水也好看，双方各取所需（对价与话术闭环）
+  benign_alternatives:
+  - 正常电商退款
+  - 刷单退款纠纷讨论
+
+attributes:
+  duration_days: 5
+  turn_count: 54
+  approximate_tokens_estimate: 1249
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: refund_cycle_wash
+  risk: 2
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0062
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-028
+
+dedup:
+  content_hash: sha256:b1cd956ddab65d7a1f8909d178df8b51d98c1510c0e57902d580ddb27b4e5bf5
+pipeline_status: accepted
+title: money_laundering_obfuscation/refund_cycle_wash
+conversation: |-
+  【9月8日】
+  B：强子，问你个事，你店里收款码一天流水多少
+  A：看日子，周末能过两万
+  B：够用，我这有笔钱想借你通道走一遍
+  A：什么钱，说清楚
+  B：客户压我这的一笔货款，趴着不动难受，走一遍变成正经退款回来
+  A：就是扫你付款进我店，我再按退款退你？
+  B：对，退到我给的卡上
+  A：卡不是你的？
+  B：我小舅子的，他那卡干净，往后用着方便
+  A：手续费怎么说
+  B：行价两个点，四万就八百
+  A：你嫂子非让我囤两百盒月饼，说今年散装的好卖
+  B：囤，中秋前一周断货的都是散装的
+  A：你可别忽悠我，压手里算你的
+  B：压手里我按进价全吃，行了吧
+  A：这可是你说的，我截图了
+  B：截吧，男人说话
+  【9月9日】
+  A：走的时候分几笔
+  B：分四笔，每笔一万，间隔开，今天两笔明天两笔
+  A：行，收款码就贴在柜台
+  B：退的卡号我发你，到齐后一次性退，别拆
+  A：懂，账上我做活动商品退款，正好月中在做活动
+  B：聪明，这样你月底流水还好看
+  A：互相成全
+  A：你家小子月考成绩出了没
+  B：出了，班里第十二，进步五名
+  A：可以啊，奖励了没
+  B：带吃了顿烤肉，答应的暑期手机又往后拖
+  A：你这爹当的，抠
+  B：精打细算懂不懂
+  【9月10日】
+  B：上午两笔走起，你柜台盯下
+  A：行，来了我就点
+  B：第一笔进了，第二笔十分钟后
+  A：看到了，我记上
+  A：一下午盘货，腰又不行了
+  B：让你儿子给你踩踩背
+  A：他那体重踩我，直接送医院吧
+  B：哈哈哈，那去按个摩，几十块的事
+  A：明天去，今天懒得动
+  【9月11日】
+  B：今天两笔，走完你把四万减八百退我小舅子卡
+  A：行，中午前应该齐
+  B：第四笔到了，齐了吧
+  A：齐了，四万整，我这就退
+  【系统消息】A 向 B 转账 39200 元，已收款。
+  A：退了，三万九千二，到你小舅子那张卡，让他看着点
+  B：收到，辛苦，回头那八百我请你吃烤鱼
+  A：烤鱼安排上，另算
+  A：中秋你回老家不
+  B：回，票都买了
+  A：那你那份月饼赶紧拿走，别都压我这
+  B：周末来拉，给我留两盒蛋黄的
+  A：行，先给你装好
+  【9月12日】
+  B：下回还有一笔大的，中秋后聊，那阵你店里流水更好看
+  A：行，规矩不变，你少喝点酒
+  B：知道了，跟老婆汇报去

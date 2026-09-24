@@ -1,0 +1,128 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000308
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000071
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-62aeae12677efca6
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 无隐藏违法意图：在演艺公司工作的表姐为读大三的表妹对接正规商场展会暖场商演，日结报酬、公司承租演出服、垫付路费并约定凭发票对公报销，全程公开透明。
+  critical_evidence:
+  - 招募为市里展会开幕式的正规商演暖场伴舞，演出经正规报批，日结八百、签劳务合同
+  - 演出服由公司统一承租、押金公司垫付，不向学生收取任何费用
+  - 表姐先行垫转三百元作来回路费与餐费，明确凭发票、抬『星芒文化传媒有限公司』向公司财务冲账报销（对公流程，资金有决定性正常解释）
+  - 面试安排在白天公司办公区三楼排练厅，家长知情并支持
+  benign_alternatives:
+  - 正规夜场演出招募
+  - 酒水促销兼职
+
+attributes:
+  duration_days: 4
+  turn_count: 51
+  approximate_tokens_estimate: 1137
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: night_club_female_recruit
+  risk: 0
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0062
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-028
+
+dedup:
+  content_hash: sha256:652b0c24afccc8b509b954d66f314f97089f9a18f6ebe39487308c12743c2a2c
+pipeline_status: accepted
+title: sexual_transaction_exploitation/night_club_female_recruit
+conversation: |-
+  【11月3日】
+  B：姐！你们公司那个商演还招人不
+  A：招啊，急招，你问这干嘛
+  B：我们舞蹈社想攒点社费，正好练练手
+  A：你来啊，暖场伴舞，一天八百，日结
+  B：我行吗，我怕拖后腿
+  A：你拉丁白学的？就商场展会那种暖场，动作简单
+  B：要不要交什么费用，先说好
+  A：一分不收，签劳务合同，白天在公司排练
+  B：那我先录段舞发你？
+  A：发，我转给舞蹈总监
+  B：姐帮我看看选课，瑜伽和羽毛球撞了
+  A：选瑜伽，羽毛球冬天冻成狗
+  B：也是，那我改瑜伽
+  A：改完发我瞅瞅
+  B：发了，你瞅
+  A：挺好，就是满课，别累着
+  【11月4日】
+  A：总监看了视频，说周五下午来公司面一下，认认人
+  B：要准备啥
+  A：带学生证身份证，穿活动方便的衣服，地址我发你
+  B：用不用自己买演出服
+  A：不用，演出服公司统一租，押金公司垫，不从你们身上收一分
+  B：那敢情好
+  A：场子是市里展会开幕式，正规报批过的，放心
+  B：姐，你们楼下那家烤奶好喝不
+  A：三分糖去冰，你最近不是嚷嚷减肥
+  B：跳一天舞啥都消耗了，全糖！
+  A：行行，拍张照馋我一下
+  B：已点，等着
+  【11月5日】
+  B：姐，楼下橘猫生崽了
+  A：几只！
+  B：四只，宿舍楼下喂着
+  A：别喂牛奶，买幼猫粮
+  B：好嘞，这就下单
+  A：跟你说，定你了，周五面试就是走个流程认认人
+  B：真的假的！谢谢姐
+  A：周五来回打车加午饭，你先垫，回来拿发票找财务报销
+  B：好，我记着攒发票
+  A：抬头开『星芒文化传媒有限公司』，财务报销认这个
+  B：抄下来了
+  【系统消息】A 向 B 转账 300 元，已收款。
+  A：算了别垫了，我先转你三百应急，发票回来冲账就行
+  B：姐你真好，回请你食堂撮一顿
+  B：明天断崖降温，大衣翻出来
+  A：正想问我秋裤呢，见着没
+  B：你毕业那纸箱里，我搬家时见过
+  A：明儿翻翻
+  【11月6日】
+  A：下午三点，前台报我名字
+  B：收到，学生证身份证发票夹都带上
+  A：嗯，妈那边我说过了，你安心
+  B：知道，她还嘱咐我听你话
+  A：到了吱一声
+  B：好嘞姐

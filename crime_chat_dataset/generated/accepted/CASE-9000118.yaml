@@ -1,0 +1,144 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000118
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000093
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-bcbcb4434f306adb
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 同事之间合谋虚构贸易闭环购买进项：合同、货单、资金三流全部造齐以应付核查，八个点点数费私相授受不走厂里账，对外一律口径为正常采购。
+  critical_evidence:
+  - B为父亲厂里的季度末进项缺口向同事A求助所谓渠道
+  - A开价八个点，承诺合同、货单、资金三流一致全部配齐
+  - 资金走公户当天进出形成闭环，3200元点数费私下微信转给A、不走厂里账
+  - A要求对外只说正常采购、别说破，票和成套单据次日配齐送达
+  benign_alternatives:
+  - 正常税务筹划沟通
+  - 供应链上下游开票业务往来
+
+attributes:
+  duration_days: 6
+  turn_count: 65
+  approximate_tokens_estimate: 1546
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: fake_trade_invoice
+  risk: 3
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0040
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-021
+
+dedup:
+  content_hash: sha256:5cf1c2e65bacaf209b1713c5808ffa0f006720d9ed7531d36232421279e1fc75
+pipeline_status: accepted
+title: money_laundering_obfuscation/fake_trade_invoice
+conversation: |-
+  【10月20日】
+  B：陈哥 在吗 请教个事
+  A：说
+  B：我爸厂里这个季度进项又差一截 财务说汇算要多交好几万
+  A：差多少
+  B：四万左右的样子
+  A：这个数好办 你要的是进项吧
+  B：对啊 你有路子?
+  A：做了三年了 渠道稳 受票那几家都可靠 没出过岔子
+  B：怎么个做法
+  A：面谈 这事微信说不清 中午食堂说
+  B：行
+  【10月21日】
+  B：昨天你说的方式 我回来想了下 三流一致是吧
+  A：对 合同 货单 资金 一样给你配齐 缺哪样补哪样
+  B：合同货单也能配?
+  A：那边仓库有现成的货 单子照着开 品名随你 五金件最顺
+  B：资金呢
+  A：你公户把钱过到对方公户 当天再走回来 一进一出 账面上挑不出毛病
+  B：那你们收多少
+  A：点数八个 行里老价
+  B：能不能六个
+  A：八个 受票方可靠就值这个价 你去打听打听
+  A：降温了 你那件厚外套还不找出来
+  B：我火力壮 不怕
+  A：年轻 仗着火力壮 等你到我这岁数就知道了
+  B：哈哈 到时候像你一样保温杯里泡枸杞
+  【10月22日】
+  B：八个就八个 就当买个踏实
+  A：明白人 四万票 八个点 3200
+  B：什么时候能开
+  A：这周内 合同我今天让那边拟 品名写五金配件 数量金额按你厂里账面缺口来
+  B：货单也一起?
+  A：送货单入库单一套 骑缝章都有
+  B：我爸那边问起来我怎么说
+  A：就说正常采购 你别说破 这是规矩
+  B：明白
+  A：还有 过账那天你盯紧点 时间别错开
+  【10月23日】
+  B：合同模板发来了 我爸看了说没毛病
+  A：那就定明天上午过账 你公户备好钱
+  B：四万当天能回来吗
+  A：上午过去 下午就转回 你盯着网银
+  B：行
+  A：明天晚上打球不 老地方
+  B：打 你上把赢我那球我到现在不服
+  A：服不服 上分数见
+  B：行 明晚见真章
+  A：带好水 场地我订了
+  【10月24日】
+  B：陈哥 钱备好了 一会儿过账
+  A：嗯 上午过去 下午资金就回来 你盯着网银
+  B：公户已经转出去了 回单截图发你
+  A：收到
+  B：对了 3200怎么给你 现金还是
+  A：微信转我私人号 别走厂里账
+  B：懂
+  【系统消息】B 向 A 转账 3200 元，已收款。
+  A：收到 资金回来吱一声 票我下午安排 明天送到你厂里
+  B：今天食堂居然有糖醋排骨
+  A：给你留了一份 我看你喜欢
+  B：陈哥你真是贵人 工作生活都照顾
+  A：少贫 盯好你下午的资金
+  【10月25日】
+  B：陈哥 资金回来了 四万整 分毫不差
+  A：嗯 票到没
+  B：到了 票和送货单入库单都齐 合同章也全 我爸说比正规厂家的还全
+  A：那是 三流给你配齐 缺一样都不算本事
+  B：说真的 你们这渠道什么来头
+  A：别打听 你知道找我就行 这是规矩
+  B：行 下季度还差 我提前十天找你
+  A：行 到时候早点说 那边要排单

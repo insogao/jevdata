@@ -1,0 +1,133 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000147
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000083
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-07a13dbf016266f6
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: privacy_doxxing
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A出钱让修车行老板在他合伙人的车上偷偷装磁吸的盒子、手机上也装一个，还约好一周换一台车，免得那人起疑。
+  critical_evidence:
+  - A托B在合伙人他常保养的车上装磁吸免接线的盒子
+  - 商量给他的手机也装一个，借口是车队统一要求
+  - 约定一周换一台车，别让他摸着规律起疑
+  - A转B 2000元，说后头跑腿另算
+  benign_alternatives:
+  - 车队统一的车辆管理安排
+  - 家人之间共享位置的正常使用
+
+attributes:
+  duration_days: 5
+  turn_count: 55
+  approximate_tokens_estimate: 1097
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: privacy_doxxing
+  subtype: location_share_tracking
+  risk: 3
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0043
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:154c78e24afddfd858148962359329fdcc0e3afca3a6fa60aa00f674b2cda7ed
+pipeline_status: accepted
+title: privacy_doxxing/location_share_tracking
+conversation: |-
+  【7月7日】
+  A：在店没 他那车不是一直你那保养的嘛
+  B：在 什么情况
+  A：上回说的那个东西 你那儿有吗
+  B：有 磁吸的 免接线 放上就能用
+  A：多大个 会不会被发现
+  B：烟盒一半大 黑的 车队里管车的都见过 没人当回事
+  A：行 你给我备一个 周四他来保养 你顺手
+  B：懂 到时候完了我给你信
+  【7月8日】
+  A：这天热得邪乎 你店里空调顶住没
+  B：顶住 昨天刚加氟 过来吃瓜 冰了一宿
+  A：什么瓜
+  B：麒麟 保甜 给你留了俩
+  A：行 下班顺路拿
+  B：冰柜最下层 自己翻
+  【7月9日】
+  B：瓜拿了没 别放到坏了
+  A：拿了 甜 谢了
+  A：明天他十点到 你记着
+  B：记着 保养加洗车 两个钟头
+  B：你到底跟他什么仇 不像生意上的事
+  A：生意上的账 我看住他别乱来 你只管装
+  B：行 我只管装
+  A：周五烧烤还出不
+  B：出 老位子 你带酒
+  A：两瓶够不
+  B：你那度数 两瓶正好
+  A：那就这么定
+  B：串我多要二十把 你别放鸽子
+  A：不放 明晚见
+  【7月10日】
+  B：弄好了 照片发你一张 你收一下
+  A：收到 看不出来什么 可以
+  A：手机那个也装上 不然人一出门还是抓瞎
+  B：装哪个
+  A：就那个家人共享的 我跟他说车队统一要求
+  B：行 他取车时我提一嘴
+  A：好 事了我转你
+  【系统消息】A 向 B 转账 2000 元，已收款。
+  A：两千 先拿着 后头跑腿另算
+  B：收到 够意思
+  A：对了 车那事 一周给他换一辆 别老搁一台
+  B：换到别的车?
+  A：队里哪台都行 别让他摸着规律
+  B：懂 下回保养时挪
+  A：你家小子暑假作业动没
+  B：动啥动 天天疯玩 甩给他姥爷了
+  A：姥爷带娃 悬
+  B：比我强 至少管得住
+  A：哈哈 也是
+  B：回头让他给你背一段课文
+  【7月11日】
+  A：周日水库去不 老宋说他那边出鱼
+  B：去 就怕晒
+  A：带伞 早去早回
+  B：那我头晚把竿理出来
+  A：对了 共享那个 他昨天点了没
+  B：点了 我看着装的 一切正常
+  A：行 挪车的事下回保养再说
+  B：好

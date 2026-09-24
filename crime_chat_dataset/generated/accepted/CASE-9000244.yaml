@@ -1,0 +1,128 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000244
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000105
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-a336ad2c41993408
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: theft_robbery_property_crime
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A 把昨晚来历不明的一批手机按老价格出给二手店 B，B 明确表示收货不问来路，双方是长期固定的上下游。
+  critical_evidence:
+  - A 称昨晚刚到一批十二台手机，成色接近全新
+  - B 表态验货不问来路
+  - 沿用固定老价格，每台让 A 赚三百，现金当面结清
+  - 当晚在 B 店铺后门交货，约定后续继续供货
+  benign_alternatives:
+  - 二手手机回收商正常收货
+  - 个人闲置转让
+
+attributes:
+  duration_days: 5
+  turn_count: 51
+  approximate_tokens_estimate: 1006
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: fence_stolen_goods
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0055
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:9d31bbba4f31a269cbdcbc56c6f64f59b8f040a6db5a85cee5065aae09b0c862
+pipeline_status: accepted
+title: theft_robbery_property_crime/fence_stolen_goods
+conversation: |-
+  【9月14日】
+  A：睡没
+  B：没，咋
+  A：昨晚到的货，手里面一共十二台
+  B：什么机型
+  A：两个新款，剩下中端走量的
+  B：成色呢
+  A：基本全新，有膜有盒
+  B：明天带一台过来我看看
+  A：你晚饭吃了没，我还没吃
+  B：前面买了烤冷面，垫了一下
+  A：大半夜吃这个，胃不要了
+  B：干我们这行的，饭点都是错峰
+  A：那明晚我请你嗦粉，看完货正好
+  B：行，老地方那家
+  【9月15日】
+  A：昨晚说的那批，你看了一眼没
+  B：你出手的东西不会看走眼，成色你说了基本全新
+  A：我的意思是收不收
+  B：收，老规矩，验货不问来路，你放心
+  A：明白，那价格还按老价格？
+  B：老价格，一台我让你赚三百，十二台一次清
+  A：行，比上回还多两台
+  B：多的我吃得下，店里有老客等着要
+  A：那就这么定
+  【9月16日】
+  A：货我分了两包，一台一台都试过机
+  B：行，下午四点店里后门进，前门在装修
+  A：明白，老地方
+  B：把盒子膜都带上，老客挑得细
+  A：带了，一样不少
+  B：你老家那边最近咋样
+  A：我妈血压有点高，别的还好
+  B：让她少吃咸，我叔也这毛病
+  A：说了不听，顿顿咸菜
+  B：老人都这样，得顺着劝
+  A：回头买个体脂秤寄回去
+  【9月17日】
+  A：货齐了没，我这边准备动身
+  B：齐了，现金我点好放抽屉了
+  A：一万八对吧，十二台一台一千五
+  B：对，你点清楚，一台都不能少
+  A：你数货我数钱，老规矩
+  B：行，半小时到？
+  A：差不多，红灯多
+  A：到了，你腰好点没
+  B：贴了膏药，久站还是疼
+  A：你这毛病得去拍个片子
+  B：忙完这阵去，店里离不开人
+  A：健康要紧，别硬扛
+  【9月18日】
+  B：昨天的货清了两台，都夸成色好
+  A：那批就是快，出手要趁早
+  B：下回有好的提前给我留
+  A：行，量大的话我第一时间找你
+  B：成，老价格不变，随时出货

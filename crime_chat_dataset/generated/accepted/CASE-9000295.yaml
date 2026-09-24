@@ -1,0 +1,119 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000295
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000017
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-a6f2d3a68960a41e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A借中间人B在关键时刻打了招呼确保中标，约定等确认函落定后把说好的那个数私下结给B，不走公司账也不声张。
+  critical_evidence:
+  - A两天内反复追问那边的进度，一天问三遍
+  - B确认名单里面有你，基本稳了，就等确认函
+  - A主动提出确认函一到就把之前说的那个数办了，B说走老渠道
+  - A叮嘱这事出了门谁也别提、项目群里一个字不带走，连公司账都不走
+  benign_alternatives:
+  - 合法居间撮合的服务费
+  - 朋友帮忙牵线的事成答谢
+
+attributes:
+  duration_days: 2
+  turn_count: 45
+  approximate_tokens_estimate: 970
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: intermediary_payment_after_result
+  risk: 2
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0061
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-028
+
+dedup:
+  content_hash: sha256:3bbeb20a67ef7c07e9e344ac83fb2b519f481a2bb3f07acc6b43cf1750c21caa
+pipeline_status: accepted
+title: bribery_corruption/intermediary_payment_after_result
+conversation: |-
+  【9月10日】
+  A：老陈，那边有动静没
+  B：别急，还没到日子
+  A：前天不是说这周出结果吗
+  B：流程就那样，走完就得下周，你一天问三遍我头都大
+  A：不是我着急，公司这季度就指着这单了
+  B：放心，话我已经带到了
+  A：那边怎么说
+  B：说你这个标做得规矩，印象不差
+  A：那……之前的数，还按老规矩来？
+  B：按老规矩，事成了再说，别提前瞎打听
+  A：行行，我不多嘴
+  B：先不聊这个，我家那小子择校的事，你不是认识实验中学的人吗
+  A：认识，回头我帮你问，这忙必须帮
+  B：那先谢了，下周要交材料
+  A：你材料发我，我让人递过去
+  B：好
+  A：又想了下，万一这周出不来呢
+  B：出不来就等，你越催我越不好办事
+  A：懂懂，我就是心里没底
+  B：你把心放肚子里，都安排上了
+  A：周末出来钓鱼不，老李包了一条船
+  B：这周悬，等事落定再放松
+  A：行，等你好消息
+  B：嗯
+  【9月11日】
+  B：在吗，给你带个话
+  A：哎呦，来了来了，怎么样
+  B：名单里面有你，基本稳了，就等明天的确认函
+  A：太好了！老陈，全靠你
+  B：客气什么，你自己材料做得也扎实
+  A：那个事，确认函一到，我就把之前说的那个数给你办了
+  B：嗯，老规矩，走老渠道
+  A：数目不变吧
+  B：不变，一分不多要
+  A：应该的应该的
+  B：还有，这事出了这个门谁也别提，尤其项目群里，一个字都别带
+  A：懂，我连公司账都不走，你放心
+  B：嗯，越少人知道越好
+  A：明白，就咱俩知道
+  A：确认函下来，我做东，叫上老李吃个饭
+  B：吃饭随意，东西就免了
+  A：那哪行，中秋快到了，节礼我让人送你那儿
+  B：普普通通的就行，别整花哨的
+  A：知道知道，都按你说的办
+  B：等函吧
+  A：好嘞，静候佳音

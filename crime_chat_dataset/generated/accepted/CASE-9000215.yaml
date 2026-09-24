@@ -1,0 +1,140 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000215
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000098
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-f2ee50338efa84e7
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 无隐藏违法意图：店员为儿子缴纳留学学费，在老板建议下使用本人每年5万美元便利化额度、通过银行手机端'留学缴费'直汇学校，并明确拒绝了私下低价换汇渠道。
+  critical_evidence:
+  - 学费通过手机银行'留学缴费'直汇学校，需上传录取通知书和缴费单
+  - 使用本人每年5万美元便利化额度，因单日限额分几笔汇出
+  - 明确拒绝'低价换汇群'并退群，提醒群内有人被骗资金被冻
+  - 老板预支5000元按财务借支处理，下月工资分两次扣还
+  benign_alternatives:
+  - 合理换汇额度使用
+  - 留学缴学费
+
+attributes:
+  duration_days: 4
+  turn_count: 63
+  approximate_tokens_estimate: 1974
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: cross_border_smurfing
+  risk: 0
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0051
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-025
+
+dedup:
+  content_hash: sha256:f3913a3f7c1e069382fbfba8b2e3454fe6a58a8909622e453d9662a1e6a0f05b
+pipeline_status: accepted
+title: money_laundering_obfuscation/cross_border_smurfing
+conversation: |-
+  【9月8日】
+  A：小吴，今天早市到的皮皮虾不错，你安排下摆台
+  B：收到段总，我这就去
+  B：段总，这批膏蟹真肥，给您家里留几只不
+  A：留四只，晚上我爹来，他就好这口
+  B：行，给您挑最沉的
+  A：这季节就是吃蟹的时候，过了这阵就柴了
+  B：是啊，就九、十俩月，忙但挣钱
+  A：辛苦你，天天四点去码头，不容易
+  B：段总，跟您请个假，下周二下午想去趟银行
+  A：行啊，啥事
+  B：我儿子墨尔本读研，学费该交了，两万八澳元，我去问问咋汇
+  A：好事啊，孩子有出息
+  B：就是有人拉我进个群，说私下换汇汇率能好不少，我心里打鼓
+  A：千万别碰那个！群里换汇来路不明的多，钱一进去冻结都算轻的
+  B：我也怕这个
+  A：听我的，就用你自己的手机银行走正规渠道，学费直汇学校
+  【9月9日】
+  B：我儿子说那边都开春了，宿舍还没暖气，哈哈
+  A：南半球季节反着来，让他备点厚衣服
+  B：他还会自己做菜了，视频里给我看番茄炒蛋，糊的
+  A：男孩子出门都得过这关，我当年出差半年，回家都会煲汤了
+  B：段总你还煲汤呢
+  A：被逼的，哈哈
+  A：说汇学费的事，手机银行里搜'跨境汇款'或者'留学缴费'
+  B：找到了，有个'留学缴费'专区
+  A：对。上传录取通知书和学校缴费单，收款直接是学校，中间不过任何人的手
+  B：额度方面呢，我听群里说每人有限制
+  A：你本人每年五万美元的便利化额度，购汇时填用途，学费完全够，你额度一次没动过
+  B：那就好。一次能汇完不
+  A：购汇可以一次，汇出有的行有单日限额，卡住就第二天接着汇，几天内汇完就行
+  B：行，我晚上回去研究
+  A：记住三样：录取函、缴费单、本人身份证信息，齐了就一路绿灯，材料每次都带齐点
+  B：收到段总
+  【9月10日】
+  B：段总，你最近瘦了？脸都小了
+  A：陪我家老爷子每天快走五公里，走出来的
+  B：老爷子精神头可以啊
+  A：八十了，天天催我出门，比闹钟还准
+  B：那我也得动起来，一称重又重了三斤
+  A：晚上少喝两场就行，哈哈
+  B：段总，第一笔换好了！手机上真方便，回单也生成了
+  A：好，回单截图存好，学校确认邮件也留档
+  B：就是……实不相瞒，手头有点紧，房租和这学费撞一起了
+  A：差多少
+  B：五千块吧，咬牙撑到月底也行
+  A：别硬撑，先给你支五千，走财务借支，我跟会计说一声，下月工资分两次扣
+  【系统消息】A 向 B 转账 5000 元，已收款。
+  B：段总，这……太感谢了
+  A：谢啥，孩子学费要紧，你安心干活比啥都强
+  B：我一定好好干
+  A：对了，群里那个'低价换汇'退了没
+  B：昨天就退了。有个哥们汇了三笔，最后一笔对方收款账户换了人，钱卡在中间，找都没处找
+  A：这就是我说的，天上不掉馅饼。你的学费每笔都有回单有记录，睡得着觉
+  【9月11日】
+  B：段总，第二笔也汇出去了，学校系统显示到账一笔了
+  A：稳了，最后一笔明天走完
+  B：嗯，我把三张回单都打出来，夹在缴费单后面
+  A：好习惯。以后每年都这么办，熟了十分钟的事
+  B：第一次干这个，紧张半天，哈哈
+  A：涉及钱的事，紧张点好
+  A：下午蟹到货你把冰换了，天还热
+  B：收到，四点前弄完
+  B：段总，学费的事全办利索了，学校邮件都确认了，谢谢您指点
+  A：客气啥。记住，再有人拉你群换汇，直接拉黑
+  B：必须的，您一句话省我大几万，还睡得踏实
+  A：好好干，年底给你儿子带盒大闸蟹，哈哈
+  B：哈哈，必须的

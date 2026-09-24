@@ -1,0 +1,138 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000201
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000120
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-64e21e233b8a1bef
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 陌生人以掌握受害者私密影像为要挟，限期转账施压，收款后继续加码勒索更多钱财。
+  critical_evidence:
+  - A 自称掌握 B 去年某段私密影像，细节描述到白衬衫和蓝色窗帘
+  - A 给出明确期限'今晚十二点前'并威胁发到 B 的单位大群
+  - B 被迫先转全款 5000 元表态度，时间紧到当天凑钱
+  - A 收款后不兑现，转而进入'第二阶段'索要两万，威胁持续升级
+  benign_alternatives:
+  - 情侣间的过火玩笑话
+  - 误发照片后的道歉解释
+
+attributes:
+  duration_days: 6
+  turn_count: 59
+  approximate_tokens_estimate: 1895
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: intimate_photo_extort
+  risk: 3
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0050
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-024
+
+dedup:
+  content_hash: sha256:195e9ccd79718b15cbe7873fe63fbe1b4880de22ceb5e9fc85c5219ea4504db6
+pipeline_status: accepted
+title: coercion_blackmail/intimate_photo_extort
+conversation: |-
+  【10月10日】
+  A：周先生 晚上好 冒昧添加 见谅
+  B：你是？我们认识吗
+  A：打过照面 你印象不深 你这样的人 眼里都是自己的事
+  B：你这么说我有点不舒服 有事吗
+  A：别紧张 随便聊聊 你做审计？朋友圈那张工位照 桌上全是账册
+  B：你翻我朋友圈？请你自重
+  A：朋友圈就是给人看的 对吧 你们做审计的 年底很忙吧
+  B：跟你没什么好聊的 再见
+  A：别急着走 这几天你会想跟我聊的
+  B：莫名其妙
+  【10月11日】
+  A：早 下雨了 你们写字楼里不通风吧 我猜你又是加班到十一点
+  B：你到底想干什么
+  A：聊聊你 你上周五加班 走的时候在电梯里看手机 看了很久
+  B：你跟踪我？？
+  A：谈不上 你总在明处而已 晚上有空聊聊？
+  B：我没有义务陪你聊 请你删了我
+  A：晚上好 你发的那句'删了我' 我就当没看见 人在屋檐下 说话客气点
+  A：换个话题 你那份工作很体面 全公司几百人的大群 也热闹
+  B：你想说什么
+  A：想说你很爱惜羽毛 这样的人 最怕东西见光
+  【10月12日】
+  B：你到底想要多少钱
+  A：急什么 钱是最不重要的部分 重要的是你懂不懂事
+  A：有段东西 去年夏天拍的 你穿白衬衫那次 在我这里
+  B：你胡说什么 我没有
+  A：白衬衫 右边的窗帘是蓝色的 你自己心里清楚
+  B：……你想怎样
+  A：今晚十二点前 转五千过来 表明态度 东西我当没存在过
+  B：我没有那么多钱 你发出来对你也没有任何好处 你到底是谁
+  A：我是谁不重要 十二点 五千 你的单位群那么热闹 你不希望里面多一张截图吧
+  B：你疯了
+  【10月13日】
+  B：我再问你一遍 东西销毁 这事就当没发生 我可以当你是恶作剧
+  A：一天过去了 态度呢？我这边没有恶作剧 只有耐心
+  B：你至少让我看看你手上到底是什么 不然免谈
+  A：不条件交换 白衬衫 蓝色窗帘 你饭后总喝一罐苏打水 这些够了 你的记忆比我手里的清楚
+  B：你以为这样就能拿捏我？我不会转的
+  B：我凑钱需要时间 你至少给我个期限
+  A：今晚十二点是给面子 不是底线
+  B：我今天真的凑不出 刚发工资卡里只有两千一 我先全转你 剩余的这周补齐
+  A：两千一？周先生 你的年薪买不起你自己的体面吗
+  B：求你 我先转这些
+  【10月14日】
+  B：钱我凑了五千 你收一下
+  【系统消息】B 向 A 转账 5000 元，已收款。
+  B：转了 五千 说到做到 你那边呢
+  A：收到了 态度可以 东西这几天不会出现
+  B：什么叫这几天？说好的当没存在过
+  A：我办事 一向论阶段 第一阶段结束 第二阶段看心情
+  B：你还要什么
+  B：我把话放这 钱我给了 你再纠缠 我什么都做得出来
+  A：周先生 深呼吸 你看 你也会凶人了 进步很大
+  B：你现在满意了？
+  【10月15日】
+  A：周先生 早 天气这么闷 人容易烦躁 想不想听听第二阶段的内容
+  B：我已经给你钱了 你还想怎样
+  A：上周说好的只是'表明态度' 这周末之前 两万 你单位群 你大学同学群 我都很喜欢热闹
+  B：两万我凑不出来 你要逼死人吗
+  A：周六之前 两万 你有三天 够借了
+  B：我在借了 你别催 我再求你一件事 东西先别动
+  A：钱到 不动 你比我守时 我们就都能体面
+  B：还有两天 我尽力
+  A：尽力不够 到账才算
+  A：周六见分晓

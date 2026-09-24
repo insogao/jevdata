@@ -1,0 +1,148 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000258
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000013
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-1e9295056a7e4d4b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A 借同事情谊放高息短期贷，先扣利息、到期还不上时诱导 B 再从别家借钱来还这家，把 B 拖进以贷养贷的循环。
+  critical_evidence:
+  - A 以同事身份放款 5 万，月息六分，一个月期限
+  - 先扣两个月利息，B 实际只到手 4.4 万
+  - A 转账 44000 元给 B
+  - 到期前 B 表示凑不齐，A 让他再借另一家的钱先把这笔结了，利息接着滚
+  benign_alternatives:
+  - 正常的过桥资金周转
+  - 亲友之间的应急借款
+
+attributes:
+  duration_days: 4
+  turn_count: 71
+  approximate_tokens_estimate: 1772
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: loan_bridge_interest_rollover
+  risk: 2
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0057
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:79d1ff91090230301862e7bfcec3cceece4a0969006b12be501a3bebd05e4a75
+pipeline_status: accepted
+title: fraud_scam/loan_bridge_interest_rollover
+conversation: |-
+  【10月10日】
+  B：何哥，你到了没，经理找你
+  A：在电梯里，啥事
+  B：让你把上季度报销单补了
+  A：知道了，烦
+  B：哎，你上次说你外面有放款的路子，还算数不
+  A：你真要用？
+  B：嗯，我妈住院要手术，缺口五万，银行批太慢
+  A：什么时候能用
+  B：这周就得交住院费
+  A：行，五万一个月期，月息六分，老规矩
+  B：六分？一个月三千，有点狠啊哥
+  A：我这钱也是凑来的，应急可以，长期别碰。先扣两个月利息，你到手四万四
+  B：先扣？那我就拿四万四
+  A：对，行业规矩，到期还五万整
+  B：让我想想……行吧，医院等不起
+  A：下午那个报表帮我看看，第三列是不是错了
+  B：看了，把9月数字粘成8月的了
+  A：我说是呢，这就改
+  B：经理还夸你报表快呢
+  A：卡号私发我，今晚让财务给你走
+  B：发了，谢何哥，真救急了
+  【系统消息】A 向 B 转账 44000 元，已收款。
+  B：收到四万四，明早交住院费。真的谢谢哥
+  A：都是同事别客气。记住一个月，11月10号，别拖
+  B：记了，日历上设了闹钟
+  【10月11日】
+  A：帮你带了杯美式，放你桌上了
+  B：谢哥，多少钱我转你
+  A：18块都跟我算，没劲哈哈
+  B：那中午食堂加个鸡腿，我请
+  B：我妈手术排明天上午了
+  A：那就好，钱的事这两天你不用急
+  B：嗯，我也在想怎么还，光靠工资有点悬
+  A：到时候再说，我这边有路子
+  【10月12日】
+  A：周六团建改钓鱼了，你去不
+  B：我不钓鱼，我去也是喂鱼
+  A：哈哈那你负责烧烤
+  B：行，这个我在行
+  B：何哥，跟你说实话，我工资到手七千，月底还你五万真够呛
+  A：我知道，所以早给你想好后路了
+  B：什么后路
+  A：到期你要是转不开，就再从别家借一笔，先把我的结了，利息别断就行
+  B：再借一家？那不越欠越多
+  A：过桥都是这么倒的，先保住信用，下个月你绩效下来不就缓过来了
+  B：听着心里发毛，但好像也只能这样
+  A：我认识的资金方也有，到时候我搭线，利息帮你谈到五分
+  B：……行，先这样
+  A：降温了，明天穿厚点，你那小身板
+  B：秋裤已经安排上了
+  A：病房空调冷，给阿姨也带条毯子
+  B：带了，谢哥提醒
+  【10月13日】
+  B：手术顺利！医生说恢复得好
+  A：太好了，替我问阿姨好
+  B：购物车塞满了，就等双十一清空
+  A：我省了，今年啥都不买
+  B：你不是想换钓竿吗
+  A：忍住了，先回血
+  B：何哥，还款的事我算了下，确实凑不齐
+  A：嗯，我猜到了。我那兄弟那边五分，你借四万八，还我五万，剩三千你周转
+  B：等于我又多了个债主
+  A：就一个月的事，你年底绩效还有一笔
+  B：四万八……到手多少
+  A：他家不扣息，到期还四万八千九，就九百利息，很良心了
+  B：为啥他家这么便宜
+  A：人家做长期攒口碑。到时候你直接还我，两边别互相认识
+  B：……好吧，明天你把人微信推我
+  A：嗯，晚上发你
+  B：哥，我越想越不对，这么倒下去工资全填利息了
+  A：想那么多干嘛，先把11月10号过去。多少人都这么倒过来的
+  B：那行吧，就这一个月
+  A：乖，把心放肚子里。住院费那事都齐了？
+  B：齐了，谢谢何哥，这周请你吃大餐
+  A：哈哈行，大餐记账上，利息可不能记账上

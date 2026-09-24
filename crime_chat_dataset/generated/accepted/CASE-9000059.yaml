@@ -1,0 +1,136 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000059
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000007
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-a32a3293cef1394f
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 借旧上司身份长期嘘寒问暖重建信任，诱导对方进入所谓内部渠道注资，再以提现受阻需缴激活金层层套钱。
+  critical_evidence:
+  - 以旧日上下级关系长期嘘寒问暖、记得生活细节，重建亲密信任
+  - 宣称内部渠道两年多月月有收益、讲究稳不追高
+  - 小额试水账面连涨后被劝把年终奖加进去
+  - 提现遇通道维护，被要求缴八千激活金，转账后仍被拖延
+  benign_alternatives:
+  - 真实异地恋的相互扶持
+  - 合法的情感陪伴与理财咨询
+
+attributes:
+  duration_days: 4
+  turn_count: 59
+  approximate_tokens_estimate: 1345
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: romance_pig_butchering
+  risk: 2
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0033
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-019
+
+dedup:
+  content_hash: sha256:6e2cdf12025f11076d1acfa8eff0d7a6484f41390e9aaea382b8c78aa067afb7
+pipeline_status: accepted
+title: fraud_scam/romance_pig_butchering
+conversation: |-
+  【10月10日】
+  A：早，降温了，你那边冷不冷
+  B：还行，风大，你多穿点
+  A：你老毛病，一到换季就咳嗽，围巾戴上
+  B：还被你记着呢，前领导就是细心
+  A：离开部门以后没人管你了吧
+  B：可不是，现在全靠自觉
+  A：昨天又加班到几点
+  B：十一点多，方案改了四版
+  A：别太拼，身体是自己的
+  B：房贷压着，不敢歇
+  A：我现在时间自由，帮几个朋友打理点东西
+  B：你不是管采购出身嘛
+  A：现在做的是另一个渠道，圈子里小范围，不对外
+  B：听着挺神秘
+  【10月11日】
+  B：中午吃什么，食堂又是那几样
+  A：我炖了排骨汤，看你可怜的
+  B：馋了，发图
+  A：刚出锅，老火两小时
+  B：下次回去请你吃我拿手的酸菜鱼
+  A：行，我等着
+  A：那个渠道，里面朋友这周又带了一轮，稳的
+  B：你做这个多久了
+  A：两年多，月月都有，没断过
+  B：收益什么水平
+  A：一轮十几个点，而且讲究稳，不追高
+  B：挺适合我这种胆小的
+  A：我什么水平你还不知道，当年部门里我坑过你吗
+  B：那倒是，你没少罩着我
+  A：阳台那盆绿萝怎么样了
+  B：生命力顽强，都爬到防盗网了
+  A：会养花的人运气不会差
+  【10月12日】
+  B：我琢磨了一晚上，先放三千试试水？
+  A：可以，小额先看看，流程发你
+  B：转过去了，账面已经有三千二了，这就算进一轮了？
+  A：对，数字会自己长，晚上再看
+  B：还真到三千五，比死工资强
+  A：我说了，稳。你把上次那笔年终奖放进来，这轮才有看头
+  B：再让我想想，不是小数
+  A：不急，机会每周有，但我只带自己人
+  B：明白，你是信得过我才带我
+  A：十一月底一起去南边看海？我查了民宿
+  B：好啊，年假正好没休
+  A：说定了，早点睡，晚安，盖好被子
+  B：晚安，老领导
+  【10月13日】
+  B：早，我今天想提一笔出来交房租
+  A：提现入口点过没有
+  B：点了，显示通道维护，昨晚还好好的
+  A：上个月也这样，要先做一笔通道激活，系统才放行
+  B：还要再交钱？
+  A：不是交，是激活金，流程走完连本带收益一起回来
+  B：要多少
+  A：你账面那个量，八千就够
+  B：八千…行，我信你
+  【系统消息】B 向 A 转账 8000 元，已收款。
+  B：转了，你帮我盯着流程
+  A：收到，交给里面朋友，晚上给你好消息
+  B：怎么样了，我有点慌
+  A：说激活完成了，出金在排队，最快明天
+  B：好，等你消息。晚饭多吃点，别光喝汤
+  A：知道啦，倒关心起我来了

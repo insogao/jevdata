@@ -1,0 +1,128 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000107
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000094
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-e77a2ba9ea874fb6
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A作为博彩资金通道的第七层上线,按千八佣金给下线秒结跑分流水,以深夜对账、当场转账完成利益结算,层层抽水的通道结构贯穿始终。
+  critical_evidence:
+  - 资金通道已到第七层,B在A的下一层,每过一手都抽一道,层级结构明确
+  - 佣金固定千八,按日对流水结算,10月27日零点对账36万流水,佣金2880元
+  - A的招牌是秒结:00:12拉出对账单,00:15当场转出2880元,时序严丝合缝
+  - 约定下月抬量但先稳一个月,并有这行不沾熟人的规矩口口相传
+  benign_alternatives:
+  - 游戏点券代充
+  - 平台充值服务
+
+attributes:
+  duration_days: 2
+  turn_count: 53
+  approximate_tokens_estimate: 1417
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: gambling_updown_score
+  risk: 3
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0039
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-021
+
+dedup:
+  content_hash: sha256:9a386ce084b2319da21e2112d1dde8163b2b59f536271e9f137a87fe45fd8964
+pipeline_status: accepted
+title: money_laundering_obfuscation/gambling_updown_score
+conversation: |-
+  【10月26日】
+  B：哥,昨晚的量你那边看到没,我这边报上去36个
+  A：看到了,系统里你的数和我对得上,36,一分不差
+  B：那就稳,我这口子最近顺,量起得快
+  A：别光求快。通道现在是第七层,你在我下一层,每过一手都抽一道,数错了上面追下来谁都不好过
+  B：懂,我每天睡前都把流水核三遍
+  A：核三遍是好习惯。佣金老规矩千八,今晚对完账就结
+  B：千八不变就行,哥你这边结算一向痛快
+  A：那必须,秒结是我的招牌,对完账当场转,从不拖到第二天
+  B：就冲这个,我这边的量都往你这儿报
+  A：晚上撸串不,老地方,烧烤摊出摊了
+  B：走啊,烤五花加两串筋
+  A：你这是把上回的债吃回来,哈哈
+  B：上回谁让你赢我两把台球
+  B：哥,今晚的量也在走,估计和昨晚差不多
+  A：好,十一点后我拉对账单,你把你的小账对齐
+  B：好嘞,我十一点准时在线
+  B：对了球赛看了没,最后那脚绝平,我嗷一嗓子
+  A：看了!我家那位都以为楼着火了
+  B：哈哈哈下周还有一场,一起看?
+  A：看现场?我表弟有票
+  B：现场必须有我
+  【10月27日】
+  A：对账单拉出来了,你过一遍
+  B：对了,36,和我小账一致,一分不差
+  A：36万流水,千八,2880,我这就转你
+  【系统消息】A 向 B 转账 2880 元，已收款。
+  B：收到,2880,秒结名不虚传
+  A：老规矩,当日事当日毕
+  B：哥,下个月我想把量再抬一抬,你那边吃得下不
+  A：吃得下,不过你先稳一个月,把账走顺再说
+  B：懂,听哥的,一步一步来
+  A：睡吧,明天量照旧
+  B：晚安哥
+  A：我手机电池不行了,半小时掉一半
+  B：换一块,百来块,我上次换的那家靠谱
+  A：发我位置,中午去
+  B：好,顺路请你喝豆浆
+  B：哥,有人问咱这行收不收人,我一个表弟想入行
+  A：别拉亲戚,这行有规矩:不沾熟人,出了事一家一串,扯不清
+  B：也是,我回了他,让他找正经班上
+  A：对,门道就是别把日子搅进去
+  A：我老家房子开始贴砖了,我妈天天发视频
+  B：装修是大工程,瓷砖得自己挑
+  A：挑了,通体大理石,贵了一截,图个耐用
+  B：值,房子是住一辈子的
+  B：哥,今晚量上来了,现在28个了
+  A：好,照这个速度今晚能过40,注意别出错数
+  B：出不了,我现在闭着眼都能对
+  A：别闭眼,睁着对,哈哈
+  B：烧烤摊老板问咱上周的牛油还吃不
+  A：吃,今晚赢了台球,我请
+  B：那我必须去,谁怕谁
+  A：哈哈少贫,十一点对完账再去,正当夜宵点
+  B：行,夜宵界的早高峰
+  A：哈哈,就这么定了

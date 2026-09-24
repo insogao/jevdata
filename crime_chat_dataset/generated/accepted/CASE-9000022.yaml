@@ -1,0 +1,137 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000022
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000024
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-e2df1a9a36476112
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: bribery_corruption
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 经李处引荐的陌生评委方与候选人约定：考核前在茶舍密会，评委手里早有名单底稿，事成之后候选人分两回奉上十八万，全程不落一个明字。
+  critical_evidence:
+  - 两人素不相识，经李处引荐后绕开单位，约在城南茶舍单独密会，车停后巷
+  - B透露晋升名单底稿早在自己抽屉里、月底才上会，并给A透底「排第二」
+  - 约定事成后给「十八那个数」，分两回、第一回不少于一半，上会公示到岗后再动
+  - B要求考核结束前停止直接联系，有事让李处传话
+  benign_alternatives:
+  - 正常的人情答谢约定
+  - 前辈对晚辈的培训学费资助
+
+attributes:
+  duration_days: 6
+  turn_count: 59
+  approximate_tokens_estimate: 1484
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: promotion_payment
+  risk: 3
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0029
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-017
+
+dedup:
+  content_hash: sha256:74d03c6331977ac2a7578d34eea426d007637fd64d33d3fb6ff6100e069b23ac
+pipeline_status: accepted
+title: bribery_corruption/promotion_payment
+conversation: |-
+  【10月13日】
+  A：您好，是周主任吗？我是小郑，李处让我加您的
+  B：是我，小李跟我提过你
+  A：冒昧打扰，我们院这次定岗的事，想向您取取经
+  B：取经谈不上。你情况小李说了，做结构出身的？
+  A：对，干这行九年了，这次评副院长岗
+  B：竞争不小吧
+  A：五个进面，两个名额，我资历不算最深
+  B：资历是一方面，关键是有人替你说话
+  A：这个我懂，所以想当面听听您的点拨
+  B：周六下午有空吗
+  A：李处跟您是老战友吧
+  B：大学同学，睡上下铺那种
+  A：怪不得，他提起您可亲了
+  【10月14日】
+  A：主任，周六几点方便
+  B：下午四点，城南清风茶舍，就我们俩
+  A：好，我准时到，就不去您单位叨扰了
+  B：单位人多眼杂，茶舍清净
+  A：这两天降温，您多穿点
+  B：是，办公室冷得像冰窖，暖气还没来
+  A：我们跑工地的更惨，昨天在外面冻一天
+  B：熬到十一月中就好了
+  A：周六见，我带点家乡的茶叶给您
+  B：人来就行，茶我这儿不缺
+  【10月15日】
+  B：你家孩子初几了
+  A：初二，住校，两周回一次
+  B：初二最关键，我们那个就是初二掉的队
+  A：是，我最近也盯着呢
+  A：主任，周六之前需要我准备什么材料吗
+  B：材料不急，评委手里都有。你把前年机场那个项目的细节捋顺
+  A：好，那个项目我全程跟的
+  B：面上答好是基本，关键在名单那一关
+  【10月16日】
+  A：主任在忙？
+  B：在带大家做工间操，形式主义哈哈
+  A：我们也搞，全在摸鱼
+  B：彼此彼此
+  A：主任，冒昧问一句，这次名单大概什么节奏
+  B：名单早有底稿了，就在我抽屉里，月底才上会
+  B：底稿上有没有你，不全看打分
+  A：我明白。那我能做点什么
+  B：周六来，当面细说
+  【10月17日】
+  A：主任，清风茶舍我导航搜到了，就城南那个院里
+  B：对，就那家，他家白茶不错，包间安静
+  A：听说您好钓鱼？李处说的
+  B：老头子一个，瞎钓，哈哈
+  A：我爸也好这口，回头给他捎两竿咱家厂里做的
+  B：客气了。周六下午四点，车停后面巷子，别提前太多
+  A：明白，四点见
+  【10月18日】
+  A：主任，今天多谢点拨，受教了
+  B：小郑，话就说到这。十八那个数，你回去盘一盘
+  A：是事成之后给您，对吧
+  B：老规矩。上了会、公示完、你到岗，那笔再动
+  A：一时半会我手头没那么活泛，能不能分两回
+  B：可以，第一回不少于一半，走你信得过的方式
+  A：好，我明白了。那名单的事……
+  B：底稿给你透个底，你排第二，上会前还有变数
+  A：那这半个月，还请您多费心
+  B：你跟李处言语一声就行，他懂
+  A：好，茶叶您务必收下
+  B：收了。这几天别再联系我，有事让李处传话

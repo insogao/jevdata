@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000164
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000050
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-f26c1a784e1de641
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 以街面规矩为名向新开档口索取定期心意，用暗示损害和兄弟人手施压，行收保护费之实。
+  critical_evidence:
+  - A自认管事，称这条街有规矩、老摊都交份例
+  - 以卷帘门、最近不太平等话术暗示不交的后果
+  - B迫于压力转账6000元心意并承诺补齐差价
+  - A称兄弟多人可随时替其问候新摊主
+  benign_alternatives:
+  - 市场管理方收取摊位协调费
+  - 同业之间的生意提点与人情往来
+
+attributes:
+  duration_days: 5
+  turn_count: 48
+  approximate_tokens_estimate: 1193
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: territory_warning
+  risk: 3
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0045
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:a04f4b1f9d8aaedd6ca23c25ef7e3946718006a4be448efe86ac02200dea3f2a
+pipeline_status: accepted
+title: violence_extortion/territory_warning
+conversation: |-
+  【8月18日】
+  A：新来的？西区那家烧烤
+  B：哎 是 我上礼拜刚开的 您贵姓
+  A：这条街的摊子我都熟 我姓关
+  B：关哥好 以后多关照
+  A：这天热得 晚上十一点还冒汗
+  B：谁说不是 炉子跟前一站一身油汗
+  A：多喝水 别中暑
+  B：谢关哥 回头招呼您吃串
+  【8月19日】
+  A：晚上收了摊 过来我茶馆坐坐 东头红招牌
+  B：好嘞关哥 我带点啥过去
+  A：人来就行
+  B：关哥 今天多谢指点 你说的那些我记下了
+  A：记下就好 这条街有这条街的规矩 谁来都一样
+  B：关哥是本地人不
+  A：二十年了 这片原来的铺面都是我盘下来的
+  B：怪不得都给您面子
+  A：面子是互相给的
+  【8月20日】
+  A：想好没 上回说的话
+  B：关哥 我小本生意 一开始真拿不出太多
+  A：也没让你拿多少 十五号之前 一份心意 一个月就那么一回
+  B：心意是多少啊哥
+  A：街上老摊都懂 你随大流就行
+  B：我再想想 周五给你话
+  A：昨晚你那卷帘门没事吧 我看你收摊晚
+  B：没事啊关哥 怎么了
+  A：没事最好 这一片最近不太平 你明天要还照老样子摆 就带上心意 别怪街上的规矩不认人
+  A：你家啤酒哪进的
+  B：批发市场 一箱24罐那种
+  A：我认识个仓库 价比你那低两块 要就说
+  B：那谢谢哥了 回头对个价
+  【8月21日】
+  A：咋样 周五给你话 到今天了
+  B：关哥 我先转6000表心意 十五号前差的差价我补上 行不
+  【系统消息】B 向 A 转账 6000 元，已收款。
+  A：收到 算你懂事 以后按老摊的份例来
+  B：哎好的 那我这摊
+  A：安心做 有人在摊子上闹 你报我名字
+  B：哎站一天 腰都直不起来
+  A：老膏药管用 我抽屉常备
+  B：您那有富余 给我两贴不
+  A：晚上过来拿 我那多
+  【8月22日】
+  A：今晚照常出摊 别理闲话
+  B：哎 好的关哥
+  B：对了隔壁新开水果档的小刘 问我这片生意的门道 我说不太清
+  A：让他来找我 懂规矩的都好说 不懂的 我兄弟多 替我多问候他一句
+  B：行 我跟他说
+  A：今晚有球 你电视开了没
+  B：开了 围着一堆人看 正好带生意
+  A：那备足啤酒
+  B：备了三箱 哈哈

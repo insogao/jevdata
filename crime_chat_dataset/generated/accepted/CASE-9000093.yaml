@@ -1,0 +1,149 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000093
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000058
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-d3ecfcf44157aea7
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: violence_extortion
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 上级A因同行主播在直播里损自己门店，指使下属B找人手按单收费冲对方直播间，提供话术、批准加钱，持续三晚把对方节奏打停。
+  critical_evidence:
+  - B报价'一单五十，冲他十分钟'，A拍板先来一百单
+  - A拟好话术发给B，定下'卖假货、售后失联、数据造假'三个点
+  - 账号被封后A指示'换号继续'，连冲三天并批了加量预算
+  - 事成后A一次性转给B五千元尾款，叮嘱这事到B为止
+  benign_alternatives:
+  - 商家对差评的正常维权讨论
+  - 直播运营团队间的营销互怼闲聊
+
+attributes:
+  duration_days: 6
+  turn_count: 70
+  approximate_tokens_estimate: 1510
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: livestream_hate_raid_for_hire
+  risk: 2
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0037
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-020
+
+dedup:
+  content_hash: sha256:eb18d69e9383c5e27988bf2f8f1f1ec748c4b888e70490f9553bf996cc40e3f1
+pipeline_status: accepted
+title: violence_extortion/livestream_hate_raid_for_hire
+conversation: |-
+  【11月2日】
+  B：头儿，上周那批对账单核完了，有两笔对不上
+  A：发我看看，估计是运费重了
+  B：好，我标出来给你
+  A：昨晚看那家直播没，又提咱们店了
+  B：看了，阴阳怪气说咱们卖尾货
+  A：他再这么喊，老客都得被他带走
+  B：那咋办，咱也开播对轰
+  A：对轰太累，找个省事的法子
+  B：什么法子
+  A：晚上出来喝茶，细说
+  A：对了今天降温，你厚外套穿上
+  B：穿了，早上冻醒了
+  A：入冬第一波，都这样
+  【11月3日】
+  A：昨晚说的事，想清楚了没
+  B：能做，圈子里有资源，一单五十，冲他十分钟
+  A：五十一单，我要的是效果，别弄虚的
+  B：效果保证，进场、节奏、收尾都有人管
+  A：行，先来一百单
+  B：一百单五千，先干活后结账，你放心
+  A：可以。话术我拟好发你，你照着安排，别太过火
+  B：收到，你把要突出的点给我就行
+  A：点就三个：他卖假货、售后失联、数据造假
+  B：明白，包装一下往上带
+  B：下午我得溜一小时，孩子家长会
+  A：去，准假，初几了
+  B：初三，要中考了，天天刷题
+  A：熬吧，考完就轻松了
+  【11月4日】
+  B：晚上八点开工，他八点开播，人齐
+  A：好，我这边盯效果
+  B：效果我录屏给你，你坐着等就行
+  A：行
+  B：开了，人进去了，节奏起来了
+  A：我看他直播间人数在掉，有点意思
+  B：十分钟到，按约定收了，今天先这样
+  A：效果我看到了，可以
+  A：吃夜宵没，楼下烧烤开到两点
+  B：来吧，正饿，整点腰子
+  A：我请，就当开工红包
+  B：那我不客气了
+  A：老位置，等你
+  【11月5日】
+  B：头儿，昨晚那批号挂了一小半，平台查得严
+  A：挂了就换号继续，老规矩
+  B：知道，新号让人补上了，今晚冲第二场
+  A：嗯，连冲三天，最好把他冲停播
+  B：尽量，他扛得住的话就加单量，费用另算
+  A：加，预算我批，不能让他缓过来
+  B：明白
+  A：你腰前两天不还疼，别老坐着
+  B：贴了膏药，好多了
+  A：下午跟我去理疗一次，我办卡了
+  B：行，四点走
+  A：四点，开车带你
+  【11月6日】
+  B：昨晚效果炸了，他那场中途下播二十分钟
+  A：好，今天第三天，冲完这波先停手，别留尾巴
+  B：明白，见好就收
+  A：尾款我今天就结你
+  B：账我拉好了，一百单整整五千
+  A：五千对，明细发我，没问题就转
+  B：发你了
+  A：收到，我看一眼
+  【系统消息】A 向 B 转账 5000 元，已收款。
+  A：转了，五千，查收
+  B：到了，痛快
+  【11月7日】
+  B：昨晚最后一场冲完，他账号今天没开播，估计消停几天
+  A：好，先收手，过半个月看他动静
+  B：收到，人散了，有单再喊
+  A：嗯，这事到你为止，别往外说
+  B：懂，我嘴里有把门的
+  A：周一部门周会，Q4排期你带一下
+  B：好，材料周日晚发你预审
+  A：辛苦了，这段时间你顶了不少事

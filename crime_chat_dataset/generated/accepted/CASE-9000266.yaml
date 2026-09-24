@@ -1,0 +1,135 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000266
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000144
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-612e5f6b82bbfc71
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 表面上是托关系、花大钱“挂户口搞定入学”的路子，实际表哥劝住了这个歪主意，走了正经买学区房、按积分入学政策办材料流程。
+  critical_evidence:
+  - B 孩子入学积分差一截，找 A（表哥）帮忙想办法
+  - A 提过“挂户”的老办法，因街道查实际居住而主动放弃
+  - A 把自己名下学区房以亲戚价 120 万卖给 B，走中介签买卖合同、网签备案
+  - B 转账 50000 元购房定金并备注“购房定金”，后续按积分入学政策准备社保、居住证材料
+  benign_alternatives:
+  - 学区房正常购买过户
+  - 按积分入学政策准备材料报名
+
+attributes:
+  duration_days: 5
+  turn_count: 57
+  approximate_tokens_estimate: 1746
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: school_zone_hukou_trade
+  risk: 0
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0057
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:dc92f413b013ee7005703a91f9e700c3424ad4f22706b1c755cfbcd1c79e3e9f
+pipeline_status: accepted
+title: other_illicit_coordination/school_zone_hukou_trade
+conversation: |-
+  【9月8日】
+  B：哥，问你个事，乐乐上学的事有门路没
+  A：刚醒，咋了，学区定下来了？
+  B：愁死了，我们住的这块对口三小，积分差着呢
+  A：差多少
+  B：去年录取线120，我们满打满算才95
+  A：社保和居住证都满年限了吗
+  B：居住证满了，社保中间断过俩月
+  A：那分少就少这儿了，补缴也算连续的，你去问下社保局
+  A：马上中秋了，你回来不，妈让问你
+  B：回，票买了，29号的高铁
+  A：行，妈说要自己蒸月饼，问你还要不要枣泥馅
+  B：要要要，我给你带两瓶好酒
+  【9月9日】
+  A：昨天没说完，乐乐这事我倒有个想法
+  B：你说
+  A：我在实验二小学区不是有套老房子嘛
+  B：你那套不是空着当仓库了吗
+  A：空着也是空着。本来想着让娃把户口挂我名下就行，后来一打听，现在街道入户要查实际居住，挂过去人不住那儿，一样白搭
+  B：啊？那隔壁老刘家是怎么弄的
+  A：老刘去年给孩子挂了个远房亲戚的，今年材料被退回来补，折腾得够呛，早知道还不如正经买房
+  B：那算了，别到时候两头空
+  A：所以我说你干脆把房买了。那套市场价一百三十个，亲戚价给你算一百二十个
+  B：一百二……首付我得凑凑
+  A：你先付五个定金把房锁住，剩下的走贷款，中介那边我熟，流程让他们跑
+  B：先吃饭，我去接乐乐奥数课了
+  A：娃这么小就上奥数了
+  B：没办法，大家都卷
+  A：适量吧，别把眼睛搞坏了
+  【9月10日】
+  B：哥，我跟嫂子商量了一晚上，房子要，定金我先转你
+  A：行，那咱走正规流程，我让中介把买卖合同拟好，你转账备注写清楚，合同里一条条落明白，网签备案都有
+  B：成，这周末就去签约
+  A：对了你把征信先拉一份，别到时候贷款卡壳
+  B：好嘞，今天就去打
+  A：爸说今年柿子大丰收，让你国庆回来摘
+  B：年年摘，我都吃怕了哈哈
+  A：怕啥，先给你寄一箱
+  B：行，给乐乐留着
+  【9月11日】
+  A：中介把合同拟好了，发你邮箱，你看看条款
+  B：看了，没问题，就按这个来
+  B：定金我现在转你？
+  A：转吧，转完把凭证发给中介留档
+  【系统消息】B 向 A 转账 50000 元，已收款。
+  B：转了5万，你查收，备注写了“购房定金”
+  A：收到，凭证我转中介了。周末签约带上户口本结婚证
+  A：晚上沿江跑了个十公里，你瘦没
+  B：我胖了五斤，天天接娃加班连轴转
+  A：等你房子定了，跟我晨跑
+  B：先定个闹钟试试哈哈
+  【9月12日】
+  B：哥，签完了我突然想到，户口迁过来具体咋办
+  A：拿到不动产证就能迁，政务网上一条条列着呢，材料齐了当场办
+  B：积分那些呢，还要不要找人
+  A：房子在学区内，户口迁过来，再加你社保年限，积分妥妥够，一分不用求人，材料齐了谁都能报
+  B：这比托人踏实多了，心里有底
+  A：所以说别信那些歪门邪道，老刘现在还后悔呢
+  B：嗯嗯。周六去量个尺寸，我找人重新刷墙
+  A：刷墙钱别省，弄好点，也是给乐乐的新家
+  A：降温了，晚上记得给乐乐加被子
+  B：知道啦，你也是，老寒腿少喝冰的
+  A：哈哈哈知道了，爸妈那我去说

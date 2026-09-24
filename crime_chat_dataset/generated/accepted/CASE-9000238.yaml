@@ -1,0 +1,118 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000238
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000040
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-2547e8a76b4f47f1
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: contraband_illicit_trade
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A 利用口岸仓库职务之便向 B 低价供来路不明的整件卷烟,B 以两万定金加现金补款的方式结算,绕开正常账目与市场价体系。
+  critical_evidence:
+  - B 问「这条多少」,A 报一类360元/条,远低于市面600多元
+  - A 称货周三靠岸,约定周四上午带 B 进三号库看货提货
+  - B 先转2万元定金,A 要求余款现金结算、账上走不了
+  - B 验货后按件补齐现金,A 当场开出库单,全程不问来路
+  benign_alternatives:
+  - 大宗卷烟批发的低价货源交易
+  - 免税渠道或内部渠道的熟人生意
+
+attributes:
+  duration_days: 2
+  turn_count: 43
+  approximate_tokens_estimate: 1243
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: tobacco_smuggle
+  risk: 2
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0054
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:0d941c527f2cca9d5cd3248f1248d55d3145e4e8d432a90f072f68b6705be8f8
+pipeline_status: accepted
+title: contraband_illicit_trade/tobacco_smuggle
+conversation: |-
+  【10月9日】
+  A：周三靠岸那批,数量点齐了,成色也好。
+  B：哥,这条多少?
+  A：一类三百六,整件拿再让五个点。市里店里都卖六百多,所以让你先看货再谈。
+  B：成,那明早我去,怎么看?
+  A：北门进,我带你上三号库,眼见为实。
+  B：行,怎么结算?
+  A：老规矩现金,这边账上走不了,你懂的。
+  B：定金先转你两万,余款当天补齐?
+  A：可以。周四上午十点,就留一上午,别迟到。
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  B：转了啊哥,你点点。对了,上回那罐单丛我快喝见底了。
+  A：喜欢就好,回头再给你拿罐新的,蜜兰香。
+  B：你这茶叶比我库里的货都齐,改行得了。
+  A：好茶配好烟,干我们这行的讲究个口碑。
+  B：我同事闻着都馋,一直问我在哪买的。
+  A：问他要不要,熟人价,哈哈。
+  B：你们码头这几天风大不大?听说一刮风就歇工。
+  A：今天还行,后天才来六七级,咱赶得巧。
+  B：那你多穿点,海边湿冷,往骨头缝里钻。
+  A：嗯,我这老寒腿比你家天气预报还准。
+  B：秋裤安排上,别硬撑。
+  A：滚,我就比你大三岁。
+  【10月10日】
+  B：到北门了,蓝色那台。
+  A：看见了,五分钟,下来带路。到了,就这排,自己拆箱验,条装随你抽。
+  B：我开两条看看……烟丝紧实,干爽,不是回潮货。就这批,二十件,现金我都带来了,当面点两遍。
+  A：行,点完我给你开出库单,路上拿着。
+  A：中午别急着走,食堂今天红烧狮子头,大师傅是广东请的,烧腊一绝。
+  B：你们伙食比我们那强多了,我们食堂的菜,狗看了都摇头。
+  A：哈哈,那你今天算蹭对日子了。
+  B：有豆浆油条没?我早点就没吃舒坦。
+  A：有,明早你来,带你去窗口吃现炸的。
+  B：行,那我明天还来,验货吃早饭两不误。
+  B：昨晚那场球看了没?最后十分钟连追三个。
+  A：看了,我这暴脾气差点把遥控器捏碎。
+  B：那个单刀是真该进,门将都懵了。
+  A：下轮踢谁?约你食堂看,大厅有投影。
+  B：成,输的人请奶茶。
+  A：一言为定。
+  B：出门这段在修路,堵得我绕了高架。
+  A：晚高峰别走高架,地面反而快。
+  B：学到了,下次听你的。
+  A：货捆牢了没有?
+  B：捆了三层绳,稳得很。
+  A：行,慢点开,下批到了给你信。

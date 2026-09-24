@@ -1,0 +1,121 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000085
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000028
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-360586482c43cf81
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 科长B借验收签字权卡住供应商尾款，含蓄索要'辛苦费'，还旁敲侧击点出对方台账有出入施压，A被迫转账八千换验收放行。
+  critical_evidence:
+  - 验收前B以'跑项目辛苦'为名索要辛苦费，老规矩一万
+  - A的二十万尾款被压着，B明确尾款要验收完才走流程
+  - B点出A去年台账'出入有点意思'，称'职责所在'施压
+  - A转8000元后，B次日理顺台账并填好验收单，尾款放行
+  benign_alternatives:
+  - 正常合同尾款催收与验收流程沟通
+  - 履约问题引发的正常商务谈判
+
+attributes:
+  duration_days: 5
+  turn_count: 43
+  approximate_tokens_estimate: 1047
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: contract_signature_fee
+  risk: 2
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0037
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-020
+
+dedup:
+  content_hash: sha256:40763a7cfcb48854ab957b387dd979acddbbedc3355dbfef599f460f47bd54c9
+pipeline_status: accepted
+title: bribery_corruption/contract_signature_fee
+conversation: |-
+  【9月8日】
+  B：老李，周末跑工地了？听你嗓子哑了
+  A：别提了，泡了三天胖大海，应酬推不掉
+  B：少吃辣，你这体质
+  B：正事，这周验收，你材料齐了吗
+  A：齐了，就等会上过一遍，尾款二十万还压着呢
+  B：材料是一回事，会上怎么填是另一回事
+  A：张科，这话什么意思
+  B：意思是，你这一年跑项目，也挺辛苦的
+  A：……辛苦是真辛苦，容我想想
+  【9月9日】
+  A：昨天那事，能不能缓缓，尾款下来我一定表示
+  B：尾款就是验收完才走流程，你顺序想反了
+  A：要是我材料过不了呢，合同里可没这条
+  B：合同没有，不过你们去年那本台账，出入有点意思
+  A：你翻我台账干嘛
+  B：职责所在。提醒你一句，别让小事耽误大事
+  A：先不说了，我儿子高三开家长会，老师又点名
+  B：高三苦，熬过去就好了
+  A：借你吉言
+  【9月10日】
+  B：想得怎么样，周五验收会就定了
+  A：多少合适，你给个数
+  B：辛苦费嘛，老规矩，一万
+  A：一万太多，八千，我这就转
+  B：行，直接转，别整那些虚的
+  A：快中秋了，月饼我不送，给你寄箱自家果园的橘子，这个不算数
+  B：橘子可以有
+  A：酸甜那种，我叔家果园直发
+  B：对了周末降温，秋裤备好
+  A：你们有暖气怕啥
+  B：验收那天穿厚点，材料自己也再理一遍
+  A：明白，周五前给你干净的版本
+  【9月11日】
+  【系统消息】A 向 B 转账 8000 元，已收款。
+  A：张科，收一下
+  B：收了。台账那几页我替你理顺了，验收单今晚填好
+  A：还是你办事敞亮
+  B：尾款下周一走流程，你催下你们财务
+  A：好嘞
+  A：周五开完会一起吃个便饭
+  B：看情况，家里那位查岗
+  A：带上嫂子，家常菜而已
+  【9月12日】
+  B：验收单扫描件发你邮箱了，签完回传
+  A：收到，这就办
+  B：以后材料提前自检，别给人留话柄
+  A：记住了，回头请你喝好茶
+  B：茶……橘子……你这人就是实在

@@ -1,0 +1,129 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000090
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000135
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-632619daf4339eaf
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: other_illicit_coordination
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A的'服务'靠考场内应B排座位、巡场放风，设备升级后按科向客人收费，B每场分三千五加红包，双方考后当晚结清。
+  critical_evidence:
+  - A告知'东西升级完了，比上回稳'，B负责'眼花'
+  - 收费按科来，'一门一万二'，B一场分三千五另有红包
+  - B凭'戴耳环那个穿灰羽绒服'认出主力客人，座位排靠窗倒数第二排
+  - 考后A转B一万二结账，并预约下月资格类、等级类两场
+  benign_alternatives:
+  - 考前辅导机构的正常排课沟通
+  - 模拟考组织的会务对接
+
+attributes:
+  duration_days: 2
+  turn_count: 54
+  approximate_tokens_estimate: 1368
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: exam_cheating_org
+  risk: 3
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0037
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-020
+
+dedup:
+  content_hash: sha256:b400df33c5881fde874e602729378a3cafd6a60eae1a2601df35befd5b45b214
+pipeline_status: accepted
+title: other_illicit_coordination/exam_cheating_org
+conversation: |-
+  【11月14日】
+  A：周老师，明天那场的名单你那边定了吗
+  B：定了，八个考场，我带其中三个
+  A：好，我们客人分在三场，名单晚上发你
+  B：照片对应座位发我就行，排座位我有权限
+  A：座位尽量靠后靠边
+  B：尽量，过道口那几个位置不行，太扎眼
+  A：懂，专业的
+  B：明天场外茶歇还包不，上回那家咖啡不错
+  A：包，预算批了，还那家，多订两箱水
+  B：行，我让会务小刘对接
+  A：小刘靠谱，上回签到台没出岔子
+  A：东西升级完了，比上回稳，客人自己会弄，你不用管
+  B：你们那玩意儿真先进，我就当没看见
+  A：你只管排座和掐点，其他别碰，干净
+  B：明白，我负责眼花
+  A：收费还按科来，一门一万二，老价格
+  B：一万二……我分多少
+  A：你一场三千五，另有客人的红包，不比工资差
+  B：行吧，谁让工资不涨呢
+  A：明天每场散场你别急着走，等我信儿
+  B：听说明天骤降十度，场里空调别开太足
+  A：交代过了，二十度恒温
+  B：上回有个考生冻得直哆嗦，这回毯子备了吧
+  【11月15日】
+  B：早，进场了，签到台秩序还行
+  A：客人都到了，戴耳环那个，穿灰羽绒服的，主力一单
+  B：看见了，往12考场去了，座位我排的，靠窗倒数第二排
+  A：好，你盯你那三场就行
+  B：九点开考铃，我八点半巡场，你那边别出动静
+  A：放心，升级过的，稳
+  A：上午场怎么样
+  B：顺，没动静，戴耳环那个中午出来时脸上有笑
+  A：笑就对了，下午照旧
+  B：你们客人中午在哪吃，外面馆子全满了
+  A：订了盒饭，送到楼下车里，不耽误下午
+  B：我们考务吃食堂，今天有烧鹅，队排疯了
+  A：给我带一份，下午去你楼下取
+  B：行，十二点半门卫那
+  A：好，回头一起结你
+  B：下午开了，一切正常
+  A：好，四点半散场你先别动，等客人出来
+  B：明白，我在楼梯口透气等
+  A：都出来了
+  B：出来了，戴耳环那个头一个，直奔你车去
+  A：收尾顺利。钱今晚统一结，老规矩
+  B：行，三场一万零五百，你数一下
+  A：对的，加红包一共一万二，晚上转你
+  【系统消息】A 向 B 转账 12000 元，已收款。
+  A：转了，一万二，查收
+  B：收到，这单结得痛快
+  A：下个月还有两场，一场资格类一场等级类，你档期看看
+  B：没问题，十二月中那场我正好值班
+  A：那提前排，还是按科收费，老规矩
+  B：行，下回客人照片早点给我，排座好安排
+  A：一定，合作愉快，天冷早点回
+  B：愉快，你也早回

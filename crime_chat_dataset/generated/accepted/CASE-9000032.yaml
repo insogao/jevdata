@@ -1,0 +1,145 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000032
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000073
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-d1b7ae1683289c6e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 大学学姐在社团招新时搭上大一学妹，以来钱快的兼职为名带她进夜间陪酒场子，一场三百日结、自己抽五十信息费，反复叮嘱瞒住宿舍和爸妈，首场之后又排下一场，把新生固定成场子里的人手。
+  critical_evidence:
+  - 学姐介绍周末晚上陪客人吃饭喝酒的场子，一场三百日结，比照发传单劝人入行
+  - 首场结束后学姐转250元，明说三百里抽五十是信息费和车费，姐妹们都这样
+  - 学姐反复叮嘱这事在宿舍里一个字别提，理由用图书馆闭馆学习糊弄
+  - 首场当晚就替学妹接了下周六的场，客户点名要文静的
+  benign_alternatives:
+  - 正规兼职群
+  - 社团活动
+
+attributes:
+  duration_days: 3
+  turn_count: 68
+  approximate_tokens_estimate: 1633
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: dorm_introduction_network
+  risk: 3
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0030
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-018
+
+dedup:
+  content_hash: sha256:072879ff3bba54c1432c1ae4875f874bf394d2fa97e2404eb7e62c5c293e6347
+pipeline_status: accepted
+title: sexual_transaction_exploitation/dorm_introduction_network
+conversation: |-
+  【10月11日】
+  A：同学你好，话剧社看看不，招新最后一天啦
+  B：学姐好，我上午已经填了三个社团了
+  A：够自律，哪个学院的
+  B：经管院，大一新生，刚军训完
+  A：巧了，我大三也经管，以后选课问我，学姐给你避雷
+  B：那太好了，加个微信呗
+  A：加了，我叫林悦
+  B：学姐，高数是不是特别难，第一章就没听懂
+  A：前两周都懵，习惯就好，期末前我把笔记给你
+  B：学姐人美心善
+  A：少贫，四级报名今天截止，报了没
+  B：报了，十二月的考
+  A：二食堂的麻辣香锅吃过没
+  B：还没，听说排队夸张
+  A：错峰去，四点半人最少
+  B：学到了
+  A：学妹，问个事，想不想搞点零花钱，不耽误上课那种
+  B：想啊，我生活费月月光
+  A：勤工俭学那种一个月八百没意思，姐这边有个来钱快的
+  B：什么兼职呀
+  A：不是发传单那种，晚上出场的，明天细说，你先想想
+  B：晚上啊……我十点半门禁诶
+  A：周末不受限，姐还能害你不成
+  B：那我想想
+  A：行，明天等信儿
+  【10月12日】
+  B：学姐，昨天说的兼职，到底是啥呀
+  A：周末晚上，陪客人吃个饭喝点酒，一场三个来小时
+  B：陪酒啊……安全吗
+  A：都是大公司的人谈生意，包厢里十几个姐妹一起，就当练社交
+  B：我不太会喝酒
+  A：不用你喝多少，会倒酒会聊天就行，主要撑场面
+  B：那一场给多少
+  A：一场三百，日结，比你发一天传单强多了
+  B：三百是真不少……可我爸妈那关
+  A：就说在图书馆闭馆学习，理由姐教你
+  B：室友那边也不好说吧
+  A：这种事在宿舍就别说了，人多嘴杂，羡慕嫉妒都有
+  B：也是
+  A：姐不骗你，第一场我陪着你，你放心
+  B：那我先试一次
+  A：这才是好学妹，周五晚七点东门，穿件像样的裙子
+  B：好
+  B：姐，我军训晒的印子还在，穿裙子丑死了
+  A：涂身体乳，俩月自己就白回来
+  B：那我先囤两瓶
+  A：拼我一单，给你送到宿舍楼下
+  A：中午吃啥，带上你，学姐请你
+  B：奶茶店那家轻食？听说贵
+  A：贵啥，姐请你，就当入伙饭
+  B：哈哈那我点最贵的
+  A：你可真是
+  【10月14日】
+  B：学姐，今晚几点集合来着
+  A：七点东门，我顺路接你，先吃点东西垫垫
+  B：好紧张，第一次
+  A：放松，就当聚餐，嘴甜一点就行
+  B：姐，我回宿舍了，今晚就这么结束了呀
+  A：结束啦，表现不错，第一次这么稳的不多
+  B：客人一直让我倒酒，我都懵的
+  A：慢慢就熟了，钱转你了，收一下
+  【系统消息】A 向 B 转账 250 元，已收款。
+  【10月15日】
+  B：收到了，怎么是二百五呀，不是说三百吗
+  A：三百里头五十是姐的信息费和车费，规矩你懂的，姐妹们都这样
+  B：哦哦这样，也行
+  A：下周六还有一场，客户点名要文文静静的，我推荐了你
+  B：这么快……我考虑下
+  A：考虑啥，两百五到手不香吗，期末买裙子买化妆品不都要钱
+  B：那行吧，下周我去
+  A：这才乖，记住，宿舍里一个字都别提
+  B：知道了姐

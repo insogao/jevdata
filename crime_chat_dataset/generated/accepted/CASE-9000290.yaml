@@ -1,0 +1,121 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000290
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000068
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-30a7d47ed03a3ac9
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A以「夜市主题纯玩团」为幌子组织出境色情交易团，B是去年参加过同一「规格」行程的回头客，以签证打包价预付定金购买落地后的「特殊安排」。
+  critical_evidence:
+  - B是去年同一趟的老客户，开口即问「还是去年的规格吗」，A称「老客户优先」且「规格只升不降」
+  - 行程表白天全是自由活动、晚间清一色夜市，A承认行程表「是给家里人看的」，真实「安排」不落文字
+  - 老客一口价「签证打包38800全含」，B据此转账定金2万元，尾款出发前一周补齐
+  - A叮嘱「这趟别带家属」，B以「纯玩团」名义向家人隐瞒行程性质
+  benign_alternatives:
+  - 高端定制出境游团购
+  - 商务考察团代订行程
+
+attributes:
+  duration_days: 5
+  turn_count: 43
+  approximate_tokens_estimate: 1361
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: overseas_tour_group
+  risk: 3
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0060
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-028
+
+dedup:
+  content_hash: sha256:b986c33a9c26d53e09f78ea3f1e6be8e5efa95a1616bc7a5ccccf92cdd8dfeb6
+pipeline_status: accepted
+title: sexual_transaction_exploitation/overseas_tour_group
+conversation: |-
+  【10月12日】
+  A：老陈，年底普吉那趟的位子我给你留了一个，老客户优先，统共就俩名额。
+  B：哟，又到日子了？跟去年那趟一个规格？
+  A：一个规格，比去年还松快，你就当去散心。
+  B：行，老规矩，行程表先发我一份，我好跟家里报备。
+  B：今早出门冻一激灵，你们那边降温没？
+  A：降了，厚外套都翻出来了。
+  B：晚上炖了萝卜排骨汤，这天气喝一口从嗓子眼暖到胃。
+  A：会过日子，回头蹭一口。
+  A：行程表发你了，五天四晚，你过一眼。
+  B：看完了。白天全是自由活动，晚上倒是排得满，清一色夜市？
+  A：对，主打名地夜市，白天想睡到几点睡到几点，老客户就喜欢这种不赶路的。
+  B：你这行程表，怕是专给家里人看的吧，哈哈。
+  A：懂行。行程归行程，安排归安排，这个不落字，到了听领队的就行，规格跟去年一样，只升不降。
+  【10月13日】
+  B：价格怎么算？别按新客给我算。
+  A：老客一口价，签证打包，38800全含，机票酒店领队落地接送都在里头。
+  B：打包得挺全啊。
+  A：该含的都含，你去年又不是没体验过。
+  B：行，那就还找你。
+  B：周六我表妹结婚，还得跑趟外地。
+  A：随礼不少吧？
+  B：一千二，肉疼，好在就这一个表妹。
+  A：亲情投资，不亏。
+  A：位子这周得锁定，先收两万定金，尾款出发前一周补齐。
+  B：这么急？
+  A：旺季，机位和那几间房都压着，定金不到我不好给你锁。
+  B：成，今晚转你。
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  B：转了两万，你点点。
+  A：收到了。尾款18800，出发前一周我提醒你。
+  【10月14日】
+  B：楼下水产店大闸蟹到货了，公四母三一百八，拎了一盒。
+  A：现在膏正厚，羡慕。
+  B：晚上配点黄酒，舒坦。
+  A：我还在啃食堂，没法比。
+  A：对了，这趟别带家属，团里都是老熟人，彼此方便。
+  B：明白，去年我就没带。家里那边我说的是纯玩团，哈哈。
+  A：这么说就行。落地以后少操心，跟着领队走，别的都不用你问。
+  B：放心，一年就指着你这一趟给我松快松快。
+  A：包在我身上，老客户我还能亏待？
+  【10月15日】
+  A：尾款18800记得20号前转，我这边把返程也一起锁了。
+  B：没问题。这回团里还有几个熟的？
+  A：俩老客户，都跟你一样一年一趟。名单不外传，你也别打听，规矩。
+  B：懂，我不多嘴。
+  【10月16日】
+  B：行李箱我去买个新的，去年那个拉杆摔了。
+  A：买软壳的，不压称。20号前尾款，其他不用你管。

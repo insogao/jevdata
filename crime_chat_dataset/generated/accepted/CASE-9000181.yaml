@@ -1,0 +1,144 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000181
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000032
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-bc96a334f80f6a5f
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: B 只是顺路帮同事代取其母亲按月复诊开具的处方助眠药，无加价、无转卖、无囤积，属同事间的正常互助。
+  critical_evidence:
+  - 药是医生按月复诊开具，一次限开三盒，母亲按顿服用不囤积
+  - 医保卡为患者本人定点绑定，代取人信息已在取药窗口登记
+  - 10月14日 A 转账486元与三盒药小票金额一一对应，B 分文不加
+  - 剩余药品由家人看护按顿服用，从未转送他人
+  benign_alternatives:
+  - 帮忙代买常用药
+  - 亲属间代取药
+
+attributes:
+  duration_days: 4
+  turn_count: 67
+  approximate_tokens_estimate: 1774
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: prescription_diversion
+  risk: 0
+  relationship: 同事
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0047
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:b1d41af85656bf0ba7952b438a5da9ba9cf50f4cb3b3f29f7220058aa350c495
+pipeline_status: accepted
+title: contraband_illicit_trade/prescription_diversion
+conversation: |-
+  【10月11日】
+  A：晨姐 早 又要麻烦你了 这个月我妈的药
+  B：说 市一院那盒助眠的? 我周四下午复查正好路过
+  A：对 名字我发你 处方我妈上周复诊开好的 就等取
+  B：行 还是三盒吧 一次最多开这么多 医生卡着的
+  A：三盒 一板一板省着吃 能吃一个月
+  B：取药窗口我熟 你妈医保卡是本人定点吧 代取人登记过没
+  A：登记过 我的信息在窗口备着 卡我拍照发你 原卡在我妈那儿
+  B：成 周四取了给你拍照 对小票
+  A：晨姐中午吃啥 我带饭 你要不
+  B：带了我 妈做的饺子
+  A：幸福啊 我吃食堂
+  B：给你留两个?
+  A：对了 药费大概多少 我先转你免得你垫
+  B：上回三盒486 我垫过一回 你转我我就先垫
+  A：行 取完把小票拍我 我对一下数
+  B：放心 一分不差
+  【10月12日】
+  A：晨姐 我把处方拍照发你了 复诊记录也有
+  B：看到了 医生签名章都有 这个齐了
+  A：我妈这次复查血压也稳 医生说药先不变
+  B：那就好 老人家按时吃 别自己加量
+  A：我盯着呢 一板一板掰给她
+  B：孝顺 老人有福
+  A：双十一你购物车多少件了
+  B：四十多件 我妈的膏药贴也囤了六盒
+  A：膏药也趁便宜囤 对的
+  B：老人这些东西 平时不打折
+  B：你们家猫又掉毛了? 我刚办公椅上坐了一裤子毛
+  A：哈哈换毛季 忍忍 我吸尘器天天跑
+  B：我这是过敏体质的命
+  B：周四下午我复诊完直接取药 一趟搞定
+  A：麻烦你了 要不我请你周五午饭?
+  B：请啥 食堂加个鸡腿就行
+  A：两个鸡腿 管够
+  【10月13日】
+  B：明天提醒我下 我怕复查完直接忘了取药
+  A：好 我早上发你 处方我转存一份在你微信
+  B：嗯 医保卡照片我也存好了
+  A：取药小票上会写代取人是我名字吧
+  B：会 窗口登记过 小票上写得清清楚楚
+  A：行 小票留好 我拿去我妈那边的补充医疗报销
+  A：你今天地铁又挤成照片了吧
+  B：别提 前门上去后门下车 一路举着手
+  A：哈哈我骑车 十分钟到
+  B：羡慕 明天我也骑车 车胎扎了没补
+  B：对了 上个月剩的半盒 你妈吃完没 别攒一堆过期
+  A：还剩三粒 她按顿吃 不多不少
+  B：那就好 这药不能囤多 医生也这么说
+  A：明天取完直接给我送店里不
+  B：送你店里顺路 我下班正好路过
+  A：那我等你 药到手我就踏实了
+  【10月14日】
+  B：取好了 三盒 486 小票拍照发你
+  【系统消息】A 向 B 转账 486 元，已收款。
+  A：转你了 对一下
+  B：一分不差 药盒拍照也发你 条码在
+  A：看到了 铝板没拆封 生产日期是新的
+  B：窗口说你妈是老主顾 按月都来
+  A：哈哈 慢病老主顾 下月还麻烦你
+  B：不麻烦 我周四反正都往医院跑
+  A：回头食堂加俩鸡腿谢你 管够
+  B：周末去水库钓鱼不 老周组局
+  A：去啊 我新买的竿还没开张
+  B：说定了 周六早六点 桥头集合
+  A：行 我负责带早饭
+  A：双十一那个膏药贴链接再发我下 也给我妈囤点
+  B：发你了 记得领券
+  A：领了 你家囤的米到没
+  B：到了 沉死 扛上五楼
+  A：药送到了 我妈吃了说睡得踏实 谢啦晨姐
+  B：那就好 替我问阿姨好 晚安

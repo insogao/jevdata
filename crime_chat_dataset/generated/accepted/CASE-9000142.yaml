@@ -1,0 +1,121 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000142
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000140
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-a2d07c78d0acda31
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: other_illicit_coordination
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A借B在城管线上递话的门路保住自家往上加的那层、躲过年前的动静，用逢节不落的烟酒和2888元茶叶钱维持这条关系。
+  critical_evidence:
+  - A盖的房子要往上加一层，B递话后说稳了
+  - B透露年前这段时间那边都没有安排
+  - A按老规矩备烟酒、逢节不落，东西放门房不进家门
+  - A转账2888元以茶叶钱名义给B
+  benign_alternatives:
+  - 正规报建进度与同行之间的节日往来
+  - 施工排期与物业管理的正常沟通
+
+attributes:
+  duration_days: 2
+  turn_count: 46
+  approximate_tokens_estimate: 982
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: illegal_construction_bribe_inspect
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0043
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:4cf1eac97ce2fd8bddac382c5ac2c023085df6f21b9090c4b9c19cae73da6b12
+pipeline_status: accepted
+title: other_illicit_coordination/illegal_construction_bribe_inspect
+conversation: |-
+  【11月3日】
+  A：哥早 心里那事有准信没
+  B：稳了 你放心弄
+  A：上面那层 我下礼拜就敢往上接了?
+  B：接 年前这段都有数 你赶你的工
+  A：石头落地 东西我照旧给你备着
+  B：老规矩 别让我白跑
+  A：懂 一回都不会少
+  A：降温了 你家小的加厚校服买了没
+  B：没 丈母娘说要买大一号
+  A：小孩蹿个快 买大没错 前年给我外甥买的春秋 穿一季就短了
+  B：买的时候心疼钱 穿一季就小 没办法
+  A：回头让我姐捎两件 给你家小的也带一件
+  B：那感情好
+  A：中午吃的啥 工地食堂今天烧鸭
+  B：楼下快餐 凑合
+  A：晚上给你留一只 烧鸭送家去?
+  B：别送家里 放店里门房
+  A：懂 门房老位置
+  B：行 晚点去拿
+  【11月5日】
+  A：哥 上面那层钢筋昨天全扎完了
+  B：快啊你
+  A：稳了就赶呗 趁这段安静多干点
+  A：你不懂我们干工程的 落袋才安
+  B：那边我问过了 这个月都没有安排
+  A：得嘞 心里有底了
+  A：中秋那点心意 我这两天给你备上?
+  B：老规矩 你看着办
+  A：那今天下午过去 店里坐坐
+  B：嗯 下午在
+  A：周末打球不 老周他们约了三缺一
+  B：去 拍子在你那 胶皮记得换
+  A：在在在 明天带去店里
+  B：护腕也带来 你上回说买新的
+  A：懂 上回就说我抠
+  B：哈哈 谁让你用补锅的胶布缠手柄
+  A：哥 到店门口了
+  B：进来吧 自己倒茶
+  【系统消息】A 向 B 转账 2888 元，已收款。
+  A：一点茶叶钱 两瓶酒放门房了 你别嫌少
+  B：下回别整这些 老朋友了
+  A：不整我心里不踏实 哈哈 拍子给你留前台了
+  A：你家车该保养了吧 里程到没
+  B：快到了 就近那家换机油 四百多
+  A：我周六也开过去 你报我名字
+  B：行 报我名还打折
+  A：那周六店里见
+  B：嗯

@@ -1,0 +1,139 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000257
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000113
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-7e071f6ea3c4e059
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: theft_robbery_property_crime
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A 从保洁等渠道低价收来带锁手机（来路不明），B 负责硬解 ID 后翻新转卖，两人按批现金结算，形成稳定的销赃链条。
+  critical_evidence:
+  - A 长期给 B 供“带锁”低价手机，被问来路时明确说“别问来路，问了你也不敢接”
+  - B 自称“能硬解”，解完每台加价转卖
+  - A 提出“批量来更优惠”，单批七台 650 一台共 4550 元
+  - B 转账 4550 元现款收货
+  benign_alternatives:
+  - 二手手机回收翻新生意
+  - 失物招领后归还失主的渠道
+
+attributes:
+  duration_days: 5
+  turn_count: 61
+  approximate_tokens_estimate: 1228
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: phone_reset_resell
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0057
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:efdb6ce1cceb40af8b619e88e406c66a0bab6a71974f2523338277517b8cbe36
+pipeline_status: accepted
+title: theft_robbery_property_crime/phone_reset_resell
+conversation: |-
+  【9月22日】
+  A：强哥起了没
+  B：刚醒，咋
+  A：没事，问问你那手艺最近还能干不
+  B：能啊，你又有货了？
+  A：压了几个在手里，回头细说
+  B：行，晚上聊
+  B：昨晚那球看了没，最后绝杀太离谱
+  A：看了，气死，我押的平局
+  B：你还押球呢，小玩怡情啊
+  A：就几十块玩玩。说正事，手里现在三个有锁的
+  B：什么型号
+  A：两个13一个14，全带锁
+  B：带锁的能值几个钱
+  A：所以便宜出啊，一台800，市面上收机的给不到你这价
+  B：价格是诱人，就是这来路……
+  A：别问来路，问了你也不敢接
+  B：……行吧，容我琢磨琢磨
+  【9月23日】
+  A：琢磨得咋样
+  B：我这边能硬解，就是费工夫，一台得折腾俩小时
+  A：那就齐活，解完转手你就翻倍
+  B：先拿一台试试水，成了后面都走你
+  A：痛快，中午送来顺便吃饭
+  B：吃啥
+  A：楼下新开的酸菜鱼
+  B：行，我把那台13捎上
+  B：鱼一般，汤倒是好喝
+  A：哈哈下回换一家。机子算给你了
+  B：嗯，明后天给你准信
+  【9月24日】
+  A：怎么样了
+  B：搞定，进去跟新机一样，就是磨人
+  A：我就说你这手艺没得说
+  B：丑话说前头，这种机子以后一台700收，量大再谈
+  A：你还压价，行，看在长合作的份上
+  B：下午得去开家长会，烦
+  A：哈哈你也有今天，儿子又闯祸了？
+  B：班主任找我，上课传纸条
+  A：随你，你当年也这德行
+  B：滚哈哈
+  B：那台挂出去俩小时，仨人问
+  A：不愁卖，你这渠道稳
+  【9月25日】
+  A：又收了几个，这回量大，一共七个，650一台，批量来更优惠
+  B：七个？你最近收得勤啊
+  A：几个小区的保洁都帮我留意着，机器更新换代快嘛
+  B：行，我这走得快，七个全要
+  A：老规矩，货到现结
+  B：成，明天你送到店里
+  B：家长会开完了，老师让盯作业
+  A：盯吧，别老让孩子看手机
+  B：他自己拿我手机看哈哈
+  A：明天上午十点我到，你备好钱
+  B：4550备好，放心
+  【9月26日】
+  A：出门了，中午前到你那
+  B：行，到了打电话
+  A：到了，老地方后门
+  B：验了，七台都在
+  【系统消息】B 向 A 转账 4550 元，已收款。
+  A：钱收到，合作愉快
+  B：以后有14 Pro多给我留
+  A：留着留着，下批到了喊你
+  B：哎那台13我2850出的
+  A：可以啊，你这生意做得欢
+  B：主要你供得稳，哈哈

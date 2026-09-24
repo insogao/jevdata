@@ -1,0 +1,143 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000252
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000026
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-9cfb8d954007c371
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 下属医生为让父亲手术插队，私下向上级讨要路子，递红包交加急费换取指定专家提前开台，术后转账并索要转账截图留底完成闭环。
+  critical_evidence:
+  - A为父亲手术向B打听路子，B明示红包和加急费缺一不可
+  - A术前在办公室单独递出装有五千元的信封给指定专家王教授
+  - 手术从下月中提前到当周三，由B介绍的专家亲自主刀
+  - 术后A转账六千元，B说明五千转交专家、一千退回，并发转账截图留底
+  benign_alternatives:
+  - 正常专家门诊挂号
+  - 医院特需医疗服务费
+
+attributes:
+  duration_days: 6
+  turn_count: 64
+  approximate_tokens_estimate: 2323
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: medical_channel_fee
+  risk: 2
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0056
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:046d7e8bf9598ab51f7fbe86fa2e4d07aca09c49644deea10dd7877a2346f84c
+pipeline_status: accepted
+title: bribery_corruption/medical_channel_fee
+conversation: |-
+  【10月9日】
+  A：主任，忙吗，我爸的事想单独请教您几句
+  B：来办公室说，楼道里人杂
+  A：我爸那个髋关节，常规排队要排到下月中，他疼得整宿睡不着，我怕等不到
+  B：排队是全院统一的盘子，我这个层级也插不了队，你是干这行的你懂
+  A：懂，所以才来问您，有没有别的路子，该有的表示我们家不省这个
+  B：你把话说到这份上，我就直说：想快，红包和加急费，两样都得有，少了免谈，多了没必要
+  A：大概什么数？
+  B：专家那边五千，我帮你递话的人情你看着来，别让我为难
+  B：周六晨跑去不去，滨江步道的银杏黄了
+  A：去，我爸这情况我半个月没跑了，腿都锈了
+  B：等这事定了，我陪你拉个十公里，给你松松绑
+  A：一言为定，到时候我请您喝豆浆
+  【10月10日】
+  A：主任，红包是术前给还是术后给？我没经历过，怕做岔了失礼
+  B：术前，当面，单独，他办公室没人的时候放下就走，一句多的话别说
+  A：明白。专家指定王教授行吗，网上都说他做髋最稳
+  B：王教授是我读研时的师兄，这个面子他有，你放心
+  A：今天食堂糖醋排骨绝了，您打了没
+  B：打了两份，被营养科看见又得念叨
+  A：哈哈您怕什么，我也就中午敢吃，晚上还得写病历
+  B：年轻人少熬夜，病历白天写完
+  【10月11日】
+  B：主治的题刷到哪了，别光顾着家里的事
+  A：刷到第二遍，案例分析还是虚，想报个冲刺班
+  B：报我当年那个老师的班，通过率有数，学费我帮你问内部价
+  A：那敢情好，您的人情我又记一笔，小本本快写满了
+  A：主任，报您了：信封给出去了，王教授收了，让我爸周一办住院
+  B：周一住，周三上台，这就是师兄给的脸面，术前同意书签了吧
+  A：签了，我妈手都在抖着签的
+  B：签完就踏实等，降压药按时吃，别的交给我们
+  A：加急费那部分，我现在转您还是术后？
+  B：术后一起，先把专家这边的事办利索
+  【10月12日】
+  A：今天把车停外头走路来的，院里车位太吓人
+  B：你还开油车？我都换电车两年了，一个月电费一百多
+  A：等年终奖下来我也换，老伙计还能撑两年
+  B：撑可以，别高峰期往院里钻，堵得心慌
+  A：主任，我爸八点一刻推走了，王教授亲自主刀
+  B：知道，我在门诊，有动静让手术室的给你去电话
+  A：出来了！医生说很顺利，假体位置特别好
+  B：好，接下来是康复的事，一步一步来，不急
+  【10月13日】
+  A：昨晚陪床睡不着，翻出您说的那个老纪录片，连看两集
+  B：怎么样，九十年代的镜头现在看还是震撼
+  A：是，比现在的悬浮剧强多了，我爸醒着还跟我讨论半天
+  B：能讨论说明精神头好，大好事
+  A：主任，加急费的事，今天方便吗
+  B：方便，转我这里，我给师兄当面转交，账给你分清楚
+  A：好，我这就转
+  【系统消息】A 向 B 转账 6000 元，已收款。
+  A：转了六千：五千是王教授的，一千是您跑前跑后的，您别推
+  B：一千我退你，师兄那五千我明天当面给，转账截图发你留底
+  A：那多不好意思，您帮这么大的忙
+  B：一码归一码，钱是师兄的，忙是我该帮的，你爸也算我看着的病人
+  A：那听您的，截图发我一份，我妈非要个准数才睡得踏实
+  B：晚上发你。还有，这事到你和我为止，科里谁都别提，影响不好
+  A：懂，我嘴严，我爸那我只说是您打招呼加的急
+  【10月14日】
+  A：主任，我爸今天能用助行器站一会儿了，护士都夸恢复快
+  B：不错，听康复师的，别逞强
+  A：截图我收到了，我妈看完那一栏，终于睡了个体整觉
+  B：嗯，账目清了，你们全家都踏实
+  A：复查的事还得您给留意，我爸认您
+  B：复查提前跟我说，我让你直接约我的门诊号
+  A：那太好了，省得我妈天不亮去排队
+  B：对了，出院小结让主管大夫写细点，复查方便
+  A：记下了，我今天就去跟主管大夫打招呼
+  B：嗯，那件事翻篇了，往后正常走流程，别再多想
+  A：懂，以后规规矩矩来，就这一次，实在等不起才走的这一步
+  B：我理解，谁家有病人都一样，去吧，我查房去了

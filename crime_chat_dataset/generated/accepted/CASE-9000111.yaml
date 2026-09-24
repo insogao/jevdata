@@ -1,0 +1,144 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000111
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000138
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-b03620cea9572a8b
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 表面像高息揽储、拉人头返佣的集资话术,实为银行客户经理向企业主合规推荐存款产品、明确拒绝返佣,转账只是归还代垫的网课费。
+  critical_evidence:
+  - B明确推荐受存款保险保障的三年期存单(年化三点零五),并主动警示月息三分类项目千万捂住钱包
+  - A试探介绍朋友来存有没有好处,B明确回答银行明令禁止返佣,顶多送一桶油一个搪瓷缸
+  - 资金全程走银行系统与本人渠道,双方一致否定现金方式,来路去向都有记录
+  - 10月24日A转B的1999元与前一日B代垫的网课费金额、事由完全对应,两清
+  benign_alternatives:
+  - 银行理财推荐
+  - 正规众筹
+
+attributes:
+  duration_days: 5
+  turn_count: 66
+  approximate_tokens_estimate: 2061
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: illegal_fundraising
+  risk: 0
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0039
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-021
+
+dedup:
+  content_hash: sha256:15df1e706ce589cce8a9407d19e0bc87177a9242f44270f49bf6aa7446de3970
+pipeline_status: accepted
+title: other_illicit_coordination/illegal_fundraising
+conversation: |-
+  【10月20日】
+  B：王总早,这周三有空没,来行里坐坐,新额度的事跟您说下
+  A：李经理早,周三下午行,上午要去趟开发区
+  B：好嘞,那我占周三下午三点
+  A：行
+  A：老李,周末水库去不去,我朋友说口子开了
+  B：去!我那套装备吃灰半年了
+  A：那说定了,周六早上六点,我开车
+  B：六点?!你这钓鱼人比鸡起得还早
+  A：鱼不等人啊,哈哈
+  【10月21日】
+  A：在高铁上了,半小时后到站
+  B：收到,材料我先看,您到了直接上三楼
+  A：材料看完了,昨晚给你发的那份也在里头?
+  B：在。说实话王总,您手里那笔闲置,我建议就配三年期存单,现在年化三点零五,受存款保险保障,五十万以内稳稳的
+  A：才三点零五?我朋友那个项目月息都敢喊三分
+  B：王总,月息三分那种您可千万捂住钱包。咱们只聊受监管的渠道,利息低点,但本金睡得着觉
+  A：你这话我爱听,上一轮暴雷吓怕了
+  B：所以我从来不推不保本的,您要嫌低,咱就全存单,一分基金都不搭
+  A：行,听你的,稳妥第一
+  A：你们行里午休管饭不,我今早那盒高铁饭,38,就两块肉
+  B：哈哈我们食堂12块管饱,就是菜随缘
+  A：12块还挑什么,知足吧
+  B：是,周五有红烧肉,全行都惦记
+  A：那个,李经理,我有个开餐厅的朋友,手里也有闲钱,我介绍他找你,你有好处没?
+  B：王总,好处真没有,返佣这种行里明令禁止,查到饭碗都没了。顶多送他一桶油一个搪瓷缸,哈哈
+  A：哈哈行,我就随口一问,那你别嫌弃我这个人
+  B：哪能,朋友介绍是信任,服务我做到位,好处一分不能拿,这是底线
+  A：明白,就冲你这句,我把人给你带来
+  【10月22日】
+  B：王总,存单额度我帮您留了,明天带身份证和借记卡来就行
+  A：好,钱我从对公账户转到个人卡再存,没毛病吧
+  B：没问题,全流程都在银行系统里走,每一步都有记录,您放心
+  A：那行,不搞现金那一套,麻烦
+  B：对,现金我们反而不建议,来路去向说不清
+  A：哈哈你这觉悟,行里培训到位
+  A：我这周回去帮我妈收玉米,你这周末有安排没,钓鱼可能要鸽
+  B：鸽就鸽,玉米要紧,我妈今早还晒辣椒呢
+  A：农村妈都一个样,院子里全是秋天的味道
+  B：是,闻着就想回家吃饭
+  【10月23日】
+  A：李经理,麻烦个事,你家娃是不是也在上那个跳跳狮思维课?
+  B：上啊,怎么了
+  A：我给闺女也报了,今早系统支付一直报错,你先帮我垫一下,1999,我回头转你
+  B：行,我现在就付,截图发您
+  A：好嘞,回头就把钱给你
+  B：付好了,您看截图,孩子上课那链接直接就能用了
+  A：收到收到,细心的,回头就转
+  A：降温了,晚上吃火锅走起?
+  B：走!不过周三下午您还要来行里,悠着点辣
+  A：微辣,微辣,遵医嘱
+  【10月24日】
+  A：到楼下了,三楼是吧
+  B：对,我在门口等您,材料都备好了
+  A：签完啦,你们这流程还挺快
+  B：存单回执您收好,到期前一周我提醒您
+  A：好嘞,省心
+  B：我们部门下周搬新楼,让我领两盆绿萝回去养,我能养活仙人掌就不错了
+  A：哈哈绿萝好养,浇点水就行,别晒
+  B：行,记住口诀了:别晒,少管
+  A：跟养孩子一样,哈哈
+  A：对了,网课钱转你,1999,你收一下
+  B：这就来
+  【系统消息】A 向 B 转账 1999 元，已收款。
+  B：收到,这下两清了,哈哈
+  A：两清,回头闺女的作业还得请教你家娃
+  B：互相抄……不是,互相学习
+  A：哈哈哈哈
+  B：王总,您朋友那边想好了随时介绍来,还是那句话,服务到位,好处没有
+  A：想好了,下周带他来,他也就信睡得着觉这种话
+  B：好,那我等着,油都给他备好
+  A：哈哈回见

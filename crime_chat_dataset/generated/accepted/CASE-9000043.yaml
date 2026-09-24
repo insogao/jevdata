@@ -1,0 +1,140 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000043
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000123
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-df9ae8819934e909
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 年长熟人假称内部有人能摆平莫须有的资金问题，以保证金、限时交钱和报警威胁步步施压，骗走对方三千元并阻止其告诉家人。受害者为已成年的年轻上班族。
+  critical_evidence:
+  - 声称 B 卖游戏皮肤收了问题资金、被人点名，直言你涉嫌犯罪了
+  - 要求用父母的手机走家属协助流程，并让 B 对家人只说手机检修
+  - 索要三千元保证金且限定当晚十点前交，B 向同学借钱转给 A
+  - 以一报警你就完了施压，阻止 B 告知父母、别接陌生电话
+  benign_alternatives:
+  - 游戏账号皮肤交易纠纷
+  - 熟人热心帮忙处理麻烦
+
+attributes:
+  duration_days: 6
+  turn_count: 61
+  approximate_tokens_estimate: 1663
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: game_skin_scam_extort_minor
+  risk: 3
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0032
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-018
+
+dedup:
+  content_hash: sha256:45f3e5558bc8a45eb7d4b79e61899fd4e0db8e2bcebe9e02284e1fe52a10162f
+pipeline_status: accepted
+title: coercion_blackmail/game_skin_scam_extort_minor
+conversation: |-
+  【9月15日】
+  A：小宇，睡没，问你个正经事
+  B：涛哥，还没，刚加完班到家
+  A：你前阵子是不是在闲鱼上出了几个皮肤和号
+  B：出过啊，咋了，都是正常价卖的
+  A：收货那几个人里，有一个的付款卡有问题，那笔钱来路不对
+  B：啊？那我卖东西收钱也有错？
+  A：你先别急，我今天先问问，明天再跟你说
+  B：涛哥你可别吓我
+  A：我吓你干啥，这事我也托了人问
+  B：哦…那我先睡了，今晚别想睡着了
+  【9月16日】
+  A：吃饭没，我打听了，你这事先按住别动
+  B：没胃口，涛哥，到底啥情况
+  A：那笔钱过了你的卡，按流程你得说清楚，你涉嫌犯罪了这话我就直说了
+  B：我就是卖个皮肤啊哥
+  A：我知道，所以才帮你问，你要是早点问我还能帮你把把关
+  B：唉，谁能想到
+  A：这两天手机保持畅通，别乱删东西，越删越说不清
+  B：我啥也没删
+  B：今天又加班到九点，外卖都凉了
+  A：你们那个项目还没完呢
+  B：验收前天天熬，头都秃了
+  【9月17日】
+  A：早上问了，这事有个内部处理的口子，不用走大流程
+  B：什么意思，罚点钱能了事吗
+  A：要走家属协助那一档，材料从家里那边过，你把你爸妈手机拿来，我帮你操作
+  B：为啥要我妈手机，我自己的不行吗
+  A：你名下的都得避一避，只能从家里走，规矩就是这样
+  B：那我今晚回去跟我妈说
+  A：别讲细节，就说手机要检修拿去弄，老人不懂这些，省得瞎担心
+  B：降温了，你上次说那家店的外套还搞活动不
+  A：搞到周末，周末陪你去看
+  B：行，正好请你吃饭
+  【9月18日】
+  A：那边出方案了，要交一笔配合处理的保证金，三千，交了就给你出结果
+  B：三千？我工资还压着没发
+  A：先周转一下，朋友那儿凑凑，这事宜早不宜迟
+  B：我问问同学
+  A：嗯，今晚十点前给我信，过了今晚口子就关了
+  B：这么急？
+  B：我们部门下周团建，说去漂流，我怕水
+  A：漂流怕啥，穿好救生衣就行
+  B：那我能不去就不去，正好省钱
+  A：你最近省着点花也是真的
+  【9月19日】
+  B：涛哥，跟同学借到三千了，怎么给你
+  A：转我微信就行，我下午带上去交
+  【系统消息】B 向 A 转账 3000 元，已收款。
+  A：收到了，下午我就去办
+  B：什么时候能有结果
+  A：快的话下周，一有信儿第一时间告诉你
+  B：涛哥，这次真多亏你
+  B：楼下那只橘猫半夜叫得瘆人，是不是该绝育了
+  A：让物业看看呗，别喂太勤，都胖成球了
+  B：你还说，上回偷喂的就是你
+  A：咳，那不它蹭我腿嘛
+  【9月20日】
+  A：刚问了，下周二三出结果，别催了
+  B：好，那我安心上班
+  A：这几天有陌生电话别乱接，一切等我的信儿
+  A：还有，这事别跟你爸妈提报警，老人家不懂，一报警你就完了
+  B：哦，知道了
+  B：涛哥，那我这几天就安心上班等信儿
+  B：晚上新片去不，我请，工资还没花完
+  A：行，看八点那场，爆米花我买
+  B：那我六点半楼下等你
+  A：嗯，看完早回，别熬夜

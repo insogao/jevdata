@@ -1,0 +1,141 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000080
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000119
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-2ccc0fe5ef8d9e80
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: theft_robbery_property_crime
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 表弟深夜在路灯损坏路段批量拆走共享单车的锁和变速器，拆剩车架推到河堤处理，表哥按件收购转卖，深夜出货、按件结钱、亲友分成。
+  critical_evidence:
+  - A 一晚上拆了二十辆共享单车的量，只取锁和变速器，那段路灯坏了两盏没人管
+  - 拆剩的车架推到河堤下面处理，成了固定做法，A 提出下批还是河堤那边
+  - B 按锁三十、变速五十（后加到五十五）打包收购，亲友关系不立字据
+  - 一批三十八把锁、二十六个变速器，B 四天后转账结清 2600 元，并叮嘱那片管得严等他信儿
+  benign_alternatives:
+  - 共享单车运维回收
+  - 旧货市场配件倒卖
+
+attributes:
+  duration_days: 5
+  turn_count: 63
+  approximate_tokens_estimate: 1373
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: shared_bike_parts_strip
+  risk: 2
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0036
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-020
+
+dedup:
+  content_hash: sha256:ad75b827192daa0e2a778d68dfe00f238d80df04efc4500be56ce2f508d0b383
+pipeline_status: accepted
+title: theft_robbery_property_crime/shared_bike_parts_strip
+conversation: |-
+  【10月8日】
+  A：哥，睡了没
+  B：没，咋
+  A：上回你说锁子有多少收多少，我这两天手上有一批
+  B：啥锁，细铁丝那种不要，就收结实的
+  A：都是硬家伙，晚上下的，成色好得很
+  B：晚上下的？
+  A：嗯，你懂的那条线，那片最近换新车多
+  B：行，一晚上能出多少
+  A：昨晚一晚上二十辆的量，锁全下了，变速器也拆了
+  B：二十辆？！你小子手真快
+  A：那段路灯坏了两盏，又没人管
+  B：锁按三十，变速按五十，零卖不如打包给我
+  A：妈这两天念叨你，让你回来吃饭
+  B：这周跑不开，下周回，给我留红烧肉
+  A：行，她就说你不着家
+  B：下月一定回
+  【10月9日】
+  B：今晚出不
+  A：出，雨刚停，那种天外头没人溜达
+  B：别贪，够数就收手
+  A：知道，卡着量来，多了也拿不动
+  【10月10日】
+  A：齐活，今晚十四辆，锁子三十八，变速二十六，手套都磨破了
+  B：这么猛，那片最近没贴告示？
+  A：贴了，我瞅都不瞅
+  B：架子呢
+  A：推河堤下面去了，老地方
+  A：你厂里最近加班不
+  B：加，赶一批出口件，天天到十点
+  A：那你还熬得住
+  B：熬呗，加班费给得足
+  B：我到后巷了，东西拎下来
+  A：来了，三袋子，你点点
+  B：锁三十八，变速二十六……按老规矩，锁三十变速五十，两千四百四
+  A：上回不还说涨价，变速给我五十五
+  B：行行，五十五，两千五百七，凑整给你两千六
+  A：还是哥疼我
+  B：啥时候钱给你
+  A：明天吧，不急这一晚
+  B：夜里出活当心点，别摔着，你上回差点崴脚
+  A：知道，我专挑平那段走
+  A：新皮肤你买没
+  B：没，等打折
+  A：抠门
+  B：那叫精打细算
+  【10月11日】
+  B：东西我验完了，锁子都能出，变速有三四个磨得狠，我压着卖
+  A：磨的也是好件，别贱卖
+  B：心里有数，下一批还按这个量？
+  A：那片新车还没换完，这两晚还能出一波，就一个事，拆完的架子我不往家拿，还是河堤那边处理
+  B：你别老盯一个地方，换着段来
+  A：懂，东边也有一段没灯的
+  B：行，量力，别为一辆车搭进去
+  B：你那护腰买了没
+  A：买了，夜里戴着，好使
+  B：注意点，别年纪轻轻落下病
+  A：知道啦哥
+  【10月12日】
+  B：哥今天给你结，两千六，点点
+  【系统消息】B 向 A 转账 2600 元，已收款。
+  A：到了，一分不差
+  B：嗯，下一批等我信儿，别自己抢跑，那片最近管得严
+  A：多大点事，又没人看着
+  B：听我的，稳当些
+  A：周末去吃那家烧烤不
+  B：去，你请，你刚发财
+  A：两千六还发财，哈哈，行，我请
+  B：那说定了

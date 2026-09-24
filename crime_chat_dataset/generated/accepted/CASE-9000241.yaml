@@ -1,0 +1,143 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000241
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000120
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-cb4370daf4979c99
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A 手里留着前恋人 B 的私密照片，以发到 B 单位群相要挟限期索要钱财，收款后仍暗示还有后续，持续施压。
+  critical_evidence:
+  - A 自称还留着当年旅游在酒店拍的那几张照片
+  - A 限定今晚十二点前给态度，否则照片发 B 单位群
+  - B 被迫凑钱转账 20000 元
+  - 付款后 A 称备份盘未处理完，暗示再要五千
+  benign_alternatives:
+  - 情侣间玩笑
+  - 误发照片道歉
+
+attributes:
+  duration_days: 6
+  turn_count: 64
+  approximate_tokens_estimate: 1197
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: intimate_photo_extort
+  risk: 3
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0055
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:8134103c9985af6753feb33f3ef197e27b7a90008e3e27fff111ae05319d502e
+pipeline_status: accepted
+title: coercion_blackmail/intimate_photo_extort
+conversation: |-
+  【9月2日】
+  A：在吗
+  B：在，这么晚
+  A：翻手机看到你以前的照片，扎俩小辫那张，笑死
+  B：别提了，黑历史
+  A：留着呢，删了可惜
+  B：你还留着啊
+  A：有些留着，哪天给你看看
+  A：对了台风后天到，窗户关好
+  B：知道，物业发通知了
+  A：你们车库年年淹，早点挪车
+  B：谢提醒，挪了
+  【9月3日】
+  A：吃了吗
+  B：食堂，今天鱼不错
+  A：我以前去蹭过，你们食堂一直行
+  B：现在蹭不到了
+  A：那可说不准，你们单位群叫啥我还记得
+  B：你咋知道的
+  A：你表妹跟我同学，忘了？
+  A：工作还顺不
+  B：老样子，赶项目
+  A：你就是太拼
+  B：不拼不行，房贷压着
+  【9月4日】
+  A：晚上想跟你说个事
+  B：说
+  A：那年旅游在酒店拍的那几张，还在我这
+  B：你怎么还留着
+  A：我留着没恶意，可换手机的时候被人瞄到过，我心里不踏实
+  B：你想干嘛，删了行吗，求你
+  A：删也行，但你得给我个态度，今晚十二点前
+  B：什么态度，你说清楚
+  A：分手是你提的，这两年我怎么过的你想过吗
+  B：都过去了，你要多少直说，别这样
+  A：明白人。十二点前，给个说法
+  B：你还跑步不
+  A：跑，情绪上头就多跑两圈
+  B：锻炼比闷着强
+  【9月5日】
+  A：想好没
+  B：你到底要多少
+  A：两万，删照片的态度
+  B：我拿不出两万
+  A：那我换个要法：今晚十二点前到账，不然照片发你单位群，让你同事都看看
+  B：你疯了，做人不能这样
+  A：我是被你逼成这样的
+  B：给我点时间，我去凑
+  A：十二点，一分不能晚
+  B：凑了两万，别发了，求你
+  A：转过来
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  B：转了，东西全删了
+  A：收到了
+  【9月6日】
+  A：东西我处理了一部分
+  B：什么叫一部分
+  A：有几张在备份盘里，盘坏了没修好，你懂的
+  B：你还要怎样，说个数
+  A：不急，再五千，这回真清干净
+  B：你说话得算数
+  A：我一直算数，是你没一次做绝
+  B：我下周还得搬家，又是一笔开销
+  A：搬哪
+  B：公司附近，房租涨八百
+  【9月7日】
+  B：五千我周四发工资才能凑齐
+  A：周四就周四，我等着
+  B：备份的事你给我个准话
+  A：钱到，东西清，咱俩再无瓜葛。这事也别跟任何人提
+  B：……行

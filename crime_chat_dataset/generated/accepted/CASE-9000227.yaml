@@ -1,0 +1,139 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000227
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000108
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-0a40f9ebfa930687
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: theft_robbery_property_crime
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 团伙头目踩点老小区独住户，指使手下锁匠趁傍晚家中无人进屋取财，约定只做一次，当晚交接并转账酬金，全程用「跑一趟」「东西」代替实指。
+  critical_evidence:
+  - 选定九十年代老小区、单元门损坏的楼栋
+  - 约定傍晚五点半家中无人时进去，只做一次不做第二回
+  - 取出的「东西」当晚在老码头停车场交接
+  - 酬金4500元转账与「说好的数」对应
+  benign_alternatives:
+  - 正规开锁换锁服务
+  - 物业钥匙托管与巡查
+
+attributes:
+  duration_days: 5
+  turn_count: 61
+  approximate_tokens_estimate: 1266
+  relationship: 上下级
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: key_copy_burglary
+  risk: 3
+  relationship: 上下级
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0053
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-025
+
+dedup:
+  content_hash: sha256:cf760ac5e2c89d013ff64c7b307732052af0a8688372a7c923efdcf215c7a2d1
+pipeline_status: accepted
+title: theft_robbery_property_crime/key_copy_burglary
+conversation: |-
+  【10月13日】
+  A：周五下午给我跑一趟，有空没
+  B：哪一趟
+  A：河东那片，你上回说最好对付的那种老小区，九十年代的房子
+  B：恩，那种对付过几个，不费劲
+  A：我看中一栋，六楼东户，那家人作息我让人看了几天
+  A：傍晚五点半，家里基本没人，就一趟，去一回就收，不做第二回
+  B：明白，你的规矩
+  A：家伙什自己带还是我给你备
+  B：我有，老一套
+  A：中午吃的啥
+  B：楼下牛肉面，老位置
+  A：你天天面，胃行吗
+  B：加了个蛋，营养均衡
+  A：少喝点酒，你那腰还得用
+  B：提醒了，贴着膏药呢
+  【10月14日】
+  B：你说那栋我路过看了眼，单元门是坏的
+  A：我就知道省事，楼道里杂物多不
+  B：多，五楼堆了一楼道纸箱
+  A：周五你四点半到，先在小区外转一圈再进
+  B：恩，走哪个门
+  A：北门，离那单元近，出来也走北门
+  B：记下了
+  A：降温了，你那屋暖气烧了没
+  B：烧了，就是干，嗓子疼
+  A：加湿器安排上
+  B：我姐寄了一个，还没到
+  A：到了就用上，晚上吃好点
+  B：晚上在我姐家蹭的饭，她做了鲈鱼
+  A：清蒸的？
+  B：恩，我姐手艺可以
+  A：下回叫上你姐夫，钓鱼那事他还欠着
+  B：他就是忙，别催他
+  【10月15日】
+  A：周五那趟时间掐准，傍晚五点半，前后别差太多
+  B：五点半楼里人最少吧
+  A：正是下班路上，屋里剩不了两户，进去二十分钟内出来
+  B：行，不磨蹭
+  A：做完这边的事就结了，你不用再管
+  B：我儿子补习班又催缴费，一学期八千多
+  A：现在都这么贵
+  B：不敢停，别的孩子都在上
+  A：他成绩咋样
+  B：数学还行，语文拖后腿
+  A：慢慢来，周五完事你手头也宽裕点
+  【10月16日】
+  B：明天四点半到北门，家伙什带齐了
+  A：别穿工装，背个双肩包，别迟到
+  B：收到
+  A：完事直接回家，当天别接别的活
+  B：知道，误事
+  B：顺路加个油，油价又涨了
+  A：可不，一箱多花三十
+  B：你那车该保养了吧
+  A：下周去，正好跑趟高速
+  【10月17日】
+  B：出来了，东西在我车上
+  A：别开箱，直接放我这，晚上八点老码头停车场，我给你结
+  B：好
+  A：到哪了
+  B：停好了，过来
+  【系统消息】A 向 B 转账 4500 元，已收款。
+  A：点下，说好的数
+  B：收到，正好给儿子交补习费
+  A：这页翻篇，最近少联系，过了这阵再走动
+  B：恩，懂的

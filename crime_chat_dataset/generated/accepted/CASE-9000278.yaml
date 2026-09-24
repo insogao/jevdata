@@ -1,0 +1,121 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000278
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000101
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-8df9e729824a1846
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 同事帮忙跑腿的说辞下，是一单替人取现换取千分之五酬金的活：带身份证、当天往返、不问来源，定金已经转了。
+  critical_evidence:
+  - A让B周六带身份证跑一趟外地，替所谓公司结算取现，当天往返
+  - 酬金按千分之五结算，取二十个得一千，A先转一千定金
+  - B追问钱是谁的、干不干净，A只说是大老板私账往来，让别多问
+  - 约定周六一早车站碰头，取完现把袋子交给来接的人就算完事
+  benign_alternatives:
+  - 帮忙代办取款的跑腿兼职
+  - 公司现金结算请同事顺路捎带
+
+attributes:
+  duration_days: 3
+  turn_count: 45
+  approximate_tokens_estimate: 1014
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: help_move_fund_fee
+  risk: 3
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0059
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:0d7b4172044bae78b779ebead0291cc47b869c64e303d91d46fac93deebd5153
+pipeline_status: accepted
+title: money_laundering_obfuscation/help_move_fund_fee
+conversation: |-
+  【10月21日】
+  A：小林 下班不 一起走到地铁口
+  B：走 蒋哥今天走挺早
+  A：你这周天天九点走 项目上线忙吧
+  B：可不 测试全靠人肉点点点
+  A：上线完请你们组撸串
+  B：记你账上啊
+  A：周六有空不 帮哥个忙 有个来钱的路子
+  B：啥路子
+  A：跑一趟腿 不累 当天来回
+  B：多不累 说来听听
+  A：明天细说 就问你周六到底有没有空
+  B：有球局 上午
+  A：让老周改到周日 你这忙必须帮
+  【10月22日】
+  B：蒋哥 说吧 周六啥活
+  A：早班高铁去临州 取个现 当天往返 晚上就回
+  B：取谁的
+  A：公司在外地的结算款 走对公太慢 老板让信得过的自己人带回来
+  B：多少
+  A：二十个 你抽千五 一千 当天来回
+  B：二十万?还要用我身份证吧
+  A：对 带身份证就行 材料我们备好 取的是你名下
+  B：这钱干不干净 万一卡出问题
+  A：大老板的私账往来 你想那么多干嘛 干活拿钱就行
+  B：财务干不了吗
+  A：额度早用完了 就当帮公司个忙 人到就行
+  B：说到球局 老周拍子断了
+  A：让他用我备用拍 再断扣他奶茶
+  B：你这教练架子越来越足
+  A：场地费都我垫的 必须有架子
+  B：我下月房租到期 想换个离地铁近的
+  A：我表弟小区有空的 回头问问
+  B：好嘞 有合适的推我
+  A：包在我身上
+  【10月23日】
+  A：定金转你了 周六七点四十 车站西口见
+  【系统消息】A 向 B 转账 1000 元，已收款。
+  B：定金都到了…先把话说明白 就取现 别的我不干
+  A：就取现 取完有人接货 袋子一交就完事
+  B：袋子沉不沉
+  A：有人搬 你当自驾游 身份证带好 别迟到
+  B：周六天气咋样 别下雨
+  A：预报晴 高铁上睡一觉就到
+  B：就这一回 说好的
+  A：就一回 干利索点
+  B：下回别找我 先说好
+  A：行行行 周六见 别迟到
+  B：唉 见

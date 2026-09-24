@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000120
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000042
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-74e073b2ad356ee9
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: contraband_illicit_trade
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 公司同事合谋赶在盘库前把仓库化工货换上他人包装、夜里从北门拉走，定金加现金尾款、不走公司账，用途去向互不追问，完成绕开公司账目的私下出货。
+  critical_evidence:
+  - A答应B赶在盘库前从仓库西边弄出一批货，并按B提供的样式更换外包装字样
+  - 约定周四夜里北门自提、尾款现金、不走公司账，B明言用途和去向都别问
+  - B提前微信转5000元定金，提货当夜现金结清尾款一万六
+  - 事后A平掉库数、冲刷北门现场，两人约定相关的话不落在手机里
+  benign_alternatives:
+  - 正规化工原料采购
+  - 实验室试剂供应
+
+attributes:
+  duration_days: 4
+  turn_count: 55
+  approximate_tokens_estimate: 1359
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: shell_chemical_diversion
+  risk: 3
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0040
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-021
+
+dedup:
+  content_hash: sha256:35309b3cf098db17d769900ac0f9f08cc22f0bc3c5cb6018bf283ae60d9ca4b7
+pipeline_status: accepted
+title: contraband_illicit_trade/shell_chemical_diversion
+conversation: |-
+  【10月8日】
+  A：早 我今晚值班 食堂新师傅的红烧蹄髈绝了 中午来不
+  B：来 给我留一块
+  B：蹄髈确实可以
+  A：就说吧
+  B：对了 上回我提的事 我哥那边催了 说这周就要
+  A：哪批
+  B：就仓库西边那些
+  A：那批有数 西边过几天要盘库 你得赶在盘库前
+  B：那就这周
+  A：周四夜里 北门 老位置
+  B：行 车我哥安排
+  A：自提 现结 老规矩
+  B：懂
+  【10月9日】
+  B：我哥问 外面那层字按什么换
+  A：你把样式发我 照做就是 换成别家公司的牌子 印刷我找人
+  B：发你了 收到没
+  A：收了 就换外面这层 里头什么都不动
+  B：我哥交代了 用途你别问 送去哪儿你也别问
+  A：我从来不问 干我们这行的 分寸我有
+  B：那就周四
+  A：盘库的单子下来了 西边那排我给他们登记成待处理 你那边手脚利索点
+  B：明白 一晚上完事
+  A：盘库那几天你少往仓库跑 别让人把咱俩对上号
+  A：我体检报告出来了 尿酸偏高 吓人
+  B：少喝啤酒 蹄髈也少吃
+  A：那活着还有什么意思
+  B：哈哈 管住嘴吧哥
+  【10月10日】
+  B：定金我现在转你
+  A：行 收了就是认这个事 周四夜不见不散
+  【系统消息】B 向 A 转账 5000 元，已收款。
+  A：收到 定金记下了 尾款现金 提货时点清
+  B：现金我准备好了
+  A：还有一条 车别进主院 北门外面停 装完就走 大灯别开
+  B：我哥的车是厢货 一趟装得下吗
+  A：十二个桶 一趟能走 天亮前必须完
+  A：叉车我借好了 电的不吵人 到了先装 别磨蹭
+  B：妥
+  B：我爸妈这周从老家过来 顺两箱苹果给你
+  A：叔叔阿姨身体还好吧
+  B：我爸血压高点 别的不碍
+  A：让他少吃咸 苹果我收下 替我谢谢二老
+  【10月11日】
+  A：完事 桶都装稳了 你清点 十二个
+  B：数了 十二个 尾款一万六现钱 点给你
+  A：对上了 我记一笔 这事到我这儿为止
+  B：我哥那边一路顺 上了高速
+  A：别给我发这些 有些话就不该落在手机里
+  A：早上北门那片我冲了一遍 叉车还了 库里的数平了 你这两天正常上班 别躲闪
+  B：知道 我今天还约了人谈订单
+  B：昨晚没看住球 凌晨那场谁赢了
+  A：平局 你亏的夜宵钱找人报去
+  B：哈哈 下回你陪我熬夜
+  A：下回你还是欠我一个人情
+  A：周末降温 你哥跑长途多穿点
+  B：跟他说了 他还笑我啰嗦
+  A：让他这趟跑完好好歇两天
+  A：缓缓好 有些钱挣一次就够了

@@ -1,0 +1,143 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000011
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000131
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-30669ff9344d181a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 放贷方以宽限还款为名，要求借款人的成年亲属到其山中据点看货抵债、还清才放人，以人身作为债务担保进行隐性胁迫。
+  critical_evidence:
+  - B 到期无力偿还 A 等人的 6 万元借款
+  - A 提出让小军先跟我们走、吃住我们管、还清来接，次日即安排接走
+  - B 转账 8000 元先算利息求缓，人仍被留下，尾款差额被暗示让军多住些日子抵了
+  - A 话里带钉：山里信号差、月底现金结清、别让家里人乱张罗
+  benign_alternatives:
+  - 民间借贷的正常催收与宽限还款协商
+  - 亲戚帮忙安排仓库看货的活计与食宿
+
+attributes:
+  duration_days: 2
+  turn_count: 68
+  approximate_tokens_estimate: 2414
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: agent_debt_bodily_collateral
+  risk: 3
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0028
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-017
+
+dedup:
+  content_hash: sha256:ab6f6e098d413c12775296c0c333effa5e1e1849d9b1e3d0f5300e3af496356d
+pipeline_status: accepted
+title: coercion_blackmail/agent_debt_bodily_collateral
+conversation: |-
+  【10月29日】
+  B：强哥，中午吃了吗
+  A：刚应酬完。小魏啊，日子到了，哥也没催你，那边筹得咋样了
+  B：哥，实话实说，店里压了一窑砖的钱，六万一下子真腾不出来
+  A：上个月你亲口说的月底本清，哥几个都听着呢。看在你表哥面上才放你这笔
+  B：我知道我知道，哥再宽限宽限，利息照付
+  A：宽限不是不行。哥几个这两天正合计，山里那个仓库缺个看货的，你那小舅子小军不是正好闲在家里吗
+  B：……军？他一个厨子，看啥仓库
+  A：年轻人，手脚利索就行。让他过来，吃住我们全管，一个月还有零花。你安心筹钱，钱清了，人我原样给你送回来
+  B：哥，军他胆子小，晚上认床……
+  A：山里空气好，睡得沉。就是信号差点，打电话要走到坡顶，你习惯就好
+  B：哥……这……
+  A：这什么这，哥是给你留面子。你让你姐家那几个别出去乱张罗，借钱的事说出去，大家脸上都不好看
+  B：我不张罗，一个字都不往外说
+  A：这就对了。明天让军自己坐早班车过来，村口那棵大槐树下等着，有人接
+  B：哎……好
+  A：你那店最近生意咋样，砖价涨没
+  B：涨了点，就是工地回款慢，压钱
+  A：做生意就这样，现金为王。你呀，就是心太软，谁赊都给
+  B：哎，街坊邻里的，拉不下脸
+  A：做买卖的，脸面值几个钱。哥这账就是太讲情面才……不说了
+  B：哥你别说了，是我对不住哥
+  B：哥，听说山里这两天下霜了
+  A：下了，早上白茫茫一层，我那几棵柿子树正甜
+  B：军他怕冷，我得给他捎床厚被子
+  A：仓库里有的是，军大衣都有新的，你人就别操这心了
+  B：那哪行，自家的孩子……
+  A：行行行，想捎就捎，让接他的一块带上去
+  B：哥，我先给您转八千，算这两个月的利息，您点点
+  A：转吧
+  【系统消息】B 向 A 转账 8000 元，已收款。
+  A：收到了。小魏，哥把话放这：这八千算利息，本金六万一分不少。军明天过来，钱清那天，人干干净净回你那
+  B：哥，军他要是有个头疼脑热……
+  A：我山庄常备着药呢，比你城里头还全。你操你自己那份心就行
+  【10月30日】
+  B：强哥，早上好，军上车了，八点的班车，我给他塞了两身换洗的
+  A：好，槐树下有人接，到了我让他给你捎话
+  B：哎，有劳哥
+  A：军到了，正吃红烧肉炖粉条呢，香得很。他让我捎话：姐夫别惦记
+  B：那就好。哥，人交给你了，我心里七上八下的
+  A：七上八下啥，山里清净。哦对了，你不是有辆拉货的车？哥认识收车的，价公道，要不出了先结一部分
+  B：车……车卖了拿啥送货啊
+  A：送货？人先安顿好比啥都强。你自己掂量，月底还剩四天
+  B：哥，容我再想想，我看看还能不能周转一笔
+  A：想可以，别拖。哥几个的耐心就到月底，过了月底，军那边的伙食费可要另算喽
+  B：……啥意思
+  A：意思就是早点结清，大家都省事。山中无历日，你急我不急
+  B：哥，我明白，我这就去凑
+  A：对了，桥头老马家烧烤还开着没
+  B：开着呢，老马腰不行了，他儿子掌勺了
+  A：味道还行不
+  B：略差点，不过烤韭菜还是一绝
+  A：等这事顺了，哥请你，把你表哥也叫上，咱哥仨好好喝一场
+  B：哎，等我顺了这天……
+  B：哥，丈母娘家凑了三万，我再把库里砖甩一批，月底前能凑到五万二
+  A：五万二？还差八千。差的这八千，让军多住些日子就抵了嘛
+  B：哥！差的这点我跟我姐张罗，一定凑齐，你别动军
+  A：谁动他了，孩子在我那吃香喝辣。26岁的大小伙子，锻炼锻炼是好事
+  B：是是是，我说岔了
+  B：哥，我姐那三万她死活不要利息，这情我记一辈子
+  A：记谁都是记，先把哥的本金结干净才是正事。月底那天，现金，我让人在你店里等
+  B：现金？五万多现金，取款有限额啊哥
+  A：分两天取嘛，你那店每天流水总有吧。别跟哥说难
+  B：哎，好，我分两天取
+  A：军刚又吃了两大碗面，让我告诉你别惦记。哥最后啰嗦一句：这事就你知我知，你姐那暴脾气，千万别让她往山里跑，来了大家脸上都不好看
+  B：我拦着呢哥。全家都等军回去吃团圆饭呢
+  A：会有那天的，钱到人回，哥办事你放心
+  B：嗯，哥，月底见
+  A：月底见。对了，你捎的被子给军盖上了，厚实着呢
+  B：哎，谢谢哥
+  A：谢啥，自家人。安心筹钱

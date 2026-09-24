@@ -1,0 +1,144 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000049
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000099
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-07fb41a7de93a345
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: money_laundering_obfuscation
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 表哥借表弟的银行卡把夜里集中到账、来路说不清的钱以店铺退款名义原路退到指定卡，刷出好看的店铺流水，并按两个点给表弟好处费。
+  critical_evidence:
+  - A 让 B 把夜里到账的钱按老规矩原路退回，却退到指定卡（尾号6621），不是原付款卡
+  - 手续费按两个点结算，走完后 A 转给 B 1900 元
+  - 两日内分三笔共 9.5 万元走账，目的是把店铺流水做得好看、让平台挑不出毛病
+  - 按指示分笔小额、换入口操作，与店铺真实订单无关
+  benign_alternatives:
+  - 正常电商退款流程
+  - 刷单退款纠纷讨论
+
+attributes:
+  duration_days: 2
+  turn_count: 69
+  approximate_tokens_estimate: 1471
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: refund_cycle_wash
+  risk: 2
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0032
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-018
+
+dedup:
+  content_hash: sha256:0671e4d03b8d661c55b837c98fe86d6fc4b3f1eb39dbd009c657bc1f447914cb
+pipeline_status: accepted
+title: money_laundering_obfuscation/refund_cycle_wash
+conversation: |-
+  【9月12日】
+  A：弟，起了没，问你个事
+  B：刚醒，哥啥事
+  A：昨天夜里进的那几笔，到你卡上了吧
+  B：到了，我看了下，一共一万九
+  A：嗯，老规矩，原路退回，退到我一会儿发你的那张卡
+  B：又不是原来付款的那张？
+  A：那边指定要收这张，你别管为什么，照卡号转就行
+  B：行吧，反正每次都是你说了算
+  A：手续费还是两个点，这波做完一起结你
+  B：成
+  A：卡号发你了，尾号6621，户名你不用管
+  B：收到，上午就转
+  A：慢点转，分两笔，一笔九千五
+  B：你想得是真细
+  A：对了，下周咱妈过生日，蛋糕你订还是我订
+  B：我订吧，上回那家栗子味她说好吃
+  A：行，钱我转你，别让你垫
+  B：几寸的？去年十寸剩了一大半
+  A：那就八寸，她现在不敢多吃甜的
+  B：好，我下午就去订
+  B：第一笔转了，你查下
+  A：到了，我对下账
+  A：没错，下午你把剩下那笔也走了
+  B：这周拢共走多少了
+  A：加上今天这波，八万出头，月底再走两万，店铺流水好看，平台那边也挑不出毛病
+  B：你这账面比我工资条还体面
+  A：那可不
+  B：哥你那边降温没，我这儿风大得很
+  A：降了，早上我都换长袖了
+  B：我那件黑外套拉链坏了，你那件借我穿穿
+  A：拿去，周末回来自己衣柜里拿
+  B：好嘞
+  A：下午那笔走完说一声
+  B：在弄了，银行App老闪退
+  A：换我发你那个入口进，别用主页那个
+  B：走了，九千五，退到尾号6621了
+  A：收到，今天先到这儿，明天收个尾
+  B：行，那我下午去打球了
+  A：别喝冰的，你胃前阵子才养好
+  B：知道啦，跟我妈似的
+  【9月13日】
+  B：早，昨晚那头有动静没
+  A：没动静，正常
+  A：今天就剩最后一笔，一万五，走完这波就齐了
+  B：行，我上午办
+  A：对了，你周三那场面试准备得咋样
+  B：简历又改了一版，就怕人家追问项目细节
+  A：照实说呗，上回那个小程序本来就是你做的
+  B：也是，大不了现场打开给他看
+  A：面完跟我说，别紧张
+  B：嗯
+  B：最后一笔走了，一万五，你看下
+  A：到了，我再核一遍
+  A：齐了，这波总共九万五，账面干干净净
+  B：手续费你说一起结的哈
+  A：这就给你，两个点，一千九
+  【系统消息】A 向 B 转账 1900 元，已收款。
+  B：到了
+  B：那我周三面完试请你吃饭
+  A：行，就蛋糕店旁边那家面馆
+  B：下午球场有人吗，我去投会儿篮
+  A：老张他们三点就在，你直接去
+  B：行，回来顺路把蛋糕订了
+  A：嗯，记得要少糖的
+  B：知道
+  A：对了，月底还有一波，跟这回差不多，你留点额度
+  B：行，你提前一天跟我说
+  A：嗯，卡就你我用，别往外借，咱俩知道就行
+  B：懂
+  A：早点睡，晚安
+  B：晚安哥

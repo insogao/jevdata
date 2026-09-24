@@ -1,0 +1,156 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000297
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000011
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-ea35a5f6776f0b7c
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A冒充航司渠道票务，谎称航班取消，以退款加补偿为饵，一步步引导老人装会议软件、交出验证码、转验证金；B全程以为自己在正常办退款。
+  critical_evidence:
+  - A主动联系称B的航班取消，可全额退款加延误补偿
+  - A引导B下载会议用的软件并让人带着一步步操作
+  - A索要B收到的短信验证码，B照念给了对方
+  - B先转9800元验证金，事后核实航班从未取消，A随即失联拉黑
+  benign_alternatives:
+  - 航司真实的退改签流程
+  - OTA客服的回电核实
+
+attributes:
+  duration_days: 6
+  turn_count: 77
+  approximate_tokens_estimate: 2158
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: customer_service_reverse
+  risk: 2
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0061
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-028
+
+dedup:
+  content_hash: sha256:94a8f8e835a86aa554c77ef190b6a3bdc17a74e4064b34eca66790dce9e2b1aa
+pipeline_status: accepted
+title: fraud_scam/customer_service_reverse
+conversation: |-
+  【9月8日】
+  A：叔，在忙没
+  B：小王啊，怎么了
+  A：跟您说个事，您18号飞海口那趟航班，航司那边取消了
+  B：啊？我没收到通知啊
+  A：系统里已经显示取消了，短信可能还在路上
+  B：那票怎么办，两千多买的呢
+  A：别急，全额退，另外每位还有三百的延误补偿
+  B：那敢情好
+  A：当初就是您侄子介绍在我这订的票，信息都现成，我直接给您走加急
+  B：行，亏得有你，省心
+  【9月9日】
+  A：叔，加急通道这边要做个回访确认
+  B：怎么弄
+  A：一会您手机上会来条短信，先别自己乱点，我教您正规的
+  A：您先在手机上装一个开会用的软件，客服对接用的，装好我教您操作
+  B：退个票还要装软件？
+  A：补偿是银联通道结算，要视频确认是本人，防冒领
+  B：行吧，你们大公司流程就是多
+  A：装好了跟我说一声
+  B：装好了，进去了
+  A：好，下午三点客服老师跟您对接，我陪着您
+  B：先不说了，孙子开学头一天，我去接放学
+  A：好嘞，您忙您的
+  B：接回来了，一年级小豆包，书包比我行李箱还沉
+  A：哈哈，那晚上还得辅导作业吧
+  【9月10日】
+  A：叔，下午的确认做了，卡在资金核验这一步
+  B：什么意思，钱呢
+  A：系统提示您的卡交易状态异常，补偿款放不进来
+  B：那咋办，卡坏了？
+  A：常见，银行系统升级闹的，走一遍冲正就好，客服老师带着您弄
+  B：那赶紧的，我这两天等着交物业费呢
+  A：刚客服老师说了，您手机上收到的验证码念一下，要做登记
+  B：来了条短信，六个数，念给您？
+  A：对，念给我，我帮您录进去
+  B：二八一五零九
+  B：弄完了？钱到哪一步了
+  A：显示处理中，24小时内到账，您留意短信
+  B：先不说了，你婶子喊我去广场舞队凑数
+  A：正好，您血压高，活动活动
+  B：医生说别跳太猛，我站最后一排甩甩手
+  【9月11日】
+  B：小王，一晚上没动静，钱没到
+  A：叔，我正要找您，系统提示核验超时，通道把您那笔冻结了
+  B：冻结了？那我那两千多票款呢
+  A：票款和补偿都在通道里，做个资金验证就能一起放行
+  A：您先转9800到通道的验证账户，验证完连本带退，原路回来
+  B：还要我先掏钱？
+  A：银联的规矩，验证金不动您本金，十分钟就回卡
+  B：我一个退休老头，你可别把我绕进去
+  A：叔，咱都处两年了，您侄子介绍的，我能坑您吗
+  B：那行，你说怎么转
+  A：转我发您的那个通道账户，备注写验证俩字
+  B：转了，9800，你给我盯着
+  【系统消息】B 向 A 转账 9800 元，已收款。
+  A：收到，我盯着系统呢
+  B：外面起风了，说是台风外围到了
+  A：是，周末您那边有雨，别出门乱跑
+  B：下周航班要再有变动，你第一时间告诉我
+  A：必须的
+  【9月12日】
+  B：小王，一宿了还是没短信
+  A：叔，通道反馈您那笔验证超时了，得重新走一遍冲正
+  B：怎么又要来一遍
+  A：系统升级闹的，这次客服总监亲自盯您的单
+  B：我怎么心里有点不踏实
+  B：我跟你婶子念叨这事，她说哪有退款倒让人先转账的
+  A：婶子没接触过银联通道，外面的验证流程她们不懂
+  B：那你让客服给我正儿八经回个电话
+  B：哎，变天了，老寒腿又开始疼
+  A：您贴两片膏药，这几天别去河边钓鱼了
+  B：竿子都收拾好了，罢了罢了
+  【9月13日】
+  B：小王，说好上午回电呢
+  A：叔，总监临时开会，改到下午，一有信我马上告诉您
+  B：刚才我让侄子查了，18号那班根本没取消，准点落的地
+  A：叔您听我解释，系统显示和实际舱单不同步，常有的事
+  B：常有的事？你给我个准话，票款加那九千八怎么办
+  A：您再给我二十四小时，流程走完一分不会少
+  B：这事我闺女和我侄子都知道了
+  B：电话也不接了是吧
+  B：微信也把我拉黑了，好啊
+  B：九千八买个明白，明天我去所里，把聊天记录都交上去

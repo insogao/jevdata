@@ -1,0 +1,143 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000221
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000128
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-8c7e6497214dd1cd
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A以帮忙照应生意为名向奶茶店主收取每月三千的费用，用隔壁没交钱的店铺门头被砸、歇业的下场暗示不交钱的后果，店主被迫按月转账。
+  critical_evidence:
+  - A以老熟人身份到店，主动提及隔壁巷子茶理店门头玻璃被碰碎、随后歇业，老板人都蔫了
+  - A提出每月三千由其朋友帮忙看场、发传单、弹开闹事醉汉，B以利薄推脱后A重提茶理下场
+  - B两次压价未果只能应下，10月11日按约转账3000元并追问店里不会出事，A承诺这条街谁也不敢来撒野
+  - 收款次日A提及街口修车老郑呛声说不用谁照应，撂话明天见分晓，B立刻服软
+  benign_alternatives:
+  - 商业竞争摩擦
+  - 物业纠纷
+
+attributes:
+  duration_days: 4
+  turn_count: 66
+  approximate_tokens_estimate: 1560
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: competitor_sabotage_threat
+  risk: 3
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0052
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-025
+
+dedup:
+  content_hash: sha256:91e3c2d5af65c260c5aff3502697e0477a286e58ecf512d6dbe37240fa2abc15
+pipeline_status: accepted
+title: coercion_blackmail/competitor_sabotage_threat
+conversation: |-
+  【10月9日】
+  A：柯老板 开门没
+  B：强哥？稀客 进来坐 尝尝新品
+  A：不用忙 路过 看看你
+  A：朋友多 这条街熟人也多
+  B：您消息就是灵
+  A：店开小半年了吧 生意还行？
+  B：马马虎虎 工作日靠学生 下雨抓瞎
+  A：年轻人创业 踏实最重要
+  B：借您吉言 尝尝 茉莉初雪
+  A：不错 比上一家强
+  B：上一家？这铺子之前是卖包子的吧
+  A：我说隔壁巷子“茶理” 听过吧 上月还热闹 后来不行了
+  B：哦 那家听说歇业了
+  A：可惜 门头玻璃前阵子不知被谁碰碎 老板人都蔫了 做生意光手艺好没用 讲究个安稳
+  B：是 装套监控也得小两万
+  A：你天台漏水弄了没 周末有台风
+  B：昨天刚补 花八百 心疼
+  A：八百买个安心 值 隔壁服装店去年棚子全掀了
+  B：所以提前弄了
+  A：柯老板 说个事 你别有压力
+  B：您说
+  A：我几个朋友常在这条街走动 传单帮发 场子帮看 醉汉闹事给你弹开 你做街坊生意 图个清净
+  B：强哥 您的意思是
+  A：每月三千 街上朋友都这个数 几杯奶茶钱 我天天帮你留意
+  B：这个……小店利薄 三千吃力
+  A：你再想想 茶理当初也这么说 后来咋样你知道 有些钱省不得
+  B：容我考虑几天 刚交完房租
+  A：行 想想 我从不逼朋友 但话带到了
+  【10月10日】
+  B：强哥早 您家小宝跆拳道班咋样 我侄子想报
+  A：可以 那老师负责 就你们店后面商场
+  B：一期多少
+  A：两千八 年卡送道服
+  B：行 回头跟哥嫂说
+  A：报我名字减二百 哈哈开玩笑 嫂子说了算
+  A：想得咋样
+  B：强哥 实话 三千真吃力 两千行不 我每月准时
+  A：我照应的是整条街 两千我不好交代
+  B：那两千五
+  A：三千 别让我为难 你这位置学生多 出不得事
+  B：……行
+  【10月11日】
+  A：老家橘子上市 我妈寄一箱 你来拿
+  B：感情好 我给您带筐鸡蛋
+  A：客气啥 咱半个老乡 你姑不也咱镇的
+  B：是 嫁你们邻村
+  A：所以这条街 咱是自己人
+  B：嗯 谢强哥照应
+  B：强哥 那事我想通了 就按您说的
+  【系统消息】B 向 A 转账 3000 元，已收款。
+  B：这个月的 您点点
+  A：收到 痛快 这不省心多了
+  B：嗯 那我店里……应该不会出啥事吧
+  A：放心 有我在这条街 谁敢来你门口撒野 安心做生意
+  【10月12日】
+  B：强哥 您那铺面二楼还租着没 我朋友找仓库
+  A：二楼堆货 三楼空着
+  B：三楼也行 放货架
+  A：让他来找我 价好说
+  B：成 让他加您
+  B：强哥吃早饭没 我新出的燕麦拿铁
+  A：路上啃了包子 你这啥
+  B：燕麦拿铁 无糖
+  A：下回尝 少整洋名字 哈哈
+  A：街口修车老郑 认识吧 上礼拜跟人呛呛 说不用谁照应
+  B：然后呢
+  A：明天见分晓 我就提醒一句 和气生财
+  B：明白 强哥
+  A：下月初一来喝你的桂花酿
+  B：好 给您留着

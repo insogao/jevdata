@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000220
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000021
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-a9938f62d6596987
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: bribery_corruption
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 评审成员老郑利用把关之便为老同事的投标量身定制技术参数与报价条件，中标公示当晚深夜收取四万元酬谢。
+  critical_evidence:
+  - 招标文件技术参数被照着恒远家的机型撰写，A直言照那个方向准备准没错，技术分占55
+  - A要求B带量报价：清单上实训终端两百台一个都不能动，报价要留出下浮空间，开标日本人也别到现场
+  - B多次提及事成后的心意，A以老同事不言谢带过，全程不点破交换条件
+  - 10月18日中标公示当晚23:47，B向A转账40000元并称一点心意，A回复收到并约定下周对接合同
+  benign_alternatives:
+  - 合法分包合作
+  - 居间佣金合规申报
+
+attributes:
+  duration_days: 3
+  turn_count: 46
+  approximate_tokens_estimate: 1491
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: project_bid_kickback
+  risk: 3
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0052
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-025
+
+dedup:
+  content_hash: sha256:0cd27fef738627a43618df3732e4124596da55d69cd7d97c36a03f173d27ad5d
+pipeline_status: accepted
+title: bribery_corruption/project_bid_kickback
+conversation: |-
+  【10月16日】
+  B：郑工 早 上礼拜说的那个学院实训室项目 文件挂出来了没
+  A：挂了 你自己上网看 招标文件第三章别漏
+  B：我刚下载了 参数那块几个指标挺怪 标注处理模块需支持同源架构 这不是照着恒远家的机器写的吗
+  A：你懂就行 评分办法里技术分占55 照那个方向准备准没错
+  B：明白 那量呢 工程量清单里实训终端写死两百台 这数怎么来的
+  A：数你按清单报 别动 带量报价 报少了影响分 报多了废标 就这个量最好
+  B：收到 那其他家呢 他们看不出来吗
+  A：文件是我帮忙把关的 你把东西做好 剩下的我来
+  B：郑工 那真是麻烦您了 事成之后……
+  A：咱俩还用说这个 老同事了 你把事办漂亮比啥都强
+  B：懂的懂的 回头我把方案再顺一遍 周五给您过目
+  A：中午食堂有糖醋排骨 你来不来
+  B：我在客户这呢 晚了 排骨替我吃两块
+  A：那我不客气 新来的师傅手艺可以 就是打菜手抖
+  B：哈哈 哪个食堂都一样 下回您带我去二楼小炒
+  【10月17日】
+  B：郑工 您闺女志愿填了没
+  A：填了 计算机 她非要学这个
+  B：好专业 以后让她来我这实习
+  A：先操心分数够不够吧
+  B：一定行的 随您
+  B：方案按您说的改好了 参数响应表全对着第三章来 量一点没动
+  A：发我邮箱 我晚上看 报价别报满 留出下浮空间 评标的时候有会比较
+  B：明白 报价我压到比预算低四个点
+  A：行 明天开标 你别来现场 派个商务的来就行
+  B：好的 您费心 咱之前说好的那份心意 我一直记着呢
+  A：少说这个 把事做成什么都好说
+  B：收到 静候消息
+  A：你上回给我那个理疗仪挺好 用了一礼拜 脖子松快多了
+  B：那是我们仓库样机 那款热敷模式最出名
+  A：行啊 卖设备的自己先享受
+  B：那必须的 您常用 我腰突的同事我都推荐
+  A：我们办公室一半人脖子都有毛病 全低头族
+  B：少低头 多游泳
+  【10月18日】
+  B：郑工 周末出钓不 我新淘了套竿
+  A：开标呢 周末哪有空 钓鱼等我退休
+  B：也是 您忙大事 哈哈
+  A：等忙完这阵 秋天水库鲫鱼正肥
+  B：行 到时候我打窝您出位
+  B：郑工 公示挂了 我们第一！
+  A：看到了 别声张 走完流程再说
+  B：全靠您 真不知怎么谢您
+  A：老同事 说这些干嘛 合同签好 把货和安装做扎实 别给我丢人
+  B：放心 您吩咐的都妥妥的
+  【系统消息】B 向 A 转账 40000 元，已收款。
+  B：郑工 一点心意 您收好 这么晚打扰 不好意思
+  A：收到了 这么晚了快休息 合同细节下周对
+  B：好的 晚安郑工

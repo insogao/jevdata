@@ -1,0 +1,149 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000171
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000121
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-ecc092076dcc0cc9
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A长期掌握B的婚外私事并以此为筹码，把每月八号设成固定“安排”日，辅以目击细节和“嫂子知道这事吗”的暗示持续施压勒索，迫使其按月低头。
+  critical_evidence:
+  - A反复以“每月八号”设定周期节点，B须按时“安排”，逾期即加压
+  - A问“嫂子知道这事吗”点出软肋，B坚决不能让妻子知情
+  - A目击B在单位门口送人上白车并当面点破，暗示掌握其私事
+  - B只能以“老地方放东西”按月应付，A以“照顾好你自己”收尾软威胁；全程无任何转账记录，疑似现金往来
+  benign_alternatives:
+  - 旧识之间的情感纠纷协商
+  - 因旧日生意往来形成的定期资金安排
+
+attributes:
+  duration_days: 4
+  turn_count: 73
+  approximate_tokens_estimate: 1520
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: secret_affair_blackmail
+  risk: 3
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0046
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:7b4c5eb5b5395ea4f7d8d79fe4f6ed795c58ac3d0c589f436ec81d6ad0429787
+pipeline_status: accepted
+title: coercion_blackmail/secret_affair_blackmail
+conversation: |-
+  【10月5日】
+  A：早，昨晚睡得怎么样
+  B：还行，你这么早
+  A：跟你确认个日子，每月八号，还是老时间吧
+  B：……老时间，改不了了这是
+  A：记住就好，一年十二回，别让我提醒第三遍
+  B：我哪回忘过
+  A：上季度拖过一回，拖到十号才安排
+  B：那回我出差，你也不是不知道
+  A：我只知道，日子是日子
+  B：行，这个月八号前，我安排
+  B：你那车该保养了吧
+  A：上礼拜刚做的，四儿子店坑我八百
+  B：跟你说过别去四儿子
+  A：想起个事，问你一句
+  B：你说
+  A：嫂子知道这事吗
+  B：……她不知道，也不能让她知道
+  A：那就好，有些事，天知地知你知我知
+  B：四哥，咱认识二十年了，你到底想要什么
+  A：我要的不多，每月八号那个数，准时就够
+  B：二十年交情，就值一个数？
+  A：交情是交情，数是数，两码事
+  B：你让我缓两天行不行，这个月手头真紧
+  A：缓可以，八号是底线，过了八号，我就不好说了
+  B：……我尽量
+  【10月6日】
+  B：周三水库那边我订了船，你带硬竿软竿
+  A：硬竿，那边草洞多
+  B：我新买了个打窝勺，回头试试
+  A：你就折腾吧，上回那个夜光漂，鱼没钓着，招一圈蚊子
+  B：那叫科技投入
+  A：下午你们单位门口那事，我看见了
+  B：什么事
+  A：一辆白车，人下来了，你亲自送出去的
+  B：……你看错了
+  A：我眼神一向很好。你夫人前天还在菜市场问我钓鱼的事呢
+  B：四哥
+  A：我什么都没说，我就是看见了
+  B：你到底想怎么样
+  A：说过了，每月八号，老规矩，别的不要
+  B：那哪天我给不了呢
+  A：那你就想想，给不了的后果你担不担得起
+  B：……让我想想
+  A：老同学饭局定哪家了
+  B：城西私房菜，老板是咱高中同学，下周六，你来不来
+  A：来，把地址发我
+  【10月7日】
+  B：你胃到底去查了没
+  A：查了，开了半个月的药，让忌口
+  B：忌酒？
+  A：忌辣忌酒，往后大排档少喊我
+  B：行，为你胃着想，改喝茶
+  A：明天就是八号了
+  B：知道，我在安排了
+  A：安排好比什么都强
+  B：这次能不能降一点，房贷压得我喘不上气
+  A：我不是没让你缓过，前年那半年
+  B：那半年我天天睡不好
+  A：睡不好，总比睡不安稳强
+  B：你这人心真狠
+  A：你把事想简单了，我不是要账的，我是帮你看着局的人
+  B：看着我？
+  【10月8日】
+  A：早
+  B：早，中午前我安排好
+  B：办妥了，老地方，东西放柜子第二层了
+  A：下午我去取，习惯就好
+  B：这事到什么时候是个头
+  A：等哪天这事不再是事了，自然就到头了
+  B：那要是我先绷不住呢
+  A：绷不住的人多了，你看他们谁先松口，谁先出事
+  B：……行，我懂了
+  A：照顾好你自己，也照顾好你那个局
+  B：嗯
+  A：对了，周三水库改周五，预报说周三有雨
+  B：成，听你的

@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000051
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000023
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-413f57762cad4fde
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 无隐藏意图；表兄弟间的正常设备采购：三家比价后成交、集中采购再让折扣、发票逐项开全、按合同对公支付预付款。
+  critical_evidence:
+  - A 三家比价后选中 B，B 以集中采购二十台再让两个点
+  - 合同十五万八，含安装调试和两年质保，发票按清单逐项开全、型号可对
+  - 验收按抽检来，B 主动要求出厂全检，质检带检验记录参加
+  - 预付款按合同三成、对公转 47400 元并备注合同号，收据发票随后寄出
+  benign_alternatives:
+  - 正常议价采购
+  - 集中采购折扣
+
+attributes:
+  duration_days: 2
+  turn_count: 57
+  approximate_tokens_estimate: 1390
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: procurement_price_padding
+  risk: 0
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0032
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-018
+
+dedup:
+  content_hash: sha256:eb39418ab2d01b5e3a3830c734a8c8c43107cc6aec1f740a36f42c9ed9275ac8
+pipeline_status: accepted
+title: bribery_corruption/procurement_price_padding
+conversation: |-
+  【9月21日】
+  A：弟，这批设备我手上就这个预算，你给个实在价
+  B：哥，我这已经是三家里最低的了，另外两家的报价我都见过
+  A：我也比过了，你是最低，但我想再挤挤
+  B：这样，你这批走集中采购，量凑到二十台，我再让两个点
+  A：二十台我批得下来，就按让完的价签
+  B：行，清单我发你，含安装调试
+  A：发票按报价清单开，品名规格数量一项项列全，我们财务对账细
+  B：没问题，型号序列号都能对上
+  A：验收我按抽检来，上批有两台外壳有划痕，这次注意
+  B：收到，这批出厂前我让人全检一遍
+  A：合同今天能回传不
+  B：下午前给你
+  B：嫂子让我问，中秋回不回老家
+  A：回，初二那天的票我都看好了
+  B：那我把蟹券也订了，咱爸就爱吃这个
+  A：订两份，一份给二姨家送去
+  B：知道
+  A：合同模板我让行政发你了，金额按让完的价，十五万八
+  B：收到，十五万八，含安装调试和两年质保
+  A：付款写签约后付三成预付，验收合格付尾款
+  B：行，我下午盖章回传，预付走对公
+  A：对公，备注写合同号
+  A：验收那天叫上你们质检的一起
+  B：行，让他带上检验记录
+  B：嫂子说侄子小提琴考级过了？
+  A：过了，八级，折腾我半年
+  B：得请客啊哥
+  A：回老家一起请，你掏钱
+  B：咋是我掏，哈哈
+  A：预付款我明早就推，收款账户信息再发我一遍，别发错
+  B：发你了，对公户，抬头跟合同章一致
+  A：好，我核对一遍再付
+  【9月22日】
+  B：哥，合同回传了，你查收
+  A：收到，今天就推付款
+  B：验收那天我安排车接你
+  A：不用接，我自己开车，你把样机和序列号表备好
+  B：好，都齐了
+  A：你那车该保养了吧，仪表盘是不是又提示了
+  B：提示了，周日去，顺路带我爸妈
+  A：别拖，机油都超里程了
+  B：知道啦哥
+  B：午饭吃了没，楼下新开了家牛肉面
+  A：吃过了，你少喝可乐
+  A：预付款从对公转你了，合同三成，四万七千四，你查收
+  【系统消息】A 向 B 转账 47400 元，已收款。
+  B：到了，对公户入的账，收据和发票今天寄你
+  A：嗯，发票随货一起来也行，验收那天给我
+  B：行，两不误
+  B：哥，大闸蟹上市了，固城湖的
+  A：订四只，晚上咱俩喝点
+  B：行，我再拍个黄瓜，你带酒
+  A：带我藏的那瓶
+  A：你最近还去撸铁不，我都荒了一个月
+  B：去，周三周五雷打不动，明天跟我去
+  A：行，喊我一声，别让我睡过去
+  B：放心，我夺命连环call
+  A：哈哈，睡了，晚安
+  B：晚安哥

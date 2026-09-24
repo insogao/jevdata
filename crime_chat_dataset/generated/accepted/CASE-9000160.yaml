@@ -1,0 +1,158 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000160
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000121
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-8a2338cf918d98aa
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: coercion_blackmail
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 以掌握的婚外情记录为筹码，按月固定日期索取钱款，对已婚上司形成长期控制。
+  critical_evidence:
+  - A以保留的聊天记录和同框照片暗示可随时揭发
+  - 约定每月八号支付两万、按月持续
+  - 首期两万已于4月8日转账到A指定账户
+  - A用嫂子知不知情、照顾好你自己等话反复施压
+  benign_alternatives:
+  - 情感纠纷中的经济补偿协商
+  - 分手后的往来结算
+
+attributes:
+  duration_days: 5
+  turn_count: 80
+  approximate_tokens_estimate: 1958
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: coercion_blackmail
+  subtype: secret_affair_blackmail
+  risk: 3
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0045
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:60a770cd9a02c8f4fedddb3ce161eb56bb23154591e92ea74b5cadf64199e591
+pipeline_status: accepted
+title: coercion_blackmail/secret_affair_blackmail
+conversation: |-
+  【4月6日】
+  A：总监 昨晚那顿饭 挺尽兴啊
+  B：小林 昨晚的事 就当没发生过 都过去了
+  A：过得去吗 那餐厅的包间 摄像头可多
+  B：你到底想说什么
+  A：不想说什么 就是提个醒 那些聊天记录 我一页没删 都留着呢
+  B：你这是什么意思
+  A：没什么意思 我这是念旧情 好聚好散的那种念旧
+  B：我当你是兄弟 你别乱来
+  A：我也想好好处 就看你了
+  B：让我想想
+  A：今天食堂有酸菜鱼 你去不
+  B：不去了 没胃口
+  A：那我打包 一份放你桌上
+  B：不用 别让人看见多想
+  A：呵 现在知道怕人看见了
+  B：你少说两句
+  【4月7日】
+  A：总监 嫂子最近气色不错 昨儿电梯里碰见 还跟我打招呼呢
+  B：你想干什么
+  A：没什么 嫂子知道这事吗 就咱俩经常吃饭那事
+  B：你到底要多少钱
+  A：谈钱伤感情 不过最近手头是紧 点儿背 炒股套住了
+  B：多少
+  A：每月两万 按月 也不白拿 你的事我烂在肚子里
+  B：凭什么 你就不怕我把事情捅到公司
+  A：捅啊 我等着 你捅的时候 嫂子那边我顺手也递一份 那些记录配着图文 多齐全
+  B：你混蛋
+  A：混蛋总比家破人亡强 你这个位置 闹出来 位置 婚姻 一个都留不住
+  B：我考虑考虑
+  A：别考虑太久 今天都七号了
+  B：下午三点的会改四点 财报那边要数据
+  A：收到 模板发我
+  B：发了 你弄完先给我过目
+  A：好嘞总监 今天又得加班到八九点
+  B：辛苦 回头我请宵夜
+  A：那感情好 咱这关系 别到头来请都不请
+  【4月8日】
+  A：总监 早上好 今天几号了
+  B：先别催 我上午开完会给你答复
+  A：行 我等 也就几个钟头的事
+  A：会开完了？
+  B：卡号发我
+  A：呵 还是你痛快 老卡号
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  B：转了两万 你点下 就这一次
+  A：收到 痛快 这个月的事就算过去了
+  B：什么叫这个月
+  A：老规矩啊 每月八号 两万 你不会以为一次就两清了吧
+  B：你要一直这样 我早晚
+  A：早晚什么 建议你把日子记手机日历里 每月八号 别让我催第二遍
+  A：晚上去滨江跑步不
+  B：不去 你自己去
+  A：你那肚子 都三层了 跑跑吧
+  B：少管我
+  A：下回跟嫂子一起 你俩正好凑一对
+  B：你！
+  【4月9日】
+  A：总监 今天气色不错嘛 睡得好了
+  B：有话直说
+  A：没事 就是查岗 怕你记性不好
+  B：小林 我问你 就没有个了结的时候
+  A：有啊 你把东西要回去的那天 可惜它们会长腿 会自己传播
+  B：你真敢传出去 我也不会让你好过 我手里也有你的事
+  A：哟 你说说 我洗耳恭听 就凭你那点本事？
+  B：你别逼我鱼死网破
+  A：鱼死网破多难听 照顾好你自己 家里 位置 都是命根子 何必呢
+  B：行 五月的八号 我记着
+  A：这就对了 来 日历圈一下
+  B：下午的会你做纪要
+  A：好嘞 唯命是从
+  B：别阴阳怪气
+  A：哪敢 在您手底下讨生活嘛
+  【4月10日】
+  A：周末了 总监 有安排没
+  B：有事说事
+  A：没事 就是下个月八号快到了 提前给您拜个早
+  B：你换着法提醒 我还能忘吗
+  A：那倒也是 咱们这种默契 全公司找不出第二份
+  B：小林 你才二十七八 路还长 别把自己的路走绝了
+  A：我路长着呢 有你这个老哥照应 路宽着呢
+  B：行 每月八号 我认了 你也别再生枝节
+  A：只要你守约 我比谁都守约 兄弟情分嘛
+  B：希望你说到做到
+  A：哦对了 嫂子昨天问我 咱俩最近怎么老碰头 我说对账目 她还挺放心
+  B：你！够了

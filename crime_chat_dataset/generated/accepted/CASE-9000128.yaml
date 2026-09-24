@@ -1,0 +1,150 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000128
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000072
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-e77a2ba9ea874fb6
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 成年模特B明确拒绝私房题材后，带她入行的摄影师A以断资源、毁约金相要挟，并强行转两万元定金制造既成事实，逼她就范。
+  critical_evidence:
+  - B明确表示不想拍私房题材，A反复施压
+  - A以断资源相要挟：资源是一串一串的，断一根全断
+  - A强转两万元定金制造既成事实，称撂挑子要赔
+  - 关键话术：这组只有我能拍、想红就别矫情
+  benign_alternatives:
+  - 正规艺术约拍
+  - 经纪公司试镜
+
+attributes:
+  duration_days: 6
+  turn_count: 71
+  approximate_tokens_estimate: 1653
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: photographer_private_pressure
+  risk: 2
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0041
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-021
+
+dedup:
+  content_hash: sha256:84031c500fa20299af1edd3a53e2239bdbf683ce129327fe044c7dc9a1dbe899
+pipeline_status: accepted
+title: sexual_transaction_exploitation/photographer_private_pressure
+conversation: |-
+  【9月8日】
+  A：小雨，九月刊的封面上没你，可惜了
+  B：是吗，我都没注意
+  A：编辑还问起你
+  B：毕业两年了还没上过刊，最近状态也一般
+  B：我最近在撸铁，体脂降了两个点
+  A：难怪上次见你脸小了一圈
+  B：教练可凶了，天天盯着我称重
+  A：自律的人运气不会差
+  B：借老师吉言
+  A：有个组想找你，私房题材，艺术向的
+  B：私房啊……我不太想拍这类
+  A：先别急着拒绝，这组概念很高级，黑白光影
+  B：老师，我还是喜欢拍服装类的
+  A：你这条件不拍私房可惜了，圈内就认这个
+  B：我再想想吧
+  A：行，不逼你，但档期不等人
+  【9月9日】
+  A：昨晚跟杂志社吃饭，提了你
+  B：哎呀，麻烦老师费心
+  A：我说这姑娘干净、可塑性强，他们想看新组图
+  B：太谢谢了！服装类的我随时可以
+  A：他们点名要看大胆点的，私房那组
+  B：老师，真不是我不接，是我自己过不去那道坎
+  A：你入行第一年谁带你的
+  B：是您……
+  A：这组只有我能把你拍出东西，换别人就是烂片
+  B：我知道您拍得好
+  A：圈子就这么大，机会递到你手上，你矫情一下就没了
+  B：老师您这话好重
+  A：重话才醒人
+  B：我家猫今天把化妆品全扒地上了
+  A：哈哈，狸花还是布偶
+  B：银渐层，拆家小能手
+  A：拍张照我看看
+  B：发您了
+  A：肥得跟我一样，哈哈
+  【9月10日】
+  A：中秋回家不
+  B：票还没抢，估计回不去，档期满
+  A：你妈做的酱鸭我还记得，那年去你家采风
+  B：哈哈我妈还说要给您寄
+  A：寄啊，我等着
+  A：对了，电商那个单子，我帮你推了服装线
+  B：真的呀！谢谢老师
+  A：我也帮你挂了私房那组，他们说打包考虑
+  B：老师，私房那组我真的不想接
+  A：那可能就都悬了，人家看的是整体
+  B：……能不能只走服装那条
+  A：圈里的规矩你还不懂？资源是一串一串的，断一根全断
+  B：老师，我有点难受
+  A：想红就别矫情，这话你迟早会懂
+  【9月11日】
+  A：私房那组的商务谈好了，预算两万。我先转你当定金，你把档期留出来
+  B：老师，我没答应拍啊，这钱不能收
+  A：钱先收着，收了定金才有约束，你才有动力
+  B：可我真的……
+  A：两万块的合同编辑那边都拟了，你这会儿撂挑子，赔的可不止这个数
+  B：让我缓缓，我跟家里商量下
+  A：这事有什么可商量的，你爸妈还等你出人头地呢
+  B：老师，您以前不是这样的
+  A：我是为你好，拍完谢我就行
+  【9月12日】
+  【系统消息】A 向 B 转账 20000 元，已收款。
+  A：定金转你了，查收
+  B：老师……
+  B：我收了这钱是不是就必须拍了
+  A：定金都收了，档期排好，地点我定
+  B：那服装那条线还推吗
+  A：你拍完这组，服装的马上签
+  B：唉，好吧，就这一次
+  A：这才对嘛，到时候给你看分镜，比你想的高级
+  【9月13日】
+  B：老师你最近皮肤真好，用什么
+  A：你嫂子给买的套装，我也不懂
+  B：什么牌子，回头发我链接
+  A：我问她去，你拍摄前把觉睡好
+  B：嗯，周日见

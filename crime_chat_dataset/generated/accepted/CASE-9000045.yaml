@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000045
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000023
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-413f57762cad4fde
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 采购负责人把订单独家给亲戚的供应商，默许上浮六个点、发票品名模糊、验收走过场，供应商在款到后转八千元感谢费。
+  critical_evidence:
+  - 订单只报一家，价格按上回上浮百分之六，六个点封顶
+  - 发票品名写综合技术服务费，不列设备明细
+  - 验收由表哥签字，明说走过场就过
+  - 合同四十六万，流程走完后 B 转 A 8000 元并约老地方见面
+  benign_alternatives:
+  - 正常的独家议价采购
+  - 集中采购的价格折扣
+
+attributes:
+  duration_days: 2
+  turn_count: 57
+  approximate_tokens_estimate: 1321
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: procurement_price_padding
+  risk: 2
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0032
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-018
+
+dedup:
+  content_hash: sha256:4050dc256d838e5b8aa1b8a44204bf2d8125b2e02cac4fee507839cb592c78f5
+pipeline_status: accepted
+title: bribery_corruption/procurement_price_padding
+conversation: |-
+  【9月21日】
+  A：弟，这批设备的采购，我打算就报你们一家
+  B：就我们一家？那价可是我说了算啊哥
+  A：别家我懒得谈了，你们上回的货也没出过岔子，我图省事
+  B：那我按上回的价上浮百分之六报
+  A：一成就免了，六个点封顶，再多我不好做账
+  B：行，听你的
+  A：发票开的时候注意点，品名写“综合技术服务费”，别一项项列设备明细
+  B：财务那边能过？
+  A：能，这类目本来就没那么细，验收是我签字，走过场就过
+  B：哥，你胆子越来越肥了
+  A：什么肥不肥，这叫变通
+  B：妈让我问你，中秋回不回老家
+  A：回，初二那天的票我都看好了
+  B：那我把蟹券也订了，咱爸就爱吃这个
+  A：订两份，一份给二姨家送去
+  B：知道
+  A：合同模板我让行政发你了，金额按报价来，四十六万
+  B：收到，四十六万，含安装调试
+  A：付款写货到付六成，验收后付四成
+  B：行，我下午盖章回传
+  A：嗯，验收定在下周四
+  B：嫂子说侄子小提琴考级过了？
+  A：过了，八级，折腾我半年
+  B：得请客啊哥
+  A：回老家一起请，你掏钱
+  B：咋是我掏，哈哈
+  A：对了，这事办利索了，老规矩不能少，你懂的
+  B：哥你放心，我心里有数，等款到账
+  A：嗯，款一到你就动，别拖
+  【9月22日】
+  B：哥，合同回传了，你查收
+  A：收到，我今天推流程
+  B：验收那天我安排车接你
+  A：不用接，我自己开车，你把现场理一理
+  B：好，样机都摆好了
+  A：你那车该保养了吧，仪表盘是不是又提示了
+  B：提示了，周日去，顺路带我爸妈
+  A：别拖，机油都超里程了
+  B：知道啦哥
+  B：午饭吃了没，楼下新开了家牛肉面
+  A：吃过了，你少喝可乐
+  A：流程走完了，下周一款到账，你留意
+  B：收到，那我按说好的准备
+  A：你约我老地方吃饭，东西带来
+  B：懂，还是那家私房菜
+  B：哥，大闸蟹上市了，固城湖的
+  A：订四只，晚上咱俩喝点
+  B：行，我再拍个黄瓜，你带酒
+  A：带我藏的那瓶
+  【系统消息】B 向 A 转账 8000 元，已收款。
+  A：收了，这样我心里踏实，你办事我也上心
+  B：应该的哥，这单四十六万，我赚大头
+  A：下季度还有一批，你把货备好
+  B：备好了，就等信儿
+  A：你最近还去撸铁不，我都荒了一个月
+  B：去，周三周五雷打不动，明天跟我去
+  A：行，喊我一声，别让我睡过去
+  B：放心，我夺命连环call
+  A：哈哈，早点睡，晚安

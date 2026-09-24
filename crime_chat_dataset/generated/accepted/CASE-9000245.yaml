@@ -1,0 +1,146 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000245
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000022
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-d1c21434b27aea6a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: B 作为餐饮协会合规辅导顾问，检查前照例向全体会员发提醒并上门辅导表弟的餐馆，门店按公示标准缴会费与辅导费，整改一次通过，全程正当。
+  critical_evidence:
+  - 检查提醒是协会向全体会员统一群发，并非单独通风报信
+  - B 提前上门辅导，唯一问题留样柜当日整改到位
+  - A 转账 3000 元为协会年费 2000 加合规辅导 1000，均按红头文件公示标准
+  - B 开具增值税发票并先发收据，费用计入门店固定支出
+  benign_alternatives:
+  - 合规咨询顾问费
+  - 行业协会会费
+
+attributes:
+  duration_days: 2
+  turn_count: 71
+  approximate_tokens_estimate: 1759
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: regulatory_tip_payment
+  risk: 0
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0055
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-026
+
+dedup:
+  content_hash: sha256:a86f72d2507461e8d356bd2db60b5411a26cc803d3d746da4fb9b0dd59308bc6
+pipeline_status: accepted
+title: bribery_corruption/regulatory_tip_payment
+conversation: |-
+  【9月19日】
+  B：弟，协会今天群发的通知看到没，市场监管要来例行检查，所有会员单位都发了
+  A：收到了，短信里说要查后厨和消防，我这心里没底
+  B：别慌，例行检查，你去年不是辅导过了嘛
+  A：就怕新规又变了
+  B：新规就加一条：留样柜必须有温度显示，别的没大动
+  A：我那柜子好像没有
+  B：没有就今天去买个带显示的，三百来块，配上记录表就行
+  A：行，我上午就去买
+  A：哥，嫂子和侄女周末回来不
+  B：回，你侄女惦记你做的糖醋排骨
+  A：让她来，排骨管够
+  B：成，那我周日带她过去
+  A：好嘞
+  A：话说你上回说的那个供应商，报价单我核了一遍，比市场价高两毛
+  B：那你谈，协会不管指定供应商，只查票据和台账
+  A：我下午找他谈，台账我倒是齐的
+  B：台账齐就稳了一大半
+  A：每天进货单我都钉在本子上，一年没断
+  B：这习惯好，检查组最认这个
+  A：跟你学的
+  A：我打算十一月把门头翻新一下
+  B：好事，翻新顺便把明厨亮灶装了，检查还加分
+  A：明厨亮灶贵不
+  B：摄像头四个加一块屏幕，四千上下，政府有补贴能报一半
+  A：有补贴那必须装
+  B：申请表我发你邮箱，月底前交
+  A：发来，我下午填
+  B：已发
+  A：哥，你下午能来店里转转不，帮我把后厨过一遍
+  B：行，三点到，你把留样记录和消毒记录摆出来
+  A：都在柜子上，我这就摆
+  B：你这后厨比去年强多了，灭火器换了新的，通道也空着
+  A：就剩留样柜这一个问题
+  B：对，买了装上温度显示，再把三天的留样补齐，明天检查稳过
+  A：我现在就去买，你等等我
+  B：我去车里歇会，你买完装上我再看一眼
+  【9月20日】
+  A：哥，柜子装好了，温度 4 度，显示清清楚楚
+  B：好，留样盒都写品名和日期了？
+  A：写了，一盒一签
+  B：齐活，今天十点他们到，你把台账和票据放前台
+  A：早摆好了
+  A：今天降温，你多穿点
+  B：加了外套。中秋你们店搞活动不
+  A：推团圆套餐，预售了四十多桌
+  B：可以啊，生意行
+  A：订满就得加桌，后厨忙得转
+  B：注意人手，别为了赶单把卫生标准拉下来
+  A：放心，哥你教的
+  B：检查组走了没
+  A：走了！一次过，带队那个还夸后厨台账是片区标杆
+  B：我就说稳的
+  A：这回多亏你提前来过一遍，心里不慌
+  B：客气啥，协会干的就是这个
+  A：对了哥，协会会费和今年的辅导服务费，我一块结了吧
+  B：行，协会红头文件你也收到了：会员单位年费 2000，合规辅导 1000，都是公示标准
+  A：收到收到，开票信息我发你，抬头写公司全称
+  B：发过来，我让财务开增值税普票，下周寄纸质版，电子的同天到
+  A：好
+  【系统消息】A 向 B 转账 3000 元，已收款。
+  B：3000 收到，收据先拍给你，发票补上
+  A：齐了，这个记进店里固定支出，年底好对账
+  B：应该的，账目清楚谁都踏实
+  A：中午吃的啥
+  B：食堂，你呢
+  A：店里员工餐，今天有大盘鸡
+  B：亏你店长天天换花样
+  A：员工吃好才肯干活
+  B：有道理
+  A：晚上遛弯去不，江边新修的步道
+  B：去，饭后走六千步，我医生叮嘱的
+  A：那七点江边见
+  B：见

@@ -1,0 +1,126 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000148
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000073
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-eeb92d904d97bf42
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 大二学姐以兼职名义给大一新生介绍晚上陪酒的场子、一场三百当天现结，叮嘱别在宿舍声张，还暗示表现好能进一晚顶三场的里场。
+  critical_evidence:
+  - 学姐以兼职名义介绍晚上出去陪两杯，一场三百、当天现结
+  - 强调学姐带你、有长辈罩着
+  - 明确叮嘱别在宿舍说
+  - 暗示表现好带你进里面的场，一晚顶这边三场
+  benign_alternatives:
+  - 正规兼职群的介绍
+  - 社团师姐妹之间的日常关照
+
+attributes:
+  duration_days: 3
+  turn_count: 51
+  approximate_tokens_estimate: 1089
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: dorm_introduction_network
+  risk: 3
+  relationship: 熟人
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0043
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:0d98090c9e5d0bf5f007dd401948428f11b5c6efaca3649efb6fadf5e504a8d3
+pipeline_status: accepted
+title: sexual_transaction_exploitation/dorm_introduction_network
+conversation: |-
+  【9月10日】
+  A：新生 学姐 前天社团招新你扫码那个 还记得不
+  B：记得学姐! 我加你了
+  A：嗯 问你 参加不
+  B：参加! 就是怕活动多跟不上课
+  A：没事 学姐罩你 选课抓不准的问我
+  B：太好了 我正愁选课 怕踩雷
+  A：马原选周三那个老师 分高 记住
+  B：记小本本上了
+  A：对了 军训晒黑没
+  B：黑两个度 学姐你不用站着晒 好羡慕
+  A：哈哈大二了 老油条
+  B：我也想快点大二
+  A：哎 你酒量行不
+  B：不太行 啤酒一杯倒
+  A：练练就行 女孩子会点酒 吃得开
+  B：……也算哈
+  【9月11日】
+  A：吃饭没 食堂二楼麻辣香锅yyds
+  B：吃了一楼 队伍太长
+  A：下次跟我走 二楼窗口报我名
+  B：学姐人脉好广 哈哈
+  A：多认识个人 多条路 跟学姐混 亏不了你
+  B：那必须的
+  B：学姐 奶茶帮带! 三分糖
+  A：行 顺路 你的我带 欠我一顿
+  B：明天请你!
+  A：跟你说个事 有个来钱的路子 你接不接
+  B：啥路子
+  A：晚上出去陪两杯酒 一场三百 当天结
+  B：……陪酒? 跟谁
+  A：都是生意人 喝酒聊天 站台撑场面 没别的
+  B：三百一场?
+  A：起步 场子不同价不同 学姐带你 长辈罩着
+  B：我有点怕 被同学看见不好
+  A：那就别在宿舍说 学姐哪个场子都熟 没出过事
+  B：……让我想想
+  A：行 想想你 顶多当兼职 一次一结 现钱
+  【9月12日】
+  B：学姐 我想了想 要不先试一场?
+  A：乖 就试一场 穿好看点 妆我让相熟的化妆师给你弄
+  B：还要化妆?
+  A：场面上的人 得像样 三百块 半天就回来了
+  B：那……真就喝酒聊天?
+  A：你听话 表现好 带你进里面的场 一晚顶这边三场
+  B：里面的场是啥
+  A：到时候你就知道了 学姐还能坑你?
+  B：……好吧
+  A：晚上那场推到周六 先陪我看个电影 新出的那个 我爱豆演的
+  B：好呀 我也想去 她演技真行
+  A：那必须 二刷预定
+  B：哈哈 学姐人还怪好的
+  A：周六晚上你先跟我去场子 再说电影
+  B：嗯 听学姐安排

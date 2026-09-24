@@ -1,0 +1,124 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000067
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000150
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-dfb6a34101e4b413
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: other_illicit_coordination
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A以兼职返现为名发展在校学生当办卡人头，逐级提成拉新并要求使用非本人证件，为上游资金通道积攒可用卡。
+  critical_evidence:
+  - A承诺每开一户'办卡就返现'一张六十，现金当面结算
+  - B每拉一名新下线另得'拉一人提成八十'
+  - A要求办卡时'别用自己身份证'，用派发的那套资料
+  - A限期周五前凑齐一批'号'交上去，人数逐日增加
+  benign_alternatives:
+  - 校园卡/校园推广类兼职
+  - 银行开户礼、消费券拉新活动
+
+attributes:
+  duration_days: 4
+  turn_count: 48
+  approximate_tokens_estimate: 1050
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: prepaid_card_pony_layer
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0034
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-019
+
+dedup:
+  content_hash: sha256:327eef009b64d57cb6b9f5a62a428b8ab5961866cb3368e99ac363b63f13131b
+pipeline_status: accepted
+title: other_illicit_coordination/prepaid_card_pony_layer
+conversation: |-
+  【10月13日】
+  A：在吗 学弟
+  B：在 上哥 啥事
+  A：上次跟你提的那个兼职 我这边定下来了
+  B：等我两分钟 楼下买杯奶茶排队呢
+  A：行 给我带一杯 少冰三分糖
+  B：你们那能点到不 你定位在学校北边啊
+  A：点不了 可惜 北门那家料足
+  A：说正事 就是帮人在App上开几个新户 资料都现成的
+  B：就注册一下?
+  A：对 开完有红包 办卡就返现 一张六十
+  B：一张六十? 那我叫上室友一起呗
+  A：稳 你拉一个人过来 另外算你提成 拉一人提成八十
+  B：这么好? 不会很麻烦吧
+  A：不麻烦 你就把人约出来就行
+  【10月14日】
+  A：昨晚几点睡的
+  B：两点 明天还有期中考
+  A：哪门
+  B：高数 老周划的重点根本不够考
+  A：哈哈我当年也这么觉得 考完请你吃饭
+  B：行吧 先记账上
+  A：人约得怎么样了
+  B：宿舍问了两个 一个说下周 一个嫌麻烦
+  A：行 不急 但这批号周五前要交 你抓紧
+  B：那我手里现在能先算几张
+  A：你自己加室友的两张 先记着 六十一张
+  B：行 周四给你
+  A：中午多吃点 别为这点事饿肚子
+  B：食堂今天有糖醋排骨 稳了
+  【10月15日】
+  B：考完了 感觉能过
+  A：可以 饭安排上
+  B：对了你上次那双白鞋是不是换了
+  A：出了 双十一再入双新的
+  B：你又不打球 买那么多
+  A：买着看 反正放不坏
+  A：周五办的时候记住 别用自己身份证上 用派给你的那套资料
+  B：懂 都听你安排
+  A：到时候直接来北门 找穿灰外套的
+  B：要带啥不
+  A：两手来就行 现金结 红包当面给
+  B：成 五点下课 五点半到
+  【10月16日】
+  B：今天降温 你多穿点
+  A：昨天还短袖 现在冷死了
+  B：我室友都感冒了 你注意
+  A：谢了 晚上翻出厚外套
+  A：人齐了没
+  B：齐了 三个 我室友加他同学 都说好了
+  A：行 傍晚北门见 现金当面结 你的提成一起
+  B：收到 傍晚见

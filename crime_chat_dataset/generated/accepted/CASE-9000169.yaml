@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000169
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000114
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-328886369dab43fb
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: theft_robbery_property_crime
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A利用做社区渠道生意掌握的小区快递架夜间无人看管信息，指挥B在大促件量高峰窃取他人包裹，按件现金结算分成。
+  critical_evidence:
+  - A以社区渠道生意为掩护踩点，掌握多个小区快递架夜间无人看管的点位
+  - 双十一件量高峰被视为下手最佳窗口，点位与量都提前规划
+  - 报酬按件计算，一单十五到二十，现金一单一结
+  - B负责动手拿件并放到指定储物柜，A只出点位
+  benign_alternatives:
+  - 帮忙代拿快递
+  - 驿站自提代收
+
+attributes:
+  duration_days: 6
+  turn_count: 54
+  approximate_tokens_estimate: 1193
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: package_porch_pickup
+  risk: 2
+  relationship: 商务关系
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0046
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:8a0cb94c3dc6bdef1cfa275a284526988c35ee4c4077e10a645916b7b7124c3e
+pipeline_status: accepted
+title: theft_robbery_property_crime/package_porch_pickup
+conversation: |-
+  【11月1日】
+  A：周五那场物流展你去了没
+  B：去了，人不多，你摊位我看了一眼没敢认
+  A：我就混个脸熟，社区渠道这行，脸熟就是钱
+  B：你现在管几个小区
+  A：十来个，保洁和门岗的活都签在我手上
+  B：那路子野啊
+  A：熟了什么都好说，好几个小区快递架子就支在门岗边上，晚上没人看
+  B：你观察挺细
+  B：双十一你囤啥了
+  A：囤了六提纸巾四箱可乐，家里跟小卖部似的
+  B：我购物车躺了三十件，就等零点
+  A：我也囤一车，零点见
+  【11月2日】
+  B：昨天你说的那事，我还琢磨下
+  A：不着急，你先想，这活不难
+  B：具体怎么个做法
+  A：你就当帮忙代拿，拿了放我指定的地方，一单一结现钱
+  B：就这么简单？
+  A：就这么简单，点位我都踩好了，你人到就行
+  B：那先试一单
+  B：你上回拍的那双鞋到了没
+  A：到了，码大了半码，懒得退
+  B：那配色真好看，我蹲了个平替
+  【11月3日】
+  A：今天的点位发你了，就两单，试水
+  B：收到，几点合适
+  A：傍晚五六点，那阵子架上件最多
+  B：行，我掐着点去
+  A：东西放哪了
+  B：按你说的放储物柜了，两单齐
+  A：利索，钱明天给你
+  B：一单多少
+  A：说好的，一单十五，量大还能谈
+  【11月4日】
+  A：昨天的三十块给你留好了
+  B：今天路过你那儿拿
+  A：跟你透个底，双十一那几天最好干，件堆成山，谁也顾不过来
+  B：那几天你点位多备几个
+  A：我挑两三个架子最大的小区，一天能走不少量
+  B：成，那几天我把手头事都推了
+  B：你老家鲁西的吧，听口音
+  A：对，菏泽的，你哪的
+  B：皖北的，过年基本不回，票难买
+  【11月5日】
+  B：昨天的钱拿到了，谢了
+  A：一单一结不欠账，你干着踏实
+  B：双十一那几天怎么分
+  A：按件算，量大了给你涨到一单二十
+  B：中，那几天我全天有空
+  A：你还夜跑不
+  B：跑，沿河那条线一圈五公里
+  A：改天跟你跑一圈，肚子再跑就兜不住了
+  B：行，配速随我你跟不上
+  【11月6日】
+  A：还有五天，点位我今晚再转一圈
+  B：成，有信儿随时喊我
+  A：到时候提前一天跟你确认时间
+  B：成，你定了我照做
+  A：就这，周日见

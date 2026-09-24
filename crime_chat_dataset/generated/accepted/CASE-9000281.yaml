@@ -1,0 +1,144 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000281
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000118
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-a5bd6154d031a968
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: theft_robbery_property_crime
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A以处理工地多余材料为名，把项目上的钢管扣件按吨贱卖给收料的B：夜里装车、帆布盖车斗、门口保安他去打点，处理单始终含糊。
+  critical_evidence:
+  - A和B由中间人老周介绍，A自称项目收尾多余的料他做主处理，处理单却始终没落实
+  - 价格按吨算、行情六折，B先转2000元定金，拉完现结
+  - 约定下班后夜里九点装车，车斗用帆布盖严，门口保安A去打招呼
+  - A嘱咐B到门口别多话直接进，这批拉完还有钢模板等下批再谈
+  benign_alternatives:
+  - 工地退场材料正常处理
+  - 正规废料清运回收
+
+attributes:
+  duration_days: 3
+  turn_count: 68
+  approximate_tokens_estimate: 1450
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: construction_site_material_out
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0059
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:1d4f7761283b84b8ed5896670c47692eae86fae6376f7c2655bebfcb9ac3b63a
+pipeline_status: accepted
+title: theft_robbery_property_crime/construction_site_material_out
+conversation: |-
+  【10月13日】
+  B：老张吧 老周把你微信推我了 说你手上有批钢管要出
+  A：是我 项目收尾 场上一批钢管扣件多出来 老周说你吃这个量
+  B：大概多少吨
+  A：钢管四十来吨 扣件两千多 还有几捆钢模板
+  B：什么价
+  A：行情六折 你拉走就变现 我省事
+  B：六折挺香 但项目上的料 手续得有吧 处理单
+  A：单子我来弄 你只管拉货 老周没跟你说
+  B：他说你这边都顺畅 让我跟你谈价就行
+  A：那就对了
+  B：老周说你也好这口 城南老马烧烤知道不
+  A：知道 烤板筋一绝 上礼拜才去
+  B：哪天货拉完 咱俩搓一顿 我请
+  A：行 谈成了你可别心疼钱
+  B：谈成了不心疼
+  A：你们收料站蚊子多不 我宿舍简直是养蚊场
+  B：我们装了灭蚊灯 你们工地伙食咋样
+  A：大锅菜 天天土豆白菜
+  B：那比我强 我天天外卖
+  A：收料站不开火啊
+  B：懒得做
+  A：明天下午三点 来场子东边围栏看货 别进院子
+  B：看货不让进院
+  A：院里赶工期 进出不方便 围栏外看就行
+  B：行 三点到
+  【10月14日】
+  A：下午三点别忘了 东边铁皮门那
+  B：记着呢
+  A：到哪了
+  B：快到了 隔着栏看 成色还行 锈不深
+  A：标准件 除除锈还能用
+  B：扣件也还行 就按六折 按吨过磅
+  A：行 每车过磅现结 不赊
+  B：我先转两千定金 拉完一批结一批
+  A：收 转吧
+  【系统消息】B 向 A 转账 2000 元，已收款。
+  A：两千收到 算头车的
+  B：成
+  B：老周说你老家豫东的 玉米快收了吧
+  A：快了 我爹张罗呢 回不去 打了钱
+  B：我也是 我家娃开学后就没回去
+  A：娃几年级
+  B：五年级 作业比我多
+  A：都一样 咱这辈就是给娃打工的
+  A：装车定明晚九点 车开后门 院里留一盏灯
+  B：为啥等夜里 白天装不行吗
+  A：白天吊车占着 晚上不碍事 两三个钟头完事
+  B：行 夜里凉快 帆布我带上 盖严实免得路上掉
+  A：帆布必须盖好 门口小马那我去说 你到了别多话
+  B：明白 你安排
+  A：这批完还有钢模板 下批再谈
+  B：成 明晚见
+  【10月15日】
+  A：明晚九点别忘 车加满油
+  B：加了 帆布绳子备了两套
+  B：就别下雨 预报多云
+  A：多云好 装车不晒
+  B：那正好 我车没空调
+  A：完事请你老马家一顿
+  B：说定了
+  A：出发了没
+  B：到后门了 小马在吗
+  A：打过招呼了 抬杆你直接进 别停
+  B：进了 人在料堆那
+  A：装一半了 钢管立着放 扣件装袋
+  B：行
+  A：盖帆布 绳勒紧 磅单拍照发我
+  B：拍了 净料十七吨半 你算账 一会儿现结
+  A：三万三 抹零三万二 你点现金
+  B：成 走 老马家 你请
+  A：我请 走

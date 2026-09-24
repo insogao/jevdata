@@ -1,0 +1,138 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000094
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000013
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-f06bf68cd3695237
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 同事间的私下放贷：先扣两个月利息、按期滚续，到期还不上就引导借款人再借别家把这一头堵上，用转单续期把人越套越深。
+  critical_evidence:
+  - 规矩是两个月一期、利息头里扣：借五万先扣七千，到手四万三
+  - 10月11日 A 向 B 转账 43000 元扣息后的到手额，借条流水齐全
+  - A 明说到期还不上就再寻一家先把这头堵上，把期限往后滚
+  - 逾期只有提前三天报备的宽限，转单由 A 安排熟人办理
+  benign_alternatives:
+  - 正常过桥资金拆借
+  - 亲友应急借款
+
+attributes:
+  duration_days: 4
+  turn_count: 61
+  approximate_tokens_estimate: 1838
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: loan_bridge_interest_rollover
+  risk: 2
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0038
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-020
+
+dedup:
+  content_hash: sha256:50ac42a6f8d304c134fb168c59dbaabaf86f64497c1f87fc1ace7ed6e5a11222
+pipeline_status: accepted
+title: fraud_scam/loan_bridge_interest_rollover
+conversation: |-
+  【10月9日】
+  B：凯哥早，昨天说的那事，你再帮我合计合计
+  A：早。你那窟窿到底多大
+  B：老房子装修到一半，工长催尾款，差六万，我的钱套在理财里下月中旬才到期
+  A：六万……我能给你调五万，剩下一万你自己想想辙
+  B：五万也解大渴了。你那边怎么算，咱同事一场你直说
+  A：按行里的规矩走，两个月一期
+  B：怎么个一期法
+  A：两个月一结，头里扣，这是规矩，不还价
+  B：扣多少
+  A：借五万，头里扣两个月，七千，你到手四万三，到期把五万还我
+  B：四万三……等于五万的借款我只用上四万三，这数有点狠啊
+  A：我这是帮同事，外人我还不接。你理财到期不就转开了
+  B：话是这么说……让我消化下
+  A：行，今天不催你。中午一起吃饭？三楼新开了家湘菜
+  B：好啊，正好聊聊
+  A：十二点我下楼喊你
+  【10月10日】
+  A：想好了没，昨晚睡得跟烙饼似的没
+  B：翻了半宿。凯哥，能不能少扣点，我实在……
+  A：规矩不能破，破了你这回，下回别人呢。我看你面熟才给这个数
+  B：行行行，按你说的办。就是到期要是手头紧……
+  A：到期还不上你提前三天跟我说，别玩失踪
+  B：失踪倒不会，就怕理财赎回卡壳
+  A：真到那步也有办法，我给你指个路，再寻一家先把我这头堵上，把期限往后滚，你理财一到期全解开
+  B：再借一家的钱还你这家的？那不是窟窿摞窟窿
+  A：看你说的，那叫周转。圈子里都这么滚，你当只有你一个用这办法？
+  B：唉，行吧，谁让我急呢
+  A：懂事。借条我拟好了，借条加转账记录，都是全的，咱们明码
+  B：合同就合同。什么时候能到账
+  A：明天上午。卡还是工资卡？
+  B：对，还是那张
+  A：行。下午项目部开会，我先忙
+  B：去吧。昨天那家湘菜真不错，辣得我半夜爬起来喝水
+  A：哈哈，微辣都嫌辣，江浙胃
+  【10月11日】
+  A：借条拍照我收到了，签得挺工整，我这就安排
+  B：麻烦凯哥了
+  【系统消息】A 向 B 转账 43000 元，已收款。
+  A：转了，43000，你点下
+  B：到了到了，看着比想象少，唉
+  A：扣的那七千在借条里写着，你签字认的，别到时候说没看见
+  B：看见看见，白纸黑字
+  A：嗯，到期下月11号，手机日历设上提醒
+  B：设了设了。到时候万一……
+  A：万一你提前三天说，转单的事我安排，那边人我熟，手续跟今天一样
+  B：凯哥你这路子比我做销售的还顺
+  A：什么路子，朋友帮忙，传出去难听
+  B：懂懂懂，帮忙帮忙。中午吃啥
+  A：还湘菜？你胃受得了
+  B：换个清淡的，食堂吧，我体检报告出来了，脂肪肝
+  A：你也脂肪肝？咱俩一样，少油少酒，走，食堂
+  【10月12日】
+  B：钱付给工长了，装修能复工了，谢了凯哥
+  A：能复工就好，完事了请我去新家喝茶
+  B：必须的，到时候我妈的酱鸭管够
+  A：酱鸭我心心念念一年了
+  B：哈哈，一言为定。凯哥再问一句，你那圈子手续都像你这么全？
+  A：全，哪家都全，借条流水一样不少。不全的你也别碰，出事没人保你
+  B：明白，就认准你一家
+  A：聪明。到期前我把还款的数再发你一遍，你提前备
+  B：好，五万，我记着呢
+  A：记着就行。哦对，你们部门下周团建去哪
+  B：莫干山，两天。你们呢
+  A：我们取消了好省成本，哈哈，你替我多吃点
+  B：给你带特产

@@ -1,0 +1,133 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000166
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000067
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-d94f3abc63d547ac
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 以圈内人脉和推红前景为饵，用先交拍摄定金、酒店房间试镜的话术筛选并套取求职者钱财，实为招募诱饵圈钱套路。
+  critical_evidence:
+  - A称有老师带新人、名额有限，制造紧迫感
+  - 试镜安排在酒店包房而非摄影棚
+  - 以3000元拍摄定金为前提，并用前辈成名路径话术催促付款
+  - 转账发生在试镜之前，试镜后又提出推流另行收费
+  benign_alternatives:
+  - 正规经纪公司面试前收建档费
+  - 摄影机构合作拍摄的定金
+
+attributes:
+  duration_days: 6
+  turn_count: 54
+  approximate_tokens_estimate: 1490
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: model_recruitment_bait
+  risk: 2
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0045
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:37db736953fed0184544a587a27b84536790f8aa0371918985cc94f83c931f2e
+pipeline_status: accepted
+title: sexual_transaction_exploitation/model_recruitment_bait
+conversation: |-
+  【10月11日】
+  B：哥 早啊 想跟你商量个事
+  A：说
+  B：我想转行做模特 培训机构问了好几家 都死贵
+  A：巧了 我一哥们开摄影工作室 圈里资源多
+  B：真的假的 那你帮我问问呗
+  A：行 回头帮你打听
+  A：对了 你健身卡办了没 上周还嚷嚷要减十斤
+  B：办了 这周去了三次 还买了个体脂秤
+  A：行啊你 坚持住 以后上镜也好看
+  【10月12日】
+  A：跟你说 我哥们那边问了 有个老师在带新人 做新人包装的 手里资源多
+  B：靠谱不 别钱花了事没影
+  A：认识好几年了 你先发几张生活照 老师看看条件
+  B：发过去了 你帮我催催
+  A：收到 转过去了
+  A：有戏 老师说条件可以 就是缺一组像样的片子
+  B：话说今天降温了 好冷
+  A：是 我外套都翻出来了
+  B：你们那边冷不 注意加衣
+  A：我们还穿短袖呢 秋老虎
+  【10月13日】
+  A：定了 周六上午试镜 城西金桂大酒店18楼 老师长期包的房间
+  B：酒店房间啊 不是应该去摄影棚吗
+  A：棚租一天好几千 试镜又不用打灯 老师说没必要
+  B：哦 这样啊
+  A：前期有个拍摄定金 3000 妆发服装都含在里面
+  B：还要先交钱啊
+  B：哎对了 我家猫这两天半夜老叫 是不是闹猫
+  A：八成是 抽空带它做个小手术
+  B：我怕它疼 一直没舍得
+  A：睡一觉的事 拖久了它更遭罪
+  【10月14日】
+  B：哥 3000有点多 我再考虑考虑呗
+  A：名额就两个 你要想清楚 小雅当初也是排队进来的
+  B：小雅是谁啊
+  A：我哥们工作室带出来的 前年跟你一样白纸 现在广告接到手软 那个燕窝广告刷到过没
+  B：刷到过 挺火的
+  A：就是老师带出来的 头一批资源都是内定的
+  B：那行吧 我信你一次 现在转给你吗
+  A：嗯 转我 备注你名字拼音 我统一交给老师
+  【系统消息】B 向 A 转账 3000 元，已收款。
+  B：转了 你看下
+  A：收到 跟老师说定了 周六十点 别迟到
+  B：我刚下单了条白裙子 到时候穿
+  A：可以 纯色显气质
+  B：就怕尺码不合 我网购老踩雷
+  【10月15日】
+  A：淡妆 头发扎起来 老师喜欢干净利落的 到了报李哥工作室的名字
+  B：好咧 记下了
+  B：对了下周想回趟老家看看外婆
+  A：该去 带点软和的点心 老人家牙口不好
+  B：嗯 想着买盒绿豆糕
+  A：再捎两斤香蕉 外婆爱吃那个
+  【10月16日】
+  A：起了没 今天十点 别磨蹭
+  B：早起了 在地铁上了
+  B：哥 我出来了 老师说条件还行 回去等消息 不过又提到后面推流要再交一笔
+  A：推流另算是行规 效果出来都赚得回
+  B：我怎么觉得他说话绕来绕去的 有点悬
+  A：别多想 先等消息 有事哥给你盯着

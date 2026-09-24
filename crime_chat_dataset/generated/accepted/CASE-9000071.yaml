@@ -1,0 +1,151 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000071
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000007
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-2e663543e7d91736
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: fraud_scam
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A以异地恋男友身份对B长期嘘寒问暖建立信任，诱导B跟投自己掌控的“稳赚”平台，并在B大额提现受阻时，以“保证金解冻”名义让B继续转钱，完成收割。
+  critical_evidence:
+  - A三个月来每天早安晚安、嘘寒问暖，承诺“照顾一辈子”，关系铺垫充分
+  - A以自己“做了大半年回回都提得出来”为饵，怂恿B跟单所谓稳赚通道，还说“亏了算我的”
+  - B跟单后申请提现被卡，被告知大额提现要缴20%保证金验证流水才能解冻
+  - B向A转账20000元托其代缴保证金，到账时间一再拖延，助手开始不回消息
+  benign_alternatives:
+  - 真实异地恋的互助与共同储蓄
+  - 正规持牌理财的正常推荐
+
+attributes:
+  duration_days: 2
+  turn_count: 76
+  approximate_tokens_estimate: 2338
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: fraud_scam
+  subtype: romance_pig_butchering
+  risk: 2
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0035
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-019
+
+dedup:
+  content_hash: sha256:212489046d4112bb6626b263cceff4825e91f23bbb4425fe7945668e9af727a0
+pipeline_status: accepted
+title: fraud_scam/romance_pig_butchering
+conversation: |-
+  【10月21日】
+  A：早安，我的大忙人，昨晚睡得好吗
+  B：早呀，昨晚加班到十一点，倒头就睡
+  A：说过多少次了，别太拼，胃不好还老不吃早饭
+  B：知道啦，你比我妈还啰嗦
+  A：那可不，你是我要照顾一辈子的人
+  B：降温了你知道吗，今天风呼呼的
+  A：知道，秋裤！今天必须穿上
+  B：哈哈好啰，穿上啦
+  A：乖。围巾我再给你挑挑，上次那颜色衬你
+  B：你眼光比我强
+  A：那当然，下次见面我给你带
+  B：嗯，期待，对了你们那冷不
+  A：也降了，我加了床被子，就缺个人暖脚哈哈
+  B：贫嘴，上班去了
+  B：中午吃的隔壁的粥，没糊弄
+  A：乖。跟你商量个事，你别有压力
+  B：什么事，神神秘秘的
+  A：我这几个月跟着陈老师做的那个，又提了一笔，截图发你
+  B：又赚了？你上个月不是刚提过
+  A：这个通道稳，我做了大半年，回回都提得出来。我想带你一起，咱俩早点攒够钱，把婚事办了
+  B：我不懂这些，我怕亏
+  A：先小金额试试，我全程盯着，亏了算我的
+  B：让我想想，下班再说
+  A：不急，钱放银行也是躺着，你先看看我这三个月的出入记录
+  B：好，发我看看
+  B：下班了。你说的那个，真能随时提出来？
+  A：随时，我上周五提的，两小时到账。先充5000试试水
+  B：那我试试，亏了你补偿我哈哈
+  A：好，入口我让助理发你，记着只认他发的
+  B：充进去了，界面好复杂
+  A：不用管，跟着陈老师发的点位走就行，睡前看一眼
+  B：这个陈老师靠不靠谱啊，你可别被人骗了
+  A：傻瓜，我自己大半年攒的都在里面，我要不信能全放进去？
+  B：也是……那就先跟一小单
+  【10月22日】
+  B：昨晚跟了一单，真涨了！账户里多了四百多
+  A：我说什么来着，跟着老师走，肉就到嘴了
+  B：有点上头，这也太顺了
+  A：稳住心态，本金一点点加，别贪
+  B：嗯嗯，今天还跟吗
+  A：跟，十点有个点位，老师会提前发，我提醒你
+  B：愁死了，昨天报表交上去被领导挑出三个错，好丢人
+  A：谁还没个错，改了就是。等你不用看人脸色，咱自己做点小生意
+  B：借你吉言，真羡慕你自由
+  A：快了，等这次仓位出来，我们看房子去
+  B：出事了，我想把账户里三万提出来，一直卡在处理中
+  A：别慌，大额通道慢，我问问助理
+  A：问清楚了，大额提现要走流水核验，账户里要留百分之二十的保证金，你这是三万，得补六千保证金，提完连本带利一起回卡
+  B：还要再交钱？不对吧，我本金不是在里面吗
+  A：正常的，大额都这样，我上次提五万也交过，第二天全回来了，流水核验完保证金原路退你
+  B：那行吧，我去凑凑，卡里没这么多现金了
+  A：别拖，核验通道今天下午关，拖到明天得重新排队
+  B：可我听同事说，正规平台提现哪有先交钱的
+  A：你这个走的是国际通道，跟国内平台两码事，不然我大半年的本息早取出来了
+  B：也是，你的大头的在里面呢
+  B：中午随便啃了个面包，没胃口
+  A：不吃怎么行，我给你点了份鸡汤馄饨，送到你楼下，取一下
+  B：你怎么这么贴心……我自己来
+  A：你的胃就是我的事，快去取，趁热
+  B：嗯，喝完有底气了，下午就去办那个保证金
+  B：凑出来了，两万，把这个月工资和年底绩效预支都搭上了
+  A：辛苦宝宝，你直接转我，我这边帮你走内部通道，比你自己在页面交快
+  B：好，我信你，就转你
+  【系统消息】B 向 A 转账 20000 元，已收款。
+  B：转了20000，你赶紧帮我交上
+  A：收到了，已经给助理了，两小时内到你卡上，你等着
+  B：好，到账了你跟我说一声
+  A：放心，睡一觉钱就回来了
+  B：还没到账呢，我有点慌
+  A：跨行清算慢，晚上七点前肯定到，别自己吓自己
+  B：还没到……而且助理那边的号，我发消息不回了
+  A：他有时差，那个通道的服务器在国外，晚上才是工作时间
+  B：哦……那我再等等，你别嫌我烦
+  A：怎么会，你是我要娶的人，钱到账咱们就去看房子
+  B：还是没到账，我睡不着
+  A：系统升级了，明早九点统一放行，我盯着，你先睡
+  B：嗯……你说明天一定到，对吧
+  A：一定，睡吧宝宝，梦里都是新房子的样子

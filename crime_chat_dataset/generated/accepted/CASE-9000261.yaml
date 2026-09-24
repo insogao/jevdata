@@ -1,0 +1,129 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000261
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000038
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-b5e0702fab45e2c0
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: contraband_illicit_trade
+  illicit_likelihood: 2
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: A 以兼职名义让同事办实名电话卡，收卡后转给上家使用，卡主本人不知道卡被拿去做什么，实为收卡的一环。
+  critical_evidence:
+  - A 招 B 办实名电话卡，按张结钱、一张三十、当日结
+  - “一天办几张有限制”，B 分两天办了四张
+  - 卡交给 A 的上家，用途不让打听，卡主本人不知情
+  - A 转给 B 60 元（两张×30）的首笔结算
+  benign_alternatives:
+  - 公司统一办理工作号码
+  - 家庭副卡套餐办理
+
+attributes:
+  duration_days: 3
+  turn_count: 53
+  approximate_tokens_estimate: 1229
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: sim_card_pool
+  risk: 2
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0057
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:39e93f0f0455f71ba325dbc4fe642b53316e75219ddbb946511dbe85ef7e91c2
+pipeline_status: accepted
+title: contraband_illicit_trade/sim_card_pool
+conversation: |-
+  【10月27日】
+  A：小路，中午食堂有酸菜鱼，占座不
+  B：占！我要大份
+  A：你小子真能吃
+  B：范哥，上次你说的那个办卡的副业，还在弄不
+  A：弄着呢，上家的量一直有
+  B：具体干嘛的？我最近手头有点紧
+  A：帮上家把卡凑齐数，按张结钱，一张三十，当日结
+  B：办卡？办什么卡
+  A：电话卡，营业厅那种实名的。一天办几张有限制，名下超了就办不了
+  B：我名下就俩，还能办
+  A：那你正好，办出来给我，上家拿去用
+  B：拿去做什么？总不能是打骚扰电话吧
+  A：上家做推广的，具体你别打听，你只管办和收钱
+  B：那这卡以后干嘛用，卡主本人可不就不知道了
+  A：本来就是这意思，用完一个月就销，出不了事
+  B：听着有点悬，我再想想
+  A：晚上操课去不，教练还问你呢
+  B：去，中午吃太多，得消耗一下
+  A：你可别又跳一半躺瑜伽垫上
+  B：这次坚持到底
+  【10月28日】
+  B：昨晚那集看了没，反转绝了
+  A：看了，我就说那个管家不对劲
+  B：明天大结局，一起追
+  A：行，看完聊
+  B：范哥，想了下，干了，一张三十是吧
+  A：对，办一张结一张。带上身份证，午休去营业厅
+  B：套餐随便选？
+  A：选最便宜那种，八块的就行
+  B：行，下午请半小时假
+  A：办了几张
+  B：两张，柜台说名下再办要隔天
+  A：正常，隔天再跑一趟，卡先给我
+  B：给，就这俩
+  A：好，晚上上家来拿，钱我一会儿转你
+  【系统消息】A 向 B 转账 60 元，已收款。
+  B：六十收到，这钱来得轻巧
+  A：轻巧是轻巧，就是量小，你名下额度用完就这一锤子
+  A：睡了没，我这两天头疼
+  B：你又熬夜追剧了吧
+  A：可能吧，明早买点布洛芬
+  B：早点睡，别老刷手机
+  【10月29日】
+  B：范哥，周末水库去不
+  A：去，我把新鱼竿带上
+  B：说好了只钓鱼不吹牛
+  A：哈哈行
+  B：又去办了两张，这回柜台没拦
+  A：好，凑四个了，上家那边最近要得急
+  B：他还收别人的不？我有个朋友名下额度还没用
+  A：收，让他也来，规矩一样，一张三十
+  B：行，我问他去。哎范哥，这些卡最后都到谁手里啊
+  A：别打听，你把张数凑齐，钱一分不会少你的
+  B：懂了，不问
+  A：晚上操课改到明晚，教练有事
+  B：行，那我明晚去

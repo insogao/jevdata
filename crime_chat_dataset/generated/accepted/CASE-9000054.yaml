@@ -1,0 +1,140 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000054
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000138
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-f93064d3e62063a7
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: other_illicit_coordination
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 以保本高息和拉客返点吸收现金入池，规避银行留痕，实为没有底层的资金盘。
+  critical_evidence:
+  - 承诺月息三分、保本，只认现金不走银行
+  - 拉一个客户入金返两个点，按月结算
+  - 先转账2800支付返点，客户现金次日茶馆交割
+  - 无合同只写手写条子，以三年没短过息安抚追加
+  benign_alternatives:
+  - 银行理财经理的正常推荐
+  - 正规产品的合格众筹
+
+attributes:
+  duration_days: 6
+  turn_count: 61
+  approximate_tokens_estimate: 1599
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: illegal_fundraising
+  risk: 2
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0033
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-019
+
+dedup:
+  content_hash: sha256:2f662e0cd721367460df5cbcfb697479c16c78d9cbc04c1f44412ecf7c2cec11
+pipeline_status: accepted
+title: other_illicit_coordination/illegal_fundraising
+conversation: |-
+  【10月8日】
+  A：那天茶会上聊得挺投缘，加了个微信
+  B：对对，你后来又去了吗
+  A：我一般周末去，那家的凤凰单丛确实好
+  B：你是懂茶的
+  A：家里存了些老茶，回头给你留一泡
+  B：那我可占便宜了
+  A：你做什么行业的，那天没细聊
+  B：我在一家机构做客户关系，平时陪投资人聊聊天
+  A：那咱们算半个同行，我这边也管着些「水」
+  B：水位不低吧哈哈
+  【10月9日】
+  A：昨天说的事，我这边的盘子，月息三分，月月结
+  B：三分？现在哪有这个行情
+  A：所以只带熟人玩，而且保本，本金打不了一分折扣
+  B：保本怎么讲
+  A：底下有实体在转，现金流每天进，你只管看息
+  B：听着不像银行那套路子
+  A：银行那点息够干什么，我们这边认的是人，不认合同那一沓纸
+  B：那钱怎么进去
+  A：现金，只收现金，银行那套流程麻烦，咱这讲究个快
+  B：行，现金就现金，客户那边我去说
+  A：痛快，就喜欢你这样的
+  【10月10日】
+  B：早起跑了五公里，今天状态不错
+  A：我下午去撸铁，你这自律劲头得学
+  B：上了年纪不跑不行，体检指标全靠它压着
+  A：哈哈同感，应酬多，更得练
+  B：你那个盘子，要是行情不好呢
+  A：三年了，没断过一个月息，水池下面还有水池，转得开
+  B：说得我心里痒痒
+  A：你手上那些客户，有没有想找路的
+  B：有几个，嫌理财收益低，天天问我
+  A：那就是缘分
+  【10月11日】
+  B：昨天跟一个老客户提了一嘴，他有点意思
+  A：你引荐一个，我返你两个点，月月结
+  B：他放十四万，我一个月两千八？
+  A：对，他拿三分息，你拿两个点，互不相干
+  B：那我再问问身边两个朋友
+  A：多多益善，记住，都收现金，别让他们走银行
+  B：行，客户那边我来开口
+  A：你只管把人带到，剩下我来说
+  B：成
+  【10月12日】
+  A：降温了，你早上跑步穿厚点
+  B：知道，套了长袖，你这比我妈还操心
+  A：朋友嘛，再说我还有事求你，得对你好点哈哈
+  B：哈哈你这个人情世故满分
+  B：客户定了，明天下午带现金过来，十四万
+  A：好，老地方那家茶馆包间，你把人安顿好就行
+  A：你那两个点我先结给你，权当定心
+  【系统消息】A 向 B 转账 2800 元，已收款。
+  B：呦，还真转了，这么痛快
+  A：跟我做事的，息没有拿不到的，你放心
+  B：行，明天我准时
+  【10月13日】
+  B：现金点清了，客户拿了张手写条子
+  A：对，我这边认条子认人，不搞花哨
+  B：他还问有没有合同
+  A：你跟他说，一沓纸不如我一句话，三年谁短过谁一分？
+  B：我也这么安抚的，他说下月发了工资再加十万
+  A：好，再来还是现金，一分别走银行
+  B：月息三分这个事，我得跟紧点
+  A：下月十五号息准时到，你留意
+  B：对了，那泡老茶别忘了
+  A：明天来拿息时带上，给你包了两泡
+  B：我再带个懂茶的朋友，说不定又是一单

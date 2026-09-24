@@ -1,0 +1,122 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000282
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000132
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-4aca659172115912
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 与超额索赔的敏感骨架同构（生鲜到驿站受损、协商赔付），但决定性事实全部反向：按实付金额全额理赔、走正规流程，本想发视频吐槽最后也算了。
+  critical_evidence:
+  - A给丈母娘买的大闸蟹（订单实付499元）在B兼职经营的驿站发生外箱渗水，死了七只
+  - A提供订单实付截图和开箱视频，只按499元申请理赔，没有多要一分
+  - B主动报生鲜理赔并把自己垫的部分一起转齐，当天全额转了499元
+  - A本来想拍视频发抖音吐槽，因为驿站处理痛快决定算了，还说给驿站写好评
+  benign_alternatives:
+  - 正常快递生鲜理赔
+  - 消费者发社交平台吐槽是常见的维权表达
+
+attributes:
+  duration_days: 3
+  turn_count: 46
+  approximate_tokens_estimate: 1029
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: courier_claim_extort
+  risk: 0
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0059
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:2749dfe08311ae4516f356321b4eaa91bb9ce3904ba4b24874b678d3eef7c3e6
+pipeline_status: accepted
+title: coercion_blackmail/courier_claim_extort
+conversation: |-
+  【10月14日】
+  A：老凯 你驿站明天到箱大闸蟹 帮我留意下
+  B：成 单号发我 到了给你拍照
+  A：给丈母娘的中秋礼 就指着这箱撑场面
+  B：你这孝心满分
+  A：她就好鲜活这口 别的不稀罕
+  B：老人都好这一口
+  A：周五团建你去不
+  B：去 轮到咱们组请下午茶 我打算订奶茶
+  A：订少冰的 女同事都念叨
+  B：记小本本上了 你要啥
+  A：我随便 你看着办
+  B：那给你来杯标准款
+  A：晚上老地方打球不
+  B：去 我带脉动
+  A：就你这技术还配脉动
+  B：周五见分晓
+  【10月15日】
+  A：到了吗 我下午过去拿
+  B：到了 外箱有点渗水 我先给你放冰柜
+  A：开了 死了七只 壳都软了 这还怎么送人
+  B：别急 按生鲜理赔来 驿站先给你登记
+  A：我拍好开箱视频了 订单实付499 截图也在
+  B：行 你把订单发我 我今天就报
+  B：报上去了 生鲜件走绿色通道 最快明天到账
+  A：这么快
+  B：你材料齐 一步到位
+  A：下雨了 你驿站门口棚布拉严实没
+  B：拉了 上礼拜刚换的
+  A：行 别把我下回寄的排骨淋了
+  B：想得远 排骨还没影呢
+  【10月16日】
+  A：昨晚雨大 你们小区没事吧
+  B：就门口积了点 早排了
+  A：理赔到账没
+  B：刚到 我把平台赔的和我垫的一起转你
+  【系统消息】B 向 A 转账 499 元，已收款。
+  A：收到 499一分不少 你这效率没得说
+  B：该赔的赔到位 你材料也全
+  A：说实话我昨晚都想拍个视频发抖音吐槽 到驿站的件还能渗水
+  B：理解 都这么想
+  A：算了 你处理得痛快 视频不发了 回头给你们驿站写个好评
+  B：好评比啥都强
+  A：对了我晚上再买两盒 蒸多久合适
+  B：冷水上锅十二分钟 姜片垫底
+  A：学到 这回给丈母娘露一手
+  A：晚上打球改周五不 团建完正好
+  B：行 奶茶订好了 十五杯少冰
+  A：有你的 周五见
+  B：见

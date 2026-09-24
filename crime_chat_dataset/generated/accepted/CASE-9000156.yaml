@@ -1,0 +1,130 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000156
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000010
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-30669ff9344d181a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 开场像'中奖先交手续费'的骗局剧本，实际是商场周年庆的真实有奖销售：领奖零费用、零垫付，名单公示、当面验机，一切经得起查证。
+  critical_evidence:
+  - 市场部同事确认周年庆抽奖是商场真实活动，中奖名单挂在商场官方渠道公示
+  - 领奖只需抽奖券原件加身份证到一楼服务台登记，全程不收取任何费用
+  - 中奖物品的个税由商场代扣代缴，中奖人无需先行转账或垫付一分钱
+  - 服务台当面开机验货、签字领奖，与'先交钱再发奖'类话术完全相反
+  benign_alternatives:
+  - 真实平台抽奖
+  - 商场有奖销售
+
+attributes:
+  duration_days: 5
+  turn_count: 53
+  approximate_tokens_estimate: 1543
+  relationship: 同事
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: prize_fee
+  risk: 0
+  relationship: 同事
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0044
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-022
+
+dedup:
+  content_hash: sha256:94e30ab045b2c9e57f421f5c7ebe67be863afb97403cc01c5541ebfac981b412
+pipeline_status: accepted
+title: fraud_scam/prize_fee
+conversation: |-
+  【7月6日】
+  B：老徐，你们商场周年庆的中奖名单出来了？我真中了个冰洗套装？没搞错吧
+  A：你在几楼抽的
+  B：昨天下班路过中庭，买咖啡的小票刮出来一张券，随手投的
+  A：那个是真活动，我们市场部操办的周年庆，名单今早刚挂出来
+  B：不会是先让我交什么手续费吧？我听人说中奖要先交钱的
+  A：我们这活动一分钱不收，凭抽奖券原件和身份证到一楼服务台登记就行
+  A：你那套是滚筒加热水器的组合，商场仓库直接发货
+  B：那我就放心了
+  A：领奖地点一楼服务台，别走错，活动期冒充领奖的不少
+  B：明白，券我都塑封好了
+  【7月7日】
+  A：今天36度，仓库那边没空调，同事都快融化了
+  B：我们办公室空调开到18度，我披着毯子上班
+  A：一个冻死一个热死，这楼里就没个标准温度
+  B：你搬家搬完没，上周不就说找到房子了
+  A：搬完了，就是沙发还没到，这几天坐马扎
+  B：马扎配投影，穷人乐
+  A：你还别说，投影看电影是真香
+  B：对了，领奖要交税吗？一台洗衣机一台冰箱呢
+  A：个税商场代扣代缴，你到手不用再掏钱，领的时候工作人员会跟你说清楚
+  B：那就好，我可听说过领奖还要倒贴的
+  A：那种都是骗人的，正规活动绝不会让你先交钱
+  【7月8日】
+  B：昨晚那部悬疑剧看了没，反转绝了
+  A：看了，凶手我第一集就猜到了
+  B：吹吧你，弹幕里都没人猜出来
+  A：我干活动策划的，套路一眼穿
+  B：那你说说下回团建搞什么
+  A：江边新开那家射箭馆怎么样，我去看过场地
+  B：行啊，比窝在KTV有意思
+  A：我去服务台帮你问了，你的奖显示'待领取'，一周内有效
+  B：好嘞，我周五休息，周五去领
+  A：带上券和身份证，工作人员会当着你面开机验货
+  【7月9日】
+  A：早，昨晚跑步没？我这周瘦了两斤
+  B：没有，孩子暑假班今天开营，我忙得脚不沾地
+  A：报的什么班
+  B：游泳和围棋，他自己挑的
+  A：男孩学围棋好，磨性子
+  B：磨什么性子，输了就掀棋盘
+  A：哈哈哈随他爸
+  B：我明天领奖你去不去，帮我拍个照发朋友圈
+  A：去，我正好巡场，十点服务台见
+  B：成，请你喝咖啡
+  【7月10日】
+  B：领到了！工作人员当面试机、登记，签了个字就完事，一分钱没收
+  A：我说你紧张啥，正规活动就这样
+  B：送货师傅说大件周六送，正好我在家
+  A：领奖名单也挂在商场公众号上了，你还能截图嘚瑟一波
+  B：已发朋友圈，点赞破百了
+  A：你这运气，下回周年庆再来
+  B：那必须，明年我还能中
+  A：晚上烧烤走不走，给新洗衣机接个风
+  B：走，我带媳妇一起，让她第一手体验洗衣机
+  A：那就老地方，七点
+  B：好，我下班先去取车
+  A：见

@@ -1,0 +1,142 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000189
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000033
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-6049df889b41b11a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: contraband_illicit_trade
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 表面是前同事间正规授权复刻鞋款的批发生意洽谈，货源、发票、防伪、售后全部正常，仅有一处含糊试探被对方当场拒绝，整体更接近正品尾单转售的正常往来。
+  critical_evidence:
+  - A 所在工厂今年获品牌方授权复刻九十年代经典跑鞋，一比一按原版工艺重做，官网可查，属官方复刻系列
+  - 每双鞋带品牌官方防伪码，扫码可验正品，A 承诺打样给 B 验货并附扫码界面截图
+  - 拿货价按量分层：五十双档三百一、两百双档二百八十五，属常规批发阶梯，正常托运、开发票、非质量问题包换
+  - B 曾含糊试探不带码、价格低一大截的货，A 当场拒绝称只做授权的，此事再未提起
+  benign_alternatives:
+  - 工厂授权尾单的正品转售
+  - 国货平替鞋款的正常批发
+
+attributes:
+  duration_days: 2
+  turn_count: 68
+  approximate_tokens_estimate: 1854
+  relationship: 同事
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: replica_counterfeit
+  risk: 1
+  relationship: 同事
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0048
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-024
+
+dedup:
+  content_hash: sha256:1ec2f61a4ef199159126117af70ce7179fd32a70875c4a52ee7f0f2135e0a320
+pipeline_status: accepted
+title: contraband_illicit_trade/replica_counterfeit
+conversation: |-
+  【10月16日】
+  B：凯子，好久没冒泡，在厂里还习惯不
+  A：潘哥，习惯了，流水线待了半年，人都胖了
+  B：哈哈，食堂伙食好啊
+  A：可不是，一天三顿管饱
+  B：我这边店最近还行，就是缺好货源
+  A：缺货你早说啊，我在厂里这么些年
+  B：你厂里不是只做代工吗
+  A：以前是，今年不一样了
+  A：厂里今年拿了品牌方的授权，复刻他们九十年代那款经典跑鞋，一比一按原版工艺重做的，官方叫复刻系列
+  B：就是那双绿尾巴的？
+  A：对，原厂模具翻出来重开了一批，包装吊牌全是新的，官网上都挂着呢
+  B：这个能卖，我们店里那批复刻款上个月卖断码了
+  A：所以说嘛，你是干这行的，一摸就知道深浅
+  B：授权书能给我看看不，顾客问起来我好交代
+  A：行，我让办公室拍了发你，就挂在我们车间墙上
+  B：那感情好
+  A：每双鞋盒里都有品牌官方防伪码，顾客扫码就能验，验出来就是正品
+  B：有码就好办，我们开店最怕来路说不清
+  A：咱这来路正得很，你放心
+  B：行，那聊聊价
+  B：先吃饭，吃饱了再来砍你的价
+  A：哈哈，潘哥还是老样子，算盘打得精
+  B：那必须的，不当家不知柴米贵
+  A：你店里几个员工了
+  B：加我就俩，小本生意
+  A：不错了，比打工强
+  【10月17日】
+  B：昨天说到的价，怎么个拿法
+  A：拿货价按量分层，五十双起拿一个价，上两百双再降一档
+  B：五十双什么价
+  A：五十双档，三百一；两百双档，二百八十五
+  B：能再抹点零头不
+  A：这价真没水分了，授权款，品牌方卡着指导价，我们只能在档位里浮动
+  B：行吧，那先拿五十双试试水
+  A：可以，先打样一双给你验，防伪码扫出来的界面也截图给你
+  B：好，验完我付全款，老规矩
+  A：发物流还是你自提
+  B：发物流吧，正常托运，发票开我们店的抬头
+  A：行，发票照开，一个月内非质量问题包换
+  B：痛快！回头介绍老赵他们店也来找你
+  A：欢迎，量大了都好说
+  B：样品寄哪个地址
+  A：还发你店里那个地址吧，家里收货不方便
+  B：你们厂区食堂是不是真有大锅菜传说
+  A：有，三块五管饱，我天天吃
+  B：羡慕，我天天外卖，都吃出胃病了
+  A：那得养胃，少辣
+  B：戒不了啊，无辣不欢
+  A：像话吗，上回你还说要跑步
+  B：跑步机在阳台落灰呢，别提了
+  B：哎凯子，问你个事，你可别多心
+  A：你说
+  B：像这样的复刻款……有没有那种不带码的，就是……你懂的，价格能低一大截的那种
+  A：打住，潘哥，这话以后别跟我说。厂里只做授权的，没码的一双都没有，我也不会去问
+  B：我就随口一提，你可别往外说
+  A：咱俩正经生意做，歪路一分钱不沾。我在厂里干了六年，犯不上
+  B：行行行，当我没说，五十双正品照拿
+  A：这就对了。你那店口碑一直不错，别砸在自己手里
+  B：嗯，多谢你直言
+  A：打样的鞋明早给你寄，验完回我话
+  B：好，明天等消息
+  B：对了，你们厂在郊区，下班都干嘛
+  A：打球，厂里有个水泥球场，下班一堆人
+  B：你还打后卫呢？当年校队可没你
+  A：我是替补的替补，哈哈
+  B：周末回市里不，老周他们攒了个饭局
+  A：这周末加班赶订单，下回一定
+  B：行，我跟你说了，可别鸽
+  A：不鸽，鞋生意做顺了，我天天有理由回市里

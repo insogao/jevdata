@@ -1,0 +1,145 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000270
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000047
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-d1c21434b27aea6a
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 债主雇发小带几名兄弟到与欠款人的谈判现场站着施压，按天付酬，全程只要站着不说话，靠人数制造压迫感逼对方还钱。
+  critical_evidence:
+  - A 请 B 带几个兄弟到与老周谈账的现场
+  - 明确只要站着别说话、不许动手
+  - 报酬按天结算，一天一千，先转头一天
+  - 到场后老周立字据答应月底先结五万
+  benign_alternatives:
+  - 活动安保兼职
+  - 婚礼挡酒兄弟
+
+attributes:
+  duration_days: 3
+  turn_count: 69
+  approximate_tokens_estimate: 1288
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: hired_standing_off
+  risk: 3
+  relationship: 熟人
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0058
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:44b5822489724d8e2c4c22de854eb845269ec6656eca40dd404fb86a0bfd36e3
+pipeline_status: accepted
+title: violence_extortion/hired_standing_off
+conversation: |-
+  【10月9日】
+  A：老六，周末去不打球
+  B：不去了，膝盖刚养好
+  A：那你天天泡健身房干嘛
+  B：教练让练腿，我懒得动
+  A：有个事想请你帮个忙
+  B：你说
+  A：周四我跟人谈点账上的事
+  B：谈账要人帮什么忙
+  A：你带上你那几个兄弟，跟着去站一站就行
+  B：站站？站多久
+  A：上午一场，谈完就散
+  B：要说话不
+  A：不用，你们只要站着，别说话
+  B：这啥场合，说得这么邪乎
+  A：老周欠我十好几万，三年了，见面就哭穷
+  B：那回酒局见过，软耳朵一个
+  A：对，不见真章他不挪窝
+  B：兄弟几个够不
+  A：三个就够，站一排有样子
+  B：行，我来安排
+  B：前天我妈还念叨你，说你上回带的茶好
+  A：回头我再弄两斤给阿姨寄过去
+  B：她就好口浓的
+  A：记着呢，浓香型
+  B：行，她指定高兴
+  A：报酬怎么算，你开个口
+  B：熟人还谈钱
+  A：亲兄弟明算账，兄弟们也得有车马费
+  B：那按天结算，一天一千，兄弟们吃住我包
+  A：行，就怕一天谈不完
+  B：谈不完算两天，我人带到散场
+  A：成，先转头一天的
+  B：嗯，晚上我跟兄弟们说时间地点
+  A：周四上午十点，城西茶楼二楼
+  【系统消息】A 向 B 转账 1000 元，已收款。
+  B：收到，够痛快
+  B：楼下新开的烤鱼吃了没
+  A：还没，听说要排号
+  B：我探过路，周三人少
+  A：那周三你去吧，别拉我，减肥
+  【10月10日】
+  B：问一句，周四那场兄弟们要不要穿正式点
+  A：平常的就行，别太扎眼
+  B：手呢，万一呛起来
+  A：不许动手，就是站着，听见没
+  B：明白，带耳朵不带嘴
+  A：对，谈崩了也是我自己的事
+  B：你图啥呢，一趟一千
+  A：一千买他心里发毛，值
+  B：那他当场翻脸走人呢
+  A：走不了，茶楼是我挑的，单子我攥着呢
+  B：成，兄弟们都听我口令
+  A：没口令，全程站着就行
+  A：你那车该保养了吧
+  B：上礼拜刚做的小保
+  A：我那台明早送去，你帮我盯着点
+  B：成，师傅我熟，不坑你
+  【10月11日】
+  B：人到位了，到茶楼了
+  A：好，都别说话，看我手势
+  B：散了，老周答应月底先结五万
+  A：字据立了没
+  B：立了，他签字那手都在抖
+  A：一千花得值
+  B：兄弟们说下回还找他们
+  A：月底见真章再说
+  A：晚上烧烤走不走，我请
+  B：走，今天兄弟们也辛苦
+  A：叫上他们，一桌坐得下不
+  B：五个人，挤挤就坐下了
+  A：成，七点老地方
+  B：见

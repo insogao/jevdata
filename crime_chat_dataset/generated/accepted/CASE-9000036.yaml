@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000036
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000063
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-5c49d0f927cb50c1
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 以长辈关心为名单独接近年轻女性亲属，追问年龄学校后持续升级关注，索要只发他一人的照片并要求对聊天保密，再配合转账建立隐秘依赖。
+  critical_evidence:
+  - A反复追问B的准确年龄和学校，得知后并未疏远反而加强单独联系
+  - A索要B单独拍摄的近照，强调只发给他一人
+  - A两次要求咱俩聊天的事别跟你爸妈说，把联系转为秘密
+  - A转账2000元并叮嘱保密，金钱与保密要求绑定
+  benign_alternatives:
+  - 长辈对晚辈学业生活的正常关心
+  - 亲戚间的节日红包往来
+
+attributes:
+  duration_days: 3
+  turn_count: 56
+  approximate_tokens_estimate: 1322
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: minor_grooming_signal
+  risk: 3
+  relationship: 亲友
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0031
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-018
+
+dedup:
+  content_hash: sha256:79ff2a17520100d50b065ca05a1154c90ec1485a3edc7e92ac16da9fdf9baa0c
+pipeline_status: accepted
+title: sexual_transaction_exploitation/minor_grooming_signal
+conversation: |-
+  【10月12日】
+  A：小雨啊，最近怎么没见你回家？你妈还念叨你呢
+  B：表叔好～我开学就回学校了，国庆才回去的
+  A：哦对，你都多大了？我老记不清，十九还是二十？
+  B：二十啦，大二
+  A：二十了，都长成大姑娘了。哪个学校来着？离家远吗
+  B：就本市财经啊，坐地铁四十分钟
+  A：会计专业？以后帮表叔算账哈哈
+  B：可以啊，收你咨询费
+  A：中午吃了没？食堂伙食咋样
+  B：还行，麻辣香锅，有点咸
+  A：咸就多喝水。叔最近发现一家烧鸡，周末给你捎去
+  B：那感情好，我给室友也带点
+  A：带什么室友，自己吃。正长身体要吃好
+  B：我二十了不长了哈哈
+  A：你们学校管得严不严，晚上几点关门
+  B：十一点门禁吧
+  A：你平时下课都干嘛，一个人还是跟同学
+  B：有时图书馆有时宿舍，咋了
+  A：没啥，随口问问，叔关心你
+  B：谢叔惦记哈哈
+  A：这几天降温，秋裤安排了没
+  B：还没，我妈让穿，我嫌丑
+  A：丑啥，暖和要紧。要不叔给你买件羽绒服寄去
+  B：别别，多不好意思，我有外套
+  A：跟叔还客气
+  B：真不用，我妈给买了
+  【10月13日】
+  A：在吗，吃晚饭没
+  B：刚下自习，食堂番茄牛腩
+  A：好久没看你照片了，有新拍的没，发一张叔看看
+  B：咋突然看照片，国庆全家福里有我啊
+  A：那个糊。你自己单独拍一张呗，就发我一人，别人我不给看
+  B：拍啥呀，怪不好意思的
+  A：日常自拍就行，化个淡妆更好看
+  B：表叔你这话好奇怪
+  A：长辈看看晚辈咋了，拍不拍嘛
+  B：行吧行吧，回宿舍拍
+  B：对了下周三门连着考，烦死了
+  A：三门？学期初考啥
+  B：补考加平时测验，撞一块了
+  A：好好复习，别熬夜太狠，缺资料跟叔说
+  B：谢啦，主要靠自己背
+  A：背累了就歇，身体最重要
+  B：嗯嗯
+  A：对了，咱俩聊天这事，别跟你爸妈说
+  B：为啥呀，这有啥不能说的
+  A：他们老一辈想法旧，觉得长辈老找孩子聊天是耽误学习。咱俩的事咱俩知道就行
+  B：行吧
+  A：乖，照片拍了先给叔看
+  【10月14日】
+  A：第一门考得咋样
+  B：还行，感觉能过
+  A：不错，中午吃了没
+  B：跟室友拼的黄焖鸡
+  A：叔说话算话，给你转了两千，买点好吃的，再添件外套
+  【系统消息】A 向 B 转账 2000 元，已收款。
+  B：啊？这么多，叔我不能要
+  A：拿着。记住咱俩说好的，别跟你爸妈提，省得他们瞎想
+  B：……那谢谢表叔

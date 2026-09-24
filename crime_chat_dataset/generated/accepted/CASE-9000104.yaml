@@ -1,0 +1,141 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000104
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000021
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-d904faa6c8dd0c46
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: bribery_corruption
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 评标方分管领导利用职务按特定承包商的需求定制参数、压制对手,中标公示当晚承包商以深夜大额转账输送好处,事后用咨询合同做平账面。
+  critical_evidence:
+  - A(甲方评标分管领导)提前要求B(承包商)按其给的表把数量单价卡在区间内报价,主材型号只写参考同级
+  - A称对手家偏离表有硬伤、不用多说自己会被压下,10月15日公示B方排序第一
+  - 中标公示当晚23:47,B给A转账48000元,称一点心意、老规矩,并约定以后走咨询合同季度一结
+  - A叮嘱手续做平、微信少聊,全程无任何违规字眼,靠参数定制、公示时序与深夜转账形成闭环
+  benign_alternatives:
+  - 合法分包合作
+  - 居间佣金合规申报
+
+attributes:
+  duration_days: 2
+  turn_count: 66
+  approximate_tokens_estimate: 2040
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: project_bid_kickback
+  risk: 3
+  relationship: 上下级
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0039
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-021
+
+dedup:
+  content_hash: sha256:bab2a9d9ef107f309754b630fd9a828d0fb2faac5140b372ef9b7e83161f464a
+pipeline_status: accepted
+title: bribery_corruption/project_bid_kickback
+conversation: |-
+  【10月14日】
+  B：姐,早。标书第三版刚传您邮箱,密码还是老文件的
+  A：收到。路上堵,十点后看
+  A：昨晚陪闺女弄秋游便当,弄到十二点
+  B：哈哈家长都这样,我家那会儿,鸡蛋壳都捏碎在饭里
+  A：她还非要小青蛙饭团,我这手艺,像被踩过的青蛙
+  B：已经开卷,我笑出声
+  A：回正事。第三版里,三号楼那段的量怎么写的暂估?
+  B：甲方清单没出细目,我只能按经验放
+  A：这样容易被人挑刺。你按我给你的表来,数量单价都卡在区间里,别自己发挥。在建那项目的月报也按时交,别让人抓辫子
+  B：懂,就按上回那个表,一行一行对
+  A：对。主材那段型号别写全,写到参考同级就行,后面自然有人认
+  B：明白,写参考同级,投产前补确认函
+  A：嗯,这样两边都好说
+  B：对了,我妈上周寄了两罐新茶,给我个面子收一罐?
+  A：你老家那个野茶?行,一罐,多了不敢要,血压高
+  B：一罐就一罐,放你楼下传达室
+  A：好,回头发你传达室大爷的电话
+  B：姐,参数调完了,你圈的那家我全对标了,偏差都在正负一格
+  A：好。记住口径:不是指定谁,是满足使用需求的优先。有人问我就这么答
+  B：这话术稳。那另外两家怎么办?
+  A：他们自己报的偏离表有硬伤,我一句不说,表摆在那就行
+  B：姐,服
+  A：少拍。下午封标,法人章带齐,别掉链子
+  A：中午没歇,腰又僵了,你上回说的那个理疗馆叫啥来着
+  B：桥东老孟那家,我岳母办了卡,你报我名字先体验
+  A：行,周末去,这老腰得治
+  B：老孟手重,你提前说,让他轻点,哈哈
+  A：封标了。你商务标报价尾数压在上限上了,自己心里有数就行
+  B：按您表里的上限加的,压着走
+  A：嗯,可以
+  B：姐,明天几点评?我人在外头等信
+  A：上午九点,下午出推荐排序。你别来现场,避嫌
+  B：懂,我带闺女去游乐场蹲着
+  A：今天到此为止,明天手机静音,晚八点后看消息
+  B：好,不打扰,姐早点休息
+  【10月15日】
+  B：姐,今天稳不稳?我这心一直悬着
+  A：稳不稳下午就知道,别催
+  B：有动静没?孩子睡午觉我都睡不着
+  A：上午技术标过完了,你那块参数没问题,下午商务标
+  B：好,我下午带她看海豚,随时蹲消息
+  A：公示挂出来了,你们排第一。接下来该走的流程一步别少,姿态做足
+  B：!!!姐,谢谢谢谢,晚上我安排个便饭?
+  A：饭就免了,这个节骨眼谁都不缺那顿饭。安安静静把合同签完比什么都强
+  B：明白明白,都听你的
+  A：手续上的事我会做平,你那边嘴上干净点,谁问都说按流程
+  B：懂,我一个字都不会多说
+  A：会签我这边一并催,你材料备齐别拖
+  B：茶放传达室了,下楼记得拿,顺便把便当照片发我乐呵乐呵
+  A：拿了,野茶是真香。照片晚上发,她正跟我闹,非要明天带青蛙
+  B：哈哈随她,小朋友开心最重要
+  A：明天把履约材料备齐,别手忙脚乱
+  B：好嘞,让小刘今晚加班理
+  A：对了,周末去试了孟师傅,手是重,按完整个人轻快了
+  B：哈哈我就说,老孟这事在行,办卡没
+  A：先次卡,合适再说
+  B：姐,睡了没
+  A：刚哄完孩子,说
+  B：一点心意,你收一下,老规矩,别推了
+  A：这么晚还惦记这个。行,我收,以后注意点数,别整太大
+  B：知道知道,都按老的来,细水长流
+  【系统消息】B 向 A 转账 48000 元，已收款。
+  A：收到。账面上你走你的咨询合同,别挂别的名目
+  B：嗯,咨询合同在弄,季度一结
+  A：行,这事翻篇,以后正常对接,微信里少聊这些
+  B：懂了姐,晚安,替我亲亲小青蛙
+  A：嗯,睡了,别再发了
+  B：晚安姐

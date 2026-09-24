@@ -1,0 +1,120 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000015
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000091
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-91946cb10b533395
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 表姐利用表弟的银行卡走账：大额到账即拆成多笔迅速转出、快进快出，按千分之五付佣金，实质为资金中转过水的跑分链条。
+  critical_evidence:
+  - A 转账 4 万元并指令拆二十个、每笔两千、到账就转出去、不过夜
+  - 报酬按千分之五日结，该笔佣金 200 元
+  - 资金连续多日快进快出，专挑限额高的卡走
+  - A 要求人要干净、来路不清的一律不要、嘴要严
+  benign_alternatives:
+  - 商家批量代发工资或兼职结算
+  - 亲友间正常的资金代收代付周转
+
+attributes:
+  duration_days: 5
+  turn_count: 42
+  approximate_tokens_estimate: 961
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: split_transfer_chain
+  risk: 3
+  relationship: 亲友
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0028
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-017
+
+dedup:
+  content_hash: sha256:8ee9ef6919d36829eb8f513d894502fc4f34947bf3508fea39ee8b76967b5b09
+pipeline_status: accepted
+title: money_laundering_obfuscation/split_transfer_chain
+conversation: |-
+  【10月13日】
+  B：姐，晚上好，这周那边还有单子没
+  A：有，明早到账。你那张新卡限额提上去没
+  B：提了，单日二十万没问题
+  A：那正好，明早的单子不小
+  B：姐你吃了吗
+  A：刚吃完，你呢，又外卖？
+  B：嗯，楼下猪脚饭，加了个蛋
+  A：少吃外卖，你胃咋样了
+  B：好多了，最近自己煲了两回粥
+  【10月14日】
+  A：阿凯，到了，四万，这就转你
+  【系统消息】A 向 B 转账 40000 元，已收款。
+  B：收到
+  A：记住，拆二十个，一个两千，到账就转出去，别压手，不过夜
+  B：知道，上回也这么走的，二十笔我半小时出完
+  A：出完把回执截图发我，佣金老规矩，千分之五
+  B：这单千五就是二百对吧
+  A：对，日结
+  B：姐，下午我得去趟公司，中午前搞定
+  A：行，别耽误正事
+  B：我下月还有个证要考，背得头大
+  A：考啥
+  B：证券从业，说来好笑，跑腿的考这个
+  【10月15日】
+  B：姐，昨天那笔有一笔到账慢了俩钟头，晚上才出去，没过夜
+  A：慢就慢点，出去了就行。今天没有，明天还有一笔小的
+  B：好嘞
+  B：姐，降温了，你那边冷不
+  A：冷，电热毯都翻出来了
+  B：我这还短袖呢
+  A：羡慕，秋裤都安排上了
+  A：阿凯，明天那笔也四万，老时间，卡别用错
+  【10月16日】
+  A：到了，还是老路子，盯紧点
+  B：收到，这就拆
+  B：二十笔出完了，截图发你了
+  A：看了，齐的。佣金二百，晚上随工资给你
+  B：姐，晚上打球去不，老地方
+  A：去，我手感正热
+  B：上回那个三不沾我还没笑完
+  A：那叫试探篮筐
+  【10月17日】
+  B：姐，我同学问我这边缺不缺人手，他手头卡多
+  A：别乱拉人，这边要干净人，来路不清的一律不要，嘴要严
+  B：懂了，回绝他
+  A：回绝得对。下周单子照旧，卡养好了随时说
+  B：好嘞姐

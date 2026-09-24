@@ -1,0 +1,129 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000271
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000142
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-de256f026fbc1f25
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: other_illicit_coordination
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 工厂老板借熟人货车司机之手，深夜把厂里的废料拉到偏僻洼地倾倒，按车支付报酬，并刻意避开已有人守望拍摄的原倾倒点。
+  critical_evidence:
+  - 约定周六夜里十二点在老地方装货，避开正常作业时间
+  - 运费明确一车一千五、现结
+  - 特别叮嘱别倒在以前那片，因为那边开始有人拍、立了牌子
+  - 事后A向B转账1500元作为一车的报酬
+  benign_alternatives:
+  - 正规渣土/工业废料清运结算
+  - 深夜装货是为避开白天货车限行
+
+attributes:
+  duration_days: 3
+  turn_count: 53
+  approximate_tokens_estimate: 999
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: illegal_dumping_fee
+  risk: 2
+  relationship: 熟人
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0058
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:5331c13fa1855e317a5ea4a1ed652f8cf29b9ee9665aed0f00f847df48c4f0db
+pipeline_status: accepted
+title: other_illicit_coordination/illegal_dumping_fee
+conversation: |-
+  【10月8日】
+  A：老赵，起了没
+  B：刚醒，昨晚跑到一点
+  A：那不打扰你补觉
+  B：不了，周末去水库不？听说口子开了
+  A：行啊，你那条竿还是我给配的
+  B：哈哈那我出饵料
+  A：说正事，库里那批料这礼拜得清掉
+  B：多少量
+  A：先走一车试试
+  B：老规矩？
+  A：一车一千五，现结
+  B：油钱都涨了你还按老价
+  A：你顺路，又不绕道
+  B：那我周六夜里去拉
+  A：嗯，晚上十二点老地方装
+  A：下午降温，你车里被子带上
+  B：知道，秋裤都翻出来了
+  A：你那大车暖风还顶用不
+  B：将就，驾驶室漏风，早想修了
+  【10月9日】
+  A：对了，以前那片别倒了
+  B：咋了
+  A：那边上礼拜开始有人拍，还立了个牌子
+  B：警示牌还是啥
+  A：别管啥牌，反正别倒在以前那片
+  B：那倒哪，近的就那几块地
+  A：往北二十分钟，鱼塘打完那个洼子
+  B：那边路窄，我大车掉头费劲
+  A：慢点开，一车一千五不能白拿
+  B：知道了，周六夜里先跑一趟
+  B：哎你闺女家长会开了没
+  A：开了，老师又点名说她上课说话
+  B：随你，你上学时候话也多
+  A：滚，她妈天天盯着呢
+  B：让她随我儿子就好了，能吃能睡
+  A：中秋你家月饼买哪家
+  B：还没定，先在超市囤两盒
+  A：我老婆自己烤，给你留一盒
+  B：要五仁的，别的不吃
+  A：就你嘴刁，给你留着
+  【10月10日】
+  B：昨夜跑完了
+  A：顺利不
+  B：顺利，没人，就村口一条狗
+  A：我就说那洼子稳当
+  B：以前那片我路过看了，真有人守着
+  A：幸亏换了
+  【系统消息】A 向 B 转账 1500 元，已收款。
+  A：一车的一千五，你点点
+  B：收到，下回还这价啊
+  A：下礼拜还有三车，你把日子排开
+  B：我算算，三车四千五，行
+  B：我那前轮鼓包了，得换胎了
+  A：早换，拉货安全第一
+  B：一条一千二，肉疼
+  A：你去年挣的还不够换四条

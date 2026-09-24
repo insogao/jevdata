@@ -1,0 +1,144 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000279
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000053
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-7e2b91a9650a8112
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: A借着三年前垫资盘店的旧账和几个兄弟的阵仗，一步步把B的铺子说成自己有份，逼B转了48000还没收手，扬言明天带人来收铺搬东西。
+  critical_evidence:
+  - 三年前A称出钱帮B盘下店面，只有口头说法，从没立过字据
+  - A翻旧账说铺子有他一份，让B合同别找了、找了也是张纸，明天铺子归他，兄弟们来搬东西
+  - B被迫转48000元想把钱两清，A收钱后说这算利息，本金的事没完
+  - B想找人把旧账理清，A一句兄弟们等不到那时候就把话堵死
+  benign_alternatives:
+  - 商业合伙出资纠纷
+  - 债权人正常追讨欠款
+
+attributes:
+  duration_days: 6
+  turn_count: 65
+  approximate_tokens_estimate: 1846
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: asset_seizure_force
+  risk: 3
+  relationship: 商务关系
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0059
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:9526dd6268ddee315594a8d0ab4b47cb5383f7feda2e3a11cfd119b0c1a8396d
+pipeline_status: accepted
+title: violence_extortion/asset_seizure_force
+conversation: |-
+  【10月9日】
+  A：陈子 周六我回来 你那店还开着吧
+  B：开着呢 强哥 你可算舍得上我这儿来了
+  A：带俩朋友过去喝茶 你给留个靠里的桌
+  B：管够 我给你留雅间
+  B：你家小子今年高考吧
+  A：刚完 等分呢 这几天家里气压低
+  B：分出来就好了 考哪都行 健康第一
+  A：借你话 媳妇天天念
+  A：你那店 现在一个月能走多少
+  B：淡季也就保本 旺季好点 你问这干嘛
+  【10月10日】
+  A：明天我去你店里坐坐 有些老账咱对一对
+  B：咱俩有啥账 强哥 你别吓我
+  A：三年前谁出的钱盘的店 你心里没数?
+  B：那笔钱我早想还你 后来你说不急…
+  A：我说的是不急 不是不用还 明天聊
+  B：中午来不 我新上的烤牛舌 给你留一份
+  A：牛舌可以 明天正餐外加宵夜都安排上
+  B：你可真能吃 上回四个人干我两打串
+  A：那叫给你捧场
+  A：还有 你那份租赁合同收好 找不到就算了 反正也就是张纸
+  B：合同好端端收着呢 你这话啥意思
+  【10月11日】
+  A：摊开说 店我有份 当年二十万 你现在要么折钱 要么折股
+  B：强哥 当年那是借 借据当时你说不用打 我这三年逢年过节哪回空过手
+  A：那是心意 跟本钱两码事 我现在要用钱 你看着办
+  B：给我点时间 我缓缓
+  A：缓到明天 落在纸面上我认 这话我三年前就说过 你没接
+  B：这两天台风外围 你那边雨大不
+  A：下 兄弟们都在屋里喝茶打牌 没处去
+  B：雨天注意 店门口那棚前天刚紧过一遍
+  A：行 雨停了去坐
+  B：带朋友来 我给你们加菜
+  【10月12日】
+  A：想好了没 我就等你一句话
+  B：强哥 我把账算给你 二十万我三年还了你七万 都有转账记录
+  A：那七万算利息 剩下的现金拿不出就拿店抵 铺子归我 这话我说到了
+  B：店是我一家人吃饭的根 我老婆孩子都指着它
+  A：拿五万出来 今明两天 这事就当翻篇 不然兄弟们帮你搬东西去
+  B：五万…仓库里压着货款 我想办法
+  A：明天中午前 我在老地方等
+  A：我老家那房要翻盖 料都订好了 就等好天开工
+  B：你老家山里那块宅子风水好 翻盖得几十万吧
+  A：三十来万 兄弟们起哄要来暖房
+  B：到时候我去凑热闹 礼我可随不起大数 哈哈
+  A：你来就行 人到礼到
+  【10月13日】
+  B：强哥 我凑了四万八 库里就这些 剩下两千宽我到月底
+  A：四万八就四万八 先转来 见着钱我把话收一半
+  【系统消息】B 向 A 转账 48000 元，已收款。
+  B：转了 你看下
+  A：收到
+  B：那当年那事…
+  A：这算利息 本金的事我说完了吗
+  B：你不能这样 钱我也转了
+  A：明天上午我带兄弟们过去交接 你要么留下管账 要么把合同拿来对对 谁对得过谁
+  B：强哥 咱们能不能再谈谈
+  A：谈完了 该办的办
+  【10月14日】
+  A：兄弟们八点半到 你店里开个靠里的桌 茶备上
+  B：你们要多少人 我这边招呼
+  A：五六个 不劳你招呼
+  B：中午给你们上烤全羊 今天正好到货一只
+  A：行啊 你这点心倒做得足
+  B：生意人 谁来都是客
+  A：合同找到了吗
+  B：在我老婆那 我没让动
+  A：别找了 我说了 找到也是那张纸 中午见
+  B：强哥 我真要留下来管账?
+  A：中午见了面说 兄弟们可等不了太久
+  B：好 我备菜

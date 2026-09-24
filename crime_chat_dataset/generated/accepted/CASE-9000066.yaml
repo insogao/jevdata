@@ -1,0 +1,151 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000066
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000094
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-3b0d5537da7e1c94
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: money_laundering_obfuscation
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: A以点券充值代理为幌发展下线，借层层扩容的'通道'为博彩资金走账，B按千八抽佣秒结，还被怂恿拉人头做'层长'抽下层佣金。
+  critical_evidence:
+  - A自称有'第七层通道'、刚扩容，暗示层越深越稳
+  - 佣金千八、'秒结'是招牌
+  - B接37500元批单，扣300元佣金后把37200元转给A走通道
+  - A鼓动B拉人头当'层长'，下层佣金抽一成
+  benign_alternatives:
+  - 游戏点券代充工作室
+  - 平台充值代理分销
+
+attributes:
+  duration_days: 6
+  turn_count: 72
+  approximate_tokens_estimate: 1215
+  relationship: 中间人关系
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: money_laundering_obfuscation
+  subtype: gambling_updown_score
+  risk: 3
+  relationship: 中间人关系
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0034
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-019
+
+dedup:
+  content_hash: sha256:0318e5830656b5146fccd71cb7e0dbba191c55e3f6bd39bcead437d47f96f530
+pipeline_status: accepted
+title: money_laundering_obfuscation/gambling_updown_score
+conversation: |-
+  【10月9日】
+  A：在吗 兄弟 老K介绍来的吧
+  B：是 他说你这边有路子
+  A：嗯 做点券充值的 单子几十到几千都有
+  B：利润怎么说
+  A：佣金千八 秒结
+  B：秒结? 行里少见
+  A：我们通道快 第七层通道 刚扩的
+  B：第七层?
+  A：层数越深越稳 你做你的 别多问
+  B：行 我先了解下
+  【10月10日】
+  A：昨晚那场看了没 补时绝平
+  B：看了 太离谱 困死也看完
+  A：周末还有一场 一起熬
+  A：注册的事办了没
+  B：办了 号在跑
+  A：先走小额 一天两三单 找感觉
+  B：好
+  A：今天单子少 系统维护 你先睡
+  B：好 佣金记得秒结啊 哈哈
+  A：必须 秒结是招牌
+  B：哎我手机一天三充 电池废了
+  A：换一块 一百多的事
+  B：怕拆机翻车
+  A：找官方售后 稳
+  【10月11日】
+  A：上了? 今天有波 十点开始
+  B：收到
+  A：第一单 1500 走起
+  B：走了
+  A：到了没
+  B：到了 秒到
+  A：这就是第七层的速度
+  B：今天的佣金呢
+  A：秒结 已到你钱包
+  B：到了 12块 哈哈积少成多
+  A：千八 一分不少
+  【10月12日】
+  A：今天单大 有笔 37500 的批单 敢接不
+  B：接 钱从我这过?
+  A：对 你收上家货款 扣佣金 剩的走通道
+  B：这单佣金三百?
+  A：对 千八 秒结
+  B：哎老家开始收玉米了 我爸说晒场不够用
+  A：你家几亩
+  B：十几亩 收割机一天完事
+  A：我们那也一样 这两天柴油都紧
+  B：哈哈秋收人的命
+  A：货款到了没
+  B：到了 37500 整
+  A：扣三百 剩的 37200 转我 别压
+  B：好
+  B：转了 你看下
+  【系统消息】B 向 A 转账 37200 元，已收款。
+  A：收到 通道确认中
+  A：确认完 这单闭环 佣金应该已到
+  B：到了 秒结名不虚传
+  【10月13日】
+  A：批单走得漂亮 上头记住你了
+  B：有下文?
+  A：第八层在谈 排到你就是层长
+  B：层长啥待遇
+  A：下层佣金你抽一成
+  B：那得拉人头
+  A：今晚单子密 别睡太死
+  B：收到 闹钟定了
+  【10月14日】
+  A：早 上午走三单小额
+  B：好
+  A：三单全闭环 这周佣金一起结你了
+  B：看到了 比上班强 哈哈
+  A：好好干 拉一个头 千八照给
+  B：问了俩朋友 有一个心动
+  A：让他来 第七层留位子
+  B：我朋友说再看看 嫌麻烦
+  A：不勉强 通道不缺人 把自己的量做起来
+  B：行 明天单子几点
+  A：老时间 十点

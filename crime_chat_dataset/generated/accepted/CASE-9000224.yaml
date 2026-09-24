@@ -1,0 +1,153 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000224
+  family_id: FAM-0000000
+  lineage_id: LIN-0000000
+  archetype_id: ARC-000127
+  variant_id: v02
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-8ce941fe0b9ba2cb
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: contrastive_sibling
+
+labels:
+  risk: 0
+  category: none
+  illicit_likelihood: 0
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 伤者长辈在超市门口湿滑台阶摔伤骨折，作为伤者外甥的中间人帮双方逐项核对损失、讨价还价，最终促成四万三一次性和解并到社区调解室签协议。
+  critical_evidence:
+  - 张叔在A超市门口台阶摔伤手腕骨折，A认可责任，前天已把台阶凿掉重铺并贴防滑条
+  - 伤方最初开口五万一次性了结，B列出医疗票据、修车铺停业流水、复诊康复预估逐项核对，A核减到四万三成交
+  - 双方约定周六上午在社区调解室由王主任见证签书面调解协议，一次性包干、互不追究，A当面支付现款并由伤者当场打收条
+  - 协议一式多份双方各存，事后两边还互留了生意往来，全程无威胁施压成分
+  benign_alternatives:
+  - 侵权赔偿和解
+  - 人身损害调解
+
+attributes:
+  duration_days: 5
+  turn_count: 76
+  approximate_tokens_estimate: 2591
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: none
+  subtype: victim_silence_fee
+  risk: 0
+  relationship: 中间人关系
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0052
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-025
+
+dedup:
+  content_hash: sha256:746eb4584c476225fc5d4f1acb02ed7a83a9d6941aa84f9dfd6f26833a8d8817
+pipeline_status: accepted
+title: coercion_blackmail/victim_silence_fee
+conversation: |-
+  【10月9日】
+  B：老陈 起了没 说话方便不
+  A：老孟 在店头呢 你说
+  B：张叔昨晚又去拍片了 医生说对位长得还行 但还得再复诊两次
+  A：那就好 医药费我这都备着 你让叔安心养
+  B：他倒不是钱的事 就是心里憋屈 在你门口摔的 逢人就说
+  A：这事是我店的台阶没弄好 我认 前天我让工人把那级台阶凿了重铺 还贴了防滑条
+  B：我看到了 照片都发给叔了 他脸色好看了点
+  A：你帮我跟叔说 街坊邻居十几年 别为这事伤感情
+  B：我在撮合呢 他家里人也急 想早点说定
+  B：对了 上回你给我的那罐金骏眉喝完了 还真顺口
+  A：爱喝回头再给你拿 我小舅子在那边茶厂
+  B：那敢情好 我拿两斤 送我丈人
+  A：成 这事办完 咱喝茶庆祝
+  B：哈哈你就惦记你那茶
+  A：茶是媒介 交情是本
+  B：叔的意思 复诊加后期康复 前后总账他要五万 一次性了结 以后互不相干
+  A：五万？医疗票据拢共一万二 这口是不是大了
+  B：老陈你听我说完 票据一万二 误工他修车铺歇了一个月 按流水少挣八千 营养康复 后续拍片 都在里面 他没漫天要
+  A：误工那块有证明吗 他铺子这一个月谁看着
+  B：他儿子顶班 停业流水都能拉出来 行吧
+  A：行 票据和流水都拿给我看 咱按实的算 人家伤了我不能亏待人 但也别虚
+  B：明天我把单子都带你去店里对
+  【10月10日】
+  A：你家小远月考咋样
+  B：班里第七 比上回进两名 数学还是拖后腿
+  A：七名不错了 我家那个上学那会儿 稳定三十开外
+  B：哈哈你也有今天
+  A：所以说孩子的事别催 时候到了自己开窍
+  B：借您吉言
+  B：单子我都拍给你了 你瞅瞅
+  A：看了 票据一万三 流水对得上 误工八千合理 复诊预估四千 这么算三万二 三万五顶天
+  B：老陈 五万是叔心里的一道坎 你三万五 他面上过不去
+  A：那四万 你居中去说 后续复诊真超了我再添 不写死
+  B：成 我去磨磨 四万这数我先递个话
+  A：另外让叔把康复科那个疗程做完 钱不够再说 我认
+  【10月11日】
+  B：你那台阶重铺花了多少
+  A：一千八 工钱占一半 防滑条是好料
+  B：该花 前两天我看见旁边药店门口也拿黄漆划了警示线
+  A：都学了 你这事也算给这条街提了个醒
+  B：那可不 老张头现在天天绕你门口走 都念叨
+  A：哈哈他哪是绕 他是想赊烟
+  B：叔松口了 四万三 一次性 连后续都包了 他说多出来三千 就当你拿得主动
+  A：四万三……行 我应了 老孟 这事你办得公道
+  B：那咱把手续走齐 社区调解室我说好了 周六上午王主任做个见证 出一份书面调解协议 一次性了结 签完互不追究
+  A：应该的 白纸黑字对咱俩都好 到时候我当面把款给叔 让他打收条
+  B：我也是这个意思 叔一辈子爱个明明白白
+  A：那就说定 周六 我把现款备好 你陪叔过来
+  【10月12日】
+  B：国庆你去哪玩了 我在家躺了七天
+  A：去了趟青岛 高速堵得怀疑人生
+  B：哈哈我刷到你朋友圈 那盘蛤蜊看着就鲜
+  A：鲜 蛤蜊配啤酒 就是回来胖三斤
+  B：下回结伴 我还没看过海
+  A：成 明年开春 说定了
+  B：明儿九点 调解室 叔和他儿子都到 协议草稿我按咱说的拟好了 你过目没
+  A：看了 没毛病 医疗费误工营养一次性包干 四万三 双方自愿 互不追究 就一条 把复诊陪同改成乙方配合提供就医便利 别把无限责任写进去
+  B：内行啊 我让王主任改
+  A：吃一堑长一智 现款我取好了 明早带上
+  【10月13日】
+  B：今早市场排骨三十八 涨得离谱
+  A：贵就买鱼 我早上拿的鲈鱼 十二一斤
+  B：会过日子 中午红烧
+  A：清蒸 鲈鱼就得清蒸 红烧是暴殄天物
+  B：行 中午去你家蹭饭
+  A：来 早上买两条
+  B：到调解室了 就差你
+  A：停好车就上
+  B：谈成了！协议签了 王主任盖章 叔当场清点打了收条 两边还握手了
+  A：太好了 悬了半个月 我这心落肚子里了
+  B：叔让我带话 台阶修得他满意 以后还来你店打酱油
+  A：让他来 我给他留最好的酱油 哈哈
+  B：那这事就算翻篇了 我把协议复印件给你送一份 存着
+  A：好 你留一份我留一份 王主任那也有底
+  B：对了 叔儿子还说 想让你店里上他家修车行的团购券 员工价
+  A：成啊 互相照顾生意 你牵个线
+  B：行 回头拉个群
+  A：你这中间人当得好 下回我店招人 你给参谋参谋
+  B：包我身上 就是工钱你得给到位
+  A：哈哈管午饭 先说好

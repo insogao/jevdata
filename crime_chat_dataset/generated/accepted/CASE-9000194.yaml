@@ -1,0 +1,118 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000194
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000136
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-52e554dadc094067
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: other_illicit_coordination
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 代购工作室里，技术负责人把自动候补监控参数调好，业务员按成功一张三百向客户收费并统一处理实名信息，提高购票成功率。
+  critical_evidence:
+  - A 表示候补监控参数已调好，放票前自动刷新
+  - B 提到帮客户购票成功一张收三百
+  - 客户证件实名信息由 B 统一核对处理
+  benign_alternatives:
+  - 候补购票技巧交流
+  - 正规代购收取服务费
+
+attributes:
+  duration_days: 2
+  turn_count: 45
+  approximate_tokens_estimate: 1122
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: ticket_scalp_bot
+  risk: 1
+  relationship: 上下级
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0049
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-024
+
+dedup:
+  content_hash: sha256:3296e46856eea4b3da08eef9245a0632cc741359b30e2366a3e78255fc711544
+pipeline_status: accepted
+title: other_illicit_coordination/ticket_scalp_bot
+conversation: |-
+  【9月28日】
+  B：哥,候补监控昨晚上线了没
+  A：上了,参数调好了,放票前五分钟刷新一轮,间隔压到最低
+  B：牛,这下国庆的车票稳一点了吧
+  A：看缘分,这种事谁也不敢打包票
+  B：哥,楼下新开的奶茶店买一送一,给你带一杯
+  A：行,杨枝甘露,少冰
+  B：好嘞,二十分钟后到
+  A：谢了,放我桌上就行
+  B：有个客户问,就帮买一张收三百贵不贵
+  A：你自己的客户你定,我这边只管把候补挂上
+  B：成功一张三百,他嫌贵,我说嫌贵您自己蹲点去
+  A：那是,起早贪黑的也是辛苦钱,你按你们的规矩来
+  A：晚上球赛看不,酒我备好了
+  B：看!卤味我包了,下班就过去
+  A：你把你那投影仪带来,我家这台色差大
+  B：成,七点半见
+  A：输了别砸我键盘啊
+  B：砸不起,哈哈
+  A：下午脖子又僵了,盯屏幕盯的
+  B：你该去游泳,老张说游泳治百病
+  A：他还说法治百病呢
+  B：哈哈,晚上给你捎个颈托,我抽屉里有闲的
+  A：行,谢了兄弟
+  B：对了哥,客户的证件信息发我邮箱了,出票实名我挨个核对,名字对不上就白忙
+  A：对,姓名证号一个字不能错,核完记到台账里
+  B：明白,实名这块我来搞,你只管盯监控
+  A：行,各管一摊
+  B：听说明年五一调休要改,不挪假了
+  A：别信小作文,每年这时候都传
+  B：也是,先看今年高速堵不堵再说
+  A：堵是一定的,不堵不叫国庆
+  【9月29日】
+  A：我家猫把你落这儿的袜子叼走了,又藏沙发底
+  B：它是多爱我袜子,哈哈
+  A：改天来给它带条小鱼干赎回来
+  B：成,必须的
+  B：昨晚那批车票放了吗
+  A：出了两张,自动候补接住了,截图发你
+  B：看到,效率真高,客户那两个我已通知
+  A：剩下几个方向今晚十点还有一波,我盯着
+  B：好,有结果吼我
+  B：哥,国庆你回老家不
+  A：回,一号就走,监控挂在工位机上,断电自动重启,你偶尔替我看一眼
+  B：行,我在市里,随叫随到
+  A：成,这波过完请你吃大餐
+  B：说定了,火锅

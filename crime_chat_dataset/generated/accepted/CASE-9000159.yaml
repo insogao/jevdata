@@ -1,0 +1,141 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000159
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000017
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-377f9e1a8f49e279
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: bribery_corruption
+  illicit_likelihood: 2
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 项目结果确认后，受益人向中间人支付三万元酬谢，并约定走私人卡、对外编名目、群里只字不提。
+  critical_evidence:
+  - A跨多日反复催问名单签批进度
+  - 公示名单确认当天A转给B三万元
+  - B要求走私人卡并与A对好业务咨询费的名目
+  - 双方约定后续项目继续由B活动、按老规矩办
+  benign_alternatives:
+  - 合法居间服务费结算
+  - 归还垫付工程款
+
+attributes:
+  duration_days: 4
+  turn_count: 64
+  approximate_tokens_estimate: 1460
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: intermediary_payment_after_result
+  risk: 2
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0045
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-023
+
+dedup:
+  content_hash: sha256:0210e06b645112e96ad2c4fe6f498afea07d77531d67f32bfb0499e9a14547a9
+pipeline_status: accepted
+title: bribery_corruption/intermediary_payment_after_result
+conversation: |-
+  【11月6日】
+  A：老刘 事情到哪一步了
+  B：上面还在走 你急啥
+  A：急啊 仓库那批货压着 就等这个落地
+  B：名单这几天出 稳住
+  A：进度有没有更准的说法 下周？这周？
+  B：你一天问我三回 我就是传话的 等信
+  A：行行 我这不是心里没底嘛
+  B：底我给你 你只管把材料备齐 其他有我
+  A：材料上周就交了 就等你消息
+  B：知道 短不了你的
+  A：中午那家新开的牛油锅 排不排
+  B：排 我上午路过 门口马扎都坐满了
+  A：那晚上去 错峰
+  B：行 六点半我去接你
+  A：好 中辣啊
+  B：你那胃还中辣 少放点辣椒
+  【11月7日】
+  A：老刘 有了吗
+  B：别催 名单在走签批 你越催我越难办
+  A：好好好 不催了 就是问一句
+  A：现在呢 有点眉目没有
+  B：到我这之前我不瞎说 真到那天你第一个知道
+  B：对了 上回说的那个数 到时候怎么给
+  A：按老规矩 别走公司账 私下转你那张卡
+  B：行 别在群里提这事 一个字都别提 有你不知道的耳朵
+  A：懂 从来没提过
+  A：先不说了 儿子家长会 得去学校
+  B：初三了吧 关键一年
+  A：是 班主任说他数学瘸腿
+  B：找个一对一补补 值当
+  A：问了 一次四百 肉疼
+  B：肉疼也得花 这钱不能省
+  A：还没信啊
+  B：说了别催 明早给你准信
+  【11月8日】
+  A：老刘 明早的准信呢
+  B：信来了 稳了 公示名单有你 周五正式出文
+  A：真的？！老哥 我怎么谢你
+  B：出了文再说 没出文都不算数
+  A：行 那说好的三万 一分不会少
+  B：嗯 出文当天结清 爽快点
+  A：必须的
+  A：名单我自己也刷到了 就是咱那个标段 对吧
+  B：对 就那个 别到处说 知道的人越少越好
+  A：懂 我连老婆都没说
+  B：明智
+  B：明天断崖降温 你仓库那批防寒服趁热出
+  A：呵 还得等我这个标落地 才有钱进货
+  B：快了 周五的事
+  A：到时候请你吃饭 那家粤菜
+  B：粤菜行 别辣的
+  A：知道你胃 中午那顿辣的忘啦
+  【11月9日】
+  A：老刘 文到了 红头的 刚收到
+  B：好 那按说好的来 卡号还是那张
+  【系统消息】A 向 B 转账 30000 元，已收款。
+  A：转了 三万 你点下
+  B：收到 这事翻篇 谁问起来就说是业务咨询费 有合同模板我给你
+  A：行 多谢老哥 后面仓储二期 还得靠你
+  B：二期是吧 让我再活动活动 老规矩
+  A：老规矩懂 都按规矩来
+  A：对了 这周别在群里提上周的事 有人说有人在打听
+  B：提啥 我嘴严 你也管好你那几个股东
+  A：管着呢
+  B：周日水库去不 老周约的
+  A：去 忙完这一阵 咋也得松快松快
+  B：行 我带新买的饵 你带竿
+  A：好 钓着鱼炖了就酒

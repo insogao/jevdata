@@ -1,0 +1,145 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000267
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000043
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-014ccf6d47fc3d8d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: contraband_illicit_trade
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 夜场供货方与作坊老板合作灌装冒牌名酒：供方出回收旧瓶并印制酒标，作坊用调好的基酒灌装、防伪码能过机，专供夜场且只走熟客。
+  critical_evidence:
+  - 约定瓶子你出，A提供回收空瓶并负责印酒标
+  - 防伪码那批扫得开、机器过没问题
+  - 明确夜场专供、只走熟客，夜里提货走后门
+  - A转账10000元定金，尾款提货当天结清
+  benign_alternatives:
+  - 正规名酒经销
+  - 散酒作坊贴牌代工
+
+attributes:
+  duration_days: 5
+  turn_count: 67
+  approximate_tokens_estimate: 1440
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: alcohol_counterfeit_line
+  risk: 2
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0058
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:f598c863fece1d2b818ec9cb44521cb369403b588f83a95deacbe39d0bccb3e5
+pipeline_status: accepted
+title: contraband_illicit_trade/alcohol_counterfeit_line
+conversation: |-
+  【10月9日】
+  A：老蔡，糖酒会你去不
+  B：去啥，展位一天两万，纯烧钱
+  A：也是，咱这体量看个热闹
+  B：我给你留了两瓶新品，你尝尝
+  A：好，回头去你厂里拿
+  A：正事，夜场那边节后要补一批货
+  B：多大量
+  A：首批两百件，走什么价你懂
+  B：老规矩，瓶子你出，我只出手艺
+  A：瓶子没问题，上个月回收的空瓶还在库房
+  B：瓶身上的码呢，现在验得严
+  A：码你放心，那批码扫得开，机器过没问题
+  B：行，那就跟上次一个做法
+  A：对，夜场专供，别往别处流
+  B：我的货只走熟客，你还不清楚
+  B：你上回给的岩茶喝完了，再来半斤
+  A：好说，我让店里给你留中足火的
+  B：就要那个火功，别的喝不惯
+  A：周五厂里见面给你带
+  【10月10日】
+  A：昨晚问了几个场子，要货的量还能加
+  B：加多少
+  A：再加一百件，档期得赶在中旬前
+  B：赶是能赶，人手得加两个
+  A：加人的事你安排，嘴严的
+  B：厂里就那几个人，都是自家的，不碍事
+  A：灌的时候还是老配方，口感不能差
+  B：放心，基酒我调好了，盲喝喝不出来
+  A：酒标呢
+  B：标你那边印好送来，我只管灌
+  A：成，我找老厂印，跟原来一家
+  B：那家手艺稳，色差小
+  A：对，差一点夜场那帮人就能尝出来，嘴刁着呢
+  B：周日去水库不，现在正口
+  A：等忙完这批再说，最近脚不沾地
+  B：行，鱼获给你留着，冻上了
+  A：你那鱼塘快成你仓库了哈哈
+  【10月11日】
+  A：标和瓶子今天都到位了，照片发你了
+  B：收到，齐了
+  A：那明后天灌，我周五夜里来提
+  B：周五白天不行吗
+  A：夜里凉快车也好走，白天市区限行
+  B：也行，你到了直接后门进
+  A：定金转你多少
+  B：首批算下来三万一，你先转一万
+  【系统消息】A 向 B 转账 10000 元，已收款。
+  B：定金收到，账我记上了
+  A：尾款提货当天结
+  B：老规矩
+  B：你家小子托福考得咋样
+  A：出分了，一百零四，够他想的那个学校
+  B：恭喜，回头得喝一坛
+  A：喝我的货就行，管够
+  【10月12日】
+  A：你厂里办公室装修完没
+  B：完了，就剩绿植没摆
+  A：甲醛散了没，别急着搬进去
+  B：通风两个月了，测过了，没事
+  A：提货那天车上苫布盖严实点
+  B：你这是怕晒还是怕看
+  A：怕晒，酒晒了变味，你懂的
+  B：懂，苫布加绳，万无一失
+  A：到了场子直接走后厨门卸
+  B：行，卸完你把尾款结了就成
+  【10月13日】
+  B：都灌完了，两百件加加急的一百件，一件不少
+  A：效率可以啊老蔡
+  B：你的标贴得正，我灌得也顺
+  A：今晚我过去提，老时间
+  B：后门给你留灯，直接装
+  A：成，见面把尾款点清

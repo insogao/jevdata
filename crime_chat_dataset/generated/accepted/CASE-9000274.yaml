@@ -1,0 +1,136 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-9000274
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000050
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-467d250cf76f2a7d
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 先来的老摊主借这条街的规矩排挤新摊主，用兄弟们问候之类的暗示施压，迫使其交两千元茶水钱并让出口子上的好位置。
+  critical_evidence:
+  - A 以这条街的规矩为由要求 B 让出口子上的摊位
+  - 威胁明天还来就别怪兄弟们多问候
+  - B 被迫转账2000元茶水钱换得继续摆摊的位置
+  - A 事后要求逢年过节看着办
+  benign_alternatives:
+  - 同业竞争摩擦
+  - 市场管理规劝
+
+attributes:
+  duration_days: 2
+  turn_count: 61
+  approximate_tokens_estimate: 1207
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: territory_warning
+  risk: 3
+  relationship: 同事
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0058
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-027
+
+dedup:
+  content_hash: sha256:1ebd287ae1c4c9fe282baadd33ee686657672c926be6bbb970771882bd4af289
+pipeline_status: accepted
+title: violence_extortion/territory_warning
+conversation: |-
+  【10月21日】
+  B：这雨说来就来，棚子都压弯了
+  A：你新来的？把伞骨拿绳绑一下
+  B：谢谢老哥，您做哪行的
+  A：我在口子那摆了八年了
+  B：难怪都跟您熟
+  A：新来的，问你个事
+  B：老哥您说
+  A：你这个位子谁给你批的
+  B：物业啊，我交了三个月摊位费
+  A：交费是一回事，规矩是另一回事
+  B：啥规矩
+  A：这条街的规矩，口子上做烤的就我一家，你懂我意思
+  B：可我这卖的是炸串，不冲突吧
+  A：行人就那么多，你支个炉子就分走一半
+  B：大家凭手艺吃饭嘛
+  A：年轻人，话别说太满
+  B：老哥，我一家老小就指这个小车
+  A：我也是为你好，明天换个地方，对你我都省事
+  B：我才摆了五天，搬家本钱都回不来
+  A：那你自己的事自己掂量
+  A：哎你孩子几年级了
+  B：初二，正愁人
+  A：初二最关键，我家那位就是初二掉下去的
+  B：是，这次月考数学又没及格
+  A：找个一对一补补，这个钱别省
+  A：想好了没
+  B：老哥，要不这样，我换个品类，卖饮品行不
+  A：饮品口子东边也有两家了
+  B：那我还能去哪
+  A：西巷啊，那边没做吃的
+  B：西巷人流量不行啊
+  A：人是走出来的，你先去混个脸熟
+  B：老哥，容我再商量商量
+  A：行，但明天还来口子这，就别怪兄弟们多问候了
+  B：这么严重吗
+  A：我把话放这，你自己品
+  B：兄弟们是指
+  A：你别管是谁，反正这条街太平，是大家伙儿让的
+  【10月22日】
+  B：早，您去批发市场了？
+  A：刚回来，牛肉又涨了两块
+  B：我肠衣也涨了
+  A：都难，凑合干吧
+  B：老哥，昨晚回去没睡好
+  A：想通了？
+  B：想通了一半，我转您个数，您帮我跟兄弟们说和说和
+  A：哦？
+  B：不是别的，就是个茶水钱，两千金
+  【系统消息】B 向 A 转账 2000 元，已收款。
+  A：收了，算你懂事
+  B：那我摊子
+  A：口子西边第三根灯柱往后，摆那，别越线
+  B：成，我记住了
+  A：往后好好干，别让我这个当老哥的为难
+  B：一定一定，多谢老哥提点
+  B：中午吃了没
+  A：刚吃口热的，下午还得备料
+  B：晚上给您送十串新调的酱，尝尝
+  A：行，放灯柱后头摊上
+  B：哎好嘞
+  A：雨具收好，明儿还有雨
+  B：知道，绑了绳的
+  A：忙去吧
