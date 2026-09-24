@@ -1,0 +1,148 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002956
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000114
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-a4adba201d8c798f
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 表哥 A 盯上小区夜里无人看管的快递架，拉失业表弟 B 入伙顺走他人滞留包裹：按小件5元大件10元当晚现金结算，赶双十一件多好下手连日开工，B 首晚试水得手后成为长期搭子。
+  critical_evidence:
+  - A 点出小区快递架一到晚上没人看、堆在外头的件没人动，以此引 B 入伙（第1天）
+  - A 强调双十一快到了件一天比一天多，是最容易下手的时候（第1、4天）
+  - 谈定小件5元大件10元、当晚现金结，A 称双十一量大了再涨（第2天）
+  - B 首晚顺了三件得现金25元，A 定下双十一正日子天天干（第4天）
+  benign_alternatives:
+  - 亲戚之间帮忙代拿代收快递
+  - 小区驿站包裹的顺路代取跑腿
+
+attributes:
+  duration_days: 4
+  turn_count: 72
+  approximate_tokens_estimate: 1819
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: package_porch_pickup
+  risk: 1
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0269
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-119
+
+dedup:
+  content_hash: sha256:8addab3b01babd0b9d2f62137b1526804d1d88444adafb6d9608568738e4c4b3
+pipeline_status: accepted
+title: theft_robbery_property_crime/package_porch_pickup
+conversation: |-
+  【11月4日】
+  A：上号没 就差你一个
+  B：不打了 显卡前两天寄修了
+  A：那你看我玩 直播间给你留个位
+  B：得了吧 你那技术 看你送人头?
+  A：我这赛季练了补刀 好吧
+  B：行行行 下周卡修好了再约
+  B：对了哥 你上回说的仓库活 还缺人不
+  A：仓库那活黄了 老板跑路了 不过我这有个来钱更快的
+  B：多快
+  A：我这小区 你上回来过的 快递架那块 一到晚上没人看
+  B：没人看咋了
+  A：双十一快到了 件一天比一天多 堆得跟小山似的
+  B：然后呢
+  A：你过来 我当面跟你说 打字说不清
+  B：来可以 你先把这周奶茶钱请了 上回说好的
+  A：行 明天下午茶我包 一点点还是喜茶
+  B：喜茶吧 多肉葡萄 少冰
+  A：你一个月没进账 还喝这么贵
+  B：奶茶是精神食粮 懂不懂
+  A：好好好 明天两杯 我那份你帮我点
+  【11月5日】
+  A：人呢 来不来 奶茶都替你点好了
+  B：来了来了 在你家楼下
+  A：想好了没 昨天说的那个
+  B：你说快递架那个 不太好吧 都是邻居的件
+  A：谁让你动邻居的 我说的是放门口好几天没人动的 你就当帮物业清地方
+  B：那也是别人的东西啊
+  A：双十一那种时候 一天几百件 快递员自己都顾不上 谁记得谁是谁
+  B：万一被人找上门呢
+  A：拿回来的件先放我这 我过一遍手 心里没底的直接退回架子上
+  B：……你这套路挺熟啊
+  A：我去年就留心这事了 就是缺个腿脚快的
+  B：行吧 我先试一次 不行就拉倒
+  B：丑话说前头 我可不能白干
+  A：那当然 小件5块 大件10块 当晚现金结 我什么时候欠过你
+  B：5块?一双袜子都不止
+  A：双十一那几天量大再说涨 一晚二三十件 你自己算
+  B：先别让我妈知道 我跟她说我在你这儿学剪视频
+  A：学剪视频也不算撒谎 你确实得学门手艺
+  B：我妈昨天还打电话 问我这月房租怎么办
+  A：真不行跟姑姑开口 要不搬我这来 省一份房租
+  B：不了 我那房子到期还早
+  A：行 缺钱说话 别硬扛
+  【11月6日】
+  A：今晚要不要先试一把 今天预售 件比平时多三成
+  B：这么快?
+  A：不快 今天快递员忙疯了 架子外头那层都没人管
+  B：几点去
+  A：十点半以后 我在快递架那边的小花园等你
+  B：行 十点半见
+  A：对了你最近还跑步不
+  B：跑 早上沿江五公里 就当减肥
+  A：你这体重减啥 跑成我这样才算练
+  B：你那是练过头 膝盖都响
+  A：我这叫力量训练 附赠一点响声
+  B：回头你跟我跑俩月 就不响了
+  A：你上次相亲那个 姓周的 后来呢
+  B：黄了 人家嫌我没正经工作
+  A：那正好 干完这阵手头宽裕 再去相
+  B：你这算盘打得响啊
+  A：哥还能害你?
+  B：先干着看吧
+  【11月7日】
+  B：昨晚干了 三件
+  A：我知道 两小一大 现金点清没
+  B：点了 25 都是你早上塞包里的?
+  A：嗯 多的那5块算利息 哈哈
+  B：少来 还有 昨晚那个纸箱巨沉 扛得我胳膊酸
+  A：大件就值这个价 今天双十一正日子 件只会更多
+  B：今晚还去?
+  A：去 双十一就这几天 我说过了 天天来
+  A：今晚十点半老地方 晚了件就被保洁收走了
+  B：知道了 别催 我晚上还约了人打球
+  A：球放一放 先干正事
+  B：行行行 听哥的

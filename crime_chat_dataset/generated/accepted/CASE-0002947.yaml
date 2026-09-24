@@ -1,0 +1,144 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002947
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000053
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-5104af0c3fd30820
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: violence_extortion
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 本地拿事的强人 A 看中店主 B 父辈传下的临街五金店，经中间人「三哥」搭线施压：以「明天铺子归我」「合同就别找了」「兄弟们一早过来搬东西」逼 B 一夜之间交铺，只付 20000 元象征性「补偿款」并让 B 打收条造个体面，随后又盯上后头仓库——全程无一个「抢」字，强占的事实全靠时间表、合同作废论与那笔严重低于市价的转账衬托。
+  critical_evidence:
+  - 第1天 经三哥搭线首次正面施压：A 开口即定调「明天铺子归我 这事就这么定」，并限「明晚八点前给我个痛快话」（第1天）
+  - 第1天 A 否定租约效力「合同就别找了 那纸管不到我」，抬出旧交情与街面先例施压（「你爸跟我父亲也是这么谈过来的」「老徐家的铺子当年也是这么过来的」）（第1天）
+  - 第1天 A 安排行动「兄弟们明早八点过来搬东西 帮你腾地方 你别让我安排」，并借中间人递话「三哥是为你好」瓦解 B 抵抗（第1天）
+  - 第2天 A 定下体面手续「我把20000转你 你出个收条 写『铺面转让补偿款』 谁也挑不出理」，11:30 转账 20000（第2天，转账）
+  - 第2天 铺子易主：兄弟们当日搬走柜台、B 清货摘招牌、仓库暂借半月，A 再抛「下月连你后头那间仓库也一起盘了」并限「明晚八点前」（第2天）
+  benign_alternatives:
+  - 商业纠纷经中间人协商的转让
+  - 房东到期正常收铺并给搬迁补偿
+
+attributes:
+  duration_days: 2
+  turn_count: 68
+  approximate_tokens_estimate: 2192
+  relationship: 中间人关系
+  obfuscation: extreme
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: violence_extortion
+  subtype: asset_seizure_force
+  risk: 3
+  relationship: 中间人关系
+  obfuscation: extreme
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0268
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-117
+
+dedup:
+  content_hash: sha256:7bb9db3ee249fb22235ced9833469516e796edad3ca1015bc1656cf47894c1ca
+pipeline_status: accepted
+title: violence_extortion/asset_seizure_force
+conversation: |-
+  【8月20日】
+  A：是小周吧 我是老严 三哥跟你说了吧
+  B：严哥好 三哥说了 您想聊聊铺子的事
+  A：你那间铺 临河街东头第二间 我看上有些日子了
+  B：严哥 那铺是我爸手上置下的 五金店做了三十年 街坊都认
+  A：我知道 你舍不得我也知道 但我这参茸行就要那位置 明天铺子归我 这事就这么定
+  B：明……明天? 这也太急了 我货都没处放
+  A：货你自己清 兄弟们明早八点过来搬东西 帮你腾地方 你别让我安排
+  B：严哥 我这有租约的 到明年三月……
+  A：合同就别找了 那纸管不到我 你爸当年跟我父亲也是这么谈过来的 街面上讲的是人和
+  B：那……补偿总得有个说法吧
+  A：你要个说法 我给你说法 你说个数
+  B：这铺子现值七八十万……
+  A：我不跟你谈市价 我给你20000 两万 你收着 这条街谁不知道你爸跟我家的交情 我这是情分不是买卖
+  B：两万……严哥 这让我怎么跟家里人交代
+  A：你就说铺子转了行 三哥在中间 你自己掂量 老徐家当年也是这么过来的 现在开得不好好的
+  B：我……让我想想
+  A：想可以 别过夜 明晚八点前给我个痛快话
+  A：对了 这两天台风 明早兄弟们搬东西正好赶在雨前 你别拖到雨天
+  B：河堤昨晚涨水了 我们店门口都垒了沙袋
+  A：垒了就好 我码头那几个仓 都加高了门槛
+  B：您这产业多 照顾得过来吗
+  A：兄弟们多 好办事
+  A：你爸血压好点没 我这有好友给的罗布麻茶 回头捎两包
+  B：谢谢严哥 他每天雷打不动一片药 天热就头晕
+  A：老人都这样 别让他操心 这事办完让他安心
+  B：就怕他知道了气不过
+  A：所以说人和 为他自己好
+  B：三哥又来电话 让我别犟 说我年轻 不懂街面上的事
+  A：三哥是为你好 你爸住院那阵 三哥垫的钱 街坊都看着呢
+  B：那笔钱我爸早还了呀
+  A：还了是还了 情分还在 你说是不是这个理
+  B：……是
+  A：你儿子毕业分哪了
+  B：在省城 做设计 说是挺忙
+  A：有出息 别让他掺和家里这些事 年轻人路长
+  B：嗯 他要知道了得跟我急
+  A：所以你自己拿主意 报喜不报忧 是当爹的本分
+  【8月21日】
+  A：想好了吧 兄弟们八点半到 店门你开着?
+  B：严哥 再宽限几天 行不行 货我真没地方去
+  A：没地方 仓库借你放半个月 这是我让步 兄弟们过去先搬柜台 零货你自己拉走
+  B：……好
+  A：明白就好 一会儿我把20000转你 你出个收条 写「铺面转让补偿款」 字据齐全 谁也挑不出理
+  B：收条……
+  A：别多想 这是让你体面 也让我体面
+  A：你小时候还在这条街上学吧 那会儿你爸铺子门口 下棋一摊
+  B：是 我小学放学就趴他柜台写作业
+  A：你爸那盘象棋 我输过一回 高兴了半个月
+  B：他要说起来都是乐呵事 现在眼花 也没几年好下了
+  A：人都这样 街面在 棋摊就在
+  B：严哥 收条让三哥转您可以吗 我这边实在……
+  A：让三哥转 成
+  【系统消息】A 向 B 转账 20000 元，已收款。
+  A：转了 20000 你点点
+  B：点了 收到
+  A：下午兄弟们到了 贵重你自己先收好 免得磕碰
+  B：好
+  B：柜台拆完了 零货装了六箱 仓库钥匙找三哥拿?
+  A：拿 周四之前清完 门口那块招牌你也摘了 那块地方我周5挂牌
+  B：摘 摘
+  A：嗯 你要摆摊过渡 街口早市我让兄弟们给你留个位置 情分归情分
+  B：谢谢严哥……
+  A：下月我连你后头那间仓库也一起盘了 你那租约到明年 转给我就行 你想开点 跟着我有肉吃
+  B：后头仓库……我再想想
+  A：想什么都行 别想太久 老规矩 明晚八点前
+  B：……知道了
+  B：严哥 爸问铺子怎么空了 我说装修 他说装修用不着把柜台都拉走……
+  A：就说升级改造 老人别让他多问 多陪他下两盘棋
+  B：嗯
+  A：明天招牌我来安排 你早点歇 明早八点 兄弟们准时

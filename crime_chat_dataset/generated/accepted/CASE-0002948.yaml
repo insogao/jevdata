@@ -1,0 +1,129 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002948
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000024
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-fd48436364ee8b17
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: bribery_corruption
+  illicit_likelihood: 3
+  evidence_strength: strong
+  review_required: true
+
+hidden_case:
+  latent_intent: 竞聘运营部主管的 A 与考核组里说话有分量的老同事 B 考核前在「老地方」密会：B 点拨述职材料与答辩细节，摊牌「名单其实早就有数了 我那一票加老钱那一票你稳」，事成次日 A 深夜转 30000 元、备注「学费」兑现「老规矩」，B 收款并提前指路处长位子的经营路线，是一手交票一手交钱的晋升交易。
+  critical_evidence:
+  - 第1天 考核前一日密会：B 约「晚上老地方吃面 有事跟你唠」，现场点拨「把三个项目的数据放前头 别讲苦劳 讲账」（第1天）
+  - 第1天 B 摊牌名单提前有数「这回名单其实早就有数了 我那一票 加上老钱那一票 你这步就算迈过去了」，并称述职「过场也是要走的 规矩是规矩」（第1天）
+  - 第1天 交易约定成立：A 表态「这份情我记下了」，B 回「谁跟你谈情 讲究是讲究 事成之后 按咱们的老规矩来」（第1天）
+  - 第2天 班子会定、次日挂公示，A 当晚即转 30000 元、备注「学费」，B 回「30000 收到」（第2天，转账）
+  - 第2天 B 嘱「钱以后别弄这么大动静 稳字当头」，并抛出下一程「处长那个位置 后年空出来 这两年把华东仓再做出个样子 提前铺」（第2天）
+  benign_alternatives:
+  - 同事间的正常人情答谢
+  - 老带新的拜师「学费」与培训资助
+
+attributes:
+  duration_days: 2
+  turn_count: 53
+  approximate_tokens_estimate: 1642
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: bribery_corruption
+  subtype: promotion_payment
+  risk: 3
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0268
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-117
+
+dedup:
+  content_hash: sha256:29e832686981bf1122d2b818d6716247a51e59a32db3071f671c551ec7e11c77
+pipeline_status: accepted
+title: bribery_corruption/promotion_payment
+conversation: |-
+  【11月4日】
+  B：小李 晚上老地方吃面? 有事跟你唠
+  A：赵哥 好嘞 六点?
+  B：六点 老位置
+  B：坐 下碗牛肉面加蛋 我请
+  A：谢赵哥 什么好事这么客气
+  B：你竞聘运营部主管的事 稳了你知道吗
+  A：哪能啊 后天才述职 我材料还改到半夜
+  B：材料改来改去没用 关键几步给你点透 述职那页 把你今年三个项目的数据放前头 别讲苦劳 讲账
+  A：嗯嗯 我记下 讲账
+  B：还有现场答辩 老钱肯定问你跨部门协同 那个你就提华东仓的例子 细节我发你
+  A：好嘞 我晚上就背
+  B：再跟你说句掏心窝的 这回名单 其实早就有数了 我那一票 加上老钱那一票 你这步就算迈过去了
+  A：名单……都有数了?! 那我们这不真成走过场了
+  B：过场也是要走的 规矩是规矩 你把过场走漂亮 大家都体面
+  A：明白……那这份情 我记下了 赵哥
+  B：谁跟你谈情 讲究是讲究 事成之后 按咱们的老规矩来 你懂的
+  A：懂 我懂 一定按老规矩
+  A：对了 团建节目定了没 我报的合唱就缺你
+  B：缺我这个五音不全的?
+  A：缺你压阵 你一开口大家就不跑调了 哈哈
+  B：那是损我 行 下周三参加 下不为例
+  A：成 一言为定
+  B：你闺女的幼儿园手工做完没 上回你半夜还在粘纸盒
+  A：别提 老师要亲子作品 最后全是我做的 她负责戳窟窿
+  B：哈哈 全国的爹都一样
+  A：谁说不是 还评上优秀作品了 就是有点心虚
+  B：心虚什么 你这不叫代做 叫辅导
+  A：周末去不去爬山 我约了俩老同学
+  B：去 我这腰是得动了 就到半山亭
+  A：半山亭就半山亭 豆汁给你留一碗
+  B：豆汁就算了 你自己享用
+  【11月5日】
+  B：上午材料最后过一遍 重点数据 加粗
+  A：改好了发您邮箱了 一页纸版本也备了
+  B：行 述职两点半 别紧张 语速放慢
+  A：嗯 赵哥 拜托了
+  B：说好的规矩 走完过场再说
+  A：述职完了 老钱果然问协同 我把华东仓的例子讲了 他点了三次头
+  B：讲账讲对了 等信
+  A：赵哥! 班子会定了 公示明天挂 运营部主管 是我!
+  B：恭喜 名单我这有数的人 从没走过眼
+  A：全靠您和老钱抬举 这份讲究 我今天就得表示
+  B：着什么急 公示期七天呢
+  A：规矩就是规矩 我不想拖 心意到了我才踏实
+  B：你这孩子 倒实在 老名目你自己写
+  A：赵哥 转您 30000 备注写的「学费」 您点点 当年就想拜您为师 一直没机会
+  【系统消息】A 向 B 转账 30000 元，已收款。
+  B：30000 收到 你这「学费」交的 倒让人不好推脱
+  A：应该的 后天我请您和老钱吃饭?
+  B：吃饭可以 钱以后别弄这么大动静 你刚上任 稳字当头
+  A：懂 稳字当头
+  B：还有 处长那个位置 后年空出来 你这两年把华东仓再做出个样子 提前铺
+  A：哎 我听您的 一步一步来
+  B：去吧 早点歇 明天公示 别发朋友圈声张
+  A：好嘞 赵哥晚安

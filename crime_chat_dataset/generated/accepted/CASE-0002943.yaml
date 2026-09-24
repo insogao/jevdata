@@ -1,0 +1,147 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002943
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000071
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-2798468eb7099eba
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: sexual_transaction_exploitation
+  illicit_likelihood: 3
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 夜场领队 A 以「商务演艺、日结800只陪唱」为幌子私信招揽在校女生 B：用公司垫置装费绑定长期、以「进场别带手机、保密客户圈子」隔断外界，将 B 一层层推进有偿陪侍局，最终约定周五晚到酒店大堂「试工」并许诺固定班底，是面向学生的夜场拉人套路。
+  critical_evidence:
+  - 第1天 A 以兼职群私信切入，开价「日结800 当天现结」，话术先扬后诱（「看你朋友圈那个舞蹈视频 身条很好」）（第1天）
+  - 第1天 A 抛出「买衣服的钱公司先垫 干满十场就算送的」，用垫资绑定长期（第1天）
+  - 第2天 B 问能否带手机，A 定规矩「进场别带手机 交前台统一保管」「保密是铁规矩」（第2天）
+  - 第2天 B 犹豫「就一次 不行就撤」，A 定下「周五晚七点 江北明珠大堂等我 我下来接你」并指挥着装修妆（第2天）
+  - 第2天 深夜 A 抛出「金先生生日包场」「下月还要包一场 正缺固定班底」，B 半推半就应下试工，被套牢在局中（第2天）
+  benign_alternatives:
+  - 正规夜场演出与礼仪的招募
+  - 酒水品牌促销的兼职合作
+
+attributes:
+  duration_days: 2
+  turn_count: 72
+  approximate_tokens_estimate: 2207
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: sexual_transaction_exploitation
+  subtype: night_club_female_recruit
+  risk: 3
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0268
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-117
+
+dedup:
+  content_hash: sha256:40dad50258990bde3c7b224c9642a91c334140c864540b2a63e62b24b7faa520
+pipeline_status: accepted
+title: sexual_transaction_exploitation/night_club_female_recruit
+conversation: |-
+  【10月11日】
+  A：同学你好 兼职群里看你问周末的活儿 我这边正好缺人
+  B：什么样的兼职呀 我周四五没课
+  A：商务演艺 店庆周年那种场面 女孩子往台上一站 气氛就起来了
+  B：我没经验诶 就社团跳过舞
+  A：要的就是这个 看你朋友圈那个舞蹈视频 身条很好 一看就上镜
+  B：哈哈那是我社团汇演
+  A：场子在江北 包厢式 会客的都是有头脸的老板 日结800 只陪唱陪聊 活跃气氛 别的不用管
+  B：800?! 一天?
+  A：一晚 日结 当天现结 我们这里规矩最正
+  B：那具体做什么呀 我有点怕怕
+  A：唱歌 喝点软饮 捧捧场 让客人高兴 剩下的交给你的临场 小姑娘嘴甜就行
+  B：说到临场 我下周还有三门期末 麻烦
+  A：大几了
+  B：大三 汉语言 天天背书背到头秃
+  A：汉语言好 出口成章 客人最爱有文化的小姑娘
+  B：哈哈背《文心雕龙》也能算才艺吗
+  A：能 引经据典 古已有之嘛
+  B：奶茶我自己请 今天说什么也不喝三分糖了
+  A：减肥呀
+  B：室友说我最近脸圆了 气死
+  A：圆润好 端庄 上台有福相
+  B：您可真会安慰人
+  B：那个 您说的那种场子 正规吗 我同学说有的地方不正经
+  A：正经演艺中介 劳务协议签得清清楚楚 客户是会员制 保密圈子
+  A：这行讲究一个懂事 什么场合说什么话 该来的来 不该碰的不碰 你上两天就明白
+  B：哦哦 那衣服呢 要自备吗
+  A：买衣服的钱公司先垫 裙子高跟鞋有合作的店 你人好看穿什么都衬 干满十场 就算公司送的
+  B：垫的话 我要是只干一两次呢
+  A：干得好的都长期 姐姐们月入一万五起 谁舍得走
+  B：月入一万五?!
+  B：室友又用我吹风机 还说我了
+  A：学生宿舍就这样 一个屋檐小摩擦
+  B：她们还阴阳我 说天天往外跑
+  A：赚钱不丢人 等你日结800 甩她们面前 哈哈
+  B：哈哈到时候请她们吃火锅
+  【10月12日】
+  B：早 我考虑了一下 还是不太敢 万一遇到不上道的客人怎么办
+  A：场里有领班全程盯着 客人过了喊一声就行 我们这里最讲规矩
+  B：领班会帮我解围吗
+  A：会 只要不傻不愣 没人为难你 我做这行八年 带的姑娘几十个 都好好的
+  B：那手机能带吗 我怕家里找我
+  A：进场别带手机 交前台统一保管 里面客人什么圈子都有 保密是铁规矩 出来了再拿
+  B：交手机……感觉像进考场
+  A：哈哈比考场松多了 就当换个包厢唱歌 一晚800 现金揣兜里
+  B：那我周五穿什么 我都没裙子
+  A：说了公司垫 明早带你去挑 你肤色白 酒红色衬你
+  B：好耶 我还没穿过酒红色
+  A：口红也换正红 别咬唇那种 灯下没气色
+  B：听姐姐的 我的化妆水平仅限学生妆
+  A：到了教你 灯光下要重一点 不然显苍白
+  B：姐 我月底抢回家的票 你说候补能成吗
+  A：候补放票多 前一晚记得刷
+  B：想家了 我妈包的饺子
+  A：孝顺 发了工资给你妈买件护膝 比说啥都强
+  B：嗯嗯 我正想买这个
+  B：姐 那我周五试一下? 就一次 不行我就撤
+  A：成 周五晚七点 江北明珠大堂等我 我下来接你
+  B：好 便装去还是
+  A：带上裙子去前台换 妆画好 头发盘起来 显精神
+  B：好哒
+  B：姐 室友问我周末干嘛 我说去做礼仪 这不算撒谎吧 哈哈
+  A：不算 礼仪就是礼仪 咱们本来就体面
+  B：也是 反正我唱唱歌
+  A：嗯 周五有位姓金的客人过生日 包场 你嘴甜点 唱两首 就算预热
+  B：金先生? 唱什么好
+  A：老歌万能 你跟着领班走就行 剩下的姐姐现场教你
+  B：好紧张又好期待
+  A：别怕 日结800 现金 揣稳了
+  B：好 周五见 姐
+  A：见 下月金先生还要包一场 正缺固定班底 干得好 周五之后姐给你排长期
+  B：长期啊……先看周五再说吧
+  A：好妹妹 别想多 这行干熟了都是姐妹 周五七点 别迟到
+  B：嗯嗯 不迟到 谢谢姐姐

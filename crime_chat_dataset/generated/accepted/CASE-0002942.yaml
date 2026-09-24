@@ -1,0 +1,140 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002942
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000037
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-SAL-001-5c39228d7e0fde4e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 3
+  category: contraband_illicit_trade
+  illicit_likelihood: 3
+  evidence_strength: medium
+  review_required: true
+
+hidden_case:
+  latent_intent: 试卷印务环节的内部人 A 经掮客「老蔡」介绍，与陌生买家 B 达成考试内容交易：按科报价一科 2800、全款 8400 锁名额、开考前一夜纸质交货，B 拿货赴考后大题「全压中」，并预留下一场交易的长期钩子，是一条开考前连夜出货的考试内容买卖线。
+  critical_evidence:
+  - 第1天 陌生人经「老蔡」介绍接头，A 称「名额只剩三个」「开考前一夜才出货 铁律」，按科报价一科2800（第1天）
+  - 第1天晚 B 定下三科全要，A 报总价 8400、约定次日晚十点纸质交货「见面点数」（第1天）
+  - 第2天 B 转账 8400 全款锁名额，A 回「名单你排头一个」（第2天，转账）
+  - 第2天夜 河堤茶楼门口车中交货，三科三袋、页数齐、封口未拆，A 称「好了就走 不在车里聊」（第2天）
+  - 第3天 考后 B 反馈「大题全压中了」，并预约下场考试「给我留一科」，A 允「老规矩」（第3天）
+  benign_alternatives:
+  - 考前辅导资料的渠道购买
+  - 机构内部模拟题库的转让
+
+attributes:
+  duration_days: 3
+  turn_count: 63
+  approximate_tokens_estimate: 1519
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: exam_leak_material
+  risk: 3
+  relationship: 陌生人
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0268
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-117
+
+dedup:
+  content_hash: sha256:565c22a878cec0d6fc8776508f91c23408549745f941b23d10ae702190131736
+pipeline_status: accepted
+title: contraband_illicit_trade/exam_leak_material
+conversation: |-
+  【6月10日】
+  B：你好 冒昧打扰 老蔡让我加你的
+  A：嗯他说过 什么事直说
+  B：这个月那场考试 你手里那批东西 还有路子吗
+  A：你消息挺快 这回上面盯得紧 名额只剩三个
+  B：我要三科 语文 数学 综合 怎么个章程
+  A：按科报价 一科2800 不二价 你去打听 行价只会更高
+  B：先给个样看看总行吧 空口白牙的
+  A：样从来不出 开考前一夜才出货 铁律 我在这行十年 靠的就是嘴严
+  B：那我怎么信货对版
+  A：错一科全退 老蔡跟我搭了三年 没砸过一回
+  B：行 我想想 名额能留我多久
+  A：今晚十二点前 过点放给别人 订金锁名额 全款更稳
+  B：这雨下疯了 打车排队八十多号 你那边淹没
+  A：还好 我走桥下 高架基本不积水
+  B：我这条街淹了半米 保安在搬沙袋
+  A：别趟水 上年我鞋泡透 晾了两天
+  B：记下了 晚点再聊
+  B：想定了 三科都要 全款 章程怎么走
+  A：8400 一次清 我把名单划到你头上 明晚十点取货 纸质 只一份 见面点数
+  B：要是页数缺了错了呢
+  A：当场对 当场清 出了这个门不认 老规矩
+  B：行 明晚见 我一个人来
+  【6月11日】
+  A：早 雨停了 去江边跑个五公里 你练吗
+  B：练不动 体重大 跑两步喘
+  A：循序渐进 我去年跟你一样 现在配速六分半
+  B：六分半已经很快了
+  A：先快走 贵在坚持
+  B：款备好了 现在走?
+  A：走 收款码发你 名额这就锁
+  B：再对一遍 一科2800 三科一共8400 没错吧
+  A：没错 8400
+  【系统消息】B 向 A 转账 8400 元，已收款。
+  A：8400 收到 名单你排头一个
+  B：取货还是茶楼那边?
+  A：今晚十点 河堤茶楼门口黑车 你一个人 不拍照 不多留
+  B：明白
+  B：愁死了 儿子小升初划片划到三流
+  A：打听民办摇号 落户政策也查查 别干熬
+  B：摇号全看命
+  A：信息灵的才有命 这话搁哪都通用
+  B：在理 回头细聊
+  B：对了 我月底搬家 三环外那个一室 帮我参谋下
+  A：顶楼别租 夏天蒸笼 看水管和新旧 电表拍给我
+  B：六楼顶楼没电梯 租金两千一
+  A：砍到一千七 不行就算
+  B：行家 谢了
+  A：出门了没
+  B：到茶楼了 哪辆
+  A：路灯底下那台 副驾上来
+  A：三袋 自己点
+  B：语文 数学 综合 页数齐 封口都没动
+  A：行 好了就走 不在车里聊
+  B：到家 全对过了 这钱花得值
+  A：嗯 明天平常心
+  【6月12日】
+  B：上场了 手心全是汗
+  A：别慌 稳着来
+  B：上午场出来 大题全压中了 你是真神
+  A：嗯 下午综合别飘
+  B：全考完了 稳得不能再稳
+  A：好 等出分
+  B：下月教资那场 老蔡说你也出手 给我留一科
+  A：名额的事出了分再谈 老规矩
+  B：成 提前谢 考上请你吃饭
+  A：饭不必 嘴严比什么都强

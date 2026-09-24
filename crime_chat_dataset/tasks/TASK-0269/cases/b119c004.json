@@ -1,0 +1,476 @@
+{
+ "key": "b119c004",
+ "archetype_id": "ARC-000119",
+ "subtype": "shared_bike_parts_strip",
+ "latent_intent": "修车铺老板 A 让住店小工 B 每晚关铺后出夜工，拆下共享单车的锁和变速两样交货，一套15元按周现金结算，车架剩件由 B 在河边老地方处理、绝不带回店里；老板以件价看涨画饼要把量加到一晚二十套，遇雨停工，形成长期夜工安排。",
+ "critical_facts": [
+  "A 安排 B 晚上出工，一晚十套为限，只留锁和变速两样（第1天）",
+  "B 问车架剩的怎么弄，A 定下老地方处理、别往店里带，带回来俩人都说不清（第2天）",
+  "A 以件价看涨画饼：等你手练熟一晚二十套不是问题，价钱涨成一套15（第4天）",
+  "周结现金705元放抽屉，B 低烧 A 令雨夜停工、钱照结（第5天）",
+  "雨停后定下明晚复工，仍按十套老规矩长期干（第6天）"
+ ],
+ "benign_alternatives": [
+  "修车铺的旧车拆解与配件回收买卖",
+  "单车运维方的报废车辆处置外包"
+ ],
+ "events": [
+  {
+   "type": "message",
+   "time": "5月19日 21:05",
+   "speaker": "A",
+   "text": "小陈 关门了没"
+  },
+  {
+   "type": "message",
+   "time": "5月19日 21:07",
+   "speaker": "B",
+   "text": "刚拉下卷帘门 老板 啥事"
+  },
+  {
+   "type": "message",
+   "time": "5月19日 21:08",
+   "speaker": "A",
+   "text": "今晚开始 晚上给我出个工 一晚十套"
+  },
+  {
+   "type": "message",
+   "time": "5月19日 21:10",
+   "speaker": "B",
+   "text": "十套?您不是说先歇一段"
+  },
+  {
+   "type": "message",
+   "time": "5月19日 21:12",
+   "speaker": "A",
+   "text": "歇够了 现在夜里那批车没人管 还是老规矩 只留锁和变速两样"
+  },
+  {
+   "type": "message",
+   "time": "5月19日 21:14",
+   "speaker": "B",
+   "text": "行 反正我住店里 空也是空着"
+  },
+  {
+   "type": "message",
+   "time": "5月19日 21:15",
+   "speaker": "A",
+   "text": "机灵点 别贪多 十套为限"
+  },
+  {
+   "type": "message",
+   "time": "5月19日 21:17",
+   "speaker": "B",
+   "text": "懂 手熟了就快"
+  },
+  {
+   "type": "message",
+   "time": "5月19日 21:18",
+   "speaker": "B",
+   "text": "对了老板 我车胎今早瘪了 去补了150 那师傅说扎了钉子"
+  },
+  {
+   "type": "message",
+   "time": "5月19日 21:20",
+   "speaker": "A",
+   "text": "150?你被宰了吧 补胎哪有这么贵"
+  },
+  {
+   "type": "message",
+   "time": "5月19日 21:22",
+   "speaker": "B",
+   "text": "人家连胎况一起查了 说胎都磨到线了 让我换"
+  },
+  {
+   "type": "message",
+   "time": "5月19日 21:23",
+   "speaker": "A",
+   "text": "换胎也先问价 这150我给你报销 别自己扛"
+  },
+  {
+   "type": "transfer",
+   "time": "5月19日 21:25",
+   "from": "A",
+   "to": "B",
+   "amount": 150,
+   "status": "received"
+  },
+  {
+   "type": "message",
+   "time": "5月19日 21:27",
+   "speaker": "B",
+   "text": "收到了150 谢谢老板"
+  },
+  {
+   "type": "message",
+   "time": "5月19日 21:28",
+   "speaker": "A",
+   "text": "谢啥 工具人也是人 哈哈"
+  },
+  {
+   "type": "message",
+   "time": "5月19日 21:29",
+   "speaker": "B",
+   "text": "那明天我把车推店里 你给我换胎 成本价啊"
+  },
+  {
+   "type": "message",
+   "time": "5月19日 21:31",
+   "speaker": "A",
+   "text": "行 就收你个胎钱"
+  },
+  {
+   "type": "message",
+   "time": "5月20日 22:40",
+   "speaker": "B",
+   "text": "老板 出完了 十套整 锁和变速在麻袋里 后门老位置"
+  },
+  {
+   "type": "message",
+   "time": "5月20日 22:42",
+   "speaker": "A",
+   "text": "好 剩下的架子呢"
+  },
+  {
+   "type": "message",
+   "time": "5月20日 22:44",
+   "speaker": "B",
+   "text": "还在河边那停着 怎么弄"
+  },
+  {
+   "type": "message",
+   "time": "5月20日 22:46",
+   "speaker": "A",
+   "text": "老地方处理 别往店里带 带回来咱俩都说不清"
+  },
+  {
+   "type": "message",
+   "time": "5月20日 22:48",
+   "speaker": "B",
+   "text": "明白 明晚我顺路就办了"
+  },
+  {
+   "type": "message",
+   "time": "5月20日 22:49",
+   "speaker": "A",
+   "text": "行 这点上道"
+  },
+  {
+   "type": "message",
+   "time": "5月20日 22:50",
+   "speaker": "A",
+   "text": "你妈寄的腊肠到了 我帮你收的 挂后厨了"
+  },
+  {
+   "type": "message",
+   "time": "5月20日 22:52",
+   "speaker": "B",
+   "text": "我妈也真是 年年寄十斤 谁吃得完"
+  },
+  {
+   "type": "message",
+   "time": "5月20日 22:54",
+   "speaker": "A",
+   "text": "我帮你吃 哈哈 蒸饭一绝"
+  },
+  {
+   "type": "message",
+   "time": "5月20日 22:55",
+   "speaker": "B",
+   "text": "那你拿两条去 跟嫂子下酒"
+  },
+  {
+   "type": "message",
+   "time": "5月20日 22:57",
+   "speaker": "A",
+   "text": "那我拿两条 回头让你嫂子给你织双手套 夜里干活冷"
+  },
+  {
+   "type": "message",
+   "time": "5月20日 22:58",
+   "speaker": "B",
+   "text": "那我先谢谢嫂子"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 07:30",
+   "speaker": "B",
+   "text": "昨晚出了九套 有一套变速拨杆花了"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 07:32",
+   "speaker": "A",
+   "text": "花的也收 拆开卖零件 亏不了"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 07:34",
+   "speaker": "B",
+   "text": "行 昨晚河边风大 那条路还封了一段 我多绕了二里地"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 07:36",
+   "speaker": "A",
+   "text": "辛苦 多绕的算加班 哈哈"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 07:38",
+   "speaker": "B",
+   "text": "那今晚继续?"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 07:39",
+   "speaker": "A",
+   "text": "继续 就按十套来 别超"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 07:41",
+   "speaker": "B",
+   "text": "懂 宁缺毋滥"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 07:42",
+   "speaker": "A",
+   "text": "嗯 睡够再干 身体是本钱"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 07:43",
+   "speaker": "B",
+   "text": "老板 昨晚决赛看了没 补时绝杀!"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 07:45",
+   "speaker": "A",
+   "text": "看了 我激动得把茶杯都碰翻了"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 07:47",
+   "speaker": "B",
+   "text": "你还好意思说支持十年 一次没冠军"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 07:48",
+   "speaker": "A",
+   "text": "这不今年进决赛了么 熬出头了"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 07:50",
+   "speaker": "B",
+   "text": "行 夺冠你请客"
+  },
+  {
+   "type": "message",
+   "time": "5月21日 07:51",
+   "speaker": "A",
+   "text": "请 烤全羊都行 哈哈"
+  },
+  {
+   "type": "message",
+   "time": "5月22日 20:15",
+   "speaker": "A",
+   "text": "跟你说个行情 这阵子件价好 锁和变速都涨了"
+  },
+  {
+   "type": "message",
+   "time": "5月22日 20:17",
+   "speaker": "B",
+   "text": "涨多少"
+  },
+  {
+   "type": "message",
+   "time": "5月22日 20:19",
+   "speaker": "A",
+   "text": "变速一套多卖三十 等你手再熟熟 一晚二十套不是问题"
+  },
+  {
+   "type": "message",
+   "time": "5月22日 20:21",
+   "speaker": "B",
+   "text": "二十套?我这腰先提抗议"
+  },
+  {
+   "type": "message",
+   "time": "5月22日 20:23",
+   "speaker": "A",
+   "text": "抗议无效 价钱给你涨成一套15 练熟了再谈"
+  },
+  {
+   "type": "message",
+   "time": "5月22日 20:24",
+   "speaker": "B",
+   "text": "行 有钱赚腰就不酸 哈哈"
+  },
+  {
+   "type": "message",
+   "time": "5月22日 20:25",
+   "speaker": "B",
+   "text": "对了 麻袋还是后门老位置?"
+  },
+  {
+   "type": "message",
+   "time": "5月22日 20:27",
+   "speaker": "A",
+   "text": "放老位置 我早上收 点完数钱压你抽屉里"
+  },
+  {
+   "type": "message",
+   "time": "5月22日 20:29",
+   "speaker": "B",
+   "text": "行 老规矩"
+  },
+  {
+   "type": "message",
+   "time": "5月22日 20:30",
+   "speaker": "A",
+   "text": "嗯 去睡吧"
+  },
+  {
+   "type": "message",
+   "time": "5月23日 09:10",
+   "speaker": "A",
+   "text": "周结了 这周四十七套 705现金放你抽屉了 点一下"
+  },
+  {
+   "type": "message",
+   "time": "5月23日 09:12",
+   "speaker": "B",
+   "text": "点过了 705 对的 老板讲究"
+  },
+  {
+   "type": "message",
+   "time": "5月23日 09:13",
+   "speaker": "A",
+   "text": "你嗓子怎么哑了"
+  },
+  {
+   "type": "message",
+   "time": "5月23日 09:15",
+   "speaker": "B",
+   "text": "昨晚河边风大 吹的 有点低烧"
+  },
+  {
+   "type": "message",
+   "time": "5月23日 09:17",
+   "speaker": "A",
+   "text": "那今晚停工 病好了再说 705照给你"
+  },
+  {
+   "type": "message",
+   "time": "5月23日 09:19",
+   "speaker": "B",
+   "text": "老板你这样我都不好意思躺"
+  },
+  {
+   "type": "message",
+   "time": "5月23日 09:21",
+   "speaker": "A",
+   "text": "躺 你的钱又不会跑 去药店拿点药 记账上"
+  },
+  {
+   "type": "message",
+   "time": "5月23日 09:22",
+   "speaker": "B",
+   "text": "得嘞"
+  },
+  {
+   "type": "message",
+   "time": "5月23日 09:23",
+   "speaker": "B",
+   "text": "药买了 39块 记账上了啊"
+  },
+  {
+   "type": "message",
+   "time": "5月23日 09:25",
+   "speaker": "A",
+   "text": "行 下周一起结"
+  },
+  {
+   "type": "message",
+   "time": "5月23日 09:26",
+   "speaker": "B",
+   "text": "嗯"
+  },
+  {
+   "type": "message",
+   "time": "5月23日 09:27",
+   "speaker": "A",
+   "text": "睡吧"
+  },
+  {
+   "type": "message",
+   "time": "5月24日 18:40",
+   "speaker": "B",
+   "text": "老板 烧退了 今晚复工不"
+  },
+  {
+   "type": "message",
+   "time": "5月24日 18:42",
+   "speaker": "A",
+   "text": "不急 外头还下着 今晚再歇 明晚看天"
+  },
+  {
+   "type": "message",
+   "time": "5月24日 18:44",
+   "speaker": "B",
+   "text": "行 那我把麻袋都洗了晾上"
+  },
+  {
+   "type": "message",
+   "time": "5月24日 18:46",
+   "speaker": "A",
+   "text": "你倒是讲究"
+  },
+  {
+   "type": "message",
+   "time": "5月24日 18:47",
+   "speaker": "B",
+   "text": "跟您学的 干净"
+  },
+  {
+   "type": "message",
+   "time": "5月24日 18:48",
+   "speaker": "A",
+   "text": "哈哈 明晚复工 十套老规矩"
+  },
+  {
+   "type": "message",
+   "time": "5月24日 18:49",
+   "speaker": "B",
+   "text": "对了 你说的那双手套 嫂子真织了?"
+  },
+  {
+   "type": "message",
+   "time": "5月24日 18:51",
+   "speaker": "A",
+   "text": "织了 红的 明天给你"
+  },
+  {
+   "type": "message",
+   "time": "5月24日 18:52",
+   "speaker": "B",
+   "text": "那我不怕冷了"
+  },
+  {
+   "type": "message",
+   "time": "5月24日 18:53",
+   "speaker": "A",
+   "text": "睡吧 明晚见"
+  }
+ ],
+ "_registered": {
+  "case_id": "CASE-0002952",
+  "status": "accepted",
+  "errors": []
+ }
+}

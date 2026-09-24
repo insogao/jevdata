@@ -1,0 +1,132 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002960
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000149
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-66ddf2c69bb52857
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: other_illicit_coordination
+  illicit_likelihood: 1
+  evidence_strength: strong
+  review_required: false
+
+hidden_case:
+  latent_intent: 做贴街贷款小广告生意的姐夫 A 把印好的「急用钱」贴纸交给小舅子 B，让他后半夜用电动车一夜贴完城东一个区，按栋25元结钱、被物业撕掉的栋扣钱，首晚贴11栋被撕2栋实得225元现金，A 又把下个区加价到一栋30元排到周末，形成按片区滚动张贴的长期路子。
+  critical_evidence:
+  - A 交底活计：把城东那片贴完、一夜贴完一个区，材料他都已印好（第1天）
+  - 计价规矩：一栋25元按栋结、一晚上两百多，被撕掉的栋一栋扣25（第2天）
+  - B 追问贴什么内容，A 只说急用钱的小贴纸、别多问、干完拿钱（第3天）
+  - 首晚报账：贴了11栋、被撕2栋扣50、实得225元现金放在老地方饼干盒（第5天）
+  - 下个区排到周末，A 把价钱涨到一栋30元，两人谈成继续干（第6天）
+  benign_alternatives:
+  - 正规信贷产品的线下广告投放
+  - 社区通知与商超促销张贴
+
+attributes:
+  duration_days: 6
+  turn_count: 52
+  approximate_tokens_estimate: 1385
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: informal_loan_ads_network
+  risk: 1
+  relationship: 亲友
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0269
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-119
+
+dedup:
+  content_hash: sha256:611d359f1205d3e2b4ac6e1a072c32d8e07e2401261289c2063dc88855513e35
+pipeline_status: accepted
+title: other_illicit_coordination/informal_loan_ads_network
+conversation: |-
+  【7月7日】
+  A：睡了没 你那电动车后座能驮东西不
+  B：能 啥事姐夫
+  A：后天晚上帮我把城东那片贴完 一夜贴完一个区 材料我都印好了
+  B：贴贴纸?贴什么内容啊
+  A：到时候你就知道了 人到场就行
+  B：我闺女班主任今晚又在群里@全体 头疼
+  A：家长群就这样 退又不能退
+  B：让明早带多肉去学校 我上哪弄 大半夜的
+  A：我阳台有两盆 明天给你拿一盆
+  B：那感情好 姐夫靠谱
+  【7月8日】
+  A：跟你说明白 一栋25 按栋结 一晚上下来两百多
+  B：25一栋?那我干劲拉满
+  A：先别美 有规矩 被物业撕了的栋 一栋扣25
+  B：撕了还扣?那我不白干
+  A：所以贴的位置有讲究 隐蔽又显眼那种 我教你
+  B：行 你是老师傅
+  A：你家厨房那砖定了没
+  B：定了 灰白的 下月开工
+  A：装的时候喊我 我早年干过瓦工 给你盯现场
+  B：敢情好 就怕你帮忙变添乱 哈哈
+  A：她敢 让她跟我妹说理去
+  B：哈哈 行 开工那天叫你
+  【7月9日】
+  B：姐夫 到底贴啥内容啊 你给我交个底
+  A：就那种急用钱找我们的小贴纸 别多问 干完拿钱
+  B：贷款那玩意啊……行吧 我就当夜跑锻炼了
+  A：聪明 干完这单请你撸串
+  B：对了 周末去不去河边 你上回说带我钓翘嘴
+  A：周末贴完再说 累得你竿都拿不动
+  B：我不累 电动车的电你给我充满就行
+  A：充满 车棚那插座是快充的
+  B：那说定了 贴完就钓
+  A：行
+  【7月10日】
+  A：材料放你楼下车棚纸箱里 两千张贴纸一桶胶 路线我发你了 从北往南
+  B：看到了 明晚十一点出门
+  A：对了 上周家庭聚餐的菜钱 356 你垫的吧 我转你 你姐记账可清楚了
+  B：是356 你转吧 那天的虾还是我拎的
+  【系统消息】A 向 B 转账 356 元，已收款。
+  A：356转了 收到没
+  B：收到 下回聚餐再轮我垫 哈哈
+  A：那天的虾大半造在你闺女肚子里
+  B：随我 能吃是福
+  【7月11日】
+  B：姐夫 贴完了 11栋 天亮前收工
+  A：牛 有两栋被早起遛弯的撕了 扣50 九栋225 现金在老地方饼干盒 给你带了瓶水
+  B：收到 下一片啥时候
+  A：先歇两天 周末说
+  【7月12日】
+  A：周末那区定了 一栋给你涨到30
+  B：涨30?那一晚三百多 睡醒数钱 哈哈
+  A：美得你 先把班上好 周末见
+  B：说起来贴一晚上等于半马 腿都不是自己的
+  A：正好减肥 你平时跑五公里都喊累
+  B：这算带薪跑步 行 周末你叫我
+  A：叫你 还有别的区排着呢
+  B：只要按栋结钱都好说

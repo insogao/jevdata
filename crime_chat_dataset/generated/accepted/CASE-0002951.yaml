@@ -1,0 +1,144 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002951
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000146
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-27401b90b87eacae
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: other_illicit_coordination
+  illicit_likelihood: 1
+  evidence_strength: medium
+  review_required: false
+
+hidden_case:
+  latent_intent: 代运营工作室老板 A 靠号商 B 供号给客户店铺刷单冲销量，上批三百个号掉号近半两人扯皮压款，A 以扣尾款作押逼 B 补货，先凑一百个号今晚开工、文案模板由 A 下发，最后谈定掉号超一成按半价结的赔付规矩，剩余号补齐继续走单。
+  critical_evidence:
+  - B 上门催上批尾款3200，A 以三百个号掉了快一半为由压款当押金（第1天）
+  - 上游卡货只出一百个，A 定下一百个号今晚开工、分两批七点前到（第2天）
+  - A 把新话术文案直接发给 B，叮嘱号主照着发、删掉落款、别整段复制（第3天）
+  - 三百个号周四补齐，谈定掉号一成内全价、超出的按半价结，下一单优先 B（第4天）
+  benign_alternatives:
+  - 电商代运营的正常推广排期沟通
+  - 账号资源采购与供应商对账
+
+attributes:
+  duration_days: 4
+  turn_count: 68
+  approximate_tokens_estimate: 1820
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: false
+  normal_transfer_count: 0
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: rating_farm_order
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: false
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0269
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-119
+
+dedup:
+  content_hash: sha256:ccc8fa5c1d1f6b1ebeb5c0d5c8dabd711701e45ec836619e1a886980bf4743a7
+pipeline_status: accepted
+title: other_illicit_coordination/rating_farm_order
+conversation: |-
+  【8月19日】
+  B：刘老板 上批的尾款 3200 说好周五结 今天都周一了
+  A：先别急 你那批号掉得凶 我客户那头炸锅了 三百个号掉了快一半
+  B：掉号正常 上游换绑那批赶上风头 我也没辙
+  A：你没辙我有辙?尾款我压着就当押金 掉号率出结果再结
+  B：你这是拿捏我 行 你说了算
+  A：不是拿捏 是规矩 上上周那批你就没兜住
+  B：行行行 这周我把欠你的三百个号补上 抵尾款
+  A：补号可以 掉号率你得保 我按活的结
+  B：成 我今天就去催上游
+  A：催快点 我单子排着队
+  B：哎你们那边降温没 我这边一场雨就入秋了
+  A：降了 早晚得穿外套 我昨天穿短袖挨冻
+  B：上岁数别硬扛 我妈都给我寄秋裤了
+  A：你妈挺好 我妈还没反应过来 哈哈
+  B：赶紧提醒她 要不冻你个措手不及
+  A：行 提醒了
+  【8月20日】
+  A：上游怎么说 三百个今天能到几个
+  B：卡得死 最多出一百 剩下的要等周四
+  A：一百就一百 一百个号今晚开工 客户那边我糊弄过去了
+  B：今晚就干?号到我那还得俩小时
+  A：那你七点前给我 分两批走 文案我都备好了
+  B：行 你这节奏真紧 单子多就是好
+  A：好什么 天天催命 下一单还指望你这三百个
+  B：周四准到 再卡我直接上门搬
+  A：行 等你上门 哈哈
+  B：七点见号
+  A：昨晚球看了没 点球大战绝了
+  B：看了!最后那个扑救我直接从沙发上跳起来
+  A：我看好那队 输得晚饭都没吃好
+  B：下次长记性 别跟我一样玻璃心
+  A：哈哈 行 这话题到此为止 伤心
+  B：晚上开工了给你播报比分 哈哈
+  【8月21日】
+  A：文案我发你 新话术 让号主照着发 发之前把落款那栏删了
+  B：收到 我挨个转过去 八点前齐
+  A：让他们别整段复制 自己改俩词 前后差开点
+  B：懂 这帮号主老手了 熟练工
+  A：上批掉号的也用上 这话术温和 不刺激
+  B：行 但老号别换风格 容易看得出来
+  A：有道理 老号沿用旧模板 新号用新的
+  B：妥 就这么办
+  B：你们老家这时节玉米该收了吧
+  A：收了 我爸拍视频给我 累得直不起腰还乐呵
+  B：老人就是闲不住 我爹种两亩花生 天天晒朋友圈
+  A：给他们寄钱都不要 就要你回家吃饭
+  B：可不 中秋回去被投喂了三顿
+  A：羡慕 我十一才回
+  【8月22日】
+  B：三百个到齐了 交接单发你
+  A：收到 我点一下……有两个号资料空着 换
+  B：换 换到你满意
+  A：痛快 那把掉号的赔法定一下 掉超一成 按半价结
+  B：半价太狠 一成内全价 超的部分按半价 折中
+  A：行 就按你说的 这单走完 下一单优先你
+  B：这话你上月也说过
+  A：上月是你货没跟上 这回货齐了 说话就算数
+  B：行 那今晚开工 我盯着
+  A：盯什么 你歇着 我夜班有人
+  B：那不行 我的号我得看着心里踏实
+  A：随你 哈哈
+  A：你那健身卡还去不 上月不是刚办的
+  B：去了三次 一次洗澡两次拍照 哈哈
+  A：跟我一样 卡在钱包里吃灰
+  B：明年不办了 请私教 按次给 肉疼才练得动
+  A：有道理 疼痛驱动
+  B：晚上开工前我先去练一组 拜拜
+  A：一百个开工了 今晚挺顺
+  B：顺利就好 周四那二百个到了吱声
+  A：吱 哈哈
+  B：行 晚安

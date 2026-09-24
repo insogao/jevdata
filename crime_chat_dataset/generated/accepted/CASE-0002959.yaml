@@ -1,0 +1,128 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002959
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000119
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-BCC-001-5b1f110b8ef6a624
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: theft_robbery_property_crime
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 夜里出手的供货人 A 与车行老板 B 做熟生意：A 一晚拆出二十套共享单车上的锁和变速两样出货，B 只按套收、压价到一套38元先收五套试水，车身剩下的部分由 A 自行处理干净、B 不闻不问，最终谈成每周两批的固定进货。
+  critical_evidence:
+  - A 报今晚二十套、全是锁和变速两样，称最近好干没人管（第1天）
+  - B 压价按旧散件收一套25，A 坚持38一套成交，B 自嘲谁让就他有货（第1天）
+  - B 点货时特意声明车架剩的别往店里塞，A 说剩下的自己处理干净、让 B 别问（第2天）
+  - 敲定一套38、先五套现金、以后每周两批，B 还嘱咐 A 悠着点干细水长流（第2天）
+  benign_alternatives:
+  - 二手车行正常采购旧车配件
+  - 共享单车企业报废车辆的配件回收处理
+
+attributes:
+  duration_days: 2
+  turn_count: 53
+  approximate_tokens_estimate: 1359
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: theft_robbery_property_crime
+  subtype: shared_bike_parts_strip
+  risk: 1
+  relationship: 商务关系
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0269
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-119
+
+dedup:
+  content_hash: sha256:6cb4bf1132a1797fb31c1bf096b973adf3111599792e1be7cc222d8d37256bd9
+pipeline_status: accepted
+title: theft_robbery_property_crime/shared_bike_parts_strip
+conversation: |-
+  【10月26日】
+  B：今晚有货吗 你上礼拜说这周给信儿
+  A：有 今晚二十套 全是锁和变速两样 别的没有
+  B：二十套?你手笔大了啊 上次还十套
+  A：最近好干 没人管 你要几套
+  B：我库里变速器压了一堆 先来五套试试
+  A：五套?我这二十套全出呢
+  B：慢慢出 消化不了砸手里
+  A：那价格得按套算 一套40
+  B：40?散件收价你又不是不知道 旧货价 一套顶多25
+  A：25做不了 我这有半新的 按旧的算我没法干
+  B：那35 别咬40了
+  A：38 少一分不干 我一晚上工夫也不白搭
+  B：行 38就38 谁让就你有货 哈哈
+  B：对了 明晚烤肉走不走 上回那家新出的牛肋条
+  A：走 这周嘴淡得很
+  B：上回536 我垫的 你还欠我一半268
+  A：记得记得 268 我记着呢 明晚一起算
+  B：先记账 烤肉的话周五定
+  A：行 周五我空
+  A：你上回抢那双鞋到了没
+  B：到了 配色比图片好看 穿了一次舍不得
+  A：车行老板穿限量 不怕招贼啊
+  B：招什么贼 我这店一个月也攒不出一双
+  A：哈哈 那你今晚多收两套就出来了
+  B：可别提这个 我老婆盯着我账呢
+  【10月27日】
+  A：今晚五套齐了 老地方 你点货
+  B：点了 成色行 变速都是趁手货
+  A：那是 我出手的货什么时候砸过你招牌
+  B：就一样 车架那些剩的你别往我店里塞
+  A：不塞 剩下的我自己处理 干干净净 你别问
+  B：我不问 你办事我放心
+  A：以后就按这个来 每周两批 一批五套
+  B：行 但你悠着点干 细水长流
+  A：后天台风 你们店门板加固没
+  B：下午就钉了 台风天我最怕招牌被掀
+  A：去年老街那块招牌飞出去砸了车 你忘了
+  B：忘不了 赔了小一万 心疼死
+  A：今年提前钉 铁丝换粗的
+  B：听劝
+  B：昨晚半决赛看了没 那波翻盘神了
+  A：看了 我支持的队又凉了 每年都凉
+  B：你换支持别家得了 死忠粉当的累
+  A：不换 熬着总有冠军那年
+  B：行 周五决赛约我家看 投影大屏
+  A：约 烤肉挪到周五一起
+  B：那说定 五套190 现款 老规矩
+  A：行 190下批一起结也行 我不急
+  B：先结一半吧95现金 另外 268 转你 烤肉那笔两清
+  【系统消息】B 向 A 转账 268 元，已收款。
+  A：收到了 268到账 那下批就是纯赚的了 哈哈
+  B：想得美 你还得干活
+  A：对了 你那店面房东又找你谈租了没
+  B：谈了 要涨5个点 我磨到3个点 签两年
+  A：行啊 你这嘴皮子不干中介可惜了 哈哈

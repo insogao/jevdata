@@ -1,0 +1,141 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002954
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000147
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-PSD-001-19e9c9eb4d64636e
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 1
+  category: other_illicit_coordination
+  illicit_likelihood: 1
+  evidence_strength: weak
+  review_required: false
+
+hidden_case:
+  latent_intent: 论文中介 A 从写手群里物色到写手 B，以一篇一千五、查重保过的价码承接三篇经管硕士课程作业的代写，导师问询由 A 打点兜底，写手只管交稿；三篇交齐后谈成每月固定走单的长期合作，稿费随客户月底月结。
+  critical_evidence:
+  - A 开门见山报三篇急稿、一篇一千五，承诺查重保过、过不了全款退（第1天）
+  - A 发要求：经管硕士课程作业一篇四千字、按模板格式，课程作业查重过了就行（第2天）
+  - A 主动给 B 定心丸：客户导师那边我打招呼了，答辩不用 B 管、只管写（第4天）
+  - 三篇交齐后 A 定下以后每月固定从 B 这儿走单，稿费随客户月底月结（第6天）
+  benign_alternatives:
+  - 论文写作辅导与润色服务
+  - 学术文案代笔的正规外包合作
+
+attributes:
+  duration_days: 6
+  turn_count: 62
+  approximate_tokens_estimate: 1542
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+  normal_transfer_count: 1
+  suspicious_transfer_count: 0
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: other_illicit_coordination
+  subtype: homework_ghostwriting_ring
+  risk: 1
+  relationship: 中间人关系
+  obfuscation: medium
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0269
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-119
+
+dedup:
+  content_hash: sha256:234936ab5730c86e3a0df6ed3b54484c1ed47d5e1fcdfc38d3774f11122385e2
+pipeline_status: accepted
+title: other_illicit_coordination/homework_ghostwriting_ring
+conversation: |-
+  【4月8日】
+  A：在吗 群里要的你微信 我姓刘 做论文中介五年了
+  B：在的 你说
+  A：手里有三篇急稿 经管硕士课程作业 一篇一千五
+  B：一千五偏低吧 这价我群里见的两千往上
+  A：急稿就这价 但我单子多 长期做不亏你
+  B：查重怎么说
+  A：查重我保过 10以内 过不了全款退
+  B：行 要求发我看看
+  B：先说好 我这周还赶两篇 每天睡五小时
+  A：写手都这样 你颈椎还好?
+  B：转脖子咔咔响 我贴着膏药写
+  A：我有朋友做推拿的 需要推给你
+  B：先码着 哈哈
+  A：你这手要是废了谁给我写 哈哈
+  【4月9日】
+  A：要求发了 三篇都是人力资源管理方向 一篇四千字
+  B：看了 不用开题报告吧
+  A：不用 正文加参考文献 格式按模板 我发你
+  B：模板收到 这学校查得严不
+  A：课程作业 查重过了就行 别想太多
+  B：行 明早先给你第一篇提纲
+  B：你这单子都是硕士的多?
+  A：对 还有些MPA的 你当年考研没
+  B：二战没上岸 出来接活了 苦命
+  A：那你写这个轻车熟路啊 政治考了多少
+  B：72 就折英语上
+  A：可惜 要不你现在也在薅导师了 哈哈
+  【4月10日】
+  B：第一篇提纲发了 你过一眼
+  A：结构行 第二部分换个国企案例 更贴地
+  B：行 我有现成的 改起来快
+  A：客户是位三十五岁读在职的老姐 特别怕导师问
+  B：那就写平实点 太深了反而露馅
+  A：对 就照平时上课的语气 周五前给我第一篇
+  B：哎你打不打新赛季那个手游
+  A：不打 我就玩消消乐
+  B：消消乐?姐 你多大岁数 哈哈
+  A：三十多 怎么 消消乐招你了?
+  B：没有 就是我缺个固定队友
+  A：那你慢慢找 哈哈
+  【4月11日】
+  A：给你颗定心丸 客户的导师那边我打招呼了 有问题我兜着
+  B：那答辩不用我管吧
+  A：不用 你只管写 其他客户自己来
+  A：以后每月都从你这儿走 前提是别掉链子
+  B：掉不了 我信誉群里看得到
+  【4月12日】
+  B：第一篇交了 你查收
+  A：收到 今晚就给客户 另外两篇周末齐
+  B：行 周末交齐
+  A：周六出来吃个饭 咱AA 就当认识一下 火锅?
+  B：火锅可以 对了你抢到票没 上回群里拼手速那个
+  A：没 刷进去就没了 认命看直播
+  B：我也一样 半分钟售罄
+  A：下回巡演再来呗 又不是绝版
+  B：也是 我先把歌单循环上
+  A：行 周六见
+  【4月13日】
+  B：第三篇交了 三篇全齐
+  A：辛苦 都收到了 我统一走查重 下周一给准信
+  B：好 挂了算我的
+  A：挂不了 你案例都是自己揉的
+  A：结算就月底一起 客户月结 你也月结 别嫌慢
+  B：行 信你
+  A：还有 昨天火锅486 你抢着垫的 一人一半 我转你243
+  【系统消息】A 向 B 转账 243 元，已收款。
+  B：收了243 行 下回我请回来
+  A：必须的 合作愉快

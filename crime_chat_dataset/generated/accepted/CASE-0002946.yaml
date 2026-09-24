@@ -1,0 +1,139 @@
+schema_version: CASE-YAML-v1
+
+identity:
+  case_id: CASE-0002946
+  family_id: FAM-0000001
+  lineage_id: LIN-0000001
+  archetype_id: ARC-000033
+  variant_id: v01
+
+source:
+  source_ids:
+  
+    "SRC-SYN-001"
+  
+  source_type: synthetic_subagent
+  source_seed_ids:
+  - SEED-SRC-AEG-001-96dd29d0a7ca0b18
+
+lineage:
+  root_case_id: None
+  parent_case_id: None
+  generation_type: original
+
+labels:
+  risk: 2
+  category: contraband_illicit_trade
+  illicit_likelihood: 2
+  evidence_strength: weak
+  review_required: true
+
+hidden_case:
+  latent_intent: 鞋厂采购科的内线 A 与做电商的前同事 B 合作高仿鞋生意：产线「一比一复刻、原版开模」，防伪「同批过的、扫码出来是正品信息」，拿货价按层级 50 双 210、200 双 190，B 转账 38000 拿走 200 双、上架当日预订六十多双，随即追加 300 双并盯上下一批复刻羽绒服，是一条从厂端内线到电商端的售假供货链。
+  critical_evidence:
+  - 第1天 A 报版「一比一复刻 原版开的模 细节都对上了」，并称「防伪是同批过的 官方小程序扫出来是正品信息 吊牌钢印都在」（第1天）
+  - 第1天 报层级拿货价「50双起 210 200双 190 500双往下谈」，B 定 200 双、总价 38000（第1天）
+  - 第2天 B 转账 38000 货款（备注「鞋款」），A 回「38000 收到 今天排产」（第2天，转账）
+  - 第3天 B 收货验收「鞋型正 吊牌钢印齐 跟专柜摆一起都看不出来」，上架标 399 对比专柜 899（第3天）
+  - 第3天 B 预热半天订出六十多双，追加「补300 有得谈不」，A 报 185 并预告复刻羽绒服下一批（第3天）
+  benign_alternatives:
+  - 工厂尾单正品渠道拿货
+  - 高性价比国货平替的电商分销
+
+attributes:
+  duration_days: 3
+  turn_count: 62
+  approximate_tokens_estimate: 1541
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+  normal_transfer_count: 0
+  suspicious_transfer_count: 1
+  format: wechat_1to1_transcript
+
+generation_signature:
+  top_category: contraband_illicit_trade
+  subtype: replica_counterfeit
+  risk: 2
+  relationship: 同事
+  obfuscation: high
+  has_transfer: true
+
+execution:
+  workflow_version: DATASET-WF-v2.0
+  prompt_id: PRM-DIALOGUE-001
+  agent_id: TASK-0268
+  model_id: MOD-SESSION-SUBAGENT
+  batch_id: BATCH-AUTO-117
+
+dedup:
+  content_hash: sha256:ad7dc84cb27ff7e6249ad8d046895054c8f753ca4f47793ee79734745d906e72
+pipeline_status: accepted
+title: contraband_illicit_trade/replica_counterfeit
+conversation: |-
+  【9月3日】
+  B：陈哥 上班没 我那个事有着落没
+  A：刚从产线上下来 事稳了 版给你留的秋款
+  B：太好了 国庆前必须上架 你懂的
+  A：懂 这版一比一复刻 原版开的模 细节都对上了 走线气眼全比着来的
+  B：扫码那些没问题吧 客户较真
+  A：防伪是同批过的 官方小程序扫出来是正品信息 吊牌钢印都在
+  B：那行 价格怎么说
+  A：拿货价按层级 50双起 210 200双 190 500双往下谈
+  B：我先拿200 跑跑看反应
+  A：成 200双 190 一共38000 老客户 给你挑同色号的
+  A：这周连上六天了 就盼中秋调休
+  B：你还盼中秋 我都忘了要放假
+  A：产线不停 我调休里攒了五天
+  B：攒着干嘛 攒着过年用?
+  A：嗯 春节票难抢 请早了扣钱
+  B：儿子网课又在摸鱼 我一转头他在玩橡皮
+  A：男孩都这样 我家那个上学期网课 差点留级
+  B：哈哈 后来呢
+  A：他妈盯着 现在老实了
+  B：得 我也得盯了
+  B：双十一你囤啥 我购物车八十六件了
+  A：我就囤洗衣液 抽纸 实用
+  B：你这务实派
+  A：过日子嘛 钱花在刀刃上
+  B：行吧 我这刀刃有点钝 哈哈
+  B：陈哥 38000 我凑一下 明天给行不
+  A：行 明天中午前 款到我这就排产 才赶得上国庆
+  【9月4日】
+  B：陈哥 早 款我这就安排
+  A：嗯 收款码还是那个 转完吱一声
+  B：备注写啥
+  A：写鞋款就行
+  B：好 鞋款 38000 对吧
+  A：对 38000
+  【系统消息】B 向 A 转账 38000 元，已收款。
+  A：38000 收到 让线上今天排 你的货后天出
+  B：爽快!
+  A：你丈母娘那中秋礼盒定了没
+  B：还没 正发愁 你有路子?
+  A：厂里工会团购 流心的 比商场便宜小一半
+  B：给我留两盒 多少钱
+  A：一盒88 两盒176 回头一起算
+  B：我办了张健身卡 一次没去 亏死
+  A：我天天在产线当散步 哈哈
+  B：你那是劳动 我这是花钱买心安
+  A：一样 哈哈 心安就好
+  B：等忙完这波 我也去走两圈
+  【9月5日】
+  A：货齐了 200双 8箱 走物流 你收货注意别磕碰
+  B：好 收到验货
+  B：到了! 开箱看了 鞋型正 吊牌钢印齐 跟专柜摆一起都看不出来
+  A：那是 这版开模开了三回 才到这个程度
+  B：值 上架我标399 专柜899 打完折还觉得占便宜
+  A：你这生意经 服
+  B：对了 朋友圈预热了 半天订出去六十多双
+  A：卖这么快 国庆前还得补一波 你提前说 我好压产线
+  B：成 补300 有得谈不
+  A：300双 按头一批的层级再往下压 185给你谈下来 就这几天
+  B：牛 到时候联系
+  B：陈哥 差点忘了 两盒月饼的钱我转你? 还是下批货里扣
+  A：下批一起 秋款羽绒服的版也快好了 到时候给你看样
+  B：羽绒服? 那我可先给我媳妇留一件 哈哈
+  A：成 你这手快 哈哈
+  B：那就这么说定 中秋快乐 陈哥
+  A：快乐快乐 旺你大卖
