@@ -696,3 +696,4 @@
 - 2026-09-24 07:56 | task_cli: CLAIM claim=367 TASK-0268 agent=glm-w1 lease=7200s 截止=2026-09-24T09:56:39
 - 2026-09-24 08:25 | task_cli: COMPLETE claim=367 TASK-0268 agent=glm-w1 accepted=10 pairs=0 | worker done: 10 case files written
 - 2026-09-24 08:26 | task_cli: COMPLETE claim=366 TASK-0269 agent=glm-w2 accepted=10 pairs=0 | worker done: 10 case files written
+- 2026-09-24 16:00 | TARGET SYNC: local synced to origin/main (glm-line production merged). total accepted=3163 >= 1000 -> PILOT-TARGET-REACHED. 本地旧生产线（batch 12-29, ~470条）已包含在远端合并结果中。Orchestrator 停止派发生成。
